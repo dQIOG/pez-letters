@@ -38,13 +38,13 @@
                   <constraint>
                      <!-- Index references -->
                      <sch:rule context="tei:rs[starts-with(@key, 'index:')]">
-                        <sch:let name="path-to-indexes" value="'../102_derived_tei/102_02_extracted_index_entries/Pez_Register_Bd2/'"/>
+                        <sch:let name="path-to-indexes" value="'../data/legacy_indices/'"/>
                         <sch:let name="index-files" value="for $i in (65 to 90) return doc(concat($path-to-indexes,'/',codepoints-to-string($i),'.xml')) "/>
                         <sch:assert test="substring-after(@key,'index:') = $index-files//tei:item/@xml:id">Kein Index-Eintrag für ID '<sch:value-of select="substring-after(@key,'index:')"/>' gefunden.</sch:assert>
                      </sch:rule>
                      <!-- Bibliography references -->
                      <sch:rule context="tei:rs[@type = 'bibl']">
-                        <sch:let name="path-to-bibliography" value="'../102_derived_tei/102_04_auxiliary_files/bibliography_TEI.xml'"/>
+                        <sch:let name="path-to-bibliography" value="'../data/indices/listbibl.xml'"/>
                         <sch:let name="bibliography" value="doc($path-to-bibliography)"/>
                         <sch:assert test="concat('b',substring-after(@key,'bibl:')) = $bibliography//tei:biblStruct/@xml:id">Kein Index-Eintrag für "<sch:value-of select="."/>" (ID <sch:value-of select="substring-after(@key,'bibl:')"/>) gefunden.</sch:assert>
                      </sch:rule>
