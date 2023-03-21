@@ -1,49 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="32" xml:id="pez-0032">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">32 Moritz Müller an Bernhard Pez. 1710-02-03. St. Gallen.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Moritz Müller an Bernhard Pez. 1710-02-03. St. Gallen.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">32</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 23 (nennt
-                     den Brief nicht, gibt aber Teile des Inhalts wieder)</bibl>
-                  <bibl><rs type="bibl" key="bibl:37320">Schönhofer, Pez</rs> 18</bibl>
-                  <bibl><rs type="bibl" key="bibl:19778">Stockinger, Fidelis</rs> 344, 347, 354,
-                     369f</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Unterhalb des Ordnungsvermerks die Jahreszahl <orig>1722</orig>.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">90r–91v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 90r–91v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -58,169 +72,143 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">30</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">53</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">38</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">24</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">30</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">38</idno>
-               </ref>
+               <ptr type="prev" target="letter:030"/>
+               <ptr type="next" target="letter:053"/>
+               <ptr type="sentWith" target="letter:038"/>
+               <ptr type="mentions" target="letter:024"/>
+               <ptr type="mentions" target="letter:030"/>
+               <ptr type="mentionedIn" target="letter:038"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">MM</rs> antwortet auf <rs type="person" role="sender">BPs</rs> Brief vom 15. Januar <ref type="letter" target="letter:30">30</ref>, der ihn über <rs ref="index:d10854e32902">Wiblingen</rs> erreicht hat, verspätet, weil ihn öffentliche Geschäfte durch eine mehrtägige Abwesenheit von den privaten abgehalten haben.</p>
+            <p corresp="#seg2"><rs type="person" role="sender">MM</rs> widmet sich täglich der Arbeit für <rs type="person" role="sender">BPs</rs> Vorhaben („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“), ist aber durch die Auslagerung des <rs ref="index:d10854e27275">Archivs</rs> und durch seine zahlreichen Verpflichtungen am Vorankommen gehindert. Daher bittet er um Geduld.</p>
+            <p corresp="#seg3"><rs type="person" role="sender">MM</rs> hat <rs type="person" role="sender">BPs</rs> Schreiben <ref type="letter" target="letter:24">24</ref>, das er von <rs ref="index:d10854e32846">Wolfgang Wetter</rs> aus der <rs ref="index:d14380e37019">Reichenau</rs> erhalten hat, nach <rs ref="index:d14380e32292">Paris</rs> an den Prior von <rs ref="index:d14380e32414">St.-Germain-des-Prés</rs> (<rs ref="index:d10854e18470">Achille-Robert Marcland</rs>) weitergeleitet und ein Empfehlungsschreiben an einen dortigen Freund und Korrespondenten (siehe Kommentar) beigefügt. Mit <rs ref="index:d14380e25581">Mabillon</rs> stand <rs type="person" role="sender">MM</rs> ja auch in Briefkontakt.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">MM</rs> antwortet auf die Anfrage des <rs ref="index:d14380e28088">Melker</rs> Abtes <rs ref="index:d14380e9628">Dietmayr</rs>, dass ihm die Werke <rs ref="index:d14380e25581">Mabillons</rs> gut bekannt sind. Alle sind in der <rs ref="index:d14380e39312">St. Galler Bibliothek</rs> vorhanden, auch hat sie <rs type="person" role="sender">MM</rs> bereits für etliche Klöster <rs ref="index:d10854e28377">Schwabens</rs> und der <rs ref="index:d14380e40241">Schweiz</rs> beschafft, ebenso die <rs ref="index:d14380e22613">Kirchenväterausgaben der Mauriner</rs>. Durch die <rs ref="index:d10854e27374">St. Galler</rs> Händler, die mit ihren Maultieren nach <rs ref="index:d14380e25537">Lyon</rs> und <rs ref="index:d14380e32292">Paris</rs> reisen, kann <rs type="person" role="sender">MM</rs> von den dortigen königlichen Buchhändlern <rs ref="index:d14380e1788">Anisson</rs> und <rs ref="index:d14380e35764">Posuel</rs>, mit denen er auch Briefkontakt unterhält, Bücher zu günstigen Preisen kaufen. Dabei ist jedoch die Bezahlung im Voraus und in bar zu leisten. <rs type="person" role="sender">MM</rs> bietet an, auch die <rs ref="index:d14380e28088">Melker</rs> mit Werken der <rs ref="index:d14380e22462">Mauriner</rs> zu versorgen. Die Bücher könnten über <rs ref="index:d14380e43652">Ulm</rs> und <rs ref="index:d10854e32902">Wiblingen</rs> gefahrlos versendet werden. <rs type="person" role="sender">MM</rs> legt auch ein Verzeichnis der Werke <rs ref="index:d14380e25581">Mabillons</rs> sowie anderer <rs ref="index:d14380e22462">Mauriner</rs> bei; er würde sich freuen, <rs ref="index:d14380e31465">Österreich</rs> – dem ja <rs ref="index:d14380e39290">St. Gallen</rs> von alters her verbunden ist – mit Buchanschaffungen zu dienen, wie er dies schon für die <rs ref="index:d14380e40241">Schweiz</rs> und <rs ref="index:d10854e28377">Schwaben</rs> getan hat.</p>
+            <p corresp="#seg5"><rs type="person" role="sender">MM</rs> bietet für <rs type="person" role="sender">BPs</rs> großes Werk neuerlich seine Mithilfe an und erwähnt seine „<rs ref="index:d10854e20740">Idea congregationis Helveto-Benedictinae</rs>“.</p>
+            <p corresp="#seg6">In einem Postskriptum fordert <rs type="person" role="sender">MM</rs> BP auf, ihm baldestmöglich mitzuteilen, ob Interesse an Büchern besteht, da zu deren Anschaffung die demnächst stattfindende <rs ref="index:d10854e17690">Lyoner Messe</rs> eine günstige Gelegenheit bietet. Er möchte auch wissen, um welchen Preis inklusive Transportkosten man in <rs ref="index:d14380e28088">Melk</rs> die vier Bände der „<rs ref="index:d14380e25705">Annales OSB</rs>“ erworben hat, damit er mit seinem Preis vergleichen kann. Von vielen Klöstern weiß er, dass sie überzogene Preise bezahlt haben. Die von <rs type="person" role="sender">MM</rs> genannten Bücherpreise beziehen sich auf die ungebundenen Lagen (in albo).</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e3199"><rs type="person" role="sender">MM</rs> antwortet auf <rs type="person" role="sender">BPs</rs> Brief vom 15. Januar <ref type="letter">30</ref>, der ihn über <rs key="index:d10854e32902">Wiblingen</rs> erreicht hat, verspätet, weil ihn öffentliche Geschäfte durch eine mehrtägige Abwesenheit von den privaten abgehalten haben.</seg><seg type="context" n="2" xml:id="d4618e3204"><rs type="person" role="sender">MM</rs> widmet sich täglich der Arbeit für <rs type="person" role="sender">BPs</rs> Vorhaben („<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“), ist aber durch die Auslagerung des <rs key="index:d10854e27275">Archivs</rs> und durch seine zahlreichen Verpflichtungen am Vorankommen gehindert. Daher bittet er um Geduld.</seg><seg type="context" n="3" xml:id="d4618e3206"><rs type="person" role="sender">MM</rs> hat <rs type="person" role="sender">BPs</rs> Schreiben <ref type="letter">24</ref>, das er von <rs key="index:d10854e32846">Wolfgang Wetter</rs> aus der <rs key="index:d14380e37019">Reichenau</rs> erhalten hat, nach <rs key="index:d14380e32292">Paris</rs> an den Prior von <rs key="index:d14380e32414">St.-Germain-des-Prés</rs> (<rs key="index:d10854e18470">Achille-Robert Marcland</rs>) weitergeleitet und ein Empfehlungsschreiben an einen dortigen Freund und Korrespondenten (siehe Kommentar) beigefügt. Mit <rs key="index:d14380e25581">Mabillon</rs> stand <rs type="person" role="sender">MM</rs> ja auch in Briefkontakt.</seg><seg type="context" n="4" xml:id="d4618e3211"><rs type="person" role="sender">MM</rs> antwortet auf die Anfrage des <rs key="index:d14380e28088">Melker</rs> Abtes <rs key="index:d14380e9628">Dietmayr</rs>, dass ihm die Werke <rs key="index:d14380e25581">Mabillons</rs> gut bekannt sind. Alle sind in der <rs key="index:d14380e39312">St. Galler Bibliothek</rs> vorhanden, auch hat sie <rs type="person" role="sender">MM</rs> bereits für etliche Klöster <rs key="index:d10854e28377">Schwabens</rs> und der <rs key="index:d14380e40241">Schweiz</rs> beschafft, ebenso die <rs key="index:d14380e22613">Kirchenväterausgaben der Mauriner</rs>. Durch die <rs key="index:d10854e27374">St. Galler</rs> Händler, die mit ihren Maultieren nach <rs key="index:d14380e25537">Lyon</rs> und <rs key="index:d14380e32292">Paris</rs> reisen, kann <rs type="person" role="sender">MM</rs> von den dortigen königlichen Buchhändlern <rs key="index:d14380e1788">Anisson</rs> und <rs key="index:d14380e35764">Posuel</rs>, mit denen er auch Briefkontakt unterhält, Bücher zu günstigen Preisen kaufen. Dabei ist jedoch die Bezahlung im Voraus und in bar zu leisten. <rs type="person" role="sender">MM</rs> bietet an, auch die <rs key="index:d14380e28088">Melker</rs> mit Werken der <rs key="index:d14380e22462">Mauriner</rs> zu versorgen. Die Bücher könnten über <rs key="index:d14380e43652">Ulm</rs> und <rs key="index:d10854e32902">Wiblingen</rs> gefahrlos versendet werden. <rs type="person" role="sender">MM</rs> legt auch ein Verzeichnis der Werke <rs key="index:d14380e25581">Mabillons</rs> sowie anderer <rs key="index:d14380e22462">Mauriner</rs> bei; er würde sich freuen, <rs key="index:d14380e31465">Österreich</rs> – dem ja <rs key="index:d14380e39290">St. Gallen</rs> von alters her verbunden ist – mit Buchanschaffungen zu dienen, wie er dies schon für die <rs key="index:d14380e40241">Schweiz</rs> und <rs key="index:d10854e28377">Schwaben</rs> getan hat.</seg><seg type="context" n="5" xml:id="d4618e3213"><rs type="person" role="sender">MM</rs> bietet für <rs type="person" role="sender">BPs</rs> großes Werk neuerlich seine Mithilfe an und erwähnt seine „<rs key="index:d10854e20740">Idea congregationis Helveto-Benedictinae</rs>“.</seg><seg type="context" n="6" xml:id="d4618e3215">In einem Postskriptum fordert <rs type="person" role="sender">MM</rs> BP auf, ihm baldestmöglich mitzuteilen, ob Interesse an Büchern besteht, da zu deren Anschaffung die demnächst stattfindende <rs key="index:d10854e17690">Lyoner Messe</rs> eine günstige Gelegenheit bietet. Er möchte auch wissen, um welchen Preis inklusive Transportkosten man in <rs key="index:d14380e28088">Melk</rs> die vier Bände der „<rs key="index:d14380e25705">Annales OSB</rs>“ erworben hat, damit er mit seinem Preis vergleichen kann. Von vielen Klöstern weiß er, dass sie überzogene Preise bezahlt haben. Die von <rs type="person" role="sender">MM</rs> genannten Bücherpreise beziehen sich auf die ungebundenen Lagen (in albo).</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">II</hi>.</p>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">207</hi>.</p>
-            <div type="remarks">
-               <p>Unterhalb des Ordnungsvermerks die Jahreszahl <hi rend="italic">1722</hi>.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Ex S. Gallo. 1710 die 3. Februarii.</p>
-            <p xml:space="preserve">Plurimum reverende religiosissime ac clarissime domine in Christo pater ac domine amice colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e3246">Accepi ultimas plurimum reverendae dominationis suae de 15. Januarii ad me datas, easque humanitate plenissimas, ad me Wiblinga translatas, ad quas cum debito respectu respondeo; maturius utique responsurus, nisi aliquot dierum a domo absentia a privatis me avulsum <seg type="lemma" corresp="#d4618e3272">negotiis</seg>, publicis destinasset. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e3248">Proinde significo: Primo. Me coepto operi in favorem operis vestri suscepti in dies intendere, licet maiori conatu et serviendi desiderio quam effectu. Nam praeterquam pleraque archivii nostri monumenta litteraria, mihi imprimis necessaria, ad manum non sint, insuper manus meae tot aliis negotiis distentae lentius, quam animus urget, laborant. Interim cum servo evangelico id unum rogo et <seg type="lemma" corresp="#d4618e3279">procidens me excuso: domine, patientiam habe in me, et omnia reddam tibi</seg>. Sed patientia, inquam, et vobis (uti mihi quoque) necessaria est. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e3250">Secundo. <seg type="lemma" corresp="#d4618e3286">Litteras ad reverendissimum dominum patrem priorem S. Germani a Pratis inscriptas</seg>, mihique per admodum reverendum dominum patrem Wolffgangum Wetter ex Augia transmissas, <seg type="lemma" corresp="#d4618e3293">meis rite inclusas</seg> Parisios direxi: ad quas, spero, brevi responsum obtinebo. Addidi etiam meas (si quid valent) commendatitias ad vota vestra explenda ad aliquem notum amicum meum, cum quo litterarum commercia misceo; sicut et olim cum ipso piae memoriae patre Mabillonio ipso crebrius assolebam. <pb n="1v"/> </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e3254">Tertio. Quod attinet ad opera patris Mabillon (de quibus reverendissimus et amplissimus dominus abbas vester patronus mihi gratiosissimus informationem postulat), sunt ea mihi omnia probe nota, sicut et ipsa authoris persona olim cognita fuit. Illaque omnia, quotquot hactenus viderunt lucem, inter chariora pignora bibliothecae nostrae asservo. Comparavi eadem pro diversis iam monasteriis tum in Suevia, tum in Helvetia nostra, sicut et alia <seg type="lemma" corresp="#d4618e3302">sanctorum patrum opera</seg> recens cum elegantissimis annotationibus edita a patribus nostris Benedictinis e Gallia. Habeo enim optimam occasionem multaque ac magna vecturae commoda, quia muli et clitellarii <seg type="lemma" corresp="#d4618e3309">mercatorum urbis nostrae Sanct-Gallensis continuo cum variis mercibus Lugdunum et Parisios</seg> abeunt et ad nos redeunt, et ego eos a prima manu librariorum regiorum dominorum Anisson et Posuel, cum quibus correspondeo in re libraria, accipere soleo, ut adeo longe mitiori eos comparare possim pretio, quam alii librarii solent; debeo tamen pro his operibus semper anticipatam et paratam solutionem praestare. Si ergo placet, ut et vestro inclyto monasterio et imprimis reverendissimo domino abbati (cui me cum profunda reverentia inclino et venerandas manus exosculor) in aliquo grato obsequio serviam, iubete; et habebitis servum et confratrem fidelem, si tamen eum dignum aestimatis, qui servire et velit et possit. Ego libros comparandos facili et secura via Ulmam usque ad monasterium Wiblingense dimittam, si modo inde secure ad vos veniant, et in solutione mihi praestanda (de qua non dubito) mora nulla fiat. At ecce! Hic <seg type="lemma" corresp="#d4618e3318">brevem syllabum operum</seg> Mabillonii, tum aliorum praecipuorum videre poterit ex adiecto. Eligite et imperate, quod placet. Felicem me aestimabo, si ut Helvetiae et Sueviae, ita et <seg type="lemma" corresp="#d4618e3323">Austriae (cui S. Gallus semper ab origine sua devotissimus et foederatus est</seg>) servire potero. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e3256">Caeterum ad operis suscepti gloriosa molimina altius et ad perfectum usque promovenda omnem fraternam meam (tametsi modicam) opem spondeo et fortiora divinae gratiae auxilia animitus adopto, ut, quod pro gloria sacri ordinis nostri coeptum est, ad eiusdem et imprimis divinae gloriae augmentum novis semper accessionibus increscat. Non deerit laboranti merces illa <pb n="2r"/> magnanimis [<hi rend="italic">sic</hi>]. Et hic ipse stimulus et me ante paucos annos<note place="foot" xml:id="d4618e3263">	Über der Zeile eingefügt.</note> impulit ad audendum aliquid, tametsi parvum, dum in Idea illa mea congregationis Helveto-Benedictinae levidensum aliquid evulgare de nostra Helvetia Benedictina praesumpsi. Promulsidem tantum dedi; vos maiora iam et opipara parate convivia. Felix ero, si vel micas de mensa casuras quandoque legero. Sed ne longior sim, abrumpo filum; alias iterum et meliori occasione plura. Avocant me negotia. Qui interim me in omnia sacra enixius commendans cum summo respectu maneo ex animo</seg></p>
-            <p xml:space="preserve">Plurimum reverendae clarissimae dominationis suae servus in Christo et confrater syncerissimus pater Mauritius Müller bibliothecarius manu propria.</p>
-            <p xml:space="preserve"><seg type="context" n="6" xml:space="preserve" xml:id="d4618e3269">P.S. Si quid placitum fuerit ex specificatis operibus, ut comparentur, mature dignetur me certiorare, quia brevi incipiunt <seg type="lemma" corresp="#d4618e3328">nundinae Lugdunenses</seg>, et tunc opportunior occasio erit dicta opera advehendi. Et quo (obsecro) pretio, computatis omnibus etiam vecturae sumptibus, comparastis quatuor tomos illos Annalium? Optarem id rescire, ut inde et vobis rescribam, quo ego pretio eadem opera comparo. Scio enim multa monasteria satis caro aliunde ea coemisse. Quaeso, dignetur mihi pretium proxime notificare. Intelligo autem libros solum in albo, uti vocant, et nondum compactos.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e3272">
-               <ref type="context">1</ref>
-               <label>negotiis</label>
-               <p>Zu den Tätigkeiten MMs vgl. <ref type="letter">15</ref> &lt;2&gt;.</p>
-            </note>
-            <note xml:id="d4618e3279">
-               <ref type="context">2</ref>
-               <label>procidens ... patientiam ... omnia reddam tibi</label>
-               <p>Mt 18,26.29.</p>
-            </note>
-            <note xml:id="d4618e3286">
-               <ref type="context">3</ref>
-               <label>Litteras ... inscriptas</label>
-               <p>BPs Brief (<ref type="letter">24</ref>) war an „die Äbte und Prioren“ der
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>negotiis</mentioned>
+            <p>Zu den Tätigkeiten MMs vgl. <ref type="letter" target="letter:15">15</ref> <ref target="letter:15#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>procidens ... patientiam ... omnia reddam tibi</mentioned>
+            <p>Mt 18,26.29.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>Litteras ... inscriptas</mentioned>
+            <p>BPs Brief (<ref type="letter" target="letter:24">24</ref>) war an „die Äbte und Prioren“ der
                   Maurinerkongregation gerichtet, jedoch an den Prior von St.-Germain-des-Prés
                   adressiert. Dieses Amt wurde von Achille-Robert Marcland bekleidet, was freilich
-                  MM kaum gewusst haben dürfte. Zu Marcland vgl. <rs type="bibl" key="bibl:15602"
-                     >Chaussy, Bénédictins</rs> 1 103, 113, 117, 128; 2 31; <rs type="bibl"
-                     key="bibl:15604">Chaussy, Matricula </rs>38; <rs type="bibl" key="bibl:20066"
-                     >Vanel, Nécrologe</rs> 89, 137f.; <rs type="bibl" key="bibl:20354">Wilhelm et
+                  MM kaum gewusst haben dürfte. Zu Marcland vgl. <rs type="bibl" ref="bibl:15602">Chaussy, Bénédictins</rs> 1 103, 113, 117, 128; 2 31; <rs type="bibl" ref="bibl:15604">Chaussy, Matricula </rs>38; <rs type="bibl" ref="bibl:20066">Vanel, Nécrologe</rs> 89, 137f.; <rs type="bibl" ref="bibl:20354">Wilhelm et
                      al., Nouveau supplément</rs> 2 45.</p>
-            </note>
-            <note xml:id="d4618e3293">
-               <ref type="context">3</ref>
-               <label>meis rite inclusas</label>
-               <p>Dieses Begleitschreiben MMs ist erhalten: BN FF 19664, 210r–212v. Die Adresse
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>meis rite inclusasaliquem
+                  notum amicum meum:</mentioned>
+            <p>Dieses Begleitschreiben MMs ist erhalten: BN FF 19664, 210r–212v. Die Adresse
                   fehlt, doch dürfte es gleichfalls an den Prior von St.-Germain gerichtet gewesen
                   sein. MM stellt sich in den ersten Sätzen dem Adressaten als bislang Unbekannter
                   vor, empfiehlt das Anliegen BPs und bittet auch für sich selbst um Herstellung des
                   Kontakts zum Nachfolger Mabillons. Auf dessen Briefwechsel mit St. Gallen nimmt MM
                   Bezug, ohne freilich zu behaupten, er selbst wäre daran beteiligt gewesen (vgl.
-                     <ref type="letter">15</ref> &lt;4&gt;).</p>
-               <label><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><?oxy_comment_start author="Mayer" timestamp="20170609T174321+0200" comment="Fehlerhafte TEI-Formatierung korrigiert, irrtümlich aber fett statt gesperrt" mid="1"?>aliquem
-                  notum amicum meum:<?oxy_custom_end?><?oxy_comment_end mid="1"?></label>
-               <p>Es bleibt unklar, wer hier gemeint ist. Die beiden Briefe BPs und MMs wurden von
+                     <ref type="letter" target="letter:15">15</ref> <ref target="letter:15#seg4">4</ref>).</p><p>Es bleibt unklar, wer hier gemeint ist. Die beiden Briefe BPs und MMs wurden von
                   Marcland an René Massuet weitergegeben, dessen Antwortschreiben an MM vom 7. März
                   1710 explizit die Aussage enthält, dass er MM zuvor nicht gekannt hatte und ihm
-                  nun zum ersten Mal schrieb (StiA St. Gallen, Bd. 322, 319–326; gedruckt bei <rs
-                     type="bibl" key="bibl:15750">Dantier, Pièces annexées</rs> 448–451; sowie bei
-                     <rs type="bibl" key="bibl:36194">Gigas, Lettres</rs> 38–45, jedoch nach einem
+                  nun zum ersten Mal schrieb (StiA St. Gallen, Bd. 322, 319–326; gedruckt bei <rs type="bibl" ref="bibl:15750">Dantier, Pièces annexées</rs> 448–451; sowie bei
+                     <rs type="bibl" ref="bibl:36194">Gigas, Lettres</rs> 38–45, jedoch nach einem
                   in Kopenhagen erhaltenen Konzept Massuets). In der gesamten weiteren Korrespondenz
                   MMs mit Massuet findet sich kein Anhaltspunkt für einen Briefpartner, den er vor
                   diesem unter den Maurinern oder in deren Umfeld gehabt hätte. Angesichts weiterer
                   nachweislich unrichtiger Aussagen MMs gegenüber BP über seine Verbindungen zu den
                   Maurinern, insbesondere der Behauptung einer Bekanntschaft mit Mabillon, liegt der
                   Verdacht nahe, dass der ungenannte Korrespondent gänzlich fiktiv sein könnte; vgl.
-                     <rs type="bibl" key="bibl:19778">Stockinger, Fidelis</rs> 354.</p>
-            </note>
-            <note xml:id="d4618e3302">
-               <ref type="context">4</ref>
-               <label>sanctorum patrum opera</label>
-               <p>Zu den Kirchenvätereditionen der Mauriner vgl. u. a. <rs type="bibl"
-                     key="bibl:35824">Armogathe, Augustinus</rs>; <rs type="bibl" key="bibl:15602"
-                     >Chaussy, Bénédictins </rs>1 91–95; <rs type="bibl" key="bibl:35788">Chaussy,
-                     Mauristes</rs>; <rs type="bibl" key="bibl:36174">Gasnault, Artisans</rs>; <rs
-                     type="bibl" key="bibl:36370">Hurel, Mauristes éditeurs</rs>; <rs type="bibl"
-                     key="bibl:17748">Kukula, Mauriner Ausgabe</rs>; <rs type="bibl"
-                     key="bibl:17878">Leclercq, Mabillon</rs> 2 628–679; <rs type="bibl"
-                     key="bibl:20066">Vanel, Nécrologe</rs> LI–LIV; <rs type="bibl" key="bibl:37224"
-                     >Weitlauff, Mauriner </rs>177f. Die Augustinus-, Hieronymus- und
-                  Gregor-Ausgaben waren 1707/08 von MM für St. Gallen beschafft worden: <rs
-                     type="bibl" key="bibl:19778">Stockinger, Fidelis</rs> 347f.; vgl. <rs
-                     type="bibl" key="bibl:20258">Weidmann, Bibliothek</rs> 74.</p>
-            </note>
-            <note xml:id="d4618e3309">
-               <ref type="context">4</ref>
-               <label>mercatorum ... Lugdunum et Parisios</label>
-               <p>Der intensive Handel St. Gallens nach Lyon betraf vor allem Leinwand; vgl. <rs
-                     type="bibl" key="bibl:36578">Lüthy, Tätigkeit </rs>10f., 30–35, 81–88.</p>
-               <label><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><?oxy_comment_start author="Mayer" timestamp="20170609T174334+0200" comment="Fehlerhafte TEI-Formatierung korrigiert, irrtümlich aber fett statt gesperrt" mid="3"?>Anisson
-                  et Posuel<?oxy_custom_end?><?oxy_comment_end mid="3"?>:</label>
-               <p>Jacques Anisson, Buchhändler und Verleger zu Lyon, war der jüngere Bruder von Jean
+                     <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 354.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>sanctorum patrum opera</mentioned>
+            <p>Zu den Kirchenvätereditionen der Mauriner vgl. u. a. <rs type="bibl" ref="bibl:35824">Armogathe, Augustinus</rs>; <rs type="bibl" ref="bibl:15602">Chaussy, Bénédictins </rs>1 91–95; <rs type="bibl" ref="bibl:35788">Chaussy,
+                     Mauristes</rs>; <rs type="bibl" ref="bibl:36174">Gasnault, Artisans</rs>; <rs type="bibl" ref="bibl:36370">Hurel, Mauristes éditeurs</rs>; <rs type="bibl" ref="bibl:17748">Kukula, Mauriner Ausgabe</rs>; <rs type="bibl" ref="bibl:17878">Leclercq, Mabillon</rs> 2 628–679; <rs type="bibl" ref="bibl:20066">Vanel, Nécrologe</rs> LI–LIV; <rs type="bibl" ref="bibl:37224">Weitlauff, Mauriner </rs>177f. Die Augustinus-, Hieronymus- und
+                  Gregor-Ausgaben waren 1707/08 von MM für St. Gallen beschafft worden: <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 347f.; vgl. <rs type="bibl" ref="bibl:20258">Weidmann, Bibliothek</rs> 74.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned>mercatorum ... Lugdunum et ParisiosAnisson
+                  et Posuel:</mentioned>
+            <p>Der intensive Handel St. Gallens nach Lyon betraf vor allem Leinwand; vgl. <rs type="bibl" ref="bibl:36578">Lüthy, Tätigkeit </rs>10f., 30–35, 81–88.</p><p>Jacques Anisson, Buchhändler und Verleger zu Lyon, war der jüngere Bruder von Jean
                   Anisson, welcher, aus Lyon stammend, nicht zuletzt auf Fürsprache der Mauriner
                   1691 Direktor der Imprimerie royale du Louvre geworden war. Beide Brüder hatten
                   Mabillon bei seinem Besuch in Lyon 1685 persönlich kennengelernt und standen mit
-                  den Maurinern in enger Verbindung: vgl. <rs type="bibl" key="bibl:17878">Leclercq,
-                     Mabillon</rs> 1 299f.; <rs type="bibl" key="bibl:18166">Martin, Bénédictins,
-                     libraires et pouvoir</rs> 276–279; <rs type="bibl" key="bibl:20068">Vanel,
+                  den Maurinern in enger Verbindung: vgl. <rs type="bibl" ref="bibl:17878">Leclercq,
+                     Mabillon</rs> 1 299f.; <rs type="bibl" ref="bibl:18166">Martin, Bénédictins,
+                     libraires et pouvoir</rs> 276–279; <rs type="bibl" ref="bibl:20068">Vanel,
                      Savants lyonnais</rs> 115–160. Ihre von Mabillon vermittelte Beziehung zu St.
-                  Gallen ist seit den 1680er Jahren nachweisbar: <rs type="bibl" key="bibl:16896"
-                     >Heer, Mabillon</rs> 189f. Jean Posuel war seit 1680 Schwiegersohn Jean
-                  Anissons: <rs type="bibl" key="bibl:37166">Vingtrinier, Imprimerie</rs> 374.</p>
-            </note>
-            <note xml:id="d4618e3318">
-               <ref type="context">4</ref>
-               <label>brevem syllabum operum</label>
-               <p>Der „syllabus“ entsprach vermutlich einer Liste maurinischer und anderer
+                  Gallen ist seit den 1680er Jahren nachweisbar: <rs type="bibl" ref="bibl:16896">Heer, Mabillon</rs> 189f. Jean Posuel war seit 1680 Schwiegersohn Jean
+                  Anissons: <rs type="bibl" ref="bibl:37166">Vingtrinier, Imprimerie</rs> 374.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
+            <mentioned>brevem syllabum operum</mentioned>
+            <p>Der „syllabus“ entsprach vermutlich einer Liste maurinischer und anderer
                   französischer Bücher, die MM seinem Brief nach St.-Germain-des-Prés mit der Bitte
                   beilegte, ihm die jeweils niedrigsten Preise mitzuteilen (BN FF 19664, 212r–v).
                   Massuet lieferte diese Informationen in einer Beilage zu seinem oben zitierten
-                  Antwortschreiben; vgl. <ref type="letter">71</ref> &lt;10&gt;.</p>
-            </note>
-            <note xml:id="d4618e3323">
-               <ref type="context">4</ref>
-               <label>Austriae ... foederatus est</label>
-               <p>Ungeachtet der Berufung auf uraltes Herkommen deutet diese Anspielung gewiss vor
-                  allem auf die aktuelle Situation St. Gallens, vgl. <ref type="letter">15</ref>
-                  &lt;2&gt;. Fürstabt Bürgisser hatte am 23. Juli 1702 einen Schutzvertrag mit dem
+                  Antwortschreiben; vgl. <ref type="letter" target="letter:71">71</ref> <ref target="letter:71#seg10">10</ref>.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
+            <mentioned>Austriae ... foederatus est</mentioned>
+            <p>Ungeachtet der Berufung auf uraltes Herkommen deutet diese Anspielung gewiss vor
+                  allem auf die aktuelle Situation St. Gallens, vgl. <ref type="letter" target="letter:15">15</ref>
+                  <ref target="letter:15#seg2">2</ref>. Fürstabt Bürgisser hatte am 23. Juli 1702 einen Schutzvertrag mit dem
                   Kaiser geschlossen, da er sich in seinen Streitigkeiten mit den protestantischen
                   Nachbarn der Unterstützung der katholischen Schweizer Orte nicht sicher sein
-                  konnte: <rs type="bibl" key="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs>
-                  152; <rs type="bibl" key="bibl:19918">Thürer, St. Galler Geschichte</rs> 1
+                  konnte: <rs type="bibl" ref="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs>
+                  152; <rs type="bibl" ref="bibl:19918">Thürer, St. Galler Geschichte</rs> 1
                   508f.</p>
-            </note>
-            <note xml:id="d4618e3328">
-               <ref type="context">6</ref>
-               <label>nundinae Lugdunenses</label>
-               <p>Von den jährlich vier Messen muss hier die im Februar gehaltene Königsmesse
-                  gemeint sein; vgl. <rs type="bibl" key="bibl:36578">Lüthy, Tätigkeit</rs> 4f.,
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg6">
+            <mentioned>nundinae Lugdunenses</mentioned>
+            <p>Von den jährlich vier Messen muss hier die im Februar gehaltene Königsmesse
+                  gemeint sein; vgl. <rs type="bibl" ref="bibl:36578">Lüthy, Tätigkeit</rs> 4f.,
                   12.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>II</orig>.</note>
+         <note anchored="false">Ordnungsvermerk: <orig>207</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:17432">
+            <title type="short">Katschthaler, Briefnachlass</title>
+            <biblScope>23</biblScope>
+            <note>nennt
+                     den Brief nicht, gibt aber Teile des Inhalts wieder)</note>
+         </bibl>
+         <bibl corresp="bibl:37320">
+            <title type="short">Schönhofer, Pez</title>
+            <biblScope>18</biblScope>
+         </bibl>
+         <bibl corresp="bibl:19778">
+            <title type="short">Stockinger, Fidelis</title>
+            <biblScope>344, 347, 354, 369f</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Ex S. Gallo. 1710 die 3. Februarii.</opener>
+         <opener>Plurimum reverende religiosissime ac clarissime domine in Christo pater ac domine amice colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Accepi ultimas plurimum reverendae dominationis suae de 15. Januarii ad me datas, easque humanitate plenissimas, ad me Wiblinga translatas, ad quas cum debito respectu respondeo; maturius utique responsurus, nisi aliquot dierum a domo absentia a privatis me avulsum <anchor xml:id="n1"/>negotiis<anchor xml:id="n1e"/>, publicis destinasset. </ab>
+         <ab resp="#editor" xml:id="seg2">Proinde significo: Primo. Me coepto operi in favorem operis vestri suscepti in dies intendere, licet maiori conatu et serviendi desiderio quam effectu. Nam praeterquam pleraque archivii nostri monumenta litteraria, mihi imprimis necessaria, ad manum non sint, insuper manus meae tot aliis negotiis distentae lentius, quam animus urget, laborant. Interim cum servo evangelico id unum rogo et <anchor xml:id="n2"/>procidens me excuso: domine, patientiam habe in me, et omnia reddam tibi<anchor xml:id="n2e"/>. Sed patientia, inquam, et vobis (uti mihi quoque) necessaria est. </ab>
+         <ab resp="#editor" xml:id="seg3">Secundo. <anchor xml:id="n3"/>Litteras ad reverendissimum dominum patrem priorem S. Germani a Pratis inscriptas<anchor xml:id="n3e"/>, mihique per admodum reverendum dominum patrem Wolffgangum Wetter ex Augia transmissas, <anchor xml:id="n4"/>meis rite inclusas<anchor xml:id="n4e"/> Parisios direxi: ad quas, spero, brevi responsum obtinebo. Addidi etiam meas (si quid valent) commendatitias ad vota vestra explenda ad aliquem notum amicum meum, cum quo litterarum commercia misceo; sicut et olim cum ipso piae memoriae patre Mabillonio ipso crebrius assolebam. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg4">Tertio. Quod attinet ad opera patris Mabillon (de quibus reverendissimus et amplissimus dominus abbas vester patronus mihi gratiosissimus informationem postulat), sunt ea mihi omnia probe nota, sicut et ipsa authoris persona olim cognita fuit. Illaque omnia, quotquot hactenus viderunt lucem, inter chariora pignora bibliothecae nostrae asservo. Comparavi eadem pro diversis iam monasteriis tum in Suevia, tum in Helvetia nostra, sicut et alia <anchor xml:id="n5"/>sanctorum patrum opera<anchor xml:id="n5e"/> recens cum elegantissimis annotationibus edita a patribus nostris Benedictinis e Gallia. Habeo enim optimam occasionem multaque ac magna vecturae commoda, quia muli et clitellarii <anchor xml:id="n6"/>mercatorum urbis nostrae Sanct-Gallensis continuo cum variis mercibus Lugdunum et Parisios<anchor xml:id="n6e"/> abeunt et ad nos redeunt, et ego eos a prima manu librariorum regiorum dominorum Anisson et Posuel, cum quibus correspondeo in re libraria, accipere soleo, ut adeo longe mitiori eos comparare possim pretio, quam alii librarii solent; debeo tamen pro his operibus semper anticipatam et paratam solutionem praestare. Si ergo placet, ut et vestro inclyto monasterio et imprimis reverendissimo domino abbati (cui me cum profunda reverentia inclino et venerandas manus exosculor) in aliquo grato obsequio serviam, iubete; et habebitis servum et confratrem fidelem, si tamen eum dignum aestimatis, qui servire et velit et possit. Ego libros comparandos facili et secura via Ulmam usque ad monasterium Wiblingense dimittam, si modo inde secure ad vos veniant, et in solutione mihi praestanda (de qua non dubito) mora nulla fiat. At ecce! Hic <anchor xml:id="n7"/>brevem syllabum operum<anchor xml:id="n7e"/> Mabillonii, tum aliorum praecipuorum videre poterit ex adiecto. Eligite et imperate, quod placet. Felicem me aestimabo, si ut Helvetiae et Sueviae, ita et <anchor xml:id="n8"/>Austriae (cui S. Gallus semper ab origine sua devotissimus et foederatus est<anchor xml:id="n8e"/>) servire potero. </ab>
+         <ab resp="#editor" xml:id="seg5">Caeterum ad operis suscepti gloriosa molimina altius et ad perfectum usque promovenda omnem fraternam meam (tametsi modicam) opem spondeo et fortiora divinae gratiae auxilia animitus adopto, ut, quod pro gloria sacri ordinis nostri coeptum est, ad eiusdem et imprimis divinae gloriae augmentum novis semper accessionibus increscat. Non deerit laboranti merces illa <pb n="2r"/> <sic>magnanimis</sic>. Et hic ipse stimulus et me ante paucos <add place="above">annos</add> impulit ad audendum aliquid, tametsi parvum, dum in Idea illa mea congregationis Helveto-Benedictinae levidensum aliquid evulgare de nostra Helvetia Benedictina praesumpsi. Promulsidem tantum dedi; vos maiora iam et opipara parate convivia. Felix ero, si vel micas de mensa casuras quandoque legero. Sed ne longior sim, abrumpo filum; alias iterum et meliori occasione plura. Avocant me negotia. Qui interim me in omnia sacra enixius commendans cum summo respectu maneo ex animo</ab>
+         <closer>Plurimum reverendae clarissimae dominationis suae servus in Christo et confrater syncerissimus pater Mauritius Müller bibliothecarius manu propria.</closer>
+         <closer xml:id="seg6">P.S. Si quid placitum fuerit ex specificatis operibus, ut comparentur, mature dignetur me certiorare, quia brevi incipiunt <anchor xml:id="n9"/>nundinae Lugdunenses<anchor xml:id="n9e"/>, et tunc opportunior occasio erit dicta opera advehendi. Et quo (obsecro) pretio, computatis omnibus etiam vecturae sumptibus, comparastis quatuor tomos illos Annalium? Optarem id rescire, ut inde et vobis rescribam, quo ego pretio eadem opera comparo. Scio enim multa monasteria satis caro aliunde ea coemisse. Quaeso, dignetur mihi pretium proxime notificare. Intelligo autem libros solum in albo, uti vocant, et nondum compactos.</closer>
+      </body>
    </text>
 </TEI>

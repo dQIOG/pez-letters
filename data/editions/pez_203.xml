@@ -1,39 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="203" xml:id="pez-0203">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">203 Placidus Haiden an Bernhard Pez. 1712-01-16. Niederaltaich.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Placidus Haiden an Bernhard Pez. 1712-01-16. Niederaltaich.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">203</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">46r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 46r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -48,72 +68,51 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">202</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">212</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">202</idno>
-               </ref>
+               <ptr type="prev" target="letter:202"/>
+               <ptr type="next" target="letter:212"/>
+               <ptr type="mentions" target="letter:202"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person">PH</rs> erwidert <rs type="person" role="sender">BPs</rs> Neujahrswünsche <ref type="letter" target="letter:202">202</ref> in der Hoffnung, <rs type="person" role="sender">BP</rs> möge durch seine Gelehrsamkeit beständig Ehren säen und ernten, und <rs type="person">PHs</rs> geringe Beiträge mögen ihm dabei nützlich sein.</p>
+            <p corresp="#seg2"><rs type="person">PH</rs> wünscht sich, <rs type="person" role="sender">BPs</rs> in <rs ref="index:d14380e45571">Wien</rs> zu druckende „<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“ zu sehen, und würde selbst gerne im Gegenzug seine <rs ref="index:d10854e11671">Hausgeschichte</rs> von <rs ref="index:d10854e21230">Niederaltaich</rs> fertig stellen. Seine Oberen haben ihn jedoch zum Unterricht des Kirchenrechts eingeteilt, und an eine Fortführung ist derzeit nicht zu denken.</p>
+            <p corresp="#seg3">Aus <rs ref="index:d10854e29518">Spitzels</rs> „<rs ref="index:d10854e29524">Sacra bibliothecarum arcana</rs>“ hat <rs type="person">PH</rs> eine <rs ref="index:d10854e11666">Liste von monastischen Autoren</rs> exzerpiert, deren Ordenszugehörigkeit jedoch aus dem Werk nicht hervorgeht. Er übermittelt den <rs ref="index:d10854e11666">Auszug</rs> an <rs type="person" role="sender">BP</rs>.</p>
+            <p corresp="#seg4">In einem Postskriptum teilt <rs type="person">PH</rs> mit, dass er zu <rs type="person" role="sender">BPs</rs> Ansinnen hinsichtlich <rs ref="index:d14380e12712">französischer</rs> Schriftsteller (<rs ref="index:d10854e6896">Duchesne, „Historiae Francorum scriptores“</rs>?) noch keine Antworten erhalten hat.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e25116"><rs type="person" key="">PH</rs> erwidert <rs type="person" role="sender">BPs</rs> Neujahrswünsche <ref type="letter">202</ref> in der Hoffnung, <rs type="person" role="sender">BP</rs> möge durch seine Gelehrsamkeit beständig Ehren säen und ernten, und <rs type="person" key="">PHs</rs> geringe Beiträge mögen ihm dabei nützlich sein.</seg><seg type="context" n="2" xml:id="d4618e25121"><rs type="person" key="">PH</rs> wünscht sich, <rs type="person" role="sender">BPs</rs> in <rs key="index:d14380e45571">Wien</rs> zu druckende „<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“ zu sehen, und würde selbst gerne im Gegenzug seine <rs key="index:d10854e11671">Hausgeschichte</rs> von <rs key="index:d10854e21230">Niederaltaich</rs> fertig stellen. Seine Oberen haben ihn jedoch zum Unterricht des Kirchenrechts eingeteilt, und an eine Fortführung ist derzeit nicht zu denken.</seg><seg type="context" n="3" xml:id="d4618e25123">Aus <rs key="index:d10854e29518">Spitzels</rs> „<rs key="index:d10854e29524">Sacra bibliothecarum arcana</rs>“ hat <rs type="person" key="">PH</rs> eine <rs key="index:d10854e11666">Liste von monastischen Autoren</rs> exzerpiert, deren Ordenszugehörigkeit jedoch aus dem Werk nicht hervorgeht. Er übermittelt den <rs key="index:d10854e11666">Auszug</rs> an <rs type="person" role="sender">BP</rs>.</seg><seg type="context" n="4" xml:id="d4618e25125">In einem Postskriptum teilt <rs type="person" key="">PH</rs> mit, dass er zu <rs type="person" role="sender">BPs</rs> Ansinnen hinsichtlich <rs key="index:d14380e12712">französischer</rs> Schriftsteller (<rs key="index:d10854e6896">Duchesne, „Historiae Francorum scriptores“</rs>?) noch keine Antworten erhalten hat.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez ordinis sancti patris nostri Benedicti in exempto ac florentissimo monasterio Mellicensi Austriae Inferioris capitulari ac pro tempore bibliothecario dignissimo, domino ac patrono colendissimo. Stüfft Melckh. Per Passau.</hi> Siegel. Überliefert auf der Beilage (II, 52v).</ab>
-            </div>
-            <div>
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">VI</hi>.</p>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">112</hi>. Überliefert auf der Beilage (II, 52v).</p>
-            </div>   
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, patrone colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e25152">Reciproco vota, et felicissimas Januarii Calendas, imo felicitatem ipsam non opto tantum, sed affectu etiam sincerissimo apprecor clarissimae suae dominationi: Faxit Deus! ut ineunte hoc anno, quocum et ego devinctissimum serviendi studium auspicari iterum praesumo, plurimum reverendae suae paternitatis eruditus calamus et praecellens ingenium alios atque alios serat et metat honores, mei vero utut exigui conatus per omnia probentur clarissimae dominationi vestrae, quam unice rogo, ut vel nunc tandem confidenter, quoad libet, mecum iubere incipiat. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e25154">Interim avide exspecto Germaniam Benedictinis scriptoribus illustrem opera et studio tanti fautoris et, si ita liceat, amici mei observandissimi typis Viennensibus edendam; vellemque vicissim, ut <seg type="lemma" corresp="#d4618e25168">annales nostri, quorum mentionem facere placuit, iam penes me forent, quo citius meae erga clarissimam suam dominationem observantiae qualecunque dare possem argumentum. Quod autem eorundem authorem pertinet, delata mihi quidem initio provincia a superioribus, sed mutato consilio, quod facile impares vires cernerent, iniunctum est amodo, ut iunioribus nostris ius canonicum praelegerem, quare opusculum illud de origine, progressu (per decem continua saecula</seg>) et moderno statu Altahae Inferioris paulisper seponere <pb n="1v"/> cogor, resumpturus forte, si iis, quorum interest, ita expedire denuo videbitur. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e25158">Theophili Spizelii manuscriptorum theologicorum ex quindecim nominatis bibliothecis catalogum, cui titulus: Sacra bibliothecarum illustrium arcana detecta, percurri, ubi in varias monachorum lucubrationes incidi; verum an nostrates essent an exteri, ex hoc auctore discernere non licuit; ideo, <seg type="lemma" corresp="#d4618e25175">quos sub simplici monachorum appellatione hic extraxi, clarissimae suae dominationi diiudicandos (quod genus? unde domo?) remitto</seg> ac me in ulteriores favores humanissime commendo.</seg></p>
-            <p xml:space="preserve">Plurimum reverendae religiosae ac clarissimae dominationis obligatissimus pater Placidus manu propria.</p>
-            <p xml:space="preserve">Nidernaltahae die 16. Januarii anno 1712.</p>
-            <p xml:space="preserve"><seg type="context" n="4" xml:space="preserve" xml:id="d4618e25165">P.S. Hactenus ad ultimum clarissimae suae dominationis postulatum <seg type="lemma" corresp="#d4618e25182">de scriptoribus Francicis</seg> nullas responsorias accepi, proxime tamen, ut confido, aderit baiulus.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e25168">
-               <ref type="context">2</ref>
-               <label>annales nostri ... decem continua saecula</label>
-               <p>PH publizierte viel später eine Hausgeschichte von Niederaltaich in der
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>annales nostri ... decem continua saecula</mentioned>
+            <p>PH publizierte viel später eine Hausgeschichte von Niederaltaich in der
                   Festschrift zum 1000-Jahr-Jubiläum des Klosters im Jahre 1731 („Tausend-jähriges
-                  jubel-fest des closters Niederaltaich“, Regensburg 1732); vgl. <rs type="bibl"
-                     key="bibl:37042">Stadtmüller–Pfister, Niederaltaich</rs> 237, 384, 448. Dass
+                  jubel-fest des closters Niederaltaich“, Regensburg 1732); vgl. <rs type="bibl" ref="bibl:37042">Stadtmüller–Pfister, Niederaltaich</rs> 237, 384, 448. Dass
                   die Vorarbeiten schon mehr als zwanzig Jahre vorher begonnen hatten, war bislang
                   nicht bekannt.</p>
-            </note>
-            <note xml:id="d4618e25175">
-               <ref type="context">3</ref>
-               <label>quos ... extraxi ... remitto</label>
-               <p>Dieser Auszug ist im Original überliefert in II, 52r–v; abschriftlich in StiA Melk, Karton 7 Patres 9, Abschriftencodex 161v–162v.</p>
-            </note>
-            <note xml:id="d4618e25182">
-               <ref type="context">4</ref>
-               <label>de scriptoribus Francicis</label>
-               <p>Zur Bestimmung vgl. <ref type="letter">195</ref>.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg3">
+            <mentioned>quos ... extraxi ... remitto</mentioned>
+            <p>Dieser Auszug ist im Original überliefert in II, 52r–v; abschriftlich in StiA Melk, Karton 7 Patres 9, Abschriftencodex 161v–162v.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg4">
+            <mentioned>de scriptoribus Francicis</mentioned>
+            <p>Zur Bestimmung vgl. <ref type="letter" target="letter:195">195</ref>.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <front>
+         <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez ordinis sancti patris nostri Benedicti in exempto ac florentissimo monasterio Mellicensi Austriae Inferioris capitulari ac pro tempore bibliothecario dignissimo, domino ac patrono colendissimo. Stüfft Melckh. Per Passau.<note type="annotation">Siegel. Überliefert auf der Beilage (II, 52v).</note></p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, patrone colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Reciproco vota, et felicissimas Januarii Calendas, imo felicitatem ipsam non opto tantum, sed affectu etiam sincerissimo apprecor clarissimae suae dominationi: Faxit Deus! ut ineunte hoc anno, quocum et ego devinctissimum serviendi studium auspicari iterum praesumo, plurimum reverendae suae paternitatis eruditus calamus et praecellens ingenium alios atque alios serat et metat honores, mei vero utut exigui conatus per omnia probentur clarissimae dominationi vestrae, quam unice rogo, ut vel nunc tandem confidenter, quoad libet, mecum iubere incipiat. </ab>
+         <ab resp="#editor" xml:id="seg2">Interim avide exspecto Germaniam Benedictinis scriptoribus illustrem opera et studio tanti fautoris et, si ita liceat, amici mei observandissimi typis Viennensibus edendam; vellemque vicissim, ut <anchor xml:id="n1"/>annales nostri, quorum mentionem facere placuit, iam penes me forent, quo citius meae erga clarissimam suam dominationem observantiae qualecunque dare possem argumentum. Quod autem eorundem authorem pertinet, delata mihi quidem initio provincia a superioribus, sed mutato consilio, quod facile impares vires cernerent, iniunctum est amodo, ut iunioribus nostris ius canonicum praelegerem, quare opusculum illud de origine, progressu (per decem continua saecula<anchor xml:id="n1e"/>) et moderno statu Altahae Inferioris paulisper seponere <pb n="1v"/> cogor, resumpturus forte, si iis, quorum interest, ita expedire denuo videbitur. </ab>
+         <ab resp="#editor" xml:id="seg3">Theophili Spizelii manuscriptorum theologicorum ex quindecim nominatis bibliothecis catalogum, cui titulus: Sacra bibliothecarum illustrium arcana detecta, percurri, ubi in varias monachorum lucubrationes incidi; verum an nostrates essent an exteri, ex hoc auctore discernere non licuit; ideo, <anchor xml:id="n2"/>quos sub simplici monachorum appellatione hic extraxi, clarissimae suae dominationi diiudicandos (quod genus? unde domo?) remitto<anchor xml:id="n2e"/> ac me in ulteriores favores humanissime commendo.</ab>
+         <closer>Plurimum reverendae religiosae ac clarissimae dominationis obligatissimus pater Placidus manu propria.</closer>
+         <closer>Nidernaltahae die 16. Januarii anno 1712.</closer>
+         <closer xml:id="seg4">P.S. Hactenus ad ultimum clarissimae suae dominationis postulatum <anchor xml:id="n3"/>de scriptoribus Francicis<anchor xml:id="n3e"/> nullas responsorias accepi, proxime tamen, ut confido, aderit baiulus.</closer>
+      </body>
    </text>
 </TEI>

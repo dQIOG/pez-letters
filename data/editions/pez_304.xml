@@ -1,36 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="304" xml:id="pez-0304">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">304 Bernhard Pez an Moritz Müller. 1713-04-13. Melk.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Bernhard Pez an Moritz Müller. 1713-04-13. Melk.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">304</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:19778">Stockinger, Fidelis</rs> 359, 375, 378,
-                     386, 392</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <p>StiA Einsiedeln, Cod. Rheinau 91 XIII, 414–413 (sic).</p>
+            <listWit>
+               <witness>StiA Einsiedeln, Cod. Rheinau 91 XIII, 414–413 (sic).   </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -45,97 +61,82 @@
                <persName>Moritz Müller</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">302</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">305</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">296</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">297</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">302</idno>
-               </ref>
+               <ptr type="prev" target="letter:302"/>
+               <ptr type="next" target="letter:305"/>
+               <ptr type="mentions" target="letter:296"/>
+               <ptr type="mentions" target="letter:297"/>
+               <ptr type="mentions" target="letter:302"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">BP</rs> ist erfreut, dass wenigstens einer seiner letzten beiden Briefe (<ref type="letter" target="letter:296">296</ref>, <ref type="letter" target="letter:297">297</ref>) <rs type="person" role="sender">MM</rs> erreicht hat. Er war schon um die Weiterführung der Korrespondenz besorgt gewesen, doch hat <rs type="person" role="sender">MMs</rs> Brief vom 22. März aus <rs ref="index:d14380e37324">Rheinau</rs> <ref type="letter" target="letter:302">302</ref> seine Sorgen zerstreut und ihn wissen lassen, dass <rs type="person" role="sender">MM</rs> sich nun dort aufhält. Die von <rs type="person" role="sender">BP</rs> zugeschickten Bücher („<rs ref="index:d14380e33515">De irruptione Bavarica</rs>“) waren nicht von so großer Bedeutung, dass sie für <rs type="person" role="sender">MM</rs> schwer zu entbehren sein sollten; es handelt sich um die ersten Früchte von <rs type="person" role="sender">BPs</rs> Jugend, die außer dieser Eigenschaft kaum einen Wert haben. Doch hofft BP, dass sie <rs type="person" role="sender">MM</rs> noch erhalten wird.</p>
+            <p corresp="#seg2"><rs type="person" role="sender">BP</rs> dankt für <rs type="person" role="sender">MMs</rs> Bemühungen um die Beschaffung der „<rs ref="index:d14380e25664">Acta sanctorum OSB</rs>“ von <rs ref="index:d14380e25581">Mabillon</rs>. Zwar schiene es ihm besser, diese in <rs ref="index:d14380e45571">Wien</rs> wenn auch teurer zu kaufen, als sie mit vielen Umständen für <rs type="person" role="sender">MM</rs> von irgendwoher kommen zu lassen; doch beugt er sich ganz dem Willen <rs type="person" role="sender">MMs</rs>, von dem nur Gutes kommen kann.</p>
+            <p corresp="#seg3"><rs ref="index:d14380e39962">Anselm Schramb</rs> hat <rs type="person" role="sender">MMs</rs> Brief erhalten, wie <rs type="person" role="sender">BP</rs> sicher weiß. Er ist erstaunt, dass <rs ref="index:d14380e39962">Schramb</rs> sich mit der Antwort Zeit gelassen haben sollte.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">BP</rs> bittet <rs type="person" role="sender">MM</rs>, in <rs ref="index:d14380e37324">Rheinau</rs> die Sache seines Vorhabens („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) zu vertreten. Man soll mitteilen, welche und wie viele Handschriften es dort gibt, oder wenigstens, dass es keine gibt, was <rs type="person" role="sender">BP</rs> sich jedoch kaum vorstellen kann. <rs type="person" role="sender">MM</rs> soll den Prior (<rs ref="index:d10854e17132">Joachim Letter</rs>) bitten, einen jüngeren Konventualen mit der Erstellung eines Katalogs der Werke benediktinischer Autoren in der <rs ref="index:d14380e37340">Rheinauer Bibliothek</rs> mit vollen bibliographischen Angaben zu beauftragen. Solche Kataloge sind für <rs type="person" role="sender">BPs</rs> Arbeit sehr nützlich.</p>
+            <p corresp="#seg5"><rs type="person" role="sender">BP</rs> hat das Werk „<rs ref="index:d14380e28843">De viris illustribus S. Galli</rs>“ von <rs ref="index:d14380e28835">Jodok Metzler</rs> in einer vom Verfasser revidierten Fassung bei sich. Das „<rs ref="index:d10854e20715">Elogium cardinalis Sfondrati</rs>“ hat er nicht erhalten und ist nun sicher, dass es unterwegs verloren gegangen ist.</p>
+            <p corresp="#seg6">Der <rs ref="index:d14380e45794">kaiserliche Hof</rs> ist den <rs ref="index:d14380e39290">St. Gallern</rs> wohlgesinnt. Ihren früheren Status werden sie gewiss wiedererlangen und vielleicht noch verbessern. <rs type="person" role="sender">BP</rs> betet darum, dass dies bald eintreten möge, und schließt mit Glückwünschen zum Osterfest.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e38754"><rs type="person" role="sender">BP</rs> ist erfreut, dass wenigstens einer seiner letzten beiden Briefe (<ref type="letter">296</ref>, <ref type="letter">297</ref>) <rs type="person" role="sender">MM</rs> erreicht hat. Er war schon um die Weiterführung der Korrespondenz besorgt gewesen, doch hat <rs type="person" role="sender">MMs</rs> Brief vom 22. März aus <rs key="index:d14380e37324">Rheinau</rs> <ref type="letter">302</ref> seine Sorgen zerstreut und ihn wissen lassen, dass <rs type="person" role="sender">MM</rs> sich nun dort aufhält. Die von <rs type="person" role="sender">BP</rs> zugeschickten Bücher („<rs key="index:d14380e33515">De irruptione Bavarica</rs>“) waren nicht von so großer Bedeutung, dass sie für <rs type="person" role="sender">MM</rs> schwer zu entbehren sein sollten; es handelt sich um die ersten Früchte von <rs type="person" role="sender">BPs</rs> Jugend, die außer dieser Eigenschaft kaum einen Wert haben. Doch hofft BP, dass sie <rs type="person" role="sender">MM</rs> noch erhalten wird.</seg><seg type="context" n="2" xml:id="d4618e38759"><rs type="person" role="sender">BP</rs> dankt für <rs type="person" role="sender">MMs</rs> Bemühungen um die Beschaffung der „<rs key="index:d14380e25664">Acta sanctorum OSB</rs>“ von <rs key="index:d14380e25581">Mabillon</rs>. Zwar schiene es ihm besser, diese in <rs key="index:d14380e45571">Wien</rs> wenn auch teurer zu kaufen, als sie mit vielen Umständen für <rs type="person" role="sender">MM</rs> von irgendwoher kommen zu lassen; doch beugt er sich ganz dem Willen <rs type="person" role="sender">MMs</rs>, von dem nur Gutes kommen kann.</seg><seg type="context" n="3" xml:id="d4618e38761"><rs key="index:d14380e39962">Anselm Schramb</rs> hat <rs type="person" role="sender">MMs</rs> Brief erhalten, wie <rs type="person" role="sender">BP</rs> sicher weiß. Er ist erstaunt, dass <rs key="index:d14380e39962">Schramb</rs> sich mit der Antwort Zeit gelassen haben sollte.</seg><seg type="context" n="4" xml:id="d4618e38763"><rs type="person" role="sender">BP</rs> bittet <rs type="person" role="sender">MM</rs>, in <rs key="index:d14380e37324">Rheinau</rs> die Sache seines Vorhabens („<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“) zu vertreten. Man soll mitteilen, welche und wie viele Handschriften es dort gibt, oder wenigstens, dass es keine gibt, was <rs type="person" role="sender">BP</rs> sich jedoch kaum vorstellen kann. <rs type="person" role="sender">MM</rs> soll den Prior (<rs key="index:d10854e17132">Joachim Letter</rs>) bitten, einen jüngeren Konventualen mit der Erstellung eines Katalogs der Werke benediktinischer Autoren in der <rs key="index:d14380e37340">Rheinauer Bibliothek</rs> mit vollen bibliographischen Angaben zu beauftragen. Solche Kataloge sind für <rs type="person" role="sender">BPs</rs> Arbeit sehr nützlich.</seg><seg type="context" n="5" xml:id="d4618e38765"><rs type="person" role="sender">BP</rs> hat das Werk „<rs key="index:d14380e28843">De viris illustribus S. Galli</rs>“ von <rs key="index:d14380e28835">Jodok Metzler</rs> in einer vom Verfasser revidierten Fassung bei sich. Das „<rs key="index:d10854e20715">Elogium cardinalis Sfondrati</rs>“ hat er nicht erhalten und ist nun sicher, dass es unterwegs verloren gegangen ist.</seg><seg type="context" n="6" xml:id="d4618e38767">Der <rs key="index:d14380e45794">kaiserliche Hof</rs> ist den <rs key="index:d14380e39290">St. Gallern</rs> wohlgesinnt. Ihren früheren Status werden sie gewiss wiedererlangen und vielleicht noch verbessern. <rs type="person" role="sender">BP</rs> betet darum, dass dies bald eintreten möge, und schließt mit Glückwünschen zum Osterfest.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, amice cordialissime et dulcissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e38781">Gaudeo vehementer vel unam ex iis, quas semel atque iterum ad plurimum reverendam dominationem vestram dedi, epistolis recte ad vestras manus pervenisse. Diu hac de re sollicitus eram, nec, qua ratione <seg type="lemma" corresp="#d4618e38815">afflicto litterario commercio</seg> mederer, quidquam diu occurrebat. Vestrae autem optatissimae litterae 22. Martii Rhenovio ad me<note place="foot" xml:id="d4618e38783">	Danach durchgestrichen <hi rend="italic">d</hi>.</note> perscriptae nubem omnem discussere meumque patronum et amicum, pro quo Deo sint laudes sempiternae! in tuto et salvo loco tantum non florere nunciarunt. Porro mei libelluli tanti sunt haudquaquam, ut magno admodum eorum desiderio teneamini. <seg type="lemma" corresp="#d4618e38822">Fructus primi</seg> sunt iuventutis meae, forte non ex alia causa aestimandi, quam quia primi. Sed hos quin suo tempore denique accepturi sitis, nullus dubito. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e38789">De Mabillonii tomis gratias maximas habeo, tametsi mihi praestare videatur, ut ii tametsi graviori etiam pretio Viennae emantur, quam alicunde advehantur, utpote quod sine gravi vestra molestia fieri non potest. Nihilominus cedo amicitiae et vestro in me iuri. Totus, mi Mauriti, ex te tuaque voluntate pendeo. Fac, quod vis, a te non nisi grata et dulcia proficisci possunt. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e38791">Pater Anselmus vestras litteras certissime accepit, ut mihi constat. Miror virum responsionem differre, si tamen distulit. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e38793">Interim plurimum reverendam ac clarissimam dominationem enixissime rogo, <pb n="1v"/> ut in clarissimo ac inclyto monasterio Rhenoviensi meam meique operis causam agere ne gravetur. Quaeso, nunciate, an et quae quotve manuscripta ibi conserventur? Saltem hoc scribite, me nihil inde sperare posse; quod vix in animum admitto. Persuadete, obsecro, plurimum reverendum patrem priorem, ut unum ex iunioribus dominis capitularibus constituat, qui saltem mihi <seg type="lemma" corresp="#d4618e38827">mittat accuratum catalogum</seg> authorum Benedictinorum, qui in huius monasterii bibliotheca exstant, addito titulo operis, forma, loco editionis et nomine typographi, anni etc. His catalogis incredibile meum opus augetur. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e38797"><seg type="lemma" corresp="#d4618e38834">Mezlerum vestrum, id est tres libros De viris illustribus</seg> S. Galli manuscriptos ad manum habeo. Egregium et <seg type="lemma" corresp="#d4618e38841">secundis curis revisum</seg> opus est. Eminentissimi <seg type="lemma" corresp="#d4618e38846">Sfondrati Elogium</seg> adhuc nullum accepi. Periisse in via pro certo habeo. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e38799">Aliud addere tempus non admittit nisi hoc, quod aula caesarea mire vobis faveat. Eritis certo, qui fuistis, et forte quid amplius; quod ut brevi fiat, <sic>flans</sic> [<hi rend="italic">sic</hi>]<note place="foot" xml:id="d4618e38804">	Wohl für <hi rend="italic">flens</hi>.</note> Resurgentem ex mortuis rogo, ut suam gratiam coelitus largiatur. Pascha demum tibi tuisque omnibus amicis laetissimum ex animo precor. Vale, mi dulcissime amice, et me tuum esse sine.</seg></p>
-            <p xml:space="preserve">Pater Bernardus Pez Mellicensis.</p>
-            <p xml:space="preserve">Mellicii 1713 in Coena Domini.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e38815">
-               <ref type="context">1</ref>
-               <label>afflicto litterario commercio</label>
-               <p>Der Grund für die Unterbrechung des Briefwechsels lag offenkundig in der
-                  Übersiedlung MMs von Zwiefalten nach Rheinau; vgl. <ref type="letter">259</ref>
-                  &lt;2&gt;, <ref type="letter">302</ref> &lt;1&gt;.</p>
-            </note>
-            <note xml:id="d4618e38822">
-               <ref type="context">1</ref>
-               <label>Fructus primi</label>
-               <p>Die Schrift „De irruptione Bavarica“ war BPs erstes und zum Zeitpunkt dieses
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>afflicto litterario commercio</mentioned>
+            <p>Der Grund für die Unterbrechung des Briefwechsels lag offenkundig in der
+                  Übersiedlung MMs von Zwiefalten nach Rheinau; vgl. <ref type="letter" target="letter:259">259</ref>
+                  <ref target="letter:259#seg2">2</ref>, <ref type="letter" target="letter:302">302</ref> <ref target="letter:302#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>Fructus primi</mentioned>
+            <p>Die Schrift „De irruptione Bavarica“ war BPs erstes und zum Zeitpunkt dieses
                   Briefs noch einziges gedrucktes Werk. Es kann sich folglich bei der angesprochenen
-                  Sendung, die in Wiblingen zurückgehalten wurde (<ref type="letter">302</ref>
-                  &lt;1&gt;), wohl nur um Exemplare hiervon gehandelt haben. Vgl. auch <ref
-                     type="letter">28</ref>, <ref type="letter">209</ref>, <ref type="letter"
-                     >230</ref>.</p>
-            </note>
-            <note xml:id="d4618e38827">
-               <ref type="context">4</ref>
-               <label>mittat accuratum catalogum</label>
-               <p>Dem Ansuchen BPs wurde nicht sofort entsprochen. Nach einer Urgenz BPs in <ref
-                     type="letter">325</ref> (11. Januar 1714) versicherte MM zwar in <ref
-                     type="letter">327</ref>, es werde so verfahren, wie hier beschrieben, doch
-                  scheint es dazu weiterhin nicht gekommen zu sein; vgl. <rs type="bibl"
-                     key="bibl:16898">Heer, Pez</rs> 430f., wonach erst 1717 erstes Material aus
+                  Sendung, die in Wiblingen zurückgehalten wurde (<ref type="letter" target="letter:302">302</ref>
+                  <ref target="letter:302#seg1">1</ref>), wohl nur um Exemplare hiervon gehandelt haben. Vgl. auch <ref type="letter" target="letter:28">28</ref>, <ref type="letter" target="letter:209">209</ref>, <ref type="letter" target="letter:230">230</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg4">
+            <mentioned>mittat accuratum catalogum</mentioned>
+            <p>Dem Ansuchen BPs wurde nicht sofort entsprochen. Nach einer Urgenz BPs in <ref type="letter" target="letter:325">325</ref> (11. Januar 1714) versicherte MM zwar in <ref type="letter" target="letter:327">327</ref>, es werde so verfahren, wie hier beschrieben, doch
+                  scheint es dazu weiterhin nicht gekommen zu sein; vgl. <rs type="bibl" ref="bibl:16898">Heer, Pez</rs> 430f., wonach erst 1717 erstes Material aus
                   Rheinau an BP gelangte.</p>
-            </note>
-            <note xml:id="d4618e38834">
-               <ref type="context">5</ref>
-               <label>Mezlerum ... De viris illustribus</label>
-               <p>Vgl. <ref type="letter">259</ref> &lt;6&gt;.</p>
-            </note>
-            <note xml:id="d4618e38841">
-               <ref type="context">5</ref>
-               <label>secundis curis revisum</label>
-               <p>Die Handschrift (StiB Schottenkloster, Cod. 596) enthält eigenhändige Korrekturen
-                  Metzlers; vgl. <ref type="letter">337</ref> &lt;1&gt;.</p>
-            </note>
-            <note xml:id="d4618e38846">
-               <ref type="context">5</ref>
-               <label>Sfondrati Elogium</label>
-               <p>Vgl. <ref type="letter">235</ref> &lt;2&gt;, <ref type="letter">272</ref>
-                  &lt;4&gt;.</p>
-            </note>
-            <note xml:id="d4618e38851">
-               <ref type="context">6</ref>
-               <label>Pascha ... Coena Domini</label>
-               <p>Der Ostersonntag fiel 1713 auf den 16. April; der Tag der Versendung dieses Briefs, den BP mit „Coena Domini“ (Gründonnerstag) bezeichnet, war somit der 13. April.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg5">
+            <mentioned>Mezlerum ... De viris illustribus</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:259">259</ref> <ref target="letter:259#seg6">6</ref>.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg5">
+            <mentioned>secundis curis revisum</mentioned>
+            <p>Die Handschrift (StiB Schottenkloster, Cod. 596) enthält eigenhändige Korrekturen
+                  Metzlers; vgl. <ref type="letter" target="letter:337">337</ref> <ref target="letter:337#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg5">
+            <mentioned>Sfondrati Elogium</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:235">235</ref> <ref target="letter:235#seg2">2</ref>, <ref type="letter" target="letter:272">272</ref>
+                  <ref target="letter:272#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg6">
+            <mentioned>Pascha ... Coena Domini</mentioned>
+            <p>Der Ostersonntag fiel 1713 auf den 16. April; der Tag der Versendung dieses Briefs, den BP mit „Coena Domini“ (Gründonnerstag) bezeichnet, war somit der 13. April.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:19778">
+            <title type="short">Stockinger, Fidelis</title>
+            <biblScope>359, 375, 378, 386, 392</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, amice cordialissime et dulcissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Gaudeo vehementer vel unam ex iis, quas semel atque iterum ad plurimum reverendam dominationem vestram dedi, epistolis recte ad vestras manus pervenisse. Diu hac de re sollicitus eram, nec, qua ratione <anchor xml:id="n1"/>afflicto litterario commercio<anchor xml:id="n1e"/> mederer, quidquam diu occurrebat. Vestrae autem optatissimae litterae 22. Martii Rhenovio ad me<del ana="#after">d</del> perscriptae nubem omnem discussere meumque patronum et amicum, pro quo Deo sint laudes sempiternae! in tuto et salvo loco tantum non florere nunciarunt. Porro mei libelluli tanti sunt haudquaquam, ut magno admodum eorum desiderio teneamini. <anchor xml:id="n2"/>Fructus primi<anchor xml:id="n2e"/> sunt iuventutis meae, forte non ex alia causa aestimandi, quam quia primi. Sed hos quin suo tempore denique accepturi sitis, nullus dubito. </ab>
+         <ab resp="#editor" xml:id="seg2">De Mabillonii tomis gratias maximas habeo, tametsi mihi praestare videatur, ut ii tametsi graviori etiam pretio Viennae emantur, quam alicunde advehantur, utpote quod sine gravi vestra molestia fieri non potest. Nihilominus cedo amicitiae et vestro in me iuri. Totus, mi Mauriti, ex te tuaque voluntate pendeo. Fac, quod vis, a te non nisi grata et dulcia proficisci possunt. </ab>
+         <ab resp="#editor" xml:id="seg3">Pater Anselmus vestras litteras certissime accepit, ut mihi constat. Miror virum responsionem differre, si tamen distulit. </ab>
+         <ab resp="#editor" xml:id="seg4">Interim plurimum reverendam ac clarissimam dominationem enixissime rogo, <pb n="1v"/> ut in clarissimo ac inclyto monasterio Rhenoviensi meam meique operis causam agere ne gravetur. Quaeso, nunciate, an et quae quotve manuscripta ibi conserventur? Saltem hoc scribite, me nihil inde sperare posse; quod vix in animum admitto. Persuadete, obsecro, plurimum reverendum patrem priorem, ut unum ex iunioribus dominis capitularibus constituat, qui saltem mihi <anchor xml:id="n3"/>mittat accuratum catalogum<anchor xml:id="n3e"/> authorum Benedictinorum, qui in huius monasterii bibliotheca exstant, addito titulo operis, forma, loco editionis et nomine typographi, anni etc. His catalogis incredibile meum opus augetur. </ab>
+         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n4"/>Mezlerum vestrum, id est tres libros De viris illustribus<anchor xml:id="n4e"/> S. Galli manuscriptos ad manum habeo. Egregium et <anchor xml:id="n5"/>secundis curis revisum<anchor xml:id="n5e"/> opus est. Eminentissimi <anchor xml:id="n6"/>Sfondrati Elogium<anchor xml:id="n6e"/> adhuc nullum accepi. Periisse in via pro certo habeo. </ab>
+         <ab resp="#editor" xml:id="seg6">Aliud addere tempus non admittit nisi hoc, quod aula caesarea mire vobis faveat. Eritis certo, qui fuistis, et forte quid amplius; quod ut brevi fiat, <sic>flans</sic> <note type="annotation" xml:id="d4618e38804">Wohl für <orig>flens</orig>.</note> Resurgentem ex mortuis rogo, ut suam gratiam coelitus largiatur. Pascha demum tibi tuisque omnibus amicis laetissimum ex animo precor. Vale, mi dulcissime amice, et me tuum esse sine.</ab>
+         <closer>Pater Bernardus Pez Mellicensis.</closer>
+         <closer>Mellicii 1713 in Coena Domini.</closer>
+      </body>
    </text>
 </TEI>

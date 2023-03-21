@@ -1,46 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="457" xml:id="pez-0457">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">457 Felix Egger an Bernhard Pez. 1715-10-28. Klingenzell.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Felix Egger an Bernhard Pez. 1715-10-28. Klingenzell.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">457</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 20f</bibl>
-                  <bibl><rs type="bibl" key="bibl:19776">Stockinger, Felix mansurus</rs> 188</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Auf 1r am oberen Blattrand das Monogramm <orig>J. M. J</orig>.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">30r–31v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 30r–31v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -55,119 +72,98 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">415</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">380</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">414</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">415</idno>
-               </ref>
+               <ptr type="prev" target="letter:415"/>
+               <ptr type="mentions" target="letter:380"/>
+               <ptr type="mentions" target="letter:414"/>
+               <ptr type="mentions" target="letter:415"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">FE</rs> hat <rs type="person" role="sender">BPs</rs> Brief vom 11. Juli <ref type="letter" target="letter:415">415</ref> ebenso erhalten wie jenen aus dem Vorjahr <ref type="letter" target="letter:380">380</ref>; auf den früheren hat er bereits zu Anfang des gegenwärtigen Jahres in einem Brief geantwortet <ref type="letter" target="letter:414">414</ref>, den er einem Schreiben an <rs ref="index:d14380e39962">Anselm Schramb</rs> beigelegt hat. Auf den späteren hat er lange geschwiegen, weil er nichts zu berichten hatte.</p>
+            <p corresp="#seg2"><rs type="person" role="sender">FE</rs> sendet nun ein Exemplar seines „<rs ref="index:d14380e10864">Prodromus Ideae ordinis hierarchico-Benedictini</rs>“ (tabulae chronologicae) und bittet <rs type="person" role="sender">BP</rs>, der maßgeblich an der Entstehung der Arbeit beteiligt war, um Korrekturen für eine etwaige Neuausgabe in Buchform. <rs type="person" role="sender">FE</rs> ersucht <rs type="person" role="sender">BP</rs> auch, zusammen mit <rs ref="index:d14380e21840">Korbinian Khamm</rs> in (<rs ref="index:d14380e3303">St. Ulrich und Afra</rs> zu) <rs ref="index:d14380e3233">Augsburg</rs>, die Verbreitung des Werks zu betreiben. Der Preis beträgt normalerweise zwei Gulden, die Auflage liegt bei 500 Stück. Ebenfalls als Geschenk sendet <rs type="person" role="sender">FE</rs> den ersten Teil der „<rs ref="index:d10854e7334">Idea ordinis hierarchico-Benedictini</rs>“ (libellus), für den er sonst 30 Kreuzer verlangt. Ein zweites Exemplar soll <rs type="person" role="sender">BP</rs> auf indirektem Wege an <rs ref="index:d14380e11474">Augustin Erath</rs> weiterleiten.</p>
+            <p corresp="#seg3"><rs type="person" role="sender">FE</rs> lobt <rs type="person" role="sender">BPs</rs> Verteidigung des <rs ref="index:d14380e4919">Benediktinerordens</rs> in seinen „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“, die <rs type="person" role="sender">FE</rs> von einem Freund erhalten hat. Mit seinem Band bezweckt er im Rahmen seiner Möglichkeiten dasselbe. Auch hat er bereits von <rs ref="index:d14380e21840">Khamm</rs> dessen Erwiderung gegen <rs ref="index:d14380e11474">Erath</rs> („<rs ref="index:d10854e14750">Prodromus partis tertiae regularis</rs>“), sein Abt <rs ref="index:d10854e32623">Placidus Weltin</rs> von <rs ref="index:d14380e39962">Schramb</rs> dessen Schrift in derselben Richtung („<rs ref="index:d14380e39987">Antilogia</rs>“) erhalten, sodass er sich fragt, wie der dreifach Widerlegte sich nun verhalten wird. <rs type="person" role="sender">FE</rs> bringt zwei Wortspiele zu dem Konflikt und kündigt weitere Teile seiner „<rs ref="index:d10854e7334">Idea</rs>“ an; der zweite Band soll den <rs ref="index:d14380e4919">benediktinischen</rs> <rs ref="index:d14380e22310">Kongregationen</rs>, der dritte den einzelnen Klöstern gewidmet sein.</p>
+            <p corresp="#seg4">Schließlich berichtet <rs type="person" role="sender">FE</rs> von seiner ungewöhnlichen Erlangung der Doktorwürde: Der <rs ref="index:d14380e25521">Luzerner</rs> Nuntius <rs ref="index:d10854e4800">Caracciolo</rs>, dem <rs type="person" role="sender">FE</rs> ein Exemplar seines „<rs ref="index:d14380e10864">Prodromus</rs>“ zugedacht hatte, wunderte sich über <rs type="person" role="sender">FEs</rs> Titel eines Lizentiaten, den dieser in <rs ref="index:d14380e39054">Salzburg</rs> erworben hatte, und meinte, der Titel sei in <rs ref="index:d14380e19828">Italien</rs> unbekannt. Deshalb ernannte ihn <rs ref="index:d10854e4800">Caracciolo</rs> kraft der ihm verliehenen Vollmacht auf der Stelle zum Doktor und ließ darüber von seinem <rs ref="index:d10854e4808">Kanzler</rs> eine Bestätigung ausstellen, die dann Abt <rs ref="index:d10854e32623">Weltin</rs> vorgelegt wurde.</p>
+            <p corresp="#seg5">In einem Postskriptum äußert <rs type="person" role="sender">FE</rs> Skepsis gegenüber <rs type="person" role="sender">BPs</rs> Absicht, den <rs ref="index:d14380e5312">Hl. Bernhard</rs> nicht den <rs ref="index:d14380e4919">Benediktinern</rs> zuzurechnen. Auf diese Weise würden auch etwa die Heiligen <rs ref="index:d10854e14043">Johannes Gualbertus</rs> und <rs ref="index:d10854e26360">Romuald von Camaldoli</rs> dem Orden verlorengehen, die <rs ref="index:d14380e25581">Mabillon</rs> in den „<rs ref="index:d14380e25664">Acta sanctorum OSB</rs>“ und den „<rs ref="index:d14380e25705">Annales OSB</rs>“ verzeichnet, zumal sie anfangs die Profess als <rs ref="index:d14380e4919">Benediktiner</rs> abgelegt hatten. Wer einmal das <rs ref="index:d14380e4919">Benediktinergewand</rs> getragen hat, ist nach Meinung <rs type="person" role="sender">FEs</rs> als <rs ref="index:d14380e4919">Benediktiner</rs> zu behandeln.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e57868"><rs type="person" role="sender">FE</rs> hat <rs type="person" role="sender">BPs</rs> Brief vom 11. Juli <ref type="letter">415</ref> ebenso erhalten wie jenen aus dem Vorjahr <ref type="letter">380</ref>; auf den früheren hat er bereits zu Anfang des gegenwärtigen Jahres in einem Brief geantwortet <ref type="letter">414</ref>, den er einem Schreiben an <rs key="index:d14380e39962">Anselm Schramb</rs> beigelegt hat. Auf den späteren hat er lange geschwiegen, weil er nichts zu berichten hatte.</seg><seg type="context" n="2" xml:id="d4618e57879"><rs type="person" role="sender">FE</rs> sendet nun ein Exemplar seines „<rs key="index:d14380e10864">Prodromus Ideae ordinis hierarchico-Benedictini</rs>“ (tabulae chronologicae) und bittet <rs type="person" role="sender">BP</rs>, der maßgeblich an der Entstehung der Arbeit beteiligt war, um Korrekturen für eine etwaige Neuausgabe in Buchform. <rs type="person" role="sender">FE</rs> ersucht <rs type="person" role="sender">BP</rs> auch, zusammen mit <rs key="index:d14380e21840">Korbinian Khamm</rs> in (<rs key="index:d14380e3303">St. Ulrich und Afra</rs> zu) <rs key="index:d14380e3233">Augsburg</rs>, die Verbreitung des Werks zu betreiben. Der Preis beträgt normalerweise zwei Gulden, die Auflage liegt bei 500 Stück. Ebenfalls als Geschenk sendet <rs type="person" role="sender">FE</rs> den ersten Teil der „<rs key="index:d10854e7334">Idea ordinis hierarchico-Benedictini</rs>“ (libellus), für den er sonst 30 Kreuzer verlangt. Ein zweites Exemplar soll <rs type="person" role="sender">BP</rs> auf indirektem Wege an <rs key="index:d14380e11474">Augustin Erath</rs> weiterleiten.</seg><seg type="context" n="3" xml:id="d4618e57881"><rs type="person" role="sender">FE</rs> lobt <rs type="person" role="sender">BPs</rs> Verteidigung des <rs key="index:d14380e4919">Benediktinerordens</rs> in seinen „<rs key="index:d14380e33682">Epistolae apologeticae</rs>“, die <rs type="person" role="sender">FE</rs> von einem Freund erhalten hat. Mit seinem Band bezweckt er im Rahmen seiner Möglichkeiten dasselbe. Auch hat er bereits von <rs key="index:d14380e21840">Khamm</rs> dessen Erwiderung gegen <rs key="index:d14380e11474">Erath</rs> („<rs key="index:d10854e14750">Prodromus partis tertiae regularis</rs>“), sein Abt <rs key="index:d10854e32623">Placidus Weltin</rs> von <rs key="index:d14380e39962">Schramb</rs> dessen Schrift in derselben Richtung („<rs key="index:d14380e39987">Antilogia</rs>“) erhalten, sodass er sich fragt, wie der dreifach Widerlegte sich nun verhalten wird. <rs type="person" role="sender">FE</rs> bringt zwei Wortspiele zu dem Konflikt und kündigt weitere Teile seiner „<rs key="index:d10854e7334">Idea</rs>“ an; der zweite Band soll den <rs key="index:d14380e4919">benediktinischen</rs> <rs key="index:d14380e22310">Kongregationen</rs>, der dritte den einzelnen Klöstern gewidmet sein.</seg><seg type="context" n="4" xml:id="d4618e57883">Schließlich berichtet <rs type="person" role="sender">FE</rs> von seiner ungewöhnlichen Erlangung der Doktorwürde: Der <rs key="index:d14380e25521">Luzerner</rs> Nuntius <rs key="index:d10854e4800">Caracciolo</rs>, dem <rs type="person" role="sender">FE</rs> ein Exemplar seines „<rs key="index:d14380e10864">Prodromus</rs>“ zugedacht hatte, wunderte sich über <rs type="person" role="sender">FEs</rs> Titel eines Lizentiaten, den dieser in <rs key="index:d14380e39054">Salzburg</rs> erworben hatte, und meinte, der Titel sei in <rs key="index:d14380e19828">Italien</rs> unbekannt. Deshalb ernannte ihn <rs key="index:d10854e4800">Caracciolo</rs> kraft der ihm verliehenen Vollmacht auf der Stelle zum Doktor und ließ darüber von seinem <rs key="index:d10854e4808">Kanzler</rs> eine Bestätigung ausstellen, die dann Abt <rs key="index:d10854e32623">Weltin</rs> vorgelegt wurde.</seg><seg type="context" n="5" xml:id="d4618e57885">In einem Postskriptum äußert <rs type="person" role="sender">FE</rs> Skepsis gegenüber <rs type="person" role="sender">BPs</rs> Absicht, den <rs key="index:d14380e5312">Hl. Bernhard</rs> nicht den <rs key="index:d14380e4919">Benediktinern</rs> zuzurechnen. Auf diese Weise würden auch etwa die Heiligen <rs key="index:d10854e14043">Johannes Gualbertus</rs> und <rs key="index:d10854e26360">Romuald von Camaldoli</rs> dem Orden verlorengehen, die <rs key="index:d14380e25581">Mabillon</rs> in den „<rs key="index:d14380e25664">Acta sanctorum OSB</rs>“ und den „<rs key="index:d14380e25705">Annales OSB</rs>“ verzeichnet, zumal sie anfangs die Profess als <rs key="index:d14380e4919">Benediktiner</rs> abgelegt hatten. Wer einmal das <rs key="index:d14380e4919">Benediktinergewand</rs> getragen hat, ist nach Meinung <rs type="person" role="sender">FEs</rs> als <rs key="index:d14380e4919">Benediktiner</rs> zu behandeln.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">V</hi>.</p>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">117</hi>. Daneben durchgestrichen <hi rend="italic">117</hi> sowie eine weitere Zahl <hi rend="italic">11[...]</hi>, bei der die letzte Ziffer unleserlich ist.</p>
-            <div type="remarks">
-               <p>Auf 1r am oberen Blattrand das Monogramm <hi rend="italic">J. M. J</hi>.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, amicorum colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e57920">Ultimas tuas 11. Julii datas, uti et priores anno iam priori expeditas, rite accepi; et ad primas quidem rite me respondisse responsumque iis, quas ad initium labentis anni ad patrem Schramb dederam, inclusisse rite memini. Ad postremas vero hactenus tacui, quod nollem vacuus comparere. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e57922">Mitto proin primos laborum meorum, imo tuorum, si insigniorem spectes partem<note place="foot" xml:id="d4618e57924">	<hi rend="italic">imo ... partem</hi> über der Zeile eingefügt.</note>, fructus, <seg type="lemma" corresp="#d4618e58000">tabulas chronologicas</seg>, tuo oculo non tantum percurrendas, sed et corrigendas: ut suo tempore in modum formamque libelli fors redigendae emendatius ac fusius publicam subire lucem queant. Et quia meis ego sumptibus typo eas mandavi, monstrabis viam, quo pacto per clarissimum dominum Kham Augustanum ac te<note place="foot" xml:id="d4618e57930">	<hi rend="italic">ac te</hi> über der Zeile eingefügt</note> ad cultores rerum istarum pervenire possint. Pauca, quod doleo, et vix 500 sunt exemplaria: pro uno exigo 2 fl. Tibi vero istud exemplar dono mitto, uti et <seg type="lemma" corresp="#d4618e58007">libellum</seg>, pro quo alias 30 x. cupio, rogoque<note place="foot" xml:id="d4618e57936">	Davor durchgestrichen <hi rend="italic">rogque</hi>.</note> alterum <seg type="lemma" corresp="#d4618e58007">libellum</seg> per indirectam <seg type="lemma" corresp="#d4618e58012">domino Erath</seg> submitti. <pb n="1v"/> </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e57944">Interea benedictus Deus, cuius nutu per illustres adeo<note place="foot" xml:id="d4618e57946">	Danach durchgestrichen <hi rend="italic">ep</hi>.</note> politas et omnibus plane numeris absolutas <seg type="lemma" corresp="#d4618e58017">Epistolas tuas</seg> (quas ab <seg type="lemma" corresp="#d4618e58024">uno amicorum</seg> tenui) sanctissimi ordinis nostri honorem vindicasti. Idem ego attento per meum libellum pro modulo meo. <sic>Rufationem</sic> [<hi rend="italic">sic</hi>]<note place="foot" xml:id="d4618e57955">	Wohl für <hi rend="italic">Refutationem</hi>.</note> suam clarissimus <seg type="lemma" corresp="#d4618e58029">pater Kam</seg> ipse mihi submisit; et reverendissimus dominus abbas meus similem accepit a clarissimo domino Schrambio vestro. Uterque sua sparta solidissime est functus. Lubens percipiam, quam se in partem adversarius versurus sit ad triplicem eiusmodi Commentarii sui refutationem: credo, quod dominus Erath</seg></p>
-         </div>
-         <div type="edition">
-            <p xml:space="preserve">Sed et ipse mihi forsan occinet:</p>
-         </div>
-         <div type="edition">
-            <p xml:space="preserve">Verum de hoc iudicent alii; ego pro tenuitate virium mearum id praestiti, quod bonis saltem probatur. Libellum hunc meum sequentur proxime alii, praelo iam maturi; quos sequetur tractatus de congregationibus nostri ordinis, alius denique de monasteriis in particulari. <pb n="2r"/> <seg type="context" n="4" xml:space="preserve" xml:id="d4618e57973">Inter haec miraberis forte, amice, quod in fronte meorum operum titulum doctoris praefigam, qui in universitate Salisburgensi gradum solummodo licentiatus accepi. Dulce mysterium pauculis explico. Postquam illustrissimo domino nuntio Lucernensi, in his nuper partibus versanti, unum exemplar mearum tabularum obtuli, is, opere plurimum commendato ac inspecto titulo, sciscitatus ex me est, quid significet iste titulus licentiatus? Quo a me explicato respondit eiusmodi titulum in Italia penitus esse ignotum; <sic>urpari</sic> [<hi rend="italic">sic</hi>]<note place="foot" xml:id="d4618e57978">	Wohl für <hi rend="italic">usurpari</hi>.</note> proin a me debere titulum doctoris, qui utrique gentium esset notus. Me reponente, quod id mihi non liceat, eo quod caream gradu doctoratus, subiecit ille potestatem sibi esse conferendi hunc gradum; me rursus reponente tantam a me gratiam nec sperari posse nec rogari, Quid multis? exclamat: Ego te creo in doctorem sacrae theologiae ex potestate mihi a summo pontifice tradita: in nomine Patris et Filii et Spiritus Sancti, amen<note place="foot" xml:id="d4618e57984">	Danach Ausriss, Textverlust im Ausmaß von ca. 2–3 Wörtern möglich.</note>. <pb n="2v"/> Domino <seg type="lemma" corresp="#d4618e58044">cancellario</seg> suo mandavit, ut super hunc actum authenticum aliquod attestatum expediat, quo reverendissimo domino abbati meo exhibito ac rite examinato, mihi is gratulatus simul indulsit, ut titulum deinceps doctoris meis lucubrationibus praefigerem. Atque hic primus est fructus laborum ac tabellarum mearum. Vale ter chare et me, ut hactenus, in sinu tuo constanter fove.</seg></p>
-            <p xml:space="preserve">Tuus ille, qui semper ad omnia obsequia promptissimus, Felix.</p>
-            <p xml:space="preserve">Klingenzellae infra Constantiam 28. Octobris 1715.</p>
-            <p xml:space="preserve"><seg type="context" n="5" xml:space="preserve" xml:id="d4618e57994">P.S. Quod sanctum Bernardum nostris accensere nolis, capere semper minus possum, alias et sanctus Gualbertus et Romualdus aliique plures ex Actibus et Annalibus nostris submovendi forent<note place="foot" xml:id="d4618e57996">	Über der Zeile eingefügt.</note>, quos tamen <seg type="lemma" corresp="#d4618e58051">Mabillonius, quia ab initio in ordine nostro professi fuerunt, illis merito inseruit</seg>, etsi singularem postea congregationem instituerint: sufficit enim, quod aliquis vel uno momento in nostro habitu et regula institutus ac professus fuerit.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e58000">
-               <ref type="context">2</ref>
-               <label>tabulas chronologicas</label>
-               <p>FEs „Prodromus“ besteht aus 18 Bögen Tafeln zur Geschichte des Benediktinerordens.
-                  Zur angesprochenen Mitarbeit BPs vgl. <ref type="letter">281</ref> &lt;3&gt;.</p>
-            </note>
-            <note xml:id="d4618e58007">
-               <ref type="context">2</ref>
-               <label>libellum</label>
-               <p>Angesichts des geringen Preises und der Ankündigung weiterer „libelli“ in &lt;3&gt;, die von dem zweiten und dritten Band der „Idea“ unterschieden werden, kann es sein, dass das Vorgelegte nur ein separat gedruckter erster Teil des aus sechs „Partes“ auf insgesamt 368 Seiten bestehenden ersten Bandes war.</p>
-            </note>
-            <note xml:id="d4618e58012">
-               <ref type="context">2</ref>
-               <label>domino Erath</label>
-               <p>Zu dem Konflikt um Augustin Eraths „Commentarius“ vgl. Einleitung, Abschnitt I.5;
-                  sowie <ref type="letter">266</ref> &lt;21&gt;, <ref type="letter">401</ref>, <ref
-                     type="letter">411</ref>, <ref type="letter">422</ref>, <ref type="letter"
-                     >425</ref>. FE wusste offenbar, dass BP mit Erath in Kontakt stand.</p>
-            </note>
-            <note xml:id="d4618e58017">
-               <ref type="context">3</ref>
-               <label>Epistolas tuas</label>
-               <p>Vgl. Einleitung, Abschnitt I.5.</p>
-            </note>
-            <note xml:id="d4618e58024">
-               <ref type="context">3</ref>
-               <label>uno amicorum</label>
-               <p>Seine Identität konnte nicht ermittelt werden.</p>
-            </note>
-            <note xml:id="d4618e58029">
-               <ref type="context">3</ref>
-               <label>pater Kam</label>
-               <p>Khamm hatte sich schon in der Vorrede zum ersten Band seiner „Hierarchia
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>tabulas chronologicas</mentioned>
+            <p>FEs „Prodromus“ besteht aus 18 Bögen Tafeln zur Geschichte des Benediktinerordens.
+                  Zur angesprochenen Mitarbeit BPs vgl. <ref type="letter" target="letter:281">281</ref> <ref target="letter:281#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>libellum</mentioned>
+            <p>Angesichts des geringen Preises und der Ankündigung weiterer „libelli“ in <ref target="#seg3">3</ref>, die von dem zweiten und dritten Band der „Idea“ unterschieden werden, kann es sein, dass das Vorgelegte nur ein separat gedruckter erster Teil des aus sechs „Partes“ auf insgesamt 368 Seiten bestehenden ersten Bandes war.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>domino Erath</mentioned>
+            <p>Zu dem Konflikt um Augustin Eraths „Commentarius“ vgl. Einleitung, Abschnitt I.5;
+                  sowie <ref type="letter" target="letter:266">266</ref> <ref target="letter:266#seg21">21</ref>, <ref type="letter" target="letter:401">401</ref>, <ref type="letter" target="letter:411">411</ref>, <ref type="letter" target="letter:422">422</ref>, <ref type="letter" target="letter:425">425</ref>. FE wusste offenbar, dass BP mit Erath in Kontakt stand.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>Epistolas tuas</mentioned>
+            <p>Vgl. Einleitung, Abschnitt I.5.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>uno amicorum</mentioned>
+            <p>Seine Identität konnte nicht ermittelt werden.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned>pater Kam</mentioned>
+            <p>Khamm hatte sich schon in der Vorrede zum ersten Band seiner „Hierarchia
                   Augustana“ (1709) zur Frage der Ursprünge der Regularkanoniker geäußert; deren
                   vierter Band „Prodromus partis tertiae regularis“, der 1715 zu Regensburg erstmals
-                  erschien, war zur Gänze dieser Kontroverse gewidmet. Im Gegensatz zu Erath in <ref
-                     type="letter">422</ref> scheint FE hier von diesem vierten Band zu
+                  erschien, war zur Gänze dieser Kontroverse gewidmet. Im Gegensatz zu Erath in <ref type="letter" target="letter:422">422</ref> scheint FE hier von diesem vierten Band zu
                   sprechen.</p>
-            </note>
-            <note xml:id="d4618e58034">
-               <ref type="context">3</ref>
-               <label>Felix mansurus ... erat</label>
-               <p>Anspielung auf das Sprichwort „Si tacuisses, philosophus mansisses“ (nach Boethius, De consolatione philosophiae 2,7); zugleich Wortspiel mit dem Namen „Erath“.</p>
-            </note>
-            <note xml:id="d4618e58039">
-               <ref type="context">3</ref>
-               <label>Mansisses ... domi</label>
-               <p>Anspielung auf eine Zeile aus der Dichtung „Urania victrix“ von Jakob Balde SJ (München 1663): „Mansisses melius, Caeciliane, domi“.</p>
-            </note>
-            <note xml:id="d4618e58044">
-               <ref type="context">4</ref>
-               <label>cancellario</label>
-               <p>Seine Identität konnte nicht ermittelt werden.</p>
-            </note>
-            <note xml:id="d4618e58051">
-               <ref type="context">5</ref>
-               <label>Mabillonius ... inseruit</label>
-               <p><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Mabillon, Acta
-                  sanctorum OSB<?oxy_custom_end?> 6 266–292 (Johannes Gualbertus) und 5/2 277–313
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned>Felix mansurus ... erat</mentioned>
+            <p>Anspielung auf das Sprichwort „Si tacuisses, philosophus mansisses“ (nach Boethius, De consolatione philosophiae 2,7); zugleich Wortspiel mit dem Namen „Erath“.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
+            <mentioned>Mansisses ... domi</mentioned>
+            <p>Anspielung auf eine Zeile aus der Dichtung „Urania victrix“ von Jakob Balde SJ (München 1663): „Mansisses melius, Caeciliane, domi“.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg4">
+            <mentioned>cancellario</mentioned>
+            <p>Seine Identität konnte nicht ermittelt werden.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
+            <mentioned>Mabillonius ... inseruit</mentioned>
+            <p>Mabillon, Acta
+                  sanctorum OSB 6 266–292 (Johannes Gualbertus) und 5/2 277–313
                   (Romuald von Camaldoli).</p>
-            </note>
-         </div>
-      </back>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>V</orig>.</note>
+         <note anchored="false">Ordnungsvermerk: <orig>117</orig>. Daneben durchgestrichen <orig>117</orig> sowie eine weitere Zahl <orig>11[...]</orig>, bei der die letzte Ziffer unleserlich ist.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:17432">
+            <title type="short">Katschthaler, Briefnachlass</title>
+            <biblScope>20f</biblScope>
+         </bibl>
+         <bibl corresp="bibl:19776">
+            <title type="short">Stockinger, Felix mansurus</title>
+            <biblScope>188</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, amicorum colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Ultimas tuas 11. Julii datas, uti et priores anno iam priori expeditas, rite accepi; et ad primas quidem rite me respondisse responsumque iis, quas ad initium labentis anni ad patrem Schramb dederam, inclusisse rite memini. Ad postremas vero hactenus tacui, quod nollem vacuus comparere. </ab>
+         <ab resp="#editor" xml:id="seg2">Mitto proin primos laborum meorum, <add>imo tuorum, si insigniorem spectes partem</add>, fructus, <anchor xml:id="n1"/>tabulas chronologicas<anchor xml:id="n1e"/>, tuo oculo non tantum percurrendas, sed et corrigendas: ut suo tempore in modum formamque libelli fors redigendae emendatius ac fusius publicam subire lucem queant. Et quia meis ego sumptibus typo eas mandavi, monstrabis viam, quo pacto per clarissimum dominum Kham Augustanum ac te<note place="foot" xml:id="d4618e57930"><hi rend="italic">ac te</hi> über der Zeile eingefügt</note> ad cultores rerum istarum pervenire possint. Pauca, quod doleo, et vix 500 sunt exemplaria: pro uno exigo 2 fl. Tibi vero istud exemplar dono mitto, uti et <anchor xml:id="n2"/>libellum<anchor xml:id="n2e"/>, pro quo alias 30 x. cupio, rogoque<del ana="#before">rogque</del> alterum <anchor xml:id="n3"/>libellum<anchor xml:id="n3e"/> per indirectam <anchor xml:id="n4"/>domino Erath<anchor xml:id="n4e"/> submitti. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg3">Interea benedictus Deus, cuius nutu per illustres adeo<del ana="#after">ep</del> politas et omnibus plane numeris absolutas <anchor xml:id="n5"/>Epistolas tuas<anchor xml:id="n5e"/> (quas ab <anchor xml:id="n6"/>uno amicorum<anchor xml:id="n6e"/> tenui) sanctissimi ordinis nostri honorem vindicasti. Idem ego attento per meum libellum pro modulo meo. <sic>Rufationem</sic> <note type="annotation" xml:id="d4618e57955">Wohl für <orig>Refutationem</orig>.</note> suam clarissimus <anchor xml:id="n7"/>pater Kam<anchor xml:id="n7e"/> ipse mihi submisit; et reverendissimus dominus abbas meus similem accepit a clarissimo domino Schrambio vestro. Uterque sua sparta solidissime est functus. Lubens percipiam, quam se in partem adversarius versurus sit ad triplicem eiusmodi Commentarii sui refutationem: credo, quod dominus Erath</ab><p xml:space="preserve">Sed et ipse mihi forsan occinet:</p>
+         <ab resp="#editor" xml:id="seg4">Inter haec miraberis forte, amice, quod in fronte meorum operum titulum doctoris praefigam, qui in universitate Salisburgensi gradum solummodo licentiatus accepi. Dulce mysterium pauculis explico. Postquam illustrissimo domino nuntio Lucernensi, in his nuper partibus versanti, unum exemplar mearum tabularum obtuli, is, opere plurimum commendato ac inspecto titulo, sciscitatus ex me est, quid significet iste titulus licentiatus? Quo a me explicato respondit eiusmodi titulum in Italia penitus esse ignotum; <sic>urpari</sic> <note type="annotation" xml:id="d4618e57978">Wohl für <orig>usurpari</orig>.</note> proin a me debere titulum doctoris, qui utrique gentium esset notus. Me reponente, quod id mihi non liceat, eo quod caream gradu doctoratus, subiecit ille potestatem sibi esse conferendi hunc gradum; me rursus reponente tantam a me gratiam nec sperari posse nec rogari, Quid multis? exclamat: Ego te creo in doctorem sacrae theologiae ex potestate mihi a summo pontifice tradita: in nomine Patris et Filii et Spiritus Sancti, amen<note type="annotation" xml:id="d4618e57984">Danach Ausriss, Textverlust im Ausmaß von ca. 2–3 Wörtern möglich.</note>. <pb n="2v"/> Domino <anchor xml:id="n8"/>cancellario<anchor xml:id="n8e"/> suo mandavit, ut super hunc actum authenticum aliquod attestatum expediat, quo reverendissimo domino abbati meo exhibito ac rite examinato, mihi is gratulatus simul indulsit, ut titulum deinceps doctoris meis lucubrationibus praefigerem. Atque hic primus est fructus laborum ac tabellarum mearum. Vale ter chare et me, ut hactenus, in sinu tuo constanter fove.</ab>
+         <closer>Tuus ille, qui semper ad omnia obsequia promptissimus, Felix.</closer>
+         <closer>Klingenzellae infra Constantiam 28. Octobris 1715.</closer>
+         <closer xml:id="seg5">P.S. Quod sanctum Bernardum nostris accensere nolis, capere semper minus possum, alias et sanctus Gualbertus et Romualdus aliique plures ex Actibus et Annalibus nostris submovendi <add place="above">forent</add>, quos tamen <anchor xml:id="n9"/>Mabillonius, quia ab initio in ordine nostro professi fuerunt, illis merito inseruit<anchor xml:id="n9e"/>, etsi singularem postea congregationem instituerint: sufficit enim, quod aliquis vel uno momento in nostro habitu et regula institutus ac professus fuerit.</closer>
+      </body>
    </text>
 </TEI>

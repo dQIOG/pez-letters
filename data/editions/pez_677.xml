@@ -1,38 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="677" xml:id="pez-0677">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">677 Edmond Martène an Bernhard Pez. &lt; 1716-10-17. Paris (St.-Germain-des-Prés).</title>
-            <title type="sub">Digital Edition</title>
+            <title>Edmond Martène an Bernhard Pez. &lt; 1716-10-17. Paris (St.-Germain-des-Prés).</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">677</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
+            <note type="remarks">
+               Ein Datum fehlt im Brief, auch der Ordnungsvermerk bietet keine Zeitangabe. Auf 2r oberhalb der Unterschrift von einer Hand des späteren 18. Jh. Vermerk: <orig>1718</orig>. Aufgrund der Bezüge in 679 sowie der Erwähnung des „Thesaurus novus anecdotorum“ als im Druck befindlich ist der Brief jedoch ohne Zweifel in das Jahr 1716 zu setzen. – Die Identifizierung BPs als Adressat ergibt sich aus dem gesamten Inhalt ebenso wie aus dem Zusammenhang mit 678 und mit der weiteren Korrespondenz EMs mit BP.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">559r–560v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 559r–560v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,148 +71,133 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="next">
-                  <idno type="pezEd">679</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">678</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">679</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">700</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">678</idno>
-               </ref>
+               <ptr type="next" target="letter:679"/>
+               <ptr type="mentions" target="letter:678"/>
+               <ptr type="mentionedIn" target="letter:679"/>
+               <ptr type="mentionedIn" target="letter:700"/>
+               <ptr type="sentWith" target="letter:678"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">EM</rs> leitet einen Brief <ref type="letter" target="letter:678">678</ref> weiter, den er kürzlich von dem Prior von Marmoutier bei Tours (Louis Tasche) für <rs type="person" role="sender">BP</rs> erhalten hat. Zugleich hat ihn der Prior ersucht, <rs type="person" role="sender">BP</rs> für sein Werk über die Schriftsteller des Benediktinerordens („Bibliotheca Benedictina“) Unterstützung zu gewähren. <rs type="person" role="sender">EM</rs> erklärt sich für wenig geeignet, bietet aber seine Hilfe an. Insbesondere will er, wenn <rs type="person" role="sender">BP</rs> dies wünscht, einen exakten Katalog der Autoren aus der Maurinerkongregation erstellen. In jenem, den René Massuet einst an <rs type="person" role="sender">BP</rs> übermittelt hat, finden sich nämlich etliche Auslassungen und Fehler.</p>
+            <p corresp="#seg2">Etwa hat Massuet geirrt, als er Laon, einen Bischofssitz unter dem Erzbistum Reims, als Heimat <rs type="person" role="sender">EMs</rs> nannte. Tatsächlich stammt <rs type="person" role="sender">EM</rs> aus St.-Jean-de-Losne, einer Stadt an den Ufern der Saône im Herzogtum Burgund, die zur Diözese Langres gehört. Auch sind <rs type="person" role="sender">EMs</rs> Werke in Massuets Katalog allzu ungenau bezeichnet; <rs type="person" role="sender">EM</rs> zählt sie auf: „Commentarius in Regulam sancti Benedicti“, zu Paris bei François Muguet 1690; „De antiquis monachorum ritibus“, zu Lyon durch die Brüder Jean und Jacques Anisson, Jean Posuel und Claude Rigaud 1690; „De antiquis ecclesiae ritibus“ in vier Büchern, deren das erste in zwei Bänden zu Rouen bei Guillaume Behourt 1700, das zweite und dritte in einem Band ebendort 1702, das vierte aber zu Lyon bei Jacques Anisson und Jean Posuel 1706 unter dem Titel „Tractatus de antiqua ecclesiae disciplina“ erschienen ist; „Veterum scriptorum collectio nova“, zu Rouen bei Guillaume Behourt und Antoine Maurry 1700; „La vie du venerable pere dom Claude Martin“, zu Tours bei Philibert Masson 1697; schließlich „Maximes spirituelles du venerable pere dom Claude Martin“, zu Rouen bei François Vaultier 1694.</p>
+            <p corresp="#seg3">Im Druck befinden sich außerdem die fünf Bände des „Thesaurus novus anecdotorum“, welchen <rs type="person" role="sender">EM</rs> zusammen mit Ursin Durand herausgibt. Bereit zur Veröffentlichung sind auch sein in französischer Sprache verfasster Reisebericht („Voyage litteraire“), den er demnächst in den Druck geben wird, seine Geschichte des Klosters Marmoutier („Histoire de Marmoutier“) sowie Heiligenleben für alle Tage des Jahres in derselben Sprache („Vies de saints“). Wann diese erscheinen werden, weiß <rs type="person" role="sender">EM</rs> nicht; der „Thesaurus novus anecdotorum“, der auch bisher unveröffentlichte benediktinische Autoren bietet, sollte hingegen innerhalb von fünf Monaten vorliegen.</p>
+            <p corresp="#seg4">Danach will <rs type="person" role="sender">EM</rs> nicht nur die Schriftsteller der Maurinerkongregation, sondern auch weitere französische Autoren des Benediktinerordens verzeichnen, von denen <rs type="person" role="sender">BP</rs> sonst nur mit Mühe Kenntnis erlangen könnte. Derzeit allerdings ist <rs type="person" role="sender">EM</rs> so beschäftigt, dass er kaum Atem holen kann.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e20341"><rs type="person" role="sender">EM</rs> leitet einen Brief <ref type="letter">678</ref> weiter, den er kürzlich von dem Prior von Marmoutier bei Tours (Louis Tasche) für <rs type="person" role="sender">BP</rs> erhalten hat. Zugleich hat ihn der Prior ersucht, <rs type="person" role="sender">BP</rs> für sein Werk über die Schriftsteller des Benediktinerordens („Bibliotheca Benedictina“) Unterstützung zu gewähren. <rs type="person" role="sender">EM</rs> erklärt sich für wenig geeignet, bietet aber seine Hilfe an. Insbesondere will er, wenn <rs type="person" role="sender">BP</rs> dies wünscht, einen exakten Katalog der Autoren aus der Maurinerkongregation erstellen. In jenem, den René Massuet einst an <rs type="person" role="sender">BP</rs> übermittelt hat, finden sich nämlich etliche Auslassungen und Fehler.</seg><seg type="context" n="2" xml:id="d3e20346">Etwa hat Massuet geirrt, als er Laon, einen Bischofssitz unter dem Erzbistum Reims, als Heimat <rs type="person" role="sender">EMs</rs> nannte. Tatsächlich stammt <rs type="person" role="sender">EM</rs> aus St.-Jean-de-Losne, einer Stadt an den Ufern der Saône im Herzogtum Burgund, die zur Diözese Langres gehört. Auch sind <rs type="person" role="sender">EMs</rs> Werke in Massuets Katalog allzu ungenau bezeichnet; <rs type="person" role="sender">EM</rs> zählt sie auf: „Commentarius in Regulam sancti Benedicti“, zu Paris bei François Muguet 1690; „De antiquis monachorum ritibus“, zu Lyon durch die Brüder Jean und Jacques Anisson, Jean Posuel und Claude Rigaud 1690; „De antiquis ecclesiae ritibus“ in vier Büchern, deren das erste in zwei Bänden zu Rouen bei Guillaume Behourt 1700, das zweite und dritte in einem Band ebendort 1702, das vierte aber zu Lyon bei Jacques Anisson und Jean Posuel 1706 unter dem Titel „Tractatus de antiqua ecclesiae disciplina“ erschienen ist; „Veterum scriptorum collectio nova“, zu Rouen bei Guillaume Behourt und Antoine Maurry 1700; „La vie du venerable pere dom Claude Martin“, zu Tours bei Philibert Masson 1697; schließlich „Maximes spirituelles du venerable pere dom Claude Martin“, zu Rouen bei François Vaultier 1694.</seg><seg type="context" n="3" xml:id="d3e20348">Im Druck befinden sich außerdem die fünf Bände des „Thesaurus novus anecdotorum“, welchen <rs type="person" role="sender">EM</rs> zusammen mit Ursin Durand herausgibt. Bereit zur Veröffentlichung sind auch sein in französischer Sprache verfasster Reisebericht („Voyage litteraire“), den er demnächst in den Druck geben wird, seine Geschichte des Klosters Marmoutier („Histoire de Marmoutier“) sowie Heiligenleben für alle Tage des Jahres in derselben Sprache („Vies de saints“). Wann diese erscheinen werden, weiß <rs type="person" role="sender">EM</rs> nicht; der „Thesaurus novus anecdotorum“, der auch bisher unveröffentlichte benediktinische Autoren bietet, sollte hingegen innerhalb von fünf Monaten vorliegen.</seg><seg type="context" n="4" xml:id="d3e20350">Danach will <rs type="person" role="sender">EM</rs> nicht nur die Schriftsteller der Maurinerkongregation, sondern auch weitere französische Autoren des Benediktinerordens verzeichnen, von denen <rs type="person" role="sender">BP</rs> sonst nur mit Mühe Kenntnis erlangen könnte. Derzeit allerdings ist <rs type="person" role="sender">EM</rs> so beschäftigt, dass er kaum Atem holen kann.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">I</hi>.</p>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">203</hi>.</p>
-            <div type="remarks">
-               <p>Ein Datum fehlt im Brief, auch der Ordnungsvermerk bietet keine Zeitangabe. Auf 2r oberhalb der Unterschrift von einer Hand des späteren 18. Jh. Vermerk: <hi rend="italic">1718</hi>. Aufgrund der Bezüge in 679 sowie der Erwähnung des „Thesaurus novus anecdotorum“ als im Druck befindlich ist der Brief jedoch ohne Zweifel in das Jahr 1716 zu setzen. – Die Identifizierung BPs als Adressat ergibt sich aus dem gesamten Inhalt ebenso wie aus dem Zusammenhang mit 678 und mit der weiteren Korrespondenz EMs mit BP.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Pax Christi.</p>
-            <p xml:space="preserve">Admodum reverende pater.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e20380">Hanc nuper accepi a reverendo patre <seg type="lemma" corresp="#d3e20445">priore Maioris Monasterii prope Turones</seg> epistolam vestrae dominationi transmittendam; qui eodem tempore me<seg type="lemma" corresp="#d3e20451"> rogavit, ut vobis in magno illo opere, quod de scriptoribus sacratissimi ordinis nostri scribendum suscepistis, suppetias ferrem</seg>. Utinam is essem, qui tanto operi conficiendo aliquid conferre possem! Sed qualiscumque est opella mea, hanc vobis sponte offero; quam si gratam vobis fore intellexero, curabo, ut exactum scriptorum nostrae congregationis catalogum habeatis. Nam in eo, quem vobis olim<seg type="lemma" corresp="#d3e20455"> transmisit noster Renatus Massuet</seg>, plures desiderantur erroresque nonnulli irrepserunt. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e20382">Erravit<note place="foot" xml:id="d3e20384">	Davor durchgestrichen <hi rend="italic">Nam</hi>.</note> enim, dum mihi patriam attribuit Laudunum, civitatem episcopalem sub metropoli Remensi, cum tamen natus sim in oppido Laudona, Latonam vocabant veteres, ad Ararim fluvium in finibus ducatus Burgundiae, sub diocesi Lingonensi. Sed neque satis clare enuntiavit opera a me edita, quae hoc modo debent recenseri: Commentarius in Regulam sancti patris Benedicti litteralis, moralis et historicus. Parisiis apud Franciscum <seg type="lemma" corresp="#d3e20459">Muguet</seg> 1690 in quarto. <pb n="1v"/> De antiquis monachorum ritibus libri quinque. Lugduni sumtibus<seg type="lemma" corresp="#d3e20465"> Anisson, Possuel et Rigaud</seg> 1690 in quarto.<seg type="lemma" corresp="#d3e20469"> De antiquis ecclesiae ritibus</seg> libri quatuor, quorum primus prodiit Rothomagi apud Guillelmum <seg type="lemma" corresp="#d3e20473">Behour</seg> anno 1700, duobus voluminibus in quarto; secundus et tertius ibidem 1702, uno volumine in quarto; quartus vero Lugduni excusus anno 1706 sumtibus Anisson et Possuel sub hoc titulo: Tractatus de antiqua ecclesiae disciplina in divinis celebrandis officiis, tomus unus in quarto. Veterum scriptorum et monumentorum moralium, historicorum, dogmaticorum ad res ecclesiasticas, monasticas et politicas illustrandas collectio nova. Rotomagi apud Guillelmum <seg type="lemma" corresp="#d3e20473">Behour</seg> et Antonium<seg type="lemma" corresp="#d3e20477"> Maury</seg> 1700 in quarto.<seg type="lemma" corresp="#d3e20481"> La vie du venerable pere dom Claude Martin religieux benedictin de la congregation de saint Maur, decedé en odeur de saintete en l’abbaye de Marmoutier. A Tours ches Philibert Masson 1697 in octavo. Maximes spirituelles du venerable pere dom Claude Martin</seg> religieux benedictin de la congregation de saint Maur tirées de ses ouvrages et confirmees par les sentimens des saints peres. A Rouen chez Francois<seg type="lemma" corresp="#d3e20489"> Vaultier</seg> 1694. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e20392">Praeterea habeo sub praelo quinque anecdotorum tomos in folio sub hoc titulo: Thesaurus novus anecdotorum quinque in tomos distributus. Prodit nunc primum studio et opera domni Edmundi Martene et domni Ursini Durand presbyterorum et monachorum<note place="foot" xml:id="d3e20394">	Danach durchgestrichen <hi rend="italic">nostrae</hi>.</note> congregationis sancti Mauri. Habeo insuper editioni paratum <seg type="lemma" corresp="#d3e20494">Iter litterarium</seg><note place="foot" xml:id="d3e20400">	Danach durchgestrichen <hi rend="italic">in</hi>.</note> Gallico idiomate conscriptum, quod propediem <pb n="2r"/> praelo sum commissurus,<seg type="lemma" corresp="#d3e20500"> Historiam Maioris Monasterii</seg> prope Turones etiam Gallice conscriptam in folio editioni paratam, ac demum<seg type="lemma" corresp="#d3e20504"> Vitas sanctorum</seg> Gallico idiomate conscriptas pro singulis anni diebus in folio. Haec vero quando in lucem prodibunt, prorsus nescio. At noster Thesaurus anecdotorum, in quo aliquos nostri ordinis auctores necdum editos comperies, Deo dante publicam lucem videbit infra quinque menses. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e20408">Hunc<note place="foot" xml:id="d3e20410">	Davor durchgestrichen <hi rend="italic">Hanc</hi>.</note> ubi absolvero, colligam non solum<note place="foot" xml:id="d3e20416">	Danach durchgestrichen <hi rend="italic">ord</hi>.</note> nostrae congregationis scriptores, sed etiam alios ordinis nostri<note place="foot" xml:id="d3e20422">	<hi rend="italic">ordinis nostri</hi> über der Zeile eingefügt.</note> auctores Gallicos, quorum notitiam aegre habere posses<note place="foot" xml:id="d3e20428">	Korrigiert aus <hi rend="italic">possem</hi>.</note>. Nam nunc<note place="foot" xml:id="d3e20434">	Danach durchgestrichen <hi rend="italic">vix</hi>.</note> adeo sum occupatus, vix ut respirare liceat. Vale, optime pater, et me tuis tuorumque fratrum orationibus commendatum habe.</seg></p>
-            <p xml:space="preserve">Addictissimus tibi frater Edmundus Martene monachus Benedictinus presbyter.</p>
-            <p xml:space="preserve">Lutetiae Parisiorum ex monasterio S. Germani a Pratis.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e20445">
-               <ref type="context">1</ref>
-               <label>priore ... Turones</label><p>EM war mit Louis Tasche persönlich bekannt, da er
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>priore ... Turones</mentioned>
+            <p>EM war mit Louis Tasche persönlich bekannt, da er
                   in der ersten Hälfte der 1690er Jahre sowie vor dem Beginn seiner Reisetätigkeit
                   1708 in Marmoutier gelebt hatte, als Tasche dort erst Novizenmeister und später
-                  Prior war: <rs type="bibl" key="bibl:15594">Charvin, Contribution</rs> 47 280; <rs
-                     type="bibl" key="bibl:15602">Chaussy, Bénédictins</rs> 2 34; <rs type="bibl"
-                     key="bibl:17040">Heurtebize, Introduction</rs> VIII, XI, XIX; <rs type="bibl"
-                     key="bibl:17882">Leclercq, Martène</rs> col. 2306.</p></note>
-            <note xml:id="d3e20451">
-               <ref type="context">1</ref>
-               <label> rogavit ... ferrem</label><p> EM übernimmt die Formulierung Tasches in <ref
-                     type="letter">678</ref> &lt;2&gt;; sichtlich hatte er diesen Brief gelesen. Ob
+                  Prior war: <rs type="bibl" ref="bibl:15594">Charvin, Contribution</rs> 47 280; <rs type="bibl" ref="bibl:15602">Chaussy, Bénédictins</rs> 2 34; <rs type="bibl" ref="bibl:17040">Heurtebize, Introduction</rs> VIII, XI, XIX; <rs type="bibl" ref="bibl:17882">Leclercq, Martène</rs> col. 2306.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> rogavit ... ferrem</mentioned>
+            <p> EM übernimmt die Formulierung Tasches in <ref type="letter" target="letter:678">678</ref> <ref target="letter:678#seg2">2</ref>; sichtlich hatte er diesen Brief gelesen. Ob
                   von einem Begleitschreiben Tasches an EM auszugehen ist, scheint daher
                   zweifelhaft; eine Ansetzung in der Tabelle „Briefe zwischen Dritten“
-                  unterbleibt.</p></note>
-            <note xml:id="d3e20455">
-               <ref type="context">1</ref>
-               <label> transmisit ... Massuet</label><p>Vgl. <ref type="letter">384</ref> &lt;7&gt;;
+                  unterbleibt.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned> transmisit ... Massuet</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:384">384</ref> <ref target="letter:384#seg7">7</ref>;
                   sowie Einleitung, Abschnitt I.4. Von diesen Materialien sind in Melk nur
                   Bruchstücke erhalten; unklar bleibt, wann sie übermittelt wurden. Da EM offenbar
                   den Inhalt genau vor Augen hatte, muss eine weitere Überlieferung in
-                  St.-Germain-des-Prés verblieben sein.</p></note>
-            <note xml:id="d3e20459">
-               <ref type="context">2</ref>
-               <label>Muguet</label><p>
-                  <rs type="bibl" key="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs>
-               415.</p></note>
-            <note xml:id="d3e20465">
-               <ref type="context">2</ref>
-               <label> Anisson ... Rigaud</label><p>Vgl. <ref type="letter">32</ref> &lt;4&gt;, <ref
-                     type="letter">71</ref> &lt;9&gt;, <ref type="letter">204</ref> &lt;2&gt;; sowie
-                     <rs type="bibl" key="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs> 29,
-                  455, 474.</p></note>
-            <note xml:id="d3e20469">
-               <ref type="context">2</ref>
-               <label> De antiquis ecclesiae ritibus</label><p> Zur Entstehung dieser Arbeit EMs
-                  vgl. <rs type="bibl" key="bibl:18156">Martimort, Documentation</rs> 21–25.
-               </p></note>
-            <note xml:id="d3e20473">
-               <ref type="context">2</ref>
-               <label>Behour</label><p>
-                  <rs type="bibl" key="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs> 58; zu den
-                  von ihm verlegten Werken EMs vgl. <rs type="bibl" key="bibl:18290">Mellot, Édition
-                     rouennaise</rs> 490, 554.</p></note>
-            <note xml:id="d3e20477">
-               <ref type="context">2</ref>
-               <label> Maury</label><p>
-                  <rs type="bibl" key="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs> 391; vgl.
-                     <rs type="bibl" key="bibl:18292">Mellot, Relations ambiguës</rs>
-               220f.</p></note>
-            <note xml:id="d3e20481">
-               <ref type="context">2</ref>
-               <label> La vie ... Martin</label><p>Die von den Superioren der Maurinerkongregation
+                  St.-Germain-des-Prés verblieben sein.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>Muguet</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs>
+               415.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned> Anisson ... Rigaud</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:32">32</ref> <ref target="letter:32#seg4">4</ref>, <ref type="letter" target="letter:71">71</ref> <ref target="letter:71#seg9">9</ref>, <ref type="letter" target="letter:204">204</ref> <ref target="letter:204#seg2">2</ref>; sowie
+                     <rs type="bibl" ref="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs> 29,
+                  455, 474.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
+            <mentioned> De antiquis ecclesiae ritibus</mentioned>
+            <p> Zur Entstehung dieser Arbeit EMs
+                  vgl. <rs type="bibl" ref="bibl:18156">Martimort, Documentation</rs> 21–25.
+               </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg2">
+            <mentioned>Behour</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs> 58; zu den
+                  von ihm verlegten Werken EMs vgl. <rs type="bibl" ref="bibl:18290">Mellot, Édition
+                     rouennaise</rs> 490, 554.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg2">
+            <mentioned> Maury</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs> 391; vgl.
+                     <rs type="bibl" ref="bibl:18292">Mellot, Relations ambiguës</rs>
+               220f.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg2">
+            <mentioned> La vie ... Martin</mentioned>
+            <p>Die von den Superioren der Maurinerkongregation
                   nicht genehmigte Veröffentlichung der Lebensbeschreibung Martins, die EM zwar
                   nicht selbst veranlasst, aber durch Weitergabe des Manuskripts ermöglicht hatte,
                   brachte ihm als Disziplinarmaßnahme die Versetzung nach Évron, gefolgt von einem
-                  längeren Aufenthalt in Rouen: <rs type="bibl" key="bibl:15752">Daoust,
-                     Martène</rs> 167–171, 183–197; <rs type="bibl" key="bibl:17040">Heurtebize,
-                     Introduction</rs> VIII–X; <rs type="bibl" key="bibl:17882">Leclercq,
-                     Martène</rs> col. 2301–2304. </p></note>
-            <note xml:id="d3e20485">
-               <ref type="context">2</ref>
-               <label>Masson</label><p>
-                  <rs type="bibl" key="bibl:14934">Ardouin-Weiss, Imprimeurs</rs> 33; vgl.<rs
-                     type="bibl" key="bibl:16184">Feyel, Gazette</rs> 392; <rs type="bibl"
-                     key="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs> 390.</p></note>
-            <note xml:id="d3e20489">
-               <ref type="context">2</ref>
-               <label> Vaultier</label><p> Es handelt sich um François Vaultier III.; der
-                  gleichnamige Vater desselben war kurz vorher verstorben: <rs type="bibl"
-                     key="bibl:18290">Mellot, Édition rouennaise</rs> 376; vgl. <rs type="bibl"
-                     key="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs> 548; <rs type="bibl"
-                     key="bibl:18974">Quéniart, Imprimerie</rs> 25, 31, 209f., 234.</p></note>
-            <note xml:id="d3e20494">
-               <ref type="context">3</ref>
-               <label>Iter litterarium</label><p> Der erste Band des „Voyage litteraire“ über EMs und Durands Reisen durch Frankreich zu Recherchen für die Neubearbeitung der „Gallia Christiana“ erschien 1717; ein weiterer über die deutsche Reise von 1718 folgte im Jahr 1724.</p></note>
-            <note xml:id="d3e20500">
-               <ref type="context">3</ref>
-               <label> Historiam Maioris Monasterii</label><p> Diese Klostergeschichte, die EM
+                  längeren Aufenthalt in Rouen: <rs type="bibl" ref="bibl:15752">Daoust,
+                     Martène</rs> 167–171, 183–197; <rs type="bibl" ref="bibl:17040">Heurtebize,
+                     Introduction</rs> VIII–X; <rs type="bibl" ref="bibl:17882">Leclercq,
+                     Martène</rs> col. 2301–2304. </p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg2">
+            <mentioned>Masson</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:14934">Ardouin-Weiss, Imprimeurs</rs> 33; vgl.<rs type="bibl" ref="bibl:16184">Feyel, Gazette</rs> 392; <rs type="bibl" ref="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs> 390.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg2">
+            <mentioned> Vaultier</mentioned>
+            <p> Es handelt sich um François Vaultier III.; der
+                  gleichnamige Vater desselben war kurz vorher verstorben: <rs type="bibl" ref="bibl:18290">Mellot, Édition rouennaise</rs> 376; vgl. <rs type="bibl" ref="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs> 548; <rs type="bibl" ref="bibl:18974">Quéniart, Imprimerie</rs> 25, 31, 209f., 234.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg3">
+            <mentioned>Iter litterarium</mentioned>
+            <p> Der erste Band des „Voyage litteraire“ über EMs und Durands Reisen durch Frankreich zu Recherchen für die Neubearbeitung der „Gallia Christiana“ erschien 1717; ein weiterer über die deutsche Reise von 1718 folgte im Jahr 1724.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg3">
+            <mentioned> Historiam Maioris Monasterii</mentioned>
+            <p> Diese Klostergeschichte, die EM
                   während seiner Aufenthalte in Marmoutier verfasst hatte, blieb zu seinen Lebzeiten
-                  ungedruckt und wurde erst im späten 19. Jh. veröffentlicht: vgl. <rs type="bibl"
-                     key="bibl:15620">Chevalier, Préface</rs> X–XII; <rs type="bibl"
-                     key="bibl:15752">Daoust, Martène</rs> 223–240; <rs type="bibl" key="bibl:17882"
-                     >Leclercq, Martène</rs> col. 2300, 2306. Das Autograph ist erhalten: BN, Ms.
-                  lat. 12876–12880.</p></note>
-            <note xml:id="d3e20504">
-               <ref type="context">3</ref>
-               <label> Vitas sanctorum</label><p> Das Werk wurde nie gedruckt. Das Autograph ist
-                  erhalten: BN, FF 17234–17237; vgl. <rs type="bibl" key="bibl:15752">Daoust,
-                     Martène</rs> 217–223; <rs type="bibl" key="bibl:17040">Heurtebize,
-                     Introduction</rs> XIX; <rs type="bibl" key="bibl:20356">Wilhelm et al., Nouveau
-                     supplément 2</rs> 50.</p></note>
-         </div>
-      </back>
+                  ungedruckt und wurde erst im späten 19. Jh. veröffentlicht: vgl. <rs type="bibl" ref="bibl:15620">Chevalier, Préface</rs> X–XII; <rs type="bibl" ref="bibl:15752">Daoust, Martène</rs> 223–240; <rs type="bibl" ref="bibl:17882">Leclercq, Martène</rs> col. 2300, 2306. Das Autograph ist erhalten: BN, Ms.
+                  lat. 12876–12880.</p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg3">
+            <mentioned> Vitas sanctorum</mentioned>
+            <p> Das Werk wurde nie gedruckt. Das Autograph ist
+                  erhalten: BN, FF 17234–17237; vgl. <rs type="bibl" ref="bibl:15752">Daoust,
+                     Martène</rs> 217–223; <rs type="bibl" ref="bibl:17040">Heurtebize,
+                     Introduction</rs> XIX; <rs type="bibl" ref="bibl:20356">Wilhelm et al., Nouveau
+                     supplément 2</rs> 50.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>I</orig>.</note>
+         <note anchored="false">Ordnungsvermerk: <orig>203</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Pax Christi.</opener>
+         <opener>Admodum reverende pater.</opener>
+         <ab resp="#editor" xml:id="seg1">Hanc nuper accepi a reverendo patre <anchor xml:id="n1"/>priore Maioris Monasterii prope Turones<anchor xml:id="n1e"/> epistolam vestrae dominationi transmittendam; qui eodem tempore me<anchor xml:id="n2"/> rogavit, ut vobis in magno illo opere, quod de scriptoribus sacratissimi ordinis nostri scribendum suscepistis, suppetias ferrem<anchor xml:id="n2e"/>. Utinam is essem, qui tanto operi conficiendo aliquid conferre possem! Sed qualiscumque est opella mea, hanc vobis sponte offero; quam si gratam vobis fore intellexero, curabo, ut exactum scriptorum nostrae congregationis catalogum habeatis. Nam in eo, quem vobis olim<anchor xml:id="n3"/> transmisit noster Renatus Massuet<anchor xml:id="n3e"/>, plures desiderantur erroresque nonnulli irrepserunt. </ab>
+         <ab resp="#editor" xml:id="seg2">Erravit<del ana="#before">Nam</del> enim, dum mihi patriam attribuit Laudunum, civitatem episcopalem sub metropoli Remensi, cum tamen natus sim in oppido Laudona, Latonam vocabant veteres, ad Ararim fluvium in finibus ducatus Burgundiae, sub diocesi Lingonensi. Sed neque satis clare enuntiavit opera a me edita, quae hoc modo debent recenseri: Commentarius in Regulam sancti patris Benedicti litteralis, moralis et historicus. Parisiis apud Franciscum <anchor xml:id="n4"/>Muguet<anchor xml:id="n4e"/> 1690 in quarto. <pb n="1v"/> De antiquis monachorum ritibus libri quinque. Lugduni sumtibus<anchor xml:id="n5"/> Anisson, Possuel et Rigaud<anchor xml:id="n5e"/> 1690 in quarto.<anchor xml:id="n6"/> De antiquis ecclesiae ritibus<anchor xml:id="n6e"/> libri quatuor, quorum primus prodiit Rothomagi apud Guillelmum <anchor xml:id="n7"/>Behour<anchor xml:id="n7e"/> anno 1700, duobus voluminibus in quarto; secundus et tertius ibidem 1702, uno volumine in quarto; quartus vero Lugduni excusus anno 1706 sumtibus Anisson et Possuel sub hoc titulo: Tractatus de antiqua ecclesiae disciplina in divinis celebrandis officiis, tomus unus in quarto. Veterum scriptorum et monumentorum moralium, historicorum, dogmaticorum ad res ecclesiasticas, monasticas et politicas illustrandas collectio nova. Rotomagi apud Guillelmum <anchor xml:id="n8"/>Behour<anchor xml:id="n8e"/> et Antonium<anchor xml:id="n9"/> Maury<anchor xml:id="n9e"/> 1700 in quarto.<anchor xml:id="n10"/> La vie du venerable pere dom Claude Martin religieux benedictin de la congregation de saint Maur, decedé en odeur de saintete en l’abbaye de Marmoutier. A Tours ches Philibert Masson 1697 in octavo. Maximes spirituelles du venerable pere dom Claude Martin<anchor xml:id="n10e"/> religieux benedictin de la congregation de saint Maur tirées de ses ouvrages et confirmees par les sentimens des saints peres. A Rouen chez Francois<anchor xml:id="n11"/> Vaultier<anchor xml:id="n11e"/> 1694. </ab>
+         <ab resp="#editor" xml:id="seg3">Praeterea habeo sub praelo quinque anecdotorum tomos in folio sub hoc titulo: Thesaurus novus anecdotorum quinque in tomos distributus. Prodit nunc primum studio et opera domni Edmundi Martene et domni Ursini Durand presbyterorum et monachorum<del ana="#after">nostrae</del> congregationis sancti Mauri. Habeo insuper editioni paratum <anchor xml:id="n12"/>Iter litterarium<del ana="#after">in</del><anchor xml:id="n12e"/> Gallico idiomate conscriptum, quod propediem <pb n="2r"/> praelo sum commissurus,<anchor xml:id="n13"/> Historiam Maioris Monasterii<anchor xml:id="n13e"/> prope Turones etiam Gallice conscriptam in folio editioni paratam, ac demum<anchor xml:id="n14"/> Vitas sanctorum<anchor xml:id="n14e"/> Gallico idiomate conscriptas pro singulis anni diebus in folio. Haec vero quando in lucem prodibunt, prorsus nescio. At noster Thesaurus anecdotorum, in quo aliquos nostri ordinis auctores necdum editos comperies, Deo dante publicam lucem videbit infra quinque menses. </ab>
+         <ab resp="#editor" xml:id="seg4">Hunc<del ana="#before">Hanc</del> ubi absolvero, colligam non solum<del ana="#after">ord</del> nostrae congregationis scriptores, sed etiam alios <add place="above">ordinis nostri</add> auctores Gallicos, quorum notitiam aegre habere <choice><sic>possem</sic><corr>posses</corr></choice>. Nam nunc<del ana="#after">vix</del> adeo sum occupatus, vix ut respirare liceat. Vale, optime pater, et me tuis tuorumque fratrum orationibus commendatum habe.</ab>
+         <closer>Addictissimus tibi frater Edmundus Martene monachus Benedictinus presbyter.</closer>
+         <closer>Lutetiae Parisiorum ex monasterio S. Germani a Pratis.</closer>
+      </body>
    </text>
 </TEI>

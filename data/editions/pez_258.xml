@@ -1,29 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="258" xml:id="pez-0258">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">[258] Moritz Müller an Bernhard Pez. 1712-06-06 &lt; 1712-07-16. Zwiefalten.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Moritz Müller an Bernhard Pez. 1712-06-06 &lt; 1712-07-16. Zwiefalten.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">258</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <p>No direct source, inferred letter.</p>
+            <listWit>
+               <witness ana="cmif:noTextBase"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -38,35 +60,23 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">257</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">259</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">259</idno>
-               </ref>
+               <ptr type="prev" target="letter:257"/>
+               <ptr type="next" target="letter:259"/>
+               <ptr type="mentionedIn" target="letter:259"/>
             </correspContext>
          </correspDesc>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
+   <standOff>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Bemerkung: Der Terminus post quem ergibt sich aus der Ankunft MMs in Zwiefalten Anfang Juni, welche durch einen Brief an Abt Bürgisser vom 6. Juni belegt ist (vgl. 259 &lt;2&gt;).</note>
+      </listAnnotation>
+   </standOff>
    <text>
-      <front>
-         <div type="editorialNote">
-            <p xml:space="preserve">Bemerkung: Der Terminus post quem ergibt sich aus der Ankunft <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>MMs<?oxy_custom_end?> in Zwiefalten Anfang Juni, welche durch einen Brief an Abt Bürgisser vom 6. Juni belegt ist (vgl. <ref type="letter">259</ref> &lt;2&gt;).</p>
-         </div>
-      </front>
       <body>
          <ab>
             <gap reason="inferred letter"/>
          </ab>
       </body>
-      <back/>
    </text>
 </TEI>

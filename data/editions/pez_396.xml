@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="396" xml:id="pez-0396">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">396 Johann Benedikt Gentilotti an Bernhard Pez. 1715-03-27. Wien.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Benedikt Gentilotti an Bernhard Pez. 1715-03-27. Wien.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">396</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
@@ -22,27 +33,31 @@
             <relatedItem type="otherEdition">
                <bibl>Staufer, Litterae 9f.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:20186">Wallnig, Epistolae</rs> 9, 11</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">III</biblScope>
-               <biblScope unit="page">240r–241v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 240r–241v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -57,129 +72,111 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">395</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">397</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">384</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">384</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">389</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">394</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">395</idno>
-               </ref>
+               <ptr type="prev" target="letter:395"/>
+               <ptr type="next" target="letter:397"/>
+               <ptr type="sentWith" target="letter:384"/>
+               <ptr type="mentions" target="letter:384"/>
+               <ptr type="mentions" target="letter:389"/>
+               <ptr type="mentions" target="letter:394"/>
+               <ptr type="mentions" target="letter:395"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">BG ist erfreut, dass <rs type="person" role="sender">BP</rs> ihm seine Säumigkeit, die aus dem Wunsch erwuchs, einen längeren Brief zu schreiben, nicht übel nimmt.</p>
+            <p corresp="#seg2">BG antwortet auf beide Schreiben <rs type="person" role="sender">BPs</rs> (<ref type="letter" target="letter:394">394</ref>, <ref type="letter" target="letter:395">395</ref>). Er freut sich über den freundlichen Brief <rs ref="index:d14380e26993">René Massuets</rs> <ref type="letter" target="letter:384">384</ref>, den er <rs type="person" role="sender">BP</rs> gemeinsam mit diesem Schreiben und einem Brief <rs ref="index:d14380e4006">Johann Christoph Bartensteins</rs> zurückschickt. Für sein Geschenk an <rs ref="index:d14380e26993">Massuet</rs> („<rs ref="index:d10854e4483">Supplementum Bruschianum</rs>“) erwartet BG keine Gegengabe, würde eine solche aber aus Gründen der Freundschaft hoch in Ehren halten.</p>
+            <p corresp="#seg3">Es ist nicht nötig, dass <rs type="person" role="sender">BP</rs> die kürzlich mitgeteilte <ref type="letter" target="letter:389">389</ref> Abschrift eines Briefs von <rs ref="index:d14380e29435">Bernard de Montfaucon</rs> zurückschickt, weil BG das Original besitzt. Gleiches gilt für BGs Antwortbrief, der BP, wenn nirgends sonst, vielleicht wenigstens auf dem Abort (<rs type="cit" ref="citIndex:ix2_d653e2023">sellae Patroclianae</rs>) nützlich sein kann.</p>
+            <p corresp="#seg4"><rs ref="index:d14380e4006">Bartenstein</rs> hält sich bei seinem Onkel (<rs ref="index:d10854e2705">Heinrich von Beck</rs>) in <rs ref="index:d10854e7974">Erfurt</rs> auf. In <rs ref="index:d14380e45571">Wien</rs> versucht ein einflussreicher <rs ref="index:d10854e33363">Gönner</rs>, die Rückkehr <rs ref="index:d14380e4006">Bartensteins</rs> nach <rs ref="index:d10854e21970">Österreich</rs> zu ermöglichen, indem er sich bei <rs ref="index:d14380e45794">Hof</rs> für ihn verwendet. Dies soll <rs type="person" role="sender">BP</rs> jedoch für sich behalten.</p>
+            <p corresp="#seg5">BG übermittelt die von <rs type="person" role="sender">BP</rs> gewünschte Stelle bei <rs ref="index:d14380e20430">Johannes Chrysostomus</rs> nach der <rs ref="index:d10854e14017">Edition von <rs ref="index:d10854e27638">Henry Savile</rs>, <rs ref="index:d10854e8333">Eton</rs> 1612</rs>, und zitiert den Anfang der <rs ref="index:d14380e23973">lateinischen</rs> Übersetzung von <rs ref="index:d10854e7896">Erasmus</rs> in der <rs ref="index:d10854e13981"><rs ref="index:d14380e4064">Baseler</rs> Ausgabe von 1558</rs>. In der <rs ref="index:d10854e13986">griechisch-lateinischen Edition</rs> von <rs ref="index:d10854e6931">Fronton Du Duc</rs> hat BG die „<rs ref="index:d10854e13967">Homiliae in Acta Apostolorum</rs>“ nicht gefunden. BG weist <rs type="person" role="sender">BP</rs> darauf hin, dass <rs ref="index:d14380e20430">Chrysostomus</rs> an dieser Stelle vom Bischofsamt spricht und mit der Bezeichnung „ἱερεὺς“ nicht beliebige Kleriker, sondern mit der Seelsorge Betraute meint.</p>
+            <p corresp="#seg6">BG hofft, bald <rs type="person" role="sender">BPs</rs> „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“ ebenso wie dessen „<rs ref="index:d14380e10982">Triumphus castitatis</rs>“ in Händen zu halten. Dass der Verfasser (<rs ref="index:d14380e18274">Gábor Hevenesi</rs>) der von <rs type="person" role="sender">BP</rs> bekämpften Schrift („<rs ref="index:d14380e18286">Cura salutis</rs>“) jüngst verstorben ist, wird <rs type="person" role="sender">BP</rs> von den Seinen ja erfahren haben. Ob jemand anderer nun dessen Standpunkt verteidigen wird, wird sich weisen.</p>
+            <p corresp="#seg7">BG würde sich freuen, wenn <rs type="person" role="sender">BP</rs> ihm einen <rs ref="index:d14380e47104">Bibliothekskatalog</rs> von <rs ref="index:d14380e47091">Zwettl</rs> mitteilen könnte. Er grüßt <rs ref="index:d14380e34537">HP</rs> und hofft, dass sich ein Weg finden wird, wie er diesem unter Wahrung des eigenen Ansehens Materialien aus der <rs ref="index:d14380e45820">Hofbibliothek</rs> für seine geplanten „<rs ref="index:d14380e34754">Scriptores rerum Austriacarum</rs>“ zur Verfügung stellen kann.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e51229"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> ist erfreut, dass <rs type="person" role="sender">BP</rs> ihm seine Säumigkeit, die aus dem Wunsch erwuchs, einen längeren Brief zu schreiben, nicht übel nimmt.</seg><seg type="context" n="2" xml:id="d4618e51231"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> antwortet auf beide Schreiben <rs type="person" role="sender">BPs</rs> (<ref type="letter">394</ref>, <ref type="letter">395</ref>). Er freut sich über den freundlichen Brief <rs key="index:d14380e26993">René Massuets</rs> <ref type="letter">384</ref>, den er <rs type="person" role="sender">BP</rs> gemeinsam mit diesem Schreiben und einem Brief <rs key="index:d14380e4006">Johann Christoph Bartensteins</rs> zurückschickt. Für sein Geschenk an <rs key="index:d14380e26993">Massuet</rs> („<rs key="index:d10854e4483">Supplementum Bruschianum</rs>“) erwartet <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> keine Gegengabe, würde eine solche aber aus Gründen der Freundschaft hoch in Ehren halten.</seg><seg type="context" n="3" xml:id="d4618e51236">Es ist nicht nötig, dass <rs type="person" role="sender">BP</rs> die kürzlich mitgeteilte <ref type="letter">389</ref> Abschrift eines Briefs von <rs key="index:d14380e29435">Bernard de Montfaucon</rs> zurückschickt, weil <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> das Original besitzt. Gleiches gilt für <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BGs<?oxy_custom_end?> Antwortbrief, der <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BP<?oxy_custom_end?>, wenn nirgends sonst, vielleicht wenigstens auf dem Abort (<rs type="cit" key="citIndex:ix2_d653e2023">sellae Patroclianae</rs>) nützlich sein kann.</seg><seg type="context" n="4" xml:id="d4618e51241"><rs key="index:d14380e4006">Bartenstein</rs> hält sich bei seinem Onkel (<rs key="index:d10854e2705">Heinrich von Beck</rs>) in <rs key="index:d10854e7974">Erfurt</rs> auf. In <rs key="index:d14380e45571">Wien</rs> versucht ein einflussreicher <rs key="index:d10854e33363">Gönner</rs>, die Rückkehr <rs key="index:d14380e4006">Bartensteins</rs> nach <rs key="index:d10854e21970">Österreich</rs> zu ermöglichen, indem er sich bei <rs key="index:d14380e45794">Hof</rs> für ihn verwendet. Dies soll <rs type="person" role="sender">BP</rs> jedoch für sich behalten.</seg><seg type="context" n="5" xml:id="d4618e51243"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> übermittelt die von <rs type="person" role="sender">BP</rs> gewünschte Stelle bei <rs key="index:d14380e20430">Johannes Chrysostomus</rs> nach der <rs key="index:d10854e14017">Edition von <rs key="index:d10854e27638">Henry Savile</rs>, <rs key="index:d10854e8333">Eton</rs> 1612</rs>, und zitiert den Anfang der <rs key="index:d14380e23973">lateinischen</rs> Übersetzung von <rs key="index:d10854e7896">Erasmus</rs> in der <rs key="index:d10854e13981"><rs key="index:d14380e4064">Baseler</rs> Ausgabe von 1558</rs>. In der <rs key="index:d10854e13986">griechisch-lateinischen Edition</rs> von <rs key="index:d10854e6931">Fronton Du Duc</rs> hat <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> die „<rs key="index:d10854e13967">Homiliae in Acta Apostolorum</rs>“ nicht gefunden. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> weist <rs type="person" role="sender">BP</rs> darauf hin, dass <rs key="index:d14380e20430">Chrysostomus</rs> an dieser Stelle vom Bischofsamt spricht und mit der Bezeichnung „ἱερεὺς“ nicht beliebige Kleriker, sondern mit der Seelsorge Betraute meint.</seg><seg type="context" n="6" xml:id="d4618e51245"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> hofft, bald <rs type="person" role="sender">BPs</rs> „<rs key="index:d14380e33682">Epistolae apologeticae</rs>“ ebenso wie dessen „<rs key="index:d14380e10982">Triumphus castitatis</rs>“ in Händen zu halten. Dass der Verfasser (<rs key="index:d14380e18274">Gábor Hevenesi</rs>) der von <rs type="person" role="sender">BP</rs> bekämpften Schrift („<rs key="index:d14380e18286">Cura salutis</rs>“) jüngst verstorben ist, wird <rs type="person" role="sender">BP</rs> von den Seinen ja erfahren haben. Ob jemand anderer nun dessen Standpunkt verteidigen wird, wird sich weisen.</seg><seg type="context" n="7" xml:id="d4618e51247"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> würde sich freuen, wenn <rs type="person" role="sender">BP</rs> ihm einen <rs key="index:d14380e47104">Bibliothekskatalog</rs> von <rs key="index:d14380e47091">Zwettl</rs> mitteilen könnte. Er grüßt <rs key="index:d14380e34537">HP</rs> und hofft, dass sich ein Weg finden wird, wie er diesem unter Wahrung des eigenen Ansehens Materialien aus der <rs key="index:d14380e45820">Hofbibliothek</rs> für seine geplanten „<rs key="index:d14380e34754">Scriptores rerum Austriacarum</rs>“ zur Verfügung stellen kann.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">IV</hi>.</p>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">108</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Venerando et eruditissimo viro domno Bernardo Pez Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilottus ab Engelsbrun.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e51273">Gaudeo me tibi, virorum optime, non solum negligentiae nomine non esse suspectum, sed et longiusculam in respondendo moram eam in partem a te accipi, ut, si velim, liceat mihi frontem diutius perfricare et sub occupationum involucris officii intermissionem velare et tegere. Sed nondum omnem pudorem et verecundiam deposui; quare a te, vir humanissime, peto, ut hanc scribendi intercapedinem mihi vitio non vertas, sed cupiditati meae assignes longioribus litteris per otium te conveniendi, quod tamen hodie, si unquam alias, mihi minime contigit. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e51275">Ad utramque igitur epistolam tuam strictim<note place="foot" xml:id="d4618e51277">	Über der Zeile eingefügt.</note> sic habeto: domni <seg type="lemma" corresp="#d4618e51302">Massueti elegantiam et eius in me amorem, qui sese ex omnibus partibus ostendit in iis litteris</seg>, quae cum his et <seg type="lemma" corresp="#d4618e51309">Bartensteinii</seg> <pb n="1v"/> coniunctae ad te redeunt, exosculor et facio plurimi; exiguum autem <seg type="lemma" corresp="#d4618e51314">litterarium munus</seg>, quod per Bartensteinium ad eum misi, nullum plane redhostimentum meretur, neque ego sim tam impudens, ut quicquam propterea postulem. Si ultro remunerabitur, non respuam, sed pro amicitiae pignore aeternum servabo. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e51282">Exemplum litterarum magni Montefalconii cur remittas, <sic>caussa</sic> [<hi rend="italic">sic</hi>] nulla est, cum autographum habeam. De meis statues, quod libet, et si forte nuspiam, saltem <seg type="lemma" corresp="#d4618e51319">in sellis Patroclianis</seg> tibi usui esse poterunt. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e51287">Bartensteinius hactenus apud <seg type="lemma" corresp="#d4618e51326">avunculum suum</seg> Erffurti commoratur. Non exigua est spes fore, ut in Austriam revocetur, quod per <seg type="lemma" corresp="#d4618e51333">virum eius amantissimum</seg>, et qui gratia plurimum valet apud eos, qui ad temperationem rei <pb n="2r"/> publicae sedent, serio et magna cum contentione agitur; secreto tamen hoc audi: tecum habeto. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e51291"><seg type="lemma" corresp="#d4618e51338">Locus Chrysostomi</seg>, quem tibi exscribi postulasti, in editione Etonensi anni MDCXII cura Henrici Savilii tomo IV. pagina 627 sic se habet, ut infra scripsi: οὐκ οἶμαι εἶναι πολλοὺς ἐν τοῖς ἱερεῦσι τοὺς σωζομένους ἀλλὰ πολλῷ πλείους τοὺς ἀπολλυμένους. Praeterea in editione Basileensi anni MDLVIII tomo III. columna 464 interprete Desiderio Erasmo is locus sic Latine redditur: Non arbitror inter sacerdotes multos esse, cetera. In editione Graecolatina Frontonis Ducaei Homilias in Acta Apostolorum reperire non potui. Quod si te, vir doctissime, admonuero Chrysostomum eo loci de episcopali munere agentem, voce ἱερεὺς non virum sacris dumtaxat initiatum denotare, sed eum, cui animarum cura et sollicitudo concredita est, acumen tuum ignorare <pb n="2v"/> videar. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e51295">Quod igitur faustum fortunatumque sit, Apologia tua in publicum prodeat et cum Wilburge tua ad nos brevi perveniat. <seg type="lemma" corresp="#d4618e51345">Eum, cuius libellum refutandum tibi proposuisti, nuper admodum mortem obiisse</seg> non ambigo, quin tui ad te perscripserint. Videbimus, an exoriatur aliquis ex eius ossibus ὑπερασπιστὴς, qui eius partes sibi sumat propugnandas. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d4618e51297">Si qualemcunque Zwettalensis bibliothecae catalogum mecum communicare volueris, id mihi erit pergratum. Vale et domnum Hieronymum fratrem tuum, cuius virtutibus et laboribus mirum quantum faveo, plurimum ex me saluta. Forte iniri poterit aliqua ratio, quemadmodum <seg type="lemma" corresp="#d4618e51352">salva fide</seg> et existimatione mea operam eius de bibliothecae caesareae pluteis adiutum ire queam. Sed de his alias. Iterum vale, vir doctissime, et nos, ut amas, ama.</seg></p>
-            <p xml:space="preserve">Festinans scripsi Vindobonae VI. Kalendas Apriles MDCCXV.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e51302">
-               <ref type="context">2</ref>
-               <label>Massueti elegantiam ... litteris</label>
-               <p>In <ref type="letter">379</ref> (vom 28. Dezember 1714) hatte BP Massuet
-                  nahegelegt, sich direkt an BG zu wenden, was dieser in <ref type="letter"
-                     >384</ref> auch ankündigte. Der hier an BP zurück ergehende Brief Massuets
-                  dürfte freilich ein Brief von jenem an BP sein, höchstwahrscheinlich <ref
-                     type="letter">384</ref>. Dazu passt das Eingehen auf ein Gegengeschenk für das
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>Massueti elegantiam ... litteris</mentioned>
+            <p>In <ref type="letter" target="letter:379">379</ref> (vom 28. Dezember 1714) hatte BP Massuet
+                  nahegelegt, sich direkt an BG zu wenden, was dieser in <ref type="letter" target="letter:384">384</ref> auch ankündigte. Der hier an BP zurück ergehende Brief Massuets
+                  dürfte freilich ein Brief von jenem an BP sein, höchstwahrscheinlich <ref type="letter" target="letter:384">384</ref>. Dazu passt das Eingehen auf ein Gegengeschenk für das
                   „Supplementum Bruschianum“. Vgl. den vielleicht ähnlich gelagerten Fall des in
-                     <ref type="letter">406</ref> &lt;3&gt; erwähnten Briefs Massuets.</p>
-            </note>
-            <note xml:id="d4618e51309">
-               <ref type="context">2</ref>
-               <label>Bartensteinii</label>
-               <p>Bei dem Schreiben Bartensteins kann es sich weder um <ref type="letter">386</ref>,
-                  den BG bereits mit <ref type="letter">389</ref> an BP geschickt hatte, noch um
-                     <ref type="letter">393</ref> handeln, den BG unmöglich einen Tag nach seiner
+                     <ref type="letter" target="letter:406">406</ref> <ref target="letter:406#seg3">3</ref> erwähnten Briefs Massuets.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>Bartensteinii</mentioned>
+            <p>Bei dem Schreiben Bartensteins kann es sich weder um <ref type="letter" target="letter:386">386</ref>,
+                  den BG bereits mit <ref type="letter" target="letter:389">389</ref> an BP geschickt hatte, noch um
+                     <ref type="letter" target="letter:393">393</ref> handeln, den BG unmöglich einen Tag nach seiner
                   Versendung aus Erfurt schon weiterleiten konnte. Einen verlorenen Brief
                   Bartensteins an BP zwischen diesen beiden anzunehmen, fehlt außer dieser Erwähnung
                   jede Veranlassung. Wahrscheinlich ist vielmehr, dass BP einen früheren Brief
                   Bartensteins ähnlich wie jenen Massuets BG zur Anschauung unterbreitet hatte; doch
                   macht BG keine Angaben, die eine nähere Bestimmung gestatten würden.</p>
-            </note>
-            <note xml:id="d4618e51314">
-               <ref type="context">2</ref>
-               <label>litterarium munus</label>
-               <p>Vgl. <ref type="letter">360</ref> &lt;7&gt;, <ref type="letter">379</ref>
-                  &lt;9&gt;, <ref type="letter">467</ref> &lt;9&gt;.</p>
-            </note>
-            <note xml:id="d4618e51319">
-               <ref type="context">3</ref>
-               <label>in sellis Patroclianis</label>
-               <p>Dieser Ausdruck begegnet bei Martial, Epigramm 12,77,9, als Bezeichnung für eine (öffentliche) Bedürfnisanstalt, die man in der Nähe des Kapitols vermutet hat.</p>
-            </note>
-            <note xml:id="d4618e51326">
-               <ref type="context">4</ref>
-               <label>avunculum suum</label>
-               <p>Vgl. <ref type="letter">386</ref> &lt;9&gt;.</p>
-            </note>
-            <note xml:id="d4618e51333">
-               <ref type="context">4</ref>
-               <label>virum eius amantissimum</label>
-               <p>In Wien hatte Bartenstein etwa Kontakt zu dem Obersthofmeister Anton Florian Fürst
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>litterarium munus</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:360">360</ref> <ref target="letter:360#seg7">7</ref>, <ref type="letter" target="letter:379">379</ref>
+                  <ref target="letter:379#seg9">9</ref>, <ref type="letter" target="letter:467">467</ref> <ref target="letter:467#seg9">9</ref>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>in sellis Patroclianis</mentioned>
+            <p>Dieser Ausdruck begegnet bei Martial, Epigramm 12,77,9, als Bezeichnung für eine (öffentliche) Bedürfnisanstalt, die man in der Nähe des Kapitols vermutet hat.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>avunculum suum</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:386">386</ref> <ref target="letter:386#seg9">9</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned>virum eius amantissimum</mentioned>
+            <p>In Wien hatte Bartenstein etwa Kontakt zu dem Obersthofmeister Anton Florian Fürst
                   Liechtenstein, dem Hofkammerrat Johann David Palm, durch diesen möglicherweise zu
-                  dem Hofkammerpräsidenten Gundaker Thomas Graf Starhemberg: <rs type="bibl"
-                     key="bibl:15398">Braubach, Bartenstein</rs> 124, 132. Es ist freilich auch
+                  dem Hofkammerpräsidenten Gundaker Thomas Graf Starhemberg: <rs type="bibl" ref="bibl:15398">Braubach, Bartenstein</rs> 124, 132. Es ist freilich auch
                   nicht gänzlich auszuschließen, dass BG sich selbst meint.</p>
-            </note>
-            <note xml:id="d4618e51338">
-               <ref type="context">5</ref>
-               <label>Locus Chrysostomi</label>
-               <p>Es handelt sich um eine Passage aus der dritten Predigt über die
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
+            <mentioned>Locus Chrysostomi</mentioned>
+            <p>Es handelt sich um eine Passage aus der dritten Predigt über die
                   Apostelgeschichte. Die ÖNB besitzt heute sämtliche von BG erwähnten Ausgaben, von
                   Du Duc sogar zwei (1636–1642 bzw. 1697–1698). Warum BG die Stelle darin nicht
                   auffinden konnte, ist unklar. BP interessierte sich für die Passage, weil sie in
                   der „Cura salutis“ zitiert worden war und er darauf in seinen „Epistolae
                   apologeticae“ eingehen wollte; er bat außer BG auch Kaspar Altlechner um
-                  Nachforschungen: vgl. <ref type="letter">391</ref>; <rs type="bibl"
-                     key="bibl:20186">Wallnig, Epistolae</rs> 11. Diese beiden Briefe sind somit die
+                  Nachforschungen: vgl. <ref type="letter" target="letter:391">391</ref>; <rs type="bibl" ref="bibl:20186">Wallnig, Epistolae</rs> 11. Diese beiden Briefe sind somit die
                   frühesten Zeugnisse für Arbeiten an dieser Schrift BPs.</p>
-            </note>
-            <note xml:id="d4618e51345">
-               <ref type="context">6</ref>
-               <label>Eum ... mortem obiisse</label>
-               <p>Gábor Hevenesi war am 11. März 1715 verstorben: <rs type="bibl" key="bibl:18084"
-                     >Lukács, Catalogus</rs> 1 555; <rs type="bibl" key="bibl:37088">Szilas,
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg6">
+            <mentioned>Eum ... mortem obiisse</mentioned>
+            <p>Gábor Hevenesi war am 11. März 1715 verstorben: <rs type="bibl" ref="bibl:18084">Lukács, Catalogus</rs> 1 555; <rs type="bibl" ref="bibl:37088">Szilas,
                      Hevenesi</rs> 1920.</p>
-            </note>
-            <note xml:id="d4618e51352">
-               <ref type="context">7</ref>
-               <label>salva fide</label>
-               <p>Vgl. <ref type="letter">378</ref>, <ref type="letter">379</ref> &lt;9&gt;.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg7">
+            <mentioned>salva fide</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:378">378</ref>, <ref type="letter" target="letter:379">379</ref> <ref target="letter:379#seg9">9</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>IV</orig>.</note>
+         <note anchored="false">Ordnungsvermerk: <orig>108</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:20186">
+            <title type="short">Wallnig, Epistolae</title>
+            <biblScope>9, 11</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Venerando et eruditissimo viro domno Bernardo Pez Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilottus ab Engelsbrun.</opener>
+         <ab resp="#editor" xml:id="seg1">Gaudeo me tibi, virorum optime, non solum negligentiae nomine non esse suspectum, sed et longiusculam in respondendo moram eam in partem a te accipi, ut, si velim, liceat mihi frontem diutius perfricare et sub occupationum involucris officii intermissionem velare et tegere. Sed nondum omnem pudorem et verecundiam deposui; quare a te, vir humanissime, peto, ut hanc scribendi intercapedinem mihi vitio non vertas, sed cupiditati meae assignes longioribus litteris per otium te conveniendi, quod tamen hodie, si unquam alias, mihi minime contigit. </ab>
+         <ab resp="#editor" xml:id="seg2">Ad utramque igitur epistolam tuam <add place="above">strictim</add> sic habeto: domni <anchor xml:id="n1"/>Massueti elegantiam et eius in me amorem, qui sese ex omnibus partibus ostendit in iis litteris<anchor xml:id="n1e"/>, quae cum his et <anchor xml:id="n2"/>Bartensteinii<anchor xml:id="n2e"/> <pb n="1v"/> coniunctae ad te redeunt, exosculor et facio plurimi; exiguum autem <anchor xml:id="n3"/>litterarium munus<anchor xml:id="n3e"/>, quod per Bartensteinium ad eum misi, nullum plane redhostimentum meretur, neque ego sim tam impudens, ut quicquam propterea postulem. Si ultro remunerabitur, non respuam, sed pro amicitiae pignore aeternum servabo. </ab>
+         <ab resp="#editor" xml:id="seg3">Exemplum litterarum magni Montefalconii cur remittas, <sic>caussa</sic>  nulla est, cum autographum habeam. De meis statues, quod libet, et si forte nuspiam, saltem <anchor xml:id="n4"/>in sellis Patroclianis<anchor xml:id="n4e"/> tibi usui esse poterunt. </ab>
+         <ab resp="#editor" xml:id="seg4">Bartensteinius hactenus apud <anchor xml:id="n5"/>avunculum suum<anchor xml:id="n5e"/> Erffurti commoratur. Non exigua est spes fore, ut in Austriam revocetur, quod per <anchor xml:id="n6"/>virum eius amantissimum<anchor xml:id="n6e"/>, et qui gratia plurimum valet apud eos, qui ad temperationem rei <pb n="2r"/> publicae sedent, serio et magna cum contentione agitur; secreto tamen hoc audi: tecum habeto. </ab>
+         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n7"/>Locus Chrysostomi<anchor xml:id="n7e"/>, quem tibi exscribi postulasti, in editione Etonensi anni MDCXII cura Henrici Savilii tomo IV. pagina 627 sic se habet, ut infra scripsi: οὐκ οἶμαι εἶναι πολλοὺς ἐν τοῖς ἱερεῦσι τοὺς σωζομένους ἀλλὰ πολλῷ πλείους τοὺς ἀπολλυμένους. Praeterea in editione Basileensi anni MDLVIII tomo III. columna 464 interprete Desiderio Erasmo is locus sic Latine redditur: Non arbitror inter sacerdotes multos esse, cetera. In editione Graecolatina Frontonis Ducaei Homilias in Acta Apostolorum reperire non potui. Quod si te, vir doctissime, admonuero Chrysostomum eo loci de episcopali munere agentem, voce ἱερεὺς non virum sacris dumtaxat initiatum denotare, sed eum, cui animarum cura et sollicitudo concredita est, acumen tuum ignorare <pb n="2v"/> videar. </ab>
+         <ab resp="#editor" xml:id="seg6">Quod igitur faustum fortunatumque sit, Apologia tua in publicum prodeat et cum Wilburge tua ad nos brevi perveniat. <anchor xml:id="n8"/>Eum, cuius libellum refutandum tibi proposuisti, nuper admodum mortem obiisse<anchor xml:id="n8e"/> non ambigo, quin tui ad te perscripserint. Videbimus, an exoriatur aliquis ex eius ossibus ὑπερασπιστὴς, qui eius partes sibi sumat propugnandas. </ab>
+         <ab resp="#editor" xml:id="seg7">Si qualemcunque Zwettalensis bibliothecae catalogum mecum communicare volueris, id mihi erit pergratum. Vale et domnum Hieronymum fratrem tuum, cuius virtutibus et laboribus mirum quantum faveo, plurimum ex me saluta. Forte iniri poterit aliqua ratio, quemadmodum <anchor xml:id="n9"/>salva fide<anchor xml:id="n9e"/> et existimatione mea operam eius de bibliothecae caesareae pluteis adiutum ire queam. Sed de his alias. Iterum vale, vir doctissime, et nos, ut amas, ama.</ab>
+         <closer>Festinans scripsi Vindobonae VI. Kalendas Apriles MDCCXV.</closer>
+      </body>
    </text>
 </TEI>

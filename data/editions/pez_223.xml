@@ -1,46 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="223" xml:id="pez-0223">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">223 Benedikt Cherle an Bernhard Pez. 1712-03-12. Thierhaupten.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Benedikt Cherle an Bernhard Pez. 1712-03-12. Thierhaupten.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">223</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:18092">Machilek, Benedikt Cherle</rs> 59,
-                     61</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">553r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 553r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -55,74 +69,62 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">221</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">256</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">198</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">221</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">256</idno>
-               </ref>
+               <ptr type="prev" target="letter:221"/>
+               <ptr type="next" target="letter:256"/>
+               <ptr type="mentions" target="letter:198"/>
+               <ptr type="mentions" target="letter:221"/>
+               <ptr type="mentionedIn" target="letter:256"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">BCh dankt für die <rs ref="index:d10854e23782">Enzyklik</rs> mit dem Schriftstellerkatalog, die ihm <rs type="person" role="sender">BP</rs> als Vorläufer des künftigen Werks („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) zugesendet hat <ref type="letter" target="letter:221">221</ref>.</p>
+            <p corresp="#seg2">Er berichtet, bei der Durchsicht der <rs ref="index:d10854e30724">Thierhauptener</rs> <rs ref="index:d10854e30746">Bibliothek</rs> auf zwei weitere Bücher von <rs ref="index:d10854e30724">Thierhauptenern</rs> gestoßen zu sein: eines davon gedruckt in Oktav (<rs ref="index:d10854e10140">Gaugenrieder, „Catholische fragstuckh“</rs>), das andere <rs ref="index:d10854e30767">handgeschrieben in Folio</rs> (<rs ref="index:d10854e5245">Korbinian Cherle, „Explicatio“</rs>). Von diesen Werken will BCh demnächst mehr berichten, ebenso von anderen Schriften, wenn er noch solche findet.</p>
+            <p corresp="#seg3">BCh geht davon aus, dass <rs type="person" role="sender">BP</rs> seine letzte Sendung <ref type="letter" target="letter:198">198</ref>, welche er mit dem <rs ref="index:d14380e14516">Garstener</rs> <rs ref="index:d10854e10104">Rotelboten</rs> geschickt hat, erhalten hat; ihr lässt BCh nun das gegenwärtige Notabene folgen.</p>
+            <p corresp="#seg4">In einem Postskriptum lässt BCh Prior <rs ref="index:d10854e16613">Valentin Larson</rs> grüßen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e27441"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BCh<?oxy_custom_end?> dankt für die <rs key="index:d10854e23782">Enzyklik</rs> mit dem <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Schriftstellerkatalog<?oxy_custom_end?>, die ihm <rs type="person" role="sender">BP</rs> als Vorläufer des künftigen Werks („<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“) zugesendet hat <ref type="letter">221</ref>.</seg><seg type="context" n="2" xml:id="d4618e27446">Er berichtet, bei der Durchsicht der <rs key="index:d10854e30724">Thierhauptener</rs> <rs key="index:d10854e30746">Bibliothek</rs> auf zwei weitere Bücher von <rs key="index:d10854e30724">Thierhauptenern</rs> gestoßen zu sein: eines davon <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>gedruckt in Oktav<?oxy_custom_end?> (<rs key="index:d10854e10140"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Gaugenrieder, „Catholische fragstuckh<?oxy_custom_end?>“</rs>), das andere <rs key="index:d10854e30767">handgeschrieben in Folio</rs> (<rs key="index:d10854e5245"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Korbinian Cherle, „Explicatio<?oxy_custom_end?>“</rs>). Von diesen Werken will <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BCh<?oxy_custom_end?> demnächst mehr berichten, ebenso von anderen Schriften, wenn er noch solche findet.</seg><seg type="context" n="3" xml:id="d4618e27448"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BCh<?oxy_custom_end?> geht davon aus, dass <rs type="person" role="sender">BP</rs> seine letzte Sendung <ref type="letter">198</ref>, welche er mit dem <rs key="index:d14380e14516">Garstener</rs> <rs key="index:d10854e10104">Rotelboten</rs> geschickt hat, erhalten hat; ihr lässt <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BCh<?oxy_custom_end?> nun das gegenwärtige Notabene folgen.</seg><seg type="context" n="4" xml:id="d4618e27453">In einem Postskriptum lässt <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BCh<?oxy_custom_end?> Prior <rs key="index:d10854e16613">Valentin Larson</rs> grüßen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">IV</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater ac patrone observandissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e27472">Non sine maximo mentis gaudio paternitatis vestrae catalogum, futuri gloriosissimi partus prodromum, accepi; perspexi siquidem in eo et amorem erga me indignum adhuc vivere et benevolentia nutriri; ago proinde, quas possum, gratias me ad obsequia ulteriora offerendo. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e27474">Inveni etenim bibliothecam nostram ex integro perlustrando <seg type="lemma" corresp="#d4618e27492">binos a patribus nostris conscriptos libros</seg><note place="foot" xml:id="d4618e27476">	Danach durchgestrichen <hi rend="italic">inu</hi>.</note>: unum in octavo impressum, scriptum <seg type="lemma" corresp="#d4618e27499">alterum in folio</seg>, quorum notitiam iuxta petitum, uti et (si invenero) aliorum proxime communicabo. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e27482">De caetero nullus dubito paternitatem vestram accepisse manipulum meum <seg type="lemma" corresp="#d4618e27504">nuper per rotularium Garstensem</seg> missum, cui adiungo <seg type="lemma" corresp="#d4618e27511">praesens notabene</seg> ac mei commendationem.</seg></p>
-            <p xml:space="preserve">Plurimum reverendae, religiosissimae ac clarissimae paternitatis vestrae servus in Christo paratissimus pater Benedictus Cherle prior manu propria.</p>
-            <p xml:space="preserve">Thierhaupten 12. Martii 1712.</p>
-            <p xml:space="preserve"><seg type="context" n="4" xml:space="preserve" xml:id="d4618e27489">P.S. Plurimum reverendo ac venerabili patri priori mei honestissimam commendationem.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e27492">
-               <ref type="context">2</ref>
-               <label>binos ... libros</label>
-               <p>Die Identifikation ergibt sich aus den Angaben in <ref type="letter"
-                  >256</ref>.</p>
-            </note>
-            <note xml:id="d4618e27499">
-               <ref type="context">2</ref>
-               <label>alterum in folio</label>
-               <p>In <ref type="letter">256</ref> beschreibt BCh das Format als Quart.</p>
-            </note>
-            <note xml:id="d4618e27504">
-               <ref type="context">3</ref>
-               <label>nuper per rotularium Garstensem</label>
-               <p>Die Identifikation dieser Erwähnung mit <ref type="letter">198</ref> und den dort
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>binos ... libros</mentioned>
+            <p>Die Identifikation ergibt sich aus den Angaben in <ref type="letter" target="letter:256">256</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>alterum in folio</mentioned>
+            <p>In <ref type="letter" target="letter:256">256</ref> beschreibt BCh das Format als Quart.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>nuper per rotularium Garstensem</mentioned>
+            <p>Die Identifikation dieser Erwähnung mit <ref type="letter" target="letter:198">198</ref> und den dort
                   angekündigten Beilagen ist als wahrscheinlich, wenn auch nicht völlig sicher
                   anzusehen.</p>
-            </note>
-            <note xml:id="d4618e27511">
-               <ref type="context">3</ref>
-               <label>praesens notabene</label>
-               <p>Die Formulierung könnte entweder den vorliegenden Brief selbst meinen oder eine Beilage dazu ankündigen. Für den letzteren Fall erlauben allerdings die Melker Beständen keine Identifikation oder Aussage darüber, worum es sich dabei gehandelt haben mag.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>praesens notabene</mentioned>
+            <p>Die Formulierung könnte entweder den vorliegenden Brief selbst meinen oder eine Beilage dazu ankündigen. Für den letzteren Fall erlauben allerdings die Melker Beständen keine Identifikation oder Aussage darüber, worum es sich dabei gehandelt haben mag.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>IV</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:18092">
+            <title type="short">Machilek, Benedikt Cherle</title>
+            <biblScope>59, 61</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater ac patrone observandissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Non sine maximo mentis gaudio paternitatis vestrae catalogum, futuri gloriosissimi partus prodromum, accepi; perspexi siquidem in eo et amorem erga me indignum adhuc vivere et benevolentia nutriri; ago proinde, quas possum, gratias me ad obsequia ulteriora offerendo. </ab>
+         <ab resp="#editor" xml:id="seg2">Inveni etenim bibliothecam nostram ex integro perlustrando <anchor xml:id="n1"/>binos a patribus nostris conscriptos libros<del ana="#after">inu</del><anchor xml:id="n1e"/>: unum in octavo impressum, scriptum <anchor xml:id="n2"/>alterum in folio<anchor xml:id="n2e"/>, quorum notitiam iuxta petitum, uti et (si invenero) aliorum proxime communicabo. </ab>
+         <ab resp="#editor" xml:id="seg3">De caetero nullus dubito paternitatem vestram accepisse manipulum meum <anchor xml:id="n3"/>nuper per rotularium Garstensem<anchor xml:id="n3e"/> missum, cui adiungo <anchor xml:id="n4"/>praesens notabene<anchor xml:id="n4e"/> ac mei commendationem.</ab>
+         <closer>Plurimum reverendae, religiosissimae ac clarissimae paternitatis vestrae servus in Christo paratissimus pater Benedictus Cherle prior manu propria.</closer>
+         <closer>Thierhaupten 12. Martii 1712.</closer>
+         <closer xml:id="seg4">P.S. Plurimum reverendo ac venerabili patri priori mei honestissimam commendationem.</closer>
+      </body>
    </text>
 </TEI>

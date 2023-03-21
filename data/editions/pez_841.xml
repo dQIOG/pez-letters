@@ -1,34 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="841" xml:id="pez-0841">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">841 Joachim Edlinger an Hieronymus Pez. &lt; 1717-10-29.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Joachim Edlinger an Hieronymus Pez. &lt; 1717-10-29.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">841</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:18992">Rabl, Briefe</rs> 330</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Das Stück ist unvollständig, das Datum fehlt. Den einzigen sicheren Anhaltspunkt bietet in &lt;5&gt; der Hinweis auf den Besuch von Vitalis Waldmüller und Karlmann Hueber in Seitenstetten. Da der Tag ihrer Abreise von dort nicht gesichert ist, richtet sich die Datumsansetzung nach dem folgenden Brief 843.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <p>StiA Melk, Karton 7 Patres 13, Fasz. 1, Nr. 1, 46r–v.</p>
+            <listWit><witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Karton 7 Patres 13, Fasz. 1, Nr. 1, 46r–v.</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -42,87 +70,80 @@
                <persName>Hieronymus Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">840</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">842</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">513</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">825</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">840</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">843</idno>
-               </ref>
+               <ptr type="prev" target="letter:840"/>
+               <ptr type="next" target="letter:842"/>
+               <ptr type="mentions" target="letter:513"/>
+               <ptr type="mentions" target="letter:825"/>
+               <ptr type="mentions" target="letter:840"/>
+               <ptr type="mentionedIn" target="letter:843"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">JE</rs> freut sich stets über <rs type="person" role="sender">HPs</rs> Schreiben, ist sich jedoch gewiss, dass die Erhaltung der Freundschaft nicht allein von häufigem Briefwechsel abhängt. Seine Antwort hat sich aufgrund seiner seelsorglichen Verpflichtungen (in der Pfarre Wolfsbach) sowie der Einladungen von Freunden verzögert. In der Vorwoche hat <rs type="person" role="sender">JE</rs> eine Gegeneinladung gegeben, bei der auch der gelehrte (musophilus) Pfarrer von Haag (Veit Daniel Götz) anwesend war, eine Ehre, die <rs type="person" role="sender">JEs</rs> Vorgängern nicht zuteil geworden war. <rs type="person" role="sender">JE</rs> erinnert sich, geschrieben zu haben, dass jener Pfarrer gerne auf BP und <rs type="person" role="sender">HP</rs> anzustoßen pflegte <ref type="letter" target="letter:513">513</ref>, was er auch nicht verlernt hat.</p>
+            <p corresp="#seg2">Weil eine am Folgetag zu haltende Predigt den Nachmittag in Anspruch nehmen wird, dankt <rs type="person" role="sender">JE</rs> nur kurz für den ihm von <rs type="person" role="sender">HP</rs> zu dessen eigenem Nachteil erwiesenen Freundschaftsdienst. Das an BP (mit 825?) gesendete Blatt braucht <rs type="person" role="sender">JE</rs> selbst nicht mehr; er trägt dazu noch einen Schriftsteller nach.</p>
+            <p corresp="#seg3">Die wenig freundschaftlichen Anwürfe Johann Benedikt Gentilottis verwundern JE, doch hat er dessen unaufrichtigen Charakter bereits in dessen Briefen an BP wahrgenommen, die ihm gezeigt worden sind. Die Gesetze der Freundschaft gebieten, einen Freund auf einen Fehler hinzuweisen, nicht ihn öffentlich zu machen. Dies ist jedoch das Schicksal aller über das Mittelmaß hinausragenden Gelehrten, wofür BP selbst in der „Bibliotheca Benedictino-Mauriana“ zahlreiche Beispiele angeführt hat. <rs type="person" role="sender">JE</rs> bittet darum, dass ihm <rs type="person" role="sender">HP</rs> die „Epistola ad Menkenium“ Gentilottis auch nur für zwei Tage überlassen wolle. Auch wenn er nicht weniger neugierig auf die Ergebnisse der Klosterreise BPs und <rs type="person" role="sender">HPs</rs> ist, will er <rs type="person" role="sender">HP</rs> keine Unannehmlichkeiten bereiten und hofft, dass der Bericht darüber ohnehin demnächst in einer von ihm bezogenen Gelehrtenzeitschrift erscheinen wird.</p>
+            <p corresp="#seg4">Die „Annales OSB“ von Jean Mabillon hat Seitenstetten von Daniel Walder um 65 Gulden gekauft. Dessen häufige Ehrenbezeugungen haben <rs type="person" role="sender">JE</rs> viel gekostet, aber nichts gebracht, da Walder kaum etwas vom Preis nachgelassen hat. Sollte <rs type="person" role="sender">JE</rs> von Abt Ambros Prevenhuber den Ankauf anderer Werke Mabillons bewilligt bekommen, will er auf den von <rs type="person" role="sender">HP</rs> vorgeschlagenen Ankaufsweg zurückgreifen.</p>
+            <p corresp="#seg5"><rs type="person" role="sender">JE</rs> lässt BP grüßen, ebenso Franz Embler und Vitalis Waldmüller, der sich überaus freundlich gegenüber <rs type="person" role="sender">JE</rs> gezeigt hat. Wie von <rs type="person" role="sender">HP</rs> gebeten <ref type="letter" target="letter:840">840</ref>, hat <rs type="person" role="sender">JE</rs> jedoch die Arbeiten BPs und <rs type="person" role="sender">HPs</rs> nicht erwähnt. Karlmann Hueber hat <rs type="person" role="sender">JE</rs> – was <rs type="person" role="sender">HP</rs> für sich behalten soll – nicht einmal eines Grußes gewürdigt, obgleich [...].</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e43705"><rs type="person" role="sender">JE</rs> freut sich stets über <rs type="person" role="sender">HPs</rs> Schreiben, ist sich jedoch gewiss, dass die Erhaltung der Freundschaft nicht allein von häufigem Briefwechsel abhängt. Seine Antwort hat sich aufgrund seiner seelsorglichen Verpflichtungen (in der Pfarre Wolfsbach) sowie der Einladungen von Freunden verzögert. In der Vorwoche hat <rs type="person" role="sender">JE</rs> eine Gegeneinladung gegeben, bei der auch der gelehrte (musophilus) Pfarrer von Haag (Veit Daniel Götz) anwesend war, eine Ehre, die <rs type="person" role="sender">JEs</rs> Vorgängern nicht zuteil geworden war. <rs type="person" role="sender">JE</rs> erinnert sich, geschrieben zu haben, dass jener Pfarrer gerne auf BP und <rs type="person" role="sender">HP</rs> anzustoßen pflegte <ref type="letter">513</ref>, was er auch nicht verlernt hat.</seg><seg type="context" n="2" xml:id="d3e43710">Weil eine am Folgetag zu haltende Predigt den Nachmittag in Anspruch nehmen wird, dankt <rs type="person" role="sender">JE</rs> nur kurz für den ihm von <rs type="person" role="sender">HP</rs> zu dessen eigenem Nachteil erwiesenen Freundschaftsdienst. Das an BP (mit 825?) gesendete Blatt braucht <rs type="person" role="sender">JE</rs> selbst nicht mehr; er trägt dazu noch einen Schriftsteller nach.</seg><seg type="context" n="3" xml:id="d3e43712">Die wenig freundschaftlichen Anwürfe Johann Benedikt Gentilottis verwundern JE, doch hat er dessen unaufrichtigen Charakter bereits in dessen Briefen an BP wahrgenommen, die ihm gezeigt worden sind. Die Gesetze der Freundschaft gebieten, einen Freund auf einen Fehler hinzuweisen, nicht ihn öffentlich zu machen. Dies ist jedoch das Schicksal aller über das Mittelmaß hinausragenden Gelehrten, wofür BP selbst in der „Bibliotheca Benedictino-Mauriana“ zahlreiche Beispiele angeführt hat. <rs type="person" role="sender">JE</rs> bittet darum, dass ihm <rs type="person" role="sender">HP</rs> die „Epistola ad Menkenium“ Gentilottis auch nur für zwei Tage überlassen wolle. Auch wenn er nicht weniger neugierig auf die Ergebnisse der Klosterreise BPs und <rs type="person" role="sender">HPs</rs> ist, will er <rs type="person" role="sender">HP</rs> keine Unannehmlichkeiten bereiten und hofft, dass der Bericht darüber ohnehin demnächst in einer von ihm bezogenen Gelehrtenzeitschrift erscheinen wird.</seg><seg type="context" n="4" xml:id="d3e43714">Die „Annales OSB“ von Jean Mabillon hat Seitenstetten von Daniel Walder um 65 Gulden gekauft. Dessen häufige Ehrenbezeugungen haben <rs type="person" role="sender">JE</rs> viel gekostet, aber nichts gebracht, da Walder kaum etwas vom Preis nachgelassen hat. Sollte <rs type="person" role="sender">JE</rs> von Abt Ambros Prevenhuber den Ankauf anderer Werke Mabillons bewilligt bekommen, will er auf den von <rs type="person" role="sender">HP</rs> vorgeschlagenen Ankaufsweg zurückgreifen.</seg><seg type="context" n="5" xml:id="d3e43716"><rs type="person" role="sender">JE</rs> lässt BP grüßen, ebenso Franz Embler und Vitalis Waldmüller, der sich überaus freundlich gegenüber <rs type="person" role="sender">JE</rs> gezeigt hat. Wie von <rs type="person" role="sender">HP</rs> gebeten <ref type="letter">840</ref>, hat <rs type="person" role="sender">JE</rs> jedoch die Arbeiten BPs und <rs type="person" role="sender">HPs</rs> nicht erwähnt. Karlmann Hueber hat <rs type="person" role="sender">JE</rs> – was <rs type="person" role="sender">HP</rs> für sich behalten soll – nicht einmal eines Grußes gewürdigt, obgleich [...].</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Das Stück ist unvollständig, das Datum fehlt. Den einzigen sicheren Anhaltspunkt bietet in &lt;5&gt; der Hinweis auf den Besuch von Vitalis Waldmüller und Karlmann Hueber in Seitenstetten. Da der Tag ihrer Abreise von dort nicht gesichert ist, richtet sich die Datumsansetzung nach dem folgenden Brief 843.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverendo religiosissimo ac clarissimo viro domino patri Hieronymo Pez Benedictino Mellicensi amicorum suorum principi salutem plurimam dicit pater Joachimus Edlinger Benedictinus Seittenstettensis.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e43736">Expertus fateor gaudere amicitiam frequenti confabulatione, cum re nulla aeque delecter ac epistolarum tuarum lectione; iniurius tamen in te futurus mihi merito videar, si tuam illam nonnisi huius glutinis beneficio conservari posse persuasum mihi haberem: hinc et silentii mei aequo morosioris, quam peto, veniam mihi facile adpromitto. Primis quidem diebus ultro responsum distuli, posterioribus tum <seg type="lemma" corresp="#d3e43749">cura parochialis</seg> tum amicorum invitationes tot excursiones imperarunt, ut residuum tempus aegre suffecerit orationi sacrae parandae. Elapsa hebdomade talionem instructo in domo parochiali mea prandiolo amicis reddidi, quod praesentia sua (qui favor est, de quo nemo antecessorum meorum, utut eum saepius ambientium, gloriari queat) dignatus etiam fuit clarissimus ille musophilus dominus parochus in Haag, quem identidem Peziorum memoriam hilari poculo ingerere solere ad te perscripsisse me memini, id quod necdum dedidicit. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e43738">Demum ad officium redeo raptimque, quod concio cras habenda pomeridianum tempus sibi vendicet, uberrimas tibi gratias redhibeo pro sincera illa amicitiae contestatione proprio quoque incommodo insuper <pb n="1v"/> habito mihi facta. Schedula ad Bernardum missa prorsus non opus habeo: eidem (supervacanea procul dubio, sed minime offutura solicitudine) <seg type="lemma" corresp="#d3e43755">hunc insuper scriptorem adicio</seg>. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e43742"><seg type="lemma" corresp="#d3e43761">Gentilottii ausus parum sane amicos miror equidem; sed peream, nisi ex eius ad Bernardum datis epistolis insincerum hominis animum subodoratus</seg> fuerim: amicitiae profecto iura moneri potius de lapsu, si quis contingeret, amicum dictant, quam proditorio modo in vulnus eundem spargi. Verum quaeso, mi Hieronyme, quis unquam eruditionis laude vel modicum supra vulgus eminuit, qui non eadem cum Bernardo fata expertus fuerit? Non flamma sine fumo, non gloria sine nebula livoris aut calumniae nascitur: rei testes in Bibliotheca Mauriana Bernardus ipse complures stitit. Pergratum ceteroquin, vir optime, mihi facies, si Gentillotianam Epistolam vel ad biduum concesseris. Et quanquam non minus quoque avidus sim noscendi fortunam itineris vestri, nolim tamen illam notitiam cum incommodo tuo a te eblandiri eo maxime, quod sperem insertum eam iri diario cuidam eruditorum a me protinus comparando. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e43744">Mabillonii Annales ipsis 65 fl. comparavimus allatos a Daniele <seg type="lemma" corresp="#d3e43767">Walder</seg>; cuius frequentes reverentiae (intelligis nempe parasiticum stilum) haud modico mihi steterunt absque ullo inde nato emolumento, cum libros, quos ab eodem emi, pretio parum mihi taxaverit. Quare si ceterorum Mabillonianiorum operum coemtionem impetrare ab abbate potero, occasione a te mihi indicata utar. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e43746">Patri Bernardo penitus meo salutem plurimam ex me dicito et, si placet, etiam patribus Francisco et <seg type="lemma" corresp="#d3e43773">Vitali, qui posterior plus, quam par erat, erga me urbanum se exhibuit. Abstinui tamen, ut monueras, a mentione de laboribus vestris ingerenda. Dominus Carolomannus</seg> interim, quod tibi soli dictum, ne salute quidem me dignabatur, tametsi sat [...].</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e43749">
-               <ref type="context">1</ref>
-               <label>cura parochialis</label><p> Gemeint ist wahrscheinlich die Seelsorge zu
-                  Wolfsbach: vgl. <ref type="letter">775</ref> &lt;3&gt;, <ref type="letter"
-                     >999</ref> &lt;4&gt;. Daneben wurde auch die Kirche St. Johann in Engstetten
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>cura parochialis</mentioned>
+            <p> Gemeint ist wahrscheinlich die Seelsorge zu
+                  Wolfsbach: vgl. <ref type="letter" target="letter:775">775</ref> <ref target="letter:775#seg3">3</ref>, <ref type="letter" target="letter:999">999</ref> <ref target="letter:999#seg4">4</ref>. Daneben wurde auch die Kirche St. Johann in Engstetten
                   von 1717 bis 1721 von JE exkurrierend betreut: StiA Seitenstetten, Professbuch
-                  1601–1700 (ohne Signatur), Nr. 8; vgl. <ref type="letter">825</ref> &lt;3&gt;. Der
+                  1601–1700 (ohne Signatur), Nr. 8; vgl. <ref type="letter" target="letter:825">825</ref> <ref target="letter:825#seg3">3</ref>. Der
                   Bericht JEs über eine im eigenen Pfarrhof gegebene Einladung spricht jedoch dafür,
-                  dass es um Wolfsbach geht.</p></note>
-            <note xml:id="d3e43755">
-               <ref type="context">2</ref>
-               <label>hunc ... adicio</label><p> Die Beilage scheint nicht erhalten zu sein.</p></note>
-            <note xml:id="d3e43761">
-               <ref type="context">3</ref>
-               <label>Gentilottii ausus ... subodoratus</label><p>Zu denken ist an eine Versendung
-                  von Schreiben Gentilottis an JE im Rahmen der in <ref type="letter">775</ref>
-                  &lt;1&gt; erwähnten Übermittlung von Gelehrtenbriefen. Welche Stücke aus der
+                  dass es um Wolfsbach geht.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>hunc ... adicio</mentioned>
+            <p> Die Beilage scheint nicht erhalten zu sein.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>Gentilottii ausus ... subodoratus</mentioned>
+            <p>Zu denken ist an eine Versendung
+                  von Schreiben Gentilottis an JE im Rahmen der in <ref type="letter" target="letter:775">775</ref>
+                  <ref target="letter:775#seg1">1</ref> erwähnten Übermittlung von Gelehrtenbriefen. Welche Stücke aus der
                   Korrespondenz BPs mit Gentilotti gemeint sein können, ist nicht näher zu
                   bestimmen. Zum Konflikt um die von BP beabsichtigte Edition des „Codex Udalrici“
-                  vgl. Einleitung, Abschnitt I.5.</p></note>
-            <note xml:id="d3e43767">
-               <ref type="context">4</ref>
-               <label>Walder</label><p>Vgl. <ref type="letter">505</ref> &lt;5&gt;.</p></note>
-            <note xml:id="d3e43773">
-               <ref type="context">5</ref>
-               <label>Vitali ... Carolomannus</label><p>Am 3. Oktober 1717 reisten Vitalis
+                  vgl. Einleitung, Abschnitt I.5.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
+            <mentioned>Walder</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:505">505</ref> <ref target="letter:505#seg5">5</ref>.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg5">
+            <mentioned>Vitali ... Carolomannus</mentioned>
+            <p>Am 3. Oktober 1717 reisten Vitalis
                   Waldmüller und Karlmann Hueber nach Seitenstetten; am 11. Oktober kehrten sie nach
                   einem Besuch in Mariazell nach Melk zurück: PE 5 165. Zur Person Huebers vgl. StiB
-                  Melk, Cod. 493, 77v; zu Embler vgl. <ref type="letter">156</ref> &lt;12&gt;; zu
-                  Waldmüller vgl. <rs type="bibl" key="bibl:20210">Wallnig–Stockinger, Korrespondenz
-                     1</rs> 814; sowie <ref type="letter">648</ref> &lt;2&gt;. Über die Hintergründe
+                  Melk, Cod. 493, 77v; zu Embler vgl. <ref type="letter" target="letter:156">156</ref> <ref target="letter:156#seg12">12</ref>; zu
+                  Waldmüller vgl. <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz
+                     1</rs> 814; sowie <ref type="letter" target="letter:648">648</ref> <ref target="letter:648#seg2">2</ref>. Über die Hintergründe
                   der anscheinend eingetretenen Verstimmung zwischen Hueber und JE ist nichts zu
                   ermitteln; ein Zusammenhang mit Kritik an den Arbeiten BPs und HPs in den Reihen
-                  der Melker wäre denkbar: vgl. <ref type="letter">694 </ref>&lt;7&gt;.</p></note>
-         </div>
-      </back>
+                  der Melker wäre denkbar: vgl. <ref type="letter" target="letter:694">694 </ref><ref target="letter:694 #seg7">7</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:18992">
+            <title type="short">Rabl, Briefe</title>
+            <biblScope>330</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverendo religiosissimo ac clarissimo viro domino patri Hieronymo Pez Benedictino Mellicensi amicorum suorum principi salutem plurimam dicit pater Joachimus Edlinger Benedictinus Seittenstettensis.</opener>
+         <ab resp="#editor" xml:id="seg1">Expertus fateor gaudere amicitiam frequenti confabulatione, cum re nulla aeque delecter ac epistolarum tuarum lectione; iniurius tamen in te futurus mihi merito videar, si tuam illam nonnisi huius glutinis beneficio conservari posse persuasum mihi haberem: hinc et silentii mei aequo morosioris, quam peto, veniam mihi facile adpromitto. Primis quidem diebus ultro responsum distuli, posterioribus tum <anchor xml:id="n1"/>cura parochialis<anchor xml:id="n1e"/> tum amicorum invitationes tot excursiones imperarunt, ut residuum tempus aegre suffecerit orationi sacrae parandae. Elapsa hebdomade talionem instructo in domo parochiali mea prandiolo amicis reddidi, quod praesentia sua (qui favor est, de quo nemo antecessorum meorum, utut eum saepius ambientium, gloriari queat) dignatus etiam fuit clarissimus ille musophilus dominus parochus in Haag, quem identidem Peziorum memoriam hilari poculo ingerere solere ad te perscripsisse me memini, id quod necdum dedidicit. </ab>
+         <ab resp="#editor" xml:id="seg2">Demum ad officium redeo raptimque, quod concio cras habenda pomeridianum tempus sibi vendicet, uberrimas tibi gratias redhibeo pro sincera illa amicitiae contestatione proprio quoque incommodo insuper <pb n="1v"/> habito mihi facta. Schedula ad Bernardum missa prorsus non opus habeo: eidem (supervacanea procul dubio, sed minime offutura solicitudine) <anchor xml:id="n2"/>hunc insuper scriptorem adicio<anchor xml:id="n2e"/>. </ab>
+         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n3"/>Gentilottii ausus parum sane amicos miror equidem; sed peream, nisi ex eius ad Bernardum datis epistolis insincerum hominis animum subodoratus<anchor xml:id="n3e"/> fuerim: amicitiae profecto iura moneri potius de lapsu, si quis contingeret, amicum dictant, quam proditorio modo in vulnus eundem spargi. Verum quaeso, mi Hieronyme, quis unquam eruditionis laude vel modicum supra vulgus eminuit, qui non eadem cum Bernardo fata expertus fuerit? Non flamma sine fumo, non gloria sine nebula livoris aut calumniae nascitur: rei testes in Bibliotheca Mauriana Bernardus ipse complures stitit. Pergratum ceteroquin, vir optime, mihi facies, si Gentillotianam Epistolam vel ad biduum concesseris. Et quanquam non minus quoque avidus sim noscendi fortunam itineris vestri, nolim tamen illam notitiam cum incommodo tuo a te eblandiri eo maxime, quod sperem insertum eam iri diario cuidam eruditorum a me protinus comparando. </ab>
+         <ab resp="#editor" xml:id="seg4">Mabillonii Annales ipsis 65 fl. comparavimus allatos a Daniele <anchor xml:id="n4"/>Walder<anchor xml:id="n4e"/>; cuius frequentes reverentiae (intelligis nempe parasiticum stilum) haud modico mihi steterunt absque ullo inde nato emolumento, cum libros, quos ab eodem emi, pretio parum mihi taxaverit. Quare si ceterorum Mabillonianiorum operum coemtionem impetrare ab abbate potero, occasione a te mihi indicata utar. </ab>
+         <ab resp="#editor" xml:id="seg5">Patri Bernardo penitus meo salutem plurimam ex me dicito et, si placet, etiam patribus Francisco et <anchor xml:id="n5"/>Vitali, qui posterior plus, quam par erat, erga me urbanum se exhibuit. Abstinui tamen, ut monueras, a mentione de laboribus vestris ingerenda. Dominus Carolomannus<anchor xml:id="n5e"/> interim, quod tibi soli dictum, ne salute quidem me dignabatur, tametsi sat [...].</ab>
+      </body>
    </text>
 </TEI>

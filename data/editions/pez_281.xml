@@ -1,39 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="281" xml:id="pez-0281">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">281 Felix Egger an Bernhard Pez. 1712-11-07. Petershausen.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Felix Egger an Bernhard Pez. 1712-11-07. Petershausen.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">281</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">37r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 37r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -48,121 +68,103 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">280</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">294</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">280</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">294</idno>
-               </ref>
+               <ptr type="prev" target="letter:280"/>
+               <ptr type="next" target="letter:294"/>
+               <ptr type="mentions" target="letter:280"/>
+               <ptr type="mentionedIn" target="letter:294"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">FE</rs> antwortet <rs type="person" role="sender">BP</rs> auf seinen Brief <ref type="letter" target="letter:280">280</ref>, nachdem er von seiner Krankheit genesen ist; weil er kurz vor der Abreise nach <rs ref="index:d10854e15095">Klingenzell</rs> steht, hat er jedoch wenig Zeit. In den vorangegangenen Wochen hat <rs type="person" role="sender">FE</rs> zwei weitere handschriftliche Traktate <rs ref="index:d10854e22432">Petrus Owers</rs> gefunden, darunter einen, den dieser noch als Weltpriester verfasste. Er sendet <rs type="person" role="sender">BP</rs> deren Titel und außerdem ein <rs ref="index:d10854e19980">Epigramm auf Ower</rs> von dem <rs ref="index:d10854e35314">Zwiefaltener</rs> <rs ref="index:d10854e19966">Thomas Metzler</rs>.</p>
+            <p corresp="#seg2">Wegen der Lebensdaten der <rs ref="index:d14380e30140">Murenser</rs> Schriftsteller, besonders <rs ref="index:d10854e32541">Anselm Weißenbachs</rs>, hat <rs type="person" role="sender">FE</rs> zweimal nach <rs ref="index:d14380e30140">Muri</rs> geschrieben, jedoch keine Antwort erhalten. Dies hat auch seine Antwort an <rs type="person" role="sender">BP</rs> verzögert. Von <rs ref="index:d10854e15095">Klingenzell</rs> aus wird er abermals in <rs ref="index:d14380e30140">Muri</rs> urgieren.</p>
+            <p corresp="#seg3">Für seinen „<rs ref="index:d14380e10864">Prodromus ideae ordinis hierarchico-Benedictini</rs>“ wäre <rs type="person" role="sender">FE</rs> sehr erfreut über die Hilfe <rs type="person" role="sender">BPs</rs> hinsichtlich der Schriftsteller des 14. und 15. Jahrhunderts. Er bittet, auch ihre Wirkungsorte und Ämter anzuführen.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">FE</rs> dankt für die – wenn auch schlichte – von <rs type="person" role="sender">BP</rs> zugesendete <rs ref="index:d10854e33691">Darstellung</rs> des <rs ref="index:d10854e33651">Wiener Schottenklosters</rs>.</p>
+            <p corresp="#seg5"><rs ref="index:d14380e39962">Anselm Schrambs</rs> „<rs ref="index:d14380e40004">Chronicon Mellicense</rs>“ hat Prior <rs ref="index:d10854e32623">Placidus Weltin</rs> in der Abwesenheit <rs type="person" role="sender">FEs</rs> in Empfang genommen; den unterbliebenen Dank holt <rs type="person" role="sender">FE</rs> nun nach und will das Geschenk erwidern, wenn seine Arbeiten („<rs ref="index:d10854e7334">Idea ordinis hierarchico-Benedictini</rs>“) druckreif sind.</p>
+            <p corresp="#seg6"><rs type="person" role="sender">FE</rs> berichtet, dass <rs ref="index:d10854e9622">Petrus Friderici</rs> im Streit mit dem <rs ref="index:d14380e32292">Pariser</rs> <rs ref="index:d14380e26993">René Massuet</rs> um die Echtheit des angeblichen <rs ref="index:d10854e5840">Gründungsdiploms Dagoberts (III.)</rs> für das <rs ref="index:d10854e8069">Peterskloster</rs> nach hartnäckigem Widerstand endlich aufgegeben hat. Den vertraulichen Ton seiner Briefe an <rs type="person" role="sender">FE</rs> soll <rs type="person" role="sender">BP</rs> nicht entschuldigen; <rs type="person" role="sender">FE</rs> ist geehrt, in die Kreise derer aufgenommen zu werden, denen er nicht wert ist, die Schuhe aufzuschnüren.</p>
+            <p corresp="#seg7">Der <rs ref="index:d10854e23168">Petershausener</rs> Geschichtsschreiber <rs ref="index:d10854e20191">Gebhard Model</rs> lebte im vorangegangenen Jahrhundert und hatte im Kloster zahlreiche Ämter inne: Er war Novizenmeister, Ökonom, zuletzt 20 Jahre Verwalter der <rs ref="index:d10854e23168">Petershausen</rs> gehörigen Herrschaft <rs ref="index:d10854e12908">Hilzingen</rs>. Geboren war er in <rs ref="index:d10854e7826">Engen</rs> im <rs ref="index:d10854e12092">Hegau</rs> im Gebiet der <rs ref="index:d10854e9929">Grafen von Fürstenberg</rs>, seine Ausbildung erhielt er mit den höchsten Auszeichnungen bei den<rs ref="index:d14380e20126"> Jesuiten</rs>. Seine <rs ref="index:d10854e20199">Hauschronik</rs> verfasste er auf Bitten <rs ref="index:d14380e25581">Mabillons</rs>; sie reicht bis zum Jahre 1680 in der Amtszeit Abt <rs ref="index:d10854e27631">Wunibald Saurs</rs>. <rs ref="index:d10854e20191">Model</rs> starb 1702.</p>
+            <p corresp="#seg8">In einem Postskriptum bittet <rs type="person" role="sender">FE</rs>, Briefe an ihn künftig mit derselben <rs ref="index:d14380e35665">Post</rs> wie bisher über <rs ref="index:d14380e23001">Konstanz</rs> nach <rs ref="index:d10854e15095">Klingenzell</rs> zu schicken.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e35812"><rs type="person" role="sender">FE</rs> antwortet <rs type="person" role="sender">BP</rs> auf seinen Brief <ref type="letter">280</ref>, nachdem er von seiner Krankheit genesen ist; weil er kurz vor der Abreise nach <rs key="index:d10854e15095">Klingenzell</rs> steht, hat er jedoch wenig Zeit. In den vorangegangenen Wochen hat <rs type="person" role="sender">FE</rs> zwei weitere handschriftliche Traktate <rs key="index:d10854e22432">Petrus Owers</rs> gefunden, darunter einen, den dieser noch als Weltpriester verfasste. Er sendet <rs type="person" role="sender">BP</rs> deren Titel und außerdem ein <rs key="index:d10854e19980">Epigramm auf Ower</rs> von dem <rs key="index:d10854e35314">Zwiefaltener</rs> <rs key="index:d10854e19966">Thomas Metzler</rs>.</seg><seg type="context" n="2" xml:id="d4618e35817">Wegen der Lebensdaten der <rs key="index:d14380e30140">Murenser</rs> Schriftsteller, besonders <rs key="index:d10854e32541">Anselm Weißenbachs</rs>, hat <rs type="person" role="sender">FE</rs> zweimal nach <rs key="index:d14380e30140">Muri</rs> geschrieben, jedoch keine Antwort erhalten. Dies hat auch seine Antwort an <rs type="person" role="sender">BP</rs> verzögert. Von <rs key="index:d10854e15095">Klingenzell</rs> aus wird er abermals in <rs key="index:d14380e30140">Muri</rs> urgieren.</seg><seg type="context" n="3" xml:id="d4618e35819">Für seinen „<rs key="index:d14380e10864">Prodromus ideae ordinis hierarchico-Benedictini</rs>“ wäre <rs type="person" role="sender">FE</rs> sehr erfreut über die Hilfe <rs type="person" role="sender">BPs</rs> hinsichtlich der Schriftsteller des 14. und 15. Jahrhunderts. Er bittet, auch ihre Wirkungsorte und Ämter anzuführen.</seg><seg type="context" n="4" xml:id="d4618e35821"><rs type="person" role="sender">FE</rs> dankt für die – wenn auch schlichte – von <rs type="person" role="sender">BP</rs> zugesendete <rs key="index:d10854e33691">Darstellung</rs> des <rs key="index:d10854e33651">Wiener Schottenklosters</rs>.</seg><seg type="context" n="5" xml:id="d4618e35823"><rs key="index:d14380e39962">Anselm Schrambs</rs> „<rs key="index:d14380e40004">Chronicon Mellicense</rs>“ hat Prior <rs key="index:d10854e32623">Placidus Weltin</rs> in der Abwesenheit <rs type="person" role="sender">FEs</rs> in Empfang genommen; den unterbliebenen Dank holt <rs type="person" role="sender">FE</rs> nun nach und will das Geschenk erwidern, wenn seine Arbeiten („<rs key="index:d10854e7334">Idea ordinis hierarchico-Benedictini</rs>“) druckreif sind.</seg><seg type="context" n="6" xml:id="d4618e35825"><rs type="person" role="sender">FE</rs> berichtet, dass <rs key="index:d10854e9622">Petrus Friderici</rs> im Streit mit dem <rs key="index:d14380e32292">Pariser</rs> <rs key="index:d14380e26993">René Massuet</rs> um die Echtheit des angeblichen <rs key="index:d10854e5840">Gründungsdiploms Dagoberts (III.)</rs> für das <rs key="index:d10854e8069">Peterskloster</rs> nach hartnäckigem Widerstand endlich aufgegeben hat. Den vertraulichen Ton seiner Briefe an <rs type="person" role="sender">FE</rs> soll <rs type="person" role="sender">BP</rs> nicht entschuldigen; <rs type="person" role="sender">FE</rs> ist geehrt, in die Kreise derer aufgenommen zu werden, denen er nicht wert ist, die Schuhe aufzuschnüren.</seg><seg type="context" n="7" xml:id="d4618e35827">Der <rs key="index:d10854e23168">Petershausener</rs> Geschichtsschreiber <rs key="index:d10854e20191">Gebhard Model</rs> lebte im vorangegangenen Jahrhundert und hatte im Kloster zahlreiche Ämter inne: Er war Novizenmeister, Ökonom, zuletzt 20 Jahre Verwalter der <rs key="index:d10854e23168">Petershausen</rs> gehörigen Herrschaft <rs key="index:d10854e12908">Hilzingen</rs>. Geboren war er in <rs key="index:d10854e7826">Engen</rs> im <rs key="index:d10854e12092">Hegau</rs> im Gebiet der <rs key="index:d10854e9929">Grafen von Fürstenberg</rs>, seine Ausbildung erhielt er mit den höchsten Auszeichnungen bei den<rs key="index:d14380e20126"> Jesuiten</rs>. Seine <rs key="index:d10854e20199">Hauschronik</rs> verfasste er auf Bitten <rs key="index:d14380e25581">Mabillons</rs>; sie reicht bis zum Jahre 1680 in der Amtszeit Abt <rs key="index:d10854e27631">Wunibald Saurs</rs>. <rs key="index:d10854e20191">Model</rs> starb 1702.</seg><seg type="context" n="8" xml:id="d4618e35829">In einem Postskriptum bittet <rs type="person" role="sender">FE</rs>, Briefe an ihn künftig mit derselben <rs key="index:d14380e35665">Post</rs> wie bisher über <rs key="index:d14380e23001">Konstanz</rs> nach <rs key="index:d10854e15095">Klingenzell</rs> zu schicken.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">III</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine amicorum colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e35846">Dum sacra <sic>me obedientia resumpta valetudine denuo me</sic> [<hi rend="italic">sic</hi>] <seg type="lemma" corresp="#d4618e35903">in Klingencellam</seg> (praeposituram nostram) abducit, meos prius invisere amicos placet quam Petri-domui valedicere. Novissimis igitur vestris brevissime (temporis avaritia et negotiorum, ut in abitu contingere solet<note place="foot" xml:id="d4618e35851">	Danach durchgestrichen ein Klammerzeichen.</note>, mole pressus et constrictus) repono in manus meas lapsis septimanis novum incidisse tractatum manuscriptum Oweri nostri<note place="foot" xml:id="d4618e35854">	<hi rend="italic">Oweri nostri</hi> über der Zeile eingefügt.</note> cum alio quodam, quem imprimis curaverat <seg type="lemma" corresp="#d4618e35910">sacerdos adhuc saecularis</seg>; quorum <seg type="lemma" corresp="#d4618e35915">titulos hic adicio</seg> cum insigni epigrammate, quo pater Mezlerus Zwifaltensis eum honoravit: servient forsan pro ornatu. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e35860">Pro vitae periodo scriptorum Murensium, praesertim Weissenbach, bis hactenus scripsi et responsum, sed frustra, expectavi: quae causa est, cur tardius responderim. Ubi Klingencellam venero, urgebo Murensibus utpote propior. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e35862">Si Prodromum meum scriptoribus saeculi XIV. et XV. suo illustrare erudito et pellucido calamo dignabitur, nae aeternum obaerabor; modo nomina eorum assignentur cum loco, ubi morati fuerunt, et munere, quo functi sunt. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e35864">Pro <seg type="lemma" corresp="#d4618e35920">tabella Scottensis monasterii</seg> Viennae (etsi non admodum culta) obligatum me plurimum profiteor, spe plenus, et reliqua oportuno tempore communicanda. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e35866"><seg type="lemma" corresp="#d4618e35927">Chronicon Mellicense</seg> a clarissimo Anselmo Schramb in mea absentia accepit iam dudum clarissimus pater prior noster. Doleo debitas ab eo grates neglectas, quas praesentibus in forma debita et solemni deposuero, praemissa mei perdemissa erga fautorem tam beneficum commendatione; ubi mea typo matura erunt, gratum pariter exhibebo animum. <pb n="1v"/> </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e35870">Diploma Dagobertinum a patre Massuet Parisiensi pluribus refutatum <sic>pertinater</sic> [<hi rend="italic">sic</hi>] tueri nihilominus tentabat <sic>amicus noster pater Petrus Friderici amicus noster</sic> [<hi rend="italic">sic</hi>]; at manus tandem et herbam porrigit. Modum, quo mecum in scribendo agere placet, non est, cur excuses, amice! Eum certe veneror mihique gratulor eorum me venire in numerum, quorum ut solvam <sic>caleamenti</sic> [<hi rend="italic">sic</hi>] corrigiam, indignum profecto me profiteor. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d4618e35881"><seg type="lemma" corresp="#d4618e35946">Chronographus noster reverendus pater Gebhardus Model</seg> vixit priori saeculo vitam vere religiosam, variis muneribus (velut novitiorum magistri, oeconomi, administratoris tandem per 20 annos <seg type="lemma" corresp="#d4618e35953">in dynastia nostra Hilzingensi</seg>) functus; in humanioribus apud patres Societatis inter primos primus, multis praemiis donatus. Patria ei fuit Enga, oppidum in Hegoia sub dominio comitum Fürstenbergensium. Obiit anno 1702 mense Septembri<note place="foot" xml:id="d4618e35883">	<hi rend="italic">Obiit ... Septembri</hi> über der Zeile eingefügt; nach <hi rend="italic" xml:space="preserve">anno </hi>durchgestrichen <hi rend="italic">16</hi>.</note>. Opus suum lucubravit ad instantiam Mabillonii, quo historiam totam monasterii nostri complectebatur usque ad regimen reverendissimi domini <seg type="lemma" corresp="#d4618e35958">abbatis Wunibaldi</seg> inclusive, id est ad annum usque 1680. Finio et in amici sinum me abscondo</seg></p>
-            <p xml:space="preserve">Vester totissimus pater Felix Egger.</p>
-            <p xml:space="preserve">Petrhusii 7. Novembris 1712.</p>
-            <p xml:space="preserve"><seg type="context" n="8" xml:space="preserve" xml:id="d4618e35900">P.S. In inscriptione posthac scribatur: per Costanz Klingenzell. Eadem posta posthac serviet, quae hactenus.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e35903">
-               <ref type="context">1</ref>
-               <label>in Klingencellam</label>
-               <p>Die Propstei Klingenzell im Thurgau hatte zum Stift St. Georgen zu Stein am Rhein gehört, welches in der Reformationszeit aufgehoben und Ende des 16. Jh. dem Kloster Petershausen inkorporiert wurde. Bis zur Aufhebung von Petershausen 1802 residierten in Klingenzell zumeist zwei Konventualen als Propst und Pfarrer: Lindner, Professbuch Petershausen 23f. FE bekleidete das Amt des Propstes und lebte auch als emeritierter Propst bis zu seinem Tod weiterhin in Klingenzell: ebd. 10.</p>
-            </note>
-            <note xml:id="d4618e35910">
-               <ref type="context">1</ref>
-               <label>sacerdos ... saecularis</label>
-               <p>Nach den Angaben in seinem „Elogium“ (II, 25r–v; Beilage zu <ref type="letter"
-                     >249</ref>) war Ower zunächst Weltpriester gewesen und hatte erst 1641, im
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>in Klingencellam</mentioned>
+            <p>Die Propstei Klingenzell im Thurgau hatte zum Stift St. Georgen zu Stein am Rhein gehört, welches in der Reformationszeit aufgehoben und Ende des 16. Jh. dem Kloster Petershausen inkorporiert wurde. Bis zur Aufhebung von Petershausen 1802 residierten in Klingenzell zumeist zwei Konventualen als Propst und Pfarrer: Lindner, Professbuch Petershausen 23f. FE bekleidete das Amt des Propstes und lebte auch als emeritierter Propst bis zu seinem Tod weiterhin in Klingenzell: ebd. 10.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>sacerdos ... saecularis</mentioned>
+            <p>Nach den Angaben in seinem „Elogium“ (II, 25r–v; Beilage zu <ref type="letter" target="letter:249">249</ref>) war Ower zunächst Weltpriester gewesen und hatte erst 1641, im
                   Alter von etwa 45 Jahren, seine Profess abgelegt. Dieser Quelle ist gegenüber den
-                  abweichenden Angaben bei <rs type="bibl" key="bibl:18034">Lindner, Professbuch
+                  abweichenden Angaben bei <rs type="bibl" ref="bibl:18034">Lindner, Professbuch
                      Petershausen</rs> 8, der Vorzug zu geben.</p>
-            </note>
-            <note xml:id="d4618e35915">
-               <ref type="context">1</ref>
-               <label>titulos hic adicio</label>
-               <p>Die Beilage scheint nicht erhalten zu sein.</p>
-            </note>
-            <note xml:id="d4618e35920">
-               <ref type="context">4</ref>
-               <label>tabella Scottensis monasterii</label>
-               <p>Zur Sammlung von Klosteransichten für die „Idea ordinis hierarchico-Benedictini“
-                  vgl. <ref type="letter">237</ref> &lt;2&gt;, <ref type="letter">249</ref>
-                  &lt;8&gt;, <ref type="letter">267</ref> &lt;3&gt;.</p>
-            </note>
-            <note xml:id="d4618e35927">
-               <ref type="context">5</ref>
-               <label>Chronicon Mellicense</label>
-               <p>Vgl. <ref type="letter">231</ref> &lt;5&gt;, wonach es den Anschein hat, dass das
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned>titulos hic adicio</mentioned>
+            <p>Die Beilage scheint nicht erhalten zu sein.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
+            <mentioned>tabella Scottensis monasterii</mentioned>
+            <p>Zur Sammlung von Klosteransichten für die „Idea ordinis hierarchico-Benedictini“
+                  vgl. <ref type="letter" target="letter:237">237</ref> <ref target="letter:237#seg2">2</ref>, <ref type="letter" target="letter:249">249</ref>
+                  <ref target="letter:249#seg8">8</ref>, <ref type="letter" target="letter:267">267</ref> <ref target="letter:267#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg5">
+            <mentioned>Chronicon Mellicense</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:231">231</ref> <ref target="letter:231#seg5">5</ref>, wonach es den Anschein hat, dass das
                   „Chronicon“ FE schon im März 1712 vorlag.</p>
-            </note>
-            <note xml:id="d4618e35934">
-               <ref type="context">6</ref>
-               <label>Diploma Dagobertinum ... Friderici</label>
-               <p>Vgl. <ref type="letter">237</ref>, <ref type="letter">248</ref>, <ref
-                     type="letter">268</ref>. Dass sich Friderici letztlich geschlagen gegeben
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg6">
+            <mentioned>Diploma Dagobertinum ... Friderici</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:237">237</ref>, <ref type="letter" target="letter:248">248</ref>, <ref type="letter" target="letter:268">268</ref>. Dass sich Friderici letztlich geschlagen gegeben
                   hätte, ist aus der erhaltenen Korrespondenz René Massuets (BN FF 19664) nicht
                   nachzuweisen.</p>
-            </note>
-            <note xml:id="d4618e35941">
-               <ref type="context">6</ref>
-               <label>ut solvam ... indignum</label>
-               <p>Nach Mk 1,7; Lk 3,16; Joh 1,27.</p>
-            </note>
-            <note xml:id="d4618e35946">
-               <ref type="context">7</ref>
-               <label>Chronographus ... Gebhardus Model</label>
-               <p><rs type="bibl" key="bibl:18034">Lindner, Professbuch Petershausen</rs> 9; zu
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg6">
+            <mentioned>ut solvam ... indignum</mentioned>
+            <p>Nach Mk 1,7; Lk 3,16; Joh 1,27.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg7">
+            <mentioned>Chronographus ... Gebhardus Model</mentioned>
+            <p><rs type="bibl" ref="bibl:18034">Lindner, Professbuch Petershausen</rs> 9; zu
                   seiner Tätigkeit als Chronist vgl.
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Egger, Idea
-                  ordinis<?oxy_custom_end?> 2 292, 452. Seine Hausgeschichte unter dem Titel
+                  Egger, Idea
+                  ordinis 2 292, 452. Seine Hausgeschichte unter dem Titel
                   „Chronicon imperialis monasterii Petridomus, vulgo Petershausen“ (mit Datum 1681)
-                  ist erhalten in GLA Karlsruhe, 65/1801; vgl. <rs type="bibl" key="bibl:19630"
-                     >Spahr–Müller, Petershausen</rs> 491, 501f.</p>
-            </note>
-            <note xml:id="d4618e35953">
-               <ref type="context">7</ref>
-               <label>in dynastia nostra Hilzingensi</label>
-               <p>Die Herrschaft und Pfarre Hilzingen bei Blumenfeld in Baden waren wie Klingenzell
-                  mit der Inkorporierung von Stein am Rhein an Petershausen gekommen: <rs
-                     type="bibl" key="bibl:18034">Lindner, Professbuch Petershausen</rs> 25; vgl.
-                     <rs type="bibl" key="bibl:19630">Spahr–Müller, Petershausen</rs> 493f.</p>
-            </note>
-            <note xml:id="d4618e35958">
-               <ref type="context">7</ref>
-               <label>abbatis Wunibaldi</label>
-               <p>Zu Wunibald Saur, der in Petershausen als „alter fundator“ gerühmt wurde:
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Egger, Idea
-                  ordinis<?oxy_custom_end?> 2 449–460; <rs type="bibl" key="bibl:18034">Lindner,
-                     Professbuch Petershausen</rs> 5; <rs type="bibl" key="bibl:19630">Spahr–Müller,
+                  ist erhalten in GLA Karlsruhe, 65/1801; vgl. <rs type="bibl" ref="bibl:19630">Spahr–Müller, Petershausen</rs> 491, 501f.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg7">
+            <mentioned>in dynastia nostra Hilzingensi</mentioned>
+            <p>Die Herrschaft und Pfarre Hilzingen bei Blumenfeld in Baden waren wie Klingenzell
+                  mit der Inkorporierung von Stein am Rhein an Petershausen gekommen: <rs type="bibl" ref="bibl:18034">Lindner, Professbuch Petershausen</rs> 25; vgl.
+                     <rs type="bibl" ref="bibl:19630">Spahr–Müller, Petershausen</rs> 493f.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg7">
+            <mentioned>abbatis Wunibaldi</mentioned>
+            <p>Zu Wunibald Saur, der in Petershausen als „alter fundator“ gerühmt wurde:
+                  Egger, Idea
+                  ordinis 2 449–460; <rs type="bibl" ref="bibl:18034">Lindner,
+                     Professbuch Petershausen</rs> 5; <rs type="bibl" ref="bibl:19630">Spahr–Müller,
                      Petershausen</rs> 491.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>III</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine amicorum colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Dum sacra <sic>me obedientia resumpta valetudine denuo me</sic>  <anchor xml:id="n1"/>in Klingencellam<anchor xml:id="n1e"/> (praeposituram nostram) abducit, meos prius invisere amicos placet quam Petri-domui valedicere. Novissimis igitur vestris brevissime (temporis avaritia et negotiorum, ut in abitu contingere solet<note place="foot" xml:id="d4618e35851">Danach durchgestrichen ein Klammerzeichen.</note>, mole pressus et constrictus) repono in manus meas lapsis septimanis novum incidisse tractatum manuscriptum <add place="above">Oweri nostri</add> cum alio quodam, quem imprimis curaverat <anchor xml:id="n2"/>sacerdos adhuc saecularis<anchor xml:id="n2e"/>; quorum <anchor xml:id="n3"/>titulos hic adicio<anchor xml:id="n3e"/> cum insigni epigrammate, quo pater Mezlerus Zwifaltensis eum honoravit: servient forsan pro ornatu. </ab>
+         <ab resp="#editor" xml:id="seg2">Pro vitae periodo scriptorum Murensium, praesertim Weissenbach, bis hactenus scripsi et responsum, sed frustra, expectavi: quae causa est, cur tardius responderim. Ubi Klingencellam venero, urgebo Murensibus utpote propior. </ab>
+         <ab resp="#editor" xml:id="seg3">Si Prodromum meum scriptoribus saeculi XIV. et XV. suo illustrare erudito et pellucido calamo dignabitur, nae aeternum obaerabor; modo nomina eorum assignentur cum loco, ubi morati fuerunt, et munere, quo functi sunt. </ab>
+         <ab resp="#editor" xml:id="seg4">Pro <anchor xml:id="n4"/>tabella Scottensis monasterii<anchor xml:id="n4e"/> Viennae (etsi non admodum culta) obligatum me plurimum profiteor, spe plenus, et reliqua oportuno tempore communicanda. </ab>
+         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n5"/>Chronicon Mellicense<anchor xml:id="n5e"/> a clarissimo Anselmo Schramb in mea absentia accepit iam dudum clarissimus pater prior noster. Doleo debitas ab eo grates neglectas, quas praesentibus in forma debita et solemni deposuero, praemissa mei perdemissa erga fautorem tam beneficum commendatione; ubi mea typo matura erunt, gratum pariter exhibebo animum. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg6">Diploma Dagobertinum a patre Massuet Parisiensi pluribus refutatum <sic>pertinater</sic>  tueri nihilominus tentabat <sic>amicus noster pater Petrus Friderici amicus noster</sic> ; at manus tandem et herbam porrigit. Modum, quo mecum in scribendo agere placet, non est, cur excuses, amice! Eum certe veneror mihique gratulor eorum me venire in numerum, quorum ut solvam <sic>caleamenti</sic>  corrigiam, indignum profecto me profiteor. </ab>
+         <ab resp="#editor" xml:id="seg7"><anchor xml:id="n6"/>Chronographus noster reverendus pater Gebhardus Model<anchor xml:id="n6e"/> vixit priori saeculo vitam vere religiosam, variis muneribus (velut novitiorum magistri, oeconomi, administratoris tandem per 20 annos <anchor xml:id="n7"/>in dynastia nostra Hilzingensi<anchor xml:id="n7e"/>) functus; in humanioribus apud patres Societatis inter primos primus, multis praemiis donatus. Patria ei fuit Enga, oppidum in Hegoia sub dominio comitum Fürstenbergensium. Obiit anno 1702 mense Septembri<note place="foot" xml:id="d4618e35883"><hi rend="italic">Obiit ... Septembri</hi> über der Zeile eingefügt; nach <hi rend="italic" xml:space="preserve">anno </hi>durchgestrichen <hi rend="italic">16</hi>.</note>. Opus suum lucubravit ad instantiam Mabillonii, quo historiam totam monasterii nostri complectebatur usque ad regimen reverendissimi domini <anchor xml:id="n8"/>abbatis Wunibaldi<anchor xml:id="n8e"/> inclusive, id est ad annum usque 1680. Finio et in amici sinum me abscondo</ab>
+         <closer>Vester totissimus pater Felix Egger.</closer>
+         <closer>Petrhusii 7. Novembris 1712.</closer>
+         <closer xml:id="seg8">P.S. In inscriptione posthac scribatur: per Costanz Klingenzell. Eadem posta posthac serviet, quae hactenus.</closer>
+      </body>
    </text>
 </TEI>

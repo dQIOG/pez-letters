@@ -1,39 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="243" xml:id="pez-0243">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">243 Odo Illem an Bernhard Pez. 1712-05-09. Gladbach.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Odo Illem an Bernhard Pez. 1712-05-09. Gladbach.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">243</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">267r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 267r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -48,145 +68,115 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">242</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">242</idno>
-               </ref>
+               <ptr type="prev" target="letter:242"/>
+               <ptr type="mentions" target="letter:242"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person">OI</rs> bittet, seine verspätete Antwort zu entschuldigen; eine anderweitige Verpflichtung war der Grund. <rs type="person" role="sender">BP</rs> hat nach <rs ref="index:d10854e29195">Ludwig Sombeck</rs> gefragt, den <rs ref="index:d14380e6885">Bucelin</rs> (im „<rs ref="index:d14380e6893">Benedictus redivivus</rs>“) als Abt von <rs ref="index:d14380e15593">Gladbach</rs> nennt, jedoch irrig. <rs type="person">OI</rs> liegen sowohl ein <rs ref="index:d10854e10578">Äbtekatalog</rs> von <rs ref="index:d14380e15593">Gladbach</rs> seit der zweiten Gründung 972 (recte: siehe Kommentar) als auch ein <rs ref="index:d10854e10597">Professenverzeichnis</rs> vor; in keinem von beiden scheint eine Person namens Ludwig auf. Aus der Überlegung, es könnte sich um den Abt eines anderen Klosters der <rs ref="index:d14380e22351">Bursfelder Kongregation</rs> handeln, hat er in den Kapitelrezessen nachgesehen, jedoch unter allen Äbten der Kongregation nur zwei namens Ludwig gefunden, einen 1536 verstorbenen <rs ref="index:d10854e17548">Abt von <rs ref="index:d10854e13004">Homburg</rs></rs> und einen 1530 (recte: 1531) verstorbenen <rs ref="index:d10854e17555">Abt von <rs ref="index:d10854e28759">Seligenstadt</rs></rs>, den auch <rs ref="index:d14380e6885">Bucelin</rs> in seiner „<rs ref="index:d14380e6898">Germania</rs>“ erwähnt. Auch unter den Verstorbenen findet sich kein <rs ref="index:d10854e29195">Ludwig Sombeck</rs> verzeichnet. <rs type="person">OI</rs> folgert hieraus, dass <rs ref="index:d14380e6885">Bucelin</rs> falsch informiert war.</p>
+            <p corresp="#seg2">In der Beilage sendet <rs type="person">OI</rs> ein Bücherverzeichnis.</p>
+            <p corresp="#seg3">Das Kloster „Lacense“ heißt deutsch „Zum Loch“ (<rs ref="index:d14380e26262">Maria Laach</rs>), weil es an einem See liegt, etwa zwei Stunden vom <rs ref="index:d14380e37308">Rhein</rs> bei <rs ref="index:d10854e752">Andernach</rs> im Gebiet der Erzdiözese <rs ref="index:d14380e22194">Köln</rs>; hinsichtlich der Spiritualien untersteht es jedoch dem Rektor von <rs ref="index:d14380e43343">Trier</rs>.</p>
+            <p corresp="#seg4">Das Kloster „Indense“ hat seinen Namen nach dem Flüßchen <rs ref="index:d10854e13431">Inde</rs>. Es liegt zweieinhalb Stunden von <rs ref="index:d14380e39">Aachen</rs> und ist dem heiligen Papst <rs ref="index:d10854e5581">Cornelius</rs> geweiht, weshalb es gemeinhin <rs ref="index:d10854e16105">Kornelimünster</rs> genannt wird.</p>
+            <p corresp="#seg5">In das Bücherverzeichnis nicht aufgenommen sind Autoren aus <rs ref="index:d10854e8946">Flandern</rs> oder <rs ref="index:d14380e18543">Holland</rs> wie <rs ref="index:d14380e5940">Louis de Blois</rs>, <rs ref="index:d14380e16869">Benedikt van Haeften</rs>, <rs ref="index:d10854e35375">Henrik van den Zype</rs>, „<rs ref="index:d10854e10335">Gerardus Belga</rs>“. Obzwar das <rs ref="index:d14380e4429">belgische</rs> Gebiet auch „Niederdeutschland“ genannt wird, unterscheiden sich seine Einwohner doch in ihrer Sprache von den <rs ref="index:d14380e9395">Deutschen</rs> und unterstehen auch nicht dem <rs ref="index:d14380e17537">Heiligen Römischen Reich</rs>. Damit schließt <rs type="person">OI</rs> seine Antwort auf <rs type="person" role="sender">BPs</rs> Brief <ref type="letter" target="letter:242">242</ref>.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e30064"><rs type="person" key="">OI</rs> bittet, seine verspätete Antwort zu entschuldigen; eine anderweitige Verpflichtung war der Grund. <rs type="person" role="sender">BP</rs> hat nach <rs key="index:d10854e29195">Ludwig Sombeck</rs> gefragt, den <rs key="index:d14380e6885">Bucelin</rs> (im „<rs key="index:d14380e6893">Benedictus redivivus</rs>“) als Abt von <rs key="index:d14380e15593">Gladbach</rs> nennt, jedoch irrig. <rs type="person" key="">OI</rs> liegen sowohl ein <rs key="index:d10854e10578">Äbtekatalog</rs> von <rs key="index:d14380e15593">Gladbach</rs> seit der zweiten Gründung 972 (recte: siehe Kommentar) als auch ein <rs key="index:d10854e10597">Professenverzeichnis</rs> vor; in keinem von beiden scheint eine Person namens Ludwig auf. Aus der Überlegung, es könnte sich um den Abt eines anderen Klosters der <rs key="index:d14380e22351">Bursfelder Kongregation</rs> handeln, hat er in den Kapitelrezessen nachgesehen, jedoch unter allen Äbten der Kongregation nur zwei namens Ludwig gefunden, einen 1536 verstorbenen <rs key="index:d10854e17548">Abt von <rs key="index:d10854e13004">Homburg</rs></rs> und einen 1530 (recte: 1531) verstorbenen <rs key="index:d10854e17555">Abt von <rs key="index:d10854e28759">Seligenstadt</rs></rs>, den auch <rs key="index:d14380e6885">Bucelin</rs> in seiner „<rs key="index:d14380e6898">Germania</rs>“ erwähnt. Auch unter den Verstorbenen findet sich kein <rs key="index:d10854e29195">Ludwig Sombeck</rs> verzeichnet. <rs type="person" key="">OI</rs> folgert hieraus, dass <rs key="index:d14380e6885">Bucelin</rs> falsch informiert war.</seg><seg type="context" n="2" xml:id="d4618e30066">In der Beilage sendet <rs type="person" key="">OI</rs> ein Bücherverzeichnis.</seg><seg type="context" n="3" xml:id="d4618e30068">Das Kloster „Lacense“ heißt deutsch „Zum Loch“ (<rs key="index:d14380e26262">Maria Laach</rs>), weil es an einem See liegt, etwa zwei Stunden vom <rs key="index:d14380e37308">Rhein</rs> bei <rs key="index:d10854e752">Andernach</rs> im Gebiet der Erzdiözese <rs key="index:d14380e22194">Köln</rs>; hinsichtlich der Spiritualien untersteht es jedoch dem Rektor von <rs key="index:d14380e43343">Trier</rs>.</seg><seg type="context" n="4" xml:id="d4618e30070">Das Kloster „Indense“ hat seinen Namen nach dem Flüßchen <rs key="index:d10854e13431">Inde</rs>. Es liegt zweieinhalb Stunden von <rs key="index:d14380e39">Aachen</rs> und ist dem heiligen Papst <rs key="index:d10854e5581">Cornelius</rs> geweiht, weshalb es gemeinhin <rs key="index:d10854e16105">Kornelimünster</rs> genannt wird.</seg><seg type="context" n="5" xml:id="d4618e30072">In das Bücherverzeichnis nicht aufgenommen sind Autoren aus <rs key="index:d10854e8946">Flandern</rs> oder <rs key="index:d14380e18543">Holland</rs> wie <rs key="index:d14380e5940">Louis de Blois</rs>, <rs key="index:d14380e16869">Benedikt van Haeften</rs>, <rs key="index:d10854e35375">Henrik van den Zype</rs>, „<rs key="index:d10854e10335">Gerardus Belga</rs>“. Obzwar das <rs key="index:d14380e4429">belgische</rs> Gebiet auch „Niederdeutschland“ genannt wird, unterscheiden sich seine Einwohner doch in ihrer Sprache von den <rs key="index:d14380e9395">Deutschen</rs> und unterstehen auch nicht dem <rs key="index:d14380e17537">Heiligen Römischen Reich</rs>. Damit schließt <rs type="person" key="">OI</rs> seine Antwort auf <rs type="person" role="sender">BPs</rs> Brief <ref type="letter">242</ref>.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Admodum reverendo et eximio domino Bernardo Pez exempti monasterii Mellicensis in Austria Inferiori ad Danubium professo capitulari etc.</hi> Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 40r.</ab>
-            </div>
-            <div>
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">II</hi>.</p>
-            </div>   
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Gladbaci 9. Maii 1712.</p>
-            <p xml:space="preserve">Admodum reverende et doctissime domine.</p>
-            <p xml:space="preserve">&lt;<hi rend="italic">1&gt;</hi> Ignoscat, quaeso, sua dominatio tarditati meae in respondendo. Inopinata occupatio causa fuit. Quaerit sua dominatio pleniorem informationem circa dominum Ludovicum Sombeck, quem Gabriel Bucelinus abbatem dicit Gladbacensem, sed erroneo. Habeo catalogum abbatum nostrorum a secunda fundatione, nimirum ab anno Christi 972, usque ad modernum, sed nullus inter illos reperitur Ludovicus, neque inter professos huius loci, quorum<note place="foot" xml:id="d4618e30103">	Korrigiert aus <hi rend="italic">quq</hi>.</note> etiam nomina habeo. Sed cogitavi, num forte<note place="foot" xml:id="d4618e30109">	Danach durchgestrichen <hi rend="italic">esset</hi>.</note> fuerit abbas alterius monasterii congregationis tamen Bursfeldensis. Idcirco capitulorum annalium recessus a primaeva eiusdem congregationis institutione usque ad nostram aetatem inspexi, volvi et revolvi, sed in tota serie vel syllabo abbatum Bursfeldensium non inveni nisi duos Ludovicos, unum Homburgensem, alterum Seligenstadiensem abbates, quorum prior obiit anno 1536, posterior<note place="foot" xml:id="d4618e30115">	Davor durchgestrichen <hi rend="italic">plter</hi>.</note> anno 1530, cuius etiam meminit Bucelinus in suo <sic>Monasteriologo</sic> [<hi rend="italic">sic</hi>]. Neque ullibi inter defunctos Benedictinos recensetur aliquis Ludovicus Sombeck. Hinc patet Bucelinum male esse informatum. <seg type="context" n="2" xml:space="preserve" xml:id="d4618e30125"><seg type="lemma" corresp="#d4618e30178">Catalogum librorum</seg>, quos inveni, accludo. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e30127">Monasterium Lacense Germanice vocatur Zum Loch; denominatur a lacu sive stagno, cui adiacet, distatque a Rheno duabus circiter horis <pb n="1v"/> prope Andernacum vulgo Andernach in finibus dioeceseos Coloniensis, sed in spiritualibus subest rectori Trevirensi. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e30131">Monasterium vero Indense denominatur ab Inda rivulo, qui ibidem e terra erumpit et monasterium praeterfluit. Duabus horis et media distat Aquisgrano, estque exstructum in honorem sancti Cornelii papae et martyris, ideoque appellatur communiter S. Cornelis Münster. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e30133">In adiecto cathalogo non posui Flandros sive Hollandos, uti sunt Ludovicus Blosius, Benedictus Haeftenus, <sic>Henrici</sic> [<hi rend="italic">sic</hi>] van den Zype, <seg type="lemma" corresp="#d4618e30192">Gerardus Belga</seg> etc. Quamvis enim Belgium vulgo appelletur Nider Teutschlant, discrepant tamen in lingua nec subsunt Romano imperio. Haec sunt, doctissime domine, quae ad gratissimas dominationis suae litteras breviter respondeo, meque ad aram enixissime recommendo, qui sum</seg></p>
-            <p xml:space="preserve">Admodum reverendae et eximiae dominationis suae paratissimus famulus et in Christo frater Odo Illem.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e30141">
-               <ref type="context">1</ref>
-               <label>Bucelinus ... dicit Gladbacensem</label>
-               <p><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Bucelin,
-                  Benedictus redivivus<?oxy_custom_end?> 166, berichtet, dass ein „Ludovicus
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>Bucelinus ... dicit Gladbacensem</mentioned>
+            <p>Bucelin,
+                  Benedictus redivivus 166, berichtet, dass ein „Ludovicus
                   Sombeck“ im Jahre 1609 als Abt von Gladbach im 76. Lebens- und 27. Regierungsjahr
                   gestorben und der Verfasser eines Buches „Funiculus triplex“ über Passion, Tod und
                   Kreuz Christi sei. Die Nachricht betrifft eigentlich Abt Louis de Sombeck von
                   Gembloux (1583–1609) und beruht auf einer Verwechslung von „Gemblacensis“ und
                   „Gladbacensis“, die dadurch begünstigt wurde, dass auch Gembloux seit 1505 der
-                  Bursfelder Kongregation angehörte. Zu Sombeck: <rs type="bibl" key="bibl:35892"
-                     >Berlière, Monasticon belge 1</rs> 25, 163.</p>
-            </note>
-            <note xml:id="d4618e30148">
-               <ref type="context">1</ref>
-               <label>catalogum abbatum</label>
-               <p>Hier ist etwa an die Chroniken der Äbte Petrus Sybenius († 1659) und Petrus Knor
+                  Bursfelder Kongregation angehörte. Zu Sombeck: <rs type="bibl" ref="bibl:35892">Berlière, Monasticon belge 1</rs> 25, 163.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>catalogum abbatum</mentioned>
+            <p>Hier ist etwa an die Chroniken der Äbte Petrus Sybenius († 1659) und Petrus Knor
                   († 1725; die Chronik abgeschlossen 1717) zu denken, die jeweils nach den
-                  Regierungen der Äbte aufgebaut sind: <rs type="bibl" key="bibl:19164">Ropertz,
+                  Regierungen der Äbte aufgebaut sind: <rs type="bibl" ref="bibl:19164">Ropertz,
                      Quellen</rs> 11–31, 33–94.</p>
-            </note>
-            <note xml:id="d4618e30153">
-               <ref type="context">1</ref>
-               <label>a secunda fundatione</label>
-               <p>Das Benediktinerkloster in Gladbach wurde 974 von Erzbischof Gero von Köln in der
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned>a secunda fundatione</mentioned>
+            <p>Das Benediktinerkloster in Gladbach wurde 974 von Erzbischof Gero von Köln in der
                   Nähe einer karolingerzeitlichen Kirche gegründet, die bei dem Ungarneinfall von
                   954 zerstört worden war. Die Gladbacher Haustradition sah hierin eine „zweite
-                  Gründung“: <rs type="bibl" key="bibl:15030">Bange–Löhr, Gladbach</rs> 324–327.</p>
-            </note>
-            <note xml:id="d4618e30158">
-               <ref type="context">1</ref>
-               <label>Ludovicos, unum Homburgensem</label>
-               <p><rs type="bibl" key="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 2 6, 29.</p>
-            </note>
-            <note xml:id="d4618e30163">
-               <ref type="context">1</ref>
-               <label>Seligenstadiensem</label>
-               <p><rs type="bibl" key="bibl:36102">Engels, Seligenstadt</rs>982; <rs type="bibl"
-                     key="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 1 530, 532, 538; 2 4.</p>
-            </note>
-            <note xml:id="d4618e30168">
-               <ref type="context">1</ref>
-               <label>in suo Monasteriologo</label>
-               <p><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Bucelin,
-                  Germania<?oxy_custom_end?> 2 273, nennt Abt Ludwig von Seligenstadt, allerdings
+                  Gründung“: <rs type="bibl" ref="bibl:15030">Bange–Löhr, Gladbach</rs> 324–327.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
+            <mentioned>Ludovicos, unum Homburgensem</mentioned>
+            <p><rs type="bibl" ref="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 2 6, 29.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg1">
+            <mentioned>Seligenstadiensem</mentioned>
+            <p><rs type="bibl" ref="bibl:36102">Engels, Seligenstadt</rs>982; <rs type="bibl" ref="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 1 530, 532, 538; 2 4.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg1">
+            <mentioned>in suo Monasteriologo</mentioned>
+            <p>Bucelin,
+                  Germania 2 273, nennt Abt Ludwig von Seligenstadt, allerdings
                   mit dem richtigen Todesjahr 1531.</p>
-            </note>
-            <note xml:id="d4618e30173">
-               <ref type="context">1</ref>
-               <label>Neque ullibi ... Sombeck</label>
-               <p>Tatsächlich ist Sombeck in den Rezessen öfters angeführt, doch stets ohne Nennung
-                  seines Familiennamens; vgl. etwa <rs type="bibl" key="bibl:20124">Volk,
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg1">
+            <mentioned>Neque ullibi ... Sombeck</mentioned>
+            <p>Tatsächlich ist Sombeck in den Rezessen öfters angeführt, doch stets ohne Nennung
+                  seines Familiennamens; vgl. etwa <rs type="bibl" ref="bibl:20124">Volk,
                      Generalkapitels-Rezesse</rs> 2 274, 334.</p>
-            </note>
-            <note xml:id="d4618e30178">
-               <ref type="context">2</ref>
-               <label>Catalogum librorum</label>
-               <p>Die Beilage ist abschriftlich erhalten in StiA Melk, Karton 7 Patres 9,
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg2">
+            <mentioned>Catalogum librorum</mentioned>
+            <p>Die Beilage ist abschriftlich erhalten in StiA Melk, Karton 7 Patres 9,
                   Abschriftencodex 41r–42r. Erwähnt werden Werke von Wolfgang Weishaupt aus
-                  Einsiedeln (<rs type="bibl" key="bibl:16984">Henggeler, Profeßbuch Einsiedeln</rs>
-                  294–296; <rs type="bibl" key="bibl:36916">Salzgeber, St. Gerold</rs> 1385);
+                  Einsiedeln (<rs type="bibl" ref="bibl:16984">Henggeler, Profeßbuch Einsiedeln</rs>
+                  294–296; <rs type="bibl" ref="bibl:36916">Salzgeber, St. Gerold</rs> 1385);
                   „Wilhelm Honn“ aus Deutz (vielleicht identisch mit Wilhelm Oeding von dort, auf
-                  den das angegebene Todesjahr 1649 passt: <rs type="bibl" key="bibl:20124">Volk,
+                  den das angegebene Todesjahr 1649 passt: <rs type="bibl" ref="bibl:20124">Volk,
                      Generalkapitels-Rezesse</rs> 2 589; die falsche Namensform könnte von einer
                   Verwechslung mit Abt Wilhelm Henn von St. Matthias zu Trier, 1700–1728, rühren);
-                  Thomas Metzler aus Zwiefalten (<rs type="bibl" key="bibl:36566">Lindner,
+                  Thomas Metzler aus Zwiefalten (<rs type="bibl" ref="bibl:36566">Lindner,
                      Professbuch Zwiefalten</rs> 42f.); Johann Bertels, Abt zu Luxemburg und
                   Echternach (Schmitz, Bertels; Schneider, Bertels); Anton Mesenich aus St. Mathias
-                  zu Trier (<rs type="bibl" key="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 3
-                  103; vgl. <rs type="bibl" key="bibl:19028">Redlich, Bibliotheks- und
-                     Geistesgeschichte</rs> 459, 462); Anselm Krodt aus St. Pantaleon zu Köln (<rs
-                     type="bibl" key="bibl:37098">Thomas, St. Mauritius</rs> 163–166; vgl. <rs
-                     type="bibl" key="bibl:17058">Hilliger, Urbare</rs> 583; <rs type="bibl"
-                     key="bibl:37122">Torsy, Regularklerus</rs> 1 155; <rs type="bibl"
-                     key="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 3 223); Adolph Overham aus
-                  Werden (<rs type="bibl" key="bibl:19850">Stüwer, Reichsabtei Werden</rs> 82,
-                  461f.; vgl. <rs type="bibl" key="bibl:15152">Benz, Zwischen Tradition und
-                     Kritik</rs> 239, 258; <rs type="bibl" key="bibl:36418">Kirchner,
-                     Abteischule</rs> 28; <rs type="bibl" key="bibl:19292">Schantz, Werdener
-                     Geschichtsquellen 3</rs> 26); Heinrich Heinlein aus Theres (vgl. <ref
-                     type="letter">99</ref>). Für die Auswahl dieser Personen ist keine Erklärung
+                  zu Trier (<rs type="bibl" ref="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 3
+                  103; vgl. <rs type="bibl" ref="bibl:19028">Redlich, Bibliotheks- und
+                     Geistesgeschichte</rs> 459, 462); Anselm Krodt aus St. Pantaleon zu Köln (<rs type="bibl" ref="bibl:37098">Thomas, St. Mauritius</rs> 163–166; vgl. <rs type="bibl" ref="bibl:17058">Hilliger, Urbare</rs> 583; <rs type="bibl" ref="bibl:37122">Torsy, Regularklerus</rs> 1 155; <rs type="bibl" ref="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 3 223); Adolph Overham aus
+                  Werden (<rs type="bibl" ref="bibl:19850">Stüwer, Reichsabtei Werden</rs> 82,
+                  461f.; vgl. <rs type="bibl" ref="bibl:15152">Benz, Zwischen Tradition und
+                     Kritik</rs> 239, 258; <rs type="bibl" ref="bibl:36418">Kirchner,
+                     Abteischule</rs> 28; <rs type="bibl" ref="bibl:19292">Schantz, Werdener
+                     Geschichtsquellen 3</rs> 26); Heinrich Heinlein aus Theres (vgl. <ref type="letter" target="letter:99">99</ref>). Für die Auswahl dieser Personen ist keine Erklärung
                   angegeben; es dürfte sich um benediktinische Autoren von Werken in der Gladbacher
                   Bibliothek handeln. Denkbar ist, dass OI Ergänzungen zum Schriftstellerkatalog der
                   LE 2 bietet, in welchem keiner der hier Genannten aufscheint (Abb. 5.3, 5.4), wohl
                   aber Sombeck als „abbas Gladbacensis“.</p>
-            </note>
-            <note xml:id="d4618e30185">
-               <ref type="context">3</ref>
-               <label>Lacense ... subest rectori Trevirensi</label>
-               <p>Vgl. <rs type="bibl" key="bibl:36870">Resmini, Laach</rs> 167–178.</p>
-            </note>
-            <note xml:id="d4618e30192">
-               <ref type="context">5</ref>
-               <label>Gerardus Belga</label>
-               <p>Bucelin gab mehrere erbauliche Schriften unter dem Namen dieses angeblichen
-                  belgischen Benediktiners heraus, deren Verfasser er selbst war: <rs type="bibl"
-                     key="bibl:18540">Neesen, Bucelin</rs> 74, 94, 101, 119, 144, 154, 362–372.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg3">
+            <mentioned>Lacense ... subest rectori Trevirensi</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:36870">Resmini, Laach</rs> 167–178.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
+            <mentioned>Gerardus Belga</mentioned>
+            <p>Bucelin gab mehrere erbauliche Schriften unter dem Namen dieses angeblichen
+                  belgischen Benediktiners heraus, deren Verfasser er selbst war: <rs type="bibl" ref="bibl:18540">Neesen, Bucelin</rs> 74, 94, 101, 119, 144, 154, 362–372.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <front>
+         <p>Admodum reverendo et eximio domino Bernardo Pez exempti monasterii Mellicensis in Austria Inferiori ad Danubium professo capitulari etc.<note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 40r.</note></p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Gladbaci 9. Maii 1712.</opener>
+         <opener>Admodum reverende et doctissime domine.</opener>
+         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n1"/>Catalogum librorum<anchor xml:id="n1e"/>, quos inveni, accludo. </ab>
+         <ab resp="#editor" xml:id="seg3">Monasterium Lacense Germanice vocatur Zum Loch; denominatur a lacu sive stagno, cui adiacet, distatque a Rheno duabus circiter horis <pb n="1v"/> prope Andernacum vulgo Andernach in finibus dioeceseos Coloniensis, sed in spiritualibus subest rectori Trevirensi. </ab>
+         <ab resp="#editor" xml:id="seg4">Monasterium vero Indense denominatur ab Inda rivulo, qui ibidem e terra erumpit et monasterium praeterfluit. Duabus horis et media distat Aquisgrano, estque exstructum in honorem sancti Cornelii papae et martyris, ideoque appellatur communiter S. Cornelis Münster. </ab>
+         <ab resp="#editor" xml:id="seg5">In adiecto cathalogo non posui Flandros sive Hollandos, uti sunt Ludovicus Blosius, Benedictus Haeftenus, <sic>Henrici</sic>  van den Zype, <anchor xml:id="n2"/>Gerardus Belga<anchor xml:id="n2e"/> etc. Quamvis enim Belgium vulgo appelletur Nider Teutschlant, discrepant tamen in lingua nec subsunt Romano imperio. Haec sunt, doctissime domine, quae ad gratissimas dominationis suae litteras breviter respondeo, meque ad aram enixissime recommendo, qui sum</ab>
+         <closer>Admodum reverendae et eximiae dominationis suae paratissimus famulus et in Christo frater Odo Illem.</closer>
+      </body>
    </text>
 </TEI>

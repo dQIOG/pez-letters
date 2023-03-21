@@ -1,38 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="764" xml:id="pez-0764">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">764 François Le Texier an Bernhard Pez. 1717-04-05. Paris.</title>
-            <title type="sub">Digital Edition</title>
+            <title>François Le Texier an Bernhard Pez. 1717-04-05. Paris.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">764</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">602r–603v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 602r–603v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,168 +68,158 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">700</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">913</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">717</idno>
-               </ref>
+               <ptr type="prev" target="letter:700"/>
+               <ptr type="next" target="letter:913"/>
+               <ptr type="mentions" target="letter:717"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Am 18. März hat FL von dem Augsburger Buchhändler Johann Veith einen Brief erhalten, wonach dieser auf Anweisung <rs type="person" role="sender">BPs</rs> zwei Bücher („Bibliotheca Benedictino-Mauriana“) nach Paris an FL abgeschickt hatte. Am 27. März sind die Bände selbst angekommen. FL hat darin mit großem Genuss gelesen und gesehen, wie die ohnehin schon berühmten Männer der Maurinerkongregation durch <rs type="person" role="sender">BPs</rs> Wirken noch bekannter werden. Als er jedoch auf das 22. Kapitel des zweiten Buches stieß, erfüllte ihn schon die Überschrift mit Scham, und er musste sich zurückhalten, um gegen <rs type="person" role="sender">BP</rs> nicht zornig zu werden. FLs eigener Name wird unter jenen so vieler Gelehrten beim Leser nur Lachen hervorrufen, und FL fürchtet, dass das Ansehen des Werkes darunter leiden könnte. Er bittet BP, in Hinkunft von solchem Lob abzusehen.</p>
+            <p corresp="#seg2">Wie von <rs type="person" role="sender">BP</rs> vorgeschlagen, hat FL Enzykliken zum Druck vorbereitet. Allerdings hat der Generalsuperior Charles Petey de l’Hostallerie entschieden, dies auf einen Zeitpunkt nach dem Generalkapitel der Maurinerkongregation zu verschieben, das noch vor dem Ende des gegenwärtigen Monats beginnen wird.</p>
+            <p corresp="#seg3">Jean-Baptiste Poncet hat bereits vor einiger Zeit Kataloge der Schriftsteller von St.-Maixent <ref type="letter" target="letter:717">717</ref> und St.-Cyprien zu Poitiers an <rs type="person" role="sender">BP</rs> gesendet. FL bittet diesen um Nachricht, ob sie angekommen sind; wenn nicht, kann er weitere Abschriften schicken lassen.</p>
+            <p corresp="#seg4">Richard „de Dumellis“ (recte: von Fourneaux), Abt von Préaux, hat mehrere bislang ungedruckte Kommentare zur Heiligen Schrift verfasst. Seine zwei Bände Kommentar zum Buch Genesis sind in zwei Teile gegliedert, deren der erste fünfzehn, der zweite sechzehn Bücher umfasst. FL gibt das Initium in Form der Anrede des Widmungsschreibens an den Erzbischof Anselm von Canterbury wieder. Weiters liegt ein Kommentar zum Buch Numeri vor, dessen Autor sich selbst im Titel ganz ähnlich bezeichnet wie Richard in jenem Widmungsschreiben. Aus den eigenen Aussagen des Verfassers geht hervor, dass er außerdem noch Kommentare zu den Büchern Deuteronomium, Exodus und Levitikus geschrieben hat, die jedoch nach Auskunft der Mönche von Préaux wohl verloren sind (recte: siehe Kommentar). Vorhanden sind ein Hoheliedkommentar, den Richard seinem Schüler Mauritius (Abt von St.-Laumer zu Blois) widmete, ein Kommentar zu den Sprichwörtern Salomons für den Abt Pontius „Dumensis“ (recte: von Cluny), ein Kommentar zum Buch Josua in sieben und einer zum Buch Ruth in vier Büchern. Richard regierte das Kloster Préaux als Abt von 1101 bis 1131.</p>
+            <p corresp="#seg5">Dies könnte René Massuet <rs type="person" role="sender">BP</rs> bereits mitgeteilt haben; was FL weiter berichtet, ist hingegen vorher nicht übermittelt worden: Bernard Grimaud, gebürtig aus Verdun-sur-Garonne am linken Ufer der Garonne in der Diözese Toulouse, wurde kurz vor 1640 Benediktiner im Kloster St.-Pierre zu Mas-Garnier. Er veröffentlichte ein Leben des hl. Benedikt in Versen in okzitanischer Sprache unter dem Titel „Le dret cami del cel“, das 1659 bei François Boude zu Toulouse erschien. Das Werk ist allen, die unter der Benediktsregel leben, gewidmet und erzählt in sechs Büchern das Leben des Ordensgründers, wie es in den „Dialogen“ Gregors des Großen dargestellt ist. Die Bücher sind in Gesänge gegliedert, deren jeder aus zwei Teilen besteht: Der jeweils erste Teil bietet Sprüche aus der Bibel und den Kirchenvätern, die zur Handlung aus dem Leben Benedikts im zweiten Teil passen. Grimauds Dichtungen wurden begeistert rezipiert und sind bei den Gascognern noch immer berühmt. Das Todesjahr Grimauds hat FL nicht ermitteln können.</p>
+            <p corresp="#seg6">Zu diesen Informationen, die er aus verschiedenen Klöstern erhalten hat, fügt FL hinzu, dass er in den Papieren Jean Mabillons ein umfangreiches Verzeichnis der Autoren der Kongregation von S. Giustina oder Cassinenser seit 1410 mit Angabe gedruckter wie handschriftlicher Werke gefunden hat. Bisher hat er es nicht für sinnvoll gehalten, dies abzuschreiben, da er annimmt, dass <rs type="person" role="sender">BP</rs> von den Cassinensern über die benediktinischen Schriftsteller Italiens unterrichtet worden ist; andernfalls will FL eine Abschrift anfertigen und übermitteln.</p>
+            <p corresp="#seg7">FL schließt mit Grüßen an HP und dem Versprechen, allfällige Neuigkeiten vom Generalkapitel zu berichten.</p>
+            <p corresp="#seg8">In einem Nachsatz merkt FL an, dass Bernard Grimaud die strengere Observanz, die von den Maurinern 1640 in Mas-Garnier eingeführt wurde, nie angenommen hat. Grimaud zählt daher zwar zu den benediktinischen Schriftstellern, aber nicht zu den Maurinern.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e32471">Am 18. März hat FL von dem Augsburger Buchhändler Johann Veith einen Brief erhalten, wonach dieser auf Anweisung <rs type="person" role="sender">BPs</rs> zwei Bücher („Bibliotheca Benedictino-Mauriana“) nach Paris an FL abgeschickt hatte. Am 27. März sind die Bände selbst angekommen. FL hat darin mit großem Genuss gelesen und gesehen, wie die ohnehin schon berühmten Männer der Maurinerkongregation durch <rs type="person" role="sender">BPs</rs> Wirken noch bekannter werden. Als er jedoch auf das 22. Kapitel des zweiten Buches stieß, erfüllte ihn schon die Überschrift mit Scham, und er musste sich zurückhalten, um gegen <rs type="person" role="sender">BP</rs> nicht zornig zu werden. FLs eigener Name wird unter jenen so vieler Gelehrten beim Leser nur Lachen hervorrufen, und FL fürchtet, dass das Ansehen des Werkes darunter leiden könnte. Er bittet BP, in Hinkunft von solchem Lob abzusehen.</seg><seg type="context" n="2" xml:id="d3e32473">Wie von <rs type="person" role="sender">BP</rs> vorgeschlagen, hat FL Enzykliken zum Druck vorbereitet. Allerdings hat der Generalsuperior Charles Petey de l’Hostallerie entschieden, dies auf einen Zeitpunkt nach dem Generalkapitel der Maurinerkongregation zu verschieben, das noch vor dem Ende des gegenwärtigen Monats beginnen wird.</seg><seg type="context" n="3" xml:id="d3e32475">Jean-Baptiste Poncet hat bereits vor einiger Zeit Kataloge der Schriftsteller von St.-Maixent <ref type="letter">717</ref> und St.-Cyprien zu Poitiers an <rs type="person" role="sender">BP</rs> gesendet. FL bittet diesen um Nachricht, ob sie angekommen sind; wenn nicht, kann er weitere Abschriften schicken lassen.</seg><seg type="context" n="4" xml:id="d3e32480">Richard „de Dumellis“ (recte: von Fourneaux), Abt von Préaux, hat mehrere bislang ungedruckte Kommentare zur Heiligen Schrift verfasst. Seine zwei Bände Kommentar zum Buch Genesis sind in zwei Teile gegliedert, deren der erste fünfzehn, der zweite sechzehn Bücher umfasst. FL gibt das Initium in Form der Anrede des Widmungsschreibens an den Erzbischof Anselm von Canterbury wieder. Weiters liegt ein Kommentar zum Buch Numeri vor, dessen Autor sich selbst im Titel ganz ähnlich bezeichnet wie Richard in jenem Widmungsschreiben. Aus den eigenen Aussagen des Verfassers geht hervor, dass er außerdem noch Kommentare zu den Büchern Deuteronomium, Exodus und Levitikus geschrieben hat, die jedoch nach Auskunft der Mönche von Préaux wohl verloren sind (recte: siehe Kommentar). Vorhanden sind ein Hoheliedkommentar, den Richard seinem Schüler Mauritius (Abt von St.-Laumer zu Blois) widmete, ein Kommentar zu den Sprichwörtern Salomons für den Abt Pontius „Dumensis“ (recte: von Cluny), ein Kommentar zum Buch Josua in sieben und einer zum Buch Ruth in vier Büchern. Richard regierte das Kloster Préaux als Abt von 1101 bis 1131.</seg><seg type="context" n="5" xml:id="d3e32482">Dies könnte René Massuet <rs type="person" role="sender">BP</rs> bereits mitgeteilt haben; was FL weiter berichtet, ist hingegen vorher nicht übermittelt worden: Bernard Grimaud, gebürtig aus Verdun-sur-Garonne am linken Ufer der Garonne in der Diözese Toulouse, wurde kurz vor 1640 Benediktiner im Kloster St.-Pierre zu Mas-Garnier. Er veröffentlichte ein Leben des hl. Benedikt in Versen in okzitanischer Sprache unter dem Titel „Le dret cami del cel“, das 1659 bei François Boude zu Toulouse erschien. Das Werk ist allen, die unter der Benediktsregel leben, gewidmet und erzählt in sechs Büchern das Leben des Ordensgründers, wie es in den „Dialogen“ Gregors des Großen dargestellt ist. Die Bücher sind in Gesänge gegliedert, deren jeder aus zwei Teilen besteht: Der jeweils erste Teil bietet Sprüche aus der Bibel und den Kirchenvätern, die zur Handlung aus dem Leben Benedikts im zweiten Teil passen. Grimauds Dichtungen wurden begeistert rezipiert und sind bei den Gascognern noch immer berühmt. Das Todesjahr Grimauds hat FL nicht ermitteln können.</seg><seg type="context" n="6" xml:id="d3e32484">Zu diesen Informationen, die er aus verschiedenen Klöstern erhalten hat, fügt FL hinzu, dass er in den Papieren Jean Mabillons ein umfangreiches Verzeichnis der Autoren der Kongregation von S. Giustina oder Cassinenser seit 1410 mit Angabe gedruckter wie handschriftlicher Werke gefunden hat. Bisher hat er es nicht für sinnvoll gehalten, dies abzuschreiben, da er annimmt, dass <rs type="person" role="sender">BP</rs> von den Cassinensern über die benediktinischen Schriftsteller Italiens unterrichtet worden ist; andernfalls will FL eine Abschrift anfertigen und übermitteln.</seg><seg type="context" n="7" xml:id="d3e32486">FL schließt mit Grüßen an HP und dem Versprechen, allfällige Neuigkeiten vom Generalkapitel zu berichten.</seg><seg type="context" n="8" xml:id="d3e32488">In einem Nachsatz merkt FL an, dass Bernard Grimaud die strengere Observanz, die von den Maurinern 1640 in Mas-Garnier eingeführt wurde, nie angenommen hat. Grimaud zählt daher zwar zu den benediktinischen Schriftstellern, aber nicht zu den Maurinern.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez Benedictino Mellicensi et bibliothecario. Mellicii vulgo Mölck in Osterreich. Viennae in Austria. A Vienne en Aûtriche. Par Strasbourg.</hi>
-               </ab>
-            </div>
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">III</hi>.</p>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">149</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez amico suavissimo pater Franciscus Le Texier Sangermanensis ordinis sancti Benedicti salutem optimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e32515">XV. Kalendas Aprilis ad me perlatum est <seg type="lemma" corresp="#d3e32609">Johannis Veith</seg> Augustani bibliopolae epistolium, quo certiorem me faciebat duos se Lutetiam Parisiorum ad me, uti iusseras, direxisse libros. Hos ego, quos de rebus nostris et abs te compositos minime dubitabam, accipiendi et evolvendi quanto statim desiderio incensus fuerim, facile, opinor, conicies, amantissime mi pater, si, quantum amo te, tantum et ipse me ames. Moras tamen tuli per aliquot dies; tandemque VI. Kalendas Aprilis sani et salvi ad me delati sunt desideratissimi codices, quos peramanter exosculatus incredibili cum voluptate legi<note place="foot" xml:id="d3e32517">	Korrigiert aus <hi rend="italic">leger</hi>.</note> advertique non sine gratissimi animi sensu notos alioquin celebresque Maurobenedictinae gentis viros tua arte, tua amicissima opera multo evasisse celebriores. Dum haec aliaque miror, incidi forte in <seg type="lemma" corresp="#d3e32615">caput 22. libri secundi, cuius vel inscriptio tantum mihi pudorem incussit</seg> movitque adeo, ut optimum quoad cetera opus hac prorsus parte improbaverim vixque memet continuerim, quin vehementer amico succenserem. Et sane, suavissime mi Bernarde, meum quisquis tot inter eruditorum nomina perlegerit, vix, arbitror, continebit risum; vereorque, ne id de operis pretio et excellentia, de ipsa immo gloria auctoris plurimum detrahat. Cave ergo, obsecro, ne me iis deinceps oneres laudibus, quas sequiorem in partem accipere nemo, qui me norit, praetermittat. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e32523">Encyclicas, ut imperatum abs te mihi erat, paraveram typis. Verum id post <seg type="lemma" corresp="#d3e32619">comitia generalia</seg>, quae hoc ipso mense exeunte auspicabuntur praepositi nostri, differendum censuit reverendissimus<seg type="lemma" corresp="#d3e32625"> generalis</seg>. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e32525">De scriptoribus sacri ordinis nostri, qui in monasteriis S. Maxentii et <seg type="lemma" corresp="#d3e32629">S. Cypriani</seg> floruere, commentarios dudum<note place="foot" xml:id="d3e32527">	Über der Zeile eingefügt.</note> ad te transmisit reverendus dominus Johannes Baptista Poncet. Hos an acceperis, certiorem me, quaeso, facias; alios enim, si primi periere, transmitti curabo. <pb n="1v"/> </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e32532"><seg type="lemma" corresp="#d3e32635">Ricardus de Dumellis</seg> Pratellensis abbas plura necdum publicae lucis facta commentaria in Scripturam Sacram composuit, scilicet in Genesim duo volumina, quae in duas dividit partes, e quibus prima quindecim complectitur libros. Primi initium hic exscribere operae pretium arbitror: <seg type="lemma" corresp="#d3e32641">Anselmo Cantuariensis ecclesiae archiepiscopo quidam dominicae crucis servus et minister Pratellini coenobii cursu infatigabili stadium paternae peregrinationis tamquam militi summi Regis feliciter consummare</seg>. Pars altera sexdecim continet libros. Commentaria in librum Numeri, cuius in fronte haec legitur inscriptio: Commentum in librum Numeri editum<note place="foot" xml:id="d3e32534">	Über der Zeile eingefügt.</note> a quodam dominicae crucis servo. Ex huius, ut ipsius auctoris verbis utar, commenti prologo colligitur Richardum, de quo agimus, edidisse etiam explanationes in libros Deuteronomii, Exodi et Levitici, quas periisse credunt nostri Pratellenses. At supersunt etiamnum, quae sequuntur: <seg type="lemma" corresp="#d3e32645">Explanatio in Cantica canticorum suo filio Mauricio</seg> inscripta. In Proverbia Salomonis ad<seg type="lemma" corresp="#d3e32649"> Pontium abbatem Dumensem</seg> [<hi rend="italic">sic</hi>]. In librum Josue libri septem. In librum Ruth libri quatuor. <seg type="lemma" corresp="#d3e32653">Praefuit Pratellensi monasterio Ricardus abbas</seg> ab anno 1101 ad annum 1131. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e32540">De his forsitan plura iam ad te bonae memoriae Massuetus scripserat; ast quae sequuntur, transmissa<note place="foot" xml:id="d3e32542">	Danach durchgestrichen <hi rend="italic">ad te</hi>.</note> non arbitror. <seg type="lemma" corresp="#d3e32657">Bernardus Grimoaldus</seg> (Gallice Grimaud) Verduni non ignobili ad laevam Garumnae ripam in dioecesi Tolosana oppido<note place="foot" xml:id="d3e32548">	Korrigiert aus <hi rend="italic">oppidi</hi>.</note> natus monasticen amplexus est in monasterio S. Petri de Curte seu de Manso Garnerio paullo ante annum 1640. Edidit ille lyrico carmine vitam beati patris Benedicti, idque vernacula, id est Tolosana lingua. Operis is est titulus: Lé dret cami del cel o La bido del grand patriarcho sant Benoît. Id est, Recta via coeli <pb n="2r"/> sive Vita magni patriarchae sancti Benedicti. Tolosae apud<seg type="lemma" corresp="#d3e32664"> Franciscum Boude</seg> 1659. Opus illud omnibus sub eiusdem beati patris Regula militantibus inscriptum. In sex partitus est libros, quibus integram beati Benedicti vitam, ut in Gregorii Magni Dialogis refertur, eademque serie et ordine complexus est. Quisque liber varia cantica seu capita continet, et unumquodque rursus canticum bifariam dividitur; prima pars varias exhibet e sacris codicibus patrumve operibus depromptas sententias, actioni<note place="foot" xml:id="d3e32556">	Davor unleserliche Streichung im Ausmaß von ca. 5–7 Buchstaben, beginnend mit <hi rend="italic">qu</hi>.</note> illi parte in altera cuiusque cantici<note place="foot" xml:id="d3e32562">	<hi rend="italic">cuiusque cantici</hi> mit Verweiszeichen über der Zeile eingefügt.</note> contentae convenientes. Hae poeticae Grimaldi lucubrationes summo omnium plausu exceptae sunt celebresque sunt hac nostra aetate apud Vascones. Quo anno ille obierit, necdum rescire potui. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e32568">Haec sunt, mi Bernarde, quae de scriptoribus Benedictinis diversis ex monasteriis transmissa accepi. His addam me inter Mabillonii schedas satis longum reperisse <seg type="lemma" corresp="#d3e32668">indicem scriptorum omnium, quos protulit sanctae Justinae seu Casinensis congregatio ab anno 1410, in quo eorum opera sive edita sive manuscripta recensentur</seg>. Hunc exscribere catalogum<note place="foot" xml:id="d3e32570">	Korrigiert aus <hi rend="italic">cath</hi>.</note> inutile hactenus duxi; abunde enim suppeditata tibi fuisse arbitror a Casinensibus nostris, quae<note place="foot" xml:id="d3e32576">	Korrigiert aus <hi rend="italic">quod</hi>.</note> ad Benedictinos ex Italia scriptores attinent<note place="foot" xml:id="d3e32582">	Korrigiert aus <hi rend="italic">attinebit</hi>.</note>. Si tamen opus habueris, exscribam integrum et ad te mittam. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d3e32588">Optimam, quaeso, salutem dicas meo nomine carissimo et eruditissimo domino Hieronymo Pez. Si quid in comitiis nostris<note place="foot" xml:id="d3e32590">	Über der Zeile eingefügt.</note> generalibus acciderit, ad te perscribam. Vale, reverendissime et amicissime mi pater.</seg></p>
-            <p xml:space="preserve">Parisiis Nonas Aprilis anno 1717.</p>
-            <p xml:space="preserve"><seg type="context" n="8" xml:space="preserve" xml:id="d3e32597">Grimoaldus iste, de quo supra, strictiorem, quam nostri in monasterio S. Petri de Curte <seg type="lemma" corresp="#d3e32674">restituerunt anno 1640</seg>, <seg type="lemma" corresp="#d3e32680">disciplinam nunquam amplexus</seg> est; unde etsi Benedictinos inter scriptores locum habeat, nostris<note place="foot" xml:id="d3e32599">	Korrigiert aus <hi rend="italic">non</hi>.</note> tamen non<note place="foot" xml:id="d3e32605">	Über der Zeile eingefügt.</note> adnumerandus est.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e32609">
-               <ref type="context">1</ref>
-               <label>Johannis Veith</label><p>
-                  <rs type="bibl" key="bibl:17756">Künast, Dokumentation</rs> 1266; <rs type="bibl"
-                     key="bibl:18698">Paisey, Buchdrucker</rs> 269. </p></note>
-            <note xml:id="d3e32615">
-               <ref type="context">1</ref>
-               <label>caput ... pudorem incussit</label><p> Pez, Bibliotheca Benedictino-Mauriana 398f. Hier wird FL nach kurzen biographischen Angaben als Bearbeiter des zehnten Bandes der „Acta sanctorum OSB“ vorgestellt.</p></note>
-            <note xml:id="d3e32619">
-               <ref type="context">2</ref>
-               <label>comitia generalia</label><p>Die Generalkapitel der Mauriner fanden alle drei
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>Johannis Veith</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:17756">Künast, Dokumentation</rs> 1266; <rs type="bibl" ref="bibl:18698">Paisey, Buchdrucker</rs> 269. </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>caput ... pudorem incussit</mentioned>
+            <p> Pez, Bibliotheca Benedictino-Mauriana 398f. Hier wird FL nach kurzen biographischen Angaben als Bearbeiter des zehnten Bandes der „Acta sanctorum OSB“ vorgestellt.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>comitia generalia</mentioned>
+            <p>Die Generalkapitel der Mauriner fanden alle drei
                   Jahre statt und begannen regulär am Donnerstag der vierten Woche nach der
-                  Osterwoche: <rs type="bibl" key="bibl:15594">Charvin, Contribution</rs> 46 221. Im
-                  Jahr 1717 war dies der 29. April.</p></note>
-            <note xml:id="d3e32625">
-               <ref type="context">2</ref>
-               <label> generalis</label><p> Zu Charles Petey de l’Hostallerie vgl. <rs type="bibl"
-                     key="bibl:15602">Chaussy, Bénédictins</rs> 2 33f.; <rs type="bibl"
-                     key="bibl:15604">Chaussy, Matricula</rs> 40; <rs type="bibl" key="bibl:16456"
-                     >Gasnault, Projet</rs>; <rs type="bibl" key="bibl:20354">Wilhelm et al.,
-                     Nouveau supplément 1</rs> 384f.</p></note>
-            <note xml:id="d3e32629">
-               <ref type="context">3</ref>
-               <label>S. Cypriani</label><p>Eine Sendung solchen Materials wird in 717 nicht erwähnt oder angekündigt, auch findet sich in den Melker Beständen nichts Derartiges. Ob von einer verlorenen Sendung oder von einem Irrtum FLs auszugehen ist, lässt sich nicht entscheiden.</p></note>
-            <note xml:id="d3e32635">
-               <ref type="context">4</ref>
-               <label>Ricardus de Dumellis</label><p> Die hier von FL gemachten Angaben beruhen
+                  Osterwoche: <rs type="bibl" ref="bibl:15594">Charvin, Contribution</rs> 46 221. Im
+                  Jahr 1717 war dies der 29. April.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned> generalis</mentioned>
+            <p> Zu Charles Petey de l’Hostallerie vgl. <rs type="bibl" ref="bibl:15602">Chaussy, Bénédictins</rs> 2 33f.; <rs type="bibl" ref="bibl:15604">Chaussy, Matricula</rs> 40; <rs type="bibl" ref="bibl:16456">Gasnault, Projet</rs>; <rs type="bibl" ref="bibl:20354">Wilhelm et al.,
+                     Nouveau supplément 1</rs> 384f.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>S. Cypriani</mentioned>
+            <p>Eine Sendung solchen Materials wird in 717 nicht erwähnt oder angekündigt, auch findet sich in den Melker Beständen nichts Derartiges. Ob von einer verlorenen Sendung oder von einem Irrtum FLs auszugehen ist, lässt sich nicht entscheiden.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned>Ricardus de Dumellis</mentioned>
+            <p> Die hier von FL gemachten Angaben beruhen
                   anscheinend auf jenen eines Doppelblattes über Richard von Fourneaux, welches sich
                   heute unter den Materialien zu der 1739 von Bernard de Montfaucon publizierten
-                  „Bibliotheca bibliothecarum“ befindet: BN, Ms. lat. 13069, 297r–298v; vgl. <rs
-                     type="bibl" key="bibl:15906">Dolbeau, Deux catalogues</rs> 348. Im Pez-Nachlass
+                  „Bibliotheca bibliothecarum“ befindet: BN, Ms. lat. 13069, 297r–298v; vgl. <rs type="bibl" ref="bibl:15906">Dolbeau, Deux catalogues</rs> 348. Im Pez-Nachlass
                   vorhandene Notizen BPs zu Richard mit der Quellenangabe „Ex schedis Mabillonianis“
                   gehen über die hier von FL übermittelten Informationen deutlich hinaus, etwa durch
                   Anführung weiterer Textinitien: StiA Melk, Kt.7 Patres 10, Fasz. 3, Nr. 13, 28f.
                   Sie könnten während des Pariser Aufenthalts BPs 1728 oder 1729 nach derselben
-                  Vorlage aufgenommen worden sein. – Zu Richard von Fourneaux vgl. <rs type="bibl"
-                     key="bibl:16464">Gazeau, Normannia monastica</rs> 1 249; 2 233–235. Zu seinen
-                  zahlreichen Bibelkommentaren und ihrer aktuellen Überlieferungslage vgl. <rs
-                     type="bibl" key="bibl:15906">Dolbeau, Deux catalogues</rs> 349f.; <rs
-                     type="bibl" key="bibl:18596">North, Forgotten Student</rs> 176–183, 196–215. Da
+                  Vorlage aufgenommen worden sein. – Zu Richard von Fourneaux vgl. <rs type="bibl" ref="bibl:16464">Gazeau, Normannia monastica</rs> 1 249; 2 233–235. Zu seinen
+                  zahlreichen Bibelkommentaren und ihrer aktuellen Überlieferungslage vgl. <rs type="bibl" ref="bibl:15906">Dolbeau, Deux catalogues</rs> 349f.; <rs type="bibl" ref="bibl:18596">North, Forgotten Student</rs> 176–183, 196–215. Da
                   die Bibliothek von Préaux, auf deren Bestände sich die Angaben FLs beziehen, zur
                   Zeit der Französischen Revolution zerstreut wurde, hat sich die Lage gegenüber der
-                  von FL berichteten stark geändert: vgl. <rs type="bibl" key="bibl:19192">Rouet,
+                  von FL berichteten stark geändert: vgl. <rs type="bibl" ref="bibl:19192">Rouet,
                      Cartulaire</rs> LXIII, LXV. Die verloren gewähnten Kommentare zu Exodus,
                   Levitikus und Deuteronomium existieren alle noch, freilich in Überlieferungen, von
                   denen die Mauriner schwerlich wissen konnten; verschollen ist dagegen inzwischen
-                  der noch im 18. Jh. in Préaux attestierte Josua-Kommentar: <rs type="bibl"
-                     key="bibl:18596">North, Forgotten Student</rs> 181. Die Namensform „de
+                  der noch im 18. Jh. in Préaux attestierte Josua-Kommentar: <rs type="bibl" ref="bibl:18596">North, Forgotten Student</rs> 181. Die Namensform „de
                   Dumellis“ ist eine Verlesung, wohl bereits in der mittelalterlichen Überlieferung,
-                  für „de Furnellis“: <rs type="bibl" key="bibl:15124">Bell, Lost Commentary</rs>
-                  109. </p></note>
-            <note xml:id="d3e32641">
-               <ref type="context">4</ref>
-               <label>Anselmo ... feliciter consummare</label><p>Vgl. <rs type="bibl"
-                     key="bibl:18596">North, Forgotten Student</rs> 196. </p></note>
-            <note xml:id="d3e32645">
-               <ref type="context">4</ref>
-               <label>Explanatio in Cantica ... Mauricio</label><p>Die Formulierung entspricht jener
+                  für „de Furnellis“: <rs type="bibl" ref="bibl:15124">Bell, Lost Commentary</rs>
+                  109. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
+            <mentioned>Anselmo ... feliciter consummare</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:18596">North, Forgotten Student</rs> 196. </p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
+            <mentioned>Explanatio in Cantica ... Mauricio</mentioned>
+            <p>Die Formulierung entspricht jener
                   im Widmungsbrief. Dass es sich bei dem Empfänger um den Abt von St.-Laumer zu
-                  Blois handelte, ist durch Ordericus Vitalis bezeugt: vgl. <rs type="bibl"
-                     key="bibl:15124">Bell, Lost Commentary</rs> 110, 112, 114–116. Zu Abt Mauritius
-                  ist sonst wenig bekannt: vgl. <rs type="bibl" key="bibl:20108">Vinet, Royal
-                     Monastère</rs> 90f., 242.</p></note>
-            <note xml:id="d3e32649">
-               <ref type="context">4</ref>
-               <label> Pontium abbatem Dumensem</label><p>Zur Widmung an Abt Pontius von Cluny vgl.
-                     <rs type="bibl" key="bibl:15704">Cowdrey, Two Studies</rs> 191; <rs type="bibl"
-                     key="bibl:17888">Leclercq, Ecrits monastiques</rs> 96; <rs type="bibl"
-                     key="bibl:18596">North, Forgotten Student</rs> 181, 210. Die Schreibweise
+                  Blois handelte, ist durch Ordericus Vitalis bezeugt: vgl. <rs type="bibl" ref="bibl:15124">Bell, Lost Commentary</rs> 110, 112, 114–116. Zu Abt Mauritius
+                  ist sonst wenig bekannt: vgl. <rs type="bibl" ref="bibl:20108">Vinet, Royal
+                     Monastère</rs> 90f., 242.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg4">
+            <mentioned> Pontium abbatem Dumensem</mentioned>
+            <p>Zur Widmung an Abt Pontius von Cluny vgl.
+                     <rs type="bibl" ref="bibl:15704">Cowdrey, Two Studies</rs> 191; <rs type="bibl" ref="bibl:17888">Leclercq, Ecrits monastiques</rs> 96; <rs type="bibl" ref="bibl:18596">North, Forgotten Student</rs> 181, 210. Die Schreibweise
                   „Dumensem“ beruht sicherlich auf einem Lesefehler, zumal ein Teil der
                   Überlieferung die Lesart „Cluniensis coenobii“ bietet, von der leicht zu
-                  „Dumensis“ zu gelangen sein kann: vgl. <rs type="bibl" key="bibl:18596">North,
-                     Forgotten Student</rs> 210. </p></note>
-            <note xml:id="d3e32653">
-               <ref type="context">4</ref>
-               <label>Praefuit ... Ricardus abbas</label><p>Vgl. <rs type="bibl" key="bibl:16996"
-                     >Henry, Préaux</rs> 198.</p></note>
-            <note xml:id="d3e32657">
-               <ref type="context">5</ref>
-               <label>Bernardus Grimoaldus</label><p>Selbst die spärlichen Angaben FLs zu seiner
+                  „Dumensis“ zu gelangen sein kann: vgl. <rs type="bibl" ref="bibl:18596">North,
+                     Forgotten Student</rs> 210. </p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg4">
+            <mentioned>Praefuit ... Ricardus abbas</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:16996">Henry, Préaux</rs> 198.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg5">
+            <mentioned>Bernardus Grimoaldus</mentioned>
+            <p>Selbst die spärlichen Angaben FLs zu seiner
                   Person gehen über das hinaus, was in der neueren Literatur über Grimaud bekannt
-                  ist: <rs type="bibl" key="bibl:18714">Passerat, Grimaud</rs>; vgl. <rs type="bibl"
-                     key="bibl:15700">Courouau, Moun lengatge</rs> 269; <rs type="bibl"
-                     key="bibl:17326">Jeanroy, Poésie occitane</rs> 152; <rs type="bibl"
-                     key="bibl:18604">Noulet, Essai</rs> 4 272–279.</p></note>
-            <note xml:id="d3e32664">
-               <ref type="context">5</ref>
-               <label> Franciscum Boude</label><p><rs type="bibl" key="bibl:18294"
-                     >Mellot–Queval–Monaque, Répertoire</rs> 91; vgl. <rs type="bibl"
-                     key="bibl:15270">Blanc-Rouquette, Presse</rs> 38, 57, 72, 92; <rs type="bibl"
-                     key="bibl:15566">Castellane, Catalogue</rs> 73–78.</p></note>
-            <note xml:id="d3e32668">
-               <ref type="context">6</ref>
-               <label>indicem ... recensentur</label><p>Wohl von demselben Katalog hatte bei
-                  früheren Gelegenheiten René Massuet berichtet: vgl. <ref type="letter">285</ref>
-                  &lt;5&gt;, <ref type="letter">384</ref> &lt;7&gt;. Ob es zu der von ihm in
-                  Aussicht gestellten Übermittlung gekommen war, ist fraglich.</p></note>
-            <note xml:id="d3e32674">
-               <ref type="context">8</ref>
-               <label>restituerunt ... 1640</label><p>Zur Eingliederung der Abtei Mas-Garnier in die
+                  ist: <rs type="bibl" ref="bibl:18714">Passerat, Grimaud</rs>; vgl. <rs type="bibl" ref="bibl:15700">Courouau, Moun lengatge</rs> 269; <rs type="bibl" ref="bibl:17326">Jeanroy, Poésie occitane</rs> 152; <rs type="bibl" ref="bibl:18604">Noulet, Essai</rs> 4 272–279.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg5">
+            <mentioned> Franciscum Boude</mentioned>
+            <p><rs type="bibl" ref="bibl:18294">Mellot–Queval–Monaque, Répertoire</rs> 91; vgl. <rs type="bibl" ref="bibl:15270">Blanc-Rouquette, Presse</rs> 38, 57, 72, 92; <rs type="bibl" ref="bibl:15566">Castellane, Catalogue</rs> 73–78.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg6">
+            <mentioned>indicem ... recensentur</mentioned>
+            <p>Wohl von demselben Katalog hatte bei
+                  früheren Gelegenheiten René Massuet berichtet: vgl. <ref type="letter" target="letter:285">285</ref>
+                  <ref target="letter:285#seg5">5</ref>, <ref type="letter" target="letter:384">384</ref> <ref target="letter:384#seg7">7</ref>. Ob es zu der von ihm in
+                  Aussicht gestellten Übermittlung gekommen war, ist fraglich.</p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg8">
+            <mentioned>restituerunt ... 1640</mentioned>
+            <p>Zur Eingliederung der Abtei Mas-Garnier in die
                   Maurinerkongregation war bereits 1629 ein erster Vertrag eingegangen, vorerst
                   jedoch nicht umgesetzt worden. Der neuerliche Beschluss zur Aggregation wurde im
                   Kapitel der Abtei im August 1640 angenommen, worauf sich wohl die Zeitangabe FLs
                   bezieht; die Inbesitznahme des Klosters durch die Mauriner erfolgte freilich erst
-                  im September 1643: <rs type="bibl" key="bibl:15760">Daux, Mas-Grenier</rs> 18
-                  130–139. </p></note>
-            <note xml:id="d3e32680">
-               <ref type="context">8</ref>
-               <label>disciplinam ... amplexus</label><p> Ein Teil des ursprünglichen Konvents hatte
+                  im September 1643: <rs type="bibl" ref="bibl:15760">Daux, Mas-Grenier</rs> 18
+                  130–139. </p>
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg8">
+            <mentioned>disciplinam ... amplexus</mentioned>
+            <p> Ein Teil des ursprünglichen Konvents hatte
                   sich der Aufnahme in die Kongregation bis zur Gewaltanwendung widersetzt; das
-                  Verhältnis zu diesen Mönchen wurde 1644 durch einen Vertrag regularisiert: <rs
-                     type="bibl" key="bibl:15760">Daux, Mas-Grenier</rs> 18 137f. Dass solche
+                  Verhältnis zu diesen Mönchen wurde 1644 durch einen Vertrag regularisiert: <rs type="bibl" ref="bibl:15760">Daux, Mas-Grenier</rs> 18 137f. Dass solche
                   „anciens“ bei der Aggregation ihrer Klöster Widerstand leisteten, kam ebenso
                   regelmäßig vor, wie dass ihnen nach erfolgter Eingliederung vertraglich das
                   Wohnrecht im Kloster auf Lebenszeit unter Beibehaltung ihrer vorherigen Observanz
-                  eingeräumt wurde: vgl. <rs type="bibl" key="bibl:15478">Bugner, Cadre
-                     architectural</rs> 18; <rs type="bibl" key="bibl:19454">Schmitz, Histoire</rs>
-                  4 36; <rs type="bibl" key="bibl:20030">Ultee, Abbey</rs> 133–151.</p></note>
-         </div>
-      </back>
+                  eingeräumt wurde: vgl. <rs type="bibl" ref="bibl:15478">Bugner, Cadre
+                     architectural</rs> 18; <rs type="bibl" ref="bibl:19454">Schmitz, Histoire</rs>
+                  4 36; <rs type="bibl" ref="bibl:20030">Ultee, Abbey</rs> 133–151.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>III</orig>.</note>
+         <note anchored="false">Ordnungsvermerk: <orig>149</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <front>
+         <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez Benedictino Mellicensi et bibliothecario. Mellicii vulgo Mölck in Osterreich. Viennae in Austria. A Vienne en Aûtriche. Par Strasbourg.</p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez amico suavissimo pater Franciscus Le Texier Sangermanensis ordinis sancti Benedicti salutem optimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">XV. Kalendas Aprilis ad me perlatum est <anchor xml:id="n1"/>Johannis Veith<anchor xml:id="n1e"/> Augustani bibliopolae epistolium, quo certiorem me faciebat duos se Lutetiam Parisiorum ad me, uti iusseras, direxisse libros. Hos ego, quos de rebus nostris et abs te compositos minime dubitabam, accipiendi et evolvendi quanto statim desiderio incensus fuerim, facile, opinor, conicies, amantissime mi pater, si, quantum amo te, tantum et ipse me ames. Moras tamen tuli per aliquot dies; tandemque VI. Kalendas Aprilis sani et salvi ad me delati sunt desideratissimi codices, quos peramanter exosculatus incredibili cum voluptate <choice><sic>leger</sic><corr>legi</corr></choice> advertique non sine gratissimi animi sensu notos alioquin celebresque Maurobenedictinae gentis viros tua arte, tua amicissima opera multo evasisse celebriores. Dum haec aliaque miror, incidi forte in <anchor xml:id="n2"/>caput 22. libri secundi, cuius vel inscriptio tantum mihi pudorem incussit<anchor xml:id="n2e"/> movitque adeo, ut optimum quoad cetera opus hac prorsus parte improbaverim vixque memet continuerim, quin vehementer amico succenserem. Et sane, suavissime mi Bernarde, meum quisquis tot inter eruditorum nomina perlegerit, vix, arbitror, continebit risum; vereorque, ne id de operis pretio et excellentia, de ipsa immo gloria auctoris plurimum detrahat. Cave ergo, obsecro, ne me iis deinceps oneres laudibus, quas sequiorem in partem accipere nemo, qui me norit, praetermittat. </ab>
+         <ab resp="#editor" xml:id="seg2">Encyclicas, ut imperatum abs te mihi erat, paraveram typis. Verum id post <anchor xml:id="n3"/>comitia generalia<anchor xml:id="n3e"/>, quae hoc ipso mense exeunte auspicabuntur praepositi nostri, differendum censuit reverendissimus<anchor xml:id="n4"/> generalis<anchor xml:id="n4e"/>. </ab>
+         <ab resp="#editor" xml:id="seg3">De scriptoribus sacri ordinis nostri, qui in monasteriis S. Maxentii et <anchor xml:id="n5"/>S. Cypriani<anchor xml:id="n5e"/> floruere, commentarios <add place="above">dudum</add> ad te transmisit reverendus dominus Johannes Baptista Poncet. Hos an acceperis, certiorem me, quaeso, facias; alios enim, si primi periere, transmitti curabo. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n6"/>Ricardus de Dumellis<anchor xml:id="n6e"/> Pratellensis abbas plura necdum publicae lucis facta commentaria in Scripturam Sacram composuit, scilicet in Genesim duo volumina, quae in duas dividit partes, e quibus prima quindecim complectitur libros. Primi initium hic exscribere operae pretium arbitror: <anchor xml:id="n7"/>Anselmo Cantuariensis ecclesiae archiepiscopo quidam dominicae crucis servus et minister Pratellini coenobii cursu infatigabili stadium paternae peregrinationis tamquam militi summi Regis feliciter consummare<anchor xml:id="n7e"/>. Pars altera sexdecim continet libros. Commentaria in librum Numeri, cuius in fronte haec legitur inscriptio: Commentum in librum Numeri <add place="above">editum</add> a quodam dominicae crucis servo. Ex huius, ut ipsius auctoris verbis utar, commenti prologo colligitur Richardum, de quo agimus, edidisse etiam explanationes in libros Deuteronomii, Exodi et Levitici, quas periisse credunt nostri Pratellenses. At supersunt etiamnum, quae sequuntur: <anchor xml:id="n8"/>Explanatio in Cantica canticorum suo filio Mauricio<anchor xml:id="n8e"/> inscripta. In Proverbia Salomonis ad<anchor xml:id="n9"/> Pontium abbatem Dumensem<anchor xml:id="n9e"/> . In librum Josue libri septem. In librum Ruth libri quatuor. <anchor xml:id="n10"/>Praefuit Pratellensi monasterio Ricardus abbas<anchor xml:id="n10e"/> ab anno 1101 ad annum 1131. </ab>
+         <ab resp="#editor" xml:id="seg5">De his forsitan plura iam ad te bonae memoriae Massuetus scripserat; ast quae sequuntur, transmissa<del ana="#after">ad te</del> non arbitror. <anchor xml:id="n11"/>Bernardus Grimoaldus<anchor xml:id="n11e"/> (Gallice Grimaud) Verduni non ignobili ad laevam Garumnae ripam in dioecesi Tolosana <choice><sic>oppidi</sic><corr>oppido</corr></choice> natus monasticen amplexus est in monasterio S. Petri de Curte seu de Manso Garnerio paullo ante annum 1640. Edidit ille lyrico carmine vitam beati patris Benedicti, idque vernacula, id est Tolosana lingua. Operis is est titulus: Lé dret cami del cel o La bido del grand patriarcho sant Benoît. Id est, Recta via coeli <pb n="2r"/> sive Vita magni patriarchae sancti Benedicti. Tolosae apud<anchor xml:id="n12"/> Franciscum Boude<anchor xml:id="n12e"/> 1659. Opus illud omnibus sub eiusdem beati patris Regula militantibus inscriptum. In sex partitus est libros, quibus integram beati Benedicti vitam, ut in Gregorii Magni Dialogis refertur, eademque serie et ordine complexus est. Quisque liber varia cantica seu capita continet, et unumquodque rursus canticum bifariam dividitur; prima pars varias exhibet e sacris codicibus patrumve operibus depromptas sententias, actioni<app><rdg wit="#"><add place="before">qu</add></rdg></app> illi parte in altera <add place="above"><witDetail wit="#A">mit Verweiszeichen über der Zeile</witDetail>cuiusque cantici</add> contentae convenientes. Hae poeticae Grimaldi lucubrationes summo omnium plausu exceptae sunt celebresque sunt hac nostra aetate apud Vascones. Quo anno ille obierit, necdum rescire potui. </ab>
+         <ab resp="#editor" xml:id="seg6">Haec sunt, mi Bernarde, quae de scriptoribus Benedictinis diversis ex monasteriis transmissa accepi. His addam me inter Mabillonii schedas satis longum reperisse <anchor xml:id="n13"/>indicem scriptorum omnium, quos protulit sanctae Justinae seu Casinensis congregatio ab anno 1410, in quo eorum opera sive edita sive manuscripta recensentur<anchor xml:id="n13e"/>. Hunc exscribere <choice><sic>cath</sic><corr>catalogum</corr></choice> inutile hactenus duxi; abunde enim suppeditata tibi fuisse arbitror a Casinensibus nostris, <choice><sic>quod</sic><corr>quae</corr></choice> ad Benedictinos ex Italia scriptores <choice><sic>attinebit</sic><corr>attinent</corr></choice>. Si tamen opus habueris, exscribam integrum et ad te mittam. </ab>
+         <ab resp="#editor" xml:id="seg7">Optimam, quaeso, salutem dicas meo nomine carissimo et eruditissimo domino Hieronymo Pez. Si quid in comitiis <add place="above">nostris</add> generalibus acciderit, ad te perscribam. Vale, reverendissime et amicissime mi pater.</ab>
+         <closer>Parisiis Nonas Aprilis anno 1717.</closer>
+         <closer xml:id="seg8">Grimoaldus iste, de quo supra, strictiorem, quam nostri in monasterio S. Petri de Curte <anchor xml:id="n14"/>restituerunt anno 1640<anchor xml:id="n14e"/>, <anchor xml:id="n15"/>disciplinam nunquam amplexus<anchor xml:id="n15e"/> est; unde etsi Benedictinos inter scriptores locum habeat, <choice><sic>non</sic><corr>nostris</corr></choice> tamen <add place="above">non</add> adnumerandus est.</closer>
+      </body>
    </text>
 </TEI>

@@ -1,47 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="814" xml:id="pez-0814">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">814 Johann Buchels an Bernhard Pez. 1717-08-26. Düsseldorf.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Buchels an Bernhard Pez. 1717-08-26. Düsseldorf.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">814</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 55 (mischt
-                     in der Paraphrase 699 und 814)</bibl>
-                  <bibl><rs type="bibl" key="bibl:19780">Stockinger, Klosterbibliothekar</rs>
-                     196</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Auf 1v gibt JB abschriftlich Text aus der Neusser Handschrift von Andreas Langs „Catalogus“ wieder, wobei er auch Textverlust ausweist. Dieser wird hier, in Analogie zu JBs Schreibweise, mit — wiedergegeben. Zu den bei Glassner, Verzeichnis 203, wiedergegebenen Verweisen vgl. 699.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">135r–136v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 135r–136v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -56,128 +72,111 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">699</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">846</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">805</idno>
-               </ref>
+               <ptr type="prev" target="letter:699"/>
+               <ptr type="next" target="letter:846"/>
+               <ptr type="mentions" target="letter:805"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">JB</rs> schreibt <rs type="person" role="sender">BP</rs> nach längerer Unterbrechung. Er hat im vergangenen Juli Gladbach besucht, dessen Abt Petrus Knor <rs type="person" role="sender">BP</rs> grüßen und ihm eine Beilage zusenden lässt, nach welcher das Leben von Abt Dietrich Hülsen anstatt nach der ersten Mitteilung gedruckt werden kann. Der Abt sendet außerdem eine Liste der Reliquien in der Klosterkirche.</p>
+            <p corresp="#seg2">Am 6. August hat <rs type="person" role="sender">JB</rs> Deutz aufgesucht, um Abt Michael Rüttgers zur Mitteilung der Schriftsteller seines Klosters zu ermuntern. Der Prior zeigte ihm ein Schreiben <rs type="person" role="sender">BPs</rs> <ref type="letter" target="letter:805">805</ref>, in dem dieser die Sorgfalt des Priors lobt und Stiche von Siegburg und Deutz erbittet.</p>
+            <p corresp="#seg3">Am 7. August war <rs type="person" role="sender">JB</rs> in Brauweiler und übergab Abt Matthias Franken <rs type="person" role="sender">BPs</rs> Enzyklik. Der Abt versprach seine Hilfe; <rs type="person" role="sender">JB</rs> glaubt jedoch, dass er weiteren Ansporn brauchen wird. <rs type="person" role="sender">JB</rs> hat auch den Bibliothekar gebeten, die Arbeit auf sich zu nehmen.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">JB</rs> möchte erfahren, ob die Melker Bibliothek über die „Anamnesis“ von Juan Tamayo de Salazar verfügt. Aus diesem Werk kann <rs type="person" role="sender">BP</rs> Nützliches für sein Vorhaben („Bibliotheca Benedictina“) entnehmen, ebenso aus den 1660 zu Paris gedruckten „Flores historiae“ von Louis Dony d’Attichy.</p>
+            <p corresp="#seg5">Vor acht Tagen hat <rs type="person" role="sender">JB</rs> im Kloster der Augustiner-Chorherren zu Neuss (Oberkloster) eine Papierhandschrift unter dem Titel „Genealogia sanctissimi patris Benedicti“ (Andreas Lang, „Catalogus sanctorum“) aufgefunden. <rs type="person" role="sender">JB</rs> gibt den Titel wieder, ebenso Angaben von späterer Hand zum Autor, der in Leipzig studiert hat (recte: siehe Kommentar) und Abt von Michelsberg zu Bamberg war, liefert eine Übersicht des Aufbaus des Werkes und schließlich eine Liste von darin erwähnten Benediktinerschriftstellern.</p>
+            <p corresp="#seg6">Im vergangenen Sommer hat <rs type="person" role="sender">JB</rs> rund dreißig Bibliotheken besucht, aber nichts für <rs type="person" role="sender">BP</rs> Brauchbares gefunden. Er hat folgende Handschriften gekauft: eine Pergamenthandschrift mit Dekreten des Konzils von Basel aus dem Jahr 1448, korrigiert und unterschrieben vom Konzilsnotar Michael Galteri; eine 900 Jahre alte illuminierte Evangelienhandschrift; eine weitere ähnlichen Alters mit Bildern des hl. Hieronymus sowie der vier Evangelisten; Augustinus, „De civitate Dei“, geschrieben von Wijbrandus Friso, sowie dessen „De nova terra circa Bodelswardiam“ über Bolsward in Westfriesland von 1423, in zwei Bänden; einen illuminierten Pergamentpsalter von 1140; Caesarius von Heisterbach, „Vita, passio et miracula beati Engelberti“ sowie desselben „Vita Elyzabeth lantgraviae“, beides auf Pergament; ein „Chronicon“ der Lütticher Bischöfe in einer Papierhandschrift von 1481; die „Cronica presulum et archiepiscoporum Coloniensis ecclesiae“ auf Papier, 1408; Florus’ „Epitoma de Tito Livio“ (oder die „Periochae“?) auf Pergament, 700 Jahre alt; ein Gebetbuch des osmanischen Sultans Süleyman I. in arabischer Sprache mit Goldlettern, das zahlreiche Gebete aus dem Koran und zudem magisch anmutende Zeichnungen enthält. Das Buch wurde nach der Belagerung von Wien 1529 beim Gegenangriff des Pfalzgrafen Philipp zurückgelassen, von diesem ging es an den Herzog von Bayern (Albrecht V.?); aus der Münchner Hofbibliothek kam es 1632 in den Besitz des schwedischen Königs Gustav Adolf – und nun schließlich an JB. Weiters hat <rs type="person" role="sender">JB</rs> einen 300 Jahre alten Koran in Duodez erstanden.</p>
+            <p corresp="#seg7"><rs type="person" role="sender">JB</rs> ersucht BP, Johann Franz Freiherrn Hegenmüller von Dubenweiler von ihm zu grüßen und ihn seiner Dienstbereitschaft zu versichern. <rs type="person" role="sender">BPs</rs> erstaunliche Nachrichten über dessen Vater (Johann Ruprecht Freiherrn Hegenmüller von Dubenweiler) überraschen <rs type="person" role="sender">JB</rs> nicht, da er dessen Frömmigkeit einst gut kannte; er lobt auch die Tugenden des Sohnes, den er als Jüngling immer „Aloysius“ nannte. <rs type="person" role="sender">JB</rs> wünscht mit Hegenmüller und <rs type="person" role="sender">BP</rs> persönlich sprechen zu können.</p>
+            <p corresp="#seg8"><rs type="person" role="sender">JB</rs> hat in Wien einen Freund namens Gerhard Cornelius van den Driesch, den Hofmeister der Mannagetta-Stiftung, der diesen Brief übermittelt und über den in Hinkunft der Briefverkehr abgewickelt werden kann. Van den Driesch, <rs type="person" role="sender">BP</rs> und <rs type="person" role="sender">JB</rs> werden dann zusammen wie die drei Grazien sein.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e40276"><rs type="person" role="sender">JB</rs> schreibt <rs type="person" role="sender">BP</rs> nach längerer Unterbrechung. Er hat im vergangenen Juli Gladbach besucht, dessen Abt Petrus Knor <rs type="person" role="sender">BP</rs> grüßen und ihm eine Beilage zusenden lässt, nach welcher das Leben von Abt Dietrich Hülsen anstatt nach der ersten Mitteilung gedruckt werden kann. Der Abt sendet außerdem eine Liste der Reliquien in der Klosterkirche.</seg><seg type="context" n="2" xml:id="d3e40278">Am 6. August hat <rs type="person" role="sender">JB</rs> Deutz aufgesucht, um Abt Michael Rüttgers zur Mitteilung der Schriftsteller seines Klosters zu ermuntern. Der Prior zeigte ihm ein Schreiben <rs type="person" role="sender">BPs</rs> <ref type="letter">805</ref>, in dem dieser die Sorgfalt des Priors lobt und Stiche von Siegburg und Deutz erbittet.</seg><seg type="context" n="3" xml:id="d3e40283">Am 7. August war <rs type="person" role="sender">JB</rs> in Brauweiler und übergab Abt Matthias Franken <rs type="person" role="sender">BPs</rs> Enzyklik. Der Abt versprach seine Hilfe; <rs type="person" role="sender">JB</rs> glaubt jedoch, dass er weiteren Ansporn brauchen wird. <rs type="person" role="sender">JB</rs> hat auch den Bibliothekar gebeten, die Arbeit auf sich zu nehmen.</seg><seg type="context" n="4" xml:id="d3e40285"><rs type="person" role="sender">JB</rs> möchte erfahren, ob die Melker Bibliothek über die „Anamnesis“ von Juan Tamayo de Salazar verfügt. Aus diesem Werk kann <rs type="person" role="sender">BP</rs> Nützliches für sein Vorhaben („Bibliotheca Benedictina“) entnehmen, ebenso aus den 1660 zu Paris gedruckten „Flores historiae“ von Louis Dony d’Attichy.</seg><seg type="context" n="5" xml:id="d3e40287">Vor acht Tagen hat <rs type="person" role="sender">JB</rs> im Kloster der Augustiner-Chorherren zu Neuss (Oberkloster) eine Papierhandschrift unter dem Titel „Genealogia sanctissimi patris Benedicti“ (Andreas Lang, „Catalogus sanctorum“) aufgefunden. <rs type="person" role="sender">JB</rs> gibt den Titel wieder, ebenso Angaben von späterer Hand zum Autor, der in Leipzig studiert hat (recte: siehe Kommentar) und Abt von Michelsberg zu Bamberg war, liefert eine Übersicht des Aufbaus des Werkes und schließlich eine Liste von darin erwähnten Benediktinerschriftstellern.</seg><seg type="context" n="6" xml:id="d3e40289">Im vergangenen Sommer hat <rs type="person" role="sender">JB</rs> rund dreißig Bibliotheken besucht, aber nichts für <rs type="person" role="sender">BP</rs> Brauchbares gefunden. Er hat folgende Handschriften gekauft: eine Pergamenthandschrift mit Dekreten des Konzils von Basel aus dem Jahr 1448, korrigiert und unterschrieben vom Konzilsnotar Michael Galteri; eine 900 Jahre alte illuminierte Evangelienhandschrift; eine weitere ähnlichen Alters mit Bildern des hl. Hieronymus sowie der vier Evangelisten; Augustinus, „De civitate Dei“, geschrieben von Wijbrandus Friso, sowie dessen „De nova terra circa Bodelswardiam“ über Bolsward in Westfriesland von 1423, in zwei Bänden; einen illuminierten Pergamentpsalter von 1140; Caesarius von Heisterbach, „Vita, passio et miracula beati Engelberti“ sowie desselben „Vita Elyzabeth lantgraviae“, beides auf Pergament; ein „Chronicon“ der Lütticher Bischöfe in einer Papierhandschrift von 1481; die „Cronica presulum et archiepiscoporum Coloniensis ecclesiae“ auf Papier, 1408; Florus’ „Epitoma de Tito Livio“ (oder die „Periochae“?) auf Pergament, 700 Jahre alt; ein Gebetbuch des osmanischen Sultans Süleyman I. in arabischer Sprache mit Goldlettern, das zahlreiche Gebete aus dem Koran und zudem magisch anmutende Zeichnungen enthält. Das Buch wurde nach der Belagerung von Wien 1529 beim Gegenangriff des Pfalzgrafen Philipp zurückgelassen, von diesem ging es an den Herzog von Bayern (Albrecht V.?); aus der Münchner Hofbibliothek kam es 1632 in den Besitz des schwedischen Königs Gustav Adolf – und nun schließlich an JB. Weiters hat <rs type="person" role="sender">JB</rs> einen 300 Jahre alten Koran in Duodez erstanden.</seg><seg type="context" n="7" xml:id="d3e40291"><rs type="person" role="sender">JB</rs> ersucht BP, Johann Franz Freiherrn Hegenmüller von Dubenweiler von ihm zu grüßen und ihn seiner Dienstbereitschaft zu versichern. <rs type="person" role="sender">BPs</rs> erstaunliche Nachrichten über dessen Vater (Johann Ruprecht Freiherrn Hegenmüller von Dubenweiler) überraschen <rs type="person" role="sender">JB</rs> nicht, da er dessen Frömmigkeit einst gut kannte; er lobt auch die Tugenden des Sohnes, den er als Jüngling immer „Aloysius“ nannte. <rs type="person" role="sender">JB</rs> wünscht mit Hegenmüller und <rs type="person" role="sender">BP</rs> persönlich sprechen zu können.</seg><seg type="context" n="8" xml:id="d3e40293"><rs type="person" role="sender">JB</rs> hat in Wien einen Freund namens Gerhard Cornelius van den Driesch, den Hofmeister der Mannagetta-Stiftung, der diesen Brief übermittelt und über den in Hinkunft der Briefverkehr abgewickelt werden kann. Van den Driesch, <rs type="person" role="sender">BP</rs> und <rs type="person" role="sender">JB</rs> werden dann zusammen wie die drei Grazien sein.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Auf 1v gibt JB abschriftlich Text aus der Neusser Handschrift von Andreas Langs „Catalogus“ wieder, wobei er auch Textverlust ausweist. Dieser wird hier, in Analogie zu JBs Schreibweise, mit — wiedergegeben. Zu den bei Glassner, Verzeichnis 203, wiedergegebenen Verweisen vgl. 699.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende domine pater, vir eruditissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e40310">Quamvis iam diu nullas ad te dederim litteras, fui tamen semper tui memor; sacra tua studia non ausus sum interpellare, donec haberem, quo possem ea promovere. Fui Gladbaci mense praeterito, et postquam tui iucunda memoria esset proposita, praesul me rogavit, quatenus obsequia sua salutemque suam humanissimam tibi offerrem additamque hic schedulam transmitterem, iuxta quam <seg type="lemma" corresp="#d3e40379">abbatis Theodori vita</seg> posset imprimi, non autem secundum<seg type="lemma" corresp="#d3e40385"> primam relationem</seg>. Adiunxit sacrarum<seg type="lemma" corresp="#d3e40389"> reliquiarum, quae ibidem in ecclesia asservantur, designationem</seg>. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e40312">Fui sexta huius Tuitii, ut abbatem ad domesticorum scriptorum communicationem sollicitarem. Eius loci <seg type="lemma" corresp="#d3e40393">prior</seg> litteras tuas ostendit, quibus te ipsius diligentia contentum esse testaris Sigeburgensisque et Tuitiensis <seg type="lemma" corresp="#d3e40399">abbatiae ichnographiam</seg> petis. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e40314">Septima Brunvillariensem praesulem visi eidemque encyclicam tuam obtuli. Se petitioni tuae iustissimae satisfacturum appromisit, sed praevideo ipsi calcaria esse addenda. Monui interim patrem <seg type="lemma" corresp="#d3e40403">bibliothecarium</seg>, virum eruditum et humanum, ut hunc laborem in se suscipiat. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e40316">Cuperem rescire, <seg type="lemma" corresp="#d3e40409">utrum in instructissima bibliotheca Mellicensi reperiatur</seg> Anamnesis sive Commemoratio omnium sanctorum Hispanorum a Joanne Tamayo de Salazar compilata; multa inde in rem tuam elici possent, velut etiam ex Ludovici Donii d’Attichy Floribus historiae<note place="foot" xml:id="d3e40318">	Korrigiert aus<hi rend="italic" xml:space="preserve"> historiaru.</hi></note> sacri collegii sacrae Romanae ecclesiae cardinalium, impressis Lutetiae anno 1660. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e40323">Inveni octo abhinc diebus <seg type="lemma" corresp="#d3e40415">Novesii in canonicorum regularium monasterio</seg> manuscriptum in charta hoc titulo: <seg type="lemma" corresp="#d3e40421">Genealogia sanctissimi patris Benedicti tum secundum carnalem, tum secundum spiritualem tradita progeniem, in qua insignium duntaxat utriusque sexus alumnorum, non tamen omnium, nomina recitantur et de pluribus pauca, quae ad nostram ex scripturis pervenire potuerunt notitiam, hic annotavimus, quae et indice rubrica suis in locis quaerentibus seriatim se obiciunt, et plerisque in locis alphabeto in margine annotato clarescunt ad laudem et gloriam Dei suique famuli sancti Benedicti</seg>. Ecclesiastici primo. <seg type="lemma" corresp="#d3e40425">Religiositas custodiet et iustificabit cor, iucunditatem et gaudium dabit</seg>. <pb n="1v"/> Scripsit manus posterioris saeculi sequentia prope libelli titulum, quae ferme visum fugiunt, et quorum pars evulsa est: Huius egregii operis autor est venerandus domnus Andreas Staphielstein doctr— imperialis monasterii Montis Monachorum Divi Michaelis extra muros Bambergenses —. Floruit anno Domini 1483. Hic fuit eximie doctus, <seg type="lemma" corresp="#d3e40429">philosophiae magister</seg> Lypsensi— gravis, morum elegantia et omnium virtutum ornamentis ac religionis summo studio co—. Librum intitulavit Opus canonisatorum ex ordine divi Benedicti pontificum, episcoporum, abbatum et abbatissarum. Vitae pontificum ordinis sancti Benedicti continent octo folia in quarto. Cardinalium quatuor. Metropolitanorum archiepiscoporum sex. Episcoporum octo. Abbatum et abbatissarum inter sanctos relatarum quinque. Imperatorum<note place="foot" xml:id="d3e40327">	Danach durchgestrichen <hi rend="italic">ex.</hi></note>, qui ordinem sunt ingressi, tria. Virorum illustrium, qui scriptis libris inclaruerunt, sex. <seg type="lemma" corresp="#d3e40434">Noto hic</seg> quosdam ex illis ignotiores: Claudius monachus socius sancti Alcuini; Angelomus monachus Luxoviensis; Willeramus monachus Fuldensis; Giselbertus; Gehardus [<hi rend="italic">sic</hi>]; Ansbertus; Joachim abbas Floriacensis; Athelmus abbas; Joannes Scotus; Berno abbas Augiensis – <seg type="lemma" corresp="#d3e40438">reperitur in Trithemio</seg>; Hugo de Foyleto monachus Corbeiensis; Milo monachus Elnonensis; Erkenbertus monachus Sconalbegiensis; Hucbaldus; Guido Aretinus; Albimundus monachus et postea Aversanus<note place="foot" xml:id="d3e40335">	Korrigiert aus <hi rend="italic">Avesanus.</hi></note> episcopus; Northungus monachus Fuldensis; Joannes abbas Versellensis; Aphanus [<hi rend="italic">sic</hi>] Cassinensis monachus; Philippus de Pergano<note place="foot" xml:id="d3e40344">	Korrigiert aus <hi rend="italic">Bergano.</hi></note> prior Sanctae Mariae de Avantio; Guzbertus, Bertharius, Bernardus abbates Cassinenses; Constantinus medicus monachus Cassinensis; Petrus Boerii abbas Sancti Aniani; Dithmarus abbas Corbeiensis; <pb n="2r"/> Alexander de Villa Dei; Henricus de Gulpen abbas Sancti Aegidii Noribergae – hunc etiam reperi in Trithemio; Wilhelmus de Lauduno abbas Monasterii Novi Pictaviensis; Odo monachus Sancti Dionysii; Andreas de Hamerhusen abbas; Hugo de Lugduno abbas in civitate Lugdunensi; Wolbero abbas Sancti Panthaleonis; Joannes monachus Castellensis; Hugo monachus Floriacensis; Wittikinus Albiensis; Wilhelmus monachus Sancti Dionysii; Joannes abbas Cassinensis; Lantfrancus monachus Hersfeldensis; Henricus; Baldericus abbas Burdegalensis; Theodoricus. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e40351">Perlustravi hac aestate triginta circiter bibliothecas et semper sedulus inquisivi, si quid in rem tuam possem offendere, sed frustra. Sequentia manuscripta a multis saeculis ad catenas damnata redemi a captivitate et <seg type="lemma" corresp="#d3e40442">in musaeo nostrate</seg> libertate donavi:<seg type="lemma" corresp="#d3e40448"> Decreta et gesta sacri concilii Basileensis</seg> a Michaele Galteri ipsiusmet concilii notario correcta et subscripta in membrana anno 1448, folio; quatuor sacra Evangelia auro et minio scripta in membrana ante novem saecula, folio; eadem eodem propemodum tempore scripta et divi Hieronymi quatuorque evangelistarum iconibus exornata in membrana, folio; sanctum Augustinum <seg type="lemma" corresp="#d3e40452">De civitate Dei in membrana scripta a Vibrando Frisone, De nova terra circa Bodelswardiam partium Westfrisiae, volumina duo in folio anno 1423</seg><note place="foot" xml:id="d3e40353"><hi rend="italic" xml:space="preserve">	anno 1423 </hi>unter der Zeile eingefügt.</note>; Psalterium auro et minio decoratum in membrana anno MCXL<note place="foot" xml:id="d3e40358">	Davor durchgestrichen<hi rend="italic" xml:space="preserve"> 1140.</hi></note>, quarto; <seg type="lemma" corresp="#d3e40456">Caesarium Heisterbacensem</seg> De vita, gestis et martyrio sancti Engelberti archiepiscopi Coloniensis in membrana, quarto; eundem De vita Elisabethae landgraviae Hassiae in membrana, quarto; <pb n="2v"/><seg type="lemma" corresp="#d3e40460"> Chronicon episcoporum Leodiensium</seg> in charta anno 1481, quarto;<seg type="lemma" corresp="#d3e40464"> Chronicon praesulum et archiepiscoporum Coloniensis ecclesiae</seg> in charta 1408, quarto;<seg type="lemma" corresp="#d3e40468"> Lucii Flori Periochen</seg> omnium librorum Titi Livii Patavini in membrana ante septem saecula scriptam, octavo; imperatoris Turcarum<seg type="lemma" corresp="#d3e40472"> Solymanni manuale precum</seg> lingua Arabica characteribus aureis potissimum eleganter scriptum, continens varias preces ex Alcorano desumptas ut et figuras quasdam et schemata, quae magiam Turcicam olent; repertus est hic liber inter impedimenta Solymanni, cum anno 1529 obsidionem Viennae Austriae solveret impellente Philippo comite Palatino, cui acceptum tulit dux Bavariae, ex cuius pinacotheca saeculi sequentis anno 32. <seg type="lemma" corresp="#d3e40476">in manus Gustavi Adolphi regis Sueciae</seg> transivit et tandem feliciter in meas, octavo. Alcoranus elegantissime scriptus ante trecentos annos in duodecimo. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d3e40365">Plurimum me devincies, si baronem illustrissimum Hegemullerum nomine meo salutare eique, quidquid a me dependet, offerre dignaris. <seg type="lemma" corresp="#d3e40481">Mirum quidem est, quod de illustrissimo eius parente</seg> scribis; ego non miror, cum virtutes eius pietasque mihi satis perspectae fuerint. Iunior tam probus et candidus in iuventute fuit, ut eum semper<seg type="lemma" corresp="#d3e40487"> Aloysium nominaverim</seg>. Utinam tam dilecti amici et tuo mihi frui liceret alloquio; beatum me dicerem. </seg><seg type="context" n="8" xml:space="preserve" xml:id="d3e40367"><seg type="lemma" corresp="#d3e40491">Amicum habeo Viennae singularem, virum eruditissimum, fundationis Mannegettanae praefectum Gerhardum Cornelium Drieschium</seg>. Per illum hasce litteras accipies; illas, quas mihi deinceps scripturus es, eidem poteris committere. Ita litterarum nostrarum commercium erit tutum, et ille velut tertius symmystes<note place="foot" xml:id="d3e40369">	Korrigiert aus<hi rend="italic" xml:space="preserve"> symmistes.</hi></note> ad explendum<seg type="lemma" corresp="#d3e40497"> Gratiarum numerum</seg> in amicitiae communionem poterit venire. Vale, vir optime et litteratorum decus, et eum ama, qui semper tuus erit ex asse</seg></p>
-            <p xml:space="preserve">Joannes Buchels.</p>
-            <p xml:space="preserve">Dusseldorpii 26. Augusti 1717.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e40379">
-               <ref type="context">1</ref>
-               <label>abbatis Theodori vita</label><p>Die Beilage ist erhalten: StiA Melk, Karton 85
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>abbatis Theodori vita</mentioned>
+            <p>Die Beilage ist erhalten: StiA Melk, Karton 85
                   Varia 25, Fasz. 1, Nr. 4. Sie trägt den Titel „Vita domini Theodori Hulsen abbatis
-                  Gladbacensis“. Zu Dietrich Hülsen: <rs type="bibl" key="bibl:15030">Bange–Löhr,
-                     Gladbach</rs> 347; <rs type="bibl" key="bibl:19164">Ropertz, Quellen</rs> 28,
-                  59f.</p></note>
-            <note xml:id="d3e40385">
-               <ref type="context">1</ref>
-               <label> primam relationem</label><p> Möglicherweise bezieht sich JB auf den 1712 von Odo Illem eingesendeten Schriftstellerkatalog von Gladbach: vgl. 217. Dietrich Hülsen kommt darin jedoch nicht vor.</p></note>
-            <note xml:id="d3e40389">
-               <ref type="context">1</ref>
-               <label> reliquiarum ... designationem</label><p>Die Beilage mit dem Titel
+                  Gladbacensis“. Zu Dietrich Hülsen: <rs type="bibl" ref="bibl:15030">Bange–Löhr,
+                     Gladbach</rs> 347; <rs type="bibl" ref="bibl:19164">Ropertz, Quellen</rs> 28,
+                  59f.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> primam relationem</mentioned>
+            <p> Möglicherweise bezieht sich JB auf den 1712 von Odo Illem eingesendeten Schriftstellerkatalog von Gladbach: vgl. 217. Dietrich Hülsen kommt darin jedoch nicht vor.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned> reliquiarum ... designationem</mentioned>
+            <p>Die Beilage mit dem Titel
                   „Specificatio sacrarum reliquiarum in monasterio sancti Viti martyris in Gladbach
                   ordinis sancti Benedicti“ ist erhalten: StiA Melk, Karton 85 Varia 22, Fasz. 3,
                   Nr. 5. Der Text stimmt überein mit dem Reliquienverzeichnis in der von Knor um
                   1717 abgeschlossenen Chronik „Liber de fundatione et abbatibus monasterii S. Viti
-                  in Gladbach“: <rs type="bibl" key="bibl:19164">Ropertz, Quellen</rs> 89–94.
-               </p></note>
-            <note xml:id="d3e40393">
-               <ref type="context">2</ref>
-               <label>prior</label><p> Die Identität dieser Person konnte nicht ermittelt werden.
+                  in Gladbach“: <rs type="bibl" ref="bibl:19164">Ropertz, Quellen</rs> 89–94.
+               </p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>prior</mentioned>
+            <p> Die Identität dieser Person konnte nicht ermittelt werden.
                   Als Prior von Deutz nachweisbar, jedoch zu einem nicht genau bestimmbaren
-                  Zeitraum, ist der um 1727 verstorbene Engelbert Kolshoven: <rs type="bibl"
-                     key="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 3 272. Die dort angegebene
+                  Zeitraum, ist der um 1727 verstorbene Engelbert Kolshoven: <rs type="bibl" ref="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 3 272. Die dort angegebene
                   Namensform könnte eine Verlesung für den in der Region sonst öfter belegten
-                  Familiennamen „Rolshoven“ sein. </p></note>
-            <note xml:id="d3e40399">
-               <ref type="context">2</ref>
-               <label>abbatiae ichnographiam</label><p> Dieses Ersuchen BPs könnte im Zusammenhang
-                  mit den Arbeiten von Felix Egger stehen: vgl. <ref type="letter">659</ref>
-                  &lt;3&gt;. </p></note>
-            <note xml:id="d3e40403">
-               <ref type="context">3</ref>
-               <label>bibliothecarium</label><p>Seine Identität konnte nicht ermittelt werden. </p></note>
-            <note xml:id="d3e40409">
-               <ref type="context">4</ref>
-               <label>utrum ... reperiatur</label><p>In Melk vorhanden ist heute Tamayo de Salazars
+                  Familiennamen „Rolshoven“ sein. </p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned>abbatiae ichnographiam</mentioned>
+            <p> Dieses Ersuchen BPs könnte im Zusammenhang
+                  mit den Arbeiten von Felix Egger stehen: vgl. <ref type="letter" target="letter:659">659</ref>
+                  <ref target="letter:659#seg3">3</ref>. </p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned>bibliothecarium</mentioned>
+            <p>Seine Identität konnte nicht ermittelt werden. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
+            <mentioned>utrum ... reperiatur</mentioned>
+            <p>In Melk vorhanden ist heute Tamayo de Salazars
                   sechsbändige „Anamnesis“: StiB Melk 3402–3407. Zu Tamayo als Geschichtsfälscher
-                  vgl. <rs type="bibl" key="bibl:16994">Henriet, Collection</rs> 58–60, 71–77.
+                  vgl. <rs type="bibl" ref="bibl:16994">Henriet, Collection</rs> 58–60, 71–77.
                   Hingegen sind die „Flores historiae“ von Dony d’Attichy dort nicht festzustellen.
-               </p></note>
-            <note xml:id="d3e40415">
-               <ref type="context">5</ref>
-               <label>Novesii ... monasterio</label><p>Zum Neusser Oberkloster vgl. <rs type="bibl"
-                     key="bibl:15650">Clemen, Kunstdenkmäler Neuss</rs> 89f.; <rs type="bibl"
-                     key="bibl:20404">Wisplinghoff, Geschichte 4</rs> 120–153. Über das Schicksal
-                  seiner Bibliotheksbestände ist nahezu nichts bekannt: ebd. 124. </p></note>
-            <note xml:id="d3e40421">
-               <ref type="context">5</ref>
-               <label>Genealogia ... Benedicti</label><p> Aufgrund der von JB gebotenen Beschreibung
+               </p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
+            <mentioned>Novesii ... monasterio</mentioned>
+            <p>Zum Neusser Oberkloster vgl. <rs type="bibl" ref="bibl:15650">Clemen, Kunstdenkmäler Neuss</rs> 89f.; <rs type="bibl" ref="bibl:20404">Wisplinghoff, Geschichte 4</rs> 120–153. Über das Schicksal
+                  seiner Bibliotheksbestände ist nahezu nichts bekannt: ebd. 124. </p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
+            <mentioned>Genealogia ... Benedicti</mentioned>
+            <p> Aufgrund der von JB gebotenen Beschreibung
                   handelt es sich entweder um Andreas Langs „Catalogus sanctorum“ unter anderem
-                  Titel oder um eine Überarbeitung davon. Zu diesem Werk vgl. <rs type="bibl"
-                     key="bibl:16154">Fassbinder, Catalogus</rs>; sowie <ref type="letter">654</ref>
-                  &lt;4&gt;. Den hier angeführten Titel soll auch eine Handschrift der Fürstlich
-                  Arenberg’schen Bibliothek getragen haben: <rs type="bibl" key="bibl:17414"
-                     >Kapsner, Bibliography</rs> 1 19; 2 299. Vermutlich ist diese identisch mit
+                  Titel oder um eine Überarbeitung davon. Zu diesem Werk vgl. <rs type="bibl" ref="bibl:16154">Fassbinder, Catalogus</rs>; sowie <ref type="letter" target="letter:654">654</ref>
+                  <ref target="letter:654#seg4">4</ref>. Den hier angeführten Titel soll auch eine Handschrift der Fürstlich
+                  Arenberg’schen Bibliothek getragen haben: <rs type="bibl" ref="bibl:17414">Kapsner, Bibliography</rs> 1 19; 2 299. Vermutlich ist diese identisch mit
                   einer zu Anfang des 19. Jh. in der Schlossbibliothek Nordkirchen vorhandenen
                   „Historia virorum illustrium ordinis sancti Benedicti“, zu deren Beschaffenheit
-                  ähnliche Angaben gemacht werden: vgl. <rs type="bibl" key="bibl:19996">Troß,
+                  ähnliche Angaben gemacht werden: vgl. <rs type="bibl" ref="bibl:19996">Troß,
                      Verzeichniß</rs> 36. Eine Anfrage bei der Arenberg Foundation im September 2011
                   ergab, dass der genannte Codex dort mangels eines Katalogs in den Beständen nicht
                   ausfindig gemacht werden kann. Ob er vorhanden ist, kann somit nicht angegeben
                   werden, zumal größere Bestände an Handschriften aus dieser Bibliothek um 1960
-                  versteigert wurden: vgl. <rs type="bibl" key="bibl:16756">Haller, Sammlung
+                  versteigert wurden: vgl. <rs type="bibl" ref="bibl:16756">Haller, Sammlung
                      Nordkirchen</rs> 15. Hinsichtlich einer – durchaus plausiblen – Identität oder
                   Verwandtschaft mit der von JB beschriebenen Neusser Handschrift lässt sich daher
                   keine sichere Aussage treffen; sonst ist zu deren Verbleib nichts zu ermitteln.
-               </p></note>
-            <note xml:id="d3e40425">
-               <ref type="context">5</ref>
-               <label>Religiositas ... dabit</label><p>Sir 1,18. </p></note>
-            <note xml:id="d3e40429">
-               <ref type="context">5</ref>
-               <label>philosophiae magister</label><p> Zu einem Studienaufenthalt Langs in Leipzig
-                  bietet die biographische Literatur über ihn keine Hinweise: <rs type="bibl"
-                     key="bibl:15894">Dippold, Lang</rs>; <rs type="bibl" key="bibl:16154"
-                     >Fassbinder, Catalogus</rs> 13–17; <rs type="bibl" key="bibl:20548">Zimmermann,
-                     Lang</rs>. </p></note>
-            <note xml:id="d3e40434">
-               <ref type="context">5</ref>
-               <label>Noto hic</label><p>Etwa die Hälfte der erwähnten Personen findet sich bei <rs
-                     type="bibl" key="bibl:16154">Fassbinder, Catalogus</rs> 55, 59f., 64–70, 84,
+               </p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
+            <mentioned>Religiositas ... dabit</mentioned>
+            <p>Sir 1,18. </p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg5">
+            <mentioned>philosophiae magister</mentioned>
+            <p> Zu einem Studienaufenthalt Langs in Leipzig
+                  bietet die biographische Literatur über ihn keine Hinweise: <rs type="bibl" ref="bibl:15894">Dippold, Lang</rs>; <rs type="bibl" ref="bibl:16154">Fassbinder, Catalogus</rs> 13–17; <rs type="bibl" ref="bibl:20548">Zimmermann,
+                     Lang</rs>. </p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg5">
+            <mentioned>Noto hic</mentioned>
+            <p>Etwa die Hälfte der erwähnten Personen findet sich bei <rs type="bibl" ref="bibl:16154">Fassbinder, Catalogus</rs> 55, 59f., 64–70, 84,
                   87, 114: Alkuin, Claudius, Angelomus von Luxeuil, Williram, Joachim von Fiore,
                   Johannes Duns Scotus, Berno von Reichenau, Hugo von Fouilloy, Milo und Hucbald von
                   St.-Amand, Guitmund von Aversa, Giacomo Filippo Foresti da Bergamo, die Äbte
@@ -201,81 +200,70 @@
                   Hamerhusen“, „Henricus“ und „Theodoricus“ konnten nicht identifiziert werden. – Zu
                   der Nennung eines „Northungus“ von Fulda lässt sich festhalten, dass ein Mönch
                   Northungus zwar im 11. Jh. in Fulda existiert hat, von ihm aber weiter nichts
-                  bekannt ist: <rs type="bibl" key="bibl:19424">Schmid et al., Kommentiertes
+                  bekannt ist: <rs type="bibl" ref="bibl:19424">Schmid et al., Kommentiertes
                      Parallelregister</rs> 295. Dass er in die „Genealogia“ von Lang Aufnahme
                   gefunden hätte, ist somit wenig wahrscheinlich. Unter dem Namen „Noting“ oder
                   „Notung“ begegnen im 9. und 10. Jh. Bischöfe von Vercelli, Verona, Brescia,
                   Novara, Konstanz sowie ein Abt des Klosters Cella Aurea zu Pavia. Einige von
-                  diesen dürften miteinander identisch sein: <rs type="bibl" key="bibl:19420"
-                     >Schmid, Hirsau</rs> 23–53; vgl. <rs type="bibl" key="bibl:18210">Maurer,
+                  diesen dürften miteinander identisch sein: <rs type="bibl" ref="bibl:19420">Schmid, Hirsau</rs> 23–53; vgl. <rs type="bibl" ref="bibl:18210">Maurer,
                      Bistum Konstanz 2</rs> 120–124. Die Familie, der diese Person oder Personen
-                  zuzuordnen sein dürften, stand mit dem Kloster Hirsau in enger Verbindung: <rs
-                     type="bibl" key="bibl:18954">Putze, Bauten</rs> 12. Ein Bischof Noting war
+                  zuzuordnen sein dürften, stand mit dem Kloster Hirsau in enger Verbindung: <rs type="bibl" ref="bibl:18954">Putze, Bauten</rs> 12. Ein Bischof Noting war
                   Korrespondent des Hrabanus Maurus und Widmungsempfänger einer Schrift desselben,
                   was die Herstellung einer Verbindung zu Fulda im Schriftstellerkatalog eventuell
-                  erklären könnte: vgl. <rs type="bibl" key="bibl:19420">Schmid, Hirsau</rs> 33f. –
-                  Zu Wolbero von St. Pantaleon vgl. <rs type="bibl" key="bibl:17640">Kracht, St.
+                  erklären könnte: vgl. <rs type="bibl" ref="bibl:19420">Schmid, Hirsau</rs> 33f. –
+                  Zu Wolbero von St. Pantaleon vgl. <rs type="bibl" ref="bibl:17640">Kracht, St.
                      Pantaleon</rs> 391, 395f. Zu den Äbten Johannes, Bertharius und Bernhard Aygler
-                  von Monte Cassino vgl. <rs type="bibl" key="bibl:17098">Hoffmann, Abtslisten</rs>
+                  von Monte Cassino vgl. <rs type="bibl" ref="bibl:17098">Hoffmann, Abtslisten</rs>
                   234–240, 257–260, 270–273. Ein Abt desselben Klosters namens „Guzbert“ ist nicht
                   ausfindig zu machen; denkbar wäre eine Verwechslung mit Gozbert von Tegernsee oder
-                  eventuell auch mit Gozbert von St. Gallen. Zu Ersterem vgl. <rs type="bibl"
-                     key="bibl:16834">Hartig, Tegernsee</rs> 10f.; <rs type="bibl" key="bibl:18024"
-                     >Lindner, Familia S. Quirini</rs> 28. Zu Letzterem vgl. <rs type="bibl"
-                     key="bibl:15998">Duft–Gössi–Vogler, St. Gallen</rs> 1181, 1192f. Zu Milo und
-                  Hucbald sowie zu Hugo von Fouilloy vgl. <ref type="letter">552</ref> &lt;6&gt; und
-                  &lt;11&gt;. </p></note>
-            <note xml:id="d3e40438">
-               <ref type="context">5</ref>
-               <label>reperitur in Trithemio</label><p> Zur Abhängigkeit Langs von Trithemius vgl.
-                     <rs type="bibl" key="bibl:14948">Arnold, De viris illustribus</rs> 68f.; <rs
-                     type="bibl" key="bibl:16154">Fassbinder, Catalogus</rs> 127–134. Berno von
+                  eventuell auch mit Gozbert von St. Gallen. Zu Ersterem vgl. <rs type="bibl" ref="bibl:16834">Hartig, Tegernsee</rs> 10f.; <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> 28. Zu Letzterem vgl. <rs type="bibl" ref="bibl:15998">Duft–Gössi–Vogler, St. Gallen</rs> 1181, 1192f. Zu Milo und
+                  Hucbald sowie zu Hugo von Fouilloy vgl. <ref type="letter" target="letter:552">552</ref> <ref target="letter:552#seg6">6</ref> und
+                  <ref target="letter:552#seg11">11</ref>. </p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg5">
+            <mentioned>reperitur in Trithemio</mentioned>
+            <p> Zur Abhängigkeit Langs von Trithemius vgl.
+                     <rs type="bibl" ref="bibl:14948">Arnold, De viris illustribus</rs> 68f.; <rs type="bibl" ref="bibl:16154">Fassbinder, Catalogus</rs> 127–134. Berno von
                   Reichenau wird behandelt bei Trithemius, De viris illustribus OSB 452f. Heinrich
                   von Gulpen, zu dem JB einen ähnlichen Vermerk anbringt, ist verzeichnet bei
-                  Trithemius, De scriptoribus ecclesiasticis 109v. </p></note>
-            <note xml:id="d3e40442">
-               <ref type="context">6</ref>
-               <label>in musaeo nostrate</label><p>Eine Verbindung mit der von JB verwalteten kurfürstlichen Bibliothek lässt sich für keines der hier genannten Bücher herstellen; folglich ist davon auszugehen, dass JB – wie in etlichen späteren Briefen – von Anschaffungen für seine persönliche Bibliothek spricht. Zu deren Verbleib nach JBs Tod ist nichts Sicheres bekannt. Es liegt allerdings nahe, dass die Sammlung nach dem Ableben JBs 1738 verkauft und dabei zerschlagen wurde.</p></note>
-            <note xml:id="d3e40448">
-               <ref type="context">6</ref>
-               <label> Decreta ... concilii Basileensis</label><p> Beglaubigte Abschriften der
-                  amtlichen Dekretensammlung wurden in beträchtlicher Zahl angefertigt: <rs
-                     type="bibl" key="bibl:18980">Quidde, Vorwort</rs> LII f., LXXIV. Michael
-                  Galteri oder Gautier war eine prominente Gestalt unter den Konzilsnotaren: <rs
-                     type="bibl" key="bibl:15842">Dephoff, Urkunden- und Kanzleiwesen</rs> 65.
-                  Mehrere von ihm beglaubigte Handschriften mit den Dekreten sind bekannt: <rs
-                     type="bibl" key="bibl:17024">Herre, Reichstagsakten Sigmund 4</rs> 675; <rs
-                     type="bibl" key="bibl:18980">Quidde, Vorwort</rs> LIII, LXXV. Von diesen ist
+                  Trithemius, De scriptoribus ecclesiasticis 109v. </p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg6">
+            <mentioned>in musaeo nostrate</mentioned>
+            <p>Eine Verbindung mit der von JB verwalteten kurfürstlichen Bibliothek lässt sich für keines der hier genannten Bücher herstellen; folglich ist davon auszugehen, dass JB – wie in etlichen späteren Briefen – von Anschaffungen für seine persönliche Bibliothek spricht. Zu deren Verbleib nach JBs Tod ist nichts Sicheres bekannt. Es liegt allerdings nahe, dass die Sammlung nach dem Ableben JBs 1738 verkauft und dabei zerschlagen wurde.</p>
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg6">
+            <mentioned> Decreta ... concilii Basileensis</mentioned>
+            <p> Beglaubigte Abschriften der
+                  amtlichen Dekretensammlung wurden in beträchtlicher Zahl angefertigt: <rs type="bibl" ref="bibl:18980">Quidde, Vorwort</rs> LII f., LXXIV. Michael
+                  Galteri oder Gautier war eine prominente Gestalt unter den Konzilsnotaren: <rs type="bibl" ref="bibl:15842">Dephoff, Urkunden- und Kanzleiwesen</rs> 65.
+                  Mehrere von ihm beglaubigte Handschriften mit den Dekreten sind bekannt: <rs type="bibl" ref="bibl:17024">Herre, Reichstagsakten Sigmund 4</rs> 675; <rs type="bibl" ref="bibl:18980">Quidde, Vorwort</rs> LIII, LXXV. Von diesen ist
                   keine mit jener, die JB erwarb, zu identifizieren. Allerdings existierten zwei
                   beglaubigte Dekretensammlungen im 16. Jh. in St. Pantaleon zu Köln und in der
-                  Kölner Kartause, wo sie von Petrus Crabbe eingesehen wurden: <rs type="bibl"
-                     key="bibl:17906">Lehmann, Modius</rs> 86; <rs type="bibl" key="bibl:18980"
-                     >Quidde, Vorwort</rs> IC. Diese Codices sind anscheinend heute unbekannten
+                  Kölner Kartause, wo sie von Petrus Crabbe eingesehen wurden: <rs type="bibl" ref="bibl:17906">Lehmann, Modius</rs> 86; <rs type="bibl" ref="bibl:18980">Quidde, Vorwort</rs> IC. Diese Codices sind anscheinend heute unbekannten
                   Verbleibs; dass einer von ihnen das hier von JB erwähnte Exemplar gewesen sein
                   könnte, ist zumindest denkbar. Die Überlieferung der Dekretensammlungen ist
                   insgesamt sehr reichlich, eine annähernd vollständige Erschließung steht aus: vgl.
-                     <rs type="bibl" key="bibl:16960">Helmrath, Basler Konzil</rs> 14, 452; <rs
-                     type="bibl" key="bibl:18342">Meuthen, Protokollführung</rs> 366. </p></note>
-            <note xml:id="d3e40452">
-               <ref type="context">6</ref>
-               <label>De civitate Dei ... 1423</label><p> Diese Handschrift lässt sich aufgrund der
+                     <rs type="bibl" ref="bibl:16960">Helmrath, Basler Konzil</rs> 14, 452; <rs type="bibl" ref="bibl:18342">Meuthen, Protokollführung</rs> 366. </p>
+         </note>
+         <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg6">
+            <mentioned>De civitate Dei ... 1423</mentioned>
+            <p> Diese Handschrift lässt sich aufgrund der
                   Angaben JBs sicher identifizieren mit Den Haag, Koninklijke Bibliotheek, 133 M
-                  51–52; vgl. <rs type="bibl" key="bibl:18006">Lieftinck–Gumbert, Manuscrits datés
-                     2/1</rs> 133 Nr. 506. </p></note>
-            <note xml:id="d3e40456">
-               <ref type="context">6</ref>
-               <label>Caesarium Heisterbacensem</label><p> Die einzig bekannte gemeinsame
+                  51–52; vgl. <rs type="bibl" ref="bibl:18006">Lieftinck–Gumbert, Manuscrits datés
+                     2/1</rs> 133 Nr. 506. </p>
+         </note>
+         <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg6">
+            <mentioned>Caesarium Heisterbacensem</mentioned>
+            <p> Die einzig bekannte gemeinsame
                   Überlieferung der Viten Engelberts und Elisabeths ist im frühen 19. Jh. in der
-                  Bibliothek der Grafen Plettenberg auf Schloss Nordkirchen nachzuweisen: <rs
-                     type="bibl" key="bibl:17940">Lemaire, Bibliothèque</rs> 85; <rs type="bibl"
-                     key="bibl:19996">Troß, Verzeichniß</rs> 36. 1903 ging der Bestand in den Besitz
+                  Bibliothek der Grafen Plettenberg auf Schloss Nordkirchen nachzuweisen: <rs type="bibl" ref="bibl:17940">Lemaire, Bibliothèque</rs> 85; <rs type="bibl" ref="bibl:19996">Troß, Verzeichniß</rs> 36. 1903 ging der Bestand in den Besitz
                   des Herzogs von Arenberg über, wo diese Handschrift um 1918 noch vorhanden gewesen
-                  zu sein scheint: vgl. <rs type="bibl" key="bibl:16756">Haller, Sammlung
-                     Nordkirchen</rs> 16f.; <rs type="bibl" key="bibl:17254">Huyskens,
+                  zu sein scheint: vgl. <rs type="bibl" ref="bibl:16756">Haller, Sammlung
+                     Nordkirchen</rs> 16f.; <rs type="bibl" ref="bibl:17254">Huyskens,
                      Schriften</rs> 331f. Nachdem der Codex lange als verschollen angesehen worden
                   war, wurde er 2001 im Historischen Archiv der Stadt Köln lokalisiert: Historisches
-                  Archiv der Stadt Köln, Cod. W* 260; vgl. <rs type="bibl" key="bibl:20088"
-                     >Vennebusch, Homiletische Handschriften 2</rs> 149–151. Für Hinweise hierüber
+                  Archiv der Stadt Köln, Cod. W* 260; vgl. <rs type="bibl" ref="bibl:20088">Vennebusch, Homiletische Handschriften 2</rs> 149–151. Für Hinweise hierüber
                   sei Bertram Haller (Münster) gedankt. Über den Status dieses Codex nach dem
                   Einsturz des Historischen Archivs am 3. März 2009 ist derzeit, im Dezember 2014,
                   noch keine sichere Aussage möglich. Dass es sich um die von JB erworbene
@@ -283,92 +271,120 @@
                   Beschreibstoff als auch anhand der lückenhaften bisher rekonstruierbaren
                   Besitzgeschichte plausibel, zumal sie im frühen 17. Jh. im Kollegiatstift
                   Münstereifel, danach erst im frühen 19. Jh. in der Plettenberg’schen Bibliothek
-                  nachweisbar ist: vgl. <rs type="bibl" key="bibl:17254">Huyskens, Schriften</rs>
-                  331f.; <rs type="bibl" key="bibl:20088">Vennebusch, Homiletische Handschriften
-                     2</rs> 150; <rs type="bibl" key="bibl:20564">Zschaeck, Leben</rs>
-               229f.</p></note>
-            <note xml:id="d3e40460">
-               <ref type="context">6</ref>
-               <label> Chronicon ... Leodiensium</label><p>Zu Lütticher Bischofschroniken der
-                  fraglichen Zeit vgl. <rs type="bibl" key="bibl:18496">Müller,
+                  nachweisbar ist: vgl. <rs type="bibl" ref="bibl:17254">Huyskens, Schriften</rs>
+                  331f.; <rs type="bibl" ref="bibl:20088">Vennebusch, Homiletische Handschriften
+                     2</rs> 150; <rs type="bibl" ref="bibl:20564">Zschaeck, Leben</rs>
+               229f.</p>
+         </note>
+         <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg6">
+            <mentioned> Chronicon ... Leodiensium</mentioned>
+            <p>Zu Lütticher Bischofschroniken der
+                  fraglichen Zeit vgl. <rs type="bibl" ref="bibl:18496">Müller,
                      Bistumsgeschichtsschreibung</rs> 132–134. Worum es sich bei dem von JB
                   erworbenen Stück handelte, ist anhand der von ihm gemachten Angaben nicht mit
-                  Sicherheit zu bestimmen.</p></note>
-            <note xml:id="d3e40464">
-               <ref type="context">6</ref>
-               <label> Chronicon ... Coloniensis ecclesiae</label><p>Aufgrund des Titels und der
+                  Sicherheit zu bestimmen.</p>
+         </note>
+         <note target="#range(right('n19'), left('n19e'))" n="19" anchored="false" corresp="#seg6">
+            <mentioned> Chronicon ... Coloniensis ecclesiae</mentioned>
+            <p>Aufgrund des Titels und der
                   Entstehungszeit handelt es sich vermutlich um die „Cronica presulum et
-                  archiepiscoporum Coloniensis ecclesiae“: vgl. <rs type="bibl" key="bibl:18496"
-                     >Müller, Bistumsgeschichtsschreibung</rs> 106. Keine der dort genannten
+                  archiepiscoporum Coloniensis ecclesiae“: vgl. <rs type="bibl" ref="bibl:18496">Müller, Bistumsgeschichtsschreibung</rs> 106. Keine der dort genannten
                   Handschriften lässt sich mit der von JB vorgebrachten Jahresangabe „1408“ in
-                  Verbindung bringen.</p></note>
-            <note xml:id="d3e40468">
-               <ref type="context">6</ref>
-               <label> Lucii Flori Periochen</label><p>Florus’ „Epitome“ der römischen Geschichte
+                  Verbindung bringen.</p>
+         </note>
+         <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg6">
+            <mentioned> Lucii Flori Periochen</mentioned>
+            <p>Florus’ „Epitome“ der römischen Geschichte
                   und die „Periochae“ zu Livius sind sehr häufig gemeinsam überliefert und wurden
-                  mehrfach, wie anscheinend in diesem Fall, verwechselt oder vermengt: vgl. <rs
-                     type="bibl" key="bibl:19044">Reeve, Transmission</rs> 479f. Anhand der Angaben
+                  mehrfach, wie anscheinend in diesem Fall, verwechselt oder vermengt: vgl. <rs type="bibl" ref="bibl:19044">Reeve, Transmission</rs> 479f. Anhand der Angaben
                   JBs kann nicht sicher darauf geschlossen werden, ob die von ihm erworbene
                   Handschrift die „Epitome“, die „Periochae“ oder beides enthielt. Zur Überlieferung
-                  beider Werke vgl. <rs type="bibl" key="bibl:17302">Jal, Introduction</rs>
-                  CXIV–CXXIII; <rs type="bibl" key="bibl:18122">Malcovati, Praefatio</rs> XI–XXIII;
-                     <rs type="bibl" key="bibl:18150">Marshall, Florus</rs>; <rs type="bibl"
-                     key="bibl:19044">Reeve, Transmission</rs>; <rs type="bibl" key="bibl:19046"
-                     >Reeve, Transmission Again</rs>; <rs type="bibl" key="bibl:19170">Rossbach,
+                  beider Werke vgl. <rs type="bibl" ref="bibl:17302">Jal, Introduction</rs>
+                  CXIV–CXXIII; <rs type="bibl" ref="bibl:18122">Malcovati, Praefatio</rs> XI–XXIII;
+                     <rs type="bibl" ref="bibl:18150">Marshall, Florus</rs>; <rs type="bibl" ref="bibl:19044">Reeve, Transmission</rs>; <rs type="bibl" ref="bibl:19046">Reeve, Transmission Again</rs>; <rs type="bibl" ref="bibl:19170">Rossbach,
                      Praefatio</rs> XI–XX. Keine der bekannten Handschriften lässt sich mit der hier
-                  erwähnten identifizieren.</p></note>
-            <note xml:id="d3e40472">
-               <ref type="context">6</ref>
-               <label> Solymanni manuale precum</label><p>Zu diesem Buch ist Näheres nicht zu
+                  erwähnten identifizieren.</p>
+         </note>
+         <note target="#range(right('n21'), left('n21e'))" n="21" anchored="false" corresp="#seg6">
+            <mentioned> Solymanni manuale precum</mentioned>
+            <p>Zu diesem Buch ist Näheres nicht zu
                   ermitteln, auch konnte keine der Angaben JBs aus anderen Quellen bestätigt werden.
                   Das einzig bekannte Verzeichnis der 1632 aus München entwendeten Bücher führt
                   neben Druckwerken in verschiedenen Sprachen nur deutsche Handschriften an: BStB
-                  München, cbm Cat. 124 d; vgl. <rs type="bibl" key="bibl:17466">Kellner–Spethmann,
+                  München, cbm Cat. 124 d; vgl. <rs type="bibl" ref="bibl:17466">Kellner–Spethmann,
                      Historische Kataloge</rs> 32. Das Gebetbuch wurde von JB im Oktober 1718 auch
                   Edmond Martène und Ursin Durand während ihres Aufenthalts in Düsseldorf gezeigt:
                   Martène–Durand, Voyage litteraire 2 223. Nach ihren Angaben handelt es sich bei
                   der von JB hier gebotenen Beschreibung der Besitzgeschichte um die Wiedergabe von
-                  Notizen, die im Band selbst angebracht waren. </p></note>
-            <note xml:id="d3e40476">
-               <ref type="context">6</ref>
-               <label>in manus ... Sueciae</label><p>Zur Plünderung der Münchner Hofbibliothek im
-                  Jahr 1632 vgl. <rs type="bibl" key="bibl:16726">Hacker, Münchner
-                     Hofbibliothek</rs> 359; <rs type="bibl" key="bibl:16760">Haller–Fabian,
-                     Bayerische Staatsbibliothek</rs> 27; <rs type="bibl" key="bibl:17400"
-                     >Kaltwasser et al., Bayerische Staatsbibliothek</rs> 29; <rs type="bibl"
-                     key="bibl:19484">Schottenloher, Bücher</rs>2 302f. </p></note>
-            <note xml:id="d3e40481">
-               <ref type="context">7</ref>
-               <label>Mirum ... parente</label><p> JB bezieht sich wahrscheinlich darauf, dass
+                  Notizen, die im Band selbst angebracht waren. </p>
+         </note>
+         <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg6">
+            <mentioned>in manus ... Sueciae</mentioned>
+            <p>Zur Plünderung der Münchner Hofbibliothek im
+                  Jahr 1632 vgl. <rs type="bibl" ref="bibl:16726">Hacker, Münchner
+                     Hofbibliothek</rs> 359; <rs type="bibl" ref="bibl:16760">Haller–Fabian,
+                     Bayerische Staatsbibliothek</rs> 27; <rs type="bibl" ref="bibl:17400">Kaltwasser et al., Bayerische Staatsbibliothek</rs> 29; <rs type="bibl" ref="bibl:19484">Schottenloher, Bücher</rs>2 302f. </p>
+         </note>
+         <note target="#range(right('n23'), left('n23e'))" n="23" anchored="false" corresp="#seg7">
+            <mentioned>Mirum ... parente</mentioned>
+            <p> JB bezieht sich wahrscheinlich darauf, dass
                   Johann Ruprecht von Hegenmüller als Witwer in den geistlichen Stand getreten war:
-                     <rs type="bibl" key="bibl:19338">Schierer, Barone Hegenmüller</rs> 26. Er war
-                  1709 verstorben: PE 5 11.</p></note>
-            <note xml:id="d3e40487">
-               <ref type="context">7</ref>
-               <label> Aloysium nominaverim</label><p>Der Beiname spielte wohl auf den hl. Aloisius Gonzaga an, der als Patron der Jugend und der Keuschheit verehrt wurde.</p></note>
-            <note xml:id="d3e40491">
-               <ref type="context">8</ref>
-               <label>Amicum habeo ... Drieschium</label><p>Durch die Übermittlung dieses Briefes
-                  stellte JB wohl den Kontakt zwischen Van den Driesch und BP her: vgl. <ref
-                     type="letter">839</ref> &lt;5&gt;, <ref type="letter">853</ref> &lt;1&gt;. Am
+                     <rs type="bibl" ref="bibl:19338">Schierer, Barone Hegenmüller</rs> 26. Er war
+                  1709 verstorben: PE 5 11.</p>
+         </note>
+         <note target="#range(right('n24'), left('n24e'))" n="24" anchored="false" corresp="#seg7">
+            <mentioned> Aloysium nominaverim</mentioned>
+            <p>Der Beiname spielte wohl auf den hl. Aloisius Gonzaga an, der als Patron der Jugend und der Keuschheit verehrt wurde.</p>
+         </note>
+         <note target="#range(right('n25'), left('n25e'))" n="25" anchored="false" corresp="#seg8">
+            <mentioned>Amicum habeo ... Drieschium</mentioned>
+            <p>Durch die Übermittlung dieses Briefes
+                  stellte JB wohl den Kontakt zwischen Van den Driesch und BP her: vgl. <ref type="letter" target="letter:839">839</ref> <ref target="letter:839#seg5">5</ref>, <ref type="letter" target="letter:853">853</ref> <ref target="letter:853#seg1">1</ref>. Am
                   26. November 1715 hatte Ersterer in Form einer Anfrage bezüglich der geplanten
                   Versteigerung der Bibliothek des 1664 verstorbenen Münsteraner Domdekans Bernhard
                   von Mallinckrodt erstmals mit JB Verbindung aufgenommen; der Briefwechsel bis zum
                   31. März 1716 wurde wenig später gedruckt: Van den Driesch, Exercitationes,
                   Epistolarum familiarium lib. VIII 65–79. Zum Verkauf der Mallinckrodtiana, der
-                  letztlich erst 1720 stattfand, vgl. <rs type="bibl" key="bibl:15152">Benz,
+                  letztlich erst 1720 stattfand, vgl. <rs type="bibl" ref="bibl:15152">Benz,
                      Zwischen Tradition und Kritik</rs> 260f. Aus den Jahren 1720 und 1721 sind
                   einige zwischen Van den Driesch und JB gewechselte Briefe teils im Original, teils
                   in Abschrift erhalten: Budapest, Országos Széchényi Könyvtár, Oct. Lat 681/1,
-                  42v–48r. Zu Van den Drieschs Stellung bei der Mannagetta-Stiftung vgl. <rs
-                     type="bibl" key="bibl:20266">Weinberger, Driesch</rs> 217; sowie <ref
-                     type="letter">839</ref> &lt;4&gt;, <ref type="letter">853</ref>
-               &lt;4&gt;.</p></note>
-            <note xml:id="d3e40497">
-               <ref type="context">8</ref>
-               <label> Gratiarum numerum</label><p>Vgl. <ref type="letter">919
-               </ref>&lt;11&gt;.</p></note>
-         </div>
-      </back>
+                  42v–48r. Zu Van den Drieschs Stellung bei der Mannagetta-Stiftung vgl. <rs type="bibl" ref="bibl:20266">Weinberger, Driesch</rs> 217; sowie <ref type="letter" target="letter:839">839</ref> <ref target="letter:839#seg4">4</ref>, <ref type="letter" target="letter:853">853</ref>
+               <ref target="letter:853#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n26'), left('n26e'))" n="26" anchored="false" corresp="#seg8">
+            <mentioned> Gratiarum numerum</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:919">919
+               </ref><ref target="letter:919&#xA;               #seg11">11</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:17432">
+            <title type="short">Katschthaler, Briefnachlass</title>
+            <biblScope>55</biblScope>
+            <note>mischt
+                     in der Paraphrase 699 und 814)</note>
+         </bibl>
+         <bibl corresp="bibl:19780">
+            <title type="short">Stockinger, Klosterbibliothekar</title>
+            <biblScope>196</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende domine pater, vir eruditissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Quamvis iam diu nullas ad te dederim litteras, fui tamen semper tui memor; sacra tua studia non ausus sum interpellare, donec haberem, quo possem ea promovere. Fui Gladbaci mense praeterito, et postquam tui iucunda memoria esset proposita, praesul me rogavit, quatenus obsequia sua salutemque suam humanissimam tibi offerrem additamque hic schedulam transmitterem, iuxta quam <anchor xml:id="n1"/>abbatis Theodori vita<anchor xml:id="n1e"/> posset imprimi, non autem secundum<anchor xml:id="n2"/> primam relationem<anchor xml:id="n2e"/>. Adiunxit sacrarum<anchor xml:id="n3"/> reliquiarum, quae ibidem in ecclesia asservantur, designationem<anchor xml:id="n3e"/>. </ab>
+         <ab resp="#editor" xml:id="seg2">Fui sexta huius Tuitii, ut abbatem ad domesticorum scriptorum communicationem sollicitarem. Eius loci <anchor xml:id="n4"/>prior<anchor xml:id="n4e"/> litteras tuas ostendit, quibus te ipsius diligentia contentum esse testaris Sigeburgensisque et Tuitiensis <anchor xml:id="n5"/>abbatiae ichnographiam<anchor xml:id="n5e"/> petis. </ab>
+         <ab resp="#editor" xml:id="seg3">Septima Brunvillariensem praesulem visi eidemque encyclicam tuam obtuli. Se petitioni tuae iustissimae satisfacturum appromisit, sed praevideo ipsi calcaria esse addenda. Monui interim patrem <anchor xml:id="n6"/>bibliothecarium<anchor xml:id="n6e"/>, virum eruditum et humanum, ut hunc laborem in se suscipiat. </ab>
+         <ab resp="#editor" xml:id="seg4">Cuperem rescire, <anchor xml:id="n7"/>utrum in instructissima bibliotheca Mellicensi reperiatur<anchor xml:id="n7e"/> Anamnesis sive Commemoratio omnium sanctorum Hispanorum a Joanne Tamayo de Salazar compilata; multa inde in rem tuam elici possent, velut etiam ex Ludovici Donii d’Attichy Floribus <choice><sic>historiaru.</sic><corr>historiae</corr></choice> sacri collegii sacrae Romanae ecclesiae cardinalium, impressis Lutetiae anno 1660. </ab>
+         <ab resp="#editor" xml:id="seg5">Inveni octo abhinc diebus <anchor xml:id="n8"/>Novesii in canonicorum regularium monasterio<anchor xml:id="n8e"/> manuscriptum in charta hoc titulo: <anchor xml:id="n9"/>Genealogia sanctissimi patris Benedicti tum secundum carnalem, tum secundum spiritualem tradita progeniem, in qua insignium duntaxat utriusque sexus alumnorum, non tamen omnium, nomina recitantur et de pluribus pauca, quae ad nostram ex scripturis pervenire potuerunt notitiam, hic annotavimus, quae et indice rubrica suis in locis quaerentibus seriatim se obiciunt, et plerisque in locis alphabeto in margine annotato clarescunt ad laudem et gloriam Dei suique famuli sancti Benedicti<anchor xml:id="n9e"/>. Ecclesiastici primo. <anchor xml:id="n10"/>Religiositas custodiet et iustificabit cor, iucunditatem et gaudium dabit<anchor xml:id="n10e"/>. <pb n="1v"/> Scripsit manus posterioris saeculi sequentia prope libelli titulum, quae ferme visum fugiunt, et quorum pars evulsa est: Huius egregii operis autor est venerandus domnus Andreas Staphielstein doctr— imperialis monasterii Montis Monachorum Divi Michaelis extra muros Bambergenses —. Floruit anno Domini 1483. Hic fuit eximie doctus, <anchor xml:id="n11"/>philosophiae magister<anchor xml:id="n11e"/> Lypsensi— gravis, morum elegantia et omnium virtutum ornamentis ac religionis summo studio co—. Librum intitulavit Opus canonisatorum ex ordine divi Benedicti pontificum, episcoporum, abbatum et abbatissarum. Vitae pontificum ordinis sancti Benedicti continent octo folia in quarto. Cardinalium quatuor. Metropolitanorum archiepiscoporum sex. Episcoporum octo. Abbatum et abbatissarum inter sanctos relatarum quinque. Imperatorum<del ana="#after">ex.</del>, qui ordinem sunt ingressi, tria. Virorum illustrium, qui scriptis libris inclaruerunt, sex. <anchor xml:id="n12"/>Noto hic<anchor xml:id="n12e"/> quosdam ex illis ignotiores: Claudius monachus socius sancti Alcuini; Angelomus monachus Luxoviensis; Willeramus monachus Fuldensis; Giselbertus; <sic>Gehardus</sic>; Ansbertus; Joachim abbas Floriacensis; Athelmus abbas; Joannes Scotus; Berno abbas Augiensis – <anchor xml:id="n13"/>reperitur in Trithemio<anchor xml:id="n13e"/>; Hugo de Foyleto monachus Corbeiensis; Milo monachus Elnonensis; Erkenbertus monachus Sconalbegiensis; Hucbaldus; Guido Aretinus; Albimundus monachus et postea <choice><sic>Avesanus.</sic><corr>Aversanus</corr></choice> episcopus; Northungus monachus Fuldensis; Joannes abbas Versellensis; <sic>Aphanus</sic> Cassinensis monachus; Philippus de <choice><sic>Bergano.</sic><corr>Pergano</corr></choice> prior Sanctae Mariae de Avantio; Guzbertus, Bertharius, Bernardus abbates Cassinenses; Constantinus medicus monachus Cassinensis; Petrus Boerii abbas Sancti Aniani; Dithmarus abbas Corbeiensis; <pb n="2r"/> Alexander de Villa Dei; Henricus de Gulpen abbas Sancti Aegidii Noribergae – hunc etiam reperi in Trithemio; Wilhelmus de Lauduno abbas Monasterii Novi Pictaviensis; Odo monachus Sancti Dionysii; Andreas de Hamerhusen abbas; Hugo de Lugduno abbas in civitate Lugdunensi; Wolbero abbas Sancti Panthaleonis; Joannes monachus Castellensis; Hugo monachus Floriacensis; Wittikinus Albiensis; Wilhelmus monachus Sancti Dionysii; Joannes abbas Cassinensis; Lantfrancus monachus Hersfeldensis; Henricus; Baldericus abbas Burdegalensis; Theodoricus. </ab>
+         <ab resp="#editor" xml:id="seg6">Perlustravi hac aestate triginta circiter bibliothecas et semper sedulus inquisivi, si quid in rem tuam possem offendere, sed frustra. Sequentia manuscripta a multis saeculis ad catenas damnata redemi a captivitate et <anchor xml:id="n14"/>in musaeo nostrate<anchor xml:id="n14e"/> libertate donavi:<anchor xml:id="n15"/> Decreta et gesta sacri concilii Basileensis<anchor xml:id="n15e"/> a Michaele Galteri ipsiusmet concilii notario correcta et subscripta in membrana anno 1448, folio; quatuor sacra Evangelia auro et minio scripta in membrana ante novem saecula, folio; eadem eodem propemodum tempore scripta et divi Hieronymi quatuorque evangelistarum iconibus exornata in membrana, folio; sanctum Augustinum <anchor xml:id="n16"/>De civitate Dei in membrana scripta a Vibrando Frisone, De nova terra circa Bodelswardiam partium Westfrisiae, volumina duo in folio <add place="below">anno 1423</add><anchor xml:id="n16e"/>; Psalterium auro et minio decoratum in membrana anno MCXL<del ana="#before">1140.</del>, quarto; <anchor xml:id="n17"/>Caesarium Heisterbacensem<anchor xml:id="n17e"/> De vita, gestis et martyrio sancti Engelberti archiepiscopi Coloniensis in membrana, quarto; eundem De vita Elisabethae landgraviae Hassiae in membrana, quarto; <pb n="2v"/><anchor xml:id="n18"/> Chronicon episcoporum Leodiensium<anchor xml:id="n18e"/> in charta anno 1481, quarto;<anchor xml:id="n19"/> Chronicon praesulum et archiepiscoporum Coloniensis ecclesiae<anchor xml:id="n19e"/> in charta 1408, quarto;<anchor xml:id="n20"/> Lucii Flori Periochen<anchor xml:id="n20e"/> omnium librorum Titi Livii Patavini in membrana ante septem saecula scriptam, octavo; imperatoris Turcarum<anchor xml:id="n21"/> Solymanni manuale precum<anchor xml:id="n21e"/> lingua Arabica characteribus aureis potissimum eleganter scriptum, continens varias preces ex Alcorano desumptas ut et figuras quasdam et schemata, quae magiam Turcicam olent; repertus est hic liber inter impedimenta Solymanni, cum anno 1529 obsidionem Viennae Austriae solveret impellente Philippo comite Palatino, cui acceptum tulit dux Bavariae, ex cuius pinacotheca saeculi sequentis anno 32. <anchor xml:id="n22"/>in manus Gustavi Adolphi regis Sueciae<anchor xml:id="n22e"/> transivit et tandem feliciter in meas, octavo. Alcoranus elegantissime scriptus ante trecentos annos in duodecimo. </ab>
+         <ab resp="#editor" xml:id="seg7">Plurimum me devincies, si baronem illustrissimum Hegemullerum nomine meo salutare eique, quidquid a me dependet, offerre dignaris. <anchor xml:id="n23"/>Mirum quidem est, quod de illustrissimo eius parente<anchor xml:id="n23e"/> scribis; ego non miror, cum virtutes eius pietasque mihi satis perspectae fuerint. Iunior tam probus et candidus in iuventute fuit, ut eum semper<anchor xml:id="n24"/> Aloysium nominaverim<anchor xml:id="n24e"/>. Utinam tam dilecti amici et tuo mihi frui liceret alloquio; beatum me dicerem. </ab>
+         <ab resp="#editor" xml:id="seg8"><anchor xml:id="n25"/>Amicum habeo Viennae singularem, virum eruditissimum, fundationis Mannegettanae praefectum Gerhardum Cornelium Drieschium<anchor xml:id="n25e"/>. Per illum hasce litteras accipies; illas, quas mihi deinceps scripturus es, eidem poteris committere. Ita litterarum nostrarum commercium erit tutum, et ille velut tertius <choice><sic>symmistes.</sic><corr>symmystes</corr></choice> ad explendum<anchor xml:id="n26"/> Gratiarum numerum<anchor xml:id="n26e"/> in amicitiae communionem poterit venire. Vale, vir optime et litteratorum decus, et eum ama, qui semper tuus erit ex asse</ab>
+         <closer>Joannes Buchels.</closer>
+         <closer>Dusseldorpii 26. Augusti 1717.</closer>
+      </body>
    </text>
 </TEI>

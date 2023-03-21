@@ -1,39 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="67" xml:id="pez-0067">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">67 Stefano Omodeo an Bernhard Pez. 1710-05-14. Mailand.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Stefano Omodeo an Bernhard Pez. 1710-05-14. Mailand.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">67</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
+            <note type="remarks">
+                  Im Datum fehlt eine Jahresangabe; aufgrund des engen Zusammenhangs mit 56 ist eine Datierung ins Jahr 1710 jedenfalls
+                     anzunehmen.
+               </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">304r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 304r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -48,98 +72,71 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">66</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">86</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">66</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">87</idno>
-               </ref>
+               <ptr type="prev" target="letter:066"/>
+               <ptr type="next" target="letter:086"/>
+               <ptr type="mentions" target="letter:066"/>
+               <ptr type="mentionedIn" target="letter:087"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person">SOm</rs> kommt <rs type="person" role="sender">BPs</rs> in dessen Brief vom vergangenen Monat <ref type="letter" target="letter:66">66</ref> geäußerter Bitte nach und übersendet einen Katalog der Schriftsteller seines Klosters <rs ref="index:d10854e18327">S. Simpliciano</rs> zu <rs ref="index:d10854e18291">Mailand</rs>. Alle sind Professen desselben Klosters, aber nicht alle gleich bedeutend; zumal wahrhaft große Begabungen sehr selten sind, sollen auch die mittleren nicht ungewürdigt bleiben.</p>
+            <p corresp="#seg2">Der Präses der <rs ref="index:d10854e15502">Cassinenser Kongregation</rs>, <rs ref="index:d10854e21598">Severino de Ò</rs>, wird indessen deren übrige Prälaten auffordern, gleichermaßen Kataloge an <rs type="person" role="sender">BP</rs> einzusenden. <rs type="person">SOm</rs> schließt mit Segenswünschen für <rs type="person" role="sender">BP</rs> und dessen Vorhaben („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“).</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e8089"><rs type="person" key="">SOm</rs> kommt <rs type="person" role="sender">BPs</rs> in dessen Brief vom vergangenen Monat <ref type="letter">66</ref> geäußerter Bitte nach und übersendet einen Katalog der Schriftsteller seines Klosters <rs key="index:d10854e18327">S. Simpliciano</rs> zu <rs key="index:d10854e18291">Mailand</rs>. Alle sind Professen desselben Klosters, aber nicht alle gleich bedeutend; zumal wahrhaft große Begabungen sehr selten sind, sollen auch die mittleren nicht ungewürdigt bleiben.</seg><seg type="context" n="2" xml:id="d4618e8094">Der Präses der <rs key="index:d10854e15502">Cassinenser Kongregation</rs>, <rs key="index:d10854e21598">Severino de Ò</rs>, wird indessen deren übrige Prälaten auffordern, gleichermaßen Kataloge an <rs type="person" role="sender">BP</rs> einzusenden. <rs type="person" key="">SOm</rs> schließt mit Segenswünschen für <rs type="person" role="sender">BP</rs> und dessen Vorhaben („<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“).</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Admodum reverendo patri ac domno domno Bernardo Pez bibliothecario. Vienna.</hi>
-               </ab>
-            </div>
-        <div type="editorialNote">
-               <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
-               <p xml:space="preserve"><?oxy_comment_start author="Mayer" timestamp="20170601T171439+0200" comment="Gewünschte Formatierung besprechen" mid="3"?>Nummerierung<?oxy_custom_end?><?oxy_comment_end mid="3"?>: <hi rend="italic">II.</hi></p>
-               <div type="remarks">
-                  <p>Im Datum fehlt eine Jahresangabe; aufgrund des engen Zusammenhangs mit <ref
-                        type="letter">56</ref> ist eine Datierung ins Jahr 1710 jedenfalls
-                     anzunehmen.</p>
-               </div>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende pater.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e8116">Ut petitioni paternitatis vestrae admodum reverendae, quae mense elapso per humanissimas literas suas mihi innotuit, pro viribus satisfaciam, <seg type="lemma" corresp="#d4618e8128">transmitto nomina, patriam, studia scriptorum</seg>, qui ingeniorum suorum lucubrationibus hoc monasterium Sancti Simpliciani, cuius sum abbas, illustrarunt. Hi omnes eiusdem monasterii professi sunt; inter hos tamen non reperiet humanitas vestra uniformitatem. Ingenia enim eximia, ut bene noscit<note place="foot" xml:id="d4618e8118">	Korrigiert aus unleserlicher Streichung im Ausmaß von ca. 4–5 Buchstaben.</note>, rara sunt; mediocria tamen, ut de parvis nihil proferam, non debent sua laude carere, cum natura producat multa mediocria, pauca autem eminentia et illustria. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e8121">Reverendissimus pater <seg type="lemma" corresp="#d4618e8135">praesidens interea rogabit caeteros praelatos</seg> nostrae congregationis, ut dignentur eadem uti diligentia, qua paternitati vestrae admodum reverendae innotescant omnes, qui laudem et applausum promeriti in caeteris monasteriis ad sapientiae fastigium, si non pervenerunt, adspirarunt. Deus interea sospitet paternitatem vestram, ut eruditissimis suis scriptis exornet et nobilitet universum Benedictinorum ordinem, et memor mei sit in orationibus suis.</seg></p>
-            <p xml:space="preserve">Paternitatis vestrae admodum reverendae addictissimus servus in Domino domnus Stephanus Homodeus abbas.</p>
-            <p xml:space="preserve">Mediolani die 14. mensis Maii.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e8128">
-               <ref type="context">1</ref>
-               <label>transmitto ... studia scriptorum</label>
-               <p>Vgl. <ref type="letter">56</ref>. In Melk sind heute zwei verschiedene
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>transmitto ... studia scriptorum</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:56">56</ref>. In Melk sind heute zwei verschiedene
                   Schriftstellerkataloge von S. Simpliciano vorhanden: einer unter dem Titel
                   „Scriptores, qui fuerunt filii monasterii S. Simpliciani“ in I, 306r–307v; ein
                   weiterer unter der Bezeichnung „Catalogus scriptorum monachorum Cassinensium
                   monasterii S. Simpliciani“ in StiA Melk, Karton 85 Varia 25, Fasz. 1, Nr. 38.
-                  Genannt werden in dem ersteren: <rs key="index:d10854e4772">Serafino Cantone</rs>;
-                     <rs key="index:d14380e6642">Gabriele Brebbia</rs>; <rs key="index:d10854e16504">Agostino Lampugnani</rs>; <rs key="index:d10854e8746">Ambrogio Ferrari</rs>;
-                     <rs key="index:d10854e5927">Valeriano Degano</rs>; <rs key="index:d10854e26701">Ambrogio Rusconi</rs>; <rs key="index:d10854e3949">Ilario Bologna</rs>; <rs key="index:d10854e21022">Pio Muzio</rs>; <rs key="index:d10854e4962">Valeriano
-                     Castiglione</rs>; <rs key="index:d14380e23892">Ilarione Lanteri</rs>; <rs key="index:d10854e5730">Chiara Margherita Cozzolani</rs>. Der zweite bietet
+                  Genannt werden in dem ersteren: <rs ref="index:d10854e4772">Serafino Cantone</rs>;
+                     <rs ref="index:d14380e6642">Gabriele Brebbia</rs>; <rs ref="index:d10854e16504">Agostino Lampugnani</rs>; <rs ref="index:d10854e8746">Ambrogio Ferrari</rs>;
+                     <rs ref="index:d10854e5927">Valeriano Degano</rs>; <rs ref="index:d10854e26701">Ambrogio Rusconi</rs>; <rs ref="index:d10854e3949">Ilario Bologna</rs>; <rs ref="index:d10854e21022">Pio Muzio</rs>; <rs ref="index:d10854e4962">Valeriano
+                     Castiglione</rs>; <rs ref="index:d14380e23892">Ilarione Lanteri</rs>; <rs ref="index:d10854e5730">Chiara Margherita Cozzolani</rs>. Der zweite bietet
                   Angaben zu Rusconi, Muzio, Castiglione, Bologna, Degano sowie eine ausführliche
                   Würdigung von SOm selbst. Die Beilage zu diesem Brief ist eher mit dem ersteren zu
-                  identifizieren, zumal BP in <ref type="letter">86</ref> bereits eine Rückfrage zu
-                  Cantone und Brebbia gestellt zu haben scheint (vgl. <ref type="letter">87</ref>);
+                  identifizieren, zumal BP in <ref type="letter" target="letter:86">86</ref> bereits eine Rückfrage zu
+                  Cantone und Brebbia gestellt zu haben scheint (vgl. <ref type="letter" target="letter:87">87</ref>);
                   doch kann hier keine letzte Sicherheit bestehen. Brebbia und Lanteri waren im
                   Übrigen keine Professen von S. Simpliciano, sondern des anderen Mailander Klosters
                   der Cassinenser, S. Pietro in Gessate; Ferrari und Rusconi stammten zwar aus
                   Mailand, waren jedoch Professen der Klöster S. Giorgio Maggiore zu Venedig bzw. S.
                   Giovanni Evangelista zu Parma. Die biographischen Angaben im Register zu allen
-                  Genannten außer Cozzolani nach <rs type="bibl" key="bibl:15352">Bossi, Matricula
+                  Genannten außer Cozzolani nach <rs type="bibl" ref="bibl:15352">Bossi, Matricula
                      1</rs> 191, 205f., 260f., 270, 415, 582–587, 617; zu allen außer jener und SOm
                   vgl. Armellini, Bibliotheca 1 14f., 62–65, 178, 223f., 227f.; 2 145–151, 168f.; 2,
-                  littera V, 1–7. Zu Cozzolani vgl. <rs type="bibl" key="bibl:36086">Eitner,
+                  littera V, 1–7. Zu Cozzolani vgl. <rs type="bibl" ref="bibl:36086">Eitner,
                      Quellen-Lexikon</rs> 3 91f.</p>
-            </note>
-            <note xml:id="d4618e8135">
-               <ref type="context">2</ref>
-               <label>praesidens ... caeteros praelatos</label>
-               <p>Die reichlich optimistische Verheißung ist wohl eher Antwort auf eine zu
-                  vermutende Ankündigung BPs in <ref type="letter">66</ref>, entsprechend der
-                  Anregung SOms in <ref type="letter">56</ref> an De Ò schreiben zu wollen, als
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>praesidens ... caeteros praelatos</mentioned>
+            <p>Die reichlich optimistische Verheißung ist wohl eher Antwort auf eine zu
+                  vermutende Ankündigung BPs in <ref type="letter" target="letter:66">66</ref>, entsprechend der
+                  Anregung SOms in <ref type="letter" target="letter:56">56</ref> an De Ò schreiben zu wollen, als
                   Hinweis auf eigene Initiativen SOms gegenüber jenem. Eine einschlägige
-                  Kommunikation zwischen SOm und De Ò wird in dessen Briefen an BP (<ref type="letter">81</ref>, <ref type="letter">101</ref>) nicht erwähnt. Falls BP
-                  seinen ersten Brief an De Ò (<ref type="letter">79</ref>) bereits vor <ref type="letter">66</ref> verschickt hatte, brauchte dieser mehr als einen Monat,
+                  Kommunikation zwischen SOm und De Ò wird in dessen Briefen an BP (<ref type="letter" target="letter:81">81</ref>, <ref type="letter" target="letter:101">101</ref>) nicht erwähnt. Falls BP
+                  seinen ersten Brief an De Ò (<ref type="letter" target="letter:79">79</ref>) bereits vor <ref type="letter" target="letter:66">66</ref> verschickt hatte, brauchte dieser mehr als einen Monat,
                   um seinen Adressaten zu erreichen.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>II.</orig></note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <front>
+         <p>Admodum reverendo patri ac domno domno Bernardo Pez bibliothecario. Vienna.</p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende pater.</opener>
+         <ab resp="#editor" xml:id="seg1">Ut petitioni paternitatis vestrae admodum reverendae, quae mense elapso per humanissimas literas suas mihi innotuit, pro viribus satisfaciam, <anchor xml:id="n1"/>transmitto nomina, patriam, studia scriptorum<anchor xml:id="n1e"/>, qui ingeniorum suorum lucubrationibus hoc monasterium Sancti Simpliciani, cuius sum abbas, illustrarunt. Hi omnes eiusdem monasterii professi sunt; inter hos tamen non reperiet humanitas vestra uniformitatem. Ingenia enim eximia, ut bene noscit<note type="annotation" xml:id="d4618e8118">Korrigiert aus unleserlicher Streichung im Ausmaß von ca. 4–5 Buchstaben.</note>, rara sunt; mediocria tamen, ut de parvis nihil proferam, non debent sua laude carere, cum natura producat multa mediocria, pauca autem eminentia et illustria. </ab>
+         <ab resp="#editor" xml:id="seg2">Reverendissimus pater <anchor xml:id="n2"/>praesidens interea rogabit caeteros praelatos<anchor xml:id="n2e"/> nostrae congregationis, ut dignentur eadem uti diligentia, qua paternitati vestrae admodum reverendae innotescant omnes, qui laudem et applausum promeriti in caeteris monasteriis ad sapientiae fastigium, si non pervenerunt, adspirarunt. Deus interea sospitet paternitatem vestram, ut eruditissimis suis scriptis exornet et nobilitet universum Benedictinorum ordinem, et memor mei sit in orationibus suis.</ab>
+         <closer>Paternitatis vestrae admodum reverendae addictissimus servus in Domino domnus Stephanus Homodeus abbas.</closer>
+         <closer>Mediolani die 14. mensis Maii.</closer>
+      </body>
    </text>
 </TEI>

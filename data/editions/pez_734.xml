@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="734" xml:id="pez-0734">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">734 Karl Meichelbeck an Bernhard Pez. 1717-02-09. Benediktbeuern.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Karl Meichelbeck an Bernhard Pez. 1717-02-09. Benediktbeuern.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">734</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -21,27 +33,31 @@
             <relatedItem type="otherEdition">
                <bibl>Siegmund, Meichelbecks Briefe 80/1–2 170–173.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:19784">Stockinger, Meichelbeck</rs> 151</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">690r–692v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 690r–692v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -56,198 +72,212 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">732</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">757</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">668</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">680</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">732</idno>
-               </ref>
+               <ptr type="prev" target="letter:732"/>
+               <ptr type="next" target="letter:757"/>
+               <ptr type="mentions" target="letter:668"/>
+               <ptr type="mentions" target="letter:680"/>
+               <ptr type="mentions" target="letter:732"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Auf <rs type="person" role="sender">BPs</rs> vorletzten Brief vom 11. Oktober 1716 <ref type="letter" target="letter:668">668</ref> hat <rs type="person" role="sender">KM</rs> am 28. Oktober (recte: 27. Oktober) geantwortet <ref type="letter" target="letter:680">680</ref>. Wie erbeten, legte er eine Liste der Initien von Benediktbeurer Handschriften bei. Während der Monate November, Dezember und Januar hat er vergeblich auf eine Antwort gewartet und sich gefragt, ob <rs type="person" role="sender">BP</rs> erneut auf einer Bibliotheksreise sei, ob er erkrankt oder durch andere wichtige Geschäfte abgelenkt sei. Doch nun erweist sich, dass beide sich unnötig Sorgen gemacht haben, während nur die Unzuverlässigkeit der Boten für die Unterbrechung des Briefwechsels verantwortlich war.</p>
+            <p corresp="#seg2"><rs type="person" role="sender">BPs</rs> Vermutung hinsichtlich einer Krankheit <rs type="person" role="sender">KMs</rs> war allerdings nicht ganz unberechtigt; im vergangenen Oktober nämlich wurde KM, nachdem er zur Ader gelassen worden war und auf Anraten des Arztes auch Egerwasser genommen hatte, von einer hartnäckigen Schwäche befallen, zu der sich noch weitere Beschwerden einstellten. Ein zweiter Aderlass im November brachte nur wenig Abhilfe; im Dezember wurde <rs type="person" role="sender">KM</rs> nach München geschickt, um weitere Ärzte (Michael Temperer und Georg Häckl) aufzusuchen. Diese diagnostizierten nach eingehender Anamnese und Untersuchungen eine Übersäuerung des Magens als Ursache des Übels, wozu der ungesunde Archivstaub, der Mangel an körperlicher Bewegung und der Genuss saurer Speisen beigetragen hätten. Durch die von ihnen verschriebene Medizin ist <rs type="person" role="sender">KM</rs> nun wieder so weit genesen, dass er ohne Beschwerden schreiben kann, was ihm zuvor kaum möglich gewesen war. Nur an seiner Stimme ist ein bis jetzt andauernder Schaden geblieben.</p>
+            <p corresp="#seg3"><rs type="person" role="sender">KM</rs> ist dennoch nicht untätig gewesen, sondern konnte ein Geschäft von großem Nutzen für das Stift Benediktbeuern ausführen. Zwischen diesem und dem benachbarten Stift Schlehdorf bestand seit vollen 616 Jahren ein Streit, welcher zu vielen Rechtshändeln geführt hatte. Kaum jemand hatte auf eine Beilegung gehofft außer <rs type="person" role="sender">KM</rs> und dem Schlehdorfer Dekan (Augustin von Schlechtern); diese beiden trafen einander im vergangenen Jahr zweimal an neutralen Orten (Weilheim und Aidling), um über eine Regelung zu beraten. Als sie schon für die meisten Streitpunkte zu Vorschlägen gelangt waren, wurde ihr Vorhaben bekannt; <rs type="person" role="sender">KMs</rs> Abt Magnus Pachinger und der Schlehdorfer Propst Bernhard Bogner statteten daraufhin <rs type="person" role="sender">KM</rs> respektive den Dekan mit den Vollmachten aus, die Beratungen weiterzuführen. Nach zwei weiteren Treffen an neutralem Ort (Kochel) und einem in Benediktbeuern wurde eine Einigung getroffen, die auch sofort von den Prälaten und Konventen beider Klöster akzeptiert wurde (siehe Kommentar). Die ganze Umgebung wurde dadurch in freudiges Erstaunen versetzt.</p>
+            <p corresp="#seg4">In seinem vorletzten Brief hatte <rs type="person" role="sender">BP</rs> sich heftig über die Trägheit vieler und über die Ahnungslosigkeit fast aller (von ihm Kontaktierten) geäußert – eine Wahrnehmung, der sich <rs type="person" role="sender">KM</rs> oft anschließen muss. Der neueste Brief <ref type="letter" target="letter:732">732</ref> zeigt nun jedoch, dass bereits viele durch <rs type="person" role="sender">BPs</rs> Ansporn aus ihrem Schlaf aufgeschreckt worden sind. <rs type="person" role="sender">KM</rs> ermuntert BP, seine Bemühungen fortzusetzen, aus den Tiefen der Bibliotheken seit Jahrhunderten Verborgenes hervorzuholen und so wie die Sonne zwischen den kleineren Himmelskörpern über Österreich zu erstrahlen, damit auch die benachbarten Bayern, Kärntner, Steirer und andere durch seinen Eifer entflammt werden.</p>
+            <p corresp="#seg5"><rs type="person" role="sender">KM</rs> dankt für die übermittelten Nachrichten aus Frankreich, die Abt Pachinger mit Erleichterung erfahren hat. Was er aus anderer Quelle über die feindselige Haltung der Mauriner gegen die Konstitution „Unigenitus“ erfahren hat, ist <rs type="person" role="sender">KM</rs> allerdings unangenehm. Der Kirche und dem Benediktinerorden stand es bis jetzt stets besser an, zum Papst zu halten als zu Königen. Sollten die Mauriner in ihren alten Codices etwa Gegenteiliges entdeckt haben? Der junge König Ludwig XV. könnte mit der Zeit auch zu den Hugenotten neigen: Wie stünden dann seine Lehrmeister, wie der Benediktinerorden vor den Augen der Kirchenoberen da? <rs type="person" role="sender">KM</rs> hofft, dass der König besser beraten wird. Sonst werden nicht allein die Mauriner, sondern auch die italienischen Mitbrüder und andere spüren müssen, dass der Orden stets von raubgierigen Feinden belauert wird, selbst wenn er sich nicht das Geringste zu Schulden kommen lässt. <rs type="person" role="sender">KM</rs> möchte gerne <rs type="person" role="sender">BPs</rs> Meinung zu dieser Sache erfahren.</p>
+            <p corresp="#seg6">Die Kontroverse zwischen <rs type="person" role="sender">KM</rs> und Thomas Aquin Erhardt von Wessobrunn ruht. Wenn dieser seine Haltung geändert hat, ist es gut; wenn nicht, so nützt es nichts, mit einem Mann zu streiten, der sein Vertrauen hartnäckig in beliebige Schriften setzt. Vor einiger Zeit hat <rs type="person" role="sender">KM</rs> zwei mit ihm bekannten Wessobrunnern, die auf der Durchreise in Benediktbeuern waren, einige seiner Argumente auseinandergesetzt und sie gebeten, diese an ihren Abt Tassilo Bölzl weiterzugeben und auf Erhardt einzuwirken. Sie haben ihre Hilfe versprochen. Ob Erhardt weiterhin beabsichtigt, den ersten Teil seines geplanten Werkes („Gloria sanctissimi protoparentis Benedicti“) Papst Klemens XI. zu widmen, wovon <rs type="person" role="sender">KM</rs> mit Nachdruck abgeraten hatte, weiß dieser nicht; nur, dass Erhardt mit allen Mitteln das Erscheinen zu beschleunigen sucht.</p>
+            <p corresp="#seg7">Von der geplanten Reise <rs type="person" role="sender">BPs</rs> und HPs nach Bayern hat <rs type="person" role="sender">KM</rs> bereits durch den Tegernseer Abt Petrus von Guetrather erfahren und ist darüber höchst erfreut. Er hofft, auch selbst ihren Besuch zu empfangen und ihnen seine Dienste anbieten zu können, und betet, dass der Reise kein Hindernis entgegentritt.</p>
+            <p corresp="#seg8">Alphons Hueber geht es, wie <rs type="person" role="sender">KM</rs> von Mitbrüdern erfahren hat, gut.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e27769">Auf <rs type="person" role="sender">BPs</rs> vorletzten Brief vom 11. Oktober 1716 <ref type="letter">668</ref> hat <rs type="person" role="sender">KM</rs> am 28. Oktober (recte: 27. Oktober) geantwortet <ref type="letter">680</ref>. Wie erbeten, legte er eine Liste der Initien von Benediktbeurer Handschriften bei. Während der Monate November, Dezember und Januar hat er vergeblich auf eine Antwort gewartet und sich gefragt, ob <rs type="person" role="sender">BP</rs> erneut auf einer Bibliotheksreise sei, ob er erkrankt oder durch andere wichtige Geschäfte abgelenkt sei. Doch nun erweist sich, dass beide sich unnötig Sorgen gemacht haben, während nur die Unzuverlässigkeit der Boten für die Unterbrechung des Briefwechsels verantwortlich war.</seg><seg type="context" n="2" xml:id="d3e27777"><rs type="person" role="sender">BPs</rs> Vermutung hinsichtlich einer Krankheit <rs type="person" role="sender">KMs</rs> war allerdings nicht ganz unberechtigt; im vergangenen Oktober nämlich wurde KM, nachdem er zur Ader gelassen worden war und auf Anraten des Arztes auch Egerwasser genommen hatte, von einer hartnäckigen Schwäche befallen, zu der sich noch weitere Beschwerden einstellten. Ein zweiter Aderlass im November brachte nur wenig Abhilfe; im Dezember wurde <rs type="person" role="sender">KM</rs> nach München geschickt, um weitere Ärzte (Michael Temperer und Georg Häckl) aufzusuchen. Diese diagnostizierten nach eingehender Anamnese und Untersuchungen eine Übersäuerung des Magens als Ursache des Übels, wozu der ungesunde Archivstaub, der Mangel an körperlicher Bewegung und der Genuss saurer Speisen beigetragen hätten. Durch die von ihnen verschriebene Medizin ist <rs type="person" role="sender">KM</rs> nun wieder so weit genesen, dass er ohne Beschwerden schreiben kann, was ihm zuvor kaum möglich gewesen war. Nur an seiner Stimme ist ein bis jetzt andauernder Schaden geblieben.</seg><seg type="context" n="3" xml:id="d3e27779"><rs type="person" role="sender">KM</rs> ist dennoch nicht untätig gewesen, sondern konnte ein Geschäft von großem Nutzen für das Stift Benediktbeuern ausführen. Zwischen diesem und dem benachbarten Stift Schlehdorf bestand seit vollen 616 Jahren ein Streit, welcher zu vielen Rechtshändeln geführt hatte. Kaum jemand hatte auf eine Beilegung gehofft außer <rs type="person" role="sender">KM</rs> und dem Schlehdorfer Dekan (Augustin von Schlechtern); diese beiden trafen einander im vergangenen Jahr zweimal an neutralen Orten (Weilheim und Aidling), um über eine Regelung zu beraten. Als sie schon für die meisten Streitpunkte zu Vorschlägen gelangt waren, wurde ihr Vorhaben bekannt; <rs type="person" role="sender">KMs</rs> Abt Magnus Pachinger und der Schlehdorfer Propst Bernhard Bogner statteten daraufhin <rs type="person" role="sender">KM</rs> respektive den Dekan mit den Vollmachten aus, die Beratungen weiterzuführen. Nach zwei weiteren Treffen an neutralem Ort (Kochel) und einem in Benediktbeuern wurde eine Einigung getroffen, die auch sofort von den Prälaten und Konventen beider Klöster akzeptiert wurde (siehe Kommentar). Die ganze Umgebung wurde dadurch in freudiges Erstaunen versetzt.</seg><seg type="context" n="4" xml:id="d3e27781">In seinem vorletzten Brief hatte <rs type="person" role="sender">BP</rs> sich heftig über die Trägheit vieler und über die Ahnungslosigkeit fast aller (von ihm Kontaktierten) geäußert – eine Wahrnehmung, der sich <rs type="person" role="sender">KM</rs> oft anschließen muss. Der neueste Brief <ref type="letter">732</ref> zeigt nun jedoch, dass bereits viele durch <rs type="person" role="sender">BPs</rs> Ansporn aus ihrem Schlaf aufgeschreckt worden sind. <rs type="person" role="sender">KM</rs> ermuntert BP, seine Bemühungen fortzusetzen, aus den Tiefen der Bibliotheken seit Jahrhunderten Verborgenes hervorzuholen und so wie die Sonne zwischen den kleineren Himmelskörpern über Österreich zu erstrahlen, damit auch die benachbarten Bayern, Kärntner, Steirer und andere durch seinen Eifer entflammt werden.</seg><seg type="context" n="5" xml:id="d3e27786"><rs type="person" role="sender">KM</rs> dankt für die übermittelten Nachrichten aus Frankreich, die Abt Pachinger mit Erleichterung erfahren hat. Was er aus anderer Quelle über die feindselige Haltung der Mauriner gegen die Konstitution „Unigenitus“ erfahren hat, ist <rs type="person" role="sender">KM</rs> allerdings unangenehm. Der Kirche und dem Benediktinerorden stand es bis jetzt stets besser an, zum Papst zu halten als zu Königen. Sollten die Mauriner in ihren alten Codices etwa Gegenteiliges entdeckt haben? Der junge König Ludwig XV. könnte mit der Zeit auch zu den Hugenotten neigen: Wie stünden dann seine Lehrmeister, wie der Benediktinerorden vor den Augen der Kirchenoberen da? <rs type="person" role="sender">KM</rs> hofft, dass der König besser beraten wird. Sonst werden nicht allein die Mauriner, sondern auch die italienischen Mitbrüder und andere spüren müssen, dass der Orden stets von raubgierigen Feinden belauert wird, selbst wenn er sich nicht das Geringste zu Schulden kommen lässt. <rs type="person" role="sender">KM</rs> möchte gerne <rs type="person" role="sender">BPs</rs> Meinung zu dieser Sache erfahren.</seg><seg type="context" n="6" xml:id="d3e27788">Die Kontroverse zwischen <rs type="person" role="sender">KM</rs> und Thomas Aquin Erhardt von Wessobrunn ruht. Wenn dieser seine Haltung geändert hat, ist es gut; wenn nicht, so nützt es nichts, mit einem Mann zu streiten, der sein Vertrauen hartnäckig in beliebige Schriften setzt. Vor einiger Zeit hat <rs type="person" role="sender">KM</rs> zwei mit ihm bekannten Wessobrunnern, die auf der Durchreise in Benediktbeuern waren, einige seiner Argumente auseinandergesetzt und sie gebeten, diese an ihren Abt Tassilo Bölzl weiterzugeben und auf Erhardt einzuwirken. Sie haben ihre Hilfe versprochen. Ob Erhardt weiterhin beabsichtigt, den ersten Teil seines geplanten Werkes („Gloria sanctissimi protoparentis Benedicti“) Papst Klemens XI. zu widmen, wovon <rs type="person" role="sender">KM</rs> mit Nachdruck abgeraten hatte, weiß dieser nicht; nur, dass Erhardt mit allen Mitteln das Erscheinen zu beschleunigen sucht.</seg><seg type="context" n="7" xml:id="d3e27790">Von der geplanten Reise <rs type="person" role="sender">BPs</rs> und HPs nach Bayern hat <rs type="person" role="sender">KM</rs> bereits durch den Tegernseer Abt Petrus von Guetrather erfahren und ist darüber höchst erfreut. Er hofft, auch selbst ihren Besuch zu empfangen und ihnen seine Dienste anbieten zu können, und betet, dass der Reise kein Hindernis entgegentritt.</seg><seg type="context" n="8" xml:id="d3e27792">Alphons Hueber geht es, wie <rs type="person" role="sender">KM</rs> von Mitbrüdern erfahren hat, gut.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">VIII.</hi></p>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">147</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime clarissime domine pater Bernarde, fautor et amice colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e27818">Ad penultimas paternitatis vestrae die 11. Octobris datas <seg type="lemma" corresp="#d3e27855">respondi die 28. eiusdem mensis literisque meis adieci</seg> codicum nostrorum initia, prout fueram monitus. Addidi postea alia quaedam, quae vel nuncianda vel interroganda pro tempore videbantur. Interim dum non sine ingenti admiratione responsorias mensibus Novembri, Decembri et Januario frustra opperiebar, nesciebam, quid denique cogitandum esset? Num fortassis pater Pezius rursus faceret excursionem ad bibliothecas perlustrandas? Num potius male haberet ob susceptos labores nimios? An certe alio et ad urgentiora negotia distractae essent viri eruditissimi curae? Sed ecce! Inanibus uterque curis exagitabamur, sola tabellariorum aut aliorum ineptorum hominum sive negligentia sive incuria commercium nostrum literarium turbante. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e27820">Interim tamen, mi Bernarde, non prorsus vana erant vestra de mea sinistra valetudine somnia. Cum enim mense Octobri <seg type="lemma" corresp="#d3e27861">post phlebotomiam</seg> adhibitam ex consilio medici adhibuissem etiam <seg type="lemma" corresp="#d3e27867">acidulas Egrenses</seg>, ingentem primum virium debilitatem <pb n="1v"/> contraxisse me persensi, cui paulo post aliud gravius malum (tunc nobis ignotum) accessit, ita ut omnium iudicio ingens fuerit necessitas adhibendi alteram<seg type="lemma" corresp="#d3e27871"> novamque sectionem</seg> venae, utut<seg type="lemma" corresp="#d3e27875"> tempore valde iniquo</seg>, scilicet mense Novembri. Et profuit quidem misisse bis sanguinem; interea tamen nullum viribus vigorem accedere videbam. Quare mense Decembri<seg type="lemma" corresp="#d3e27879"> Monachium ad medicos</seg> missus statum meum omnem ipsis candidissime aperui; qui post multas repetitasque interrogationes, responsiones et experientias vix aegre tandem deprehenderunt radicem mali, quam demum ex conspicuis indiciis non aliam esse concluserunt quam acidum quoddam ex multo tempore in stomacho contractum, promoventibus illud archivi pulveribus perniciosis, vita sedentaria, rariori corporis motu, ciborum acidorum et similium usu etc. Pro cuius mali depulsione certae mihi medicinae praescriptae et a me adhibitae adeo fuere salubres, ut hodie (Deo sint laudes aeternae!) calamum, quem antea una et altera die vix ad bene formandum characterem tractare poteram, hodie [<hi rend="italic">sic</hi>] fere tractem absque difficultate, hac propemodum sola pristini mali memoria <pb n="2r"/> in corpore relicta, <seg type="lemma" corresp="#d3e27883">quod vox, quae ante credebatur acuta et clara, hactenus interciderit</seg> et hodie sonet longe obscurius, fractius luridiusque. <seg type="lemma" corresp="#d3e27887">Verum Dominus dedit, Dominusque abstulit. Sit nomen Domini benedictum</seg>! </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e27829">Interea tamen non omnes dies duxi otiosos, et adfuit bonus Deus laboribus meis, ut hoc eodem tempore, quo dictum<seg type="lemma" corresp="#d3e27914"> in modum infirmabar, res ageretur monasterio</seg> nostro non parum proficua. Gravissima iam <seg type="lemma" corresp="#d3e27891">ab annis omnino 616</seg> dissidia erant inter hoc nostrum et vicinum monasterium Schlechdorffense. Vix erat, qui ullum tot et tantorum litigiorum finem sperare auderet, praeter me et<seg type="lemma" corresp="#d3e27897"> decanum</seg> dicti monasterii. Voluit autem Deus, ut nos duo anno superiori in <seg type="lemma" corresp="#d3e27901">locis tertiis</seg> bis conveniremus deque pace ineunda consilia privata inire possemus. Et ecce! Cum circa articulos fere omnes, quantumvis difficillimos, quid statui posset, dante Numine nobis brevi occurrisset, erupere tandem in apricum consilia nostra, quae eousque secreta tenebamus. Et sane placuit reverendissimo meo domino praesuli me, Schlechdorffensi autem<seg type="lemma" corresp="#d3e27906"> praeposito</seg> suum illum<seg type="lemma" corresp="#d3e27897"> decanum</seg> ad locum tertium mittere et pacis articulos, si fieri posset, cudere. Dictum, factum.<seg type="lemma" corresp="#d3e27910"> Bis in loco tertio</seg>, demum<seg type="lemma" corresp="#d3e27914"> in hoc nostro monasterio</seg> convenimus et pacem invenimus a nostris <pb n="2v"/> superioribus et religiosis sodalibus statim solenniter approbatam et firmatam, tota late vicinia in admirationem et gratulationem ingentem effusa. Ita Deus voluit consolari meam infirmitatem; qui sit iterum benedictus! Sed haec incidenter. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e27833">Nunc ad literas vestras. Vidi in penultima epistola sua Bernardum verbis sane gravissimis invehi in <seg type="lemma" corresp="#d3e27922">ῥαθυμίαν multorum</seg>, ἀβλεψίαν plurimorum, quibus et ego (fatebor enim) sane non raro soleo iuste indignari. Sed posterior epistola longe aliter loquentem inducit Bernardum, videoque veternum iamiam multis fuisse excussum ab aculeata ape Mellicensi: id quod optaveram maxime et dudum ad caelos suspiraveram. Ita fac, mi Bernarde! Excute intimos bibliothecarum recessus, profer in lucem, quae erant abscondita a multis saeculis, perge pulcherrimo tuo exemplo vocare operarios in societatem laboris tui praestantissimi. Ita solis instar inter stellas minores fulgebis in Austria, et ardor tuus accendet etiam proximos Boios, Carinthios, Styros, omnes. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e27835">Gratias maximas dico ob <seg type="lemma" corresp="#d3e27928">relationes ex Gallia</seg> factas, quas cum ingenti solatio legit reverendissimus meus. Sed quid hoc aliunde audio de Gallis nostris, quod scilicet notae pontificis constitutioni sese <pb n="3r"/> inter primos opponant? Certe hactenus in ecclesia Dei et in ordine sancti patris Benedicti praestabat adhaerere pontifici quam regibus. Repereruntne nostri illi domini Galli in suis codicibus quidquam contrarium? Quid, si rex iuvenis cum tempore faveret Hugonotis et eiusmodi hominum supra sobrietatem sapientium faeci, quid, inquam, de paedagogo, quid de ordine nostro sentirent ecclesiae capita? Faxint Superi, ut res eveniat bene, et rex ad salutaria consilia dirigatur! Certe alias non tantum sentient Galli nostri, sed etiam Itali caeterique, quorum rebus et fortunis nunquam non insidiantur rapaces Harpyae, etiam quando neminem laesimus, neminem corrupimus, neminem circumvenimus. Obsecro, quis hoc super negotio sensus est Bernardi mei? </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e27839">Mea et patris Thomae Wessofontani controversia hodie est nulla. Si is mentem mutavit, bene est. Si non mutavit, altercari non iuvat cum homine quibusvis libellulis tenaciter fidente. Interim cum non ita pridem hoc transirent <seg type="lemma" corresp="#d3e27938">duo Wessofontani mihi dudum familiares</seg>, exhibui illis gravia quaedam momenta rationum mearum rogans, ut rem referrent reverendissimo suo domino abbati <pb n="3v"/> et<note place="foot" xml:id="d3e27843">	Danach unleserliche Streichung im Ausmaß von ca. 4–5 Buchstaben.</note> patrem Thomam ad saniora pertraherent. Condixere illi operam suam; neque ullum est dubium, quin pater Thomas ab iis sit religiose exagitandus. Volebat is antehac dedicare primam operis sui futuri partem<seg type="lemma" corresp="#d3e27944"> Romano pontifici</seg>. Ego periculum ob oculos posui. Nunc, quid sit demum tentaturus, ignoro. Hoc scio, quod urgeat modis omnibus editionem. Tempus dabit, quid pariturus sit homo<seg type="lemma" corresp="#d3e27948"> adeo parturiens</seg>. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d3e27846">De vestro ad nos futuro itinere primus me <seg type="lemma" corresp="#d3e27952">monuit reverendissimus dominus abbas</seg> Tegernseensis, qui gratius ex Austria poterat referre nihil. Bene habet. Spero me in amplexus ruiturum virorum eruditissimorum et demonstraturum paratam, licet debilem, serviendi voluntatem. Ad desideratissimum illud tempus multa refero. Faxit Deus, ne ullus obex ponatur itineri, ex quo tanta bona integris provinciis imminent! </seg><seg type="context" n="8" xml:space="preserve" xml:id="d3e27848">Alphonsus noster Tegernseensis, ut mihi <seg type="lemma" corresp="#d3e27959">narrant nostri</seg>, vivit et valet optime. Sed video me iam dudum excessisse limites epistolae. Hinc ex abrupto finio et post mei humillimam commendationem maneo, qui semper</seg></p>
-            <p xml:space="preserve">Paternitatis vestrae admodum reverendae servus obligatissimus uti paratissimus pater Carolus.</p>
-            <p xml:space="preserve">Benedictbeuern hac die Cineres praecedente, 1717 9. Februarii.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e27855">
-               <ref type="context">1</ref>
-               <label>respondi ... adieci</label><p> Der Brief KMs kam offenbar nicht an; weder er noch die Beilage finden sich in Melk.</p></note>
-            <note xml:id="d3e27861">
-               <ref type="context">2</ref>
-               <label>post phlebotomiam</label><p>Der Aderlass ist in KMs Diarium zum 5. Oktober
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>respondi ... adieci</mentioned>
+            <p> Der Brief KMs kam offenbar nicht an; weder er noch die Beilage finden sich in Melk.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>post phlebotomiam</mentioned>
+            <p>Der Aderlass ist in KMs Diarium zum 5. Oktober
                   1716 vermerkt: BStB München, Meichelbeckiana 18b, 284r. Der Arzt, der ihn vornahm
                   und danach KM zur Einnahme des Egerwassers riet, wird dort nicht namentlich
                   genannt. Benediktbeuern beschäftigte zwar einen eigenen Hofbader, aber keinen
                   Arzt; zu Aderlässen und ähnlichen Gelegenheiten reisten in der Regel Ärzte aus den
-                  Städten der Umgebung an: vgl. <rs type="bibl" key="bibl:16970">Hemmerle,
-                     Benediktbeuern</rs> 162f. </p></note>
-            <note xml:id="d3e27867">
-               <ref type="context">2</ref>
-               <label>acidulas Egrenses</label><p> Kohlensaures Wasser aus dem Sauerbrunnen von Eger
+                  Städten der Umgebung an: vgl. <rs type="bibl" ref="bibl:16970">Hemmerle,
+                     Benediktbeuern</rs> 162f. </p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>acidulas Egrenses</mentioned>
+            <p> Kohlensaures Wasser aus dem Sauerbrunnen von Eger
                   wurde in weite Gebiete des östlichen und südöstlichen Deutschland als Heilmittel
-                  exportiert: vgl. <rs type="bibl" key="bibl:15438">Brinkmann, Eger-Franzensbad</rs>
-                  170–172; <rs type="bibl" key="bibl:16060">Eisenbach, Mineralwasser</rs> 42f., 72,
-                  78; <rs type="bibl" key="bibl:19472">Schneider, Stets in frischer Füllung</rs>
-                  223, 237; <rs type="bibl" key="bibl:19844">Sturm, Eger</rs> 241, 319f.</p></note>
-            <note xml:id="d3e27871">
-               <ref type="context">2</ref>
-               <label> novamque sectionem</label><p>Der zweite Aderlass ist im Diarium zum 8. November 1716 vermerkt: BStB München, Meichelbeckiana 18b, 285v.</p></note>
-            <note xml:id="d3e27875">
-               <ref type="context">2</ref>
-               <label> tempore valde iniquo</label><p>In der mittelalterlichen wie in der
+                  exportiert: vgl. <rs type="bibl" ref="bibl:15438">Brinkmann, Eger-Franzensbad</rs>
+                  170–172; <rs type="bibl" ref="bibl:16060">Eisenbach, Mineralwasser</rs> 42f., 72,
+                  78; <rs type="bibl" ref="bibl:19472">Schneider, Stets in frischer Füllung</rs>
+                  223, 237; <rs type="bibl" ref="bibl:19844">Sturm, Eger</rs> 241, 319f.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned> novamque sectionem</mentioned>
+            <p>Der zweite Aderlass ist im Diarium zum 8. November 1716 vermerkt: BStB München, Meichelbeckiana 18b, 285v.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned> tempore valde iniquo</mentioned>
+            <p>In der mittelalterlichen wie in der
                   frühneuzeitlichen Medizin war es verbreitet, günstige und ungünstige Termine für
                   die Anwendung bestimmter Therapien auf astrologischer Basis zu bestimmen. Dies
-                  galt auch für den Aderlass: vgl. <rs type="bibl" key="bibl:15884">Diepgen,
-                     Geschichte der Medizin</rs> 1 221; <rs type="bibl" key="bibl:17308">Jaritz,
+                  galt auch für den Aderlass: vgl. <rs type="bibl" ref="bibl:15884">Diepgen,
+                     Geschichte der Medizin</rs> 1 221; <rs type="bibl" ref="bibl:17308">Jaritz,
                      Aderlaß</rs> 74. Die Bemerkung KMs könnte sich freilich auch nur auf das
-                  winterliche Wetter als unvorteilhaft beziehen.</p></note>
-            <note xml:id="d3e27879">
-               <ref type="context">2</ref>
-               <label> Monachium ad medicos</label><p> Nach dem Diarium fiel der Münchner Aufenthalt
+                  winterliche Wetter als unvorteilhaft beziehen.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
+            <mentioned> Monachium ad medicos</mentioned>
+            <p> Nach dem Diarium fiel der Münchner Aufenthalt
                   auf den 9. bis 13. Dezember 1716. Die beiden beigezogenen Ärzte werden als „domini
                   medici Temprer et Hakl“ bezeichnet: BStB München, Meichelbeckiana 18b, 290r–v. In
                   diesen sind der kurfürstliche Leibarzt Michael Temperer und der Münchner
-                  Stadtphysikus Georg Häckl zu sehen; zu ihnen vgl. <rs type="bibl" key="bibl:15116"
-                     >Beierlein, Regesten</rs> 284; <rs type="bibl" key="bibl:16178">Ferchl,
-                     Behörden</rs> 2 937; <rs type="bibl" key="bibl:17102">Hoffmeister,
-                     Medizinalwesen</rs> 145; <rs type="bibl" key="bibl:17934">Leitschuh,
-                     Matrikeln</rs> 1 187; 2 11; <rs type="bibl" key="bibl:18888">Pölnitz, Matrikel
-                     Ingolstadt 1/2/2</rs> col. 1157. </p></note>
-            <note xml:id="d3e27883">
-               <ref type="context">2</ref>
-               <label>quod vox ... interciderit</label><p>KM berichtet diese unersprießliche Entwicklung in seinem Diarium zum 10. Oktober 1716 in den folgenden Worten: „Tota nocte praeterita nil dormiens, mane iterum sumo acedulas, ast redduntur per vomitum. [...] Hac die ob nimium impetum vomitus vox mihi frangitur“ (BStB München, Meichelbeckiana 18b, 284v). Der letztere Satz ist später nachgetragen. </p></note>
-            <note xml:id="d3e27887">
-               <ref type="context">2</ref>
-               <label>Verum Dominus dedit ... benedictum</label><p>Nach Hi 1,21.</p></note>
-            <note xml:id="d3e27891">
-               <ref type="context">3</ref>
-               <label>ab annis omnino 616</label><p>KM bezieht sich hier auf die Gebietsteilung
+                  Stadtphysikus Georg Häckl zu sehen; zu ihnen vgl. <rs type="bibl" ref="bibl:15116">Beierlein, Regesten</rs> 284; <rs type="bibl" ref="bibl:16178">Ferchl,
+                     Behörden</rs> 2 937; <rs type="bibl" ref="bibl:17102">Hoffmeister,
+                     Medizinalwesen</rs> 145; <rs type="bibl" ref="bibl:17934">Leitschuh,
+                     Matrikeln</rs> 1 187; 2 11; <rs type="bibl" ref="bibl:18888">Pölnitz, Matrikel
+                     Ingolstadt 1/2/2</rs> col. 1157. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg2">
+            <mentioned>quod vox ... interciderit</mentioned>
+            <p>KM berichtet diese unersprießliche Entwicklung in seinem Diarium zum 10. Oktober 1716 in den folgenden Worten: „Tota nocte praeterita nil dormiens, mane iterum sumo acedulas, ast redduntur per vomitum. [...] Hac die ob nimium impetum vomitus vox mihi frangitur“ (BStB München, Meichelbeckiana 18b, 284v). Der letztere Satz ist später nachgetragen. </p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg2">
+            <mentioned>Verum Dominus dedit ... benedictum</mentioned>
+            <p>Nach Hi 1,21.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg3">
+            <mentioned>ab annis omnino 616</mentioned>
+            <p>KM bezieht sich hier auf die Gebietsteilung
                   zwischen Benediktbeuern und Schlehdorf hinsichtlich der Besitzungen am Walchensee,
                   welche unter Bischof Heinrich von Freising zwischen 1098 und 1116 vorgenommen
                   wurde. Der Vorgang ist nur in einer Notiz überliefert, die sich in einem damals
-                  Benediktbeurer Codex befindet: BStB München, clm 4614, 143r–v; vgl. <rs
-                     type="bibl" key="bibl:16532">Glauche, Catalogus 3/1</rs> 200. KM hatte diese
+                  Benediktbeurer Codex befindet: BStB München, clm 4614, 143r–v; vgl. <rs type="bibl" ref="bibl:16532">Glauche, Catalogus 3/1</rs> 200. KM hatte diese
                   Notiz bereits 1696 entdeckt, wonach sie im Rechtsstreit mit Schlehdorf Verwendung
-                  fand: vgl. <rs type="bibl" key="bibl:18376">Mindera, Jugend</rs> 97. Er berichtete
-                  später mehrfach über ihren Inhalt: <rs type="bibl" key="bibl:14746">Meichelbeck,
-                     Chronicon Benedictoburanum</rs> 1 81–83; <rs type="bibl" key="bibl:14748"
-                     >Meichelbeck, Historia Frisingensis</rs> 1/1 312f., 336. Zur Gebietsteilung
-                  vgl. <rs type="bibl" key="bibl:15082">Baumann, Urkunden</rs> 26; <rs type="bibl"
-                     key="bibl:16970">Hemmerle, Benediktbeuern</rs> 441; <rs type="bibl"
-                     key="bibl:18622">Oefele, Geschichte des Hausengaues</rs> 6f., 10–12; <rs
-                     type="bibl" key="bibl:19698">Steinberger, Benediktbeurer Studien</rs> 471f. Zum
-                  Streit und zum Vergleich mit Schlehdorf vgl. <rs type="bibl" key="bibl:16970"
-                     >Hemmerle, Benediktbeuern</rs> 533; <rs type="bibl" key="bibl:19412">Schmid,
-                     Nachblüte</rs> 94f.; <rs type="bibl" key="bibl:20248">Weber, Meichelbeck</rs>
-                  135f.; <rs type="bibl" key="bibl:20468">Wühr, Bedeutung</rs> 229f.</p></note>
-            <note xml:id="d3e27897">
-               <ref type="context">3</ref>
-               <label> decanum</label><p>Zum Dekan und späteren Propst Augustin von Schlechtern vgl.
-                     <rs type="bibl" key="bibl:16910">Heigel, Schlehdorf</rs> 62f.; <rs type="bibl"
-                     key="bibl:17684">Krausen, Herkunft</rs> 271, 281. </p></note>
-            <note xml:id="d3e27901">
-               <ref type="context">3</ref>
-               <label>locis tertiis</label><p>Die erste dieser Begegnungen fand am 18. Juni 1716 in
+                  fand: vgl. <rs type="bibl" ref="bibl:18376">Mindera, Jugend</rs> 97. Er berichtete
+                  später mehrfach über ihren Inhalt: <rs type="bibl" ref="bibl:14746">Meichelbeck,
+                     Chronicon Benedictoburanum</rs> 1 81–83; <rs type="bibl" ref="bibl:14748">Meichelbeck, Historia Frisingensis</rs> 1/1 312f., 336. Zur Gebietsteilung
+                  vgl. <rs type="bibl" ref="bibl:15082">Baumann, Urkunden</rs> 26; <rs type="bibl" ref="bibl:16970">Hemmerle, Benediktbeuern</rs> 441; <rs type="bibl" ref="bibl:18622">Oefele, Geschichte des Hausengaues</rs> 6f., 10–12; <rs type="bibl" ref="bibl:19698">Steinberger, Benediktbeurer Studien</rs> 471f. Zum
+                  Streit und zum Vergleich mit Schlehdorf vgl. <rs type="bibl" ref="bibl:16970">Hemmerle, Benediktbeuern</rs> 533; <rs type="bibl" ref="bibl:19412">Schmid,
+                     Nachblüte</rs> 94f.; <rs type="bibl" ref="bibl:20248">Weber, Meichelbeck</rs>
+                  135f.; <rs type="bibl" ref="bibl:20468">Wühr, Bedeutung</rs> 229f.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg3">
+            <mentioned> decanum</mentioned>
+            <p>Zum Dekan und späteren Propst Augustin von Schlechtern vgl.
+                     <rs type="bibl" ref="bibl:16910">Heigel, Schlehdorf</rs> 62f.; <rs type="bibl" ref="bibl:17684">Krausen, Herkunft</rs> 271, 281. </p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg3">
+            <mentioned>locis tertiis</mentioned>
+            <p>Die erste dieser Begegnungen fand am 18. Juni 1716 in
                   Weilheim statt, eine weitere, vermutlich in Aidling, am 15. Juli während der
                   Ausmarchung der Grenze zwischen Aidling und Sindelsdorf: BStB München,
-                  Meichelbeckiana 18b, 275v, 277v. Zu letzterem Vorgang vgl. <ref type="letter">540
-                  </ref>&lt;5&gt;.</p></note>
-            <note xml:id="d3e27906">
-               <ref type="context">3</ref>
-               <label> praeposito</label><p>Zu Propst Bernhard Bogner vgl. <rs type="bibl"
-                     key="bibl:16910">Heigel, Schlehdorf</rs> 59–62.</p></note>
-            <note xml:id="d3e27910">
-               <ref type="context">3</ref>
-               <label> Bis in loco tertio</label><p>KM konferierte mit Schlechtern am 12. und 26. November 1716 in Kochel: BStB München, Meichelbeckiana 18b, 286r, 288v.</p></note>
-            <note xml:id="d3e27914">
-               <ref type="context">3</ref>
-               <label> in ... monasterio</label><p>Am 29. November 1716: BStB München, Meichelbeckiana 18b, 288v–289r.</p></note>
-            <note xml:id="d3e27918">
-               <ref type="context">3</ref>
-               <label> nostris superioribus</label><p> Dem Diarium KMs zufolge gewährte Magnus Pachinger seine Zustimmung nur widerwillig, nachdem er zunächst ungehalten über die vermeintliche Missachtung seiner Autorität gewesen war: BStB München, Meichelbeckiana 18b, 286v–288v.</p></note>
-            <note xml:id="d3e27922">
-               <ref type="context">4</ref>
-               <label>ῥαθυμίαν multorum</label><p>Anscheinend auf ähnliche Äußerungen BPs reagierte
-                  Alphons Hueber in <ref type="letter">727</ref> &lt;1&gt; und &lt;3&gt;.</p></note>
-            <note xml:id="d3e27928">
-               <ref type="context">5</ref>
-               <label>relationes ex Gallia</label><p> Gemeint sein dürfte am ehesten ein Bericht BPs
+                  Meichelbeckiana 18b, 275v, 277v. Zu letzterem Vorgang vgl. <ref type="letter" target="letter:540">540
+                  </ref><ref target="letter:540&#xA;                  #seg5">5</ref>.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg3">
+            <mentioned> praeposito</mentioned>
+            <p>Zu Propst Bernhard Bogner vgl. <rs type="bibl" ref="bibl:16910">Heigel, Schlehdorf</rs> 59–62.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg3">
+            <mentioned> Bis in loco tertio</mentioned>
+            <p>KM konferierte mit Schlechtern am 12. und 26. November 1716 in Kochel: BStB München, Meichelbeckiana 18b, 286r, 288v.</p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg3">
+            <mentioned> in ... monasterio</mentioned>
+            <p>Am 29. November 1716: BStB München, Meichelbeckiana 18b, 288v–289r.</p>
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg3">
+            <mentioned> nostris superioribus</mentioned>
+            <p> Dem Diarium KMs zufolge gewährte Magnus Pachinger seine Zustimmung nur widerwillig, nachdem er zunächst ungehalten über die vermeintliche Missachtung seiner Autorität gewesen war: BStB München, Meichelbeckiana 18b, 286v–288v.</p>
+         </note>
+         <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg4">
+            <mentioned>ῥαθυμίαν multorum</mentioned>
+            <p>Anscheinend auf ähnliche Äußerungen BPs reagierte
+                  Alphons Hueber in <ref type="letter" target="letter:727">727</ref> <ref target="letter:727#seg1">1</ref> und <ref target="letter:727#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg5">
+            <mentioned>relationes ex Gallia</mentioned>
+            <p> Gemeint sein dürfte am ehesten ein Bericht BPs
                   über die Wiederaufnahme des Kontaktes mit den Maurinern nach der durch den Tod
-                  René Massuets eingetretenen Unterbrechung: vgl. <ref type="letter">646</ref>
-                  &lt;1&gt;, <ref type="letter">671</ref> &lt;1&gt;. Eventuell kann auch die
+                  René Massuets eingetretenen Unterbrechung: vgl. <ref type="letter" target="letter:646">646</ref>
+                  <ref target="letter:646#seg1">1</ref>, <ref type="letter" target="letter:671">671</ref> <ref target="letter:671#seg1">1</ref>. Eventuell kann auch die
                   Apologie von Jean-Évangéliste Thiroux für Denis de Sainte-Marthe zur Sprache
                   gebracht worden sein, deren antijesuitische Komponente zweifellos in
                   Benediktbeuern wohlwollend aufgenommen worden wäre: vgl. 702. Ob noch weitere
                   konkrete Nachrichten hier relevant sind, ist jedoch nicht sicher zu sagen.
-               </p></note>
-            <note xml:id="d3e27934">
-               <ref type="context">5</ref>
-               <label>pontificis constitutioni ... opponant</label><p> Maurinische Mönche hatten
+               </p>
+         </note>
+         <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg5">
+            <mentioned>pontificis constitutioni ... opponant</mentioned>
+            <p> Maurinische Mönche hatten
                   sich in beträchtlicher Zahl den Protesten gegen die Bulle angeschlossen und nahmen
                   auch in der Folge an Appellationen an ein Konzil teil. Die Leitung der
                   Kongregation bemühte sich zumindest in der Amtszeit des Generalsuperiors Charles
-                  Petey de l’Hostallerie um Mäßigung und Beruhigung: vgl. <rs type="bibl"
-                     key="bibl:15602">Chaussy, Bénédictins</rs> 1 110–119; <rs type="bibl"
-                     key="bibl:15824">Denis, Charles de l’Hostallerie</rs> 344f., 353–357, 365–391.
-                  Zur Diskussion der Angelegenheit im Umkreis BPs vgl. <ref type="letter">504</ref>
-                  &lt;7&gt;, <ref type="letter">525</ref> &lt;2&gt;, <ref type="letter">581</ref>
-                  &lt;2&gt;, <ref type="letter">772</ref> &lt;2&gt;.</p></note>
-            <note xml:id="d3e27938">
-               <ref type="context">6</ref>
-               <label>duo Wessofontani ... familiares</label><p>Die Identität dieser beiden Mönche
+                  Petey de l’Hostallerie um Mäßigung und Beruhigung: vgl. <rs type="bibl" ref="bibl:15602">Chaussy, Bénédictins</rs> 1 110–119; <rs type="bibl" ref="bibl:15824">Denis, Charles de l’Hostallerie</rs> 344f., 353–357, 365–391.
+                  Zur Diskussion der Angelegenheit im Umkreis BPs vgl. <ref type="letter" target="letter:504">504</ref>
+                  <ref target="letter:504#seg7">7</ref>, <ref type="letter" target="letter:525">525</ref> <ref target="letter:525#seg2">2</ref>, <ref type="letter" target="letter:581">581</ref>
+                  <ref target="letter:581#seg2">2</ref>, <ref type="letter" target="letter:772">772</ref> <ref target="letter:772#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n19'), left('n19e'))" n="19" anchored="false" corresp="#seg6">
+            <mentioned>duo Wessofontani ... familiares</mentioned>
+            <p>Die Identität dieser beiden Mönche
                   ist aufgrund dieser Angabe nicht zu bestimmen, auch das Diarium KMs bietet nichts
-                  zu diesem Besuch: vgl. <rs type="bibl" key="bibl:19582">Siegmund, Meichelbecks
+                  zu diesem Besuch: vgl. <rs type="bibl" ref="bibl:19582">Siegmund, Meichelbecks
                      Briefe</rs> 80/1–2 173. Erhardt selbst kam wenig später, vom 19. bis zum 21.
                   Februar 1717, nach Benediktbeuern, wobei ihn KM nach eigener Wahrnehmung von
                   seinem Standpunkt hinsichtlich der Gründung Wessobrunns überzeugen konnte: BStB
-                  München, Meichelbeckiana 18b, 293v–294r.</p></note>
-            <note xml:id="d3e27944">
-               <ref type="context">6</ref>
-               <label> Romano pontifici</label><p> Die Widmung an Papst Klemens XI. erfolgte wie beabsichtigt.</p></note>
-            <note xml:id="d3e27948">
-               <ref type="context">6</ref>
-               <label> adeo parturiens</label><p>Wohl angelehnt an Horaz, De arte poetica 139: „Parturient montes et nascetur ridiculus mus“.</p></note>
-            <note xml:id="d3e27952">
-               <ref type="context">7</ref>
-               <label>monuit ... abbas</label><p> Guetrather hatte sich vom 23. bis zum 25. Januar
+                  München, Meichelbeckiana 18b, 293v–294r.</p>
+         </note>
+         <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg6">
+            <mentioned> Romano pontifici</mentioned>
+            <p> Die Widmung an Papst Klemens XI. erfolgte wie beabsichtigt.</p>
+         </note>
+         <note target="#range(right('n21'), left('n21e'))" n="21" anchored="false" corresp="#seg6">
+            <mentioned> adeo parturiens</mentioned>
+            <p>Wohl angelehnt an Horaz, De arte poetica 139: „Parturient montes et nascetur ridiculus mus“.</p>
+         </note>
+         <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg7">
+            <mentioned>monuit ... abbas</mentioned>
+            <p> Guetrather hatte sich vom 23. bis zum 25. Januar
                   1717 in Benediktbeuern aufgehalten und dabei auch das Archiv besichtigt: BStB
                   München, Meichelbeckiana 18b, 292v–293r. Irrig zum 21. Januar 1717 erwähnt diesen
-                  Besuch <rs type="bibl" key="bibl:20468">Wühr, Bedeutung</rs> 230.</p></note>
-            <note xml:id="d3e27959">
-               <ref type="context">8</ref>
-               <label>narrant nostri</label><p>Im Anschluss an den Aufenthalt Guetrathers reisten vier nicht namentlich genannte Benediktbeurer vom 26. bis zum 29. Januar 1717 nach Tegernsee: BStB München, Meichelbeckiana 18b, 293r.</p></note>
-         </div>
-      </back>
+                  Besuch <rs type="bibl" ref="bibl:20468">Wühr, Bedeutung</rs> 230.</p>
+         </note>
+         <note target="#range(right('n23'), left('n23e'))" n="23" anchored="false" corresp="#seg8">
+            <mentioned>narrant nostri</mentioned>
+            <p>Im Anschluss an den Aufenthalt Guetrathers reisten vier nicht namentlich genannte Benediktbeurer vom 26. bis zum 29. Januar 1717 nach Tegernsee: BStB München, Meichelbeckiana 18b, 293r.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>VIII.</orig></note>
+         <note anchored="false">Ordnungsvermerk: <orig>147</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:19784">
+            <title type="short">Stockinger, Meichelbeck</title>
+            <biblScope>151</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime clarissime domine pater Bernarde, fautor et amice colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Ad penultimas paternitatis vestrae die 11. Octobris datas <anchor xml:id="n1"/>respondi die 28. eiusdem mensis literisque meis adieci<anchor xml:id="n1e"/> codicum nostrorum initia, prout fueram monitus. Addidi postea alia quaedam, quae vel nuncianda vel interroganda pro tempore videbantur. Interim dum non sine ingenti admiratione responsorias mensibus Novembri, Decembri et Januario frustra opperiebar, nesciebam, quid denique cogitandum esset? Num fortassis pater Pezius rursus faceret excursionem ad bibliothecas perlustrandas? Num potius male haberet ob susceptos labores nimios? An certe alio et ad urgentiora negotia distractae essent viri eruditissimi curae? Sed ecce! Inanibus uterque curis exagitabamur, sola tabellariorum aut aliorum ineptorum hominum sive negligentia sive incuria commercium nostrum literarium turbante. </ab>
+         <ab resp="#editor" xml:id="seg2">Interim tamen, mi Bernarde, non prorsus vana erant vestra de mea sinistra valetudine somnia. Cum enim mense Octobri <anchor xml:id="n2"/>post phlebotomiam<anchor xml:id="n2e"/> adhibitam ex consilio medici adhibuissem etiam <anchor xml:id="n3"/>acidulas Egrenses<anchor xml:id="n3e"/>, ingentem primum virium debilitatem <pb n="1v"/> contraxisse me persensi, cui paulo post aliud gravius malum (tunc nobis ignotum) accessit, ita ut omnium iudicio ingens fuerit necessitas adhibendi alteram<anchor xml:id="n4"/> novamque sectionem<anchor xml:id="n4e"/> venae, utut<anchor xml:id="n5"/> tempore valde iniquo<anchor xml:id="n5e"/>, scilicet mense Novembri. Et profuit quidem misisse bis sanguinem; interea tamen nullum viribus vigorem accedere videbam. Quare mense Decembri<anchor xml:id="n6"/> Monachium ad medicos<anchor xml:id="n6e"/> missus statum meum omnem ipsis candidissime aperui; qui post multas repetitasque interrogationes, responsiones et experientias vix aegre tandem deprehenderunt radicem mali, quam demum ex conspicuis indiciis non aliam esse concluserunt quam acidum quoddam ex multo tempore in stomacho contractum, promoventibus illud archivi pulveribus perniciosis, vita sedentaria, rariori corporis motu, ciborum acidorum et similium usu etc. Pro cuius mali depulsione certae mihi medicinae praescriptae et a me adhibitae adeo fuere salubres, ut hodie (Deo sint laudes aeternae!) calamum, quem antea una et altera die vix ad bene formandum characterem tractare poteram, <sic>hodie</sic> fere tractem absque difficultate, hac propemodum sola pristini mali memoria <pb n="2r"/> in corpore relicta, <anchor xml:id="n7"/>quod vox, quae ante credebatur acuta et clara, hactenus interciderit<anchor xml:id="n7e"/> et hodie sonet longe obscurius, fractius luridiusque. <anchor xml:id="n8"/>Verum Dominus dedit, Dominusque abstulit. Sit nomen Domini benedictum<anchor xml:id="n8e"/>! </ab>
+         <ab resp="#editor" xml:id="seg3">Interea tamen non omnes dies duxi otiosos, et adfuit bonus Deus laboribus meis, ut hoc eodem tempore, quo dictum<anchor xml:id="n9"/> in modum infirmabar, res ageretur monasterio<anchor xml:id="n9e"/> nostro non parum proficua. Gravissima iam <anchor xml:id="n10"/>ab annis omnino 616<anchor xml:id="n10e"/> dissidia erant inter hoc nostrum et vicinum monasterium Schlechdorffense. Vix erat, qui ullum tot et tantorum litigiorum finem sperare auderet, praeter me et<anchor xml:id="n11"/> decanum<anchor xml:id="n11e"/> dicti monasterii. Voluit autem Deus, ut nos duo anno superiori in <anchor xml:id="n12"/>locis tertiis<anchor xml:id="n12e"/> bis conveniremus deque pace ineunda consilia privata inire possemus. Et ecce! Cum circa articulos fere omnes, quantumvis difficillimos, quid statui posset, dante Numine nobis brevi occurrisset, erupere tandem in apricum consilia nostra, quae eousque secreta tenebamus. Et sane placuit reverendissimo meo domino praesuli me, Schlechdorffensi autem<anchor xml:id="n13"/> praeposito<anchor xml:id="n13e"/> suum illum<anchor xml:id="n14"/> decanum<anchor xml:id="n14e"/> ad locum tertium mittere et pacis articulos, si fieri posset, cudere. Dictum, factum.<anchor xml:id="n15"/> Bis in loco tertio<anchor xml:id="n15e"/>, demum<anchor xml:id="n16"/> in hoc nostro monasterio<anchor xml:id="n16e"/> convenimus et pacem invenimus a nostris <pb n="2v"/> superioribus et religiosis sodalibus statim solenniter approbatam et firmatam, tota late vicinia in admirationem et gratulationem ingentem effusa. Ita Deus voluit consolari meam infirmitatem; qui sit iterum benedictus! Sed haec incidenter. </ab>
+         <ab resp="#editor" xml:id="seg4">Nunc ad literas vestras. Vidi in penultima epistola sua Bernardum verbis sane gravissimis invehi in <anchor xml:id="n17"/>ῥαθυμίαν multorum<anchor xml:id="n17e"/>, ἀβλεψίαν plurimorum, quibus et ego (fatebor enim) sane non raro soleo iuste indignari. Sed posterior epistola longe aliter loquentem inducit Bernardum, videoque veternum iamiam multis fuisse excussum ab aculeata ape Mellicensi: id quod optaveram maxime et dudum ad caelos suspiraveram. Ita fac, mi Bernarde! Excute intimos bibliothecarum recessus, profer in lucem, quae erant abscondita a multis saeculis, perge pulcherrimo tuo exemplo vocare operarios in societatem laboris tui praestantissimi. Ita solis instar inter stellas minores fulgebis in Austria, et ardor tuus accendet etiam proximos Boios, Carinthios, Styros, omnes. </ab>
+         <ab resp="#editor" xml:id="seg5">Gratias maximas dico ob <anchor xml:id="n18"/>relationes ex Gallia<anchor xml:id="n18e"/> factas, quas cum ingenti solatio legit reverendissimus meus. Sed quid hoc aliunde audio de Gallis nostris, quod scilicet notae pontificis constitutioni sese <pb n="3r"/> inter primos opponant? Certe hactenus in ecclesia Dei et in ordine sancti patris Benedicti praestabat adhaerere pontifici quam regibus. Repereruntne nostri illi domini Galli in suis codicibus quidquam contrarium? Quid, si rex iuvenis cum tempore faveret Hugonotis et eiusmodi hominum supra sobrietatem sapientium faeci, quid, inquam, de paedagogo, quid de ordine nostro sentirent ecclesiae capita? Faxint Superi, ut res eveniat bene, et rex ad salutaria consilia dirigatur! Certe alias non tantum sentient Galli nostri, sed etiam Itali caeterique, quorum rebus et fortunis nunquam non insidiantur rapaces Harpyae, etiam quando neminem laesimus, neminem corrupimus, neminem circumvenimus. Obsecro, quis hoc super negotio sensus est Bernardi mei? </ab>
+         <ab resp="#editor" xml:id="seg6">Mea et patris Thomae Wessofontani controversia hodie est nulla. Si is mentem mutavit, bene est. Si non mutavit, altercari non iuvat cum homine quibusvis libellulis tenaciter fidente. Interim cum non ita pridem hoc transirent <anchor xml:id="n19"/>duo Wessofontani mihi dudum familiares<anchor xml:id="n19e"/>, exhibui illis gravia quaedam momenta rationum mearum rogans, ut rem referrent reverendissimo suo domino abbati <pb n="3v"/> et<note type="annotation" xml:id="d3e27843">Danach unleserliche Streichung im Ausmaß von ca. 4–5 Buchstaben.</note> patrem Thomam ad saniora pertraherent. Condixere illi operam suam; neque ullum est dubium, quin pater Thomas ab iis sit religiose exagitandus. Volebat is antehac dedicare primam operis sui futuri partem<anchor xml:id="n20"/> Romano pontifici<anchor xml:id="n20e"/>. Ego periculum ob oculos posui. Nunc, quid sit demum tentaturus, ignoro. Hoc scio, quod urgeat modis omnibus editionem. Tempus dabit, quid pariturus sit homo<anchor xml:id="n21"/> adeo parturiens<anchor xml:id="n21e"/>. </ab>
+         <ab resp="#editor" xml:id="seg7">De vestro ad nos futuro itinere primus me <anchor xml:id="n22"/>monuit reverendissimus dominus abbas<anchor xml:id="n22e"/> Tegernseensis, qui gratius ex Austria poterat referre nihil. Bene habet. Spero me in amplexus ruiturum virorum eruditissimorum et demonstraturum paratam, licet debilem, serviendi voluntatem. Ad desideratissimum illud tempus multa refero. Faxit Deus, ne ullus obex ponatur itineri, ex quo tanta bona integris provinciis imminent! </ab>
+         <ab resp="#editor" xml:id="seg8">Alphonsus noster Tegernseensis, ut mihi <anchor xml:id="n23"/>narrant nostri<anchor xml:id="n23e"/>, vivit et valet optime. Sed video me iam dudum excessisse limites epistolae. Hinc ex abrupto finio et post mei humillimam commendationem maneo, qui semper</ab>
+         <closer>Paternitatis vestrae admodum reverendae servus obligatissimus uti paratissimus pater Carolus.</closer>
+         <closer>Benedictbeuern hac die Cineres praecedente, 1717 9. Februarii.</closer>
+      </body>
    </text>
 </TEI>

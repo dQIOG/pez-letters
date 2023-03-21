@@ -1,45 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="541" xml:id="pez-0541">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">541 Petrus Merschoff an Bernhard Pez. 1716-04-03. Paderborn (Abdinghof).</title>
-            <title type="sub">Digital Edition</title>
+            <title>Petrus Merschoff an Bernhard Pez. 1716-04-03. Paderborn (Abdinghof).</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">541</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl>Katschthaler, Briefnachlass 52</bibl>
-                  <bibl>Wallnig–Mayer, Bursfelder Kongregation 99</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">460r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 460r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -54,69 +69,57 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">515</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">584</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">515</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">585</idno>
-               </ref>
+               <ptr type="prev" target="letter:515"/>
+               <ptr type="next" target="letter:584"/>
+               <ptr type="mentions" target="letter:515"/>
+               <ptr type="mentionedIn" target="letter:585"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">BPs</rs> dritte <rs ref="index:d14380e33611">Enzyklik</rs> <ref type="letter" target="letter:515">515</ref> ist am 10. März 1716 in <rs ref="index:d14380e32007">Abdinghof</rs> eingetroffen. Die Antwort wurde PMe von seinem Abt <rs ref="index:d14380e6842">Pantaleon Bruns</rs> aufgetragen, und PMe kommt dem gerne nach, weil <rs type="person" role="sender">BPs</rs> Vorhaben („<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“) Gott zur Glorie sowie dem <rs ref="index:d10854e2786">hl. Benedikt</rs> und seinem Orden zu Lob und Ehre gereicht.</p>
+            <p corresp="#seg2">Gelehrte gab es zwar immer in <rs ref="index:d14380e32007">Abdinghof</rs>, aber wenige Schriftsteller. Ein Verzeichnis übermittelt PMe in der Beilage; <rs type="person" role="sender">BP</rs> soll dieses nach eigenem Gutdünken kürzen, insbesondere die Lebensbeschreibung des <rs ref="index:d14380e38222">Leonhard Ruben</rs>. In der gleichfalls beigefügten Liste von gedruckten Werken <rs ref="index:d14380e4919">benediktinischer</rs> Autoren aus der <rs ref="index:d14380e32019">Abdinghofer Bibliothek</rs> hat PMe diejenigen ausgelassen, von denen er annehmen konnte, dass sie auch in der <rs ref="index:d14380e28279">Bibliothek von Melk</rs> vorhanden sind, ebenso die Handschriften, deren Autoren, auch wenn sie <rs ref="index:d14380e4919">Benediktiner</rs> waren, nicht hinreichend bekannt sind.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e7317"><rs type="person" role="sender">BPs</rs> dritte <rs key="index:d14380e33611">Enzyklik</rs> <ref type="letter">515</ref> ist am 10. März 1716 in <rs key="index:d14380e32007">Abdinghof</rs> eingetroffen. Die Antwort wurde <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>PMe<?oxy_custom_end?> von seinem Abt <rs key="index:d14380e6842">Pantaleon Bruns</rs> aufgetragen, und <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>PMe<?oxy_custom_end?> kommt dem gerne nach, weil <rs type="person" role="sender">BPs</rs> Vorhaben („<rs key="index:d14380e33227">Bibliotheca Benedictina</rs>“) Gott zur Glorie sowie dem <rs key="index:d10854e2786">hl. Benedikt</rs> und seinem Orden zu Lob und Ehre gereicht.</seg><seg type="context" n="2" xml:id="d3e7322">Gelehrte gab es zwar immer in <rs key="index:d14380e32007">Abdinghof</rs>, aber wenige Schriftsteller. Ein Verzeichnis übermittelt <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>PMe<?oxy_custom_end?> in der Beilage; <rs type="person" role="sender">BP</rs> soll dieses nach eigenem Gutdünken kürzen, insbesondere die Lebensbeschreibung des <rs key="index:d14380e38222">Leonhard Ruben</rs>. In der gleichfalls beigefügten Liste von gedruckten Werken <rs key="index:d14380e4919">benediktinischer</rs> Autoren aus der <rs key="index:d14380e32019">Abdinghofer Bibliothek</rs> hat <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>PMe<?oxy_custom_end?> diejenigen ausgelassen, von denen er annehmen konnte, dass sie auch in der <rs key="index:d14380e28279">Bibliothek von Melk</rs> vorhanden sind, ebenso die Handschriften, deren Autoren, auch wenn sie <rs key="index:d14380e4919">Benediktiner</rs> waren, nicht hinreichend bekannt sind.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Paderbornae 3. Aprilis 1716.</p>
-            <p xml:space="preserve">Admodum reverende eximie doctissimeque pater, domine confrater colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e7339">Tertia epistola encyclica, qua reverenda dominatio vestra e quovis monasterio cathalogum scriptorum Benedictinorum, qui in eodem vixerunt, sibi transmitti rogat, 10. Martii ad monasterium nostrum Abdinghoffense est perlata, ac responsio ad eandem mihi infra scripto a reverendissimo domino <seg type="lemma" corresp="#d3e7364">praelato</seg> meo<note place="foot" xml:id="d3e7341">	Danach durchgetsrichen <hi rend="italic">mihi</hi>.</note> est demandata, quam conditionem accepi libentissime, cum labores ab eximia paternitate vestra suscepti cedant Deo ad gloriam, sancto patri nostro Benedicto totique eius ordini ad honorem et laudem. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e7347">Licet monasterio nostro viri eruditi nunquam defuerint, tamen pauci fuere, qui ingenii sui monumenta posteritati reliquerunt, quorum cathologum [<hi rend="italic">sic</hi>] transmitto, in quo, maxime in vita Leonardi Rübeni<note place="foot" xml:id="d3e7352">	Danach durchgestrichen <hi rend="italic">spt</hi>.</note>, si quid omittendum, reverentiae vestrae iudicio relinquitur. In cathologo [<hi rend="italic">sic</hi>]<seg type="lemma" corresp="#d3e7376"> librorum ab authoribus Benedictinis editorum, qui in nostro monasterio asservantur</seg>, omisi eos, de quibus merito potuerim praesumere, quod etiam in celeberrima vestra bibliotheca sint reperiendi, item libros manuscriptos, quorum authores licet fuerint Benedictini, non tamen satis noti. Precor ex animo felicissimum in incoepto opere successum meque in omnia sacra recommendo ac permaneo</seg></p>
-            <p xml:space="preserve">Admodum reverendae et eximiae dominationis vestrae servus ad omnia grata paratissimus frater Petrus Merschoff professus Abdinghoffensis manu propria.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e7364">
-               <ref type="context">1</ref>
-               <label>praelato</label><p>Zu Pantaleon Bruns vgl. <rs type="bibl" key="bibl:15392"
-                     >Brandt–Hengst, Weihbischöfe</rs> 116–119; <rs type="bibl" key="bibl:16660"
-                     >Greve, Abdinghof </rs>175–192; <rs type="bibl" key="bibl:16990">Hengst,
-                     Bruns</rs>; <rs type="bibl" key="bibl:17168">Honselmann, Abdinghof </rs>511,
-                  518, 524.</p></note>
-            <note xml:id="d3e7370">
-               <ref type="context">2</ref>
-               <label>cathologum transmitto</label><p> Die Beilage ist erhalten: StiA Melk, Karton 7
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>praelato</mentioned>
+            <p>Zu Pantaleon Bruns vgl. <rs type="bibl" ref="bibl:15392">Brandt–Hengst, Weihbischöfe</rs> 116–119; <rs type="bibl" ref="bibl:16660">Greve, Abdinghof </rs>175–192; <rs type="bibl" ref="bibl:16990">Hengst,
+                     Bruns</rs>; <rs type="bibl" ref="bibl:17168">Honselmann, Abdinghof </rs>511,
+                  518, 524.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>cathologum transmitto</mentioned>
+            <p> Die Beilage ist erhalten: StiA Melk, Karton 7
                   Patres 10, Fasz. 8, Nr. 5. Sie trägt den Titel „Scriptores Benedictini, qui
                   vixerunt in monasterio sanctorum apostolorum Petri et Pauli vulgo Abdinghoff intra
                   Paderbornam“ und ist von PMe eigenhändig geschrieben. Genannt werden darin die
                   Äbte Gumbert, Leonhard Ruben, Albert Egginck und Heinrich Keller. Zu ihnen vgl.
-                     <rs type="bibl" key="bibl:16660">Greve, Abdinghof</rs> 36–54, 134–144, 163–167;
-                     <rs type="bibl" key="bibl:17168">Honselmann, Abdinghof</rs> 501f., 507f., 510,
-                  523f.; <rs type="bibl" key="bibl:17168">Löffler, Auszüge</rs> 97, 103. Zu Ruben
-                  vgl. <rs type="bibl" key="bibl:17648">Kramer, Leonhard Ruben</rs>; <rs type="bibl"
-                     key="bibl:19376">Schmalor, Abdinghofer Bibliothek</rs> 194–202, 236–244; sowie
-                     <ref type="letter">585</ref> &lt;5&gt;. Zu Gumbert vgl. <ref type="letter"
-                     >585</ref> &lt;1&gt; und &lt;2&gt;.</p></note>
-            <note xml:id="d3e7376">
-               <ref type="context">2</ref>
-               <label> librorum ... asservantur</label><p>Dieses Verzeichnis mit der Überschrift „Cathalogus librorum ab authoribus Benedictinis editorum minus communium, qui partim in bibliotheca, partim in cubiculis monasterii Abdinghoffensis asservantur“ schließt an die Schriftstellerliste von Abdinghof unmittelbar an: StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 5, 2r–3v.</p></note>
-         </div>
-      </back>
+                     <rs type="bibl" ref="bibl:16660">Greve, Abdinghof</rs> 36–54, 134–144, 163–167;
+                     <rs type="bibl" ref="bibl:17168">Honselmann, Abdinghof</rs> 501f., 507f., 510,
+                  523f.; <rs type="bibl" ref="bibl:17168">Löffler, Auszüge</rs> 97, 103. Zu Ruben
+                  vgl. <rs type="bibl" ref="bibl:17648">Kramer, Leonhard Ruben</rs>; <rs type="bibl" ref="bibl:19376">Schmalor, Abdinghofer Bibliothek</rs> 194–202, 236–244; sowie
+                     <ref type="letter" target="letter:585">585</ref> <ref target="letter:585#seg5">5</ref>. Zu Gumbert vgl. <ref type="letter" target="letter:585">585</ref> <ref target="letter:585#seg1">1</ref> und <ref target="letter:585#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned> librorum ... asservantur</mentioned>
+            <p>Dieses Verzeichnis mit der Überschrift „Cathalogus librorum ab authoribus Benedictinis editorum minus communium, qui partim in bibliotheca, partim in cubiculis monasterii Abdinghoffensis asservantur“ schließt an die Schriftstellerliste von Abdinghof unmittelbar an: StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 5, 2r–3v.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl>Katschthaler, Briefnachlass 52</bibl>
+         <bibl>Wallnig–Mayer, Bursfelder Kongregation 99</bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Paderbornae 3. Aprilis 1716.</opener>
+         <opener>Admodum reverende eximie doctissimeque pater, domine confrater colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Tertia epistola encyclica, qua reverenda dominatio vestra e quovis monasterio cathalogum scriptorum Benedictinorum, qui in eodem vixerunt, sibi transmitti rogat, 10. Martii ad monasterium nostrum Abdinghoffense est perlata, ac responsio ad eandem mihi infra scripto a reverendissimo domino <anchor xml:id="n1"/>praelato<anchor xml:id="n1e"/> meo<app><rdg wit="#"><add place="after">mihi</add></rdg></app> est demandata, quam conditionem accepi libentissime, cum labores ab eximia paternitate vestra suscepti cedant Deo ad gloriam, sancto patri nostro Benedicto totique eius ordini ad honorem et laudem. </ab>
+         <ab resp="#editor" xml:id="seg2">Licet monasterio nostro viri eruditi nunquam defuerint, tamen pauci fuere, qui ingenii sui monumenta posteritati reliquerunt, quorum <sic>cathologum</sic> transmitto, in quo, maxime in vita Leonardi Rübeni<del ana="#after">spt</del>, si quid omittendum, reverentiae vestrae iudicio relinquitur. In <sic>cathologo</sic><anchor xml:id="n2"/> librorum ab authoribus Benedictinis editorum, qui in nostro monasterio asservantur<anchor xml:id="n2e"/>, omisi eos, de quibus merito potuerim praesumere, quod etiam in celeberrima vestra bibliotheca sint reperiendi, item libros manuscriptos, quorum authores licet fuerint Benedictini, non tamen satis noti. Precor ex animo felicissimum in incoepto opere successum meque in omnia sacra recommendo ac permaneo</ab>
+         <closer>Admodum reverendae et eximiae dominationis vestrae servus ad omnia grata paratissimus frater Petrus Merschoff professus Abdinghoffensis manu propria.</closer>
+      </body>
    </text>
 </TEI>

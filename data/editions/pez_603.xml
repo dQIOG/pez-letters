@@ -1,38 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="603" xml:id="pez-0603">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">603 Theodor Thier an Bernhard Pez. 1716-06-23. Werden.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Theodor Thier an Bernhard Pez. 1716-06-23. Werden.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">603</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">421r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 421r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,54 +68,30 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">602</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">665</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">602</idno>
-               </ref>
+               <ptr type="prev" target="letter:602"/>
+               <ptr type="next" target="letter:665"/>
+               <ptr type="mentions" target="letter:602"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Nach dem Erhalt von <rs type="person" role="sender">BPs</rs> letztem Brief <ref type="letter" target="letter:602">602</ref> hat <rs type="person">TT</rs> selbst und durch andere Nachforschungen nach dem Werk von Edward Maihew („Trophaea“) angestellt, jedoch vergeblich. Bei der Suche unterstützt ihn der Bibliothekar (Johann Buchels) des jüngst verstorbenen Pfälzer Kurfürsten (Johann Wilhelm), welcher im Auftrag und auf Kosten seines Herren die wichtigsten Bibliotheken Europas durchforstet hat. <rs type="person">TT</rs> legt Buchels’ Antworten auf seine Briefe bei. Wenn <rs type="person" role="sender">BP</rs> für sich selbst Buchels’ Hilfe wünscht, kann <rs type="person">TT</rs> diesen darum bitten.</p>
+            <p corresp="#seg2">Am Vortag hat <rs type="person">TT</rs> aus Douai (aus St. Gregory?) einen Brief empfangen, laut dem Maihews Buch auch dort nicht zu finden ist, man jedoch vermutet, dass es in einer gewissen Bibliothek in Lothringen (der des Klosters St. Laurence zu Dieulouard?) vorhanden sein muss, wohin <rs type="person">TT</rs> am Folgetag schreiben will, um an das Buch zu gelangen.</p>
+            <p corresp="#seg3">Eben hat <rs type="person">TT</rs> aus Lamspringe einen (von Dunstan Hutchinson an John Townson gesendeten) Schriftstellerkatalog (der englischen Benediktiner) erhalten. <rs type="person" role="sender">BP</rs> soll den Inhalt nach seinem Gutdünken kürzen oder ausbauen; der Stil scheint <rs type="person">TT</rs> an manchen Stellen zu bescheiden.</p>
+            <p corresp="#seg4">Aus dem Gesagten wird <rs type="person" role="sender">BP</rs> den Grund für die Verzögerung von <rs type="person">TTs</rs> Antwort ersehen können. Die Orte, wohin <rs type="person">TT</rs> geschrieben hat, sind weit von Werden entfernt, und <rs type="person">TT</rs> musste geduldig auf Reaktionen warten. Am 5. Juli 1716 wird das Generalkapitel (der Bursfelder Kongregation) stattfinden, wo <rs type="person">TT</rs> dafür sorgen will, dass das Anliegen <rs type="person" role="sender">BPs</rs> den Prälaten neuerlich ans Herz gelegt wird.</p>
+            <p corresp="#seg5">Für das Angebot einer Zusendung von <rs type="person" role="sender">BPs</rs> bisher veröffentlichten Schriften bedankt sich TT; deren Übermittlung würde der kurfürstliche Bibliothekar übernehmen. Die „Epistolae apologeticae“ sind in Köln bereits verfügbar. <rs type="person">TT</rs> schließt mit dem Angebot seiner weiteren Hilfestellung.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e13053">Nach dem Erhalt von <rs type="person" role="sender">BPs</rs> letztem Brief <ref type="letter">602</ref> hat <rs type="person" key="">TT</rs> selbst und durch andere Nachforschungen nach dem Werk von Edward Maihew („Trophaea“) angestellt, jedoch vergeblich. Bei der Suche unterstützt ihn der Bibliothekar (Johann Buchels) des jüngst verstorbenen Pfälzer Kurfürsten (Johann Wilhelm), welcher im Auftrag und auf Kosten seines Herren die wichtigsten Bibliotheken Europas durchforstet hat. <rs type="person" key="">TT</rs> legt Buchels’ Antworten auf seine Briefe bei. Wenn <rs type="person" role="sender">BP</rs> für sich selbst Buchels’ Hilfe wünscht, kann <rs type="person" key="">TT</rs> diesen darum bitten.</seg><seg type="context" n="2" xml:id="d3e13058">Am Vortag hat <rs type="person" key="">TT</rs> aus Douai (aus St. Gregory?) einen Brief empfangen, laut dem Maihews Buch auch dort nicht zu finden ist, man jedoch vermutet, dass es in einer gewissen Bibliothek in Lothringen (der des Klosters St. Laurence zu Dieulouard?) vorhanden sein muss, wohin <rs type="person" key="">TT</rs> am Folgetag schreiben will, um an das Buch zu gelangen.</seg><seg type="context" n="3" xml:id="d3e13060">Eben hat <rs type="person" key="">TT</rs> aus Lamspringe einen (von Dunstan Hutchinson an John Townson gesendeten) Schriftstellerkatalog (der englischen Benediktiner) erhalten. <rs type="person" role="sender">BP</rs> soll den Inhalt nach seinem Gutdünken kürzen oder ausbauen; der Stil scheint <rs type="person" key="">TT</rs> an manchen Stellen zu bescheiden.</seg><seg type="context" n="4" xml:id="d3e13062">Aus dem Gesagten wird <rs type="person" role="sender">BP</rs> den Grund für die Verzögerung von <rs type="person" key="">TTs</rs> Antwort ersehen können. Die Orte, wohin <rs type="person" key="">TT</rs> geschrieben hat, sind weit von Werden entfernt, und <rs type="person" key="">TT</rs> musste geduldig auf Reaktionen warten. Am 5. Juli 1716 wird das Generalkapitel (der Bursfelder Kongregation) stattfinden, wo <rs type="person" key="">TT</rs> dafür sorgen will, dass das Anliegen <rs type="person" role="sender">BPs</rs> den Prälaten neuerlich ans Herz gelegt wird.</seg><seg type="context" n="5" xml:id="d3e13064">Für das Angebot einer Zusendung von <rs type="person" role="sender">BPs</rs> bisher veröffentlichten Schriften bedankt sich TT; deren Übermittlung würde der kurfürstliche Bibliothekar übernehmen. Die „Epistolae apologeticae“ sind in Köln bereits verfügbar. <rs type="person" key="">TT</rs> schließt mit dem Angebot seiner weiteren Hilfestellung.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic" xml:space="preserve">Admodum reverendo doctissimoque domino domino Bernardo Petz exempti monasterii Melicensis ordinis sancti Benedicti in Austria professo et bibliothecario. Viennae in Austria. Im Mölcker hoff daselbst abzulegen. </hi>Postalische Vermerke zur Freimachung.</ab>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende doctissimeque domine, domine colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e13082">Post acceptas ultimas admodum reverendae dominationis vestrae literas studiose per me et alios inquisivi per varia loca<note place="foot" xml:id="d3e13084">	<hi rend="italic">per ... loca</hi> über der Zeile eingefügt.</note> in authorem Eduardum Maiheu, sed nusquam invenire licuit. Iuvit me in inquirendo serenissimi electoris Palatini <seg type="lemma" corresp="#d3e13109">nuper defuncti</seg> bibliothecarius vir doctissimus, qui iussu et sumptibus sui serenissimi olim principalis totius fere Europae praecipuas bibliothecas lustravit; quid mihi diversis vicibus<seg type="lemma" corresp="#d3e13115"> rescripserit, accludo</seg>. Si admodum reverenda dominatio vestra iudicet virum istum esse posse aliqua in re subsidio, erit ad requisitionem meam paratus. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e13090"><seg type="lemma" corresp="#d3e13119">Duaco</seg> heri accepi literas, quod Eduardus Maiheu nusquam ibidem haberi possit, credatur tamen esse in quadam bibliotheca in Lotharingia, quo crastina posta pro eo obtinendo, si ibidem sit, scribetur. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e13092">Hodie accepi ex monasterio Lambspringensi <seg type="lemma" corresp="#d3e13125">acclusum catalogum</seg> quorundam authorum; placebit admodum reverendae dominationi vestrae addere et demere pro libitu; est in aliquibus stilus nimis humilis. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e13094">Ex praecedentibus his colligere poterit admodum reverenda dominatio vestra, cur serius ad ultimas respondeam. Loca enim illa, ad quae scriptum fuit, longius hinc distant: debui<note place="foot" xml:id="d3e13096">	Davor durchgestrichen <hi rend="italic">cui</hi>.</note> proinde in patientia exspectare responsum. Sequenti mense quinta eiusdem <seg type="lemma" corresp="#d3e13131">erit capitulum</seg> annale, in quo curabo, ut congregatis ibidem reverendissimis dominis iterum negotium admodum reverendae dominationis vestrae recommendetur. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e13102">Pro oblatis mihi opusculis, quae admodum reverenda dominatio vestra typis vulgavit, gratias habeo maximas; ut ad me deferantur, curam in se suscipiet praefatus dominus bibliothecarius. Scripta interim illa apologetica iam Coloniae extant. Ad ulteriora servitia me offero et maneo</seg></p>
-            <p xml:space="preserve">Admodum reverendae doctissimaeque dominationis vestrae servus obsequiosissimus frater Theodorus Thier.</p>
-            <p xml:space="preserve">Werdenae die 23. Junii 1716.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e13109">
-               <ref type="context">1</ref>
-               <label>nuper defuncti</label><p>Kurfürst Johann Wilhelm von der Pfalz war am 8. Juni 1716 verstorben.</p></note>
-            <note xml:id="d3e13115">
-               <ref type="context">1</ref>
-               <label> rescripserit ... accludo</label><p>Es handelt sich um zwei Briefe von Buchels
-                  an TT: II, 131r–v, 132r–v. Beide sind irrig als Briefe an BP verzeichnet bei <rs
-                     type="bibl" key="bibl:16524">Glassner, Verzeichnis</rs> 203f. Das erste dieser
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>nuper defuncti</mentioned>
+            <p>Kurfürst Johann Wilhelm von der Pfalz war am 8. Juni 1716 verstorben.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> rescripserit ... accludo</mentioned>
+            <p>Es handelt sich um zwei Briefe von Buchels
+                  an TT: II, 131r–v, 132r–v. Beide sind irrig als Briefe an BP verzeichnet bei <rs type="bibl" ref="bibl:16524">Glassner, Verzeichnis</rs> 203f. Das erste dieser
                   Schreiben ist mit 25. April 1716 datiert und reagiert auf die Anfrage TTs nach
                   Maihews „Trophaea“. Buchels kennt das Buch nicht und hält den Autor für einen
                   Franzosen. Er hat dazu die „Bibliotheca Belgica“ von Valerius Andreas konsultiert,
@@ -131,45 +128,58 @@
                   die „Bibliotheca Benedictina“ suchen. In Wien verfügt Buchels über Freunde, mit
                   deren Hilfe er sich die bisherigen Publikationen von BP beschaffen will. Hier
                   könnten die Freiherrn Johann Ruprecht und Johann Franz von Hegenmüller oder
-                  Gerhard Cornelius van den Driesch gemeint sein. </p></note>
-            <note xml:id="d3e13119">
-               <ref type="context">2</ref>
-               <label>Duaco</label><p>Angesichts des Gegenstands der Anfrage und der guten Kontakte
+                  Gerhard Cornelius van den Driesch gemeint sein. </p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>Duaco</mentioned>
+            <p>Angesichts des Gegenstands der Anfrage und der guten Kontakte
                   TTs zur Englischen Benediktinerkongregation kann hier mit einiger
                   Wahrscheinlichkeit deren Kloster St. Gregory gemeint sein; unter der im Folgenden
                   angedeuteten lothringischen Bibliothek wäre dann möglicherweise jene von
-                  Dieulouard zu verstehen: vgl. <ref type="letter">531</ref> &lt;2&gt;. </p></note>
-            <note xml:id="d3e13125">
-               <ref type="context">3</ref>
-               <label>acclusum catalogum</label><p>Gemeint ist sicherlich ein Schriftstellerkatalog
+                  Dieulouard zu verstehen: vgl. <ref type="letter" target="letter:531">531</ref> <ref target="letter:531#seg2">2</ref>. </p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>acclusum catalogum</mentioned>
+            <p>Gemeint ist sicherlich ein Schriftstellerkatalog
                   der Englischen Benediktinerkongregation, der als Auszug aus einem Brief des
                   Lamspringer Mönchs Dunstan Hutchinson an seinen in Werden lebenden Mitbruder John
                   Townson vom 29. Mai 1716 erhalten ist: I, 683r–684v. Behandelt werden Augustine
                   Baker, Leander a Sancto Martino, Rudesind Barlow, Serenus Cressy, Anthony Batt,
                   Jerome Porter und Thomas Vincent Sadler. Zu Leander a Sancto Martino oder Leander
-                  Jones vgl. <rs type="bibl" key="bibl:14866">Allanson, Biography</rs> 22–24; zu den
-                  Übrigen vgl. <ref type="letter">231</ref> &lt;4&gt;. Zu Hutchinson und Townson
-                  vgl. <rs type="bibl" key="bibl:14866">Allanson, Biography</rs> 141f., 157; <rs
-                     type="bibl" key="bibl:19548">Scott, Library</rs> 62–64. – Bereits 1712 hatte BP
+                  Jones vgl. <rs type="bibl" ref="bibl:14866">Allanson, Biography</rs> 22–24; zu den
+                  Übrigen vgl. <ref type="letter" target="letter:231">231</ref> <ref target="letter:231#seg4">4</ref>. Zu Hutchinson und Townson
+                  vgl. <rs type="bibl" ref="bibl:14866">Allanson, Biography</rs> 141f., 157; <rs type="bibl" ref="bibl:19548">Scott, Library</rs> 62–64. – Bereits 1712 hatte BP
                   über Felix Egger ein Verzeichnis englischer Benediktinerschriftsteller erhalten:
-                  vgl. <ref type="letter">231</ref> &lt;4&gt;. 1715 war ihm ein weiterer Katalog
+                  vgl. <ref type="letter" target="letter:231">231</ref> <ref target="letter:231#seg4">4</ref>. 1715 war ihm ein weiterer Katalog
                   angekündigt worden, aber letztlich anscheinend nicht zugegangen, von dessen
                   Existenz Johann Christoph Bartenstein und Konrad Widow durch Bernard Baillie im
-                  Schottenkloster zu Erfurt erfahren hatten: vgl. <ref type="letter">387</ref>
-                  &lt;2&gt;, <ref type="letter">393</ref> &lt;5&gt;.</p></note>
-            <note xml:id="d3e13131">
-               <ref type="context">4</ref>
-               <label>erit capitulum</label><p> Das Generalkapitel der Bursfelder Kongregation fand
-                  vom 5. bis 7. Juli 1716 in Brauweiler statt: <rs type="bibl" key="bibl:20124"
-                     >Volk, Generalkapitels-Rezesse</rs> 3 231–238; <rs type="bibl" key="bibl:20542"
-                     >Ziegler, Bursfelder Kongregation</rs> 372. Schon 1715 war BPs Bitte um
+                  Schottenkloster zu Erfurt erfahren hatten: vgl. <ref type="letter" target="letter:387">387</ref>
+                  <ref target="letter:387#seg2">2</ref>, <ref type="letter" target="letter:393">393</ref> <ref target="letter:393#seg5">5</ref>.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>erit capitulum</mentioned>
+            <p> Das Generalkapitel der Bursfelder Kongregation fand
+                  vom 5. bis 7. Juli 1716 in Brauweiler statt: <rs type="bibl" ref="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 3 231–238; <rs type="bibl" ref="bibl:20542">Ziegler, Bursfelder Kongregation</rs> 372. Schon 1715 war BPs Bitte um
                   Einsendungen für die „Bibliotheca Benedictina“ auf Betreiben des Petrus Friderici
                   aus Erfurt an das Bursfelder Generalkapitel herangetragen worden, doch offenbar
-                  ohne große Resonanz: vgl. <ref type="letter">268</ref> &lt;2&gt;, <ref
-                     type="letter">418</ref> &lt;1&gt;. Der Werdener Abt Cölestin von Geismar als
-                  Präses der Kongregation zeigte hingegen Interesse an BPs Anliegen: vgl. <ref
-                     type="letter">435</ref> &lt;1&gt;.</p></note>
-         </div>
-      </back>
+                  ohne große Resonanz: vgl. <ref type="letter" target="letter:268">268</ref> <ref target="letter:268#seg2">2</ref>, <ref type="letter" target="letter:418">418</ref> <ref target="letter:418#seg1">1</ref>. Der Werdener Abt Cölestin von Geismar als
+                  Präses der Kongregation zeigte hingegen Interesse an BPs Anliegen: vgl. <ref type="letter" target="letter:435">435</ref> <ref target="letter:435#seg1">1</ref>.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <front>
+         <p>Admodum reverendo doctissimoque domino domino Bernardo Petz exempti monasterii Melicensis ordinis sancti Benedicti in Austria professo et bibliothecario. Viennae in Austria. Im Mölcker hoff daselbst abzulegen. <note type="annotation">Postalische Vermerke zur Freimachung.</note></p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende doctissimeque domine, domine colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Post acceptas ultimas admodum reverendae dominationis vestrae literas studiose per me et alios inquisivi <add>per varia loca</add> in authorem Eduardum Maiheu, sed nusquam invenire licuit. Iuvit me in inquirendo serenissimi electoris Palatini <anchor xml:id="n1"/>nuper defuncti<anchor xml:id="n1e"/> bibliothecarius vir doctissimus, qui iussu et sumptibus sui serenissimi olim principalis totius fere Europae praecipuas bibliothecas lustravit; quid mihi diversis vicibus<anchor xml:id="n2"/> rescripserit, accludo<anchor xml:id="n2e"/>. Si admodum reverenda dominatio vestra iudicet virum istum esse posse aliqua in re subsidio, erit ad requisitionem meam paratus. </ab>
+         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n3"/>Duaco<anchor xml:id="n3e"/> heri accepi literas, quod Eduardus Maiheu nusquam ibidem haberi possit, credatur tamen esse in quadam bibliotheca in Lotharingia, quo crastina posta pro eo obtinendo, si ibidem sit, scribetur. </ab>
+         <ab resp="#editor" xml:id="seg3">Hodie accepi ex monasterio Lambspringensi <anchor xml:id="n4"/>acclusum catalogum<anchor xml:id="n4e"/> quorundam authorum; placebit admodum reverendae dominationi vestrae addere et demere pro libitu; est in aliquibus stilus nimis humilis. </ab>
+         <ab resp="#editor" xml:id="seg4">Ex praecedentibus his colligere poterit admodum reverenda dominatio vestra, cur serius ad ultimas respondeam. Loca enim illa, ad quae scriptum fuit, longius hinc distant: debui<del ana="#before">cui</del> proinde in patientia exspectare responsum. Sequenti mense quinta eiusdem <anchor xml:id="n5"/>erit capitulum<anchor xml:id="n5e"/> annale, in quo curabo, ut congregatis ibidem reverendissimis dominis iterum negotium admodum reverendae dominationis vestrae recommendetur. </ab>
+         <ab resp="#editor" xml:id="seg5">Pro oblatis mihi opusculis, quae admodum reverenda dominatio vestra typis vulgavit, gratias habeo maximas; ut ad me deferantur, curam in se suscipiet praefatus dominus bibliothecarius. Scripta interim illa apologetica iam Coloniae extant. Ad ulteriora servitia me offero et maneo</ab>
+         <closer>Admodum reverendae doctissimaeque dominationis vestrae servus obsequiosissimus frater Theodorus Thier.</closer>
+         <closer>Werdenae die 23. Junii 1716.</closer>
+      </body>
    </text>
 </TEI>

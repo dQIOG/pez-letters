@@ -1,45 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="918" xml:id="pez-0918">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">918 Edmond Martène an Bernhard Pez. 1718-03-07. Paris.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Edmond Martène an Bernhard Pez. 1718-03-07. Paris.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">918</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:16792">Hammermayer, Forschungszentren</rs>
-                     168</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Im Datum fehlt eine Jahresangabe; die Bezüge zur bevorstehenden Reise EMs sowie zur Chrysostomus-Edition erlauben jedoch eine eindeutige Zuweisung zu 1718.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">571r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 571r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -54,82 +72,84 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">917</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">931</idno>
-               </ref>
+               <ptr type="prev" target="letter:917"/>
+               <ptr type="next" target="letter:931"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Die „Historiae Anglicanae scriptores“ (von John Selden und Roger Twysden), um die <rs type="person" role="sender">BP</rs> gebeten hatte, hat <rs type="person" role="sender">EM</rs> in Paris gesucht, aber nicht finden können. Wenn <rs type="person" role="sender">BP</rs> sie wünscht, werden sie aus England selbst beschafft werden müssen.</p>
+            <p corresp="#seg2">Die vier Bände der „Vetera analecta“ von Jean Mabillon hat <rs type="person" role="sender">EM</rs> für <rs type="person" role="sender">BP</rs> um 18 Livres gekauft; er hat sie bei sich und wird sie an <rs type="person" role="sender">BP</rs> senden, wenn dieser es befiehlt. Hinsichtlich der übrigen Bücher, nach deren Preis <rs type="person" role="sender">BP</rs> gefragt hat, wartet <rs type="person" role="sender">EM</rs> auf weitere Anweisungen. Wenn sie <rs type="person" role="sender">BP</rs> für sich oder für andere erstehen will, dann soll er dies rasch mitteilen und den Kaufpreis übermitteln, denn nach Ostern wird <rs type="person" role="sender">EM</rs> eine Bibliotheksreise antreten. Dies teilt er mit, damit <rs type="person" role="sender">BP</rs> nicht in seiner Abwesenheit um etwas bittet und enttäuscht wird.</p>
+            <p corresp="#seg3">Die ersten zwei Bände der neuen Edition der Werke des Johannes Chrysostomus, die Bernard de Montfaucon herausgibt, werden nun an die Subskribenten ausgeliefert. Der Subskriptionspreis beträgt für diese beiden Bände 35 Livres; wer alle Bände subskribiert, bezahlt je Band nur 15 Livres.</p>
+            <p corresp="#seg4">Zu Avignon erschienen ist das Werk des Mauriners Jean-Paul Dusault, Priors von La Daurade zu Toulouse, mit dem Titel „Le religieux mourant ou Preparation à la mort“, in zwei Bänden in französischer Sprache. Auch hat Robert Morel, ebenfalls in französischer Sprache, „Entretiens spirituels“ für den Advent veröffentlicht. Dies teilt <rs type="person" role="sender">EM</rs> mit, damit <rs type="person" role="sender">BP</rs> die Werke in seiner „Bibliotheca Benedictina“ berücksichtigt.</p>
+            <p corresp="#seg5">In einem Nachsatz bittet <rs type="person" role="sender">EM</rs> um ein Verzeichnis der unveröffentlichten Texte, die <rs type="person" role="sender">BP</rs> zur Edition vorbereitet, und lässt HP grüßen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e54417">Die „Historiae Anglicanae scriptores“ (von John Selden und Roger Twysden), um die <rs type="person" role="sender">BP</rs> gebeten hatte, hat <rs type="person" role="sender">EM</rs> in Paris gesucht, aber nicht finden können. Wenn <rs type="person" role="sender">BP</rs> sie wünscht, werden sie aus England selbst beschafft werden müssen.</seg><seg type="context" n="2" xml:id="d3e54419">Die vier Bände der „Vetera analecta“ von Jean Mabillon hat <rs type="person" role="sender">EM</rs> für <rs type="person" role="sender">BP</rs> um 18 Livres gekauft; er hat sie bei sich und wird sie an <rs type="person" role="sender">BP</rs> senden, wenn dieser es befiehlt. Hinsichtlich der übrigen Bücher, nach deren Preis <rs type="person" role="sender">BP</rs> gefragt hat, wartet <rs type="person" role="sender">EM</rs> auf weitere Anweisungen. Wenn sie <rs type="person" role="sender">BP</rs> für sich oder für andere erstehen will, dann soll er dies rasch mitteilen und den Kaufpreis übermitteln, denn nach Ostern wird <rs type="person" role="sender">EM</rs> eine Bibliotheksreise antreten. Dies teilt er mit, damit <rs type="person" role="sender">BP</rs> nicht in seiner Abwesenheit um etwas bittet und enttäuscht wird.</seg><seg type="context" n="3" xml:id="d3e54421">Die ersten zwei Bände der neuen Edition der Werke des Johannes Chrysostomus, die Bernard de Montfaucon herausgibt, werden nun an die Subskribenten ausgeliefert. Der Subskriptionspreis beträgt für diese beiden Bände 35 Livres; wer alle Bände subskribiert, bezahlt je Band nur 15 Livres.</seg><seg type="context" n="4" xml:id="d3e54423">Zu Avignon erschienen ist das Werk des Mauriners Jean-Paul Dusault, Priors von La Daurade zu Toulouse, mit dem Titel „Le religieux mourant ou Preparation à la mort“, in zwei Bänden in französischer Sprache. Auch hat Robert Morel, ebenfalls in französischer Sprache, „Entretiens spirituels“ für den Advent veröffentlicht. Dies teilt <rs type="person" role="sender">EM</rs> mit, damit <rs type="person" role="sender">BP</rs> die Werke in seiner „Bibliotheca Benedictina“ berücksichtigt.</seg><seg type="context" n="5" xml:id="d3e54425">In einem Nachsatz bittet <rs type="person" role="sender">EM</rs> um ein Verzeichnis der unveröffentlichten Texte, die <rs type="person" role="sender">BP</rs> zur Edition vorbereitet, und lässt HP grüßen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">VII</hi>.</p>
-            <div type="remarks">
-               <p>Im Datum fehlt eine Jahresangabe; die Bezüge zur bevorstehenden Reise EMs sowie zur Chrysostomus-Edition erlauben jedoch eine eindeutige Zuweisung zu 1718.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Reverendo admodum patri et erudito viro domno Bernardo Pez monacho Benedictino et bibliothecario Mellicensi frater Edmundus Martene humilis monachus e congregatione sancti Mauri salutem plurimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e54447">Auctores decem historiae Anglicanae, quos a me petebas, hactenus Parisiis quaesitos reperire non potui. Hos si optas, ex Anglia ipsa necessario sunt quaerendi. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e54449">Analectorum Mabillonii tomos quatuor tibi emtos libris 18 penes me habeo tibique, cum iusseris, transmittam. De reliquis libris, quorum mihi indicem direxeras ac pretium postulaveras, expecto mandata tua, ad obsequendum tibi semper paratus. Hos tamen si tu ipse pro te aut pro amicis tuis optas, significare mihi ne pigriteris assignato praefixo eorum pretio, nam <seg type="lemma" corresp="#d3e54473">post Pascha</seg> <seg type="lemma" corresp="#d3e54479">aliquod iter litterarium</seg> me suscepturum praevideo. Haec tibi scribenda existimavi operae pretium, ut, si forte absente me aliquid requiras, non frauderis a desiderio tuo. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e54451">Publicam iam lucem vident duo primi tomi operum sancti Johannis Chrysostomi a nostro <pb n="1v"/> Bernardo de Monfaucon adornati iisque, <seg type="lemma" corresp="#d3e54483">qui subscribere volunt</seg>, distribuuntur. Subscriptionis pretium pro duobus tomis est 35 librarum, qui autem pro omnibus simul voluminibus volunt subscribere, 15 libras tantum nunc solvunt pro singulis voluminibus. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e54455">Prodit etiam nunc duobus in octavo tomis Avenione typis mandata nostri <seg type="lemma" corresp="#d3e54489">Pauli Dusault</seg> prioris Tolosani Beatae Mariae Deauratae Praeparatio ad mortem Gallico idiomate<note place="foot" xml:id="d3e54457">	<hi rend="italic">Gallico idiomate</hi> über der Zeile eingefügt.</note>, opus eximium et pietatem singulis in paginis spirans. Publici etiam iuris fecit noster<seg type="lemma" corresp="#d3e54495"> Robertus Morel</seg> Pia cum Deo colloquia Gallice conscripta pro tempore Adventus, in duodecimo; quod te monitum volui, ut iis in tu [<hi rend="italic">sic</hi>] Bibliotheca Benedictina locum tribuas. Vale et ora pro me.</seg></p>
-            <p xml:space="preserve">Lutetiae Parisiorum die 7. Martii.</p>
-            <p xml:space="preserve"><seg type="context" n="5" xml:space="preserve" xml:id="d3e54470"><seg type="lemma" corresp="#d3e54499">Anecdotorum</seg>, quae paras editioni, si non graveris, oro, ut mihi indicem mittas. Fratrem tuum Hieronymum a me saluta.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e54473">
-               <ref type="context">2</ref>
-               <label>post Pascha</label><p>Der Ostersonntag fiel 1718 auf den 17. April. </p></note>
-            <note xml:id="d3e54479">
-               <ref type="context">2</ref>
-               <label>aliquod iter litterarium</label><p> Zu der Reise EMs und Ursin Durands nach
-                  Norddeutschland vgl. <rs type="bibl" key="bibl:16708">Haacke–Sauermann,
-                     Einleitung</rs> 137–152; <rs type="bibl" key="bibl:17216">Hurel,
-                     Chartreuses</rs> 381.</p></note>
-            <note xml:id="d3e54483">
-               <ref type="context">3</ref>
-               <label>qui subscribere volunt</label><p> Zur Werbung um Subskriptionen für
-                  Montfaucons Werke vgl. <ref type="letter">682</ref> &lt;3&gt;, <ref type="letter"
-                     >700</ref> &lt;6&gt;.</p></note>
-            <note xml:id="d3e54489">
-               <ref type="context">4</ref>
-               <label>Pauli Dusault</label><p><rs type="bibl" key="bibl:14772">Tassin, Histoire
-                     littéraire</rs> 433–436; vgl. <rs type="bibl" key="bibl:15604">Chaussy,
-                     Matricula</rs> 52; <rs type="bibl" key="bibl:20356">Wilhelm et al., Nouveau
-                     supplement 2</rs> 199f.; <rs type="bibl" key="bibl:20358">Wilhelm et al.,
-                     Nouveau supplément 3</rs> 42.</p></note>
-            <note xml:id="d3e54495">
-               <ref type="context">4</ref>
-               <label> Robertus Morel</label><p><rs type="bibl" key="bibl:14772">Tassin, Histoire
-                     littéraire</rs> 500–505; vgl. <rs type="bibl" key="bibl:15602">Chaussy,
-                     Bénédictins</rs> 2 46; <rs type="bibl" key="bibl:15604">Chaussy, Matricula</rs>
-                  59; <rs type="bibl" key="bibl:16302">Franklin, Anciennes bibliothèques</rs> 1 112,
-                  125; <rs type="bibl" key="bibl:20356">Wilhelm et al., Nouveau supplement 2</rs>
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>post Pascha</mentioned>
+            <p>Der Ostersonntag fiel 1718 auf den 17. April. </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>aliquod iter litterarium</mentioned>
+            <p> Zu der Reise EMs und Ursin Durands nach
+                  Norddeutschland vgl. <rs type="bibl" ref="bibl:16708">Haacke–Sauermann,
+                     Einleitung</rs> 137–152; <rs type="bibl" ref="bibl:17216">Hurel,
+                     Chartreuses</rs> 381.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>qui subscribere volunt</mentioned>
+            <p> Zur Werbung um Subskriptionen für
+                  Montfaucons Werke vgl. <ref type="letter" target="letter:682">682</ref> <ref target="letter:682#seg3">3</ref>, <ref type="letter" target="letter:700">700</ref> <ref target="letter:700#seg6">6</ref>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
+            <mentioned>Pauli Dusault</mentioned>
+            <p><rs type="bibl" ref="bibl:14772">Tassin, Histoire
+                     littéraire</rs> 433–436; vgl. <rs type="bibl" ref="bibl:15604">Chaussy,
+                     Matricula</rs> 52; <rs type="bibl" ref="bibl:20356">Wilhelm et al., Nouveau
+                     supplement 2</rs> 199f.; <rs type="bibl" ref="bibl:20358">Wilhelm et al.,
+                     Nouveau supplément 3</rs> 42.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned> Robertus Morel</mentioned>
+            <p><rs type="bibl" ref="bibl:14772">Tassin, Histoire
+                     littéraire</rs> 500–505; vgl. <rs type="bibl" ref="bibl:15602">Chaussy,
+                     Bénédictins</rs> 2 46; <rs type="bibl" ref="bibl:15604">Chaussy, Matricula</rs>
+                  59; <rs type="bibl" ref="bibl:16302">Franklin, Anciennes bibliothèques</rs> 1 112,
+                  125; <rs type="bibl" ref="bibl:20356">Wilhelm et al., Nouveau supplement 2</rs>
                   119f. Morel war der Nachfolger von Jean-Luc d’Achery als Bibliothekar von
-                  St.-Germain-des-Prés gewesen. </p></note>
-            <note xml:id="d3e54499">
-               <ref type="context">5</ref>
-               <label>Anecdotorum</label><p> Der Ausdruck dürfte zu diesem Zeitpunkt noch eher als
+                  St.-Germain-des-Prés gewesen. </p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg5">
+            <mentioned>Anecdotorum</mentioned>
+            <p> Der Ausdruck dürfte zu diesem Zeitpunkt noch eher als
                   bloße Bezeichnung denn als Titel des geplanten Werkes zu verstehen sein. Wie aus
                   der von BP in Reaktion auf diese Bitte an EM geschickten Liste zu ersehen ist,
-                  dachte er noch an einen Titel „Novum spicilegium“: vgl. <ref type="letter"
-                     >932</ref> &lt;1&gt;. Zur Entwicklung der Pläne für das Editionswerk vgl.
-                  Einleitung, Abschnitt I.4.</p></note>
-         </div>
-      </back>
+                  dachte er noch an einen Titel „Novum spicilegium“: vgl. <ref type="letter" target="letter:932">932</ref> <ref target="letter:932#seg1">1</ref>. Zur Entwicklung der Pläne für das Editionswerk vgl.
+                  Einleitung, Abschnitt I.4.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>VII</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:16792">
+            <title type="short">Hammermayer, Forschungszentren</title>
+            <biblScope>168</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Reverendo admodum patri et erudito viro domno Bernardo Pez monacho Benedictino et bibliothecario Mellicensi frater Edmundus Martene humilis monachus e congregatione sancti Mauri salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Auctores decem historiae Anglicanae, quos a me petebas, hactenus Parisiis quaesitos reperire non potui. Hos si optas, ex Anglia ipsa necessario sunt quaerendi. </ab>
+         <ab resp="#editor" xml:id="seg2">Analectorum Mabillonii tomos quatuor tibi emtos libris 18 penes me habeo tibique, cum iusseris, transmittam. De reliquis libris, quorum mihi indicem direxeras ac pretium postulaveras, expecto mandata tua, ad obsequendum tibi semper paratus. Hos tamen si tu ipse pro te aut pro amicis tuis optas, significare mihi ne pigriteris assignato praefixo eorum pretio, nam <anchor xml:id="n1"/>post Pascha<anchor xml:id="n1e"/> <anchor xml:id="n2"/>aliquod iter litterarium<anchor xml:id="n2e"/> me suscepturum praevideo. Haec tibi scribenda existimavi operae pretium, ut, si forte absente me aliquid requiras, non frauderis a desiderio tuo. </ab>
+         <ab resp="#editor" xml:id="seg3">Publicam iam lucem vident duo primi tomi operum sancti Johannis Chrysostomi a nostro <pb n="1v"/> Bernardo de Monfaucon adornati iisque, <anchor xml:id="n3"/>qui subscribere volunt<anchor xml:id="n3e"/>, distribuuntur. Subscriptionis pretium pro duobus tomis est 35 librarum, qui autem pro omnibus simul voluminibus volunt subscribere, 15 libras tantum nunc solvunt pro singulis voluminibus. </ab>
+         <ab resp="#editor" xml:id="seg4">Prodit etiam nunc duobus in octavo tomis Avenione typis mandata nostri <anchor xml:id="n4"/>Pauli Dusault<anchor xml:id="n4e"/> prioris Tolosani Beatae Mariae Deauratae Praeparatio ad mortem <add place="above">Gallico idiomate</add>, opus eximium et pietatem singulis in paginis spirans. Publici etiam iuris fecit noster<anchor xml:id="n5"/> Robertus Morel<anchor xml:id="n5e"/> Pia cum Deo colloquia Gallice conscripta pro tempore Adventus, in duodecimo; quod te monitum volui, ut iis in <sic>tu</sic> Bibliotheca Benedictina locum tribuas. Vale et ora pro me.</ab>
+         <closer>Lutetiae Parisiorum die 7. Martii.</closer>
+         <closer xml:id="seg5"><anchor xml:id="n6"/>Anecdotorum<anchor xml:id="n6e"/>, quae paras editioni, si non graveris, oro, ut mihi indicem mittas. Fratrem tuum Hieronymum a me saluta.</closer>
+      </body>
    </text>
 </TEI>

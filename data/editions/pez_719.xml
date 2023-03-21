@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="719" xml:id="pez-0719">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">719 Johann Benedikt Gentilotti von Engelsbrunn an Bernhard Pez. 1717-01-09. Wien.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Benedikt Gentilotti von Engelsbrunn an Bernhard Pez. 1717-01-09. Wien.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">719</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -21,34 +33,34 @@
             <relatedItem type="otherEdition">
                <bibl>Staufer, Litterae 21.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:16526">Glassner–Haidinger, Inventar Melk 1</rs>/1
-                     9</bibl>
-                  <bibl><rs type="bibl" key="bibl:16586">Gottlieb, Bibliothekskataloge 1</rs>
-                     141</bibl>
-                  <bibl><rs type="bibl" key="bibl:16794">Hammermayer, Maurinismus</rs> 431</bibl>
-                  <bibl><rs type="bibl" key="bibl:18236">Mayer, Nachlaß</rs> 18 549f</bibl>
-                  <bibl><rs type="bibl" key="bibl:18772">Peper, Österreichische Gelehrtenwelt</rs>
-                     23</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               BP gibt in seinem Bericht zur Vorgeschichte der Kontroverse mit BG die den „Codex Udalrici“ betreffenden Sätze dieses Briefes in leicht verändertem Wortlaut als Auszug eines Briefes des „Angelus Fonteius“ wieder: Pez, Dissertatio apologetico-litteraria 9f.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">III</biblScope>
-               <biblScope unit="page">273r–274v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 273r–274v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -63,137 +75,140 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">718</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">608</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">700</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">702</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">718</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">828</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">700</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">702</idno>
-               </ref>
+               <ptr type="prev" target="letter:718"/>
+               <ptr type="mentions" target="letter:608"/>
+               <ptr type="mentions" target="letter:700"/>
+               <ptr type="mentions" target="letter:702"/>
+               <ptr type="mentions" target="letter:718"/>
+               <ptr type="mentionedIn" target="letter:828"/>
+               <ptr type="sentWith" target="letter:700"/>
+               <ptr type="sentWith" target="letter:702"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">BG ist es peinlich, auf den jüngsten Brief <rs type="person" role="sender">BPs</rs> <ref type="letter" target="letter:718">718</ref> so spät zu antworten, aber bei ihrer Freundschaft hält er es für unnötig, eine Entschuldigung vorzubringen. BG ist erstaunt, dass <rs type="person" role="sender">BP</rs> dem Ulmer Buchhändler den Ankauf der „Acta sanctorum OSB“ (für die Hofbibliothek), den ihm BG anheimgestellt hatte, abgesagt hat. BG hat jedoch vor wenigen Tagen die fünf Bände der „Annales OSB“ sowie mehrere der maurinischen Kirchenvätereditionen erlangen können und vertraut darauf, dass die Anschaffung der „Acta sanctorum OSB“ ebenso leicht gelingen wird. Da allerdings von Buchhändlern üblicherweise nur vollständige Werke gehandelt werden, ist der erste Band, den <rs type="person" role="sender">BP</rs> an BG übermittelt hat <ref type="letter" target="letter:608">608</ref>, nun weder von Nutzen für diesen, noch kann er zu einem Tauschgeschäft dienen, nicht zuletzt im Hinblick darauf, dass <rs type="person" role="sender">BP</rs> die Dubletten der Hofbibliothek unverblümt als von wenig Wert bezeichnet hat.</p>
+            <p corresp="#seg2">Kaspar Altlechner hat BG kürzlich im Auftrag <rs type="person" role="sender">BPs</rs> jenen Teil (den zweiten Band) von Johann Gottlieb Krauses „Umständlicher bücher-historie“ gebracht, der sechs Kataloge österreichischer Handschriftenbestände (Pez, „Nachricht“) enthält. BG ist überzeugt, dass <rs type="person" role="sender">BPs</rs> und HPs Sorgfalt und ihr Eifer, die Gelehrsamkeit voranzubringen, auf allgemeine Zustimmung stoßen werden.</p>
+            <p corresp="#seg3">Eine Pergamenthandschrift der Briefsammlung des Udalrich von Bamberg („Codex Udalrici“) gibt es auch in der Hofbibliothek. Auf kaiserlichen Befehl hat BG diese bereits Gottfried Wilhelm Leibniz zugänglich gemacht, der eine Edition überlegte. Schon vor einiger Zeit hat BG eine gründliche Durchsicht dieser Sammlung vorgenommen; diese Mühe wäre durch die Arbeit <rs type="person" role="sender">BPs</rs> unnötig geworden, wenn diesem früher jenes Exemplar (die Zwettler Handschrift) in die Hände gefallen wäre, von dem er einen Auszug in den Leipziger „Acta eruditorum“ zu publizieren gedenkt.</p>
+            <p corresp="#seg4">Die Apologie der von Denis de Sainte-Marthe herausgegebenen „Gallia Christiana“ durch Jean-Évangéliste Thiroux <ref type="letter" target="letter:702">702</ref> hat BG mit Vergnügen gelesen; in Erstaunen versetzt ihn das jämmerliche Gefasel in den „Mémoires de Trévoux“, das Thiroux gegen Ende seiner Abhandlung zu Recht verreißt. Diese sowie einen Brief von François Le Texier (700?) sendet BG als Beilagen mit Dank an <rs type="person" role="sender">BP</rs> zurück.</p>
+            <p corresp="#seg5">BG ist erfreut, dass <rs type="person" role="sender">BP</rs> über Johann Jakob Mascov seiner Meinung ist; diese teilen auch andere, insbesondere Johann Burkhard Mencke, der in seinem Empfehlungsbrief für Mascov geschrieben hat, er hätte niemand, den er mit diesem vergleiche.</p>
+            <p corresp="#seg6">BG würde gerne mehr schreiben, aber sein Bruder (Johann Franz Gentilotti von Engelsbrunn), der Kanzler des Salzburger Erzbischofs (Franz Anton von Harrach), ist in Geschäften nach Wien geschickt worden und nimmt ihn in Anspruch. Abschließend äußert BG seine Freude über <rs type="person" role="sender">BPs</rs> Fertigstellung des Melker Bibliothekskatalogs, von dem BG für seine Arbeiten sehr profitieren wird. Er fordert zur raschen Drucklegung auf und schließt mit Neujahrswünschen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e26140">BG ist es peinlich, auf den jüngsten Brief <rs type="person" role="sender">BPs</rs> <ref type="letter">718</ref> so spät zu antworten, aber bei ihrer Freundschaft hält er es für unnötig, eine Entschuldigung vorzubringen. BG ist erstaunt, dass <rs type="person" role="sender">BP</rs> dem Ulmer Buchhändler den Ankauf der „Acta sanctorum OSB“ (für die Hofbibliothek), den ihm BG anheimgestellt hatte, abgesagt hat. BG hat jedoch vor wenigen Tagen die fünf Bände der „Annales OSB“ sowie mehrere der maurinischen Kirchenvätereditionen erlangen können und vertraut darauf, dass die Anschaffung der „Acta sanctorum OSB“ ebenso leicht gelingen wird. Da allerdings von Buchhändlern üblicherweise nur vollständige Werke gehandelt werden, ist der erste Band, den <rs type="person" role="sender">BP</rs> an BG übermittelt hat <ref type="letter">608</ref>, nun weder von Nutzen für diesen, noch kann er zu einem Tauschgeschäft dienen, nicht zuletzt im Hinblick darauf, dass <rs type="person" role="sender">BP</rs> die Dubletten der Hofbibliothek unverblümt als von wenig Wert bezeichnet hat.</seg><seg type="context" n="2" xml:id="d3e26148">Kaspar Altlechner hat BG kürzlich im Auftrag <rs type="person" role="sender">BPs</rs> jenen Teil (den zweiten Band) von Johann Gottlieb Krauses „Umständlicher bücher-historie“ gebracht, der sechs Kataloge österreichischer Handschriftenbestände (Pez, „Nachricht“) enthält. BG ist überzeugt, dass <rs type="person" role="sender">BPs</rs> und HPs Sorgfalt und ihr Eifer, die Gelehrsamkeit voranzubringen, auf allgemeine Zustimmung stoßen werden.</seg><seg type="context" n="3" xml:id="d3e26150">Eine Pergamenthandschrift der Briefsammlung des Udalrich von Bamberg („Codex Udalrici“) gibt es auch in der Hofbibliothek. Auf kaiserlichen Befehl hat BG diese bereits Gottfried Wilhelm Leibniz zugänglich gemacht, der eine Edition überlegte. Schon vor einiger Zeit hat BG eine gründliche Durchsicht dieser Sammlung vorgenommen; diese Mühe wäre durch die Arbeit <rs type="person" role="sender">BPs</rs> unnötig geworden, wenn diesem früher jenes Exemplar (die Zwettler Handschrift) in die Hände gefallen wäre, von dem er einen Auszug in den Leipziger „Acta eruditorum“ zu publizieren gedenkt.</seg><seg type="context" n="4" xml:id="d3e26152">Die Apologie der von Denis de Sainte-Marthe herausgegebenen „Gallia Christiana“ durch Jean-Évangéliste Thiroux <ref type="letter">702</ref> hat BG mit Vergnügen gelesen; in Erstaunen versetzt ihn das jämmerliche Gefasel in den „Mémoires de Trévoux“, das Thiroux gegen Ende seiner Abhandlung zu Recht verreißt. Diese sowie einen Brief von François Le Texier (700?) sendet BG als Beilagen mit Dank an <rs type="person" role="sender">BP</rs> zurück.</seg><seg type="context" n="5" xml:id="d3e26157">BG ist erfreut, dass <rs type="person" role="sender">BP</rs> über Johann Jakob Mascov seiner Meinung ist; diese teilen auch andere, insbesondere Johann Burkhard Mencke, der in seinem Empfehlungsbrief für Mascov geschrieben hat, er hätte niemand, den er mit diesem vergleiche.</seg><seg type="context" n="6" xml:id="d3e26159">BG würde gerne mehr schreiben, aber sein Bruder (Johann Franz Gentilotti von Engelsbrunn), der Kanzler des Salzburger Erzbischofs (Franz Anton von Harrach), ist in Geschäften nach Wien geschickt worden und nimmt ihn in Anspruch. Abschließend äußert BG seine Freude über <rs type="person" role="sender">BPs</rs> Fertigstellung des Melker Bibliothekskatalogs, von dem BG für seine Arbeiten sehr profitieren wird. Er fordert zur raschen Drucklegung auf und schließt mit Neujahrswünschen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>BP gibt in seinem Bericht zur Vorgeschichte der Kontroverse mit BG die den „Codex Udalrici“ betreffenden Sätze dieses Briefes in leicht verändertem Wortlaut als Auszug eines Briefes des „Angelus Fonteius“ wieder: Pez, Dissertatio apologetico-litteraria 9f.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Clarissimo viro domno Bernardo Pez Benedictino et bibliothecario Mellicensi eruditissimo salutem plurimam dicit Joannes Benedictus Gentilotus ab Engelsbrun.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e26177">Cum pudore tam longo intervallo litteris tuis respondeo, vir amicissime, nec ullam tamen excusationem affero, quod necessitudo, quam tu mihi tecum esse voluisti, eam desiderare non videatur. Emtionem Actorum ordinis sancti Benedicti in arbitrium tuum a me collatam quod Ulmensi bibliopolae renuntiaveris, miror quidem; at cum tibi sic visum fuerit, eo aequiore animo fero, quod confidam fore, ut quemadmodum paucis abhinc diebus Annalium tomos quinque et <seg type="lemma" corresp="#d3e26204">complures sanctorum patrum editiones</seg> a doctissimis sancti Mauri monachis procuratas sum nactus, ita mihi nullo negotio Acta quoque illa obveniant. Cum vero opera nonnisi integra a bibliopolis addici soleant, tute intelligis tomum primum, quem ad me misisti, nec mihi usui nec ulli cum eo permutationi locum esse, praesertim cum superfluos <pb n="1v"/> nostros bona fide consignatos parvi pendere non obscure prae te feras. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e26181">Humanissimus domnus Gasparus mihi nuper tuo iussu tradidit Krausii Litterariae historiae partem illam, cui <seg type="lemma" corresp="#d3e26210">sex catalogi</seg> manuscriptorum Austriae intexti sunt. Qua de re, ut ego valde te amo, ita minime dubito tuam fratrisque diligentiam et in amplificanda re litteraria studium ab omnibus probatum et commendatum iri. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e26183">Udalrici Babebergensis [<hi rend="italic">sic</hi>] Codex epistolaris membraneus eximiae notae exstat etiam in caesarea bibliotheca, cum <seg type="lemma" corresp="#d3e26222">Leibnitio immortalis memoriae viro</seg>, qui eius<seg type="lemma" corresp="#d3e26226"> editionem meditabatur</seg>, iussu caesaris a me communicatus. Integram eius recensionem iam dudum institui; quo labore me opera tua levasset, si citius<seg type="lemma" corresp="#d3e26230"> exemplum illud</seg> in manus vestras incidisset, cuius epitomen inter<seg type="lemma" corresp="#d3e26234"> Acta Lipsiensium</seg> litteraria evulgare voluisti. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e26188"><seg type="lemma" corresp="#d3e26238">Apologiam pro Gallia Christiana Sanmarthani a clarissimo Thirusio</seg> scriptam summa cum voluptate perlegi et miratus sum <pb n="2r"/> Trevoltianos tam misere alucinatos, quos ille merito suo praesertim prope finem egregie depexos dedit. Eam apologiam et domni<seg type="lemma" corresp="#d3e26244"> Texerii epistolam</seg> cum ingentibus gratiis ad te remitto et in has litteras includo. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e26192">Gaudeo te de Mascovio mecum sentire; idem sentiunt alii, cum quibus diutius versatus est, praesertim clarissimus <seg type="lemma" corresp="#d3e26248">Menkenius</seg>, qui in commendatitiis litteris scribit se neminem habere, quem cum ipso componat. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e26194">Plura ad te scribere volentem <seg type="lemma" corresp="#d3e26254">germanus frater</seg> meus Salisburgensium principis cancellarius negotiorum caussa huc legatus interpellat eaque in aliud tempus diferre [<hi rend="italic">sic</hi>] cogit. Illud tamen non pratermittam, supra, quam dici possit, me laetari de <seg type="lemma" corresp="#d3e26261">perfecto tuo Mellicensis bibliothecae catalogo</seg>, quod probe sciam me mirum quantum ex eo proficere et iuvari posse, tametsi me aliosque ea de re non monuisses. Fac igitur, ut, quoad eius fieri poterit, quantocius in lucem prodeat et omnigenae eruditionis fontibus hortulos <pb n="2v"/> nostros irriget. Deus te hoc, quem exorsi sumus, aliisque quamplurimis annis incolumem servet.</seg></p>
-            <p xml:space="preserve">Vindobona ante diem V. Idus Januarias MDCCXVII.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e26204">
-               <ref type="context">1</ref>
-               <label>complures ... editiones</label><p>Welche Werke im Einzelnen Gegenstand dieser
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>complures ... editiones</mentioned>
+            <p>Welche Werke im Einzelnen Gegenstand dieser
                   Anschaffung für die Hofbibliothek waren, ist nicht festzustellen. Zu den
-                  maurinischen Kirchenvätereditionen vgl. <ref type="letter">32</ref> &lt;4&gt;;
-                  sowie <rs type="bibl" key="bibl:18960">Quantin, Catholicisme classique</rs>
-                  169–198. Zu ihrem Ankauf in Melk vgl. 346.</p></note>
-            <note xml:id="d3e26210">
-               <ref type="context">2</ref>
-               <label>sex catalogi</label><p> Die „Nachricht“ gliedert sich in sechs Abschnitte zu den Bibliotheken des Augustiner-Chorherrenstifts Dürnstein und der Benediktinerklöster Seitenstetten, Lambach, Kremsmünster, des Schottenklosters zu Wien sowie Garsten.</p></note>
-            <note xml:id="d3e26216">
-               <ref type="context">3</ref>
-               <label>Udalrici ... Codex</label><p> Zum Formelbuch Udalrichs von Bamberg vgl. <rs
-                     type="bibl" key="bibl:17230">Hussl, Urkundensammlung</rs>; <rs type="bibl"
-                     key="bibl:17358">Johanek, Reichskanzlei</rs> 40–44; <rs type="bibl"
-                     key="bibl:18130">Manitius, Literatur</rs> 3 287–289; <rs type="bibl"
-                     key="bibl:18856">Pivec, Studien und Forschungen</rs>; <rs type="bibl"
-                     key="bibl:20540">Ziegler, Kompilator</rs> 258–260, 278–280. Die von BG hier
-                  genannte Wiener Handschrift ist heute ÖNB, Cod. 398; vgl. <rs type="bibl"
-                     key="bibl:17012">Hermann, Verzeichnis 2/2</rs> 211f.; <rs type="bibl"
-                     key="bibl:17990">Lhotsky, Quellenkunde</rs> 235. </p></note>
-            <note xml:id="d3e26222">
-               <ref type="context">3</ref>
-               <label>Leibnitio ... viro</label><p> Leibniz war am 14. November 1716 in Hannover gestorben.</p></note>
-            <note xml:id="d3e26226">
-               <ref type="context">3</ref>
-               <label> editionem meditabatur</label><p>Leibniz hatte eine heute nicht mehr erhaltene
+                  maurinischen Kirchenvätereditionen vgl. <ref type="letter" target="letter:32">32</ref> <ref target="letter:32#seg4">4</ref>;
+                  sowie <rs type="bibl" ref="bibl:18960">Quantin, Catholicisme classique</rs>
+                  169–198. Zu ihrem Ankauf in Melk vgl. 346.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>sex catalogi</mentioned>
+            <p> Die „Nachricht“ gliedert sich in sechs Abschnitte zu den Bibliotheken des Augustiner-Chorherrenstifts Dürnstein und der Benediktinerklöster Seitenstetten, Lambach, Kremsmünster, des Schottenklosters zu Wien sowie Garsten.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>Udalrici ... Codex</mentioned>
+            <p> Zum Formelbuch Udalrichs von Bamberg vgl. <rs type="bibl" ref="bibl:17230">Hussl, Urkundensammlung</rs>; <rs type="bibl" ref="bibl:17358">Johanek, Reichskanzlei</rs> 40–44; <rs type="bibl" ref="bibl:18130">Manitius, Literatur</rs> 3 287–289; <rs type="bibl" ref="bibl:18856">Pivec, Studien und Forschungen</rs>; <rs type="bibl" ref="bibl:20540">Ziegler, Kompilator</rs> 258–260, 278–280. Die von BG hier
+                  genannte Wiener Handschrift ist heute ÖNB, Cod. 398; vgl. <rs type="bibl" ref="bibl:17012">Hermann, Verzeichnis 2/2</rs> 211f.; <rs type="bibl" ref="bibl:17990">Lhotsky, Quellenkunde</rs> 235. </p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>Leibnitio ... viro</mentioned>
+            <p> Leibniz war am 14. November 1716 in Hannover gestorben.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned> editionem meditabatur</mentioned>
+            <p>Leibniz hatte eine heute nicht mehr erhaltene
                   Abschrift nach dem Wiener Codex herstellen lassen, nach welcher später Johann
-                  Georg Eckhart den „Codex Udalrici“ edierte: vgl. <ref type="letter">886</ref>
-                  &lt;3&gt;, <ref type="letter">955</ref> &lt;2&gt;.</p></note>
-            <note xml:id="d3e26230">
-               <ref type="context">3</ref>
-               <label> exemplum illud</label><p> Gemeint ist die Zwettler Überlieferung des „Codex
-                  Udalrici“: StiB Zwettl, Cod. 283; vgl. <rs type="bibl" key="bibl:20538"
-                     >Ziegler–Rössl, Katalog</rs> 3 204f. Von ihr hatte BP bei dem Besuch in Zwettl
+                  Georg Eckhart den „Codex Udalrici“ edierte: vgl. <ref type="letter" target="letter:886">886</ref>
+                  <ref target="letter:886#seg3">3</ref>, <ref type="letter" target="letter:955">955</ref> <ref target="letter:955#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned> exemplum illud</mentioned>
+            <p> Gemeint ist die Zwettler Überlieferung des „Codex
+                  Udalrici“: StiB Zwettl, Cod. 283; vgl. <rs type="bibl" ref="bibl:20538">Ziegler–Rössl, Katalog</rs> 3 204f. Von ihr hatte BP bei dem Besuch in Zwettl
                   auf der Bibliotheksreise im Sommer 1716 Kenntnis erlangt, wie ein bei dieser
                   Gelegenheit festgehaltenes Notat beweist: StiB Melk, Cod. 1850, 94v. Ob er die
                   Handschrift in der Folge nach Melk entlehnte, ist nicht festzustellen; jedenfalls
                   war sie als Vorlage der Edition vorgesehen, die er ankündigte, aber im Gefolge der
-                  daraus erwachsenen Kontroverse mit BG letztlich nicht ausführte.</p></note>
-            <note xml:id="d3e26234">
-               <ref type="context">3</ref>
-               <label> Acta Lipsiensium</label><p>BPs „Conspectus Codicis Udalrici“ erschien im Heft der „Acta eruditorum“ für den Monat Januar 1717: vgl. 759. Er kann BG daher zu diesem Zeitpunkt noch nicht vorgelegen haben. BGs Worte lassen eher darauf schließen, dass BP in 718 diese Schrift angekündigt hatte, an der sich in der Folge die Kontroverse entzündete; dazu vgl. Einleitung, Abschnitt I.5.</p></note>
-            <note xml:id="d3e26238">
-               <ref type="context">4</ref>
-               <label>Apologiam ... Thirusio</label><p> Vgl. <ref type="letter">702</ref>; sowie
-                  Einleitung, Abschnitt I.5.</p></note>
-            <note xml:id="d3e26244">
-               <ref type="context">4</ref>
-               <label> Texerii epistolam</label><p> Da 671 vermutlich bereits früher an BG
-                  weitergegeben worden (vgl. <ref type="letter">685</ref> &lt;1&gt;) und 698 wohl
+                  daraus erwachsenen Kontroverse mit BG letztlich nicht ausführte.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned> Acta Lipsiensium</mentioned>
+            <p>BPs „Conspectus Codicis Udalrici“ erschien im Heft der „Acta eruditorum“ für den Monat Januar 1717: vgl. 759. Er kann BG daher zu diesem Zeitpunkt noch nicht vorgelegen haben. BGs Worte lassen eher darauf schließen, dass BP in 718 diese Schrift angekündigt hatte, an der sich in der Folge die Kontroverse entzündete; dazu vgl. Einleitung, Abschnitt I.5.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
+            <mentioned>Apologiam ... Thirusio</mentioned>
+            <p> Vgl. <ref type="letter" target="letter:702">702</ref>; sowie
+                  Einleitung, Abschnitt I.5.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg4">
+            <mentioned> Texerii epistolam</mentioned>
+            <p> Da 671 vermutlich bereits früher an BG
+                  weitergegeben worden (vgl. <ref type="letter" target="letter:685">685</ref> <ref target="letter:685#seg1">1</ref>) und 698 wohl
                   nie bei BP angekommen war, dürfte es sich bei dem hier zurückerstatteten Brief um
-                  700 handeln.</p></note>
-            <note xml:id="d3e26248">
-               <ref type="context">5</ref>
-               <label>Menkenius</label><p> Mascov hatte in Leipzig auf Vermittlung eines ehemaligen
+                  700 handeln.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
+            <mentioned>Menkenius</mentioned>
+            <p> Mascov hatte in Leipzig auf Vermittlung eines ehemaligen
                   Lehrers Kontakt zu Johann Burkhard Mencke geknüpft, welcher in der Folge zu seinem
-                  Mentor wurde: <rs type="bibl" key="bibl:17970">Leskien, Mascov</rs> 31; <rs
-                     type="bibl" key="bibl:20122">Voigt, Mascov</rs> 335f. Zu dem hier erwähnten
-                  Empfehlungsschreiben vgl. <ref type="letter">685</ref> &lt;4&gt;.</p></note>
-            <note xml:id="d3e26254">
-               <ref type="context">6</ref>
-               <label>germanus frater</label><p> Zu BGs jüngerem Bruder Johann Franz Gentilotti vgl.
-                     <rs type="bibl" key="bibl:18300">Menestrina, Gentilotti</rs> 204; <rs
-                     type="bibl" key="bibl:19212">Rumpl, Stadtpfarrer</rs> 112; <rs type="bibl"
-                     key="bibl:19818">Strnad, Gentilotti</rs> 137f., 152. Eine offizielle
+                  Mentor wurde: <rs type="bibl" ref="bibl:17970">Leskien, Mascov</rs> 31; <rs type="bibl" ref="bibl:20122">Voigt, Mascov</rs> 335f. Zu dem hier erwähnten
+                  Empfehlungsschreiben vgl. <ref type="letter" target="letter:685">685</ref> <ref target="letter:685#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg6">
+            <mentioned>germanus frater</mentioned>
+            <p> Zu BGs jüngerem Bruder Johann Franz Gentilotti vgl.
+                     <rs type="bibl" ref="bibl:18300">Menestrina, Gentilotti</rs> 204; <rs type="bibl" ref="bibl:19212">Rumpl, Stadtpfarrer</rs> 112; <rs type="bibl" ref="bibl:19818">Strnad, Gentilotti</rs> 137f., 152. Eine offizielle
                   diplomatische Mission nach Wien ist für diesen Zeitpunkt nicht nachzuweisen: vgl.
-                     <rs type="bibl" key="bibl:16878">Hausmann–Kotasek–Groß, Repertorium 2</rs> 81.
-               </p></note>
-            <note xml:id="d3e26261">
-               <ref type="context">6</ref>
-               <label>perfecto ... catalogo</label><p>Zu BPs Handschriftenkatalog der Melker
-                  Bibliothek vgl. <ref type="letter">559</ref> &lt;3&gt;; sowie <rs type="bibl"
-                     key="bibl:16512">Glassner, Handschriften</rs> 140. Dieser Katalog ist in 16
+                     <rs type="bibl" ref="bibl:16878">Hausmann–Kotasek–Groß, Repertorium 2</rs> 81.
+               </p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg6">
+            <mentioned>perfecto ... catalogo</mentioned>
+            <p>Zu BPs Handschriftenkatalog der Melker
+                  Bibliothek vgl. <ref type="letter" target="letter:559">559</ref> <ref target="letter:559#seg3">3</ref>; sowie <rs type="bibl" ref="bibl:16512">Glassner, Handschriften</rs> 140. Dieser Katalog ist in 16
                   ungebundenen Faszikeln erhalten. Er trägt kein Datum; ob hier von seiner
                   Fertigstellung in der heute vorliegenden Form oder von einer früheren
-                  Bearbeitungsstufe die Rede ist, kann nicht als gesichert gelten.</p></note>
-         </div>
-      </back>
+                  Bearbeitungsstufe die Rede ist, kann nicht als gesichert gelten.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:16526">
+            <title type="short">Glassner–Haidinger, Inventar Melk 1</title>
+            <biblScope>/1 9</biblScope>
+         </bibl>
+         <bibl corresp="bibl:16586">
+            <title type="short">Gottlieb, Bibliothekskataloge 1</title>
+            <biblScope>141</biblScope>
+         </bibl>
+         <bibl corresp="bibl:16794">
+            <title type="short">Hammermayer, Maurinismus</title>
+            <biblScope>431</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18236">
+            <title type="short">Mayer, Nachlaß</title>
+            <biblScope>18 549f</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18772">
+            <title type="short">Peper, Österreichische Gelehrtenwelt</title>
+            <biblScope>23</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Clarissimo viro domno Bernardo Pez Benedictino et bibliothecario Mellicensi eruditissimo salutem plurimam dicit Joannes Benedictus Gentilotus ab Engelsbrun.</opener>
+         <ab resp="#editor" xml:id="seg1">Cum pudore tam longo intervallo litteris tuis respondeo, vir amicissime, nec ullam tamen excusationem affero, quod necessitudo, quam tu mihi tecum esse voluisti, eam desiderare non videatur. Emtionem Actorum ordinis sancti Benedicti in arbitrium tuum a me collatam quod Ulmensi bibliopolae renuntiaveris, miror quidem; at cum tibi sic visum fuerit, eo aequiore animo fero, quod confidam fore, ut quemadmodum paucis abhinc diebus Annalium tomos quinque et <anchor xml:id="n1"/>complures sanctorum patrum editiones<anchor xml:id="n1e"/> a doctissimis sancti Mauri monachis procuratas sum nactus, ita mihi nullo negotio Acta quoque illa obveniant. Cum vero opera nonnisi integra a bibliopolis addici soleant, tute intelligis tomum primum, quem ad me misisti, nec mihi usui nec ulli cum eo permutationi locum esse, praesertim cum superfluos <pb n="1v"/> nostros bona fide consignatos parvi pendere non obscure prae te feras. </ab>
+         <ab resp="#editor" xml:id="seg2">Humanissimus domnus Gasparus mihi nuper tuo iussu tradidit Krausii Litterariae historiae partem illam, cui <anchor xml:id="n2"/>sex catalogi<anchor xml:id="n2e"/> manuscriptorum Austriae intexti sunt. Qua de re, ut ego valde te amo, ita minime dubito tuam fratrisque diligentiam et in amplificanda re litteraria studium ab omnibus probatum et commendatum iri. </ab>
+         <ab resp="#editor" xml:id="seg3">Udalrici <sic>Babebergensis</sic> Codex epistolaris membraneus eximiae notae exstat etiam in caesarea bibliotheca, cum <anchor xml:id="n3"/>Leibnitio immortalis memoriae viro<anchor xml:id="n3e"/>, qui eius<anchor xml:id="n4"/> editionem meditabatur<anchor xml:id="n4e"/>, iussu caesaris a me communicatus. Integram eius recensionem iam dudum institui; quo labore me opera tua levasset, si citius<anchor xml:id="n5"/> exemplum illud<anchor xml:id="n5e"/> in manus vestras incidisset, cuius epitomen inter<anchor xml:id="n6"/> Acta Lipsiensium<anchor xml:id="n6e"/> litteraria evulgare voluisti. </ab>
+         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n7"/>Apologiam pro Gallia Christiana Sanmarthani a clarissimo Thirusio<anchor xml:id="n7e"/> scriptam summa cum voluptate perlegi et miratus sum <pb n="2r"/> Trevoltianos tam misere alucinatos, quos ille merito suo praesertim prope finem egregie depexos dedit. Eam apologiam et domni<anchor xml:id="n8"/> Texerii epistolam<anchor xml:id="n8e"/> cum ingentibus gratiis ad te remitto et in has litteras includo. </ab>
+         <ab resp="#editor" xml:id="seg5">Gaudeo te de Mascovio mecum sentire; idem sentiunt alii, cum quibus diutius versatus est, praesertim clarissimus <anchor xml:id="n9"/>Menkenius<anchor xml:id="n9e"/>, qui in commendatitiis litteris scribit se neminem habere, quem cum ipso componat. </ab>
+         <ab resp="#editor" xml:id="seg6">Plura ad te scribere volentem <anchor xml:id="n10"/>germanus frater<anchor xml:id="n10e"/> meus Salisburgensium principis cancellarius negotiorum caussa huc legatus interpellat eaque in aliud tempus <sic>diferre</sic> cogit. Illud tamen non pratermittam, supra, quam dici possit, me laetari de <anchor xml:id="n11"/>perfecto tuo Mellicensis bibliothecae catalogo<anchor xml:id="n11e"/>, quod probe sciam me mirum quantum ex eo proficere et iuvari posse, tametsi me aliosque ea de re non monuisses. Fac igitur, ut, quoad eius fieri poterit, quantocius in lucem prodeat et omnigenae eruditionis fontibus hortulos <pb n="2v"/> nostros irriget. Deus te hoc, quem exorsi sumus, aliisque quamplurimis annis incolumem servet.</ab>
+         <closer>Vindobona ante diem V. Idus Januarias MDCCXVII.</closer>
+      </body>
    </text>
 </TEI>

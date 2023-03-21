@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="442" xml:id="pez-0442">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">442 Joachim Edlinger an Hieronymus Pez. 1715-09-19. Seitenstetten.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Joachim Edlinger an Hieronymus Pez. 1715-09-19. Seitenstetten.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">442</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
@@ -24,9 +35,27 @@
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <p>StiA Melk, Karton 7 Patres 13, Fasz. 1, 1r–2v.</p>
+            <listWit><witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Karton 7 Patres 13, Fasz. 1, 1r–2v.</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -41,120 +70,82 @@
                <persName>Hieronymus Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">441</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">444</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">441</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">444</idno>
-               </ref>
+               <ptr type="prev" target="letter:441"/>
+               <ptr type="next" target="letter:444"/>
+               <ptr type="mentions" target="letter:441"/>
+               <ptr type="mentionedIn" target="letter:444"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">JE</rs> dankt für den Brief <rs type="person" role="sender">HPs</rs> <ref type="letter" target="letter:441">441</ref> und entschuldigt sich dafür, dem übersendeten <rs ref="index:d10854e28677">Bücherverzeichnis</rs> keine Schreiben an ihn und <rs ref="index:d14380e33148">BP</rs> beigefügt zu haben. Weil er am Tag vor der Abreise <rs ref="index:d10854e7225">Anton Eders</rs> unerwartet verpflichtet wurde, für den folgenden Tag eine Predigt vorzubereiten, ist ihm keine Zeit für Briefe geblieben.</p>
+            <p corresp="#seg2"><rs type="person" role="sender">JE</rs> kündigt <rs type="person" role="sender">HP</rs> ein Vorhaben an, von dem sonst bislang niemand weiß: Er will ein <rs ref="index:d10854e7245">Werk über die richtige Aussprache von Eigennamen</rs> zur Unterstützung bei der Mensallesung zusammenstellen. Existierende Behelfe wie die <rs ref="index:d10854e29164">„Prosodia“ von Smet</rs>, <rs ref="index:d14380e37357">jene von Riccioli</rs> und das <rs ref="index:d10854e5881">„Amaltheum prosodicum“ von Dangalières</rs> taugen zu diesem Zweck nicht, ebenso wenig mit Akzenten versehene Lexika wie <rs ref="index:d10854e14924">jenes von Kirsch</rs>; nicht nur enthalten sie zu viele Fehler, sondern es fehlen in ihnen häufig gerade die Eigennamen, die in historischen Werken in großer Zahl begegnen und auch gebildeten Lesern Schwierigkeiten machen. Obwohl ihm seine Pflichten in Chor und Bibliothek wenig Zeit lassen, hat <rs type="person" role="sender">JE</rs> mit der Sammlung von Belegen aus verschiedenen Werken <rs ref="index:d14380e23973">lateinischer</rs> und <rs ref="index:d14380e16473">griechischer</rs> Dichtung schon begonnen.</p>
+            <p corresp="#seg3"><rs type="person" role="sender">JE</rs> bittet um <rs type="person" role="sender">HPs</rs> Urteil zu diesem Vorhaben; wenn es positiv ausfällt, will er im Winter mit der Niederschrift beginnen. Nach deren Abschluss wird er sich vielleicht mit einer <rs ref="index:d10854e7240">Hausgeschichte von <rs ref="index:d14380e40413">Seitenstetten</rs></rs> befassen. Von der geplanten Anlage des Werks will er später berichten.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">JE</rs> ersucht, niemandem außer <rs ref="index:d14380e33148">BP</rs> etwas davon mitzuteilen, wenn aber doch, dann keinesfalls <rs type="person" role="sender">JEs</rs> Namen oder den seines Klosters anzugeben. Er selbst will in der ersten Ausgabe seinen Namen nur als Anagramm nennen und Orden und Kloster mit Initialen bezeichnen, weil er nicht mit Kritik sparen möchte; erst bei einer zweiten Auflage will er seinen Namen preisgeben, nachdem er zuvor wie <rs type="cit" ref="citIndex:ix2_d653e143">Apelles</rs> aus seinem Versteck die Reaktionen auf sein Werk beobachtet haben wird.</p>
+            <p corresp="#seg5"><rs type="person" role="sender">JE</rs> sendet nun den gewünschten Pergamentcodex („<rs ref="index:d14380e40458">Codex Gundacheri</rs>“), in dem ihm besonders die Selbstgefälligkeit (philautia) der eigenhändigen Eintragung des Abtes <rs ref="index:d10854e24553">Kaspar Plautz</rs> gefällt. <rs type="person" role="sender">JE</rs> kennt den Schriftzug von <rs ref="index:d10854e24553">Plautz</rs> aus mehreren Autographen; das Todesdatum ist von anderer Hand nachgetragen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e56073"><rs type="person" role="sender">JE</rs> dankt für den Brief <rs type="person" role="sender">HPs</rs> <ref type="letter">441</ref> und entschuldigt sich dafür, dem übersendeten <rs key="index:d10854e28677">Bücherverzeichnis</rs> keine Schreiben an ihn und <rs key="index:d14380e33148">BP</rs> beigefügt zu haben. Weil er am Tag vor der Abreise <rs key="index:d10854e7225">Anton Eders</rs> unerwartet verpflichtet wurde, für den folgenden Tag eine Predigt vorzubereiten, ist ihm keine Zeit für Briefe geblieben.</seg><seg type="context" n="2" xml:id="d4618e56078"><rs type="person" role="sender">JE</rs> kündigt <rs type="person" role="sender">HP</rs> ein Vorhaben an, von dem sonst bislang niemand weiß: Er will ein <rs key="index:d10854e7245">Werk über die richtige Aussprache von Eigennamen</rs> zur Unterstützung bei der Mensallesung zusammenstellen. Existierende Behelfe wie die <rs key="index:d10854e29164">„Prosodia“ von Smet</rs>, <rs key="index:d14380e37357">jene von Riccioli</rs> und das <rs key="index:d10854e5881">„Amaltheum prosodicum“ von Dangalières</rs> taugen zu diesem Zweck nicht, ebenso wenig mit Akzenten versehene Lexika wie <rs key="index:d10854e14924">jenes von Kirsch</rs>; nicht nur enthalten sie zu viele Fehler, sondern es fehlen in ihnen häufig gerade die Eigennamen, die in historischen Werken in großer Zahl begegnen und auch gebildeten Lesern Schwierigkeiten machen. Obwohl ihm seine Pflichten in Chor und Bibliothek wenig Zeit lassen, hat <rs type="person" role="sender">JE</rs> mit der Sammlung von Belegen aus verschiedenen Werken <rs key="index:d14380e23973">lateinischer</rs> und <rs key="index:d14380e16473">griechischer</rs> Dichtung schon begonnen.</seg><seg type="context" n="3" xml:id="d4618e56080"><rs type="person" role="sender">JE</rs> bittet um <rs type="person" role="sender">HPs</rs> Urteil zu diesem Vorhaben; wenn es positiv ausfällt, will er im Winter mit der Niederschrift beginnen. Nach deren Abschluss wird er sich vielleicht mit einer <rs key="index:d10854e7240">Hausgeschichte von <rs key="index:d14380e40413">Seitenstetten</rs></rs> befassen. Von der geplanten Anlage des Werks will er später berichten.</seg><seg type="context" n="4" xml:id="d4618e56082"><rs type="person" role="sender">JE</rs> ersucht, niemandem außer <rs key="index:d14380e33148">BP</rs> etwas davon mitzuteilen, wenn aber doch, dann keinesfalls <rs type="person" role="sender">JEs</rs> Namen oder den seines Klosters anzugeben. Er selbst will in der ersten Ausgabe seinen Namen nur als Anagramm nennen und Orden und Kloster mit Initialen bezeichnen, weil er nicht mit Kritik sparen möchte; erst bei einer zweiten Auflage will er seinen Namen preisgeben, nachdem er zuvor wie <rs type="cit" key="citIndex:ix2_d653e143">Apelles</rs> aus seinem Versteck die Reaktionen auf sein Werk beobachtet haben wird.</seg><seg type="context" n="5" xml:id="d4618e56084"><rs type="person" role="sender">JE</rs> sendet nun den gewünschten Pergamentcodex („<rs key="index:d14380e40458">Codex Gundacheri</rs>“), in dem ihm besonders die Selbstgefälligkeit (philautia) der eigenhändigen Eintragung des Abtes <rs key="index:d10854e24553">Kaspar Plautz</rs> gefällt. <rs type="person" role="sender">JE</rs> kennt den Schriftzug von <rs key="index:d10854e24553">Plautz</rs> aus mehreren Autographen; das Todesdatum ist von anderer Hand nachgetragen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Admodum reverendo religiosissimo ac eximio domino patri Hieronymo Pez ordinis sanctissimi patris Benedicti in celeberrimo ac exempto monasterio Mellicensi professo, domino ac patrono meo plurimum colendo. Mellicium</hi>. Siegel.</ab>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende religiosissime ac eximie domine pater Hieronyme, domine ac patrone omni observantia colende.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e56103">Exultabundus tuas omni humanitatis genere abundantes literas accepi. Meum erat, fateor, una cum transmisso <seg type="lemma" corresp="#d4618e56149">librorum indiculo</seg> aliquas ad te tuumque colendissimum dominum germanum literulas dare; verum cum pridie abitus domini <seg type="lemma" corresp="#d4618e56156">Antonii Eder</seg> nihil minus expectans concionem pro sequenti die corradere magis quam componere debuerim, tempus mihi ad scribendum non suppetiit: quapropter errati huius veniam peto. A te itaque in scribendo praeventus, quid ad humanissimas tuas, vir admodum reverende, reponam, non habeo, nisi ut gratias, quas tu equidem pro minutiis meis sane nimias agis, in te omnes refundam tum pro tanta humanitate, tum maxime pro benignissima tuae, qua, quoad vixero, nil acceptius mihi unquam erit, amicitiae indigno equidem sed nihilominus eiusdem ambitiosissimo mihi facta delatione. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e56105">Ut vero advertas, vir amicissime, quantum fiduciae in hac tua amicitia ponam, <pb n="1v"/> de re quapiam te consulo, cuius nemo adhucdum hominum vel suspicionem aliquam, nedum notitiam habet. Nempe saepius iam mirabar, quod, cum ubique fere locorum lectio mensalis vigeat, necdum ullus, quantum quidem mihi constat, inter tot librorum in catalogis contentorum myriades liber in subsidium huiusmodi lectorum sit editus. Teruntur equidem singulorum prope manibus <seg type="lemma" corresp="#d4618e56161">Smetius, Ricciolius et Amaltheum</seg> prosodicum, ne quid de variis lexicis sive dictionariis accentibus insignitis, utpote quae ob molem suam et multiplices errores, quorum vel in solo Kirschio myriadem est cernere, sunt inepta. Sed praeterquam, quod Amaltheum erroribus non careat, omnes huiuscemodi tanquam in usum versificatorum nati quemadmodum multa vocabulorum millia continent, circa quorum pronuntiationem nemini potest dubium oriri; ita e contrario tot vel plura millia gentium, hominum, locorum, fluviorum etc. nomina propria in historicis passim obvia, quae vel<note place="foot" xml:id="d4618e56109">	Über der Zeile eingefügt.</note> eruditum quemque dubium tenent, in iisdem desiderantur. Cum tamen delicatas eruditorum aures mirum quantum offendat vel unius voculae iniqua pronuntiatio, his defectibus mederi mecum constituens, quantulumcunque temporis mihi chorus et bibliotheca, quae vel sola me sibi totum <sic>vendicat</sic> [<hi rend="italic">sic</hi>], reliquum fecerunt, id omne poetarum omnis generis et nonnunquam etiam Graecorum librorum lectioni impendi, qua quidem pertinacia, cui et deinceps insistam, vim non modicam dubiorum nominum, propriorum praesertim, sum <sic>consecutis</sic> [<hi rend="italic">sic</hi>]<note place="foot" xml:id="d4618e56118">	Wohl für <hi rend="italic">consecutus</hi>.</note>, quae in omnibus praefatis libris frustra inquiras. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e56124">Stat ergo, si modo tu, amicorum meorum princeps, id approbes <seg type="lemma" corresp="#d4618e56168">inficetam gruem suavicanos inter olores</seg> exhibere, libellum de recta omnium vocum dubiarum <sic>pronuntiatdatione</sic> [<hi rend="italic">sic</hi>] ad facilitandam quamcunque publicam lectionem edendo, cui, statim ac bruma me in <pb n="2r"/> cellam compegerit, prius enim bibliotheca id non permittet, primam manum imponam; quo absoluto annales forte nostros concinnare aggrediar. <seg type="lemma" corresp="#d4618e56175">De libri oeconomia</seg>, ne nimium hic in epistolae leges peccem, proxime. Interim quid de hoc meo conatu sentias, mihi candide rescribas, enixe rogo; ut, si reprobes, labori parcere queam, si approbes, stimulum habeam non exiguum. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e56131">Verum utrumcunque sit, hoc per omnia te obtestor, ut praeterquam colendissimo germano tuo nemini omnino de hoc meo proposito quidquam dicas, vel nonnisi suppresso nomine ac monasterio; nullatenus enim induci potero, ut aliter meum nomen quam anagrammatice ponam, ordinem vero et monasterium literis initialibus; idque partim ob varios in legendo et nonnunquam etiam in corrigendo commissos errores, quos non superficiarie taxabo; partim ut in <seg type="lemma" corresp="#d4618e56180">prima hac editione</seg> (nam in altera<note place="foot" xml:id="d4618e56133">	<hi rend="italic">nam in altera</hi> mit Verweiszeichen am linken Blattrand eingefügt.</note>, quae quidem in huiusmodi opere vix diu differri poterit<note place="foot" xml:id="d4618e56139">	Danach durchgestrichene schließende Klammer.</note>, nomen meum fateri non detrectabo) <seg type="lemma" corresp="#d4618e56187">cum Apelle sub tabula</seg> delitescam, hominum de labore meo iudicia exploraturus, quorum deinde genio nonnihil serviri poterit. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e56142">Transmitto impraesentiarum desideratum <seg type="lemma" corresp="#d4618e56192">codicem membranaceum</seg>, in quo mire mihi placuit reverendissimi domini <seg type="lemma" corresp="#d4618e56199">Gasparis Plautii philautia</seg>, utpote qui suas laudes propria manu non parce scripsit; nam characterem eius ex variis, qui de ipso supersunt, scriptis optime nosco, cuius eo facilius mihi fidem habebis, si advertas annos vitae cum die et anno mortis ab alia manu suppleta; imo cum aetas forte ignoraretur, solum anni regiminis sunt positi. Claudo cum voto, ut quam optime valeas meque vel ultimo inter amicos tuos loco frui permittas.</seg></p>
-            <p xml:space="preserve">Tuus fidissimus pater Joachimus Edlinger Benedictinus Seittenstettensis.</p>
-            <p xml:space="preserve">Sub dato in Seittenstadio 19. Septembris 1715.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e56149">
-               <ref type="context">1</ref>
-               <label>librorum indiculo</label>
-               <p><rs type="bibl" key="bibl:20570">Spevak, Edlinger</rs> 2, vermutet in dieser
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>librorum indiculo</mentioned>
+            <p><rs type="bibl" ref="bibl:20570">Spevak, Edlinger</rs> 2, vermutet in dieser
                   Beilage mit einiger Plausibilität ein Verzeichnis der Werke benediktinischer
                   Autoren in der Seitenstettener Bibliothek. Ein solches findet sich im Melker
                   Pez-Nachlass nicht, wohl aber einige Blätter mit Angaben JEs über mehrere
                   Seitenstettener Autoren (StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 3). Ob sich
                   diese mit dem hier genannten „librorum indiculus“ identifizieren lassen, ist nicht
                   sicher zu entscheiden.</p>
-            </note>
-            <note xml:id="d4618e56156">
-               <ref type="context">1</ref>
-               <label>Antonii Eder</label>
-               <p>Johann Franz Anton Eder aus Seitenstetten wurde am 26. September 1715 in Melk als
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>Antonii Eder</mentioned>
+            <p>Johann Franz Anton Eder aus Seitenstetten wurde am 26. September 1715 in Melk als
                   Kandidat aufgenommen, nachdem er dort etwa eine Woche zuvor eingetroffen war: PE 5
                   140. Schon am 12. November wurde er entlassen, nachdem er bekannt hatte, den
                   Klostereintritt nur auf Druck seiner Eltern angestrebt zu haben: PE 5 145f. Der
-                  Hofrichter des Stiftes Seitenstetten Franz Joseph Eder (vgl. <rs type="bibl"
-                     key="bibl:20570">Spevak, Edlinger</rs> 2) könnte sein Vater gewesen sein. Auch
-                  eine Verbindung mit dem Melker Infirmar Adalbert Eder (vgl. <ref type="letter"
-                     >3</ref>) ist denkbar.</p>
-            </note>
-            <note xml:id="d4618e56161">
-               <ref type="context">2</ref>
-               <label>Smetius, Ricciolius et Amaltheum</label>
-               <p>Sehr verbreitete Werke, deren jedes zahlreiche Auflagen erlebt hatte.</p>
-            </note>
-            <note xml:id="d4618e56168">
-               <ref type="context">3</ref>
-               <label>inficetam gruem suavicanos inter olores</label>
-               <p>Vgl. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Lukrez, De
-                  rerum natura<?oxy_custom_end?> 4,180–182: „suavidicis potius quam multis versibus
+                  Hofrichter des Stiftes Seitenstetten Franz Joseph Eder (vgl. <rs type="bibl" ref="bibl:20570">Spevak, Edlinger</rs> 2) könnte sein Vater gewesen sein. Auch
+                  eine Verbindung mit dem Melker Infirmar Adalbert Eder (vgl. <ref type="letter" target="letter:3">3</ref>) ist denkbar.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>Smetius, Ricciolius et Amaltheum</mentioned>
+            <p>Sehr verbreitete Werke, deren jedes zahlreiche Auflagen erlebt hatte.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>inficetam gruem suavicanos inter olores</mentioned>
+            <p>Vgl. Lukrez, De
+                  rerum natura 4,180–182: „suavidicis potius quam multis versibus
                   edam, / parvus ut est cycni melior canor ille gruum quam / clamor in aetheriis
                   dispersus nubibus austri“, sowie
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Vergil,
-                  Ekloge<?oxy_custom_end?> 9,36: „argutos inter strepere anser olores“. Das Wort
+                  Vergil,
+                  Ekloge 9,36: „argutos inter strepere anser olores“. Das Wort
                   „suavicanus“ konnte nirgends belegt werden; es dürfte sich um eine Neubildung JEs
                   in Anlehnung an Lukrez’ „suavidicus“ (das nur in der zitierten Stelle vorkommt)
                   handeln.</p>
-            </note>
-            <note xml:id="d4618e56175">
-               <ref type="context">3</ref>
-               <label>De libri oeconomia</label>
-               <p>Vgl. <ref type="letter">444</ref> &lt;2&gt;.</p>
-            </note>
-            <note xml:id="d4618e56180">
-               <ref type="context">4</ref>
-               <label>prima hac editione</label>
-               <p>Das geplante Werk scheint nicht fertig gestellt worden zu sein; es ist auch nicht klar, ob JE die Niederschrift überhaupt in Angriff nahm.</p>
-            </note>
-            <note xml:id="d4618e56187">
-               <ref type="context">4</ref>
-               <label>cum Apelle sub tabula</label>
-               <p>JE bezieht sich auf die Anekdote, wonach der Maler Apelles sich hinter seinen
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>De libri oeconomia</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:444">444</ref> <ref target="letter:444#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned>prima hac editione</mentioned>
+            <p>Das geplante Werk scheint nicht fertig gestellt worden zu sein; es ist auch nicht klar, ob JE die Niederschrift überhaupt in Angriff nahm.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
+            <mentioned>cum Apelle sub tabula</mentioned>
+            <p>JE bezieht sich auf die Anekdote, wonach der Maler Apelles sich hinter seinen
                   Bildern versteckte, um das Urteil der Betrachter darüber zu hören:
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Plinius,
-                  Naturalis historia<?oxy_custom_end?> 35,36.</p>
-            </note>
-            <note xml:id="d4618e56192">
-               <ref type="context">5</ref>
-               <label>codicem membranaceum</label>
-               <p>Hierbei handelt es sich gewiss um den sogenannten Codex Gundacheri (StiA
+                  Plinius,
+                  Naturalis historia 35,36.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
+            <mentioned>codicem membranaceum</mentioned>
+            <p>Hierbei handelt es sich gewiss um den sogenannten Codex Gundacheri (StiA
                   Seitenstetten, Cod. 3 U, olim 11 D), das um 1320 angelegte älteste Kopialbuch des
                   Stiftes Seitenstetten, welchem eine von Abt Gundacher verfasste
                   Gründungsgeschichte mit einem Äbtekatalog vorangestellt ist, den spätere Schreiber
-                  bis zu Abt Kaspar Plautz fortgesetzt haben; vgl. <rs type="bibl" key="bibl:18668"
-                     >Ortmayr–Decker, Seitenstetten</rs> 75; <rs type="bibl" key="bibl:37188"
-                     >Wagner, Göttweig</rs> 39. HP edierte die beiden genannten Abschnitte
-                  (<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Pez,
-                  Scriptores rerum Austriacarum<?oxy_custom_end?> 2 col. 301–318), wobei er über die
+                  bis zu Abt Kaspar Plautz fortgesetzt haben; vgl. <rs type="bibl" ref="bibl:18668">Ortmayr–Decker, Seitenstetten</rs> 75; <rs type="bibl" ref="bibl:37188">Wagner, Göttweig</rs> 39. HP edierte die beiden genannten Abschnitte
+                  (Pez,
+                  Scriptores rerum Austriacarum 2 col. 301–318), wobei er über die
                   Quelle vermerkte: „Caeterum integram historiam inclyti istius monasterii una cum
                   abbatum serie ad verbum expressimus ex illo quantivis pretii codice traditionum,
                   qui a reverendissimo domino domino Benedicto Seittenstettensium divae memoriae
@@ -162,20 +153,33 @@
                   reverendi [...] patris Joachimi Edlinger, eiusdem loci eruditissimi coenobitae ac
                   bibliothecarii, veteris et singularis amici nostri, summa fide ac gratissimo animo
                   restitutus fuit“ (ebd. col. 303). Gesehen hatten HP und BP den Codex zuerst auf
-                  ihrer Bibliotheksreise im Mai 1715; vgl. <ref type="letter">411</ref>
-                  &lt;8&gt;.</p>
-            </note>
-            <note xml:id="d4618e56199">
-               <ref type="context">5</ref>
-               <label>Gasparis Plautii philautia</label>
-               <p>Zu Plautz vgl. 5. Sein Eintrag, anhand dessen die Wahrnehmung JEs gut
+                  ihrer Bibliotheksreise im Mai 1715; vgl. <ref type="letter" target="letter:411">411</ref>
+                  <ref target="letter:411#seg8">8</ref>.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
+            <mentioned>Gasparis Plautii philautia</mentioned>
+            <p>Zu Plautz vgl. 5. Sein Eintrag, anhand dessen die Wahrnehmung JEs gut
                   nachzuvollziehen ist („Res coenobii exornavit, auxit, conservavit, defendit.
                   Sacrae ecclesiae ritus et regularem observantiam mirifice coluit [...]“), ist
                   nachzulesen bei
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Pez, Scriptores
-                  rerum Austriacarum<?oxy_custom_end?> 2 col. 317f.</p>
-            </note>
-         </div>
-      </back>
+                  Pez, Scriptores
+                  rerum Austriacarum 2 col. 317f.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <front>
+         <p>Admodum reverendo religiosissimo ac eximio domino patri Hieronymo Pez ordinis sanctissimi patris Benedicti in celeberrimo ac exempto monasterio Mellicensi professo, domino ac patrono meo plurimum colendo. Mellicium.<note type="annotation">Siegel.</note></p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende religiosissime ac eximie domine pater Hieronyme, domine ac patrone omni observantia colende.</opener>
+         <ab resp="#editor" xml:id="seg1">Exultabundus tuas omni humanitatis genere abundantes literas accepi. Meum erat, fateor, una cum transmisso <anchor xml:id="n1"/>librorum indiculo<anchor xml:id="n1e"/> aliquas ad te tuumque colendissimum dominum germanum literulas dare; verum cum pridie abitus domini <anchor xml:id="n2"/>Antonii Eder<anchor xml:id="n2e"/> nihil minus expectans concionem pro sequenti die corradere magis quam componere debuerim, tempus mihi ad scribendum non suppetiit: quapropter errati huius veniam peto. A te itaque in scribendo praeventus, quid ad humanissimas tuas, vir admodum reverende, reponam, non habeo, nisi ut gratias, quas tu equidem pro minutiis meis sane nimias agis, in te omnes refundam tum pro tanta humanitate, tum maxime pro benignissima tuae, qua, quoad vixero, nil acceptius mihi unquam erit, amicitiae indigno equidem sed nihilominus eiusdem ambitiosissimo mihi facta delatione. </ab>
+         <ab resp="#editor" xml:id="seg2">Ut vero advertas, vir amicissime, quantum fiduciae in hac tua amicitia ponam, <pb n="1v"/> de re quapiam te consulo, cuius nemo adhucdum hominum vel suspicionem aliquam, nedum notitiam habet. Nempe saepius iam mirabar, quod, cum ubique fere locorum lectio mensalis vigeat, necdum ullus, quantum quidem mihi constat, inter tot librorum in catalogis contentorum myriades liber in subsidium huiusmodi lectorum sit editus. Teruntur equidem singulorum prope manibus <anchor xml:id="n3"/>Smetius, Ricciolius et Amaltheum<anchor xml:id="n3e"/> prosodicum, ne quid de variis lexicis sive dictionariis accentibus insignitis, utpote quae ob molem suam et multiplices errores, quorum vel in solo Kirschio myriadem est cernere, sunt inepta. Sed praeterquam, quod Amaltheum erroribus non careat, omnes huiuscemodi tanquam in usum versificatorum nati quemadmodum multa vocabulorum millia continent, circa quorum pronuntiationem nemini potest dubium oriri; ita e contrario tot vel plura millia gentium, hominum, locorum, fluviorum etc. nomina propria in historicis passim obvia, quae <add place="above">vel</add> eruditum quemque dubium tenent, in iisdem desiderantur. Cum tamen delicatas eruditorum aures mirum quantum offendat vel unius voculae iniqua pronuntiatio, his defectibus mederi mecum constituens, quantulumcunque temporis mihi chorus et bibliotheca, quae vel sola me sibi totum <sic>vendicat</sic> , reliquum fecerunt, id omne poetarum omnis generis et nonnunquam etiam Graecorum librorum lectioni impendi, qua quidem pertinacia, cui et deinceps insistam, vim non modicam dubiorum nominum, propriorum praesertim, sum <sic>consecutis</sic> <note type="annotation" xml:id="d4618e56118">Wohl für <orig>consecutus</orig>.</note>, quae in omnibus praefatis libris frustra inquiras. </ab>
+         <ab resp="#editor" xml:id="seg3">Stat ergo, si modo tu, amicorum meorum princeps, id approbes <anchor xml:id="n4"/>inficetam gruem suavicanos inter olores<anchor xml:id="n4e"/> exhibere, libellum de recta omnium vocum dubiarum <sic>pronuntiatdatione</sic>  ad facilitandam quamcunque publicam lectionem edendo, cui, statim ac bruma me in <pb n="2r"/> cellam compegerit, prius enim bibliotheca id non permittet, primam manum imponam; quo absoluto annales forte nostros concinnare aggrediar. <anchor xml:id="n5"/>De libri oeconomia<anchor xml:id="n5e"/>, ne nimium hic in epistolae leges peccem, proxime. Interim quid de hoc meo conatu sentias, mihi candide rescribas, enixe rogo; ut, si reprobes, labori parcere queam, si approbes, stimulum habeam non exiguum. </ab>
+         <ab resp="#editor" xml:id="seg4">Verum utrumcunque sit, hoc per omnia te obtestor, ut praeterquam colendissimo germano tuo nemini omnino de hoc meo proposito quidquam dicas, vel nonnisi suppresso nomine ac monasterio; nullatenus enim induci potero, ut aliter meum nomen quam anagrammatice ponam, ordinem vero et monasterium literis initialibus; idque partim ob varios in legendo et nonnunquam etiam in corrigendo commissos errores, quos non superficiarie taxabo; partim ut in <anchor xml:id="n6"/>prima hac editione<anchor xml:id="n6e"/> <add place="left-margin"><witDetail wit="#A">mit Verweiszeichen am linken Blattrand</witDetail>(nam in altera</add>, quae quidem in huiusmodi opere vix diu differri poterit<note place="foot" xml:id="d4618e56139">Danach durchgestrichene schließende Klammer.</note>, nomen meum fateri non detrectabo) <anchor xml:id="n7"/>cum Apelle sub tabula<anchor xml:id="n7e"/> delitescam, hominum de labore meo iudicia exploraturus, quorum deinde genio nonnihil serviri poterit. </ab>
+         <ab resp="#editor" xml:id="seg5">Transmitto impraesentiarum desideratum <anchor xml:id="n8"/>codicem membranaceum<anchor xml:id="n8e"/>, in quo mire mihi placuit reverendissimi domini <anchor xml:id="n9"/>Gasparis Plautii philautia<anchor xml:id="n9e"/>, utpote qui suas laudes propria manu non parce scripsit; nam characterem eius ex variis, qui de ipso supersunt, scriptis optime nosco, cuius eo facilius mihi fidem habebis, si advertas annos vitae cum die et anno mortis ab alia manu suppleta; imo cum aetas forte ignoraretur, solum anni regiminis sunt positi. Claudo cum voto, ut quam optime valeas meque vel ultimo inter amicos tuos loco frui permittas.</ab>
+         <closer>Tuus fidissimus pater Joachimus Edlinger Benedictinus Seittenstettensis.</closer>
+         <closer>Sub dato in Seittenstadio 19. Septembris 1715.</closer>
+      </body>
    </text>
 </TEI>

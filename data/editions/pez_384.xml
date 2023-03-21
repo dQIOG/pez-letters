@@ -1,46 +1,67 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="384" xml:id="pez-0384">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">384 René Massuet an Bernhard Pez. 1715-01-30. Paris.</title>
-            <title type="sub">Digital Edition</title>
+            <title>René Massuet an Bernhard Pez. 1715-01-30. Paris.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">384</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 28f., 40
-                     (irrig zum 30. Januar 1716)</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Aufgrund der Korrektur in der Datumsangabe ist dieser Brief bei Katschthaler und
+                  ebenso bei Glassner, Verzeichnis 226,
+                  fälschlich zum 30. Januar 1716 datiert. RM war bereits am 19. Januar 1716
+                  verstorben. Auch der Inhalt des Briefs fügt sich zwanglos zum Datum 30. Januar
+                  1715 in die Korrespondenz zwischen BP und RM ein.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">566r–567v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 566r–567v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -55,140 +76,86 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">379</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">388</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">394395</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">396</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">192</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">285</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">357</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">364</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">379</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">396</idno>
-               </ref>
+               <ptr type="prev" target="letter:379"/>
+               <ptr type="next" target="letter:388"/>
+               <ptr type="sentWith" target="letter:394395"/>
+               <ptr type="sentWith" target="letter:396"/>
+               <ptr type="mentions" target="letter:192"/>
+               <ptr type="mentions" target="letter:285"/>
+               <ptr type="mentions" target="letter:357"/>
+               <ptr type="mentions" target="letter:364"/>
+               <ptr type="mentions" target="letter:379"/>
+               <ptr type="mentionedIn" target="letter:396"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person">RM</rs> hat lange auf einen Brief <rs type="person" role="sender">BPs</rs> <ref type="letter" target="letter:379">379</ref> gewartet, wusste jedoch, dass sich dieser in <rs ref="index:d14380e45571">Wien</rs> aufhielt und dort mit <rs ref="index:d14380e14738">Johann Benedikt Gentilotti</rs>, <rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs> und <rs ref="index:d10854e32969">Konrad Widow</rs> verkehrte. Die letzteren beiden hatten schon lange die Freundschaft <rs type="person" role="sender">BPs</rs> angestrebt, und <rs ref="index:d10854e32969">Widow</rs> hatte, als er sich von <rs type="person">RM</rs> verabschiedete, versprochen, <rs type="person" role="sender">BP</rs> in <rs ref="index:d14380e28088">Melk</rs> zu besuchen. <rs type="person">RM</rs> ist erfreut und dankbar, dass <rs type="person" role="sender">BP</rs> ihnen seine Freundschaft gewährt hat; keiner von ihnen wird es zu bereuen haben. Beide sind dem <rs ref="index:d14380e21679">katholischen</rs> Glauben nicht abgeneigt. <rs type="person">RM</rs> hätte <rs ref="index:d10854e32969">Widow</rs> leicht zu diesem gebracht, wenn er nicht nach dessen Rückkehr in seine <rs ref="index:d14380e16986">Hamburger</rs> Umgebung eine ebenso leichte Rückkehr zum <rs ref="index:d14380e11852">Protestantismus</rs> (haeresis) befürchtet hätte. Anlass zu mehr Hoffnung gibt <rs ref="index:d14380e4006">Bartenstein</rs>.</p>
+            <p corresp="#seg2">Dieser hat die ihm von <rs type="person" role="sender">BP</rs> anvertraute Sendung bis <rs ref="index:d14380e24317">Leipzig</rs> mitgenommen, von wo sie nach <rs ref="index:d14380e41684">Straßburg</rs> und <rs ref="index:d14380e32292">Paris</rs> weiter verschickt werden soll. <rs type="person">RM</rs> hat sie noch nicht erhalten, macht sich jedoch keine Sorgen. Den Erhalt wird er <rs type="person" role="sender">BP</rs> umgehend melden und dabei ein Dankschreiben an <rs ref="index:d14380e14738">Gentilotti</rs> mitsenden, das <rs type="person" role="sender">BP</rs> diesem weiterleiten soll. Hätte <rs type="person">RM</rs> gewusst, dass <rs type="person" role="sender">BP</rs> über Exemplare des „<rs ref="index:d10854e4483">Supplementum Bruschianum</rs>“ verfügt, hätte er sie von diesem erbeten. Da ihm aber <rs ref="index:d14380e14738">Gentilotti</rs> eines angeboten hat, hat er es nicht abgelehnt; dies nicht, weil er auf das Werk von <rs ref="index:d10854e4454">Brusch</rs>, der wenig vertrauenswürdig ist, viel Wert legt, sondern weil er bereits den <rs ref="index:d10854e4470">ersten Teil</rs> besitzt und deshalb der zweite nicht fehlen sollte. <rs type="person">RM</rs> weiß jedoch nicht, wie er sich <rs ref="index:d14380e14738">Gentilotti</rs> erkenntlich zeigen soll. Geld lässt sich dieser nicht einmal anbieten, es muss also ein Buch sein. Von <rs type="person">RMs</rs> <rs ref="index:d14380e19786">Irenäus-Edition</rs> gibt es weder bei ihm noch bei den Buchhändlern mehr Exemplare; die <rs ref="index:d10854e3285">neue Ausgabe</rs> der <rs ref="index:d14380e5343">Edition der Werke des Hl. Bernhard von Clairvaux</rs> (von Jean Mabillon) ist zwar zur Zeit bereits in Druck, wird aber kaum in weniger als zwei Jahren, also zu spät erscheinen. Wenn <rs type="person" role="sender">BP</rs> dazu einen Vorschlag hat, soll er ihn mitteilen.</p>
+            <p corresp="#seg3">Wenn das Gesendete von <rs type="person" role="sender">BP</rs> selbst ausgewählt wurde, bürgt dessen Verstand (ingenium) für die Qualität. Wenn die Auswahl von anderen getroffen wurde, befürchtet <rs type="person">RM</rs>, dass es sich um Material in der Art von <rs ref="index:d10854e5148">Benedikt Cherles „Chronologia monasterii in Thierhaupten“</rs> handeln wird. <rs type="person" role="sender">BP</rs> hat ja in der <rs ref="index:d14380e45820">Hofbibliothek</rs> mit <rs ref="index:d14380e4006">Bartenstein</rs> und <rs ref="index:d10854e32969">Widow</rs> über dieses Werk gelacht, <rs type="person">RM</rs> bewahrt es jedoch wegen seiner Kuriosität auf. Jedenfalls wird er alle Einsendungen <rs type="person" role="sender">BPs</rs> dankbar aufnehmen. In dessen Weltgegend gibt es viele, deren Gaumen an <rs type="cit" ref="citIndex:ix2_d653e1988">scholastischen Flausen</rs> derart verbrannt ist, dass sie den Geschmack an wahrhaftiger Geschichtsschreibung (vera historia) verloren haben. Hierin ähneln sie jenem wohlgenährten Abt, den <rs type="person" role="sender">BP</rs> und seine Freunde in der<rs ref="index:d14380e45820"> Hofbibliothek</rs> mit Staunen und Erheiterung seine unsinnigen und kindischen Befürchtungen äußern gehört haben; die Unkenntnis der Regeln der Geschichtsforschung (<rs type="cit" ref="citIndex:ix2_d653e1157">leges historicae</rs>) begründet solches Misstrauen. Freilich hat jener auf das Drängen <rs type="person" role="sender">BPs</rs> und der anderen seine Mithilfe versprochen; was er tun wird, bleibt zu sehen. Wenn aber er und andere nichts Brauchbares mitteilen wollen, dann sollen sie nicht beklagen, dass die <rs ref="index:d10854e15615">Mauriner</rs> die <rs ref="index:d14380e9395">deutschen</rs> Klöster vernachlässigen. Es ist nicht statthaft, den Wahrsager zu spielen, schreiben muss man, was erwiesen ist, und nicht, was sich ein an Chimären genährter Geist einbildet.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">BP</rs> soll bei seiner Erkundung der Bibliotheken <rs ref="index:d14380e9395">Deutschlands</rs> an <rs type="person">RM</rs> denken, wenn er auf einschlägiges Material stößt. Auf diesem Weg wird auch <rs type="person" role="sender">BPs</rs> eigenes Vorhaben zum Erfolg gelangen. Hierzu reicht der Verstand nicht, man muss auch ein Auge dafür haben. Alle größeren Bibliotheken sind genau zu durchforsten.</p>
+            <p corresp="#seg5">Der <rs ref="index:d14380e41211">Spanier</rs> (<rs ref="index:d14380e1186">Luis Alvarez</rs>) soll schreiben, was er mag; <rs type="person" role="sender">BP</rs> braucht sich keine Sorgen zu machen. Jener wird wohl einige <rs ref="index:d14380e41211">spanische</rs> Schriftsteller bieten, die <rs type="person" role="sender">BP</rs> unbekannt sind, dieser kann sie dann in sein umfangreicheres Werk („Bibliotheca Benedictina“) aufnehmen. Alles Weitere wird der <rs ref="index:d14380e1186">Spanier</rs> aus <rs ref="index:d14380e43380">Trithemius</rs> und anderen Bibliographen übernehmen und dabei deren Irrtümer reproduzieren, wenn er nicht selbst noch welche hinzufügt. <rs type="person">RM</rs> selbst verfügt über viele Informationen, die für <rs type="person" role="sender">BP</rs> reserviert sind; der wenig sorgfältige <rs ref="index:d14380e41211"><rs ref="index:d14380e1186">Spanier</rs></rs> hat <rs type="person">RM</rs> noch nicht einmal danach gefragt.</p>
+            <p corresp="#seg6">Die Methode <rs ref="index:d14380e7705">William Caves</rs>, der <rs type="person" role="sender">BP</rs> folgen will, heißt <rs type="person">RM</rs> gut. Angeblich wollte sie <rs ref="index:d14380e25581">Mabillon</rs> selbst verwenden, hätte er über Schriftsteller gearbeitet. Gegenüber <rs ref="index:d14380e7705">Cave</rs> selbst ist jedoch Vorsicht geboten. Insbesondere ist seine Gliederung in ein „<rs ref="index:d14380e2932">arianisches</rs>“, ein „<rs ref="index:d10854e21130">nestorianisches</rs>“, ein „<rs ref="index:d10854e20372">eutychianisches“ (monophysitisches)</rs> Jahrhundert und so weiter albern und lächerlich.</p>
+            <p corresp="#seg7"><rs type="person">RM</rs> verfügt über einige Materialien für <rs type="person" role="sender">BP</rs>: ein von <rs ref="index:d14380e25581">Mabillon</rs> angelegtes <rs ref="index:d10854e18051">Verzeichnis (benediktinischer Autoren)</rs>, das <rs type="person">RM</rs> bei der Durchsicht der Kollektaneen noch stark erweitert hat; ein <rs ref="index:d10854e15573">Verzeichnis der Schriftsteller der Cassinenser Kongregation</rs>; ein von <rs type="person">RM</rs> selbst erstelltes <rs ref="index:d10854e18911">Verzeichnis der Maurinerschriftsteller</rs>; <rs ref="index:d14380e35252">Pits’ „Relationes historicae de rebus Anglicis“</rs> und <rs ref="index:d14380e45041">Wares „De scriptoribus Hiberniae“</rs>, um welche <rs type="person" role="sender">BP</rs> schon vor langem gebeten hat; schließlich aus <rs ref="index:d14380e4429">Belgien</rs> an <rs ref="index:d14380e25581">Mabillon</rs> eingesendete <rs ref="index:d14380e25877">Kollektaneen</rs>, die aufgrund der kleinen Schrift kaum zu lesen sind.</p>
+            <p corresp="#seg8">Betreffend den <rs ref="index:d14380e25749">fünften Band der „Annales OSB“</rs> wiederholt <rs type="person">RM</rs>, was er <rs type="person" role="sender">BP</rs> (<ref type="letter" target="letter:192">192</ref>, <ref type="letter" target="letter:285">285</ref>) und <rs ref="index:d14380e39962">Anselm Schramb</rs> bereits öfter versichert hat: Sie werden ihn beizeiten erhalten, je nach Wunsch ungebunden oder auf <rs ref="index:d14380e12712">französische</rs> Art gebunden. Weil die Korrespondenz durch die <rs ref="index:d10854e29346">Kriegsereignisse</rs> unterbrochen wurde, weiß <rs type="person">RM</rs> nicht, ob der Band vielleicht in der Zwischenzeit angeschafft wurde. Er hat danach, sobald es wieder möglich war, gefragt (<ref type="letter" target="letter:357">357</ref>?), aber keine Antwort erhalten. Ebenso wenig wurde ihm auf seine Frage <ref type="letter" target="letter:364">364</ref> mitgeteilt, ob die <rs ref="index:d14380e28088">Melker</rs> Kontakte in <rs ref="index:d14380e4064">Basel</rs> haben und ob von dort Sendungen nach Wien gelangen können. <rs type="person">RM</rs> bittet nachdrücklich um Antwort.</p>
+            <p corresp="#seg9"><rs type="person" role="sender">BP</rs> könnte dieses Drängen der Streitsucht der <rs ref="index:d14380e12712">Franzosen</rs> zuschreiben; so sprach ja auch der zuvor genannte Abt. <rs type="person" role="sender">BP</rs> aber wird die <rs ref="index:d14380e12712">Franzosen</rs> als gütig und entgegenkommend kennenlernen. Auch den scharfen, doch nicht ganz ungerechtfertigten Ton von <rs type="person" role="sender">BPs</rs> Jugendwerk („<rs ref="index:d14380e33515">De irruptione Bavarica</rs>“) werden sie ihm leicht nachsehen, zumal die klügeren <rs ref="index:d14380e12712">Franzosen</rs> ähnlich dachten, eine öffentliche Äußerung dieser Ansicht aber nicht ratsam gewesen wäre. <rs type="person">RM</rs> lädt <rs type="person" role="sender">BP</rs> ein, nach <rs ref="index:d14380e12712">Frankreich</rs> zu reisen, wo er höchst willkommen sein wird, niemandem jedoch so sehr wie <rs type="person">RM</rs> selbst, und wo ihm ein guter Ruf der Gelehrsamkeit ebenso wie der Frömmigkeit vorauseilt. Die Oberen der <rs ref="index:d10854e15615">Mauriner</rs> haben zwar aufgrund schlechter Erfahrungen mit dem Lebenswandel einiger auswärtiger Gäste beschlossen, niemanden mehr zum längeren Aufenthalt aufzunehmen, doch hat <rs type="person">RM</rs> beschworen, dass <rs type="person" role="sender">BP</rs> ganz anders sei und ihm <rs ref="index:d14380e32292">Paris</rs> nicht, wie so vielen Laxen oder Unvorsichtigen, zum Verhängnis würde. Was zu lassen und zu tun ist, will ihm <rs type="person">RM</rs> an Ort und Stelle mitteilen. Auf seiner Reise durch <rs ref="index:d14380e9395">Deutschland</rs> soll <rs type="person" role="sender">BP</rs> häufig schreiben und angeben, wohin Briefe an ihn zu adressieren sind.</p>
+            <p corresp="#seg10"><rs type="person">RM</rs> ist erfreut über <rs type="person" role="sender">BPs</rs> Bericht, wonach die <rs ref="index:d14380e22021">Bulle „Unigenitus“</rs> Papst <rs ref="index:d14380e21985">Klemens’ XI.</rs> in <rs ref="index:d10854e21970">Österreich</rs> nicht feierlich promulgiert worden ist. Verwunderlich ist nur, dass der <rs ref="index:d14380e21188">Kaiser</rs> die Promulgation in den <rs ref="index:d14380e30604">Österreichischen Niederlanden</rs> zugelassen hat, wo doch auch die <rs ref="index:d14380e41211">Spanier</rs>, <rs ref="index:d10854e31813">Venetianer</rs>, <rs ref="index:d14380e41073">Sizilianer</rs> und <rs ref="index:d14380e39518">Savoyer</rs> eine Veröffentlichung unterlassen haben. Gegen die <rs ref="index:d14380e22021">Bulle</rs> stehen der Erzbischof von <rs ref="index:d14380e32292">Paris</rs> Kardinal <rs ref="index:d10854e21427">Noailles</rs>, viele weitere Erzbischöfe und Bischöfe sowie zahlreiche Priester ein, in der Überzeugung, dass durch sie die Grundfesten des <rs ref="index:d14380e8048">Christentums</rs> erschüttert werden. Diese Haltung führt zu großer Unruhe in der <rs ref="index:d14380e12712">französischen</rs> Kirche bis an den Rand eines Schismas. Zwar haben manche das Buch <rs ref="index:d14380e36227">Quesnels</rs> („<rs ref="index:d10854e25189">Le Nouveau Testament en françois</rs>“) verboten, seine <rs ref="index:d10854e25182">Propositionen</rs> weigern sie sich jedoch zu verurteilen und ergreifen so öffentlich Partei für <rs ref="index:d14380e36227">Quesnel</rs>, wie es <rs type="person" role="sender">BP</rs> zu tun fürchtet. Wenn <rs type="person" role="sender">BP</rs> in dieser Sache etwas Neues erfährt, soll er es mitteilen.</p>
+            <p corresp="#seg11"><rs type="person">RM</rs> bestellt Grüße von <rs ref="index:d14380e29435">Montfaucon</rs>, <rs ref="index:d14380e9205">Charles de la Rue</rs> und <rs ref="index:d10854e26800">Pierre Sabatier</rs>; er sendet selbst solche an <rs type="person" role="sender">BPs</rs> Bruder Klemens (recte: <rs ref="index:d14380e34537">Hieronymus</rs>) und an <rs ref="index:d14380e39962">Anselm Schramb</rs>. Diesem soll <rs type="person" role="sender">BP</rs> schreiben, dass <rs type="person">RM</rs> die vermutlich von <rs ref="index:d14380e39962">Schramb</rs> aus <rs ref="index:d14380e45571">Wien</rs> geschickten Exemplare von <rs ref="index:d14380e11508">Eraths „Commentarius“</rs> durch einen <rs ref="index:d10854e30984">Boten</rs> des königlichen Staatssekretärs <rs ref="index:d14380e42961">Marquis de Torcy</rs> erhalten hat. Erste Blicke in das Buch haben gezeigt, dass es nichtig und voller Unsinn ist. Eine ausführliche Entgegnung würde ihm unverdientes Gewicht verleihen, was <rs type="person">RM</rs> Schramb bereits in früheren Briefen angedeutet hat. Er fordert <rs type="person" role="sender">BP</rs> auf, seinen Mitbruder nachdrücklich von der vergeblichen Mühe abzuhalten und zu sinnvollerer Betätigung zu rufen.</p>
+            <p corresp="#seg12">In einem Postskriptum bittet <rs type="person">RM</rs>, mitzuteilen, ob <rs type="person" role="sender">BP</rs> außer dem oben Erwähnten noch etwas aus Paris wünscht.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e49634"><rs type="person" key="">RM</rs> hat lange auf einen Brief <rs type="person" role="sender">BPs</rs> <ref type="letter">379</ref> gewartet, wusste jedoch, dass sich dieser in <rs key="index:d14380e45571">Wien</rs> aufhielt und dort mit <rs key="index:d14380e14738">Johann Benedikt Gentilotti</rs>, <rs key="index:d14380e4006">Johann Christoph Bartenstein</rs> und <rs key="index:d10854e32969">Konrad Widow</rs> verkehrte. Die letzteren beiden hatten schon lange die Freundschaft <rs type="person" role="sender">BPs</rs> angestrebt, und <rs key="index:d10854e32969">Widow</rs> hatte, als er sich von <rs type="person" key="">RM</rs> verabschiedete, versprochen, <rs type="person" role="sender">BP</rs> in <rs key="index:d14380e28088">Melk</rs> zu besuchen. <rs type="person" key="">RM</rs> ist erfreut und dankbar, dass <rs type="person" role="sender">BP</rs> ihnen seine Freundschaft gewährt hat; keiner von ihnen wird es zu bereuen haben. Beide sind dem <rs key="index:d14380e21679">katholischen</rs> Glauben nicht abgeneigt. <rs type="person" key="">RM</rs> hätte <rs key="index:d10854e32969">Widow</rs> leicht zu diesem gebracht, wenn er nicht nach dessen Rückkehr in seine <rs key="index:d14380e16986">Hamburger</rs> Umgebung eine ebenso leichte Rückkehr zum <rs key="index:d14380e11852">Protestantismus</rs> (haeresis) befürchtet hätte. Anlass zu mehr Hoffnung gibt <rs key="index:d14380e4006">Bartenstein</rs>.</seg><seg type="context" n="2" xml:id="d4618e49639">Dieser hat die ihm von <rs type="person" role="sender">BP</rs> anvertraute Sendung bis <rs key="index:d14380e24317">Leipzig</rs> mitgenommen, von wo sie nach <rs key="index:d14380e41684">Straßburg</rs> und <rs key="index:d14380e32292">Paris</rs> weiter verschickt werden soll. <rs type="person" key="">RM</rs> hat sie noch nicht erhalten, macht sich jedoch keine Sorgen. Den Erhalt wird er <rs type="person" role="sender">BP</rs> umgehend melden und dabei ein Dankschreiben an <rs key="index:d14380e14738">Gentilotti</rs> mitsenden, das <rs type="person" role="sender">BP</rs> diesem weiterleiten soll. Hätte <rs type="person" key="">RM</rs> gewusst, dass <rs type="person" role="sender">BP</rs> über Exemplare des „<rs key="index:d10854e4483">Supplementum Bruschianum</rs>“ verfügt, hätte er sie von diesem erbeten. Da ihm aber <rs key="index:d14380e14738">Gentilotti</rs> eines angeboten hat, hat er es nicht abgelehnt; dies nicht, weil er auf das Werk von <rs key="index:d10854e4454">Brusch</rs>, der wenig vertrauenswürdig ist, viel Wert legt, sondern weil er bereits den <rs key="index:d10854e4470">ersten Teil</rs> besitzt und deshalb der zweite nicht fehlen sollte. <rs type="person" key="">RM</rs> weiß jedoch nicht, wie er sich <rs key="index:d14380e14738">Gentilotti</rs> erkenntlich zeigen soll. Geld lässt sich dieser nicht einmal anbieten, es muss also ein Buch sein. Von <rs type="person" key="">RMs</rs> <rs key="index:d14380e19786">Irenäus-Edition</rs> gibt es weder bei ihm noch bei den Buchhändlern mehr Exemplare; die <rs key="index:d10854e3285">neue Ausgabe</rs> der <rs key="index:d14380e5343">Edition der Werke des Hl. Bernhard von Clairvaux</rs> (von Jean Mabillon) ist zwar zur Zeit bereits in Druck, wird aber kaum in weniger als zwei Jahren, also zu spät erscheinen. Wenn <rs type="person" role="sender">BP</rs> dazu einen Vorschlag hat, soll er ihn mitteilen.</seg><seg type="context" n="3" xml:id="d4618e49641">Wenn das Gesendete von <rs type="person" role="sender">BP</rs> selbst ausgewählt wurde, bürgt dessen Verstand (ingenium) für die Qualität. Wenn die Auswahl von anderen getroffen wurde, befürchtet <rs type="person" key="">RM</rs>, dass es sich um Material in der Art von <rs key="index:d10854e5148">Benedikt Cherles „Chronologia monasterii in Thierhaupten“</rs> handeln wird. <rs type="person" role="sender">BP</rs> hat ja in der <rs key="index:d14380e45820">Hofbibliothek</rs> mit <rs key="index:d14380e4006">Bartenstein</rs> und <rs key="index:d10854e32969">Widow</rs> über dieses Werk gelacht, <rs type="person" key="">RM</rs> bewahrt es jedoch wegen seiner Kuriosität auf. Jedenfalls wird er alle Einsendungen <rs type="person" role="sender">BPs</rs> dankbar aufnehmen. In dessen Weltgegend gibt es viele, deren Gaumen an <rs type="cit" key="citIndex:ix2_d653e1988">scholastischen Flausen</rs> derart verbrannt ist, dass sie den Geschmack an wahrhaftiger Geschichtsschreibung (vera historia) verloren haben. Hierin ähneln sie jenem wohlgenährten Abt, den <rs type="person" role="sender">BP</rs> und seine Freunde in der<rs key="index:d14380e45820"> Hofbibliothek</rs> mit Staunen und Erheiterung seine unsinnigen und kindischen Befürchtungen äußern gehört haben; die Unkenntnis der Regeln der Geschichtsforschung (<rs type="cit" key="citIndex:ix2_d653e1157">leges historicae</rs>) begründet solches Misstrauen. Freilich hat jener auf das Drängen <rs type="person" role="sender">BPs</rs> und der anderen seine Mithilfe versprochen; was er tun wird, bleibt zu sehen. Wenn aber er und andere nichts Brauchbares mitteilen wollen, dann sollen sie nicht beklagen, dass die <rs key="index:d10854e15615">Mauriner</rs> die <rs key="index:d14380e9395">deutschen</rs> Klöster vernachlässigen. Es ist nicht statthaft, den Wahrsager zu spielen, schreiben muss man, was erwiesen ist, und nicht, was sich ein an <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>Chimären<?oxy_custom_end?> genährter Geist einbildet.</seg><seg type="context" n="4" xml:id="d4618e49643"><rs type="person" role="sender">BP</rs> soll bei seiner Erkundung der Bibliotheken <rs key="index:d14380e9395">Deutschlands</rs> an <rs type="person" key="">RM</rs> denken, wenn er auf einschlägiges Material stößt. Auf diesem Weg wird auch <rs type="person" role="sender">BPs</rs> eigenes Vorhaben zum Erfolg gelangen. Hierzu reicht der Verstand nicht, man muss auch ein Auge dafür haben. Alle größeren Bibliotheken sind genau zu durchforsten.</seg><seg type="context" n="5" xml:id="d4618e49645">Der <rs key="index:d14380e41211">Spanier</rs> (<rs key="index:d14380e1186">Luis Alvarez</rs>) soll schreiben, was er mag; <rs type="person" role="sender">BP</rs> braucht sich keine Sorgen zu machen. Jener wird wohl einige <rs key="index:d14380e41211">spanische</rs> Schriftsteller bieten, die <rs type="person" role="sender">BP</rs> unbekannt sind, dieser kann sie dann in sein umfangreicheres Werk („Bibliotheca Benedictina“) aufnehmen. Alles Weitere wird der <rs key="index:d14380e1186">Spanier</rs> aus <rs key="index:d14380e43380">Trithemius</rs> und anderen Bibliographen übernehmen und dabei deren Irrtümer reproduzieren, wenn er nicht selbst noch welche hinzufügt. <rs type="person" key="">RM</rs> selbst verfügt über viele Informationen, die für <rs type="person" role="sender">BP</rs> reserviert sind; der wenig sorgfältige <rs key="index:d14380e41211"><rs key="index:d14380e1186">Spanier</rs></rs> hat <rs type="person" key="">RM</rs> noch nicht einmal danach gefragt.</seg><seg type="context" n="6" xml:id="d4618e49647">Die Methode <rs key="index:d14380e7705">William Caves</rs>, der <rs type="person" role="sender">BP</rs> folgen will, heißt <rs type="person" key="">RM</rs> gut. Angeblich wollte sie <rs key="index:d14380e25581">Mabillon</rs> selbst verwenden, hätte er über Schriftsteller gearbeitet. Gegenüber <rs key="index:d14380e7705">Cave</rs> selbst ist jedoch Vorsicht geboten. Insbesondere ist seine Gliederung in ein „<rs key="index:d14380e2932">arianisches</rs>“, ein „<rs key="index:d10854e21130">nestorianisches</rs>“, ein „<rs key="index:d10854e20372">eutychianisches“ (monophysitisches)</rs> Jahrhundert und so weiter albern und lächerlich.</seg><seg type="context" n="7" xml:id="d4618e49649"><rs type="person" key="">RM</rs> verfügt über einige Materialien für <rs type="person" role="sender">BP</rs>: ein von <rs key="index:d14380e25581">Mabillon</rs> angelegtes <rs key="index:d10854e18051">Verzeichnis (benediktinischer Autoren)</rs>, das <rs type="person" key="">RM</rs> bei der Durchsicht der Kollektaneen noch stark erweitert hat; ein <rs key="index:d10854e15573">Verzeichnis der Schriftsteller der Cassinenser Kongregation</rs>; ein von <rs type="person" key="">RM</rs> selbst erstelltes <rs key="index:d10854e18911">Verzeichnis der Maurinerschriftsteller</rs>; <rs key="index:d14380e35252">Pits’ „Relationes historicae de rebus Anglicis“</rs> und <rs key="index:d14380e45041">Wares „De scriptoribus Hiberniae“</rs>, um welche <rs type="person" role="sender">BP</rs> schon vor langem gebeten hat; schließlich aus <rs key="index:d14380e4429">Belgien</rs> an <rs key="index:d14380e25581">Mabillon</rs> eingesendete <rs key="index:d14380e25877">Kollektaneen</rs>, die aufgrund der kleinen Schrift kaum zu lesen sind.</seg><seg type="context" n="8" xml:id="d4618e49651">Betreffend den <rs key="index:d14380e25749">fünften Band der „Annales OSB“</rs> wiederholt <rs type="person" key="">RM</rs>, was er <rs type="person" role="sender">BP</rs> (<ref type="letter">192</ref>, <ref type="letter">285</ref>) und <rs key="index:d14380e39962">Anselm Schramb</rs> bereits öfter versichert hat: Sie werden ihn beizeiten erhalten, je nach Wunsch ungebunden oder auf <rs key="index:d14380e12712">französische</rs> Art gebunden. Weil die Korrespondenz durch die <rs key="index:d10854e29346">Kriegsereignisse</rs> unterbrochen wurde, weiß <rs type="person" key="">RM</rs> nicht, ob der Band vielleicht in der Zwischenzeit angeschafft wurde. Er hat danach, sobald es wieder möglich war, gefragt (<ref type="letter">357</ref>?), aber keine Antwort erhalten. Ebenso wenig wurde ihm auf seine Frage <ref type="letter">364</ref> mitgeteilt, ob die <rs key="index:d14380e28088">Melker</rs> Kontakte in <rs key="index:d14380e4064">Basel</rs> haben und ob von dort Sendungen nach Wien gelangen können. <rs type="person" key="">RM</rs> bittet nachdrücklich um Antwort.</seg><seg type="context" n="9" xml:id="d4618e49656"><rs type="person" role="sender">BP</rs> könnte dieses Drängen der Streitsucht der <rs key="index:d14380e12712">Franzosen</rs> zuschreiben; so sprach ja auch der zuvor genannte Abt. <rs type="person" role="sender">BP</rs> aber wird die <rs key="index:d14380e12712">Franzosen</rs> als gütig und entgegenkommend kennenlernen. Auch den scharfen, doch nicht ganz ungerechtfertigten Ton von <rs type="person" role="sender">BPs</rs> Jugendwerk („<rs key="index:d14380e33515">De irruptione Bavarica</rs>“) werden sie ihm leicht nachsehen, zumal die klügeren <rs key="index:d14380e12712">Franzosen</rs> ähnlich dachten, eine öffentliche Äußerung dieser Ansicht aber nicht ratsam gewesen wäre. <rs type="person" key="">RM</rs> lädt <rs type="person" role="sender">BP</rs> ein, nach <rs key="index:d14380e12712">Frankreich</rs> zu reisen, wo er höchst willkommen sein wird, niemandem jedoch so sehr wie <rs type="person" key="">RM</rs> selbst, und wo ihm ein guter Ruf der Gelehrsamkeit ebenso wie der Frömmigkeit vorauseilt. Die Oberen der <rs key="index:d10854e15615">Mauriner</rs> haben zwar aufgrund schlechter Erfahrungen mit dem Lebenswandel einiger auswärtiger Gäste beschlossen, niemanden mehr zum längeren Aufenthalt aufzunehmen, doch hat <rs type="person" key="">RM</rs> beschworen, dass <rs type="person" role="sender">BP</rs> ganz anders sei und ihm <rs key="index:d14380e32292">Paris</rs> nicht, wie so vielen Laxen oder Unvorsichtigen, zum Verhängnis würde. Was zu lassen und zu tun ist, will ihm <rs type="person" key="">RM</rs> an Ort und Stelle mitteilen. Auf seiner Reise durch <rs key="index:d14380e9395">Deutschland</rs> soll <rs type="person" role="sender">BP</rs> häufig schreiben und angeben, wohin Briefe an ihn zu adressieren sind.</seg><seg type="context" n="10" xml:id="d4618e49658"><rs type="person" key="">RM</rs> ist erfreut über <rs type="person" role="sender">BPs</rs> Bericht, wonach die <rs key="index:d14380e22021">Bulle „Unigenitus“</rs> Papst <rs key="index:d14380e21985">Klemens’ XI.</rs> in <rs key="index:d10854e21970">Österreich</rs> nicht feierlich promulgiert worden ist. Verwunderlich ist nur, dass der <rs key="index:d14380e21188">Kaiser</rs> die Promulgation in den <rs key="index:d14380e30604">Österreichischen Niederlanden</rs> zugelassen hat, wo doch auch die <rs key="index:d14380e41211">Spanier</rs>, <rs key="index:d10854e31813">Venetianer</rs>, <rs key="index:d14380e41073">Sizilianer</rs> und <rs key="index:d14380e39518">Savoyer</rs> eine Veröffentlichung unterlassen haben. Gegen die <rs key="index:d14380e22021">Bulle</rs> stehen der Erzbischof von <rs key="index:d14380e32292">Paris</rs> Kardinal <rs key="index:d10854e21427">Noailles</rs>, viele weitere Erzbischöfe und Bischöfe sowie zahlreiche Priester ein, in der Überzeugung, dass durch sie die Grundfesten des <rs key="index:d14380e8048">Christentums</rs> erschüttert werden. Diese Haltung führt zu großer Unruhe in der <rs key="index:d14380e12712">französischen</rs> Kirche bis an den Rand eines Schismas. Zwar haben manche das Buch <rs key="index:d14380e36227">Quesnels</rs> („<rs key="index:d10854e25189">Le Nouveau Testament en françois</rs>“) verboten, seine <rs key="index:d10854e25182">Propositionen</rs> weigern sie sich jedoch zu verurteilen und ergreifen so öffentlich Partei für <rs key="index:d14380e36227">Quesnel</rs>, wie es <rs type="person" role="sender">BP</rs> zu tun fürchtet. Wenn <rs type="person" role="sender">BP</rs> in dieser Sache etwas Neues erfährt, soll er es mitteilen.</seg><seg type="context" n="11" xml:id="d4618e49660"><rs type="person" key="">RM</rs> bestellt Grüße von <rs key="index:d14380e29435">Montfaucon</rs>, <rs key="index:d14380e9205">Charles de la Rue</rs> und <rs key="index:d10854e26800">Pierre Sabatier</rs>; er sendet selbst solche an <rs type="person" role="sender">BPs</rs> Bruder Klemens (recte: <rs key="index:d14380e34537">Hieronymus</rs>) und an <rs key="index:d14380e39962">Anselm Schramb</rs>. Diesem soll <rs type="person" role="sender">BP</rs> schreiben, dass <rs type="person" key="">RM</rs> die vermutlich von <rs key="index:d14380e39962">Schramb</rs> aus <rs key="index:d14380e45571">Wien</rs> geschickten Exemplare von <rs key="index:d14380e11508">Eraths „Commentarius“</rs> durch einen <rs key="index:d10854e30984">Boten</rs> des königlichen Staatssekretärs <rs key="index:d14380e42961">Marquis de Torcy</rs> erhalten hat. Erste Blicke in das Buch haben gezeigt, dass es nichtig und voller Unsinn ist. Eine ausführliche Entgegnung würde ihm unverdientes Gewicht verleihen, was <rs type="person" key="">RM</rs> Schramb bereits in früheren Briefen angedeutet hat. Er fordert <rs type="person" role="sender">BP</rs> auf, seinen Mitbruder nachdrücklich von der vergeblichen Mühe abzuhalten und zu sinnvollerer Betätigung zu rufen.</seg><seg type="context" n="12" xml:id="d4618e49663">In einem Postskriptum bittet <rs type="person" key="">RM</rs>, mitzuteilen, ob <rs type="person" role="sender">BP</rs> außer dem oben Erwähnten noch etwas aus Paris wünscht.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">V</hi>.</p>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">121</hi> (mit irrigem Datum 30. Januar 1716).</p>
-            <div type="remarks">
-               <p>Aufgrund der Korrektur in der Datumsangabe ist dieser Brief bei Katschthaler und
-                  ebenso bei <rs type="bibl" key="bibl:16524">Glassner, Verzeichnis</rs> 226,
-                  fälschlich zum 30. Januar 1716 datiert. RM war bereits am 19. Januar 1716
-                  verstorben. Auch der Inhalt des Briefs fügt sich zwanglos zum Datum 30. Januar
-                  1715 in die Korrespondenz zwischen BP und RM ein.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverendo ac religiosissimo domino patri Bernardo Pez frater Renatus Massuet salutem plurimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e49689">Litteras tuas, Bernarde mi, diutius exspectavi, patienter tamen, ut decebat, satis sciens <seg type="lemma" corresp="#d4618e49769">te Vindobonae agere</seg> iucundaque interdum cum clarissimo et erudito Gentillotio et amicis nostris Bartenstenio et Widowio colloquia serere. Amicitiam tuam iam dudum ambiebant duo posteriores, Widowiusque a me discedens iis permotus, quae de te a me saepius audierat, se Mellicio transiturum promiserat, ut te inviseret verbisque meis salutaret. Gaudeo, immo gratias ago, quod utrumque in familiaritatem admiseris; nec te nec illos umquam poenitebit. Neutrius animus <seg type="lemma" corresp="#d4618e49776">a catholica fide alienus</seg> est, eoque facile Widowium adduxissem, nisi reditus ad suos Hamburgenses tam facilem ad eorum mores et haeresim reditum<note place="foot" xml:id="d4618e49691">	Über der Zeile eingefügt.</note> praenuntiasset. Maior de Bartenstenio spes, quae ne fallat, assiduis a Deo precibus obtine. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e49694">Hic, quam commisisti <seg type="lemma" corresp="#d4618e49781">sarcinam</seg>, secum Lipsiam usque detulit, inde Argentoratum ac tum demum Parisios tuto mittendam. Nondum accepi, sed nulla me sollicitudo tenet. Ut viro probo et amico rem commisisti, sic probe et amice rem nostram geret. Simul acceperim, tibi nuntiabo litterasque <seg type="lemma" corresp="#d4618e49788">meas ad clarissimum Gentillotium</seg>, grati animi pignus, scriptas mittam, quas ipse tuis utique stipatas perferri cures. Si quidem te Bruschiis abundare scissem, postremam Centuriam a te, non ab alio expetiissem. Sed nihil minus cogitanti cum generose obtulerit Gentillotius, oblatam non recusavi; non quod totum Bruschium, ducem utique parum fidum, pluris faciam, sed quod iam habenti mihi primam partem noluerim secundam, hic satis raram, deesse. At quid benefico viro rependam, haud satis scio. Offerri sibi pecuniam ne quidem patienter audit. Alius proinde liber quispiam mittendus est. Sed quis? Irenaei iam dudum non apud me modo, sed et apud bibliopolas deficiunt; nova quidem <seg type="lemma" corresp="#d4618e49793">Bernardi operum editio</seg> sub praelo est, sed vix ante biennium prodibit, tardius proinde, quam decet. Tu, quid erudito viro gratum esse possit, si noveris aut <sic>coniecteris</sic> [<hi rend="italic">sic</hi>], significes, quaeso. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e49699">De iis, quae ad me mittere dignaris, si ipse delegeris, certam fiduciam facit optimum ingenium tuum optima esse; si ab aliis delecta acceperis, vereor, ne plura sint, quae non multum abhorreant a <seg type="lemma" corresp="#d4618e49798">Chronico Thierhauptano</seg>, lepido certe opere, de quo ipse (scio) cum amicis nostris in bibliotheca caesarea risisti, curiose tamen a me servato ob novitatem et insolentiam. Ut tamen res erunt, gratissimus accipiam, quaecumque miseris, probe sciens te non, quod velis, sed quod possis facere. Non desunt enim apud vos, quibus fervidae scholasticorum nugae palatum adeo exsurdarint, ut verae historiae gustum prorsus ademerint. Similes pingui <seg type="lemma" corresp="#d4618e49805">illi abbati</seg>, quem in caesarea bibliotheca non sine admiratione, immo nec sine risu vanos ac plus quam pueriles prodentem timores audistis; quos legum historicarum ignorantia ridicule suspiciosos facit. Vides non adeo obductos fuisse loci parietes, quin per ignotas tibi <seg type="lemma" corresp="#d4618e49810">rimulas</seg> abbatis sermo ad aures meas diffluxerit. Sed satis<note place="foot" xml:id="d4618e49701">	Abkürzung <hi rend="italic">st.</hi>, Auflösung unsicher.</note>. <pb n="1v"/> Aliquid tamen bonus ille a vobis lacessitus et stimulatus promisit. Sine, videamus, quid acturus sit. Sed si vel ipse vel alii nihil communicare velint, quod operae pretium sit, non ergo nobiscum expostulent, quod res Germaniae monasticas negligamus. Nobis non licet esse hariolis, scribentibus quippe, quae exstitisse nobis constat, non quae esse potuisse mens chimaeris pasta suaserit. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e49709">Tu, amice mi, cui exquisitum bonarum rerum gustum natura dare coepit, cum Germaniae bibliothecas perlustrabis, mei, quaeso, memineris. Vix enim fieri potest, quin plura tibi occurrant, quae ad res nostras faciant. Certe viam tenes, qua tibi prospere succedat opus, quod moliris: hic enim ingenium non sufficit, nisi et in operis partem veniant oculi. Adeundae sunt locupletiores quaeque bibliothecae diligentiusque perscrutandi singuli earum foruli, ut abditi in iis thesauri inde eruantur. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e49711">Sine, sine, scribat <seg type="lemma" corresp="#d4618e49815">Hispanus</seg>, nec te terreat ingens operis eius moles. Hispanos quosdam auctores ignotos forte dabit, quos tu pro iure tuo in numerosiorem coetum adscisces; caeteros a Trithemio aliisque bibliographis accipiet, pristinis utique naevis foedatos, nisi et novos addiderit. Certe penes me plura sunt tibi servata, quae ne quidem<note place="foot" xml:id="d4618e49713">	Über der Zeile eingefügt.</note> suspicari potest <seg type="lemma" corresp="#d4618e49815">Hispanus</seg>, immo nec exquirere satagit; adeo indiligens est. Quanto plura tu assiduo labore sollertique inquisitione addideris! </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e49716">Admodum placet, quem sequi instituis, Caveana methodus: ipsa est, quam meditari Mabillonium audivi, si quid ea de re scripsisset. A Cavio tamen tibi cave, auctore prorsus infido; ut nihil dicam de insulsa illa ac ridicula operis distributione per saecula Arianum, Nestorianum, Eutychianum etc., a qua tu meliori iudicio donatus abhorrebis. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d4618e49718"><seg type="lemma" corresp="#d4618e49822">Quae tibi mittenda habeam</seg>, sciscitaris? Plura, amice mi. Primo quidem <seg type="lemma" corresp="#d4618e49829">catalogum, quem sibi aliud agens confecerat Mabillonius</seg>, sed a me post diligentem, quantum licuit, inquisitionem perlustrataque scrinia mea duplo ad minus auctum et amplificatum. Secundo catalogum accuratum scriptorum congregationis sanctae Justinae, quem vix alibi reperire posses. Tertio <seg type="lemma" corresp="#d4618e49840">alium a me concinnatum</seg> scriptorum nostrae congregationis. Quarto Pitsei De scriptoribus Angliae et Waraei De scriptoribus Hiberniae libros a te dudum expetitos. Quinto varias schedas e Belgio ad Mabillonium missas; bonas an malas? Minutiori quippe charactere scriptas legere non licuit oculis tenerioribus: tu oculis ac pedibus valens facile expedies. </seg><seg type="context" n="8" xml:space="preserve" xml:id="d4618e49720">Meminerim adhuc semel quinti Annalium nostrorum tomi? Paene taedet. Iteratis tum ad te, tum ad Schrambium nostrum litteris monui tibi servari suo tempore mittendum, in foliis an Gallico more compactum, ut iuberes. Ingratas posthaec ferias litteris nostris imperante bello, quid interea actum sit, num forte comparatus quintus tomus, non novi. <seg type="lemma" corresp="#d4618e49845">Id primum, scribere dum licuit, sciscitatus</seg>, ne verbum quidem responsionis obtinere potui. Ergone misso apparitore diem tibi dicam teque de responsione appellem? Si litem semel moveam, non unam. Nam quod sciscitanti, num quid vobis cum Basileensibus commercii esset, et an ea urbe quidpiam Vindobonam recte transmitti posset, nihil<note place="foot" xml:id="d4618e49722">	Danach durchgestrichen <hi rend="italic">transmit</hi>.</note> responderis, novae liti fomitem ministrabit. Responde igitur, ne forte silentium pertinacius tibi fraudi sit. </seg><seg type="context" n="9" xml:space="preserve" xml:id="d4618e49728">Hui! inquis, litium amantes Galli! Sic aiebat lepidus ille abbas supra designatus. Sed tu bonos experieris, satisque commodos etiam maledicentibus. Acriorem nec prorsus immeritum iuvenilis scripti stilum tibi facile condonabunt: cum maxime prudentiores quique idem tecum senserint, <pb n="2r"/> quamvis tecum palam improbare tutum non fuisset. Veni proinde, veni nihil a Gallis timens: iis, qui te iam norunt, optatissimus est adventus tuus; iis, qui te praesentem adspexerint, iucundissimus erit; sed nulli vel optatior vel iucundior quam mihi tui percupido. Magna hic est opinio de te, nec minuet praesentia famam, cum maxime ingenio ad litteras bene nato haud disparem, immo maiorem, ut par est, pietatem religionisque studium respondere animadverterint superiores nostri. Ii enim (quod tibi subobscurius forte dictum fuit Viennae) <seg type="lemma" corresp="#d4618e49852">exterorum quorumdam huc missorum moribus parum religiosis offensi</seg> statuerant nullum deinceps exterum admittere diutius apud nos commoraturum. Sed longe alios esse Bernardi mei mores, ipsi Lutetiam, ut pluribus aut iam licentioribus aut incautioribus fuit, exitio non fore, ac demum eum esse, qui probis omnibus sese probaturus sit, fidem feci; nec fallet. Sed quae tibi cavenda sint quaeve agenda, praesenti dicam amicus amico. Interim Germaniam peragrans mihi identidem scribere ne praetermittas eaque loca indicare, ad quae litteras meas mittere possim diutius commoraturo. Haud spernendis rationibus fultus id a te peto. </seg><seg type="context" n="10" xml:space="preserve" xml:id="d4618e49732">Gratissimum est, quod narras, nuperam<note place="foot" xml:id="d4618e49734">	Davor durchgestrichen <hi rend="italic">constitu</hi>.</note> <seg type="lemma" corresp="#d4618e49859">constitutionem pontificiam</seg> apud vos sollemni ritu promulgatam non fuisse<note place="foot" xml:id="d4618e49740">	Danach unleserliche Streichung im Ausmaß von 5 Wörtern.</note>. Sed mirum est caesarem in Belgio promulgari permisisse, quam a finibus suis Austriacis arcuit, arcuerunt et a suis Hispani, Veneti, Siculi et Sabaudi. Eam admittere palam detractant eminentissimus cardinalis archiepiscopus noster aliique plures cum archiepiscopi, tum episcopi, iique non infimi nominis, ut nihil dicam de secundi ordinis sacerdotibus; rati videlicet ipsa religionis Christianae fundamenta succussum iri. Haec eorum sententia, et inde turbarum in ecclesia Gallicana seges et prope schisma. Et si quidam ὀικονομίας causa fidelibus<note place="foot" xml:id="d4618e49743">	Danach durchgestrichen <hi rend="italic">Quesnell</hi>.</note> interdixerint Quesnellii libro (quod tamen non omnibus placuit), propositiones tamen, quae catholicum dogma prae se ferre putant, damnare constanter renuunt; et sic, quod tu vereris, a Quesnellii partibus palam stare non timent. Sic res hic sunt. Si quid novi ea de re, maximi utique momenti, apud vos acciderit, quod operae pretium sit<note place="foot" xml:id="d4618e49749">	Über der Zeile eingefügt.</note> significare, quaeso, non omittas. </seg><seg type="context" n="11" xml:space="preserve" xml:id="d4618e49752">Plurimam tibi salutem dicunt Montefalconius, <seg type="lemma" corresp="#d4618e49866">Carolus de la Rüe</seg> et Sabbaterius nostri; nec minorem ego reverendo et amantissimo cognomini et <seg type="lemma" corresp="#d4618e49873">cognato tuo Clementi</seg> et amico nostro reverendo patri Anselmo Schramb. Huic, quaeso, ne litteras frustra multiplicare cogar, quam primum licuerit, scribere ne pigeat accepisse me ab eo, puto, Vienna missos Erathii Commentarios, ad me allatos per unum e <seg type="lemma" corresp="#d4618e49878">cursoribus illustrissimi marchionis de Torcy</seg> regi nostro a secretis; gratis proinde. Pauca evolvi, hucque et illuc oculos, prout sors temere ferebat, coniciens<note place="foot" xml:id="d4618e49754">	Davor durchgestrichen <hi rend="italic">cont</hi>.</note>; deprehendi futile opus esse ac nugis refertum, quod qui serio confutare voluerit, nugis pondus addiderit. Hanc meam <seg type="lemma" corresp="#d4618e49883">sententiam opere nondum inspecto Schrambio significavi</seg>, ut eum a confutandi consilio depellerem. Sed iam acrius urgendus videtur, ut ne <seg type="lemma" corresp="#d4618e49888">oleum et operam perdat</seg> in tam deplorato opere confutando. Tu pro ea, qua apud ipsum vales auctoritate, mentem eius ad meliora studia avoca. Vale meque semper ama.</seg></p>
-            <p xml:space="preserve">Parisiis III. Kalendas Februarii MDCCXV<note place="foot" xml:id="d4618e49762">	Am Ende des Zahlzeichens eine Streichung, die einem senkrechten Schaft ähnelt.</note>.</p>
-            <p xml:space="preserve"><seg type="context" n="12" xml:space="preserve" xml:id="d4618e49766">P.S. Si quid aliud hinc praeter superius memorata mitti velis, tempestive significes.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e49769">
-               <ref type="context">1</ref>
-               <label>te Vindobonae agere</label>
-               <p>Vgl. <ref type="letter">375</ref> &lt;1&gt;; sowie Einleitung, Abschnitt I.1.</p>
-            </note>
-            <note xml:id="d4618e49776">
-               <ref type="context">1</ref>
-               <label>a catholica fide alienus</label>
-               <p>Die Frage nach Ähnlichkeiten jansenistischer und protestantischer Standpunkte bildete einen Gegenstand der Korrespondenz Bartensteins mit Bernard de Montfaucon; vgl. Einleitung, Abschnitt I.3.</p>
-            </note>
-            <note xml:id="d4618e49781">
-               <ref type="context">2</ref>
-               <label>sarcinam</label>
-               <p>Die Sendung erreichte Straßburg nicht vor April 1715; vgl. <ref type="letter"
-                     >360</ref> &lt;7&gt;, <ref type="letter">379</ref> &lt;7&gt;.</p>
-            </note>
-            <note xml:id="d4618e49788">
-               <ref type="context">2</ref>
-               <label>meas ad ... Gentillotium</label>
-               <p>Vgl. <ref type="letter">396</ref> &lt;2&gt;.</p>
-            </note>
-            <note xml:id="d4618e49793">
-               <ref type="context">2</ref>
-               <label>Bernardi operum editio</label>
-               <p>Gemeint ist die Neuausgabe von Mabillons Edition der Werke Bernhards von Clairvaux
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>te Vindobonae agere</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:375">375</ref> <ref target="letter:375#seg1">1</ref>; sowie Einleitung, Abschnitt I.1.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>a catholica fide alienus</mentioned>
+            <p>Die Frage nach Ähnlichkeiten jansenistischer und protestantischer Standpunkte bildete einen Gegenstand der Korrespondenz Bartensteins mit Bernard de Montfaucon; vgl. Einleitung, Abschnitt I.3.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>sarcinam</mentioned>
+            <p>Die Sendung erreichte Straßburg nicht vor April 1715; vgl. <ref type="letter" target="letter:360">360</ref> <ref target="letter:360#seg7">7</ref>, <ref type="letter" target="letter:379">379</ref> <ref target="letter:379#seg7">7</ref>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>meas ad ... Gentillotium</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:396">396</ref> <ref target="letter:396#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned>Bernardi operum editio</mentioned>
+            <p>Gemeint ist die Neuausgabe von Mabillons Edition der Werke Bernhards von Clairvaux
                   aus dem Jahre 1690. Sie wurde zunächst von RM bearbeitet, nach seinem Tod zu
-                  Anfang des Jahres 1716 von François Le Texier (vgl. <ref type="letter">450</ref>
-                  &lt;7&gt;) übernommen, und erschien 1719 zu Paris; vgl. <rs type="bibl"
-                     key="bibl:14772">Tassin, Histoire littéraire</rs> 376; <rs type="bibl"
-                     key="bibl:20066">Vanel, Nécrologe</rs> 109; <rs type="bibl" key="bibl:20354"
-                     >Wilhelm et al., Nouveau supplément 1</rs> 370.</p>
-            </note>
-            <note xml:id="d4618e49798">
-               <ref type="context">3</ref>
-               <label>Chronico Thierhauptano</label>
-               <p>Vgl. <ref type="letter">285</ref> &lt;6&gt;, <ref type="letter">381</ref>
-                  &lt;1&gt;.</p>
-            </note>
-            <note xml:id="d4618e49805">
-               <ref type="context">3</ref>
-               <label>illi abbati</label>
-               <p>Seine Identität konnte nicht ermittelt werden; vgl. jedoch <ref type="letter"
-                     >427</ref> &lt;6&gt;. Da er offenbar um Material für RM gebeten wurde, müsste
+                  Anfang des Jahres 1716 von François Le Texier (vgl. <ref type="letter" target="letter:450">450</ref>
+                  <ref target="letter:450#seg7">7</ref>) übernommen, und erschien 1719 zu Paris; vgl. <rs type="bibl" ref="bibl:14772">Tassin, Histoire littéraire</rs> 376; <rs type="bibl" ref="bibl:20066">Vanel, Nécrologe</rs> 109; <rs type="bibl" ref="bibl:20354">Wilhelm et al., Nouveau supplément 1</rs> 370.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned>Chronico Thierhauptano</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:285">285</ref> <ref target="letter:285#seg6">6</ref>, <ref type="letter" target="letter:381">381</ref>
+                  <ref target="letter:381#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned>illi abbati</mentioned>
+            <p>Seine Identität konnte nicht ermittelt werden; vgl. jedoch <ref type="letter" target="letter:427">427</ref> <ref target="letter:427#seg6">6</ref>. Da er offenbar um Material für RM gebeten wurde, müsste
                   er Benediktiner gewesen sein. Zu Ängsten vor Gefahren der Publikation von
-                  hausgeschichtlichen Quellen vgl. Einleitung, Abschnitt I.2; sowie etwa <ref
-                     type="letter">143</ref> &lt;5&gt;, <ref type="letter">266</ref> &lt;10&gt;.</p>
-            </note>
-            <note xml:id="d4618e49810">
-               <ref type="context">3</ref>
-               <label>rimulas</label>
-               <p>Zweifellos Bartenstein oder Widow.</p>
-            </note>
-            <note xml:id="d4618e49815">
-               <ref type="context">5</ref>
-               <label>Hispanus</label>
-               <p>Gemeint ist Luis Alvarez; vgl. <ref type="letter">379</ref> &lt;4&gt;.</p>
-            </note>
-            <note xml:id="d4618e49822">
-               <ref type="context">7</ref>
-               <label>Quae tibi mittenda habeam</label>
-               <p>Die meisten der aufgezählten Materialien wurden bereits in <ref type="letter"
-                     >285</ref> &lt;5&gt; erwähnt. Über die „belgischen“ Notizen ist weiter nichts
+                  hausgeschichtlichen Quellen vgl. Einleitung, Abschnitt I.2; sowie etwa <ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg5">5</ref>, <ref type="letter" target="letter:266">266</ref> <ref target="letter:266#seg10">10</ref>.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
+            <mentioned>rimulas</mentioned>
+            <p>Zweifellos Bartenstein oder Widow.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
+            <mentioned>Hispanus</mentioned>
+            <p>Gemeint ist Luis Alvarez; vgl. <ref type="letter" target="letter:379">379</ref> <ref target="letter:379#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg7">
+            <mentioned>Quae tibi mittenda habeam</mentioned>
+            <p>Die meisten der aufgezählten Materialien wurden bereits in <ref type="letter" target="letter:285">285</ref> <ref target="letter:285#seg5">5</ref> erwähnt. Über die „belgischen“ Notizen ist weiter nichts
                   bekannt, sie sind auch im Pez-Nachlass nicht auszumachen.</p>
-            </note>
-            <note xml:id="d4618e49829">
-               <ref type="context">7</ref>
-               <label>catalogum, quem ... confecerat Mabillonius</label>
-               <p>Nach der Beschreibung in <ref type="letter">154</ref> &lt;11&gt; handelte es sich
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg7">
+            <mentioned>catalogum, quem ... confecerat Mabillonius</mentioned>
+            <p>Nach der Beschreibung in <ref type="letter" target="letter:154">154</ref> <ref target="letter:154#seg11">11</ref> handelte es sich
                   um eine nach Jahrhunderten angeordnete Zusammenstellung benediktinischer Autoren.
                   In den Maurinerbeständen der BN scheint diese nicht erhalten zu sein. Im
                   Pez-Nachlass findet sich ein unvollständiges Verzeichnis „Scriptores ordinis
@@ -199,22 +166,19 @@
                   könnte darauf hinweisen, dass er das Material erst zu dieser Zeit aus dem Nachlass
                   RMs an sich brachte; auf eine Zusendung zu Lebzeiten RMs findet sich jedenfalls in
                   den Briefen kein Hinweis.</p>
-            </note>
-            <note xml:id="d4618e49835">
-               <ref type="context">7</ref>
-               <label>catalogum... sanctae Justinae</label>
-               <p>Im Pez-Nachlass sind zwei Schriftstellerverzeichnisse dieser Kongregation
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg7">
+            <mentioned>catalogum... sanctae Justinae</mentioned>
+            <p>Im Pez-Nachlass sind zwei Schriftstellerverzeichnisse dieser Kongregation
                   überliefert: StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 29 und 30. Das letztere
                   ist nach einem Vermerk Katschthalers eine Beilage zu einem Brief des Giuseppe
-                  Maria Sandi aus S. Giustina zu Padua (1717 oder später; vgl. <rs type="bibl"
-                     key="bibl:16524">Glassner, Verzeichnis</rs> 232f.); Nr. 29 könnte vielleicht
+                  Maria Sandi aus S. Giustina zu Padua (1717 oder später; vgl. <rs type="bibl" ref="bibl:16524">Glassner, Verzeichnis</rs> 232f.); Nr. 29 könnte vielleicht
                   das hier angesprochene Verzeichnis sein, doch ergeben sich keine sicheren
                   Anhaltspunkte für oder gegen eine solche Identifizierung.</p>
-            </note>
-            <note xml:id="d4618e49840">
-               <ref type="context">7</ref>
-               <label>alium a me concinnatum</label>
-               <p>In mehreren Kartons des Melker Pez-Nachlasses sind zahlreiche Verzeichnisse und
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg7">
+            <mentioned>alium a me concinnatum</mentioned>
+            <p>In mehreren Kartons des Melker Pez-Nachlasses sind zahlreiche Verzeichnisse und
                   Notizen über französische Benediktinerautoren, zu einem guten Teil von
                   französischen Händen, erhalten. Einige wenige kleinere Stücke sind eigenhändig von
                   RM geschrieben: Skizzen über Julien Garnier und Montfaucon in StiA Melk, Karton 7
@@ -222,72 +186,87 @@
                   Fasz. 1, Nr. 13; ein Verzeichnis über „Scriptores Benedictini incerti temporis“
                   ebd., Karton 85 Varia 25, Fasz. 1, Nr. 64. Dieses Material dürfte jedoch erst nach
                   dem Tod RMs an BP gelangt sein, sei es durch Martène ab 1716 oder bei BPs
-                  Paris-Aufenthalt 1728. Vgl. auch <ref type="letter">467</ref> &lt;1&gt;.</p>
-            </note>
-            <note xml:id="d4618e49845">
-               <ref type="context">8</ref>
-               <label>Id ... sciscitatus</label>
-               <p>Die Frage findet sich nicht in <ref type="letter">364</ref> und müsste daher im
-                  verlorenen Brief <ref type="letter">357</ref> erfolgt sein, was auch gut zu RMs
+                  Paris-Aufenthalt 1728. Vgl. auch <ref type="letter" target="letter:467">467</ref> <ref target="letter:467#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg8">
+            <mentioned>Id ... sciscitatus</mentioned>
+            <p>Die Frage findet sich nicht in <ref type="letter" target="letter:364">364</ref> und müsste daher im
+                  verlorenen Brief <ref type="letter" target="letter:357">357</ref> erfolgt sein, was auch gut zu RMs
                   Formulierung „primum, dum scribere licuit“ passen würde.</p>
-            </note>
-            <note xml:id="d4618e49852">
-               <ref type="context">9</ref>
-               <label>exterorum ... offensi</label>
-               <p>Hier könnte an Anselmo Banduri gedacht sein, dessen immer intensiveres Verkehren
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg9">
+            <mentioned>exterorum ... offensi</mentioned>
+            <p>Hier könnte an Anselmo Banduri gedacht sein, dessen immer intensiveres Verkehren
                   in der höfischen Gesellschaft bei seinen maurinischen Gastgebern um diese Zeit
                   bereits zunehmendes Missfallen erregte (Impellizzeri–Rotta, Bandur 745: „ [...] la
                   condotta del B. aveva cessato di edificare la famiglia maurina“). Zu Banduris
-                  Pariser Aufenthalt vgl. <ref type="letter">205</ref> &lt;7&gt;, <ref type="letter"
-                     >359</ref> &lt;4&gt;.</p>
-            </note>
-            <note xml:id="d4618e49859">
-               <ref type="context">10</ref>
-               <label>constitutionem pontificiam</label>
-               <p>Zu den Querelen um die Bulle „Unigenitus“ vgl. Einleitung, Abschnitt I.4; zur
+                  Pariser Aufenthalt vgl. <ref type="letter" target="letter:205">205</ref> <ref target="letter:205#seg7">7</ref>, <ref type="letter" target="letter:359">359</ref> <ref target="letter:359#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg10">
+            <mentioned>constitutionem pontificiam</mentioned>
+            <p>Zu den Querelen um die Bulle „Unigenitus“ vgl. Einleitung, Abschnitt I.4; zur
                   Haltung des Kaiserhofes und zur Promulgierung in den Österreichischen
-                  Niederlanden: <rs type="bibl" key="bibl:36276">Hantsch, Schönborn</rs> 201f.; <rs
-                     type="bibl" key="bibl:19346">Schill, Constitution Unigenitus</rs> 332f.; vgl.
-                  auch <ref type="letter">379</ref> &lt;10&gt;. Die Freude RMs über das von BP aus
+                  Niederlanden: <rs type="bibl" ref="bibl:36276">Hantsch, Schönborn</rs> 201f.; <rs type="bibl" ref="bibl:19346">Schill, Constitution Unigenitus</rs> 332f.; vgl.
+                  auch <ref type="letter" target="letter:379">379</ref> <ref target="letter:379#seg10">10</ref>. Die Freude RMs über das von BP aus
                   Wien Berichtete hängt wohl damit zusammen, dass die Nicht-Promulgierung der Bulle
                   im Ausland von der jansenistischen Partei in Frankreich als Argument herangezogen
-                  wurde, wonach ihr die Anerkennung der Gesamtkirche fehle: <rs type="bibl"
-                     key="bibl:15792">Deinhardt, Jansenismus</rs> 30.</p>
-            </note>
-            <note xml:id="d4618e49866">
-               <ref type="context">11</ref>
-               <label>Carolus de la Rüe</label>
-               <p>RM stellt den irrigen Vornamen richtig, welchen BP (379 &lt;2&gt;) wohl von
-                  Gentilotti (<ref type="letter">363</ref> &lt;1&gt;) übernommen hatte.</p>
-            </note>
-            <note xml:id="d4618e49873">
-               <ref type="context">11</ref>
-               <label>cognato tuo Clementi</label>
-               <p>RM vermengt anscheinend Klemens Schramb und HP.</p>
-            </note>
-            <note xml:id="d4618e49878">
-               <ref type="context">11</ref>
-               <label>cursoribus ... Torcy</label>
-               <p>Seit November 1714 waren Verhandlungen zur Wiederaufnahme der französischen
-                  Gesandtschaft in Wien angelaufen, Mitte Januar traf ein Geschäftsträger ein: <rs
-                     type="bibl" key="bibl:15256">Bittner–Groß, Repertorium 1</rs> 214f.; <rs
-                     type="bibl" key="bibl:15406">Braubach, Prinz Eugen</rs> 3 259–262. Die
+                  wurde, wonach ihr die Anerkennung der Gesamtkirche fehle: <rs type="bibl" ref="bibl:15792">Deinhardt, Jansenismus</rs> 30.</p>
+         </note>
+         <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg11">
+            <mentioned>Carolus de la Rüe</mentioned>
+            <p>RM stellt den irrigen Vornamen richtig, welchen BP (379 <ref target="#seg2">2</ref>) wohl von
+                  Gentilotti (<ref type="letter" target="letter:363">363</ref> <ref target="letter:363#seg1">1</ref>) übernommen hatte.</p>
+         </note>
+         <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg11">
+            <mentioned>cognato tuo Clementi</mentioned>
+            <p>RM vermengt anscheinend Klemens Schramb und HP.</p>
+         </note>
+         <note target="#range(right('n19'), left('n19e'))" n="19" anchored="false" corresp="#seg11">
+            <mentioned>cursoribus ... Torcy</mentioned>
+            <p>Seit November 1714 waren Verhandlungen zur Wiederaufnahme der französischen
+                  Gesandtschaft in Wien angelaufen, Mitte Januar traf ein Geschäftsträger ein: <rs type="bibl" ref="bibl:15256">Bittner–Groß, Repertorium 1</rs> 214f.; <rs type="bibl" ref="bibl:15406">Braubach, Prinz Eugen</rs> 3 259–262. Die
                   Heranziehung eines diplomatischen Kuriers passt zur Vorgehensweise Schrambs bei
                   früheren Sendungen; vgl. Einleitung, Abschnitt II.2.</p>
-            </note>
-            <note xml:id="d4618e49883">
-               <ref type="context">11</ref>
-               <label>sententiam ... significavi</label>
-               <p>Vgl. <ref type="letter">266 </ref>&lt;1&gt; und &lt;21&gt;, <ref type="letter"
-                     >285</ref> &lt;1&gt;. Zur Kontroverse vgl. Einleitung, Abschnitt I.5.</p>
-            </note>
-            <note xml:id="d4618e49888">
-               <ref type="context">11</ref>
-               <label>oleum et operam perdat</label>
-               <p>Nach <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Plautus,
-                  Poenulus<?oxy_custom_end?> 332.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg11">
+            <mentioned>sententiam ... significavi</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:266">266 </ref><ref target="letter:266 #seg1">1</ref> und <ref target="letter:266 #seg21">21</ref>, <ref type="letter" target="letter:285">285</ref> <ref target="letter:285#seg1">1</ref>. Zur Kontroverse vgl. Einleitung, Abschnitt I.5.</p>
+         </note>
+         <note target="#range(right('n21'), left('n21e'))" n="21" anchored="false" corresp="#seg11">
+            <mentioned>oleum et operam perdat</mentioned>
+            <p>Nach Plautus,
+                  Poenulus 332.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>V</orig>.</note>
+         <note anchored="false">Ordnungsvermerk: <orig>121</orig> (mit irrigem Datum 30. Januar 1716).</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:17432">
+            <title type="short">Katschthaler, Briefnachlass</title>
+            <biblScope>28f., 40</biblScope>
+            <note>irrig zum 30. Januar 1716)</note>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverendo ac religiosissimo domino patri Bernardo Pez frater Renatus Massuet salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Litteras tuas, Bernarde mi, diutius exspectavi, patienter tamen, ut decebat, satis sciens <anchor xml:id="n1"/>te Vindobonae agere<anchor xml:id="n1e"/> iucundaque interdum cum clarissimo et erudito Gentillotio et amicis nostris Bartenstenio et Widowio colloquia serere. Amicitiam tuam iam dudum ambiebant duo posteriores, Widowiusque a me discedens iis permotus, quae de te a me saepius audierat, se Mellicio transiturum promiserat, ut te inviseret verbisque meis salutaret. Gaudeo, immo gratias ago, quod utrumque in familiaritatem admiseris; nec te nec illos umquam poenitebit. Neutrius animus <anchor xml:id="n2"/>a catholica fide alienus<anchor xml:id="n2e"/> est, eoque facile Widowium adduxissem, nisi reditus ad suos Hamburgenses tam facilem ad eorum mores et haeresim <add place="above">reditum</add> praenuntiasset. Maior de Bartenstenio spes, quae ne fallat, assiduis a Deo precibus obtine. </ab>
+         <ab resp="#editor" xml:id="seg2">Hic, quam commisisti <anchor xml:id="n3"/>sarcinam<anchor xml:id="n3e"/>, secum Lipsiam usque detulit, inde Argentoratum ac tum demum Parisios tuto mittendam. Nondum accepi, sed nulla me sollicitudo tenet. Ut viro probo et amico rem commisisti, sic probe et amice rem nostram geret. Simul acceperim, tibi nuntiabo litterasque <anchor xml:id="n4"/>meas ad clarissimum Gentillotium<anchor xml:id="n4e"/>, grati animi pignus, scriptas mittam, quas ipse tuis utique stipatas perferri cures. Si quidem te Bruschiis abundare scissem, postremam Centuriam a te, non ab alio expetiissem. Sed nihil minus cogitanti cum generose obtulerit Gentillotius, oblatam non recusavi; non quod totum Bruschium, ducem utique parum fidum, pluris faciam, sed quod iam habenti mihi primam partem noluerim secundam, hic satis raram, deesse. At quid benefico viro rependam, haud satis scio. Offerri sibi pecuniam ne quidem patienter audit. Alius proinde liber quispiam mittendus est. Sed quis? Irenaei iam dudum non apud me modo, sed et apud bibliopolas deficiunt; nova quidem <anchor xml:id="n5"/>Bernardi operum editio<anchor xml:id="n5e"/> sub praelo est, sed vix ante biennium prodibit, tardius proinde, quam decet. Tu, quid erudito viro gratum esse possit, si noveris aut <sic>coniecteris</sic> , significes, quaeso. </ab>
+         <ab resp="#editor" xml:id="seg3">De iis, quae ad me mittere dignaris, si ipse delegeris, certam fiduciam facit optimum ingenium tuum optima esse; si ab aliis delecta acceperis, vereor, ne plura sint, quae non multum abhorreant a <anchor xml:id="n6"/>Chronico Thierhauptano<anchor xml:id="n6e"/>, lepido certe opere, de quo ipse (scio) cum amicis nostris in bibliotheca caesarea risisti, curiose tamen a me servato ob novitatem et insolentiam. Ut tamen res erunt, gratissimus accipiam, quaecumque miseris, probe sciens te non, quod velis, sed quod possis facere. Non desunt enim apud vos, quibus fervidae scholasticorum nugae palatum adeo exsurdarint, ut verae historiae gustum prorsus ademerint. Similes pingui <anchor xml:id="n7"/>illi abbati<anchor xml:id="n7e"/>, quem in caesarea bibliotheca non sine admiratione, immo nec sine risu vanos ac plus quam pueriles prodentem timores audistis; quos legum historicarum ignorantia ridicule suspiciosos facit. Vides non adeo obductos fuisse loci parietes, quin per ignotas tibi <anchor xml:id="n8"/>rimulas<anchor xml:id="n8e"/> abbatis sermo ad aures meas diffluxerit. Sed satis<note type="annotation" xml:id="d4618e49701">Abkürzung <orig>st.</orig>, Auflösung unsicher.</note>. <pb n="1v"/> Aliquid tamen bonus ille a vobis lacessitus et stimulatus promisit. Sine, videamus, quid acturus sit. Sed si vel ipse vel alii nihil communicare velint, quod operae pretium sit, non ergo nobiscum expostulent, quod res Germaniae monasticas negligamus. Nobis non licet esse hariolis, scribentibus quippe, quae exstitisse nobis constat, non quae esse potuisse mens chimaeris pasta suaserit. </ab>
+         <ab resp="#editor" xml:id="seg4">Tu, amice mi, cui exquisitum bonarum rerum gustum natura dare coepit, cum Germaniae bibliothecas perlustrabis, mei, quaeso, memineris. Vix enim fieri potest, quin plura tibi occurrant, quae ad res nostras faciant. Certe viam tenes, qua tibi prospere succedat opus, quod moliris: hic enim ingenium non sufficit, nisi et in operis partem veniant oculi. Adeundae sunt locupletiores quaeque bibliothecae diligentiusque perscrutandi singuli earum foruli, ut abditi in iis thesauri inde eruantur. </ab>
+         <ab resp="#editor" xml:id="seg5">Sine, sine, scribat <anchor xml:id="n9"/>Hispanus<anchor xml:id="n9e"/>, nec te terreat ingens operis eius moles. Hispanos quosdam auctores ignotos forte dabit, quos tu pro iure tuo in numerosiorem coetum adscisces; caeteros a Trithemio aliisque bibliographis accipiet, pristinis utique naevis foedatos, nisi et novos addiderit. Certe penes me plura sunt tibi servata, quae ne <add place="above">quidem</add> suspicari potest <anchor xml:id="n10"/>Hispanus<anchor xml:id="n10e"/>, immo nec exquirere satagit; adeo indiligens est. Quanto plura tu assiduo labore sollertique inquisitione addideris! </ab>
+         <ab resp="#editor" xml:id="seg6">Admodum placet, quem sequi instituis, Caveana methodus: ipsa est, quam meditari Mabillonium audivi, si quid ea de re scripsisset. A Cavio tamen tibi cave, auctore prorsus infido; ut nihil dicam de insulsa illa ac ridicula operis distributione per saecula Arianum, Nestorianum, Eutychianum etc., a qua tu meliori iudicio donatus abhorrebis. </ab>
+         <ab resp="#editor" xml:id="seg7"><anchor xml:id="n11"/>Quae tibi mittenda habeam<anchor xml:id="n11e"/>, sciscitaris? Plura, amice mi. Primo quidem <anchor xml:id="n12"/>catalogum, quem sibi aliud agens confecerat Mabillonius<anchor xml:id="n12e"/>, sed a me post diligentem, quantum licuit, inquisitionem perlustrataque scrinia mea duplo ad minus auctum et amplificatum. Secundo catalogum accuratum scriptorum congregationis sanctae Justinae, quem vix alibi reperire posses. Tertio <anchor xml:id="n13"/>alium a me concinnatum<anchor xml:id="n13e"/> scriptorum nostrae congregationis. Quarto Pitsei De scriptoribus Angliae et Waraei De scriptoribus Hiberniae libros a te dudum expetitos. Quinto varias schedas e Belgio ad Mabillonium missas; bonas an malas? Minutiori quippe charactere scriptas legere non licuit oculis tenerioribus: tu oculis ac pedibus valens facile expedies. </ab>
+         <ab resp="#editor" xml:id="seg8">Meminerim adhuc semel quinti Annalium nostrorum tomi? Paene taedet. Iteratis tum ad te, tum ad Schrambium nostrum litteris monui tibi servari suo tempore mittendum, in foliis an Gallico more compactum, ut iuberes. Ingratas posthaec ferias litteris nostris imperante bello, quid interea actum sit, num forte comparatus quintus tomus, non novi. <anchor xml:id="n14"/>Id primum, scribere dum licuit, sciscitatus<anchor xml:id="n14e"/>, ne verbum quidem responsionis obtinere potui. Ergone misso apparitore diem tibi dicam teque de responsione appellem? Si litem semel moveam, non unam. Nam quod sciscitanti, num quid vobis cum Basileensibus commercii esset, et an ea urbe quidpiam Vindobonam recte transmitti posset, nihil<del ana="#after">transmit</del> responderis, novae liti fomitem ministrabit. Responde igitur, ne forte silentium pertinacius tibi fraudi sit. </ab>
+         <ab resp="#editor" xml:id="seg9">Hui! inquis, litium amantes Galli! Sic aiebat lepidus ille abbas supra designatus. Sed tu bonos experieris, satisque commodos etiam maledicentibus. Acriorem nec prorsus immeritum iuvenilis scripti stilum tibi facile condonabunt: cum maxime prudentiores quique idem tecum senserint, <pb n="2r"/> quamvis tecum palam improbare tutum non fuisset. Veni proinde, veni nihil a Gallis timens: iis, qui te iam norunt, optatissimus est adventus tuus; iis, qui te praesentem adspexerint, iucundissimus erit; sed nulli vel optatior vel iucundior quam mihi tui percupido. Magna hic est opinio de te, nec minuet praesentia famam, cum maxime ingenio ad litteras bene nato haud disparem, immo maiorem, ut par est, pietatem religionisque studium respondere animadverterint superiores nostri. Ii enim (quod tibi subobscurius forte dictum fuit Viennae) <anchor xml:id="n15"/>exterorum quorumdam huc missorum moribus parum religiosis offensi<anchor xml:id="n15e"/> statuerant nullum deinceps exterum admittere diutius apud nos commoraturum. Sed longe alios esse Bernardi mei mores, ipsi Lutetiam, ut pluribus aut iam licentioribus aut incautioribus fuit, exitio non fore, ac demum eum esse, qui probis omnibus sese probaturus sit, fidem feci; nec fallet. Sed quae tibi cavenda sint quaeve agenda, praesenti dicam amicus amico. Interim Germaniam peragrans mihi identidem scribere ne praetermittas eaque loca indicare, ad quae litteras meas mittere possim diutius commoraturo. Haud spernendis rationibus fultus id a te peto. </ab>
+         <ab resp="#editor" xml:id="seg10">Gratissimum est, quod narras, nuperam<del ana="#before">constitu</del> <anchor xml:id="n16"/>constitutionem pontificiam<anchor xml:id="n16e"/> apud vos sollemni ritu promulgatam non fuisse<note type="annotation" xml:id="d4618e49740">Danach unleserliche Streichung im Ausmaß von 5 Wörtern.</note>. Sed mirum est caesarem in Belgio promulgari permisisse, quam a finibus suis Austriacis arcuit, arcuerunt et a suis Hispani, Veneti, Siculi et Sabaudi. Eam admittere palam detractant eminentissimus cardinalis archiepiscopus noster aliique plures cum archiepiscopi, tum episcopi, iique non infimi nominis, ut nihil dicam de secundi ordinis sacerdotibus; rati videlicet ipsa religionis Christianae fundamenta succussum iri. Haec eorum sententia, et inde turbarum in ecclesia Gallicana seges et prope schisma. Et si quidam ὀικονομίας causa fidelibus<del ana="#after">Quesnell</del> interdixerint Quesnellii libro (quod tamen non omnibus placuit), propositiones tamen, quae catholicum dogma prae se ferre putant, damnare constanter renuunt; et sic, quod tu vereris, a Quesnellii partibus palam stare non timent. Sic res hic sunt. Si quid novi ea de re, maximi utique momenti, apud vos acciderit, quod operae pretium <add place="above">sit</add> significare, quaeso, non omittas. </ab>
+         <ab resp="#editor" xml:id="seg11">Plurimam tibi salutem dicunt Montefalconius, <anchor xml:id="n17"/>Carolus de la Rüe<anchor xml:id="n17e"/> et Sabbaterius nostri; nec minorem ego reverendo et amantissimo cognomini et <anchor xml:id="n18"/>cognato tuo Clementi<anchor xml:id="n18e"/> et amico nostro reverendo patri Anselmo Schramb. Huic, quaeso, ne litteras frustra multiplicare cogar, quam primum licuerit, scribere ne pigeat accepisse me ab eo, puto, Vienna missos Erathii Commentarios, ad me allatos per unum e <anchor xml:id="n19"/>cursoribus illustrissimi marchionis de Torcy<anchor xml:id="n19e"/> regi nostro a secretis; gratis proinde. Pauca evolvi, hucque et illuc oculos, prout sors temere ferebat, coniciens<del ana="#before">cont</del>; deprehendi futile opus esse ac nugis refertum, quod qui serio confutare voluerit, nugis pondus addiderit. Hanc meam <anchor xml:id="n20"/>sententiam opere nondum inspecto Schrambio significavi<anchor xml:id="n20e"/>, ut eum a confutandi consilio depellerem. Sed iam acrius urgendus videtur, ut ne <anchor xml:id="n21"/>oleum et operam perdat<anchor xml:id="n21e"/> in tam deplorato opere confutando. Tu pro ea, qua apud ipsum vales auctoritate, mentem eius ad meliora studia avoca. Vale meque semper ama.</ab>
+         <closer>Parisiis III. Kalendas Februarii MDCCXV<note place="foot" xml:id="d4618e49762">Am Ende des Zahlzeichens eine Streichung, die einem senkrechten Schaft ähnelt.</note>.</closer>
+         <closer xml:id="seg12">P.S. Si quid aliud hinc praeter superius memorata mitti velis, tempestive significes.</closer>
+      </body>
    </text>
 </TEI>

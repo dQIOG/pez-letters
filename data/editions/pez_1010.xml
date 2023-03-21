@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="1010" xml:id="pez-1010">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">1010 Joachim Edlinger an Hieronymus Pez. 1718-10-29. Seitenstetten.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Joachim Edlinger an Hieronymus Pez. 1718-10-29. Seitenstetten.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">1010</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -21,17 +33,30 @@
             <relatedItem type="otherEdition">
                <bibl>Spevak, Edlinger 73–78.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:18992">Rabl, Briefe</rs> 330</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <p>StiA Melk, Karton 7 Patres 13, Fasz. 1, Nr. 1, 29r–30v.</p>
+            <listWit><witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Karton 7 Patres 13, Fasz. 1, Nr. 1, 29r–30v.</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -46,102 +71,115 @@
                <persName>Hieronymus Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">1001</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">999</idno>
-               </ref>
+               <ptr type="prev" target="letter:1001"/>
+               <ptr type="mentions" target="letter:999"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">JE</rs> hat sich in der laufenden Woche vier Tage in Strengberg aufgehalten, weshalb er nur wenig Zeit hat. Er teilt <rs type="person" role="sender">HP</rs> mit, dass das gewünschte Proprium als „Proprium Gotwicense“ 1683 zu Krems gedruckt wurde und praktisch jedem Missale angefügt ist. Es enthält nicht nur die Feste der Diözese, sondern auch die neu hinzugekommenen, die in den Missalien oft fehlen. Der gut bekannte Johann Stainer hat <rs type="person" role="sender">JE</rs> gesagt, dass ihm der Melker Sakristan Martin Hager mehrere Exemplare überlassen und weitere in Aussicht gestellt hat.</p>
+            <p corresp="#seg2"><rs type="person" role="sender">JE</rs> übermittelt an <rs type="person" role="sender">HP</rs> und BP Grüße von Alphons Hueber von Tegernsee. Dieser fragt, da er dies bei seinem Aufenthalt in Melk vergessen hat, nach dem ihm versprochenen „Itinerar“ der Klosterreise des vergangenen Jahres. <rs type="person" role="sender">JE</rs> hat zwei Tage mit diesem ebenfalls sehr um den Orden verdienten Benediktiner verbracht. Die Unterhaltungen haben zwischen aufwändigen Mahlzeiten ohne Mitwisser stattgefunden: Zum einen wollte <rs type="person" role="sender">JE</rs> nicht, dass die anderen Anwesenden – darunter zwei Garstener und der Seitenstettener Hieronymus Hueber – mitbekommen, was mit viel Vergnügen über <rs type="person" role="sender">HP</rs> und BP gesprochen wurde; zum anderen wollte <rs type="person" role="sender">JE</rs> vermeiden, ein ähnliches Schicksal wie BP bei denjenigen Zensoren zu erleiden, die ihre Zeit lieber mit Spielen und Possen als mit gelehrten Gesprächen verbringen.</p>
+            <p corresp="#seg3">Daher gibt es auch keinen Grund mehr, dass <rs type="person" role="sender">HP</rs> gegenüber <rs type="person" role="sender">JE</rs> den Grund des Streites verschweigt, den BP mit Abt Berthold Dietmayr hatte. Über BPs Ansinnen (einer benediktinischen Kongregation oder Akademie) ist <rs type="person" role="sender">JE</rs> schon vor geraumer Zeit durch den Melker Franz Embler informiert worden. Er hat stets dafür gebetet, dass dieses Ansinnen Früchte trägt, zum Ruhm von Orden und Vaterland (patria); auch jetzt hegt er noch Hoffnung.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">JE</rs> bittet <rs type="person" role="sender">HP</rs> zugleich um Hilfe für eine gewisse arme Frau Eva, welche bis jetzt bei Frau (Barbara) Usleber, einer Melker Bürgerin, gedient hat. <rs type="person" role="sender">JE</rs> wurde von dem Pfarrer von Strengberg (Johann Michael Steinfellner) gebeten, Frau Eva die Beichte abzunehmen. Infolgedessen fühlt sich <rs type="person" role="sender">JE</rs> verpflichtet, die unschuldig Unglückliche zu unterstützen. Er bittet HP, Magdalena Usleber, die Tochter der vorgenannten Frau Usleber, zu sich zu rufen und ihr die Angelegenheit, die ihm <rs type="person" role="sender">JE</rs> nun unterbreitet, auseinanderzusetzen, damit sie die Flucht ihrer Dienerin nicht verurteilt.</p>
+            <p corresp="#seg5">Ein Grenadier trug Eva zu wiederholten Malen die Ehe an. Sie lehnte stets entschieden ab, doch rief ihr der Mann beim Abzug aus Melk zu, dass sie ihn doch werde heiraten müssen. Diese Worte lassen einen Liebeszauber (maleficium) vermuten, dessen Wirkung sie bald darauf spürte und, dadurch aufgewühlt, kopfüber aus dem Haus stürzte, um dem Soldaten zu folgen, sodass sie an einem einzigen Tag von Melk bis Aschbach lief. Am folgenden Morgen traf sie ihren Bewunderer (amator) in Strengberg an. Er führte sie sogleich freudig zu seinem Vorgesetzten, um die Heiratserlaubnis zu erhalten. Der Offizier aber verweigerte die Bitte aufgrund der Armut der Frau. Daraufhin versuchte der Soldat zu beweisen, dass er genug besitze, um auch eine mittellose Ehefrau zu unterhalten, sofern sie nur ihn im fortschreitenden Alter pflegen wolle. Als der Soldat jedoch schließlich begriff, dass sein Flehen sinnlos war, schickte er die Geliebte, ohne sie berührt zu haben, unter Tränen fort. Kurz darauf erlangte Eva ihre Sinne wieder und erstaunte über die Verblendung der früheren Liebe, zweifellos weil der Soldat den Zauber gelöst hatte. Am folgenden Tag erbat sie deshalb, mehr des Trostes als der Lossprechung bedürftig, die Beichte und die heilige Kommunion als Heilmittel Gottes zur Linderung der Schmerzen, die ihr das Schicksal zugefügt hat.</p>
+            <p corresp="#seg6"><rs type="person" role="sender">JE</rs> bittet HP, sich der armen Frau nun anzunehmen und Magdalena Usleber anzuhalten, ihr auf Aufforderung ihre Habe auszufolgen. Wo sich Eva nun aufhält, weiß <rs type="person" role="sender">JE</rs> nicht, er glaubt aber, dass sie beim Pfarrer von Sindelburg (Simon Zech) ist, zu dem sie sich, da sie ihn kannte, begeben hat.</p>
+            <p corresp="#seg7"><rs type="person" role="sender">JE</rs> erkundigt sich, ob <rs type="person" role="sender">HP</rs> seine unlängst getätigte Anfrage bezüglich der Aussprache der „Oxytona“ und „Perispomena“ <ref type="letter" target="letter:999">999</ref> vergessen hat, und ersucht ihn erneut um Auskunft. Gegen seinen Willen schließt er aufgrund des Mangels an Zeit.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e67002"><rs type="person" role="sender">JE</rs> hat sich in der laufenden Woche vier Tage in Strengberg aufgehalten, weshalb er nur wenig Zeit hat. Er teilt <rs type="person" role="sender">HP</rs> mit, dass das gewünschte Proprium als „Proprium Gotwicense“ 1683 zu Krems gedruckt wurde und praktisch jedem Missale angefügt ist. Es enthält nicht nur die Feste der Diözese, sondern auch die neu hinzugekommenen, die in den Missalien oft fehlen. Der gut bekannte Johann Stainer hat <rs type="person" role="sender">JE</rs> gesagt, dass ihm der Melker Sakristan Martin Hager mehrere Exemplare überlassen und weitere in Aussicht gestellt hat.</seg><seg type="context" n="2" xml:id="d3e67004"><rs type="person" role="sender">JE</rs> übermittelt an <rs type="person" role="sender">HP</rs> und BP Grüße von Alphons Hueber von Tegernsee. Dieser fragt, da er dies bei seinem Aufenthalt in Melk vergessen hat, nach dem ihm versprochenen „Itinerar“ der Klosterreise des vergangenen Jahres. <rs type="person" role="sender">JE</rs> hat zwei Tage mit diesem ebenfalls sehr um den Orden verdienten Benediktiner verbracht. Die Unterhaltungen haben zwischen aufwändigen Mahlzeiten ohne Mitwisser stattgefunden: Zum einen wollte <rs type="person" role="sender">JE</rs> nicht, dass die anderen Anwesenden – darunter zwei Garstener und der Seitenstettener Hieronymus Hueber – mitbekommen, was mit viel Vergnügen über <rs type="person" role="sender">HP</rs> und BP gesprochen wurde; zum anderen wollte <rs type="person" role="sender">JE</rs> vermeiden, ein ähnliches Schicksal wie BP bei denjenigen Zensoren zu erleiden, die ihre Zeit lieber mit Spielen und Possen als mit gelehrten Gesprächen verbringen.</seg><seg type="context" n="3" xml:id="d3e67006">Daher gibt es auch keinen Grund mehr, dass <rs type="person" role="sender">HP</rs> gegenüber <rs type="person" role="sender">JE</rs> den Grund des Streites verschweigt, den BP mit Abt Berthold Dietmayr hatte. Über BPs Ansinnen (einer benediktinischen Kongregation oder Akademie) ist <rs type="person" role="sender">JE</rs> schon vor geraumer Zeit durch den Melker Franz Embler informiert worden. Er hat stets dafür gebetet, dass dieses Ansinnen Früchte trägt, zum Ruhm von Orden und Vaterland (patria); auch jetzt hegt er noch Hoffnung.</seg><seg type="context" n="4" xml:id="d3e67008"><rs type="person" role="sender">JE</rs> bittet <rs type="person" role="sender">HP</rs> zugleich um Hilfe für eine gewisse arme Frau Eva, welche bis jetzt bei Frau (Barbara) Usleber, einer Melker Bürgerin, gedient hat. <rs type="person" role="sender">JE</rs> wurde von dem Pfarrer von Strengberg (Johann Michael Steinfellner) gebeten, Frau Eva die Beichte abzunehmen. Infolgedessen fühlt sich <rs type="person" role="sender">JE</rs> verpflichtet, die unschuldig Unglückliche zu unterstützen. Er bittet HP, Magdalena Usleber, die Tochter der vorgenannten Frau Usleber, zu sich zu rufen und ihr die Angelegenheit, die ihm <rs type="person" role="sender">JE</rs> nun unterbreitet, auseinanderzusetzen, damit sie die Flucht ihrer Dienerin nicht verurteilt.</seg><seg type="context" n="5" xml:id="d3e67010">Ein Grenadier trug Eva zu wiederholten Malen die Ehe an. Sie lehnte stets entschieden ab, doch rief ihr der Mann beim Abzug aus Melk zu, dass sie ihn doch werde heiraten müssen. Diese Worte lassen einen Liebeszauber (maleficium) vermuten, dessen Wirkung sie bald darauf spürte und, dadurch aufgewühlt, kopfüber aus dem Haus stürzte, um dem Soldaten zu folgen, sodass sie an einem einzigen Tag von Melk bis Aschbach lief. Am folgenden Morgen traf sie ihren Bewunderer (amator) in Strengberg an. Er führte sie sogleich freudig zu seinem Vorgesetzten, um die Heiratserlaubnis zu erhalten. Der Offizier aber verweigerte die Bitte aufgrund der Armut der Frau. Daraufhin versuchte der Soldat zu beweisen, dass er genug besitze, um auch eine mittellose Ehefrau zu unterhalten, sofern sie nur ihn im fortschreitenden Alter pflegen wolle. Als der Soldat jedoch schließlich begriff, dass sein Flehen sinnlos war, schickte er die Geliebte, ohne sie berührt zu haben, unter Tränen fort. Kurz darauf erlangte Eva ihre Sinne wieder und erstaunte über die Verblendung der früheren Liebe, zweifellos weil der Soldat den Zauber gelöst hatte. Am folgenden Tag erbat sie deshalb, mehr des Trostes als der Lossprechung bedürftig, die Beichte und die heilige Kommunion als Heilmittel Gottes zur Linderung der Schmerzen, die ihr das Schicksal zugefügt hat.</seg><seg type="context" n="6" xml:id="d3e67012"><rs type="person" role="sender">JE</rs> bittet HP, sich der armen Frau nun anzunehmen und Magdalena Usleber anzuhalten, ihr auf Aufforderung ihre Habe auszufolgen. Wo sich Eva nun aufhält, weiß <rs type="person" role="sender">JE</rs> nicht, er glaubt aber, dass sie beim Pfarrer von Sindelburg (Simon Zech) ist, zu dem sie sich, da sie ihn kannte, begeben hat.</seg><seg type="context" n="7" xml:id="d3e67014"><rs type="person" role="sender">JE</rs> erkundigt sich, ob <rs type="person" role="sender">HP</rs> seine unlängst getätigte Anfrage bezüglich der Aussprache der „Oxytona“ und „Perispomena“ <ref type="letter">999</ref> vergessen hat, und ersucht ihn erneut um Auskunft. Gegen seinen Willen schließt er aufgrund des Mangels an Zeit.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Admodum reverendo religiosissimo ac clarissimo domino patri Hieronymo Pez ordinis sanctissimi patris Benedicti in celeberrimo ac exemto monasterio Mellicensi professo etc., domino ac patrono meo colendissimo etc. Closter Mölck.</hi>
-               </ab>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverendo religiosissimo ac clarissimo domino patri Hieronymo Pez etc. pater Joachimus Edlinger Benedictinus Seitenstettensis salutem plurimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e67038">Cum integrum labentis hebdomadis quatriduum in Stremberg genio indulgendo combusserim, restantis temporis angustiae nonnisi raptim me significare tibi, vir clarissime, patiuntur proprium, ceteroquin sub nomine <seg type="lemma" corresp="#d3e67071">proprii Gotwicensis</seg> abunde notum et cuivis fere missali adiectum, Cremsii anno 1683 impressum esse continereque festa tam dioecesana quam alia noviter indulta, quae in missalibus plerumque desiderantur. Aliquorum eius exemplarium copiam pluriumque spem a domino sacristano vestro sibi factam mihi dixit notissimus vobis <seg type="lemma" corresp="#d3e67077">Joannes Stainer</seg>. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e67040">Ceterum salutat utrumque vestrum, amicissimi Pezii, studiosissimus vestri vir integerrimus pater Alphonsus Tegernseensis et, cuius <seg type="lemma" corresp="#d3e67081">apud vos exsistens</seg> oblitus erat, diarium itineris literarii elapso anno a vobis confecti sibi dudum, ut ait, promissum rogat urgetque. Totus pene in<note place="foot" xml:id="d3e67042">	Danach durchgestrichen <hi rend="italic">eiusdem</hi>.</note> huius viri amicitiam me insinuavi, postquam biduo eius lateri usque adhaesi sermonesque cum eo miscui Benedictino equidem sui ordinis studioso non indignos, idque inter sumtuosissima quoque ac regalia pene convivia, absque arbitris tamen potissimum, tum quod alios, quos inter erant<seg type="lemma" corresp="#d3e67087"> duo Garstenses</seg> et <seg type="lemma" corresp="#d3e67091">noster Hieronymus</seg>, scire nollem, quae de Peziis nostris summa cum voluptate confabulabamur; tum ne eandem cum Bernardo sortem apud eiuscemodi censores subiremus, qui iocis potius nugisque quam eruditis colloquiis obsonia condiri malunt. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e67048">Hinc non est amplius, vir optime, cur me <seg type="lemma" corresp="#d3e67095">causam celes</seg> de la deméle, la quelle monsieur nôtre ami a eu avec son abbé. J’ai été averti de <seg type="lemma" corresp="#d3e67101">ce dessein</seg> de reverend pere vôtre frere il y a long tems par monsieur vôtre pere<seg type="lemma" corresp="#d3e67105"> François</seg>, a quo tempore nihil magis in votis mihi erat, quam ut eius consilio respondeat exitus, sacri ordinis gloriae in nostra patria haud minimum sane momentum additurus. Hinc et necdum eum despero, quidquid contra nitatur proprii <pb n="1v"/> (si ita fari licet) emolumenti studium. Fortassis proxime hac de re plura. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e67052">Interim auxilium tuum pro <seg type="lemma" corresp="#d3e67109">misera quadam femina Eva</seg> nomine, quae apud dominam<seg type="lemma" corresp="#d3e67115"> Usleberin</seg> civem vestram hactenus famulabatur, imploro. Eius nuper confessionem miro fato a<seg type="lemma" corresp="#d3e67119"> loci parocho</seg> ad id requisitus excepi; hincque necessitatem eius iuvandae impositam mihi tute vides eo maiorem, quo maior est miserae innocentia. Quare ut<seg type="lemma" corresp="#d3e67124"> Magdalenam</seg> praefatae civis filiam ad te accersas eique, ne sequius de suae famulae fuga iudicet, rem<note place="foot" xml:id="d3e67054">	Davor durchgestrichen <hi rend="italic">multum oro</hi>.</note> totam, ut subicio, exponas, multum oro. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e67060">Militum, quos granatarios vulgo vocant, nonnemo dictam feminam crebris sollicitationibus fatigabat, ut sibi nuberet, quod cum illa constanter detrectaret, a discedente demum audivit: Ey! Sie muß mir doch noch werden, quae verba maleficii, cuius vim non multo post satis misera sensit, suspicionem haud parum firmant. Non sine stupore certe derepente illa spreti hactenus hominis amore insanire, ut eidem excutiendo impar praecipitem se e domo dederit tantaque contentione militem insecuta fuerit, ut <seg type="lemma" corresp="#d3e67128">Mellicio Aspacum usque</seg> illa die cucurrerit. Sequenti mane amatorem suum in Stremberg invenit, qui laetus eam ad tribunum suum adduxit facultatem impetraturus hanc feminam ducendi, quam tamen ille feminae inopiam caussatus negavit, quidquid miles testatus obtestatusque fuerit sufficientia sibi ipsi media, quibus uxorem etiam egenam, dummodo sui iam senescentis curam habeat, alat, suppetere. Verum cum aerem se verberare cerneret, veniam a dilecta precatus lacrymabundus eam demum, ne tactu quidem laesam, dimisit. Quae paulo post sibi rursus restituta insolitum suum amorem stupebat pristinumque animum ab huiusmodi coniugio longe alienissimum (soluto haud dubie interim a milite maleficio) recepit. Quare postero die solatii magis quam absolutionis indiga exhomologesin coram me obiit, vulneribus a fato sibi inflictis remedium a Deo in sacra communione flagitatura. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e67062">Huius tu patrocinium, vir ex bonitate totus composite, suscipere Magdalenaeque, ut, cum requisita idcirco fuerit, suas afflictae reculas extradat, persuadere mea gratia ne detrecta. Ubi autem defacto <pb n="2r"/> illa moretur, equidem me latet; credo, quod apud <seg type="lemma" corresp="#d3e67134">parochum in Sindlburg</seg>, quem utpote sibi notum post adiit. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d3e67066">Denique ne eorum, quae nuper circa pronuntiationem verborum oxytonorum, perispomenorum etc. sciscitatus fui, obliviscaris, iterum rogo et invitus ob defectum temporis claudo. Vale.</seg></p>
-            <p xml:space="preserve">Dabam in Seitenstadio IV. Kalendas Novembris MDCCXVIII.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e67071">
-               <ref type="context">1</ref>
-               <label>proprii Gotwicensis</label><p> Zum Gebrauch dieser Proprien in Seitenstetten
-                  vgl. <rs type="bibl" key="bibl:19106">Riesenhuber, Kunst und Handwerk</rs> 300.
-               </p></note>
-            <note xml:id="d3e67077">
-               <ref type="context">1</ref>
-               <label>Joannes Stainer</label><p> Vgl. <ref type="letter">513</ref> &lt;4&gt;, <ref
-                     type="letter">694</ref> &lt;5&gt; und &lt;8&gt;, <ref type="letter">974</ref>
-                  &lt;1&gt;.</p></note>
-            <note xml:id="d3e67081">
-               <ref type="context">2</ref>
-               <label>apud vos exsistens</label><p>Alphons Hueber hatte seinen Besuch in Melk
-                  bereits für den Oktober 1717 angekündigt: vgl. <ref type="letter">819</ref>
-                  &lt;2&gt;. Ob es dazu zu der angestrebten Zeit, später oder vielleicht auch
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>proprii Gotwicensis</mentioned>
+            <p> Zum Gebrauch dieser Proprien in Seitenstetten
+                  vgl. <rs type="bibl" ref="bibl:19106">Riesenhuber, Kunst und Handwerk</rs> 300.
+               </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>Joannes Stainer</mentioned>
+            <p> Vgl. <ref type="letter" target="letter:513">513</ref> <ref target="letter:513#seg4">4</ref>, <ref type="letter" target="letter:694">694</ref> <ref target="letter:694#seg5">5</ref> und <ref target="letter:694#seg8">8</ref>, <ref type="letter" target="letter:974">974</ref>
+                  <ref target="letter:974#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>apud vos exsistens</mentioned>
+            <p>Alphons Hueber hatte seinen Besuch in Melk
+                  bereits für den Oktober 1717 angekündigt: vgl. <ref type="letter" target="letter:819">819</ref>
+                  <ref target="letter:819#seg2">2</ref>. Ob es dazu zu der angestrebten Zeit, später oder vielleicht auch
                   mehrmals gekommen war, ist nicht zu ermitteln. Die Melker Prioratsephemeriden
-                  bieten keinen Aufschluss.</p></note>
-            <note xml:id="d3e67087">
-               <ref type="context">2</ref>
-               <label> duo Garstenses</label><p>Ihre Identität ließ sich nicht bestimmen. JEs
+                  bieten keinen Aufschluss.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned> duo Garstenses</mentioned>
+            <p>Ihre Identität ließ sich nicht bestimmen. JEs
                   Vorsicht ihnen gegenüber hatte möglicherweise einen konkreten Grund; er hatte
                   zuvor mehrmals über Kritik an BP und HP unter den Konventualen von Garsten
-                  berichtet: vgl. <ref type="letter">504</ref> &lt;5&gt;, <ref type="letter"
-                     >694</ref> &lt;7&gt;. </p></note>
-            <note xml:id="d3e67091">
-               <ref type="context">2</ref>
-               <label>noster Hieronymus</label><p>Vgl. <ref type="letter">825</ref>
-               &lt;6&gt;.</p></note>
-            <note xml:id="d3e67095">
-               <ref type="context">3</ref>
-               <label>causam celes</label><p> Zum Konflikt zwischen BP und Abt Dietmayr vgl. Einleitung, Abschnitt I.1. </p></note>
-            <note xml:id="d3e67101">
-               <ref type="context">3</ref>
-               <label>ce dessein</label><p> Zu den Plänen für eine benediktinische Gelehrtenkongregation und zu der Rolle, die BP dabei spielte, vgl. Einleitung, Abschnitt I.5.</p></note>
-            <note xml:id="d3e67105">
-               <ref type="context">3</ref>
-               <label> François</label><p>Vgl. <ref type="letter">156</ref> &lt;12&gt;.</p></note>
-            <note xml:id="d3e67109">
-               <ref type="context">4</ref>
-               <label>misera quadam ... Eva</label><p>Zu ihr und zu den im Folgenden geschilderten Vorgängen ist nichts Näheres zu ermitteln.</p></note>
-            <note xml:id="d3e67115">
-               <ref type="context">4</ref>
-               <label> Usleberin</label><p>Vgl. <ref type="letter">504</ref> &lt;4&gt;.</p></note>
-            <note xml:id="d3e67119">
-               <ref type="context">4</ref>
-               <label> loci parocho</label><p>Zu Johann Michael Steinfellner vgl. <ref type="letter"
-                     >504</ref> &lt;1&gt;.</p></note>
-            <note xml:id="d3e67124">
-               <ref type="context">4</ref>
-               <label> Magdalenam</label><p>Die Taufe von Maria Magdalena Usleber ist für den 11. Juni 1687 belegt. Als ihre Eltern werden Barbara und Jakob Usleber genannt: DA St. Pölten, Pfarrarchiv Melk, Tauf-, Trauungs- und Sterbebuch 1656–1701, Taufbuch 138v. Die Hochzeit der Eltern ist in den Trauungsbüchern nicht vermerkt. Maria Magdalena, die unverheiratet geblieben war, wurde am 18. Mai 1722 in Melk begraben: DA St. Pölten, Pfarrarchiv Melk, Tauf-, Trauungs- und Sterbebuch 1702–1730, Liber mortuorum 93v.</p></note>
-            <note xml:id="d3e67128">
-               <ref type="context">5</ref>
-               <label>Mellicio Aspacum usque</label><p>Die Entfernung von Melk nach Aschbach beträgt deutlich über 50 Kilometer.</p></note>
-            <note xml:id="d3e67134">
-               <ref type="context">6</ref>
-               <label>parochum in Sindlburg</label><p>Von 1712 bis 1730 war Simon Zech Pfarrer von
+                  berichtet: vgl. <ref type="letter" target="letter:504">504</ref> <ref target="letter:504#seg5">5</ref>, <ref type="letter" target="letter:694">694</ref> <ref target="letter:694#seg7">7</ref>. </p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned>noster Hieronymus</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:825">825</ref>
+               <ref target="letter:825#seg6">6</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned>causam celes</mentioned>
+            <p> Zum Konflikt zwischen BP und Abt Dietmayr vgl. Einleitung, Abschnitt I.1. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned>ce dessein</mentioned>
+            <p> Zu den Plänen für eine benediktinische Gelehrtenkongregation und zu der Rolle, die BP dabei spielte, vgl. Einleitung, Abschnitt I.5.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
+            <mentioned> François</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:156">156</ref> <ref target="letter:156#seg12">12</ref>.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg4">
+            <mentioned>misera quadam ... Eva</mentioned>
+            <p>Zu ihr und zu den im Folgenden geschilderten Vorgängen ist nichts Näheres zu ermitteln.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg4">
+            <mentioned> Usleberin</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:504">504</ref> <ref target="letter:504#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg4">
+            <mentioned> loci parocho</mentioned>
+            <p>Zu Johann Michael Steinfellner vgl. <ref type="letter" target="letter:504">504</ref> <ref target="letter:504#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg4">
+            <mentioned> Magdalenam</mentioned>
+            <p>Die Taufe von Maria Magdalena Usleber ist für den 11. Juni 1687 belegt. Als ihre Eltern werden Barbara und Jakob Usleber genannt: DA St. Pölten, Pfarrarchiv Melk, Tauf-, Trauungs- und Sterbebuch 1656–1701, Taufbuch 138v. Die Hochzeit der Eltern ist in den Trauungsbüchern nicht vermerkt. Maria Magdalena, die unverheiratet geblieben war, wurde am 18. Mai 1722 in Melk begraben: DA St. Pölten, Pfarrarchiv Melk, Tauf-, Trauungs- und Sterbebuch 1702–1730, Liber mortuorum 93v.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg5">
+            <mentioned>Mellicio Aspacum usque</mentioned>
+            <p>Die Entfernung von Melk nach Aschbach beträgt deutlich über 50 Kilometer.</p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg6">
+            <mentioned>parochum in Sindlburg</mentioned>
+            <p>Von 1712 bis 1730 war Simon Zech Pfarrer von
                   Sindelburg, nachdem er zuvor bereits als Kooperator in dieser Gemeinde gewirkt
-                  hatte: <rs type="bibl" key="bibl:16358">Fuchs, Sindelburg</rs> 11.</p></note>
-         </div>
-      </back>
+                  hatte: <rs type="bibl" ref="bibl:16358">Fuchs, Sindelburg</rs> 11.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:18992">
+            <title type="short">Rabl, Briefe</title>
+            <biblScope>330</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <front>
+         <p>Admodum reverendo religiosissimo ac clarissimo domino patri Hieronymo Pez ordinis sanctissimi patris Benedicti in celeberrimo ac exemto monasterio Mellicensi professo etc., domino ac patrono meo colendissimo etc. Closter Mölck.</p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Admodum reverendo religiosissimo ac clarissimo domino patri Hieronymo Pez etc. pater Joachimus Edlinger Benedictinus Seitenstettensis salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Cum integrum labentis hebdomadis quatriduum in Stremberg genio indulgendo combusserim, restantis temporis angustiae nonnisi raptim me significare tibi, vir clarissime, patiuntur proprium, ceteroquin sub nomine <anchor xml:id="n1"/>proprii Gotwicensis<anchor xml:id="n1e"/> abunde notum et cuivis fere missali adiectum, Cremsii anno 1683 impressum esse continereque festa tam dioecesana quam alia noviter indulta, quae in missalibus plerumque desiderantur. Aliquorum eius exemplarium copiam pluriumque spem a domino sacristano vestro sibi factam mihi dixit notissimus vobis <anchor xml:id="n2"/>Joannes Stainer<anchor xml:id="n2e"/>. </ab>
+         <ab resp="#editor" xml:id="seg2">Ceterum salutat utrumque vestrum, amicissimi Pezii, studiosissimus vestri vir integerrimus pater Alphonsus Tegernseensis et, cuius <anchor xml:id="n3"/>apud vos exsistens<anchor xml:id="n3e"/> oblitus erat, diarium itineris literarii elapso anno a vobis confecti sibi dudum, ut ait, promissum rogat urgetque. Totus pene in<del ana="#after">eiusdem</del> huius viri amicitiam me insinuavi, postquam biduo eius lateri usque adhaesi sermonesque cum eo miscui Benedictino equidem sui ordinis studioso non indignos, idque inter sumtuosissima quoque ac regalia pene convivia, absque arbitris tamen potissimum, tum quod alios, quos inter erant<anchor xml:id="n4"/> duo Garstenses<anchor xml:id="n4e"/> et <anchor xml:id="n5"/>noster Hieronymus<anchor xml:id="n5e"/>, scire nollem, quae de Peziis nostris summa cum voluptate confabulabamur; tum ne eandem cum Bernardo sortem apud eiuscemodi censores subiremus, qui iocis potius nugisque quam eruditis colloquiis obsonia condiri malunt. </ab>
+         <ab resp="#editor" xml:id="seg3">Hinc non est amplius, vir optime, cur me <anchor xml:id="n6"/>causam celes<anchor xml:id="n6e"/> de la deméle, la quelle monsieur nôtre ami a eu avec son abbé. J’ai été averti de <anchor xml:id="n7"/>ce dessein<anchor xml:id="n7e"/> de reverend pere vôtre frere il y a long tems par monsieur vôtre pere<anchor xml:id="n8"/> François<anchor xml:id="n8e"/>, a quo tempore nihil magis in votis mihi erat, quam ut eius consilio respondeat exitus, sacri ordinis gloriae in nostra patria haud minimum sane momentum additurus. Hinc et necdum eum despero, quidquid contra nitatur proprii <pb n="1v"/> (si ita fari licet) emolumenti studium. Fortassis proxime hac de re plura. </ab>
+         <ab resp="#editor" xml:id="seg4">Interim auxilium tuum pro <anchor xml:id="n9"/>misera quadam femina Eva<anchor xml:id="n9e"/> nomine, quae apud dominam<anchor xml:id="n10"/> Usleberin<anchor xml:id="n10e"/> civem vestram hactenus famulabatur, imploro. Eius nuper confessionem miro fato a<anchor xml:id="n11"/> loci parocho<anchor xml:id="n11e"/> ad id requisitus excepi; hincque necessitatem eius iuvandae impositam mihi tute vides eo maiorem, quo maior est miserae innocentia. Quare ut<anchor xml:id="n12"/> Magdalenam<anchor xml:id="n12e"/> praefatae civis filiam ad te accersas eique, ne sequius de suae famulae fuga iudicet, rem<del ana="#before">multum oro</del> totam, ut subicio, exponas, multum oro. </ab>
+         <ab resp="#editor" xml:id="seg5">Militum, quos granatarios vulgo vocant, nonnemo dictam feminam crebris sollicitationibus fatigabat, ut sibi nuberet, quod cum illa constanter detrectaret, a discedente demum audivit: Ey! Sie muß mir doch noch werden, quae verba maleficii, cuius vim non multo post satis misera sensit, suspicionem haud parum firmant. Non sine stupore certe derepente illa spreti hactenus hominis amore insanire, ut eidem excutiendo impar praecipitem se e domo dederit tantaque contentione militem insecuta fuerit, ut <anchor xml:id="n13"/>Mellicio Aspacum usque<anchor xml:id="n13e"/> illa die cucurrerit. Sequenti mane amatorem suum in Stremberg invenit, qui laetus eam ad tribunum suum adduxit facultatem impetraturus hanc feminam ducendi, quam tamen ille feminae inopiam caussatus negavit, quidquid miles testatus obtestatusque fuerit sufficientia sibi ipsi media, quibus uxorem etiam egenam, dummodo sui iam senescentis curam habeat, alat, suppetere. Verum cum aerem se verberare cerneret, veniam a dilecta precatus lacrymabundus eam demum, ne tactu quidem laesam, dimisit. Quae paulo post sibi rursus restituta insolitum suum amorem stupebat pristinumque animum ab huiusmodi coniugio longe alienissimum (soluto haud dubie interim a milite maleficio) recepit. Quare postero die solatii magis quam absolutionis indiga exhomologesin coram me obiit, vulneribus a fato sibi inflictis remedium a Deo in sacra communione flagitatura. </ab>
+         <ab resp="#editor" xml:id="seg6">Huius tu patrocinium, vir ex bonitate totus composite, suscipere Magdalenaeque, ut, cum requisita idcirco fuerit, suas afflictae reculas extradat, persuadere mea gratia ne detrecta. Ubi autem defacto <pb n="2r"/> illa moretur, equidem me latet; credo, quod apud <anchor xml:id="n14"/>parochum in Sindlburg<anchor xml:id="n14e"/>, quem utpote sibi notum post adiit. </ab>
+         <ab resp="#editor" xml:id="seg7">Denique ne eorum, quae nuper circa pronuntiationem verborum oxytonorum, perispomenorum etc. sciscitatus fui, obliviscaris, iterum rogo et invitus ob defectum temporis claudo. Vale.</ab>
+         <closer>Dabam in Seitenstadio IV. Kalendas Novembris MDCCXVIII.</closer>
+      </body>
    </text>
 </TEI>

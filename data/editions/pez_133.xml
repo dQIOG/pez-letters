@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="133" xml:id="pez-0133">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">[133] Bernhard Pez an NN (Corvey). LE 1. &lt; 1710-12-17.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Bernhard Pez an NN (Corvey). LE 1. &lt; 1710-12-17.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">133</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
@@ -25,11 +36,32 @@
                   <title>Litterae encyclicae 1</title>
                </bibl>
             </relatedItem>
+            <note type="remarks">
+               Der von BP in 134 &lt;2&gt; erwähnte Brief nach Corvey
+                  lässt sich nicht mit 23 oder 44
+                  identifizieren, aus deren Text jeweils eindeutig hervorgeht, dass sie nach St.
+                  Pantaleon zu Köln respektive nach Abdinghof gerichtet waren. Hingegen ist der von
+                  Ansgar Grass in 127 als <orig>ad hasce partes</orig> gerichtet bezeichnete Brief weit eher der nachweislich nach Corvey
+                  gelangte und mit 134 und 149
+                  überlieferte 23 (aufgrund des genannten Datums nicht 44); ob 133 überhaupt in Corvey
+                  ankam, ist als fraglich anzusehen.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <p>No direct source, inferred letter.</p>
+            <listWit>
+               <witness ana="cmif:noTextBase"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -43,46 +75,18 @@
                <orgName type="monastery">Corvey</orgName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">127</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">134</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">134</idno>
-               </ref>
+               <ptr type="prev" target="letter:127"/>
+               <ptr type="next" target="letter:134"/>
+               <ptr type="mentionedIn" target="letter:134"/>
             </correspContext>
          </correspDesc>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
    <text>
-      <front>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Der von BP in <ref type="letter">134</ref> &lt;2&gt; erwähnte Brief nach Corvey
-                  lässt sich nicht mit <ref type="letter">23</ref> oder <ref type="letter">44</ref>
-                  identifizieren, aus deren Text jeweils eindeutig hervorgeht, dass sie nach St.
-                  Pantaleon zu Köln respektive nach Abdinghof gerichtet waren. Hingegen ist der von
-                  Ansgar Grass in <ref type="letter">127</ref> als <hi rend="italic">ad hasce
-                     partes</hi> gerichtet bezeichnete Brief weit eher der nachweislich nach Corvey
-                  gelangte und mit <ref type="letter">134</ref> und <ref type="letter">149</ref>
-                  überlieferte <ref type="letter">23</ref> (aufgrund des genannten Datums nicht <ref
-                     type="letter">44</ref>); ob <ref type="letter">133</ref> überhaupt in Corvey
-                  ankam, ist als fraglich anzusehen.</p>
-            </div>
-         </div>
-      </front>
       <body>
          <ab>
             <gap reason="inferred letter"/>
          </ab>
       </body>
-      <back/>
    </text>
 </TEI>

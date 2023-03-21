@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="363" xml:id="pez-0363">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">363 Johann Benedikt Gentilotti an Bernhard Pez. 1714-09-26. Wien.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Benedikt Gentilotti an Bernhard Pez. 1714-09-26. Wien.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">363</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
@@ -24,19 +35,28 @@
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">III</biblScope>
-               <biblScope unit="page">232r–233v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 232r–233v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -51,125 +71,108 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">361</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">377</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">361</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">371</idno>
-               </ref>
+               <ptr type="prev" target="letter:361"/>
+               <ptr type="next" target="letter:377"/>
+               <ptr type="mentions" target="letter:361"/>
+               <ptr type="mentionedIn" target="letter:371"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Der junge <rs ref="index:d14380e41684">Straßburger</rs> <rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs> hat BG vor wenigen Tagen einen Brief Montfaucons übergeben; wenig später hat BG auch <rs type="person" role="sender">BPs</rs> letztes Schreiben <ref type="letter" target="letter:361">361</ref> erhalten. In beiden Briefen geht es um die Erlaubnis einer Abschrift der „Selecta in Psalmos“ des Origenes (recte: <rs ref="index:d10854e12664">Hesychios, „Commentarius brevis in Psalmos“</rs>) aus einem <rs ref="index:d10854e33419">Codex der Hofbibliothek</rs> für <rs ref="index:d14380e9205">Claude (recte: Charles) de la Rues</rs> <rs ref="index:d14380e31318">Origenes-Gesamtausgabe</rs>.</p>
+            <p corresp="#seg2">Diesen Bitten ist jedoch BGs Zuneigung zu den Gelehrten des <rs ref="index:d14380e4919">Benediktinerordens</rs> zuvorgekommen. <rs ref="index:d14380e4006">Bartenstein</rs> hat es selbst auf sich genommen, den Text abzuschreiben, da es in <rs ref="index:d14380e45571">Wien</rs> wenige gibt, die des <rs ref="index:d14380e16473">Griechischen</rs> mächtig sind.</p>
+            <p corresp="#seg3">BG wünscht sich mit dem <rs ref="index:d14380e18591">Homerischen</rs> <rs type="cit" ref="citIndex:ix2_d653e64">Agamemnon</rs> zehn Männer vom Schlage <rs type="person" role="sender">BPs</rs> in dessen Orden, die gegen die drohende Unbildung (imminens barbaries) ankämpfen und zum Nutzen der Gelehrtenwelt (<rs type="cit" ref="citIndex:ix2_d763e2202">res litteraria publica</rs>) alte Schriften vor den Motten und Schaben (<rs type="cit" ref="citIndex:ix2_d653e326">tineae ac blattae</rs>) retten.</p>
+            <p corresp="#seg4">BG beklagt, dass er <rs ref="index:d14380e34725">HPs „Acta sancti Colomanni“</rs> noch nicht erhalten hat, und fordert die Sendung mehrerer Exemplare. <rs ref="index:d14380e34537">HP</rs> lässt er Grüße bestellen.</p>
+            <p corresp="#seg5">Ebenso verlangt BG mehrere Exemplare von <rs type="person" role="sender">BPs</rs> „<rs ref="index:d14380e10982">Triumphus castitatis</rs>“, sobald dieser erscheint.</p>
+            <p corresp="#seg6">Hinsichtlich der zwei von <rs type="person" role="sender">BP</rs> erwähnten <rs ref="index:d10854e31359"><rs ref="index:d10854e22188">Chroniken</rs></rs> aus <rs ref="index:d14380e10296">Dürnstein</rs> berichtet BG, dass beide in der <rs ref="index:d14380e45820">Hofbibliothek</rs> <rs ref="index:d10854e31366"><rs ref="index:d10854e22197">vorhanden</rs></rs> sind. Der Autor des ersten Werks ist <rs ref="index:d10854e31344">Jakob Twinger von Königshofen</rs>, der Text wurde als „<rs ref="index:d10854e31354">Alteste teutsche allgemeine und Straßburgische chronicke</rs>“ von <rs ref="index:d10854e27836">Schilter</rs> kommentiert und herausgegeben. Über den Verfasser des anderen („<rs ref="index:d10854e22184">Österreichische Chronik von den 95 Herrschaften</rs>“) kann BG nichts sagen, außer dass er an einer Stelle einen von ihm verfassten <rs ref="index:d10854e22202">Lobbrief</rs> auf <rs ref="index:d14380e866">Herzog Albrecht (III.)</rs> erwähnt. Manche schreiben den Text <rs ref="index:d10854e11394">Joseph Grünpeck</rs> zu, dessen handschriftliche Chronik <rs ref="index:d14380e37908">Gerard van Roo</rs> bei der Abfassung seiner „<rs ref="index:d14380e37914">Annales</rs>“ benutzte. <rs ref="index:d10854e7103">Thomas Ebendorfer</rs> schrieb hingegen lateinisch; seine „<rs ref="index:d10854e7111">Chronica Austriae</rs>“ ist nicht an der <rs ref="index:d14380e45820">Hofbibliothek</rs>, wohl jedoch an der <rs ref="index:d10854e33842">Universitätsbibliothek</rs> vorhanden. BG bittet um die weitere Mitteilung von derartigen Funden.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e46598">Der junge <rs key="index:d14380e41684"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Straßburger<?oxy_custom_end?></rs> <rs key="index:d14380e4006">Johann Christoph Bartenstein</rs> hat <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> vor wenigen Tagen einen Brief Montfaucons übergeben; wenig später hat <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> auch <rs type="person" role="sender">BPs</rs> letztes Schreiben <ref type="letter">361</ref> erhalten. In beiden Briefen geht es um die Erlaubnis einer Abschrift der „Selecta in Psalmos“ des Origenes (recte: <rs key="index:d10854e12664">Hesychios, „Commentarius brevis in Psalmos“</rs>) aus einem <rs key="index:d10854e33419">Codex der Hofbibliothek</rs> für <rs key="index:d14380e9205">Claude (recte: Charles) de la Rues</rs> <rs key="index:d14380e31318">Origenes-Gesamtausgabe</rs>.</seg><seg type="context" n="2" xml:id="d4618e46603">Diesen Bitten ist jedoch <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BGs<?oxy_custom_end?> Zuneigung zu den Gelehrten des <rs key="index:d14380e4919">Benediktinerordens</rs> zuvorgekommen. <rs key="index:d14380e4006">Bartenstein</rs> hat es selbst auf sich genommen, den Text abzuschreiben, da es in <rs key="index:d14380e45571">Wien</rs> wenige gibt, die des <rs key="index:d14380e16473">Griechischen</rs> mächtig sind.</seg><seg type="context" n="3" xml:id="d4618e46605"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> wünscht sich mit dem <rs key="index:d14380e18591">Homerischen</rs> <rs type="cit" key="citIndex:ix2_d653e64">Agamemnon</rs> zehn Männer vom Schlage <rs type="person" role="sender">BPs</rs> in dessen Orden, die gegen die drohende Unbildung (imminens barbaries) ankämpfen und zum Nutzen der Gelehrtenwelt (<rs type="cit" key="citIndex:ix2_d763e2202">res litteraria publica</rs>) alte Schriften vor den Motten und Schaben (<rs type="cit" key="citIndex:ix2_d653e326">tineae ac blattae</rs>) retten.</seg><seg type="context" n="4" xml:id="d4618e46607"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> beklagt, dass er <rs key="index:d14380e34725">HPs „Acta sancti Colomanni“</rs> noch nicht erhalten hat, und fordert die Sendung mehrerer Exemplare. <rs key="index:d14380e34537">HP</rs> lässt er Grüße bestellen.</seg><seg type="context" n="5" xml:id="d4618e46609">Ebenso verlangt <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> mehrere Exemplare von <rs type="person" role="sender">BPs</rs> „<rs key="index:d14380e10982">Triumphus castitatis</rs>“, sobald dieser erscheint.</seg><seg type="context" n="6" xml:id="d4618e46611">Hinsichtlich der zwei von <rs type="person" role="sender">BP</rs> erwähnten <rs key="index:d10854e31359"><rs key="index:d10854e22188">Chroniken</rs></rs> aus <rs key="index:d14380e10296">Dürnstein</rs> berichtet <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?>, dass beide in der <rs key="index:d14380e45820">Hofbibliothek</rs> <rs key="index:d10854e31366"><rs key="index:d10854e22197">vorhanden</rs></rs> sind. Der Autor des ersten Werks ist <rs key="index:d10854e31344">Jakob Twinger von Königshofen</rs>, der Text wurde als „<rs key="index:d10854e31354">Alteste teutsche allgemeine und Straßburgische chronicke</rs>“ von <rs key="index:d10854e27836">Schilter</rs> kommentiert und herausgegeben. Über den Verfasser des anderen („<rs key="index:d10854e22184">Österreichische Chronik von den 95 Herrschaften</rs>“) kann <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> nichts sagen, außer dass er an einer Stelle einen von ihm verfassten <rs key="index:d10854e22202">Lobbrief</rs> auf <rs key="index:d14380e866">Herzog Albrecht (III.)</rs> erwähnt. Manche schreiben den Text <rs key="index:d10854e11394">Joseph Grünpeck</rs> zu, dessen handschriftliche Chronik <rs key="index:d14380e37908">Gerard van Roo</rs> bei der Abfassung seiner „<rs key="index:d14380e37914">Annales</rs>“ benutzte. <rs key="index:d10854e7103">Thomas Ebendorfer</rs> schrieb hingegen lateinisch; seine „<rs key="index:d10854e7111">Chronica Austriae</rs>“ ist nicht an der <rs key="index:d14380e45820">Hofbibliothek</rs>, wohl jedoch an der <rs key="index:d10854e33842">Universitätsbibliothek</rs> vorhanden. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> bittet um die weitere Mitteilung von derartigen Funden.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">II</hi>.</p>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">103</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Clarissimo viro domno Bernardo Pez Benedictino Mellicensi probandorum magistro et bibliothecario salutem plurimam dicit Joannes Benedictus Gentilott ab Engelsbrun.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e46635">Cum superioribus proximis diebus politissimus iuvenis Bartensteinus Argentinensis, qui eruditionis <sic>caussa</sic> [<hi rend="italic">sic</hi>] hic peregrinatur, a celeberrimo viro domno Bernardo de Montfaucon mihi<note place="foot" xml:id="d4618e46640">	Über der Zeile eingefügt.</note> litteras reddidisset, non longo intervallo tuas, vir clarissime, et humanitatis et eruditionis plenas accepi. Utriusque par fere argumentum: postulatio nimirum, ut ex manuscripto <seg type="lemma" corresp="#d4618e46672">codice caesareo enarrationem Origenis</seg> in Psalmos exscribere liceret, ad hoc, ut eius ad novam omnium operum editionem, quam domnus Claudius De la Rüe molitur, non contemnenda accessio fieri possit. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e46643">Sed vestro, viri optimi, desiderio meum rem litterariam promovendi studium et incredibilis amor, quo in Benedictini coetus homines, praesertim vestri similes, feror, iam anteverterat, potestate pridem facta doctissimo Bartensteino, quando eorum (cum stomacho id dico), qui Graece sciant, hic tam magna est paucitas, et is hunc laborem libens suscepit sua manu memoratam enarrationem exscribendi. Quocirca doleo vobis petitionis operam, praesertim tuam tam accuratam, periisse; mihi autem gratulor aliquem locum voluntatis in vos meae ultro declarandae fuisse datum. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e46645">Ceterum tuo, vir doctissime, studio vetusta monumenta indagandi et optimas artes excolendi mirifice delector ac <seg type="lemma" corresp="#d4618e46677">cum Homerico Agamemnone</seg> identidem expeto, ut οἷος σὺ, τοιοῦτοι δέκα in aliis Benedictinae familiae Germanicis <pb n="1v"/> coenobiis existant, qui imminentem barbariem strenue propulsent et doctorum hominum scripta cum tineis ac blattis luctantia in lucem proferant. Nolim etenim, quamquam tibi impense faveo, ut haec tua propria sit laus; sed opto, ut alii quamplures tuo exemplo ad bene de re litteraria publica merendum accendantur. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e46649">Acta sancti Colomanni a fratre germano, vitae instituti et studiorum tuorum aemulo, illustrata et publicata hucusque videre non contigit. Mirum sane, quod tu me, qui praeter libros nihil amo, iis tamdiu carere sis passus. Quare, ni tibi officii intermissionem a me vis exprobrari, accessione unius alteriusve exemplaris temporis iacturam ocyus sarcies; fratrem vero plurima salute imperties eique laudem, quam sibi hoc opere peperit, gratulabere. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e46651">Acta sanctae Wilburgis avidissime exspecto, statim ac e praelo emerserint; de quibus idem tibi atque de Actis sancti Colomanni dictum puta; unico enim exemplari mihi satisfieri non sinam. Erit tempus, si mihi vita contigerit, cum te aliquo litterario munere remunerabor. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e46653">Quod porro attinet ad duo illa <seg type="lemma" corresp="#d4618e46684">chronica in bibliotheca Tyrnsteinensi</seg> a te reperta, utriusque exemplum habetur in caesarea. Prioris auctor est Jacob de Koenigshouen, quod Chronici Argentoratensis nomine a celebri Schiltero notis exornatum typis descriptum prostat. De alterius auctore nihil habeo explorati, praeterquam quod laudes Alberti ducis se Latina epistola complexum fuisse alicubi memorat. Sunt, qui Josepho <pb n="2r"/> <seg type="lemma" corresp="#d4618e46691">Grünbeccio attribuant, cuius manuscripto Chronico se adiutum fatetur Gerardus de Roo</seg> in contexendis Annalibus Austriacis; nam <seg type="lemma" corresp="#d4618e46696">Thomas de Haselbach</seg> Latino sermone scripsit: eius operis pars in Vindobonensis academiae bibliotheca adservatur, in caesarea non exstat. Si quid praeterea huiusmodi mercis, quae tua est sagacitas, alicunde in dias luminis auras protraxeris, quaeso, fac me certiorem; ea re mihi gratius facere vix quicquam potes. Vale, vir doctissime, et nos ama.</seg></p>
-            <p xml:space="preserve">Vindobona VI. Kalendas Octobres 1714.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e46660">
-               <ref type="context">1</ref>
-               <label>probandorum magistro</label>
-               <p>BG wusste offenbar nicht, dass BP seines Amtes als Novizenmeister bereits am 13.
-                  November 1713 entsetzt worden war; vgl. <ref type="letter">343</ref> &lt;1&gt;
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>probandorum magistro</mentioned>
+            <p>BG wusste offenbar nicht, dass BP seines Amtes als Novizenmeister bereits am 13.
+                  November 1713 entsetzt worden war; vgl. <ref type="letter" target="letter:343">343</ref> <ref target="letter:343#seg1">1</ref>
                   sowie Einleitung, Abschnitt I.1.</p>
-            </note>
-            <note xml:id="d4618e46667">
-               <ref type="context">1</ref>
-               <label>a ... Montfaucon mihi litteras</label>
-               <p>Der Brief ist als undatiertes Konzept erhalten: BN FF 17701, 43r–v; vgl. <ref
-                     type="letter">359</ref> &lt;10&gt;.</p>
-            </note>
-            <note xml:id="d4618e46672">
-               <ref type="context">1</ref>
-               <label>codice caesareo ... Origenis</label>
-               <p>Vgl. <ref type="letter">353</ref> &lt;3&gt;.</p>
-            </note>
-            <note xml:id="d4618e46677">
-               <ref type="context">3</ref>
-               <label>cum ... Agamemnone</label>
-               <p>Ilias 2,372: „τοιοῦτοι δέκα μοι συμφράδμονεϛ εἶεν Ἀχαιῶν“. Agamemnon spricht hier zu Nestor.</p>
-            </note>
-            <note xml:id="d4618e46684">
-               <ref type="context">6</ref>
-               <label>chronica in bibliotheca Tyrnsteinensi</label>
-               <p>BP hatte in der Bibliothek des Augustiner-Chorherrenstifts Dürnstein, offenbar
-                  während seiner Reise im Dezember 1713 (vgl. <ref type="letter">323</ref>), jene
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>a ... Montfaucon mihi litteras</mentioned>
+            <p>Der Brief ist als undatiertes Konzept erhalten: BN FF 17701, 43r–v; vgl. <ref type="letter" target="letter:359">359</ref> <ref target="letter:359#seg10">10</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned>codice caesareo ... Origenis</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:353">353</ref> <ref target="letter:353#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>cum ... Agamemnone</mentioned>
+            <p>Ilias 2,372: „τοιοῦτοι δέκα μοι συμφράδμονεϛ εἶεν Ἀχαιῶν“. Agamemnon spricht hier zu Nestor.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg6">
+            <mentioned>chronica in bibliotheca Tyrnsteinensi</mentioned>
+            <p>BP hatte in der Bibliothek des Augustiner-Chorherrenstifts Dürnstein, offenbar
+                  während seiner Reise im Dezember 1713 (vgl. <ref type="letter" target="letter:323">323</ref>), jene
                   heute verlorene Handschrift gesehen, in welcher Jakob Twingers Chronik und die
                   „Österreichische Chronik von den 95 Herrschaften“ enthalten waren. Aus BGs Antwort
                   lässt sich erschließen, dass ihm BP Angaben zu den beiden Texten übermittelt hatte
                   und von ihm wissen wollte, ob ihm die Texte bekannt, wer die Verfasser seien und
                   ob es bereits Editionen gebe. Von Twingers Chronik existieren in der ÖNB heute
                   zwei Handschriften (ÖNB, Cod. 2808, 3411), von der „Österreichischen Chronik“
-                  vierzehn (vgl. <rs type="bibl" key="bibl:19550">Seemüller, Einleitung</rs>
+                  vierzehn (vgl. <rs type="bibl" ref="bibl:19550">Seemüller, Einleitung</rs>
                   I–LVIII; zur Dürnsteiner Handschrift ebd. XX). Dass es sich bei dem zweiten der
                   genannten Werke um die „Österreichische Chronik“ handelt, ergibt sich aus BGs
-                  Verweis auf die lateinische Epistel des Chronisten auf Herzog Albrecht III. (<rs
-                     type="bibl" key="bibl:35750">Österreichische Chronik</rs> 220). HP druckte
+                  Verweis auf die lateinische Epistel des Chronisten auf Herzog Albrecht III. (<rs type="bibl" ref="bibl:35750">Österreichische Chronik</rs> 220). HP druckte
                   Teile der Chronik einige Jahre später
-                  (<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Pez,
-                  Scriptores rerum Austriacarum<?oxy_custom_end?> 1 col. 1043–1158) nach der
+                  (Pez,
+                  Scriptores rerum Austriacarum 1 col. 1043–1158) nach der
                   Dürnsteiner Handschrift, von welcher er auch eine ausführliche Beschreibung gab
                   (ebd. 1051f.) und berichtete, dass BP sie im Winter 1713 bei seinem Besuch in der
-                  Dürnsteiner Bibliothek entdeckt hatte; vgl. <ref type="letter">399</ref>. In dem
+                  Dürnsteiner Bibliothek entdeckt hatte; vgl. <ref type="letter" target="letter:399">399</ref>. In dem
                   Bericht über Dürnstein bei
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Pez,
-                  Nachricht<?oxy_custom_end?> 178–186, wird die Chronik Twingers nicht angeführt.
+                  Pez,
+                  Nachricht 178–186, wird die Chronik Twingers nicht angeführt.
                   Die „Österreichische Chronik“ ist eventuell mit der Nr. 29 zu identifizieren
                   („Eine alte deutsche Chronick der hertzoge von Oesterreich, so aus V büchern
                   bestehet und ungefähr mit dem jahr 1443 aufhöret“); das genannte Enddatum ist
                   allerdings nicht ohne Weiteres nachvollziehbar.</p>
-            </note>
-            <note xml:id="d4618e46691">
-               <ref type="context">6</ref>
-               <label>Grünbeccio ... de Roo</label>
-               <p>In der unpaginierten Vorrede seiner „Annales“ nennt van Roo die von ihm
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg6">
+            <mentioned>Grünbeccio ... de Roo</mentioned>
+            <p>In der unpaginierten Vorrede seiner „Annales“ nennt van Roo die von ihm
                   verwendeten Autoren, darunter in der Rubrik „Manuscripti“ auch Joseph Grünpeck.
-                  Nach <rs type="bibl" key="bibl:17990">Lhotsky, Quellenkunde</rs> 458, handelte es
+                  Nach <rs type="bibl" ref="bibl:17990">Lhotsky, Quellenkunde</rs> 458, handelte es
                   sich bei dem von van Roo benutzten Werk Grünpecks um die verschollenen
                   „Commentaria divi Maximiliani“.</p>
-            </note>
-            <note xml:id="d4618e46696">
-               <ref type="context">6</ref>
-               <label>Thomas de Haselbach</label>
-               <p>Zur Überlieferungssituation der „Chronica Austriae“ vgl. <rs type="bibl"
-                     key="bibl:17986">Lhotsky, Einleitung</rs> XLIX–LXXXIV. Zu Cod. B (ÖNB, Cod.
-                  7660) argumentiert Lhotsky (<rs type="bibl" key="bibl:17986">ebd.</rs> LXIV), er
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg6">
+            <mentioned>Thomas de Haselbach</mentioned>
+            <p>Zur Überlieferungssituation der „Chronica Austriae“ vgl. <rs type="bibl" ref="bibl:17986">Lhotsky, Einleitung</rs> XLIX–LXXXIV. Zu Cod. B (ÖNB, Cod.
+                  7660) argumentiert Lhotsky (<rs type="bibl" ref="bibl:17986">ebd.</rs> LXIV), er
                   sei nach 1725 in die Hofbibliothek gekommen, weil ihn HP sonst gekannt haben
                   müsste. Dies bleibt auch im Lichte der Aussagen BGs in diesem Brief plausibel,
                   zumal BG auf die ihm bekannte Handschrift der Universitätsbibliothek verweist
-                  (Cod. A bei <rs type="bibl" key="bibl:17986">Lhotsky, Einleitung</rs> LII–LXIV;
+                  (Cod. A bei <rs type="bibl" ref="bibl:17986">Lhotsky, Einleitung</rs> LII–LXIV;
                   seit 1756 an der Hofbibliothek: heute ÖNB, Cod. 7583, olim Univ. 842) und somit
                   wohl auch Handschriften seines Bestandes nicht verschwiegen hätte. BP und HP
                   scheinen BGs Hinweis übersehen oder vergessen zu haben, zumal Franz Wagner HP kurz
                   vor der Edition 1725 nochmals auf die Universitäts-Handschrift aufmerksam machte:
-                     <rs type="bibl" key="bibl:17986">Lhotsky, Einleitung</rs> LVI.</p>
-            </note>
-         </div>
-      </back>
+                     <rs type="bibl" ref="bibl:17986">Lhotsky, Einleitung</rs> LVI.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>II</orig>.</note>
+         <note anchored="false">Ordnungsvermerk: <orig>103</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Clarissimo viro domno Bernardo Pez Benedictino Mellicensi probandorum magistro et bibliothecario salutem plurimam dicit Joannes Benedictus Gentilott ab Engelsbrun.</opener>
+         <ab resp="#editor" xml:id="seg1">Cum superioribus proximis diebus politissimus iuvenis Bartensteinus Argentinensis, qui eruditionis <sic>caussa</sic>  hic peregrinatur, a celeberrimo viro domno Bernardo de Montfaucon <add place="above">mihi</add> litteras reddidisset, non longo intervallo tuas, vir clarissime, et humanitatis et eruditionis plenas accepi. Utriusque par fere argumentum: postulatio nimirum, ut ex manuscripto <anchor xml:id="n1"/>codice caesareo enarrationem Origenis<anchor xml:id="n1e"/> in Psalmos exscribere liceret, ad hoc, ut eius ad novam omnium operum editionem, quam domnus Claudius De la Rüe molitur, non contemnenda accessio fieri possit. </ab>
+         <ab resp="#editor" xml:id="seg2">Sed vestro, viri optimi, desiderio meum rem litterariam promovendi studium et incredibilis amor, quo in Benedictini coetus homines, praesertim vestri similes, feror, iam anteverterat, potestate pridem facta doctissimo Bartensteino, quando eorum (cum stomacho id dico), qui Graece sciant, hic tam magna est paucitas, et is hunc laborem libens suscepit sua manu memoratam enarrationem exscribendi. Quocirca doleo vobis petitionis operam, praesertim tuam tam accuratam, periisse; mihi autem gratulor aliquem locum voluntatis in vos meae ultro declarandae fuisse datum. </ab>
+         <ab resp="#editor" xml:id="seg3">Ceterum tuo, vir doctissime, studio vetusta monumenta indagandi et optimas artes excolendi mirifice delector ac <anchor xml:id="n2"/>cum Homerico Agamemnone<anchor xml:id="n2e"/> identidem expeto, ut οἷος σὺ, τοιοῦτοι δέκα in aliis Benedictinae familiae Germanicis <pb n="1v"/> coenobiis existant, qui imminentem barbariem strenue propulsent et doctorum hominum scripta cum tineis ac blattis luctantia in lucem proferant. Nolim etenim, quamquam tibi impense faveo, ut haec tua propria sit laus; sed opto, ut alii quamplures tuo exemplo ad bene de re litteraria publica merendum accendantur. </ab>
+         <ab resp="#editor" xml:id="seg4">Acta sancti Colomanni a fratre germano, vitae instituti et studiorum tuorum aemulo, illustrata et publicata hucusque videre non contigit. Mirum sane, quod tu me, qui praeter libros nihil amo, iis tamdiu carere sis passus. Quare, ni tibi officii intermissionem a me vis exprobrari, accessione unius alteriusve exemplaris temporis iacturam ocyus sarcies; fratrem vero plurima salute imperties eique laudem, quam sibi hoc opere peperit, gratulabere. </ab>
+         <ab resp="#editor" xml:id="seg5">Acta sanctae Wilburgis avidissime exspecto, statim ac e praelo emerserint; de quibus idem tibi atque de Actis sancti Colomanni dictum puta; unico enim exemplari mihi satisfieri non sinam. Erit tempus, si mihi vita contigerit, cum te aliquo litterario munere remunerabor. </ab>
+         <ab resp="#editor" xml:id="seg6">Quod porro attinet ad duo illa <anchor xml:id="n3"/>chronica in bibliotheca Tyrnsteinensi<anchor xml:id="n3e"/> a te reperta, utriusque exemplum habetur in caesarea. Prioris auctor est Jacob de Koenigshouen, quod Chronici Argentoratensis nomine a celebri Schiltero notis exornatum typis descriptum prostat. De alterius auctore nihil habeo explorati, praeterquam quod laudes Alberti ducis se Latina epistola complexum fuisse alicubi memorat. Sunt, qui Josepho <pb n="2r"/> <anchor xml:id="n4"/>Grünbeccio attribuant, cuius manuscripto Chronico se adiutum fatetur Gerardus de Roo<anchor xml:id="n4e"/> in contexendis Annalibus Austriacis; nam <anchor xml:id="n5"/>Thomas de Haselbach<anchor xml:id="n5e"/> Latino sermone scripsit: eius operis pars in Vindobonensis academiae bibliotheca adservatur, in caesarea non exstat. Si quid praeterea huiusmodi mercis, quae tua est sagacitas, alicunde in dias luminis auras protraxeris, quaeso, fac me certiorem; ea re mihi gratius facere vix quicquam potes. Vale, vir doctissime, et nos ama.</ab>
+         <closer>Vindobona VI. Kalendas Octobres 1714.</closer>
+      </body>
    </text>
 </TEI>

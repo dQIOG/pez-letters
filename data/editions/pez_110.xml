@@ -1,45 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="110" xml:id="pez-0110">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">110 Hyazinth Baumbach an Bernhard Pez. 1710-09-13. Würzburg (St. Stephan).</title>
-            <title type="sub">Digital Edition</title>
+            <title>Hyazinth Baumbach an Bernhard Pez. 1710-09-13. Würzburg (St. Stephan).</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">110</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 16</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Zu etlichen der aufgezählten Klöster hat BP die Tage vermerkt, an denen er Briefe dorthin geschickt hat. Die Vermerke werden in geschwungenen Klammern wiedergegeben.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">185r–186v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 185r–186v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -54,106 +72,88 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">102</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">120</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">99</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">102</idno>
-               </ref>
+               <ptr type="prev" target="letter:102"/>
+               <ptr type="next" target="letter:120"/>
+               <ptr type="mentions" target="letter:099"/>
+               <ptr type="mentions" target="letter:102"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">HB</rs> hat aus <rs type="person" role="sender">BPs</rs> Brief <ref type="letter" target="letter:102">102</ref> vom 5. September, welchen er am 13. erhalten hat, dessen Bemühen um den Orden ersehen und wünscht, dass der <rs ref="index:d10854e2786">Hl. Benedikt</rs> ihn in den Kreis seiner Auserwählten aufnehmen möge.</p>
+            <p corresp="#seg2">Da <rs type="person" role="sender">BP</rs> um die Namen der Klöster in <rs ref="index:d14380e12643">Franken</rs> gebeten hat, gibt <rs type="person" role="sender">HB</rs> einen gereihten Überblick über diese. Er nennt als das geringste sein eigenes, <rs ref="index:d10854e34414">St. Stephan</rs> zu <rs ref="index:d10854e34226">Würzburg</rs>, mit dem von <rs ref="index:d10854e34414">St. Stephan</rs> aus gegründeten Benediktinerinnenkloster <rs ref="index:d10854e34353">St. Afra</rs> dortselbst; dann <rs ref="index:d10854e2054">St. Dionys zu Banz</rs>, das in geistlichen Dingen dem <rs ref="index:d10854e34226">Bistum Würzburg</rs>, in weltlichen aber dem Bischof von <rs ref="index:d14380e3735">Bamberg</rs> untersteht; <rs ref="index:d10854e20856">St. Felicitas zu Münsterschwarzach</rs> am <rs ref="index:d10854e18358">Main</rs>, nur vier Stunden von <rs ref="index:d10854e34226">Würzburg</rs> entfernt; <rs ref="index:d10854e21196">St. Martin zu Neustadt am Main</rs>, stromabwärts von <rs ref="index:d10854e34226">Würzburg</rs> in sechs oder sieben Stunden Entfernung; <rs ref="index:d10854e30653">St. Veit zu Theres</rs>, stromaufwärts von <rs ref="index:d10854e34226">Würzburg</rs> am <rs ref="index:d10854e18358">Main</rs>, eine Tagesreise entfernt; von diesen wird jedoch kaum mehr zu bekommen sein, als <rs type="person" role="sender">HB</rs> bereits geschrieben hat <ref type="letter" target="letter:99">99</ref>. Des Weiteren gibt es das Kloster <rs ref="index:d10854e677">St. Simplicius und Faustinus zu Amorbach</rs> im <rs ref="index:d10854e21698">Odenwald</rs>, um dessen Zugehörigkeit es einen Streit mit dem Erzbistum <rs ref="index:d14380e25988">Mainz</rs> gibt; in <rs ref="index:d14380e25988">Mainz</rs> selbst das Kloster <rs ref="index:d10854e18403">St. Jakob</rs> und in demselben Erzbistum noch <rs ref="index:d10854e28759">Seligenstadt</rs>; schließlich das <rs ref="index:d10854e34375">Schottenkloster St. Jakob</rs> zu <rs ref="index:d10854e34226">Würzburg</rs>, in dem es derzeit keinen Abt gibt; wegen der Kleinheit des Konvents wird beraten, ob man einen neuen Abt wählen oder das Kloster in ein Priorat umwandeln soll.</p>
+            <p corresp="#seg3"><rs type="person" role="sender">HB</rs> verfügt über die ersten vier Bände von <rs ref="index:d14380e25581">Mabillons</rs> „<rs ref="index:d10854e17940">Annales OSB</rs>“. Er selbst hat sie vor zwei Jahren angekauft und, angeregt durch die Vorrede des vierten Bandes, Dokumente zur Gründung von <rs ref="index:d10854e34414">St. Stephan</rs> gesammelt, um sie nach Paris einzusenden. Er wusste jedoch nicht, wem er sie nach <rs ref="index:d14380e25581">Mabillons</rs> Tod schicken sollte, und nimmt deshalb gerne <rs type="person" role="sender">BPs</rs> Angebot an, das Material nach <rs ref="index:d14380e32292">Paris</rs> weiterzuleiten. <rs type="person" role="sender">HB</rs> will es bald schicken, wird aber derzeit durch eine öffentlich abzuhaltende Disputation gegen den Neffen (<rs ref="index:d10854e11179">Karl Philipp von Greiffenclau</rs>) des Würzburger Fürstbischofs (<rs ref="index:d10854e11166">Johann Philipp von Greiffenclau</rs>), einen Domkanonikus der <rs ref="index:d14380e25988">Mainzer</rs> und der <rs ref="index:d10854e34226">Würzburger</rs> Kirche, abgehalten.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">HB</rs> will sich um Informationen zu <rs ref="index:d10854e7386">Egilward</rs> bemühen.</p>
+            <p corresp="#seg5">Die <rs ref="index:d10854e26618">Enzyklik</rs> (<rs ref="index:d14380e38364">Ruinarts</rs>) aus <rs ref="index:d14380e32292">Paris</rs> will <rs type="person" role="sender">HB</rs> in Kopie an andere Äbte und Prälaten senden.</p>
+            <p corresp="#seg6">In einem Postskriptum bittet HB, den mitgesendeten Brief an <rs ref="index:d10854e7254">Urban Egerer</rs> (in Göttweig) weiterzuleiten.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e13517"><rs type="person" role="sender">HB</rs> hat aus <rs type="person" role="sender">BPs</rs> Brief <ref type="letter">102</ref> vom 5. September, welchen er am 13. erhalten hat, dessen Bemühen um den Orden ersehen und wünscht, dass der <rs key="index:d10854e2786">Hl. Benedikt</rs> ihn in den Kreis seiner Auserwählten aufnehmen möge.</seg><seg type="context" n="2" xml:id="d4618e13522">Da <rs type="person" role="sender">BP</rs> um die Namen der Klöster in <rs key="index:d14380e12643">Franken</rs> gebeten hat, gibt <rs type="person" role="sender">HB</rs> einen gereihten Überblick über diese. Er nennt als das geringste sein eigenes, <rs key="index:d10854e34414">St. Stephan</rs> zu <rs key="index:d10854e34226">Würzburg</rs>, mit dem von <rs key="index:d10854e34414">St. Stephan</rs> aus gegründeten Benediktinerinnenkloster <rs key="index:d10854e34353">St. Afra</rs> dortselbst; dann <rs key="index:d10854e2054">St. Dionys zu Banz</rs>, das in geistlichen Dingen dem <rs key="index:d10854e34226">Bistum Würzburg</rs>, in weltlichen aber dem Bischof von <rs key="index:d14380e3735">Bamberg</rs> untersteht; <rs key="index:d10854e20856">St. Felicitas zu Münsterschwarzach</rs> am <rs key="index:d10854e18358">Main</rs>, nur vier Stunden von <rs key="index:d10854e34226">Würzburg</rs> entfernt; <rs key="index:d10854e21196">St. Martin zu Neustadt am Main</rs>, stromabwärts von <rs key="index:d10854e34226">Würzburg</rs> in sechs oder sieben Stunden Entfernung; <rs key="index:d10854e30653">St. Veit zu Theres</rs>, stromaufwärts von <rs key="index:d10854e34226">Würzburg</rs> am <rs key="index:d10854e18358">Main</rs>, eine Tagesreise entfernt; von diesen wird jedoch kaum mehr zu bekommen sein, als <rs type="person" role="sender">HB</rs> bereits geschrieben hat <ref type="letter">99</ref>. Des Weiteren gibt es das Kloster <rs key="index:d10854e677">St. Simplicius und Faustinus zu Amorbach</rs> im <rs key="index:d10854e21698">Odenwald</rs>, um dessen Zugehörigkeit es einen Streit mit dem Erzbistum <rs key="index:d14380e25988">Mainz</rs> gibt; in <rs key="index:d14380e25988">Mainz</rs> selbst das Kloster <rs key="index:d10854e18403">St. Jakob</rs> und in demselben Erzbistum noch <rs key="index:d10854e28759">Seligenstadt</rs>; schließlich das <rs key="index:d10854e34375">Schottenkloster St. Jakob</rs> zu <rs key="index:d10854e34226">Würzburg</rs>, in dem es derzeit keinen Abt gibt; wegen der Kleinheit des Konvents wird beraten, ob man einen neuen Abt wählen oder das Kloster in ein Priorat umwandeln soll.</seg><seg type="context" n="3" xml:id="d4618e13527"><rs type="person" role="sender">HB</rs> verfügt über die ersten vier Bände von <rs key="index:d14380e25581">Mabillons</rs> „<rs key="index:d10854e17940">Annales OSB</rs>“. Er selbst hat sie vor zwei Jahren angekauft und, angeregt durch die Vorrede des vierten Bandes, Dokumente zur Gründung von <rs key="index:d10854e34414">St. Stephan</rs> gesammelt, um sie nach Paris einzusenden. Er wusste jedoch nicht, wem er sie nach <rs key="index:d14380e25581">Mabillons</rs> Tod schicken sollte, und nimmt deshalb gerne <rs type="person" role="sender">BPs</rs> Angebot an, das Material nach <rs key="index:d14380e32292">Paris</rs> weiterzuleiten. <rs type="person" role="sender">HB</rs> will es bald schicken, wird aber derzeit durch eine öffentlich abzuhaltende Disputation gegen den Neffen (<rs key="index:d10854e11179">Karl Philipp von Greiffenclau</rs>) des Würzburger Fürstbischofs (<rs key="index:d10854e11166">Johann Philipp von Greiffenclau</rs>), einen Domkanonikus der <rs key="index:d14380e25988">Mainzer</rs> und der <rs key="index:d10854e34226">Würzburger</rs> Kirche, abgehalten.</seg><seg type="context" n="4" xml:id="d4618e13529"><rs type="person" role="sender">HB</rs> will sich um Informationen zu <rs key="index:d10854e7386">Egilward</rs> bemühen.</seg><seg type="context" n="5" xml:id="d4618e13531">Die <rs key="index:d10854e26618">Enzyklik</rs> (<rs key="index:d14380e38364">Ruinarts</rs>) aus <rs key="index:d14380e32292">Paris</rs> will <rs type="person" role="sender">HB</rs> in Kopie an andere Äbte und Prälaten senden.</seg><seg type="context" n="6" xml:id="d4618e13533">In einem Postskriptum bittet HB, den mitgesendeten Brief an <rs key="index:d10854e7254">Urban Egerer</rs> (in Göttweig) weiterzuleiten.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">31</hi> (?).</p>
-            <div type="remarks">
-               <p>Zu etlichen der aufgezählten Klöster hat BP die Tage vermerkt, an denen er Briefe dorthin geschickt hat. Die Vermerke werden in geschwungenen Klammern wiedergegeben.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende eximie ac<note place="foot" xml:id="d4618e13553">	Korrigiert aus <hi rend="italic">ad</hi>.</note> doctissime pater, domine et pater colende.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e13560">Mirandum admodum reverendae paternitatis vestrae in sacrum ordinem nostrum amorem et vehemens eiusdem promovendi honoris studium ex litteris ultimis sub 5. Septembris ad me directis et 13. eiusdem acceptis abunde cognovi. Superaddet Deus gratiam et augebit coronam fratrum sanctissimi patris nostri Benedicti, quando hic gloriosissimus pater noster reverendam paternitatem vestram, devotum suo ordini clientem, annumerabit suis et associabit electis. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e13562">Petiit admodum reverenda paternitas vestra nomina monasteriorum nostrorum in Franconia. En haec sunt <seg type="lemma" corresp="#d4618e13616">ordine suo</seg>: minimum monasterium nostrum S. Stephani Herbipoli, una cum monasterio monialium S. Afrae a nostro monasterio fundatum [<hi rend="italic">sic</hi>]. Secundo monasterium Banthense ad S. Dionysium, dioecesis quidem Herbipolensis; temporalia tamen quod attinet, spectat ad episcopum et principem Bambergensem, cui loco <sic>proximius</sic> [<hi rend="italic">sic</hi>] est. Tertio monasterium Schwarzacense sive ad S. Felicitatem in Münsterschwarzach ad tractum Moeni, quattuor tantum horis Herbipoli distans. {Scripsi 15. Octobris 1710.} Quarto monasterium Neostadiense ad S. Martinum<note place="foot" xml:id="d4618e13570">	<hi rend="italic">ad S. Martinum</hi> über der Zeile eingefügt.</note> ad Moenum infra Herbipolim sex vel septem horis ab hac urbe distans. {Scripsi 15. Octobris 1710.} Quinto monasterium Therense ad S. Vitum supra Herbipolim iter unius diei ad Moenum fluvium. {Scripsi 11. Octobris 1710.} De quibus tamen vix aliud habebitur, quam quod scripsi. <pb n="1v"/> Insuper monasterium est Amorbacense sanctorum <seg type="lemma" corresp="#d4618e13623">Simplicii, Faustini etc.</seg> im Odenwalt, antehac nostrae, nunc archidioecesis Moguntinae. {Scripsi 1710 24. Octobris.} <seg type="lemma" corresp="#d4618e13628">Disputabitur</seg> tamen et recuperandum speratur. Moguntiae quoque est celebre monasterium in Monte S. Jacobi. {Scripsi 31. Octobris 1710.} Item in eadem archidioecesi monasterium Seeligenstadense etc. ad Moenum. Si forte et ad haec scribere placeret, ne forte iam scripserit. Ferme obliviscerer item<note place="foot" xml:id="d4618e13578">	Über der Zeile eingefügt.</note> monasterii Scotorum hic Herbipoli ad S. Jacobum iam <sic>notum</sic> [<hi rend="italic">sic</hi>]. {Scripsi 30. Octobris 1710.} Hi <seg type="lemma" corresp="#d4618e13633">abbatem modo non habent</seg>; deliberatur, utrum iterum abbas eligendus vel prioratus instituendus propter paucitatem personarum. Haec per indirectum. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e13585">Opera sive tomos quatuor Annalium ordinis nostri Mabillionis habeo, ipsemet coemi ante duos annos, et ex eius <seg type="lemma" corresp="#d4618e13638">tomi quarti <sic>proemio</sic></seg> [<hi rend="italic">sic</hi>] incensus congessi, quantum potui, monasterii nostri prima documenta et fundationem mittenda Parisios. Sed viro hoc praeclarissimo interim defuncto nesciebam, ad quem dirigerem. Cum igitur admodum reverenda paternitas vestra se ad hoc charitatis officium offerat, fiducialiter acceptabo et proxime mittam; modo enim impeditus ob argumentationem publicam habendam contra celsissimi principis nostri nepotem ex fratre, metropolitanae Moguntinae et ecclesiae cathedralis nostrae canonicum, tam cito congerere nequeo. <pb n="2r"/> </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e13592">De Egilwardo ut quid accipiam, laborabo. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e13594"><seg type="lemma" corresp="#d4618e13645">Litteras Parisienses</seg> sive copiam earum <sic>lecteris</sic> [<hi rend="italic">sic</hi>] dominis praelatis et abbatibus communicabo. Quibus denuo <sic>admodum </sic>[<hi rend="italic">sic</hi>]<note place="foot" xml:id="d4618e13602">	Sicherlich irrig ausgelassen <hi rend="italic">reverendam</hi>.</note> paternitatem vestram divinae protectioni devote commendo et permaneo</seg></p>
-            <p xml:space="preserve">Admodum reverendae et eximiae paternitatis vestrae addictissimus Hyacinth abbas manu propria.</p>
-            <p xml:space="preserve">Herbipoli ex monasterio S. Stephani 13. Septembris 1710.</p>
-            <p xml:space="preserve"><seg type="context" n="6" xml:space="preserve" xml:id="d4618e13613">P.S. Inclusas placeat admodum reverendo <seg type="lemma" corresp="#d4618e13652">patri Urbano</seg> transmittere.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e13616">
-               <ref type="context">2</ref>
-               <label>ordine suo</label>
-               <p>Die Reihenfolge zumindest der ersten fünf dürfte der Präzedenz in den Landständen
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>ordine suo</mentioned>
+            <p>Die Reihenfolge zumindest der ersten fünf dürfte der Präzedenz in den Landständen
                   des Hochstifts Würzburg entsprechen. In dieser rangierte der Abt von St. Stephan
-                  nur nach jenem der Zisterze Ebrach; vgl. <rs type="bibl" key="bibl:36986"
-                     >Schubert, Landstände</rs> 183f.</p>
-            </note>
-            <note xml:id="d4618e13623">
-               <ref type="context">2</ref>
-               <label>Simplicii, Faustini etc.</label>
-               <p>Die dritte Patronin von Amorbach, die HB hier auslässt, ist die Hl. Beatrix.</p>
-            </note>
-            <note xml:id="d4618e13628">
-               <ref type="context">2</ref>
-               <label>Disputabitur</label>
-               <p>Vgl. <rs type="bibl" key="bibl:16972">Hemmerle, Benediktinerklöster</rs> 28.</p>
-            </note>
-            <note xml:id="d4618e13633">
-               <ref type="context">2</ref>
-               <label>abbatem ... non habent</label>
-               <p>Abt Ambrose Cook war wegen „unzukömmlicher“ Lebensweise und langer Abwesenheit vom
+                  nur nach jenem der Zisterze Ebrach; vgl. <rs type="bibl" ref="bibl:36986">Schubert, Landstände</rs> 183f.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>Simplicii, Faustini etc.</mentioned>
+            <p>Die dritte Patronin von Amorbach, die HB hier auslässt, ist die Hl. Beatrix.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>Disputabitur</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:16972">Hemmerle, Benediktinerklöster</rs> 28.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>abbatem ... non habent</mentioned>
+            <p>Abt Ambrose Cook war wegen „unzukömmlicher“ Lebensweise und langer Abwesenheit vom
                   Kloster im Jahr 1703 abgesetzt worden. Aufgrund hoher Schulden und eingerissener
                   Indisziplin im Konvent wurde das Schottenstift der Administration unterstellt;
-                  erst 1713 wurde wieder eine <rs key="index:d10854e34456">Abtwahl</rs> erlaubt, die
-                  auf den bisherigen Prior und Administrator Augustine Bruce fiel: <rs type="bibl"
-                     key="bibl:16972">Hemmerle, Benediktinerklöster</rs> 351f.; <rs type="bibl"
-                     key="bibl:37252">Wieland, Schottenkloster</rs> 131–133. Zur Größe des Konvents:
-                     <rs type="bibl" key="bibl:36042">Dilworth, Scottish Benedictines</rs> 177f.;
-                     <rs type="bibl" key="bibl:37252">Wieland, Schottenkloster</rs> 109f. Den
-                  unerfreulichen Stand der Disziplin illustriert das bei <rs type="bibl"
-                     key="bibl:37222">Weißenberger, Schottenabtei</rs> 74f., abgedruckte
+                  erst 1713 wurde wieder eine <rs ref="index:d10854e34456">Abtwahl</rs> erlaubt, die
+                  auf den bisherigen Prior und Administrator Augustine Bruce fiel: <rs type="bibl" ref="bibl:16972">Hemmerle, Benediktinerklöster</rs> 351f.; <rs type="bibl" ref="bibl:37252">Wieland, Schottenkloster</rs> 131–133. Zur Größe des Konvents:
+                     <rs type="bibl" ref="bibl:36042">Dilworth, Scottish Benedictines</rs> 177f.;
+                     <rs type="bibl" ref="bibl:37252">Wieland, Schottenkloster</rs> 109f. Den
+                  unerfreulichen Stand der Disziplin illustriert das bei <rs type="bibl" ref="bibl:37222">Weißenberger, Schottenabtei</rs> 74f., abgedruckte
                   Reformationsdekret des Würzburger Bischofs vom 20. Dezember 1716.</p>
-            </note>
-            <note xml:id="d4618e13638">
-               <ref type="context">3</ref>
-               <label>tomi quarti proemio</label>
-               <p>Die Vorrede enthält keinen expliziten Aufruf zur Mitarbeit; anspornend könnte auf HB die Ankündigung Mabillons gewirkt haben, innerhalb der ihm noch verbleibenden Lebenszeit möglichst nicht nur den bereits druckfertigen fünften, sondern auch noch den sechsten Band herausbringen zu wollen. Auch eine – freilich kaum über das Maß gewohnter Proömientopik hinausreichende – Korrekturbitte an die Leser bietet einen Anknüpfungspunkt für Einsendungen: „[...] sic errata mea, ubi mihi comperta fuerint, agnoscere et emendare non erubescam, iis omnibus gratiam habiturus, qui eorum me amice et benevole admonuerint“.</p>
-            </note>
-            <note xml:id="d4618e13645">
-               <ref type="context">5</ref>
-               <label>Litteras Parisienses</label>
-               <p>Gemäß der Aussage BPs in <ref type="letter">143</ref> &lt;12&gt; handelt es sich
-                  um die Enzyklik Ruinarts; vermutlich hatte BP diese mit <ref type="letter"
-                     >102</ref> an HB gesendet. Vgl. auch <ref type="letter">149</ref>.</p>
-            </note>
-            <note xml:id="d4618e13652">
-               <ref type="context">6</ref>
-               <label>patri Urbano</label>
-               <p>Urban Egerer, Konventuale in Göttweig, war aus Würzburg gebürtig: <rs type="bibl"
-                     key="bibl:17830">Lashofer, Profeßbuch Göttweig</rs> 187. Zu den näheren
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>tomi quarti proemio</mentioned>
+            <p>Die Vorrede enthält keinen expliziten Aufruf zur Mitarbeit; anspornend könnte auf HB die Ankündigung Mabillons gewirkt haben, innerhalb der ihm noch verbleibenden Lebenszeit möglichst nicht nur den bereits druckfertigen fünften, sondern auch noch den sechsten Band herausbringen zu wollen. Auch eine – freilich kaum über das Maß gewohnter Proömientopik hinausreichende – Korrekturbitte an die Leser bietet einen Anknüpfungspunkt für Einsendungen: „[...] sic errata mea, ubi mihi comperta fuerint, agnoscere et emendare non erubescam, iis omnibus gratiam habiturus, qui eorum me amice et benevole admonuerint“.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg5">
+            <mentioned>Litteras Parisienses</mentioned>
+            <p>Gemäß der Aussage BPs in <ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg12">12</ref> handelt es sich
+                  um die Enzyklik Ruinarts; vermutlich hatte BP diese mit <ref type="letter" target="letter:102">102</ref> an HB gesendet. Vgl. auch <ref type="letter" target="letter:149">149</ref>.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg6">
+            <mentioned>patri Urbano</mentioned>
+            <p>Urban Egerer, Konventuale in Göttweig, war aus Würzburg gebürtig: <rs type="bibl" ref="bibl:17830">Lashofer, Profeßbuch Göttweig</rs> 187. Zu den näheren
                   Umständen seiner Bekanntschaft mit HB und anderen Mönchen von St. Stephan zu
-                  Würzburg ist nichts bekannt. Vgl. <ref type="letter">178</ref>, <ref type="letter"
-                     >196</ref>.</p>
-            </note>
-         </div>
-      </back>
+                  Würzburg ist nichts bekannt. Vgl. <ref type="letter" target="letter:178">178</ref>, <ref type="letter" target="letter:196">196</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Ordnungsvermerk: <orig>31</orig> (?).</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:17432">
+            <title type="short">Katschthaler, Briefnachlass</title>
+            <biblScope>16</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende eximie <choice><sic>ad</sic><corr>ac</corr></choice> doctissime pater, domine et pater colende.</opener>
+         <ab resp="#editor" xml:id="seg1">Mirandum admodum reverendae paternitatis vestrae in sacrum ordinem nostrum amorem et vehemens eiusdem promovendi honoris studium ex litteris ultimis sub 5. Septembris ad me directis et 13. eiusdem acceptis abunde cognovi. Superaddet Deus gratiam et augebit coronam fratrum sanctissimi patris nostri Benedicti, quando hic gloriosissimus pater noster reverendam paternitatem vestram, devotum suo ordini clientem, annumerabit suis et associabit electis. </ab>
+         <ab resp="#editor" xml:id="seg2">Petiit admodum reverenda paternitas vestra nomina monasteriorum nostrorum in Franconia. En haec sunt <anchor xml:id="n1"/>ordine suo<anchor xml:id="n1e"/>: minimum monasterium nostrum S. Stephani Herbipoli, una cum monasterio monialium S. Afrae a nostro monasterio <sic>fundatum</sic>. Secundo monasterium Banthense ad S. Dionysium, dioecesis quidem Herbipolensis; temporalia tamen quod attinet, spectat ad episcopum et principem Bambergensem, cui loco <sic>proximius</sic>  est. Tertio monasterium Schwarzacense sive ad S. Felicitatem in Münsterschwarzach ad tractum Moeni, quattuor tantum horis Herbipoli distans. {Scripsi 15. Octobris 1710.} Quarto monasterium Neostadiense <add place="above">ad S. Martinum</add> ad Moenum infra Herbipolim sex vel septem horis ab hac urbe distans. {Scripsi 15. Octobris 1710.} Quinto monasterium Therense ad S. Vitum supra Herbipolim iter unius diei ad Moenum fluvium. {Scripsi 11. Octobris 1710.} De quibus tamen vix aliud habebitur, quam quod scripsi. <pb n="1v"/> Insuper monasterium est Amorbacense sanctorum <anchor xml:id="n2"/>Simplicii, Faustini etc.<anchor xml:id="n2e"/> im Odenwalt, antehac nostrae, nunc archidioecesis Moguntinae. {Scripsi 1710 24. Octobris.} <anchor xml:id="n3"/>Disputabitur<anchor xml:id="n3e"/> tamen et recuperandum speratur. Moguntiae quoque est celebre monasterium in Monte S. Jacobi. {Scripsi 31. Octobris 1710.} Item in eadem archidioecesi monasterium Seeligenstadense etc. ad Moenum. Si forte et ad haec scribere placeret, ne forte iam scripserit. Ferme obliviscerer <add place="above">item</add> monasterii Scotorum hic Herbipoli ad S. Jacobum iam <sic>notum</sic> . {Scripsi 30. Octobris 1710.} Hi <anchor xml:id="n4"/>abbatem modo non habent<anchor xml:id="n4e"/>; deliberatur, utrum iterum abbas eligendus vel prioratus instituendus propter paucitatem personarum. Haec per indirectum. </ab>
+         <ab resp="#editor" xml:id="seg3">Opera sive tomos quatuor Annalium ordinis nostri Mabillionis habeo, ipsemet coemi ante duos annos, et ex eius <anchor xml:id="n5"/>tomi quarti <sic>proemio</sic><anchor xml:id="n5e"/>  incensus congessi, quantum potui, monasterii nostri prima documenta et fundationem mittenda Parisios. Sed viro hoc praeclarissimo interim defuncto nesciebam, ad quem dirigerem. Cum igitur admodum reverenda paternitas vestra se ad hoc charitatis officium offerat, fiducialiter acceptabo et proxime mittam; modo enim impeditus ob argumentationem publicam habendam contra celsissimi principis nostri nepotem ex fratre, metropolitanae Moguntinae et ecclesiae cathedralis nostrae canonicum, tam cito congerere nequeo. <pb n="2r"/> </ab>
+         <ab resp="#editor" xml:id="seg4">De Egilwardo ut quid accipiam, laborabo. </ab>
+         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n6"/>Litteras Parisienses<anchor xml:id="n6e"/> sive copiam earum <sic>lecteris</sic>  dominis praelatis et abbatibus communicabo. Quibus denuo <sic>admodum </sic> <note place="foot" xml:id="d4618e13602">Sicherlich irrig ausgelassen <hi rend="italic">reverendam</hi>.</note> paternitatem vestram divinae protectioni devote commendo et permaneo</ab>
+         <closer>Admodum reverendae et eximiae paternitatis vestrae addictissimus Hyacinth abbas manu propria.</closer>
+         <closer>Herbipoli ex monasterio S. Stephani 13. Septembris 1710.</closer>
+         <closer xml:id="seg6">P.S. Inclusas placeat admodum reverendo <anchor xml:id="n7"/>patri Urbano<anchor xml:id="n7e"/> transmittere.</closer>
+      </body>
    </text>
 </TEI>

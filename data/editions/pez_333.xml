@@ -1,45 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="333" xml:id="pez-0333">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">333 Augustin Erath an Bernhard Pez. 1714-03-16. St. Andrä an der Traisen.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Augustin Erath an Bernhard Pez. 1714-03-16. St. Andrä an der Traisen.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">333</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:19776">Stockinger, Felix mansurus</rs> 176</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">531r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 531r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -54,95 +69,62 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">332</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">336</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">332</idno>
-               </ref>
+               <ptr type="prev" target="letter:332"/>
+               <ptr type="next" target="letter:336"/>
+               <ptr type="mentions" target="letter:332"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">BPs</rs> letzten Brief <ref type="letter" target="letter:332">332</ref> hat AEr mit großer Freude erhalten, weil das Schreiben <rs type="person" role="sender">BP</rs> als wahren <rs ref="index:d14380e28088">Melker</rs> Mönch, also als beständig und ebenso auf Gerechtigkeit wie auf religiöses Leben erpicht, ausweist.</p>
+            <p corresp="#seg2">Über die Ankündigung <rs type="person" role="sender">BPs</rs>, ihm statt anderer Werke <rs ref="index:d10854e30058">Francisco Suárez’ „Defensio fidei catholicae“</rs> zu schicken, ist AEr so erfreut, dass er sich entschlossen hat, so bald wie möglich seinen <rs ref="index:d10854e27089">Briefboten</rs> zu schicken, der dieses Buch und die <rs ref="index:d10854e30898">„Loca infesta“ des Thyraeus</rs> zusammen mit <rs ref="index:d10854e8805">Vincenzo Figliuccis „Morales quaestiones“</rs> abholen soll. Zugleich sendet AEr von den Büchern, die er <rs type="person" role="sender">BP</rs> versprochen hat, so viele, wie der Bote tragen kann; die übrigen will er demnächst über den Baumeister <rs ref="index:d10854e25037">Prandtauer</rs> <rs type="person" role="sender">BP</rs> zukommen lassen. AEr freut sich sehr über die Vervollständigung seiner <rs ref="index:d10854e27070">Bibliothek</rs>: Er vergleicht sich mit einem Kartenspieler, der zu einem Paar den „Pamphilius“ (Trumpfkarte) zieht. Die Bücher, welche er schickt, sind <rs ref="index:d10854e5790">Cuspinians „De caesaribus atque imperatoribus Romanis“</rs>, die <rs ref="index:d10854e31864">„Boicae gentis annales“</rs> von <rs ref="index:d10854e219">Adlzreiter</rs> (recte: von <rs ref="index:d10854e31858">Johann Vervaux</rs>) in zwei Bänden, sowie <rs ref="index:d10854e24369">Predigten</rs> von <rs ref="index:d10854e24356">Filippo Picinelli</rs>.</p>
+            <p corresp="#seg3">AEr bittet <rs type="person" role="sender">BP</rs>, ihm die jüngst zu <rs ref="index:d14380e39054">Salzburg</rs> durch den dortigen Professor und nunmehrigen <rs ref="index:d14380e40413">Seitenstettener</rs> Prior <rs ref="index:d10854e24585">Cölestin Pley</rs> veröffentlichten Thesen „<rs ref="index:d10854e24595">Angelicae theologiae theoremata</rs>“ zu beschaffen. Für <rs type="person" role="sender">BP</rs> wird dies leicht sein, da <rs ref="index:d10854e24585">Pley</rs> gleichsam ein Nachbar und zudem ein Angehöriger desselben Ordens ist wie BP.</p>
+            <p corresp="#seg4">Hinsichtlich des <rs ref="index:d10854e22301">Siegels</rs> <rs ref="index:d10854e22291">Ottos III.</rs> und der Gründung des Kurfürstenkollegiums durch diesen will AEr demnächst antworten, da die Frage einer längeren Beweisführung bedarf.</p>
+            <p corresp="#seg5">In einem Postskriptum berichtet AEr, dass er im <rs ref="index:d10854e31187">„Catalogus scriptorum ecclesiasticorum“ von Trithemius</rs> Schriften des <rs ref="index:d14380e28088">Melker</rs> Mönchs <rs ref="index:d14380e33131">Petrus von Rosenheim</rs> erwähnt gefunden hat. Er fragt <rs type="person" role="sender">BP</rs>, ob von dessen Werken in <rs ref="index:d14380e28088"><rs ref="index:d14380e28279">Melk</rs></rs> noch etwas vorhanden ist, sowie ob ihn <rs type="person" role="sender">BP</rs> in seiner „<rs ref="index:d14380e33468">Bibliotheca Mellicensis</rs>“ berücksichtigt hat. Diese erwartet AEr sehnlich.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e42620"><rs type="person" role="sender">BPs</rs> letzten Brief <ref type="letter">332</ref> hat <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>AEr<?oxy_custom_end?> mit großer Freude erhalten, weil das Schreiben <rs type="person" role="sender">BP</rs> als wahren <rs key="index:d14380e28088">Melker</rs> Mönch, also als beständig und ebenso auf Gerechtigkeit wie auf religiöses Leben erpicht, ausweist.</seg><seg type="context" n="2" xml:id="d4618e42625">Über die Ankündigung <rs type="person" role="sender">BPs</rs>, ihm statt anderer Werke <rs key="index:d10854e30058">Francisco Suárez’ „Defensio fidei catholicae“</rs> zu schicken, ist <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>AEr<?oxy_custom_end?> so erfreut, dass er sich entschlossen hat, so bald wie möglich seinen <rs key="index:d10854e27089">Briefboten</rs> zu schicken, der dieses Buch und die <rs key="index:d10854e30898">„Loca infesta“ des Thyraeus</rs> zusammen mit <rs key="index:d10854e8805">Vincenzo Figliuccis „Morales quaestiones“</rs> abholen soll. Zugleich sendet <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>AEr<?oxy_custom_end?> von den Büchern, die er <rs type="person" role="sender">BP</rs> versprochen hat, so viele, wie der Bote tragen kann; die übrigen will er demnächst über den Baumeister <rs key="index:d10854e25037">Prandtauer</rs> <rs type="person" role="sender">BP</rs> zukommen lassen. AEr freut sich sehr über die Vervollständigung seiner <rs key="index:d10854e27070">Bibliothek</rs>: Er vergleicht sich mit einem Kartenspieler, der zu einem Paar den „<?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>Pamphilius<?oxy_custom_end?>“ (Trumpfkarte) zieht. Die Bücher, welche er schickt, sind <rs key="index:d10854e5790">Cuspinians „De caesaribus atque imperatoribus Romanis“</rs>, die <rs key="index:d10854e31864">„Boicae gentis annales“</rs> von <rs key="index:d10854e219">Adlzreiter</rs> (recte: von <rs key="index:d10854e31858">Johann Vervaux</rs>) in zwei Bänden, sowie <rs key="index:d10854e24369">Predigten</rs> von <rs key="index:d10854e24356">Filippo Picinelli</rs>.</seg><seg type="context" n="3" xml:id="d4618e42627"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>AEr<?oxy_custom_end?> bittet <rs type="person" role="sender">BP</rs>, ihm die jüngst zu <rs key="index:d14380e39054">Salzburg</rs> durch den dortigen Professor und nunmehrigen <rs key="index:d14380e40413">Seitenstettener</rs> Prior <rs key="index:d10854e24585">Cölestin Pley</rs> veröffentlichten Thesen „<rs key="index:d10854e24595">Angelicae theologiae theoremata</rs>“ zu beschaffen. Für <rs type="person" role="sender">BP</rs> wird dies leicht sein, da <rs key="index:d10854e24585">Pley</rs> gleichsam ein Nachbar und zudem ein Angehöriger desselben Ordens ist wie BP.</seg><seg type="context" n="4" xml:id="d4618e42629">Hinsichtlich des <rs key="index:d10854e22301">Siegels</rs> <rs key="index:d10854e22291">Ottos III.</rs> und der Gründung des Kurfürstenkollegiums durch diesen will <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>AEr<?oxy_custom_end?> demnächst antworten, da die Frage einer längeren Beweisführung bedarf.</seg><seg type="context" n="5" xml:id="d4618e42631">In einem Postskriptum berichtet <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>AEr<?oxy_custom_end?>, dass er im <rs key="index:d10854e31187">„Catalogus scriptorum ecclesiasticorum“ von Trithemius</rs> Schriften des <rs key="index:d14380e28088">Melker</rs> Mönchs <rs key="index:d14380e33131">Petrus von Rosenheim</rs> erwähnt gefunden hat. Er fragt <rs type="person" role="sender">BP</rs>, ob von dessen Werken in <rs key="index:d14380e28088"><rs key="index:d14380e28279">Melk</rs></rs> noch etwas vorhanden ist, sowie ob ihn <rs type="person" role="sender">BP</rs> in seiner „<rs key="index:d14380e33468">Bibliotheca Mellicensis</rs>“ berücksichtigt hat. Diese erwartet <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>AEr<?oxy_custom_end?> sehnlich.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende religiosissime et clarissime in Christo pater.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e42645">Domine et pater plurimum colende. Summo gaudio accepi litteras mihi longe gratissimas: hae enim abunde testantur admodum reverendam paternitatem vestram esse religiosum Mellicensem, id est, omnibus numeris constantem ac iustitiae non minus quam religiosae virtutis tenacissimum. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e42647">Ita me recreavit admodum reverenda paternitas vestra, quando de Suarezio mihi in vicem aliorum transmittendo meminit, ut prae gaudio et libri expectatione quamprimum decreverim proprium <seg type="lemma" corresp="#d4618e42663">tabellarium mittere</seg>, qui <seg type="lemma" corresp="#d4618e42670">Thyraeum</seg> et <seg type="lemma" corresp="#d4618e42675">Suarezium Contra regem Galliae</seg> cum <seg type="lemma" corresp="#d4618e42680">compacto Filliucio</seg> avocet. Ille enim ipse Suarezius est, quem describit admodum reverenda paternitas vestra, et quem ego desidero. Quotquot autem tabellarius nunc portare potest ex meis promissis libris, mitto, reliquos proxime missurus apud nostrum architectum Prandauer. Mihi ita nunc per omnia satisfactum est, ut non solum obligatissimus sim, sed etiam perpetuo me obaeratum admodum reverendae paternitati vestrae profitear. Novit admodum reverenda paternitas vestra, quanto sit gaudio, dum toti alicui operi subito accedat residuum. Idem mihi accidit, quod ludenti chartis, si duabus similibus fortuito adveniat <seg type="lemma" corresp="#d4618e42685">Pamphilius</seg>. Mitto nunc <seg type="lemma" corresp="#d4618e42690">Cuspinianum Latinum</seg>, <seg type="lemma" corresp="#d4618e42695">Adelzreiteri geminos tomos</seg> et <seg type="lemma" corresp="#d4618e42700">Picinelli conciones</seg>. Reliqui sequentur, ut dixi. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e42649">Plurimum me sibi obstringeret admodum reverenda paternitas vestra, si mihi mitteret <seg type="lemma" corresp="#d4618e42705">theses in folio, quas ultimo Salisburgi edidit pater Coelestinus Bley</seg>, nunc prior Seitenstettensis. <pb n="1v"/> Has enim facile erit recuperare, cum et vicinus sit et eiusdem sacri ordinis. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e42653">Quod attinet numisma, respondebo proxime; cum longioris operae sit, ut demonstretur inchoatus ab Ottone III. in imperio Romano electoratus. Expecto proinde apud hunc tabellarium libros tantopere a me expectatos. Commendo me in sacra sacrificia.</seg></p>
-            <p xml:space="preserve">Admodum reverendae paternitatis vestrae addictissimus Augustinus praelatus manu propria.</p>
-            <p xml:space="preserve">Ad S. Andream 16. Martii 1714.</p>
-            <p xml:space="preserve"><seg type="context" n="5" xml:space="preserve" xml:id="d4618e42660">P.S. Nuper evolvi <seg type="lemma" corresp="#d4618e42712">Trithemii Scriptores ecclesiasticos</seg>, inter quos reperi opera Petri monachi Mellicensis. An adhuc Mellicii superest aliquid ex ipsius libris? An etiam admodum reverenda paternitas vestra eum recensuit in <seg type="lemma" corresp="#d4618e42719">Bibliotheca sua Mellicensi</seg>? Certe hanc summopere opperior.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e42663">
-               <ref type="context">2</ref>
-               <label>tabellarium mittere</label>
-               <p>In einer Depositen-Abrechnung des Priors Valentin Larson für 1714 (StiA Melk, Karton 5 Priorat 3, unfoliiert) findet sich zum 19. März 1714 eine Ausgabe von 17 Kreuzern Trinkgeld für „einen pothen, so von St. Andre pro bibliotheca bücher gebracht“. Für den Hinweis auf dieses Zeugnis danken die Autoren Huberta Weigl (Wien).</p>
-            </note>
-            <note xml:id="d4618e42670">
-               <ref type="context">2</ref>
-               <label>Thyraeum</label>
-               <p>Das Buch ist im St. Andräer Bibliothekskatalog AErs (vgl. <ref type="letter"
-                     >331</ref> &lt;3&gt;) verzeichnet: StiA Herzogenburg, A4. B. 1, 373.</p>
-            </note>
-            <note xml:id="d4618e42675">
-               <ref type="context">2</ref>
-               <label>Suarezium Contra regem Galliae</label>
-               <p>Ein Werk dieses Titels konnte nicht ermittelt werden. Zur wahrscheinlichen
-                  Identifikation vgl. <ref type="letter">331</ref> &lt;5&gt;.</p>
-            </note>
-            <note xml:id="d4618e42680">
-               <ref type="context">2</ref>
-               <label>compacto Filliucio</label>
-               <p>Anhand eines Eintrags in StiA Herzogenburg, A4. B. 1, 125, lässt sich die Erwähnung mit hoher Wahrscheinlichkeit identifizieren. Die Bezeichnung „compacto“ bezieht sich vermutlich darauf, dass in der fraglichen Ausgabe die drei „tomi“ des Werks einen einzigen Band bilden.</p>
-            </note>
-            <note xml:id="d4618e42685">
-               <ref type="context">2</ref>
-               <label>Pamphilius</label>
-               <p>Bezeichnung einer Trumpfkarte beim Kartenspiel; nach einem Beleg bei Abraham a
-                  Sancta Clara handelte es sich um den Eichel-Ober: <rs type="bibl" key="bibl:19388"
-                     >Schmeller, Bayerisches Wörterbuch</rs> 1 285.</p>
-            </note>
-            <note xml:id="d4618e42690">
-               <ref type="context">2</ref>
-               <label>Cuspinianum Latinum</label>
-               <p>Wahrscheinlich das heutige Melker Exemplar (StiB Melk 6005); vgl. <ref
-                     type="letter">331</ref> &lt;7&gt;.</p>
-            </note>
-            <note xml:id="d4618e42695">
-               <ref type="context">2</ref>
-               <label>Adelzreiteri geminos tomos</label>
-               <p>StiB Melk 3759, 3760. Von dem üblicherweise dreibändigen Werk sind der zweite und
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>tabellarium mittere</mentioned>
+            <p>In einer Depositen-Abrechnung des Priors Valentin Larson für 1714 (StiA Melk, Karton 5 Priorat 3, unfoliiert) findet sich zum 19. März 1714 eine Ausgabe von 17 Kreuzern Trinkgeld für „einen pothen, so von St. Andre pro bibliotheca bücher gebracht“. Für den Hinweis auf dieses Zeugnis danken die Autoren Huberta Weigl (Wien).</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>Thyraeum</mentioned>
+            <p>Das Buch ist im St. Andräer Bibliothekskatalog AErs (vgl. <ref type="letter" target="letter:331">331</ref> <ref target="letter:331#seg3">3</ref>) verzeichnet: StiA Herzogenburg, A4. B. 1, 373.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>Suarezium Contra regem Galliae</mentioned>
+            <p>Ein Werk dieses Titels konnte nicht ermittelt werden. Zur wahrscheinlichen
+                  Identifikation vgl. <ref type="letter" target="letter:331">331</ref> <ref target="letter:331#seg5">5</ref>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>compacto Filliucio</mentioned>
+            <p>Anhand eines Eintrags in StiA Herzogenburg, A4. B. 1, 125, lässt sich die Erwähnung mit hoher Wahrscheinlichkeit identifizieren. Die Bezeichnung „compacto“ bezieht sich vermutlich darauf, dass in der fraglichen Ausgabe die drei „tomi“ des Werks einen einzigen Band bilden.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned>Pamphilius</mentioned>
+            <p>Bezeichnung einer Trumpfkarte beim Kartenspiel; nach einem Beleg bei Abraham a
+                  Sancta Clara handelte es sich um den Eichel-Ober: <rs type="bibl" ref="bibl:19388">Schmeller, Bayerisches Wörterbuch</rs> 1 285.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
+            <mentioned>Cuspinianum Latinum</mentioned>
+            <p>Wahrscheinlich das heutige Melker Exemplar (StiB Melk 6005); vgl. <ref type="letter" target="letter:331">331</ref> <ref target="letter:331#seg7">7</ref>.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg2">
+            <mentioned>Adelzreiteri geminos tomos</mentioned>
+            <p>StiB Melk 3759, 3760. Von dem üblicherweise dreibändigen Werk sind der zweite und
                   dritte Teil zu einem Band gebunden; beide Bände tragen den Besitzvermerk
-                  „Monasterium S. Andreae cis Drasenam [sic] me possidet 1674“. Vgl. <ref
-                     type="letter">331</ref> &lt;4&gt;. – Die „Boicae gentis annales“ waren unter
+                  „Monasterium S. Andreae cis Drasenam [sic] me possidet 1674“. Vgl. <ref type="letter" target="letter:331">331</ref> <ref target="letter:331#seg4">4</ref>. – Die „Boicae gentis annales“ waren unter
                   dem Namen des bayerischen Geheimen Kanzlers Johann Adlzreiter veröffentlicht
                   worden, ihr tatsächlicher Verfasser war jedoch der Jesuit Vervaux, was erst im
-                  Laufe des 18. Jh. allgemein bekannt wurde; vgl. <rs type="bibl" key="bibl:16000"
-                     >Duhr, Jesuiten</rs> 3 560–566; <rs type="bibl" key="bibl:36468">Kraus,
+                  Laufe des 18. Jh. allgemein bekannt wurde; vgl. <rs type="bibl" ref="bibl:16000">Duhr, Jesuiten</rs> 3 560–566; <rs type="bibl" ref="bibl:36468">Kraus,
                      Bayerische Wissenschaft</rs> 913f.</p>
-            </note>
-            <note xml:id="d4618e42700">
-               <ref type="context">2</ref>
-               <label>Picinelli conciones</label>
-               <p>AEr hatte mehrere Werke Picinellis aus dem Italienischen ins Lateinische
-                  übersetzt; vgl. <rs type="bibl" key="bibl:19776">Stockinger, Felix mansurus</rs>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg2">
+            <mentioned>Picinelli conciones</mentioned>
+            <p>AEr hatte mehrere Werke Picinellis aus dem Italienischen ins Lateinische
+                  übersetzt; vgl. <rs type="bibl" ref="bibl:19776">Stockinger, Felix mansurus</rs>
                   160, 194f., 197f. Die hier verwendete Bezeichnung passt am ehesten zu den Fasten-
                   und Adventpredigten Picinellis („Labores apostolici“, Augsburg 1711). In der
                   Melker Bibliothek finden sich indes diese, soweit feststellbar, nicht, wohl aber
@@ -152,39 +134,53 @@
                   Melk 843). Diese Schriften haben die Form von „discorsi“ und könnten daher mit
                   „conciones“ denkbarerweise gemeint sein. Es bleibt somit unklar, von welchem Werk
                   (oder welchen Werken) hier die Rede ist.</p>
-            </note>
-            <note xml:id="d4618e42705">
-               <ref type="context">3</ref>
-               <label>theses ... Coelestinus Bley</label>
-               <p>Cölestin Pley hatte von 1700 bis 1710 (so <rs type="bibl" key="bibl:17590">Kolb,
-                     Präsidium</rs> 133) oder 1711 (<rs type="bibl" key="bibl:19270">Sattler,
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg3">
+            <mentioned>theses ... Coelestinus Bley</mentioned>
+            <p>Cölestin Pley hatte von 1700 bis 1710 (so <rs type="bibl" ref="bibl:17590">Kolb,
+                     Präsidium</rs> 133) oder 1711 (<rs type="bibl" ref="bibl:19270">Sattler,
                      Collectaneen-Blätter</rs> 248) an der Universität Salzburg mehrere theologische
                   Lehrstühle innegehabt und während dieser Jahre mehrmals Disputationen seiner
                   Schüler veröffentlicht. Der St. Andräer Bibliothekskatalog verzeichnet nur den
                   letzten solchen Band („Angelicae theologiae theoremata Benedictino-Thomistica“,
                   1711): StiA Herzogenburg, A4. B. 1, 289. Diesen hat AEr anscheinend von BP
                   erhalten (vgl. 341).</p>
-            </note>
-            <note xml:id="d4618e42712">
-               <ref type="context">5</ref>
-               <label>Trithemii Scriptores ecclesiasticos</label>
-               <p>Dem Katalog zufolge war in St. Andrä die Ausgabe Köln 1531 (unter dem Titel
-                  „Catalogus scriptorum ecclesiasticorum“; zur Publikationsgeschichte vgl. <rs
-                     type="bibl" key="bibl:14950">Arnold, Trithemius</rs> 250) vorhanden: StiA
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
+            <mentioned>Trithemii Scriptores ecclesiasticos</mentioned>
+            <p>Dem Katalog zufolge war in St. Andrä die Ausgabe Köln 1531 (unter dem Titel
+                  „Catalogus scriptorum ecclesiasticorum“; zur Publikationsgeschichte vgl. <rs type="bibl" ref="bibl:14950">Arnold, Trithemius</rs> 250) vorhanden: StiA
                   Herzogenburg, A4. B. 1, 377. Das Elogium Petrus’ von Rosenheim findet sich in
                   dieser Ausgabe auf CXXXIv–CXXXIIr. Zu den zahlreichen Handschriften und
                   Überlieferungen seiner Werke in Melk lässt sich ein Überblick gewinnen aus dem
-                  Werksverzeichnis von <rs type="bibl" key="bibl:37096">Thoma, Zusammenfassung</rs>
+                  Werksverzeichnis von <rs type="bibl" ref="bibl:37096">Thoma, Zusammenfassung</rs>
                   134–164.</p>
-            </note>
-            <note xml:id="d4618e42719">
-               <ref type="context">5</ref>
-               <label>Bibliotheca sua Mellicensi</label>
-               <p>Vgl. Einleitung, Abschnitt I.5. Es handelt sich hier um den frühesten bisher
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg5">
+            <mentioned>Bibliotheca sua Mellicensi</mentioned>
+            <p>Vgl. Einleitung, Abschnitt I.5. Es handelt sich hier um den frühesten bisher
                   bekannten Beleg für ein derartiges Vorhaben BPs, das er einige Monate später auch
-                  gegenüber René Massuet ankündigte (<ref type="letter">354</ref> &lt;5&gt;).</p>
-            </note>
-         </div>
-      </back>
+                  gegenüber René Massuet ankündigte (<ref type="letter" target="letter:354">354</ref> <ref target="letter:354#seg5">5</ref>).</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:19776">
+            <title type="short">Stockinger, Felix mansurus</title>
+            <biblScope>176</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende religiosissime et clarissime in Christo pater.</opener>
+         <ab resp="#editor" xml:id="seg1">Domine et pater plurimum colende. Summo gaudio accepi litteras mihi longe gratissimas: hae enim abunde testantur admodum reverendam paternitatem vestram esse religiosum Mellicensem, id est, omnibus numeris constantem ac iustitiae non minus quam religiosae virtutis tenacissimum. </ab>
+         <ab resp="#editor" xml:id="seg2">Ita me recreavit admodum reverenda paternitas vestra, quando de Suarezio mihi in vicem aliorum transmittendo meminit, ut prae gaudio et libri expectatione quamprimum decreverim proprium <anchor xml:id="n1"/>tabellarium mittere<anchor xml:id="n1e"/>, qui <anchor xml:id="n2"/>Thyraeum<anchor xml:id="n2e"/> et <anchor xml:id="n3"/>Suarezium Contra regem Galliae<anchor xml:id="n3e"/> cum <anchor xml:id="n4"/>compacto Filliucio<anchor xml:id="n4e"/> avocet. Ille enim ipse Suarezius est, quem describit admodum reverenda paternitas vestra, et quem ego desidero. Quotquot autem tabellarius nunc portare potest ex meis promissis libris, mitto, reliquos proxime missurus apud nostrum architectum Prandauer. Mihi ita nunc per omnia satisfactum est, ut non solum obligatissimus sim, sed etiam perpetuo me obaeratum admodum reverendae paternitati vestrae profitear. Novit admodum reverenda paternitas vestra, quanto sit gaudio, dum toti alicui operi subito accedat residuum. Idem mihi accidit, quod ludenti chartis, si duabus similibus fortuito adveniat <anchor xml:id="n5"/>Pamphilius<anchor xml:id="n5e"/>. Mitto nunc <anchor xml:id="n6"/>Cuspinianum Latinum<anchor xml:id="n6e"/>, <anchor xml:id="n7"/>Adelzreiteri geminos tomos<anchor xml:id="n7e"/> et <anchor xml:id="n8"/>Picinelli conciones<anchor xml:id="n8e"/>. Reliqui sequentur, ut dixi. </ab>
+         <ab resp="#editor" xml:id="seg3">Plurimum me sibi obstringeret admodum reverenda paternitas vestra, si mihi mitteret <anchor xml:id="n9"/>theses in folio, quas ultimo Salisburgi edidit pater Coelestinus Bley<anchor xml:id="n9e"/>, nunc prior Seitenstettensis. <pb n="1v"/> Has enim facile erit recuperare, cum et vicinus sit et eiusdem sacri ordinis. </ab>
+         <ab resp="#editor" xml:id="seg4">Quod attinet numisma, respondebo proxime; cum longioris operae sit, ut demonstretur inchoatus ab Ottone III. in imperio Romano electoratus. Expecto proinde apud hunc tabellarium libros tantopere a me expectatos. Commendo me in sacra sacrificia.</ab>
+         <closer>Admodum reverendae paternitatis vestrae addictissimus Augustinus praelatus manu propria.</closer>
+         <closer>Ad S. Andream 16. Martii 1714.</closer>
+         <closer xml:id="seg5">P.S. Nuper evolvi <anchor xml:id="n10"/>Trithemii Scriptores ecclesiasticos<anchor xml:id="n10e"/>, inter quos reperi opera Petri monachi Mellicensis. An adhuc Mellicii superest aliquid ex ipsius libris? An etiam admodum reverenda paternitas vestra eum recensuit in <anchor xml:id="n11"/>Bibliotheca sua Mellicensi<anchor xml:id="n11e"/>? Certe hanc summopere opperior.</closer>
+      </body>
    </text>
 </TEI>

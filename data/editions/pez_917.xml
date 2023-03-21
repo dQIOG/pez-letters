@@ -1,45 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="917" xml:id="pez-0917">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">917 Edmond Martène an Bernhard Pez. &lt; 1718-03-07.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Edmond Martène an Bernhard Pez. &lt; 1718-03-07.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">917</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:16792">Hammermayer, Forschungszentren</rs>
-                     168</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Es fehlt jegliche Datierung. Der Bezug auf die bayerische Bibliotheksreise BPs und HPs erlaubt jedoch eine Ansetzung in die zweite Jahreshälfte 1717 oder zu Beginn des Jahres 1718, und zwar nach 827, weil EM in diesem Brief auf wesentlich detailliertere Angaben zu den Ergebnissen dieser Reise reagiert als in jenem. Der Vergleich der beiden Bezüge auf eine Beschaffung der „Vetera analecta“ hier und in 918 &lt;2&gt; gestattet zudem eine Einordnung dieses Briefes vor jenem. Das in &lt;5&gt; erwähnte Edikt des Regenten, mit dem Schweigen geboten wurde, ist in Verbindung mit diesen Befunden eindeutig als jenes von Anfang Oktober 1717 zu identifizieren und liefert einen Terminus post quem. Als Absendeort ist Paris anzunehmen.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">570r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 570r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -53,111 +71,109 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">916</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">918</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">916</idno>
-               </ref>
+               <ptr type="prev" target="letter:916"/>
+               <ptr type="next" target="letter:918"/>
+               <ptr type="mentions" target="letter:916"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">EM</rs> ist sehr erfreut über die von <rs type="person" role="sender">BP</rs> in den bayerischen Bibliotheken entdeckten Schätze und gratuliert dazu. Allerdings fordert er <rs type="person" role="sender">BP</rs> auf, bis zu seiner vollständigen Gesundung von solch anstrengenden Arbeiten Abstand zu nehmen, denn im irdischen Leben ist für den Gelehrten nichts kostbarer als die Gesundheit.</p>
+            <p corresp="#seg2">Die (von Albert von Oberaltaich verfasste) Vita des Priors von Oberaltaich Albert (von Haigerloch) liegt François Le Texier nicht vor; wenn sie von einem vertrauenswürdigen Verfasser stammt und leicht übermittelt werden kann, wäre Le Texier damit sehr gedient. Dagegen steht die von Gerhoch von Reichersberg (recte: von einem Vornbacher Anonymus) verfasste Vita des Abtes Wirnto von Vornbach in Bayern Le Texier bereits zur Verfügung und braucht nicht gesendet zu werden.</p>
+            <p corresp="#seg3">Was die von <rs type="person" role="sender">BP</rs> entdeckten Schriften Gerhochs betrifft, so ist diesem sicherlich bewusst, dass der „Liber de simoniacis“, den Gerhoch dem Bernhard von Clairvaux widmete, von <rs type="person" role="sender">EM</rs> und Ursin Durand im „Thesaurus anecdotorum novus“ ediert worden ist; leider fehlten in der Vorlage (aus der Abtei Les Dunes) ein oder mehrere Blätter. Eine andere Schrift Gerhochs „De corrupto ecclesiae statu“ („Tractatus in Psalmum LXIV“) ist von Étienne Baluze in seinen „Miscellanea“ herausgegeben worden; weitere Texte desselben („De investigatione Antichristi“) sind auch bei Jakob Gretser („De Henrico IV. et V. imperatoribus syntagma“) zu finden. Diese sind freilich alle unbedeutend im Vergleich zu den von <rs type="person" role="sender">BP</rs> neu aufgefundenen Werken.</p>
+            <p corresp="#seg4">Die „Vetera analecta“ von Jean Mabillon, die <rs type="person" role="sender">BP</rs> begehrt <ref type="letter" target="letter:916">916</ref>, hätte man um zehn oder zwölf Livres bekommen können, wenn man sie sofort nach ihrem Erscheinen gekauft hätte; nun aber, da die gesamte Auflage vergriffen ist, sind sie kaum um zwanzig Livres zu haben, sofern sie überhaupt zu finden sind. Jüngst hat <rs type="person" role="sender">EM</rs> ein Exemplar bei einem Buchhändler gefunden, der auf seine Nachfrage angab, es nicht unter zwanzig Livres verkaufen zu können.</p>
+            <p corresp="#seg5">In der Angelegenheit der Bulle „Unigenitus“, nach der <rs type="person" role="sender">BP</rs> gefragt hat, kann <rs type="person" role="sender">EM</rs> nichts Gutes berichten. Er wünscht, dass diejenigen gestorben wären, die ihre Erlassung herbeigeführt haben; sie ist eine Quelle größter Unruhe im gallikanischen Klerus. Der Regent Philipp von Orléans hat versucht, für Beruhigung zu sorgen, indem er durch ein Edikt beiden Seiten Schweigen auferlegt hat; doch wer vermag so ungebärdige Menschen zur Ruhe zu bringen? <rs type="person" role="sender">EM</rs> schließt mit Grüßen an HP und die übrigen Melker Mitbrüder.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e54249"><rs type="person" role="sender">EM</rs> ist sehr erfreut über die von <rs type="person" role="sender">BP</rs> in den bayerischen Bibliotheken entdeckten Schätze und gratuliert dazu. Allerdings fordert er <rs type="person" role="sender">BP</rs> auf, bis zu seiner vollständigen Gesundung von solch anstrengenden Arbeiten Abstand zu nehmen, denn im irdischen Leben ist für den Gelehrten nichts kostbarer als die Gesundheit.</seg><seg type="context" n="2" xml:id="d3e54251">Die (von Albert von Oberaltaich verfasste) Vita des Priors von Oberaltaich Albert (von Haigerloch) liegt François Le Texier nicht vor; wenn sie von einem vertrauenswürdigen Verfasser stammt und leicht übermittelt werden kann, wäre Le Texier damit sehr gedient. Dagegen steht die von Gerhoch von Reichersberg (recte: von einem Vornbacher Anonymus) verfasste Vita des Abtes Wirnto von Vornbach in Bayern Le Texier bereits zur Verfügung und braucht nicht gesendet zu werden.</seg><seg type="context" n="3" xml:id="d3e54253">Was die von <rs type="person" role="sender">BP</rs> entdeckten Schriften Gerhochs betrifft, so ist diesem sicherlich bewusst, dass der „Liber de simoniacis“, den Gerhoch dem Bernhard von Clairvaux widmete, von <rs type="person" role="sender">EM</rs> und Ursin Durand im „Thesaurus anecdotorum novus“ ediert worden ist; leider fehlten in der Vorlage (aus der Abtei Les Dunes) ein oder mehrere Blätter. Eine andere Schrift Gerhochs „De corrupto ecclesiae statu“ („Tractatus in Psalmum LXIV“) ist von Étienne Baluze in seinen „Miscellanea“ herausgegeben worden; weitere Texte desselben („De investigatione Antichristi“) sind auch bei Jakob Gretser („De Henrico IV. et V. imperatoribus syntagma“) zu finden. Diese sind freilich alle unbedeutend im Vergleich zu den von <rs type="person" role="sender">BP</rs> neu aufgefundenen Werken.</seg><seg type="context" n="4" xml:id="d3e54255">Die „Vetera analecta“ von Jean Mabillon, die <rs type="person" role="sender">BP</rs> begehrt <ref type="letter">916</ref>, hätte man um zehn oder zwölf Livres bekommen können, wenn man sie sofort nach ihrem Erscheinen gekauft hätte; nun aber, da die gesamte Auflage vergriffen ist, sind sie kaum um zwanzig Livres zu haben, sofern sie überhaupt zu finden sind. Jüngst hat <rs type="person" role="sender">EM</rs> ein Exemplar bei einem Buchhändler gefunden, der auf seine Nachfrage angab, es nicht unter zwanzig Livres verkaufen zu können.</seg><seg type="context" n="5" xml:id="d3e54260">In der Angelegenheit der Bulle „Unigenitus“, nach der <rs type="person" role="sender">BP</rs> gefragt hat, kann <rs type="person" role="sender">EM</rs> nichts Gutes berichten. Er wünscht, dass diejenigen gestorben wären, die ihre Erlassung herbeigeführt haben; sie ist eine Quelle größter Unruhe im gallikanischen Klerus. Der Regent Philipp von Orléans hat versucht, für Beruhigung zu sorgen, indem er durch ein Edikt beiden Seiten Schweigen auferlegt hat; doch wer vermag so ungebärdige Menschen zur Ruhe zu bringen? <rs type="person" role="sender">EM</rs> schließt mit Grüßen an HP und die übrigen Melker Mitbrüder.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">V</hi>.</p>
-            <div type="remarks">
-               <p>Es fehlt jegliche Datierung. Der Bezug auf die bayerische Bibliotheksreise BPs und HPs erlaubt jedoch eine Ansetzung in die zweite Jahreshälfte 1717 oder zu Beginn des Jahres 1718, und zwar nach 827, weil EM in diesem Brief auf wesentlich detailliertere Angaben zu den Ergebnissen dieser Reise reagiert als in jenem. Der Vergleich der beiden Bezüge auf eine Beschaffung der „Vetera analecta“ hier und in 918 &lt;2&gt; gestattet zudem eine Einordnung dieses Briefes vor jenem. Das in &lt;5&gt; erwähnte Edikt des Regenten, mit dem Schweigen geboten wurde, ist in Verbindung mit diesen Befunden eindeutig als jenes von Anfang Oktober 1717 zu identifizieren und liefert einen Terminus post quem. Als Absendeort ist Paris anzunehmen.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverendo atque erudito viro domno Bernardo Pez monacho Benedictino ac bibliothecario Mellicensi frater Edmundus Martene humilis monachus Benedictinus e congregatione sancti Mauri salutem plurimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e54282">De tam immensis a te repertis thesauris in Baioariae bibliothecis superabundo gaudio tibique inde plurimum gratulor, vir erudite; auctor sum tibi tamen, ut, <seg type="lemma" corresp="#d3e54319">donec omnino convalescas</seg>, a tam arduis laboribus paulisper temperes, hac enim in vita homini studioso nihil sanitate pretiosius. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e54284"><seg type="lemma" corresp="#d3e54325">Alberti prioris Altahae Superioris Vitam</seg> non habet noster Franciscus Tixierus; si ab auctore gravi scriptam commode transmittere<note place="foot" xml:id="d3e54286">	Korrigiert aus <hi rend="italic">mit</hi>.</note> possis, pergratum ipsi facies.<seg type="lemma" corresp="#d3e54331"> Vitam vero beati Wirntonis</seg> abbatis Vambacensis [<hi rend="italic">sic</hi>] in Bavaria a Gerocho praeposito Reicherspergensi scriptam penes se habet, nec necesse erit, ut transcribas. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e54295">Quod vero spectat ad auctoris huius opera, quae e tenebris eruisti, non ignoras editum a nobis in Thesauro anecdotorum ipsius <seg type="lemma" corresp="#d3e54335">opusculum Adversus simoniacos</seg>, quod sancto Bernardo Clarevallensi abbati dicat, sed uno aut altero folio <pb n="1v"/> truncatum, quod utinam habuissem! Alterum edidit<note place="foot" xml:id="d3e54299">	Korrigiert aus <hi rend="italic">edididit</hi>.</note> in suis Miscellaneis Stephanus Baluzius<seg type="lemma" corresp="#d3e54341"> De corrupto ecclesiae statu</seg>, alia eiusdem <seg type="lemma" corresp="#d3e54345">apud Gretserum impressa reperies</seg>. Sed haec minima, si cum aliis eiusdem auctoris operibus a te detectis comparentur. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e54305">De Mabillonii <seg type="lemma" corresp="#d3e54349">Analectis</seg>, quae desideras, quid rescribam, nescio. Ea si statim, ac typis mandata sunt, comparasses, pro decem aut duodecim libris Gallicis habuisses; nunc vero exhausta omni editione vix pro viginti libris obtinere poteris, si tamen reperiri poterunt. Unum illorum exemplar nuper reperi apud bibliopolam, qui sciscitanti mihi, quanti illud vendere vellet, respondi [<hi rend="italic">sic</hi>] non nisi pro viginti libris dare posse. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e54310">De constitutione Unigenitus quod inquiris, nihil boni tibi scribere possum. Utinam <seg type="lemma" corresp="#d3e54355">obdormiissent ii</seg>, qui eam edi procuraverunt, maximarum in clero Gallicano perturbationum fontem et originem! Turbas sedare studuit serenissimus princeps dux<note place="foot" xml:id="d3e54312">	<hi rend="italic">princeps dux</hi> über der Zeile eingefügt.</note> Aurelianensis regni administer edito statuto<seg type="lemma" corresp="#d3e54361"> silentium utrique parti hac de re imponens</seg>. At inquietos homines quis compescere potest? Vale et me amare perge. Fratrem tuum Hieronymum aliosque Mellicenses fratres nostros nomine meo salutes.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e54319">
-               <ref type="context">1</ref>
-               <label>donec ... convalescas</label><p> Gemeint sein kann aus chronologischen Gründen
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>donec ... convalescas</mentioned>
+            <p> Gemeint sein kann aus chronologischen Gründen
                   nicht die schwere Erkrankung BPs im März 1718, sondern nur die Beschwerden, unter
-                  denen er im Anschluss an die Bibliotheksreise von 1717 litt: vgl. <ref
-                     type="letter">828</ref> &lt;1&gt;, <ref type="letter">839</ref> &lt;1&gt;, <ref
-                     type="letter">845</ref> &lt;1&gt;.</p></note>
-            <note xml:id="d3e54325">
-               <ref type="context">2</ref>
-               <label>Alberti ... Vitam</label><p>Die Vita des Albert von Haigerloch stammt von
+                  denen er im Anschluss an die Bibliotheksreise von 1717 litt: vgl. <ref type="letter" target="letter:828">828</ref> <ref target="letter:828#seg1">1</ref>, <ref type="letter" target="letter:839">839</ref> <ref target="letter:839#seg1">1</ref>, <ref type="letter" target="letter:845">845</ref> <ref target="letter:845#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>Alberti ... Vitam</mentioned>
+            <p>Die Vita des Albert von Haigerloch stammt von
                   dessen gleichnamigem Nachfolger im Priorat. Zu dem Text und seiner Überlieferung
-                  vgl. <rs type="bibl" key="bibl:20430">Worstbrock, Albert von Oberaltaich</rs>. BP
+                  vgl. <rs type="bibl" ref="bibl:20430">Worstbrock, Albert von Oberaltaich</rs>. BP
                   kannte sowohl die St. Emmeramer als auch die Oberaltaicher Handschrift: heute BStB
                   München, clm 14673, 47r–57r, respektive clm 9804, 263r–269v. Er legte beide seiner
-                  späteren Edition zugrunde: <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs>
-                  1/3 col. 535–554; vgl. <rs type="bibl" key="bibl:16512">Glassner,
-                     Handschriften</rs> 99.</p></note>
-            <note xml:id="d3e54331">
-               <ref type="context">2</ref>
-               <label> Vitam ... Wirntonis</label><p> Die Zuschreibung an Gerhoch von Reichersberg
+                  späteren Edition zugrunde: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs>
+                  1/3 col. 535–554; vgl. <rs type="bibl" ref="bibl:16512">Glassner,
+                     Handschriften</rs> 99.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned> Vitam ... Wirntonis</mentioned>
+            <p> Die Zuschreibung an Gerhoch von Reichersberg
                   beruht auf einem nachträglichen Vermerk in der Vornbacher Handschrift der Vita:
                   heute BStB München, clm 27182. Sie ist mit Sicherheit unrichtig; möglicherweise
                   rührt sie von einer Verwechslung mit einem für die erste Hälfte des 13. Jh.
                   bezeugten Vornbacher Abt namens Gerhoch her, der jedoch als Verfasser gleichfalls
-                  nicht in Frage kommt: <rs type="bibl" key="bibl:15644">Classen, Gerhoch</rs> 444;
-                     <rs type="bibl" key="bibl:15948">Dorrer, Angelus Rumpler</rs> 37f. BP druckte
-                  den Text später nach dieser Vorlage unter Übernahme der Zuweisung: <rs type="bibl"
-                     key="bibl:36782">Pez, Thesaurus</rs> 1/3 col. 399–424; vgl. <ref type="letter"
-                     >1020</ref> &lt;4&gt;.</p></note>
-            <note xml:id="d3e54335">
-               <ref type="context">3</ref>
-               <label>opusculum Adversus simoniacos</label><p> Das Werk wird heute unter dem Titel
+                  nicht in Frage kommt: <rs type="bibl" ref="bibl:15644">Classen, Gerhoch</rs> 444;
+                     <rs type="bibl" ref="bibl:15948">Dorrer, Angelus Rumpler</rs> 37f. BP druckte
+                  den Text später nach dieser Vorlage unter Übernahme der Zuweisung: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 1/3 col. 399–424; vgl. <ref type="letter" target="letter:1020">1020</ref> <ref target="letter:1020#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>opusculum Adversus simoniacos</mentioned>
+            <p> Das Werk wird heute unter dem Titel
                   „Libellus de eo, quod princeps huius mundi iam iudicatus sit“ oder auch „Liber de
-                  simoniacis“ geführt: <rs type="bibl" key="bibl:15644">Classen, Gerhoch</rs> 80–87,
-                  408f.; <rs type="bibl" key="bibl:20050">Van den Eynde, Œuvre littéraire</rs>
+                  simoniacis“ geführt: <rs type="bibl" ref="bibl:15644">Classen, Gerhoch</rs> 80–87,
+                  408f.; <rs type="bibl" ref="bibl:20050">Van den Eynde, Œuvre littéraire</rs>
                   34–42. Die Vorlage EMs war ein Codex aus dem Kloster Les Dunes: heute Bruges,
                   Bibliothèque publique, Ms. 131. Die Drucklegung erfolgte bei Martène–Durand,
-                  Thesaurus anecdotorum 5 col. 1457–1496.</p></note>
-            <note xml:id="d3e54341">
-               <ref type="context">3</ref>
-               <label> De corrupto ecclesiae statu</label><p>Baluze, Miscellanea 5 63–235; vgl. <rs
-                     type="bibl" key="bibl:15644">Classen, Gerhoch</rs> 141–149, 419; <rs
-                     type="bibl" key="bibl:20050">Van den Eynde, Œuvre littéraire</rs> 92–107.
-               </p></note>
-            <note xml:id="d3e54345">
-               <ref type="context">3</ref>
-               <label>apud Gretserum ... reperies</label><p> Jakob Gretser hatte 1611 einen Teil des
+                  Thesaurus anecdotorum 5 col. 1457–1496.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned> De corrupto ecclesiae statu</mentioned>
+            <p>Baluze, Miscellanea 5 63–235; vgl. <rs type="bibl" ref="bibl:15644">Classen, Gerhoch</rs> 141–149, 419; <rs type="bibl" ref="bibl:20050">Van den Eynde, Œuvre littéraire</rs> 92–107.
+               </p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned>apud Gretserum ... reperies</mentioned>
+            <p> Jakob Gretser hatte 1611 einen Teil des
                   ersten Buches der zweiten Redaktion von Gerhochs Traktat „De investigatione
-                  Antichristi“ veröffentlicht: Gretser, Syntagma 21–68; vgl. <rs type="bibl"
-                     key="bibl:20050">Van den Eynde, Œuvre littéraire</rs> 139. </p></note>
-            <note xml:id="d3e54349">
-               <ref type="context">4</ref>
-               <label>Analectis</label><p> Die vier Bände waren von 1675 bis 1685 erschienen; eine zweite Ausgabe wurde 1723 herausgebracht.</p></note>
-            <note xml:id="d3e54355">
-               <ref type="context">5</ref>
-               <label>obdormiissent ii</label><p>Möglicherweise bezieht sich EM hier auf eine Frage
+                  Antichristi“ veröffentlicht: Gretser, Syntagma 21–68; vgl. <rs type="bibl" ref="bibl:20050">Van den Eynde, Œuvre littéraire</rs> 139. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
+            <mentioned>Analectis</mentioned>
+            <p> Die vier Bände waren von 1675 bis 1685 erschienen; eine zweite Ausgabe wurde 1723 herausgebracht.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
+            <mentioned>obdormiissent ii</mentioned>
+            <p>Möglicherweise bezieht sich EM hier auf eine Frage
                   BPs, ob der Tod Ludwigs XIV. eine nachhaltige Beruhigung herbeigeführt habe, wie
-                  dies René Massuet in seinen letzten Briefen erhofft hatte: vgl. <ref type="letter"
-                     >450</ref> &lt;2&gt; und &lt;6&gt;, <ref type="letter">467</ref>
-               &lt;6&gt;.</p></note>
-            <note xml:id="d3e54361">
-               <ref type="context">5</ref>
-               <label> silentium ... imponens</label><p>Das Edikt des Regenten wurde am 7. Oktober
-                  1717 vom Pariser Parlement registriert: <rs type="bibl" key="bibl:15546">Carreyre,
-                     Jansénisme</rs> 1 188–191; <rs type="bibl" key="bibl:18266">McManners, Church
-                     and Society</rs> 2 398.</p></note>
-         </div>
-      </back>
+                  dies René Massuet in seinen letzten Briefen erhofft hatte: vgl. <ref type="letter" target="letter:450">450</ref> <ref target="letter:450#seg2">2</ref> und <ref target="letter:450#seg6">6</ref>, <ref type="letter" target="letter:467">467</ref>
+               <ref target="letter:467#seg6">6</ref>.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
+            <mentioned> silentium ... imponens</mentioned>
+            <p>Das Edikt des Regenten wurde am 7. Oktober
+                  1717 vom Pariser Parlement registriert: <rs type="bibl" ref="bibl:15546">Carreyre,
+                     Jansénisme</rs> 1 188–191; <rs type="bibl" ref="bibl:18266">McManners, Church
+                     and Society</rs> 2 398.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>V</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:16792">
+            <title type="short">Hammermayer, Forschungszentren</title>
+            <biblScope>168</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverendo atque erudito viro domno Bernardo Pez monacho Benedictino ac bibliothecario Mellicensi frater Edmundus Martene humilis monachus Benedictinus e congregatione sancti Mauri salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">De tam immensis a te repertis thesauris in Baioariae bibliothecis superabundo gaudio tibique inde plurimum gratulor, vir erudite; auctor sum tibi tamen, ut, <anchor xml:id="n1"/>donec omnino convalescas<anchor xml:id="n1e"/>, a tam arduis laboribus paulisper temperes, hac enim in vita homini studioso nihil sanitate pretiosius. </ab>
+         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n2"/>Alberti prioris Altahae Superioris Vitam<anchor xml:id="n2e"/> non habet noster Franciscus Tixierus; si ab auctore gravi scriptam commode <choice><sic>mit</sic><corr>transmittere</corr></choice> possis, pergratum ipsi facies.<anchor xml:id="n3"/> Vitam vero beati Wirntonis<anchor xml:id="n3e"/> abbatis <sic>Vambacensis</sic> in Bavaria a Gerocho praeposito Reicherspergensi scriptam penes se habet, nec necesse erit, ut transcribas. </ab>
+         <ab resp="#editor" xml:id="seg3">Quod vero spectat ad auctoris huius opera, quae e tenebris eruisti, non ignoras editum a nobis in Thesauro anecdotorum ipsius <anchor xml:id="n4"/>opusculum Adversus simoniacos<anchor xml:id="n4e"/>, quod sancto Bernardo Clarevallensi abbati dicat, sed uno aut altero folio <pb n="1v"/> truncatum, quod utinam habuissem! Alterum <choice><sic>edididit</sic><corr>edidit</corr></choice> in suis Miscellaneis Stephanus Baluzius<anchor xml:id="n5"/> De corrupto ecclesiae statu<anchor xml:id="n5e"/>, alia eiusdem <anchor xml:id="n6"/>apud Gretserum impressa reperies<anchor xml:id="n6e"/>. Sed haec minima, si cum aliis eiusdem auctoris operibus a te detectis comparentur. </ab>
+         <ab resp="#editor" xml:id="seg4">De Mabillonii <anchor xml:id="n7"/>Analectis<anchor xml:id="n7e"/>, quae desideras, quid rescribam, nescio. Ea si statim, ac typis mandata sunt, comparasses, pro decem aut duodecim libris Gallicis habuisses; nunc vero exhausta omni editione vix pro viginti libris obtinere poteris, si tamen reperiri poterunt. Unum illorum exemplar nuper reperi apud bibliopolam, qui sciscitanti mihi, quanti illud vendere vellet, <sic>respondi</sic> non nisi pro viginti libris dare posse. </ab>
+         <ab resp="#editor" xml:id="seg5">De constitutione Unigenitus quod inquiris, nihil boni tibi scribere possum. Utinam <anchor xml:id="n8"/>obdormiissent ii<anchor xml:id="n8e"/>, qui eam edi procuraverunt, maximarum in clero Gallicano perturbationum fontem et originem! Turbas sedare studuit serenissimus <add place="above">princeps dux</add> Aurelianensis regni administer edito statuto<anchor xml:id="n9"/> silentium utrique parti hac de re imponens<anchor xml:id="n9e"/>. At inquietos homines quis compescere potest? Vale et me amare perge. Fratrem tuum Hieronymum aliosque Mellicenses fratres nostros nomine meo salutes.</ab>
+      </body>
    </text>
 </TEI>

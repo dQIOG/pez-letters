@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="389" xml:id="pez-0389">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">389 Johann Benedikt Gentilotti an Bernhard Pez. 1715-02-23. Wien.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Benedikt Gentilotti an Bernhard Pez. 1715-02-23. Wien.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">389</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
@@ -24,19 +35,28 @@
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">III</biblScope>
-               <biblScope unit="page">236r–237v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 236r–237v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -51,61 +71,32 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">378</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">394</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">386</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">387</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">386</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">396</idno>
-               </ref>
+               <ptr type="prev" target="letter:378"/>
+               <ptr type="next" target="letter:394"/>
+               <ptr type="sentWith" target="letter:386"/>
+               <ptr type="sentWith" target="letter:387"/>
+               <ptr type="mentions" target="letter:386"/>
+               <ptr type="mentionedIn" target="letter:396"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">BGs Vorhaben, <rs type="person" role="sender">BP</rs> zu schreiben, ist durch einen Brief, den BG von <rs ref="index:d14380e29435">Montfaucon</rs> erhalten hat, weiter angeregt worden. BG sendet diesen Brief und seine eigene Antwort abschriftlich an <rs type="person" role="sender">BP</rs>, damit dieser daraus die Probleme ersehen kann, die seinem erhofften <rs ref="index:d14380e12712">Frankreich</rs>-Aufenthalt entgegenstehen, und beurteilen kann, ob BG das <rs ref="index:d10854e33533">Anliegen</rs> richtig unterstützt. <rs type="person" role="sender">BP</rs> soll nach Rücksprache mit Abt <rs ref="index:d14380e9628">Dietmayr</rs> und anderen <rs ref="index:d10854e21970">österreichischen</rs> Prälaten seine Meinung mitteilen. Nach dem Tod <rs ref="index:d10854e28623">Johann Friedrich von Seilerns</rs> fragt sich BG, ob sein Engagement noch sinnvoll ist.</p>
+            <p corresp="#seg2">Beigeschlossen ist weiters ein Brief <rs ref="index:d14380e4006">Bartensteins</rs> an <rs type="person" role="sender">BP</rs> <ref type="letter" target="letter:386">386</ref>. An BG hat <rs ref="index:d14380e4006">Bartenstein</rs> aus <rs ref="index:d10854e7974">Erfurt</rs> höchst ausführlich über die gelehrten Begegnungen seiner Reise geschrieben. <rs ref="index:d14380e4006">Bartenstein</rs>, ein vielversprechender junger Mann, hat noch nicht ganz den Gedanken einer Rückkehr nach <rs ref="index:d14380e45571">Wien</rs> aufgegeben. Er würde gerade wegen seines <rs ref="index:d14380e11852">protestantischen</rs> Glaubens <rs ref="index:d14380e9395">Deutschland</rs> <rs ref="index:d14380e12712">Frankreich</rs> vorziehen, wenn er dort dieselben Angebote bekäme wie in <rs ref="index:d14380e12712">Frankreich</rs>.</p>
+            <p corresp="#seg3">BG grüßt <rs ref="index:d14380e34537">HP</rs> und bittet um Mitteilung ihrer Vorhaben oder weiterer Funde aus <rs ref="index:d10854e21970">österreichischen</rs> Bibliotheken.</p>
+            <p corresp="#seg4">BG möchte gerne <rs type="person" role="sender">BPs</rs> „<rs ref="index:d14380e10982">Triumphus castitatis</rs>“ sehen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e50462"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BGs<?oxy_custom_end?> Vorhaben, <rs type="person" role="sender">BP</rs> zu schreiben, ist durch einen Brief, den <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> von <rs key="index:d14380e29435">Montfaucon</rs> erhalten hat, weiter angeregt worden. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> sendet diesen Brief und seine eigene Antwort abschriftlich an <rs type="person" role="sender">BP</rs>, damit dieser daraus die Probleme ersehen kann, die seinem erhofften <rs key="index:d14380e12712">Frankreich</rs>-Aufenthalt entgegenstehen, und beurteilen kann, ob <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> das <rs key="index:d10854e33533">Anliegen</rs> richtig unterstützt. <rs type="person" role="sender">BP</rs> soll nach Rücksprache mit Abt <rs key="index:d14380e9628">Dietmayr</rs> und anderen <rs key="index:d10854e21970">österreichischen</rs> Prälaten seine Meinung mitteilen. Nach dem Tod <rs key="index:d10854e28623">Johann Friedrich von Seilerns</rs> fragt sich <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?>, ob sein Engagement noch sinnvoll ist.</seg><seg type="context" n="2" xml:id="d4618e50464">Beigeschlossen ist weiters ein Brief <rs key="index:d14380e4006">Bartensteins</rs> an <rs type="person" role="sender">BP</rs> <ref type="letter">386</ref>. An <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> hat <rs key="index:d14380e4006">Bartenstein</rs> aus <rs key="index:d10854e7974">Erfurt</rs> höchst ausführlich über die gelehrten Begegnungen seiner Reise geschrieben. <rs key="index:d14380e4006">Bartenstein</rs>, ein vielversprechender junger Mann, hat noch nicht ganz den Gedanken einer Rückkehr nach <rs key="index:d14380e45571">Wien</rs> aufgegeben. Er würde gerade wegen seines <rs key="index:d14380e11852">protestantischen</rs> Glaubens <rs key="index:d14380e9395">Deutschland</rs> <rs key="index:d14380e12712">Frankreich</rs> vorziehen, wenn er dort dieselben Angebote bekäme wie in <rs key="index:d14380e12712">Frankreich</rs>.</seg><seg type="context" n="3" xml:id="d4618e50469"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> grüßt <rs key="index:d14380e34537">HP</rs> und bittet um Mitteilung ihrer Vorhaben oder weiterer Funde aus <rs key="index:d10854e21970">österreichischen</rs> Bibliotheken.</seg><seg type="context" n="4" xml:id="d4618e50471"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> möchte gerne <rs type="person" role="sender">BPs</rs> „<rs key="index:d14380e10982">Triumphus castitatis</rs>“ sehen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">III</hi>.</p>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">107</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Clarissimo viro domno Bernardo Pez bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilott ab Engelsbrun.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e50495">Cum ad te, vir doctissime, scribendi impetum cepissem, <seg type="lemma" corresp="#d4618e50516">allatae a celeberrimo Montfauconio litterae</seg> me vehementius incitarunt. Quarum argumentum cum ad te maxime pertinere existimaverim, earum mearumque, <seg type="lemma" corresp="#d4618e50523">quibus illis respondeo</seg>, exemplum ad te mitto; ut non solum inde cognoscas, quantam <seg type="lemma" corresp="#d4618e50528">difficultatem</seg> illi afferant laudabili tuo aliorumque in Galliam peregrinandi consilio, sed et, an bene suasoris et hortatoris partes sustinuerim, iudices. Tu, vir clarissime, re cum amplissimo tuo aliisque, si placet, Austriae coenobiarchis communicata, quid vobis videatur, rescribes; simulque praecipies, quemadmodum me geram: porro instem, an secus. Nam si post fata summi illius viri, quem sine lacrymis nominare non possum, ardor ille refrixit ac deferbuit, quid est <sic>caussae</sic> [<hi rend="italic">sic</hi>], cur ego in persuadendo defatiger? <pb n="1v"/> </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e50502">Praeterea in hanc epistolam coniectae sunt litterae, quas amicissimus noster Bartensteinius ad te curari voluit. Longissimas is ad me dedit Erffordia, in quibus omnium doctorum hominum, quos in itinere convenit, vitam, mores et studia eleganter admodum descripsit. Doctissimus iste et maximae spei iuvenis non videtur omnem cogitationem abiecisse in hanc regionem et regiam redeundi: multis quidem de <sic>caussis</sic> [<hi rend="italic">sic</hi>], maxime autem religionis, ut prae se fert, facile Germaniam Galliae antelaturus, si quando, quod vix sperandum, aeque amplae conditiones atque illae, quibus <seg type="lemma" corresp="#d4618e50533">in Galliam invitatur</seg>, hic ei fuerint oblatae. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e50507">Tu, amice magne, quid agas, quid cum suavissimo fratre tuo, cui plurimam salutem adscribo, commenteris, et num aliquid interea ex bibliothecis seu bibliotaphiis Austriae erueris, quaeso, fac me <pb n="2r"/> certiorem. Vale. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e50511">Incredibili desiderio teneor videndi Wilburgem tuam: eo me diutius affici ne sustineas. Iterum vale.</seg></p>
-            <p xml:space="preserve">Vindobona ante diem VII. Kalendas Martias MDCCXV.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e50516">
-               <ref type="context">1</ref>
-               <label>allatae ... litterae</label>
-               <p>Der Brief Montfaucons, datiert aus St.-Germain vom 5. Januar 1715, ist
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>allatae ... litterae</mentioned>
+            <p>Der Brief Montfaucons, datiert aus St.-Germain vom 5. Januar 1715, ist
                   abschriftlich erhalten in III, 234r–235v; sicherlich handelt es sich um die von BG
                   übermittelte Abschrift. Das Original ist unter den Briefen Montfaucons an BG
                   (Rovereto, Biblioteca Rosminiana, Fondo Gentilotti, 4.4.14) nicht erhalten. Der
-                  Text ist ediert bei <rs type="bibl" key="bibl:19682">Staufer, Litterae</rs> 8;
-                  vgl. <rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 28.
+                  Text ist ediert bei <rs type="bibl" ref="bibl:19682">Staufer, Litterae</rs> 8;
+                  vgl. <rs type="bibl" ref="bibl:17432">Katschthaler, Briefnachlass</rs> 28.
                   Montfaucon schreibt, dass Bartenstein ihm nach einem Gespräch mit Hofkanzler
                   Seilern von dessen Bestreben berichtet hat, junge deutsche Benediktiner zur
                   Ausbildung zu den Maurinern nach Paris zu senden, da er St.-Germain für eine
@@ -123,13 +114,12 @@
                   großem Umfang vor. Bartenstein und Widow haben sicherlich von der Anlage dieses
                   Werks berichtet; wenn Montfaucon etwas benötigt, wird er sich an BG wenden, dieser
                   soll das Gleiche tun.</p>
-            </note>
-            <note xml:id="d4618e50523">
-               <ref type="context">1</ref>
-               <label>quibus illis respondeo</label>
-               <p>Der Brief BGs, datiert aus Wien vom 23. Februar 1715, ist sowohl im Original (BN
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>quibus illis respondeo</mentioned>
+            <p>Der Brief BGs, datiert aus Wien vom 23. Februar 1715, ist sowohl im Original (BN
                   FF 17708, 107r–108v) als auch in der von BG nach Melk gesendeten Abschrift (II,
-                  359r–360v) erhalten; ediert bei <rs type="bibl" key="bibl:19682">Staufer,
+                  359r–360v) erhalten; ediert bei <rs type="bibl" ref="bibl:19682">Staufer,
                      Litterae</rs> 8f. Gentilotti schreibt, dass Graf Seilern, dem an der
                   Verbesserung der Studien in Österreich gelegen war, erwogen hatte, junge Mönche
                   zur Ausbildung nach Frankreich („quasi alteras Athenas“) zu senden. Nicht nur
@@ -138,10 +128,8 @@
                   Sache annehmen und auch junge Mönche für einen Aufenthalt begeistern. BG selbst
                   nimmt sich nicht heraus, nach den Gründen der Ablehnung zu fragen, nimmt aber an,
                   dass sie schwerwiegend sein müssen, wenn den Österreichern verwehrt wird, was
-                  deutsche (vielleicht Anspielung auf Bestrebungen in Ottobeuren 1694; vgl. <rs
-                     type="bibl" key="bibl:20188">Wallnig, Gasthaus und Gelehrsamkeit</rs> 89) wie
-                  auch italienische Mönche schon genossen haben (etwa Banduri und Querini; vgl. <ref
-                     type="letter">205</ref> &lt;7&gt;, <ref type="letter">359</ref> &lt;4&gt;).
+                  deutsche (vielleicht Anspielung auf Bestrebungen in Ottobeuren 1694; vgl. <rs type="bibl" ref="bibl:20188">Wallnig, Gasthaus und Gelehrsamkeit</rs> 89) wie
+                  auch italienische Mönche schon genossen haben (etwa Banduri und Querini; vgl. <ref type="letter" target="letter:205">205</ref> <ref target="letter:205#seg7">7</ref>, <ref type="letter" target="letter:359">359</ref> <ref target="letter:359#seg4">4</ref>).
                   Montfaucon möge sich für die Sache einsetzen, um die Studien in Österreich
                   heimisch werden zu lassen („velut in coloniam bonae artes deductae“). Umgekehrt
                   soll man sich in Paris besser nicht fragen, wie die Österreicher einen negativen
@@ -165,26 +153,36 @@
                   hat, möge dieser nach einem schnelleren Weg der Briefübermittlung suchen; den
                   gegenwärtigen Brief vertraut BG jedoch wiederum Bartenstein zur Übermittlung an,
                   von dem er auch das Schreiben Montfaucons erhalten hat.</p>
-            </note>
-            <note xml:id="d4618e50528">
-               <ref type="context">1</ref>
-               <label>difficultatem</label>
-               <p>Zu den Vorbehalten der Maurinersuperioren gegen weitere Gastaufenthalte
-                  ausländischer Benediktiner vgl. <ref type="letter">384</ref> &lt;9&gt;; zu den
-                  Reiseplänen BPs und der Rolle des Grafen Seilern vgl. <ref type="letter">364</ref>
-                  &lt;3&gt;, <ref type="letter">365</ref> &lt;14&gt;, <ref type="letter">379</ref>
-                  &lt;3&gt;; sowie Einleitung, Abschnitt I.3. Zum Tod Seilerns vgl. <ref
-                     type="letter">386</ref> &lt;3&gt;.</p>
-            </note>
-            <note xml:id="d4618e50533">
-               <ref type="context">2</ref>
-               <label>in Galliam invitatur</label>
-               <p>Vgl. <ref type="letter">371</ref> &lt;5&gt;. Das dort erwähnte Angebot des
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned>difficultatem</mentioned>
+            <p>Zu den Vorbehalten der Maurinersuperioren gegen weitere Gastaufenthalte
+                  ausländischer Benediktiner vgl. <ref type="letter" target="letter:384">384</ref> <ref target="letter:384#seg9">9</ref>; zu den
+                  Reiseplänen BPs und der Rolle des Grafen Seilern vgl. <ref type="letter" target="letter:364">364</ref>
+                  <ref target="letter:364#seg3">3</ref>, <ref type="letter" target="letter:365">365</ref> <ref target="letter:365#seg14">14</ref>, <ref type="letter" target="letter:379">379</ref>
+                  <ref target="letter:379#seg3">3</ref>; sowie Einleitung, Abschnitt I.3. Zum Tod Seilerns vgl. <ref type="letter" target="letter:386">386</ref> <ref target="letter:386#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>in Galliam invitatur</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:371">371</ref> <ref target="letter:371#seg5">5</ref>. Das dort erwähnte Angebot des
                   elsässischen Adelsdirektoriums scheint Bartenstein jedoch nicht weiter verfolgt zu
                   haben; bei seiner Rückkehr nach Straßburg im Sommer 1715 ist davon nicht mehr die
-                  Rede (vgl. <ref type="letter">429</ref> &lt;2&gt;).</p>
-            </note>
-         </div>
-      </back>
+                  Rede (vgl. <ref type="letter" target="letter:429">429</ref> <ref target="letter:429#seg2">2</ref>).</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>III</orig>.</note>
+         <note anchored="false">Ordnungsvermerk: <orig>107</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Clarissimo viro domno Bernardo Pez bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilott ab Engelsbrun.</opener>
+         <ab resp="#editor" xml:id="seg1">Cum ad te, vir doctissime, scribendi impetum cepissem, <anchor xml:id="n1"/>allatae a celeberrimo Montfauconio litterae<anchor xml:id="n1e"/> me vehementius incitarunt. Quarum argumentum cum ad te maxime pertinere existimaverim, earum mearumque, <anchor xml:id="n2"/>quibus illis respondeo<anchor xml:id="n2e"/>, exemplum ad te mitto; ut non solum inde cognoscas, quantam <anchor xml:id="n3"/>difficultatem<anchor xml:id="n3e"/> illi afferant laudabili tuo aliorumque in Galliam peregrinandi consilio, sed et, an bene suasoris et hortatoris partes sustinuerim, iudices. Tu, vir clarissime, re cum amplissimo tuo aliisque, si placet, Austriae coenobiarchis communicata, quid vobis videatur, rescribes; simulque praecipies, quemadmodum me geram: porro instem, an secus. Nam si post fata summi illius viri, quem sine lacrymis nominare non possum, ardor ille refrixit ac deferbuit, quid est <sic>caussae</sic> , cur ego in persuadendo defatiger? <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg2">Praeterea in hanc epistolam coniectae sunt litterae, quas amicissimus noster Bartensteinius ad te curari voluit. Longissimas is ad me dedit Erffordia, in quibus omnium doctorum hominum, quos in itinere convenit, vitam, mores et studia eleganter admodum descripsit. Doctissimus iste et maximae spei iuvenis non videtur omnem cogitationem abiecisse in hanc regionem et regiam redeundi: multis quidem de <sic>caussis</sic> , maxime autem religionis, ut prae se fert, facile Germaniam Galliae antelaturus, si quando, quod vix sperandum, aeque amplae conditiones atque illae, quibus <anchor xml:id="n4"/>in Galliam invitatur<anchor xml:id="n4e"/>, hic ei fuerint oblatae. </ab>
+         <ab resp="#editor" xml:id="seg3">Tu, amice magne, quid agas, quid cum suavissimo fratre tuo, cui plurimam salutem adscribo, commenteris, et num aliquid interea ex bibliothecis seu bibliotaphiis Austriae erueris, quaeso, fac me <pb n="2r"/> certiorem. Vale. </ab>
+         <ab resp="#editor" xml:id="seg4">Incredibili desiderio teneor videndi Wilburgem tuam: eo me diutius affici ne sustineas. Iterum vale.</ab>
+         <closer>Vindobona ante diem VII. Kalendas Martias MDCCXV.</closer>
+      </body>
    </text>
 </TEI>

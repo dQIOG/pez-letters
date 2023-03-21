@@ -1,38 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="815" xml:id="pez-0815">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">815 Casimir Freschot an Bernhard Pez. 1717-09-01. Wien.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Casimir Freschot an Bernhard Pez. 1717-09-01. Wien.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">815</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">518r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 518r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,49 +68,38 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">789</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">776</idno>
-               </ref>
+               <ptr type="prev" target="letter:789"/>
+               <ptr type="mentions" target="letter:776"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Bereits seit einigen Tagen hält sich CF, von Prag gekommen, in Wien auf, von wo er alsbald nach Italien aufbrechen will. Er hat sich gewundert, dass er von <rs type="person" role="sender">BP</rs> keinen Brief erhalten hat, seit dieser sich für die Büchersendung <rs type="person" role="sender">CFs</rs> bedankt und dafür eine Entlohnung versprochen hat <ref type="letter" target="letter:776">776</ref>, die bei <rs type="person" role="sender">CF</rs> jedoch nie eingetroffen ist. Da <rs type="person" role="sender">CF</rs> diese Gegend nun auf immer verlassen wird, fragt er, was aus der Angelegenheit nun werden soll, und will noch eine Woche auf <rs type="person" role="sender">BPs</rs> Antwort warten, damit der Briefverkehr unter guten Auspizien weitergehen kann.</p>
+            <p corresp="#seg2">Die „Ducum et regum Bohemiae corona“ ist im selben Stil (wie die zugesendeten Bücher) gehalten, und <rs type="person" role="sender">CF</rs> ist zuversichtlich, dass sie in Wien ohne Schwierigkeit erhältlich sein wird. <rs type="person" role="sender">CF</rs> hat das Werk Anton Florian Fürsten Liechtenstein gewidmet und ist nun nach Wien gekommen, um diesem die ersten Exemplare zu übergeben; er wartet auf dessen Rückkehr, zumal der Fürst gegenwärtig, durch ein besonderes kaiserliches Indult dazu beurlaubt, seine Güter in Böhmen und Mähren inspiziert.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>dedicavi ... Liechtenstain</mentioned>
+            <p> Zu Anton Florian Fürsten Liechtenstein
+                  vgl. <rs type="bibl" ref="bibl:16870">Haupt, Biographische Skizzen</rs> 218; <rs type="bibl" ref="bibl:17194">Hörrmann, Anton Florian von Liechtenstein</rs>.
+                  Zum Werk CFs vgl. <rs type="bibl" ref="bibl:18306">Menk-Bertrand, Images</rs>
+                  158.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned> indulto speciali</mentioned>
+            <p>Ein solches Schriftstück ist im Hausarchiv der Fürsten von Liechtenstein heute nicht feststellbar. Für diese Auskunft sei Arthur Stögmann (Wien) gedankt.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
    <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e40553">Bereits seit einigen Tagen hält sich CF, von Prag gekommen, in Wien auf, von wo er alsbald nach Italien aufbrechen will. Er hat sich gewundert, dass er von <rs type="person" role="sender">BP</rs> keinen Brief erhalten hat, seit dieser sich für die Büchersendung <rs type="person" role="sender">CFs</rs> bedankt und dafür eine Entlohnung versprochen hat <ref type="letter">776</ref>, die bei <rs type="person" role="sender">CF</rs> jedoch nie eingetroffen ist. Da <rs type="person" role="sender">CF</rs> diese Gegend nun auf immer verlassen wird, fragt er, was aus der Angelegenheit nun werden soll, und will noch eine Woche auf <rs type="person" role="sender">BPs</rs> Antwort warten, damit der Briefverkehr unter guten Auspizien weitergehen kann.</seg><seg type="context" n="2" xml:id="d3e40558">Die „Ducum et regum Bohemiae corona“ ist im selben Stil (wie die zugesendeten Bücher) gehalten, und <rs type="person" role="sender">CF</rs> ist zuversichtlich, dass sie in Wien ohne Schwierigkeit erhältlich sein wird. <rs type="person" role="sender">CF</rs> hat das Werk Anton Florian Fürsten Liechtenstein gewidmet und ist nun nach Wien gekommen, um diesem die ersten Exemplare zu übergeben; er wartet auf dessen Rückkehr, zumal der Fürst gegenwärtig, durch ein besonderes kaiserliches Indult dazu beurlaubt, seine Güter in Böhmen und Mähren inspiziert.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
       <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende et eruditissime domine pater.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e40571">Iam ab aliquot diebus hic me detineo, Viennam relicta Praga deductus, animo quamprimum Italiam versus transgrediendi, dum aliquod negotiolum hic perfecero. Miratus sum me nullam a paternitate vestra epistolam habuisse ab illa, qua me docebat libellos meos accepisse gratamque compensationem pro iis me recepturum, de qua nihil umquam ad me pervenit. Cum has provincias deseram animo eas numquam revisendi, gratum mihi foret rescire, quid de hoc nostro negotiolo statuat paternitas vestra admodum reverenda et eruditissima, expectaboque hic adhuc per alteram hebdomadam, quacumque dignabitur rescribere circa illud, ut bonis avibus procedat commercium, quod mecum dignata est instituere, cuiusque continuatum tenorem, mihi ubicumque posito, semper utile et honorificum erit conservare et meis qualibuscumque officiis fovere. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e40573">Luci dedi etiam Ducum<note place="foot" xml:id="d3e40575">	Korrigiert aus <hi rend="italic">dedi</hi>.</note> et regum Bohemiae vitas eodem stilo contextas, quas hic Viennae<note place="foot" xml:id="d3e40581">	Danach durchgestrichen <hi rend="italic">puto</hi>.</note> habere facile mihi suadeo futurum cuilibet, qui eas lectitare voluerit. Illas <seg type="lemma" corresp="#d3e40601">dedicavi excellentissimo principi Antonio a Liechtenstain</seg> et, ut illi prima exemplaria offerrem, Viennam me contuli, quae unica est intineris [<hi rend="italic">sic</hi>] mei causa in hanc urbem, ubi imminentem eius adventum praestolari mihi necesse est; ipse enim lustrat dominia sua per Bohemiam et Moraviam ex<seg type="lemma" corresp="#d3e40607"> indulto speciali</seg> caesaris, qui eum ob<note place="foot" xml:id="d3e40590">	Korrigiert aus <hi rend="italic">ad</hi>.</note> id abesse patitur. Me precibus et affectui commendo</seg></p>
-            <p xml:space="preserve">Reverendae admodum paternitatis vestrae humillimus et addictissimus servus Casimirus Freschot.</p>
-            <p xml:space="preserve">Dabam Viennae 1. Septembris 1717.</p>
-         </div>
+         <opener><pb n="1r"/> Admodum reverende et eruditissime domine pater.</opener>
+         <ab resp="#editor" xml:id="seg1">Iam ab aliquot diebus hic me detineo, Viennam relicta Praga deductus, animo quamprimum Italiam versus transgrediendi, dum aliquod negotiolum hic perfecero. Miratus sum me nullam a paternitate vestra epistolam habuisse ab illa, qua me docebat libellos meos accepisse gratamque compensationem pro iis me recepturum, de qua nihil umquam ad me pervenit. Cum has provincias deseram animo eas numquam revisendi, gratum mihi foret rescire, quid de hoc nostro negotiolo statuat paternitas vestra admodum reverenda et eruditissima, expectaboque hic adhuc per alteram hebdomadam, quacumque dignabitur rescribere circa illud, ut bonis avibus procedat commercium, quod mecum dignata est instituere, cuiusque continuatum tenorem, mihi ubicumque posito, semper utile et honorificum erit conservare et meis qualibuscumque officiis fovere. </ab>
+         <ab resp="#editor" xml:id="seg2">Luci dedi etiam <choice><sic>dedi</sic><corr>Ducum</corr></choice> et regum Bohemiae vitas eodem stilo contextas, quas hic Viennae<del ana="#after">puto</del> habere facile mihi suadeo futurum cuilibet, qui eas lectitare voluerit. Illas <anchor xml:id="n1"/>dedicavi excellentissimo principi Antonio a Liechtenstain<anchor xml:id="n1e"/> et, ut illi prima exemplaria offerrem, Viennam me contuli, quae unica est <sic>intineris</sic> mei causa in hanc urbem, ubi imminentem eius adventum praestolari mihi necesse est; ipse enim lustrat dominia sua per Bohemiam et Moraviam ex<anchor xml:id="n2"/> indulto speciali<anchor xml:id="n2e"/> caesaris, qui eum <choice><sic>ad</sic><corr>ob</corr></choice> id abesse patitur. Me precibus et affectui commendo</ab>
+         <closer>Reverendae admodum paternitatis vestrae humillimus et addictissimus servus Casimirus Freschot.</closer>
+         <closer>Dabam Viennae 1. Septembris 1717.</closer>
       </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e40601">
-               <ref type="context">2</ref>
-               <label>dedicavi ... Liechtenstain</label><p> Zu Anton Florian Fürsten Liechtenstein
-                  vgl. <rs type="bibl" key="bibl:16870">Haupt, Biographische Skizzen</rs> 218; <rs
-                     type="bibl" key="bibl:17194">Hörrmann, Anton Florian von Liechtenstein</rs>.
-                  Zum Werk CFs vgl. <rs type="bibl" key="bibl:18306">Menk-Bertrand, Images</rs>
-                  158.</p></note>
-            <note xml:id="d3e40607">
-               <ref type="context">2</ref>
-               <label> indulto speciali</label><p>Ein solches Schriftstück ist im Hausarchiv der Fürsten von Liechtenstein heute nicht feststellbar. Für diese Auskunft sei Arthur Stögmann (Wien) gedankt.</p></note>
-         </div>
-      </back>
    </text>
 </TEI>

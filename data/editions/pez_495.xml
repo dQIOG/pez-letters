@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="495" xml:id="pez-0495">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">495 Joachim Edlinger an Hieronymus Pez. 1716-01-23. Seitenstetten.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Joachim Edlinger an Hieronymus Pez. 1716-01-23. Seitenstetten.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">495</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -21,17 +33,33 @@
             <relatedItem type="otherEdition">
                <bibl>Spevak, Edlinger 11–16.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:18992">Rabl, Briefe</rs> 330</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Irrig zum 19. Januar 1716 datiert bei Glassner, Verzeichnis 208.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <p>StiA Melk, Karton 7 Patres 13, Fasz. 1, Nr. 1, 6r–v.</p>
+            <listWit><witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Karton 7 Patres 13, Fasz. 1, Nr. 1, 6r–v.</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -46,70 +74,45 @@
                <persName>Hieronymus Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">494</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">502</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">494</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">504</idno>
-               </ref>
+               <ptr type="prev" target="letter:494"/>
+               <ptr type="next" target="letter:502"/>
+               <ptr type="mentions" target="letter:494"/>
+               <ptr type="mentionedIn" target="letter:504"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">HPs</rs> Danksagungen für einen ohnehin geschuldeten Dienst <ref type="letter" target="letter:494">494</ref> haben bei <rs type="person" role="sender">JE</rs> die Galle in Wallung gebracht: doch nicht die scharfe (gelbe), sondern jene (schwarze), welche durch die Liebe entsteht. Sämtliche Bestände der <rs ref="index:d14380e40446">Seitenstettener Bibliothek</rs> stehen den <rs ref="index:d14380e28088">Melkern</rs>, insbesondere <rs type="person" role="sender">HP</rs> und <rs ref="index:d14380e33148">BP</rs>, zur Verfügung. Es ist diesbezüglich auch keine Erlaubnis bei Abt <rs ref="index:d14380e88">Benedikt Abelzhauser</rs> einzuholen, da <rs type="person" role="sender">JE</rs> dazu bereits eine dauerhafte Vollmacht erteilt worden ist. Deshalb sind ebenso keine schriftlichen Vereinbarungen (syngraphae) nötig, es reicht die Freundschaft.</p>
+            <p corresp="#seg2"><rs type="person" role="sender">HP</rs> soll sich nicht so sehr dafür entschuldigen, dass er das <rs ref="index:d14380e18247">Werk</rs> des <rs ref="index:d14380e18241">Richard Hesius</rs> („Prosodia“) <rs type="person" role="sender">JE</rs> nicht zur Verfügung stellen kann. <rs type="person" role="sender">JE</rs> bittet um Mitteilung, ob in der <rs ref="index:d14380e28279">Melker Bibliothek</rs> die historischen Werke des <rs ref="index:d14380e5840">Johann Bissel</rs> vorhanden sind – nicht die poetischen, welche gemeinsam mit dem „<rs ref="index:d14380e5852">Argonauticon Americanorum</rs>“, der „<rs ref="index:d14380e5866">Icaria</rs>“ sowie dem dritten Septennium der „<rs ref="index:d14380e5840">Medulla historica</rs>“ in <rs ref="index:d14380e40413">Seitenstetten</rs> greifbar sind. <rs type="person" role="sender">JE</rs> würde diese Bücher gerne kurz einsehen und danach gleich zurücksenden. <rs type="person" role="sender">HP</rs> soll zunächst lediglich ein Verzeichnis senden.</p>
+            <p corresp="#seg3">Bezüglich des Werkes von <rs ref="index:d14380e18241">Hesius</rs> wäre <rs type="person" role="sender">JE</rs> dankbar, wenn <rs type="person" role="sender">HP</rs> das Buch in <rs ref="index:d14380e45571">Wien</rs>, auch um einen beliebig hohen Preis, besorgen könnte, sofern es nicht in Melk vorhanden ist. <rs type="person" role="sender">JE</rs> möchte jedoch, bevor er <rs type="person" role="sender">HP</rs> um solch einen Gefallen bittet, auf die Antwort von <rs ref="index:d14380e23354">Ildephons Kypers</rs> aus <rs ref="index:d14380e14516">Garsten</rs> warten, den er hierzu gleichfalls brieflich befragt hat. Das Buch ist offenbar sehr selten; <rs type="person" role="sender">JE</rs> konnte es in keinem Katalog, den er durchgesehen hat, auffinden.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">HP</rs> soll den „<rs ref="index:d14380e40458">Codex Gundacheri</rs>“ so lange benützen, wie es ihm beliebt, und danach nur durch eine zuverlässige Person zurücksenden. Der <rs ref="index:d14380e40491">Seitenstettener Bote</rs> (tabellarius) kommt möglicherweise demnächst auf dem Rückweg von <rs ref="index:d14380e45571">Wien</rs> in <rs ref="index:d14380e28088">Melk</rs> vorbei; <rs type="person" role="sender">HP</rs> könnte ihm dann jenen Codex unbesorgt anvertrauen.</p>
+            <p corresp="#seg5"><rs type="person" role="sender">JE</rs> hat durch das Verschulden des Prokurators immer noch nicht die Fortsetzung der „Neuen zeitungen“ erhalten, wogegen die „Fama“ („Europäische fama“? „Gelehrte fama“?) sowie die „Acta eruditorum“ zu ihm gelangen. <rs type="person" role="sender">JE</rs> beklagt sich, dass <rs type="person" role="sender">HP</rs> ihm keine Neuigkeiten aus <rs ref="index:d14380e12712">Frankreich</rs> mitteilt.</p>
+            <p corresp="#seg6">Da ihn <rs type="person" role="sender">HP</rs> über den Fortgang seines <rs ref="index:d10854e7245">Werkes</rs> (über richtige Aussprache) befragt hat, lässt <rs type="person" role="sender">JE</rs> ihn wissen, dass er vorankommt, aber nicht so, wie er es sich selbst wünscht. Weil er sein Werk unter Pseudonym und im Geheimen verfasst und nicht bekannt werden lässt, dass er daran arbeitet, muss er nicht selten gegen seinen Willen anderes tun. <rs type="person" role="sender">JE</rs> entschuldigt seine Eile – der Bote drängt – und schließt mit Grüßen an BP.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e1932"><rs type="person" role="sender">HPs</rs> Danksagungen für einen ohnehin geschuldeten Dienst <ref type="letter">494</ref> haben bei <rs type="person" role="sender">JE</rs> die Galle in Wallung gebracht: doch nicht die scharfe (gelbe), sondern jene (schwarze), welche durch die Liebe entsteht. Sämtliche Bestände der <rs key="index:d14380e40446">Seitenstettener Bibliothek</rs> stehen den <rs key="index:d14380e28088">Melkern</rs>, insbesondere <rs type="person" role="sender">HP</rs> und <rs key="index:d14380e33148">BP</rs>, zur Verfügung. Es ist diesbezüglich auch keine Erlaubnis bei Abt <rs key="index:d14380e88">Benedikt Abelzhauser</rs> einzuholen, da <rs type="person" role="sender">JE</rs> dazu bereits eine dauerhafte Vollmacht erteilt worden ist. Deshalb sind ebenso keine schriftlichen Vereinbarungen (syngraphae) nötig, es reicht die Freundschaft.</seg><seg type="context" n="2" xml:id="d3e1937"><rs type="person" role="sender">HP</rs> soll sich nicht so sehr dafür entschuldigen, dass er das <rs key="index:d14380e18247">Werk</rs> des <rs key="index:d14380e18241">Richard Hesius</rs> („Prosodia“) <rs type="person" role="sender">JE</rs> nicht zur Verfügung stellen kann. <rs type="person" role="sender">JE</rs> bittet um Mitteilung, ob in der <rs key="index:d14380e28279">Melker Bibliothek</rs> die historischen Werke des <rs key="index:d14380e5840">Johann Bissel</rs> vorhanden sind – nicht die poetischen, welche gemeinsam mit dem „<rs key="index:d14380e5852">Argonauticon Americanorum</rs>“, der „<rs key="index:d14380e5866">Icaria</rs>“ sowie dem dritten Septennium der „<rs key="index:d14380e5840">Medulla historica</rs>“ in <rs key="index:d14380e40413">Seitenstetten</rs> greifbar sind. <rs type="person" role="sender">JE</rs> würde diese Bücher gerne kurz einsehen und danach gleich zurücksenden. <rs type="person" role="sender">HP</rs> soll zunächst lediglich ein Verzeichnis senden.</seg><seg type="context" n="3" xml:id="d3e1939">Bezüglich des Werkes von <rs key="index:d14380e18241">Hesius</rs> wäre <rs type="person" role="sender">JE</rs> dankbar, wenn <rs type="person" role="sender">HP</rs> das Buch in <rs key="index:d14380e45571">Wien</rs>, auch um einen beliebig hohen Preis, besorgen könnte, sofern es nicht in Melk vorhanden ist. <rs type="person" role="sender">JE</rs> möchte jedoch, bevor er <rs type="person" role="sender">HP</rs> um solch einen Gefallen bittet, auf die Antwort von <rs key="index:d14380e23354">Ildephons Kypers</rs> aus <rs key="index:d14380e14516">Garsten</rs> warten, den er hierzu gleichfalls brieflich befragt hat. Das Buch ist offenbar sehr selten; <rs type="person" role="sender">JE</rs> konnte es in keinem Katalog, den er durchgesehen hat, auffinden.</seg><seg type="context" n="4" xml:id="d3e1941"><rs type="person" role="sender">HP</rs> soll den „<rs key="index:d14380e40458">Codex Gundacheri</rs>“ so lange benützen, wie es ihm beliebt, und danach nur durch eine zuverlässige Person zurücksenden. Der <rs key="index:d14380e40491">Seitenstettener Bote</rs> (tabellarius) kommt möglicherweise demnächst auf dem Rückweg von <rs key="index:d14380e45571">Wien</rs> in <rs key="index:d14380e28088">Melk</rs> vorbei; <rs type="person" role="sender">HP</rs> könnte ihm dann jenen Codex unbesorgt anvertrauen.</seg><seg type="context" n="5" xml:id="d3e1943"><rs type="person" role="sender">JE</rs> hat durch das Verschulden des Prokurators immer noch nicht die Fortsetzung der „Neuen zeitungen“ erhalten, wogegen die „Fama“ („Europäische fama“? „Gelehrte fama“?) sowie die „Acta eruditorum“ zu ihm gelangen. <rs type="person" role="sender">JE</rs> beklagt sich, dass <rs type="person" role="sender">HP</rs> ihm keine Neuigkeiten aus <rs key="index:d14380e12712">Frankreich</rs> mitteilt.</seg><seg type="context" n="6" xml:id="d3e1945">Da ihn <rs type="person" role="sender">HP</rs> über den Fortgang seines <rs key="index:d10854e7245">Werkes</rs> (über richtige Aussprache) befragt hat, lässt <rs type="person" role="sender">JE</rs> ihn wissen, dass er vorankommt, aber nicht so, wie er es sich selbst wünscht. Weil er sein Werk unter Pseudonym und im Geheimen verfasst und nicht bekannt werden lässt, dass er daran arbeitet, muss er nicht selten gegen seinen Willen anderes tun. <rs type="person" role="sender">JE</rs> entschuldigt seine Eile – der Bote drängt – und schließt mit Grüßen an BP.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Irrig zum 19. Januar 1716 datiert bei Glassner, Verzeichnis 208.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverendo religiosissimo ac eximio domino patri Hieronymo suo salutem plurimam dicit pater Joachimus Edlinger Benedictinus Seittenstettensis.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e1964">Bilem mihi, non equidem acrem illam, sed qualem amor gignit, movisti, mi Hieronyme, dum tot gratiarum actiones <seg type="lemma" corresp="#d3e2002">pro officio</seg> millies vobis debito coacervasti. Quidquid enim bibliotheca nostra, utinam non tam paupertina! condit, multiplici iure Mellicensium, maxime Peziorum esse puta: non rogandum, sed postulandum. Nec <seg type="lemma" corresp="#d3e2008">recursu ad reverendissimum</seg> meum hac in re opus, ut qui pridem facultatem mihi plenam impertivit omnia a vobis desideranda liberaliter transmittendi. Hinc et syngraphae omittendae; sufficiat, quae longe fortius stringit, amicitia, in quam receptum me a vobis eo amplius gloriabar<note place="foot" xml:id="d3e1966">	Über der Zeile eingefügt.</note>, quo indigniorem ea me sciebam. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e1969">Porro cur tam sollicite tu excusas impotentiam concedendi mihi <seg type="lemma" corresp="#d3e2012">Hesium</seg>? Vel verbo dixisse sat erat, mi Hieronyme. Amice te et cordate saltem agere mecum volo, ubi ego (ut meus e crassiore limo fert genius), si non rustice, sane nimium praefidenter tecum. En specimen! Rogo nempe te, ut, ubi opportunum fuerit, mihi rescribas, quidnam operum Bisselii historicorum (non poeticorum, utpote quae<note place="foot" xml:id="d3e1971">	Danach durchgestrichen <hi rend="italic">(nec magni aestimo)</hi>.</note> unacum Argonautico, Icaria et Medullae historicae septennio tertio apud nos exstant) penes vos sit: vellem ea, sed ad percurrendum tantum, propediem restituenda; interim non ipsa opera, sed elenchum mitte. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e1977">Quod Hesium, ni apud vos existat, Vienna te procuraturum scribas, mihi longe gratissimum est, quantivis sit pretii: <pb n="1v"/> <seg type="lemma" corresp="#d3e2022">Ildephonsi<note place="foot" xml:id="d3e1981">	Korrigiert aus <hi rend="italic">Id</hi>.</note> tamen Garstensis</seg>, quem idcirco per literas heri adii, responsum exspecto, priusquam istud benevolentiae a te petam. Rarus sit, oportet, hic liber; nullibi enim inter tot myriades librorum in variis, quos evolvi, copiosissimis catalogis contentorum eum unquam observavi. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e1987">Codice nostro etc. utere, donec libuerit; nec facile, tametsi non utaris, eum cuipiam huc deferendum committe<note place="foot" xml:id="d3e1989">	Über der Zeile eingefügt.</note>: veniet fortassis meo iussu, cui secure trades, tabellarius noster Vienna, quo brevi abire destinat, redux ad te ipsemet. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e1992"><seg type="lemma" corresp="#d3e2028">Novorum literariorum continuationem culpa procuratoris necdum obtinui</seg>, cum tamen <seg type="lemma" corresp="#d3e2032">Fama</seg> et Acta eruditorum rite ad me perveniunt. Sed heus, Hieronyme, necdum desino querelarum; dum enim Novorum hic mentionem facio, neglexisse te aliquid adverto, quod sine summa mei delectatione non praestisses [<hi rend="italic">sic</hi>]: Cur tu nempe novorum ad me nihil ex Gallia? Certum habe, si quid talium rariorum mihi obtingeret, te minime a me celandum eadem fore. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e1997">De lucubratiuncula mea si roges, progreditur ea quidem; non tamen, ut vellem, currit, idque nec penitus absque mea culpa; quippe cum pseudonymus esse velim, ne hoc agere, quod ago, videar, non raro <seg type="lemma" corresp="#d3e2036">aliud invitus ago</seg>. Imperat tabellarius impatienter exspectans finem: quare, vir candidissime, quod incultas has cernas, celeritate scribentis, quod liberiores, amicitiae iure excusa meque idcirco non minus ama et cum Bernardo vale.</seg></p>
-            <p xml:space="preserve">Seittenstadii X. Kalendas Februarii MDCCXVI.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e2002">
-               <ref type="context">1</ref>
-               <label>pro officio</label><p>Gemeint ist gewiss die Übermittlung des „Codex
-                  Gundacheri“: vgl. <ref type="letter">411</ref> &lt;8&gt;, <ref type="letter"
-                     >442</ref> &lt;5&gt;, <ref type="letter">491</ref> &lt;6&gt;, <ref
-                     type="letter">535</ref> &lt;2&gt;. Umfangreiche Auszüge HPs aus dieser
-                  Handschrift sind erhalten in StiB Melk, Cod. 145; vgl. <rs type="bibl"
-                     key="bibl:16512">Glassner, Handschriften</rs> 53f. </p></note>
-            <note xml:id="d3e2008">
-               <ref type="context">1</ref>
-               <label>recursu ad reverendissimum</label><p> Zur Frage der Benützung von
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>pro officio</mentioned>
+            <p>Gemeint ist gewiss die Übermittlung des „Codex
+                  Gundacheri“: vgl. <ref type="letter" target="letter:411">411</ref> <ref target="letter:411#seg8">8</ref>, <ref type="letter" target="letter:442">442</ref> <ref target="letter:442#seg5">5</ref>, <ref type="letter" target="letter:491">491</ref> <ref target="letter:491#seg6">6</ref>, <ref type="letter" target="letter:535">535</ref> <ref target="letter:535#seg2">2</ref>. Umfangreiche Auszüge HPs aus dieser
+                  Handschrift sind erhalten in StiB Melk, Cod. 145; vgl. <rs type="bibl" ref="bibl:16512">Glassner, Handschriften</rs> 53f. </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>recursu ad reverendissimum</mentioned>
+            <p> Zur Frage der Benützung von
                   Klosterbeständen vgl. Einleitung, Abschnitt I.2. Zu Abt Benedikt Abelzhauser vgl.
-                     <rs type="bibl" key="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs>
-                  793.</p></note>
-            <note xml:id="d3e2012">
-               <ref type="context">2</ref>
-               <label>Hesium</label><p>JE hatte in <ref type="letter">444</ref> &lt;3&gt; um das
-                  Werk gebeten. </p></note>
-            <note xml:id="d3e2018">
-               <ref type="context">2</ref>
-               <label>operum Bisselii ... penes vos</label><p> Zu Bissel vgl. <rs type="bibl"
-                     key="bibl:15152">Benz, Zwischen Tradition und Kritik</rs> 481, 490; <rs
-                     type="bibl" key="bibl:19624">Sommervogel, Bibliothèque</rs> 1 col. 1513–1517.
+                     <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs>
+                  793.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>Hesium</mentioned>
+            <p>JE hatte in <ref type="letter" target="letter:444">444</ref> <ref target="letter:444#seg3">3</ref> um das
+                  Werk gebeten. </p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>operum Bisselii ... penes vos</mentioned>
+            <p> Zu Bissel vgl. <rs type="bibl" ref="bibl:15152">Benz, Zwischen Tradition und Kritik</rs> 481, 490; <rs type="bibl" ref="bibl:19624">Sommervogel, Bibliothèque</rs> 1 col. 1513–1517.
                   Die Stiftsbibliothek Seitenstetten besitzt heute die von JE genannten Werke
                   „Argonauticon Americanorum“, „Icaria“ sowie alle drei Bände der „Medulla
                   historica“, bei welchen freilich die spätere Eintragung eine Anschaffung nach dem
@@ -117,33 +120,52 @@
                   veris“, „De pestiferis peccatorum mortalium fructibus“ und „Illustrium ruinarum
                   decades“. Die StiB Melk verwahrt heute von Bissels Werken die Bände 1 und 3 der
                   „Medulla historica“, die „Deliciae aestatis“, „Icaria“ sowie das „Argonauticon“:
-                  StiB Melk 27111–27112, 38631–38634.</p></note>
-            <note xml:id="d3e2022">
-               <ref type="context">3</ref>
-               <label>Ildephonsi ... Garstensis</label><p>Zu Kypers vgl. <rs type="bibl"
-                     key="bibl:16438">Garstenauer, Beiträge 2</rs> 295</p></note>
-            <note xml:id="d3e2028">
-               <ref type="context">5</ref>
-               <label>Novorum ... obtinui</label><p>Die Bezeichnung „Nova literaria“ für die „Neuen
+                  StiB Melk 27111–27112, 38631–38634.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>Ildephonsi ... Garstensis</mentioned>
+            <p>Zu Kypers vgl. <rs type="bibl" ref="bibl:16438">Garstenauer, Beiträge 2</rs> 295</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg5">
+            <mentioned>Novorum ... obtinui</mentioned>
+            <p>Die Bezeichnung „Nova literaria“ für die „Neuen
                   zeitungen von gelehrten sachen“ findet sich so auch auf den Einbänden der
                   Seitenstettener Stiftsbibliothek; die Bände zu 1715 tragen einen eigenhändigen
-                  Ankaufsvermerk von JE zum Jahr 1718. Zur Zeitschrift vgl. <rs type="bibl"
-                     key="bibl:16718">Habel, Gelehrte Journale</rs> 448–450.</p></note>
-            <note xml:id="d3e2032">
-               <ref type="context">5</ref>
-               <label> Fama</label><p>Wahrscheinlich ist eine Identifikation mit der Leipziger
-                  Zeitschrift „Europäische fama“; zu ihr vgl. <rs type="bibl" key="bibl:14940"
-                     >Arndt, Herrschaftskontrolle</rs> 113–117. Zu ihrem Bezug in Seitenstetten vgl.
-                     <ref type="letter">843</ref> &lt;4&gt;. In der dortigen Bibliothek vorhanden
+                  Ankaufsvermerk von JE zum Jahr 1718. Zur Zeitschrift vgl. <rs type="bibl" ref="bibl:16718">Habel, Gelehrte Journale</rs> 448–450.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
+            <mentioned> Fama</mentioned>
+            <p>Wahrscheinlich ist eine Identifikation mit der Leipziger
+                  Zeitschrift „Europäische fama“; zu ihr vgl. <rs type="bibl" ref="bibl:14940">Arndt, Herrschaftskontrolle</rs> 113–117. Zu ihrem Bezug in Seitenstetten vgl.
+                     <ref type="letter" target="letter:843">843</ref> <ref target="letter:843#seg4">4</ref>. In der dortigen Bibliothek vorhanden
                   ist daneben die „Gelehrte fama“, doch belegt ein Vermerk JEs im ersten vorhandenen
                   Band derselben zu 1713 einen Ankauf erst im Jahr 1719. Zur „Gelehrten fama“ vgl.
-                     <rs type="bibl" key="bibl:16718">Habel, Gelehrte Journale</rs> 118; <rs
-                     type="bibl" key="bibl:17492">Kirchner, Bibliographie 1</rs> 2.</p></note>
-            <note xml:id="d3e2036">
-               <ref type="context">6</ref>
-               <label>aliud invitus ago</label><p>Vgl. <ref type="letter">843</ref> &lt;2&gt; und
-                  &lt;3&gt;.</p></note>
-         </div>
-      </back>
+                     <rs type="bibl" ref="bibl:16718">Habel, Gelehrte Journale</rs> 118; <rs type="bibl" ref="bibl:17492">Kirchner, Bibliographie 1</rs> 2.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg6">
+            <mentioned>aliud invitus ago</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:843">843</ref> <ref target="letter:843#seg2">2</ref> und
+                  <ref target="letter:843#seg3">3</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:18992">
+            <title type="short">Rabl, Briefe</title>
+            <biblScope>330</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverendo religiosissimo ac eximio domino patri Hieronymo suo salutem plurimam dicit pater Joachimus Edlinger Benedictinus Seittenstettensis.</opener>
+         <ab resp="#editor" xml:id="seg1">Bilem mihi, non equidem acrem illam, sed qualem amor gignit, movisti, mi Hieronyme, dum tot gratiarum actiones <anchor xml:id="n1"/>pro officio<anchor xml:id="n1e"/> millies vobis debito coacervasti. Quidquid enim bibliotheca nostra, utinam non tam paupertina! condit, multiplici iure Mellicensium, maxime Peziorum esse puta: non rogandum, sed postulandum. Nec <anchor xml:id="n2"/>recursu ad reverendissimum<anchor xml:id="n2e"/> meum hac in re opus, ut qui pridem facultatem mihi plenam impertivit omnia a vobis desideranda liberaliter transmittendi. Hinc et syngraphae omittendae; sufficiat, quae longe fortius stringit, amicitia, in quam receptum me a vobis eo amplius <add place="above">gloriabar</add>, quo indigniorem ea me sciebam. </ab>
+         <ab resp="#editor" xml:id="seg2">Porro cur tam sollicite tu excusas impotentiam concedendi mihi <anchor xml:id="n3"/>Hesium<anchor xml:id="n3e"/>? Vel verbo dixisse sat erat, mi Hieronyme. Amice te et cordate saltem agere mecum volo, ubi ego (ut meus e crassiore limo fert genius), si non rustice, sane nimium praefidenter tecum. En specimen! Rogo nempe te, ut, ubi opportunum fuerit, mihi rescribas, quidnam operum Bisselii historicorum (non poeticorum, utpote quae<del ana="#after">(nec magni aestimo)</del> unacum Argonautico, Icaria et Medullae historicae septennio tertio apud nos exstant) penes vos sit: vellem ea, sed ad percurrendum tantum, propediem restituenda; interim non ipsa opera, sed elenchum mitte. </ab>
+         <ab resp="#editor" xml:id="seg3">Quod Hesium, ni apud vos existat, Vienna te procuraturum scribas, mihi longe gratissimum est, quantivis sit pretii: <pb n="1v"/> <anchor xml:id="n4"/> <choice><sic>Id</sic><corr>Ildephonsi</corr></choice> tamen Garstensis<anchor xml:id="n4e"/>, quem idcirco per literas heri adii, responsum exspecto, priusquam istud benevolentiae a te petam. Rarus sit, oportet, hic liber; nullibi enim inter tot myriades librorum in variis, quos evolvi, copiosissimis catalogis contentorum eum unquam observavi. </ab>
+         <ab resp="#editor" xml:id="seg4">Codice nostro etc. utere, donec libuerit; nec facile, tametsi non utaris, eum cuipiam huc deferendum <add place="above">committe</add>: veniet fortassis meo iussu, cui secure trades, tabellarius noster Vienna, quo brevi abire destinat, redux ad te ipsemet. </ab>
+         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n5"/>Novorum literariorum continuationem culpa procuratoris necdum obtinui<anchor xml:id="n5e"/>, cum tamen <anchor xml:id="n6"/>Fama<anchor xml:id="n6e"/> et Acta eruditorum rite ad me perveniunt. Sed heus, Hieronyme, necdum desino querelarum; dum enim Novorum hic mentionem facio, neglexisse te aliquid adverto, quod sine summa mei delectatione non <sic>praestisses</sic>: Cur tu nempe novorum ad me nihil ex Gallia? Certum habe, si quid talium rariorum mihi obtingeret, te minime a me celandum eadem fore. </ab>
+         <ab resp="#editor" xml:id="seg6">De lucubratiuncula mea si roges, progreditur ea quidem; non tamen, ut vellem, currit, idque nec penitus absque mea culpa; quippe cum pseudonymus esse velim, ne hoc agere, quod ago, videar, non raro <anchor xml:id="n7"/>aliud invitus ago<anchor xml:id="n7e"/>. Imperat tabellarius impatienter exspectans finem: quare, vir candidissime, quod incultas has cernas, celeritate scribentis, quod liberiores, amicitiae iure excusa meque idcirco non minus ama et cum Bernardo vale.</ab>
+         <closer>Seittenstadii X. Kalendas Februarii MDCCXVI.</closer>
+      </body>
    </text>
 </TEI>

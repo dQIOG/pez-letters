@@ -1,45 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="308" xml:id="pez-0308">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">308 Konrad Sigler an Bernhard Pez. 1713-05-31 &lt; 1713-06-16. Würzburg.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Konrad Sigler an Bernhard Pez. 1713-05-31 &lt; 1713-06-16. Würzburg.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">308</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 17f</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Der Brief ist von einem Sekretär geschrieben, nur der Nachsatz &lt;10&gt; von KS.
+                  Dieser unterließ es, in den freigelassenen Platz im Datum die Tagesangabe
+                  einzutragen. Der Brief muss aber in den frühen Juni fallen, zumal BP am 16. Juni
+                  antwortete; vgl. 312.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">201r–202v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 201r–202v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -54,109 +75,71 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">160</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">311</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">309</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">160</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">312</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">317</idno>
-               </ref>
+               <ptr type="prev" target="letter:160"/>
+               <ptr type="next" target="letter:311"/>
+               <ptr type="sentWith" target="letter:309"/>
+               <ptr type="mentions" target="letter:160"/>
+               <ptr type="mentionedIn" target="letter:312"/>
+               <ptr type="mentionedIn" target="letter:317"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">KS</rs> entschuldigt sich, dass er auf <rs type="person" role="sender">BPs</rs> Brief <ref type="letter" target="letter:160">160</ref> nie geantwortet hat, und bringt seine Lebensumstände als Grund für sein zweijähriges Schweigen vor.</p>
+            <p corresp="#seg2">Während der Verhandlungen zur Wahl und Krönung <rs ref="index:d14380e21188">Karls VI.</rs> in Frankfurt 1711 wirkte <rs type="person" role="sender">KS</rs> als Sekretär der <rs ref="index:d10854e26841">kursächsischen  Delegation</rs>, wobei er auch für deren Verhandlungen mit dem Apostolischen Nuntius <rs ref="index:d10854e392">Albani</rs> verwendet wurde, was dazu führte, dass er von den Erziehern des Kurprinzen <rs ref="index:d14380e13478">Friedrich August (II.)</rs> als Begleiter für dessen Reise nach <rs ref="index:d14380e19828">Italien</rs> engagiert wurde. Seine Heimat <rs ref="index:d10854e9767">Fulda</rs> hatte ihm keine adäquate Stellung geboten, für seine Rückkehr hatte ihm hingegen <rs ref="index:d10854e34226">Würzburg</rs> die Stelle eines Bibliothekars in Aussicht gestellt. In <rs ref="index:d14380e19828">Italien</rs>, besonders in <rs ref="index:d10854e31813">Venedig</rs> und <rs ref="index:d10854e18291">Mailand</rs>, pflegte <rs type="person" role="sender">KS</rs> neben dem Unterricht für den <rs ref="index:d14380e13478">Kurprinzen</rs> gelehrte Kontakte und besuchte zahlreiche Bibliotheken. Als sich die Weiterreise nach <rs ref="index:d14380e37680">Rom</rs> zu lange verzögerte, verließ er im Oktober 1712 <rs ref="index:d14380e19828">Italien</rs> und kehrte nach Würzburg zurück, wo ihn Fürstbischof <rs ref="index:d10854e11166">Johann Philipp von Greiffenclau</rs> zum Sekretär des <rs ref="index:d10854e34296">Geistlichen Rats</rs> ernannte. Wie sehr ihn dieses Amt von den Studien abhält, dürfte <rs ref="index:d10854e2493">Hyazinth Baumbach</rs> <rs type="person" role="sender">BP</rs> ja berichtet haben.</p>
+            <p corresp="#seg3">Indem <rs type="person" role="sender">KS</rs> nun zu <rs type="person" role="sender">BPs</rs> Brief zurückkehrt, räumt er ein, durch jene Schulen gegangen zu sein, welche die wahre Beredsamkeit zusammen mit der Kenntnis des <rs ref="index:d14380e16473">Griechischen</rs> gänzlich aus <rs ref="index:d14380e9395">Deutschland</rs> verbannt haben. Daher sind seine Möglichkeiten, <rs type="person" role="sender">BP</rs> bei seinem Unterfangen zu helfen, trotz seines guten Willens gering.</p>
+            <p corresp="#seg4">Zudem sind die Kollektaneen, die <rs type="person" role="sender">KS</rs> für <rs type="person" role="sender">BP</rs> angelegt hatte, bei seiner Übersiedlung aus <rs ref="index:d10854e9767">Fulda</rs> verloren gegangen. Doch hat <rs type="person" role="sender">KS</rs> vor einiger Zeit <rs ref="index:d10854e2493">Baumbach</rs> <rs ref="index:d10854e21145">etwas</rs> aus dem <rs ref="index:d14380e24317">Leipziger</rs> „<rs ref="index:d10854e21135">Neuen bücher-saal</rs>“ (Ephemerides Lipsienses) für <rs type="person" role="sender">BP</rs> gegeben. Dies hat <rs type="person" role="sender">BP</rs> hoffentlich ebenso erhalten wie die Abschrift eines uralten Briefs („<rs ref="index:d10854e20414">Epistola monachorum Casinensium</rs>“), dessen <rs ref="index:d10854e20435">Original</rs> sich laut der <rs ref="index:d10854e8145">Handschrift</rs> des <rs ref="index:d10854e21395">Nikolaus von Siegen</rs>, der im 15. Jahrhundert im <rs ref="index:d10854e8069">Peterskloster</rs> zu Erfurt gelebt hat, in <rs ref="index:d10854e9767">Fulda</rs> befunden haben soll, dort aber nicht mehr vorhanden ist. <rs type="person" role="sender">KS</rs> möchte gerne <rs type="person" role="sender">BPs</rs> Meinung zum Alter des Briefs erfahren.</p>
+            <p corresp="#seg5"><rs ref="index:d10854e2493">Baumbach</rs> hat <rs type="person" role="sender">KS</rs> mitgeteilt, dass <rs type="person" role="sender">BP</rs> über einen „Sermo ad neophytos“ (recte: „<rs ref="index:d10854e4025">Praedicatio de abrenuntiatione in baptismate</rs>“) des <rs ref="index:d10854e3976">Hl. Bonifatius</rs> verfügt. Solch ein Text ist <rs type="person" role="sender">KS</rs> nicht bekannt. Angaben über Werke des <rs ref="index:d10854e3976">Bonifatius</rs> finden sich in <rs ref="index:d10854e30497">Tentzels „Supplementum historiae Gothanae secundum“</rs> sowie in <rs ref="index:d10854e34106">Witzels „Chorus sanctorum omnium“</rs>, dort gestützt auf <rs ref="index:d14380e43380">Trithemius</rs>. Der 1561, mithin bereits nach dem Bauernkrieg und den Diebstählen des Flacius (siehe Kommentar) angelegte <rs ref="index:d10854e9847">Katalog</rs> der <rs ref="index:d10854e9817">Fuldaer Bibliothek</rs> verzeichnet unter mehr als 800 Pergamentcodices an Werken des Bonifatius eine „<rs ref="index:d10854e9859">Historia scholastica</rs>“ (recte: von Petrus Comestor), einen „<rs ref="index:d10854e9852">Liber collectaneus ad missam</rs>“ und einen „<rs ref="index:d10854e9825">Liber de laboribus suis in conversione gentium</rs>“ (siehe Kommentar). <rs type="person" role="sender">KS</rs> hat nichts von alledem je gesehen und bezweifelt, dass noch etwas davon existiert, da die <rs ref="index:d10854e9817">Fuldaer Bibliothek</rs> – nach <rs ref="index:d10854e20576">Morhofs „Polyhistor“</rs> einst die vornehmste in <rs ref="index:d14380e11804">Europa</rs> – durch Kriegszerstörungen zugrunde gegangen ist und vor allem im <rs ref="index:d10854e6755">Dreißigjährigen Krieg</rs> kaum die drei „Codices Bonifatiani“ zusammen mit den Reliquien in Sicherheit gebracht werden konnten;<rs ref="index:d10854e31929"> einer von diesen</rs> enthält Korrekturen von der Hand des <rs ref="index:d10854e31923">Viktor von Capua</rs>, was <rs type="person" role="sender">KS</rs> in seinem „<rs ref="index:d10854e28990">Criterium</rs>“ darlegen wollte. Auch in <rs ref="index:d10854e34226">Würzburg</rs> existieren zwei ähnliche <rs ref="index:d10854e34289">Evangeliencodices</rs> in <rs ref="index:d10854e28315">Halbunziale</rs> (semiuncialis rotunda) mit Marginalien in <rs ref="index:d10854e28286">gotischer Schrift</rs> (scriptura Gothica).</p>
+            <p corresp="#seg6">Durch Zufall ist <rs type="person" role="sender">KS</rs> auf eine <rs ref="index:d10854e31227">Handschrift des Trithemius</rs> gestoßen, die <rs ref="index:d10854e31221">Schriften</rs> über die bedeutenden Männer (viri illustres) des Karmeliter- und des Benediktinerordens enthält. <rs type="person" role="sender">KS</rs> berichtet weiters von <rs ref="index:d10854e14139">Versen zu Ehren der <rs ref="index:d10854e14863">Hl. Kilian</rs></rs> und <rs ref="index:d10854e14134"><rs ref="index:d10854e4613">Burchard</rs></rs> von <rs ref="index:d10854e14124">Johannes von Lauterbach</rs>, Mönch des <rs ref="index:d10854e8069">Petersklosters</rs> zu <rs ref="index:d10854e7974">Erfurt</rs>, dann von <rs ref="index:d10854e34414">St. Stephan</rs> zu <rs ref="index:d10854e34226">Würzburg</rs>; <rs ref="index:d10854e16735">Lauterbach</rs>, an der Grenze zwischen <rs ref="index:d14380e18255">Hessen</rs> und der Landschaft Bucha, war früher dem Abt von <rs ref="index:d10854e9767">Fulda</rs> untertan. Weiters nennt <rs type="person" role="sender">KS</rs> einen <rs ref="index:d10854e517">Brief</rs> des <rs ref="index:d14380e1014">Alkuin von Fulda</rs>, den <rs ref="index:d14380e12406">Fontanini</rs> in den „<rs ref="index:d10854e9043">Vindiciae antiquorum diplomatum</rs>“ <rs ref="index:d10854e9049">publiziert</rs> hat. In der zuvor genannten <rs ref="index:d10854e8145">Erfurter Handschrift</rs> (des <rs ref="index:d10854e21395">Nikolaus von Siegen</rs>) finden sich Angaben über die Mönche Isuard (recte: <rs ref="index:d10854e31662">Usuard von St.-Germain</rs>), <rs ref="index:d10854e26555">Rudolf (von Fulda?)</rs> und <rs ref="index:d10854e30615">Theoderich (von Fleury?)</rs>. <rs type="person" role="sender">KS</rs> konnte diese <rs ref="index:d10854e8145"><rs ref="index:d10854e21401">Handschrift</rs></rs> sechs Monate lang in <rs ref="index:d10854e9767">Fulda</rs> benützen; er zweifelt nicht, dass die<rs ref="index:d10854e8069"> Petrenser</rs> die Handschrift auch <rs type="person" role="sender">BP</rs> zur Verfügung stellen oder das Relevante für ihn abschreiben werden.</p>
+            <p corresp="#seg7">Das Leben des Bischofs <rs ref="index:d14380e16920">Haimo von Halberstadt</rs>, der zuvor Mönch von <rs ref="index:d10854e9767">Fulda</rs> war, hat der <rs ref="index:d14380e16951">Hallenser</rs> Professor <rs ref="index:d10854e1184">Anton</rs> herausgebracht („<rs ref="index:d10854e1190">Exercitatio historico-theologica</rs>“). Beachtenswert sind auch die Ausführungen zu <rs ref="index:d14380e16920">Haimo</rs> in der <rs ref="index:d10854e20297">„Homonymoscopia“ Johann Mollers</rs>. Das 1630 zu <rs ref="index:d14380e39054">Salzburg</rs> (von <rs ref="index:d10854e32507">Matthäus Weiß</rs>) herausgebrachte „<rs ref="index:d10854e32520">Lyceum Benedictinum</rs>“ dürfte <rs type="person" role="sender">BP</rs> bekannt sein. <rs type="person" role="sender">KS</rs> hat auch bei <rs ref="index:d14380e7705">Cave</rs> („<rs ref="index:d14380e7715">Scriptorum ecclesiasticorum historia literaria</rs>“), <rs ref="index:d14380e29687">Moréri</rs> („<rs ref="index:d14380e29693">Dictionaire</rs>“) und <rs ref="index:d10854e32057">Voss</rs> („<rs ref="index:d10854e32065">De historicis Latinis</rs>“) sowie <rs ref="index:d10854e27029">Sand</rs>, der dessen Werk fortsetzte („<rs ref="index:d10854e27035">Notae et animadversiones</rs>“), Notizen über Fuldaer Schriftsteller gesammelt, ebenso aus dem „<rs ref="index:d10854e24496">Theatrum“</rs> von <rs ref="index:d10854e24488">Placcius</rs>, aus den Werken <rs ref="index:d10854e203">Melchior Adams</rs>, <rs ref="index:d14380e13009">Frehers</rs> und anderer Biographen, die in <rs ref="index:d10854e16349">Labbes „Bibliotheca bibliothecarum“</rs>, <rs ref="index:d10854e20576">Morhofs „Polyhistor“</rs>, <rs ref="index:d10854e32020">Voglers „Introductio universalis“</rs> sowie <rs ref="index:d10854e29999">Struves „Introductio ad notitiam rei litterariae“</rs> angeführt sind. Diese Werke dürften <rs type="person" role="sender">BP</rs> freilich bekannt sein.</p>
+            <p corresp="#seg8"><rs type="person" role="sender">KS</rs> rät BP, sich mit Schriftstellersammlungen zu einzelnen Regionen oder Städten zu befassen. Zu <rs ref="index:d14380e19828">Italien</rs> führt er an: <rs ref="index:d10854e18433">Mandosi, „Bibliotheca Romana“</rs>; <rs ref="index:d10854e30968">Toppi, „Biblioteca Napoletana“</rs>; <rs ref="index:d10854e20359">Mongitore, „Bibliotheca Sicula“</rs>, <rs ref="index:d14380e32218">Palermo</rs> 1708 (recte: 1707); <rs ref="index:d10854e5694">Cotta, „Museo Novarese“</rs>; <rs ref="index:d14380e2958">Arisi, „Cremona literata“</rs>; <rs ref="index:d10854e23002">Patin, „Lyceum Patavinum“</rs>; <rs ref="index:d10854e24356">Picinelli, „Ateneo dei letterati Milanesi“</rs>; <rs ref="index:d10854e10543">Gimma, „Elogi accademici“</rs> über die Akademie von <rs ref="index:d10854e26398">Rossano</rs>; die „<rs ref="index:d10854e21542">Notizie letterarie ed istoriche intorno agli uomini illustri dell’accademia Fiorentina</rs>“; <rs ref="index:d10854e11407">Guasco, „Storia litteraria dell’Accademia in Reggio“</rs>. Von der Anschaffung dieser Werke rät <rs type="person" role="sender">KS</rs> ab, da mit wenig Aufwand andere für <rs type="person" role="sender">BP</rs> darin nach <rs ref="index:d14380e4919">Benediktinern</rs> suchen können: etwa die Bibliothekare von <rs ref="index:d14380e44301">S. Giorgio Maggiore</rs> zu Venedig (<rs ref="index:d14380e26813">Licinio Martinoni</rs>?), von <rs ref="index:d10854e18306">S. Ambrogio</rs> zu <rs ref="index:d10854e18291">Mailand</rs> (<rs ref="index:d14380e39486">Giuseppe Antonio Sassi</rs>) oder von <rs ref="index:d14380e32104">S. Giustina zu Padua</rs>. Der dortige <rs ref="index:d14380e32121">Bibliothekar</rs> <rs ref="index:d14380e39246">Giuseppe Maria Sandi</rs> hat <rs type="person" role="sender">KS</rs> seine Bestände durchsehen lassen, wobei er <rs ref="index:d10854e22519">Lebensbeschreibungen von Cassinenser Mönchen</rs> des 15. Jahrhunderts sowie Werke derselben gesehen hat.</p>
+            <p corresp="#seg9">In einem Postskriptum berichtet <rs type="person" role="sender">KS</rs>, in Konziliensammlungen vergeblich nach Akten der <rs ref="index:d14380e26022">Mainzer Synode von 1049</rs> gesucht zu haben, besonders hinsichtlich der Rechte <rs ref="index:d10854e34226">Würzburgs</rs>. Wenn <rs type="person" role="sender">BP</rs> in der <rs ref="index:d14380e45571">Wiener</rs> <rs ref="index:d14380e45820">Hofbibliothek</rs> oder anderen Bibliotheken dazu etwas finden könnte, wäre <rs type="person" role="sender">KS</rs> dafür dankbar. Auch <rs ref="index:d14380e26993">Massuet</rs> zu fragen, wäre lohnend.</p>
+            <p corresp="#seg10">In einem Nachsatz bemerkt <rs type="person" role="sender">KS</rs>, dass der von seinem <rs ref="index:d10854e29034">Schreiber</rs> ausgefertigte Brief zwar an vielen Stellen fehlerhaft ist, er ihn aber mit Korrekturen und der Bitte um <rs type="person" role="sender">BPs</rs> Nachsicht trotzdem schickt.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e39290"><rs type="person" role="sender">KS</rs> entschuldigt sich, dass er auf <rs type="person" role="sender">BPs</rs> Brief <ref type="letter">160</ref> nie geantwortet hat, und bringt seine Lebensumstände als Grund für sein zweijähriges Schweigen vor.</seg><seg type="context" n="2" xml:id="d4618e39295">Während der Verhandlungen zur Wahl und Krönung <rs key="index:d14380e21188">Karls VI.</rs> in Frankfurt 1711 wirkte <rs type="person" role="sender">KS</rs> als Sekretär der <rs key="index:d10854e26841">kursächsischen  Delegation</rs>, wobei er auch für deren Verhandlungen mit dem Apostolischen Nuntius <rs key="index:d10854e392">Albani</rs> verwendet wurde, was dazu führte, dass er von den Erziehern des Kurprinzen <rs key="index:d14380e13478">Friedrich August (II.)</rs> als Begleiter für dessen Reise nach <rs key="index:d14380e19828">Italien</rs> engagiert wurde. Seine Heimat <rs key="index:d10854e9767">Fulda</rs> hatte ihm keine adäquate Stellung geboten, für seine Rückkehr hatte ihm hingegen <rs key="index:d10854e34226">Würzburg</rs> die Stelle eines Bibliothekars in Aussicht gestellt. In <rs key="index:d14380e19828">Italien</rs>, besonders in <rs key="index:d10854e31813">Venedig</rs> und <rs key="index:d10854e18291">Mailand</rs>, pflegte <rs type="person" role="sender">KS</rs> neben dem Unterricht für den <rs key="index:d14380e13478">Kurprinzen</rs> gelehrte Kontakte und besuchte zahlreiche Bibliotheken. Als sich die Weiterreise nach <rs key="index:d14380e37680">Rom</rs> zu lange verzögerte, verließ er im Oktober 1712 <rs key="index:d14380e19828">Italien</rs> und kehrte nach Würzburg zurück, wo ihn Fürstbischof <rs key="index:d10854e11166">Johann Philipp von Greiffenclau</rs> zum Sekretär des <rs key="index:d10854e34296">Geistlichen Rats</rs> ernannte. Wie sehr ihn dieses Amt von den Studien abhält, dürfte <rs key="index:d10854e2493">Hyazinth Baumbach</rs> <rs type="person" role="sender">BP</rs> ja berichtet haben.</seg><seg type="context" n="3" xml:id="d4618e39297">Indem <rs type="person" role="sender">KS</rs> nun zu <rs type="person" role="sender">BPs</rs> Brief zurückkehrt, räumt er ein, durch jene Schulen gegangen zu sein, welche die wahre Beredsamkeit zusammen mit der Kenntnis des <rs key="index:d14380e16473">Griechischen</rs> gänzlich aus <rs key="index:d14380e9395">Deutschland</rs> verbannt haben. Daher sind seine Möglichkeiten, <rs type="person" role="sender">BP</rs> bei seinem Unterfangen zu helfen, trotz seines guten Willens gering.</seg><seg type="context" n="4" xml:id="d4618e39299">Zudem sind die Kollektaneen, die <rs type="person" role="sender">KS</rs> für <rs type="person" role="sender">BP</rs> angelegt hatte, bei seiner Übersiedlung aus <rs key="index:d10854e9767">Fulda</rs> verloren gegangen. Doch hat <rs type="person" role="sender">KS</rs> vor einiger Zeit <rs key="index:d10854e2493">Baumbach</rs> <rs key="index:d10854e21145">etwas</rs> aus dem <rs key="index:d14380e24317">Leipziger</rs> „<rs key="index:d10854e21135">Neuen bücher-saal</rs>“ (Ephemerides Lipsienses) für <rs type="person" role="sender">BP</rs> gegeben. Dies hat <rs type="person" role="sender">BP</rs> hoffentlich ebenso erhalten wie die Abschrift eines uralten Briefs („<rs key="index:d10854e20414">Epistola monachorum Casinensium</rs>“), dessen <rs key="index:d10854e20435">Original</rs> sich laut der <rs key="index:d10854e8145">Handschrift</rs> des <rs key="index:d10854e21395">Nikolaus von Siegen</rs>, der im 15. Jahrhundert im <rs key="index:d10854e8069">Peterskloster</rs> zu Erfurt gelebt hat, in <rs key="index:d10854e9767">Fulda</rs> befunden haben soll, dort aber nicht mehr vorhanden ist. <rs type="person" role="sender">KS</rs> möchte gerne <rs type="person" role="sender">BPs</rs> Meinung zum Alter des Briefs erfahren.</seg><seg type="context" n="5" xml:id="d4618e39301"><rs key="index:d10854e2493">Baumbach</rs> hat <rs type="person" role="sender">KS</rs> mitgeteilt, dass <rs type="person" role="sender">BP</rs> über einen „Sermo ad neophytos“ (recte: „<rs key="index:d10854e4025">Praedicatio de abrenuntiatione in baptismate</rs>“) des <rs key="index:d10854e3976">Hl. Bonifatius</rs> verfügt. Solch ein Text ist <rs type="person" role="sender">KS</rs> nicht bekannt. Angaben über Werke des <rs key="index:d10854e3976">Bonifatius</rs> finden sich in <rs key="index:d10854e30497">Tentzels „Supplementum historiae Gothanae secundum“</rs> sowie in <rs key="index:d10854e34106">Witzels „Chorus sanctorum omnium“</rs>, dort gestützt auf <rs key="index:d14380e43380">Trithemius</rs>. Der 1561, mithin bereits nach dem Bauernkrieg und den Diebstählen des Flacius (siehe Kommentar) angelegte <rs key="index:d10854e9847">Katalog</rs> der <rs key="index:d10854e9817">Fuldaer Bibliothek</rs> verzeichnet unter mehr als 800 Pergamentcodices an Werken des Bonifatius eine „<rs key="index:d10854e9859">Historia scholastica</rs>“ (recte: von Petrus Comestor), einen „<rs key="index:d10854e9852">Liber collectaneus ad missam</rs>“ und einen „<rs key="index:d10854e9825">Liber de laboribus suis in conversione gentium</rs>“ (siehe Kommentar). <rs type="person" role="sender">KS</rs> hat nichts von alledem je gesehen und bezweifelt, dass noch etwas davon existiert, da die <rs key="index:d10854e9817">Fuldaer Bibliothek</rs> – nach <rs key="index:d10854e20576">Morhofs „Polyhistor“</rs> einst die vornehmste in <rs key="index:d14380e11804">Europa</rs> – durch Kriegszerstörungen zugrunde gegangen ist und vor allem im <rs key="index:d10854e6755">Dreißigjährigen Krieg</rs> kaum die drei „Codices Bonifatiani“ zusammen mit den Reliquien in Sicherheit gebracht werden konnten;<rs key="index:d10854e31929"> einer von diesen</rs> enthält Korrekturen von der Hand des <rs key="index:d10854e31923">Viktor von Capua</rs>, was <rs type="person" role="sender">KS</rs> in seinem „<rs key="index:d10854e28990">Criterium</rs>“ darlegen wollte. Auch in <rs key="index:d10854e34226">Würzburg</rs> existieren zwei ähnliche <rs key="index:d10854e34289">Evangeliencodices</rs> in <rs key="index:d10854e28315">Halbunziale</rs> (semiuncialis rotunda) mit Marginalien in <rs key="index:d10854e28286">gotischer Schrift</rs> (scriptura Gothica).</seg><seg type="context" n="6" xml:id="d4618e39303">Durch Zufall ist <rs type="person" role="sender">KS</rs> auf eine <rs key="index:d10854e31227">Handschrift des Trithemius</rs> gestoßen, die <rs key="index:d10854e31221">Schriften</rs> über die bedeutenden Männer (viri illustres) des Karmeliter- und des Benediktinerordens enthält. <rs type="person" role="sender">KS</rs> berichtet weiters von <rs key="index:d10854e14139">Versen zu Ehren der <rs key="index:d10854e14863">Hl. Kilian</rs></rs> und <rs key="index:d10854e14134"><rs key="index:d10854e4613">Burchard</rs></rs> von <rs key="index:d10854e14124">Johannes von Lauterbach</rs>, Mönch des <rs key="index:d10854e8069">Petersklosters</rs> zu <rs key="index:d10854e7974">Erfurt</rs>, dann von <rs key="index:d10854e34414">St. Stephan</rs> zu <rs key="index:d10854e34226">Würzburg</rs>; <rs key="index:d10854e16735">Lauterbach</rs>, an der Grenze zwischen <rs key="index:d14380e18255">Hessen</rs> und der Landschaft <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Bucha<?oxy_custom_end?>, war früher dem Abt von <rs key="index:d10854e9767">Fulda</rs> untertan. Weiters nennt <rs type="person" role="sender">KS</rs> einen <rs key="index:d10854e517">Brief</rs> des <rs key="index:d14380e1014">Alkuin von Fulda</rs>, den <rs key="index:d14380e12406">Fontanini</rs> in den „<rs key="index:d10854e9043">Vindiciae antiquorum diplomatum</rs>“ <rs key="index:d10854e9049">publiziert</rs> hat. In der zuvor genannten <rs key="index:d10854e8145">Erfurter Handschrift</rs> (des <rs key="index:d10854e21395">Nikolaus von Siegen</rs>) finden sich Angaben über die Mönche Isuard (recte: <rs key="index:d10854e31662">Usuard von St.-Germain</rs>), <rs key="index:d10854e26555">Rudolf (von Fulda?)</rs> und <rs key="index:d10854e30615">Theoderich (von Fleury?)</rs>. <rs type="person" role="sender">KS</rs> konnte diese <rs key="index:d10854e8145"><rs key="index:d10854e21401">Handschrift</rs></rs> sechs Monate lang in <rs key="index:d10854e9767">Fulda</rs> benützen; er zweifelt nicht, dass die<rs key="index:d10854e8069"> Petrenser</rs> die Handschrift auch <rs type="person" role="sender">BP</rs> zur Verfügung stellen oder das Relevante für ihn abschreiben werden.</seg><seg type="context" n="7" xml:id="d4618e39305">Das Leben des Bischofs <rs key="index:d14380e16920">Haimo von Halberstadt</rs>, der zuvor Mönch von <rs key="index:d10854e9767">Fulda</rs> war, hat der <rs key="index:d14380e16951">Hallenser</rs> Professor <rs key="index:d10854e1184">Anton</rs> herausgebracht („<rs key="index:d10854e1190">Exercitatio historico-theologica</rs>“). Beachtenswert sind auch die Ausführungen zu <rs key="index:d14380e16920">Haimo</rs> in der <rs key="index:d10854e20297">„Homonymoscopia“ Johann Mollers</rs>. Das 1630 zu <rs key="index:d14380e39054">Salzburg</rs> (von <rs key="index:d10854e32507">Matthäus Weiß</rs>) herausgebrachte „<rs key="index:d10854e32520">Lyceum Benedictinum</rs>“ dürfte <rs type="person" role="sender">BP</rs> bekannt sein. <rs type="person" role="sender">KS</rs> hat auch bei <rs key="index:d14380e7705">Cave</rs> („<rs key="index:d14380e7715">Scriptorum ecclesiasticorum historia literaria</rs>“), <rs key="index:d14380e29687">Moréri</rs> („<rs key="index:d14380e29693">Dictionaire</rs>“) und <rs key="index:d10854e32057">Voss</rs> („<rs key="index:d10854e32065">De historicis Latinis</rs>“) sowie <rs key="index:d10854e27029">Sand</rs>, der dessen Werk fortsetzte („<rs key="index:d10854e27035">Notae et animadversiones</rs>“), Notizen über Fuldaer Schriftsteller gesammelt, ebenso aus dem „<rs key="index:d10854e24496">Theatrum“</rs> von <rs key="index:d10854e24488">Placcius</rs>, aus den Werken <rs key="index:d10854e203">Melchior Adams</rs>, <rs key="index:d14380e13009">Frehers</rs> und anderer Biographen, die in <rs key="index:d10854e16349">Labbes „Bibliotheca bibliothecarum“</rs>, <rs key="index:d10854e20576">Morhofs „Polyhistor“</rs>, <rs key="index:d10854e32020">Voglers „Introductio universalis“</rs> sowie <rs key="index:d10854e29999">Struves „Introductio ad notitiam rei litterariae“</rs> angeführt sind. Diese Werke dürften <rs type="person" role="sender">BP</rs> freilich bekannt sein.</seg><seg type="context" n="8" xml:id="d4618e39307"><rs type="person" role="sender">KS</rs> rät BP, sich mit Schriftstellersammlungen zu einzelnen Regionen oder Städten zu befassen. Zu <rs key="index:d14380e19828">Italien</rs> führt er an: <rs key="index:d10854e18433">Mandosi, „Bibliotheca Romana“</rs>; <rs key="index:d10854e30968">Toppi, „Biblioteca Napoletana“</rs>; <rs key="index:d10854e20359">Mongitore, „Bibliotheca Sicula“</rs>, <rs key="index:d14380e32218">Palermo</rs> 1708 (recte: 1707); <rs key="index:d10854e5694">Cotta, „Museo Novarese“</rs>; <rs key="index:d14380e2958">Arisi, „Cremona literata“</rs>; <rs key="index:d10854e23002">Patin, „Lyceum Patavinum“</rs>; <rs key="index:d10854e24356">Picinelli, „Ateneo dei letterati Milanesi“</rs>; <rs key="index:d10854e10543">Gimma, „Elogi accademici“</rs> über die Akademie von <rs key="index:d10854e26398">Rossano</rs>; die „<rs key="index:d10854e21542">Notizie letterarie ed istoriche intorno agli uomini illustri dell’accademia Fiorentina</rs>“; <rs key="index:d10854e11407">Guasco, „Storia litteraria dell’Accademia in Reggio“</rs>. Von der Anschaffung dieser Werke rät <rs type="person" role="sender">KS</rs> ab, da mit wenig Aufwand andere für <rs type="person" role="sender">BP</rs> darin nach <rs key="index:d14380e4919">Benediktinern</rs> suchen können: etwa die Bibliothekare von <rs key="index:d14380e44301">S. Giorgio Maggiore</rs> zu Venedig (<rs key="index:d14380e26813">Licinio Martinoni</rs>?), von <rs key="index:d10854e18306">S. Ambrogio</rs> zu <rs key="index:d10854e18291">Mailand</rs> (<rs key="index:d14380e39486">Giuseppe Antonio Sassi</rs>) oder von <rs key="index:d14380e32104">S. Giustina zu Padua</rs>. Der dortige <rs key="index:d14380e32121">Bibliothekar</rs> <rs key="index:d14380e39246">Giuseppe Maria Sandi</rs> hat <rs type="person" role="sender">KS</rs> seine Bestände durchsehen lassen, wobei er <rs key="index:d10854e22519">Lebensbeschreibungen von Cassinenser Mönchen</rs> des 15. Jahrhunderts sowie Werke derselben gesehen hat.</seg><seg type="context" n="9" xml:id="d4618e39309">In einem Postskriptum berichtet <rs type="person" role="sender">KS</rs>, in Konziliensammlungen vergeblich nach Akten der <rs key="index:d14380e26022">Mainzer Synode von 1049</rs> gesucht zu haben, besonders hinsichtlich der Rechte <rs key="index:d10854e34226">Würzburgs</rs>. Wenn <rs type="person" role="sender">BP</rs> in der <rs key="index:d14380e45571">Wiener</rs> <rs key="index:d14380e45820">Hofbibliothek</rs> oder anderen Bibliotheken dazu etwas finden könnte, wäre <rs type="person" role="sender">KS</rs> dafür dankbar. Auch <rs key="index:d14380e26993">Massuet</rs> zu fragen, wäre lohnend.</seg><seg type="context" n="10" xml:id="d4618e39311">In einem Nachsatz bemerkt <rs type="person" role="sender">KS</rs>, dass der von seinem <rs key="index:d10854e29034">Schreiber</rs> ausgefertigte Brief zwar an vielen Stellen fehlerhaft ist, er ihn aber mit Korrekturen und der Bitte um <rs type="person" role="sender">BPs</rs> Nachsicht trotzdem schickt.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">96.</hi></p>
-            <div type="remarks">
-               <p>Der Brief ist von einem Sekretär geschrieben, nur der Nachsatz &lt;10&gt; von KS.
-                  Dieser unterließ es, in den freigelassenen Platz im Datum die Tagesangabe
-                  einzutragen. Der Brief muss aber in den frühen Juni fallen, zumal BP am 16. Juni
-                  antwortete; vgl. <ref type="letter">312</ref>.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Viro admodum reverendo eximio eruditissimoque domino patri Bernardo Petz presbytero Mellicensi ordinis sancti Benedicti Georgius Conradus Sigler, celsissimo principi episcopo Herbipolensi ac Franciae Orientalis duci a secretis et bibliotheca, salutem plurimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e39331">Contingeret mihi prorsum ex merito, sicubi, vir praestantissime, a te tacito cogitationis <sic>convitio</sic> [<hi rend="italic">sic</hi>] verberarer, quod literis tuis amantissime scriptis nihil unquam responderim, siquidem non omnem a me abesse culpam neque iusta<note place="foot" xml:id="d4618e39336">	Danach durchgestrichen <hi rend="italic">simul</hi>.</note> ac idonea bimi silentii excusatione uti me posse<note place="foot" xml:id="d4618e39342">	Danach durchgestrichen <hi rend="italic">haud</hi>.</note> diffiteor, nisi tua singularis humanitas, quam summa cum eruditione tibi coniunctam esse suavissimae tuae luculenter testatae sunt literae, excusatum me velit liberatumque. Idque eo facilius, quo vitae meae ab eo tempore transactae ratio quadantenus pro me interpellaverit; quam ut paucis enarrem, permitte. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e39348">Obtulit sese occasio anno MDCCXI, ut eo <seg type="lemma" corresp="#d4618e39520">tempore, quo electio ac coronatio imperatoris Francofurti peragebatur</seg>, in aula <seg type="lemma" corresp="#d4618e39527">legationis Saxonicae</seg> secretarii munere fungi mihi concederetur, qua<note place="foot" xml:id="d4618e39350">	Danach durchgestrichen <hi rend="italic">in</hi>.</note> occasione factum est, ut<note place="foot" xml:id="d4618e39356">	<hi rend="italic">Factum est, ut</hi> über der Zeile eingefügt.</note>, dum mea saepius<note place="foot" xml:id="d4618e39362">	Danach durchgestrichen <hi rend="italic">in</hi>.</note> in tractandis cum aula <seg type="lemma" corresp="#d4618e39532">nuntii apostolici</seg> negotiis uterentur opera, qui serenissimi <seg type="lemma" corresp="#d4618e39537">principis regii et electoratus Saxonici moderatores erant, facilem eorundem assensum dederim desideriis ipsamque aulam principis regii in Italiam</seg> fuerim secutus, eoque libentius, quod patria mea honestiorem negaret sustentationem. Neque tamen ante Fuldam usque adeo degenerem ab antiquo literarum cultu deserui, ac Herbipolis ultro securam ad reditum stationem, bibliothecarii scilicet officium, pollicita esset. In Italia igitur Venetiis et Mediolani tempus, quod instructioni principis memorati subtrahere fas erat, totum in acquirendis fautoribus et amicis visendisque et rimandis bibliothecis insumpsi; at vero, cum iter nostrum Romam longius opinione<note place="foot" xml:id="d4618e39368">	Danach durchgestrichen <hi rend="italic">nostra</hi>.</note> protraheretur, anni elapsi mense Octobri aulam, <seg type="lemma" corresp="#d4618e39542">Italiam literatosque reliqui</seg> atque benignissimae voluntati principis mei morem gessi, qui secretarii munere de consilio <sic>ecclesiasto</sic> [<hi rend="italic">sic</hi>] me ultro ornaverat. Herbipoli ergo nunc moror muneris huius laboribus, plus quam Musae vellent, distentus, ut a reverendissimo domino Hyacintho nostro intellexeris. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e39377">Sed ne longioribus excusationis verbis expleam omne scribendi propositum, ad suavissimas tuas redeo, quarum mehercle ubi recordor, quantum in iis mihi tribuas, vix non iterato a proposito me retrahit verecundia; ipse enim mihi sum conscius, et<note place="foot" xml:id="d4618e39379">	<hi rend="italic">Ipse ... et</hi> über der Zeile eingefügt. Vor dem letzten Wort durchgestrichen <hi rend="italic">qui</hi>.</note> eorum<note place="foot" xml:id="d4618e39388">	Davor und danach unleserliche Streichungen im Ausmaß von ca. 2 bzw. ca. 5–6 Buchstaben.</note> in scholis enutritus sum, qui veram eloquentiam omnem una cum Graecis literis e totius iamdudum Germaniae proscripserunt finibus<note place="foot" xml:id="d4618e39391">	Danach durchgestrichen <hi rend="italic">usque</hi>.</note>, adeo ut<note place="foot" xml:id="d4618e39397">	Danach durchgestrichen <hi rend="italic">non</hi>.</note> de veteri sua sede amplius cogitare nec ausit; quocirca, quod praeter animum bonis inserviendi literis cupidum in me suspicias, est omnino nihil. Vellem equidem, et quam maxime vellem, positum esse aliquid in viribus meis, quod ad spartam tuam ornandam facere institutumque ut difficillimum, ita praeclarissimum iuvare possit. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e39403">Dolere autem inprimis debeo schedarum iacturam in abitu Fuldensi inter alia perpessam, quibus annotata a me fuerant collecta, qualiacunque e re tua fore eram arbitratus; quod licet damnum <pb n="1v"/> resarciri vix possit, non tamen committam, ut exspectes a me frustra, quod scivero meae esse facultatis; quemadmodum iam<note place="foot" xml:id="d4618e39407">	Über der Zeile eingefügt.</note> nuper reverendissimo domino Hyacintho nostro aliquid, quod <seg type="lemma" corresp="#d4618e39547">ex ephemeridibus Lipsiensibus</seg> in usum tuum transcribi curaret, tradidi; acceperis ab eodem pariter <seg type="lemma" corresp="#d4618e39554">literarum antiquissimarum exemplar</seg>, cuius extitisse olim prototypon in monasterio Fuldensi asserit <seg type="lemma" corresp="#d4618e39559">manuscriptum Erffurtense</seg> a Nicolao de Sighen monasterii S. Petri incola circa finem saeculi XV. consarcinatum; harum nullum Fuldae extat vestigium literarum, de quarum antiquitate malim tamen tuum, vir eruditissime, iudicium explorare. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e39410">Relatum habeo ex eodem domino Hyacintho supra memorato te <seg type="lemma" corresp="#d4618e39564">sermonem a sancto Bonifacio</seg> ad neophytos<note place="foot" xml:id="d4618e39412">	Korrigiert aus <hi rend="italic">neophitos</hi>.</note> dictum possidere; an editus is, et qualis sit, magni fecerim scire. Exceptis enim viri sancti epistolis me quicquam vidisse non memini. Wilhelmus Ernestus <seg type="lemma" corresp="#d4618e39571">Tenzelius</seg> Supplemento historiae Gothanae folio mihi 343, sic et Georgius <seg type="lemma" corresp="#d4618e39577">Wicelius</seg> in Vitis sanctorum folio mihi 262 plures libros a Bonifacio compositos recenset Trithemium citans. In ipso etiam <seg type="lemma" corresp="#d4618e39582">cathalogo bibliothecae Fuldensis, qualis anno 1561</seg> post <seg type="lemma" corresp="#d4618e39587">bellum rusticanum</seg> et spolium<note place="foot" xml:id="d4618e39418">	Korrigiert aus <hi rend="italic">splium</hi>.</note> Flacci Illyrici iam perpessum residua fuit, inter DCCC et ultra codices membranaceos numerantur quoque eiusdem sancti <seg type="lemma" corresp="#d4618e39597">Bonifacii Historia scholastica</seg>, eiusdem <seg type="lemma" corresp="#d4618e39602">Liber collectaneus ad missam</seg>, eiusdem <seg type="lemma" corresp="#d4618e39607">Liber de laboribus suis in conversione gentium</seg> et reliqui; nihil autem, ut dixi, huiuscemodi unquam vidi, neque facile credam extare in hunc usque diem quidquam. Etenim amplissima illa veterumque librorum ad miraculum plenissima ac totius Europae celeberrima bibliotheca Fuldensis (ut <seg type="lemma" corresp="#d4618e39612">Morhoffii Polyhistoris</seg> verbis utar) turbarum ac bellorum fato periit atque taliter <seg type="lemma" corresp="#d4618e39617">belli praecipue Suecici</seg> tempore extirpata fuit, ut vix tres codices Bonifaciani dicti inter reliquias sanctorum in securitatem aliorsum transportati flammas et direptionem evaserint. Hos inter <seg type="lemma" corresp="#d4618e39627">unus reperitur propriis sancti Victoris Capuani manibus correctus</seg>, ut pro indubitato teneo, atque hanc meam opinionem non una ratione stabilitam dedi in Criterio, quod olim de his codicibus edere meditabar. Hic quoque Herbipoli asservantur duo <seg type="lemma" corresp="#d4618e39633">codices Evangeliorum</seg> Fuldensi illi non absimiles, charactere utrinque semiunciali rotundo, adnotationibus etiam Gothicae scripturae hinc inde intertextis. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e39424">Inopinato in meas <seg type="lemma" corresp="#d4618e39638">incidit manus manuscriptum Trithemii</seg>, in quo praeter ipsam manum eiusdem plura observavi, ut De viris illustribus ordinum Carmelitarum et Benedictinorum; item<note place="foot" xml:id="d4618e39426">	Davor durchgestrichen <hi rend="italic">librum</hi>.</note> <seg type="lemma" corresp="#d4618e39645">Joannis de Lauterbach, monachi S. Stephani et olim S. Petri Erffurtensis, de sanctis Kiliano et Burcardo metra</seg> hactenus inedita (Lauterbach oppidum est in Hassiae ac Buchoniae finibus situm, quod aliquando abbati Fuldensi paruit); de Alcuino Fuldensi epistolam dedit<note place="foot" xml:id="d4618e39432">	Korrigiert aus <hi rend="italic">edidit</hi>.</note> hactenus ineditam illustrissimus <seg type="lemma" corresp="#d4618e39650">Fontaninus in Vindiciis</seg> antiquorum diplomatum; de Isuardo, Rudolpho, Theodorico monachis aliqua adducit <seg type="lemma" corresp="#d4618e39655">manuscriptum Erffurtense</seg> superius adductum, quod integrum evolvisse non pigebit, quo Fuldae sex olim mensibus usus quoque fui, neque dubium est patres illos ultro in usum tuum codicem hunc commodaturos vel saltem, quae in <pb n="2r"/> rem tuam fuerint, transcripturos. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d4618e39440">Haymonis Halberstadensis episcopi, ante Fuldensis monachi, vitam typis nuper vulgavit Antonius professor Hallensis; legi quoque merentur, quae <seg type="lemma" corresp="#d4618e39660">Mollerus</seg> in Homonymoscopia de eodem in medium profert, non ubivis cognita. <seg type="lemma" corresp="#d4618e39667">Lycaeum Benedictinum</seg> Salisburgi 1630 impressum cognitum haud dubie tibi erit. Ex Caveo, Morero, Vossio et Sandio huius continuatore plura notaveram de aliis inter Fuldenses eruditionis fama insignibus viris, ita pariter ex Placcii Theatro, ex Melchiore Adamo, Frehero aliisque biographis, quos congessit Labbeus in Bibliotheca bibliothecarum, Morhoff in Polyhistore, Vogler et Struvius Introductionibus in rem literariam. Sed haec omnia tibi eruditissimo viro et hac in provincia iamdiu versanti notiora erunt, quam ut iis recensendis longius immorari operae ducam pretium<note place="foot" xml:id="d4618e39442">	<hi rend="italic">operae ducam pretium</hi> über der Zeile eingefügt.</note>. </seg><seg type="context" n="8" xml:space="preserve" xml:id="d4618e39448">Neque me monitore te egere puto evolvendos esse praeprimis bibliothecarum scriptores, illos maxime, qui vitas et scripta eruditorum unius provinciae vel civitatis collegerunt; ut ex Italis modo occurrunt Mandosii<note place="foot" xml:id="d4618e39450">	Korrigiert aus <hi rend="italic">Mandosius</hi>. Danach durchgestrichen <hi rend="italic">e</hi> sowie ein Beistrich.</note> Bibliotheca Romana, Toppii<note place="foot" xml:id="d4618e39459">	Korrigiert aus <hi rend="italic">Toppius</hi>.</note> Neapolitana<note place="foot" xml:id="d4618e39465">	Korrigiert aus <hi rend="italic">Neapolitanus</hi>.</note>, Antonini Mongitoris Bibliotheca Sicula Panormi 1708, Musaeum Novariense Cottae, Cremona erudita, Lycaeum Patavinum, <sic>Athaenaeum</sic> [<hi rend="italic">sic</hi>] Mediolanense, Hyacinthi Gimmae<note place="foot" xml:id="d4618e39474">	Korrigiert aus <hi rend="italic">Gymmae</hi>.</note> Elogia academiae Rosciani, Notitiae academiae Florentinae 1700, similiter Regii 1711 et reliqua. Quos singulos comparare nec consultum nec necesse quidem aestimo; tenui quis labore colligeret, quotquot ex familia Benedictina in eiusmodi libris proferuntur, neque dubito hunc amice subituros laborem, qui <seg type="lemma" corresp="#d4618e39672">S. Georgii Maioris monasterii Venetiis</seg>, ad S. Justinam Patavii et <seg type="lemma" corresp="#d4618e39679">S. Ambrosium Mediolani</seg> bibliothecae praesunt: viros ut singulos doctos, ita perhumanos ego deprehendi. Patavini nomen, quantum recordor, hoc est: don <seg type="lemma" corresp="#d4618e39684">Giuseppe Maria Sandi</seg>; humanissimus hic vir copiam perlustrandi dedit manuscripta<note place="foot" xml:id="d4618e39481">	Danach durchgestrichen <hi rend="italic">quae</hi>.</note> ibi asservata<note place="foot" xml:id="d4618e39487">	Korrigiert aus <hi rend="italic">asservantur</hi>.</note>, quae inter <seg type="lemma" corresp="#d4618e39689">observavi vitas illustrissimorum virorum monachorum Cassinensium saeculo XV. scriptas; item libros</seg> illustrium virorum monachorum Cassinensium. Sed ne in recensendis illis rebus, quae curae minutioris sunt, tua longius abutar patientia, finem nunc tandem his literis imponendum esse reor, te vero exorandum, ut, licet minus opere valui, voluntatem saltem et animum tui studiosissimum admittas; ab eo enim, quo suavissimae tuae mihi reddebantur, non modo optimos tuos laudare conatus, sed et admirari eruditionem atque adeo amore quodam singulari te complecti coepi; cultum adicio observantiamque, quibus, quoad vivam, te persequi mens est. Tu, vir optime, vale et me quoque ama ac inter tuos imposterum numera.</seg></p>
-            <p xml:space="preserve">Dabam Herbipoli, die [...]<note place="foot" xml:id="d4618e39495">	Freigelassener Platz im Ausmaß von ca. 1–2 Wörtern.</note> mensis Junii MDCCXIII.</p>
-            <p xml:space="preserve"><seg type="context" n="9" xml:space="preserve" xml:id="d4618e39499">P.S. <seg type="lemma" corresp="#d4618e39695">Acta synodi Moguntinae</seg> anno MXLIX celebratae irrito labore in conciliorum collectionibus ac etiam alibi usque adhuc quaesivi; praecipue vero ea quaero, quae pro huius nostri episcopatus iuribus ventilata atque conclusa fuisse perhibentur. Quod si vel ex Vindobonensi caesarea vel aliis antiquorum codicum fama celebratis bibliothecis aliquid ad nostram hanc rem consequi valeremus, tua potissimum intercessione, faceres certe rem mihi gratissimam patriaeque utilissimam. Forte etiam dominum Masuet hac super re consuluisse iuvabit, cui <pb n="2v"/> viro summo tibique cumprimis omnem meam reciproco studio operam addico.</seg></p>
-            <p xml:space="preserve"><seg type="context" n="10" xml:space="preserve" xml:id="d4618e39504">Licet ab amanuensi minus correcte viderem descriptas has meas, malui tamen correctionibus deformes et mendosas<note place="foot" xml:id="d4618e39506">	<hi rend="italic">et mendosas</hi> über der Zeile eingefügt.</note> quam nullasdum mittere, tuae, vir summe, bonitati confisus. Iterum vale. Ita precatur ex corde G. C. Sigler.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e39513">
-               <ref type="context">1</ref>
-               <label>tacito cogitationis convitio verberarer</label>
-               <p>Vgl. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Cicero,
-                  Epistolae ad familiares<?oxy_custom_end?> 16,26 (Cicero an Tiro): „Verberavi te
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>tacito cogitationis convitio verberarer</mentioned>
+            <p>Vgl. Cicero,
+                  Epistolae ad familiares 16,26 (Cicero an Tiro): „Verberavi te
                   cogitationis tacito dumtaxat convicio, quod fasciculus alter ad me iam sine tuis
                   litteris perlatus est“.</p>
-            </note>
-            <note xml:id="d4618e39520">
-               <ref type="context">2</ref>
-               <label>tempore, quo electio ... peragebatur</label>
-               <p>Die Verhandlungen in Frankfurt vor der Kaiserwahl dauerten von August bis Oktober
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>tempore, quo electio ... peragebatur</mentioned>
+            <p>Die Verhandlungen in Frankfurt vor der Kaiserwahl dauerten von August bis Oktober
                   1711; die Wahl selbst fand am 12. Oktober statt, die Krönung am 22. Dezember.
                   Friedrich August I. von Sachsen (August II. von Polen), der Reichsvikar in
                   Norddeutschland, unterstützte zwar die Wahl Karls VI., verfolgte aber zugleich
                   eine Bündnispolitik mit der Kurie in der Perspektive, seinem Haus nach den
-                  Habsburgern eine Anwartschaft auf die Kaiserwürde zu schaffen: <rs type="bibl"
-                     key="bibl:36884">Rill, Karl VI</rs>. 97–106. Vgl. <ref type="letter">196</ref>,
-                     <ref type="letter">201</ref>.</p>
-            </note>
-            <note xml:id="d4618e39527">
-               <ref type="context">2</ref>
-               <label>legationis Saxonicae</label>
-               <p>Der sächsische Kurfürst war bei der Wahl nicht selbst anwesend, sondern durch
-                  mehrere Gesandte vertreten: <rs type="bibl" key="bibl:36700">Neuhaus, Friedrich
+                  Habsburgern eine Anwartschaft auf die Kaiserwürde zu schaffen: <rs type="bibl" ref="bibl:36884">Rill, Karl VI</rs>. 97–106. Vgl. <ref type="letter" target="letter:196">196</ref>,
+                     <ref type="letter" target="letter:201">201</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>legationis Saxonicae</mentioned>
+            <p>Der sächsische Kurfürst war bei der Wahl nicht selbst anwesend, sondern durch
+                  mehrere Gesandte vertreten: <rs type="bibl" ref="bibl:36700">Neuhaus, Friedrich
                      August I</rs>. 183f. Einen Beleg für die Position KS’ als Sekretär der
-                  sächsischen Legation bietet: <rs type="bibl" key="bibl:35760">Vollständiges
+                  sächsischen Legation bietet: <rs type="bibl" ref="bibl:35760">Vollständiges
                      diarium</rs> 163.</p>
-            </note>
-            <note xml:id="d4618e39532">
-               <ref type="context">2</ref>
-               <label>nuntii apostolici</label>
-               <p>Annibale Albani, Neffe Papst Klemens’ XI., war seit 1709 als außerordentlicher
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>nuntii apostolici</mentioned>
+            <p>Annibale Albani, Neffe Papst Klemens’ XI., war seit 1709 als außerordentlicher
                   Nuntius in Wien gewesen, um über die Restitution von Comacchio zu verhandeln;
                   während dieser Zeit hatte er 1710 auch Dresden besucht, wo er sich für den
                   Übertritt des Kurprinzen Friedrich August zum Katholizismus einsetzte. Während der
                   zweiten Jahreshälfte 1711 residierte Albani als außerordentlicher Nuntius in Köln;
                   eine Anwesenheit in Frankfurt zum Zeitpunkt der Kaiserwahl war ihm durch die
                   Einsprüche einiger der Kurfürsten verwehrt, doch hatte er sich im Spätsommer dort
-                  aufgehalten und dabei den Kurprinzen und dessen Erzieher getroffen: <rs
-                     type="bibl" key="bibl:15256">Bittner–Groß, Repertorium 1</rs> 381f., 384; <rs
-                     type="bibl" key="bibl:37022">Sofri, Albani</rs> 598f.; <rs type="bibl"
-                     key="bibl:37044">Staszewski, August III</rs> 48f. – Gegen Ende seines
+                  aufgehalten und dabei den Kurprinzen und dessen Erzieher getroffen: <rs type="bibl" ref="bibl:15256">Bittner–Groß, Repertorium 1</rs> 381f., 384; <rs type="bibl" ref="bibl:37022">Sofri, Albani</rs> 598f.; <rs type="bibl" ref="bibl:37044">Staszewski, August III</rs> 48f. – Gegen Ende seines
                   Aufenthalts in Österreich hatte Albani am 28. April 1711 auch Melk besichtigt: PE
                   5 60.</p>
-            </note>
-            <note xml:id="d4618e39537">
-               <ref type="context">2</ref>
-               <label>principis regii ... in Italiam</label>
-               <p>Der sächsische Kurprinz hielt sich im Rahmen seiner Kavalierstour von August 1711
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned>principis regii ... in Italiam</mentioned>
+            <p>Der sächsische Kurprinz hielt sich im Rahmen seiner Kavalierstour von August 1711
                   bis Januar 1712 in Frankfurt auf, von wo er nach Venedig, Modena und Mailand
                   weiterreiste. In Bologna vollzog er am 27. November 1712 die von seinem Vater
                   schon lange in Aussicht gestellte Konversion zum Katholizismus, die den Gegenstand
@@ -164,276 +147,243 @@
                   internationaler Ebene gebildet hatte. Die Anstellung von KS ist im Zusammenhang
                   mit Umbesetzungen im Gefolge des Prinzen im Dezember 1711 zu sehen, die der
                   Entfernung von Begleitern dienten, welche seiner protestantischen Mutter
-                  nahestanden: <rs type="bibl" key="bibl:37044">Staszewski, August III</rs> 46–56;
-                  vgl. <rs type="bibl" key="bibl:36716">Nicklas, Friedrich August II</rs>. 193f.</p>
-            </note>
-            <note xml:id="d4618e39542">
-               <ref type="context">2</ref>
-               <label>Italiam ... reliqui</label>
-               <p>Abt Hyazinth Baumbach berichtete Anfang November 1712, dass KS in Würzburg
-                  eingetroffen war (<ref type="letter">284</ref>). Von der Ernennung zum Sekretär
-                  des Geistlichen Rats wusste Baumbach bereits Ende August (<ref type="letter"
-                     >267</ref>).</p>
-            </note>
-            <note xml:id="d4618e39547">
-               <ref type="context">4</ref>
-               <label>ex ephemeridibus Lipsiensibus</label>
-               <p>Dieser Auszug wurde von Baumbach als Beilage zu 303 versendet; nach seiner dortigen Aussage war die Quelle der „Neue bücher-saal“.</p>
-            </note>
-            <note xml:id="d4618e39554">
-               <ref type="context">4</ref>
-               <label>literarum ... exemplar</label>
-               <p>Vgl. <ref type="letter">303</ref>, <ref type="letter">312</ref>. Zu dieser
-                  „Epistola monachorum Casinensium“ vgl. <rs type="bibl" key="bibl:36634"
-                     >Meyer–Burckhardt, Handschriften</rs> 460. Der Text ist in Melk in einer dort
+                  nahestanden: <rs type="bibl" ref="bibl:37044">Staszewski, August III</rs> 46–56;
+                  vgl. <rs type="bibl" ref="bibl:36716">Nicklas, Friedrich August II</rs>. 193f.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
+            <mentioned>Italiam ... reliqui</mentioned>
+            <p>Abt Hyazinth Baumbach berichtete Anfang November 1712, dass KS in Würzburg
+                  eingetroffen war (<ref type="letter" target="letter:284">284</ref>). Von der Ernennung zum Sekretär
+                  des Geistlichen Rats wusste Baumbach bereits Ende August (<ref type="letter" target="letter:267">267</ref>).</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
+            <mentioned>ex ephemeridibus Lipsiensibus</mentioned>
+            <p>Dieser Auszug wurde von Baumbach als Beilage zu 303 versendet; nach seiner dortigen Aussage war die Quelle der „Neue bücher-saal“.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
+            <mentioned>literarum ... exemplar</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:303">303</ref>, <ref type="letter" target="letter:312">312</ref>. Zu dieser
+                  „Epistola monachorum Casinensium“ vgl. <rs type="bibl" ref="bibl:36634">Meyer–Burckhardt, Handschriften</rs> 460. Der Text ist in Melk in einer dort
                   angefertigten neuerlichen Abschrift überliefert: StiA Melk, Karton 7 Patres 9,
                   Abschriftencodex 70r–71v, im Anschluss an eine Abschrift dieses Briefs. Wann die
                   „Epistola“ an BP verschickt wurde, ist nicht ganz klar; vielleicht wurde sie von
-                  Baumbach zusammen mit <ref type="letter">309</ref> diesem Brief beigefügt, als er
+                  Baumbach zusammen mit <ref type="letter" target="letter:309">309</ref> diesem Brief beigefügt, als er
                   ihn an BP weitersendete.</p>
-            </note>
-            <note xml:id="d4618e39559">
-               <ref type="context">4</ref>
-               <label>manuscriptum Erffurtense</label>
-               <p>Das Autograph des „Chronicon ecclesiasticum“ des Nikolaus von Siegen (heute
-                  Landeshauptarchiv Weimar, Hs. F 166; vgl. <ref type="letter">166</ref> &lt;4&gt;),
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg4">
+            <mentioned>manuscriptum Erffurtense</mentioned>
+            <p>Das Autograph des „Chronicon ecclesiasticum“ des Nikolaus von Siegen (heute
+                  Landeshauptarchiv Weimar, Hs. F 166; vgl. <ref type="letter" target="letter:166">166</ref> <ref target="letter:166#seg4">4</ref>),
                   worin sich der Text der „Epistola“ auf 83r–v findet und zur Herkunft vermerkt
                   wird: „in monasterio Fuldensi scriptum invenitur et habetur videlicet quod
                   epistola sequens hic transmissa sive directa sit a fratribus Cassinensibus
-                  fratribus Fuldensibus“: <rs type="bibl" key="bibl:35728">Chronicon Ecclesiasticum
+                  fratribus Fuldensibus“: <rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum
                      Nicolai de Siegen</rs> 162–164.</p>
-            </note>
-            <note xml:id="d4618e39564">
-               <ref type="context">5</ref>
-               <label>sermonem a sancto Bonifacio</label>
-               <p>Es handelt sich um die „Praedicatio de abrenuntiatione in baptismate“ in StiB
-                  Melk, Cod. 597, 114r–115r; vgl. <rs type="bibl" key="bibl:16526"
-                     >Glassner–Haidinger, Inventar Melk 1</rs>, Katalogband 269. BP druckte diesen
-                  Text später: <rs type="bibl" key="bibl:36782">Pez, Thesaurus </rs>4/2 col. 3–6.
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
+            <mentioned>sermonem a sancto Bonifacio</mentioned>
+            <p>Es handelt sich um die „Praedicatio de abrenuntiatione in baptismate“ in StiB
+                  Melk, Cod. 597, 114r–115r; vgl. <rs type="bibl" ref="bibl:16526">Glassner–Haidinger, Inventar Melk 1</rs>, Katalogband 269. BP druckte diesen
+                  Text später: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus </rs>4/2 col. 3–6.
                   Ein Konzept zur Vorrede findet sich in StiA Melk, Karton 7 Patres 10, Fasz. 3, Nr.
-                  46. Vgl. <ref type="letter">312</ref>, <ref type="letter">354</ref>.</p>
-            </note>
-            <note xml:id="d4618e39571">
-               <ref type="context">5</ref>
-               <label>Tenzelius</label>
-               <p><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Tentzel,
-                  Supplementum historiae Gothanae secundum<?oxy_custom_end?> 343–374, berichtet über
+                  46. Vgl. <ref type="letter" target="letter:312">312</ref>, <ref type="letter" target="letter:354">354</ref>.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg5">
+            <mentioned>Tenzelius</mentioned>
+            <p>Tentzel,
+                  Supplementum historiae Gothanae secundum 343–374, berichtet über
                   eine Handschrift mit dem Titel „Legenda patroni Germaniae sanctissimi Bonifacii“,
                   die sich im Besitz des Sagittarius befinde, und gibt einen längeren Auszug wieder.
                   Er datiert den Codex und den Text frühestens ins 14. Jh. (ebd. 374); von einem
                   Werk des Bonifatius ist nicht die Rede.</p>
-            </note>
-            <note xml:id="d4618e39577">
-               <ref type="context">5</ref>
-               <label>Wicelius</label>
-               <p>Witzel, Chorus sanctorum 262, erwähnt an Schriften des Bonifatius dessen „episteln“, ein „buch von der einigkeit des catholischen glaubens“ sowie „ettlicher heiligen leben“; für die letztere Angabe beruft er sich auf Trithemius, ohne dabei ein bestimmtes Werk zu nennen.</p>
-            </note>
-            <note xml:id="d4618e39582">
-               <ref type="context">5</ref>
-               <label>cathalogo ... anno 1561</label>
-               <p>Zum Inventar der Fuldaer Bibliothek um 1561 vgl. <rs type="bibl" key="bibl:35994"
-                     >Christ, Bibliothek Fulda</rs> 19–33, 249–294 (Edition).</p>
-            </note>
-            <note xml:id="d4618e39587">
-               <ref type="context">5</ref>
-               <label>bellum rusticanum</label>
-               <p>Vgl. <rs type="bibl" key="bibl:35822">Aris et al., Fulda</rs> 255f.</p>
-            </note>
-            <note xml:id="d4618e39592">
-               <ref type="context">5</ref>
-               <label>spolium Flacci Illyrici</label>
-               <p>Die verbreitete Behauptung, dass Flacius aus verschiedenen Bibliotheken, darunter
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg5">
+            <mentioned>Wicelius</mentioned>
+            <p>Witzel, Chorus sanctorum 262, erwähnt an Schriften des Bonifatius dessen „episteln“, ein „buch von der einigkeit des catholischen glaubens“ sowie „ettlicher heiligen leben“; für die letztere Angabe beruft er sich auf Trithemius, ohne dabei ein bestimmtes Werk zu nennen.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg5">
+            <mentioned>cathalogo ... anno 1561</mentioned>
+            <p>Zum Inventar der Fuldaer Bibliothek um 1561 vgl. <rs type="bibl" ref="bibl:35994">Christ, Bibliothek Fulda</rs> 19–33, 249–294 (Edition).</p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg5">
+            <mentioned>bellum rusticanum</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:35822">Aris et al., Fulda</rs> 255f.</p>
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg5">
+            <mentioned>spolium Flacci Illyrici</mentioned>
+            <p>Die verbreitete Behauptung, dass Flacius aus verschiedenen Bibliotheken, darunter
                   jener von Fulda, Bücher entwendet habe, entbehrt weitestgehend einer Grundlage:
-                     <rs type="bibl" key="bibl:36282">Hartmann, Mit ungeheurer Mühe</rs>; <rs
-                     type="bibl" key="bibl:36724">Olson, Bücherdieb</rs>; vgl. <rs type="bibl"
-                     key="bibl:35994">Christ, Bibliothek Fulda</rs> 305.</p>
-            </note>
-            <note xml:id="d4618e39597">
-               <ref type="context">5</ref>
-               <label>Bonifacii Historia scholastica</label>
-               <p>In dem Inventar von ca. 1561 findet sich ein Eintrag: „Historia scholastica. S.
-                  Bonifacii episcopi et martyris, patroni in Fulda, est hic liber“ (<rs type="bibl"
-                     key="bibl:35994">Christ, Bibliothek Fulda</rs> 262, 284). Die verlorene
+                     <rs type="bibl" ref="bibl:36282">Hartmann, Mit ungeheurer Mühe</rs>; <rs type="bibl" ref="bibl:36724">Olson, Bücherdieb</rs>; vgl. <rs type="bibl" ref="bibl:35994">Christ, Bibliothek Fulda</rs> 305.</p>
+         </note>
+         <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg5">
+            <mentioned>Bonifacii Historia scholastica</mentioned>
+            <p>In dem Inventar von ca. 1561 findet sich ein Eintrag: „Historia scholastica. S.
+                  Bonifacii episcopi et martyris, patroni in Fulda, est hic liber“ (<rs type="bibl" ref="bibl:35994">Christ, Bibliothek Fulda</rs> 262, 284). Die verlorene
                   Handschrift ist durch einen parallelen Eintrag in einem anderen Verzeichnis des
                   16. Jh. eindeutig als ein Exemplar der „Historia scholastica“ des Petrus Comestor
                   zu bestimmen: ebd. 131.</p>
-            </note>
-            <note xml:id="d4618e39602">
-               <ref type="context">5</ref>
-               <label>Liber collectaneus ad missam</label>
-               <p>Das Inventar führt einen „Liber s. Bonifacii: Collectareus ad missam“ an: ebd. 263. Wie im vorigen Fall beruht die Zuweisung an Bonifatius sichtlich auf einem missverstandenen Besitzvermerk. Auch diese Handschrift scheint verloren zu sein.</p>
-            </note>
-            <note xml:id="d4618e39607">
-               <ref type="context">5</ref>
-               <label>Liber ... gentium</label>
-               <p>Einen Eintrag mit diesem oder ähnlichem Wortlaut bietet das Inventar in der
+         </note>
+         <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg5">
+            <mentioned>Liber collectaneus ad missam</mentioned>
+            <p>Das Inventar führt einen „Liber s. Bonifacii: Collectareus ad missam“ an: ebd. 263. Wie im vorigen Fall beruht die Zuweisung an Bonifatius sichtlich auf einem missverstandenen Besitzvermerk. Auch diese Handschrift scheint verloren zu sein.</p>
+         </note>
+         <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg5">
+            <mentioned>Liber ... gentium</mentioned>
+            <p>Einen Eintrag mit diesem oder ähnlichem Wortlaut bietet das Inventar in der
                   zitierten Edition nicht. Die Bezeichnung lässt am ehesten an die „Vitae Bonifacii“
                   denken, die im frühen 16. Jh. nach anderen Verzeichnissen der Fuldaer Bibliothek
-                  mehrfach vorhanden waren: <rs type="bibl" key="bibl:35994">Christ, Bibliothek
-                     Fulda</rs> 141, 222f., 302; <rs type="bibl" key="bibl:36976">Schrimpf,
+                  mehrfach vorhanden waren: <rs type="bibl" ref="bibl:35994">Christ, Bibliothek
+                     Fulda</rs> 141, 222f., 302; <rs type="bibl" ref="bibl:36976">Schrimpf,
                      Bücherverzeichnisse</rs> 117, 151–153. Die angebliche Schrift des Bonifatius
-                  erwähnte KS auch in der Beilage zu <ref type="letter">145</ref>.</p>
-            </note>
-            <note xml:id="d4618e39612">
-               <ref type="context">5</ref>
-               <label>Morhoffii Polyhistoris</label>
-               <p>Morhof, Polyhistor 39: „Non facile credat aliquis adeo malitios esse nonnullos, ut in bibliothecas grassari velint. Quod fieri tamen saepe vidimus vel ab hostium barbarie vel militum inconsulto furore. Quot non ex antiquis bibliothecis profanorum manibus direptae perierunt? Quae non in ipsa Germania nostra passim librorum strages? Non alio fato Fuldensis monasterii amplissima veterumque librorum ad miraculum plenissima ac totius Europae celeberrima, ut Melchior Adamus illam in Vita Francisci Modii describit, periit“.</p>
-            </note>
-            <note xml:id="d4618e39617">
-               <ref type="context">5</ref>
-               <label>belli ... Suecici</label>
-               <p>Vgl. <rs type="bibl" key="bibl:35822">Aris et al., Fulda</rs> 347; <rs type="bibl"
-                     key="bibl:36444">Komp, Zweite Schule</rs> 39–57.</p>
-            </note>
-            <note xml:id="d4618e39622">
-               <ref type="context">5</ref>
-               <label>codices Bonifatiani</label>
-               <p>Diese drei Handschriften aus dem 6. bzw. 8. Jh. entgingen der Plünderung 1632,
+                  erwähnte KS auch in der Beilage zu <ref type="letter" target="letter:145">145</ref>.</p>
+         </note>
+         <note target="#range(right('n19'), left('n19e'))" n="19" anchored="false" corresp="#seg5">
+            <mentioned>Morhoffii Polyhistoris</mentioned>
+            <p>Morhof, Polyhistor 39: „Non facile credat aliquis adeo malitios esse nonnullos, ut in bibliothecas grassari velint. Quod fieri tamen saepe vidimus vel ab hostium barbarie vel militum inconsulto furore. Quot non ex antiquis bibliothecis profanorum manibus direptae perierunt? Quae non in ipsa Germania nostra passim librorum strages? Non alio fato Fuldensis monasterii amplissima veterumque librorum ad miraculum plenissima ac totius Europae celeberrima, ut Melchior Adamus illam in Vita Francisci Modii describit, periit“.</p>
+         </note>
+         <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg5">
+            <mentioned>belli ... Suecici</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:35822">Aris et al., Fulda</rs> 347; <rs type="bibl" ref="bibl:36444">Komp, Zweite Schule</rs> 39–57.</p>
+         </note>
+         <note target="#range(right('n21'), left('n21e'))" n="21" anchored="false" corresp="#seg5">
+            <mentioned>codices Bonifatiani</mentioned>
+            <p>Diese drei Handschriften aus dem 6. bzw. 8. Jh. entgingen der Plünderung 1632,
                   weil sie als Teil des Reliquienschatzes mit diesem nach Köln in Sicherheit
                   gebracht worden waren. Heute befinden sich zwei davon in der Hessischen
-                  Landesbibliothek Fulda, die dritte im Domschatz dortselbst: <rs type="bibl"
-                     key="bibl:36238">Gugel, Handschriften </rs>1 68f.; <rs type="bibl"
-                     key="bibl:36288">Hausmann, Handschriften</rs> 3–13.</p>
-            </note>
-            <note xml:id="d4618e39627">
-               <ref type="context">5</ref>
-               <label>unus ... Victoris Capuani manibus correctus</label>
-               <p>Der „Victor-Codex“, heute Hessische Landesbibliothek Fulda, Cod. Bonifatianus 1;
-                  vgl. <rs type="bibl" key="bibl:36288">Hausmann, Handschriften</rs> 3–7.</p>
-            </note>
-            <note xml:id="d4618e39633">
-               <ref type="context">5</ref>
-               <label>codices Evangeliorum</label>
-               <p>In Frage kommen hier zwei in Unziale geschriebene Evangeliare der ehemaligen
+                  Landesbibliothek Fulda, die dritte im Domschatz dortselbst: <rs type="bibl" ref="bibl:36238">Gugel, Handschriften </rs>1 68f.; <rs type="bibl" ref="bibl:36288">Hausmann, Handschriften</rs> 3–13.</p>
+         </note>
+         <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg5">
+            <mentioned>unus ... Victoris Capuani manibus correctus</mentioned>
+            <p>Der „Victor-Codex“, heute Hessische Landesbibliothek Fulda, Cod. Bonifatianus 1;
+                  vgl. <rs type="bibl" ref="bibl:36288">Hausmann, Handschriften</rs> 3–7.</p>
+         </note>
+         <note target="#range(right('n23'), left('n23e'))" n="23" anchored="false" corresp="#seg5">
+            <mentioned>codices Evangeliorum</mentioned>
+            <p>In Frage kommen hier zwei in Unziale geschriebene Evangeliare der ehemaligen
                   Würzburger Dombibliothek, heute UB Würzburg, M.p.th.f. 67 und 68
-                  („Burkhardsevangeliar“); vgl. <rs type="bibl" key="bibl:19922">Thurn,
+                  („Burkhardsevangeliar“); vgl. <rs type="bibl" ref="bibl:19922">Thurn,
                      Handschriften 3/1</rs> 52–56.</p>
-            </note>
-            <note xml:id="d4618e39638">
-               <ref type="context">6</ref>
-               <label>incidit ... manuscriptum Trithemii</label>
-               <p>Ein Codex, in dem die Schriften des Trithemius „De origine, progressu et laudibus
+         </note>
+         <note target="#range(right('n24'), left('n24e'))" n="24" anchored="false" corresp="#seg6">
+            <mentioned>incidit ... manuscriptum Trithemii</mentioned>
+            <p>Ein Codex, in dem die Schriften des Trithemius „De origine, progressu et laudibus
                   ordinis fratrum Carmelitarum“ und „De viris illustribus ordinis sancti Benedicti“
-                  zusammen überliefert wären, ist nicht bekannt: <rs type="bibl" key="bibl:14950"
-                     >Arnold, Trithemius</rs> 233, 249. Es mag sich hier allerdings um die
-                  Handschrift UB Würzburg, M.p.th.f. 64b handeln (<rs type="bibl" key="bibl:19920"
-                     >Thurn, Handschriften 2/1</rs> 88–92), in welcher sich der erstere Text
+                  zusammen überliefert wären, ist nicht bekannt: <rs type="bibl" ref="bibl:14950">Arnold, Trithemius</rs> 233, 249. Es mag sich hier allerdings um die
+                  Handschrift UB Würzburg, M.p.th.f. 64b handeln (<rs type="bibl" ref="bibl:19920">Thurn, Handschriften 2/1</rs> 88–92), in welcher sich der erstere Text
                   zusammen mit dem „Catalogus illustrium virorum Germaniae“ findet, den KS mit dem
                   „De viris illustribus OSB“ verwechselt haben könnte. Diese Handschrift befand sich
                   im Schottenkloster St. Jakob zu Würzburg, scheint aber um 1713 in die
-                  Universitätsbibliothek gelangt zu sein, vielleicht durch KS: <rs type="bibl"
-                     key="bibl:16814">Handwerker, Universitäts-Bibliothek </rs>65, 132. Zu den
-                  genannten Schriften vgl. <rs type="bibl" key="bibl:14950">Arnold, Trithemius</rs>
+                  Universitätsbibliothek gelangt zu sein, vielleicht durch KS: <rs type="bibl" ref="bibl:16814">Handwerker, Universitäts-Bibliothek </rs>65, 132. Zu den
+                  genannten Schriften vgl. <rs type="bibl" ref="bibl:14950">Arnold, Trithemius</rs>
                   135–137.</p>
-            </note>
-            <note xml:id="d4618e39645">
-               <ref type="context">6</ref>
-               <label>Joannis de Lauterbach ... metra</label>
-               <p>Zu den Überlieferungen der beiden Dichtungen: <rs type="bibl" key="bibl:37102"
-                     >Thurn, Lauterbach</rs>; welche davon KS eingesehen hatte, lässt sich nicht
+         </note>
+         <note target="#range(right('n25'), left('n25e'))" n="25" anchored="false" corresp="#seg6">
+            <mentioned>Joannis de Lauterbach ... metra</mentioned>
+            <p>Zu den Überlieferungen der beiden Dichtungen: <rs type="bibl" ref="bibl:37102">Thurn, Lauterbach</rs>; welche davon KS eingesehen hatte, lässt sich nicht
                   sicher bestimmen. Nach Versen auf den Hl. Kilian von einem (offenbar nicht näher
                   bezeichneten) „Johannes“ aus dem Erfurter Peterskloster hatte sich BP bereits
                   zuvor bei Petrus Friderici erkundigt, der dazu nur Johannes Mühlbach zu nennen
-                  wusste (<ref type="letter">166</ref> &lt;1&gt;).</p>
-            </note>
-            <note xml:id="d4618e39650">
-               <ref type="context">6</ref>
-               <label>Fontaninus in Vindiciis</label>
-               <p>Fontanini, Vindiciae 266–269 (Edition), 270–273 (Anmerkungen). Es handelt sich um
-                  einen Brief Alkuins an Erzbischof Eanbald II. von York: <rs type="bibl"
-                     key="bibl:35720">Alcvini Epistolae</rs> 166–170 Nr. 114. Die Vorlage Fontaninis
+                  wusste (<ref type="letter" target="letter:166">166</ref> <ref target="letter:166#seg1">1</ref>).</p>
+         </note>
+         <note target="#range(right('n26'), left('n26e'))" n="26" anchored="false" corresp="#seg6">
+            <mentioned>Fontaninus in Vindiciis</mentioned>
+            <p>Fontanini, Vindiciae 266–269 (Edition), 270–273 (Anmerkungen). Es handelt sich um
+                  einen Brief Alkuins an Erzbischof Eanbald II. von York: <rs type="bibl" ref="bibl:35720">Alcvini Epistolae</rs> 166–170 Nr. 114. Die Vorlage Fontaninis
                   stammte aus Canterbury, war ihm von Giuseppe Maria Tommasi mitgeteilt und von
                   Domenico Passionei mit Anmerkungen versehen worden. Weder die Überlieferung noch
                   der Text des Briefs stehen mit Fulda in Zusammenhang.</p>
-            </note>
-            <note xml:id="d4618e39655">
-               <ref type="context">6</ref>
-               <label>manuscriptum Erffurtense</label>
-               <p>Vgl. &lt;4&gt;. Offenbar hatte KS aus dem „Chronicon“ des Nikolaus von Siegen
+         </note>
+         <note target="#range(right('n27'), left('n27e'))" n="27" anchored="false" corresp="#seg6">
+            <mentioned>manuscriptum Erffurtense</mentioned>
+            <p>Vgl. <ref target="#seg4">4</ref>. Offenbar hatte KS aus dem „Chronicon“ des Nikolaus von Siegen
                   Nachrichten über Schriftsteller aus Fulda zu extrahieren versucht. Seine Nennung
                   eines „Isuardus“ beruht zweifellos auf der Notiz über einen „Ysuardus, nacione
                   Gallicus, monachus Fuldensis“, der im Auftrag Karls des Großen ein später
-                  weitverbreitetes Martyrologium zusammengestellt habe: <rs type="bibl"
-                     key="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs> 158. Gemeint
+                  weitverbreitetes Martyrologium zusammengestellt habe: <rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs> 158. Gemeint
                   ist damit Usuard von St.-Germain-des-Prés, dessen Martyrologium Karl dem Kahlen
                   gewidmet war; die irrige Zuordnung zu Fulda mag auf einer Vermengung mit Hrabanus
                   Maurus, Abt von Fulda, beruhen, der gleichfalls im 9. Jh. ein bedeutendes
                   Martyrologium verfasst hatte. „Theodoricus“ ist wohl Theoderich von Fleury, von
                   dem es im „Chronicon“ heißt: „Theodoricus monachus [...] scripsit ad Richardum
                   abbatem Fuldensem de laudibus et vita sancti patris nostri Benedicti, de
-                  translatione eiusdem corporis ad Floriacum“ (<rs type="bibl" key="bibl:35728"
-                     >Chronicon Ecclesiasticum Nicolai de Siegen</rs> 224; vgl. <ref type="letter"
-                     >224</ref> &lt;7&gt;). „Rudolphus“ könnte Rudolf von Fulda sein, auf den der
-                  Eintrag über „Radulphus monachus Fuldensis“ (<rs type="bibl" key="bibl:35728"
-                     >Chronicon Ecclesiasticum Nicolai de Siegen</rs> 214) zu beziehen sein muss,
+                  translatione eiusdem corporis ad Floriacum“ (<rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs> 224; vgl. <ref type="letter" target="letter:224">224</ref> <ref target="letter:224#seg7">7</ref>). „Rudolphus“ könnte Rudolf von Fulda sein, auf den der
+                  Eintrag über „Radulphus monachus Fuldensis“ (<rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs> 214) zu beziehen sein muss,
                   auch wenn er irrig um das Jahr 1000 angesetzt ist (Rudolf von Fulda starb 865) und
                   die Angaben zu Werken großteils nicht nachvollziehbar sind. Zu Rudolf am
-                  ausführlichsten: <rs type="bibl" key="bibl:37064">Stengel,
-                     Urkundenfälschungen</rs>, insb. 43–54; vgl. weiters <rs type="bibl"
-                     key="bibl:35898">Berschin, Biographie in Fulda</rs> 317–320; <rs type="bibl"
-                     key="bibl:18130">Manitius, Literatur</rs> 1 668–671; <rs type="bibl"
-                     key="bibl:36690">Naß, Rudolf von Fulda</rs>.</p>
-            </note>
-            <note xml:id="d4618e39660">
-               <ref type="context">7</ref>
-               <label>Mollerus</label>
-               <p>Moller, Homonymoscopia 574f., erklärt insbesondere (unter Berufung auf
+                  ausführlichsten: <rs type="bibl" ref="bibl:37064">Stengel,
+                     Urkundenfälschungen</rs>, insb. 43–54; vgl. weiters <rs type="bibl" ref="bibl:35898">Berschin, Biographie in Fulda</rs> 317–320; <rs type="bibl" ref="bibl:18130">Manitius, Literatur</rs> 1 668–671; <rs type="bibl" ref="bibl:36690">Naß, Rudolf von Fulda</rs>.</p>
+         </note>
+         <note target="#range(right('n28'), left('n28e'))" n="28" anchored="false" corresp="#seg7">
+            <mentioned>Mollerus</mentioned>
+            <p>Moller, Homonymoscopia 574f., erklärt insbesondere (unter Berufung auf
                   Trithemius), dass Predigten Haimos von Halberstadt öfter mit solchen Heimos von
                   Hirsau vermischt überliefert und auch wegen des ähnlichen Stils leicht zu
-                  verwechseln seien. Vgl. <ref type="letter">317</ref> &lt;5&gt;.</p>
-            </note>
-            <note xml:id="d4618e39667">
-               <ref type="context">7</ref>
-               <label>Lycaeum Benedictinum</label>
-               <p>In der Abhandlung von Matthäus Weiß über benediktinische Verdienste im Schulwesen
+                  verwechseln seien. Vgl. <ref type="letter" target="letter:317">317</ref> <ref target="letter:317#seg5">5</ref>.</p>
+         </note>
+         <note target="#range(right('n29'), left('n29e'))" n="29" anchored="false" corresp="#seg7">
+            <mentioned>Lycaeum Benedictinum</mentioned>
+            <p>In der Abhandlung von Matthäus Weiß über benediktinische Verdienste im Schulwesen
                   wird etwa Alkuin, welchen KS sichtlich für Fulda reklamierte, ausführlich
-                  behandelt; vgl. <ref type="letter">36</ref> &lt;1&gt;.</p>
-            </note>
-            <note xml:id="d4618e39672">
-               <ref type="context">8</ref>
-               <label>S. Georgii ... Venetiis</label>
-               <p>Der Bibliothekar von S. Giorgio Maggiore könnte derselbe Licinio Martinoni sein,
-                  der ab 1716 als Korrespondent BPs in Erscheinung trat: <rs type="bibl"
-                     key="bibl:16524">Glassner, Verzeichnis</rs> 225. Zu ihm vgl. <rs type="bibl"
-                     key="bibl:15352">Bossi, Matricula 1</rs> 205; <rs type="bibl" key="bibl:15560"
-                     >Castagna, Corrispondenza</rs> 13 324.</p>
-            </note>
-            <note xml:id="d4618e39679">
-               <ref type="context">8</ref>
-               <label>S. Ambrosium Mediolani</label>
-               <p>Der Vorsteher der Ambrosiana war von 1711 bis 1751 Giuseppe Antonio Sassi: <rs
-                     type="bibl" key="bibl:36746">Paredi, Storia</rs> 27.</p>
-            </note>
-            <note xml:id="d4618e39684">
-               <ref type="context">8</ref>
-               <label>Giuseppe Maria Sandi</label>
-               <p>Zu ihm <rs type="bibl" key="bibl:18184">Maschietto, Biblioteca</rs> 81–125.</p>
-            </note>
-            <note xml:id="d4618e39689">
-               <ref type="context">8</ref>
-               <label>observavi vitas ... libros</label>
-               <p>Ein Aufenthalt des Kurprinzen Friedrich August in Padua 1712 ist nicht belegt: <rs
-                     type="bibl" key="bibl:37044">Staszewski, August III</rs> 52–56. KS dürfte Padua
+                  behandelt; vgl. <ref type="letter" target="letter:36">36</ref> <ref target="letter:36#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n30'), left('n30e'))" n="30" anchored="false" corresp="#seg8">
+            <mentioned>S. Georgii ... Venetiis</mentioned>
+            <p>Der Bibliothekar von S. Giorgio Maggiore könnte derselbe Licinio Martinoni sein,
+                  der ab 1716 als Korrespondent BPs in Erscheinung trat: <rs type="bibl" ref="bibl:16524">Glassner, Verzeichnis</rs> 225. Zu ihm vgl. <rs type="bibl" ref="bibl:15352">Bossi, Matricula 1</rs> 205; <rs type="bibl" ref="bibl:15560">Castagna, Corrispondenza</rs> 13 324.</p>
+         </note>
+         <note target="#range(right('n31'), left('n31e'))" n="31" anchored="false" corresp="#seg8">
+            <mentioned>S. Ambrosium Mediolani</mentioned>
+            <p>Der Vorsteher der Ambrosiana war von 1711 bis 1751 Giuseppe Antonio Sassi: <rs type="bibl" ref="bibl:36746">Paredi, Storia</rs> 27.</p>
+         </note>
+         <note target="#range(right('n32'), left('n32e'))" n="32" anchored="false" corresp="#seg8">
+            <mentioned>Giuseppe Maria Sandi</mentioned>
+            <p>Zu ihm <rs type="bibl" ref="bibl:18184">Maschietto, Biblioteca</rs> 81–125.</p>
+         </note>
+         <note target="#range(right('n33'), left('n33e'))" n="33" anchored="false" corresp="#seg8">
+            <mentioned>observavi vitas ... libros</mentioned>
+            <p>Ein Aufenthalt des Kurprinzen Friedrich August in Padua 1712 ist nicht belegt: <rs type="bibl" ref="bibl:37044">Staszewski, August III</rs> 52–56. KS dürfte Padua
                   auf der Rückreise nach Würzburg oder während einer Beurlaubung besucht haben. Die
                   Handschriften über die Cassinensergelehrten sind anhand der Angaben KS’ nicht zu
                   bestimmen. Die Bibliothek von S. Giustina wurde 1806/07 zerstreut, die Bestände
-                  teils nach Paris oder Mailand verbracht, teils verloren: <rs type="bibl"
-                     key="bibl:18184">Maschietto, Biblioteca</rs> 295–321. Über die Bestände vor
-                  1806 liegen fünf handschriftliche Kataloge vor: <rs type="bibl" key="bibl:18184"
-                     >Maschietto, Biblioteca</rs> 330–347. Unter den wenigen heute in S. Giustina
+                  teils nach Paris oder Mailand verbracht, teils verloren: <rs type="bibl" ref="bibl:18184">Maschietto, Biblioteca</rs> 295–321. Über die Bestände vor
+                  1806 liegen fünf handschriftliche Kataloge vor: <rs type="bibl" ref="bibl:18184">Maschietto, Biblioteca</rs> 330–347. Unter den wenigen heute in S. Giustina
                   vorhandenen mittelalterlichen Handschriften findet sich nichts, was den von KS
-                  gemachten Angaben entspräche; vgl. <rs type="bibl" key="bibl:19982">Trolese,
+                  gemachten Angaben entspräche; vgl. <rs type="bibl" ref="bibl:19982">Trolese,
                      Padova S. Giustina</rs> XLVIII.</p>
-            </note>
-            <note xml:id="d4618e39695">
-               <ref type="context">9</ref>
-               <label>Acta synodi Moguntinae</label>
-               <p>Bischof Adalbero von Würzburg hatte auf dieser Synode weitreichende
+         </note>
+         <note target="#range(right('n34'), left('n34e'))" n="34" anchored="false" corresp="#seg9">
+            <mentioned>Acta synodi Moguntinae</mentioned>
+            <p>Bischof Adalbero von Würzburg hatte auf dieser Synode weitreichende
                   Jurisdiktionsansprüche gegenüber Fulda erhoben, welche jedoch zurückgewiesen
-                  wurden: <rs type="bibl" key="bibl:37228">Wendehorst, Bistum Würzburg 1</rs>
+                  wurden: <rs type="bibl" ref="bibl:37228">Wendehorst, Bistum Würzburg 1</rs>
                   110.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Ordnungsvermerk: <orig>96.</orig></note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:17432">
+            <title type="short">Katschthaler, Briefnachlass</title>
+            <biblScope>17f</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Viro admodum reverendo eximio eruditissimoque domino patri Bernardo Petz presbytero Mellicensi ordinis sancti Benedicti Georgius Conradus Sigler, celsissimo principi episcopo Herbipolensi ac Franciae Orientalis duci a secretis et bibliotheca, salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Contingeret mihi prorsum ex merito, sicubi, vir praestantissime, a te tacito cogitationis <sic>convitio</sic>  verberarer, quod literis tuis amantissime scriptis nihil unquam responderim, siquidem non omnem a me abesse culpam neque iusta<del ana="#after">simul</del> ac idonea bimi silentii excusatione uti me posse<del ana="#after">haud</del> diffiteor, nisi tua singularis humanitas, quam summa cum eruditione tibi coniunctam esse suavissimae tuae luculenter testatae sunt literae, excusatum me velit liberatumque. Idque eo facilius, quo vitae meae ab eo tempore transactae ratio quadantenus pro me interpellaverit; quam ut paucis enarrem, permitte. </ab>
+         <ab resp="#editor" xml:id="seg2">Obtulit sese occasio anno MDCCXI, ut eo <anchor xml:id="n1"/>tempore, quo electio ac coronatio imperatoris Francofurti peragebatur<anchor xml:id="n1e"/>, in aula <anchor xml:id="n2"/>legationis Saxonicae<anchor xml:id="n2e"/> secretarii munere fungi mihi concederetur, qua<del ana="#after">in</del> <add place="above"> occasione factum est, ut</add>, dum mea saepius<del ana="#after">in</del> in tractandis cum aula <anchor xml:id="n3"/>nuntii apostolici<anchor xml:id="n3e"/> negotiis uterentur opera, qui serenissimi <anchor xml:id="n4"/>principis regii et electoratus Saxonici moderatores erant, facilem eorundem assensum dederim desideriis ipsamque aulam principis regii in Italiam<anchor xml:id="n4e"/> fuerim secutus, eoque libentius, quod patria mea honestiorem negaret sustentationem. Neque tamen ante Fuldam usque adeo degenerem ab antiquo literarum cultu deserui, ac Herbipolis ultro securam ad reditum stationem, bibliothecarii scilicet officium, pollicita esset. In Italia igitur Venetiis et Mediolani tempus, quod instructioni principis memorati subtrahere fas erat, totum in acquirendis fautoribus et amicis visendisque et rimandis bibliothecis insumpsi; at vero, cum iter nostrum Romam longius opinione<del ana="#after">nostra</del> protraheretur, anni elapsi mense Octobri aulam, <anchor xml:id="n5"/>Italiam literatosque reliqui<anchor xml:id="n5e"/> atque benignissimae voluntati principis mei morem gessi, qui secretarii munere de consilio <sic>ecclesiasto</sic>  me ultro ornaverat. Herbipoli ergo nunc moror muneris huius laboribus, plus quam Musae vellent, distentus, ut a reverendissimo domino Hyacintho nostro intellexeris. </ab>
+         <ab resp="#editor" xml:id="seg3">Sed ne longioribus excusationis verbis expleam omne scribendi propositum, ad suavissimas tuas redeo, quarum mehercle ubi recordor, quantum in iis mihi tribuas, vix non iterato a proposito me retrahit verecundia; ipse enim mihi sum conscius, et<note place="foot" xml:id="d4618e39379"><hi rend="italic">Ipse ... et</hi> über der Zeile eingefügt. Vor dem letzten Wort durchgestrichen <hi rend="italic">qui</hi>.</note> eorum<note type="annotation" xml:id="d4618e39388">Davor und danach unleserliche Streichungen im Ausmaß von ca. 2 bzw. ca. 5–6 Buchstaben.</note> in scholis enutritus sum, qui veram eloquentiam omnem una cum Graecis literis e totius iamdudum Germaniae proscripserunt finibus<del ana="#after">usque</del>, adeo ut<del ana="#after">non</del> de veteri sua sede amplius cogitare nec ausit; quocirca, quod praeter animum bonis inserviendi literis cupidum in me suspicias, est omnino nihil. Vellem equidem, et quam maxime vellem, positum esse aliquid in viribus meis, quod ad spartam tuam ornandam facere institutumque ut difficillimum, ita praeclarissimum iuvare possit. </ab>
+         <ab resp="#editor" xml:id="seg4">Dolere autem inprimis debeo schedarum iacturam in abitu Fuldensi inter alia perpessam, quibus annotata a me fuerant collecta, qualiacunque e re tua fore eram arbitratus; quod licet damnum <pb n="1v"/> resarciri vix possit, non tamen committam, ut exspectes a me frustra, quod scivero meae esse facultatis; quemadmodum <add place="above">iam</add> nuper reverendissimo domino Hyacintho nostro aliquid, quod <anchor xml:id="n6"/>ex ephemeridibus Lipsiensibus<anchor xml:id="n6e"/> in usum tuum transcribi curaret, tradidi; acceperis ab eodem pariter <anchor xml:id="n7"/>literarum antiquissimarum exemplar<anchor xml:id="n7e"/>, cuius extitisse olim prototypon in monasterio Fuldensi asserit <anchor xml:id="n8"/>manuscriptum Erffurtense<anchor xml:id="n8e"/> a Nicolao de Sighen monasterii S. Petri incola circa finem saeculi XV. consarcinatum; harum nullum Fuldae extat vestigium literarum, de quarum antiquitate malim tamen tuum, vir eruditissime, iudicium explorare. </ab>
+         <ab resp="#editor" xml:id="seg5">Relatum habeo ex eodem domino Hyacintho supra memorato te <anchor xml:id="n9"/>sermonem a sancto Bonifacio<anchor xml:id="n9e"/> ad <choice><sic>neophitos</sic><corr>neophytos</corr></choice> dictum possidere; an editus is, et qualis sit, magni fecerim scire. Exceptis enim viri sancti epistolis me quicquam vidisse non memini. Wilhelmus Ernestus <anchor xml:id="n10"/>Tenzelius<anchor xml:id="n10e"/> Supplemento historiae Gothanae folio mihi 343, sic et Georgius <anchor xml:id="n11"/>Wicelius<anchor xml:id="n11e"/> in Vitis sanctorum folio mihi 262 plures libros a Bonifacio compositos recenset Trithemium citans. In ipso etiam <anchor xml:id="n12"/>cathalogo bibliothecae Fuldensis, qualis anno 1561<anchor xml:id="n12e"/> post <anchor xml:id="n13"/>bellum rusticanum<anchor xml:id="n13e"/> et <choice><sic>splium</sic><corr>spolium</corr></choice> Flacci Illyrici iam perpessum residua fuit, inter DCCC et ultra codices membranaceos numerantur quoque eiusdem sancti <anchor xml:id="n14"/>Bonifacii Historia scholastica<anchor xml:id="n14e"/>, eiusdem <anchor xml:id="n15"/>Liber collectaneus ad missam<anchor xml:id="n15e"/>, eiusdem <anchor xml:id="n16"/>Liber de laboribus suis in conversione gentium<anchor xml:id="n16e"/> et reliqui; nihil autem, ut dixi, huiuscemodi unquam vidi, neque facile credam extare in hunc usque diem quidquam. Etenim amplissima illa veterumque librorum ad miraculum plenissima ac totius Europae celeberrima bibliotheca Fuldensis (ut <anchor xml:id="n17"/>Morhoffii Polyhistoris<anchor xml:id="n17e"/> verbis utar) turbarum ac bellorum fato periit atque taliter <anchor xml:id="n18"/>belli praecipue Suecici<anchor xml:id="n18e"/> tempore extirpata fuit, ut vix tres codices Bonifaciani dicti inter reliquias sanctorum in securitatem aliorsum transportati flammas et direptionem evaserint. Hos inter <anchor xml:id="n19"/>unus reperitur propriis sancti Victoris Capuani manibus correctus<anchor xml:id="n19e"/>, ut pro indubitato teneo, atque hanc meam opinionem non una ratione stabilitam dedi in Criterio, quod olim de his codicibus edere meditabar. Hic quoque Herbipoli asservantur duo <anchor xml:id="n20"/>codices Evangeliorum<anchor xml:id="n20e"/> Fuldensi illi non absimiles, charactere utrinque semiunciali rotundo, adnotationibus etiam Gothicae scripturae hinc inde intertextis. </ab>
+         <ab resp="#editor" xml:id="seg6">Inopinato in meas <anchor xml:id="n21"/>incidit manus manuscriptum Trithemii<anchor xml:id="n21e"/>, in quo praeter ipsam manum eiusdem plura observavi, ut De viris illustribus ordinum Carmelitarum et Benedictinorum; item<del ana="#before">librum</del> <anchor xml:id="n22"/>Joannis de Lauterbach, monachi S. Stephani et olim S. Petri Erffurtensis, de sanctis Kiliano et Burcardo metra<anchor xml:id="n22e"/> hactenus inedita (Lauterbach oppidum est in Hassiae ac Buchoniae finibus situm, quod aliquando abbati Fuldensi paruit); de Alcuino Fuldensi epistolam <choice><sic>edidit</sic><corr>dedit</corr></choice> hactenus ineditam illustrissimus <anchor xml:id="n23"/>Fontaninus in Vindiciis<anchor xml:id="n23e"/> antiquorum diplomatum; de Isuardo, Rudolpho, Theodorico monachis aliqua adducit <anchor xml:id="n24"/>manuscriptum Erffurtense<anchor xml:id="n24e"/> superius adductum, quod integrum evolvisse non pigebit, quo Fuldae sex olim mensibus usus quoque fui, neque dubium est patres illos ultro in usum tuum codicem hunc commodaturos vel saltem, quae in <pb n="2r"/> rem tuam fuerint, transcripturos. </ab>
+         <ab resp="#editor" xml:id="seg7">Haymonis Halberstadensis episcopi, ante Fuldensis monachi, vitam typis nuper vulgavit Antonius professor Hallensis; legi quoque merentur, quae <anchor xml:id="n25"/>Mollerus<anchor xml:id="n25e"/> in Homonymoscopia de eodem in medium profert, non ubivis cognita. <anchor xml:id="n26"/>Lycaeum Benedictinum<anchor xml:id="n26e"/> Salisburgi 1630 impressum cognitum haud dubie tibi erit. Ex Caveo, Morero, Vossio et Sandio huius continuatore plura notaveram de aliis inter Fuldenses eruditionis fama insignibus viris, ita pariter ex Placcii Theatro, ex Melchiore Adamo, Frehero aliisque biographis, quos congessit Labbeus in Bibliotheca bibliothecarum, Morhoff in Polyhistore, Vogler et Struvius Introductionibus in rem literariam. Sed haec omnia tibi eruditissimo viro et hac in provincia iamdiu versanti notiora erunt, quam ut iis recensendis longius immorari <add place="above">operae ducam pretium</add>. </ab>
+         <ab resp="#editor" xml:id="seg8">Neque me monitore te egere puto evolvendos esse praeprimis bibliothecarum scriptores, illos maxime, qui vitas et scripta eruditorum unius provinciae vel civitatis collegerunt; ut ex Italis modo occurrunt Mandosii<note place="foot" xml:id="d4618e39450">Korrigiert aus <hi rend="italic">Mandosius</hi>. Danach durchgestrichen <hi rend="italic">e</hi> sowie ein Beistrich.</note> Bibliotheca Romana, <choice><sic>Toppius</sic><corr>Toppii</corr></choice> <choice><sic>Neapolitanus</sic><corr>Neapolitana</corr></choice>, Antonini Mongitoris Bibliotheca Sicula Panormi 1708, Musaeum Novariense Cottae, Cremona erudita, Lycaeum Patavinum, <sic>Athaenaeum</sic>  Mediolanense, Hyacinthi <choice><sic>Gymmae</sic><corr>Gimmae</corr></choice> Elogia academiae Rosciani, Notitiae academiae Florentinae 1700, similiter Regii 1711 et reliqua. Quos singulos comparare nec consultum nec necesse quidem aestimo; tenui quis labore colligeret, quotquot ex familia Benedictina in eiusmodi libris proferuntur, neque dubito hunc amice subituros laborem, qui <anchor xml:id="n27"/>S. Georgii Maioris monasterii Venetiis<anchor xml:id="n27e"/>, ad S. Justinam Patavii et <anchor xml:id="n28"/>S. Ambrosium Mediolani<anchor xml:id="n28e"/> bibliothecae praesunt: viros ut singulos doctos, ita perhumanos ego deprehendi. Patavini nomen, quantum recordor, hoc est: don <anchor xml:id="n29"/>Giuseppe Maria Sandi<anchor xml:id="n29e"/>; humanissimus hic vir copiam perlustrandi dedit manuscripta<del ana="#after">quae</del> ibi <choice><sic>asservantur</sic><corr>asservata</corr></choice>, quae inter <anchor xml:id="n30"/>observavi vitas illustrissimorum virorum monachorum Cassinensium saeculo XV. scriptas; item libros<anchor xml:id="n30e"/> illustrium virorum monachorum Cassinensium. Sed ne in recensendis illis rebus, quae curae minutioris sunt, tua longius abutar patientia, finem nunc tandem his literis imponendum esse reor, te vero exorandum, ut, licet minus opere valui, voluntatem saltem et animum tui studiosissimum admittas; ab eo enim, quo suavissimae tuae mihi reddebantur, non modo optimos tuos laudare conatus, sed et admirari eruditionem atque adeo amore quodam singulari te complecti coepi; cultum adicio observantiamque, quibus, quoad vivam, te persequi mens est. Tu, vir optime, vale et me quoque ama ac inter tuos imposterum numera.</ab>
+         <closer>Dabam Herbipoli, die [...]<note place="foot" xml:id="d4618e39495">Freigelassener Platz im Ausmaß von ca. 1–2 Wörtern.</note> mensis Junii MDCCXIII.</closer>
+         <closer xml:id="seg9">P.S. <anchor xml:id="n31"/>Acta synodi Moguntinae<anchor xml:id="n31e"/> anno MXLIX celebratae irrito labore in conciliorum collectionibus ac etiam alibi usque adhuc quaesivi; praecipue vero ea quaero, quae pro huius nostri episcopatus iuribus ventilata atque conclusa fuisse perhibentur. Quod si vel ex Vindobonensi caesarea vel aliis antiquorum codicum fama celebratis bibliothecis aliquid ad nostram hanc rem consequi valeremus, tua potissimum intercessione, faceres certe rem mihi gratissimam patriaeque utilissimam. Forte etiam dominum Masuet hac super re consuluisse iuvabit, cui <pb n="2v"/> viro summo tibique cumprimis omnem meam reciproco studio operam addico.</closer>
+         <closer xml:id="seg10">Licet ab amanuensi minus correcte viderem descriptas has meas, malui tamen correctionibus deformes <add place="above">et mendosas</add> quam nullasdum mittere, tuae, vir summe, bonitati confisus. Iterum vale. Ita precatur ex corde G. C. Sigler.</closer>
+      </body>
    </text>
 </TEI>

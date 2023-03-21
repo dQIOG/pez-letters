@@ -1,45 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="727" xml:id="pez-0727">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">727 Alphons Hueber an Bernhard Pez. 1717-01-25. Tegernsee.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Alphons Hueber an Bernhard Pez. 1717-01-25. Tegernsee.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">727</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:19780">Stockinger, Klosterbibliothekar</rs>
-                     221</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">602r–603v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 602r–603v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -54,83 +69,86 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">726</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">819</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">726</idno>
-               </ref>
+               <ptr type="prev" target="letter:726"/>
+               <ptr type="next" target="letter:819"/>
+               <ptr type="mentions" target="letter:726"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">AH</rs> antwortet endlich, kann jedoch nicht liefern, was er schuldig ist. Er hat lange darauf gewartet, von seinem Abt Petrus von Guetrather das zu erhalten, worum er für HP gebeten hat. Er bittet um Entschuldigung und will das Material rasch übermitteln, sobald er die letzten ausstehenden Stücke aus dem Tegernseer Archiv erhalten hat. <rs type="person" role="sender">BP</rs> hat in seinem letzten Brief <ref type="letter" target="letter:726">726</ref> geschrieben, die Versprechen der Äbte seien unbeständig wie Wachs; <rs type="person" role="sender">AH</rs> muss bisweilen Verdrießliches dazu melden. Er bedauert, nicht prompt den Bitten <rs type="person" role="sender">BPs</rs> und HPs entsprechen zu können, und betont, dass dies nicht an seinem mangelnden Willen liegt.</p>
+            <p corresp="#seg2">Die Büchersendung aus Melk (wohl Pez, „Bibliotheca Benedictino-Mauriana“; Schramb, „Antilogia“) ist <rs type="person" role="sender">AH</rs> von Abt Guetrather am Tag des hl. Andreas (30. November 1716) übergeben worden, als er eben von der jährlichen Rechnungslegung in seiner Pfarre (Egern) zurückkam. <rs type="person" role="sender">AH</rs> will diese Bücher als einen persönlichen Schatz zum Gedenken an die Melker hüten. Sein eigenes asketisches Werk („Wegzehrung der reisenden“) würde er gerne im Gegenzug schicken, nach Auskunft des Verlegers (Daniel Walder) wird es aber nicht vor dem Herbst erscheinen.</p>
+            <p corresp="#seg3">Karl Meichelbeck aus Benediktbeuern erwartet <rs type="person" role="sender">AH</rs> bald zu Besuch in Tegernsee. Dabei will er mit ihm über Thomas Aquin Erhardt von Wessobrunn und andere Ordensbrüder beraten, die mit ihren Antworten auf <rs type="person" role="sender">BPs</rs> Bitten säumig sind. <rs type="person" role="sender">AH</rs> wünscht sich nichts sehnlicher als die Fähigkeit, <rs type="person" role="sender">BP</rs> und HP zu helfen; da ihm aber diese, und vor allem hinreichendes Wissen, mangelt, betet er zu Gott, dass seine Wünsche durch die Beiträge anderer gelehrter Ordensbrüder erfüllt werden.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">AH</rs> schließt mit der nochmaligen Bitte, ihn bei HP zu entschuldigen. Wie große Aufgaben ihn derzeit beschäftigen, will er bei Gelegenheit mündlich berichten, und hofft, dass ihrer nicht noch mehr werden.</p>
+            <p corresp="#seg5">In einem Nachsatz lässt <rs type="person" role="sender">AH</rs> Anselm Schramb und den an Gicht leidenden Martin Hager, seinen ehemaligen Mitschüler in Salzburg, grüßen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e26961"><rs type="person" role="sender">AH</rs> antwortet endlich, kann jedoch nicht liefern, was er schuldig ist. Er hat lange darauf gewartet, von seinem Abt Petrus von Guetrather das zu erhalten, worum er für HP gebeten hat. Er bittet um Entschuldigung und will das Material rasch übermitteln, sobald er die letzten ausstehenden Stücke aus dem Tegernseer Archiv erhalten hat. <rs type="person" role="sender">BP</rs> hat in seinem letzten Brief <ref type="letter">726</ref> geschrieben, die Versprechen der Äbte seien unbeständig wie Wachs; <rs type="person" role="sender">AH</rs> muss bisweilen Verdrießliches dazu melden. Er bedauert, nicht prompt den Bitten <rs type="person" role="sender">BPs</rs> und HPs entsprechen zu können, und betont, dass dies nicht an seinem mangelnden Willen liegt.</seg><seg type="context" n="2" xml:id="d3e26966">Die Büchersendung aus Melk (wohl Pez, „Bibliotheca Benedictino-Mauriana“; Schramb, „Antilogia“) ist <rs type="person" role="sender">AH</rs> von Abt Guetrather am Tag des hl. Andreas (30. November 1716) übergeben worden, als er eben von der jährlichen Rechnungslegung in seiner Pfarre (Egern) zurückkam. <rs type="person" role="sender">AH</rs> will diese Bücher als einen persönlichen Schatz zum Gedenken an die Melker hüten. Sein eigenes asketisches Werk („Wegzehrung der reisenden“) würde er gerne im Gegenzug schicken, nach Auskunft des Verlegers (Daniel Walder) wird es aber nicht vor dem Herbst erscheinen.</seg><seg type="context" n="3" xml:id="d3e26968">Karl Meichelbeck aus Benediktbeuern erwartet <rs type="person" role="sender">AH</rs> bald zu Besuch in Tegernsee. Dabei will er mit ihm über Thomas Aquin Erhardt von Wessobrunn und andere Ordensbrüder beraten, die mit ihren Antworten auf <rs type="person" role="sender">BPs</rs> Bitten säumig sind. <rs type="person" role="sender">AH</rs> wünscht sich nichts sehnlicher als die Fähigkeit, <rs type="person" role="sender">BP</rs> und HP zu helfen; da ihm aber diese, und vor allem hinreichendes Wissen, mangelt, betet er zu Gott, dass seine Wünsche durch die Beiträge anderer gelehrter Ordensbrüder erfüllt werden.</seg><seg type="context" n="4" xml:id="d3e26970"><rs type="person" role="sender">AH</rs> schließt mit der nochmaligen Bitte, ihn bei HP zu entschuldigen. Wie große Aufgaben ihn derzeit beschäftigen, will er bei Gelegenheit mündlich berichten, und hofft, dass ihrer nicht noch mehr werden.</seg><seg type="context" n="5" xml:id="d3e26972">In einem Nachsatz lässt <rs type="person" role="sender">AH</rs> Anselm Schramb und den an Gicht leidenden Martin Hager, seinen ehemaligen Mitschüler in Salzburg, grüßen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez celeberrimi exemptique monasterii Mellicensis capitulari ac ibidem bibliothecario dignissimo, domino ac patrono suo colendissimo. Mölkh. 1717.</hi> Siegel.</ab>
-            </div>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">146.</hi></p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez amico ac patrono suo integerrimo et optimo pater Alphonsus Tegernseensis cordis sui intima et omnia.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e26996">Tandem aliquando cum responsoriis suis Alphonsus, et utinam cum iis omnia, quae debeo. In dies sustuli, quia in dies speravi a reverendissimo nostro optimoque praesule accipere, quae petii, et quidem <seg type="lemma" corresp="#d3e27039">pro clarissimo domino patri Hieronymo</seg> germano tuo. Rogo iterumque rogo, in his me negligentem excuses, quod hactenus iustissimis desideriis non satisfecerim; satisfaciam autem certissime, quamprimum obtinuero ea, quae<note place="foot" xml:id="d3e26998">	Davor durchgestrichen <hi rend="italic">quae</hi>.</note> adhuc desunt ex archivio nostro petenda et exspectanda, quare iteratis vicibus<note place="foot" xml:id="d3e27004">	Danach durchgestrichen <hi rend="italic">vicibus</hi>.</note> veniam rogo et patientiam. Scribis in ultimis tuis reverendissimorum abbatum promissa esse cerea, ego de nostris morosa quandoque scribo, hinc doleo me non semper citissime posse satisfacere iustissimis desideriis vestris. Spiritus meus inserviendi quidem promptissimus est, sed etc. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e27010">Fasciculum <seg type="lemma" corresp="#d3e27045">Mellicensium opusculorum</seg> in festo sancti Andreae a reverendissimo nostro accepi redux ex ratiociniis annuis parochiae meae. O insignia <pb n="1v"/> et aurea sane Benedictina munuscula! Partus hos<note place="foot" xml:id="d3e27014">	<hi rend="italic">Partus hos</hi> korrigiert aus <hi rend="italic">partusque</hi>.</note> nobilissimos reponam ad thesaurum meum intimum et in terra charissimum in dulcissimam Mellicensium meorum memoriam. Utinam et similiter<seg type="lemma" corresp="#d3e27051"> opusculum meum</seg> ascetico-morale proxime offerre possem, sed quia<note place="foot" xml:id="d3e27023">	Über der Zeile eingefügt.</note> vix ante autumnum publicam lucem videbit, bibliopola ipso teste, veniam etiam quoad hoc rogo et patientiam. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e27026"><seg type="lemma" corresp="#d3e27055">Carolum illum nostrum Buranum proxime hic exspecto</seg>, vae dulcissimae tui memoriae Bernarde melliflue, vae tibi. Conferam cum eo plura etiam de<seg type="lemma" corresp="#d3e27061"> Thoma Wessofontano aliisque in suis responsoriis et communicatione cum charissimo nostro Bernardo adeo tepidis et desidiosis sodalibus nostris. Doleo certe horum desidiam et teporem</seg>, quia video et agnosco Bernardi mei eiusque dulcissimi domini germani studia sanctissima et iustissima desideria, nihilque opto a Deo ter optimo nisi sufficientiam virium in omnibus vobis succurrendi; <pb n="2r"/> certe vitam meam vitaeque adhuc residuos annos vobis offerrem. Quibus cum me undique, specialiter scientia debita, destitutum videam et satis experiar, Deum exoro, ut aliorum doctissimorum ordinis nostri confratrum studio et labore supplere dignetur vota et desideria mea. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e27030">Vale, Bernarde dilectissime, meque apud tuum dilectissimum germanum et comprofessum tuum excusa, quod hac vice non satisfecerim. Quantis pro tempore occuper negotiis, <seg type="lemma" corresp="#d3e27065">oretenus suo tempore explicabo. Et utinam proxime</seg>, si obedientia non iniungeret plura. Vale iterumque vale et pro me etiam Deum exora, ut de me in omnibus fiat eius sanctissima voluntas.</seg></p>
-            <p xml:space="preserve">Ex cella mea dilecta in Conversione sancti Pauli 1717.</p>
-            <p xml:space="preserve"><seg type="context" n="5" xml:space="preserve" xml:id="d3e27036">Antiquissimo meo patrono <seg type="lemma" corresp="#d3e27071">Anselmo vestro et Martino podagrico</seg> condiscipulo meo olim Salisburgensi dilectissimo recommendationem mei cordialissimam rogo.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e27039">
-               <ref type="context">1</ref>
-               <label>pro ... Hieronymo</label><p>Um welches Material es bei dieser Gelegenheit ging, konnte nicht festgestellt werden.</p></note>
-            <note xml:id="d3e27045">
-               <ref type="context">2</ref>
-               <label>Mellicensium opusculorum</label><p> Gemeint sind vermutlich die in <ref
-                     type="letter">655</ref> &lt;4&gt; erbetenen Werke „Bibliotheca
-                  Benedictino-Mauriana“ und „Antilogia“.</p></note>
-            <note xml:id="d3e27051">
-               <ref type="context">2</ref>
-               <label> opusculum meum</label><p>Vgl. <ref type="letter">505</ref>
-               &lt;5&gt;.</p></note>
-            <note xml:id="d3e27055">
-               <ref type="context">3</ref>
-               <label>Carolum ... hic exspecto</label><p> Meichelbeck erwähnt einen solchen Besuch in 734 weder als stattgefunden noch als geplant; auch aus seinem Diarium ist dazu nichts zu entnehmen.</p></note>
-            <note xml:id="d3e27061">
-               <ref type="context">3</ref>
-               <label> Thoma Wessofontano ... teporem</label><p> Vgl.<ref type="letter"> 609</ref>,
-                     <ref type="letter">655</ref> &lt;6&gt;, <ref type="letter">734 </ref>&lt;4&gt;
-                  und &lt;6&gt;. Unklar ist, ob AH die bereits erfolgte Einsendung einer
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>pro ... Hieronymo</mentioned>
+            <p>Um welches Material es bei dieser Gelegenheit ging, konnte nicht festgestellt werden.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>Mellicensium opusculorum</mentioned>
+            <p> Gemeint sind vermutlich die in <ref type="letter" target="letter:655">655</ref> <ref target="letter:655#seg4">4</ref> erbetenen Werke „Bibliotheca
+                  Benedictino-Mauriana“ und „Antilogia“.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned> opusculum meum</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:505">505</ref>
+               <ref target="letter:505#seg5">5</ref>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>Carolum ... hic exspecto</mentioned>
+            <p> Meichelbeck erwähnt einen solchen Besuch in 734 weder als stattgefunden noch als geplant; auch aus seinem Diarium ist dazu nichts zu entnehmen.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned> Thoma Wessofontano ... teporem</mentioned>
+            <p> Vgl.<ref type="letter" target="letter:609"> 609</ref>,
+                     <ref type="letter" target="letter:655">655</ref> <ref target="letter:655#seg6">6</ref>, <ref type="letter" target="letter:734">734 </ref><ref target="letter:734 #seg4">4</ref>
+                  und <ref target="letter:734 #seg6">6</ref>. Unklar ist, ob AH die bereits erfolgte Einsendung einer
                   Schriftstellerliste durch Erhardt nicht bewusst war oder er hier an darüber
                   hinausgehende Lieferungen – etwa Ergänzungen und Erläuterungen, wie sie BP öfter
-                  erbat – dachte.</p></note>
-            <note xml:id="d3e27065">
-               <ref type="context">4</ref>
-               <label>oretenus ... utinam proxime</label><p>AH könnte sich hier entweder auf den ihm
+                  erbat – dachte.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned>oretenus ... utinam proxime</mentioned>
+            <p>AH könnte sich hier entweder auf den ihm
                   bereits bekannten Plan einer Bibliotheksreise BPs nach Bayern oder auf seine
                   eigene wenig später, nämlich im April 1717, erfolgte Ernennung zum Zellerar
-                  beziehen, die ihm in weiterer Folge Reisen nach Österreich ermöglichte: vgl. <ref
-                     type="letter">688</ref> &lt;2&gt;, <ref type="letter">819
-               </ref>&lt;2&gt;.</p></note>
-            <note xml:id="d3e27071">
-               <ref type="context">5</ref>
-               <label>Anselmo ... Martino podagrico</label><p>Vgl. <ref type="letter">505</ref>
-                  &lt;8&gt;.</p></note>
-         </div>
-      </back>
+                  beziehen, die ihm in weiterer Folge Reisen nach Österreich ermöglichte: vgl. <ref type="letter" target="letter:688">688</ref> <ref target="letter:688#seg2">2</ref>, <ref type="letter" target="letter:819">819
+               </ref><ref target="letter:819&#xA;               #seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
+            <mentioned>Anselmo ... Martino podagrico</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:505">505</ref>
+                  <ref target="letter:505#seg8">8</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Ordnungsvermerk: <orig>146.</orig></note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:19780">
+            <title type="short">Stockinger, Klosterbibliothekar</title>
+            <biblScope>221</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <front>
+         <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez celeberrimi exemptique monasterii Mellicensis capitulari ac ibidem bibliothecario dignissimo, domino ac patrono suo colendissimo. Mölkh. 1717.<note type="annotation">Siegel.</note></p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez amico ac patrono suo integerrimo et optimo pater Alphonsus Tegernseensis cordis sui intima et omnia.</opener>
+         <ab resp="#editor" xml:id="seg1">Tandem aliquando cum responsoriis suis Alphonsus, et utinam cum iis omnia, quae debeo. In dies sustuli, quia in dies speravi a reverendissimo nostro optimoque praesule accipere, quae petii, et quidem <anchor xml:id="n1"/>pro clarissimo domino patri Hieronymo<anchor xml:id="n1e"/> germano tuo. Rogo iterumque rogo, in his me negligentem excuses, quod hactenus iustissimis desideriis non satisfecerim; satisfaciam autem certissime, quamprimum obtinuero ea, quae<del ana="#before">quae</del> adhuc desunt ex archivio nostro petenda et exspectanda, quare iteratis vicibus<del ana="#after">vicibus</del> veniam rogo et patientiam. Scribis in ultimis tuis reverendissimorum abbatum promissa esse cerea, ego de nostris morosa quandoque scribo, hinc doleo me non semper citissime posse satisfacere iustissimis desideriis vestris. Spiritus meus inserviendi quidem promptissimus est, sed etc. </ab>
+         <ab resp="#editor" xml:id="seg2">Fasciculum <anchor xml:id="n2"/>Mellicensium opusculorum<anchor xml:id="n2e"/> in festo sancti Andreae a reverendissimo nostro accepi redux ex ratiociniis annuis parochiae meae. O insignia <pb n="1v"/> et aurea sane Benedictina munuscula! <choice><sic>partusque</sic><corr>Partus hos</corr></choice> nobilissimos reponam ad thesaurum meum intimum et in terra charissimum in dulcissimam Mellicensium meorum memoriam. Utinam et similiter<anchor xml:id="n3"/> opusculum meum<anchor xml:id="n3e"/> ascetico-morale proxime offerre possem, sed <add place="above">quia</add> vix ante autumnum publicam lucem videbit, bibliopola ipso teste, veniam etiam quoad hoc rogo et patientiam. </ab>
+         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n4"/>Carolum illum nostrum Buranum proxime hic exspecto<anchor xml:id="n4e"/>, vae dulcissimae tui memoriae Bernarde melliflue, vae tibi. Conferam cum eo plura etiam de<anchor xml:id="n5"/> Thoma Wessofontano aliisque in suis responsoriis et communicatione cum charissimo nostro Bernardo adeo tepidis et desidiosis sodalibus nostris. Doleo certe horum desidiam et teporem<anchor xml:id="n5e"/>, quia video et agnosco Bernardi mei eiusque dulcissimi domini germani studia sanctissima et iustissima desideria, nihilque opto a Deo ter optimo nisi sufficientiam virium in omnibus vobis succurrendi; <pb n="2r"/> certe vitam meam vitaeque adhuc residuos annos vobis offerrem. Quibus cum me undique, specialiter scientia debita, destitutum videam et satis experiar, Deum exoro, ut aliorum doctissimorum ordinis nostri confratrum studio et labore supplere dignetur vota et desideria mea. </ab>
+         <ab resp="#editor" xml:id="seg4">Vale, Bernarde dilectissime, meque apud tuum dilectissimum germanum et comprofessum tuum excusa, quod hac vice non satisfecerim. Quantis pro tempore occuper negotiis, <anchor xml:id="n6"/>oretenus suo tempore explicabo. Et utinam proxime<anchor xml:id="n6e"/>, si obedientia non iniungeret plura. Vale iterumque vale et pro me etiam Deum exora, ut de me in omnibus fiat eius sanctissima voluntas.</ab>
+         <closer>Ex cella mea dilecta in Conversione sancti Pauli 1717.</closer>
+         <closer xml:id="seg5">Antiquissimo meo patrono <anchor xml:id="n7"/>Anselmo vestro et Martino podagrico<anchor xml:id="n7e"/> condiscipulo meo olim Salisburgensi dilectissimo recommendationem mei cordialissimam rogo.</closer>
+      </body>
    </text>
 </TEI>

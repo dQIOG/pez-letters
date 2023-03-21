@@ -1,44 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="873" xml:id="pez-0873">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">873 Leopold Wydemann an Bernhard und Hieronymus Pez. 1718-01-01. Gaming.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Leopold Wydemann an Bernhard und Hieronymus Pez. 1718-01-01. Gaming.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">873</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:16236">Fiska, Geschichtsforschung </rs>231</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">III</biblScope>
-               <biblScope unit="page">39r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 39r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -53,177 +69,170 @@
                <persName>Bernhard und Hieronymus Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">872</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">879</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">855</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">865</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">872</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">880</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">880</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">888</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">904</idno>
-               </ref>
+               <ptr type="prev" target="letter:872"/>
+               <ptr type="next" target="letter:879"/>
+               <ptr type="mentions" target="letter:855"/>
+               <ptr type="mentions" target="letter:865"/>
+               <ptr type="mentions" target="letter:872"/>
+               <ptr type="mentions" target="letter:880"/>
+               <ptr type="mentionedIn" target="letter:880"/>
+               <ptr type="mentionedIn" target="letter:888"/>
+               <ptr type="mentionedIn" target="letter:904"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">LW</rs> beginnt seinen Brief mit Neujahrswünschen an BP und HP. Er kann nicht ausführlicher schreiben, da ihn die umfangreichen Weihnachtsfeierlichkeiten und auch die nach den Gottesdiensten zugestandene Entspannung des Geistes davon abgehalten haben. Diese Erholung ist insbesondere für einen kontemplativen Mönch, dem solche oft verwehrt wird, wegen der dadurch möglichen umso größeren Devotion keineswegs zu vernachlässigen.</p>
+            <p corresp="#seg2"><rs type="person" role="sender">LW</rs> lehnt es nicht ab, die drei Texte, um die BP gebeten hat <ref type="letter" target="letter:872">872</ref>, abzuschreiben oder durch einen anderen abschreiben zu lassen, will aber vorher noch einige Anmerkungen zu ihnen anbringen. Das Werk des Richard von St.-Victor (drittes Buch von „De eruditione hominis interioris“) ist schön und vergeistigt, wenn auch nicht umfangreich. Dass es <rs type="person" role="sender">LW</rs> einem anderen zur Abschrift anvertraut, verbieten die schwer lesbare Schrift und die vielen Abkürzungen, weshalb <rs type="person" role="sender">LW</rs> dies selbst übernehmen wird. Er sendet eine partielle Beschreibung des Textes und überlässt es BP, der nach eigener Angabe über alle Werke Richards verfügt, nachzuprüfen, ob nicht Richards Kommentar zum siebenten Kapitel des Buches Daniel mit dem vorliegenden Traktat identisch ist; nach Johannes Trithemius („Catalogus scriptorum ecclesiasticorum“) hat Richard über das Buch Daniel geschrieben. Wenn aber diese Vermutung nicht zutrifft, verspricht <rs type="person" role="sender">LW</rs> die Übermittlung einer Abschrift.</p>
+            <p corresp="#seg3"><rs type="person" role="sender">LW</rs> übermittelt in der Beilage außerdem das Initium des Berichts über die Pilgerfahrt des Herzogs Albrecht von Sachsen in das Heilige Land (Kurzfassung nach Hans von Mergenthal). BP wird daraus den Stil des unbekannten Autors ersehen und auch, wie knapp die Reise von Sachsen nach Rom und von dort nach Venedig beschrieben wird. Weitläufiger schildert der Autor die heiligen Stätten Jerusalems, wobei er genau ausführt, an welchen Orten Ablässe erworben wurden, doch auch hierbei ist seine Gelehrsamkeit sehr gering. Das ganze Werk wird auf drei bis vier Bögen gehen. Am 5. März verließ Albrecht Sachsen und kehrte bereits am Samstag nach St. Michael (29. September) im selben Jahr (1476) nach Venedig zurück. Da <rs type="person" role="sender">LW</rs> unklar ist, ob BP und HP auch deutschsprachige Texte, zumal in schlichtem Stil, veröffentlichen wollen, fragt er, was mit diesem Bericht geschehen soll, da er ihn nicht vergeblich abschreiben lassen will.</p>
+            <p corresp="#seg4">Aus dem Dialog „De esu volatilium“ (des Honorius Augustodunensis) zitiert <rs type="person" role="sender">LW</rs> die Worte des Schülers an den Meister, wonach bei einer Zusammenkunft zahlreicher Äbte in Gegenwart Kaiser Ludwigs des Frommen den Mönchen die Mästung von Geflügel zugestanden wurde. Eine Erwähnung Karls des Großen oder eines Konzils zu Aachen hat <rs type="person" role="sender">LW</rs> bei einer raschen Durchsicht seines Codex nicht gefunden, weshalb ihm fraglich scheint, ob BPs Handschrift denselben oder einen anderen Text enthält. <rs type="person" role="sender">LWs</rs> Codex, dessen Initium er sicherlich in seinem Katalog der Gaminger Handschriften verzeichnet hat, besteht aus einem Einzelblatt und drei Lagen (philyrae).</p>
+            <p corresp="#seg5">Die „Peregrinatio in Aegyptum“ des Georg von Gaming wird <rs type="person" role="sender">LW</rs> in der Fastenzeit oder schon vorher fertig abgeschrieben haben; ein Drittel davon hat er bereits auf neun Bögen kopiert. Bei geeigneter Gelegenheit will er BP das erste der insgesamt drei Bücher senden, woraufhin BP, wenn es passend erscheint, auf seine gewohnte Art Anmerkungen anbringen kann.</p>
+            <p corresp="#seg6">Seinen eigenen flüchtig zu Papier gebrachten Handschriftenkatalog wünscht sich <rs type="person" role="sender">LW</rs> nicht so dringend wie möglichst viele Kommentare BPs zu diesem.</p>
+            <p corresp="#seg7">Bald will <rs type="person" role="sender">LW</rs> an HP, wie neulich versprochen <ref type="letter" target="letter:865">865</ref>, über die Grafen von Cilli schreiben <ref type="letter" target="letter:880">880</ref>. Die beiden Fragestellungen hat er eher zu deren besserer Kenntnis vorgebracht <ref type="letter" target="letter:855">855</ref> als wegen Elisabeth, der Ehefrau des Herzogs Albrecht V. von Österreich. <rs type="person" role="sender">LW</rs> sendet Grüße an BP und HP und ersucht, in deren Gebete eingeschlossen zu werden.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e47667"><rs type="person" role="sender">LW</rs> beginnt seinen Brief mit Neujahrswünschen an BP und HP. Er kann nicht ausführlicher schreiben, da ihn die umfangreichen Weihnachtsfeierlichkeiten und auch die nach den Gottesdiensten zugestandene Entspannung des Geistes davon abgehalten haben. Diese Erholung ist insbesondere für einen kontemplativen Mönch, dem solche oft verwehrt wird, wegen der dadurch möglichen umso größeren Devotion keineswegs zu vernachlässigen.</seg><seg type="context" n="2" xml:id="d3e47669"><rs type="person" role="sender">LW</rs> lehnt es nicht ab, die drei Texte, um die BP gebeten hat <ref type="letter">872</ref>, abzuschreiben oder durch einen anderen abschreiben zu lassen, will aber vorher noch einige Anmerkungen zu ihnen anbringen. Das Werk des Richard von St.-Victor (drittes Buch von „De eruditione hominis interioris“) ist schön und vergeistigt, wenn auch nicht umfangreich. Dass es <rs type="person" role="sender">LW</rs> einem anderen zur Abschrift anvertraut, verbieten die schwer lesbare Schrift und die vielen Abkürzungen, weshalb <rs type="person" role="sender">LW</rs> dies selbst übernehmen wird. Er sendet eine partielle Beschreibung des Textes und überlässt es BP, der nach eigener Angabe über alle Werke Richards verfügt, nachzuprüfen, ob nicht Richards Kommentar zum siebenten Kapitel des Buches Daniel mit dem vorliegenden Traktat identisch ist; nach Johannes Trithemius („Catalogus scriptorum ecclesiasticorum“) hat Richard über das Buch Daniel geschrieben. Wenn aber diese Vermutung nicht zutrifft, verspricht <rs type="person" role="sender">LW</rs> die Übermittlung einer Abschrift.</seg><seg type="context" n="3" xml:id="d3e47674"><rs type="person" role="sender">LW</rs> übermittelt in der Beilage außerdem das Initium des Berichts über die Pilgerfahrt des Herzogs Albrecht von Sachsen in das Heilige Land (Kurzfassung nach Hans von Mergenthal). BP wird daraus den Stil des unbekannten Autors ersehen und auch, wie knapp die Reise von Sachsen nach Rom und von dort nach Venedig beschrieben wird. Weitläufiger schildert der Autor die heiligen Stätten Jerusalems, wobei er genau ausführt, an welchen Orten Ablässe erworben wurden, doch auch hierbei ist seine Gelehrsamkeit sehr gering. Das ganze Werk wird auf drei bis vier Bögen gehen. Am 5. März verließ Albrecht Sachsen und kehrte bereits am Samstag nach St. Michael (29. September) im selben Jahr (1476) nach Venedig zurück. Da <rs type="person" role="sender">LW</rs> unklar ist, ob BP und HP auch deutschsprachige Texte, zumal in schlichtem Stil, veröffentlichen wollen, fragt er, was mit diesem Bericht geschehen soll, da er ihn nicht vergeblich abschreiben lassen will.</seg><seg type="context" n="4" xml:id="d3e47676">Aus dem Dialog „De esu volatilium“ (des Honorius Augustodunensis) zitiert <rs type="person" role="sender">LW</rs> die Worte des Schülers an den Meister, wonach bei einer Zusammenkunft zahlreicher Äbte in Gegenwart Kaiser Ludwigs des Frommen den Mönchen die Mästung von Geflügel zugestanden wurde. Eine Erwähnung Karls des Großen oder eines Konzils zu Aachen hat <rs type="person" role="sender">LW</rs> bei einer raschen Durchsicht seines Codex nicht gefunden, weshalb ihm fraglich scheint, ob BPs Handschrift denselben oder einen anderen Text enthält. <rs type="person" role="sender">LWs</rs> Codex, dessen Initium er sicherlich in seinem Katalog der Gaminger Handschriften verzeichnet hat, besteht aus einem Einzelblatt und drei Lagen (philyrae).</seg><seg type="context" n="5" xml:id="d3e47678">Die „Peregrinatio in Aegyptum“ des Georg von Gaming wird <rs type="person" role="sender">LW</rs> in der Fastenzeit oder schon vorher fertig abgeschrieben haben; ein Drittel davon hat er bereits auf neun Bögen kopiert. Bei geeigneter Gelegenheit will er BP das erste der insgesamt drei Bücher senden, woraufhin BP, wenn es passend erscheint, auf seine gewohnte Art Anmerkungen anbringen kann.</seg><seg type="context" n="6" xml:id="d3e47680">Seinen eigenen flüchtig zu Papier gebrachten Handschriftenkatalog wünscht sich <rs type="person" role="sender">LW</rs> nicht so dringend wie möglichst viele Kommentare BPs zu diesem.</seg><seg type="context" n="7" xml:id="d3e47682">Bald will <rs type="person" role="sender">LW</rs> an HP, wie neulich versprochen <ref type="letter">865</ref>, über die Grafen von Cilli schreiben <ref type="letter">880</ref>. Die beiden Fragestellungen hat er eher zu deren besserer Kenntnis vorgebracht <ref type="letter">855</ref> als wegen Elisabeth, der Ehefrau des Herzogs Albrecht V. von Österreich. <rs type="person" role="sender">LW</rs> sendet Grüße an BP und HP und ersucht, in deren Gebete eingeschlossen zu werden.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverendo ac religiosissimo in Christo patri Bernardo Pez et reverendo fratri eius Hieronymo Pez precatur frater Leopoldus Wydeman felicem anni praesentis ingressum, feliciorem progressum et felicissimum egressum.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e47706">Ut fusiore calamo scriberem, prohibuit divini officii in his festis prolixitas, pater colendissime, et concessa maior solito<note place="foot" xml:id="d3e47708">	Korrigiert aus <hi rend="italic">solita</hi>.</note> post divinum officium relaxatio animi. Nec haec venit negligenda, ut illud devotione maiori possit peragi, praesertim a solitario, cui frequentior denegatur relaxatio. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e47714">Ad rem, tria a me postulas describenda opuscula; nec, ut describam sive per me sive per alium, abnuo. Id tamen patieris aequo animo, ut paucis mentem meam circa eadem, antequam describam, explicem. <seg type="lemma" corresp="#d3e47737">Richardi a S. Victore opus pulchrum</seg> est et spirituale, licet non magnum; quod alteri ad describendum ut committam, prohibet intricatus et abbreviatus character et suadet, ut ipse describam. Habes huius oeconomiam<note place="foot" xml:id="d3e47716">	Korrigiert aus <hi rend="italic">oeconi</hi>.</note> hic appositam ex parte aliqua; sed tuum erit, cum <seg type="lemma" corresp="#d3e47747">omnia opera eius, ut scribis, habeas</seg>, revidere<seg type="lemma" corresp="#d3e47751"> caput septimum in Danielem</seg> (nam in hunc scripsisse Richardum<seg type="lemma" corresp="#d3e47755"> testis est Trithemius</seg>), an forsitan ibidem lateat tractatus, quem a me requiris. Si non latet, securus esto, quod eum proxime describam et mittam. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e47722">De <seg type="lemma" corresp="#d3e47759">Alberti ducis Saxoniae Passagio</seg> in Terram Sanctam etiam in adiuncto cernes principium, ex quo authoris, quiscunque ille sit, stylum utcunque conicies; et simul, quam compendiose iter ex Saxonia Romam et Roma Venetias descripserit. Fusior quidem est in describendis locis sacris Hierosolymitanis, licet et haec breviter describat et cuique loco suas assignet indulgentias, tamen et hic eruditio vel nulla est vel exigua; totumque opus philyris tribus aut quatuor continebitur. Quinta Martii abiit Albertus ex Saxonia, Sabbato post Michaelis autem reversus est Venetias in uno et eodem anno, peracto iam itinere Hierosolymitano. Mihi interim cum nondum constet, an opera Germanica et quidem simplici stylo descripta edituri sitis, necesse videtur interrogare, quid factu opus fore cum hoc opere censeatis, ne alium in describendo frustra fatigem. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e47724">In dialogo <seg type="lemma" corresp="#d3e47765">De esu volatilium</seg> lego sequentia discipuli ad magistrum verba: <seg type="lemma" corresp="#d3e47771">Sicut relatione multorum didicimus, usus saginae indultus est monachis in quodam conventu, in quo resedit imperator Pius Ludwicus cum multis religiosis abbatibus, ut volatilia in saginam transferrentur, id decernentibus. Num incusas statutum illorum</seg>? Haec discipulus. De Carolo <pb n="1v"/> Magno et concilio Aquisgranensi nulla in meo codice obiter reviso fit mentio, unde dubium, an codex tuus alium dialogum contineat diversum a meo vel eundem; habet alias <seg type="lemma" corresp="#d3e47779">codex meus</seg> (cuius initium utique in catalogo meo posui) folium unum et philyras tres. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e47728"><seg type="lemma" corresp="#d3e47783">Georgii nostri Diarium</seg> in Quadragesima, uti spero, vel ante illam perficiam, utpote cuius tertiam partem in nona philyra iam descriptam habeo, missurus eruditioni tuae occasione congrua librum primum, nam opus totum tres continet libros; ut sic annotationes more tuo, si visum fuerit, addere valeas. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e47730">Catalogum bibliothecae nostrae obiter in chartam coniectum non tantum desidero, quantum notas tuas ad illum; quae quo plures erunt, erunt eo gratiores. Sed de his plura, ubi notas illas tuas obtinuero. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d3e47732">Proxime charissimo fratri tuo perscribam, quae nuper promisi de Ciliensibus comitibus, ob quorum notitiam pleniorem magis dubia illa duo proposui quam ob Elisabetham Alberti ducis Austriae V. coniugem. Uterque optime valeat et memor sit mei in orationibus. Bene valete.</seg></p>
-            <p xml:space="preserve">Die 1. Januarii 1718 Gemnici.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e47737">
-               <ref type="context">2</ref>
-               <label>Richardi ... opus pulchrum</label><p>Dieser Text lässt sich eindeutig
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>Richardi ... opus pulchrum</mentioned>
+            <p>Dieser Text lässt sich eindeutig
                   bestimmen anhand der Angaben LWs in der Beilage zu diesem Brief sowie der weiteren
                   Diskussion in der späteren Korrespondenz, die letztlich zu der Erkenntnis führte,
-                  dass er schon ediert war: vgl. <ref type="letter">888</ref> &lt;1&gt;, <ref
-                     type="letter">904</ref> &lt;1&gt;. Es handelt sich um das dritte Buch von
+                  dass er schon ediert war: vgl. <ref type="letter" target="letter:888">888</ref> <ref target="letter:888#seg1">1</ref>, <ref type="letter" target="letter:904">904</ref> <ref target="letter:904#seg1">1</ref>. Es handelt sich um das dritte Buch von
                   Richards Schrift „De eruditione hominis interioris“, das in der LW vorliegenden
-                  Handschrift, wie auch sonst häufig, offenbar separat überliefert war: vgl. <rs
-                     type="bibl" key="bibl:16608">Goy, Richard von St. Viktor</rs> 304. In Melk sind
+                  Handschrift, wie auch sonst häufig, offenbar separat überliefert war: vgl. <rs type="bibl" ref="bibl:16608">Goy, Richard von St. Viktor</rs> 304. In Melk sind
                   heute zwei solche Überlieferungen vorhanden: StiB Melk, Cod. 1776, 115r–130r, und
-                  Cod. 1827, 69r–93r; vgl. <rs type="bibl" key="bibl:16608">Goy, Richard von St.
+                  Cod. 1827, 69r–93r; vgl. <rs type="bibl" ref="bibl:16608">Goy, Richard von St.
                      Viktor</rs> 294. Sie entsprechen allerdings nicht den detaillierten Angaben LWs
                   in der Beilage, insbesondere nicht im Hinblick auf den von ihm wörtlich
                   wiedergegebenen Überlieferungstitel. Es ist daher anzunehmen, dass auch hier – wie
                   bei den weiteren handschriftlichen Texten, die in diesem Brief zur Sprache kommen
                   – von einer Gaminger Überlieferung die Rede ist, die BP wohl in LWs
                   Handschriftenkatalog aufgefallen war. Sie hat als verschollen zu
-               gelten.</p></note>
-            <note xml:id="d3e47743">
-               <ref type="context">2</ref>
-               <label> Habes ... appositam</label><p>Die Beilage ist erhalten: III, 40r–v. Das Blatt
+               gelten.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned> Habes ... appositam</mentioned>
+            <p>Die Beilage ist erhalten: III, 40r–v. Das Blatt
                   ist jenes, auf dem LW bereits früher den Inhalt einer Gaminger historischen
                   Sammelhandschrift – heute ÖNB, Cod. 3358 – aufgeschlüsselt und das er als Beilage
-                  zu 865 zwar angekündigt, aber nicht versendet hatte: vgl. <ref type="letter"
-                     >865</ref> &lt;5&gt;. Die Notate zu den in diesem Brief besprochenen Texten
-                  stehen auf der Rectoseite: III, 40r. </p></note>
-            <note xml:id="d3e47747">
-               <ref type="context">2</ref>
-               <label>omnia opera ... habeas</label><p>In Melk ist heute von mehreren während des 16. und 17. Jh. erschienenen Gesamtausgaben der Werke Richards von St.-Victor keine zu finden.</p></note>
-            <note xml:id="d3e47751">
-               <ref type="context">2</ref>
-               <label> caput ... in Danielem</label><p>Am Beginn des dritten Buches wird Dan 7,2–3 zitiert. LW vermutete wohl deshalb, dass es sich bei diesem Text um ein Bruchstück eines Kommentars zum Buch Daniel handeln könnte.</p></note>
-            <note xml:id="d3e47755">
-               <ref type="context">2</ref>
-               <label> testis est Trithemius</label><p>Bei Trithemius scheint unter den Werken
+                  zu 865 zwar angekündigt, aber nicht versendet hatte: vgl. <ref type="letter" target="letter:865">865</ref> <ref target="letter:865#seg5">5</ref>. Die Notate zu den in diesem Brief besprochenen Texten
+                  stehen auf der Rectoseite: III, 40r. </p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>omnia opera ... habeas</mentioned>
+            <p>In Melk ist heute von mehreren während des 16. und 17. Jh. erschienenen Gesamtausgaben der Werke Richards von St.-Victor keine zu finden.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned> caput ... in Danielem</mentioned>
+            <p>Am Beginn des dritten Buches wird Dan 7,2–3 zitiert. LW vermutete wohl deshalb, dass es sich bei diesem Text um ein Bruchstück eines Kommentars zum Buch Daniel handeln könnte.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned> testis est Trithemius</mentioned>
+            <p>Bei Trithemius scheint unter den Werken
                   Richards von St. Viktor eine Schrift „In Danielem prophetam, liber unus“ auf:
                   Trithemius, Catalogus scriptorum (Köln 1531) 73v. Zur Verwendung der genannten
-                  Ausgabe durch LW vgl. <ref type="letter">1026</ref> &lt;4&gt;. Die Nennung dürfte
+                  Ausgabe durch LW vgl. <ref type="letter" target="letter:1026">1026</ref> <ref target="letter:1026#seg4">4</ref>. Die Nennung dürfte
                   sich in der Tat auf „De eruditione hominis interioris“ beziehen, da von Richard
-                  sonst kein exegetisches Werk zum Buch Daniel bekannt ist: vgl. <rs type="bibl"
-                     key="bibl:15600">Châtillon, Richard de Saint-Victor</rs> col. 599–627.
-               </p></note>
-            <note xml:id="d3e47759">
-               <ref type="context">3</ref>
-               <label>Alberti ducis ... Passagio</label><p> Die Pilgerfahrt Albrechts III. des
+                  sonst kein exegetisches Werk zum Buch Daniel bekannt ist: vgl. <rs type="bibl" ref="bibl:15600">Châtillon, Richard de Saint-Victor</rs> col. 599–627.
+               </p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned>Alberti ducis ... Passagio</mentioned>
+            <p> Die Pilgerfahrt Albrechts III. des
                   Beherzten, Herzogs von Sachsen und Markgrafen von Meißen, fand zwischen dem 5.
                   März und 5. Dezember 1476 statt. Einen ausführlichen Bericht darüber verfasste der
-                  sächsische Landrentmeister Hans von Mergenthal: <rs type="bibl" key="bibl:16764"
-                     >Halm, Reiseberichte</rs> 177–181; <rs type="bibl" key="bibl:20398">Wis, Hans
+                  sächsische Landrentmeister Hans von Mergenthal: <rs type="bibl" ref="bibl:16764">Halm, Reiseberichte</rs> 177–181; <rs type="bibl" ref="bibl:20398">Wis, Hans
                      von Megenthal</rs>. Der LW vorliegende Text war allerdings, wie auch das in der
                   Beilage zu diesem Brief mitgeteilte Initium bestätigt, nicht identisch mit jenem
                   Bericht, sondern eine deutlich gekürzte und auch inhaltlich modifizierte Fassung
                   davon, die vor allem nur den Abschnitt der Reise von Venedig ins Heilige Land und
                   zurück nach Venedig behandelt. LW übermittelte später eine vollständige Abschrift
-                  des Textes nach Melk: vgl. <ref type="letter">936 </ref>&lt;1&gt;. In der Folge
+                  des Textes nach Melk: vgl. <ref type="letter" target="letter:936">936 </ref><ref target="letter:936 #seg1">1</ref>. In der Folge
                   kam es durch Vermittlung BPs zum Abdruck des Berichts durch Johann Burkhard
-                  Mencke: <rs type="bibl" key="bibl:14750">Mencke, Scriptores</rs> 2 col. 2103–2112.
+                  Mencke: <rs type="bibl" ref="bibl:14750">Mencke, Scriptores</rs> 2 col. 2103–2112.
                   In der Vorrede wurde ausdrücklich auf LW als Abschreiber und BP als Vermittler
                   hingewiesen: ebd., Praefatio (unpag.) ad Nr. XXIX. Die Vorlage und einzig bekannte
                   Überlieferung dieser Fassung, eine Gaminger Handschrift, ist als verschollen
-                  anzusehen: vgl. <rs type="bibl" key="bibl:19050">Reichert, Von Dresden nach
+                  anzusehen: vgl. <rs type="bibl" ref="bibl:19050">Reichert, Von Dresden nach
                      Jerusalem</rs> 57. – Der Reisebericht des Hans von Mergenthal liegt auch in
                   einer Melker Handschrift aus den 1560er Jahren vor: StiB Melk, Cod. 1574, 1r–120v;
-                  vgl. <rs type="bibl" key="bibl:19050">Reichert, Von Dresden nach Jerusalem</rs>
+                  vgl. <rs type="bibl" ref="bibl:19050">Reichert, Von Dresden nach Jerusalem</rs>
                   57. Fälschlich mit StiB Melk, Cod. 46, der andere Pilgerberichte enthält,
                   identifiziert wird dieser Codex bei Halm, Reiseberichte 179. Diese Überlieferung
                   scheint, sofern sie sich überhaupt bereits in Melk befand, bei den geschilderten
-                  Vorgängen um die Gaminger Fassung keine Rolle gespielt zu haben. </p></note>
-            <note xml:id="d3e47765">
-               <ref type="context">4</ref>
-               <label>De esu volatilium</label><p>BP edierte diesen Text in der Folge unter dem
+                  Vorgängen um die Gaminger Fassung keine Rolle gespielt zu haben. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
+            <mentioned>De esu volatilium</mentioned>
+            <p>BP edierte diesen Text in der Folge unter dem
                   Titel „Anonymi Benedictini, qui circa saeculum duodecimum scripsisse videtur,
-                  dialogus De esu volatilium“: <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs>
+                  dialogus De esu volatilium“: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs>
                   2/2 col. 543–566. Als Vorlagen benutzte er die hier von LW beschriebene Gaminger
                   Handschrift, die heute verschollen ist, sowie einen Melker Codex: heute StiB Melk,
-                  Cod. 990, 109r–115v; vgl. <rs type="bibl" key="bibl:16432">Garrigues, De esu</rs>
+                  Cod. 990, 109r–115v; vgl. <rs type="bibl" ref="bibl:16432">Garrigues, De esu</rs>
                   92. Eine dritte Handschrift aus Göttweig war BP gleichfalls bekannt: StiB
-                  Göttweig, Cod. 99, 105v–115r; vgl. <rs type="bibl" key="bibl:16432">Garrigues, De
+                  Göttweig, Cod. 99, 105v–115r; vgl. <rs type="bibl" ref="bibl:16432">Garrigues, De
                      esu</rs> 92f. BP hatte sie zum Zeitpunkt der Publikation bereits eingesehen,
                   sie war ihm jedoch nach dem Göttweiger Stiftsbrand von 1718 nicht mehr zugänglich:
-                  vgl. <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs> 2 xxxiv; sowie <ref
-                     type="letter">936</ref> &lt;2&gt;, <ref type="letter">954</ref> &lt;1&gt;. Von
+                  vgl. <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 2 xxxiv; sowie <ref type="letter" target="letter:936">936</ref> <ref target="letter:936#seg2">2</ref>, <ref type="letter" target="letter:954">954</ref> <ref target="letter:954#seg1">1</ref>. Von
                   BP und LW wurde bereits eine Zuschreibung an Honorius Augustodunensis erwogen,
                   aber letztlich nicht als sicher behauptet. Die neuere Forschung hat sich dieser
                   Ansicht angeschlossen und somit auch die Zuschreibung mehrerer später
-                  Überlieferungen an Bernhard von Waging widerlegt: <rs type="bibl" key="bibl:16432"
-                     >Garrigues, De esu</rs> 80–84; <rs type="bibl" key="bibl:19962">Treusch,
+                  Überlieferungen an Bernhard von Waging widerlegt: <rs type="bibl" ref="bibl:16432">Garrigues, De esu</rs> 80–84; <rs type="bibl" ref="bibl:19962">Treusch,
                      Bernhard von Waging</rs> 257–265. Dies wird weiter erhärtet durch eine bisher
                   übersehene weitere Handschrift des 12. Jh. aus Lambach, die sich allerdings
                   bereits seit dem 16. Jh. in Wien befand: heute ÖNB, Cod. 1659, 11v–24r. Zur
-                  weiteren Bearbeitung dieses Textes vgl. <ref type="letter">929</ref> &lt;4&gt; und
-                  &lt;5&gt;. </p></note>
-            <note xml:id="d3e47771">
-               <ref type="context">4</ref>
-               <label>Sicut relatione ... illorum</label><p><rs type="bibl" key="bibl:16432"
-                     >Garrigues, De esu</rs> 113.</p></note>
-            <note xml:id="d3e47775">
-               <ref type="context">4</ref>
-               <label> De Carolo ... Aquisgranensi</label><p>Wovon BPs Anfrage ausging, bleibt
+                  weiteren Bearbeitung dieses Textes vgl. <ref type="letter" target="letter:929">929</ref> <ref target="letter:929#seg4">4</ref> und
+                  <ref target="letter:929#seg5">5</ref>. </p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
+            <mentioned>Sicut relatione ... illorum</mentioned>
+            <p><rs type="bibl" ref="bibl:16432">Garrigues, De esu</rs> 113.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg4">
+            <mentioned> De Carolo ... Aquisgranensi</mentioned>
+            <p>Wovon BPs Anfrage ausging, bleibt
                   unklar. Der Melker Codex mit „De esu volatilium“ enthält keine Erwähnung Karls des
                   Großen. Da in ihm heute unmittelbar vor jenem Text zwei Blätter fehlen, ist nicht
                   ganz auszuschließen, dass sich dort ein Hinweis befunden haben könnte. In der
                   Vorrede zu seiner Edition ordnete BP später die Debatte über den Verzehr von
                   Geflügel durch Mönche korrekt den beiden von Benedikt von Aniane geleiteten
-                  Äbteversammlungen 816 und 817 in Aachen zu: <rs type="bibl" key="bibl:36782">Pez,
+                  Äbteversammlungen 816 und 817 in Aachen zu: <rs type="bibl" ref="bibl:36782">Pez,
                      Thesaurus</rs> 2 xxxiii. Zu diesen Synoden und ihren Entscheidungen in jener
-                  Frage vgl. <rs type="bibl" key="bibl:19558">Semmler, Volatilia</rs> 165–170. Die
+                  Frage vgl. <rs type="bibl" ref="bibl:19558">Semmler, Volatilia</rs> 165–170. Die
                   erste hatte den Geflügelverzehr nur bei Krankheit gestattet, die zweite erlaubte
-                  ihn auch zu den Festen Ostern und Weihnachten. </p></note>
-            <note xml:id="d3e47779">
-               <ref type="context">4</ref>
-               <label>codex meus</label><p>Zu der verschollenen Handschrift vgl. <ref type="letter"
-                     >948</ref> &lt;23&gt;, <ref type="letter">973</ref> &lt;5&gt;.</p></note>
-            <note xml:id="d3e47783">
-               <ref type="context">5</ref>
-               <label>Georgii nostri Diarium</label><p>Vgl. <ref type="letter">849</ref> &lt;2&gt;
-                  und &lt;3&gt;.</p></note>
-         </div>
-      </back>
+                  ihn auch zu den Festen Ostern und Weihnachten. </p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg4">
+            <mentioned>codex meus</mentioned>
+            <p>Zu der verschollenen Handschrift vgl. <ref type="letter" target="letter:948">948</ref> <ref target="letter:948#seg23">23</ref>, <ref type="letter" target="letter:973">973</ref> <ref target="letter:973#seg5">5</ref>.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg5">
+            <mentioned>Georgii nostri Diarium</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:849">849</ref> <ref target="letter:849#seg2">2</ref>
+                  und <ref target="letter:849#seg3">3</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:16236">
+            <title type="short">Fiska, Geschichtsforschung</title>
+            <biblScope>231</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverendo ac religiosissimo in Christo patri Bernardo Pez et reverendo fratri eius Hieronymo Pez precatur frater Leopoldus Wydeman felicem anni praesentis ingressum, feliciorem progressum et felicissimum egressum.</opener>
+         <ab resp="#editor" xml:id="seg1">Ut fusiore calamo scriberem, prohibuit divini officii in his festis prolixitas, pater colendissime, et concessa maior <choice><sic>solita</sic><corr>solito</corr></choice> post divinum officium relaxatio animi. Nec haec venit negligenda, ut illud devotione maiori possit peragi, praesertim a solitario, cui frequentior denegatur relaxatio. </ab>
+         <ab resp="#editor" xml:id="seg2">Ad rem, tria a me postulas describenda opuscula; nec, ut describam sive per me sive per alium, abnuo. Id tamen patieris aequo animo, ut paucis mentem meam circa eadem, antequam describam, explicem. <anchor xml:id="n1"/>Richardi a S. Victore opus pulchrum<anchor xml:id="n1e"/> est et spirituale, licet non magnum; quod alteri ad describendum ut committam, prohibet intricatus et abbreviatus character et suadet, ut ipse describam. Habes huius <choice><sic>oeconi</sic><corr>oeconomiam</corr></choice> hic appositam ex parte aliqua; sed tuum erit, cum <anchor xml:id="n2"/>omnia opera eius, ut scribis, habeas<anchor xml:id="n2e"/>, revidere<anchor xml:id="n3"/> caput septimum in Danielem<anchor xml:id="n3e"/> (nam in hunc scripsisse Richardum<anchor xml:id="n4"/> testis est Trithemius<anchor xml:id="n4e"/>), an forsitan ibidem lateat tractatus, quem a me requiris. Si non latet, securus esto, quod eum proxime describam et mittam. </ab>
+         <ab resp="#editor" xml:id="seg3">De <anchor xml:id="n5"/>Alberti ducis Saxoniae Passagio<anchor xml:id="n5e"/> in Terram Sanctam etiam in adiuncto cernes principium, ex quo authoris, quiscunque ille sit, stylum utcunque conicies; et simul, quam compendiose iter ex Saxonia Romam et Roma Venetias descripserit. Fusior quidem est in describendis locis sacris Hierosolymitanis, licet et haec breviter describat et cuique loco suas assignet indulgentias, tamen et hic eruditio vel nulla est vel exigua; totumque opus philyris tribus aut quatuor continebitur. Quinta Martii abiit Albertus ex Saxonia, Sabbato post Michaelis autem reversus est Venetias in uno et eodem anno, peracto iam itinere Hierosolymitano. Mihi interim cum nondum constet, an opera Germanica et quidem simplici stylo descripta edituri sitis, necesse videtur interrogare, quid factu opus fore cum hoc opere censeatis, ne alium in describendo frustra fatigem. </ab>
+         <ab resp="#editor" xml:id="seg4">In dialogo <anchor xml:id="n6"/>De esu volatilium<anchor xml:id="n6e"/> lego sequentia discipuli ad magistrum verba: <anchor xml:id="n7"/>Sicut relatione multorum didicimus, usus saginae indultus est monachis in quodam conventu, in quo resedit imperator Pius Ludwicus cum multis religiosis abbatibus, ut volatilia in saginam transferrentur, id decernentibus. Num incusas statutum illorum<anchor xml:id="n7e"/>? Haec discipulus. De Carolo <pb n="1v"/> Magno et concilio Aquisgranensi nulla in meo codice obiter reviso fit mentio, unde dubium, an codex tuus alium dialogum contineat diversum a meo vel eundem; habet alias <anchor xml:id="n8"/>codex meus<anchor xml:id="n8e"/> (cuius initium utique in catalogo meo posui) folium unum et philyras tres. </ab>
+         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n9"/>Georgii nostri Diarium<anchor xml:id="n9e"/> in Quadragesima, uti spero, vel ante illam perficiam, utpote cuius tertiam partem in nona philyra iam descriptam habeo, missurus eruditioni tuae occasione congrua librum primum, nam opus totum tres continet libros; ut sic annotationes more tuo, si visum fuerit, addere valeas. </ab>
+         <ab resp="#editor" xml:id="seg6">Catalogum bibliothecae nostrae obiter in chartam coniectum non tantum desidero, quantum notas tuas ad illum; quae quo plures erunt, erunt eo gratiores. Sed de his plura, ubi notas illas tuas obtinuero. </ab>
+         <ab resp="#editor" xml:id="seg7">Proxime charissimo fratri tuo perscribam, quae nuper promisi de Ciliensibus comitibus, ob quorum notitiam pleniorem magis dubia illa duo proposui quam ob Elisabetham Alberti ducis Austriae V. coniugem. Uterque optime valeat et memor sit mei in orationibus. Bene valete.</ab>
+         <closer>Die 1. Januarii 1718 Gemnici.</closer>
+      </body>
    </text>
 </TEI>

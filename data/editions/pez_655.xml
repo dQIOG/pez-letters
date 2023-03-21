@@ -1,38 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="655" xml:id="pez-0655">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">655 Alphons Hueber an Bernhard Pez. 1716-09-20. Tegernsee.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Alphons Hueber an Bernhard Pez. 1716-09-20. Tegernsee.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">655</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
+            <note type="remarks">
+               Das dritte Folium (593r–v) ist im Briefcodex verkehrt eingebunden. – Der Brief und
+                  die Beilagen wurden von Petrus von Guetrather nach Melk überbracht: vgl. 660 &lt;1&gt;.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">591r–593v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 591r–593v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,256 +72,220 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">641</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">660</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">276</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">609</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">641</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">660</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">688</idno>
-               </ref>
+               <ptr type="prev" target="letter:641"/>
+               <ptr type="next" target="letter:660"/>
+               <ptr type="mentions" target="letter:276"/>
+               <ptr type="mentions" target="letter:609"/>
+               <ptr type="mentions" target="letter:641"/>
+               <ptr type="mentionedIn" target="letter:660"/>
+               <ptr type="mentionedIn" target="letter:688"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">BPs</rs> Brief vom 23. August 1716 <ref type="letter" target="letter:641">641</ref> hat <rs type="person" role="sender">AH</rs> am 30. August erhalten, dem <rs type="cit" ref="citIndex:ix2_d763e2379">Fest der heiligen Schutzengel</rs>, der Patrone der <rs ref="index:d14380e22316">Bayerischen Benediktinerkongregation</rs>. Er ist erfreut darüber, dass <rs type="person" role="sender">BP</rs> bei guter Gesundheit ist, und wünscht deren lange Erhaltung.</p>
+            <p corresp="#seg2">Nach den beiden Traktaten „<rs ref="index:d14380e40978"><rs ref="index:d14380e42356">De rationali et ratione uti</rs></rs>“ des Gilbert von Reims (recte: <rs ref="index:d14380e40968">Gerbert von Aurillac</rs>) sowie „<rs ref="index:d14380e2257"><rs ref="index:d14380e42240">De mensura monochordi</rs></rs>“ des <rs ref="index:d14380e16692">Guido von Arezzo</rs> (recte: siehe Kommentar) hat <rs type="person" role="sender">AH</rs> unter den ausgelagerten Büchern im Turm lange, aber vergeblich gesucht. Mit besonderer Erlaubnis seines Abtes <rs ref="index:d14380e16651">Petrus von Guetrather</rs> hat er schließlich auch jene <rs ref="index:d14380e42422">Kammer (den „Tempel“)</rs> betreten können, in der die wertvollsten Pergamenthandschriften auf Anordnung des verstorbenen Abtes <rs ref="index:d14380e29011">Quirin Millon</rs> zu dessen ausschließlichem Gebrauch separat verwahrt wurden. Dort hat <rs type="person" role="sender">AH</rs> die Signaturen, die diesen Werken entsprechen, gesucht und auch gefunden. <rs type="person" role="sender">AH</rs> hat die Codices in seine Zelle gebracht und aus dem „<rs ref="index:d14380e42240">De mensura monochordi</rs>“ nach der Bitte <rs type="person" role="sender">BPs</rs> die Initien exzerpiert, den Text „<rs ref="index:d14380e42356">De rationali et ratione uti</rs>“ aber vollständig kopiert. Er bittet um Entschuldigung für die schlechte Lesbarkeit seiner großteils nachts angefertigten Abschrift. Die Entzifferung der Schrift ist ihm schwer gefallen, auch hat er öfter den Sinn nicht verstanden; doch hat er viel Sorgfalt angewendet und die Kopie mehrfach kollationiert.</p>
+            <p corresp="#seg3"><rs type="person" role="sender">AH</rs> hat auch nach Schriften weiterer Autoren gesucht, um die <rs type="person" role="sender">BP</rs> früher gebeten hatte, insbesondere in seinem Brief vom 16. Oktober 1712 <ref type="letter" target="letter:276">276</ref>, darunter jene der <rs ref="index:d14380e28088">Melker</rs> <rs ref="index:d14380e8073">Christian Eibensteiner</rs>, „Johannes Cellensis“ (<rs ref="index:d14380e46938">Johann Zeller</rs>?) und <rs ref="index:d14380e41536">Stephan von Spanberg</rs>. Er hat die im <rs ref="index:d14380e42312">Bibliothekskatalog</rs> (des Chrysogonus Auceps) dazu vermerkten Signaturen notiert und danach gesucht, konnte unter den völlig ungeordneten Büchern aber nur die Handschrift 638 auffinden. In dieser befinden sich <rs ref="index:d14380e43856"><rs ref="index:d14380e42410">Predigten</rs></rs> des <rs ref="index:d14380e43848">Urban von Melk</rs> und des <rs ref="index:d14380e41544"><rs ref="index:d14380e42364">Stephan von Spanberg</rs></rs>, deren Initien <rs type="person" role="sender">AH</rs> mitteilt, ebenso Schriften des <rs ref="index:d14380e20511">Johannes Frey von Kempten</rs> („<rs ref="index:d14380e20519"><rs ref="index:d14380e42280">Sermo de passione Domini</rs></rs>“) wie auch <rs ref="index:d14380e42287"><rs ref="index:d14380e20605">Predigten</rs> des <rs ref="index:d14380e20597">Johannes Keck</rs></rs>, die <rs type="person" role="sender">AH</rs> ebenfalls für <rs type="person" role="sender">BPs</rs> Werk („Bibliotheca Benedictina“) herausgeschrieben hat. Von diesem will er sich ein eigenes Exemplar kaufen, selbst wenn er dazu sein ganzes Depositum verbrauchen müsste. Er sendet Grüße an <rs ref="index:d14380e34537">HP</rs> und wünscht beiden Brüdern gedeihliches Arbeiten zum Ruhme des <rs ref="index:d14380e4919">Benediktinerordens</rs>; sein <rs ref="index:d14380e9395">deutscher</rs> und <rs ref="index:d10854e21970">österreichischer</rs> Sinn (pectus Germano-Austriacum) ist begierig, ihr Werk und die darin zu verewigenden Heerscharen der <rs ref="index:d14380e4919">Benediktiner</rs> zu sehen.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">BPs</rs> versprochene „<rs ref="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“ erwartet <rs type="person" role="sender">AH</rs> ungeduldig; er bittet zudem um ein weiteres, gegebenfalls auch ungebundenes, Exemplar von <rs ref="index:d14380e39962">Anselm Schrambs</rs> Schrift gegen <rs ref="index:d14380e11474">Augustin Erath</rs> („<rs ref="index:d14380e39987">Antilogia</rs>“), weil Abt <rs ref="index:d14380e16651">Guetrather</rs> das bereits empfangene Exemplar zu seinem eigenen Gebrauch zurückbehalten hat. Eine Gelegenheit zur Übermittlung ergibt sich daraus, dass <rs ref="index:d14380e16651">Guetrather</rs> mit zwei Kapitularen zur Weinlese nach <rs ref="index:d10854e21970">Österreich</rs> gereist ist. Falls sie auf der Rückreise <rs ref="index:d14380e28088">Melk</rs> besuchen, kann <rs type="person" role="sender">BP</rs> von ihnen mehr darüber erfahren, wie es <rs type="person" role="sender">AH</rs> und der <rs ref="index:d14380e42178">Tegernseer Bibliothek</rs> geht, zumal einer von Guetrathers Begleitern der Bibliothekar (<rs ref="index:d14380e43752">Benno von Unertl</rs>) ist.</p>
+            <p corresp="#seg5"><rs ref="index:d14380e39552">Bernhard Schalhamer</rs>, Präses der beiliegenden Thesen („<rs ref="index:d14380e39560">Tria difficilia</rs>“), lässt sich <rs type="person" role="sender">BP</rs> empfehlen. Bei der öffentlichen Disputation dieser Thesen waren zahlreiche <rs ref="index:d14380e36631">Regensburger</rs> Ordensgeistliche anwesend, darunter mehrere <rs ref="index:d14380e20126">Jesuiten</rs>. Ein Lektor aus dem Orden der <rs ref="index:d14380e3390">Augustiner-Eremiten</rs> begann seine Wortmeldung mit einer Bemerkung darüber, dass aus diesen Thesen der hohe Stand der Studien unter den <rs ref="index:d14380e4919">Benediktinern</rs> zu ersehen sei. Die zuhörenden <rs ref="index:d14380e20126">Jesuiten</rs> müssen sich dadurch schmerzlich an die Schrift aus ihrer Gesellschaft gegen die Benediktiner (<rs ref="index:d14380e18286">Hevenesi, „Cura salutis“</rs>) und an deren Widerlegung (<rs type="person" role="sender">BPs</rs> „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“) erinnert gefühlt haben.</p>
+            <p corresp="#seg6">Am 17. Juli war <rs ref="index:d14380e11563">Thomas Aquin Erhardt</rs> aus <rs ref="index:d14380e45389">Wessobrunn</rs> mit <rs ref="index:d14380e11607">einem Begleiter</rs> in <rs ref="index:d14380e42111">Tegernsee</rs>, um nach Altertümern dieses Klosters und insbesondere nach einer Äbteliste zu suchen. <rs ref="index:d14380e11563">Erhardt</rs> wünscht dringend eine Korrespondenz mit <rs type="person" role="sender">BP</rs>. Er hat bereits mehrere Bücher veröffentlicht und arbeitet nun an einem Werk „<rs ref="index:d14380e11585">Gloria sanctissimi protoparentis Benedicti</rs>“. Erhardt hat <rs type="person" role="sender">AH</rs> gebeten, <rs type="person" role="sender">BP</rs> zu ermahnen, auf ein Schreiben Erhardts <ref type="letter" target="letter:609">609</ref> zu antworten. Der <rs ref="index:d14380e45389">Wessobrunner</rs> Mönch verfügt über eine <rs ref="index:d14380e11598">Zusammenstellung von mehreren hundert benediktinischen Schriftstellern</rs>, die er <rs type="person" role="sender">BP</rs> gerne übermitteln will, wenn ihm dieser Material über den <rs ref="index:d10854e2786">hl. Benedikt</rs> zukommen lässt. Briefe an ihn sollten an das <rs ref="index:d14380e30078">Wessobrunner Haus</rs> in <rs ref="index:d14380e29936">München</rs> geschickt werden.</p>
+            <p corresp="#seg7"><rs type="person" role="sender">AH</rs> bittet um Neuigkeiten über die Unternehmung der kaiserlichen Truppen gegen die Stadt <rs ref="index:d14380e42490">Temesvár</rs>, von welcher <rs type="person" role="sender">BP</rs> berichtet hat. Ähnliche Nachrichten sind auch aus <rs ref="index:d14380e29936">München</rs> gekommen: Es heißt, die Stadt sei bereits belagert. <rs type="person" role="sender">AH</rs> wünscht den gänzlichen Sieg der Waffen Kaiser <rs ref="index:d14380e21188">Karls VI.</rs>, für den auch in ganz <rs ref="index:d14380e4170">Bayern</rs> gebetet wird. <rs type="person" role="sender">AH</rs> hat selbst für seine Pfarrkinder (in <rs ref="index:d14380e10811">Egern</rs>) ein eigenes diesbezügliches Gebet verfasst, das zu allen Festtagen in Gegenwart des Allerheiligsten gesprochen wird.</p>
+            <p corresp="#seg8">Die Untertanen <rs ref="index:d14380e42111">Tegernsees</rs> in <rs ref="index:d10854e21970">Österreich</rs> rund um <rs ref="index:d14380e41712">Strengberg</rs> und <rs ref="index:d14380e190">Achleiten</rs> werden Abt <rs ref="index:d14380e16651">Guetrather</rs> die Huldigung leisten, weshalb sich dieser dort gewiss einige Zeit aufhalten wird, ebenso in <rs ref="index:d14380e43823">Unterloiben</rs> wegen der Weinlese. Eine Sendung <rs type="person" role="sender">BPs</rs> mit der „<rs ref="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“ kann also an einen dieser beiden Orte geschickt werden. <rs type="person" role="sender">AH</rs> hofft jedoch, dass der Abt <rs ref="index:d14380e28088">Melk</rs> besuchen wird, und wünscht, er selbst könnte dabei sein. Vielleicht wird ihm dies im kommenden Jahr möglich sein.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e17609"><rs type="person" role="sender">BPs</rs> Brief vom 23. August 1716 <ref type="letter">641</ref> hat <rs type="person" role="sender">AH</rs> am 30. August erhalten, dem <rs type="cit" key="citIndex:ix2_d763e2379">Fest der heiligen Schutzengel</rs>, der Patrone der <rs key="index:d14380e22316">Bayerischen Benediktinerkongregation</rs>. Er ist erfreut darüber, dass <rs type="person" role="sender">BP</rs> bei guter Gesundheit ist, und wünscht deren lange Erhaltung.</seg><seg type="context" n="2" xml:id="d3e17614">Nach den beiden Traktaten „<rs key="index:d14380e40978"><rs key="index:d14380e42356">De rationali et ratione uti</rs></rs>“ des <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Gilbert von Reims<?oxy_custom_end?> (recte: <rs key="index:d14380e40968">Gerbert von Aurillac</rs>) sowie „<rs key="index:d14380e2257"><rs key="index:d14380e42240">De mensura monochordi</rs></rs>“ des <rs key="index:d14380e16692">Guido von Arezzo</rs> (recte: siehe Kommentar) hat <rs type="person" role="sender">AH</rs> unter den ausgelagerten Büchern im Turm lange, aber vergeblich gesucht. Mit besonderer Erlaubnis seines Abtes <rs key="index:d14380e16651">Petrus von Guetrather</rs> hat er schließlich auch jene <rs key="index:d14380e42422">Kammer (den „Tempel“)</rs> betreten können, in der die wertvollsten Pergamenthandschriften auf Anordnung des verstorbenen Abtes <rs key="index:d14380e29011">Quirin Millon</rs> zu dessen ausschließlichem Gebrauch separat verwahrt wurden. Dort hat <rs type="person" role="sender">AH</rs> die Signaturen, die diesen Werken entsprechen, gesucht und auch gefunden. <rs type="person" role="sender">AH</rs> hat die Codices in seine Zelle gebracht und aus dem „<rs key="index:d14380e42240">De mensura monochordi</rs>“ nach der Bitte <rs type="person" role="sender">BPs</rs> die Initien exzerpiert, den Text „<rs key="index:d14380e42356">De rationali et ratione uti</rs>“ aber vollständig kopiert. Er bittet um Entschuldigung für die schlechte Lesbarkeit seiner großteils nachts angefertigten Abschrift. Die Entzifferung der Schrift ist ihm schwer gefallen, auch hat er öfter den Sinn nicht verstanden; doch hat er viel Sorgfalt angewendet und die Kopie mehrfach kollationiert.</seg><seg type="context" n="3" xml:id="d3e17616"><rs type="person" role="sender">AH</rs> hat auch nach Schriften weiterer Autoren gesucht, um die <rs type="person" role="sender">BP</rs> früher gebeten hatte, insbesondere in seinem Brief vom 16. Oktober 1712 <ref type="letter">276</ref>, darunter jene der <rs key="index:d14380e28088">Melker</rs> <rs key="index:d14380e8073">Christian Eibensteiner</rs>, „Johannes Cellensis“ (<rs key="index:d14380e46938">Johann Zeller</rs>?) und <rs key="index:d14380e41536">Stephan von Spanberg</rs>. Er hat die im <rs key="index:d14380e42312">Bibliothekskatalog</rs> (des <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Chrysogonus Auceps<?oxy_custom_end?>) dazu vermerkten Signaturen notiert und danach gesucht, konnte unter den völlig ungeordneten Büchern aber nur die <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Handschrift 638<?oxy_custom_end?> auffinden. In dieser befinden sich <rs key="index:d14380e43856"><rs key="index:d14380e42410">Predigten</rs></rs> des <rs key="index:d14380e43848">Urban von Melk</rs> und des <rs key="index:d14380e41544"><rs key="index:d14380e42364">Stephan von Spanberg</rs></rs>, deren Initien <rs type="person" role="sender">AH</rs> mitteilt, ebenso Schriften des <rs key="index:d14380e20511">Johannes Frey von Kempten</rs> („<rs key="index:d14380e20519"><rs key="index:d14380e42280">Sermo de passione Domini</rs></rs>“) wie auch <rs key="index:d14380e42287"><rs key="index:d14380e20605">Predigten</rs> des <rs key="index:d14380e20597">Johannes Keck</rs></rs>, die <rs type="person" role="sender">AH</rs> ebenfalls für <rs type="person" role="sender">BPs</rs> Werk („Bibliotheca Benedictina“) herausgeschrieben hat. Von diesem will er sich ein eigenes Exemplar kaufen, selbst wenn er dazu sein ganzes Depositum verbrauchen müsste. Er sendet Grüße an <rs key="index:d14380e34537">HP</rs> und wünscht beiden Brüdern gedeihliches Arbeiten zum Ruhme des <rs key="index:d14380e4919">Benediktinerordens</rs>; sein <rs key="index:d14380e9395">deutscher</rs> und <rs key="index:d10854e21970">österreichischer</rs> Sinn (<?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>pectus Germano-Austriacum<?oxy_custom_end?>) ist begierig, ihr Werk und die darin zu verewigenden Heerscharen der <rs key="index:d14380e4919">Benediktiner</rs> zu sehen.</seg><seg type="context" n="4" xml:id="d3e17621"><rs type="person" role="sender">BPs</rs> versprochene „<rs key="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“ erwartet <rs type="person" role="sender">AH</rs> ungeduldig; er bittet zudem um ein weiteres, gegebenfalls auch ungebundenes, Exemplar von <rs key="index:d14380e39962">Anselm Schrambs</rs> Schrift gegen <rs key="index:d14380e11474">Augustin Erath</rs> („<rs key="index:d14380e39987">Antilogia</rs>“), weil Abt <rs key="index:d14380e16651">Guetrather</rs> das bereits empfangene Exemplar zu seinem eigenen Gebrauch zurückbehalten hat. Eine Gelegenheit zur Übermittlung ergibt sich daraus, dass <rs key="index:d14380e16651">Guetrather</rs> mit zwei Kapitularen zur Weinlese nach <rs key="index:d10854e21970">Österreich</rs> gereist ist. Falls sie auf der Rückreise <rs key="index:d14380e28088">Melk</rs> besuchen, kann <rs type="person" role="sender">BP</rs> von ihnen mehr darüber erfahren, wie es <rs type="person" role="sender">AH</rs> und der <rs key="index:d14380e42178">Tegernseer Bibliothek</rs> geht, zumal einer von Guetrathers Begleitern der Bibliothekar (<rs key="index:d14380e43752">Benno von Unertl</rs>) ist.</seg><seg type="context" n="5" xml:id="d3e17623"><rs key="index:d14380e39552">Bernhard Schalhamer</rs>, Präses der beiliegenden Thesen („<rs key="index:d14380e39560">Tria difficilia</rs>“), lässt sich <rs type="person" role="sender">BP</rs> empfehlen. Bei der öffentlichen Disputation dieser Thesen waren zahlreiche <rs key="index:d14380e36631">Regensburger</rs> Ordensgeistliche anwesend, darunter mehrere <rs key="index:d14380e20126">Jesuiten</rs>. Ein Lektor aus dem Orden der <rs key="index:d14380e3390">Augustiner-Eremiten</rs> begann seine Wortmeldung mit einer Bemerkung darüber, dass aus diesen Thesen der hohe Stand der Studien unter den <rs key="index:d14380e4919">Benediktinern</rs> zu ersehen sei. Die zuhörenden <rs key="index:d14380e20126">Jesuiten</rs> müssen sich dadurch schmerzlich an die Schrift aus ihrer Gesellschaft gegen die Benediktiner (<rs key="index:d14380e18286">Hevenesi, „Cura salutis“</rs>) und an deren Widerlegung (<rs type="person" role="sender">BPs</rs> „<rs key="index:d14380e33682">Epistolae apologeticae</rs>“) erinnert gefühlt haben.</seg><seg type="context" n="6" xml:id="d3e17625">Am 17. Juli war <rs key="index:d14380e11563">Thomas Aquin Erhardt</rs> aus <rs key="index:d14380e45389">Wessobrunn</rs> mit <rs key="index:d14380e11607">einem Begleiter</rs> in <rs key="index:d14380e42111">Tegernsee</rs>, um nach Altertümern dieses Klosters und insbesondere nach einer Äbteliste zu suchen. <rs key="index:d14380e11563">Erhardt</rs> wünscht dringend eine Korrespondenz mit <rs type="person" role="sender">BP</rs>. Er hat bereits mehrere Bücher veröffentlicht und arbeitet nun an einem Werk „<rs key="index:d14380e11585">Gloria sanctissimi protoparentis Benedicti</rs>“. Erhardt hat <rs type="person" role="sender">AH</rs> gebeten, <rs type="person" role="sender">BP</rs> zu ermahnen, auf ein Schreiben Erhardts <ref type="letter">609</ref> zu antworten. Der <rs key="index:d14380e45389">Wessobrunner</rs> Mönch verfügt über eine <rs key="index:d14380e11598">Zusammenstellung von mehreren hundert benediktinischen Schriftstellern</rs>, die er <rs type="person" role="sender">BP</rs> gerne übermitteln will, wenn ihm dieser Material über den <rs key="index:d10854e2786">hl. Benedikt</rs> zukommen lässt. Briefe an ihn sollten an das <rs key="index:d14380e30078">Wessobrunner Haus</rs> in <rs key="index:d14380e29936">München</rs> geschickt werden.</seg><seg type="context" n="7" xml:id="d3e17630"><rs type="person" role="sender">AH</rs> bittet um Neuigkeiten über die Unternehmung der <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>kaiserlichen Truppen<?oxy_custom_end?> gegen die Stadt <rs key="index:d14380e42490">Temesvár</rs>, von welcher <rs type="person" role="sender">BP</rs> berichtet hat. Ähnliche Nachrichten sind auch aus <rs key="index:d14380e29936">München</rs> gekommen: Es heißt, die Stadt sei bereits belagert. <rs type="person" role="sender">AH</rs> wünscht den gänzlichen Sieg der Waffen Kaiser <rs key="index:d14380e21188">Karls VI.</rs>, für den auch in ganz <rs key="index:d14380e4170">Bayern</rs> gebetet wird. <rs type="person" role="sender">AH</rs> hat selbst für seine Pfarrkinder (in <rs key="index:d14380e10811">Egern</rs>) ein eigenes diesbezügliches <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Gebet<?oxy_custom_end?> verfasst, das zu allen Festtagen in Gegenwart des Allerheiligsten gesprochen wird.</seg><seg type="context" n="8" xml:id="d3e17632">Die Untertanen <rs key="index:d14380e42111">Tegernsees</rs> in <rs key="index:d10854e21970">Österreich</rs> rund um <rs key="index:d14380e41712">Strengberg</rs> und <rs key="index:d14380e190">Achleiten</rs> werden Abt <rs key="index:d14380e16651">Guetrather</rs> die Huldigung leisten, weshalb sich dieser dort gewiss einige Zeit aufhalten wird, ebenso in <rs key="index:d14380e43823">Unterloiben</rs> wegen der Weinlese. Eine Sendung <rs type="person" role="sender">BPs</rs> mit der „<rs key="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“ kann also an einen dieser beiden Orte geschickt werden. <rs type="person" role="sender">AH</rs> hofft jedoch, dass der Abt <rs key="index:d14380e28088">Melk</rs> besuchen wird, und wünscht, er selbst könnte dabei sein. Vielleicht wird ihm dies im kommenden Jahr möglich sein.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Das dritte Folium (593r–v) ist im Briefcodex verkehrt eingebunden. – Der Brief und
-                  die Beilagen wurden von Petrus von Guetrather nach Melk überbracht: vgl. <ref
-                     type="letter">660</ref> &lt;1&gt;.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater Bernarde, patrone colendissime, amice dilectissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e17647">Epistolam tuam 23. Augusti ad me datam 30. eiusdem in <seg type="lemma" corresp="#d3e17786">festo titularium patronorum congregationis nostrae, sanctorum scilicet angelorum custodum</seg>, accepi, legi eaque summe delectatus fui, quia ex ea intellexi te bene valere. Superi te mihi et universo ordini salvum et incolumem, ulterius quam diutissime salvum et incolumem conservent! </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e17649"><seg type="lemma" corresp="#d3e17792">Gilberti Remensis opusculum De rationali et ratione uti</seg>, nec non et<seg type="lemma" corresp="#d3e17798"> Guidonis abbatis nostri libellum De mensura <sic>menochordi</sic></seg> [<hi rend="italic">sic</hi>], boni Superi! quot horis supra manuscriptorum nostrorum libros in turri optime reservatos in genua mea provolutus iisque incumbens, bone Deus, quam diu quaesivi, sed frustra! Amor autem erga te sincerissimus et desiderium optimum inserviendi illi, quem sincerissimo affectu prosequor et<note place="foot" xml:id="d3e17654">	Danach durchgestrichen <hi rend="italic">amor</hi>.</note> diligo, addidit alas, quibus de novo instructus cum licentia reverendissimi nostri speciali ingressus sum<seg type="lemma" corresp="#d3e17802"> cellam, cui interim nobilissimi libri in membranis descripti inclusi reservantur, sibique specialiter reverendissimus dominus dominus Quirinus piae memoriae reservari voluit</seg>; quaesivi<seg type="lemma" corresp="#d3e17806"> manuscriptorum numeros</seg> 540<hi rend="superscript">2</hi> et 914, horum authorum scilicet indices, et Deo sint aeternae laudes, ad mei tuique, amicorum dilectissime, solatium<note place="foot" xml:id="d3e17663">	Davor durchgestrichen <hi rend="italic">l</hi>.</note> inveni, ad cubiculum meum et cellam dilectissimam <pb n="1v"/> deportavi, libelli De mensura <sic>menochordi</sic> [<hi rend="italic">sic</hi>] initia iuxta <sic>petentionem</sic> [<hi rend="italic">sic</hi>] et intentionem<note place="foot" xml:id="d3e17678">	Danach durchgestrichen <hi rend="italic">descripsi</hi>.</note>, Gilbertum vero Remensem<note place="foot" xml:id="d3e17684">	Korrigiert aus <hi rend="italic">Remensim</hi>.</note> ex integro descripsi. Ignosce, Bernarde, luriditati calami mei horis plerumque nocturnis huius libelli apographum ita deproperantis. Mus bekennen, hab noch niemahlen in lesung der alten schrifften dermassen<note place="foot" xml:id="d3e17690">	Über der Zeile eingefügt.</note> gestudiert, quam in penetrandis literis<note place="foot" xml:id="d3e17693">	Danach durchgestrichen <hi rend="italic">huius</hi>.</note> Rationalis de ratione uti: sed iucundus labor est, si labor amor est. Sincerissime omnia descripsi descriptaque cum alio iterum iterumque recollegi relegique etc. Si quid forte erratum est, tua corriget prudentia et in his summa dexteritas tua. Saepius non intellexi sensum, quid velit etc. Hoc saltem intellexi, Gilbertum fuisse virum doctissimum et ordinis specialissimum ornamentum. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e17699">Sed non solum quaesivi hos, sed et alios a te saepius desideratos, specialiter in epistola tua secunda XVII. Kalendas Novembris anno 1712 ad me data, scilicet Christianum abbatem vestrum, <seg type="lemma" corresp="#d3e17810">Joannem Cellensem</seg>, Stephanum abbatem aliosque etc. Diligenter numeros indicis nostri generalis <pb n="2r"/> annotavi, in speciali schedula descripsi, perlustravi omnia, sed quia nullus pro tempore librorum nostrorum ordo, praeter <seg type="lemma" corresp="#d3e17816">numerum 638</seg> manuscriptorum nihil invenire potui; gratulabar mihi saltem de thesauro hoc invento, in quo erant absconditi <seg type="lemma" corresp="#d3e17820">vestri etiam celeberrimi viri Urbanus</seg> et<seg type="lemma" corresp="#d3e17824"> Stephanus</seg>, quorum sermonum initia fideliter hic communico; et quia etiam de<seg type="lemma" corresp="#d3e17828"> Joanne Frey Campidonensi</seg> et<seg type="lemma" corresp="#d3e17832"> Joanne Keckio</seg> nostro aliqua scripta erant in illo libro, etiam<seg type="lemma" corresp="#d3e17837"> describere non neglexi</seg>, ut videat Bernardus meus mellifluus et amantissimus me nihil negligere eorum, quae scire possem etiam forte tibi<note place="foot" xml:id="d3e17703">	Korrigiert aus <hi rend="italic">esse</hi>.</note> accepta et iucunda ad perfecte tractandum opus tuum, cuius exemplar mihi specialiter comparabo<note place="foot" xml:id="d3e17709">	Korrigiert aus <hi rend="italic">compararem</hi>.</note>, soll auch mein ganzes depositum darauf gehen. Vale interim, virorum clarissime, iterum vale cum tuo clarissimo<note place="foot" xml:id="d3e17715">	Danach durchgestrichen <hi rend="italic">fratre</hi>.</note> germano, amico ac patrono meo itidem colendissimo, valete et ad illustrandam rempublicam nostram ac gloriam Benedictinam literariam studia vestra ac labores indefessos ulterius conferte, non dubitantes, quin me servum vestrum ineptissimum tanto benevolentiorem facilioremque habituri sitis in conferendis auxiliis <pb n="2v"/> qualibuscunque tandem, quanto maiori desiderio<seg type="lemma" corresp="#d3e17841"> pectus meum sincerissimum Germano-Austriacum</seg> iam dudum exarsit nobilissimos vestros partus et in iis insignem Benedictinorum exercitum videndi, quorum doctrina et eruditio tantam ordini nostro gloriam peperere. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e17723">Exemplar Bibliothecae tuae <sic>Mauriae</sic> [<hi rend="italic">sic</hi>], quo me dignari promisisti, etiam atque etiam exspecto; quaero, adhuc unum exemplar <seg type="lemma" corresp="#d3e17845">partus illius Anselmiani</seg> (contra Augustinum Errath illum editi) etsi incompactum adde ad usum meum reservandum, quia iam transmissum reverendissimus noster sibi detinuit. Nisi alia occasio mittendi citius se obtulerit, optima erit haec ipsa occasio, nemblich mit unsern closter leuth, qui in Austriam abiere ad vindemias. Reverendissimus ipse noster illuc abiit cum duobus patribus capitularibus, ex quibus, si ad celeberrimum vestrum monasterium in reditu pervenerint, uti spero, pluribus oretenus accipies, quomodo vivat Alphonsus et quomodo se habeat status bibliothecae nostrae; erit enim socius<note place="foot" xml:id="d3e17728">	Danach durchgestrichen <hi rend="italic">bbus</hi>, wohl Abkürzung für <hi rend="italic">bibliothecarius</hi>.</note> reverendissimi nostri ipse<seg type="lemma" corresp="#d3e17851"> custos bibliothecae</seg> turrisque librorum. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e17737">Pater <seg type="lemma" corresp="#d3e17855">Bernardus noster</seg> thesium praesentium praeses se suo meoque Bernardo demisse commendat. In publica thesium harum disputatione (cui<note place="foot" xml:id="d3e17739">	Danach durchgestrichen <hi rend="italic">ois.</hi></note> diversorum<note place="foot" xml:id="d3e17744">	Am linken Blattrand eingefügt.</note> ordinum religiosi Ratisbonenses<note place="foot" xml:id="d3e17747">	Über der Zeile eingefügt.</note>, etiam patres Societatis intererant) lector quidam,<seg type="lemma" corresp="#d3e17861"> sancti Augustini alumnus</seg>, in haec verba argumentum suum incepit: Gaudeo summopere, viri clarissimi, ex his iterum thesibus insigniter omnibus innotescere etiam in florentissimo ordine Benedictino studiorum ac talentorum usum maximum esse. <pb n="3r"/> Quid ad haec praesentes illi Socii cogitarint,<seg type="lemma" corresp="#d3e17865"> libelli sui propudiosi et insignis eiusdem refutationis</seg> optime memores, facile nobis imaginamur. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e17752">17. Julii adfuit apud nos pater Thomas Erhardt Wessofontanus, vir doctus et eruditus, cum socio a nobis petens aliquas nostri monasterii antiquitates abbatumque suorum exactam notitiam, quam habebamus. Hic optimus vir nihil aliud exoptat nisi cum Bernardo meo colendissimo literarum commercium. Edidit iam aliquos libros, nunc actualiter laborat in conscribendo libro, cuius titulus: Gloria Benedictina. De sanctissimo patre nostro Benedicto etc. Spopondit mihi meque unice rogavit, ut paternitatem vestram clarissimam monerem pro responso dando ad suas literas. Er hat würkhlich vil hundert ex ordine nostro authores eorumque librorum catalogum beysammen. Wil gehrn alles communicirn, wan herr pater Bernard ihm nur auch was weniges pro gloria sanctissimi patris nostri amplificanda communicirn wolt. Litterae ad eum dirigi possunt nacher München in <seg type="lemma" corresp="#d3e17869">Wessobruner haus</seg> abzulegen. Respondebit et satisfaciet certissime. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d3e17754">Sed quid de nuper transcripto <seg type="lemma" corresp="#d3e17875">stratagemate</seg> Temeswarico? Allata etiam haec nova sunt Monachio; indies avidissime exspectamus horum confirmationem. Interim audivimus saepius urbem hanc actualiter iam esse obsessam <pb n="3v"/> a nobilissimo exercitu caesareo. Superi concedant etiam hic<note place="foot" xml:id="d3e17758">	Korrigiert aus <hi rend="italic">hunc</hi>.</note> fortissimis et invictissimis militibus Caroli nostri gloriosissimi et optimi victoriam et triumphos innumeros, id rogamus et petimus a Deo ter optimo singulis fere momentis etiam in Bavaria. Superi, quoties desuper exhortor oviculas meas, facta ideo a me speciali oratione coram sanctissimo singulis diebus festivis cum ipsis persolvenda. Deus exaudiat suspiria et vota nostra sincerissima Tegernseensia<note place="foot" xml:id="d3e17764">	<hi rend="italic">Deus ... Tegernseensia</hi> korrigiert aus einer kaum zu rekonstruierenden überschriebenen Fassung, vielleicht <hi rend="italic">Deus concedat voto nostro sincerississimoque Tegernseensi</hi>.</note>! </seg><seg type="context" n="8" xml:space="preserve" xml:id="d3e17773">Reverendissimo nostro subditi nostri in Austria prope <seg type="lemma" corresp="#d3e17881">Strenberg und Ahleuten</seg> existentes <sic>homigium</sic> [<hi rend="italic">sic</hi>] praestabunt, dahero wirdt er sich ohne allen zweifl einige zeit aldorten aufhalten, wie auch zu<seg type="lemma" corresp="#d3e17887"> Loimb</seg> in vindemiis. Wan mein liebster pater Bernard villeicht sonst kein gelegenheit hett mir die antworth cum acceptissimo libro zuschickhen, khan es äntweders nach Strenberg oder<seg type="lemma" corresp="#d3e17887"> Loimb</seg> geschickht werden<note place="foot" xml:id="d3e17778">	Über der Zeile eingefügt.</note>. Spero quidem reverendissimum nostrum suos etiam dilectissimos Mellicenses invisurum in reditu. Utinam et ego essem cum ipso! Fiet suo tempore, forte futuro anno. Vale centies, vale millies iterumque millies, Bernarde amandissime. Sum</seg></p>
-            <p xml:space="preserve">Tuus et omnium vestrum servus et confrater minimus pater Alphonsus.</p>
-            <p xml:space="preserve">Raptissime ex cella mea dilecta Tegurina 20. Septembris 1716.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e17786">
-               <ref type="context">1</ref>
-               <label>festo ... angelorum custodum</label><p>Vgl. <ref type="letter">644</ref>
-                  &lt;4&gt;. </p></note>
-            <note xml:id="d3e17792">
-               <ref type="context">2</ref>
-               <label>Gilberti ... De rationali et ratione uti</label><p> Zu dem Werk vgl. <rs
-                     type="bibl" key="bibl:16350">Frova, Gerberto philosophus</rs>; <rs type="bibl"
-                     key="bibl:18886">Poirel, Art de la logique</rs>; <rs type="bibl"
-                     key="bibl:19588">Sigismondi, Gerberto</rs>. BP druckte den Text später nach der
-                  von AH bearbeiteten Handschrift: <rs type="bibl" key="bibl:36782">Pez,
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>festo ... angelorum custodum</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:644">644</ref>
+                  <ref target="letter:644#seg4">4</ref>. </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>Gilberti ... De rationali et ratione uti</mentioned>
+            <p> Zu dem Werk vgl. <rs type="bibl" ref="bibl:16350">Frova, Gerberto philosophus</rs>; <rs type="bibl" ref="bibl:18886">Poirel, Art de la logique</rs>; <rs type="bibl" ref="bibl:19588">Sigismondi, Gerberto</rs>. BP druckte den Text später nach der
+                  von AH bearbeiteten Handschrift: <rs type="bibl" ref="bibl:36782">Pez,
                      Thesaurus</rs> 1/2 col. 147–162. Bei dieser handelt es sich um BStB München,
-                  clm 18540b; vgl. <rs type="bibl" key="bibl:16768">Halm et al., Catalogus 2/3</rs>
-                  174; <rs type="bibl" key="bibl:17266">Ineichen-Eder, Schule</rs> 110; <rs
-                     type="bibl" key="bibl:17514">Klemm, Ottonische Handschriften </rs>1 123f.
+                  clm 18540b; vgl. <rs type="bibl" ref="bibl:16768">Halm et al., Catalogus 2/3</rs>
+                  174; <rs type="bibl" ref="bibl:17266">Ineichen-Eder, Schule</rs> 110; <rs type="bibl" ref="bibl:17514">Klemm, Ottonische Handschriften </rs>1 123f.
                   Unrichtig ist demnach die mehrfach anzutreffende Nachricht, die Vorlage der
-                  Edition BPs sei verloren:<rs type="bibl" key="bibl:16350">Frova, Gerberto
-                     philosophus</rs> 370; <rs type="bibl" key="bibl:18130">Manitius, Literatur</rs>
-                  2 737; <rs type="bibl" key="bibl:18886">Poirel, Art de la logique</rs> 318. Die
+                  Edition BPs sei verloren:<rs type="bibl" ref="bibl:16350">Frova, Gerberto
+                     philosophus</rs> 370; <rs type="bibl" ref="bibl:18130">Manitius, Literatur</rs>
+                  2 737; <rs type="bibl" ref="bibl:18886">Poirel, Art de la logique</rs> 318. Die
                   angekündigte Beilage mit der Abschrift des Textes scheint in Melk nicht erhalten
-                  zu sein.</p></note>
-            <note xml:id="d3e17798">
-               <ref type="context">2</ref>
-               <label> Guidonis ... De mensura menochordi</label><p> Aufgrund der von ihm genannten
-                  Signatur war die AH vorliegende Handschrift BStB München, clm 18914; vgl. <rs
-                     type="bibl" key="bibl:16768">Halm et al., Catalogus 2/3</rs> 219; <rs
-                     type="bibl" key="bibl:17266">Ineichen-Eder, Schule</rs> 107. Eine
+                  zu sein.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned> Guidonis ... De mensura menochordi</mentioned>
+            <p> Aufgrund der von ihm genannten
+                  Signatur war die AH vorliegende Handschrift BStB München, clm 18914; vgl. <rs type="bibl" ref="bibl:16768">Halm et al., Catalogus 2/3</rs> 219; <rs type="bibl" ref="bibl:17266">Ineichen-Eder, Schule</rs> 107. Eine
                   selbstständige Abhandlung des Guido von Arezzo „De mensura monochordi“ ist nicht
                   bekannt; der Codex enthält weder die Schrift „Micrologus“, in deren drittem
                   Kapitel Guido dieses Thema behandelt, noch andere Werke Guidos, wohl aber neben
                   verschiedenen weiteren musiktheoretischen Werken mehrere kurze Traktate über die
-                  Teilung des Monochords: BStB München, clm 18914, 41r–42v; vgl. <rs type="bibl"
-                     key="bibl:18348">Meyer, Mensura monochordi</rs> XCIX; <rs type="bibl"
-                     key="bibl:19608">Smits van Waesberghe, De Guidone Aretino</rs> 157f., 170,
+                  Teilung des Monochords: BStB München, clm 18914, 41r–42v; vgl. <rs type="bibl" ref="bibl:18348">Meyer, Mensura monochordi</rs> XCIX; <rs type="bibl" ref="bibl:19608">Smits van Waesberghe, De Guidone Aretino</rs> 157f., 170,
                   175f. Die Beilage mit den von AH exzerpierten Initien ist erhalten: StiA Melk, Kt.
                   85 Varia 23, Fasz. 1, Nr. 25, 1–3. Das dort Wiedergegebene entspricht den Texten
-                  auf den beiden genannten Folien des Codex. – Zu Leben und Werken Guidos vgl. <rs
-                     type="bibl" key="bibl:17072">Hirschmann, Guido von Arezzo</rs>; <rs type="bibl"
-                     key="bibl:18630">Oesch, Guido von Arezzo</rs> 112–117; <rs type="bibl"
-                     key="bibl:19608">Smits van Waesberghe, De Guidone Aretino</rs> 9–24,
-                  139–146.</p></note>
-            <note xml:id="d3e17802">
-               <ref type="context">2</ref>
-               <label> cellam ... reservari voluit</label><p> Zu dieser Kammer, die in Tegernsee
-                  auch als „Tempel“ bezeichnet wurde, vgl. <ref type="letter">907</ref>
-                  &lt;1&gt;.</p></note>
-            <note xml:id="d3e17806">
-               <ref type="context">2</ref>
-               <label> manuscriptorum numeros</label><p> Die angegebenen Signaturen wie auch der
+                  auf den beiden genannten Folien des Codex. – Zu Leben und Werken Guidos vgl. <rs type="bibl" ref="bibl:17072">Hirschmann, Guido von Arezzo</rs>; <rs type="bibl" ref="bibl:18630">Oesch, Guido von Arezzo</rs> 112–117; <rs type="bibl" ref="bibl:19608">Smits van Waesberghe, De Guidone Aretino</rs> 9–24,
+                  139–146.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned> cellam ... reservari voluit</mentioned>
+            <p> Zu dieser Kammer, die in Tegernsee
+                  auch als „Tempel“ bezeichnet wurde, vgl. <ref type="letter" target="letter:907">907</ref>
+                  <ref target="letter:907#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned> manuscriptorum numeros</mentioned>
+            <p> Die angegebenen Signaturen wie auch der
                   Gebrauch eines Exponenten zur Unterscheidung mehrerer Bände unter derselben Nummer
-                  entsprechen dem Katalog von Chrysogonus Auceps: vgl. <ref type="letter">630</ref>
-                  &lt;2&gt;.</p></note>
-            <note xml:id="d3e17810">
-               <ref type="context">3</ref>
-               <label>Joannem Cellensem</label><p>Vgl. <ref type="letter">288</ref> &lt;3&gt;. Eine
+                  entsprechen dem Katalog von Chrysogonus Auceps: vgl. <ref type="letter" target="letter:630">630</ref>
+                  <ref target="letter:630#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned>Joannem Cellensem</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:288">288</ref> <ref target="letter:288#seg3">3</ref>. Eine
                   sichere Bestimmung ist auch anhand der neuerlichen Erwähnung in diesem Brief nicht
-                  möglich. </p></note>
-            <note xml:id="d3e17816">
-               <ref type="context">3</ref>
-               <label>numerum 638</label><p> Heute BStB München, clm 18638; vgl. <rs type="bibl"
-                     key="bibl:16768">Halm et al., Catalogus 2/3</rs> 193f. </p></note>
-            <note xml:id="d3e17820">
-               <ref type="context">3</ref>
-               <label>vestri ... Urbanus</label><p> Zu Urban von Melk vgl. <rs type="bibl"
-                     key="bibl:14954">Aschbach, Universität</rs> 445f.; <rs type="bibl"
-                     key="bibl:17456">Keiblinger, Melk</rs> 2/1 106–108; <rs type="bibl"
-                     key="bibl:20016">Uiblein, Acta Facultatis Artium</rs> 567f.; <rs type="bibl"
-                     key="bibl:20566">Zschokke, Metropolitan-Capitel</rs> 300, 382. Er war
+                  möglich. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned>numerum 638</mentioned>
+            <p> Heute BStB München, clm 18638; vgl. <rs type="bibl" ref="bibl:16768">Halm et al., Catalogus 2/3</rs> 193f. </p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
+            <mentioned>vestri ... Urbanus</mentioned>
+            <p> Zu Urban von Melk vgl. <rs type="bibl" ref="bibl:14954">Aschbach, Universität</rs> 445f.; <rs type="bibl" ref="bibl:17456">Keiblinger, Melk</rs> 2/1 106–108; <rs type="bibl" ref="bibl:20016">Uiblein, Acta Facultatis Artium</rs> 567f.; <rs type="bibl" ref="bibl:20566">Zschokke, Metropolitan-Capitel</rs> 300, 382. Er war
                   allerdings nicht, wie AH sichtlich vermutete, Benediktiner in Melk, sondern
                   Weltgeistlicher und Magister an der Artistenfakultät der Universität Wien; die
                   Bezeichnung „von Melk“ bezieht sich auf seinen Geburtsort. Er ist in der von AH
                   benutzten Handschrift mit einer Predigt zu Mariä Verkündigung vertreten: BStB
-                  München, clm 18638, 131v–139r.</p></note>
-            <note xml:id="d3e17824">
-               <ref type="context">3</ref>
-               <label> Stephanus</label><p> Zu Stephan von Spanberg vgl. <rs type="bibl"
-                     key="bibl:17456">Keiblinger, Melk</rs> 1 571–585; <rs type="bibl"
-                     key="bibl:17636">Kowarik et al., Melk</rs> 541f.; <rs type="bibl"
-                     key="bibl:18574">Niederkorn-Bruck, Profeßbuch</rs> 145–149. Von ihm findet sich
-                  ein „Sermo de passione Dominica“ in BStB München, clm 18638, 159r–171r.</p></note>
-            <note xml:id="d3e17828">
-               <ref type="context">3</ref>
-               <label> Joanne Frey Campidonensi</label><p>Er ist als Autor einer Karfreitagspredigt
+                  München, clm 18638, 131v–139r.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg3">
+            <mentioned> Stephanus</mentioned>
+            <p> Zu Stephan von Spanberg vgl. <rs type="bibl" ref="bibl:17456">Keiblinger, Melk</rs> 1 571–585; <rs type="bibl" ref="bibl:17636">Kowarik et al., Melk</rs> 541f.; <rs type="bibl" ref="bibl:18574">Niederkorn-Bruck, Profeßbuch</rs> 145–149. Von ihm findet sich
+                  ein „Sermo de passione Dominica“ in BStB München, clm 18638, 159r–171r.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg3">
+            <mentioned> Joanne Frey Campidonensi</mentioned>
+            <p>Er ist als Autor einer Karfreitagspredigt
                   von 1446 vermerkt: BStB München, clm 18638, 144r–149r. Er kann sehr wahrscheinlich
                   mit dem Magister artium an der Universität Wien und Benediktiner von
-                  Kleinmariazell Johannes Frey von Kempten identifiziert werden: vgl. <rs
-                     type="bibl" key="bibl:14954">Aschbach, Universität</rs> 608; <rs type="bibl"
-                     key="bibl:20018">Uiblein, Akten der Theologischen Fakultät</rs> 2 660. Dieser
+                  Kleinmariazell Johannes Frey von Kempten identifiziert werden: vgl. <rs type="bibl" ref="bibl:14954">Aschbach, Universität</rs> 608; <rs type="bibl" ref="bibl:20018">Uiblein, Akten der Theologischen Fakultät</rs> 2 660. Dieser
                   wiederum ist vermutlich identisch mit dem Kleinmariazeller Abt desselben Namens,
-                  der von 1479 bis 1482 regierte: <rs type="bibl" key="bibl:16054">Eigner,
+                  der von 1479 bis 1482 regierte: <rs type="bibl" ref="bibl:16054">Eigner,
                      Mariazell</rs> 114–121. Gewiss unrichtig ist hingegen die von Virgil Redlich
                   implizierte Gleichsetzung mit dem gleichnamigen Weihbischof von Freising zwischen
-                  1457 und 1474: <rs type="bibl" key="bibl:19036">Redlich, Tegernsee</rs> 32, 161,
-                  248. Dieser war Franziskaner: vgl. <rs type="bibl" key="bibl:16634">Greipl,
-                     Frey</rs>; <rs type="bibl" key="bibl:18378">Minges, Franziskaner in Bayern</rs>
-                  31. Der Kommentar zu <ref type="letter">288</ref> &lt;7&gt; ist entsprechend zu
-                  ergänzen.</p></note>
-            <note xml:id="d3e17832">
-               <ref type="context">3</ref>
-               <label> Joanne Keckio</label><p>
-                  <rs type="bibl" key="bibl:18024">Lindner, Familia S. Quirini</rs> 68–75; <rs
-                     type="bibl" key="bibl:18498">Müller, Anfänge</rs> 76–78; <rs type="bibl"
-                     key="bibl:19036">Redlich, Tegernsee</rs> 72f., 117–121. Die hier erwähnten
-                  Predigten finden sich in BStB München, clm 18638, 177v–180r, 180v–181v; vgl. <rs
-                     type="bibl" key="bibl:18024">Lindner, Familia S. Quirini</rs> 72; <rs
-                     type="bibl" key="bibl:19174">Roßmann, Keck</rs> col. 1100, 1102. Gehalten
-                  wurden sie unter anderem auf dem Konzil von Basel: vgl. <rs type="bibl"
-                     key="bibl:19036">Redlich, Tegernsee</rs> 118; <rs type="bibl" key="bibl:19038"
-                     >Redlich, Universität</rs> 93, 95.</p></note>
-            <note xml:id="d3e17837">
-               <ref type="context">3</ref>
-               <label> describere non neglexi</label><p> Diese Exzerpte sind erhalten als Teil derselben Beilage, in der AH die Initien der musiktheoretischen Texte angab: StiA Melk, Kt. 85 Varia 23, Fasz. 1, Nr. 25, 4–8.</p></note>
-            <note xml:id="d3e17841">
-               <ref type="context">3</ref>
-               <label> pectus ... Germano-Austriacum</label><p> Vgl. <ref type="letter">255</ref>
-                  &lt;3&gt;, <ref type="letter">273 </ref>&lt;7&gt;, <ref type="letter">293</ref>
-                  &lt;2&gt;, <ref type="letter">688</ref> &lt;4&gt;.</p></note>
-            <note xml:id="d3e17845">
-               <ref type="context">4</ref>
-               <label>partus ... Anselmiani</label><p>Zu Schrambs „Antilogia“ vgl. <rs type="bibl"
-                     key="bibl:16240">Fiska, Schramb</rs> 222–235; <rs type="bibl" key="bibl:19776"
-                     >Stockinger, Felix mansurus</rs> 187–189; <rs type="bibl" key="bibl:20210"
-                     >Wallnig–Stockinger, Korrespondenz 1</rs> 14. Zur Versendung eines Exemplars
-                  nach Tegernsee im September 1715 vgl. <ref type="letter">453 </ref>&lt;1&gt; und
-                  &lt;2&gt;.</p></note>
-            <note xml:id="d3e17851">
-               <ref type="context">4</ref>
-               <label> custos bibliothecae</label><p>Dieses Amt hatte zwischen 1708 und 1719 Benno
-                  von Unertl inne: <rs type="bibl" key="bibl:18024">Lindner, Familia S. Quirini</rs>
-                  Ergh. 118.</p></note>
-            <note xml:id="d3e17855">
-               <ref type="context">5</ref>
-               <label>Bernardus noster</label><p> Schalhamer war von 1714 bis 1722 Professor der
+                  1457 und 1474: <rs type="bibl" ref="bibl:19036">Redlich, Tegernsee</rs> 32, 161,
+                  248. Dieser war Franziskaner: vgl. <rs type="bibl" ref="bibl:16634">Greipl,
+                     Frey</rs>; <rs type="bibl" ref="bibl:18378">Minges, Franziskaner in Bayern</rs>
+                  31. Der Kommentar zu <ref type="letter" target="letter:288">288</ref> <ref target="letter:288#seg7">7</ref> ist entsprechend zu
+                  ergänzen.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg3">
+            <mentioned> Joanne Keckio</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> 68–75; <rs type="bibl" ref="bibl:18498">Müller, Anfänge</rs> 76–78; <rs type="bibl" ref="bibl:19036">Redlich, Tegernsee</rs> 72f., 117–121. Die hier erwähnten
+                  Predigten finden sich in BStB München, clm 18638, 177v–180r, 180v–181v; vgl. <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> 72; <rs type="bibl" ref="bibl:19174">Roßmann, Keck</rs> col. 1100, 1102. Gehalten
+                  wurden sie unter anderem auf dem Konzil von Basel: vgl. <rs type="bibl" ref="bibl:19036">Redlich, Tegernsee</rs> 118; <rs type="bibl" ref="bibl:19038">Redlich, Universität</rs> 93, 95.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg3">
+            <mentioned> describere non neglexi</mentioned>
+            <p> Diese Exzerpte sind erhalten als Teil derselben Beilage, in der AH die Initien der musiktheoretischen Texte angab: StiA Melk, Kt. 85 Varia 23, Fasz. 1, Nr. 25, 4–8.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg3">
+            <mentioned> pectus ... Germano-Austriacum</mentioned>
+            <p> Vgl. <ref type="letter" target="letter:255">255</ref>
+                  <ref target="letter:255#seg3">3</ref>, <ref type="letter" target="letter:273">273 </ref><ref target="letter:273 #seg7">7</ref>, <ref type="letter" target="letter:293">293</ref>
+                  <ref target="letter:293#seg2">2</ref>, <ref type="letter" target="letter:688">688</ref> <ref target="letter:688#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg4">
+            <mentioned>partus ... Anselmiani</mentioned>
+            <p>Zu Schrambs „Antilogia“ vgl. <rs type="bibl" ref="bibl:16240">Fiska, Schramb</rs> 222–235; <rs type="bibl" ref="bibl:19776">Stockinger, Felix mansurus</rs> 187–189; <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 14. Zur Versendung eines Exemplars
+                  nach Tegernsee im September 1715 vgl. <ref type="letter" target="letter:453">453 </ref><ref target="letter:453 #seg1">1</ref> und
+                  <ref target="letter:453 #seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg4">
+            <mentioned> custos bibliothecae</mentioned>
+            <p>Dieses Amt hatte zwischen 1708 und 1719 Benno
+                  von Unertl inne: <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs>
+                  Ergh. 118.</p>
+         </note>
+         <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg5">
+            <mentioned>Bernardus noster</mentioned>
+            <p> Schalhamer war von 1714 bis 1722 Professor der
                   Theologie am Kommunstudium der Bayerischen Benediktinerkongregation, das von 1714
-                  bis 1717 in Prüfening bei Regensburg gehalten wurde: <rs type="bibl"
-                     key="bibl:18024">Lindner, Familia S. Quirini</rs> Ergh. 99–101; <rs type="bibl"
-                     key="bibl:19054">Reichhold, 300 Jahre</rs> 673. Bei den genannten Thesen kann
+                  bis 1717 in Prüfening bei Regensburg gehalten wurde: <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> Ergh. 99–101; <rs type="bibl" ref="bibl:19054">Reichhold, 300 Jahre</rs> 673. Bei den genannten Thesen kann
                   es sich nur um die 1716 gedruckten „Tria difficilia“ handeln, von denen aber heute
-                  in Melk kein Exemplar nachzuweisen ist.</p></note>
-            <note xml:id="d3e17861">
-               <ref type="context">5</ref>
-               <label> sancti Augustini alumnus</label><p>Gemeint ist mit Sicherheit ein Angehöriger
+                  in Melk kein Exemplar nachzuweisen ist.</p>
+         </note>
+         <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg5">
+            <mentioned> sancti Augustini alumnus</mentioned>
+            <p>Gemeint ist mit Sicherheit ein Angehöriger
                   des Regensburger Augustiner-Eremitenklosters, in dem sich auch ein theologisches
-                  Studium der bayerischen Provinz dieses Ordens befand: vgl. <rs type="bibl"
-                     key="bibl:16966">Hemmerle, Augustinerkloster</rs> 34; <rs type="bibl"
-                     key="bibl:16968">Hemmerle, Bedeutung</rs> 155, 161. Die Identität dieses
-                  Lektors konnte nicht festgestellt werden.</p></note>
-            <note xml:id="d3e17865">
-               <ref type="context">5</ref>
-               <label> libelli sui ... refutationis</label><p> Vgl. Einleitung, Abschnitt I.5.</p></note>
-            <note xml:id="d3e17869">
-               <ref type="context">6</ref>
-               <label>Wessobruner haus</label><p> Das Münchner Stadthaus des Klosters Wessobrunn lag
-                  in der Promenadestraße: <rs type="bibl" key="bibl:14894">Andrian-Werburg,
-                     Wessobrunn</rs> 291; <rs type="bibl" key="bibl:17998">Lieb, Klosterhäuser</rs>
-                  160.</p></note>
-            <note xml:id="d3e17875">
-               <ref type="context">7</ref>
-               <label>stratagemate</label><p> Nach dem Sieg über die Osmanen in der Schlacht bei
+                  Studium der bayerischen Provinz dieses Ordens befand: vgl. <rs type="bibl" ref="bibl:16966">Hemmerle, Augustinerkloster</rs> 34; <rs type="bibl" ref="bibl:16968">Hemmerle, Bedeutung</rs> 155, 161. Die Identität dieses
+                  Lektors konnte nicht festgestellt werden.</p>
+         </note>
+         <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg5">
+            <mentioned> libelli sui ... refutationis</mentioned>
+            <p> Vgl. Einleitung, Abschnitt I.5.</p>
+         </note>
+         <note target="#range(right('n19'), left('n19e'))" n="19" anchored="false" corresp="#seg6">
+            <mentioned>Wessobruner haus</mentioned>
+            <p> Das Münchner Stadthaus des Klosters Wessobrunn lag
+                  in der Promenadestraße: <rs type="bibl" ref="bibl:14894">Andrian-Werburg,
+                     Wessobrunn</rs> 291; <rs type="bibl" ref="bibl:17998">Lieb, Klosterhäuser</rs>
+                  160.</p>
+         </note>
+         <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg7">
+            <mentioned>stratagemate</mentioned>
+            <p> Nach dem Sieg über die Osmanen in der Schlacht bei
                   Peterwardein am 5. August 1716 war Prinz Eugen von Savoyen mit dem kaiserlichen
                   Heer gegen Temesvár, den Hauptort des Banats, vorgerückt. Die Stadt wurde Ende
                   August zerniert, nach etwa sechs Wochen Belagerung musste sie am 12. Oktober
-                  kapitulieren: <rs type="bibl" key="bibl:15406">Braubach, Prinz Eugen</rs> 3
-                  316–328; <rs type="bibl" key="bibl:18202">Matuschka, Feldzug 1716</rs> 217–270;
-                     <rs type="bibl" key="bibl:20112">Vocelka, Glanz und Untergang</rs> 157; <rs
-                     type="bibl" key="bibl:20318">Wess et al., Prinz Eugen</rs> 171–176. Das
+                  kapitulieren: <rs type="bibl" ref="bibl:15406">Braubach, Prinz Eugen</rs> 3
+                  316–328; <rs type="bibl" ref="bibl:18202">Matuschka, Feldzug 1716</rs> 217–270;
+                     <rs type="bibl" ref="bibl:20112">Vocelka, Glanz und Untergang</rs> 157; <rs type="bibl" ref="bibl:20318">Wess et al., Prinz Eugen</rs> 171–176. Das
                   vielbeachtete Ereignis wurde in Melk am 1. November mit einem Te Deum gefeiert: PE
-                  5 153.</p></note>
-            <note xml:id="d3e17881">
-               <ref type="context">8</ref>
-               <label>Strenberg ... Ahleuten</label><p> Der Besitz des Klosters Tegernsee um
+                  5 153.</p>
+         </note>
+         <note target="#range(right('n21'), left('n21e'))" n="21" anchored="false" corresp="#seg8">
+            <mentioned>Strenberg ... Ahleuten</mentioned>
+            <p> Der Besitz des Klosters Tegernsee um
                   Strengberg ist erstmals urkundlich nachgewiesen durch ein Diplom Heinrichs II. von
-                  1011: MGH DD.H.II 268 Nr. 231. Er dürfte aber noch etwas weiter zurückgehen: <rs
-                     type="bibl" key="bibl:17686">Krawarik, Entwicklung</rs> 196–207; <rs
-                     type="bibl" key="bibl:20278">Weißensteiner, Tegernsee</rs> 144–146. Das Schloss
+                  1011: MGH DD.H.II 268 Nr. 231. Er dürfte aber noch etwas weiter zurückgehen: <rs type="bibl" ref="bibl:17686">Krawarik, Entwicklung</rs> 196–207; <rs type="bibl" ref="bibl:20278">Weißensteiner, Tegernsee</rs> 144–146. Das Schloss
                   Achleiten war in späterer Zeit der Verwaltungssitz der Tegernseer Herrschaft um
-                  Strengberg: <rs type="bibl" key="bibl:14858">Aigner, Tegernsee</rs> 17f.; <rs
-                     type="bibl" key="bibl:18874">Plesser, Strengberg</rs> 237, 247; <rs type="bibl"
-                     key="bibl:20082">Veigl, Strengberg</rs> 129; <rs type="bibl" key="bibl:20278"
-                     >Weißensteiner, Tegernsee</rs> 150.</p></note>
-            <note xml:id="d3e17887">
-               <ref type="context">8</ref>
-               <label> Loimb</label><p> Der Tegernseer Besitz zu Loiben in der Wachau beruhte
+                  Strengberg: <rs type="bibl" ref="bibl:14858">Aigner, Tegernsee</rs> 17f.; <rs type="bibl" ref="bibl:18874">Plesser, Strengberg</rs> 237, 247; <rs type="bibl" ref="bibl:20082">Veigl, Strengberg</rs> 129; <rs type="bibl" ref="bibl:20278">Weißensteiner, Tegernsee</rs> 150.</p>
+         </note>
+         <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg8">
+            <mentioned> Loimb</mentioned>
+            <p> Der Tegernseer Besitz zu Loiben in der Wachau beruhte
                   zumindest zum Teil auf einer Schenkung Heinrichs II. von 1002: MGH DD.H.II 228f.
-                  Nr. 194; vgl. <rs type="bibl" key="bibl:14858">Aigner, Tegernsee</rs> 13, 16f.;
-                     <rs type="bibl" key="bibl:15424">Bresslau, Erläuterungen</rs> 20 153–159; <rs
-                     type="bibl" key="bibl:20278">Weißensteiner, Tegernsee</rs> 145–152. Auch hier
+                  Nr. 194; vgl. <rs type="bibl" ref="bibl:14858">Aigner, Tegernsee</rs> 13, 16f.;
+                     <rs type="bibl" ref="bibl:15424">Bresslau, Erläuterungen</rs> 20 153–159; <rs type="bibl" ref="bibl:20278">Weißensteiner, Tegernsee</rs> 145–152. Auch hier
                   ist freilich ein noch früherer, möglicherweise sogar karolingerzeitlicher Ursprung
-                  der Begüterung zu vermuten: <rs type="bibl" key="bibl:17686">Krawarik,
-                     Entwicklung</rs> 208; <rs type="bibl" key="bibl:20388">Winter, Besitz- und
-                     Herrschaftsstrukturen</rs> 159f., 170; vgl. <rs type="bibl" key="bibl:14858"
-                     >Aigner, Tegernsee</rs> 8f. Die dortige Pfarre war hingegen erst 1695 dem Stift
+                  der Begüterung zu vermuten: <rs type="bibl" ref="bibl:17686">Krawarik,
+                     Entwicklung</rs> 208; <rs type="bibl" ref="bibl:20388">Winter, Besitz- und
+                     Herrschaftsstrukturen</rs> 159f., 170; vgl. <rs type="bibl" ref="bibl:14858">Aigner, Tegernsee</rs> 8f. Die dortige Pfarre war hingegen erst 1695 dem Stift
                   Tegernsee inkorporiert, vorerst jedoch noch nicht mit Konventualen besetzt worden:
-                     <rs type="bibl" key="bibl:14858">Aigner, Tegernsee</rs> 24. Die von AH
+                     <rs type="bibl" ref="bibl:14858">Aigner, Tegernsee</rs> 24. Die von AH
                   gebrauchte Schreibweise entspricht der mundartlichen Aussprache des Ortsnamens:
-                  vgl. <rs type="bibl" key="bibl:19528">Schuster, Etymologie</rs> 2 488f.</p></note>
-         </div>
-      </back>
+                  vgl. <rs type="bibl" ref="bibl:19528">Schuster, Etymologie</rs> 2 488f.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater Bernarde, patrone colendissime, amice dilectissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Epistolam tuam 23. Augusti ad me datam 30. eiusdem in <anchor xml:id="n1"/>festo titularium patronorum congregationis nostrae, sanctorum scilicet angelorum custodum<anchor xml:id="n1e"/>, accepi, legi eaque summe delectatus fui, quia ex ea intellexi te bene valere. Superi te mihi et universo ordini salvum et incolumem, ulterius quam diutissime salvum et incolumem conservent! </ab>
+         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n2"/>Gilberti Remensis opusculum De rationali et ratione uti<anchor xml:id="n2e"/>, nec non et<anchor xml:id="n3"/> Guidonis abbatis nostri libellum De mensura <sic>menochordi</sic><anchor xml:id="n3e"/> , boni Superi! quot horis supra manuscriptorum nostrorum libros in turri optime reservatos in genua mea provolutus iisque incumbens, bone Deus, quam diu quaesivi, sed frustra! Amor autem erga te sincerissimus et desiderium optimum inserviendi illi, quem sincerissimo affectu prosequor et<del ana="#after">amor</del> diligo, addidit alas, quibus de novo instructus cum licentia reverendissimi nostri speciali ingressus sum<anchor xml:id="n4"/> cellam, cui interim nobilissimi libri in membranis descripti inclusi reservantur, sibique specialiter reverendissimus dominus dominus Quirinus piae memoriae reservari voluit<anchor xml:id="n4e"/>; quaesivi<anchor xml:id="n5"/> manuscriptorum numeros<anchor xml:id="n5e"/> 540<hi rend="superscript">2</hi> et 914, horum authorum scilicet indices, et Deo sint aeternae laudes, ad mei tuique, amicorum dilectissime, solatium<del ana="#before">l</del> inveni, ad cubiculum meum et cellam dilectissimam <pb n="1v"/> deportavi, libelli De mensura <sic>menochordi</sic>  initia iuxta <sic>petentionem</sic>  et intentionem<del ana="#after">descripsi</del>, Gilbertum vero <choice><sic>Remensim</sic><corr>Remensem</corr></choice> ex integro descripsi. Ignosce, Bernarde, luriditati calami mei horis plerumque nocturnis huius libelli apographum ita deproperantis. Mus bekennen, hab noch niemahlen in lesung der alten schrifften <add place="above">dermassen</add> gestudiert, quam in penetrandis literis<del ana="#after">huius</del> Rationalis de ratione uti: sed iucundus labor est, si labor amor est. Sincerissime omnia descripsi descriptaque cum alio iterum iterumque recollegi relegique etc. Si quid forte erratum est, tua corriget prudentia et in his summa dexteritas tua. Saepius non intellexi sensum, quid velit etc. Hoc saltem intellexi, Gilbertum fuisse virum doctissimum et ordinis specialissimum ornamentum. </ab>
+         <ab resp="#editor" xml:id="seg3">Sed non solum quaesivi hos, sed et alios a te saepius desideratos, specialiter in epistola tua secunda XVII. Kalendas Novembris anno 1712 ad me data, scilicet Christianum abbatem vestrum, <anchor xml:id="n6"/>Joannem Cellensem<anchor xml:id="n6e"/>, Stephanum abbatem aliosque etc. Diligenter numeros indicis nostri generalis <pb n="2r"/> annotavi, in speciali schedula descripsi, perlustravi omnia, sed quia nullus pro tempore librorum nostrorum ordo, praeter <anchor xml:id="n7"/>numerum 638<anchor xml:id="n7e"/> manuscriptorum nihil invenire potui; gratulabar mihi saltem de thesauro hoc invento, in quo erant absconditi <anchor xml:id="n8"/>vestri etiam celeberrimi viri Urbanus<anchor xml:id="n8e"/> et<anchor xml:id="n9"/> Stephanus<anchor xml:id="n9e"/>, quorum sermonum initia fideliter hic communico; et quia etiam de<anchor xml:id="n10"/> Joanne Frey Campidonensi<anchor xml:id="n10e"/> et<anchor xml:id="n11"/> Joanne Keckio<anchor xml:id="n11e"/> nostro aliqua scripta erant in illo libro, etiam<anchor xml:id="n12"/> describere non neglexi<anchor xml:id="n12e"/>, ut videat Bernardus meus mellifluus et amantissimus me nihil negligere eorum, quae scire possem etiam forte <choice><sic>esse</sic><corr>tibi</corr></choice> accepta et iucunda ad perfecte tractandum opus tuum, cuius exemplar mihi specialiter <choice><sic>compararem</sic><corr>comparabo</corr></choice>, soll auch mein ganzes depositum darauf gehen. Vale interim, virorum clarissime, iterum vale cum tuo clarissimo<del ana="#after">fratre</del> germano, amico ac patrono meo itidem colendissimo, valete et ad illustrandam rempublicam nostram ac gloriam Benedictinam literariam studia vestra ac labores indefessos ulterius conferte, non dubitantes, quin me servum vestrum ineptissimum tanto benevolentiorem facilioremque habituri sitis in conferendis auxiliis <pb n="2v"/> qualibuscunque tandem, quanto maiori desiderio<anchor xml:id="n13"/> pectus meum sincerissimum Germano-Austriacum<anchor xml:id="n13e"/> iam dudum exarsit nobilissimos vestros partus et in iis insignem Benedictinorum exercitum videndi, quorum doctrina et eruditio tantam ordini nostro gloriam peperere. </ab>
+         <ab resp="#editor" xml:id="seg4">Exemplar Bibliothecae tuae <sic>Mauriae</sic> , quo me dignari promisisti, etiam atque etiam exspecto; quaero, adhuc unum exemplar <anchor xml:id="n14"/>partus illius Anselmiani<anchor xml:id="n14e"/> (contra Augustinum Errath illum editi) etsi incompactum adde ad usum meum reservandum, quia iam transmissum reverendissimus noster sibi detinuit. Nisi alia occasio mittendi citius se obtulerit, optima erit haec ipsa occasio, nemblich mit unsern closter leuth, qui in Austriam abiere ad vindemias. Reverendissimus ipse noster illuc abiit cum duobus patribus capitularibus, ex quibus, si ad celeberrimum vestrum monasterium in reditu pervenerint, uti spero, pluribus oretenus accipies, quomodo vivat Alphonsus et quomodo se habeat status bibliothecae nostrae; erit enim socius<note type="annotation" xml:id="d3e17728">Danach durchgestrichen <orig>bbus</orig>, wohl Abkürzung für <orig>bibliothecarius</orig>.</note> reverendissimi nostri ipse<anchor xml:id="n15"/> custos bibliothecae<anchor xml:id="n15e"/> turrisque librorum. </ab>
+         <ab resp="#editor" xml:id="seg5">Pater <anchor xml:id="n16"/>Bernardus noster<anchor xml:id="n16e"/> thesium praesentium praeses se suo meoque Bernardo demisse commendat. In publica thesium harum disputatione (cui<del ana="#after">ois.</del> <add place="left-margin">diversorum</add> ordinum religiosi <add place="above">Ratisbonenses</add>, etiam patres Societatis intererant) lector quidam,<anchor xml:id="n17"/> sancti Augustini alumnus<anchor xml:id="n17e"/>, in haec verba argumentum suum incepit: Gaudeo summopere, viri clarissimi, ex his iterum thesibus insigniter omnibus innotescere etiam in florentissimo ordine Benedictino studiorum ac talentorum usum maximum esse. <pb n="3r"/> Quid ad haec praesentes illi Socii cogitarint,<anchor xml:id="n18"/> libelli sui propudiosi et insignis eiusdem refutationis<anchor xml:id="n18e"/> optime memores, facile nobis imaginamur. </ab>
+         <ab resp="#editor" xml:id="seg6">17. Julii adfuit apud nos pater Thomas Erhardt Wessofontanus, vir doctus et eruditus, cum socio a nobis petens aliquas nostri monasterii antiquitates abbatumque suorum exactam notitiam, quam habebamus. Hic optimus vir nihil aliud exoptat nisi cum Bernardo meo colendissimo literarum commercium. Edidit iam aliquos libros, nunc actualiter laborat in conscribendo libro, cuius titulus: Gloria Benedictina. De sanctissimo patre nostro Benedicto etc. Spopondit mihi meque unice rogavit, ut paternitatem vestram clarissimam monerem pro responso dando ad suas literas. Er hat würkhlich vil hundert ex ordine nostro authores eorumque librorum catalogum beysammen. Wil gehrn alles communicirn, wan herr pater Bernard ihm nur auch was weniges pro gloria sanctissimi patris nostri amplificanda communicirn wolt. Litterae ad eum dirigi possunt nacher München in <anchor xml:id="n19"/>Wessobruner haus<anchor xml:id="n19e"/> abzulegen. Respondebit et satisfaciet certissime. </ab>
+         <ab resp="#editor" xml:id="seg7">Sed quid de nuper transcripto <anchor xml:id="n20"/>stratagemate<anchor xml:id="n20e"/> Temeswarico? Allata etiam haec nova sunt Monachio; indies avidissime exspectamus horum confirmationem. Interim audivimus saepius urbem hanc actualiter iam esse obsessam <pb n="3v"/> a nobilissimo exercitu caesareo. Superi concedant etiam <choice><sic>hunc</sic><corr>hic</corr></choice> fortissimis et invictissimis militibus Caroli nostri gloriosissimi et optimi victoriam et triumphos innumeros, id rogamus et petimus a Deo ter optimo singulis fere momentis etiam in Bavaria. Superi, quoties desuper exhortor oviculas meas, facta ideo a me speciali oratione coram sanctissimo singulis diebus festivis cum ipsis persolvenda. <choice><sic>Deus concedat voto nostro sincerississimoque Tegernseensi</sic><corr>Deus exaudiat suspiria et vota nostra sincerissima Tegernseensia</corr></choice>! </ab>
+         <ab resp="#editor" xml:id="seg8">Reverendissimo nostro subditi nostri in Austria prope <anchor xml:id="n21"/>Strenberg und Ahleuten<anchor xml:id="n21e"/> existentes <sic>homigium</sic>  praestabunt, dahero wirdt er sich ohne allen zweifl einige zeit aldorten aufhalten, wie auch zu<anchor xml:id="n22"/> Loimb<anchor xml:id="n22e"/> in vindemiis. Wan mein liebster pater Bernard villeicht sonst kein gelegenheit hett mir die antworth cum acceptissimo libro zuschickhen, khan es äntweders nach Strenberg oder<anchor xml:id="n23"/> Loimb<anchor xml:id="n23e"/> geschickht <add place="above">werden</add>. Spero quidem reverendissimum nostrum suos etiam dilectissimos Mellicenses invisurum in reditu. Utinam et ego essem cum ipso! Fiet suo tempore, forte futuro anno. Vale centies, vale millies iterumque millies, Bernarde amandissime. Sum</ab>
+         <closer>Tuus et omnium vestrum servus et confrater minimus pater Alphonsus.</closer>
+         <closer>Raptissime ex cella mea dilecta Tegurina 20. Septembris 1716.</closer>
+      </body>
    </text>
 </TEI>

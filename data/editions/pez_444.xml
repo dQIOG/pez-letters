@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="444" xml:id="pez-0444">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">444 Joachim Edlinger an Hieronymus Pez. 1715-09-22. Seitenstetten.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Joachim Edlinger an Hieronymus Pez. 1715-09-22. Seitenstetten.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">444</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
@@ -24,9 +35,27 @@
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <p>StiA Melk, Karton 7 Patres 13, Fasz. 1, 3r–v.</p>
+            <listWit><witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Karton 7 Patres 13, Fasz. 1, 3r–v.</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -41,78 +70,60 @@
                <persName>Hieronymus Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">442</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">446</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">440</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">442</idno>
-               </ref>
+               <ptr type="prev" target="letter:442"/>
+               <ptr type="next" target="letter:446"/>
+               <ptr type="mentions" target="letter:440"/>
+               <ptr type="mentions" target="letter:442"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">In der durch die verfrühte Abreise <rs ref="index:d10854e7225">Anton Eders</rs> verursachten Eile hat <rs type="person" role="sender">JE</rs> vergessen, jene Materialien (reculae), die er in einem Brief an BP <ref type="letter" target="letter:440">440</ref> versprochen hatte, von <rs ref="index:d10854e7225">Eder</rs> überbringen zu lassen. Er bittet um Entschuldigung und holt nun die Versendung nach.</p>
+            <p corresp="#seg2">Das Versäumnis verschafft <rs type="person" role="sender">JE</rs> nun allerdings die Gelegenheit, <rs type="person" role="sender">HP</rs> über den Aufbau des von ihm <rs ref="index:d10854e7245">geplanten Werks</rs> zu unterrichten, was ihm in seinem jüngsten Brief <ref type="letter" target="letter:442">442</ref> aus Mangel an Platz nicht möglich gewesen ist. Erstens will <rs type="person" role="sender">JE</rs> darlegen, was bei einer öffentlichen Lesung im Allgemeinen zu beachten ist. Zweitens will er die richtige Aussprache aller Buchstaben und Diphthonge sowohl der <rs ref="index:d14380e23973">lateinischen</rs> Sprache als auch des <rs ref="index:d14380e9395">Deutschen</rs> (vernaculum idioma) behandeln, zumal viele bei Letzterem fast mehr Fehler begehen. Drittens will <rs type="person" role="sender">JE</rs> nicht alle Wörter, deren Quantität in der vorletzten Silbe nicht auf den ersten Blick erkennbar ist, einzeln anführen, damit das Buch nicht über ein handliches und tragbares Format hinaus anwächst. Vielmehr will er ähnlich dem <rs ref="index:d10854e5881">„Amaltheum prosodicum“ von Dangalières</rs> allgemeine Regeln für Wörter mit der gleichen Endung angeben, im Gegensatz zu diesem aber in einer praktischeren, nämlich alphabetischen Ordnung. Viertens sollen jene Wörter, die sich nicht unter solchen Regeln zusammenfassen lassen oder Ausnahmen bilden, in einem alphabetischen Verzeichnis aufgeführt werden. Fünftens sollen die in Druckwerken gebräuchlichen Abkürzungen beigefügt werden, zusammen mit mathematischen und medizinischen Zeichen. Sechstens soll eine Anleitung zum Lesen von juristischen Zitaten geboten werden. Weiters denkt <rs type="person" role="sender">JE</rs> auch daran, die <rs ref="index:d14380e19828">italienische</rs> und <rs ref="index:d14380e12712">französische</rs> Aussprache am Beispiel der Namen von Provinzen und Orten zu erläutern; diese kommen in den <rs ref="index:d10854e35082">Zeitungen (novellae)</rs> häufig vor, die immer öfter bei den Tischlesungen verwendet werden, und verursachen Lesern wie Hörern Unannehmlichkeiten. <rs type="person" role="sender">JE</rs> bittet um <rs type="person" role="sender">HPs</rs> und <rs ref="index:d14380e33148">BPs</rs> Urteil zu diesem Entwurf.</p>
+            <p corresp="#seg3"><rs type="person" role="sender">JE</rs> bittet um die Übermittlung der <rs ref="index:d14380e18247">„Prosodia“ von Hesius</rs>, falls sie für <rs type="person" role="sender">HP</rs> greifbar ist; <rs type="person" role="sender">JE</rs> konnte sie nirgends, auch nicht auf dem <rs ref="index:d14380e24970"><rs ref="index:d14380e24970">Linzer</rs> Markt</rs>, bekommen.</p>
+            <p corresp="#seg4">Ferner bittet <rs type="person" role="sender">JE</rs> um eine Schwanenfeder, weil er auch eine solche bislang selbst nicht hat beschaffen können.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e56310">In der durch die verfrühte Abreise <rs key="index:d10854e7225">Anton Eders</rs> verursachten Eile hat <rs type="person" role="sender">JE</rs> vergessen, jene Materialien (reculae), die er in einem Brief an BP <ref type="letter">440</ref> versprochen hatte, von <rs key="index:d10854e7225">Eder</rs> überbringen zu lassen. Er bittet um Entschuldigung und holt nun die Versendung nach.</seg><seg type="context" n="2" xml:id="d4618e56315">Das Versäumnis verschafft <rs type="person" role="sender">JE</rs> nun allerdings die Gelegenheit, <rs type="person" role="sender">HP</rs> über den Aufbau des von ihm <rs key="index:d10854e7245">geplanten Werks</rs> zu unterrichten, was ihm in seinem jüngsten Brief <ref type="letter">442</ref> aus Mangel an Platz nicht möglich gewesen ist. Erstens will <rs type="person" role="sender">JE</rs> darlegen, was bei einer öffentlichen Lesung im Allgemeinen zu beachten ist. Zweitens will er die richtige Aussprache aller Buchstaben und Diphthonge sowohl der <rs key="index:d14380e23973">lateinischen</rs> Sprache als auch des <rs key="index:d14380e9395">Deutschen</rs> (vernaculum idioma) behandeln, zumal viele bei Letzterem fast mehr Fehler begehen. Drittens will <rs type="person" role="sender">JE</rs> nicht alle Wörter, deren Quantität in der vorletzten Silbe nicht auf den ersten Blick erkennbar ist, einzeln anführen, damit das Buch nicht über ein handliches und tragbares Format hinaus anwächst. Vielmehr will er ähnlich dem <rs key="index:d10854e5881">„Amaltheum prosodicum“ von Dangalières</rs> allgemeine Regeln für Wörter mit der gleichen Endung angeben, im Gegensatz zu diesem aber in einer praktischeren, nämlich alphabetischen Ordnung. Viertens sollen jene Wörter, die sich nicht unter solchen Regeln zusammenfassen lassen oder Ausnahmen bilden, in einem alphabetischen Verzeichnis aufgeführt werden. Fünftens sollen die in Druckwerken gebräuchlichen Abkürzungen beigefügt werden, zusammen mit mathematischen und medizinischen Zeichen. Sechstens soll eine Anleitung zum Lesen von juristischen Zitaten geboten werden. Weiters denkt <rs type="person" role="sender">JE</rs> auch daran, die <rs key="index:d14380e19828">italienische</rs> und <rs key="index:d14380e12712">französische</rs> Aussprache am Beispiel der Namen von Provinzen und Orten zu erläutern; diese kommen in den <rs key="index:d10854e35082">Zeitungen (novellae)</rs> häufig vor, die immer öfter bei den Tischlesungen verwendet werden, und verursachen Lesern wie Hörern Unannehmlichkeiten. <rs type="person" role="sender">JE</rs> bittet um <rs type="person" role="sender">HPs</rs> und <rs key="index:d14380e33148">BPs</rs> Urteil zu diesem Entwurf.</seg><seg type="context" n="3" xml:id="d4618e56320"><rs type="person" role="sender">JE</rs> bittet um die Übermittlung der <rs key="index:d14380e18247">„Prosodia“ von Hesius</rs>, falls sie für <rs type="person" role="sender">HP</rs> greifbar ist; <rs type="person" role="sender">JE</rs> konnte sie nirgends, auch nicht auf dem <rs key="index:d14380e24970"><rs key="index:d14380e24970">Linzer</rs> Markt</rs>, bekommen.</seg><seg type="context" n="4" xml:id="d4618e56322">Ferner bittet <rs type="person" role="sender">JE</rs> um eine Schwanenfeder, weil er auch eine solche bislang selbst nicht hat beschaffen können.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende religiosissime ac eximie domine pater Hieronyme, domine ac patrone plurimum colende.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e56336"><seg type="lemma" corresp="#d4618e56351">Canis festinans caecos parit catulos</seg>: ita et mihi nuperrime contigit; dum enim tam mea opinione quam suo promisso citius abiit <seg type="lemma" corresp="#d4618e56358">dominus Eder</seg>, omnia deproperare coactus fui adeo, ut nec ad revidendum literas mihi tempus suppetierit. Et hinc facile contigit, ut ad <seg type="lemma" corresp="#d4618e56363">reculas istas</seg>, quarum tamen in epistola ad colendissimum dominum germanum tuum mentionem feci, plane non adverterem. Eas itaque incuriae meae veniam petens impraesentiarum transmitto. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e56338">Interim hoc saltem emolumenti ex hac non admodum paenitenda incuria emersit, ut de oeconomia eius, quod meditor, opusculi te hic instruere valeam, quod nuper ob defectum spatii non potui, tametsi ad rite de proposito meo ferendum, uti rogavi, iudicium fere sit necessarium. Ea igitur huiusmodi erit: primo, quid generatim in lectione publica sit observandum, ostendam. Secundo rectam pronuntiationem omnium literarum ac diphthongorum tam Latini quam vernaculi idiomatis, quia non pauci maiorem fere quam in priori difficultatem patiuntur, ordinate tradam. Tertio ne, si omnes <pb n="1v"/> omnino voces, de quarum penultimae quantitate vel ob positionem vel ob vocalem ante vocalem non cuivis constat, vellem expresse ponere, liber, qui tamen manualis et in quovis sacculo portabilis esse debet, nimium excrescat, ad eum fere modum, quo in Amaltheo prosodico, sed longe commodiorem ordine alphabetico regulas quam plurimas, ordinatissime tamen, tradam circa eas voces, quarum plures eandem terminationem habent. Quae vero sub communi regula haud facile comprehendi queunt vel ab eadem recedunt, ea quarto ordine alphabetico in repertorium sive indiculum coniciam, ubi commodissime inter legendum fere inquiri poterunt. Quinto abbreviaturas in impressis libris usitatiores una cum signis mathematicis et medicis adiciam. Sexto methodum legendi citationes iuris docebo. Et quid, si in novellistarum (cum novellae saepe saepius etiam in mensa legantur) gratiam Italicam quoque et Gallicam pronuntiationem annecterem, exemplorum loco meras provincias et loca illarum regionum ponendo? Utpote quae in libris etiam Germanicis passim sunt obvia, et tam lectorem quam audientes mire torquent. De his ergo tuum tuique admodum reverendi domini germani iudicium, vir amicissime, ne me celes, rogo. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e56342">Si vel absolute vel cum limitatione approbes, hanc porro petitionem adicio, ut <seg type="lemma" corresp="#d4618e56368">Hesium, quem aliqui hac in re citant, sed nonnunquam tamen reiciunt, mihi ad tempus communices, si eum habeas aut scias; quia nullibi, nec in nundinis Lincensibus, adhucdum potui acquirere</seg>. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e56344">Si vel unicam pennam cygneam posses absque incommodo adicere, favorem mihi exhibiturus esses haud exiguum, quia pariter aliunde nusquam etiam constitutas acquiro. Vale et mihi fave.</seg></p>
-            <p xml:space="preserve">Obsequiosissimus tuus pater Joachimus Benedictinus Seittenstettensis.</p>
-            <p xml:space="preserve">Seittenstadii 22. Septembris 1715.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e56351">
-               <ref type="context">1</ref>
-               <label>Canis ... catulos</label>
-               <p><rs type="bibl" key="bibl:20224">Walther, Proverbia</rs> 7 318 Nr. 35384.</p>
-            </note>
-            <note xml:id="d4618e56358">
-               <ref type="context">1</ref>
-               <label>dominus Eder</label>
-               <p>Vgl. <ref type="letter">442</ref> &lt;1&gt;. Es sind vermutlich in beiden Briefen
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>Canis ... catulos</mentioned>
+            <p><rs type="bibl" ref="bibl:20224">Walther, Proverbia</rs> 7 318 Nr. 35384.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>dominus Eder</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:442">442</ref> <ref target="letter:442#seg1">1</ref>. Es sind vermutlich in beiden Briefen
                   dieselben Ereignisse (im Zusammenhang mit der Versendung des „indiculus librorum“,
-                  vor derjenigen von <ref type="letter">442</ref>) gemeint.</p>
-            </note>
-            <note xml:id="d4618e56363">
-               <ref type="context">1</ref>
-               <label>reculas istas</label>
-               <p>Schwerlich der in <ref type="letter">442</ref> &lt;1&gt; als bereits versendet
+                  vor derjenigen von <ref type="letter" target="letter:442">442</ref>) gemeint.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned>reculas istas</mentioned>
+            <p>Schwerlich der in <ref type="letter" target="letter:442">442</ref> <ref target="letter:442#seg1">1</ref> als bereits versendet
                   erwähnte „indiculus librorum“, sondern eher weitere Materialien, die zusammen mit
                   diesem hätten übermittelt werden sollen.</p>
-            </note>
-            <note xml:id="d4618e56368">
-               <ref type="context">3</ref>
-               <label>Hesium ... potui acquirere</label>
-               <p>Neben der ersten Ausgabe (Parma 1624) gab es mindestens zwei aus Deutschland
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>Hesium ... potui acquirere</mentioned>
+            <p>Neben der ersten Ausgabe (Parma 1624) gab es mindestens zwei aus Deutschland
                   (Freiburg im Breisgau 1627; Köln 1630). Dennoch war dies ein erheblich selteneres
-                  Werk als die drei in <ref type="letter">442</ref> &lt;2&gt; angeführten.</p>
-            </note>
-            <note xml:id="d4618e56375">
-               <ref type="context">3</ref>
-               <label>nundinis Lincensibus</label>
-               <p>Zur Bedeutung der Linzer Märkte im österreichischen Buchhandel vgl. <rs
-                     type="bibl" key="bibl:14994">Bachleitner–Eybl–Fischer, Buchhandel</rs> 40, 75,
+                  Werk als die drei in <ref type="letter" target="letter:442">442</ref> <ref target="letter:442#seg2">2</ref> angeführten.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>nundinis Lincensibus</mentioned>
+            <p>Zur Bedeutung der Linzer Märkte im österreichischen Buchhandel vgl. <rs type="bibl" ref="bibl:14994">Bachleitner–Eybl–Fischer, Buchhandel</rs> 40, 75,
                   82.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende religiosissime ac eximie domine pater Hieronyme, domine ac patrone plurimum colende.</opener>
+         <ab resp="#editor" xml:id="seg1"><anchor xml:id="n1"/>Canis festinans caecos parit catulos<anchor xml:id="n1e"/>: ita et mihi nuperrime contigit; dum enim tam mea opinione quam suo promisso citius abiit <anchor xml:id="n2"/>dominus Eder<anchor xml:id="n2e"/>, omnia deproperare coactus fui adeo, ut nec ad revidendum literas mihi tempus suppetierit. Et hinc facile contigit, ut ad <anchor xml:id="n3"/>reculas istas<anchor xml:id="n3e"/>, quarum tamen in epistola ad colendissimum dominum germanum tuum mentionem feci, plane non adverterem. Eas itaque incuriae meae veniam petens impraesentiarum transmitto. </ab>
+         <ab resp="#editor" xml:id="seg2">Interim hoc saltem emolumenti ex hac non admodum paenitenda incuria emersit, ut de oeconomia eius, quod meditor, opusculi te hic instruere valeam, quod nuper ob defectum spatii non potui, tametsi ad rite de proposito meo ferendum, uti rogavi, iudicium fere sit necessarium. Ea igitur huiusmodi erit: primo, quid generatim in lectione publica sit observandum, ostendam. Secundo rectam pronuntiationem omnium literarum ac diphthongorum tam Latini quam vernaculi idiomatis, quia non pauci maiorem fere quam in priori difficultatem patiuntur, ordinate tradam. Tertio ne, si omnes <pb n="1v"/> omnino voces, de quarum penultimae quantitate vel ob positionem vel ob vocalem ante vocalem non cuivis constat, vellem expresse ponere, liber, qui tamen manualis et in quovis sacculo portabilis esse debet, nimium excrescat, ad eum fere modum, quo in Amaltheo prosodico, sed longe commodiorem ordine alphabetico regulas quam plurimas, ordinatissime tamen, tradam circa eas voces, quarum plures eandem terminationem habent. Quae vero sub communi regula haud facile comprehendi queunt vel ab eadem recedunt, ea quarto ordine alphabetico in repertorium sive indiculum coniciam, ubi commodissime inter legendum fere inquiri poterunt. Quinto abbreviaturas in impressis libris usitatiores una cum signis mathematicis et medicis adiciam. Sexto methodum legendi citationes iuris docebo. Et quid, si in novellistarum (cum novellae saepe saepius etiam in mensa legantur) gratiam Italicam quoque et Gallicam pronuntiationem annecterem, exemplorum loco meras provincias et loca illarum regionum ponendo? Utpote quae in libris etiam Germanicis passim sunt obvia, et tam lectorem quam audientes mire torquent. De his ergo tuum tuique admodum reverendi domini germani iudicium, vir amicissime, ne me celes, rogo. </ab>
+         <ab resp="#editor" xml:id="seg3">Si vel absolute vel cum limitatione approbes, hanc porro petitionem adicio, ut <anchor xml:id="n4"/>Hesium, quem aliqui hac in re citant, sed nonnunquam tamen reiciunt, mihi ad tempus communices, si eum habeas aut scias; quia nullibi, nec in nundinis Lincensibus, adhucdum potui acquirere<anchor xml:id="n4e"/>. </ab>
+         <ab resp="#editor" xml:id="seg4">Si vel unicam pennam cygneam posses absque incommodo adicere, favorem mihi exhibiturus esses haud exiguum, quia pariter aliunde nusquam etiam constitutas acquiro. Vale et mihi fave.</ab>
+         <closer>Obsequiosissimus tuus pater Joachimus Benedictinus Seittenstettensis.</closer>
+         <closer>Seittenstadii 22. Septembris 1715.</closer>
+      </body>
    </text>
 </TEI>

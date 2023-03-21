@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="565" xml:id="pez-0565">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">565 Karl Meichelbeck an Bernhard Pez. 1716-05-13. Benediktbeuern.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Karl Meichelbeck an Bernhard Pez. 1716-05-13. Benediktbeuern.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">565</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -21,27 +33,34 @@
             <relatedItem type="otherEdition">
                <bibl>Siegmund, Meichelbecks Briefe 80/1–2 157–160.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:20248">Weber, Meichelbeck</rs> 141</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               KM vermerkt in seinem Diarium zum 13. Mai 1716: <orig>Scrissi al padre Pez</orig> (BStB München, Meichelbeckiana 18b, 273r).
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">684r–685v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 684r–685v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -56,151 +75,148 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">557</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">626</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">557</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">663</idno>
-               </ref>
+               <ptr type="prev" target="letter:557"/>
+               <ptr type="next" target="letter:626"/>
+               <ptr type="mentions" target="letter:557"/>
+               <ptr type="mentionedIn" target="letter:663"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">KM</rs> zeigt sich peinlich berührt von dem Übermaß an Freundlichkeit, mit dem ihn <rs type="person" role="sender">BP</rs> in seinem jüngsten Brief <ref type="letter" target="letter:557">557</ref> bedacht hat. Seine Schriften verdienen kein solches Lob, doch ist er erfreut, dass sich <rs type="person" role="sender">BPs</rs> Ansichten über die Nützlichkeit des Studiums der Geschichte mit den seinen vollständig decken.</p>
+            <p corresp="#seg2">Zu <rs ref="index:d14380e3605">Ludwig Babenstubers „Fundatrix Ettalensis“</rs> und <rs ref="index:d14380e30205">Aemilian Naisls „Speculum cleri“</rs> ist <rs type="person" role="sender">KM</rs> bereits vor langem zu ganz demselben Urteil gelangt wie BP; vielleicht wird er dieses Urteil den Betroffenen auch einmal offen mitteilen.</p>
+            <p corresp="#seg3">Die <rs ref="index:d14380e3022">Chronik des Veit Arnpeck</rs>, die so häufig von späteren Autoren genannt wird, hat <rs type="person" role="sender">KM</rs> schon seit Jahren in verschiedenen Bibliotheken gesucht, aber bislang nicht gefunden. Da ihn <rs type="person" role="sender">BP</rs> nun darauf anspricht, will er neue Bemühungen unternehmen. Ihm liegt allerdings eine <rs ref="index:d14380e2324">Handschrift</rs> in deutscher Sprache vor, deren Text in lateinischer Fassung auch in einem Codex des <rs ref="index:d14380e42163">Tegernseer Archivs</rs> vorhanden ist, der <rs ref="index:d14380e3014">Arnpeck</rs> zugeschrieben wird, allerdings erst von späterer Hand. Beide Handschriften sind aus dem 15. Jahrhundert, der <rs ref="index:d14380e4706">Benediktbeurer</rs> Codex ist mit 1479 datiert. Der Text darin bietet Gründungsgeschichten zahlreicher bayerischer Klöster; er entspricht nicht dem, was <rs ref="index:d10854e32596">Markus Welser</rs> und andere Schriftsteller aus Arnpecks Chronik wiedergeben. Deshalb ist <rs type="person" role="sender">KM</rs> unsicher, ob die Zuschreibung richtig ist.</p>
+            <p corresp="#seg4">Zu <rs ref="index:d14380e3014">Arnpeck</rs> fällt ihm noch ein, dass dieser in dem Werk „<rs ref="index:d14380e45520">Divus Sebastianus Eberspergae Boiorum propitius</rs>“ des <rs ref="index:d14380e20126">Jesuiten</rs> <rs ref="index:d14380e45514">Adam Widl</rs>, das auf <rs ref="index:d14380e10433">Ebersberger</rs> Quellen beruht und 1688 zu <rs ref="index:d14380e29936">München</rs> bei <rs ref="index:d14380e36560">Sebastian Rauch</rs> erschien, nirgends erwähnt wird. Dies ist sicherlich der Angst der <rs ref="index:d14380e20126">Jesuiten</rs> zuzuschreiben, Lob für einen <rs ref="index:d14380e4919">Benediktiner</rs> könnte das Ansehen ihrer eigenen Gesellschaft schmälern.</p>
+            <p corresp="#seg5">Dass <rs ref="index:d14380e26993">René Massuet</rs> gestorben und damit BP, ihm selbst und dem ganzen Orden verloren gegangen ist, hat <rs type="person" role="sender">KM</rs> mit tiefstem Schmerz erfahren. Er zweifelt jedoch nicht, dass ein anderer aus den Reihen der <rs ref="index:d10854e15615">Mauriner</rs> an dessen Stelle treten und die Korrespondenz mit <rs type="person" role="sender">BP</rs> aufnehmen wird, und bittet für diesen Fall um Vermittlung eines Kontakts. Dies wäre ihm umso wichtiger, als er die Arbeit an einer Chronik von <rs ref="index:d14380e4706">Benediktbeuern</rs> wie auch an einer Geschichte der <rs ref="index:d14380e4919">Benediktiner</rs> in <rs ref="index:d14380e4170">Bayern</rs> ernsthaft aufnehmen will, wenn er mit der Ordnung des <rs ref="index:d14380e4754">Benediktbeurer Archivs</rs> fertig ist.</p>
+            <p corresp="#seg6">Die Trauer über den <rs ref="index:d14380e27059">Tod Massuets</rs> wird gemildert durch gute Nachrichten aus <rs ref="index:d14380e37680">Rom</rs>, welche ein benediktinischer Korrespondent (<rs ref="index:d14380e5595">Stefano Bianchi</rs>?) <rs type="person" role="sender">KM</rs> kürzlich mitgeteilt hat. <rs ref="index:d14380e42104">Nicolò Maria Tedeschi</rs>, Bischof von <rs ref="index:d14380e24994">Lipari</rs> und bislang Prosekretär der Ritenkongregation, ist von Papst <rs ref="index:d14380e21985">Klemens XI</rs>. zu deren erstem Sekretär befördert worden, außerdem zum Sekretär und Examinator der Kongregation für das Examen der Bischöfe sowie zugleich zum Konsultor des Sanctum Officium. Dieser <rs ref="index:d14380e4919">benediktinische</rs> Mitbruder steuert also mit großen Schritten auf den Kardinalspurpur zu.</p>
+            <p corresp="#seg7"><rs type="person" role="sender">KMs</rs> Abt <rs ref="index:d14380e31969">Magnus Pachinger</rs>, der <rs type="person" role="sender">BPs</rs> letzten Brief gelesen hat, hat jüngst beim gemeinsamen Rasten nach dem Aderlass ein Gebet für die Gesundheit <rs type="person" role="sender">BPs</rs> dargebracht. Als sich <rs type="person" role="sender">KM</rs> dem anschloss, folgten die übrigen zahlreich anwesenden <rs ref="index:d14380e4706">Benediktbeurer</rs> Konventualen seinem Beispiel. Unter diesen waren <rs ref="index:d14380e16543">Bernhard Gross</rs> und <rs ref="index:d10854e35200">Gregor Zödl</rs>, welche die von <rs type="person" role="sender">BP</rs> ausgesprochenen Grüße erwidern. <rs type="person" role="sender">KM</rs> schließt mit dem Versprechen, zu späterer Zeit mehr zu schreiben.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e9922"><rs type="person" role="sender">KM</rs> zeigt sich peinlich berührt von dem Übermaß an Freundlichkeit, mit dem ihn <rs type="person" role="sender">BP</rs> in seinem jüngsten Brief <ref type="letter">557</ref> bedacht hat. Seine Schriften verdienen kein solches Lob, doch ist er erfreut, dass sich <rs type="person" role="sender">BPs</rs> Ansichten über die Nützlichkeit des Studiums der Geschichte mit den seinen vollständig decken.</seg><seg type="context" n="2" xml:id="d3e9927">Zu <rs key="index:d14380e3605">Ludwig Babenstubers „Fundatrix Ettalensis“</rs> und <rs key="index:d14380e30205">Aemilian Naisls „Speculum cleri“</rs> ist <rs type="person" role="sender">KM</rs> bereits vor langem zu ganz demselben Urteil gelangt wie BP; vielleicht wird er dieses Urteil den Betroffenen auch einmal offen mitteilen.</seg><seg type="context" n="3" xml:id="d3e9929">Die <rs key="index:d14380e3022">Chronik des Veit Arnpeck</rs>, die so häufig von späteren Autoren genannt wird, hat <rs type="person" role="sender">KM</rs> schon seit Jahren in verschiedenen Bibliotheken gesucht, aber bislang nicht gefunden. Da ihn <rs type="person" role="sender">BP</rs> nun darauf anspricht, will er neue Bemühungen unternehmen. Ihm liegt allerdings eine <rs key="index:d14380e2324">Handschrift</rs> in deutscher Sprache vor, deren Text in lateinischer Fassung auch in einem Codex des <rs key="index:d14380e42163">Tegernseer Archivs</rs> vorhanden ist, der <rs key="index:d14380e3014">Arnpeck</rs> zugeschrieben wird, allerdings erst von späterer Hand. Beide Handschriften sind aus dem 15. Jahrhundert, der <rs key="index:d14380e4706">Benediktbeurer</rs> Codex ist mit 1479 datiert. Der Text darin bietet Gründungsgeschichten zahlreicher bayerischer Klöster; er entspricht nicht dem, was <rs key="index:d10854e32596">Markus Welser</rs> und andere Schriftsteller aus Arnpecks Chronik wiedergeben. Deshalb ist <rs type="person" role="sender">KM</rs> unsicher, ob die Zuschreibung richtig ist.</seg><seg type="context" n="4" xml:id="d3e9931">Zu <rs key="index:d14380e3014">Arnpeck</rs> fällt ihm noch ein, dass dieser in dem Werk „<rs key="index:d14380e45520">Divus Sebastianus Eberspergae Boiorum propitius</rs>“ des <rs key="index:d14380e20126">Jesuiten</rs> <rs key="index:d14380e45514">Adam Widl</rs>, das auf <rs key="index:d14380e10433">Ebersberger</rs> Quellen beruht und 1688 zu <rs key="index:d14380e29936">München</rs> bei <rs key="index:d14380e36560">Sebastian Rauch</rs> erschien, nirgends erwähnt wird. Dies ist sicherlich der Angst der <rs key="index:d14380e20126">Jesuiten</rs> zuzuschreiben, Lob für einen <rs key="index:d14380e4919">Benediktiner</rs> könnte das Ansehen ihrer eigenen Gesellschaft schmälern.</seg><seg type="context" n="5" xml:id="d3e9933">Dass <rs key="index:d14380e26993">René Massuet</rs> gestorben und damit <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BP<?oxy_custom_end?>, ihm selbst und dem ganzen Orden verloren gegangen ist, hat <rs type="person" role="sender">KM</rs> mit tiefstem Schmerz erfahren. Er zweifelt jedoch nicht, dass ein anderer aus den Reihen der <rs key="index:d10854e15615">Mauriner</rs> an dessen Stelle treten und die Korrespondenz mit <rs type="person" role="sender">BP</rs> aufnehmen wird, und bittet für diesen Fall um Vermittlung eines Kontakts. Dies wäre ihm umso wichtiger, als er die Arbeit an einer Chronik von <rs key="index:d14380e4706">Benediktbeuern</rs> wie auch an einer Geschichte der <rs key="index:d14380e4919">Benediktiner</rs> in <rs key="index:d14380e4170">Bayern</rs> ernsthaft aufnehmen will, wenn er mit der Ordnung des <rs key="index:d14380e4754">Benediktbeurer Archivs</rs> fertig ist.</seg><seg type="context" n="6" xml:id="d3e9935">Die Trauer über den <rs key="index:d14380e27059">Tod Massuets</rs> wird gemildert durch gute Nachrichten aus <rs key="index:d14380e37680">Rom</rs>, welche ein benediktinischer Korrespondent (<rs key="index:d14380e5595">Stefano Bianchi</rs>?) <rs type="person" role="sender">KM</rs> kürzlich mitgeteilt hat. <rs key="index:d14380e42104">Nicolò Maria Tedeschi</rs>, Bischof von <rs key="index:d14380e24994">Lipari</rs> und bislang Prosekretär der <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Ritenkongregation<?oxy_custom_end?>, ist von Papst <rs key="index:d14380e21985">Klemens XI</rs>. zu deren erstem Sekretär befördert worden, außerdem zum Sekretär und Examinator der Kongregation für das Examen der Bischöfe sowie zugleich zum Konsultor des Sanctum Officium. Dieser <rs key="index:d14380e4919">benediktinische</rs> Mitbruder steuert also mit großen Schritten auf den Kardinalspurpur zu.</seg><seg type="context" n="7" xml:id="d3e9937"><rs type="person" role="sender">KMs</rs> Abt <rs key="index:d14380e31969">Magnus Pachinger</rs>, der <rs type="person" role="sender">BPs</rs> letzten Brief gelesen hat, hat jüngst beim gemeinsamen Rasten nach dem Aderlass ein Gebet für die Gesundheit <rs type="person" role="sender">BPs</rs> dargebracht. Als sich <rs type="person" role="sender">KM</rs> dem anschloss, folgten die übrigen zahlreich anwesenden <rs key="index:d14380e4706">Benediktbeurer</rs> Konventualen seinem Beispiel. Unter diesen waren <rs key="index:d14380e16543">Bernhard Gross</rs> und <rs key="index:d10854e35200">Gregor Zödl</rs>, welche die von <rs type="person" role="sender">BP</rs> ausgesprochenen Grüße erwidern. <rs type="person" role="sender">KM</rs> schließt mit dem Versprechen, zu späterer Zeit mehr zu schreiben.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>KM vermerkt in seinem Diarium zum 13. Mai 1716: <hi rend="italic">Scrissi al padre Pez</hi> (BStB München, Meichelbeckiana 18b, 273r).</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime et clarissime domine, domine colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e9959">Operuit confusio faciem meam legentis literas nuperas paternitatis vestrae admodum reverendae, quibus excessum humanitatis erga me suae tam benignis expressionibus fecit testatum. Certe nil tale potuerunt mereri minutiae illae meae, quippe quae clarissimo eruditissimoque Bernardo, inter libros codicesque selectissimos ducenti suavissimos dies, aliud non attulerint nisi fastidium nauseamque ingentem. Interea tamen (fatebor enim) magno mihi solatio est, quod videam ovum ovo non tam esse simile, quam sunt similia vota mea votis vestris circa utilissimum historiae studium. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e9961">Iudicium de Historia Ettalensi uti etiam de Speculo patris Naysel ego iam dudum prorsus idem cum paternitate vestra tuli; et fortassis iudicium hoc nostrum iis, ad quos pertinet, aperiam suo tempore ἐμφανῶσ. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e9963">Arenbekii Chronicon toties a scriptoribus laudatum iam a pluribus annis in variis bibliothecis quaesivi, sed in hanc usque diem non inveni. Quia tamen memorem monet paternitas vestra, tentabo adhuc alias vias, quamprimum dante Deo occasio fuerit oblata. Habeo interea <pb n="1v"/> ad manum <seg type="lemma" corresp="#d3e9990">codicem quendam scriptum Germanice</seg>, qui codex, sed Latino idiomate conscriptus, reperitur etiam<seg type="lemma" corresp="#d3e9996"> in archivo Tegernseensi</seg> et ibi Arenbekio tribuitur, ast non nisi a manu recentiori, cum uterque codex iam fuerit scriptus saeculo 15., et noster quidem anno 1479. Hic codex exhibet multas fundationes monasteriorum Bavariae neque respondet iis, quae ex Arenbekio copiose affert<seg type="lemma" corresp="#d3e10000"> Marcus Velserus</seg> aliique scriptores. Itaque nescio, quid de veritate authoris tuto possit credi. Dabo autem operam, ut certiora possim suo tempore nunciare. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e9967">Interim dum de Arenbekio incidit sermo, illud hic animadverto, quod huius viri nulla mihi hactenus occurrerit mentio in eo libello, cui titulus: Sanctus Sebastianus Eberspergae Boiorum propitius. Scriptus ex monimentis Eberspergensibus ab <seg type="lemma" corresp="#d3e10004">Adamo Widl</seg> Societatis Jesu et editus Monachii anno 1688 typis<seg type="lemma" corresp="#d3e10010"> Sebastiani Rauch</seg>. Id quod utique tribuendum videtur<seg type="lemma" corresp="#d3e10018"> affectui Sociorum</seg> ex <seg type="lemma" corresp="#d3e10014">laude hominis Benedictini</seg> timentium <pb n="2r"/> existimationis propriae detrimentum. Verum hoc incidenter. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e9971">Eruditissimum Massuetum nostrum paternitati vestrae mihique, imo toti sacrae familiae nostrae esse ereptum non sine summo animi dolore intellexi; confido tamen non defore ex doctissimis sodalibus nostris Gallis, qui vices viri celeberrimi suppleat et Bernardum Massueti exemplo amet. Id ubi intellexero, curae mihi erit, ut ad preces Bernardi et ego fiam particeps eiusmodi amoris, maxime cum ad Chronicon monasterii nostri ac postea ad Historiam Benedictino-Bavaricam potuero propius adicere manus, hodie tabularii nostri negotiis impeditas. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e9973">Dolores interim ex Massueti obitu obortos mitigemus ex novellis Romanis nuper a <seg type="lemma" corresp="#d3e10028">quodam nostrorum</seg> mihi perscriptis, quibus nunciat illustrissimum nostrum Nicolaum Mariam <seg type="lemma" corresp="#d3e10034">Tedeschi, episcopum Liparitanum et hactenus prosecretarium sacrae congregationis rituum, nuper a sanctissimo domino nostro Clemente XI. renunciatum</seg> esse dictae <pb n="2v"/> congregationis secretarium in capite, ut vocant, nec non secretarium examinis episcoporum simulque examinatorem eorundem episcoporum, ac insuper consultorem Sancti Officii. Unde intelligimus, quantis passibus hic sodalis noster grassetur ad sacram purpuram. Deus secundet! </seg><seg type="context" n="7" xml:space="preserve" xml:id="d3e9977">Reverendissimus noster Benedictoburanus visis lectisque nuperis paternitatis vestrae literis, cum <seg type="lemma" corresp="#d3e10039">post phlebotomiam</seg> consideremus in communi triclinio, sanitatem precatus est Bernardo Mellicensi. Cuius ego vota prosecutus totam assidentium fratrum frequentiam in sequelam facile traxi. Assedere autem inter alios Bernardus et Gregorius nostri, qui literis vestris salutati humanissimas gratias agunt pro sui memoria nimium benigna; quibus ego accedens (dum alio tempore plura scribere liceat) me devotissime commendatum cupio et inter applausus Mellicensi Bernardo indies accrescentes maneo</seg></p>
-            <p xml:space="preserve">Plurimum reverendae et clarissimae paternitatis vestrae servus in Christo obligatissimus semperque paratissimus pater Carolus Meichelbek.</p>
-            <p xml:space="preserve">In monasterio Benedictoburano 13. Maii 1716.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e9984">
-               <ref type="context">2</ref>
-               <label>Speculum patris Naysel</label><p>Zu Aemilian Naisl vgl. <rs type="bibl"
-                     key="bibl:16214">Fink, Beiträge</rs> 73, 130; <rs type="bibl" key="bibl:16474"
-                     >Gentner, Weihenstephan</rs> 159, 213f.; <rs type="bibl" key="bibl:19054"
-                     >Reichhold, 300 Jahre</rs> 667f. Ein Exemplar des „Speculum cleri“ ist in Melk
-                  vorhanden: StiB Melk 14190. </p></note>
-            <note xml:id="d3e9990">
-               <ref type="context">3</ref>
-               <label>codicem ... Germanice</label><p>Dabei handelt es sich um BStB München, cgm
-                  427; vgl. <rs type="bibl" key="bibl:17916">Leidinger, Fundationes</rs> 706f.; <rs
-                     type="bibl" key="bibl:19464">Schneider, Catalogus 5/3</rs> 234–237. Die
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>Speculum patris Naysel</mentioned>
+            <p>Zu Aemilian Naisl vgl. <rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 73, 130; <rs type="bibl" ref="bibl:16474">Gentner, Weihenstephan</rs> 159, 213f.; <rs type="bibl" ref="bibl:19054">Reichhold, 300 Jahre</rs> 667f. Ein Exemplar des „Speculum cleri“ ist in Melk
+                  vorhanden: StiB Melk 14190. </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg3">
+            <mentioned>codicem ... Germanice</mentioned>
+            <p>Dabei handelt es sich um BStB München, cgm
+                  427; vgl. <rs type="bibl" ref="bibl:17916">Leidinger, Fundationes</rs> 706f.; <rs type="bibl" ref="bibl:19464">Schneider, Catalogus 5/3</rs> 234–237. Die
                   Identifikation wurde unter Verweis auf eigenhändige Marginalien KMs in dieser
-                  Handschrift vorgenommen von <rs type="bibl" key="bibl:19582">Siegmund,
-                     Meichelbecks Briefe</rs> 80/1–2 159.</p></note>
-            <note xml:id="d3e9996">
-               <ref type="context">3</ref>
-               <label> in archivo Tegernseensi</label><p> Die fragliche Handschrift ist heute BStB
-                  München, clm 27164; vgl. <rs type="bibl" key="bibl:17916">Leidinger,
-                     Fundationes</rs> 704–706; <rs type="bibl" key="bibl:19582">Siegmund,
+                  Handschrift vorgenommen von <rs type="bibl" ref="bibl:19582">Siegmund,
+                     Meichelbecks Briefe</rs> 80/1–2 159.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned> in archivo Tegernseensi</mentioned>
+            <p> Die fragliche Handschrift ist heute BStB
+                  München, clm 27164; vgl. <rs type="bibl" ref="bibl:17916">Leidinger,
+                     Fundationes</rs> 704–706; <rs type="bibl" ref="bibl:19582">Siegmund,
                      Meichelbecks Briefe</rs> 80/1–2 159. Der Befund KMs hinsichtlich des
                   Verhältnisses der beiden Codices – die deutsche Fassung ist eine direkte
                   Übersetzung der lateinischen – wie auch der Nachzeitigkeit des Vermerks mit der
                   Zuschreibung an Arnpeck trifft im Wesentlichen zu. Der Text, heute meist
                   „Fundationes monasteriorum Bavariae“ genannt, gilt nicht als Werk Arnpecks,
-                  sondern stammt erst aus dem späten 14. Jh. <rs type="bibl" key="bibl:19582">Der
+                  sondern stammt erst aus dem späten 14. Jh. <rs type="bibl" ref="bibl:19582">Der
                      Dießener Chorherr Albert</rs> von Tegernsee ist als Autor vorgeschlagen worden
-                  von <rs type="bibl" key="bibl:15072">Bauerreiß, Verfasser</rs>; dies kann jedoch
-                  nicht als gesichert gelten. Zur neuzeitlichen Zuschreibung an Arnpeck vgl. <rs
-                     type="bibl" key="bibl:17914">Leidinger, Einleitung Arnpeck</rs> CXXV–CXXVII;
-                  sie wurde von BP übernommen: <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs>
-                  3 xxv. Zum von KM angesprochenen Vermerk vgl.<rs type="bibl" key="bibl:17920">
-                     Leidinger, Schriften</rs> 100.</p></note>
-            <note xml:id="d3e10000">
-               <ref type="context">3</ref>
-               <label> Marcus Velserus</label><p> Ausdrückliche Bezüge auf die Chronik Arnpecks
-                  finden sich bei Welser insgesamt mehr als zwanzig: <rs type="bibl"
-                     key="bibl:14776">Welser, Rerum Boicarum</rs> 9, 11, 92, 106 und passim. An
+                  von <rs type="bibl" ref="bibl:15072">Bauerreiß, Verfasser</rs>; dies kann jedoch
+                  nicht als gesichert gelten. Zur neuzeitlichen Zuschreibung an Arnpeck vgl. <rs type="bibl" ref="bibl:17914">Leidinger, Einleitung Arnpeck</rs> CXXV–CXXVII;
+                  sie wurde von BP übernommen: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs>
+                  3 xxv. Zum von KM angesprochenen Vermerk vgl.<rs type="bibl" ref="bibl:17920">
+                     Leidinger, Schriften</rs> 100.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned> Marcus Velserus</mentioned>
+            <p> Ausdrückliche Bezüge auf die Chronik Arnpecks
+                  finden sich bei Welser insgesamt mehr als zwanzig: <rs type="bibl" ref="bibl:14776">Welser, Rerum Boicarum</rs> 9, 11, 92, 106 und passim. An
                   keiner dieser Stellen gibt Welser jedoch einen Hinweis auf das von ihm benutzte
-                  Exemplar.</p></note>
-            <note xml:id="d3e10004">
-               <ref type="context">4</ref>
-               <label>Adamo Widl</label><p>Zu ihm: <rs type="bibl" key="bibl:16482">Gerl,
-                     Catalogus</rs> 478; <rs type="bibl" key="bibl:16678">Grünewald, Widl</rs>; <rs
-                     type="bibl" key="bibl:16678">Sommervogel, Bibliothèque</rs> 8 col. 1107f. Zu
-                  seinem Werk über den hl. Sebastian und dessen Kult zu Ebersberg vgl. <rs
-                     type="bibl" key="bibl:17656">Krammer, Verehrung</rs> 242–245.</p></note>
-            <note xml:id="d3e10010">
-               <ref type="context">4</ref>
-               <label> Sebastiani Rauch</label><p>
-                  <rs type="bibl" key="bibl:19078">Reske, Buchdrucker</rs> 629. </p></note>
-            <note xml:id="d3e10014">
-               <ref type="context">4</ref>
-               <label>laude hominis Benedictini</label><p>Die irrige Einordnung Veit Arnpecks, der
+                  Exemplar.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>Adamo Widl</mentioned>
+            <p>Zu ihm: <rs type="bibl" ref="bibl:16482">Gerl,
+                     Catalogus</rs> 478; <rs type="bibl" ref="bibl:16678">Grünewald, Widl</rs>; <rs type="bibl" ref="bibl:16678">Sommervogel, Bibliothèque</rs> 8 col. 1107f. Zu
+                  seinem Werk über den hl. Sebastian und dessen Kult zu Ebersberg vgl. <rs type="bibl" ref="bibl:17656">Krammer, Verehrung</rs> 242–245.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned> Sebastiani Rauch</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:19078">Reske, Buchdrucker</rs> 629. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
+            <mentioned>laude hominis Benedictini</mentioned>
+            <p>Die irrige Einordnung Veit Arnpecks, der
                   eigentlich Weltgeistlicher gewesen war, als Benediktiner von Ebersberg beruhte auf
                   einer Verwechslung mit Veit Stopfer von Ebersberg, dem Verfasser eines „Chronicon
                   Bavarorum“ von etwa 1506. Der Irrtum ging auf Peter Lambeck zurück, von dem die
                   1665 in die Hofbibliothek übernommene Ambraser Abschrift der Chronik des Veit von
                   Ebersberg – heute ÖNB, Cod. 9234 – mit jener des Veit Arnpeck identifiziert wurde:
-                  vgl. <rs type="bibl" key="bibl:20362">Willibald, Chronicon Bavarorum</rs> 498–500.
+                  vgl. <rs type="bibl" ref="bibl:20362">Willibald, Chronicon Bavarorum</rs> 498–500.
                   BP bemerkte diesen Irrtum knapp vor der Veröffentlichung der Chronik Arnpecks in
                   seinem „Thesaurus anecdotorum“ und rückte dort eine eingehende Richtigstellung
-                  ein: <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs> 3 xxii–xxv. Zur
-                  Biographie Arnpecks vgl. <rs type="bibl" key="bibl:17352">Johanek, Arnpeck</rs>;
-                     <rs type="bibl" key="bibl:17914">Leidinger, Einleitung Arnpeck</rs> VI–XII; <rs
-                     type="bibl" key="bibl:17920">Leidinger, Schriften</rs> 5–7. Zu Stopfer und
-                  seiner Chronik vgl. <rs type="bibl" key="bibl:15868">Dicker,
-                     Landesbewusstsein</rs> 186–218; <rs type="bibl" key="bibl:20362">Willibald,
-                     Chronicon Bavarorum</rs>.</p></note>
-            <note xml:id="d3e10018">
-               <ref type="context">4</ref>
-               <label> affectui Sociorum</label><p>Das Benediktinerkloster Ebersberg war 1595 auf
+                  ein: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 3 xxii–xxv. Zur
+                  Biographie Arnpecks vgl. <rs type="bibl" ref="bibl:17352">Johanek, Arnpeck</rs>;
+                     <rs type="bibl" ref="bibl:17914">Leidinger, Einleitung Arnpeck</rs> VI–XII; <rs type="bibl" ref="bibl:17920">Leidinger, Schriften</rs> 5–7. Zu Stopfer und
+                  seiner Chronik vgl. <rs type="bibl" ref="bibl:15868">Dicker,
+                     Landesbewusstsein</rs> 186–218; <rs type="bibl" ref="bibl:20362">Willibald,
+                     Chronicon Bavarorum</rs>.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
+            <mentioned> affectui Sociorum</mentioned>
+            <p>Das Benediktinerkloster Ebersberg war 1595 auf
                   Betreiben Herzog Wilhelms V. von Bayern aufgehoben und dem Münchner Kolleg der
-                  Jesuiten inkorporiert worden: <rs type="bibl" key="bibl:18238">Mayr,
+                  Jesuiten inkorporiert worden: <rs type="bibl" ref="bibl:18238">Mayr,
                      Ebersberg</rs> 39f. KM unterstellt, dass Widl es vermeiden wollte, auf die
-                  benediktinische Vergangenheit der Kultstätte hinzuweisen. </p></note>
-            <note xml:id="d3e10022">
-               <ref type="context">5</ref>
-               <label>Chronicon ... Historiam Benedicto-Bavaricam</label><p>Vgl. <ref type="letter"
-                     >474</ref> &lt;8&gt;.</p></note>
-            <note xml:id="d3e10028">
-               <ref type="context">6</ref>
-               <label>quodam ... nostrorum</label><p>Bei diesem Korrespondenten handelt es sich wohl
+                  benediktinische Vergangenheit der Kultstätte hinzuweisen. </p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
+            <mentioned>Chronicon ... Historiam Benedicto-Bavaricam</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:474">474</ref> <ref target="letter:474#seg8">8</ref>.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg6">
+            <mentioned>quodam ... nostrorum</mentioned>
+            <p>Bei diesem Korrespondenten handelt es sich wohl
                   um den Cassinenser Stefano Bianchi, von dem KM am 8. April 1716 ein Schreiben
-                  bekommen hatte: BStB München, Meichelbeckiana 18b, 271v. Zu Bianchi vgl. <rs
-                     type="bibl" key="bibl:15352">Bossi, Matricula 1</rs> 456; in welchem oder
+                  bekommen hatte: BStB München, Meichelbeckiana 18b, 271v. Zu Bianchi vgl. <rs type="bibl" ref="bibl:15352">Bossi, Matricula 1</rs> 456; in welchem oder
                   welchen Klöstern er, wie dort vermerkt, später Abt wurde, konnte nicht ermittelt
                   werden. In einer – freilich unvollständigen – Serie der Äbte seines
                   Professklosters S. Faustino zu Brescia scheint er nicht auf, auch nicht in den
-                  Angaben über Professen und Todesfälle: <rs type="bibl" key="bibl:16694">Guerrini,
+                  Angaben über Professen und Todesfälle: <rs type="bibl" ref="bibl:16694">Guerrini,
                      S. Faustino</rs> 97–115. – KMs andere römische Korrespondenten in dieser Zeit
-                  scheinen keine Benediktiner gewesen zu sein. </p></note>
-            <note xml:id="d3e10034">
-               <ref type="context">6</ref>
-               <label>Tedeschi ... renunciatum</label><p>
-                  <rs type="bibl" key="bibl:18712">Papa, Cardinali Prefetti </rs>425; <rs
-                     type="bibl" key="bibl:19122">Ritzler–Sefrin, Hierarchia catholica</rs> 5 90,
-                  245; vgl. <rs type="bibl" key="bibl:15568">Catalano, Vicende</rs> 22–26, 54, 62f.,
-                  152, 155; sowie <ref type="letter">464</ref> &lt;4&gt;.</p></note>
-            <note xml:id="d3e10039">
-               <ref type="context">7</ref>
-               <label>post phlebotomiam</label><p> Laut dem Diarium KMs fand diese am 4. Mai statt: BStB München, Meichelbeckiana 18b, 273r.</p></note>
-         </div>
-      </back>
+                  scheinen keine Benediktiner gewesen zu sein. </p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg6">
+            <mentioned>Tedeschi ... renunciatum</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:18712">Papa, Cardinali Prefetti </rs>425; <rs type="bibl" ref="bibl:19122">Ritzler–Sefrin, Hierarchia catholica</rs> 5 90,
+                  245; vgl. <rs type="bibl" ref="bibl:15568">Catalano, Vicende</rs> 22–26, 54, 62f.,
+                  152, 155; sowie <ref type="letter" target="letter:464">464</ref> <ref target="letter:464#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg7">
+            <mentioned>post phlebotomiam</mentioned>
+            <p> Laut dem Diarium KMs fand diese am 4. Mai statt: BStB München, Meichelbeckiana 18b, 273r.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:20248">
+            <title type="short">Weber, Meichelbeck</title>
+            <biblScope>141</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime et clarissime domine, domine colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Operuit confusio faciem meam legentis literas nuperas paternitatis vestrae admodum reverendae, quibus excessum humanitatis erga me suae tam benignis expressionibus fecit testatum. Certe nil tale potuerunt mereri minutiae illae meae, quippe quae clarissimo eruditissimoque Bernardo, inter libros codicesque selectissimos ducenti suavissimos dies, aliud non attulerint nisi fastidium nauseamque ingentem. Interea tamen (fatebor enim) magno mihi solatio est, quod videam ovum ovo non tam esse simile, quam sunt similia vota mea votis vestris circa utilissimum historiae studium. </ab>
+         <ab resp="#editor" xml:id="seg2">Iudicium de Historia Ettalensi uti etiam de Speculo patris Naysel ego iam dudum prorsus idem cum paternitate vestra tuli; et fortassis iudicium hoc nostrum iis, ad quos pertinet, aperiam suo tempore ἐμφανῶσ. </ab>
+         <ab resp="#editor" xml:id="seg3">Arenbekii Chronicon toties a scriptoribus laudatum iam a pluribus annis in variis bibliothecis quaesivi, sed in hanc usque diem non inveni. Quia tamen memorem monet paternitas vestra, tentabo adhuc alias vias, quamprimum dante Deo occasio fuerit oblata. Habeo interea <pb n="1v"/> ad manum <anchor xml:id="n1"/>codicem quendam scriptum Germanice<anchor xml:id="n1e"/>, qui codex, sed Latino idiomate conscriptus, reperitur etiam<anchor xml:id="n2"/> in archivo Tegernseensi<anchor xml:id="n2e"/> et ibi Arenbekio tribuitur, ast non nisi a manu recentiori, cum uterque codex iam fuerit scriptus saeculo 15., et noster quidem anno 1479. Hic codex exhibet multas fundationes monasteriorum Bavariae neque respondet iis, quae ex Arenbekio copiose affert<anchor xml:id="n3"/> Marcus Velserus<anchor xml:id="n3e"/> aliique scriptores. Itaque nescio, quid de veritate authoris tuto possit credi. Dabo autem operam, ut certiora possim suo tempore nunciare. </ab>
+         <ab resp="#editor" xml:id="seg4">Interim dum de Arenbekio incidit sermo, illud hic animadverto, quod huius viri nulla mihi hactenus occurrerit mentio in eo libello, cui titulus: Sanctus Sebastianus Eberspergae Boiorum propitius. Scriptus ex monimentis Eberspergensibus ab <anchor xml:id="n4"/>Adamo Widl<anchor xml:id="n4e"/> Societatis Jesu et editus Monachii anno 1688 typis<anchor xml:id="n5"/> Sebastiani Rauch<anchor xml:id="n5e"/>. Id quod utique tribuendum videtur<anchor xml:id="n6"/> affectui Sociorum<anchor xml:id="n6e"/> ex <anchor xml:id="n7"/>laude hominis Benedictini<anchor xml:id="n7e"/> timentium <pb n="2r"/> existimationis propriae detrimentum. Verum hoc incidenter. </ab>
+         <ab resp="#editor" xml:id="seg5">Eruditissimum Massuetum nostrum paternitati vestrae mihique, imo toti sacrae familiae nostrae esse ereptum non sine summo animi dolore intellexi; confido tamen non defore ex doctissimis sodalibus nostris Gallis, qui vices viri celeberrimi suppleat et Bernardum Massueti exemplo amet. Id ubi intellexero, curae mihi erit, ut ad preces Bernardi et ego fiam particeps eiusmodi amoris, maxime cum ad Chronicon monasterii nostri ac postea ad Historiam Benedictino-Bavaricam potuero propius adicere manus, hodie tabularii nostri negotiis impeditas. </ab>
+         <ab resp="#editor" xml:id="seg6">Dolores interim ex Massueti obitu obortos mitigemus ex novellis Romanis nuper a <anchor xml:id="n8"/>quodam nostrorum<anchor xml:id="n8e"/> mihi perscriptis, quibus nunciat illustrissimum nostrum Nicolaum Mariam <anchor xml:id="n9"/>Tedeschi, episcopum Liparitanum et hactenus prosecretarium sacrae congregationis rituum, nuper a sanctissimo domino nostro Clemente XI. renunciatum<anchor xml:id="n9e"/> esse dictae <pb n="2v"/> congregationis secretarium in capite, ut vocant, nec non secretarium examinis episcoporum simulque examinatorem eorundem episcoporum, ac insuper consultorem Sancti Officii. Unde intelligimus, quantis passibus hic sodalis noster grassetur ad sacram purpuram. Deus secundet! </ab>
+         <ab resp="#editor" xml:id="seg7">Reverendissimus noster Benedictoburanus visis lectisque nuperis paternitatis vestrae literis, cum <anchor xml:id="n10"/>post phlebotomiam<anchor xml:id="n10e"/> consideremus in communi triclinio, sanitatem precatus est Bernardo Mellicensi. Cuius ego vota prosecutus totam assidentium fratrum frequentiam in sequelam facile traxi. Assedere autem inter alios Bernardus et Gregorius nostri, qui literis vestris salutati humanissimas gratias agunt pro sui memoria nimium benigna; quibus ego accedens (dum alio tempore plura scribere liceat) me devotissime commendatum cupio et inter applausus Mellicensi Bernardo indies accrescentes maneo</ab>
+         <closer>Plurimum reverendae et clarissimae paternitatis vestrae servus in Christo obligatissimus semperque paratissimus pater Carolus Meichelbek.</closer>
+         <closer>In monasterio Benedictoburano 13. Maii 1716.</closer>
+      </body>
    </text>
 </TEI>

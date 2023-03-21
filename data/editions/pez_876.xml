@@ -1,45 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="876" xml:id="pez-0876">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">876 Gregor Zödl an Bernhard Pez. 1718-01-05. Benediktbeuern.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Gregor Zödl an Bernhard Pez. 1718-01-05. Benediktbeuern.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">876</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:19582">Siegmund, Meichelbecks Briefe</rs> 80/1–2
-                     181</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Es fehlt sowohl ein Datum als auch eine Ortsangabe. Möglicherweise ist dies auf Textverlust durch einen größeren Ausriss am unteren Rand des zweiten Blattes zurückzuführen. Der Datumsansatz ergibt sich aus der Erwähnung in 875 sowie aus einem Diariumseintrag Meichelbecks, der die gemeinsame Versendung der beiden Briefe belegt: vgl. Bemerkungen zu 875.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">676r–677v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 676r–677v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -54,77 +72,76 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="next">
-                  <idno type="pezEd">893</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">875</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">875</idno>
-               </ref>
+               <ptr type="next" target="letter:893"/>
+               <ptr type="mentionedIn" target="letter:875"/>
+               <ptr type="sentWith" target="letter:875"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Dass <rs type="person" role="sender">GZ</rs> seinen Brief mit den Beilagen so spät sendet, hat seinen Grund darin, dass er <rs type="person" role="sender">BP</rs> nicht lästig fallen wollte. Er weiß, dass dessen Inanspruchnahme seit seiner Bibliotheksreise, zu deren glücklichem Ende er gratuliert, stark zugenommen hat, weil viele, die Wichtigeres vorzulegen haben als GZ, nach seiner Aufmerksamkeit verlangen. Niemand könnte keine Sehnsucht nach Kontakt mit <rs type="person" role="sender">BP</rs> verspüren, der dessen Eifer für das Ordensleben, Bemühen um den Nutzen der Gelehrsamkeit und Verdienste um den Benediktinerorden kennt.</p>
+            <p corresp="#seg2">Endlich sendet <rs type="person" role="sender">GZ</rs> das von ihm angelegte Verzeichnis der Werke benediktinischer Autoren in der Bibliothek von Benediktbeuern. Es in eine übersichtlichere und knappere Form ins Reine zu schreiben, ist ihm noch nicht möglich gewesen; er hat dies auch nicht mehr unternehmen wollen, um nicht zu sehr mit der Einsendung in Verzug zu geraten. Auch Geringfügiges ist aufgenommen, und zweifellos vieles Bekannte; <rs type="person" role="sender">GZ</rs> ist davon ausgegangen, dass es besser ist, Unnützes mitzuteilen, als irgend etwas auszulassen. Er vertraut auf das Wohlwollen BPs. Auch Thesen hat <rs type="person" role="sender">GZ</rs> angeführt, weil sie bei Autoren, die möglicherweise größere Werke veröffentlicht haben, die <rs type="person" role="sender">GZ</rs> nicht vorliegen, ergänzend verzeichnet werden können. Doch hat er Angaben zum Umfang gemacht, damit nicht kleine Schriften für große gehalten werden, nur weil sie, aus Bayern kommend, <rs type="person" role="sender">BP</rs> nicht bekannt sind.</p>
+            <p corresp="#seg3">Die „Historia Fontis Salutis in Bavaria“ hat <rs type="person" role="sender">GZ</rs> aus der alten Handschrift kopiert, wobei er nur die Interpunktion verändert hat, indem er Punkte innerhalb von Sätzen als Beistriche wiedergibt; zudem hat er Abkürzungen nach der Schreibweise aufgelöst, die der Schreiber des Codex bei ausgeschriebenen Wörtern verwendet. Das Schwanken zwischen dem Diphthong „ae“ und einfachem „e“ hat <rs type="person" role="sender">GZ</rs> reproduziert; die Entscheidung über Eingriffe überlässt er BP.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">GZ</rs> hofft, dass sein erster Versuch, Material aus der Benediktbeurer Bibliothek zu liefern, von Nutzen ist. Ihm würde es genügen, wenn auch nur einer der angeführten Autoren brauchbar ist; wenn nicht, wird er sich freuen, sich für Gott und den Orden gemüht zu haben.</p>
+            <p corresp="#seg5"><rs type="person" role="sender">GZ</rs> schließt mit Neujahrswünschen für <rs type="person" role="sender">BP</rs> und HP.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e48126">Dass <rs type="person" role="sender">GZ</rs> seinen Brief mit den Beilagen so spät sendet, hat seinen Grund darin, dass er <rs type="person" role="sender">BP</rs> nicht lästig fallen wollte. Er weiß, dass dessen Inanspruchnahme seit seiner Bibliotheksreise, zu deren glücklichem Ende er gratuliert, stark zugenommen hat, weil viele, die Wichtigeres vorzulegen haben als GZ, nach seiner Aufmerksamkeit verlangen. Niemand könnte keine Sehnsucht nach Kontakt mit <rs type="person" role="sender">BP</rs> verspüren, der dessen Eifer für das Ordensleben, Bemühen um den Nutzen der Gelehrsamkeit und Verdienste um den Benediktinerorden kennt.</seg><seg type="context" n="2" xml:id="d3e48128">Endlich sendet <rs type="person" role="sender">GZ</rs> das von ihm angelegte Verzeichnis der Werke benediktinischer Autoren in der Bibliothek von Benediktbeuern. Es in eine übersichtlichere und knappere Form ins Reine zu schreiben, ist ihm noch nicht möglich gewesen; er hat dies auch nicht mehr unternehmen wollen, um nicht zu sehr mit der Einsendung in Verzug zu geraten. Auch Geringfügiges ist aufgenommen, und zweifellos vieles Bekannte; <rs type="person" role="sender">GZ</rs> ist davon ausgegangen, dass es besser ist, Unnützes mitzuteilen, als irgend etwas auszulassen. Er vertraut auf das Wohlwollen BPs. Auch Thesen hat <rs type="person" role="sender">GZ</rs> angeführt, weil sie bei Autoren, die möglicherweise größere Werke veröffentlicht haben, die <rs type="person" role="sender">GZ</rs> nicht vorliegen, ergänzend verzeichnet werden können. Doch hat er Angaben zum Umfang gemacht, damit nicht kleine Schriften für große gehalten werden, nur weil sie, aus Bayern kommend, <rs type="person" role="sender">BP</rs> nicht bekannt sind.</seg><seg type="context" n="3" xml:id="d3e48130">Die „Historia Fontis Salutis in Bavaria“ hat <rs type="person" role="sender">GZ</rs> aus der alten Handschrift kopiert, wobei er nur die Interpunktion verändert hat, indem er Punkte innerhalb von Sätzen als Beistriche wiedergibt; zudem hat er Abkürzungen nach der Schreibweise aufgelöst, die der Schreiber des Codex bei ausgeschriebenen Wörtern verwendet. Das Schwanken zwischen dem Diphthong „ae“ und einfachem „e“ hat <rs type="person" role="sender">GZ</rs> reproduziert; die Entscheidung über Eingriffe überlässt er BP.</seg><seg type="context" n="4" xml:id="d3e48132"><rs type="person" role="sender">GZ</rs> hofft, dass sein erster Versuch, Material aus der Benediktbeurer Bibliothek zu liefern, von Nutzen ist. Ihm würde es genügen, wenn auch nur einer der angeführten Autoren brauchbar ist; wenn nicht, wird er sich freuen, sich für Gott und den Orden gemüht zu haben.</seg><seg type="context" n="5" xml:id="d3e48134"><rs type="person" role="sender">GZ</rs> schließt mit Neujahrswünschen für <rs type="person" role="sender">BP</rs> und HP.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Admodum reverendo religiosissimo et clarissimo domino patri Bernardo Pezio, celeberrimi amplissimi et exempti monasterii Mellicensis bibliothecario eruditissimo etc., patrono colendissimo. Closter Mölckh.</hi> Siegel.</ab>
-            </div>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">196</hi>.</p>
-            <div type="remarks">
-               <p>Es fehlt sowohl ein Datum als auch eine Ortsangabe. Möglicherweise ist dies auf Textverlust durch einen größeren Ausriss am unteren Rand des zweiten Blattes zurückzuführen. Der Datumsansatz ergibt sich aus der Erwähnung in 875 sowie aus einem Diariumseintrag Meichelbecks, der die gemeinsame Versendung der beiden Briefe belegt: vgl. Bemerkungen zu 875.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende religiosissime et clarissime domine pater Bernarde, domine pater bibliothecarie etc., patrone colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e48161">Literas meas una cum hoc fasciculo tarditatis postulare si velis, amorem et venerationem, quibus in te feror, o vir clarissime, in ius vocabis. Scivi negotia tua nupero ab <seg type="lemma" corresp="#d3e48196">itinere</seg>, quod feliciter confectum gratulor, haud levem in molem accrevisse; nec aliud mihi persuadere potui, quam quod ab aliis, qui maiora meis attulerint, certatim petitus fueris et occupatus: quis enim, sine fuco scribo, tui desiderium non habeat tuique necessitudinem non exambiat, qui tuum in sacram religionem nostram zelum, in rei literariae utilitatem studium et, ut omittendo alia modestiae tuae parcam, de toto nostro ordine meritum tuum plenius considerat? Tantum, crede firmiter, desiderium et mihi fuit; sed verecundia temperavit, ne, si<note place="foot" xml:id="d3e48163">	Nachträglich eingefügt.</note> inter plures molestus venirem, prima<note place="foot" xml:id="d3e48166">	Korrigiert aus <hi rend="italic">primaque</hi>; davor nachträglich eingefügt, dann durchgestrichen <hi rend="italic">si</hi>.</note> vice iam importunus displicerem. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e48175">Nunc tandem <seg type="lemma" corresp="#d3e48202">fasciculum hunc authorum Benedictinorum, quem ex bibliotheca nostra collegi, qualiscunque sit, in usum tuum offero</seg> et, ut servire possit, opto ex animo. Describere in aliam<seg type="lemma" corresp="#d3e48208"> meliorem, commodiorem et breviorem formam</seg> hactenus aliis impeditus non potui, nec modo amplius volui, ne, qui praematurus venire nolui, nunc in <pb n="1v"/> tarditatis nimiae vitium inciderem. Minima etiam collegi et notissima non raro, saepe, si non plerumque superfluus; et haec de industria. Nugantem ridebis? Haud credo, quia me nugari maluisse quam vel in minimo deesse censebis. Insuper me novellum in hoc officio meo consideraturus facile indulgebis, quod mihi pollicetur animus tuus adeo benevolus, qualem expertus fui, cum sors, vel Deus potius, dulcissima praesentia tua frui concessit.<seg type="lemma" corresp="#d3e48212"> Theses</seg> ideo notavi, quia maiora forte nonnulli ediderunt opera, quae ad manus non habeo; quibus istae forte, si tibi videbitur, venient inter accessoria. Adnotavi tamen alphabeta plagarumque numerum, ne forte leviores, si quae de nostra provincia adhuc incognita forent, inter grandiores numerarentur. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e48179"><seg type="lemma" corresp="#d3e48216">Legenda de Fonte nostro</seg> ex antiquo illo codice fideliter descripsi, et fere ad literam, nisi quod interpunctiones, commata scilicet punctis notata, usque ad finitas periodos modernum ad modum scripserim, et abbreviata vocabula integra exaraverim; observata tamen ratione, qua scriba codicis usus fuis [<hi rend="italic">sic</hi>] in vocabulis integris. Diphthongos mutat saepius, modo ae, modo e simplex legitur: ita et ego scripsi, tibi relicturus, quidquid mutare velis. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e48184">Fruere hoc primo conatu meo, quem nostra e bibliotheca post Deum tibi offero. Sufficit mihi, si vel unicus authorum adnotatorum tuos in usus servire possit; si nullus, attamen exinde mihi gratulor, quia Deo, sacro ordini et tibi, vir clarissime, vel leviter laboravi sicque meum in te, quem summe veneror, affectum ostendere potui. <pb n="2r"/> </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e48188">Caeterum tibi tuoque germano clarissimo domino patri Hieronymo auspicatissimum anni exordium animitus apprecor. Deus ter optimus maximus vos in annos plurimos sacro ordini nostro conservet incolumes viresque vestras divina benedictione sua corroboret, ut quam diutissime nostris et rei literariae praelucere pluresque adhuc ad studium hoc saluberrimum et ecclesiae toti summe proficuum alicere [<hi rend="italic">sic</hi>] atque animare possitis; quod votis omnibus exopto meque utrique vestrum ad aras humillime ac devotissime commendo.</seg></p>
-            <p xml:space="preserve">Admodum reverendae religiosissimae et clarissimae dominationis tuae servus in Christo devotissimus atque humillimus pater Gregorius Zödl Benedictoburanus manu propria.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e48196">
-               <ref type="context">1</ref>
-               <label>itinere</label><p>Zur Bibliotheksreise des Sommers 1717 vgl. Einleitung,
-                  Abschnitt I.2; zum Aufenthalt BPs und HPs in Benediktbeuern vgl. <ref
-                     type="letter">804</ref> &lt;2&gt;, <ref type="letter">835</ref> &lt;1&gt; und
-                  &lt;8&gt;.</p></note>
-            <note xml:id="d3e48202">
-               <ref type="context">2</ref>
-               <label>fasciculum ... offero</label><p> Die Beilage ist erhalten: StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 46.</p></note>
-            <note xml:id="d3e48208">
-               <ref type="context">2</ref>
-               <label> meliorem ... formam</label><p>Das Verzeichnis besteht aus einzelnen losen Bögen jeweils für einen Anfangsbuchstaben der Verfassernamen und weist daher viel unbeschriebenen Platz auf. Zudem ist es halbbrüchig geschrieben, wobei in der freien Spalte öfter Nachträge oder Korrekturen angebracht wurden.</p></note>
-            <note xml:id="d3e48212">
-               <ref type="context">2</ref>
-               <label> Theses</label><p>Am Ende eines jeden Buchstabens sind Thesen getrennt aufgeführt.</p></note>
-            <note xml:id="d3e48216">
-               <ref type="context">3</ref>
-               <label>Legenda de Fonte nostro</label><p>Die Beilage ist erhalten: StiA Melk, Karton
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>itinere</mentioned>
+            <p>Zur Bibliotheksreise des Sommers 1717 vgl. Einleitung,
+                  Abschnitt I.2; zum Aufenthalt BPs und HPs in Benediktbeuern vgl. <ref type="letter" target="letter:804">804</ref> <ref target="letter:804#seg2">2</ref>, <ref type="letter" target="letter:835">835</ref> <ref target="letter:835#seg1">1</ref> und
+                  <ref target="letter:835#seg8">8</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>fasciculum ... offero</mentioned>
+            <p> Die Beilage ist erhalten: StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 46.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned> meliorem ... formam</mentioned>
+            <p>Das Verzeichnis besteht aus einzelnen losen Bögen jeweils für einen Anfangsbuchstaben der Verfassernamen und weist daher viel unbeschriebenen Platz auf. Zudem ist es halbbrüchig geschrieben, wobei in der freien Spalte öfter Nachträge oder Korrekturen angebracht wurden.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned> Theses</mentioned>
+            <p>Am Ende eines jeden Buchstabens sind Thesen getrennt aufgeführt.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>Legenda de Fonte nostro</mentioned>
+            <p>Die Beilage ist erhalten: StiA Melk, Karton
                   85 Varia 22, Fasz. 2, Nr. 17. Als Vorlage für die Abschrift dieses anonymen Textes
                   muss die einzig bekannte Überlieferung angesehen werden: BStB München, clm 4621,
-                  225r–232v; vgl. <rs type="bibl" key="bibl:16522">Glassner, Thesaurus</rs> 370; <rs
-                     type="bibl" key="bibl:16532">Glauche, Catalogus 3/1</rs> 218. Aufmerksam
+                  225r–232v; vgl. <rs type="bibl" ref="bibl:16522">Glassner, Thesaurus</rs> 370; <rs type="bibl" ref="bibl:16532">Glauche, Catalogus 3/1</rs> 218. Aufmerksam
                   gemacht worden war BP auf diese Quelle durch Karl Meichelbecks Hinweis in der
-                  Beilage zu 663; vgl. <rs type="bibl" key="bibl:19582">Siegmund, Meichelbecks
+                  Beilage zu 663; vgl. <rs type="bibl" ref="bibl:19582">Siegmund, Meichelbecks
                      Briefe</rs> 80/1–2 165, 169f. Die von GZ erstellte Abschrift diente als Vorlage
-                  für den Druck bei <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs> 3/3 col.
-                  647–656.</p></note>
-         </div>
-      </back>
+                  für den Druck bei <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 3/3 col.
+                  647–656.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Ordnungsvermerk: <orig>196</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:19582">
+            <title type="short">Siegmund, Meichelbecks Briefe</title>
+            <biblScope>80/1–2 181</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <front>
+         <p>Admodum reverendo religiosissimo et clarissimo domino patri Bernardo Pezio, celeberrimi amplissimi et exempti monasterii Mellicensis bibliothecario eruditissimo etc., patrono colendissimo. Closter Mölckh.<note type="annotation">Siegel.</note></p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende religiosissime et clarissime domine pater Bernarde, domine pater bibliothecarie etc., patrone colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Literas meas una cum hoc fasciculo tarditatis postulare si velis, amorem et venerationem, quibus in te feror, o vir clarissime, in ius vocabis. Scivi negotia tua nupero ab <anchor xml:id="n1"/>itinere<anchor xml:id="n1e"/>, quod feliciter confectum gratulor, haud levem in molem accrevisse; nec aliud mihi persuadere potui, quam quod ab aliis, qui maiora meis attulerint, certatim petitus fueris et occupatus: quis enim, sine fuco scribo, tui desiderium non habeat tuique necessitudinem non exambiat, qui tuum in sacram religionem nostram zelum, in rei literariae utilitatem studium et, ut omittendo alia modestiae tuae parcam, de toto nostro ordine meritum tuum plenius considerat? Tantum, crede firmiter, desiderium et mihi fuit; sed verecundia temperavit, ne, si<note type="annotation" xml:id="d3e48163">Nachträglich eingefügt.</note> inter plures molestus venirem, prima<note place="foot" xml:id="d3e48166">Korrigiert aus <hi rend="italic">primaque</hi>; davor nachträglich eingefügt, dann durchgestrichen <hi rend="italic">si</hi>.</note> vice iam importunus displicerem. </ab>
+         <ab resp="#editor" xml:id="seg2">Nunc tandem <anchor xml:id="n2"/>fasciculum hunc authorum Benedictinorum, quem ex bibliotheca nostra collegi, qualiscunque sit, in usum tuum offero<anchor xml:id="n2e"/> et, ut servire possit, opto ex animo. Describere in aliam<anchor xml:id="n3"/> meliorem, commodiorem et breviorem formam<anchor xml:id="n3e"/> hactenus aliis impeditus non potui, nec modo amplius volui, ne, qui praematurus venire nolui, nunc in <pb n="1v"/> tarditatis nimiae vitium inciderem. Minima etiam collegi et notissima non raro, saepe, si non plerumque superfluus; et haec de industria. Nugantem ridebis? Haud credo, quia me nugari maluisse quam vel in minimo deesse censebis. Insuper me novellum in hoc officio meo consideraturus facile indulgebis, quod mihi pollicetur animus tuus adeo benevolus, qualem expertus fui, cum sors, vel Deus potius, dulcissima praesentia tua frui concessit.<anchor xml:id="n4"/> Theses<anchor xml:id="n4e"/> ideo notavi, quia maiora forte nonnulli ediderunt opera, quae ad manus non habeo; quibus istae forte, si tibi videbitur, venient inter accessoria. Adnotavi tamen alphabeta plagarumque numerum, ne forte leviores, si quae de nostra provincia adhuc incognita forent, inter grandiores numerarentur. </ab>
+         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n5"/>Legenda de Fonte nostro<anchor xml:id="n5e"/> ex antiquo illo codice fideliter descripsi, et fere ad literam, nisi quod interpunctiones, commata scilicet punctis notata, usque ad finitas periodos modernum ad modum scripserim, et abbreviata vocabula integra exaraverim; observata tamen ratione, qua scriba codicis usus <sic>fuis</sic> in vocabulis integris. Diphthongos mutat saepius, modo ae, modo e simplex legitur: ita et ego scripsi, tibi relicturus, quidquid mutare velis. </ab>
+         <ab resp="#editor" xml:id="seg4">Fruere hoc primo conatu meo, quem nostra e bibliotheca post Deum tibi offero. Sufficit mihi, si vel unicus authorum adnotatorum tuos in usus servire possit; si nullus, attamen exinde mihi gratulor, quia Deo, sacro ordini et tibi, vir clarissime, vel leviter laboravi sicque meum in te, quem summe veneror, affectum ostendere potui. <pb n="2r"/> </ab>
+         <ab resp="#editor" xml:id="seg5">Caeterum tibi tuoque germano clarissimo domino patri Hieronymo auspicatissimum anni exordium animitus apprecor. Deus ter optimus maximus vos in annos plurimos sacro ordini nostro conservet incolumes viresque vestras divina benedictione sua corroboret, ut quam diutissime nostris et rei literariae praelucere pluresque adhuc ad studium hoc saluberrimum et ecclesiae toti summe proficuum <sic>alicere</sic> atque animare possitis; quod votis omnibus exopto meque utrique vestrum ad aras humillime ac devotissime commendo.</ab>
+         <closer>Admodum reverendae religiosissimae et clarissimae dominationis tuae servus in Christo devotissimus atque humillimus pater Gregorius Zödl Benedictoburanus manu propria.</closer>
+      </body>
    </text>
 </TEI>

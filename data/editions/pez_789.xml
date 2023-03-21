@@ -1,38 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="789" xml:id="pez-0789">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">789 Casimir Freschot an Bernhard Pez. 1717-05-25. Prag.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Casimir Freschot an Bernhard Pez. 1717-05-25. Prag.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">789</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">516r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 516r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,120 +68,123 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">777</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">815</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">776</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">777</idno>
-               </ref>
+               <ptr type="prev" target="letter:777"/>
+               <ptr type="next" target="letter:815"/>
+               <ptr type="mentions" target="letter:776"/>
+               <ptr type="mentions" target="letter:777"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Am vergangenen Sonntag, anlässlich der feierlichen Weihe des neuen Abtes von St. Nikolaus (Anselm Vlach) durch den Prager Erzbischof (Franz Ferdinand Grafen Kuenburg), hat <rs type="person" role="sender">CF</rs> mit einem Benediktiner gesprochen, der den Abt begleitete und von dem sich herausstellte, dass er selbst der Abt von St. Johann unter dem Felsen war, wie <rs type="person" role="sender">CF</rs> glaubt (Aemilian Kotterowsky?), und bei der Zeremonie konzelebrieren sollte. <rs type="person" role="sender">CF</rs> hat diesen gefragt, ob <rs type="person" role="sender">BP</rs> sich schon auf der Klosterreise befindet, die er gegenüber <rs type="person" role="sender">CF</rs> angekündigt hatte <ref type="letter" target="letter:776">776</ref>. Da der Abt dies verneinte, schreibt <rs type="person" role="sender">CF</rs> nun abermals, um <rs type="person" role="sender">BP</rs> von dem Stand der Verhandlungen mit seinem mittlerweile zurückgekehrten Herrn zu berichten.</p>
+            <p corresp="#seg2">Dieser hat auf mehreren Wegen, aber vergeblich versucht, beim Papst (Klemens XI.) die Erlaubnis zu erwirken, <rs type="person" role="sender">CF</rs> bei sich zu behalten. Auf die Frage, was er nun tun will, hat <rs type="person" role="sender">CF</rs> Interesse an einer Rückkehr nach Italien bekundet, zumal er für seine Wiederaufnahme in die Cassinenserkongregation auf die Unterstützung des Großherzogs der Toskana (Cosimo III.) hofft, welchem er sein Buch „Marmor loquens“ gewidmet hat. Er hat zudem von den ihm in der Kongregation verbliebenen Freunden erfahren, dass diejenigen, die bösen Willen gegen ihn hegten, inzwischen gestorben sind.</p>
+            <p corresp="#seg3"><rs type="person" role="sender">CFs</rs> weitere Arbeit „Ducum et regum Boemiae corona“ ist im Druck und steht kurz vor der Fertigstellung. Er hat davon bereits 20 Bögen erhalten, die auf dieselbe Art gemacht sind wie die Elogien der Prager Erzbischöfe („Infulae Pragensis ornamenta“). Sobald <rs type="person" role="sender">CF</rs> über das ganze Werk verfügt, will er nach Wien kommen und von dort nach Italien weiterreisen; er bietet <rs type="person" role="sender">BP</rs> seine Dienste an.</p>
+            <p corresp="#seg4">Seit <rs type="person" role="sender">BPs</rs> letztem Schreiben vom 22. April hat <rs type="person" role="sender">CF</rs> keine Nachricht mehr von ihm erhalten. Daher weiß <rs type="person" role="sender">CF</rs> auch nicht, ob und auf welchem Wege <rs type="person" role="sender">BP</rs> ihm die angekündigte Bezahlung für die zugesendeten Bücher zukommen lassen will. Nach der Rückkehr des Erzbischofs hatte <rs type="person" role="sender">CF</rs> diesbezüglich auf einen Freund hingewiesen <ref type="letter" target="letter:777">777</ref>, der in Wien als Hofmeister der jungen Grafen Trauttmansdorff dient, De Mouleville heißt und als Mittelsmann fungieren kann. Da der Briefverkehr mit <rs type="person" role="sender">CFs</rs> Ankunft in Italien enger werden kann, wird er <rs type="person" role="sender">BP</rs> weiterhin berichten, wo er sich aufhält.</p>
+            <p corresp="#seg5">Aufgrund der insistenten Bitte <rs type="person" role="sender">BPs</rs> übermittelt <rs type="person" role="sender">CF</rs> ein Verzeichnis der unter seinem Namen erschienenen Schriften in italienischer und französischer Sprache.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e36318">Am vergangenen Sonntag, anlässlich der feierlichen Weihe des neuen Abtes von St. Nikolaus (Anselm Vlach) durch den Prager Erzbischof (Franz Ferdinand Grafen Kuenburg), hat <rs type="person" role="sender">CF</rs> mit einem Benediktiner gesprochen, der den Abt begleitete und von dem sich herausstellte, dass er selbst der Abt von St. Johann unter dem Felsen war, wie <rs type="person" role="sender">CF</rs> glaubt (Aemilian Kotterowsky?), und bei der Zeremonie konzelebrieren sollte. <rs type="person" role="sender">CF</rs> hat diesen gefragt, ob <rs type="person" role="sender">BP</rs> sich schon auf der Klosterreise befindet, die er gegenüber <rs type="person" role="sender">CF</rs> angekündigt hatte <ref type="letter">776</ref>. Da der Abt dies verneinte, schreibt <rs type="person" role="sender">CF</rs> nun abermals, um <rs type="person" role="sender">BP</rs> von dem Stand der Verhandlungen mit seinem mittlerweile zurückgekehrten Herrn zu berichten.</seg><seg type="context" n="2" xml:id="d3e36323">Dieser hat auf mehreren Wegen, aber vergeblich versucht, beim Papst (Klemens XI.) die Erlaubnis zu erwirken, <rs type="person" role="sender">CF</rs> bei sich zu behalten. Auf die Frage, was er nun tun will, hat <rs type="person" role="sender">CF</rs> Interesse an einer Rückkehr nach Italien bekundet, zumal er für seine Wiederaufnahme in die Cassinenserkongregation auf die Unterstützung des Großherzogs der Toskana (Cosimo III.) hofft, welchem er sein Buch „Marmor loquens“ gewidmet hat. Er hat zudem von den ihm in der Kongregation verbliebenen Freunden erfahren, dass diejenigen, die bösen Willen gegen ihn hegten, inzwischen gestorben sind.</seg><seg type="context" n="3" xml:id="d3e36325"><rs type="person" role="sender">CFs</rs> weitere Arbeit „Ducum et regum Boemiae corona“ ist im Druck und steht kurz vor der Fertigstellung. Er hat davon bereits 20 Bögen erhalten, die auf dieselbe Art gemacht sind wie die Elogien der Prager Erzbischöfe („Infulae Pragensis ornamenta“). Sobald <rs type="person" role="sender">CF</rs> über das ganze Werk verfügt, will er nach Wien kommen und von dort nach Italien weiterreisen; er bietet <rs type="person" role="sender">BP</rs> seine Dienste an.</seg><seg type="context" n="4" xml:id="d3e36327">Seit <rs type="person" role="sender">BPs</rs> letztem Schreiben vom 22. April hat <rs type="person" role="sender">CF</rs> keine Nachricht mehr von ihm erhalten. Daher weiß <rs type="person" role="sender">CF</rs> auch nicht, ob und auf welchem Wege <rs type="person" role="sender">BP</rs> ihm die angekündigte Bezahlung für die zugesendeten Bücher zukommen lassen will. Nach der Rückkehr des Erzbischofs hatte <rs type="person" role="sender">CF</rs> diesbezüglich auf einen Freund hingewiesen <ref type="letter">777</ref>, der in Wien als Hofmeister der jungen Grafen Trauttmansdorff dient, De Mouleville heißt und als Mittelsmann fungieren kann. Da der Briefverkehr mit <rs type="person" role="sender">CFs</rs> Ankunft in Italien enger werden kann, wird er <rs type="person" role="sender">BP</rs> weiterhin berichten, wo er sich aufhält.</seg><seg type="context" n="5" xml:id="d3e36332">Aufgrund der insistenten Bitte <rs type="person" role="sender">BPs</rs> übermittelt <rs type="person" role="sender">CF</rs> ein Verzeichnis der unter seinem Namen erschienenen Schriften in italienischer und französischer Sprache.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende et eruditissime domine pater et amice colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e36345">Occasione solemnis <seg type="lemma" corresp="#d3e36421">benedictionis</seg>, quam a nostro celsissimo principe archiepiscopo dominica ultima suscepit novus abbas S. Nicolai, cum reperto uno e vestris, quem monachum comitem novi abbatis, collocutus in antimera [<hi rend="italic">sic</hi>], et qui erat ipse <seg type="lemma" corresp="#d3e36427">abbas S. Joannis</seg>, ut puto, sub Rupe, futurus in sacra<note place="foot" xml:id="d3e36350">	Korrigiert aus <hi rend="italic">c</hi>.</note> cerimonia cooperator principis; et quaerens, utrum paternitas vestra admodum reverenda iam se itineri commisisset, ad quod se<seg type="lemma" corresp="#d3e36431"> accinctam ad me scripserat</seg>, dixit se non putare, quod hactenus incepisset peregrinari; quod in causa est, cur iterum rescribam et referam, quae mihi cum meo principe tandem suae residentiae restituto contigerunt. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e36356">Post tentatam non una via, ut a pontifice obtineret, facultatem me apud se retinendi, quod frustra fuit, cum a me peteret, quid ergo statuerem, respondi me non invitum rediturum in Italiam confisum, quod summi Etruriae ducis, cui, ut videt paternitas vestra admodum reverenda, Elogia sanctorum dedicavi, anticipato studio ipsum demerendi, favore et auspiciis obtinere sperem <seg type="lemma" corresp="#d3e36435">novum inter Casinenses ingressum</seg>, maxime quod ab amicis in eorum congregatione relictis intelligam <seg type="lemma" corresp="#d3e36441">illos esse mortuos</seg>, qui malo in me animo erant. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e36358">Cum sub praelo habeam alia item Elogia regum Bohemiae et instanter sim recepturus opus absolute impressum, cuius iam ad me transmissa sunt plusquam 20 folia eiusdem tenoris, quo impressa sunt Elogia episcoporum, illico cum reliquum operis habuero, Viennam me conferam, inde Italiae iter suscepturus; unde si quid me valiturum umquam arbitretur aliquid<note place="foot" xml:id="d3e36360">	Korrigiert aus <hi rend="italic">aliquis</hi>.</note> [<hi rend="italic">sic</hi>], quod suo servitio conducat, me paratissimum habebit ad omnia, quae virium mearum tenuitatem non excedant. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e36369">Nihil ab ultima gratissima epistola reverendae admodum paternitatis vestrae, quae sub dato 22. praeteriti Aprilis scripta erat, accepi; unde nec scire queo, utrum, quod sperare me iusserat, aliquid et qua via direxerit ad me pro retributione benefica libellorum, quos transmittere ausus sum. Post reditum nostri principis indicaram illi unum ex amicis meis, qui moderatoris studiorum officio fungitur apud iuniores comites de Trautmansdorf nomine De <seg type="lemma" corresp="#d3e36445">Mouleville</seg>; cui si consignaretur quidquam, illico ad me tuto perveniret. Eundem adhuc Viennae degentem habet paternitas vestra admodum reverenda, quo utatur, si prior gratificandi mihi voluntas perseveret. De caetero cum pervenero in Italiam, poterit nostrum commercium arctius stringi, illique partem adventus mei communicare non morabor, ubi sedem fixero. Me interim gratis affectibus reverendae admodum paternitatis vestrae me commendo</seg></p>
-            <p xml:space="preserve">Ad omnia obsequia paratissimus Casimirus Freschot.</p>
-            <p xml:space="preserve">Pragae 25. Maii 1717.</p>
-            <p xml:space="preserve"><pb n="1v"/> <seg type="context" n="5" xml:space="preserve" xml:id="d3e36378">Cum aliquoties institerit paternitas vestra admodum reverenda pro habendo <seg type="lemma" corresp="#d3e36451">cathalogo opusculorum meorum, hic sequenter submitto</seg>, quae meo nomine vulgata sunt. Italici. Li pregi della nobiltà Veneta abbozzati in un giuoco d’armi di tutte le famiglie<note place="foot" xml:id="d3e36380">	Korrigiert aus <hi rend="italic">famill</hi>.</note>. Venetia appresso<note place="foot" xml:id="d3e36386">	Danach durchgestrichen <hi rend="italic">And</hi>.</note> Giovanni Giacomo Hertz 1682 in duodecimo. Ristretto dell’historia d’Hungaria etc. Bologna<note place="foot" xml:id="d3e36392">	Davor durchgestrichen <hi rend="italic">Milano per Marc Antonio Malatesta</hi>.</note> per<seg type="lemma" corresp="#d3e36461"> Giacomo Monti</seg> 1686 in quarto. Li successi della fede nell’Inghilterra etc. Bologna per<seg type="lemma" corresp="#d3e36461"> Giacomo Monti</seg> 1687 in duodecimo. Memorie historiche e geographiche della Dalmatia etc. Bologna per<seg type="lemma" corresp="#d3e36461"> Giacomo Monti</seg> 1687 in duodecimo. Vita di Carlo V. duca di Lorena generalissimo dell’armi imperiali etc. Milano per <seg type="lemma" corresp="#d3e36469">Marc-Antonio Malatesta</seg> 1692 in duodecimo. Origine, progressi e ruina del Calvinismo nella Francia. Parma per Alberto<seg type="lemma" corresp="#d3e36474"> Pazzoni e Paolo Monti</seg> 1693 in quarto. Gallici. Nouvelle relation de la ville et republique de Venise. Utrecht chez Guillaume <seg type="lemma" corresp="#d3e36478">van Poolsum</seg> 1709 in duodecimo. <seg type="lemma" corresp="#d3e36482">Second et troisieme tome du Supplément</seg> a l’Histoire universelle dés l’an 1500<note place="foot" xml:id="d3e36398">	Danach durchgestrichen <hi rend="italic">Utrecht chez Guillaume Meester</hi>.</note>. Amsterdam chez <seg type="lemma" corresp="#d3e36486">Etienne Roger</seg> 1710 in duodecimo. Histoire abregée<note place="foot" xml:id="d3e36404">	Über der Zeile eingefügt.</note> de la ville et province d’Utrecht. Chez <seg type="lemma" corresp="#d3e36490">Guillaume Meester</seg> 1713.<seg type="lemma" corresp="#d3e36494"> Paratum habeo amplum volumen eiusdem Historiae in folio</seg>. Histoire du congres et de la paix d’Utrecht. Chez Guillaume <seg type="lemma" corresp="#d3e36478">van Poolsum</seg> 1716<note place="foot" xml:id="d3e36408">	Korrigiert aus <hi rend="italic">1717</hi>.</note> in duodecimo<note place="foot" xml:id="d3e36414">	Korrigiert aus <hi rend="italic">quarto</hi>.</note>.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e36421">
-               <ref type="context">1</ref>
-               <label>benedictionis</label><p>Abt des Klosters St. Nikolaus zu Prag war bereits seit
-                  1714 Anselm Vlach: <rs type="bibl" key="bibl:17750">Kulhánek, Geschichte</rs>
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>benedictionis</mentioned>
+            <p>Abt des Klosters St. Nikolaus zu Prag war bereits seit
+                  1714 Anselm Vlach: <rs type="bibl" ref="bibl:17750">Kulhánek, Geschichte</rs>
                   41–45. Seine Benediktion durch den Erzbischof erfolgte erst nach längeren
-                  Auseinandersetzungen am 23. Mai 1717: vgl. <rs type="bibl" key="bibl:17660">Krásl,
+                  Auseinandersetzungen am 23. Mai 1717: vgl. <rs type="bibl" ref="bibl:17660">Krásl,
                      Vlach</rs> 21–23. Zu haus- und ordensgeschichtlicher Forschungsarbeit in St.
                   Nikolaus um diese Zeit inklusive – wohl nur indirekter – Verbindungen zu BP vgl.
-                     <rs type="bibl" key="bibl:19874">Tadra, Nachrichten</rs>. </p></note>
-            <note xml:id="d3e36427">
-               <ref type="context">1</ref>
-               <label>abbas S. Joannis</label><p> Abt zwischen 1695 und 1742 war Aemilian
-                  Kotterowsky: <rs type="bibl" key="bibl:20390">Wintera, Memoria Subrupensis</rs>
-                  613–618.</p></note>
-            <note xml:id="d3e36431">
-               <ref type="context">1</ref>
-               <label> accinctam ... scripserat</label><p>Diese Information dürfte von BP in 776 mitgeteilt worden sein; ein weiterer Vorbrief wird nicht angesetzt: vgl. &lt;4&gt;.</p></note>
-            <note xml:id="d3e36435">
-               <ref type="context">2</ref>
-               <label>novum ... ingressum</label><p>Zu einer Wiederaufnahme CFs in die Cassinenserkongregation scheint es nicht gekommen zu sein. </p></note>
-            <note xml:id="d3e36441">
-               <ref type="context">2</ref>
-               <label>illos esse mortuos</label><p>Vgl. <ref type="letter">733</ref> &lt;2&gt;; <ref
-                     type="letter">761</ref> &lt;2&gt;.</p></note>
-            <note xml:id="d3e36445">
-               <ref type="context">4</ref>
-               <label>Mouleville</label><p>Vgl. <ref type="letter">777</ref> &lt;2&gt;. </p></note>
-            <note xml:id="d3e36451">
-               <ref type="context">5</ref>
-               <label>cathalogo ... submitto</label><p>Zu den Veröffentlichungen CFs vgl. <rs
-                     type="bibl" key="bibl:16550">Godefroy, Bibliothèque</rs> 89–92. Dort werden
-                  wesentlich mehr Titel angeführt, als CF in seiner Liste für BP nennt.</p></note>
-            <note xml:id="d3e36457">
-               <ref type="context">5</ref>
-               <label> Li pregi ... Hertz</label><p> Die erste Ausgabe wurde 1682 von Andrea Poletti
+                     <rs type="bibl" ref="bibl:19874">Tadra, Nachrichten</rs>. </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>abbas S. Joannis</mentioned>
+            <p> Abt zwischen 1695 und 1742 war Aemilian
+                  Kotterowsky: <rs type="bibl" ref="bibl:20390">Wintera, Memoria Subrupensis</rs>
+                  613–618.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned> accinctam ... scripserat</mentioned>
+            <p>Diese Information dürfte von BP in 776 mitgeteilt worden sein; ein weiterer Vorbrief wird nicht angesetzt: vgl. <ref target="#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>novum ... ingressum</mentioned>
+            <p>Zu einer Wiederaufnahme CFs in die Cassinenserkongregation scheint es nicht gekommen zu sein. </p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned>illos esse mortuos</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:733">733</ref> <ref target="letter:733#seg2">2</ref>; <ref type="letter" target="letter:761">761</ref> <ref target="letter:761#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned>Mouleville</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:777">777</ref> <ref target="letter:777#seg2">2</ref>. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
+            <mentioned>cathalogo ... submitto</mentioned>
+            <p>Zu den Veröffentlichungen CFs vgl. <rs type="bibl" ref="bibl:16550">Godefroy, Bibliothèque</rs> 89–92. Dort werden
+                  wesentlich mehr Titel angeführt, als CF in seiner Liste für BP nennt.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
+            <mentioned> Li pregi ... Hertz</mentioned>
+            <p> Die erste Ausgabe wurde 1682 von Andrea Poletti
                   gedruckt, eine weitere unter abgeändertem Titel 1707 von Giovanni Gabriele Hertz.
-                  Zu den Buchdruckern und Verlegern Hertz vgl. <ref type="letter">733</ref>
-                  &lt;3&gt;.</p></note>
-            <note xml:id="d3e36461">
-               <ref type="context">5</ref>
-               <label> Giacomo Monti</label><p>
-                  <rs type="bibl" key="bibl:19264">Sartori, Dizionario</rs> 104f.; vgl. <rs
-                     type="bibl" key="bibl:14870">Allsop, Corelli</rs> 24. </p></note>
-            <note xml:id="d3e36465">
-               <ref type="context">5</ref>
-               <label>Li successi della fede ... 1687</label><p> Es handelte sich um eine erweiterte Neuausgabe; das Werk war erstmals 1685 bei Monti zu Bologna und bei Ponzio Bernardon zu Venedig erschienen. </p></note>
-            <note xml:id="d3e36469">
-               <ref type="context">5</ref>
-               <label>Marc-Antonio Malatesta</label><p><rs type="bibl" key="bibl:19254">Santoro,
-                     Tipografi milanesi</rs> 333–335.</p></note>
-            <note xml:id="d3e36474">
-               <ref type="context">5</ref>
-               <label> Pazzoni e Paolo Monti</label><p>
-                  <rs type="bibl" key="bibl:17826">Lasagni, Dizionario</rs> 3 585, 830. </p></note>
-            <note xml:id="d3e36478">
-               <ref type="context">5</ref>
-               <label>van Poolsum</label><p>
-                  <rs type="bibl" key="bibl:16684">Gruys–De Wolf, Thesaurus</rs> 140. </p></note>
-            <note xml:id="d3e36482">
-               <ref type="context">5</ref>
-               <label>Second ... Supplément</label><p>Diese Publikation konnte nicht nachgewiesen werden. </p></note>
-            <note xml:id="d3e36486">
-               <ref type="context">5</ref>
-               <label>Etienne Roger</label><p><rs type="bibl" key="bibl:16684">Gruys–De Wolf,
-                     Thesaurus</rs> 148. </p></note>
-            <note xml:id="d3e36490">
-               <ref type="context">5</ref>
-               <label>Guillaume Meester</label><p>
-                  <rs type="bibl" key="bibl:16684">Gruys–De Wolf, Thesaurus</rs> 120.</p></note>
-            <note xml:id="d3e36494">
-               <ref type="context">5</ref>
-               <label> Paratum habeo ... folio</label><p>Ein derartiges Werk von CF ist in der Folge
-                  nicht mehr veröffentlicht worden: vgl. <ref type="letter">761</ref>
-               &lt;1&gt;.</p></note>
-         </div>
-      </back>
+                  Zu den Buchdruckern und Verlegern Hertz vgl. <ref type="letter" target="letter:733">733</ref>
+                  <ref target="letter:733#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
+            <mentioned> Giacomo Monti</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:19264">Sartori, Dizionario</rs> 104f.; vgl. <rs type="bibl" ref="bibl:14870">Allsop, Corelli</rs> 24. </p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
+            <mentioned>Li successi della fede ... 1687</mentioned>
+            <p> Es handelte sich um eine erweiterte Neuausgabe; das Werk war erstmals 1685 bei Monti zu Bologna und bei Ponzio Bernardon zu Venedig erschienen. </p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg5">
+            <mentioned>Marc-Antonio Malatesta</mentioned>
+            <p><rs type="bibl" ref="bibl:19254">Santoro,
+                     Tipografi milanesi</rs> 333–335.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg5">
+            <mentioned> Pazzoni e Paolo Monti</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:17826">Lasagni, Dizionario</rs> 3 585, 830. </p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg5">
+            <mentioned>van Poolsum</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:16684">Gruys–De Wolf, Thesaurus</rs> 140. </p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg5">
+            <mentioned>Second ... Supplément</mentioned>
+            <p>Diese Publikation konnte nicht nachgewiesen werden. </p>
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg5">
+            <mentioned>Etienne Roger</mentioned>
+            <p><rs type="bibl" ref="bibl:16684">Gruys–De Wolf,
+                     Thesaurus</rs> 148. </p>
+         </note>
+         <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg5">
+            <mentioned>Guillaume Meester</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:16684">Gruys–De Wolf, Thesaurus</rs> 120.</p>
+         </note>
+         <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg5">
+            <mentioned> Paratum habeo ... folio</mentioned>
+            <p>Ein derartiges Werk von CF ist in der Folge
+                  nicht mehr veröffentlicht worden: vgl. <ref type="letter" target="letter:761">761</ref>
+               <ref target="letter:761#seg1">1</ref>.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende et eruditissime domine pater et amice colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Occasione solemnis <anchor xml:id="n1"/>benedictionis<anchor xml:id="n1e"/>, quam a nostro celsissimo principe archiepiscopo dominica ultima suscepit novus abbas S. Nicolai, cum reperto uno e vestris, quem monachum comitem novi abbatis, collocutus in <sic>antimera</sic>, et qui erat ipse <anchor xml:id="n2"/>abbas S. Joannis<anchor xml:id="n2e"/>, ut puto, sub Rupe, futurus in <choice><sic>c</sic><corr>sacra</corr></choice> cerimonia cooperator principis; et quaerens, utrum paternitas vestra admodum reverenda iam se itineri commisisset, ad quod se<anchor xml:id="n3"/> accinctam ad me scripserat<anchor xml:id="n3e"/>, dixit se non putare, quod hactenus incepisset peregrinari; quod in causa est, cur iterum rescribam et referam, quae mihi cum meo principe tandem suae residentiae restituto contigerunt. </ab>
+         <ab resp="#editor" xml:id="seg2">Post tentatam non una via, ut a pontifice obtineret, facultatem me apud se retinendi, quod frustra fuit, cum a me peteret, quid ergo statuerem, respondi me non invitum rediturum in Italiam confisum, quod summi Etruriae ducis, cui, ut videt paternitas vestra admodum reverenda, Elogia sanctorum dedicavi, anticipato studio ipsum demerendi, favore et auspiciis obtinere sperem <anchor xml:id="n4"/>novum inter Casinenses ingressum<anchor xml:id="n4e"/>, maxime quod ab amicis in eorum congregatione relictis intelligam <anchor xml:id="n5"/>illos esse mortuos<anchor xml:id="n5e"/>, qui malo in me animo erant. </ab>
+         <ab resp="#editor" xml:id="seg3">Cum sub praelo habeam alia item Elogia regum Bohemiae et instanter sim recepturus opus absolute impressum, cuius iam ad me transmissa sunt plusquam 20 folia eiusdem tenoris, quo impressa sunt Elogia episcoporum, illico cum reliquum operis habuero, Viennam me conferam, inde Italiae iter suscepturus; unde si quid me valiturum umquam arbitretur <choice><sic>aliquis</sic><corr>aliquid</corr></choice> , quod suo servitio conducat, me paratissimum habebit ad omnia, quae virium mearum tenuitatem non excedant. </ab>
+         <ab resp="#editor" xml:id="seg4">Nihil ab ultima gratissima epistola reverendae admodum paternitatis vestrae, quae sub dato 22. praeteriti Aprilis scripta erat, accepi; unde nec scire queo, utrum, quod sperare me iusserat, aliquid et qua via direxerit ad me pro retributione benefica libellorum, quos transmittere ausus sum. Post reditum nostri principis indicaram illi unum ex amicis meis, qui moderatoris studiorum officio fungitur apud iuniores comites de Trautmansdorf nomine De <anchor xml:id="n6"/>Mouleville<anchor xml:id="n6e"/>; cui si consignaretur quidquam, illico ad me tuto perveniret. Eundem adhuc Viennae degentem habet paternitas vestra admodum reverenda, quo utatur, si prior gratificandi mihi voluntas perseveret. De caetero cum pervenero in Italiam, poterit nostrum commercium arctius stringi, illique partem adventus mei communicare non morabor, ubi sedem fixero. Me interim gratis affectibus reverendae admodum paternitatis vestrae me commendo</ab>
+         <closer>Ad omnia obsequia paratissimus Casimirus Freschot.</closer>
+         <closer>Pragae 25. Maii 1717.</closer>
+         <closer xml:id="seg5">Cum aliquoties institerit paternitas vestra admodum reverenda pro habendo <anchor xml:id="n7"/>cathalogo opusculorum meorum, hic sequenter submitto<anchor xml:id="n7e"/>, quae meo nomine vulgata sunt. Italici. Li pregi della nobiltà Veneta abbozzati in un giuoco d’armi di tutte le <choice><sic>famill</sic><corr>famiglie</corr></choice>. Venetia appresso<del ana="#after">And</del> Giovanni Giacomo Hertz 1682 in duodecimo. Ristretto dell’historia d’Hungaria etc. Bologna<del ana="#before">Milano per Marc Antonio Malatesta</del> per<anchor xml:id="n8"/> Giacomo Monti<anchor xml:id="n8e"/> 1686 in quarto. Li successi della fede nell’Inghilterra etc. Bologna per<anchor xml:id="n9"/> Giacomo Monti<anchor xml:id="n9e"/> 1687 in duodecimo. Memorie historiche e geographiche della Dalmatia etc. Bologna per<anchor xml:id="n10"/> Giacomo Monti<anchor xml:id="n10e"/> 1687 in duodecimo. Vita di Carlo V. duca di Lorena generalissimo dell’armi imperiali etc. Milano per <anchor xml:id="n11"/>Marc-Antonio Malatesta<anchor xml:id="n11e"/> 1692 in duodecimo. Origine, progressi e ruina del Calvinismo nella Francia. Parma per Alberto<anchor xml:id="n12"/> Pazzoni e Paolo Monti<anchor xml:id="n12e"/> 1693 in quarto. Gallici. Nouvelle relation de la ville et republique de Venise. Utrecht chez Guillaume <anchor xml:id="n13"/>van Poolsum<anchor xml:id="n13e"/> 1709 in duodecimo. <anchor xml:id="n14"/>Second et troisieme tome du Supplément<anchor xml:id="n14e"/> a l’Histoire universelle dés l’an 1500<del ana="#after">Utrecht chez Guillaume Meester</del>. Amsterdam chez <anchor xml:id="n15"/>Etienne Roger<anchor xml:id="n15e"/> 1710 in duodecimo. Histoire <add place="above">abregée</add> de la ville et province d’Utrecht. Chez <anchor xml:id="n16"/>Guillaume Meester<anchor xml:id="n16e"/> 1713.<anchor xml:id="n17"/> Paratum habeo amplum volumen eiusdem Historiae in folio<anchor xml:id="n17e"/>. Histoire du congres et de la paix d’Utrecht. Chez Guillaume <anchor xml:id="n18"/>van Poolsum<anchor xml:id="n18e"/> <choice><sic>1717</sic><corr>1716</corr></choice> in <choice><sic>quarto</sic><corr>duodecimo</corr></choice>.<pb n="1v"/> </closer>
+      </body>
    </text>
 </TEI>

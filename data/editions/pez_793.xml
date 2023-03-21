@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="793" xml:id="pez-0793">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">793 Bernhard Pez an Augustin Calmet. 1717-06-01. Melk.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Bernhard Pez an Augustin Calmet. 1717-06-01. Melk.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">793</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -21,20 +33,26 @@
             <relatedItem type="otherEdition">
                <bibl>Calmet, Bibliothèque lorraine xxiv f.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:15194">Berlière, Quelques correspondants</rs>
-                     221f</bibl>
-                  <bibl><rs type="bibl" key="bibl:16478">Gérard, Dom Augustin Calmet</rs> 154, 358,
-                     708</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Auf 1r am oberen Blattrand die Notiz: <orig>1. Juin 1717. III. lettre du meme sur le meme sujet.</orig> Im Zwischenraum von Anrede und Text ist eine Nummerierung <orig>II</orig> angebracht<orig>.</orig> Die Überschrift stimmt mit jener in der Edition ACs überein.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <p>Nancy, Bibliothèque diocésaine, Ms. MB 66, Nr. 66.</p>
+            <listWit>
+               <witness>Nancy, Bibliothèque diocésaine, Ms. MB 66, Nr. 66.   </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -49,53 +67,28 @@
                <persName>Augustin Calmet</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">782</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">762</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">782</idno>
-               </ref>
+               <ptr type="prev" target="letter:782"/>
+               <ptr type="mentions" target="letter:762"/>
+               <ptr type="mentions" target="letter:782"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">BP</rs> hat nicht gehofft, dass sein eigenes unmögliches Benehmen bei <rs type="person" role="sender">AC</rs> so freundliche Aufnahme finden würde. Die Schamesröte, mit welcher er seinen letzten Brief <ref type="letter" target="letter:762">762</ref> geschrieben hatte, war noch nicht aus seinem Gesicht und seiner Erinnerung gewichen, als er von <rs type="person" role="sender">AC</rs> einen neuen, überaus exakten und ausführlichen Schriftstellerkatalog der Kongregation von St.-Vanne erhalten hat <ref type="letter" target="letter:782">782</ref>. Noch mehr zu erwarten, wäre nicht Zeichen von Unhöflichkeit, sondern von Irrsinn. <rs type="person" role="sender">BP</rs> dankt AC, einer besonderen Zierde des Benediktinerordens, überschwänglich und verspricht eine angemessene Würdigung der mitgeteilten Autoren in seiner „Bibliotheca Benedictina“. Wenn <rs type="person" role="sender">AC</rs> nachträglich Ergänzungen anbringen will, so sind sie <rs type="person" role="sender">BP</rs> willkommen. Es fehlen freilich noch die Schriftsteller aus der Zeit vor der Gründung der Kongregation, an denen <rs type="person" role="sender">BP</rs> gleichfalls großes Interesse hat; doch will er <rs type="person" role="sender">AC</rs> nicht weiter damit belangen und wäre bereits sehr dankbar, wenn dieser andere dazu auffordern wollte, diesem Wunsch nachzukommen.</p>
+            <p corresp="#seg2"><rs type="person" role="sender">BP</rs> ist erstaunt über <rs type="person" role="sender">ACs</rs> Bericht von dem in Avignon erschienenen Raubdruck von dessen Vorreden („Discours et dissertations sur tous les livres de l’Ancien et du Nouveau Testament“) und will dafür sorgen, dass darüber in den Leipziger „Neuen zeitungen“ berichtet wird. Er beabsichtigt die Anschaffung von <rs type="person" role="sender">ACs</rs> „Commentaire litteral“, der in Österreich nirgends vorhanden ist, zweifellos wegen Stumpfsinnigkeit und Geiz der örtlichen Buchhändler. <rs type="person" role="sender">BP</rs> unterzeichnet den Brief unmittelbar vor dem Aufbruch zu seiner Klosterreise nach Bayern.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e36718"><rs type="person" role="sender">BP</rs> hat nicht gehofft, dass sein eigenes unmögliches Benehmen bei <rs type="person" role="sender">AC</rs> so freundliche Aufnahme finden würde. Die Schamesröte, mit welcher er seinen letzten Brief <ref type="letter">762</ref> geschrieben hatte, war noch nicht aus seinem Gesicht und seiner Erinnerung gewichen, als er von <rs type="person" role="sender">AC</rs> einen neuen, überaus exakten und ausführlichen Schriftstellerkatalog der Kongregation von St.-Vanne erhalten hat <ref type="letter">782</ref>. Noch mehr zu erwarten, wäre nicht Zeichen von Unhöflichkeit, sondern von Irrsinn. <rs type="person" role="sender">BP</rs> dankt AC, einer besonderen Zierde des Benediktinerordens, überschwänglich und verspricht eine angemessene Würdigung der mitgeteilten Autoren in seiner „Bibliotheca Benedictina“. Wenn <rs type="person" role="sender">AC</rs> nachträglich Ergänzungen anbringen will, so sind sie <rs type="person" role="sender">BP</rs> willkommen. Es fehlen freilich noch die Schriftsteller aus der Zeit vor der Gründung der Kongregation, an denen <rs type="person" role="sender">BP</rs> gleichfalls großes Interesse hat; doch will er <rs type="person" role="sender">AC</rs> nicht weiter damit belangen und wäre bereits sehr dankbar, wenn dieser andere dazu auffordern wollte, diesem Wunsch nachzukommen.</seg><seg type="context" n="2" xml:id="d3e36726"><rs type="person" role="sender">BP</rs> ist erstaunt über <rs type="person" role="sender">ACs</rs> Bericht von dem in Avignon erschienenen Raubdruck von dessen Vorreden („Discours et dissertations sur tous les livres de l’Ancien et du Nouveau Testament“) und will dafür sorgen, dass darüber in den Leipziger „Neuen zeitungen“ berichtet wird. Er beabsichtigt die Anschaffung von <rs type="person" role="sender">ACs</rs> „Commentaire litteral“, der in Österreich nirgends vorhanden ist, zweifellos wegen Stumpfsinnigkeit und Geiz der örtlichen Buchhändler. <rs type="person" role="sender">BP</rs> unterzeichnet den Brief unmittelbar vor dem Aufbruch zu seiner Klosterreise nach Bayern.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Auf 1r am oberen Blattrand die Notiz: <hi rend="italic" xml:space="preserve">1. Juin 1717. III. lettre du meme sur le meme sujet. </hi>Im Zwischenraum von Anrede und Text ist eine Nummerierung <hi rend="italic">II</hi> angebracht<hi rend="italic">.</hi> Die Überschrift stimmt mit jener in der Edition ACs überein.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverendo religiosissimo ac clarissimo domino patri Augustino Calmet patrono singulari pater Bernardus Pez monachus Mellicensis salutem plurimam precatur.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e36754">Minime sperabam singularem insignemque inurbanitatem meam tanta benevolentia exceptum iri; sed hic est tuus uniceque proprius character, celeberrime pater, ut, quo molestis amicorum precibus magis importuniusque appeteris, eo te faciliorem et ad quaevis officia promptiorem praebeas. Nondum ille rubor pudorque, quo ultimam epistolam ad te dando totus suffusus eram, e facie memoriaque excessit, cum ecce adest a te novus, accuratissimus et maxime perspicuus vestrae inclytae congregationis scriptorum catalogus, quo amplius et maius quid exspectare iam non inhumanitatis, sed extremae dementiae foret. Quare tibi, o singulare ordinis Benedictini decus, gratias, quam possum, cumulatissimas pro adeo effusa et uberi erga me benevolentia ago sancteque spondeo me omnem eo operam in Bibliotheca Benedictina collaturum, ut vestrae res cum commendatione nequaquam vulgari ad omnium eruditorum notitiam perferantur. Quod si post tempus tibi quaedam adhuc aut monenda, corrigenda aut (ut quotidie proficimus) addenda ad iam transmissa viderentur, summae gratiae loco habebo, si mecum omnia candide communicare dignatus fueris. Desunt adhuc scriptores, qui ante conditam vestram congregationem floruere, quorum in cognitionem sic venire desidero, ut qui maxime. Sed quid ego ista ad virum aliis summis studiis occupatissimum et pene obrutum? Ergo nihil amplius <pb n="1v"/> ad te de istis; satis gratiarum accepi accepturusque sum, si aliis, ut mihi aut potius toti sacro ordini nostro gratificentur, cohortator eris. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e36758">De dissertationum tuarum selectarum Avenionensi editione mira narras. Faxo, ut ea res et machinatio <seg type="lemma" corresp="#d3e36763">Novis litterariis Lipsiae publicatis quam primum inseratur</seg>. Caeterum opus tuum in Sacram Scripturam immortale habere tandem debebo, quocunque pretio constiterit. Eius ne ullum quidem exemplar in universa Austria extat, haud dubie vel socordia vel sumptuum metu nostrorum bibliopolarum. Vale, plurimum reverende ac eruditissime pater, et immemor inhumanitatis meae me meosque conatus fovere ne umquam desine.</seg></p>
-            <p xml:space="preserve">Mellicii 1. Junii 1717, cum ad iter Bavaricum iam essem accinctus.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e36763">
-               <ref type="context">2</ref>
-               <label>Novis litterariis ... inseratur</label><p>In den „Neuen zeitungen“ der Jahre 1717 und 1718 findet sich kein Beitrag solchen Inhalts.</p></note>
-            <note xml:id="d3e36769">
-               <ref type="context">2</ref>
-               <label> iter Bavaricum</label><p>Zum Datum des Aufbruchs zur Bibliotheksreise sind
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>Novis litterariis ... inseratur</mentioned>
+            <p>In den „Neuen zeitungen“ der Jahre 1717 und 1718 findet sich kein Beitrag solchen Inhalts.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned> iter Bavaricum</mentioned>
+            <p>Zum Datum des Aufbruchs zur Bibliotheksreise sind
                   die Angaben widersprüchlich. In der publizierten Reisebeschreibung wird der 3. Mai
-                  1717 genannt, was zweifellos nur ein Fehler sein kann: <rs type="bibl"
-                     key="bibl:36782">Pez, Thesaurus</rs> 1 iii. Die Melker Prioratsephemeriden
+                  1717 genannt, was zweifellos nur ein Fehler sein kann: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 1 iii. Die Melker Prioratsephemeriden
                   bieten einen Eintrag zum 30. Mai 1717, in dem die Abreise für diesen Tag vermerkt
                   ist: PE 5 161. In einem Bericht über die Kontroverse BPs mit Johann Benedikt
                   Gentilotti, der zum 25. April 1718 eingetragen ist, wird hingegen die Abreise mit
@@ -105,9 +98,28 @@
                   noch in Melk waren und entweder an demselben Tag oder sehr bald danach die Reise
                   antraten. Zu dieser vgl. Einleitung, Abschnitt I.2. – Der unrichtigen Angabe im
                   „Thesaurus anecdotorum“ folgend, ist von einem Aufbruch „Anfangs Mai“ die Rede bei
-                     <rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs>
-               42.</p></note>
-         </div>
-      </back>
+                     <rs type="bibl" ref="bibl:17432">Katschthaler, Briefnachlass</rs>
+               42.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:15194">
+            <title type="short">Berlière, Quelques correspondants</title>
+            <biblScope>221f</biblScope>
+         </bibl>
+         <bibl corresp="bibl:16478">
+            <title type="short">Gérard, Dom Augustin Calmet</title>
+            <biblScope>154, 358, 708</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverendo religiosissimo ac clarissimo domino patri Augustino Calmet patrono singulari pater Bernardus Pez monachus Mellicensis salutem plurimam precatur.</opener>
+         <ab resp="#editor" xml:id="seg1">Minime sperabam singularem insignemque inurbanitatem meam tanta benevolentia exceptum iri; sed hic est tuus uniceque proprius character, celeberrime pater, ut, quo molestis amicorum precibus magis importuniusque appeteris, eo te faciliorem et ad quaevis officia promptiorem praebeas. Nondum ille rubor pudorque, quo ultimam epistolam ad te dando totus suffusus eram, e facie memoriaque excessit, cum ecce adest a te novus, accuratissimus et maxime perspicuus vestrae inclytae congregationis scriptorum catalogus, quo amplius et maius quid exspectare iam non inhumanitatis, sed extremae dementiae foret. Quare tibi, o singulare ordinis Benedictini decus, gratias, quam possum, cumulatissimas pro adeo effusa et uberi erga me benevolentia ago sancteque spondeo me omnem eo operam in Bibliotheca Benedictina collaturum, ut vestrae res cum commendatione nequaquam vulgari ad omnium eruditorum notitiam perferantur. Quod si post tempus tibi quaedam adhuc aut monenda, corrigenda aut (ut quotidie proficimus) addenda ad iam transmissa viderentur, summae gratiae loco habebo, si mecum omnia candide communicare dignatus fueris. Desunt adhuc scriptores, qui ante conditam vestram congregationem floruere, quorum in cognitionem sic venire desidero, ut qui maxime. Sed quid ego ista ad virum aliis summis studiis occupatissimum et pene obrutum? Ergo nihil amplius <pb n="1v"/> ad te de istis; satis gratiarum accepi accepturusque sum, si aliis, ut mihi aut potius toti sacro ordini nostro gratificentur, cohortator eris. </ab>
+         <ab resp="#editor" xml:id="seg2">De dissertationum tuarum selectarum Avenionensi editione mira narras. Faxo, ut ea res et machinatio <anchor xml:id="n1"/>Novis litterariis Lipsiae publicatis quam primum inseratur<anchor xml:id="n1e"/>. Caeterum opus tuum in Sacram Scripturam immortale habere tandem debebo, quocunque pretio constiterit. Eius ne ullum quidem exemplar in universa Austria extat, haud dubie vel socordia vel sumptuum metu nostrorum bibliopolarum. Vale, plurimum reverende ac eruditissime pater, et immemor inhumanitatis meae me meosque conatus fovere ne umquam desine.</ab>
+         <closer>Mellicii 1. Junii 1717, cum ad iter Bavaricum iam essem accinctus.</closer>
+      </body>
    </text>
 </TEI>

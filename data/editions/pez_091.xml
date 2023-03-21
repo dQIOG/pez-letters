@@ -1,31 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="91" xml:id="pez-0091">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">91 Bernhard Pez an Benedetto Bacchini. LE 1. 1710-07-24. Melk.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Bernhard Pez an Benedetto Bacchini. LE 1. 1710-07-24. Melk.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">91</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:20188">Wallnig, Gasthaus und Gelehrsamkeit</rs>
-                     9</bibl>
-               </listBibl>
-            </relatedItem>
+            
             <relatedItem type="instanceOf">
                <bibl>
                   <author>Bernhard Pez</author>
@@ -34,9 +39,20 @@
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <p>Modena, Biblioteca Estense, It. 998 (α.K.3.20), Nr. 2.</p>
+            <listWit>
+               <witness>Modena, Biblioteca Estense, It. 998 (α.K.3.20), Nr. 2.   </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -51,80 +67,62 @@
                <persName>Benedetto Bacchini. LE 1</persName>
             </correspAction>
             <correspContext>
-               <ref type="next">
-                  <idno type="pezEd">98</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">19</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">79</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">90</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">98</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">108</idno>
-               </ref>
+               <ptr type="next" target="letter:098"/>
+               <ptr type="mentions" target="letter:019"/>
+               <ptr type="mentions" target="letter:079"/>
+               <ptr type="mentions" target="letter:090"/>
+               <ptr type="mentionedIn" target="letter:098"/>
+               <ptr type="mentionedIn" target="letter:108"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">BP</rs> unterbreitet BBa sein Vorhaben, ein Schriftstellerlexikon des Benediktinerordens mit dem Namen „<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“ zu verfassen. Sein Ansinnen entspringt dem Wunsch, den Ruhm des Ordens – nicht den eigenen – zu vermehren. Gegenstand des Werks sollen alle benediktinischen Schriftsteller sein, die seit der Gründung des Ordens bis in die Gegenwart gewirkt haben.</p>
+            <p corresp="#seg2">Bisher hat weder <rs ref="index:d14380e9628">Abt Dietmayr</rs> seine Unterstützung zu bereuen, noch <rs type="person" role="sender">BP</rs> seine bereits eingebrachte Arbeit. Das Entgegenkommen zahlreicher Prälaten <rs ref="index:d14380e12712">Frankreichs</rs> und <rs ref="index:d14380e9395">Deutschlands</rs> setzt <rs type="person" role="sender">BP</rs> in eine glückliche Lage, verglichen mit anderen, die ähnliche Vorhaben verfolgt haben. Mit demselben Anliegen ist <rs type="person" role="sender">BP</rs> an die Prälaten <rs ref="index:d14380e19828">Italiens</rs>, der Mutter vieler Gelehrten, herangetreten <ref type="letter" target="letter:19">19</ref>. Jüngst hat <rs type="person" role="sender">BP</rs> in einem Schreiben von <rs ref="index:d10854e1454">Mauro Aspini</rs>, Abt von <rs ref="index:d10854e8731">S. Benedetto</rs> zu <rs ref="index:d10854e8724">Ferrara</rs> <ref type="letter" target="letter:90">90</ref>, von den gelehrten Meriten BBas gehört und bittet daher auch ihn um Mithilfe. BBa soll einen Konventualen aus seinem Kloster <rs ref="index:d14380e29118">S. Pietro</rs> zu <rs ref="index:d14380e29112">Modena</rs> bestellen, der Informationen zu den Schriftstellern des Klosters sammelt und diese entweder direkt nach <rs ref="index:d14380e28088">Melk</rs> oder in den <rs ref="index:d10854e33557">Melkerhof</rs> zu <rs ref="index:d14380e45571">Wien</rs> einsendet.</p>
+            <p corresp="#seg3">An Informationen zu den Schriftstellern wünscht <rs type="person" role="sender">BP</rs> Angaben zum Leben, nämlich zu Ausbildung, Herkunft, bemerkenswerten Aussprüchen oder Taten sowie zum Todesjahr; ein Verzeichnis der gedruckten oder wichtigen ungedruckten Werke sowie das Urteil anderer Gelehrter über diese. <rs type="person" role="sender">BP</rs> verspricht, die erhoffte Mitarbeit in seinem Werk entsprechend zu würdigen Der beauftragte Sammler soll auch umliegende Benediktinerklöster von <rs type="person" role="sender">BPs</rs> Vorhaben informieren.</p>
+            <p corresp="#seg4">Auf die Briefe, die <rs type="person" role="sender">BP</rs> bisher an <rs ref="index:d14380e19828">italienische</rs> Klöster geschickt hat, sind noch kaum Antworten eingelangt. <rs type="person" role="sender">BP</rs> hat sich an den Präses der <rs ref="index:d10854e15502">Cassinenser Kongregation</rs>, <rs ref="index:d10854e21598">Severino de Ò</rs>, um Unterstützung gewandt <ref type="letter" target="letter:79">79</ref>, weiß aber nicht, was er davon zu erwarten hat.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>Mauri Aspini</mentioned>
+            <p>Aspini, der einige Jahre später zum Präses gewählt wurde, besaß auch selbst
+                  gewisse gelehrte Meriten, vgl. <ref type="letter" target="letter:148">148</ref> <ref target="letter:148#seg3">3</ref>. Über
+                  Verbindungen zu BBa ist nichts bekannt, sofern er nicht jener ungenannte „amico“
+                  in S. Benedetto zu Ferrara war, den BBa in einem Brief von 1710 erwähnt (<rs type="bibl" ref="bibl:15560">Castagna, Corrispondenza</rs> 6 102). Auch der
+                  dortige Konventuale Anselmo Paioli stand mit BBa in Kontakt, vgl. <ref type="letter" target="letter:98">98</ref> <ref target="letter:98#seg6">6</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>suo capitulo</mentioned>
+            <p>BBa stand zwar im Rang eines Abtes, war jedoch nicht Abt von S. Pietro, für
+                  welchen ihn BP (wie aus der Adresse ersichtlich) hielt; vgl. <ref type="letter" target="letter:98">98</ref> <ref target="letter:98#seg1">1</ref>, <ref target="letter:98#seg9">9</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>Iudicium doctorum hominum</mentioned>
+            <p>Die Bitte um Angaben zur Sekundärliteratur ist die auffälligste Neuerung im Vergleich zu den Fragenkatalogen der früheren erhaltenen LE 1. Dagegen sind die Fragen nach biographischen Daten verhältnismäßig knapp formuliert und zu einem einzigen Punkt zusammengefasst.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:20188">
+            <title type="short">Wallnig, Gasthaus und Gelehrsamkeit</title>
+            <biblScope>9</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
    <text>
       <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e11513"><rs type="person" role="sender">BP</rs> unterbreitet <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BBa<?oxy_custom_end?> sein Vorhaben, ein Schriftstellerlexikon des Benediktinerordens mit dem Namen „<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“ zu verfassen. Sein Ansinnen entspringt dem Wunsch, den Ruhm des Ordens – nicht den eigenen – zu vermehren. Gegenstand des Werks sollen alle benediktinischen Schriftsteller sein, die seit der Gründung des Ordens bis in die Gegenwart gewirkt haben.</seg><seg type="context" n="2" xml:id="d4618e11515">Bisher hat weder <rs key="index:d14380e9628">Abt Dietmayr</rs> seine Unterstützung zu bereuen, noch <rs type="person" role="sender">BP</rs> seine bereits eingebrachte Arbeit. Das Entgegenkommen zahlreicher Prälaten <rs key="index:d14380e12712">Frankreichs</rs> und <rs key="index:d14380e9395">Deutschlands</rs> setzt <rs type="person" role="sender">BP</rs> in eine glückliche Lage, verglichen mit anderen, die ähnliche Vorhaben verfolgt haben. Mit demselben Anliegen ist <rs type="person" role="sender">BP</rs> an die Prälaten <rs key="index:d14380e19828">Italiens</rs>, der Mutter vieler Gelehrten, herangetreten <ref type="letter">19</ref>. Jüngst hat <rs type="person" role="sender">BP</rs> in einem Schreiben von <rs key="index:d10854e1454">Mauro Aspini</rs>, Abt von <rs key="index:d10854e8731">S. Benedetto</rs> zu <rs key="index:d10854e8724">Ferrara</rs> <ref type="letter">90</ref>, von den gelehrten Meriten <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BBas<?oxy_custom_end?> gehört und bittet daher auch ihn um Mithilfe. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BBa<?oxy_custom_end?> soll einen Konventualen aus seinem Kloster <rs key="index:d14380e29118">S. Pietro</rs> zu <rs key="index:d14380e29112">Modena</rs> bestellen, der Informationen zu den Schriftstellern des Klosters sammelt und diese entweder direkt nach <rs key="index:d14380e28088">Melk</rs> oder in den <rs key="index:d10854e33557">Melkerhof</rs> zu <rs key="index:d14380e45571">Wien</rs> einsendet.</seg><seg type="context" n="3" xml:id="d4618e11523">An Informationen zu den Schriftstellern wünscht <rs type="person" role="sender">BP</rs> Angaben zum Leben, nämlich zu Ausbildung, Herkunft, bemerkenswerten Aussprüchen oder Taten sowie zum Todesjahr; ein Verzeichnis der gedruckten oder wichtigen ungedruckten Werke sowie das Urteil anderer Gelehrter über diese. <rs type="person" role="sender">BP</rs> verspricht, die erhoffte Mitarbeit in seinem Werk entsprechend zu würdigen Der beauftragte Sammler soll auch umliegende Benediktinerklöster von <rs type="person" role="sender">BPs</rs> Vorhaben informieren.</seg><seg type="context" n="4" xml:id="d4618e11525">Auf die Briefe, die <rs type="person" role="sender">BP</rs> bisher an <rs key="index:d14380e19828">italienische</rs> Klöster geschickt hat, sind noch kaum Antworten eingelangt. <rs type="person" role="sender">BP</rs> hat sich an den Präses der <rs key="index:d10854e15502">Cassinenser Kongregation</rs>, <rs key="index:d10854e21598">Severino de Ò</rs>, um Unterstützung gewandt <ref type="letter">79</ref>, weiß aber nicht, was er davon zu erwarten hat.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Reverendissimo perillustri ac amplissimo domino domino Benedicto Bacchino celeberrimi ac florentissimi monasterii ad S. Petrum Mutinae ordinis sancti patris Benedicti congregationis Casinensis abbati vigilantissimo, domino domino ac patrono meo gratiosissimo. Modena in Italien. Per Inspruck.</hi>
-               </ab>
-            </div>
-         </div>
+         <p>Reverendissimo perillustri ac amplissimo domino domino Benedicto Bacchino celeberrimi ac florentissimi monasterii ad S. Petrum Mutinae ordinis sancti patris Benedicti congregationis Casinensis abbati vigilantissimo, domino domino ac patrono meo gratiosissimo. Modena in Italien. Per Inspruck.</p>
       </front>
       <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Reverendissime perillustris ac amplissime domine domine praesul, patrone gratiosissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e11546">Quod per praesentes literas reverendissimo perillustri ac amplissimo domino domino praesuli negotium facessere non verear, id non a privati spe commodi, sed a Benedictinae gloriae promovendae desiderio proficiscitur. Coepi multo abhinc tempore Bibliothecam Benedictinam scribere, id est: iusto volumine scriptores Benedictinos omnes, quotquot a condito sacro ordine ad hanc usque aetatem nostram aliqua scribendi laude floruere, complecti. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e11548">Nec est, quod aut reverendissimum dominum abbatem meum impensi favoris, aut me praestiti adhuc laboris poeniteat. Quippe tantum in plerisque Galliae, Germaniae etc. praesulibus mihi gratificandi studium quotidie experior, ut paucorum simile quid conantium similis fuisse fortuna videatur. Quae res mihi animum peperit etiam reverendissimos perillustres ac amplissimos dominos dominos Italiae, foecundissimae doctorum virorum matris, praesules et abbates conveniendi demississimeque rogandi, ut et ii pro celebratissimo suo in sustentandis ordinis nostri ornamentis zelo consimilem mihi favorem opemque ferre ne graventur. Quocirca, cum ex reverendissimi perillustris ac amplissimi domini domini <seg type="lemma" corresp="#d4618e11567">Mauri Aspini</seg> ad S. Benedictum Ferrariae abbatis literis ad me nuper gratiosissime datis probe intellexerim reverendissimam perillustrem ac amplissimam dominationem vestram ceu sydus quoddam nobilissimum sapientiae suae radiis omnem late Italiam illustrare, visum est eiusdem benignissimum aspectum et influxum cum maxime implorare. Quare hisce meas preces repraesento impenseque oro, ut reverendissimus ac perillustris dominus dominus ex celeberrimo ac clarissimo <seg type="lemma" corresp="#d4618e11574">suo capitulo</seg> unum aliquem deligere dignetur, qui omnium clarissimorum dominorum capitularium in monasterio S. Petri Mutinae professorum, qui aliquid unquam literis commendarunt, nomina, patriam etc. colligat eaque ad me seu recta Mellicium seu Viennam Austriae, ubi celebrem quoque domum vulgo Mölker-hoff dictam possidemus, emittat. <pb n="1v"/> </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e11552">Atque ut clarius, quid circa unumquemque S. Petri scriptorem observandum sit, intelligatur, attexo hic perbrevem petitorum meorum elenchum, qui est huiusmodi: Primo. Brevis vitae a scriptore traductae historia, id est studia, natales, virtus, nobile dictum aut factum etc., adiecto anno obitus aut certe probabiliori de hoc coniectura. Secundo. Catalogus operum tam typis mandatorum quam etiam manuscriptorum, si haec valde antiqua aut alias gravis eruditique argumenti sint. Locus item, tempus et forma editionis. Tertio. <seg type="lemma" corresp="#d4618e11579">Iudicium doctorum hominum</seg> de opere in vulgus edito etc. Quae pauca ubi obtinuero, nihil sane in hoc meo opere intermittam, quod ad illustranda florentissimae Italiae monasteria atque in iis praecipue celeberrimum reverendissimi perillustris ac amplissimi domini domini asceterium spectet. Gratissimum sine dubio mihi fuerit, si praedictus clarissimus dominus collector una et item altera epistola in hanc meam sententiam conscripta viciniora etiam sacri ordinis nostri monasteria de meo consilio commonefecerit. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e11554">Scripsi quidem ad plurima Italiae monasteria in hac causa, sed pauca (quod sine dolore animi quis eloquatur?), pauca, inquam, responderunt. Nuper illustrissimum dominum dominum congregationis Casinensis praesidem obnixe per literas precatus sum, ut et is pro gloria sacri ordinis laboranti sua authoritate et favore adesse dignaretur. Quid inde mihi<note place="foot" xml:id="d4618e11556">	Danach durchgestrichen <hi rend="italic">exspe</hi>.</note> exspectandum, haud scio. Auguror felicia omnia, roboratque spem meam depraedicata summi praesulis virtus et ingenita Italis humanitas. Deus optimus maximus reverendissimum perillustrem ac amplissimum dominum dominum in totius sacri ordinis ornamentum et decus in optima valetudine quam diutissime incolumem florentemque conservet.</seg></p>
-            <p xml:space="preserve">Reverendissimae perillustris ac amplissimae dominationis vestrae infimus servus pater Bernardus Pez ibidem professus et bibliothecarius.</p>
-            <p xml:space="preserve">Ex exempto nostro monasterio Mellicensi vulgo Mölk ordinis sancti patris Benedicti in Austria Inferiore ad Danubium sito 24. Julii 1710.</p>
-         </div>
+         <opener><pb n="1r"/> Reverendissime perillustris ac amplissime domine domine praesul, patrone gratiosissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Quod per praesentes literas reverendissimo perillustri ac amplissimo domino domino praesuli negotium facessere non verear, id non a privati spe commodi, sed a Benedictinae gloriae promovendae desiderio proficiscitur. Coepi multo abhinc tempore Bibliothecam Benedictinam scribere, id est: iusto volumine scriptores Benedictinos omnes, quotquot a condito sacro ordine ad hanc usque aetatem nostram aliqua scribendi laude floruere, complecti. </ab>
+         <ab resp="#editor" xml:id="seg2">Nec est, quod aut reverendissimum dominum abbatem meum impensi favoris, aut me praestiti adhuc laboris poeniteat. Quippe tantum in plerisque Galliae, Germaniae etc. praesulibus mihi gratificandi studium quotidie experior, ut paucorum simile quid conantium similis fuisse fortuna videatur. Quae res mihi animum peperit etiam reverendissimos perillustres ac amplissimos dominos dominos Italiae, foecundissimae doctorum virorum matris, praesules et abbates conveniendi demississimeque rogandi, ut et ii pro celebratissimo suo in sustentandis ordinis nostri ornamentis zelo consimilem mihi favorem opemque ferre ne graventur. Quocirca, cum ex reverendissimi perillustris ac amplissimi domini domini <anchor xml:id="n1"/>Mauri Aspini<anchor xml:id="n1e"/> ad S. Benedictum Ferrariae abbatis literis ad me nuper gratiosissime datis probe intellexerim reverendissimam perillustrem ac amplissimam dominationem vestram ceu sydus quoddam nobilissimum sapientiae suae radiis omnem late Italiam illustrare, visum est eiusdem benignissimum aspectum et influxum cum maxime implorare. Quare hisce meas preces repraesento impenseque oro, ut reverendissimus ac perillustris dominus dominus ex celeberrimo ac clarissimo <anchor xml:id="n2"/>suo capitulo<anchor xml:id="n2e"/> unum aliquem deligere dignetur, qui omnium clarissimorum dominorum capitularium in monasterio S. Petri Mutinae professorum, qui aliquid unquam literis commendarunt, nomina, patriam etc. colligat eaque ad me seu recta Mellicium seu Viennam Austriae, ubi celebrem quoque domum vulgo Mölker-hoff dictam possidemus, emittat. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg3">Atque ut clarius, quid circa unumquemque S. Petri scriptorem observandum sit, intelligatur, attexo hic perbrevem petitorum meorum elenchum, qui est huiusmodi: Primo. Brevis vitae a scriptore traductae historia, id est studia, natales, virtus, nobile dictum aut factum etc., adiecto anno obitus aut certe probabiliori de hoc coniectura. Secundo. Catalogus operum tam typis mandatorum quam etiam manuscriptorum, si haec valde antiqua aut alias gravis eruditique argumenti sint. Locus item, tempus et forma editionis. Tertio. <anchor xml:id="n3"/>Iudicium doctorum hominum<anchor xml:id="n3e"/> de opere in vulgus edito etc. Quae pauca ubi obtinuero, nihil sane in hoc meo opere intermittam, quod ad illustranda florentissimae Italiae monasteria atque in iis praecipue celeberrimum reverendissimi perillustris ac amplissimi domini domini asceterium spectet. Gratissimum sine dubio mihi fuerit, si praedictus clarissimus dominus collector una et item altera epistola in hanc meam sententiam conscripta viciniora etiam sacri ordinis nostri monasteria de meo consilio commonefecerit. </ab>
+         <ab resp="#editor" xml:id="seg4">Scripsi quidem ad plurima Italiae monasteria in hac causa, sed pauca (quod sine dolore animi quis eloquatur?), pauca, inquam, responderunt. Nuper illustrissimum dominum dominum congregationis Casinensis praesidem obnixe per literas precatus sum, ut et is pro gloria sacri ordinis laboranti sua authoritate et favore adesse dignaretur. Quid inde mihi<del ana="#after">exspe</del> exspectandum, haud scio. Auguror felicia omnia, roboratque spem meam depraedicata summi praesulis virtus et ingenita Italis humanitas. Deus optimus maximus reverendissimum perillustrem ac amplissimum dominum dominum in totius sacri ordinis ornamentum et decus in optima valetudine quam diutissime incolumem florentemque conservet.</ab>
+         <closer>Reverendissimae perillustris ac amplissimae dominationis vestrae infimus servus pater Bernardus Pez ibidem professus et bibliothecarius.</closer>
+         <closer>Ex exempto nostro monasterio Mellicensi vulgo Mölk ordinis sancti patris Benedicti in Austria Inferiore ad Danubium sito 24. Julii 1710.</closer>
       </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e11567">
-               <ref type="context">2</ref>
-               <label>Mauri Aspini</label>
-               <p>Aspini, der einige Jahre später zum Präses gewählt wurde, besaß auch selbst
-                  gewisse gelehrte Meriten, vgl. <ref type="letter">148</ref> &lt;3&gt;. Über
-                  Verbindungen zu BBa ist nichts bekannt, sofern er nicht jener ungenannte „amico“
-                  in S. Benedetto zu Ferrara war, den BBa in einem Brief von 1710 erwähnt (<rs
-                     type="bibl" key="bibl:15560">Castagna, Corrispondenza</rs> 6 102). Auch der
-                  dortige Konventuale Anselmo Paioli stand mit BBa in Kontakt, vgl. <ref
-                     type="letter">98</ref> &lt;6&gt;.</p>
-            </note>
-            <note xml:id="d4618e11574">
-               <ref type="context">2</ref>
-               <label>suo capitulo</label>
-               <p>BBa stand zwar im Rang eines Abtes, war jedoch nicht Abt von S. Pietro, für
-                  welchen ihn BP (wie aus der Adresse ersichtlich) hielt; vgl. <ref type="letter"
-                     >98</ref> &lt;1&gt;, &lt;9&gt;.</p>
-            </note>
-            <note xml:id="d4618e11579">
-               <ref type="context">3</ref>
-               <label>Iudicium doctorum hominum</label>
-               <p>Die Bitte um Angaben zur Sekundärliteratur ist die auffälligste Neuerung im Vergleich zu den Fragenkatalogen der früheren erhaltenen LE 1. Dagegen sind die Fragen nach biographischen Daten verhältnismäßig knapp formuliert und zu einem einzigen Punkt zusammengefasst.</p>
-            </note>
-         </div>
-      </back>
    </text>
 </TEI>

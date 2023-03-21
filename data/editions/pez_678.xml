@@ -1,38 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="678" xml:id="pez-0678">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">678 Louis Tasche an Bernhard Pez. &lt; 1716-10-17. Marmoutier.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Louis Tasche an Bernhard Pez. &lt; 1716-10-17. Marmoutier.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">678</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
+            <note type="remarks">
+               Ein Datum fehlt im Brief, auch der Ordnungsvermerk bietet keine Zeitangabe. Die Ansetzung ergibt sich aus der Versendung mit 677 und richtet sich somit nach dem Datum von 679.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">532r–533v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 532r–533v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,111 +71,93 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">613</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">613</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">677</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">679</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">677</idno>
-               </ref>
+               <ptr type="prev" target="letter:613"/>
+               <ptr type="mentions" target="letter:613"/>
+               <ptr type="mentionedIn" target="letter:677"/>
+               <ptr type="mentionedIn" target="letter:679"/>
+               <ptr type="sentWith" target="letter:677"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">LT</rs> lobt <rs type="person" role="sender">BPs</rs> Absicht, eine „Bibliotheca Benedictina“ zusammenzustellen <ref type="letter" target="letter:613">613</ref>. Der ganze Benediktinerorden wird dafür tief in <rs type="person" role="sender">BPs</rs> Schuld stehen, denn bereits seit langer Zeit sind die Benediktiner beinahe die einzigen, für die ein gut ausgearbeiteter Schriftstellerkatalog fehlt. Viele in der Maurinerkongregation hatten diese Aufgabe Jean Mabillon übertragen wollen. <rs type="person" role="sender">LT</rs> dankt Gott, dass er <rs type="person" role="sender">BP</rs> zu diesem schwierigen, aber notwendigen Vorhaben inspiriert hat, und wünscht, dass er mithelfen könnte.</p>
+            <p corresp="#seg2">Da Edmond Martène in St.-Germain-des-Prés, der als Verfasser mehrerer Bücher bekannt ist, über ein umfangreiches Verzeichnis der Schriftsteller der Mauriner verfügt, in dem auch jene von Marmoutier bei Tours enthalten sein müssen, sofern es sie gegeben hat, so ersucht <rs type="person" role="sender">LT</rs> Martène, <rs type="person" role="sender">BP</rs> Unterstützung zu gewähren.</p>
+            <p corresp="#seg3">In einem Nachsatz merkt <rs type="person" role="sender">LT</rs> an, dass Joachim Périon, Mönch und Prior des Klosters St.-Paul zu Cormery, der Autor zahlreicher Werke war. Diese verzeichnet Antoine Teissier in seinem „Catalogus auctorum“, welcher 1686 zu Genf erschienen ist. Casimir Oudin behandelt in seinem „Supplementum de scriptoribus a Bellarmino omissis“ 174 (recte: 175) benediktinische Schriftsteller. Freilich ist es unnötig, <rs type="person" role="sender">BP</rs> auf dies hinzuweisen, zumal dessen Bibliothek sicherlich mit den besten Büchern ausgestattet ist.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e20560"><rs type="person" role="sender">LT</rs> lobt <rs type="person" role="sender">BPs</rs> Absicht, eine „Bibliotheca Benedictina“ zusammenzustellen <ref type="letter">613</ref>. Der ganze Benediktinerorden wird dafür tief in <rs type="person" role="sender">BPs</rs> Schuld stehen, denn bereits seit langer Zeit sind die Benediktiner beinahe die einzigen, für die ein gut ausgearbeiteter Schriftstellerkatalog fehlt. Viele in der Maurinerkongregation hatten diese Aufgabe Jean Mabillon übertragen wollen. <rs type="person" role="sender">LT</rs> dankt Gott, dass er <rs type="person" role="sender">BP</rs> zu diesem schwierigen, aber notwendigen Vorhaben inspiriert hat, und wünscht, dass er mithelfen könnte.</seg><seg type="context" n="2" xml:id="d3e20565">Da Edmond Martène in St.-Germain-des-Prés, der als Verfasser mehrerer Bücher bekannt ist, über ein umfangreiches Verzeichnis der Schriftsteller der Mauriner verfügt, in dem auch jene von Marmoutier bei Tours enthalten sein müssen, sofern es sie gegeben hat, so ersucht <rs type="person" role="sender">LT</rs> Martène, <rs type="person" role="sender">BP</rs> Unterstützung zu gewähren.</seg><seg type="context" n="3" xml:id="d3e20567">In einem Nachsatz merkt <rs type="person" role="sender">LT</rs> an, dass Joachim Périon, Mönch und Prior des Klosters St.-Paul zu Cormery, der Autor zahlreicher Werke war. Diese verzeichnet Antoine Teissier in seinem „Catalogus auctorum“, welcher 1686 zu Genf erschienen ist. Casimir Oudin behandelt in seinem „Supplementum de scriptoribus a Bellarmino omissis“ 174 (recte: 175) benediktinische Schriftsteller. Freilich ist es unnötig, <rs type="person" role="sender">BP</rs> auf dies hinzuweisen, zumal dessen Bibliothek sicherlich mit den besten Büchern ausgestattet ist.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Reverendo admodum patri domno Bernardo Pez Benedictino Mellicensi et bibliothecario. Mellicii Viennae in Austria. A Vienne en Autriche. Allemagne.</hi>
-               </ab>
-            </div>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">202. In Italia in Monasterio Maiori Turonensi a Ludovico Tache.</hi> Die irrige Angabe <hi rend="italic">In Italia</hi> beruht vermutlich auf einer falschen Auffassung von <hi rend="italic">Turones</hi> als Bezeichnung für Turin.</p>
-            <div type="remarks">
-               <p>Ein Datum fehlt im Brief, auch der Ordnungsvermerk bietet keine Zeitangabe. Die Ansetzung ergibt sich aus der Versendung mit 677 und richtet sich somit nach dem Datum von 679.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Pater reverendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e20597">Tuam de instituenda Bibliotheca Benedictina generali curam non satis laudandam confitemur tibique totum ordinem impense debitum [<hi rend="italic">sic</hi>]<note place="foot" xml:id="d3e20602">	Gemeint wohl <hi rend="italic">obligatum</hi> oder Ähnliches.</note> esse praedicamus: a multis annis desideratur et expectatur catalogus scriptorum ordinis nostri; soli enim fere Benedictini erant, qui suorum authorum catalogum absolutissimum non haberent. Unde multi e nostris hanc provinciam <seg type="lemma" corresp="#d3e20617">Mabillonio demandare</seg> tentaverant. Gratias Deo, qui tam arduum, imo et necessarium consilium dominationi vestrae religiosissimae inspiravit, quod iuvare utinam possemus. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e20608">Sed cum domnus Edmundus Martennus multorum iam librorum editor non ignotus in monasterio Sancti Germani a Pratis Parisiensis habeat amplam seriem scriptorum nostrae congregationis sancti Mauri, imo et <seg type="lemma" corresp="#d3e20623">Maioris huius Monasterii</seg> Turonensis, si qui sunt, rogo illum, ut vobis suppetias ferre dignetur, meque vobis commendare velit tanquam addictissimum et humillimum servum in Christo</seg></p>
-            <p xml:space="preserve">Fratrem Ludovicum Tasche monachum Benedictinum priorem indignum Maioris Monasterii prope Turones.</p>
-            <p xml:space="preserve"><seg type="context" n="3" xml:space="preserve" xml:id="d3e20614">In monasterio Sancti Pauli Cormeriacensis Joachimus <seg type="lemma" corresp="#d3e20629">Perionius</seg> eiusdem loci monachus et prior claustralis multa scripsit, quorum meminit<seg type="lemma" corresp="#d3e20635"> Antonius Teisserius</seg> in <seg type="lemma" corresp="#d3e20639">suo Catalogo auctorum</seg> et bibliothecarum, Genevae anno 1686 impresso in quarto. Casimirus <seg type="lemma" corresp="#d3e20643">Oudin</seg> in suo Supplemento de scriptoribus in Bellarmino omissis notat<seg type="lemma" corresp="#d3e20647"> centum septuaginta quatuor</seg> auctores Benedictinos, quod vobis indicare superfluum et inutile est, quandoquidem<seg type="lemma" corresp="#d3e20651"> bibliothecae vestrae sint omnium omnino librorum refertissimae</seg>.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e20617">
-               <ref type="context">1</ref>
-               <label>Mabillonio demandare</label><p> Zu Arbeiten Mabillons an einem
-                  Schriftstellerkatalog des Benediktinerordens vgl. <ref type="letter">154</ref>
-                  &lt;11&gt;, <ref type="letter">384</ref> &lt;7&gt;, <ref type="letter">1012</ref>
-                  &lt;1&gt;.</p></note>
-            <note xml:id="d3e20623">
-               <ref type="context">2</ref>
-               <label>Maioris huius Monasterii</label><p>Die Formulierung LTs scheint darauf
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>Mabillonio demandare</mentioned>
+            <p> Zu Arbeiten Mabillons an einem
+                  Schriftstellerkatalog des Benediktinerordens vgl. <ref type="letter" target="letter:154">154</ref>
+                  <ref target="letter:154#seg11">11</ref>, <ref type="letter" target="letter:384">384</ref> <ref target="letter:384#seg7">7</ref>, <ref type="letter" target="letter:1012">1012</ref>
+                  <ref target="letter:1012#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>Maioris huius Monasterii</mentioned>
+            <p>Die Formulierung LTs scheint darauf
                   hinzuweisen, dass er (zu diesem Zeitpunkt) nicht von einer Übermittlung von
                   Materialien aus Marmoutier an BP über François Le Texier wusste, die allerdings in
                   keinem allzu großen zeitlichen Abstand zu diesem Brief erfolgt zu sein scheint, da
-                  sie Le Texier in <ref type="letter">671</ref> &lt;1&gt; als einige Zeit
+                  sie Le Texier in <ref type="letter" target="letter:671">671</ref> <ref target="letter:671#seg1">1</ref> als einige Zeit
                   zurückliegend erwähnt. Nicht völlig auszuschließen wäre, dass es sich bei 677 und
                   678 selbst um jene Materialien handelte, welche Le Texier zusammen mit 670 an BP
                   weitergeleitet hatte; keiner der erhaltenen Briefe enthält jedoch einen deutlichen
-                  Hinweis auf einen solchen Sachverhalt.</p></note>
-            <note xml:id="d3e20629">
-               <ref type="context">3</ref>
-               <label>Perionius</label><p>Zu ihm sowie zu seinen Schriften: <rs type="bibl"
-                     key="bibl:15816">Demerson–Jacquetin, Introduction</rs> 15–23; <rs type="bibl"
-                     key="bibl:18112">Maillard et al., Hellénistes I</rs> 349–479; vgl. <rs
-                     type="bibl" key="bibl:15000">Backus, Historical Method</rs> 296f., 307–310.
+                  Hinweis auf einen solchen Sachverhalt.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>Perionius</mentioned>
+            <p>Zu ihm sowie zu seinen Schriften: <rs type="bibl" ref="bibl:15816">Demerson–Jacquetin, Introduction</rs> 15–23; <rs type="bibl" ref="bibl:18112">Maillard et al., Hellénistes I</rs> 349–479; vgl. <rs type="bibl" ref="bibl:15000">Backus, Historical Method</rs> 296f., 307–310.
                   Hinsichtlich seines Todesjahrs folgt die Registeransetzung dem Beleg für 1557 bei
-                     <rs type="bibl" key="bibl:15370">Bourassé, Cartulaire</rs> LXXXVIII, gegen das
+                     <rs type="bibl" ref="bibl:15370">Bourassé, Cartulaire</rs> LXXXVIII, gegen das
                   in biographischen Lexika seit dem 17. Jh. wie auch im größten Teil der Literatur
-                  bis in die Gegenwart angegebene Jahr 1559.</p></note>
-            <note xml:id="d3e20635">
-               <ref type="context">3</ref>
-               <label> Antonius Teisserius</label><p><rs type="bibl" key="bibl:18674">Othmer,
-                     Berlin</rs> 25, 38f., 45–53; <rs type="bibl" key="bibl:18700">Palladini,
-                     Pufendorf-Übersetzer</rs>; <rs type="bibl" key="bibl:19654">Splett,
-                     Teissier</rs>. </p></note>
-            <note xml:id="d3e20639">
-               <ref type="context">3</ref>
-               <label>suo Catalogo auctorum</label><p>Teissier, Catalogus 156f. </p></note>
-            <note xml:id="d3e20643">
-               <ref type="context">3</ref>
-               <label>Oudin</label><p><rs type="bibl" key="bibl:14936">Ardura, Abbayes</rs> 38f.;
-                     <rs type="bibl" key="bibl:16578">Goovaerts, Écrivains</rs> 1 643–648; Rozemond,
-                  Oudin. Zum Kontakt Oudins mit den maurinischen Ambrosius-Editoren vgl. <rs
-                     type="bibl" key="bibl:19166">Roques, Tradition manuscrite</rs> 266.</p></note>
-            <note xml:id="d3e20647">
-               <ref type="context">3</ref>
-               <label> centum septuaginta quatuor</label><p>Unter den mehreren unpaginierten Indices zu Oudins „Supplementum“ findet sich an vierter Stelle ein „Index dignitatum“, der die in dem Werk behandelten Autoren unter anderem nach Ordenszugehörigkeit aufgliedert; nach der dortigen Liste der „Monachi occidentales ordinis divi Benedicti“ dürfte die Angabe LTs abgezählt sein, freilich nicht ganz richtig, da dort 175 Namen angeführt werden.</p></note>
-            <note xml:id="d3e20651">
-               <ref type="context">3</ref>
-               <label> bibliothecae vestrae ... refertissimae</label><p>Die Rede von „bibliothecae“
+                  bis in die Gegenwart angegebene Jahr 1559.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned> Antonius Teisserius</mentioned>
+            <p><rs type="bibl" ref="bibl:18674">Othmer,
+                     Berlin</rs> 25, 38f., 45–53; <rs type="bibl" ref="bibl:18700">Palladini,
+                     Pufendorf-Übersetzer</rs>; <rs type="bibl" ref="bibl:19654">Splett,
+                     Teissier</rs>. </p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>suo Catalogo auctorum</mentioned>
+            <p>Teissier, Catalogus 156f. </p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned>Oudin</mentioned>
+            <p><rs type="bibl" ref="bibl:14936">Ardura, Abbayes</rs> 38f.;
+                     <rs type="bibl" ref="bibl:16578">Goovaerts, Écrivains</rs> 1 643–648; Rozemond,
+                  Oudin. Zum Kontakt Oudins mit den maurinischen Ambrosius-Editoren vgl. <rs type="bibl" ref="bibl:19166">Roques, Tradition manuscrite</rs> 266.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned> centum septuaginta quatuor</mentioned>
+            <p>Unter den mehreren unpaginierten Indices zu Oudins „Supplementum“ findet sich an vierter Stelle ein „Index dignitatum“, der die in dem Werk behandelten Autoren unter anderem nach Ordenszugehörigkeit aufgliedert; nach der dortigen Liste der „Monachi occidentales ordinis divi Benedicti“ dürfte die Angabe LTs abgezählt sein, freilich nicht ganz richtig, da dort 175 Namen angeführt werden.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
+            <mentioned> bibliothecae vestrae ... refertissimae</mentioned>
+            <p>Die Rede von „bibliothecae“
                   im Plural könnte so zu deuten sein, dass LT jene von St.-Germain-des-Prés
                   einschloss und somit zumindest das Postskriptum ebenso an Martène wie an BP
                   richtete. Er beabsichtigte vermutlich, dass Martène seinen Brief vor der
-                  Weitergabe an BP lesen sollte, was dieser sichtlich auch tat: vgl. <ref
-                     type="letter">677</ref> &lt;1&gt;.</p></note>
-         </div>
-      </back>
+                  Weitergabe an BP lesen sollte, was dieser sichtlich auch tat: vgl. <ref type="letter" target="letter:677">677</ref> <ref target="letter:677#seg1">1</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Ordnungsvermerk: <orig>202. In Italia in Monasterio Maiori Turonensi a Ludovico Tache.</orig> Die irrige Angabe <orig>In Italia</orig> beruht vermutlich auf einer falschen Auffassung von <orig>Turones</orig> als Bezeichnung für Turin.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <front>
+         <p>Reverendo admodum patri domno Bernardo Pez Benedictino Mellicensi et bibliothecario. Mellicii Viennae in Austria. A Vienne en Autriche. Allemagne.</p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Pater reverendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Tuam de instituenda Bibliotheca Benedictina generali curam non satis laudandam confitemur tibique totum ordinem impense <sic>debitum</sic><note place="foot" xml:id="d3e20602">Gemeint wohl <hi rend="italic">obligatum</hi> oder Ähnliches.</note> esse praedicamus: a multis annis desideratur et expectatur catalogus scriptorum ordinis nostri; soli enim fere Benedictini erant, qui suorum authorum catalogum absolutissimum non haberent. Unde multi e nostris hanc provinciam <anchor xml:id="n1"/>Mabillonio demandare<anchor xml:id="n1e"/> tentaverant. Gratias Deo, qui tam arduum, imo et necessarium consilium dominationi vestrae religiosissimae inspiravit, quod iuvare utinam possemus. </ab>
+         <ab resp="#editor" xml:id="seg2">Sed cum domnus Edmundus Martennus multorum iam librorum editor non ignotus in monasterio Sancti Germani a Pratis Parisiensis habeat amplam seriem scriptorum nostrae congregationis sancti Mauri, imo et <anchor xml:id="n2"/>Maioris huius Monasterii<anchor xml:id="n2e"/> Turonensis, si qui sunt, rogo illum, ut vobis suppetias ferre dignetur, meque vobis commendare velit tanquam addictissimum et humillimum servum in Christo</ab>
+         <closer>Fratrem Ludovicum Tasche monachum Benedictinum priorem indignum Maioris Monasterii prope Turones.</closer>
+         <closer xml:id="seg3">In monasterio Sancti Pauli Cormeriacensis Joachimus <anchor xml:id="n3"/>Perionius<anchor xml:id="n3e"/> eiusdem loci monachus et prior claustralis multa scripsit, quorum meminit<anchor xml:id="n4"/> Antonius Teisserius<anchor xml:id="n4e"/> in <anchor xml:id="n5"/>suo Catalogo auctorum<anchor xml:id="n5e"/> et bibliothecarum, Genevae anno 1686 impresso in quarto. Casimirus <anchor xml:id="n6"/>Oudin<anchor xml:id="n6e"/> in suo Supplemento de scriptoribus in Bellarmino omissis notat<anchor xml:id="n7"/> centum septuaginta quatuor<anchor xml:id="n7e"/> auctores Benedictinos, quod vobis indicare superfluum et inutile est, quandoquidem<anchor xml:id="n8"/> bibliothecae vestrae sint omnium omnino librorum refertissimae<anchor xml:id="n8e"/>.</closer>
+      </body>
    </text>
 </TEI>

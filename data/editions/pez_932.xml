@@ -1,48 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="932" xml:id="pez-0932">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">932 Edmond Martène an Bernhard Pez. 1718-04-21. Paris.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Edmond Martène an Bernhard Pez. 1718-04-21. Paris.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">932</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:16236">Fiska, Geschichtsforschung</rs> 230</bibl>
-                  <bibl><rs type="bibl" key="bibl:16792">Hammermayer, Forschungszentren</rs>
-                     169</bibl>
-                  <bibl><rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 37</bibl>
-                  <bibl><rs type="bibl" key="bibl:18236">Mayer, Nachlaß</rs> 18 630</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">573r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 573r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -57,247 +69,240 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">931</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">941</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">931</idno>
-               </ref>
+               <ptr type="prev" target="letter:931"/>
+               <ptr type="next" target="letter:941"/>
+               <ptr type="mentions" target="letter:931"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Den Brief <rs type="person" role="sender">BPs</rs> <ref type="letter" target="letter:931">931</ref> hat <rs type="person" role="sender">EM</rs> erhalten, ebenso acht Tage später das Verzeichnis der unedierten Texte in <rs type="person" role="sender">BPs</rs> Besitz. Er gratuliert herzlich zu diesen Kostbarkeiten, welche die Gelehrtenwelt unermesslich bereichern werden. Bereits ediert ist allerdings das Gebet des Berengar (von Tours), das mit den Worten „Iuste iudex Jesu Christe“ beginnt, im vierten Band des „Thesaurus novus anecdotorum“ (von <rs type="person" role="sender">EM</rs> und Ursin Durand). Im Hinblick auf den Brief des Walter von Mortagne an Hugo von St.-Victor mit dem Titel „De anima Christi“ sollte sich <rs type="person" role="sender">BP</rs> vergewissern, ob er nicht von Hugues Mathoud in dessen Anmerkungen zur Edition der Sentenzen des Robertus Pullus publiziert ist. Die Vorrede zur Schrift „De computo“ des Helperich (von Auxerre) steht bei Jean Mabillon in den „Vetera analecta“.</p>
+            <p corresp="#seg2">Das Buch „Sic et non“ von Petrus Abaelard liegt den Maurinern in zwei sehr alten Handschriften vor, doch haben sie es einer Publikation nicht für würdig befunden, worin sie auch durch das Urteil anderer Gelehrter bestärkt worden sind. Es enthält Dinge, die unruhigen Geistern Anlass bieten könnten, über die Geheimnisse der christlichen Religion zu spotten. <rs type="person" role="sender">EM</rs> fordert auch <rs type="person" role="sender">BP</rs> auf, von einer Edition abzusehen. Gleiches gilt für Abaelards weitere Schrift „Scito te ipsum“, die <rs type="person" role="sender">EM</rs> zwar nicht selbst kennt, gegen die sich aber Bernhard von Clairvaux scharf ausgesprochen hat.</p>
+            <p corresp="#seg3">Das dreiteilige Buch eines Abtes Johannes „De professione monachorum“ kann nicht mit jenem identisch sein, das Wilhelm Peraldus zu diesem Gegenstand verfasst hat (siehe Kommentar). Die apokryphen Wunder des Apostels Andreas (von Gregor von Tours) könnten in dem Buch des Abdias von Babylon („De historia certaminis apostolici“) enthalten sein. Ein Werk „De virginitate“ eines Autors Konrad ist ediert; ob dieser mit dem von <rs type="person" role="sender">BP</rs> angeführten Konrad von Hirsau identisch ist, vermag <rs type="person" role="sender">EM</rs> nicht zu erraten. Dass die Vita des hl. Christophorus in Versen für Gelehrte von irgendeinem Wert ist, bezweifelt EM. Er schließt seine Anmerkungen zu <rs type="person" role="sender">BPs</rs> Liste von Texten mit der Aufforderung, diese rasch zu veröffentlichen.</p>
+            <p corresp="#seg4">Von den Büchern, um die <rs type="person" role="sender">BP</rs> gebeten hat, sind fast alle bereits bei EM; die Buchhändler erlauben deren Versendung außer Landes jedoch nicht, bevor der Kaufpreis bezahlt ist. Die Werke des Anselm von Canterbury in der Ausgabe von Gabriel Gerberon sind restlos vergriffen; <rs type="person" role="sender">EM</rs> kann nichts versprechen, will sich aber bemühen, ein Exemplar zu bekommen. Auch die Ambrosius-Edition (von Jacques Du Frische und Nicolas Le Nourry) ist ausverkauft, man findet sie nur mehr in der Folioausgabe, die meist um die 100 Livres kostet. Ein gebundenes Exemplar ist <rs type="person" role="sender">EM</rs> allerdings um 60 Livres untergekommen, ein weiteres hat er um 70 Livres ungebunden gekauft. Die Werke des Athanasius mit der beigefügten Sammlung weiterer Vätertexte (herausgegeben von Jacques Loppin, Bernard de Montfaucon und Antoine Pouget) hat <rs type="person" role="sender">EM</rs> wegen des exorbitanten Preises von 160 Livres nicht für <rs type="person" role="sender">BP</rs> zu kaufen gewagt. Sollte <rs type="person" role="sender">BP</rs> dies wünschen, wird er sie jedoch schicken; er wartet auf Anweisungen. Alle weiteren Bücher hält er bereit und will sie versenden, sobald er das Geld erhalten hat.</p>
+            <p corresp="#seg5">Die Reise <rs type="person" role="sender">EMs</rs> und Ursin Durands verzögert sich und wird vielleicht sogar abgesagt werden müssen, weil einige Mitbrüder schwer erkrankt sind. Insbesondere Denis de Sainte-Marthe, Prior von St.-Denis, schwebt in Lebensgefahr.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e56432">Den Brief <rs type="person" role="sender">BPs</rs> <ref type="letter">931</ref> hat <rs type="person" role="sender">EM</rs> erhalten, ebenso acht Tage später das Verzeichnis der unedierten Texte in <rs type="person" role="sender">BPs</rs> Besitz. Er gratuliert herzlich zu diesen Kostbarkeiten, welche die Gelehrtenwelt unermesslich bereichern werden. Bereits ediert ist allerdings das Gebet des Berengar (von Tours), das mit den Worten „Iuste iudex Jesu Christe“ beginnt, im vierten Band des „Thesaurus novus anecdotorum“ (von <rs type="person" role="sender">EM</rs> und Ursin Durand). Im Hinblick auf den Brief des Walter von Mortagne an Hugo von St.-Victor mit dem Titel „De anima Christi“ sollte sich <rs type="person" role="sender">BP</rs> vergewissern, ob er nicht von Hugues Mathoud in dessen Anmerkungen zur Edition der Sentenzen des Robertus Pullus publiziert ist. Die Vorrede zur Schrift „De computo“ des Helperich (von Auxerre) steht bei Jean Mabillon in den „Vetera analecta“.</seg><seg type="context" n="2" xml:id="d3e56437">Das Buch „Sic et non“ von Petrus Abaelard liegt den Maurinern in zwei sehr alten Handschriften vor, doch haben sie es einer Publikation nicht für würdig befunden, worin sie auch durch das Urteil anderer Gelehrter bestärkt worden sind. Es enthält Dinge, die unruhigen Geistern Anlass bieten könnten, über die Geheimnisse der christlichen Religion zu spotten. <rs type="person" role="sender">EM</rs> fordert auch <rs type="person" role="sender">BP</rs> auf, von einer Edition abzusehen. Gleiches gilt für Abaelards weitere Schrift „Scito te ipsum“, die <rs type="person" role="sender">EM</rs> zwar nicht selbst kennt, gegen die sich aber Bernhard von Clairvaux scharf ausgesprochen hat.</seg><seg type="context" n="3" xml:id="d3e56439">Das dreiteilige Buch eines Abtes Johannes „De professione monachorum“ kann nicht mit jenem identisch sein, das Wilhelm Peraldus zu diesem Gegenstand verfasst hat (siehe Kommentar). Die apokryphen Wunder des Apostels Andreas (von Gregor von Tours) könnten in dem Buch des Abdias von Babylon („De historia certaminis apostolici“) enthalten sein. Ein Werk „De virginitate“ eines Autors Konrad ist ediert; ob dieser mit dem von <rs type="person" role="sender">BP</rs> angeführten Konrad von Hirsau identisch ist, vermag <rs type="person" role="sender">EM</rs> nicht zu erraten. Dass die Vita des hl. Christophorus in Versen für Gelehrte von irgendeinem Wert ist, bezweifelt EM. Er schließt seine Anmerkungen zu <rs type="person" role="sender">BPs</rs> Liste von Texten mit der Aufforderung, diese rasch zu veröffentlichen.</seg><seg type="context" n="4" xml:id="d3e56441">Von den Büchern, um die <rs type="person" role="sender">BP</rs> gebeten hat, sind fast alle bereits bei EM; die Buchhändler erlauben deren Versendung außer Landes jedoch nicht, bevor der Kaufpreis bezahlt ist. Die Werke des Anselm von Canterbury in der Ausgabe von Gabriel Gerberon sind restlos vergriffen; <rs type="person" role="sender">EM</rs> kann nichts versprechen, will sich aber bemühen, ein Exemplar zu bekommen. Auch die Ambrosius-Edition (von Jacques Du Frische und Nicolas Le Nourry) ist ausverkauft, man findet sie nur mehr in der Folioausgabe, die meist um die 100 Livres kostet. Ein gebundenes Exemplar ist <rs type="person" role="sender">EM</rs> allerdings um 60 Livres untergekommen, ein weiteres hat er um 70 Livres ungebunden gekauft. Die Werke des Athanasius mit der beigefügten Sammlung weiterer Vätertexte (herausgegeben von Jacques Loppin, Bernard de Montfaucon und Antoine Pouget) hat <rs type="person" role="sender">EM</rs> wegen des exorbitanten Preises von 160 Livres nicht für <rs type="person" role="sender">BP</rs> zu kaufen gewagt. Sollte <rs type="person" role="sender">BP</rs> dies wünschen, wird er sie jedoch schicken; er wartet auf Anweisungen. Alle weiteren Bücher hält er bereit und will sie versenden, sobald er das Geld erhalten hat.</seg><seg type="context" n="5" xml:id="d3e56443">Die Reise <rs type="person" role="sender">EMs</rs> und Ursin Durands verzögert sich und wird vielleicht sogar abgesagt werden müssen, weil einige Mitbrüder schwer erkrankt sind. Insbesondere Denis de Sainte-Marthe, Prior von St.-Denis, schwebt in Lebensgefahr.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">VIII</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverendo patri atque erudito viro domno Bernardo Pez monacho Mellicensi frater Edmundus Martene humilis monachus Benedictinus salutem plurimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e56463">Epistolam accepi tuam, vir erudite, atque etiam octo<note place="foot" xml:id="d3e56465">	Korrigiert aus <hi rend="italic">t</hi>.</note> post dies <seg type="lemma" corresp="#d3e56532">syllabum anecdotorum</seg> tuorum amplissimum. Non possum non tibi multum iterum gratulari de tot a te repertis thesauris, ex quibus in immensum ditescet res litteraria. Ex his tamen edita est<seg type="lemma" corresp="#d3e56538"> Berengarii oratio</seg>, quae incipit Iuste iudex Jesu Christe, eamque reperies in tomo quarto Anecdotorum nostrorum.<seg type="lemma" corresp="#d3e56542"> Walterii epistola</seg><note place="foot" xml:id="d3e56471">	Korrigiert aus <hi rend="italic">epistolam</hi>.</note> ad Hugonem de S. Victore De anima Christi vide, ne sit<seg type="lemma" corresp="#d3e56546"> edita in notis Hugonis Mathoud</seg> ad Roberti Pulli libros Sententiarum. <seg type="lemma" corresp="#d3e56550">Hilperici praefatio in librum De computo</seg> extat inter Analecta Mabillonii. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e56477">Petri Abaelardi librum de <seg type="lemma" corresp="#d3e56554">Sic et non</seg> habemus <seg type="lemma" corresp="#d3e56560">in duobus antiquissimis manuscriptis</seg>, sed opus aeternis sepeliendum tenebris publica luce non iudicavimus dignum, neve illud typis mandaremus, hortati sunt viri eruditi subinde ac pii, utpote quod hominibus<note place="foot" xml:id="d3e56479">	Korrigiert, vielleicht aus <hi rend="italic">amicis</hi>.</note> inquietis materiam subsannandi religionis Christianae mysteria<note place="foot" xml:id="d3e56485">	Über der Zeile eingefügt.</note> subministrare posset. Neve illud edas, auctor tibi sum. Idem potest esse iudicium de altero libro eiusdem auctoris, cui titulus <seg type="lemma" corresp="#d3e56564">Scito te ipsum</seg>; quem tamen non vidi, sed in eum <seg type="lemma" corresp="#d3e56568">invectus est</seg> sanctus Bernardus. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e56488">Johannis abbatis liber tripartitus <seg type="lemma" corresp="#d3e56572">De professione monachorum</seg> non<note place="foot" xml:id="d3e56490">	Korrigiert aus <hi rend="italic">idem</hi>.</note> potest esse opus Guillelmi Peraldi, qui<note place="foot" xml:id="d3e56496">	Danach durchgestrichen <hi rend="italic">idem</hi>.</note> tribus libris tractavit eamdem materiam.<seg type="lemma" corresp="#d3e56578"> Liber miraculorum</seg> sancti Andreae apocryphus, vide, ne extet<seg type="lemma" corresp="#d3e56583"> apud Abdiam</seg> Babilonicum.<seg type="lemma" corresp="#d3e56587"> Conradi cuiusdam liber De virginitate</seg><seg type="lemma" corresp="#d3e56591"> editus est</seg>; an vero is sit idem cum Hirsaugiensi tuo, divinare non possum. <seg type="lemma" corresp="#d3e56595">Vita metrica sancti Christophori</seg> apud viros litterarios an alicui possit esse<note place="foot" xml:id="d3e56502">	<hi rend="italic">possit esse</hi> korrigiert aus <hi rend="italic">possint</hi>.</note> usui, valde dubito. <pb n="1v"/> Haec de tuis anecdotis, si quidem iubes, annotanda habui tibi<note place="foot" xml:id="d3e56513">	Über der Zeile eingefügt.</note> scribenda. Ceterum ut quam primum ea publici iuris facias, maxime deprecor. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e56516">De libris autem, quos tibi emendos mandasti, scias omnes fere penes me esse, at bibliopolae extra regnum transferri non sinunt, nisi prius sibi numerata pecunia. Anselmi tamen Opera ex reeditione Gerberonii an mittere tibi potero, non ausim promittere, nam exhausta omni iam edition[e vix]<note place="foot" xml:id="d3e56518">	Textverlust im Ausmaß von ca. 4–6 Buchstaben durch Loch.</note> reperiri possunt<note place="foot" xml:id="d3e56521">	Korrigiert aus <hi rend="italic">potest</hi>.</note>; dabo tamen operam, ut, si fieri possit, ea habeas. Ambrosii etiam editio omnis exhausta est nec iam invenitur nisi in maiori carta, quae 100 libris venit. Unum tamen exemplar pro 60 libris occurrit mihi compactum, alterum etiam in maiori carta emi in albo 70 libris. Sancti Athanasii Opera cum adiuncta sibi collectione patrum emere tibi non ausus fui propter immensum pretium 160 librarum, quod bibliopola requirit. Mittam tamen, si iusseris. Itaque mandata hac de re expectabo tua. Reliqua vero, quae postulasti, penes me habeo tibi mittenda, statim atque pecuniam accepero. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e56527">Iter nostrum retardavit, nescio, an omnino impediat, quorumdam fratrum nostrorum morbus. De vita maxime periclitatur noster Dionysius de Sainte Marthe prior S. Dionysii in Francia. Vale et me amare perge.</seg></p>
-            <p xml:space="preserve">Lutetiae Parisiorum 21. Aprilis 1718.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e56532">
-               <ref type="context">1</ref>
-               <label>syllabum anecdotorum</label><p> Die Beilage ist erhalten: BN, Ms. lat. 17194, 268r–271v. Sie trägt den Titel „Syllabus opusculorum Novo spicilegio contentorum“ und ist am Ende unterzeichnet mit „Pater Bernardus Pez Mellicensis“.</p></note>
-            <note xml:id="d3e56538">
-               <ref type="context">1</ref>
-               <label> Berengarii oratio</label><p>BN, Ms. lat. 17194, 268v: „Magistri Berengarii
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>syllabum anecdotorum</mentioned>
+            <p> Die Beilage ist erhalten: BN, Ms. lat. 17194, 268r–271v. Sie trägt den Titel „Syllabus opusculorum Novo spicilegio contentorum“ und ist am Ende unterzeichnet mit „Pater Bernardus Pez Mellicensis“.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> Berengarii oratio</mentioned>
+            <p>BN, Ms. lat. 17194, 268v: „Magistri Berengarii
                   oratio, quam composuit in angustia sua: Iuste iudex Jesu Christe“. Zu diesem
                   Gedicht, dessen nur in einem Teil der handschriftlichen Überlieferung auftretende
-                  Zuschreibung an Berengar von Tours als fragwürdig zu gelten hat, vgl. <rs
-                     type="bibl" key="bibl:15622">Chevalier, Repertorium</rs> 1 599 Nr. 9910; <rs
-                     type="bibl" key="bibl:15968">Dreves–Blume, Hymnendichtung</rs> 1 175f.; <rs
-                     type="bibl" key="bibl:16484">Gibson, Letters</rs> 9; <rs type="bibl"
-                     key="bibl:17238">Huygens, Bérenger, Lanfranc et Bernold</rs> 400; <rs
-                     type="bibl" key="bibl:18424">Mone, Hymnen</rs> 1 359–361; <rs type="bibl"
-                     key="bibl:19000">Radding–Newton, Theology</rs> 115; <rs type="bibl"
-                     key="bibl:19288">Schaller–Könsgen–Tagliabue, Initia carminum</rs> 383 Nr. 8579;
-                     <rs type="bibl" key="bibl:19480">Schnitzer, Berengar von Tours</rs> 102f.; <rs
-                     type="bibl" key="bibl:19856">Sudendorf, Berengarius</rs> 56f.; <rs type="bibl"
-                     key="bibl:20222">Walther, Initia</rs> 506 Nr. 9997. Die Vorlage, aus der es BP
+                  Zuschreibung an Berengar von Tours als fragwürdig zu gelten hat, vgl. <rs type="bibl" ref="bibl:15622">Chevalier, Repertorium</rs> 1 599 Nr. 9910; <rs type="bibl" ref="bibl:15968">Dreves–Blume, Hymnendichtung</rs> 1 175f.; <rs type="bibl" ref="bibl:16484">Gibson, Letters</rs> 9; <rs type="bibl" ref="bibl:17238">Huygens, Bérenger, Lanfranc et Bernold</rs> 400; <rs type="bibl" ref="bibl:18424">Mone, Hymnen</rs> 1 359–361; <rs type="bibl" ref="bibl:19000">Radding–Newton, Theology</rs> 115; <rs type="bibl" ref="bibl:19288">Schaller–Könsgen–Tagliabue, Initia carminum</rs> 383 Nr. 8579;
+                     <rs type="bibl" ref="bibl:19480">Schnitzer, Berengar von Tours</rs> 102f.; <rs type="bibl" ref="bibl:19856">Sudendorf, Berengarius</rs> 56f.; <rs type="bibl" ref="bibl:20222">Walther, Initia</rs> 506 Nr. 9997. Die Vorlage, aus der es BP
                   bekannt war, konnte nicht sicher bestimmt werden. In Frage kämen eventuell zwei
                   Handschriften von St. Peter zu Salzburg: StiB St. Peter, Cod. A V 31, 111r, und
-                  Cod. A IV 39, 302r; vgl. <rs type="bibl" key="bibl:16888">Hayer et al.,
+                  Cod. A IV 39, 302r; vgl. <rs type="bibl" ref="bibl:16888">Hayer et al.,
                      Handschriften</rs> 68f., 72. Keine von beiden bietet jedoch die Zuschreibung an
                   Berengar von Tours; für diese Information sei Sonja Führer (Salzburg) gedankt. Der
                   von EM angeführte Druck findet sich bei Martène–Durand, Thesaurus anecdotorum 4
-                  col. 115f.</p></note>
-            <note xml:id="d3e56542">
-               <ref type="context">1</ref>
-               <label> Walterii epistola</label><p>BN, Ms. lat. 17194, 268v: „Waltherii seu Galterii
+                  col. 115f.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned> Walterii epistola</mentioned>
+            <p>BN, Ms. lat. 17194, 268v: „Waltherii seu Galterii
                   episcopi Laudunensis libellus De incarnatione Verbi, et maxime, quomodo id
                   accipiendum sit: Assumptus homo est Deus. [...] Eiusdem epistola ad Hugonem de S.
                   Victore De scientia animae Christi“. Als Vorlage BPs für beide Texte lässt sich
                   eine Handschrift von St. Peter bestimmen: StiB St. Peter, Cod. A XI 2, 283–285.
                   Die von HP daraus angefertigte vollständige Transkription der Briefe ist erhalten
-                  in StiB Melk, Cod. 1850, 288r–290v. Zum Brief an Hugo vgl. <rs type="bibl"
-                     key="bibl:18678">Ott, Untersuchungen</rs> 340–347. – Die einzige publizierte
+                  in StiB Melk, Cod. 1850, 288r–290v. Zum Brief an Hugo vgl. <rs type="bibl" ref="bibl:18678">Ott, Untersuchungen</rs> 340–347. – Die einzige publizierte
                   Angabe zu der genannten Salzburger Überlieferung ist fehlerhaft, indem dort unter
-                  Zitierung einer Foliierung „283v–285v“ nur der Brief an Hugo angeführt ist: <rs
-                     type="bibl" key="bibl:15202">Bernards, Überlieferung</rs> 334. Der Codex ist
+                  Zitierung einer Foliierung „283v–285v“ nur der Brief an Hugo angeführt ist: <rs type="bibl" ref="bibl:15202">Bernards, Überlieferung</rs> 334. Der Codex ist
                   jedoch nicht foliiert, sondern paginiert; der Brief an Hugo findet sich in StiB
                   St. Peter, Cod. A XI 2, 283–284, der Brief zu „Assumptus homo est Deus“ ebd.
                   284–285. Für die Erhebung und Mitteilung dieser Angaben sei Sonja Führer
                   (Salzburg) gedankt. – Für weitere Codices von BP benutzter Bibliotheken, in denen
                   dieselben zwei Texte zusammen überliefert sind, fehlt ein Nachweis für eine
                   Einsichtnahme. Dabei handelt es sich um die vormals Benediktbeurer Handschrift
-                  BStB München, clm 4600, sowie um StiB Klosterneuburg, Cod. 312; vgl. <rs
-                     type="bibl" key="bibl:16532">Glauche, Catalogus 3/1</rs> 168; <rs type="bibl"
-                     key="bibl:18678">Ott, Untersuchungen</rs> 163, 341; <rs type="bibl"
-                     key="bibl:18816">Pfeiffer–Černík, Catalogus</rs> 2 74f.</p></note>
-            <note xml:id="d3e56546">
-               <ref type="context">1</ref>
-               <label> edita ... Mathoud</label><p>Der Text ist tatsächlich an der von EM genannten
-                  Stelle publiziert: Roberti Pulli Sententiarum libri 332–334. Zu Mathoud vgl. <ref
-                     type="letter">749 </ref>&lt;5&gt;. Auf den Hinweis EMs unterließ BP eine
-                  Edition, wies jedoch auf die Salzburger Überlieferung hin: <rs type="bibl"
-                     key="bibl:36782">Pez, Thesaurus</rs> 1 lxxi. Zur gleichfalls letztlich nicht
-                  ausgeführten Edition des anderen Briefes vgl. <ref type="letter">1020</ref>
-                  &lt;3&gt;. </p></note>
-            <note xml:id="d3e56550">
-               <ref type="context">1</ref>
-               <label>Hilperici ... De computo</label><p> BN, Ms. lat. 17194, 268v: „Helperici
+                  BStB München, clm 4600, sowie um StiB Klosterneuburg, Cod. 312; vgl. <rs type="bibl" ref="bibl:16532">Glauche, Catalogus 3/1</rs> 168; <rs type="bibl" ref="bibl:18678">Ott, Untersuchungen</rs> 163, 341; <rs type="bibl" ref="bibl:18816">Pfeiffer–Černík, Catalogus</rs> 2 74f.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
+            <mentioned> edita ... Mathoud</mentioned>
+            <p>Der Text ist tatsächlich an der von EM genannten
+                  Stelle publiziert: Roberti Pulli Sententiarum libri 332–334. Zu Mathoud vgl. <ref type="letter" target="letter:749">749 </ref><ref target="letter:749 #seg5">5</ref>. Auf den Hinweis EMs unterließ BP eine
+                  Edition, wies jedoch auf die Salzburger Überlieferung hin: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 1 lxxi. Zur gleichfalls letztlich nicht
+                  ausgeführten Edition des anderen Briefes vgl. <ref type="letter" target="letter:1020">1020</ref>
+                  <ref target="letter:1020#seg3">3</ref>. </p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg1">
+            <mentioned>Hilperici ... De computo</mentioned>
+            <p> BN, Ms. lat. 17194, 268v: „Helperici
                   monachi S.-Gallensis liber De computo ecclesiastico“. Als Vorlage für diesen Text
                   diente BP eine Handschrift aus Zwettl: heute StiB Zwettl, Cod. 255, 21r–32v; vgl.
-                     <rs type="bibl" key="bibl:20538">Ziegler–Rössl, Katalog</rs> 3 137f. Er
-                  lieferte auf ihrer Grundlage die bis heute maßgebliche Edition: <rs type="bibl"
-                     key="bibl:36782">Pez, Thesaurus</rs> 2/2 col. 181–222. Der von EM genannte
+                     <rs type="bibl" ref="bibl:20538">Ziegler–Rössl, Katalog</rs> 3 137f. Er
+                  lieferte auf ihrer Grundlage die bis heute maßgebliche Edition: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 2/2 col. 181–222. Der von EM genannte
                   Druck der Vorrede steht bei Mabillon, Vetera analecta 1 113–120. Auf ihn wies BP
-                  in seiner Vorbemerkung hin: <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs> 2
+                  in seiner Vorbemerkung hin: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 2
                   xxv. Zur irrigen Annahme, es habe sich bei dem Verfasser Helperich um einen
-                  Benediktiner von St. Gallen gehandelt, vgl. <ref type="letter">224</ref>
-                  &lt;6&gt;.</p></note>
-            <note xml:id="d3e56554">
-               <ref type="context">2</ref>
-               <label>Sic et non</label><p>BN, Ms. lat. 17194, 269r: „Petri Abailardi liber Scito te
+                  Benediktiner von St. Gallen gehandelt, vgl. <ref type="letter" target="letter:224">224</ref>
+                  <ref target="letter:224#seg6">6</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
+            <mentioned>Sic et non</mentioned>
+            <p>BN, Ms. lat. 17194, 269r: „Petri Abailardi liber Scito te
                   ipsum. [...] Eiusdem aliud amplissimum opus extat in monasterio Tegernseensi de
                   Sic et non“. Die vormals Tegernseer Überlieferung des „Sic et non“ ist zu
-                  identifizieren mit BStB München, clm 18926, 14v–105v; vgl. <rs type="bibl"
-                     key="bibl:15374">Boyer–McKeon, Introduction</rs> 5, 51–68. Zu einer Edition
+                  identifizieren mit BStB München, clm 18926, 14v–105v; vgl. <rs type="bibl" ref="bibl:15374">Boyer–McKeon, Introduction</rs> 5, 51–68. Zu einer Edition
                   durch BP kam es nicht; ob dafür die Warnung EMs ausschlaggebend war, ist nicht mit
                   Sicherheit zu sagen, dies scheint jedoch im Hinblick auf die Vorgehensweise BPs in
-                  Bezug auf das „Scito te ipsum“ nicht überaus wahrscheinlich zu sein. </p></note>
-            <note xml:id="d3e56560">
-               <ref type="context">2</ref>
-               <label>in duobus ... manuscriptis</label><p>Es lassen sich zwei Überlieferungen aus
+                  Bezug auf das „Scito te ipsum“ nicht überaus wahrscheinlich zu sein. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg2">
+            <mentioned>in duobus ... manuscriptis</mentioned>
+            <p>Es lassen sich zwei Überlieferungen aus
                   dem Besitz ehemaliger Maurinerklöster nachweisen. Die eine stammt aus Marmoutier:
                   heute Tours, Bibliothèque municipale, Ms. 85. Die andere gehörte früher der
                   Bibliothek der Abtei Mont-St.-Michel: heute Avranches, Bibliothèque municipale,
-                  Ms. 12; vgl. <rs type="bibl" key="bibl:15374">Boyer–McKeon, Introduction</rs> 5f.,
+                  Ms. 12; vgl. <rs type="bibl" ref="bibl:15374">Boyer–McKeon, Introduction</rs> 5f.,
                   14–21, 72–77. Zu einer Edition durch die Mauriner kam es, der von EM geäußerten
                   Haltung entsprechend, nicht; zu ihrer Auseinandersetzung mit Petrus Abaelard in
-                  ihren regionalhistorischen und literaturgeschichtlichen Werken vgl. <rs
-                     type="bibl" key="bibl:17950">Lemoine, Philosophe</rs> 577f. Durch EM selbst
+                  ihren regionalhistorischen und literaturgeschichtlichen Werken vgl. <rs type="bibl" ref="bibl:17950">Lemoine, Philosophe</rs> 577f. Durch EM selbst
                   wurden zwei theologische Schriften Abaelards publiziert: Martène–Durand, Thesaurus
                   anecdotorum 5 col. 1139–1416. Die Vorbemerkungen boten dabei eine sehr negative
-                  Einschätzung der Positionen und der Person Abaelards. </p></note>
-            <note xml:id="d3e56564">
-               <ref type="context">2</ref>
-               <label>Scito te ipsum</label><p>Diese Schrift Abaelards kannte BP aus einem Codex des
-                  Klosters St. Emmeram zu Regensburg: BStB München, clm 14160, 39r–67r; vgl. <rs
-                     type="bibl" key="bibl:15042">Barrow–Burnett–Luscombe, Checklist</rs> 205; <rs
-                     type="bibl" key="bibl:17828">Laschinger, Scholastik</rs> 102f., 108; <rs
-                     type="bibl" key="bibl:18546">Neske, Catalogus 4/2/2</rs> 77f. Ein Notat über
+                  Einschätzung der Positionen und der Person Abaelards. </p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg2">
+            <mentioned>Scito te ipsum</mentioned>
+            <p>Diese Schrift Abaelards kannte BP aus einem Codex des
+                  Klosters St. Emmeram zu Regensburg: BStB München, clm 14160, 39r–67r; vgl. <rs type="bibl" ref="bibl:15042">Barrow–Burnett–Luscombe, Checklist</rs> 205; <rs type="bibl" ref="bibl:17828">Laschinger, Scholastik</rs> 102f., 108; <rs type="bibl" ref="bibl:18546">Neske, Catalogus 4/2/2</rs> 77f. Ein Notat über
                   diesen Fund ist überliefert in StiB Melk, Cod. 1850, 342r–v. BP veröffentlichte
                   den Text in der Folge nach dieser Vorlage, welche in Melk von Benedikt Bonneth
-                  bearbeitet wurde: <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs> 3/2 col.
+                  bearbeitet wurde: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 3/2 col.
                   625–688. In seiner Vorrede ging er auf mögliche Kritik an der Entscheidung zur
                   Publikation ein und argumentierte, diese ermögliche ein fundiertes Urteil über die
                   von Bernhard von Clairvaux und anderen erhobenen Vorwürfe. Die einschlägigen
                   Veröffentlichungen EMs und Jean Mabillons wurden dabei zitiert und kommentiert,
                   wobei BP aber zu einem milderen Urteil über Abaelard und insbesondere zu dem
                   Schluss gelangte, dieser sei kein Häretiker gewesen, weil er nicht verstockt auf
-                  seinen Fehlern beharrte: <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs> 3
-                  xix–xxii. </p></note>
-            <note xml:id="d3e56568">
-               <ref type="context">2</ref>
-               <label>invectus est</label><p>Bernhard von Clairvaux, Epistola 188.</p></note>
-            <note xml:id="d3e56572">
-               <ref type="context">3</ref>
-               <label>De professione monachorum</label><p>BN, Ms. lat. 17194, 270v: „Johannis
+                  seinen Fehlern beharrte: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 3
+                  xix–xxii. </p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg2">
+            <mentioned>invectus est</mentioned>
+            <p>Bernhard von Clairvaux, Epistola 188.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg3">
+            <mentioned>De professione monachorum</mentioned>
+            <p>BN, Ms. lat. 17194, 270v: „Johannis
                   abbatis liber tripartitus De professione monachorum“. Anhand des dort angeführten
                   Incipit handelt es sich zweifelsfrei um die „Expositio professionis monachorum“
                   von Guillaume Peyraut; die anfängliche Vermutung EMs, die er durch die Korrektur
                   zurücknahm, war somit richtig. BP kannte den Text aus insgesamt fünf Codices,
                   deren vier in Melk, einer in Benediktbeuern verwahrt wurde: heute StiB Melk, Cod.
-                  639, 1267, 1386 und 1717 sowie BStB München, clm 4637; vgl. <rs type="bibl"
-                     key="bibl:15928">Dondaine, Guillaume Peyraut</rs> 210–215; <rs type="bibl"
-                     key="bibl:16526">Glassner–Haidinger, Inventar Melk 1</rs>/1 459f.; <rs
-                     type="bibl" key="bibl:16532">Glauche, Catalogus 3/1</rs> 263; <rs type="bibl"
-                     key="bibl:17392">Kaeppeli, Scriptores</rs> 2 147–149. Der Traktat wurde auf der
-                  Basis der Melker Handschriften gedruckt: <rs type="bibl" key="bibl:36782">Pez,
+                  639, 1267, 1386 und 1717 sowie BStB München, clm 4637; vgl. <rs type="bibl" ref="bibl:15928">Dondaine, Guillaume Peyraut</rs> 210–215; <rs type="bibl" ref="bibl:16526">Glassner–Haidinger, Inventar Melk 1</rs>/1 459f.; <rs type="bibl" ref="bibl:16532">Glauche, Catalogus 3/1</rs> 263; <rs type="bibl" ref="bibl:17392">Kaeppeli, Scriptores</rs> 2 147–149. Der Traktat wurde auf der
+                  Basis der Melker Handschriften gedruckt: <rs type="bibl" ref="bibl:36782">Pez,
                      Thesaurus</rs> 1/2 col. 565–650. Dabei hielt sich BP an die Verfasserangabe
                   „Johannes abbas“, welche diese Codices – in Abhängigkeit voneinander – bieten, und
                   schlug zudem vor, diesen „Johannes“ mit Johannes Gersen, dem vermeintlichen
                   Verfasser von „De imitatione Christi“, zu identifizieren. Davon abweichende
                   Zuschreibungen wurden zur Sprache gebracht, aber ohne Bezug auf den Hinweis EMs:
-                     <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs> 1 lxxx f. Zur Kontroverse
-                  um die Autorschaft von „De imitatione Christi“ vgl. <ref type="letter">675</ref>
-                  &lt;2&gt;, <ref type="letter">691</ref> &lt;3&gt;.</p></note>
-            <note xml:id="d3e56578">
-               <ref type="context">3</ref>
-               <label> Liber miraculorum</label><p>BN, Ms. lat. 17194, 271r: „Liber antiquissimus de
+                     <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 1 lxxx f. Zur Kontroverse
+                  um die Autorschaft von „De imitatione Christi“ vgl. <ref type="letter" target="letter:675">675</ref>
+                  <ref target="letter:675#seg2">2</ref>, <ref type="letter" target="letter:691">691</ref> <ref target="letter:691#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg3">
+            <mentioned> Liber miraculorum</mentioned>
+            <p>BN, Ms. lat. 17194, 271r: „Liber antiquissimus de
                   miraculis sancti Andreae apostoli. [...] Hoc opus apocryphum solum ideo edendum
                   videtur, ut, quam annosae quaedam fabellae sint, cognoscamus. Extat enim in codice
                   saeculi circiter IX. aut X. exaratum in bibliotheca S. Emmerammi Ratisbonensis“.
                   Diese Regensburger Handschrift ist zu identifizieren mit BStB München, clm 14775;
-                  vgl. <rs type="bibl" key="bibl:16766">Halm et al., Catalogus 2/2</rs> 231. Der
-                  Text gilt heute als eine Arbeit des Gregor von Tours: vgl. <rs type="bibl"
-                     key="bibl:15766">De Backer et al., Bibliotheca hagiographica Latina</rs> 1
-                  71f.; <rs type="bibl" key="bibl:18932">Prieur, Acta Andreae</rs> 1 8–12; Zelzer,
+                  vgl. <rs type="bibl" ref="bibl:16766">Halm et al., Catalogus 2/2</rs> 231. Der
+                  Text gilt heute als eine Arbeit des Gregor von Tours: vgl. <rs type="bibl" ref="bibl:15766">De Backer et al., Bibliotheca hagiographica Latina</rs> 1
+                  71f.; <rs type="bibl" ref="bibl:18932">Prieur, Acta Andreae</rs> 1 8–12; Zelzer,
                   Frage des Autors. Seine weitere Bearbeitung durch BP unterblieb
-               anscheinend.</p></note>
-            <note xml:id="d3e56583">
-               <ref type="context">3</ref>
-               <label> apud Abdiam</label><p>Unter dem Namen des angeblichen Apostelschülers Abdias
+               anscheinend.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg3">
+            <mentioned> apud Abdiam</mentioned>
+            <p>Unter dem Namen des angeblichen Apostelschülers Abdias
                   von Babylon war eine Sammlung apokrypher Erzählungen über die Leben der Apostel in
                   Umlauf, die zuerst 1551 durch Wolfgang Lazius unter dem Titel „Historia certaminis
                   apostolici“ gedruckt worden war und seit damals etliche weitere Ausgabe erfahren
-                  hatte. Der Wunderbericht zu Andreas ist in der Sammlung meist enthalten: vgl. <rs
-                     type="bibl" key="bibl:18050">Lipsius, Apostelgeschichten</rs> 1
-               117–137.</p></note>
-            <note xml:id="d3e56587">
-               <ref type="context">3</ref>
-               <label> Conradi ... De virginitate</label><p> BN, Ms. lat. 17194, 271r: „Conradi
+                  hatte. Der Wunderbericht zu Andreas ist in der Sammlung meist enthalten: vgl. <rs type="bibl" ref="bibl:18050">Lipsius, Apostelgeschichten</rs> 1
+               117–137.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg3">
+            <mentioned> Conradi ... De virginitate</mentioned>
+            <p> BN, Ms. lat. 17194, 271r: „Conradi
                   Hirsaugiensis monachi saeculi XII. praefatio in libros suos undecim De officiis
                   virginum Christi“. Weiterführende Angaben fehlen, doch ist die Nennung aller
                   Wahrscheinlichkeit nach zu identifizieren mit der Schrift „Speculum virginum“, die
-                  BP in einem Zwettler Codex bekannt war: heute StiB Zwettl, Cod. 180; vgl. <rs
-                     type="bibl" key="bibl:19570">Seyfarth, Einleitung</rs> 75* f.; <rs type="bibl"
-                     key="bibl:20538">Ziegler–Rössl, Katalog</rs> 2 224f. Eine Abschrift mit
+                  BP in einem Zwettler Codex bekannt war: heute StiB Zwettl, Cod. 180; vgl. <rs type="bibl" ref="bibl:19570">Seyfarth, Einleitung</rs> 75* f.; <rs type="bibl" ref="bibl:20538">Ziegler–Rössl, Katalog</rs> 2 224f. Eine Abschrift mit
                   Korrekturen von Leopold Wydemann ist in Melk erhalten: StiB Melk, Cod. 395,
-                  223–517; vgl. <rs type="bibl" key="bibl:16512">Glassner, Handschriften</rs> 82.
+                  223–517; vgl. <rs type="bibl" ref="bibl:16512">Glassner, Handschriften</rs> 82.
                   Zur Drucklegung kam es nicht. Die auf Trithemius zurückgehende Zuschreibung an
-                  einen Mönch Konrad von Hirsau ist bis heute umstritten: vgl. <rs type="bibl"
-                     key="bibl:15486">Bultot, Konrad von Hirsau</rs> col. 205; <rs type="bibl"
-                     key="bibl:17776">Küsters–Seyfarth, Speculum virginum</rs> col. 68f.; <rs
-                     type="bibl" key="bibl:19570">Seyfarth, Einleitung</rs> 37*–42*. Die Handschrift
+                  einen Mönch Konrad von Hirsau ist bis heute umstritten: vgl. <rs type="bibl" ref="bibl:15486">Bultot, Konrad von Hirsau</rs> col. 205; <rs type="bibl" ref="bibl:17776">Küsters–Seyfarth, Speculum virginum</rs> col. 68f.; <rs type="bibl" ref="bibl:19570">Seyfarth, Einleitung</rs> 37*–42*. Die Handschrift
                   aus Zwettl gehört zu jenen, die eine Initiale „C“ als Absenderangabe des
-                  Einleitungsbriefes tradieren: <rs type="bibl" key="bibl:19570">Seyfarth,
-                     Einleitung</rs> 40*; <rs type="bibl" key="bibl:20538">Ziegler–Rössl,
+                  Einleitungsbriefes tradieren: <rs type="bibl" ref="bibl:19570">Seyfarth,
+                     Einleitung</rs> 40*; <rs type="bibl" ref="bibl:20538">Ziegler–Rössl,
                      Katalog</rs> 2 225. Dies würde zu den Angaben BPs passen; unklar bleibt
                   hingegen die Grundlage für die Abweichung von dem weithin eingeführten Titel und
-                  für die Behauptung von elf statt richtig zwölf Büchern.</p></note>
-            <note xml:id="d3e56591">
-               <ref type="context">3</ref>
-               <label> editus est</label><p>Eine solche Edition konnte nicht bestimmt werden. Ein
+                  für die Behauptung von elf statt richtig zwölf Büchern.</p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg3">
+            <mentioned> editus est</mentioned>
+            <p>Eine solche Edition konnte nicht bestimmt werden. Ein
                   Werk „De virginitate“ wurde in der frühneuzeitlichen bibliographischen Literatur
-                  vielfach unter den Schriften Konrads von Halberstadt genannt: vgl. <rs type="bibl"
-                     key="bibl:19014">Rauner, Tripartitus</rs> 25f. Es existiert auch zumindest eine
+                  vielfach unter den Schriften Konrads von Halberstadt genannt: vgl. <rs type="bibl" ref="bibl:19014">Rauner, Tripartitus</rs> 25f. Es existiert auch zumindest eine
                   handschriftliche Überlieferung eines solchen Textes, der Konrad dem Jüngeren von
-                  Halberstadt zugeschrieben wird: <rs type="bibl" key="bibl:17392">Kaeppeli,
+                  Halberstadt zugeschrieben wird: <rs type="bibl" ref="bibl:17392">Kaeppeli,
                      Scriptores</rs> 1 282. Eine Druckausgabe davon ist jedoch nicht bekannt.
                   Möglicherweise ist die im Vergleich zu seinen anderen Nennungen von Drucken
                   auffallend ungenaue Angabe EMs aus dem Gedächtnis erfolgt und unrichtig.
-               </p></note>
-            <note xml:id="d3e56595">
-               <ref type="context">3</ref>
-               <label>Vita ... Christophori</label><p>BN, Ms. lat. 17194, 270r: „Waltheri
+               </p>
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg3">
+            <mentioned>Vita ... Christophori</mentioned>
+            <p>BN, Ms. lat. 17194, 270r: „Waltheri
                   scholastici Vita sancti Christophori prosaice et metrice scripta“. Gemeint ist
                   sicher die „Vita Christophori“ des Walter von Speyer, welche BP in St. Emmeram zu
                   Regensburg gesehen hatte: StiB Melk, Cod. 1850, 350r. Die fragliche Handschrift
-                  ist heute BStB München, clm 14798; vgl. <rs type="bibl" key="bibl:19816">Strecker,
+                  ist heute BStB München, clm 14798; vgl. <rs type="bibl" ref="bibl:19816">Strecker,
                      Handschrift</rs>. BP publizierte die Vita, wobei er die Druckvorlage selbst
-                  anfertigte: <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs> 2/3 col.
-                  27–122.</p></note>
-         </div>
-      </back>
+                  anfertigte: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 2/3 col.
+                  27–122.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>VIII</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:16236">
+            <title type="short">Fiska, Geschichtsforschung</title>
+            <biblScope>230</biblScope>
+         </bibl>
+         <bibl corresp="bibl:16792">
+            <title type="short">Hammermayer, Forschungszentren</title>
+            <biblScope>169</biblScope>
+         </bibl>
+         <bibl corresp="bibl:17432">
+            <title type="short">Katschthaler, Briefnachlass</title>
+            <biblScope>37</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18236">
+            <title type="short">Mayer, Nachlaß</title>
+            <biblScope>18 630</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverendo patri atque erudito viro domno Bernardo Pez monacho Mellicensi frater Edmundus Martene humilis monachus Benedictinus salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Epistolam accepi tuam, vir erudite, atque etiam <choice><sic>t</sic><corr>octo</corr></choice> post dies <anchor xml:id="n1"/>syllabum anecdotorum<anchor xml:id="n1e"/> tuorum amplissimum. Non possum non tibi multum iterum gratulari de tot a te repertis thesauris, ex quibus in immensum ditescet res litteraria. Ex his tamen edita est<anchor xml:id="n2"/> Berengarii oratio<anchor xml:id="n2e"/>, quae incipit Iuste iudex Jesu Christe, eamque reperies in tomo quarto Anecdotorum nostrorum.<anchor xml:id="n3"/> Walterii <choice><sic>epistolam</sic><corr>epistola</corr></choice><anchor xml:id="n3e"/> ad Hugonem de S. Victore De anima Christi vide, ne sit<anchor xml:id="n4"/> edita in notis Hugonis Mathoud<anchor xml:id="n4e"/> ad Roberti Pulli libros Sententiarum. <anchor xml:id="n5"/>Hilperici praefatio in librum De computo<anchor xml:id="n5e"/> extat inter Analecta Mabillonii. </ab>
+         <ab resp="#editor" xml:id="seg2">Petri Abaelardi librum de <anchor xml:id="n6"/>Sic et non<anchor xml:id="n6e"/> habemus <anchor xml:id="n7"/>in duobus antiquissimis manuscriptis<anchor xml:id="n7e"/>, sed opus aeternis sepeliendum tenebris publica luce non iudicavimus dignum, neve illud typis mandaremus, hortati sunt viri eruditi subinde ac pii, utpote quod hominibus<note place="foot" xml:id="d3e56479">Korrigiert, vielleicht aus <hi rend="italic">amicis</hi>.</note> inquietis materiam subsannandi religionis Christianae <add place="above">mysteria</add> subministrare posset. Neve illud edas, auctor tibi sum. Idem potest esse iudicium de altero libro eiusdem auctoris, cui titulus <anchor xml:id="n8"/>Scito te ipsum<anchor xml:id="n8e"/>; quem tamen non vidi, sed in eum <anchor xml:id="n9"/>invectus est<anchor xml:id="n9e"/> sanctus Bernardus. </ab>
+         <ab resp="#editor" xml:id="seg3">Johannis abbatis liber tripartitus <anchor xml:id="n10"/>De professione monachorum<anchor xml:id="n10e"/> <choice><sic>idem</sic><corr>non</corr></choice> potest esse opus Guillelmi Peraldi, qui<del ana="#after">idem</del> tribus libris tractavit eamdem materiam.<anchor xml:id="n11"/> Liber miraculorum<anchor xml:id="n11e"/> sancti Andreae apocryphus, vide, ne extet<anchor xml:id="n12"/> apud Abdiam<anchor xml:id="n12e"/> Babilonicum.<anchor xml:id="n13"/> Conradi cuiusdam liber De virginitate<anchor xml:id="n13e"/><anchor xml:id="n14"/> editus est<anchor xml:id="n14e"/>; an vero is sit idem cum Hirsaugiensi tuo, divinare non possum. <anchor xml:id="n15"/>Vita metrica sancti Christophori<anchor xml:id="n15e"/> apud viros litterarios an alicui <choice><sic>possint</sic><corr>possit esse</corr></choice> usui, valde dubito. <pb n="1v"/> Haec de tuis anecdotis, si quidem iubes, annotanda habui <add place="above">tibi</add> scribenda. Ceterum ut quam primum ea publici iuris facias, maxime deprecor. </ab>
+         <ab resp="#editor" xml:id="seg4">De libris autem, quos tibi emendos mandasti, scias omnes fere penes me esse, at bibliopolae extra regnum transferri non sinunt, nisi prius sibi numerata pecunia. Anselmi tamen Opera ex reeditione Gerberonii an mittere tibi potero, non ausim promittere, nam exhausta omni iam edition[e vix]<note type="annotation" xml:id="d3e56518">Textverlust im Ausmaß von ca. 4–6 Buchstaben durch Loch.</note> reperiri <choice><sic>potest</sic><corr>possunt</corr></choice>; dabo tamen operam, ut, si fieri possit, ea habeas. Ambrosii etiam editio omnis exhausta est nec iam invenitur nisi in maiori carta, quae 100 libris venit. Unum tamen exemplar pro 60 libris occurrit mihi compactum, alterum etiam in maiori carta emi in albo 70 libris. Sancti Athanasii Opera cum adiuncta sibi collectione patrum emere tibi non ausus fui propter immensum pretium 160 librarum, quod bibliopola requirit. Mittam tamen, si iusseris. Itaque mandata hac de re expectabo tua. Reliqua vero, quae postulasti, penes me habeo tibi mittenda, statim atque pecuniam accepero. </ab>
+         <ab resp="#editor" xml:id="seg5">Iter nostrum retardavit, nescio, an omnino impediat, quorumdam fratrum nostrorum morbus. De vita maxime periclitatur noster Dionysius de Sainte Marthe prior S. Dionysii in Francia. Vale et me amare perge.</ab>
+         <closer>Lutetiae Parisiorum 21. Aprilis 1718.</closer>
+      </body>
    </text>
 </TEI>

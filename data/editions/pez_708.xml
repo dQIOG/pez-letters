@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="708" xml:id="pez-0708">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">708 Bernhard Pez an Augustin Calmet. 1716-12-13. Melk.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Bernhard Pez an Augustin Calmet. 1716-12-13. Melk.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">708</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -21,22 +33,26 @@
             <relatedItem type="otherEdition">
                <bibl>Calmet, Bibliothèque lorraine xxii f.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:15152">Benz, Zwischen Tradition und Kritik</rs>
-                     563</bibl>
-                  <bibl><rs type="bibl" key="bibl:15194">Berlière, Quelques correspondants</rs>
-                     221f</bibl>
-                  <bibl><rs type="bibl" key="bibl:16478">Gérard, Dom Augustin Calmet</rs> 154, 358,
-                     708</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Auf 1r am oberen Blattrand von einer französischen Hand des 18. Jh. die Notiz: <orig>13. Decembre 1716. Lettre du reverend pere Bernard Pez a dom Augustin Calmet touchant la Biblioteque Benedictine universelle</orig>. Im Zwischenraum von Anrede und Text ist eine Nummerierung <orig>VI</orig> angebracht. – Die Überschrift stimmt mit jener in der Edition überein. Der Satz „Solatii non nihil [...] non possint“ in &lt;3&gt; ist im Original durchgestrichen und fehlt in der Edition.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <p>Nancy, Bibliothèque diocésaine, Ms. MB 66, Nr. 64.</p>
+            <listWit>
+               <witness>Nancy, Bibliothèque diocésaine, Ms. MB 66, Nr. 64.   </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -51,132 +67,108 @@
                <persName>Augustin Calmet</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">683</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">743</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">285</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">534</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">537</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">538</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">542</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">543</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">544</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">545</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">548</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">550</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">551</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">556</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">683</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">743</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">762</idno>
-               </ref>
+               <ptr type="prev" target="letter:683"/>
+               <ptr type="next" target="letter:743"/>
+               <ptr type="mentions" target="letter:285"/>
+               <ptr type="mentions" target="letter:534"/>
+               <ptr type="mentions" target="letter:537"/>
+               <ptr type="mentions" target="letter:538"/>
+               <ptr type="mentions" target="letter:542"/>
+               <ptr type="mentions" target="letter:543"/>
+               <ptr type="mentions" target="letter:544"/>
+               <ptr type="mentions" target="letter:545"/>
+               <ptr type="mentions" target="letter:548"/>
+               <ptr type="mentions" target="letter:550"/>
+               <ptr type="mentions" target="letter:551"/>
+               <ptr type="mentions" target="letter:556"/>
+               <ptr type="mentions" target="letter:683"/>
+               <ptr type="mentionedIn" target="letter:743"/>
+               <ptr type="mentionedIn" target="letter:762"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">BP</rs> dankt für <rs type="person" role="sender">ACs</rs> Schreiben <ref type="letter" target="letter:683">683</ref> und den zugleich übermittelten Schriftstellerkatalog der Kongregation von St.-Vanne (von Pierre Munier). Er hegt schon seit langem den Wunsch, mit <rs type="person" role="sender">AC</rs> in Briefkontakt zu treten, wurde jedoch bisher von der Furcht abgehalten, ihn von seiner Arbeit am „Commentaire litteral“ abzulenken. Nun aber ermutigt ihn die Freundlichkeit (humanitas) ACs, künftig in jener Weise von dessen Freundschaft zu profitieren, die dessen Wohlwollen gegenüber der benediktinischen Sache zulässt. <rs type="person" role="sender">BP</rs> dankt herzlich; er will die ihm mitgeteilten Schriftsteller entsprechend in seine „Bibliotheca Benedictina“ einrücken und lobend auf <rs type="person" role="sender">ACs</rs> Hilfe hinweisen. Der Katalog ist ehrenvoll für die Kongregation, doch würde er <rs type="person" role="sender">BP</rs> mehr nützen, wenn er zu den einzelnen Werken auch vollständige bibliographische Angaben enthielte, da diese von <rs type="person" role="sender">BP</rs> in seinem Werk angeführt werden; teils fehlen Angaben, ob ein Werk gedruckt ist oder nicht, und <rs type="person" role="sender">BP</rs> scheint, dass nicht immer die ursprünglichen und vollständigen Titel wiedergegeben werden. Aus diesen Gründen bittet <rs type="person" role="sender">BP</rs> um die Zusendung einer überarbeiteten Version, regt aber an, dass <rs type="person" role="sender">AC</rs> seine für die Kirche so nützlichen Studien nicht unterbrechen, sondern die Arbeit vielmehr einem jüngeren Mitbruder delegieren soll. Dabei soll auch darauf geachtet werden, dass die Titel in der Sprache aufgenommen werden, in der das Werk verfasst ist. Kein Hindernis stellt das Französische dar, das <rs type="person" role="sender">BP</rs> beherrscht, wenn er es in einer annehmbaren Schrift vorfindet. Schließlich möchte <rs type="person" role="sender">BP</rs> die gesamte Ordensgeschichte behandeln und bittet daher <rs type="person" role="sender">AC</rs> und seine Mitbrüder um entsprechende Mitteilungen.</p>
+            <p corresp="#seg2">Was <rs type="person" role="sender">AC</rs> über die Arbeiten von Ildéphonse Cathelinot und Luis Alvarez an ähnlichen Vorhaben wie dem <rs type="person" role="sender">BPs</rs> („Historia litteraria Benedictina“, „Athenae Benedictinae“) berichtet hat, war <rs type="person" role="sender">BP</rs> aus einem Brief von René Massuet <ref type="letter" target="letter:285">285</ref> bereits bekannt. <rs type="person" role="sender">BP</rs> will zwar gerne glauben, dass insbesondere Cathelinot über bessere Geistesgaben und einen reichhaltigeren Apparat verfügt, doch gibt es Gründe, die <rs type="person" role="sender">BP</rs> an seiner Absicht festhalten lassen; von diesen will er bei anderer Gelegenheit sprechen. <rs type="person" role="sender">BP</rs> wünscht die baldige Publikation des Werkes von Alvarez, zumal nur von einem Spanier die obskuren Altertümer dieses Volkes (gens) bearbeitet werden können. Bis dahin muss sich <rs type="person" role="sender">BP</rs> an das Werk von Nicolás Antonio („Bibliotheca Hispana vetus“) halten. Aus Italien hat <rs type="person" role="sender">BP</rs> eine handschriftliche Ausarbeitung zu den Schriftstellern der Cassinenserkongregation bekommen, die allerdings eher durch rhetorische Floskeln denn durch kritische Festigkeit (criticus robur) auffällt. Da freilich in Italien nahezu alle Provinzen ihre eigenen gedruckten Schriftstellerkataloge haben, wird die Bearbeitung leicht fallen. Zu England wird man nicht über das hinauskommen, was bei John Pits („Relationes historicae de rebus Anglicis“), James Ware („De scriptoribus Hiberniae“), Edward Maihew („Congregationis Anglicanae trophaea“) oder in anderen Sammlungen zur englischen Geschichte steht. Einen Katalog der jüngeren Schriftsteller der Englischen Benediktinerkongregation hat <rs type="person" role="sender">BP</rs> von einem gelehrten Mitglied dieser Gemeinschaft (Dunstan Hutchinson, über John Townson) erhalten. Die Belgier sind auch durch viele Briefe (534, 537, 538, 542, 543, 544, 545, 548, 550, 551, 556) nicht zur Mitarbeit zu bewegen, weshalb hier nur die Werke von Aubert Le Mire („Elogia Belgica“) und Valerius Andreas („Bibliotheca Belgica“) als Grundlage dienen können. Im Hinblick auf Nordfrankreich (Gallia Interior) und Deutschland sorgt sich <rs type="person" role="sender">BP</rs> nicht, da er in Letzterem bereits zahlreiche Bibliotheken bereist hat und noch weitere bereisen wird, mit solcher Genauigkeit, dass ihm kaum etwas entgangen sein dürfte. Frankreich will er besuchen, sobald er mit Deutschland fertig ist. Mehr kann wohl von einem gelehrten Benediktiner nicht erwartet werden, und die „Bibliotheca Benedictina“ wird dann so perfekt wie möglich sein, wenn ihr nicht nichts, sondern möglichst wenig fehlt. Allein aus den Bibliotheken Deutschlands hat <rs type="person" role="sender">BP</rs> freilich bereits so viel Bedeutendes zu den benediktinischen Schriftstellern hervorgeholt, besonders aus den zahlreich vorhandenen Handschriften, dass sich damit mehrere Bände füllen ließen. Doch will <rs type="person" role="sender">BP</rs> sorgfältig auswählen, damit er weder sein Werk mit Überflüssigem beschwert noch Wesentliches weglässt.</p>
+            <p corresp="#seg3">Seine „Epistolae apologeticae“ zur Verteidigung des Benediktinerordens will <rs type="person" role="sender">BP</rs> bei der nächsten sicheren Gelegenheit senden, obgleich sie <rs type="person" role="sender">AC</rs> wenig gefallen dürften: Zu dieser Publikation ist <rs type="person" role="sender">BP</rs> durch Notwendigkeit und durch die Heftigkeit der Angriffe veranlasst worden, obgleich der Sturm vorauszusehen war, der sich durch die Ränke der Jesuiten nun über <rs type="person" role="sender">BPs</rs> Kopf zusammengebraut hat. Jene haben <rs type="person" role="sender">BP</rs> bei Kaiser Karl VI. angeklagt und wollten ihn eines Vergehens (crimen) schuldig sehen, obwohl sie selbst die Angreifer waren. Doch der Kaiser hat sie zurückgewiesen, und <rs type="person" role="sender">BP</rs> wartet ab, was sie als nächstes bewerkstelligen. Es tröstet ein wenig, dass die Jesuiten hier in einer Position sind, in der sie nicht schaden können; alles Weitere empfiehlt <rs type="person" role="sender">BP</rs> Gott und dem hl. Benedikt, wobei er keine Galle und keinen Hass gegen irgendeinen Gegner hegt. Er schreckt vor solchen Auseinandersetzungen zurück und will künftig selbst auf neue Herausforderungen nicht antworten, sofern ihn nicht seine Oberen (Abt Berthold Dietmayr) dazu anhalten. Das jesuitische Buch („Cura salutis“ von Gábor Hevenesi) ist jüngst zu Köln – zumindest steht das so auf dem Titelblatt – neuerlich erschienen, sicher auf Betreiben eines Evangelischen (haereticus), der den Streit der Orden weiter anzufachen versucht; doch vergeblich. <rs type="person" role="sender">BP</rs> wird nicht mit einer neuen Schrift reagieren. Die Blüte der Studien in <rs type="person" role="sender">ACs</rs> Kongregation erfreut <rs type="person" role="sender">BP</rs> und alle Guten.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e24711"><rs type="person" role="sender">BP</rs> dankt für <rs type="person" role="sender">ACs</rs> Schreiben <ref type="letter">683</ref> und den zugleich übermittelten Schriftstellerkatalog der Kongregation von St.-Vanne (von Pierre Munier). Er hegt schon seit langem den Wunsch, mit <rs type="person" role="sender">AC</rs> in Briefkontakt zu treten, wurde jedoch bisher von der Furcht abgehalten, ihn von seiner Arbeit am „Commentaire litteral“ abzulenken. Nun aber ermutigt ihn die Freundlichkeit (humanitas) ACs, künftig in jener Weise von dessen Freundschaft zu profitieren, die dessen Wohlwollen gegenüber der benediktinischen Sache zulässt. <rs type="person" role="sender">BP</rs> dankt herzlich; er will die ihm mitgeteilten Schriftsteller entsprechend in seine „Bibliotheca Benedictina“ einrücken und lobend auf <rs type="person" role="sender">ACs</rs> Hilfe hinweisen. Der Katalog ist ehrenvoll für die Kongregation, doch würde er <rs type="person" role="sender">BP</rs> mehr nützen, wenn er zu den einzelnen Werken auch vollständige bibliographische Angaben enthielte, da diese von <rs type="person" role="sender">BP</rs> in seinem Werk angeführt werden; teils fehlen Angaben, ob ein Werk gedruckt ist oder nicht, und <rs type="person" role="sender">BP</rs> scheint, dass nicht immer die ursprünglichen und vollständigen Titel wiedergegeben werden. Aus diesen Gründen bittet <rs type="person" role="sender">BP</rs> um die Zusendung einer überarbeiteten Version, regt aber an, dass <rs type="person" role="sender">AC</rs> seine für die Kirche so nützlichen Studien nicht unterbrechen, sondern die Arbeit vielmehr einem jüngeren Mitbruder delegieren soll. Dabei soll auch darauf geachtet werden, dass die Titel in der Sprache aufgenommen werden, in der das Werk verfasst ist. Kein Hindernis stellt das Französische dar, das <rs type="person" role="sender">BP</rs> beherrscht, wenn er es in einer annehmbaren Schrift vorfindet. Schließlich möchte <rs type="person" role="sender">BP</rs> die gesamte Ordensgeschichte behandeln und bittet daher <rs type="person" role="sender">AC</rs> und seine Mitbrüder um entsprechende Mitteilungen.</seg><seg type="context" n="2" xml:id="d3e24716">Was <rs type="person" role="sender">AC</rs> über die Arbeiten von Ildéphonse Cathelinot und Luis Alvarez an ähnlichen Vorhaben wie dem <rs type="person" role="sender">BPs</rs> („Historia litteraria Benedictina“, „Athenae Benedictinae“) berichtet hat, war <rs type="person" role="sender">BP</rs> aus einem Brief von René Massuet <ref type="letter">285</ref> bereits bekannt. <rs type="person" role="sender">BP</rs> will zwar gerne glauben, dass insbesondere Cathelinot über bessere Geistesgaben und einen reichhaltigeren Apparat verfügt, doch gibt es Gründe, die <rs type="person" role="sender">BP</rs> an seiner Absicht festhalten lassen; von diesen will er bei anderer Gelegenheit sprechen. <rs type="person" role="sender">BP</rs> wünscht die baldige Publikation des Werkes von Alvarez, zumal nur von einem Spanier die obskuren Altertümer dieses Volkes (gens) bearbeitet werden können. Bis dahin muss sich <rs type="person" role="sender">BP</rs> an das Werk von Nicolás Antonio („Bibliotheca Hispana vetus“) halten. Aus Italien hat <rs type="person" role="sender">BP</rs> eine handschriftliche Ausarbeitung zu den Schriftstellern der Cassinenserkongregation bekommen, die allerdings eher durch rhetorische Floskeln denn durch kritische Festigkeit (criticus robur) auffällt. Da freilich in Italien nahezu alle Provinzen ihre eigenen gedruckten Schriftstellerkataloge haben, wird die Bearbeitung leicht fallen. Zu England wird man nicht über das hinauskommen, was bei John Pits („Relationes historicae de rebus Anglicis“), James Ware („De scriptoribus Hiberniae“), Edward Maihew („Congregationis Anglicanae trophaea“) oder in anderen Sammlungen zur englischen Geschichte steht. Einen Katalog der jüngeren Schriftsteller der Englischen Benediktinerkongregation hat <rs type="person" role="sender">BP</rs> von einem gelehrten Mitglied dieser Gemeinschaft (Dunstan Hutchinson, über John Townson) erhalten. Die Belgier sind auch durch viele Briefe (534, 537, 538, 542, 543, 544, 545, 548, 550, 551, 556) nicht zur Mitarbeit zu bewegen, weshalb hier nur die Werke von Aubert Le Mire („Elogia Belgica“) und Valerius Andreas („Bibliotheca Belgica“) als Grundlage dienen können. Im Hinblick auf Nordfrankreich (Gallia Interior) und Deutschland sorgt sich <rs type="person" role="sender">BP</rs> nicht, da er in Letzterem bereits zahlreiche Bibliotheken bereist hat und noch weitere bereisen wird, mit solcher Genauigkeit, dass ihm kaum etwas entgangen sein dürfte. Frankreich will er besuchen, sobald er mit Deutschland fertig ist. Mehr kann wohl von einem gelehrten Benediktiner nicht erwartet werden, und die „Bibliotheca Benedictina“ wird dann so perfekt wie möglich sein, wenn ihr nicht nichts, sondern möglichst wenig fehlt. Allein aus den Bibliotheken Deutschlands hat <rs type="person" role="sender">BP</rs> freilich bereits so viel Bedeutendes zu den benediktinischen Schriftstellern hervorgeholt, besonders aus den zahlreich vorhandenen Handschriften, dass sich damit mehrere Bände füllen ließen. Doch will <rs type="person" role="sender">BP</rs> sorgfältig auswählen, damit er weder sein Werk mit Überflüssigem beschwert noch Wesentliches weglässt.</seg><seg type="context" n="3" xml:id="d3e24721">Seine „Epistolae apologeticae“ zur Verteidigung des Benediktinerordens will <rs type="person" role="sender">BP</rs> bei der nächsten sicheren Gelegenheit senden, obgleich sie <rs type="person" role="sender">AC</rs> wenig gefallen dürften: Zu dieser Publikation ist <rs type="person" role="sender">BP</rs> durch Notwendigkeit und durch die Heftigkeit der Angriffe veranlasst worden, obgleich der Sturm vorauszusehen war, der sich durch die Ränke der Jesuiten nun über <rs type="person" role="sender">BPs</rs> Kopf zusammengebraut hat. Jene haben <rs type="person" role="sender">BP</rs> bei Kaiser Karl VI. angeklagt und wollten ihn eines Vergehens (crimen) schuldig sehen, obwohl sie selbst die Angreifer waren. Doch der Kaiser hat sie zurückgewiesen, und <rs type="person" role="sender">BP</rs> wartet ab, was sie als nächstes bewerkstelligen. Es tröstet ein wenig, dass die Jesuiten hier in einer Position sind, in der sie nicht schaden können; alles Weitere empfiehlt <rs type="person" role="sender">BP</rs> Gott und dem hl. Benedikt, wobei er keine Galle und keinen Hass gegen irgendeinen Gegner hegt. Er schreckt vor solchen Auseinandersetzungen zurück und will künftig selbst auf neue Herausforderungen nicht antworten, sofern ihn nicht seine Oberen (Abt Berthold Dietmayr) dazu anhalten. Das jesuitische Buch („Cura salutis“ von Gábor Hevenesi) ist jüngst zu Köln – zumindest steht das so auf dem Titelblatt – neuerlich erschienen, sicher auf Betreiben eines Evangelischen (haereticus), der den Streit der Orden weiter anzufachen versucht; doch vergeblich. <rs type="person" role="sender">BP</rs> wird nicht mit einer neuen Schrift reagieren. Die Blüte der Studien in <rs type="person" role="sender">ACs</rs> Kongregation erfreut <rs type="person" role="sender">BP</rs> und alle Guten.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Auf 1r am oberen Blattrand von einer französischen Hand des 18. Jh. die Notiz: <hi rend="italic">13. Decembre 1716. Lettre du reverend pere Bernard Pez a dom Augustin Calmet touchant la Biblioteque Benedictine universelle</hi>. Im Zwischenraum von Anrede und Text ist eine Nummerierung <hi rend="italic">VI</hi> angebracht. – Die Überschrift stimmt mit jener in der Edition überein. Der Satz „Solatii non nihil [...] non possint“ in &lt;3&gt; ist im Original durchgestrichen und fehlt in der Edition.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverendo clarissimo ac eruditissimo patri domino Augustino Calmet e congregatione sancti Vitoni pater Bernardus Pez Benedictinus Mellicensis salutem dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e24746">Recte accepi humanissimas litteras tuas, celeberrime pater, una cum peregregio scriptorum, qui in inclyta sancti Vitoni congregatione ab eius exortu usque ad hanc aetatem claruerunt, elencho. Utraque me eo gaudio compleverunt, ut nullis sat verbis exprimere queam. Equidem exarsi dudum desiderio litterarium tecum commercium ineundi propterea, quod mihi persuasissimum semper esset id non posse non cum maximo uberrimoque meo commodo ac fructu coniunctum esse. Verum nescio quo maligno fato hae cogitationes disturbatae sunt. Absterrebat et illud, quod gravi edendorum Commentariorum tuorum cura te distentum esse non ignorarem. Itaque novo molestiarum cumulo a me obruendus nequaquam eras. Enimvero cum ea nunc tua, clarissime domine, humanitas sit, ut sponte ac ultro amicitiae favorisque tui copiam non exspectanti offeras, hoc coelesti munere sic uti deinceps constitui, ut tuus erga res Benedictinas animus tulerit. Quod in praesenti praeprimis mihi agendum est, ut gratum videlicet pro transmissis animum meum tibi probem, id iam nunc praestitum cupio reponoque gratias, quas possum, maximas. Mei porro muneris erit tum singula communicatorum scriptorum nomina suis cum laude locis inserere, tum illius pluribus meminisse, cuius benevolentia et ope profecerim. Caeterum ad missum catalogum quod attinet, est is quidem inclytae tuae congregationi honorificus, ast mihi non paulo utilior quoque foret, <pb n="1v"/> si ad singula opera locus, tempus, forma, nomen typographi etc. adiuncta essent. Haec enim omnia scrupulose persequatur is, qui Bibliothecam huiusmodi perscribendam suscepit. Subinde etiam non satis clare significatur, opusne typis excusum an manu tantum exaratum sit. Denique genuini ac integri librorum tituli non videntur ubique notati; quae res magnam apud eruditos viros perplexitatem errandique occasionem parere consuevit. Ut itaque immortali me sibi beneficio obstringet, quisquis transmissum catalogum semel atque iterum recensebit expressis diligentissime iis, quae supra notare non sum veritus. Nam quo minus id abs te contendam, eruditissimi tui labores, toti ecclesiae utilissimi, quibus perpetim vacas, in causa sunt. Sat favoris in me contuleris, si alicui iuniorum accuratiorum hanc provinciam imposueris. Hic moneri etiam potest, ut in transcribendis operum titulis non alio<note place="foot" xml:id="d3e24750">	Korrigiert aus <hi rend="italic">alia</hi>.</note> idiomate utatur, quam quo illa edita fuerunt. Nec remoram aut scrupulum eidem iniciat idioma Francicum, utpote quod etiam calleo, modo, quae mecum communicantur, legibili aut saltem tolerabili charactere exarentur. Denique cum non unius et item alterius saeculi scriptores in opus meum inferre<note place="foot" xml:id="d3e24756">	Korrigiert aus <hi rend="italic">inferendos</hi>.</note> statuerim, sed quotquot ab ordinis nostri origine usque ad haec tempora floruerunt, demississime ac enixissime te, pater optime, rogatum velim, ut sodales tuos ad ferendam quoquo modo opem cohortari ne dedigneris. Sane hac re nihil mihi optatius gratiusque facere potes. <pb n="2r"/> </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e24764">Quod scribis admodum reverendos dominos Ildephonsum Kathelinot<note place="foot" xml:id="d3e24766">	Korrigiert aus <hi rend="italic">Kathelinet</hi>.</note> et Ludovicum Alvarez simili operi insudare, id ex domini Renati Massueti coniunctissimi olim amici litteris dudum intellexi. Sed non defuerunt causae et rationum momenta, quae ad persequendos conatus me permoverunt. Crediderim quidem facile praeclaros hos viros, praesertim dominum Ildephonsum, longe me instructiores tum ab ingenio, tum ab reliquo apparatu esse, sed forte alia sunt, quibus me illis feliciorem existiment quidam. Sed de his alio loco. Utinam Hispanus ille brevi sua in lucem efferat! Profecto res illius gentis antiquiores adeo incertae et obscurae sunt et insuper a nostro commercio remotae, ut nisi ab homine Hispano recte ac cum dignitate nequeant explicari. Id dum fiat, doctissimis Nicolai Antonii commentariis contentus sim, oportet. Ex Italia accepi <seg type="lemma" corresp="#d3e24803">opus quoddam manuscriptum de scriptoribus e congregatione Cassinensi</seg>, rhetoricis pro more gentis flosculis potius quam critico robore ac diligentia conspicuum. Sed cum paucae sint<seg type="lemma" corresp="#d3e24809"> Italiae provinciae, quae perscriptas bibliothecas</seg> non habeant, res Italicae forte omnibus expeditiores erunt.<seg type="lemma" corresp="#d3e24813"> Ex Anglia vix quidquam aliud sperandum, quam quod Pitseus, Wareus et Maihew nobis reliquerunt aut in rerum Anglicanarum collectionibus extat</seg>.<seg type="lemma" corresp="#d3e24817"> Recentiores congregationis Anglicanae scriptores a quodam docto eiusdem societatis sodali accepi</seg>.<seg type="lemma" corresp="#d3e24821"> Belgae</seg> nostri vix ullis litteris ad conferendam symbolam<note place="foot" xml:id="d3e24772">	Danach durchgestrichen <hi rend="italic">litt</hi>.</note> se moveri sinunt. Itaque solus Aubertus Miraeus et Andreas Valerius hic subsidio sunt. De<seg type="lemma" corresp="#d3e24825"> Gallia Interiori</seg> et Germania non admodum laboro. Huius ipse plurimas bibliothecas lustravi et deinceps lustrabo ea quidem diligentia, ut non nisi paucissima me latere possint. <pb n="2v"/> Galliam vero illico adibo, mox ut res nostras Germanicas absolvero. Plus<note place="foot" xml:id="d3e24780">	Korrigiert aus <hi rend="italic">Plura</hi>.</note> vix<note place="foot" xml:id="d3e24786">	Danach durchgestrichen <hi rend="italic">ego</hi>.</note> expectari a quoquam nostrum potest, nec illa Bibliothea Benedictina perfectissima erit, cui nihil, sed cui paucissima desint. Interim ex solis Germaniae bibliothecis tantam scriptorum nostrorum vim erui, praesertim ex manuscriptis codicibus, quorum ingens multitudo adhuc superest, ut vel haec sola plura volumina posset implere. Verum hic ego sic me geram, ut nec superfluis opus onerem nec eorum quidquam, quae nosse eruditorum intersit, praetermittam. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e24792"><seg type="lemma" corresp="#d3e24829">Epistolas meas pro ordine nostro apologeticas</seg> mittam, quamprimum tuta se occasio obtulerit; tametsi eae nequaquam eiusmodi sint, quae tanto viro placere possint. Edidi eas necessitate et iniuriae atrocitate adactus praevisa facile tempestate, quae machinantibus Jesuitis in meum caput consurrecta esset. Certe<seg type="lemma" corresp="#d3e24835"> apud augustissimum caesarem</seg> me nuper accusarunt reumque criminis esse voluerunt, qui aggressores fuerant. Sed a caesare reiecti nec exauditi sunt. Nunc, quid amplius adornaturi sint, exspecto. Solatii non nihil affert, quod Jesuitae hic eo loco sint, ut nocere non possint<note place="foot" xml:id="d3e24794">	<hi rend="italic">Solatii ... possint</hi> von späterer Hand durchgestrichen.</note>. Caetera bono Deo sanctissimoque patri nostro commendo nihil fellis aut odii in adversariorum quemquam sub praecordiis fovens. Abhorreo ab huiusmodi rixis vehementissime nec vel provocantibus deinceps respondebo, nisi aliud meis superioribus visum fuerit. Jesuitarum libellus nuperrime <seg type="lemma" corresp="#d3e24839">recusus est Coloniae</seg> (ut titulus praefert) haud dubie ab haeretico homine, qui flammam inter nos coortam auctam cuperet, sed fallet hominem spes sua. Non scriptis novis transigam, sed neglectu. Studia litterarum in inclyta tua congregatione adeo egregie florere omnes boni una mecum triumphant. Vale, clarissime pater, et tuo me amore prosequi perge.</seg></p>
-            <p xml:space="preserve">Mellicii vulgo Mölk in Österreich. MDCCXVI XIII. Decembris.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e24803">
-               <ref type="context">2</ref>
-               <label>opus ... Cassinensi</label><p>Wovon BP spricht, ist nicht sicher zu bestimmen.
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>opus ... Cassinensi</mentioned>
+            <p>Wovon BP spricht, ist nicht sicher zu bestimmen.
                   Wohl kaum dürfte er den aus Paris übermittelten Schriftstellerkatalog der
-                  Cassinenserkongregation meinen: vgl. <ref type="letter">266</ref> &lt;16&gt;, <ref
-                     type="letter">285</ref> &lt;5&gt;, <ref type="letter">379</ref> &lt;6&gt;, <ref
-                     type="letter">384</ref> &lt;7&gt;. Nicht in Frage kommt auch das von Giuseppe
+                  Cassinenserkongregation meinen: vgl. <ref type="letter" target="letter:266">266</ref> <ref target="letter:266#seg16">16</ref>, <ref type="letter" target="letter:285">285</ref> <ref target="letter:285#seg5">5</ref>, <ref type="letter" target="letter:379">379</ref> <ref target="letter:379#seg6">6</ref>, <ref type="letter" target="letter:384">384</ref> <ref target="letter:384#seg7">7</ref>. Nicht in Frage kommt auch das von Giuseppe
                   Maria Sandi gesendete Verzeichnis der Schriftsteller von S. Giustina zu Padua, das
                   erst im April 1717 bei BP eintraf: vgl. 763. Im Pez-Nachlass existieren noch
                   mehrere weitere Schriftstellerkataloge zur Cassinenserkongregation, die sich
                   bislang keiner bestimmten Übermittlung sicher zuordnen haben lassen: StiA Melk,
                   Karton 7 Patres 10, Fasz. 8, Nr. 29; ebd., Karton 85 Varia 25, Fasz. 1, Nr. 26 und
-                  39.</p></note>
-            <note xml:id="d3e24809">
-               <ref type="context">2</ref>
-               <label> Italiae provinciae ... bibliothecas</label><p>Dazu hatte namentlich Konrad
-                  Sigler ausführliche bibliographische Angaben geliefert: vgl. <ref type="letter"
-                     >308</ref> &lt;8&gt;.</p></note>
-            <note xml:id="d3e24813">
-               <ref type="context">2</ref>
-               <label> Ex Anglia vix ... extat</label><p>Vgl. <ref type="letter">154</ref>
-                  &lt;13&gt;.</p></note>
-            <note xml:id="d3e24817">
-               <ref type="context">2</ref>
-               <label> Recentiores ... accepi</label><p>Die Übermittlung des in Lamspringe
+                  39.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned> Italiae provinciae ... bibliothecas</mentioned>
+            <p>Dazu hatte namentlich Konrad
+                  Sigler ausführliche bibliographische Angaben geliefert: vgl. <ref type="letter" target="letter:308">308</ref> <ref target="letter:308#seg8">8</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned> Ex Anglia vix ... extat</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:154">154</ref>
+                  <ref target="letter:154#seg13">13</ref>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned> Recentiores ... accepi</mentioned>
+            <p>Die Übermittlung des in Lamspringe
                   erstellten Katalogs war über John Townson und Theodor Thier in Werden erfolgt:
-                  vgl. <ref type="letter">603</ref> &lt;3&gt;.</p></note>
-            <note xml:id="d3e24821">
-               <ref type="context">2</ref>
-               <label> Belgae</label><p> Vgl. <ref type="letter">154</ref> &lt;13&gt;.</p></note>
-            <note xml:id="d3e24825">
-               <ref type="context">2</ref>
-               <label> Gallia Interiori</label><p> Der Ausdruck ist zu verstehen im Sinne der durch Caesars „Bellum Gallicum“ etablierten Dreiteilung Galliens, hier vor allem in Abgrenzung zu dem zuvor erwähnten „Belgien“. </p></note>
-            <note xml:id="d3e24829">
-               <ref type="context">3</ref>
-               <label>Epistolas ... apologeticas</label><p> Zu dieser Angelegenheit vgl. Einleitung, Abschnitt I.5.</p></note>
-            <note xml:id="d3e24835">
-               <ref type="context">3</ref>
-               <label> apud ... caesarem</label><p>Vgl. <ref type="letter">474</ref> &lt;4&gt;, <ref
-                     type="letter">476</ref> &lt;3&gt;, <ref type="letter">505</ref> &lt;6&gt;.
-               </p></note>
-            <note xml:id="d3e24839">
-               <ref type="context">3</ref>
-               <label>recusus est Coloniae</label><p>Vgl. <ref type="letter">688</ref> &lt;7&gt;,
-                     <ref type="letter">712</ref> &lt;1&gt;.</p></note>
-         </div>
-      </back>
+                  vgl. <ref type="letter" target="letter:603">603</ref> <ref target="letter:603#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned> Belgae</mentioned>
+            <p> Vgl. <ref type="letter" target="letter:154">154</ref> <ref target="letter:154#seg13">13</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
+            <mentioned> Gallia Interiori</mentioned>
+            <p> Der Ausdruck ist zu verstehen im Sinne der durch Caesars „Bellum Gallicum“ etablierten Dreiteilung Galliens, hier vor allem in Abgrenzung zu dem zuvor erwähnten „Belgien“. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned>Epistolas ... apologeticas</mentioned>
+            <p> Zu dieser Angelegenheit vgl. Einleitung, Abschnitt I.5.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
+            <mentioned> apud ... caesarem</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:474">474</ref> <ref target="letter:474#seg4">4</ref>, <ref type="letter" target="letter:476">476</ref> <ref target="letter:476#seg3">3</ref>, <ref type="letter" target="letter:505">505</ref> <ref target="letter:505#seg6">6</ref>.
+               </p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg3">
+            <mentioned>recusus est Coloniae</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:688">688</ref> <ref target="letter:688#seg7">7</ref>,
+                     <ref type="letter" target="letter:712">712</ref> <ref target="letter:712#seg1">1</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:15152">
+            <title type="short">Benz, Zwischen Tradition und Kritik</title>
+            <biblScope>563</biblScope>
+         </bibl>
+         <bibl corresp="bibl:15194">
+            <title type="short">Berlière, Quelques correspondants</title>
+            <biblScope>221f</biblScope>
+         </bibl>
+         <bibl corresp="bibl:16478">
+            <title type="short">Gérard, Dom Augustin Calmet</title>
+            <biblScope>154, 358, 708</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverendo clarissimo ac eruditissimo patri domino Augustino Calmet e congregatione sancti Vitoni pater Bernardus Pez Benedictinus Mellicensis salutem dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Recte accepi humanissimas litteras tuas, celeberrime pater, una cum peregregio scriptorum, qui in inclyta sancti Vitoni congregatione ab eius exortu usque ad hanc aetatem claruerunt, elencho. Utraque me eo gaudio compleverunt, ut nullis sat verbis exprimere queam. Equidem exarsi dudum desiderio litterarium tecum commercium ineundi propterea, quod mihi persuasissimum semper esset id non posse non cum maximo uberrimoque meo commodo ac fructu coniunctum esse. Verum nescio quo maligno fato hae cogitationes disturbatae sunt. Absterrebat et illud, quod gravi edendorum Commentariorum tuorum cura te distentum esse non ignorarem. Itaque novo molestiarum cumulo a me obruendus nequaquam eras. Enimvero cum ea nunc tua, clarissime domine, humanitas sit, ut sponte ac ultro amicitiae favorisque tui copiam non exspectanti offeras, hoc coelesti munere sic uti deinceps constitui, ut tuus erga res Benedictinas animus tulerit. Quod in praesenti praeprimis mihi agendum est, ut gratum videlicet pro transmissis animum meum tibi probem, id iam nunc praestitum cupio reponoque gratias, quas possum, maximas. Mei porro muneris erit tum singula communicatorum scriptorum nomina suis cum laude locis inserere, tum illius pluribus meminisse, cuius benevolentia et ope profecerim. Caeterum ad missum catalogum quod attinet, est is quidem inclytae tuae congregationi honorificus, ast mihi non paulo utilior quoque foret, <pb n="1v"/> si ad singula opera locus, tempus, forma, nomen typographi etc. adiuncta essent. Haec enim omnia scrupulose persequatur is, qui Bibliothecam huiusmodi perscribendam suscepit. Subinde etiam non satis clare significatur, opusne typis excusum an manu tantum exaratum sit. Denique genuini ac integri librorum tituli non videntur ubique notati; quae res magnam apud eruditos viros perplexitatem errandique occasionem parere consuevit. Ut itaque immortali me sibi beneficio obstringet, quisquis transmissum catalogum semel atque iterum recensebit expressis diligentissime iis, quae supra notare non sum veritus. Nam quo minus id abs te contendam, eruditissimi tui labores, toti ecclesiae utilissimi, quibus perpetim vacas, in causa sunt. Sat favoris in me contuleris, si alicui iuniorum accuratiorum hanc provinciam imposueris. Hic moneri etiam potest, ut in transcribendis operum titulis non <choice><sic>alia</sic><corr>alio</corr></choice> idiomate utatur, quam quo illa edita fuerunt. Nec remoram aut scrupulum eidem iniciat idioma Francicum, utpote quod etiam calleo, modo, quae mecum communicantur, legibili aut saltem tolerabili charactere exarentur. Denique cum non unius et item alterius saeculi scriptores in opus meum <choice><sic>inferendos</sic><corr>inferre</corr></choice> statuerim, sed quotquot ab ordinis nostri origine usque ad haec tempora floruerunt, demississime ac enixissime te, pater optime, rogatum velim, ut sodales tuos ad ferendam quoquo modo opem cohortari ne dedigneris. Sane hac re nihil mihi optatius gratiusque facere potes. <pb n="2r"/> </ab>
+         <ab resp="#editor" xml:id="seg2">Quod scribis admodum reverendos dominos Ildephonsum <choice><sic>Kathelinet</sic><corr>Kathelinot</corr></choice> et Ludovicum Alvarez simili operi insudare, id ex domini Renati Massueti coniunctissimi olim amici litteris dudum intellexi. Sed non defuerunt causae et rationum momenta, quae ad persequendos conatus me permoverunt. Crediderim quidem facile praeclaros hos viros, praesertim dominum Ildephonsum, longe me instructiores tum ab ingenio, tum ab reliquo apparatu esse, sed forte alia sunt, quibus me illis feliciorem existiment quidam. Sed de his alio loco. Utinam Hispanus ille brevi sua in lucem efferat! Profecto res illius gentis antiquiores adeo incertae et obscurae sunt et insuper a nostro commercio remotae, ut nisi ab homine Hispano recte ac cum dignitate nequeant explicari. Id dum fiat, doctissimis Nicolai Antonii commentariis contentus sim, oportet. Ex Italia accepi <anchor xml:id="n1"/>opus quoddam manuscriptum de scriptoribus e congregatione Cassinensi<anchor xml:id="n1e"/>, rhetoricis pro more gentis flosculis potius quam critico robore ac diligentia conspicuum. Sed cum paucae sint<anchor xml:id="n2"/> Italiae provinciae, quae perscriptas bibliothecas<anchor xml:id="n2e"/> non habeant, res Italicae forte omnibus expeditiores erunt.<anchor xml:id="n3"/> Ex Anglia vix quidquam aliud sperandum, quam quod Pitseus, Wareus et Maihew nobis reliquerunt aut in rerum Anglicanarum collectionibus extat<anchor xml:id="n3e"/>.<anchor xml:id="n4"/> Recentiores congregationis Anglicanae scriptores a quodam docto eiusdem societatis sodali accepi<anchor xml:id="n4e"/>.<anchor xml:id="n5"/> Belgae<anchor xml:id="n5e"/> nostri vix ullis litteris ad conferendam symbolam<del ana="#after">litt</del> se moveri sinunt. Itaque solus Aubertus Miraeus et Andreas Valerius hic subsidio sunt. De<anchor xml:id="n6"/> Gallia Interiori<anchor xml:id="n6e"/> et Germania non admodum laboro. Huius ipse plurimas bibliothecas lustravi et deinceps lustrabo ea quidem diligentia, ut non nisi paucissima me latere possint. <pb n="2v"/> Galliam vero illico adibo, mox ut res nostras Germanicas absolvero. <choice><sic>Plura</sic><corr>Plus</corr></choice> vix<del ana="#after">ego</del> expectari a quoquam nostrum potest, nec illa Bibliothea Benedictina perfectissima erit, cui nihil, sed cui paucissima desint. Interim ex solis Germaniae bibliothecis tantam scriptorum nostrorum vim erui, praesertim ex manuscriptis codicibus, quorum ingens multitudo adhuc superest, ut vel haec sola plura volumina posset implere. Verum hic ego sic me geram, ut nec superfluis opus onerem nec eorum quidquam, quae nosse eruditorum intersit, praetermittam. </ab>
+         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n7"/>Epistolas meas pro ordine nostro apologeticas<anchor xml:id="n7e"/> mittam, quamprimum tuta se occasio obtulerit; tametsi eae nequaquam eiusmodi sint, quae tanto viro placere possint. Edidi eas necessitate et iniuriae atrocitate adactus praevisa facile tempestate, quae machinantibus Jesuitis in meum caput consurrecta esset. Certe<anchor xml:id="n8"/> apud augustissimum caesarem<anchor xml:id="n8e"/> me nuper accusarunt reumque criminis esse voluerunt, qui aggressores fuerant. Sed a caesare reiecti nec exauditi sunt. Nunc, quid amplius adornaturi sint, exspecto. Solatii non nihil affert, quod Jesuitae hic eo loco sint, ut nocere non possint<note type="annotation" xml:id="d3e24794"><orig>Solatii ... possint</orig> von späterer Hand durchgestrichen.</note>. Caetera bono Deo sanctissimoque patri nostro commendo nihil fellis aut odii in adversariorum quemquam sub praecordiis fovens. Abhorreo ab huiusmodi rixis vehementissime nec vel provocantibus deinceps respondebo, nisi aliud meis superioribus visum fuerit. Jesuitarum libellus nuperrime <anchor xml:id="n9"/>recusus est Coloniae<anchor xml:id="n9e"/> (ut titulus praefert) haud dubie ab haeretico homine, qui flammam inter nos coortam auctam cuperet, sed fallet hominem spes sua. Non scriptis novis transigam, sed neglectu. Studia litterarum in inclyta tua congregatione adeo egregie florere omnes boni una mecum triumphant. Vale, clarissime pater, et tuo me amore prosequi perge.</ab>
+         <closer>Mellicii vulgo Mölk in Österreich. MDCCXVI XIII. Decembris.</closer>
+      </body>
    </text>
 </TEI>

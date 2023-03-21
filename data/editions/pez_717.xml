@@ -1,38 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="717" xml:id="pez-0717">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">717 Jean-Baptiste Poncet an Bernhard Pez. 1717-01-06. St.-Maixent.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Jean-Baptiste Poncet an Bernhard Pez. 1717-01-06. St.-Maixent.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">717</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
+            <note type="remarks">
+               Der Brief ist von einem Sekretär geschrieben; nur vier Worte am Schluss, die Unterschrift ab <orig>Joannes Baptista Poncet</orig> sowie das zweite der beiden Daten sind von JPo eigenhändig nachgetragen. Das Schreiben dürfte am 1. Dezember 1716 abgeschlossen und datiert, aber noch nicht verschickt worden sein; das spätere Datum dürfte JPo zugleich mit der Unterschrift angebracht haben. Zur Ansetzung wird dieses verwendet.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">507r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 507r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,60 +71,36 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">622</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">622</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">764</idno>
-               </ref>
+               <ptr type="prev" target="letter:622"/>
+               <ptr type="mentions" target="letter:622"/>
+               <ptr type="mentionedIn" target="letter:764"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Der Prior von St.-Maixent (François Chazal) hat die Enzyklik <rs type="person" role="sender">BPs</rs> <ref type="letter" target="letter:622">622</ref> mit dem „Conspectus“ der „Bibliotheca Benedictina“, sobald er sie erhalten hatte, an JPo mit dem Auftrag übergeben, dem Ansinnen <rs type="person" role="sender">BPs</rs> zu entsprechen.</p>
+            <p corresp="#seg2">JPo legt nun vor, was er zu den Schriftstellern seines Klosters zusammenstellen konnte. Es ist wenig, doch bedenkt man die wiederholten Plünderungen und Brände und insbesondere die noch nicht lange zurückliegende Zerstörung des Klosters durch die Calvinisten, so ist es erstaunlich, dass von dem einst reichen Urkundenschatz auch nur ein geringer Teil noch vorhanden ist.</p>
+            <p corresp="#seg3">JPo hat in der Beilage sowohl die älteren als auch die neueren Schriftsteller von St.-Maixent behandelt und auch eine kurze Darstellung der Gründung beigefügt. Über die Verfasser der Viten der Heiligen Maxentius und Leodegar hat sich JPo ausführlich geäußert, weil auswärtige Autoren bislang nur sehr knapp darüber gehandelt haben. Auch hat JPo für nötig befunden, ausdrücklich darzulegen, dass diese Verfasser Mönche von St.-Maixent waren. Es steht <rs type="person" role="sender">BP</rs> frei, hier nach Belieben zu kürzen.</p>
+            <p corresp="#seg4">Über das Konzil von St.-Maixent konnte JPo nichts weiter finden, als was er geschrieben hat. Die Dekrete der Generalkapitel erwähnt er, weil sie wertvolle Aufschlüsse über den früheren Stand der Dinge bieten; wenn <rs type="person" role="sender">BP</rs> sie einzeln dargestellt wünscht, soll er Bescheid geben, und man wird sie ihm senden.</p>
+            <p corresp="#seg5">Über die Autoren aus der Maurinerkongregation hat sich JPo in größerer Breite geäußert. Unter ihnen hervorzuheben ist der gegenwärtige Prior François Chazal, der sich sehr um die Ordnung der Dokumente, um die feierliche Gestaltung der Liturgie und die Beschaffung neuer Paramente bemüht, um die Verluste kostbarer Stücke am Ende des 16. Jahrhunderts auszugleichen und damit der Pracht der jüngst erneuerten Kirche zu entsprechen. Da Chazal aus Bescheidenheit verboten hat, dass JPo in dem Schriftstellerkatalog etwas über seine Herkunft geschrieben hätte, vermerkt JPo nun, dass Chazal aus einer ehrenwerten und sehr wohlhabenden Bürgerfamilie stammt, seine Mutter adelig und sehr fromm war. Alle Angaben, die JPo in der Beilage macht, sind aus den Arbeiten Chazals entnommen; dieser zeichnet sich vor allem durch ein hervorragendes Gedächtnis aus. Über sich selbst als Neuling auf dem Gebiet der Gelehrsamkeit hat JPo einiges Wenige geschrieben, das <rs type="person" role="sender">BP</rs> verwenden oder auch weglassen kann. Gemäß den Vorgaben in der Enzyklik <rs type="person" role="sender">BPs</rs> hat JPo auch den jeweils bedeutendsten Musiker (Claude Chaussandier), Maler (André Guérin) und Bildhauer (Joachim Rabusseau) behandelt.</p>
+            <p corresp="#seg6">JPo hätte gerne einen längeren Brief geschrieben, doch fehlt ihm die Zeit dazu. Er verlässt demnächst St.-Maixent, weil er als Prior des gleichfalls in der Diözese Poitiers gelegenen Klosters St.-Junien zu Nouaillé designiert worden ist. Sollte er dort etwas finden, das für <rs type="person" role="sender">BPs</rs> Werk nützlich sein kann, will er es mitteilen. Er schließt mit Gebeten für <rs type="person" role="sender">BPs</rs> Gesundheit.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e25890">Der Prior von St.-Maixent (François Chazal) hat die Enzyklik <rs type="person" role="sender">BPs</rs> <ref type="letter">622</ref> mit dem „Conspectus“ der „Bibliotheca Benedictina“, sobald er sie erhalten hatte, an JPo mit dem Auftrag übergeben, dem Ansinnen <rs type="person" role="sender">BPs</rs> zu entsprechen.</seg><seg type="context" n="2" xml:id="d3e25895">JPo legt nun vor, was er zu den Schriftstellern seines Klosters zusammenstellen konnte. Es ist wenig, doch bedenkt man die wiederholten Plünderungen und Brände und insbesondere die noch nicht lange zurückliegende Zerstörung des Klosters durch die Calvinisten, so ist es erstaunlich, dass von dem einst reichen Urkundenschatz auch nur ein geringer Teil noch vorhanden ist.</seg><seg type="context" n="3" xml:id="d3e25897">JPo hat in der Beilage sowohl die älteren als auch die neueren Schriftsteller von St.-Maixent behandelt und auch eine kurze Darstellung der Gründung beigefügt. Über die Verfasser der Viten der Heiligen Maxentius und Leodegar hat sich JPo ausführlich geäußert, weil auswärtige Autoren bislang nur sehr knapp darüber gehandelt haben. Auch hat JPo für nötig befunden, ausdrücklich darzulegen, dass diese Verfasser Mönche von St.-Maixent waren. Es steht <rs type="person" role="sender">BP</rs> frei, hier nach Belieben zu kürzen.</seg><seg type="context" n="4" xml:id="d3e25899">Über das Konzil von St.-Maixent konnte JPo nichts weiter finden, als was er geschrieben hat. Die Dekrete der Generalkapitel erwähnt er, weil sie wertvolle Aufschlüsse über den früheren Stand der Dinge bieten; wenn <rs type="person" role="sender">BP</rs> sie einzeln dargestellt wünscht, soll er Bescheid geben, und man wird sie ihm senden.</seg><seg type="context" n="5" xml:id="d3e25901">Über die Autoren aus der Maurinerkongregation hat sich JPo in größerer Breite geäußert. Unter ihnen hervorzuheben ist der gegenwärtige Prior François Chazal, der sich sehr um die Ordnung der Dokumente, um die feierliche Gestaltung der Liturgie und die Beschaffung neuer Paramente bemüht, um die Verluste kostbarer Stücke am Ende des 16. Jahrhunderts auszugleichen und damit der Pracht der jüngst erneuerten Kirche zu entsprechen. Da Chazal aus Bescheidenheit verboten hat, dass JPo in dem Schriftstellerkatalog etwas über seine Herkunft geschrieben hätte, vermerkt JPo nun, dass Chazal aus einer ehrenwerten und sehr wohlhabenden Bürgerfamilie stammt, seine Mutter adelig und sehr fromm war. Alle Angaben, die JPo in der Beilage macht, sind aus den Arbeiten Chazals entnommen; dieser zeichnet sich vor allem durch ein hervorragendes Gedächtnis aus. Über sich selbst als Neuling auf dem Gebiet der Gelehrsamkeit hat JPo einiges Wenige geschrieben, das <rs type="person" role="sender">BP</rs> verwenden oder auch weglassen kann. Gemäß den Vorgaben in der Enzyklik <rs type="person" role="sender">BPs</rs> hat JPo auch den jeweils bedeutendsten Musiker (Claude Chaussandier), Maler (André Guérin) und Bildhauer (Joachim Rabusseau) behandelt.</seg><seg type="context" n="6" xml:id="d3e25903">JPo hätte gerne einen längeren Brief geschrieben, doch fehlt ihm die Zeit dazu. Er verlässt demnächst St.-Maixent, weil er als Prior des gleichfalls in der Diözese Poitiers gelegenen Klosters St.-Junien zu Nouaillé designiert worden ist. Sollte er dort etwas finden, das für <rs type="person" role="sender">BPs</rs> Werk nützlich sein kann, will er es mitteilen. Er schließt mit Gebeten für <rs type="person" role="sender">BPs</rs> Gesundheit.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Der Brief ist von einem Sekretär geschrieben; nur vier Worte am Schluss, die Unterschrift ab<hi rend="italic" xml:space="preserve"> Joannes Baptista Poncet</hi> sowie das zweite der beiden Daten sind von JPo eigenhändig nachgetragen. Das Schreiben dürfte am 1. Dezember 1716 abgeschlossen und datiert, aber noch nicht verschickt worden sein; das spätere Datum dürfte JPo zugleich mit der Unterschrift angebracht haben. Zur Ansetzung wird dieses verwendet.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Pax Christi.</p>
-            <p xml:space="preserve">Admodum reverende religiosissime ac clarissime pater.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e25923">Statim ut ad reverendum et intimo cordis affectu colendissimum superiorem meum, huius monasterii priorem doctissimum doctorumque cultorem, tua epistola encyclica<note place="foot" xml:id="d3e25925">	<hi rend="italic">tua ... encyclica</hi> korrigiert aus <hi rend="italic">tuam epistolam encyclicam</hi>.</note> cum conspectu Bibliothecae Benedictinae generalis, cui operam navas, pervenit, illico<note place="foot" xml:id="d3e25934">	Korrigiert aus <hi rend="italic">paratissimus</hi>.</note> in manibus meis eam credidit commisitque, ut iustis postulationibus reverentiae tuae fieret satis, quod lubenti animo sum aggressus, gaudens, si quid tam utili et glorioso operi conferre et contribuere possim. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e25940">Haec sunt, quae colligere mihi licuit e scriptoribus monasterii nostri. Pauca videbuntur, sed si ad<note place="foot" xml:id="d3e25942">	Nachträglich eingefügt.</note> frequentes illius depraedationes, incensiones, vastationes et nuperas <seg type="lemma" corresp="#d3e25975">a Calvinistis direptiones</seg> et totius monasterii desolationem et destructionem attendatur, mirum, quod nobis supersit minima chartarum nostrarum pars ex illo maximo numero, qui alias apud nos servabatur. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e25945"><seg type="lemma" corresp="#d3e25981">En igitur</seg>, reverende admodum pater, et veteres et novos abbatiae Sancti Maxentii scriptores cum brevi idea fundationis istius monasterii. Longiorem fortassis enumerationem sive dissertationem<seg type="lemma" corresp="#d3e25987"> auctorum vitae sanctorum Maxentii et Leodegarii</seg> fecisse videbimur, eam tamen assumere operae praetium existimavi, quia exteri de illis, quod sciam, non satis expresse egere. Necesse etiam duxi demonstrandum illos fuisse omnes monachos nostri coenobii; quod si existimet reverentia tua extra modum me processisse, coarctare tuum erit, ut videbitur; nec displiceat, si ultra scopum rem perduxerim, volui tam praetioso operi tuo secundum posse meum utilis fieri et esse. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e25947">De <seg type="lemma" corresp="#d3e25991">concilio Sammaxentiano</seg> nihil aliud reperi, quam scripsi; illud parum tibi sufficiat. Adieci<seg type="lemma" corresp="#d3e25997"> capitulorum generalium decreta</seg>, utpote quae ad antiquum ordinem maxime conferant et sint curiosa; si illa statuta tibi singillatim exponi desideres, scribere digneris, et ad te transmittentur. <pb n="1v"/> </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e25951">De auctoribus nostrae congregationis, qui istic scripsere, fuse egi, et inter alios notandus religiosissimus <seg type="lemma" corresp="#d3e26001">superior noster</seg>, monasterii prior multum amabilis et dilectus, qui curam adhibet omnimodam in scrutandis et notandis scriniis nostris, in componendo magnifice et ordinando divino officio, cum maximis impensis ad comparanda praetiosa ornamenta, ut non amplius lugeamus amissionem praetiosissimorum, a quibus 16. exeunte saeculo expoliati fuimus, utque nova magnificentissime a nobis nuper<seg type="lemma" corresp="#d3e26007"> reparatae nostrae basilicae</seg> respondeant. Nec passus est pro sua innata humilitate modestus prior, ut de suis natalibus aliquid in cathalogo nostro annotarem; inde iudico opportunum et congruum hic edocere te ipsum honestissimo parente, oppulentissimo [<hi rend="italic">sic</hi>] cive, matre pia ac nobili femina oriundum. A se<seg type="lemma" corresp="#d3e26011"> mutuari mihi permisit</seg> eruditus prior, zelo in ecclesiasticum et monasticum ordinem plenus, quaecumque ad te mitto: ille enim praesentem, facilem et opportunam memoriae facultatem cum iugi lectione et studio coniungit. Unde extra laudem debitam laudari nequit.<seg type="lemma" corresp="#d3e26015"> De me quasi novitio aliqua</seg> scripsi, quae si notatu digna reverentiae tuae videantur, his utere, ut placebit; ast si non, sileantur.<seg type="lemma" corresp="#d3e26019"> Musicum, pictorem et sculptorem</seg> expertissimos ostendo; tu postulasti, et pro voluntate et<seg type="lemma" corresp="#d3e26023"> regula a te perscripta</seg> omnia facere nisus sum. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e25956">Hanc brevem epistolam ad te dirigo, cum per tempus mihi non sit permissum longiorem, ut volebam, conscribere. Ex hoc enim monasterio egredior electus abbatiae Sancti Iuniani <seg type="lemma" corresp="#d3e26028">Nobiliacensis, ista in dioecesi Pictaviensi consistentis, indignus quamvis, prior</seg>. In illa si quid utilis operi tuo invenire valuero, lubens ad te transmittam. Interim Deum precor, ut te conservet incolumem ad gloriam ordinis nostri Benedictini, ipsumque dignare precari pro me; habeas me, velim, tanquam<note place="foot" xml:id="d3e25958"><hi rend="italic">	habeas ... tanquam</hi> nachträglich von JPo angefügt.</note>,</seg></p>
-            <p xml:space="preserve">Admodum reverende pater, reverentiae tuae servum humilem et fratrem ad obsequia paratum Joannem Baptistam Poncet subpriorem et bibliothecarium, nunc abbatiae Sancti Juniani Nobiliacensis in Pictonibus priorem.</p>
-            <p xml:space="preserve">In monasterio Sancti Maxentii Pictaviensis 1. Decembris anno 1716.</p>
-            <p xml:space="preserve">6. Januarii 1717<note place="foot" xml:id="d3e25969"><hi rend="italic">	6. Januarii 1717</hi> von JPo eigenhändig nachgetragen.</note>.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e25975">
-               <ref type="context">2</ref>
-               <label>a Calvinistis direptiones</label><p> Die Abteikirche von St.-Maixent wurde
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>a Calvinistis direptiones</mentioned>
+            <p> Die Abteikirche von St.-Maixent wurde
                   1568 während der französischen Religionskriege zum großen Teil zerstört und blieb
-                  ein Jahrhundert lang als Ruine stehen: <rs type="bibl" key="bibl:17794">Lambert,
+                  ein Jahrhundert lang als Ruine stehen: <rs type="bibl" ref="bibl:17794">Lambert,
                      Reconstruction</rs> 48. Schwere Verluste am Besitz des Klosters rührten
                   allerdings auch vom Wirken der Kommendataräbte her, die um etwa dieselbe Zeit
-                  sogar die Säkularisation der Abtei anstrebten: <rs type="bibl" key="bibl:19088"
-                     >Richard, Chartes et documents</rs> 16 XLIV f., XCVII–XCIX; 18
-               301–305.</p></note>
-            <note xml:id="d3e25981">
-               <ref type="context">3</ref>
-               <label>En igitur</label><p>Die Beilage ist erhalten: StiA Melk, Karton 7 Patres 10,
+                  sogar die Säkularisation der Abtei anstrebten: <rs type="bibl" ref="bibl:19088">Richard, Chartes et documents</rs> 16 XLIV f., XCVII–XCIX; 18
+               301–305.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg3">
+            <mentioned>En igitur</mentioned>
+            <p>Die Beilage ist erhalten: StiA Melk, Karton 7 Patres 10,
                   Fasz. 8, Nr. 2. Sie trägt den Titel „Notitia auctorum, qui in monasterio Sancti
                   Maxentii Pictaviensis dioecesis doctrina et scriptis tum ad religionem cum
                   rempublicam pertinentibus illustres floruere“ und bietet Angaben zum hl. Leodegar;
@@ -110,108 +110,103 @@
                   André Guérin, Joachim Rabusseau, Guinamundus, Léonard de Massiot und Claude
                   Estiennot de la Serre, schließlich zu dem anonymen Verfasser einer Streitschrift
                   gegen Mabillon zugunsten des Benediktinertums einiger Heiliger des 6. Jh. Zu
-                  Vallée, Liabeuf, Estiennot, Massiot und Chaussandier vgl. <rs type="bibl"
-                     key="bibl:15602">Chaussy, Bénédictins</rs> 2 15, 20, 32, 36, 64; <rs
-                     type="bibl" key="bibl:15604">Chaussy, Matricula</rs> 16, 23, 39, 44, 77. Zu
-                  Estiennot und Massiot vgl. <rs type="bibl" key="bibl:14772">Tassin, Histoire
-                     littéraire</rs> 177–185, 380f.; zu Vallée und Liabeuf vgl. <rs type="bibl"
-                     key="bibl:19126">Robert, Supplément</rs> 64, 93; zu denselben vier vgl. <rs
-                     type="bibl" key="bibl:20354">Wilhelm et al., Nouveau supplément 1</rs> 206–210,
-                  385; <rs type="bibl" key="bibl:20356">Wilhelm et al., Nouveau supplément 2</rs>
-                  72f., 257f.; <rs type="bibl" key="bibl:20358">Wilhelm et al., Nouveau supplément
+                  Vallée, Liabeuf, Estiennot, Massiot und Chaussandier vgl. <rs type="bibl" ref="bibl:15602">Chaussy, Bénédictins</rs> 2 15, 20, 32, 36, 64; <rs type="bibl" ref="bibl:15604">Chaussy, Matricula</rs> 16, 23, 39, 44, 77. Zu
+                  Estiennot und Massiot vgl. <rs type="bibl" ref="bibl:14772">Tassin, Histoire
+                     littéraire</rs> 177–185, 380f.; zu Vallée und Liabeuf vgl. <rs type="bibl" ref="bibl:19126">Robert, Supplément</rs> 64, 93; zu denselben vier vgl. <rs type="bibl" ref="bibl:20354">Wilhelm et al., Nouveau supplément 1</rs> 206–210,
+                  385; <rs type="bibl" ref="bibl:20356">Wilhelm et al., Nouveau supplément 2</rs>
+                  72f., 257f.; <rs type="bibl" ref="bibl:20358">Wilhelm et al., Nouveau supplément
                      3</rs> 37, 43f. Ausführliche Angaben zu Estiennot bieten Vanel, Savants
-                  lyonnais 161–233; <rs type="bibl" key="bibl:20100">Vidier, Estiennot</rs>; weiters
-                  vgl. <rs type="bibl" key="bibl:17948">Lemaître–Dufour, Documents
-                     nécrologiques</rs> 31–36. Zu Guérin und Rabusseau vgl. <rs type="bibl"
-                     key="bibl:15604">Chaussy, Matricula</rs> 320f. Zu Audulfus vgl. <rs type="bibl"
-                     key="bibl:15774">Debus, Urkunden</rs> 14 186–188; <rs type="bibl"
-                     key="bibl:16284">Fouchier, Abbaye</rs> 31, 33f., 122. Petrus Raymundi ist als
+                  lyonnais 161–233; <rs type="bibl" ref="bibl:20100">Vidier, Estiennot</rs>; weiters
+                  vgl. <rs type="bibl" ref="bibl:17948">Lemaître–Dufour, Documents
+                     nécrologiques</rs> 31–36. Zu Guérin und Rabusseau vgl. <rs type="bibl" ref="bibl:15604">Chaussy, Matricula</rs> 320f. Zu Audulfus vgl. <rs type="bibl" ref="bibl:15774">Debus, Urkunden</rs> 14 186–188; <rs type="bibl" ref="bibl:16284">Fouchier, Abbaye</rs> 31, 33f., 122. Petrus Raymundi ist als
                   vermuteter Verfasser der mittelalterlichen Chronik von St.-Maixent aufgenommen;
-                  zur Widerlegung dieser These vgl. <rs type="bibl" key="bibl:18140"
-                     >Marchegay–Mabille, Chroniques</rs> XXXVI; <rs type="bibl" key="bibl:19088"
-                     >Richard, Chartes et documents</rs> 16 XXV f.; <rs type="bibl" key="bibl:20094"
-                     >Verdon, Chronique de Saint-Maixent</rs> VIII. Zu Guillaume de Vezençay, Pierre
-                  Baston und Pierre de Clervaux vgl. <rs type="bibl" key="bibl:16284">Fouchier,
-                     Abbaye</rs> 66–68, 71f., 125; <rs type="bibl" key="bibl:18520">Naegle,
-                     Stadt</rs> 2 649f. Zu Guinamundus vgl. <rs type="bibl" key="bibl:16462"
-                     >Gauthier–François, Émaux 1</rs> 51f.; <rs type="bibl" key="bibl:19666"
-                     >Stalley, Architecture</rs> 157. Die anonyme Schrift gegen Mabillon und ihr
+                  zur Widerlegung dieser These vgl. <rs type="bibl" ref="bibl:18140">Marchegay–Mabille, Chroniques</rs> XXXVI; <rs type="bibl" ref="bibl:19088">Richard, Chartes et documents</rs> 16 XXV f.; <rs type="bibl" ref="bibl:20094">Verdon, Chronique de Saint-Maixent</rs> VIII. Zu Guillaume de Vezençay, Pierre
+                  Baston und Pierre de Clervaux vgl. <rs type="bibl" ref="bibl:16284">Fouchier,
+                     Abbaye</rs> 66–68, 71f., 125; <rs type="bibl" ref="bibl:18520">Naegle,
+                     Stadt</rs> 2 649f. Zu Guinamundus vgl. <rs type="bibl" ref="bibl:16462">Gauthier–François, Émaux 1</rs> 51f.; <rs type="bibl" ref="bibl:19666">Stalley, Architecture</rs> 157. Die anonyme Schrift gegen Mabillon und ihr
                   nicht zu ermittelnder Verfasser sind im Kontext eines größeren Protestes gegen
-                  Mabillons kritisches Vorgehen in den „Acta sanctorum OSB“ zu sehen: vgl. <rs
-                     type="bibl" key="bibl:15808">Delisle, Mabillon</rs>; <rs type="bibl"
-                     key="bibl:17220">Hurel, Mabillon</rs> 908–931; <rs type="bibl" key="bibl:17880"
-                     >Leclercq, Mabillon 1</rs> 139–153. – Eine Abschrift der Beilage von der Hand
+                  Mabillons kritisches Vorgehen in den „Acta sanctorum OSB“ zu sehen: vgl. <rs type="bibl" ref="bibl:15808">Delisle, Mabillon</rs>; <rs type="bibl" ref="bibl:17220">Hurel, Mabillon</rs> 908–931; <rs type="bibl" ref="bibl:17880">Leclercq, Mabillon 1</rs> 139–153. – Eine Abschrift der Beilage von der Hand
                   Theodor Mayers ist ebenfalls erhalten: StiA Melk, Karton 7, Patres 11, Fasz. 1,
-                  Nr. 39.</p></note>
-            <note xml:id="d3e25987">
-               <ref type="context">3</ref>
-               <label> auctorum ... Maxentii et Leodegarii</label><p> JPo referiert an dieser Stelle der Beilage hauptsächlich Ausführungen aus den Arbeiten Mabillons: StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 2, 2–4.</p></note>
-            <note xml:id="d3e25991">
-               <ref type="context">4</ref>
-               <label>concilio Sammaxentiano</label><p>Die knappe Notiz über dieses Konzil in der
+                  Nr. 39.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned> auctorum ... Maxentii et Leodegarii</mentioned>
+            <p> JPo referiert an dieser Stelle der Beilage hauptsächlich Ausführungen aus den Arbeiten Mabillons: StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 2, 2–4.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
+            <mentioned>concilio Sammaxentiano</mentioned>
+            <p>Die knappe Notiz über dieses Konzil in der
                   Beilage datiert es auf Juni 1075, nennt einige der Teilnehmer und gibt als
                   Vermutung an, dass der Zweck der Versammlung in der Verdammung der Lehren
                   Berengars von Tours bestanden hätte: StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr.
                   2, 4. Hierfür beruft sich JPo auf die einschlägige Stelle in der Chronik von
-                  St.-Maixent: <rs type="bibl" key="bibl:20094">Verdon, Chronique de
+                  St.-Maixent: <rs type="bibl" ref="bibl:20094">Verdon, Chronique de
                      Saint-Maixent</rs> 142. Nach gegenwärtigem Stand der Forschung ist das Konzil
                   wohl auf den 25. Juni 1074 zu datieren; es richtete sich gegen Bischof Isembert
-                  von Poitiers und wurde von ihm mit Waffengewalt aufgelöst: <rs type="bibl"
-                     key="bibl:18896">Pontal, Conciles</rs> 174f. Den Bezug zu Berengar stellte JPo
+                  von Poitiers und wurde von ihm mit Waffengewalt aufgelöst: <rs type="bibl" ref="bibl:18896">Pontal, Conciles</rs> 174f. Den Bezug zu Berengar stellte JPo
                   vermutlich wegen der zeitlichen Nähe zu einem weiteren Konzil in Poitiers im
-                  Januar 1075 her, auf welchem jener verurteilt wurde: <rs type="bibl"
-                     key="bibl:18896">Pontal, Conciles</rs> 147f.; vgl. <rs type="bibl"
-                     key="bibl:16194">Fichtenau, Ketzer und Professoren</rs> 265; <rs type="bibl"
-                     key="bibl:18428">Montclos, Lanfranc et Bérenger</rs> 45, 214f.</p></note>
-            <note xml:id="d3e25997">
-               <ref type="context">4</ref>
-               <label> capitulorum ... decreta</label><p>Nur auf der ersten Seite der Beilage werden in einem knappen Hinweis „infra scribenda capitulorum generalium decreta“ erwähnt: StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 2, 1. Darüber heißt es dann: „quae capitula generalia ad monasticum ordinem conservandum aut restituendum ab abbatibus fuerunt congregata, quorum statuta adhuc in cartophilacio nostro custodiuntur“. Jede weitere Angabe, die eine nähere Einordnung ermöglichen könnte, fehlt. Falls das als „infra scribenda“ angekündigte Material Teil der Beilage im versendeten Umfang war, ist es heute nicht mehr erhalten; die Worte des Briefes lassen sich jedoch auch so deuten, dass von jeder Ausführung der Ankündigung vorerst abgesehen wurde.</p></note>
-            <note xml:id="d3e26001">
-               <ref type="context">5</ref>
-               <label>superior noster</label><p> Zu François Chazal: <rs type="bibl"
-                     key="bibl:14772">Tassin, Histoire littéraire</rs> 493f.; vgl. <rs type="bibl"
-                     key="bibl:15602">Chaussy, Bénédictins</rs> 1 197f.; 2 74; <rs type="bibl"
-                     key="bibl:15604">Chaussy, Matricula</rs> 86; <rs type="bibl" key="bibl:19088"
-                     >Richard, Chartes et documents</rs> 16 XIX, CXVIII f.; 18 441; <rs type="bibl"
-                     key="bibl:20354">Wilhelm et al., Nouveau supplément 1</rs> 113–115.</p></note>
-            <note xml:id="d3e26007">
-               <ref type="context">5</ref>
-               <label> reparatae ... basilicae</label><p>Zum 1670 eingeleiteten, 1682
-                  abgeschlossenen Wiederaufbau der Abteikirche vgl. <rs type="bibl" key="bibl:17064"
-                     >Hipault, Église abbatiale</rs>; <rs type="bibl" key="bibl:17794">Lambert,
-                     Reconstruction</rs>; <rs type="bibl" key="bibl:19088">Richard, Chartes et
-                     documents</rs> 16 XLV; 18 373–379, 398f., 406–408.</p></note>
-            <note xml:id="d3e26011">
-               <ref type="context">5</ref>
-               <label> mutuari mihi permisit</label><p>Chazal arbeitete an einer Hausgeschichte von
-                  St.-Maixent, welche handschriftlich erhalten geblieben ist: vgl. <rs type="bibl"
-                     key="bibl:19088">Richard, Chartes et documents</rs> 16 CXVIII f.; <rs
-                     type="bibl" key="bibl:20354">Wilhelm et al., Nouveau supplément 1</rs> 115. JPo
+                  Januar 1075 her, auf welchem jener verurteilt wurde: <rs type="bibl" ref="bibl:18896">Pontal, Conciles</rs> 147f.; vgl. <rs type="bibl" ref="bibl:16194">Fichtenau, Ketzer und Professoren</rs> 265; <rs type="bibl" ref="bibl:18428">Montclos, Lanfranc et Bérenger</rs> 45, 214f.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned> capitulorum ... decreta</mentioned>
+            <p>Nur auf der ersten Seite der Beilage werden in einem knappen Hinweis „infra scribenda capitulorum generalium decreta“ erwähnt: StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 2, 1. Darüber heißt es dann: „quae capitula generalia ad monasticum ordinem conservandum aut restituendum ab abbatibus fuerunt congregata, quorum statuta adhuc in cartophilacio nostro custodiuntur“. Jede weitere Angabe, die eine nähere Einordnung ermöglichen könnte, fehlt. Falls das als „infra scribenda“ angekündigte Material Teil der Beilage im versendeten Umfang war, ist es heute nicht mehr erhalten; die Worte des Briefes lassen sich jedoch auch so deuten, dass von jeder Ausführung der Ankündigung vorerst abgesehen wurde.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg5">
+            <mentioned>superior noster</mentioned>
+            <p> Zu François Chazal: <rs type="bibl" ref="bibl:14772">Tassin, Histoire littéraire</rs> 493f.; vgl. <rs type="bibl" ref="bibl:15602">Chaussy, Bénédictins</rs> 1 197f.; 2 74; <rs type="bibl" ref="bibl:15604">Chaussy, Matricula</rs> 86; <rs type="bibl" ref="bibl:19088">Richard, Chartes et documents</rs> 16 XIX, CXVIII f.; 18 441; <rs type="bibl" ref="bibl:20354">Wilhelm et al., Nouveau supplément 1</rs> 113–115.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
+            <mentioned> reparatae ... basilicae</mentioned>
+            <p>Zum 1670 eingeleiteten, 1682
+                  abgeschlossenen Wiederaufbau der Abteikirche vgl. <rs type="bibl" ref="bibl:17064">Hipault, Église abbatiale</rs>; <rs type="bibl" ref="bibl:17794">Lambert,
+                     Reconstruction</rs>; <rs type="bibl" ref="bibl:19088">Richard, Chartes et
+                     documents</rs> 16 XLV; 18 373–379, 398f., 406–408.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
+            <mentioned> mutuari mihi permisit</mentioned>
+            <p>Chazal arbeitete an einer Hausgeschichte von
+                  St.-Maixent, welche handschriftlich erhalten geblieben ist: vgl. <rs type="bibl" ref="bibl:19088">Richard, Chartes et documents</rs> 16 CXVIII f.; <rs type="bibl" ref="bibl:20354">Wilhelm et al., Nouveau supplément 1</rs> 115. JPo
                   schöpfte offenbar seine Angaben aus der Materialsammlung seines
-               Vorgesetzten.</p></note>
-            <note xml:id="d3e26015">
-               <ref type="context">5</ref>
-               <label> De me ... aliqua</label><p> Neben sehr kurzen biographischen Angaben bietet JPo eine umfangreiche Inhaltsübersicht seines als Subprior von St.-Angel verfassten handschriftlichen Werkes über dieses Kloster und über den dort verehrten Märtyrer Gaudentius: StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 2, 10–14.</p></note>
-            <note xml:id="d3e26019">
-               <ref type="context">5</ref>
-               <label> Musicum ... sculptorem</label><p> StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 2, 15.</p></note>
-            <note xml:id="d3e26023">
-               <ref type="context">5</ref>
-               <label> regula ... perscripta</label><p>JPo bezieht sich offenbar auf die Stelle in
+               Vorgesetzten.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
+            <mentioned> De me ... aliqua</mentioned>
+            <p> Neben sehr kurzen biographischen Angaben bietet JPo eine umfangreiche Inhaltsübersicht seines als Subprior von St.-Angel verfassten handschriftlichen Werkes über dieses Kloster und über den dort verehrten Märtyrer Gaudentius: StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 2, 10–14.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
+            <mentioned> Musicum ... sculptorem</mentioned>
+            <p> StiA Melk, Karton 7 Patres 10, Fasz. 8, Nr. 2, 15.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg5">
+            <mentioned> regula ... perscripta</mentioned>
+            <p>JPo bezieht sich offenbar auf die Stelle in
                   der LE 3: „Scriptoribus nostris accensentur etiam anonymi, musici, pictores et
-                  cuiuscunque generis insignes artifices“; vgl. <ref type="letter">477</ref>
-                  &lt;4&gt;.</p></note>
-            <note xml:id="d3e26028">
-               <ref type="context">6</ref>
-               <label>Nobiliacensis ... prior</label><p>Die Funktion ist nicht nachgewiesen bei <rs
-                     type="bibl" key="bibl:15594">Charvin, Contribution</rs> 48 59. Da noch im
+                  cuiuscunque generis insignes artifices“; vgl. <ref type="letter" target="letter:477">477</ref>
+                  <ref target="letter:477#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg6">
+            <mentioned>Nobiliacensis ... prior</mentioned>
+            <p>Die Funktion ist nicht nachgewiesen bei <rs type="bibl" ref="bibl:15594">Charvin, Contribution</rs> 48 59. Da noch im
                   Verlauf desselben Jahres ein Generalkapitel stattfand, auf dem André Gardès zum
                   Prior von Nouaillé, JPo zum Prior von St.-Angel ernannt wurde, scheint es sich
                   hier um eine kurzfristige Substitution zu handeln. Der bisherige Prior von
-                  Nouaillé, Joseph Croisier, war nämlich im Oktober 1716 verstorben: vgl. <rs
-                     type="bibl" key="bibl:15602">Chaussy, Bénédictins</rs> 2 66; <rs type="bibl"
-                     key="bibl:15604">Chaussy, Matricula</rs> 79.</p></note>
-         </div>
-      </back>
+                  Nouaillé, Joseph Croisier, war nämlich im Oktober 1716 verstorben: vgl. <rs type="bibl" ref="bibl:15602">Chaussy, Bénédictins</rs> 2 66; <rs type="bibl" ref="bibl:15604">Chaussy, Matricula</rs> 79.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Pax Christi.</opener>
+         <opener>Admodum reverende religiosissime ac clarissime pater.</opener>
+         <ab resp="#editor" xml:id="seg1">Statim ut ad reverendum et intimo cordis affectu colendissimum superiorem meum, huius monasterii priorem doctissimum doctorumque cultorem, <choice><sic>tuam epistolam encyclicam</sic><corr>tua epistola encyclica</corr></choice> cum conspectu Bibliothecae Benedictinae generalis, cui operam navas, pervenit, <choice><sic>paratissimus</sic><corr>illico</corr></choice> in manibus meis eam credidit commisitque, ut iustis postulationibus reverentiae tuae fieret satis, quod lubenti animo sum aggressus, gaudens, si quid tam utili et glorioso operi conferre et contribuere possim. </ab>
+         <ab resp="#editor" xml:id="seg2">Haec sunt, quae colligere mihi licuit e scriptoribus monasterii nostri. Pauca videbuntur, sed si ad<note type="annotation" xml:id="d3e25942">Nachträglich eingefügt.</note> frequentes illius depraedationes, incensiones, vastationes et nuperas <anchor xml:id="n1"/>a Calvinistis direptiones<anchor xml:id="n1e"/> et totius monasterii desolationem et destructionem attendatur, mirum, quod nobis supersit minima chartarum nostrarum pars ex illo maximo numero, qui alias apud nos servabatur. </ab>
+         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n2"/>En igitur<anchor xml:id="n2e"/>, reverende admodum pater, et veteres et novos abbatiae Sancti Maxentii scriptores cum brevi idea fundationis istius monasterii. Longiorem fortassis enumerationem sive dissertationem<anchor xml:id="n3"/> auctorum vitae sanctorum Maxentii et Leodegarii<anchor xml:id="n3e"/> fecisse videbimur, eam tamen assumere operae praetium existimavi, quia exteri de illis, quod sciam, non satis expresse egere. Necesse etiam duxi demonstrandum illos fuisse omnes monachos nostri coenobii; quod si existimet reverentia tua extra modum me processisse, coarctare tuum erit, ut videbitur; nec displiceat, si ultra scopum rem perduxerim, volui tam praetioso operi tuo secundum posse meum utilis fieri et esse. </ab>
+         <ab resp="#editor" xml:id="seg4">De <anchor xml:id="n4"/>concilio Sammaxentiano<anchor xml:id="n4e"/> nihil aliud reperi, quam scripsi; illud parum tibi sufficiat. Adieci<anchor xml:id="n5"/> capitulorum generalium decreta<anchor xml:id="n5e"/>, utpote quae ad antiquum ordinem maxime conferant et sint curiosa; si illa statuta tibi singillatim exponi desideres, scribere digneris, et ad te transmittentur. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg5">De auctoribus nostrae congregationis, qui istic scripsere, fuse egi, et inter alios notandus religiosissimus <anchor xml:id="n6"/>superior noster<anchor xml:id="n6e"/>, monasterii prior multum amabilis et dilectus, qui curam adhibet omnimodam in scrutandis et notandis scriniis nostris, in componendo magnifice et ordinando divino officio, cum maximis impensis ad comparanda praetiosa ornamenta, ut non amplius lugeamus amissionem praetiosissimorum, a quibus 16. exeunte saeculo expoliati fuimus, utque nova magnificentissime a nobis nuper<anchor xml:id="n7"/> reparatae nostrae basilicae<anchor xml:id="n7e"/> respondeant. Nec passus est pro sua innata humilitate modestus prior, ut de suis natalibus aliquid in cathalogo nostro annotarem; inde iudico opportunum et congruum hic edocere te ipsum honestissimo parente, <sic>oppulentissimo</sic> cive, matre pia ac nobili femina oriundum. A se<anchor xml:id="n8"/> mutuari mihi permisit<anchor xml:id="n8e"/> eruditus prior, zelo in ecclesiasticum et monasticum ordinem plenus, quaecumque ad te mitto: ille enim praesentem, facilem et opportunam memoriae facultatem cum iugi lectione et studio coniungit. Unde extra laudem debitam laudari nequit.<anchor xml:id="n9"/> De me quasi novitio aliqua<anchor xml:id="n9e"/> scripsi, quae si notatu digna reverentiae tuae videantur, his utere, ut placebit; ast si non, sileantur.<anchor xml:id="n10"/> Musicum, pictorem et sculptorem<anchor xml:id="n10e"/> expertissimos ostendo; tu postulasti, et pro voluntate et<anchor xml:id="n11"/> regula a te perscripta<anchor xml:id="n11e"/> omnia facere nisus sum. </ab>
+         <ab resp="#editor" xml:id="seg6">Hanc brevem epistolam ad te dirigo, cum per tempus mihi non sit permissum longiorem, ut volebam, conscribere. Ex hoc enim monasterio egredior electus abbatiae Sancti Iuniani <anchor xml:id="n12"/>Nobiliacensis, ista in dioecesi Pictaviensi consistentis, indignus quamvis, prior<anchor xml:id="n12e"/>. In illa si quid utilis operi tuo invenire valuero, lubens ad te transmittam. Interim Deum precor, ut te conservet incolumem ad gloriam ordinis nostri Benedictini, ipsumque dignare precari pro me; habeas me, velim, tanquam<note place="foot" xml:id="d3e25958"><hi rend="italic">	habeas ... tanquam</hi> nachträglich von JPo angefügt.</note>,</ab>
+         <closer>Admodum reverende pater, reverentiae tuae servum humilem et fratrem ad obsequia paratum Joannem Baptistam Poncet subpriorem et bibliothecarium, nunc abbatiae Sancti Juniani Nobiliacensis in Pictonibus priorem.</closer>
+         <closer>In monasterio Sancti Maxentii Pictaviensis 1. Decembris anno 1716.</closer>
+         <closer>6. Januarii 1717<note place="foot" xml:id="d3e25969"><hi rend="italic">	6. Januarii 1717</hi> von JPo eigenhändig nachgetragen.</note>.</closer>
+      </body>
    </text>
 </TEI>

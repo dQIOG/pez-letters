@@ -1,45 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="115" xml:id="pez-0115">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">115 Bernardo Cretoni an Bernhard Pez. 1710-10-05. Ravenna (S. Vitale).</title>
-            <title type="sub">Digital Edition</title>
+            <title>Bernardo Cretoni an Bernhard Pez. 1710-10-05. Ravenna (S. Vitale).</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">115</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:18236">Mayer, Nachlaß</rs> 18 499</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">278r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 278r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -54,122 +69,98 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">114</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">116</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">114</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">116</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">148</idno>
-               </ref>
+               <ptr type="prev" target="letter:114"/>
+               <ptr type="next" target="letter:116"/>
+               <ptr type="mentions" target="letter:114"/>
+               <ptr type="mentions" target="letter:116"/>
+               <ptr type="mentionedIn" target="letter:148"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Sein Abt <rs ref="index:d10854e1766">Flaminio Avanzi</rs> hat <rs type="person" role="sender">BC</rs> vor wenigen Tagen das Schreiben <rs type="person" role="sender">BPs</rs> gezeigt <ref type="letter" target="letter:114">114</ref>, und so ergreift er die Gelegenheit, <rs type="person" role="sender">BP</rs> seiner Bereitschaft zur Hilfeleistung zu versichern.</p>
+            <p corresp="#seg2">Durch den Brief <rs ref="index:d10854e1766">Avanzis</rs> <ref type="letter" target="letter:116">116</ref> sollte <rs type="person" role="sender">BPs</rs> Wunsch zwar schon befriedigt sein, doch wenn sich weitere Fragen ergeben, will <rs type="person" role="sender">BC</rs> sich gerne nützlich erweisen. Er räumt jedoch ein, selbst nicht Professe von <rs ref="index:d14380e36578">S. Vitale</rs>, sondern von <rs ref="index:d10854e8638">S. Maria zu Farfa</rs> zu sein und erst seit sieben Jahren in <rs ref="index:d14380e36578">S. Vitale</rs> scholastische Theologie zu unterrichten. Auch herrscht in <rs ref="index:d14380e36578">S. Vitale</rs> nicht die Gewohnheit, Aufzeichnungen über die Lehrenden zu führen, wenngleich sie Schriften hinterlassen haben, von denen einige noch in der <rs ref="index:d14380e36586">Bibliothek</rs> vorhanden sind.</p>
+            <p corresp="#seg3">In <rs ref="index:d14380e36574">Ravenna</rs> gab es einst zwölf Benediktinerklöster mit zahlreichen frommen und gelehrten Männern. <rs type="person" role="sender">BP</rs> kann sich aus folgenden Werken zur Geschichte <rs ref="index:d14380e36574">Ravennas</rs> über sie informieren: <rs ref="index:d10854e26414">Girolamo Rossis</rs> „<rs ref="index:d10854e26420">Historiarum Ravennatum libri decem</rs>“, die dieser in elegantem <rs ref="index:d14380e23973">Latein</rs> zu Zeiten <rs ref="index:d14380e3931">Baronios</rs> schrieb; den <rs ref="index:d14380e19828">italienischen</rs> <rs ref="index:d10854e8549">Werken</rs> von <rs ref="index:d10854e8543">Girolamo Fabbri</rs>; <rs ref="index:d10854e29549">Desiderio Spretis</rs> „<rs ref="index:d10854e29555">De urbis Ravennae amplitudine</rs>“, worin allerdings nur das Wesentliche knapp dargestellt wird; sowie des <rs ref="index:d10854e306">Agnellus von Ravenna</rs> „<rs ref="index:d10854e312">Liber pontificalis</rs>“ aus dem 9. Jahrhundert, einem Katalog der Erzbischöfe von <rs ref="index:d14380e36574">Ravenna</rs>, unter denen sich fünf Benediktiner befanden (recte: siehe Kommentar). Das Werk befindet sich nun in der <rs ref="index:d10854e20217">Bibliothek der Herzöge von Modena</rs>; <rs ref="index:d14380e3625">Benedetto Bacchini</rs>, ein Abt der <rs ref="index:d10854e15502">Cassinensischen Kongregation</rs>, hat es samt gelehrten Kommentaren ediert. <rs type="person" role="sender">BC</rs> schließt mit Segenswünschen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e14335">Sein Abt <rs key="index:d10854e1766">Flaminio Avanzi</rs> hat <rs type="person" role="sender">BC</rs> vor wenigen Tagen das Schreiben <rs type="person" role="sender">BPs</rs> gezeigt <ref type="letter">114</ref>, und so ergreift er die Gelegenheit, <rs type="person" role="sender">BP</rs> seiner Bereitschaft zur Hilfeleistung zu versichern.</seg><seg type="context" n="2" xml:id="d4618e14340">Durch den Brief <rs key="index:d10854e1766">Avanzis</rs> <ref type="letter">116</ref> sollte <rs type="person" role="sender">BPs</rs> Wunsch zwar schon befriedigt sein, doch wenn sich weitere Fragen ergeben, will <rs type="person" role="sender">BC</rs> sich gerne nützlich erweisen. Er räumt jedoch ein, selbst nicht Professe von <rs key="index:d14380e36578">S. Vitale</rs>, sondern von <rs key="index:d10854e8638">S. Maria zu Farfa</rs> zu sein und erst seit sieben Jahren in <rs key="index:d14380e36578">S. Vitale</rs> scholastische Theologie zu unterrichten. Auch herrscht in <rs key="index:d14380e36578">S. Vitale</rs> nicht die Gewohnheit, Aufzeichnungen über die Lehrenden zu führen, wenngleich sie Schriften hinterlassen haben, von denen einige noch in der <rs key="index:d14380e36586">Bibliothek</rs> vorhanden sind.</seg><seg type="context" n="3" xml:id="d4618e14345">In <rs key="index:d14380e36574">Ravenna</rs> gab es einst zwölf Benediktinerklöster mit zahlreichen frommen und gelehrten Männern. <rs type="person" role="sender">BP</rs> kann sich aus folgenden Werken zur Geschichte <rs key="index:d14380e36574">Ravennas</rs> über sie informieren: <rs key="index:d10854e26414">Girolamo Rossis</rs> „<rs key="index:d10854e26420">Historiarum Ravennatum libri decem</rs>“, die dieser in elegantem <rs key="index:d14380e23973">Latein</rs> zu Zeiten <rs key="index:d14380e3931">Baronios</rs> schrieb; den <rs key="index:d14380e19828">italienischen</rs> <rs key="index:d10854e8549">Werken</rs> von <rs key="index:d10854e8543">Girolamo Fabbri</rs>; <rs key="index:d10854e29549">Desiderio Spretis</rs> „<rs key="index:d10854e29555">De urbis Ravennae amplitudine</rs>“, worin allerdings nur das Wesentliche knapp dargestellt wird; sowie des <rs key="index:d10854e306">Agnellus von Ravenna</rs> „<rs key="index:d10854e312">Liber pontificalis</rs>“ aus dem 9. Jahrhundert, einem Katalog der Erzbischöfe von <rs key="index:d14380e36574">Ravenna</rs>, unter denen sich fünf Benediktiner befanden (recte: siehe Kommentar). Das Werk befindet sich nun in der <rs key="index:d10854e20217">Bibliothek der Herzöge von Modena</rs>; <rs key="index:d14380e3625">Benedetto Bacchini</rs>, ein Abt der <rs key="index:d10854e15502">Cassinensischen Kongregation</rs>, hat es samt gelehrten Kommentaren ediert. <rs type="person" role="sender">BC</rs> schließt mit Segenswünschen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Reverendo admodum patri amplissimo viro domino patri Bernardo Pezz monacho Benedictino Mellicensi. Viennae in Austria</hi>. Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 141v.</ab>
-            </div>
-            <div>
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">I</hi>.</p>
-         </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende pater ac domine mi gratissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e14369">Quoniam paucis abhinc diebus reverendissimus meus praesul dignatus fuit ostendere humanissimam epistolam sibi a paternitate vestra admodum reverenda missam pro obtinendo catalogo illustrium virorum, qui in hoc almo coenobio in scientiis floruere: ex hoc ergo nactus sum occasionem tuae benignitati humillimam observantiam meam toto cordis affectu devinciendi, ut exinde aliquo tui iucundo mandato in posterum me decorare non dedigneris. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e14371">Ex litteris itaque laudati praesulis saltem ex parte tuo nobilissimo genio puto satisfactum; attamen si uberior notitia erit necessaria, conatus omnes impendam, ut, quantum licet, tibi valeam inservire, licet enim <seg type="lemma" corresp="#d4618e14400">non sim professus huius monasterii</seg>, in quo solum septem abhinc annis quamvis indoctus scientias speculativas declaro, sed <seg type="lemma" corresp="#d4618e14407">sacri et imperialis S. Mariae Farfensis</seg>; pergratum tamen mihi erit tuis votis pro viribus indulgere. Interim te monitum facio apud nos non solere describi lectores licet alias praeclari nominis, quamvis<note place="foot" xml:id="d4618e14373">	Davor durchgestrichen <hi rend="italic">licet et</hi>.</note> scripta condiderint, quorum etiam aliqua in hac bibliotheca, praecipue recentiorum, asservantur. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e14379">In hac celebri et antiquissima civitate fuerunt <seg type="lemma" corresp="#d4618e14412">duodecim monasteria</seg> ex nostro nigrorum ordine, in quibus omnibus sanctitate ac doctrina viri fuere celebratissimi, quorum numerum <pb n="1v"/> descriptum reperies apud historicos Ravennates, et praecipue apud Hieronymum Rubeum, qui <sic>elangantissimo</sic> [<hi rend="italic">sic</hi>] Latino idiomate circa tempora Baronii integrum volumen descripsit; non displicebit tamen alter Hieronymus Fabri, Italica lingua suae patriae gesta enarrans; similiter Desiderius Spretus historiam<note place="foot" xml:id="d4618e14386">	Danach durchgestrichen <hi rend="italic">gle</hi>.</note> edidit, licet breviter praecipua solum tetigerit; circa nonum saeculum fuit Andreas, dictus Agnellus, qui archiepiscoporum seriem, <seg type="lemma" corresp="#d4618e14419">quorum ex nostris quinque</seg> fuere, rudi stylo exaravit, et cui modo <seg type="lemma" corresp="#d4618e14424">in bibliotheca serenissimi ducis Mutinae</seg> extanti doctissimos <seg type="lemma" corresp="#d4618e14429">edi fecit commentarios reverendissimus pater domnus Benedictus Bacchinius</seg> abbas nostrae congregationis. Precor tandem humanitatem tuam, ut me <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>excusatum<?oxy_custom_end?> <sic><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>habeas<?oxy_custom_end?></sic> [<hi rend="italic">sic</hi>], dum interea Supremum rerum omnium Largitorem, ut te ad beneficium nostrae religionis diu incolumem servet, enixe rogabo. Vale.</seg></p>
-            <p xml:space="preserve">Paternitatis tuae admodum reverendae humillimus ac addictissimus servus domnus Bernardus Cretoni a Phara monachus Casinensis.</p>
-            <p xml:space="preserve">Ravennae in coenobio S. Vitalis die 5. Octobris 1710.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e14400">
-               <ref type="context">2</ref>
-               <label>non sim professus huius monasterii</label>
-               <p>Die Cassinenser legten ihre Profess zwar in einem bestimmten Kloster, aber „sub
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>non sim professus huius monasterii</mentioned>
+            <p>Die Cassinenser legten ihre Profess zwar in einem bestimmten Kloster, aber „sub
                   congregatione“ ab; Versetzungen von Mönchen von einem Kloster in ein anderes waren
-                  leicht möglich und kamen häufig vor: <rs type="bibl" key="bibl:18418">Molitor,
+                  leicht möglich und kamen häufig vor: <rs type="bibl" ref="bibl:18418">Molitor,
                      Rechtsgeschichte</rs> 1 273f.</p>
-            </note>
-            <note xml:id="d4618e14407">
-               <ref type="context">2</ref>
-               <label>sacri et imperialis ... Farfensis</label>
-               <p>Die Abtei Farfa war im Mittelalter eng mit dem Kaisertum verbunden. Karl der Große
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>sacri et imperialis ... Farfensis</mentioned>
+            <p>Die Abtei Farfa war im Mittelalter eng mit dem Kaisertum verbunden. Karl der Große
                   hatte sie 775 den königlichen Klöstern im Frankenreich gleichgestellt; Otto I. und
                   etliche nachfolgende Kaiser hatten diesen besonderen Schutz erneuert, der sich
                   auch im kaiserlichen Zugriff auf innere Angelegenheiten des Klosters, etwa
                   Abtwahlen, äußerte. Nach einer letzten Neubelebung unter Friedrich I. (1155)
                   erstarb zwar der kaiserliche Schutz und die Abtei fiel unter päpstliche Dominanz,
                   doch führte das Kloster auch in der Neuzeit weiter gewohnheitsmäßig die hier von
-                  BC gebrauchte Bezeichnung. Vgl. dazu <rs type="bibl" key="bibl:36010">D’Acunto,
-                     Farfa e l’Impero</rs>; <rs type="bibl" key="bibl:37082">Stroll, Abbey of
+                  BC gebrauchte Bezeichnung. Vgl. dazu <rs type="bibl" ref="bibl:36010">D’Acunto,
+                     Farfa e l’Impero</rs>; <rs type="bibl" ref="bibl:37082">Stroll, Abbey of
                      Farfa</rs>.</p>
-            </note>
-            <note xml:id="d4618e14412">
-               <ref type="context">3</ref>
-               <label>duodecim monasteria</label>
-               <p>Die Zahl der Klöster in Ravenna, die nachweislich zu irgendeiner Zeit
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>duodecim monasteria</mentioned>
+            <p>Die Zahl der Klöster in Ravenna, die nachweislich zu irgendeiner Zeit
                   benediktinisch waren, ist insgesamt noch deutlich höher. Als wichtige Häuser zu
                   nennen sind S. Andrea, S. Apollinare Nuovo, S. Giorgio, S. Giovanni Battista, S.
                   Giovanni Evangelista, S. Lorenzo in Cesarea, S. Maria in Cosmedin, S. Maria
                   Rotonda, S. Pietro in Vincoli, S. Spirito und S. Vitale. Mit Ausnahme von S.
                   Vitale waren zur Zeit BCs die meisten davon anderen Orden übertragen worden oder
-                  bestanden nicht länger:<rs type="bibl" key="bibl:15690">Cottineau,
+                  bestanden nicht länger:<rs type="bibl" ref="bibl:15690">Cottineau,
                      Répertoire</rs> 2 col. 2411–2416.</p>
-            </note>
-            <note xml:id="d4618e14419">
-               <ref type="context">3</ref>
-               <label>quorum ex nostris quinque</label>
-               <p>BC bezieht sich wohl darauf, dass Agnellus von fünf Erzbischöfen erwähnt, sie
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>quorum ex nostris quinque</mentioned>
+            <p>BC bezieht sich wohl darauf, dass Agnellus von fünf Erzbischöfen erwähnt, sie
                   seien vor ihrem Amtsantritt Angehörige ravennatischer Klöster gewesen: Maurus
                   (648–671) und Felix (705–723) waren Äbte von Agnellus’ eigenem Kloster S.
                   Bartolomeo, Reparatus (671–677) und Gratiosus (784–795) Äbte von S. Apollinare
-                  Nuovo gewesen, Martin (810–817) kam aus dem Kloster S. Andrea: <rs type="bibl"
-                     key="bibl:35718">Agnelli Liber pontificalis</rs> 349, 353, 366, 383, 386;
-                  Pontifikatsdaten nach <rs type="bibl" key="bibl:36168">Gams, Series
+                  Nuovo gewesen, Martin (810–817) kam aus dem Kloster S. Andrea: <rs type="bibl" ref="bibl:35718">Agnelli Liber pontificalis</rs> 349, 353, 366, 383, 386;
+                  Pontifikatsdaten nach <rs type="bibl" ref="bibl:36168">Gams, Series
                      episcoporum</rs> 717. Während S. Apollinare Nuovo bereits 669 als
-                  Benediktinerkloster erwiesen ist (<rs type="bibl" key="bibl:15690">Cottineau,
+                  Benediktinerkloster erwiesen ist (<rs type="bibl" ref="bibl:15690">Cottineau,
                      Répertoire</rs> 2 col. 2412), kann für die beiden anderen Häuser keineswegs als
                   sicher angenommen werden, dass in ihnen zur fraglichen Zeit nach der RB gelebt
                   wurde.</p>
-            </note>
-            <note xml:id="d4618e14424">
-               <ref type="context">3</ref>
-               <label>in bibliotheca ... ducis Mutinae</label>
-               <p>Heute Modena, Biblioteca Estense, Lat. 371 (α.P.4.9); vgl. <rs type="bibl"
-                     key="bibl:35718">Agnelli Liber pontificalis</rs> 265–269; <rs type="bibl"
-                     key="bibl:37110">Tjäder, Bestrafung</rs> 432.</p>
-            </note>
-            <note xml:id="d4618e14429">
-               <ref type="context">3</ref>
-               <label>edi fecit ... Bacchinius</label>
-               <p>Bacchinis Agnellus-Ausgabe war 1708 erst nach jahrelangen Unersprießlichkeiten mit
-                  der römischen Zensur erschienen; vgl. <rs type="bibl" key="bibl:35812">Andreoli,
-                     Bacchini e Muratori</rs> 60, 68f., 81; <rs type="bibl" key="bibl:36176"
-                     >Gasperoni, Bacchini</rs> 296–299; <rs type="bibl" key="bibl:16570">Golinelli,
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>in bibliotheca ... ducis Mutinae</mentioned>
+            <p>Heute Modena, Biblioteca Estense, Lat. 371 (α.P.4.9); vgl. <rs type="bibl" ref="bibl:35718">Agnelli Liber pontificalis</rs> 265–269; <rs type="bibl" ref="bibl:37110">Tjäder, Bestrafung</rs> 432.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned>edi fecit ... Bacchinius</mentioned>
+            <p>Bacchinis Agnellus-Ausgabe war 1708 erst nach jahrelangen Unersprießlichkeiten mit
+                  der römischen Zensur erschienen; vgl. <rs type="bibl" ref="bibl:35812">Andreoli,
+                     Bacchini e Muratori</rs> 60, 68f., 81; <rs type="bibl" ref="bibl:36176">Gasperoni, Bacchini</rs> 296–299; <rs type="bibl" ref="bibl:16570">Golinelli,
                      Bacchini par lui même</rs> 392f., 401.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:18236">
+            <title type="short">Mayer, Nachlaß</title>
+            <biblScope>18 499</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <front>
+         <p>Reverendo admodum patri amplissimo viro domino patri Bernardo Pezz monacho Benedictino Mellicensi. Viennae in Austria.<note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 141v.</note></p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende pater ac domine mi gratissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Quoniam paucis abhinc diebus reverendissimus meus praesul dignatus fuit ostendere humanissimam epistolam sibi a paternitate vestra admodum reverenda missam pro obtinendo catalogo illustrium virorum, qui in hoc almo coenobio in scientiis floruere: ex hoc ergo nactus sum occasionem tuae benignitati humillimam observantiam meam toto cordis affectu devinciendi, ut exinde aliquo tui iucundo mandato in posterum me decorare non dedigneris. </ab>
+         <ab resp="#editor" xml:id="seg2">Ex litteris itaque laudati praesulis saltem ex parte tuo nobilissimo genio puto satisfactum; attamen si uberior notitia erit necessaria, conatus omnes impendam, ut, quantum licet, tibi valeam inservire, licet enim <anchor xml:id="n1"/>non sim professus huius monasterii<anchor xml:id="n1e"/>, in quo solum septem abhinc annis quamvis indoctus scientias speculativas declaro, sed <anchor xml:id="n2"/>sacri et imperialis S. Mariae Farfensis<anchor xml:id="n2e"/>; pergratum tamen mihi erit tuis votis pro viribus indulgere. Interim te monitum facio apud nos non solere describi lectores licet alias praeclari nominis, quamvis<del ana="#before">licet et</del> scripta condiderint, quorum etiam aliqua in hac bibliotheca, praecipue recentiorum, asservantur. </ab>
+         <ab resp="#editor" xml:id="seg3">In hac celebri et antiquissima civitate fuerunt <anchor xml:id="n3"/>duodecim monasteria<anchor xml:id="n3e"/> ex nostro nigrorum ordine, in quibus omnibus sanctitate ac doctrina viri fuere celebratissimi, quorum numerum <pb n="1v"/> descriptum reperies apud historicos Ravennates, et praecipue apud Hieronymum Rubeum, qui <sic>elangantissimo</sic>  Latino idiomate circa tempora Baronii integrum volumen descripsit; non displicebit tamen alter Hieronymus Fabri, Italica lingua suae patriae gesta enarrans; similiter Desiderius Spretus historiam<del ana="#after">gle</del> edidit, licet breviter praecipua solum tetigerit; circa nonum saeculum fuit Andreas, dictus Agnellus, qui archiepiscoporum seriem, <anchor xml:id="n4"/>quorum ex nostris quinque<anchor xml:id="n4e"/> fuere, rudi stylo exaravit, et cui modo <anchor xml:id="n5"/>in bibliotheca serenissimi ducis Mutinae<anchor xml:id="n5e"/> extanti doctissimos <anchor xml:id="n6"/>edi fecit commentarios reverendissimus pater domnus Benedictus Bacchinius<anchor xml:id="n6e"/> abbas nostrae congregationis. Precor tandem humanitatem tuam, ut me excusatum <sic>habeas</sic> , dum interea Supremum rerum omnium Largitorem, ut te ad beneficium nostrae religionis diu incolumem servet, enixe rogabo. Vale.</ab>
+         <closer>Paternitatis tuae admodum reverendae humillimus ac addictissimus servus domnus Bernardus Cretoni a Phara monachus Casinensis.</closer>
+         <closer>Ravennae in coenobio S. Vitalis die 5. Octobris 1710.</closer>
+      </body>
    </text>
 </TEI>

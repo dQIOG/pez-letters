@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="486" xml:id="pez-0486">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">486 Karl Meichelbeck an Bernhard Pez. 1716-01-08. Benediktbeuern.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Karl Meichelbeck an Bernhard Pez. 1716-01-08. Benediktbeuern.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">486</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -21,29 +33,34 @@
             <relatedItem type="otherEdition">
                <bibl>Siegmund, Meichelbecks Briefe 80/1–2 150–152.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:15152">Benz, Zwischen Tradition und Kritik</rs>
-                     603</bibl>
-                  <bibl><rs type="bibl" key="bibl:20248">Weber, Meichelbeck</rs> 132, 134f</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               KM vermerkt in seinem Diarium zum 8. Januar 1716: <orig>Scribo patri Pezio</orig> (BStB München, Meichelbeckiana 18b, 267v).
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">678r–679v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 678r–679v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -58,235 +75,211 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">481</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">497</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">481</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">482</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">483</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">484</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">506</idno>
-               </ref>
+               <ptr type="prev" target="letter:481"/>
+               <ptr type="next" target="letter:497"/>
+               <ptr type="mentions" target="letter:481"/>
+               <ptr type="mentions" target="letter:482"/>
+               <ptr type="mentions" target="letter:483"/>
+               <ptr type="mentions" target="letter:484"/>
+               <ptr type="mentionedIn" target="letter:506"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person" role="sender">KM</rs> hat drei weitere Exemplare von <rs type="person" role="sender">BPs</rs> <rs ref="index:d14380e33611">Enzyklik</rs> erhalten <ref type="letter" target="letter:481">481</ref>, von denen er an diesem Tag eines an Abt <rs ref="index:d14380e18863">Ildephons Huber</rs> von <rs ref="index:d14380e45067">Weihenstephan</rs> <ref type="letter" target="letter:484">484</ref>, eines an Abt <rs ref="index:d14380e28852">Benedikt Meyding</rs> von <rs ref="index:d14380e39711">Scheyern</rs> <ref type="letter" target="letter:483">483</ref> und das dritte an Abt <rs ref="index:d14380e40573">Placidus Seiz</rs> von <rs ref="index:d14380e11731">Ettal</rs> <ref type="letter" target="letter:482">482</ref> schickt; hätte er noch weitere bekommen, so hätte er diese an die Äbte <rs ref="index:d14380e31203">Aemilian Oetlinger</rs> von <rs ref="index:d10854e26457">Rott am Inn</rs> und <rs ref="index:d14380e39702">Kajetan Scheyerl</rs> von <rs ref="index:d14380e3167">Attel</rs> gesendet. Dass <rs ref="index:d14380e42111">Tegernsee</rs> von <rs type="person" role="sender">BP</rs> selbst bereits Enzykliken erhalten hat, nimmt er an, da er weiß, dass sein Freund <rs ref="index:d14380e18904">Alphons Hueber</rs> schon lange Korrespondent <rs type="person" role="sender">BPs</rs> ist. Er will sich bemühen, alle Aufträge <rs type="person" role="sender">BPs</rs> längstens bis zum Osterfest zu erfüllen, und hofft, dass seine Mitwirkung für dessen Vorhaben („<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“) nützlich sein kann.</p>
+            <p corresp="#seg2">Die von <rs type="person" role="sender">KM</rs> geplanten Werke werden wohl noch länger nicht erscheinen, denn die Ordnung des Benediktbeurer Archivs wird ihn noch mindestens bis zum September beschäftigen; danach werden erst die sehr umfangreichen Inventare und Archivordnungen ins Reine zu schreiben sein, was nochmals fast ein Jahr dauern kann. Diese Arbeiten werden allerdings viel zu seinem Werk zur Hausgeschichte beitragen. Zu einigen Gegenständen wird <rs type="person" role="sender">KM</rs> <rs ref="index:d14380e26993">René Massuet</rs> um Rat fragen, denn in den schwierigsten Zweifelsfällen bezüglich der Quellen seines Klosters können nur die Mauriner helfen. Dies betrifft etwa die Frankenkönigin <rs ref="index:d14380e21927">Kisyla</rs>, welche im benachbarten, einst <rs ref="index:d14380e4706">Benediktbeuern</rs> unterstellten Kloster <rs ref="index:d14380e22160">Kochel</rs> Ordensfrau war, oder die Genealogie der Stifter und ersten Äbte (<rs ref="index:d14380e23773">Landfrid</rs>, <rs ref="index:d14380e44931">Waldram</rs>, <rs ref="index:d14380e11050">Eliland</rs>) von Benediktbeuern, welche nach zahlreichen hauseigenen Dokumenten Verwandte <rs ref="index:d14380e21270">Karl Martells</rs> waren.</p>
+            <p corresp="#seg3">Auch die Hilfe <rs type="person" role="sender">BPs</rs> wird <rs type="person" role="sender">KM</rs> anrufen, vor allem zu Fragen des 15. Jahrhunderts, wie dieser selbst vorausgesehen hat. Dies betrifft insbesondere die im <rs ref="index:d14380e4899">Benediktbeurer Chor</rs> verwahrten <rs ref="index:d14380e4908">Antiphonare</rs> aus jener Zeit mit dem Vermerk, dass sie Gesänge nach dem Brauch der Mönche von Melk (der Melker Reform) enthalten. Diese Antiphonare werden noch verwendet.</p>
+            <p corresp="#seg4"><rs type="person" role="sender">BPs</rs> „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“ werden in <rs ref="index:d14380e4170">Bayern</rs> weithin gelesen und sehr gelobt. Die Benediktbeurer verteilen Exemplare, die sie in <rs ref="index:d14380e3233">Augsburg</rs> erworben haben, in <rs ref="index:d14380e29936">München</rs>, <rs ref="index:d14380e19763">Innsbruck</rs> und <rs ref="index:d14380e6458">Bozen</rs>. Auch der erste Minister des kurfürstlichen Hofes (primus minister; <rs ref="index:d14380e43759">Franz Xaver Joseph von Unertl</rs>?) hat unlängst um ein Exemplar gebeten, das er in den nächsten Tagen erhalten wird.</p>
+            <p corresp="#seg5">Vor kurzem wurde ein junger Verwandter <rs type="person" role="sender">KMs</rs> (David Luz?) von dem Präfekten (<rs ref="index:d14380e37301">Johann Reyman</rs>) des Münchner Gymnasiums gefragt, welche Gespräche er während der Ferien in <rs ref="index:d14380e4706">Benediktbeuern</rs> gehört habe. Der junge Mann antwortete, dass viel über eine Schrift (<rs ref="index:d14380e18286">Gábor Hevenesi, „Cura salutis“</rs>) geklagt wurde, welche an der Universität Wien verteilt worden war, und dass ebenso viel über deren Widerlegung durch einen Melker („<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“) gesprochen wurde. Der Jesuit soll dazu gemeint haben, darüber hätten die <rs ref="index:d14380e4919">Benediktiner</rs> in der Tat Grund zur Klage, dann aber gebeten haben, die Äußerung für sich zu behalten; der Jüngling teilte die Anekdote belustigt <rs type="person" role="sender">KM</rs> mit. Weit weniger erfreulich ist die Reaktion eines Besuchers aus der Cassinenserkongregation (<rs ref="index:d14380e5760">Diogenio Bigaglia</rs>?), dem <rs type="person" role="sender">KM</rs> die „Epistolae apologeticae“ gezeigt hat; auf die Stelle, wo <rs type="person" role="sender">BP</rs> den Vorwurf zurückweist, das Leben der Benediktiner sei außerhalb von Messe und Chorgebet von Müßiggang erfüllt, bemerkte der <rs ref="index:d10854e15502">Cassinenser</rs>, dass sich dies für seine Kongregation gar nicht leugnen lasse. <rs type="person" role="sender">KM</rs> ruft nach der Rute des hl. Benedikt, mit der dieser aus einem faulen Mönch den Teufel (daemonius meridianus) austrieb. Er hofft, dass er und <rs type="person" role="sender">BP</rs> so arbeiten, dass ihr Beispiel die Mitbrüder anspornt.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e527"><rs type="person" role="sender">KM</rs> hat drei weitere Exemplare von <rs type="person" role="sender">BPs</rs> <rs key="index:d14380e33611">Enzyklik</rs> erhalten <ref type="letter">481</ref>, von denen er an diesem Tag eines an Abt <rs key="index:d14380e18863">Ildephons Huber</rs> von <rs key="index:d14380e45067">Weihenstephan</rs> <ref type="letter">484</ref>, eines an Abt <rs key="index:d14380e28852">Benedikt Meyding</rs> von <rs key="index:d14380e39711">Scheyern</rs> <ref type="letter">483</ref> und das dritte an Abt <rs key="index:d14380e40573">Placidus Seiz</rs> von <rs key="index:d14380e11731">Ettal</rs> <ref type="letter">482</ref> schickt; hätte er noch weitere bekommen, so hätte er diese an die Äbte <rs key="index:d14380e31203">Aemilian Oetlinger</rs> von <rs key="index:d10854e26457">Rott am Inn</rs> und <rs key="index:d14380e39702">Kajetan Scheyerl</rs> von <rs key="index:d14380e3167">Attel</rs> gesendet. Dass <rs key="index:d14380e42111">Tegernsee</rs> von <rs type="person" role="sender">BP</rs> selbst bereits Enzykliken erhalten hat, nimmt er an, da er weiß, dass sein Freund <rs key="index:d14380e18904">Alphons Hueber</rs> schon lange Korrespondent <rs type="person" role="sender">BPs</rs> ist. Er will sich bemühen, alle Aufträge <rs type="person" role="sender">BPs</rs> längstens bis zum Osterfest zu erfüllen, und hofft, dass seine Mitwirkung für dessen Vorhaben („<rs key="index:d14380e33227">Bibliotheca Benedictina</rs>“) nützlich sein kann.</seg><seg type="context" n="2" xml:id="d3e541">Die von <rs type="person" role="sender">KM</rs> geplanten Werke werden wohl noch länger nicht erscheinen, denn die Ordnung des Benediktbeurer Archivs wird ihn noch mindestens bis zum September beschäftigen; danach werden erst die sehr umfangreichen Inventare und Archivordnungen ins Reine zu schreiben sein, was nochmals fast ein Jahr dauern kann. Diese Arbeiten werden allerdings viel zu seinem Werk zur Hausgeschichte beitragen. Zu einigen Gegenständen wird <rs type="person" role="sender">KM</rs> <rs key="index:d14380e26993">René Massuet</rs> um Rat fragen, denn in den schwierigsten Zweifelsfällen bezüglich der Quellen seines Klosters können nur die Mauriner helfen. Dies betrifft etwa die Frankenkönigin <rs key="index:d14380e21927">Kisyla</rs>, welche im benachbarten, einst <rs key="index:d14380e4706">Benediktbeuern</rs> unterstellten Kloster <rs key="index:d14380e22160">Kochel</rs> Ordensfrau war, oder die Genealogie der Stifter und ersten Äbte (<rs key="index:d14380e23773">Landfrid</rs>, <rs key="index:d14380e44931">Waldram</rs>, <rs key="index:d14380e11050">Eliland</rs>) von Benediktbeuern, welche nach zahlreichen hauseigenen Dokumenten Verwandte <rs key="index:d14380e21270">Karl Martells</rs> waren.</seg><seg type="context" n="3" xml:id="d3e543">Auch die Hilfe <rs type="person" role="sender">BPs</rs> wird <rs type="person" role="sender">KM</rs> anrufen, vor allem zu Fragen des 15. Jahrhunderts, wie dieser selbst vorausgesehen hat. Dies betrifft insbesondere die im <rs key="index:d14380e4899">Benediktbeurer Chor</rs> verwahrten <rs key="index:d14380e4908">Antiphonare</rs> aus jener Zeit mit dem Vermerk, dass sie Gesänge nach dem Brauch der Mönche von Melk (der Melker Reform) enthalten. Diese Antiphonare werden noch verwendet.</seg><seg type="context" n="4" xml:id="d3e545"><rs type="person" role="sender">BPs</rs> „<rs key="index:d14380e33682">Epistolae apologeticae</rs>“ werden in <rs key="index:d14380e4170">Bayern</rs> weithin gelesen und sehr gelobt. Die Benediktbeurer verteilen Exemplare, die sie in <rs key="index:d14380e3233">Augsburg</rs> erworben haben, in <rs key="index:d14380e29936">München</rs>, <rs key="index:d14380e19763">Innsbruck</rs> und <rs key="index:d14380e6458">Bozen</rs>. Auch der erste Minister des kurfürstlichen Hofes (primus minister; <rs key="index:d14380e43759">Franz Xaver Joseph von Unertl</rs>?) hat unlängst um ein Exemplar gebeten, das er in den nächsten Tagen erhalten wird.</seg><seg type="context" n="5" xml:id="d3e547">Vor kurzem wurde ein junger Verwandter <rs type="person" role="sender">KMs</rs> (David Luz?) von dem Präfekten (<rs key="index:d14380e37301">Johann Reyman</rs>) des Münchner Gymnasiums gefragt, welche Gespräche er während der Ferien in <rs key="index:d14380e4706">Benediktbeuern</rs> gehört habe. Der junge Mann antwortete, dass viel über eine Schrift (<rs key="index:d14380e18286">Gábor Hevenesi, „Cura salutis“</rs>) geklagt wurde, welche an der Universität Wien verteilt worden war, und dass ebenso viel über deren Widerlegung durch einen Melker („<rs key="index:d14380e33682">Epistolae apologeticae</rs>“) gesprochen wurde. Der Jesuit soll dazu gemeint haben, darüber hätten die <rs key="index:d14380e4919">Benediktiner</rs> in der Tat Grund zur Klage, dann aber gebeten haben, die Äußerung für sich zu behalten; der Jüngling teilte die Anekdote belustigt <rs type="person" role="sender">KM</rs> mit. Weit weniger erfreulich ist die Reaktion eines Besuchers aus der Cassinenserkongregation (<rs key="index:d14380e5760">Diogenio Bigaglia</rs>?), dem <rs type="person" role="sender">KM</rs> die „Epistolae apologeticae“ gezeigt hat; auf die Stelle, wo <rs type="person" role="sender">BP</rs> den Vorwurf zurückweist, das Leben der Benediktiner sei außerhalb von Messe und Chorgebet von Müßiggang erfüllt, bemerkte der <rs key="index:d10854e15502">Cassinenser</rs>, dass sich dies für seine Kongregation gar nicht leugnen lasse. <rs type="person" role="sender">KM</rs> ruft nach der Rute des hl. Benedikt, mit der dieser aus einem faulen Mönch den Teufel (daemonius meridianus) austrieb. Er hofft, dass er und <rs type="person" role="sender">BP</rs> so arbeiten, dass ihr Beispiel die Mitbrüder anspornt.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">III</hi>.</p>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">120</hi>.</p>
-            <div type="remarks">
-               <p>KM vermerkt in seinem Diarium zum 8. Januar 1716: <hi rend="italic">Scribo patri Pezio</hi> (BStB München, Meichelbeckiana 18b, 267v).</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime et clarissime domine pater Bernare [<hi rend="italic">sic</hi>], patrone colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e582">Reddita mihi fuere posteriora quoque tria exemplaria encyclicae vestrae, quorum unum reverendissimo domino abbati <seg type="lemma" corresp="#d3e611">Weihenstephanensi</seg>, alterum reverendissimo domino abbati<seg type="lemma" corresp="#d3e617"> Schyrensi</seg>, tertium vero reverendissimo domino praesuli<seg type="lemma" corresp="#d3e621"> Ettallensi</seg> propediem<seg type="lemma" corresp="#d3e625"> transmittam</seg>. Si plura accepissem, misissem etiam reverendissimis dominis antistitibus<seg type="lemma" corresp="#d3e629"> Rottensi</seg> et<seg type="lemma" corresp="#d3e633"> Attilensi</seg>; nam quin vicini nostri Tegernseenses iam acceperint ab ipsa paternitate vestra, nullus dubito, cum aliunde certus sim reverendum patrem Alphonsum Hueber Tegernseensem, amicissimum meum, inter familiares paternitatis vestrae iam dudum invenisse locum, cui utique pie invideo. Porro ut caeteris quoque mandatis paternitatis vestrae clarissimae atque promissis, imo obligationibus meis satis a me saltem ante festa Paschalia fiat, totis viribus allaborabo, felicem me existimaturus, ubi humilia mea semperque paratissima obsequia aliquid conferre potuerint ad opus illud grande, quod ex encyclica eminus conspiciendo admiramur et admirando conspicimus. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e584">Sane mea illa <seg type="lemma" corresp="#d3e637">meditata opuscula</seg> nonnisi tarde prodibunt in lucem, cum in instructione archivi nostri magna adhuc restet laboris materia; <pb n="1v"/> quam si ante Septembrem absolvere potuero, infinitas quidem Deo gratias dicam. At postea descriptio<seg type="lemma" corresp="#d3e643"> indicum atque instructionum</seg>, quas, ita exigente summa necessitate, valde multas et operosas concinnare debui, forte iterum unius fere anni spatium sibi postulabunt [<hi rend="italic">sic</hi>], ita tamen, ut labor ille componendis vel potius conscribendis<seg type="lemma" corresp="#d3e647"> annalibus nostris</seg> conferre plurimum possit; qui insuper materias suggeret, super quibus praecipue reverendi patris domini Renati mentem explorare instructionemque petere necessum erit, eo quod in praecipuis quibusdam monimentorum domesticorum dubiis a nemine quam a Gallis nostris succurri posse videatur, maxime in rebus<seg type="lemma" corresp="#d3e651"> Kisilae Francorum reginae, quam in vicino quodam atque nobis olim subiecto parthenone Cochelensi</seg> monialem fuisse certum est, uti etiam in genealogia fundatorum ac primorum abbatum nostrorum, quos<seg type="lemma" corresp="#d3e655"> Caroli Martelli consanguineos</seg><note place="foot" xml:id="d3e591">	Korrigiert aus <hi rend="italic">sanguineos.</hi></note> fuisse quam plurimae vetustae membranae nostrae constanter asserunt. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e596">Interea tamen absque omni dubio etiam paternitatis vestrae clarissimae opem in pluribus mihi exorabo, <pb n="2r"/> et forte maxime circa res saeculi XV., uti sapienter sibi ipsi vaticinata nuper fuisse videtur. Video enim in sacro odaeo seu choro nostro <seg type="lemma" corresp="#d3e660">antiphonaria quaedam</seg> saeculo XV. scripta cum titulo: Cantus etc. secundum consuetudinem monachorum beati Petri in Mellico. Et iis quidem antiphonariis in hanc usque diem utimur. Verum de his suo tempore. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e600">Caeterum <seg type="lemma" corresp="#d3e666">Epistolae vestrae</seg> apologeticae in his nostris partibus passim leguntur cum ingenti (qualem scilicet merentur) applausu; quarum plura exemplaria Augustae comparata distribuimus Monachii, <seg type="lemma" corresp="#d3e672">Oeniponti et Bulsani</seg>. Nuperrime eas a me petiit<seg type="lemma" corresp="#d3e676"> primus minister aulae electoralis</seg>, quas etiam his diebus accipiet. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e602">Interrogatus non ita pridem a patre <seg type="lemma" corresp="#d3e680">praefecto gymnasii Monacensis</seg><seg type="lemma" corresp="#d3e686"> consobrinus quidam meus</seg>, quos qualesque tempore feriarum literariarum in monasterio Benedictoburano discursus audisset? respondit Benedictoburanos et saepius et multa fuisse conquestos de libello quodam famoso in universitate Viennensi sodalibus distributo; deque illius libelli doctissima quadam confutatione a quodam Mellicensi coenobita edita multa fuisse dicta etc. <pb n="2v"/> Tum Jesuita confessus est et non negavit; et confessus est dicens: Ia, dissfahls haben sie ursach sich zu beklagen. Mox inexspectato discursui imponens finem addidit: Sed haec inter nos; iuvene in sinu ridente et mihi postea totum hilariter recensente. Haec Jesuitae responsio plus utique solatii praestitit quam altera cuiusdam <seg type="lemma" corresp="#d3e690">monachi Casinensis</seg> mihi familiariter noti. Is, cum ego ei in hoc ipso musaeo meo libellum vestrae paternitatis, et in eo exhiberem sarcasmum illum:<seg type="lemma" corresp="#d3e694"> Vita etc. praeter missam et chorum otiosa, respondit: In nostra congregatione (Casinensi) negare non possumus vitam praeter chorum et missam esse otiosa</seg>m. O magne monachorum pater Benedicte, <seg type="lemma" corresp="#d3e698">ubi est ferula tua, qua ab otioso monacho quondam eiecisti daemonium meridianum</seg>! Sed nempe haec inter nos, amice colendissime. Faxint boni Superi, ut ita laboremus, ut accendat ardor proximos, imo domesticos! Vale, Bernarde melliflue, cuius favores mihi exopto perpetuos et cum impensissima mei commendatione permaneo, dum spiro</seg></p>
-            <p xml:space="preserve">Paternitatis vestrae admodum reverendae servus obstrictissimus pater Carolus.</p>
-            <p xml:space="preserve">In monasterio Benedictoburano 1716 8. Januarii.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e611">
-               <ref type="context">1</ref>
-               <label>Weihenstephanensi</label><p>Zu Abt Ildephons Huber vgl. <rs type="bibl"
-                     key="bibl:16214">Fink, Beiträge</rs> 59, 167, 261; <rs type="bibl"
-                     key="bibl:16474">Gentner, Weihenstephan</rs> 157–166, 313–324; <rs type="bibl"
-                     key="bibl:16658">Gressierer, General-Kapitel</rs> 494–501; <rs type="bibl"
-                     key="bibl:16972">Hemmerle, Benediktinerklöster</rs> 323f.; <rs type="bibl"
-                     key="bibl:17680">Krausen, Brauerstand</rs> 163; <rs type="bibl"
-                     key="bibl:19582">Siegmund, Meichelbecks Briefe</rs> 80/1–2 136. Die
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>Weihenstephanensi</mentioned>
+            <p>Zu Abt Ildephons Huber vgl. <rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 59, 167, 261; <rs type="bibl" ref="bibl:16474">Gentner, Weihenstephan</rs> 157–166, 313–324; <rs type="bibl" ref="bibl:16658">Gressierer, General-Kapitel</rs> 494–501; <rs type="bibl" ref="bibl:16972">Hemmerle, Benediktinerklöster</rs> 323f.; <rs type="bibl" ref="bibl:17680">Krausen, Brauerstand</rs> 163; <rs type="bibl" ref="bibl:19582">Siegmund, Meichelbecks Briefe</rs> 80/1–2 136. Die
                   Beantwortung der an ihn gerichteten Enzyklik erfolgte durch Korbinian Junghans:
-                  vgl. <ref type="letter">662</ref>.</p></note>
-            <note xml:id="d3e617">
-               <ref type="context">1</ref>
-               <label> Schyrensi</label><p> Zu Benedikt Meyding vgl. <rs type="bibl"
-                     key="bibl:16214">Fink, Beiträge</rs> 225, 262; <rs type="bibl" key="bibl:17396"
-                     >Kainz, Visitationsrezesse</rs> 9, 13, 345, 352–354; <rs type="bibl"
-                     key="bibl:17684">Krausen, Herkunft</rs> 268; <rs type="bibl" key="bibl:19052"
-                     >Reichhold, Chronik Scheyern</rs> 327–330; <rs type="bibl" key="bibl:19582"
-                     >Siegmund, Meichelbecks Briefe</rs> 80/1–2 152.</p></note>
-            <note xml:id="d3e621">
-               <ref type="context">1</ref>
-               <label> Ettallensi</label><p> Zu Seiz vgl. <rs type="bibl" key="bibl:15288">Boberski,
-                     Theater</rs> 168; <rs type="bibl" key="bibl:16404">Gahbauer, Ettaler
-                     Benediktiner</rs> 149–156; <rs type="bibl" key="bibl:16972">Hemmerle,
-                     Benediktinerklöster</rs> 95, 97; <rs type="bibl" key="bibl:17590">Kolb,
-                     Präsidium</rs> 124, 126, 133, 145, 154–157; <rs type="bibl" key="bibl:17680"
-                     >Krausen, Brauerstand</rs> 164; <rs type="bibl" key="bibl:18016">Lindner, Album
-                     Ettalense</rs> 253f.; <rs type="bibl" key="bibl:19270">Sattler,
-                     Collectaneen-Blätter</rs> 258f.; <rs type="bibl" key="bibl:19290">Schaller,
-                     Placidus Seiz</rs>.</p></note>
-            <note xml:id="d3e625">
-               <ref type="context">1</ref>
-               <label> transmittam</label><p>KMs Diarium vermerkt die Versendung der drei Briefe noch am 8. Januar: BStB München, Meichelbeckiana 18b, 267v.</p></note>
-            <note xml:id="d3e629">
-               <ref type="context">1</ref>
-               <label> Rottensi</label><p> Zu Aemilian Oetlinger vgl. <rs type="bibl"
-                     key="bibl:16214">Fink, Beiträge</rs> 224; <rs type="bibl" key="bibl:16972"
-                     >Hemmerle, Benediktinerklöster</rs> 267f.; <rs type="bibl" key="bibl:17684"
-                     >Krausen, Herkunft</rs> 265; <rs type="bibl" key="bibl:19202">Ruf,
+                  vgl. <ref type="letter" target="letter:662">662</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> Schyrensi</mentioned>
+            <p> Zu Benedikt Meyding vgl. <rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 225, 262; <rs type="bibl" ref="bibl:17396">Kainz, Visitationsrezesse</rs> 9, 13, 345, 352–354; <rs type="bibl" ref="bibl:17684">Krausen, Herkunft</rs> 268; <rs type="bibl" ref="bibl:19052">Reichhold, Chronik Scheyern</rs> 327–330; <rs type="bibl" ref="bibl:19582">Siegmund, Meichelbecks Briefe</rs> 80/1–2 152.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned> Ettallensi</mentioned>
+            <p> Zu Seiz vgl. <rs type="bibl" ref="bibl:15288">Boberski,
+                     Theater</rs> 168; <rs type="bibl" ref="bibl:16404">Gahbauer, Ettaler
+                     Benediktiner</rs> 149–156; <rs type="bibl" ref="bibl:16972">Hemmerle,
+                     Benediktinerklöster</rs> 95, 97; <rs type="bibl" ref="bibl:17590">Kolb,
+                     Präsidium</rs> 124, 126, 133, 145, 154–157; <rs type="bibl" ref="bibl:17680">Krausen, Brauerstand</rs> 164; <rs type="bibl" ref="bibl:18016">Lindner, Album
+                     Ettalense</rs> 253f.; <rs type="bibl" ref="bibl:19270">Sattler,
+                     Collectaneen-Blätter</rs> 258f.; <rs type="bibl" ref="bibl:19290">Schaller,
+                     Placidus Seiz</rs>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
+            <mentioned> transmittam</mentioned>
+            <p>KMs Diarium vermerkt die Versendung der drei Briefe noch am 8. Januar: BStB München, Meichelbeckiana 18b, 267v.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg1">
+            <mentioned> Rottensi</mentioned>
+            <p> Zu Aemilian Oetlinger vgl. <rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 224; <rs type="bibl" ref="bibl:16972">Hemmerle, Benediktinerklöster</rs> 267f.; <rs type="bibl" ref="bibl:17684">Krausen, Herkunft</rs> 265; <rs type="bibl" ref="bibl:19202">Ruf,
                      Profeßbuch</rs> 97–101. Zu einem wahrscheinlichen, wenn auch nur flüchtigen
-                  Kontakt BPs mit dem Stift Rott am Inn bereits 1712 vgl. <ref type="letter"
-                     >226</ref>.</p></note>
-            <note xml:id="d3e633">
-               <ref type="context">1</ref>
-               <label> Attilensi</label><p>Zu Kajetan Scheyerl vgl. <rs type="bibl" key="bibl:16214"
-                     >Fink, Beiträge</rs> 163; <rs type="bibl" key="bibl:16474">Gentner,
-                     Weihenstephan</rs> 156, 230; <rs type="bibl" key="bibl:16972">Hemmerle,
-                     Benediktinerklöster</rs> 41f.; <rs type="bibl" key="bibl:19350">Schinagl,
-                     Attel</rs> 171–195.</p></note>
-            <note xml:id="d3e637">
-               <ref type="context">2</ref>
-               <label>meditata opuscula</label><p> Vgl. <ref type="letter">464</ref> &lt;1&gt;, <ref
-                     type="letter">474</ref> &lt;8&gt;.</p></note>
-            <note xml:id="d3e643">
-               <ref type="context">2</ref>
-               <label> indicum atque instructionum</label><p>Das von KM angelegte Repertorium unter
+                  Kontakt BPs mit dem Stift Rott am Inn bereits 1712 vgl. <ref type="letter" target="letter:226">226</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg1">
+            <mentioned> Attilensi</mentioned>
+            <p>Zu Kajetan Scheyerl vgl. <rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 163; <rs type="bibl" ref="bibl:16474">Gentner,
+                     Weihenstephan</rs> 156, 230; <rs type="bibl" ref="bibl:16972">Hemmerle,
+                     Benediktinerklöster</rs> 41f.; <rs type="bibl" ref="bibl:19350">Schinagl,
+                     Attel</rs> 171–195.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg2">
+            <mentioned>meditata opuscula</mentioned>
+            <p> Vgl. <ref type="letter" target="letter:464">464</ref> <ref target="letter:464#seg1">1</ref>, <ref type="letter" target="letter:474">474</ref> <ref target="letter:474#seg8">8</ref>.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg2">
+            <mentioned> indicum atque instructionum</mentioned>
+            <p>Das von KM angelegte Repertorium unter
                   dem Titel „Archivum Buranum“ ist in mehreren Reinschriften erhalten. Das Exemplar
                   für den Abt trägt heute die Signatur BStB München, Meichelbeckiana 21. Außerdem
                   ist ein unvollständiges Konzept vorhanden: HStA München, KL Benediktbeuern 3. Zur
-                  gesamten Überlieferung vgl. <rs type="bibl" key="bibl:15736">Dachs,
-                     Meichelbeckiana</rs> 197f.; <rs type="bibl" key="bibl:18374">Mindera,
-                     Benediktbeurer Archiv</rs> 43–46.</p></note>
-            <note xml:id="d3e647">
-               <ref type="context">2</ref>
-               <label> annalibus nostris</label><p> Aufgrund des Kontextes ist hierin das erst viel
+                  gesamten Überlieferung vgl. <rs type="bibl" ref="bibl:15736">Dachs,
+                     Meichelbeckiana</rs> 197f.; <rs type="bibl" ref="bibl:18374">Mindera,
+                     Benediktbeurer Archiv</rs> 43–46.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg2">
+            <mentioned> annalibus nostris</mentioned>
+            <p> Aufgrund des Kontextes ist hierin das erst viel
                   später als „Chronicon Benedictoburanum“ realisierte hausgeschichtliche Projekt KMs
-                  zu sehen: vgl. <rs type="bibl" key="bibl:19582">Siegmund, Meichelbecks Briefe</rs>
-                  80/1–2 152; sowie <ref type="letter">474</ref> &lt;8&gt;.</p></note>
-            <note xml:id="d3e651">
-               <ref type="context">2</ref>
-               <label> Kisilae ... parthenone Cochelensi</label><p>Nach alten Benediktbeurer
+                  zu sehen: vgl. <rs type="bibl" ref="bibl:19582">Siegmund, Meichelbecks Briefe</rs>
+                  80/1–2 152; sowie <ref type="letter" target="letter:474">474</ref> <ref target="letter:474#seg8">8</ref>.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg2">
+            <mentioned> Kisilae ... parthenone Cochelensi</mentioned>
+            <p>Nach alten Benediktbeurer
                   Überlieferungen befand sich in Kochel am See ein zugleich mit Benediktbeuern
                   gegründetes, diesem unterstelltes Frauenkloster, das im 10. Jh. während der
-                  ungarischen Einfälle unterging: <rs type="bibl" key="bibl:16970">Hemmerle,
-                     Benediktbeuern</rs> 80, 223, 366; <rs type="bibl" key="bibl:19692">Steiger,
+                  ungarischen Einfälle unterging: <rs type="bibl" ref="bibl:16970">Hemmerle,
+                     Benediktbeuern</rs> 80, 223, 366; <rs type="bibl" ref="bibl:19692">Steiger,
                      Kisyla</rs> 17–20. Die Quellen über eine angebliche karolingische Prinzessin
                   „Kisyla“, welche dort Religiose gewesen und begraben worden sein sollte, sind in
                   der Form, wie sie KM vorlagen, Fabrikationen aus dem 11. Jh. Die Möglichkeit eines
                   tatsächlichen Bezugs zu einer von mehreren Karolingerinnen namens Gisela, die auch
                   in der neueren Forschung verschiedentlich vorgeschlagen worden ist, kann nicht
-                  völlig ausgeschlossen werden: vgl. <rs type="bibl" key="bibl:16970">Hemmerle,
+                  völlig ausgeschlossen werden: vgl. <rs type="bibl" ref="bibl:16970">Hemmerle,
                      Benediktbeuern</rs> 65, 424; Ruf, Kisyla; Steiger, Kisyla; Stoclet, Gisèle. BP
                   veröffentlichte die Nachrichten über „Kisyla“, nachdem er sie in Benediktbeuern
-                  selbst eingesehen hatte: <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs> 3
-                  xxvii; 3/3 col. 609f. KM verwertete sie gleichfalls: <rs type="bibl"
-                     key="bibl:14746">Meichelbeck, Chronicon Benedictoburanum</rs> 1 14f.</p></note>
-            <note xml:id="d3e655">
-               <ref type="context">2</ref>
-               <label> Caroli Martelli consanguineos</label><p> Datum und Umstände der Gründung
+                  selbst eingesehen hatte: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 3
+                  xxvii; 3/3 col. 609f. KM verwertete sie gleichfalls: <rs type="bibl" ref="bibl:14746">Meichelbeck, Chronicon Benedictoburanum</rs> 1 14f.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg2">
+            <mentioned> Caroli Martelli consanguineos</mentioned>
+            <p> Datum und Umstände der Gründung
                   Benediktbeuerns sind ebenso wie die genealogische Einordnung des unter dem Namen
                   „Landfrid“ überlieferten Stifters bis heute Gegenstand vieler Diskussionen, die
-                  hier nicht wiedergegeben werden können: vgl. <rs type="bibl" key="bibl:16970"
-                     >Hemmerle, Benediktbeuern</rs> 79–90, 419–428; <rs type="bibl" key="bibl:17270"
-                     >Isel, Gründungs- und Frühgeschichte</rs>. Die Ansippung der Gründer an die
+                  hier nicht wiedergegeben werden können: vgl. <rs type="bibl" ref="bibl:16970">Hemmerle, Benediktbeuern</rs> 79–90, 419–428; <rs type="bibl" ref="bibl:17270">Isel, Gründungs- und Frühgeschichte</rs>. Die Ansippung der Gründer an die
                   Karolinger und speziell an Karl Martell begegnet erst in spätmittelalterlichen
-                  Quellen und ist daher für kaum plausibel zu halten: <rs type="bibl"
-                     key="bibl:16970">Hemmerle, Benediktbeuern</rs> 81–83.</p></note>
-            <note xml:id="d3e660">
-               <ref type="context">3</ref>
-               <label>antiphonaria quaedam</label><p>Zu den liturgischen Neuerungen durch die Melker
-                  Reform vgl. <rs type="bibl" key="bibl:14912">Angerer, Erneuerung</rs> 125–176; <rs
-                     type="bibl" key="bibl:18572">Niederkorn-Bruck, Melker Reform</rs> 125–149. Die
+                  Quellen und ist daher für kaum plausibel zu halten: <rs type="bibl" ref="bibl:16970">Hemmerle, Benediktbeuern</rs> 81–83.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg3">
+            <mentioned>antiphonaria quaedam</mentioned>
+            <p>Zu den liturgischen Neuerungen durch die Melker
+                  Reform vgl. <rs type="bibl" ref="bibl:14912">Angerer, Erneuerung</rs> 125–176; <rs type="bibl" ref="bibl:18572">Niederkorn-Bruck, Melker Reform</rs> 125–149. Die
                   hier von KM erwähnten Antiphonare lassen sich weder mit BStB München, clm
                   23004–23006, aus dem Jahr 1506, noch UB München, Cod. 2° 179, aus dem Jahr 1490,
-                  identifizieren, da diese keinen Verweis auf Melk enthalten. Zu Ersteren vgl. <rs
-                     type="bibl" key="bibl:16532">Glauche, Catalogus 3/1</rs> XV; <rs type="bibl"
-                     key="bibl:16970">Hemmerle, Benediktbeuern</rs> 40; zu Letzterem vgl. <rs
-                     type="bibl" key="bibl:16594">Gottwald, Musikhandschriften</rs> 40f.</p></note>
-            <note xml:id="d3e666">
-               <ref type="context">4</ref>
-               <label>Epistolae vestrae</label><p> Zur Veranlassung der „Epistolae apologeticae“
-                  vgl. <rs type="bibl" key="bibl:20210">Wallnig–Stockinger, Korrespondenz</rs> 1 14.
-               </p></note>
-            <note xml:id="d3e672">
-               <ref type="context">4</ref>
-               <label>Oeniponti et Bulsani</label><p> In Nord- wie in Südtirol verfügte
-                  Benediktbeuern über erheblichen Landbesitz, in erster Linie Weingärten: vgl. <rs
-                     type="bibl" key="bibl:16970">Hemmerle, Benediktbeuern</rs>
-                  <ref type="letter">338</ref>, <ref type="letter">363</ref>; sowie <ref
-                     type="letter">1024</ref> &lt;1&gt;.</p></note>
-            <note xml:id="d3e676">
-               <ref type="context">4</ref>
-               <label> primus minister aulae electoralis</label><p> Den Titel gab es in diesem
+                  identifizieren, da diese keinen Verweis auf Melk enthalten. Zu Ersteren vgl. <rs type="bibl" ref="bibl:16532">Glauche, Catalogus 3/1</rs> XV; <rs type="bibl" ref="bibl:16970">Hemmerle, Benediktbeuern</rs> 40; zu Letzterem vgl. <rs type="bibl" ref="bibl:16594">Gottwald, Musikhandschriften</rs> 40f.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg4">
+            <mentioned>Epistolae vestrae</mentioned>
+            <p> Zur Veranlassung der „Epistolae apologeticae“
+                  vgl. <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz</rs> 1 14.
+               </p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg4">
+            <mentioned>Oeniponti et Bulsani</mentioned>
+            <p> In Nord- wie in Südtirol verfügte
+                  Benediktbeuern über erheblichen Landbesitz, in erster Linie Weingärten: vgl. <rs type="bibl" ref="bibl:16970">Hemmerle, Benediktbeuern</rs>
+                  <ref type="letter" target="letter:338">338</ref>, <ref type="letter" target="letter:363">363</ref>; sowie <ref type="letter" target="letter:1024">1024</ref> <ref target="letter:1024#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg4">
+            <mentioned> primus minister aulae electoralis</mentioned>
+            <p> Den Titel gab es in diesem
                   Wortlaut nicht. An den formell ranghöchsten Amtsträger bei Hof, den Präsidenten
-                  des Geheimen Rats, denkt <rs type="bibl" key="bibl:19582">Siegmund, Meichelbecks
+                  des Geheimen Rats, denkt <rs type="bibl" ref="bibl:19582">Siegmund, Meichelbecks
                      Briefe</rs> 80/1–2 152. Als den Inhaber dieses Amtes vermutet er Johann
                   Maximilian Franz Grafen Preysing, was nicht ohne Weiteres nachzuvollziehen ist:
-                  vgl. <rs type="bibl" key="bibl:16178">Ferchl, Behörden</rs> 1 886; 2 1170; <rs
-                     type="bibl" key="bibl:19534">Schütz, Preysing-Hohenaschau</rs> 309f. Zudem sind
+                  vgl. <rs type="bibl" ref="bibl:16178">Ferchl, Behörden</rs> 1 886; 2 1170; <rs type="bibl" ref="bibl:19534">Schütz, Preysing-Hohenaschau</rs> 309f. Zudem sind
                   für Preysing Kontakte mit Benediktbeuern oder mit KM sonst nicht dokumentiert.
                   Wahrscheinlicher ist, dass KM den einflussreichen Geheimen Rat Franz Xaver Joseph
                   von Unertl meint. Mit diesem hatte KM während seines Aufenthalts in München am 17.
                   Dezember 1715 eine Unterredung gehabt: BStB München, Meichelbeckiana 18b, 266v.
-                  Auch sonst bestanden regelmäßig gepflogene Verbindungen: vgl. <ref type="letter"
-                     >835</ref> &lt;5&gt;. Zu Unertl vgl. Verzeichnis der Pez-Korrespondenten. Aus
+                  Auch sonst bestanden regelmäßig gepflogene Verbindungen: vgl. <ref type="letter" target="letter:835">835</ref> <ref target="letter:835#seg5">5</ref>. Zu Unertl vgl. Verzeichnis der Pez-Korrespondenten. Aus
                   der weiteren Literatur nicht zu bestätigen ist die – zu KMs Formulierung gut
                   passende – Angabe, wonach Unertl 1715 zum Geheimen Konferenzminister ernannt
-                  worden wäre, bei <rs type="bibl" key="bibl:18924">Press, Wittelsbachische
-                     Territorien</rs> 580.</p></note>
-            <note xml:id="d3e680">
-               <ref type="context">5</ref>
-               <label>praefecto gymnasii Monacensis</label><p> Dieses Amt hatte von 1710 bis 1723
-                  Johann Reyman inne: <rs type="bibl" key="bibl:15068">Bauer, Diarium</rs> 29; <rs
-                     type="bibl" key="bibl:17930">Leitschuh, Leiter</rs> 40. Zu ihm vgl. <rs
-                     type="bibl" key="bibl:16482">Gerl, Catalogus</rs> 343.</p></note>
-            <note xml:id="d3e686">
-               <ref type="context">5</ref>
-               <label> consobrinus ... meus</label><p>Unter den für diese Zeit verzeichneten
+                  worden wäre, bei <rs type="bibl" ref="bibl:18924">Press, Wittelsbachische
+                     Territorien</rs> 580.</p>
+         </note>
+         <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg5">
+            <mentioned>praefecto gymnasii Monacensis</mentioned>
+            <p> Dieses Amt hatte von 1710 bis 1723
+                  Johann Reyman inne: <rs type="bibl" ref="bibl:15068">Bauer, Diarium</rs> 29; <rs type="bibl" ref="bibl:17930">Leitschuh, Leiter</rs> 40. Zu ihm vgl. <rs type="bibl" ref="bibl:16482">Gerl, Catalogus</rs> 343.</p>
+         </note>
+         <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg5">
+            <mentioned> consobrinus ... meus</mentioned>
+            <p>Unter den für diese Zeit verzeichneten
                   Schülern des Münchner Gymnasiums kommt am ehesten David Luz als Verwandter KMs in
-                  Frage: <rs type="bibl" key="bibl:17934">Leitschuh, Matrikeln</rs> 2 180. Er könnte
+                  Frage: <rs type="bibl" ref="bibl:17934">Leitschuh, Matrikeln</rs> 2 180. Er könnte
                   ein Sohn aus der ersten Ehe der späteren Frau von KMs Bruder mit dem
-                  Gerichtsschreiber Luz oder ein Verwandter desselben gewesen sein: vgl. <rs
-                     type="bibl" key="bibl:16018">Dussler, Genealogie</rs> 23. Er wurde später unter
-                  dem Namen Otto Luz Augustiner-Chorherr in Bernried: <rs type="bibl"
-                     key="bibl:19324">Scherbaum, Bernried</rs> 445. </p></note>
-            <note xml:id="d3e690">
-               <ref type="context">5</ref>
-               <label>monachi Casinensis</label><p>Möglicherweise war dies der Musiker Diogenio
+                  Gerichtsschreiber Luz oder ein Verwandter desselben gewesen sein: vgl. <rs type="bibl" ref="bibl:16018">Dussler, Genealogie</rs> 23. Er wurde später unter
+                  dem Namen Otto Luz Augustiner-Chorherr in Bernried: <rs type="bibl" ref="bibl:19324">Scherbaum, Bernried</rs> 445. </p>
+         </note>
+         <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg5">
+            <mentioned>monachi Casinensis</mentioned>
+            <p>Möglicherweise war dies der Musiker Diogenio
                   Bigaglia aus S. Giorgio Maggiore zu Venedig, der mit der Kurfürstin Therese
                   Kunigunde nach München gekommen war. Er hatte KM am 17. und 18. Juni 1715 in
-                  Benediktbeuern aufgesucht: BStB München, Meichelbeckiana 18b, 260v; vgl. <rs
-                     type="bibl" key="bibl:19582">Siegmund, Meichelbecks Briefe</rs> 80/1–2 152. Zu
+                  Benediktbeuern aufgesucht: BStB München, Meichelbeckiana 18b, 260v; vgl. <rs type="bibl" ref="bibl:19582">Siegmund, Meichelbecks Briefe</rs> 80/1–2 152. Zu
                   diesem Zeitpunkt hätte KM allerdings noch kein Exemplar der „Epistolae
                   apologeticae“ vorzeigen können; allenfalls wäre an einen weiteren Besuch zu einer
                   späteren Zeit zu denken. Ein anderer Aufenthalt eines italienischen Benediktiners
                   in Benediktbeuern in der Zwischenzeit ist nicht festzustellen. Zu Bigaglia vgl.
-                     <rs type="bibl" key="bibl:15352">Bossi, Matricula 1</rs> 205; <rs type="bibl"
-                     key="bibl:16144">Fano–Kellner, Bigaglia</rs>.</p></note>
-            <note xml:id="d3e694">
-               <ref type="context">5</ref>
-               <label> Vita ... otiosa</label><p> Hevenesi, Cura salutis (1714) 272; vgl. <rs
-                     type="bibl" key="bibl:20186">Wallnig, Epistolae</rs> 11. </p></note>
-            <note xml:id="d3e698">
-               <ref type="context">5</ref>
-               <label>ubi est ferula tua ... daemonium meridianum</label><p> Die Anspielung bezieht sich wohl auf: Gregor der Große, Dialogi 2,4. Die Erzählung dort handelt allerdings nicht von Faulheit, sondern von der Verführung eines Mönchs zur Abwesenheit vom Gottesdienst durch den Teufel in Gestalt eines „niger puerulus“. Benedikt treibt die Besessenheit aus, indem er den Mönch mit seinem Stab („virga“, nicht „ferula“) schlägt. Der von KM in Anlehnung an Ps 90,6 gebrauchte Ausdruck „daemonius meridianus“ kommt ebenfalls weder hier noch sonst in den „Dialogi“ vor.</p></note>
-         </div>
-      </back>
+                     <rs type="bibl" ref="bibl:15352">Bossi, Matricula 1</rs> 205; <rs type="bibl" ref="bibl:16144">Fano–Kellner, Bigaglia</rs>.</p>
+         </note>
+         <note target="#range(right('n19'), left('n19e'))" n="19" anchored="false" corresp="#seg5">
+            <mentioned> Vita ... otiosa</mentioned>
+            <p> Hevenesi, Cura salutis (1714) 272; vgl. <rs type="bibl" ref="bibl:20186">Wallnig, Epistolae</rs> 11. </p>
+         </note>
+         <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg5">
+            <mentioned>ubi est ferula tua ... daemonium meridianum</mentioned>
+            <p> Die Anspielung bezieht sich wohl auf: Gregor der Große, Dialogi 2,4. Die Erzählung dort handelt allerdings nicht von Faulheit, sondern von der Verführung eines Mönchs zur Abwesenheit vom Gottesdienst durch den Teufel in Gestalt eines „niger puerulus“. Benedikt treibt die Besessenheit aus, indem er den Mönch mit seinem Stab („virga“, nicht „ferula“) schlägt. Der von KM in Anlehnung an Ps 90,6 gebrauchte Ausdruck „daemonius meridianus“ kommt ebenfalls weder hier noch sonst in den „Dialogi“ vor.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>III</orig>.</note>
+         <note anchored="false">Ordnungsvermerk: <orig>120</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:15152">
+            <title type="short">Benz, Zwischen Tradition und Kritik</title>
+            <biblScope>603</biblScope>
+         </bibl>
+         <bibl corresp="bibl:20248">
+            <title type="short">Weber, Meichelbeck</title>
+            <biblScope>132, 134f</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime et clarissime domine pater <sic>Bernare</sic>, patrone colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Reddita mihi fuere posteriora quoque tria exemplaria encyclicae vestrae, quorum unum reverendissimo domino abbati <anchor xml:id="n1"/>Weihenstephanensi<anchor xml:id="n1e"/>, alterum reverendissimo domino abbati<anchor xml:id="n2"/> Schyrensi<anchor xml:id="n2e"/>, tertium vero reverendissimo domino praesuli<anchor xml:id="n3"/> Ettallensi<anchor xml:id="n3e"/> propediem<anchor xml:id="n4"/> transmittam<anchor xml:id="n4e"/>. Si plura accepissem, misissem etiam reverendissimis dominis antistitibus<anchor xml:id="n5"/> Rottensi<anchor xml:id="n5e"/> et<anchor xml:id="n6"/> Attilensi<anchor xml:id="n6e"/>; nam quin vicini nostri Tegernseenses iam acceperint ab ipsa paternitate vestra, nullus dubito, cum aliunde certus sim reverendum patrem Alphonsum Hueber Tegernseensem, amicissimum meum, inter familiares paternitatis vestrae iam dudum invenisse locum, cui utique pie invideo. Porro ut caeteris quoque mandatis paternitatis vestrae clarissimae atque promissis, imo obligationibus meis satis a me saltem ante festa Paschalia fiat, totis viribus allaborabo, felicem me existimaturus, ubi humilia mea semperque paratissima obsequia aliquid conferre potuerint ad opus illud grande, quod ex encyclica eminus conspiciendo admiramur et admirando conspicimus. </ab>
+         <ab resp="#editor" xml:id="seg2">Sane mea illa <anchor xml:id="n7"/>meditata opuscula<anchor xml:id="n7e"/> nonnisi tarde prodibunt in lucem, cum in instructione archivi nostri magna adhuc restet laboris materia; <pb n="1v"/> quam si ante Septembrem absolvere potuero, infinitas quidem Deo gratias dicam. At postea descriptio<anchor xml:id="n8"/> indicum atque instructionum<anchor xml:id="n8e"/>, quas, ita exigente summa necessitate, valde multas et operosas concinnare debui, forte iterum unius fere anni spatium sibi <sic>postulabunt</sic>, ita tamen, ut labor ille componendis vel potius conscribendis<anchor xml:id="n9"/> annalibus nostris<anchor xml:id="n9e"/> conferre plurimum possit; qui insuper materias suggeret, super quibus praecipue reverendi patris domini Renati mentem explorare instructionemque petere necessum erit, eo quod in praecipuis quibusdam monimentorum domesticorum dubiis a nemine quam a Gallis nostris succurri posse videatur, maxime in rebus<anchor xml:id="n10"/> Kisilae Francorum reginae, quam in vicino quodam atque nobis olim subiecto parthenone Cochelensi<anchor xml:id="n10e"/> monialem fuisse certum est, uti etiam in genealogia fundatorum ac primorum abbatum nostrorum, quos<anchor xml:id="n11"/> Caroli Martelli <choice><sic>sanguineos.</sic><corr>consanguineos</corr></choice><anchor xml:id="n11e"/> fuisse quam plurimae vetustae membranae nostrae constanter asserunt. </ab>
+         <ab resp="#editor" xml:id="seg3">Interea tamen absque omni dubio etiam paternitatis vestrae clarissimae opem in pluribus mihi exorabo, <pb n="2r"/> et forte maxime circa res saeculi XV., uti sapienter sibi ipsi vaticinata nuper fuisse videtur. Video enim in sacro odaeo seu choro nostro <anchor xml:id="n12"/>antiphonaria quaedam<anchor xml:id="n12e"/> saeculo XV. scripta cum titulo: Cantus etc. secundum consuetudinem monachorum beati Petri in Mellico. Et iis quidem antiphonariis in hanc usque diem utimur. Verum de his suo tempore. </ab>
+         <ab resp="#editor" xml:id="seg4">Caeterum <anchor xml:id="n13"/>Epistolae vestrae<anchor xml:id="n13e"/> apologeticae in his nostris partibus passim leguntur cum ingenti (qualem scilicet merentur) applausu; quarum plura exemplaria Augustae comparata distribuimus Monachii, <anchor xml:id="n14"/>Oeniponti et Bulsani<anchor xml:id="n14e"/>. Nuperrime eas a me petiit<anchor xml:id="n15"/> primus minister aulae electoralis<anchor xml:id="n15e"/>, quas etiam his diebus accipiet. </ab>
+         <ab resp="#editor" xml:id="seg5">Interrogatus non ita pridem a patre <anchor xml:id="n16"/>praefecto gymnasii Monacensis<anchor xml:id="n16e"/><anchor xml:id="n17"/> consobrinus quidam meus<anchor xml:id="n17e"/>, quos qualesque tempore feriarum literariarum in monasterio Benedictoburano discursus audisset? respondit Benedictoburanos et saepius et multa fuisse conquestos de libello quodam famoso in universitate Viennensi sodalibus distributo; deque illius libelli doctissima quadam confutatione a quodam Mellicensi coenobita edita multa fuisse dicta etc. <pb n="2v"/> Tum Jesuita confessus est et non negavit; et confessus est dicens: Ia, dissfahls haben sie ursach sich zu beklagen. Mox inexspectato discursui imponens finem addidit: Sed haec inter nos; iuvene in sinu ridente et mihi postea totum hilariter recensente. Haec Jesuitae responsio plus utique solatii praestitit quam altera cuiusdam <anchor xml:id="n18"/>monachi Casinensis<anchor xml:id="n18e"/> mihi familiariter noti. Is, cum ego ei in hoc ipso musaeo meo libellum vestrae paternitatis, et in eo exhiberem sarcasmum illum:<anchor xml:id="n19"/> Vita etc. praeter missam et chorum otiosa, respondit: In nostra congregatione (Casinensi) negare non possumus vitam praeter chorum et missam esse otiosa<anchor xml:id="n19e"/>m. O magne monachorum pater Benedicte, <anchor xml:id="n20"/>ubi est ferula tua, qua ab otioso monacho quondam eiecisti daemonium meridianum<anchor xml:id="n20e"/>! Sed nempe haec inter nos, amice colendissime. Faxint boni Superi, ut ita laboremus, ut accendat ardor proximos, imo domesticos! Vale, Bernarde melliflue, cuius favores mihi exopto perpetuos et cum impensissima mei commendatione permaneo, dum spiro</ab>
+         <closer>Paternitatis vestrae admodum reverendae servus obstrictissimus pater Carolus.</closer>
+         <closer>In monasterio Benedictoburano 1716 8. Januarii.</closer>
+      </body>
    </text>
 </TEI>

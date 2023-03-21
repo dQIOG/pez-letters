@@ -1,48 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="1006" xml:id="pez-1006">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">1006 Apronian Hueber an Bernhard Pez. 1718-10-22. Mehrerau.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Apronian Hueber an Bernhard Pez. 1718-10-22. Mehrerau.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">1006</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:16228">Fischer, Reichenauer Kulturerbe</rs>
-                     79</bibl>
-                  <bibl><rs type="bibl" key="bibl:16898">Heer, Pez</rs> 418f., 421, 431, 447</bibl>
-                  <bibl><rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 50</bibl>
-                  <bibl><rs type="bibl" key="bibl:18770">Peper, Ohne Parteilichkeit</rs> 272</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">275r–276v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 275r–276v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -57,62 +69,46 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">1005</idno>
-               </ref>
+               <ptr type="prev" target="letter:1005"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">AHu dankt für die Übermittlung eines Briefes an den Grafen (Franz Ehrenreich?) Trauttmansdorff durch BP.</p>
+            <p corresp="#seg2">AHu hat sowohl an den Bibliothekar (Heinrich Ab Yberg) als auch an den Fürstabt Thomas Schenklin von Einsiedeln sehr nachdrückliche Briefe geschrieben und nochmals um die Einsendung eines Schriftstellerkatalogs gebeten. Wenn ihnen auch nur ein Funken Ehrlichkeit verblieben ist, werden sie dies nicht mehr weiter ablehnen oder verzögern können. Aus Rheinau hat AHu ein Verzeichnis erhalten, das er beilegt; Abt Gerold Zurlauben hat brieflich die Lieferung weiterer Materialien versprochen. Dass jedoch Konrad Müller nach so vielen Anweisungen, die er von AHu mündlich und schriftlich bekommen hat, noch weitere von <rs type="person" role="sender">BP</rs> wünscht, ist mehr als erstaunlich.</p>
+            <p corresp="#seg3">Dasselbe gilt für das Verhalten der Engelberger, die vielen dringenden Gründen zum Trotz noch immer nicht überzeugt werden konnten, die Abhandlung des Frowin von Engelberg („De laude liberi arbitrii“) zur Verfügung zu stellen. Man muss den Schweizern eine gewisse Eigenwilligkeit (nationis genius) zugestehen.</p>
+            <p corresp="#seg4">AHu übermittelt die Schrift „Secreta Jansenistarum politia“, die er kürzlich von einem Freund erhalten hat. Sie kann <rs type="person" role="sender">BP</rs> für seine Abhandlung über die Geschichte der jansenistischen Irrlehre wertvolle Dienste leisten. AHu legt weiters Anweisungen zum Studium bei, die Kardinal Cölestin Sfondrati einst einem seiner Religiosen vorgeschrieben hat.</p>
+            <p corresp="#seg5">Am 7. September ist der Fürstabt von St. Gallen, Joseph von Rudolfis, von der Mehrerau aufgebrochen, um aus dem Exil in sein Kloster zurückzukehren. Am 12. September ist Cölestin Teschler gestorben, der keinem unter den St. Gallern an Wissen und an Tugend nachstand. An seiner Stelle hat AHu nun Bernhard Frank von Frankenberg ausgesucht, der aus St. Gallen alles dort verbliebene Material für <rs type="person" role="sender">BPs</rs> „Bibliotheca Benedictina“ sammeln soll.</p>
+            <p corresp="#seg6">Von den Schwierigkeiten <rs type="person" role="sender">BPs</rs> zeigt sich AHu betroffen. Er wäre dies noch mehr, wenn er nicht sicher wäre, dass die für den Benediktinerorden ehrenvollen Forschungen <rs type="person" role="sender">BPs</rs> letztlich umso größeren Erfolg haben werden, je mehr Gegnerschaft sie aushalten müssen. AHu weiß aus Erfahrung, dass Unternehmen, gegen die sich kein Widerstand regt, oft auch keine besonderen Ergebnisse bringen. Zudem gehört es zum Wesen der Ungebildeten und der Disziplinlosen, dass sie diejenigen, die sie an Wissen und Tugend nicht erreichen können, mit missgünstigen Anwürfen verfolgen. Der Herr möge ihnen vergeben, da sie nicht wissen, was sie tun.</p>
+            <p corresp="#seg7">In einem Postskriptum rät AHu, die Namen derjenigen zu notieren, welche die Übermittlung von Verzeichnissen oder von Handschriften verweigern, und sie zu gegebener Zeit zu veröffentlichen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e66564">AHu dankt für die Übermittlung eines Briefes an den Grafen (Franz Ehrenreich?) Trauttmansdorff durch BP.</seg><seg type="context" n="2" xml:id="d3e66566">AHu hat sowohl an den Bibliothekar (Heinrich Ab Yberg) als auch an den Fürstabt Thomas Schenklin von Einsiedeln sehr nachdrückliche Briefe geschrieben und nochmals um die Einsendung eines Schriftstellerkatalogs gebeten. Wenn ihnen auch nur ein Funken Ehrlichkeit verblieben ist, werden sie dies nicht mehr weiter ablehnen oder verzögern können. Aus Rheinau hat AHu ein Verzeichnis erhalten, das er beilegt; Abt Gerold Zurlauben hat brieflich die Lieferung weiterer Materialien versprochen. Dass jedoch Konrad Müller nach so vielen Anweisungen, die er von AHu mündlich und schriftlich bekommen hat, noch weitere von <rs type="person" role="sender">BP</rs> wünscht, ist mehr als erstaunlich.</seg><seg type="context" n="3" xml:id="d3e66568">Dasselbe gilt für das Verhalten der Engelberger, die vielen dringenden Gründen zum Trotz noch immer nicht überzeugt werden konnten, die Abhandlung des Frowin von Engelberg („De laude liberi arbitrii“) zur Verfügung zu stellen. Man muss den Schweizern eine gewisse Eigenwilligkeit (nationis genius) zugestehen.</seg><seg type="context" n="4" xml:id="d3e66570">AHu übermittelt die Schrift „Secreta Jansenistarum politia“, die er kürzlich von einem Freund erhalten hat. Sie kann <rs type="person" role="sender">BP</rs> für seine Abhandlung über die Geschichte der jansenistischen Irrlehre wertvolle Dienste leisten. AHu legt weiters Anweisungen zum Studium bei, die Kardinal Cölestin Sfondrati einst einem seiner Religiosen vorgeschrieben hat.</seg><seg type="context" n="5" xml:id="d3e66572">Am 7. September ist der Fürstabt von St. Gallen, Joseph von Rudolfis, von der Mehrerau aufgebrochen, um aus dem Exil in sein Kloster zurückzukehren. Am 12. September ist Cölestin Teschler gestorben, der keinem unter den St. Gallern an Wissen und an Tugend nachstand. An seiner Stelle hat AHu nun Bernhard Frank von Frankenberg ausgesucht, der aus St. Gallen alles dort verbliebene Material für <rs type="person" role="sender">BPs</rs> „Bibliotheca Benedictina“ sammeln soll.</seg><seg type="context" n="6" xml:id="d3e66574">Von den Schwierigkeiten <rs type="person" role="sender">BPs</rs> zeigt sich AHu betroffen. Er wäre dies noch mehr, wenn er nicht sicher wäre, dass die für den Benediktinerorden ehrenvollen Forschungen <rs type="person" role="sender">BPs</rs> letztlich umso größeren Erfolg haben werden, je mehr Gegnerschaft sie aushalten müssen. AHu weiß aus Erfahrung, dass Unternehmen, gegen die sich kein Widerstand regt, oft auch keine besonderen Ergebnisse bringen. Zudem gehört es zum Wesen der Ungebildeten und der Disziplinlosen, dass sie diejenigen, die sie an Wissen und Tugend nicht erreichen können, mit missgünstigen Anwürfen verfolgen. Der Herr möge ihnen vergeben, da sie nicht wissen, was sie tun.</seg><seg type="context" n="7" xml:id="d3e66576">In einem Postskriptum rät AHu, die Namen derjenigen zu notieren, welche die Übermittlung von Verzeichnissen oder von Handschriften verweigern, und sie zu gegebener Zeit zu veröffentlichen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">VI</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende religiosissime ac clarissime domine pater bibliothecarie, patrone venerandissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e66596">Quod clarissima paternitas vestra recommendatas sibi litteras ad illustrissimum <seg type="lemma" corresp="#d3e66635">comitem de Trauttmannsdorff</seg> etc. dirigere dignata sit, maximas, quas possum, rependo gratias unaque vestris obsequiis me totum quotum de novo dico et consecro. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e66598">Scripsi interea nervose, modeste tamen, non modo ad reverendum patrem bibliothecarium, verum ad ipsum quoque illustrissimum principem Einsidlensem, atque iterato pro extradendis scriptorum suorum catalogis supplicavi, et quidem (nisi admodum fallar) adeo instanter, ut, si vel unica honestatis et humanitatis religiosae scintilla ipsis supersit, eosdem ultra denegare seu retardare non valeant. E monasterio Rhenoviensi acclusum <seg type="lemma" corresp="#d3e66641">catalogum</seg> accepi, plura (ut ipsius reverendissimi domini domini abbatis litterae sperare iubent) deinceps accepturus. Quod vero reverendus pater<seg type="lemma" corresp="#d3e66647"> Conradus</seg> post tot partim oretenus, <pb n="1v"/> partim scriptotenus a me datas instructiones a sua clarissima paternitate novam desideret, satis mirari non possum. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e66602">Pari admiratione dignum est, quod <seg type="lemma" corresp="#d3e66651">Engelbergenses, tot urgentibus motivis necdum permoti, ulteriora, quibus ad extradendum opus beati Frowini etc. persuadeantur, exspectent</seg>. Sed concedamus his Helvetis pro nationis suae genio quid singulare. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e66604">Transmitto interim <seg type="lemma" corresp="#d3e66657">Secreta Jansenistarum politica</seg> a singulari<seg type="lemma" corresp="#d3e66663"> quodam amico</seg> mihi non ita pridem communicata, quae pro illustranda<note place="foot" xml:id="d3e66606">	Danach durchgestrichen <hi rend="italic">Bibliotheca</hi>.</note> dissertatione historica circa haeresin Jansenianam clarissimae paternitati vestrae plurimum deservire poterunt. Addo quoque praeclaram<seg type="lemma" corresp="#d3e66671"> studendi methodum</seg>, quam olim eminentissimus cardinalis Sfondrati cuidam suorum religiosorum praescripsit. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e66612">Septimo elapsi mensis illustrissimus princeps S. Galli nobis valedixit, <pb n="2r"/> hinc de exilio <seg type="lemma" corresp="#d3e66675">in patriam regressus</seg>. 12. eiusdem in domum aeternitatis<seg type="lemma" corresp="#d3e66681"> abiit reverendus pater Coelestinus Teschler</seg>, vir San-Gallenses inter scientia et virtute si non primus, certe nulli secundus. Requiescat in sancta pace! In vicem demortui<seg type="lemma" corresp="#d3e66685"> constitui reverendum patrem Bernardum Franck</seg>, qui singula, quae in monasterio San-Gallensi pro exornanda Bibliotheca generali Benedictina supersunt, sedulo conscribet. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e66616">Caeterum vestra <seg type="lemma" corresp="#d3e66690">afflictio</seg> me dolorose affligit, dolorosius haud dubie me afflictura, nisi firmiter sperarem laudabilissima vestra totique ordini nostro summe honorifica studia eo feliciorem successum habitura esse, quo plures eadem adversarios et contradictores pati coguntur; novi enim a propria experientia res illas, quibus nil adversi sese ingerit, haud admodum feliciter succedere. Dein communis is omnium<note place="foot" xml:id="d3e66618">	Danach durchgestrichen <hi rend="italic">in do</hi>.</note> indoctorum et indisciplinatorum genius est, ut, quos scientia et virtute <pb n="2v"/> assequi non valent, hos invidae linguae spiculis persequi soleant; sed<seg type="lemma" corresp="#d3e66696"> Domine ignosce illis</seg>, quia nesciunt, quid faciunt etc. Vale, o dimidium cordis mei! atque tuis favoribus et amoribus aeternum commendatum habe</seg></p>
-            <p xml:space="preserve">Admodum reverendae religiosissimae ac clarissimae paternitatis etc. cultorem ex asse devotum patrem Apronianum priorem manu propria.</p>
-            <p xml:space="preserve">Ex Augia Maiori Brigantina 22. Octobris 1718.</p>
-            <p xml:space="preserve"><seg type="context" n="7" xml:space="preserve" xml:id="d3e66632">P.S. Salvo meliori iudicio modeste notarem suoque loco et tempore toti litterario orbi palam facerem, quotquot seu suos catalogos seu manuscriptos codices communicare recusarunt.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e66635">
-               <ref type="context">1</ref>
-               <label>comitem de Trauttmannsdorff</label><p> Eine sichere Identifizierung ist in
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>comitem de Trauttmannsdorff</mentioned>
+            <p> Eine sichere Identifizierung ist in
                   Ermangelung weiterer Hinweise nicht möglich; wahrscheinlich dürfte es sich aber um
                   Franz Ehrenreich von Trauttmansdorff handeln, der bis 1715 kaiserlicher Gesandter
                   in der Schweiz gewesen war und eine wichtige Rolle im Vorfeld des
                   Toggenburgerkriegs sowie in den ersten Jahren der Restitutionsverhandlungen
-                  gespielt hatte: <rs type="bibl" key="bibl:15256">Bittner–Groß, Repertorium 1</rs>
-                  165, 167; <rs type="bibl" key="bibl:17148">Holenstein, Eidgenössische Politik</rs>
-                  35, 58f., 63–71, 253–265; <rs type="bibl" key="bibl:17836">Lau, Stiefbrüder</rs>
+                  gespielt hatte: <rs type="bibl" ref="bibl:15256">Bittner–Groß, Repertorium 1</rs>
+                  165, 167; <rs type="bibl" ref="bibl:17148">Holenstein, Eidgenössische Politik</rs>
+                  35, 58f., 63–71, 253–265; <rs type="bibl" ref="bibl:17836">Lau, Stiefbrüder</rs>
                   313, 319f., 327, 426. Ist diese Identifikation zutreffend, so wäre der Inhalt des
                   weitergeleiteten Briefes vermutlich in Verbindung mit dem Friedensschluss und der
                   Rückkehr der St. Galler in ihr Stift zu sehen. Eine Beteiligung Franz Ehrenreich
                   von Trauttmansdorffs an gelehrten Forschungen ist kaum bekannt; nachweisbar ist
                   nur, dass er Anton Steyerer wenigstens eine mittelalterliche Handschrift aus
-                  seinem Besitz zur Verfügung gestellt hat: <rs type="bibl" key="bibl:15152">Benz,
-                     Zwischen Tradition und Kritik</rs> 433; <rs type="bibl" key="bibl:19748"
-                     >Stelzer, Verschollene Trauttmannsdorffer Handschrift</rs>. Auf den Absender
+                  seinem Besitz zur Verfügung gestellt hat: <rs type="bibl" ref="bibl:15152">Benz,
+                     Zwischen Tradition und Kritik</rs> 433; <rs type="bibl" ref="bibl:19748">Stelzer, Verschollene Trauttmannsdorffer Handschrift</rs>. Auf den Absender
                   des von BP weitergeleiteten Briefes fehlt jeder Hinweis; insbesondere gibt es
                   keinen Anlass, AHu selbst als solchen und nicht ebenfalls als Vermittler
-                  anzunehmen. </p></note>
-            <note xml:id="d3e66641">
-               <ref type="context">2</ref>
-               <label>catalogum</label><p>Die Beilage ist vielleicht mit einem Stück zu
+                  anzunehmen. </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>catalogum</mentioned>
+            <p>Die Beilage ist vielleicht mit einem Stück zu
                   identifizieren, das in StiA Melk, Karton 7 Patres 10, Fasz.8, als Nr. 16 erhalten
                   ist. Unter dem Titel „Notae ex catalogo librorum bibliothecae Rhenoviensis
                   etiamnum dispersae pro reverendo domino patre Bernardo Pez bibliothecario
@@ -130,21 +126,21 @@
                   Basilii Itten abbatis Rhenoviensis etc. cum catalogo“ (StiA Melk, Karton 7 Patres
                   10, Fasz. 8, Nr. 16, 10v). Im Zweifel werden jedoch allein die „Notae ex catalogo“
                   als mögliche Beilage zu diesem Brief angesetzt. Zu Iten, Laufen und Zumbrunnen:
-                     <rs type="bibl" key="bibl:16986">Henggeler, Profeßbuch Pfäfers Rheinau
-                     Fischingen</rs> 227–229, 285–288; zu Iten vgl. <rs type="bibl" key="bibl:19716"
-                     >Steinmann–Stotz, Rheinau</rs> 1156f. – Anzunehmen ist, dass AHu diese Beilage
+                     <rs type="bibl" ref="bibl:16986">Henggeler, Profeßbuch Pfäfers Rheinau
+                     Fischingen</rs> 227–229, 285–288; zu Iten vgl. <rs type="bibl" ref="bibl:19716">Steinmann–Stotz, Rheinau</rs> 1156f. – Anzunehmen ist, dass AHu diese Beilage
                   gemeinsam mit dem Schreiben Zurlaubens erhielt, in dem dieser die Wünsche Konrad
-                  Müllers zur Weitergabe an BP mitteilte.</p></note>
-            <note xml:id="d3e66647">
-               <ref type="context">2</ref>
-               <label> Conradus</label><p> Zu Konrad Müller, der seit dem 14. Februar 1718
-                  Bibliothekar von Rheinau war: <rs type="bibl" key="bibl:16896">Heer, Mabillon</rs>
-                  363f.; <rs type="bibl" key="bibl:16898">Heer, Pez</rs> 431–433; <rs type="bibl"
-                     key="bibl:16986">Henggeler, Profeßbuch Pfäfers Rheinau Fischingen</rs>
-               310.</p></note>
-            <note xml:id="d3e66651">
-               <ref type="context">3</ref>
-               <label>Engelbergenses ... exspectent</label><p>AHu bezieht sich vermutlich auf einen
+                  Müllers zur Weitergabe an BP mitteilte.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned> Conradus</mentioned>
+            <p> Zu Konrad Müller, der seit dem 14. Februar 1718
+                  Bibliothekar von Rheinau war: <rs type="bibl" ref="bibl:16896">Heer, Mabillon</rs>
+                  363f.; <rs type="bibl" ref="bibl:16898">Heer, Pez</rs> 431–433; <rs type="bibl" ref="bibl:16986">Henggeler, Profeßbuch Pfäfers Rheinau Fischingen</rs>
+               310.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>Engelbergenses ... exspectent</mentioned>
+            <p>AHu bezieht sich vermutlich auf einen
                   Brief des Engelberger Priors Frowin Christen vom 18. September 1718, in dem
                   erklärt wird, dass trotz dessen Bemühungen eine Entscheidung zur Übermittlung von
                   Frowins „De laude liberi arbitrii“ an BP noch ausstehe, weil ein Teil des Konvents
@@ -155,69 +151,103 @@
                   Abgesehen von BPs Nennung in der dritten Person lässt die Anrede an einen Prior
                   erkennen, dass das Schreiben an AHu gerichtet war, von dem es wohl als Beilage
                   dieses Briefes an BP kam. Zur Entscheidungsfindung in Engelberg in dieser
-                  Angelegenheit vgl. <ref type="letter">927</ref> &lt;1&gt;.</p></note>
-            <note xml:id="d3e66657">
-               <ref type="context">4</ref>
-               <label>Secreta Jansenistarum politica</label><p> Die Nennung ist noch am ehesten zu identifizieren mit der anonymen Schrift „Secreta Jansenistarum politia“ von 1667. In Melk ist diese heute nicht vorhanden.</p></note>
-            <note xml:id="d3e66663">
-               <ref type="context">4</ref>
-               <label> quodam amico</label><p>Zu einer Identifikation fehlt jeder Anhaltspunkt.</p></note>
-            <note xml:id="d3e66667">
-               <ref type="context">4</ref>
-               <label> illustranda dissertatione</label><p> Ein solches Vorhaben BPs ist sonst nicht
+                  Angelegenheit vgl. <ref type="letter" target="letter:927">927</ref> <ref target="letter:927#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>Secreta Jansenistarum politica</mentioned>
+            <p> Die Nennung ist noch am ehesten zu identifizieren mit der anonymen Schrift „Secreta Jansenistarum politia“ von 1667. In Melk ist diese heute nicht vorhanden.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned> quodam amico</mentioned>
+            <p>Zu einer Identifikation fehlt jeder Anhaltspunkt.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
+            <mentioned> illustranda dissertatione</mentioned>
+            <p> Ein solches Vorhaben BPs ist sonst nicht
                   bezeugt: vgl. Einleitung, Abschnitt I.5. Einige Jahre zuvor hatte er sich einer
                   Aufforderung, gegen die TBrief des Engelberger Priors Frowin Christen, offenbar
-                  entzogen: vgl. <ref type="letter">411</ref> &lt;6&gt;.</p></note>
-            <note xml:id="d3e66671">
-               <ref type="context">4</ref>
-               <label> studendi methodum</label><p>Diese Beilage scheint in Melk nicht erhalten zu sein.</p></note>
-            <note xml:id="d3e66675">
-               <ref type="context">5</ref>
-               <label>in patriam regressus</label><p>Zum Exil der St. Galler im Gefolge des
-                  Toggenburgerkrieges von 1712 vgl. <ref type="letter">259</ref>, <ref type="letter"
-                     >510</ref> &lt;4&gt;. Der Friedensvertrag von Baden, durch den das Stift St.
+                  entzogen: vgl. <ref type="letter" target="letter:411">411</ref> <ref target="letter:411#seg6">6</ref>.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
+            <mentioned> studendi methodum</mentioned>
+            <p>Diese Beilage scheint in Melk nicht erhalten zu sein.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
+            <mentioned>in patriam regressus</mentioned>
+            <p>Zum Exil der St. Galler im Gefolge des
+                  Toggenburgerkrieges von 1712 vgl. <ref type="letter" target="letter:259">259</ref>, <ref type="letter" target="letter:510">510</ref> <ref target="letter:510#seg4">4</ref>. Der Friedensvertrag von Baden, durch den das Stift St.
                   Gallen sein Territorium und seine Hoheitsrechte im Austausch für bedeutende
                   Zugeständnisse gegenüber seinen reformierten Untertanen im Toggenburg, aber auch
                   im Thurgau und im Rheintal wiedererlangte, war am 15. Juni 1718 unterzeichnet und
                   am 5. August ratifiziert worden. Abt Rudolfis erreichte nach seiner Durchreise in
                   der Mehrerau noch am 7. September Rorschach, am folgenden Tag Wil, und konnte
-                  schließlich am 11. September in St. Gallen einziehen: <rs type="bibl"
-                     key="bibl:15998">Duft–Gössi–Vogler, St. Gallen</rs> 1340f.; <rs type="bibl"
-                     key="bibl:16048">Ehrenzeller, Stadt St. Gallen</rs> 264; <rs type="bibl"
-                     key="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs> 155; <rs type="bibl"
-                     key="bibl:17148">Holenstein, Eidgenössische Politik</rs> 598; <rs type="bibl"
-                     key="bibl:19918">Thürer, St. Galler Geschichte</rs> 1 529f.</p></note>
-            <note xml:id="d3e66681">
-               <ref type="context">5</ref>
-               <label> abiit ... Teschler</label><p>Teschler verstarb an plötzlich auftretender Ruhr
-                  in Wasserburg am Bodensee: <rs type="bibl" key="bibl:16988">Henggeler, Profeßbuch
-                     St. Gallen</rs> 355.</p></note>
-            <note xml:id="d3e66685">
-               <ref type="context">5</ref>
-               <label> constitui ... Bernardum Franck</label><p>Dieser hatte 1710 in St. Gallen
+                  schließlich am 11. September in St. Gallen einziehen: <rs type="bibl" ref="bibl:15998">Duft–Gössi–Vogler, St. Gallen</rs> 1340f.; <rs type="bibl" ref="bibl:16048">Ehrenzeller, Stadt St. Gallen</rs> 264; <rs type="bibl" ref="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs> 155; <rs type="bibl" ref="bibl:17148">Holenstein, Eidgenössische Politik</rs> 598; <rs type="bibl" ref="bibl:19918">Thürer, St. Galler Geschichte</rs> 1 529f.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
+            <mentioned> abiit ... Teschler</mentioned>
+            <p>Teschler verstarb an plötzlich auftretender Ruhr
+                  in Wasserburg am Bodensee: <rs type="bibl" ref="bibl:16988">Henggeler, Profeßbuch
+                     St. Gallen</rs> 355.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg5">
+            <mentioned> constitui ... Bernardum Franck</mentioned>
+            <p>Dieser hatte 1710 in St. Gallen
                   Profess abgelegt und 1716 in der Mehrerau Primiz gefeiert, wo er demzufolge
                   zumindest einen Teil der Exilsjahre verbracht haben dürfte. Seine Begabungen
                   wurden anscheinend nicht nur von AHu, sondern auch von seinem eigenen Abt
                   geschätzt, der ihn ab 1719 als Professor, später als Bibliothekar und Offizial
                   einsetzte und zur Erwerbung eines juristischen Doktorgrads 1729 nach Rom schickte.
-                  1742 wurde er zum Abt von Disentis postuliert: <rs type="bibl" key="bibl:16988"
-                     >Henggeler, Profeßbuch St. Gallen</rs> 362–364; <rs type="bibl"
-                     key="bibl:16498">Gilomen-Schenkel–Müller, Disentis</rs> 506; <rs type="bibl"
-                     key="bibl:19426">Schmid, Bernhard Frank</rs>. Beiträge für die „Bibliotheca
-                  Benedictina“ leistete Frank erst in den frühen 1720er Jahren: vgl. <rs type="bibl"
-                     key="bibl:16898">Heer, Pez</rs> 419.</p></note>
-            <note xml:id="d3e66690">
-               <ref type="context">6</ref>
-               <label>afflictio</label><p>Zu BPs Konflikt mit seinem Abt Berthold Dietmayr in den
+                  1742 wurde er zum Abt von Disentis postuliert: <rs type="bibl" ref="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs> 362–364; <rs type="bibl" ref="bibl:16498">Gilomen-Schenkel–Müller, Disentis</rs> 506; <rs type="bibl" ref="bibl:19426">Schmid, Bernhard Frank</rs>. Beiträge für die „Bibliotheca
+                  Benedictina“ leistete Frank erst in den frühen 1720er Jahren: vgl. <rs type="bibl" ref="bibl:16898">Heer, Pez</rs> 419.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg6">
+            <mentioned>afflictio</mentioned>
+            <p>Zu BPs Konflikt mit seinem Abt Berthold Dietmayr in den
                   vorangegangenen Monaten sowie zum Scheitern eines ersten Anlaufs zur Gründung
-                  einer Gelehrtenkongregation vgl. <ref type="letter">977</ref>, <ref type="letter"
-                     >978</ref>, <ref type="letter">979</ref>, <ref type="letter">992</ref>
-                  &lt;3&gt;, <ref type="letter">994</ref> &lt;2&gt;, <ref type="letter">1003</ref>
-                  &lt;6&gt;; sowie Einleitung, Abschnitt I.1.</p></note>
-            <note xml:id="d3e66696">
-               <ref type="context">6</ref>
-               <label> Domine ignosce illis</label><p>Nach Lk 23,34: „Pater, dimitte illis, non enim sciunt, quid faciunt“.</p></note>
-         </div>
-      </back>
+                  einer Gelehrtenkongregation vgl. <ref type="letter" target="letter:977">977</ref>, <ref type="letter" target="letter:978">978</ref>, <ref type="letter" target="letter:979">979</ref>, <ref type="letter" target="letter:992">992</ref>
+                  <ref target="letter:992#seg3">3</ref>, <ref type="letter" target="letter:994">994</ref> <ref target="letter:994#seg2">2</ref>, <ref type="letter" target="letter:1003">1003</ref>
+                  <ref target="letter:1003#seg6">6</ref>; sowie Einleitung, Abschnitt I.1.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg6">
+            <mentioned> Domine ignosce illis</mentioned>
+            <p>Nach Lk 23,34: „Pater, dimitte illis, non enim sciunt, quid faciunt“.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>VI</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:16228">
+            <title type="short">Fischer, Reichenauer Kulturerbe</title>
+            <biblScope>79</biblScope>
+         </bibl>
+         <bibl corresp="bibl:16898">
+            <title type="short">Heer, Pez</title>
+            <biblScope>418f., 421, 431, 447</biblScope>
+         </bibl>
+         <bibl corresp="bibl:17432">
+            <title type="short">Katschthaler, Briefnachlass</title>
+            <biblScope>50</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18770">
+            <title type="short">Peper, Ohne Parteilichkeit</title>
+            <biblScope>272</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende religiosissime ac clarissime domine pater bibliothecarie, patrone venerandissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Quod clarissima paternitas vestra recommendatas sibi litteras ad illustrissimum <anchor xml:id="n1"/>comitem de Trauttmannsdorff<anchor xml:id="n1e"/> etc. dirigere dignata sit, maximas, quas possum, rependo gratias unaque vestris obsequiis me totum quotum de novo dico et consecro. </ab>
+         <ab resp="#editor" xml:id="seg2">Scripsi interea nervose, modeste tamen, non modo ad reverendum patrem bibliothecarium, verum ad ipsum quoque illustrissimum principem Einsidlensem, atque iterato pro extradendis scriptorum suorum catalogis supplicavi, et quidem (nisi admodum fallar) adeo instanter, ut, si vel unica honestatis et humanitatis religiosae scintilla ipsis supersit, eosdem ultra denegare seu retardare non valeant. E monasterio Rhenoviensi acclusum <anchor xml:id="n2"/>catalogum<anchor xml:id="n2e"/> accepi, plura (ut ipsius reverendissimi domini domini abbatis litterae sperare iubent) deinceps accepturus. Quod vero reverendus pater<anchor xml:id="n3"/> Conradus<anchor xml:id="n3e"/> post tot partim oretenus, <pb n="1v"/> partim scriptotenus a me datas instructiones a sua clarissima paternitate novam desideret, satis mirari non possum. </ab>
+         <ab resp="#editor" xml:id="seg3">Pari admiratione dignum est, quod <anchor xml:id="n4"/>Engelbergenses, tot urgentibus motivis necdum permoti, ulteriora, quibus ad extradendum opus beati Frowini etc. persuadeantur, exspectent<anchor xml:id="n4e"/>. Sed concedamus his Helvetis pro nationis suae genio quid singulare. </ab>
+         <ab resp="#editor" xml:id="seg4">Transmitto interim <anchor xml:id="n5"/>Secreta Jansenistarum politica<anchor xml:id="n5e"/> a singulari<anchor xml:id="n6"/> quodam amico<anchor xml:id="n6e"/> mihi non ita pridem communicata, quae pro illustranda<del ana="#after">Bibliotheca</del> dissertatione historica circa haeresin Jansenianam clarissimae paternitati vestrae plurimum deservire poterunt. Addo quoque praeclaram<anchor xml:id="n7"/> studendi methodum<anchor xml:id="n7e"/>, quam olim eminentissimus cardinalis Sfondrati cuidam suorum religiosorum praescripsit. </ab>
+         <ab resp="#editor" xml:id="seg5">Septimo elapsi mensis illustrissimus princeps S. Galli nobis valedixit, <pb n="2r"/> hinc de exilio <anchor xml:id="n8"/>in patriam regressus<anchor xml:id="n8e"/>. 12. eiusdem in domum aeternitatis<anchor xml:id="n9"/> abiit reverendus pater Coelestinus Teschler<anchor xml:id="n9e"/>, vir San-Gallenses inter scientia et virtute si non primus, certe nulli secundus. Requiescat in sancta pace! In vicem demortui<anchor xml:id="n10"/> constitui reverendum patrem Bernardum Franck<anchor xml:id="n10e"/>, qui singula, quae in monasterio San-Gallensi pro exornanda Bibliotheca generali Benedictina supersunt, sedulo conscribet. </ab>
+         <ab resp="#editor" xml:id="seg6">Caeterum vestra <anchor xml:id="n11"/>afflictio<anchor xml:id="n11e"/> me dolorose affligit, dolorosius haud dubie me afflictura, nisi firmiter sperarem laudabilissima vestra totique ordini nostro summe honorifica studia eo feliciorem successum habitura esse, quo plures eadem adversarios et contradictores pati coguntur; novi enim a propria experientia res illas, quibus nil adversi sese ingerit, haud admodum feliciter succedere. Dein communis is omnium<del ana="#after">in do</del> indoctorum et indisciplinatorum genius est, ut, quos scientia et virtute <pb n="2v"/> assequi non valent, hos invidae linguae spiculis persequi soleant; sed<anchor xml:id="n12"/> Domine ignosce illis<anchor xml:id="n12e"/>, quia nesciunt, quid faciunt etc. Vale, o dimidium cordis mei! atque tuis favoribus et amoribus aeternum commendatum habe</ab>
+         <closer>Admodum reverendae religiosissimae ac clarissimae paternitatis etc. cultorem ex asse devotum patrem Apronianum priorem manu propria.</closer>
+         <closer>Ex Augia Maiori Brigantina 22. Octobris 1718.</closer>
+         <closer xml:id="seg7">P.S. Salvo meliori iudicio modeste notarem suoque loco et tempore toti litterario orbi palam facerem, quotquot seu suos catalogos seu manuscriptos codices communicare recusarunt.</closer>
+      </body>
    </text>
 </TEI>
