@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="559" xml:id="pez-0559">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">559 Johann Benedikt Gentilotti von Engelsbrunn an Bernhard Pez. 1716-05-09. Wien.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Benedikt Gentilotti von Engelsbrunn an Bernhard Pez. 1716-05-09. Wien.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">559</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -23,19 +35,28 @@
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">III</biblScope>
-               <biblScope unit="page">271r–272v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 271r–272v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -50,82 +71,75 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">558</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">608</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">558</idno>
-               </ref>
+               <ptr type="prev" target="letter:558"/>
+               <ptr type="next" target="letter:608"/>
+               <ptr type="mentions" target="letter:558"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">BG entschuldigt sich dafür, länger nicht geschrieben zu haben. Er war mehrere Tage krank, und dies gerade zu jener Zeit, als in der ganzen <rs ref="index:d14380e45571">Stadt</rs> die größte Freude über die Niederkunft der Kaiserin <rs ref="index:d10854e7663">Elisabeth Christine</rs> (mit Erzherzog <rs ref="index:d14380e24743">Leopold Johann</rs>) herrschte. Nun aber ist BG durch die Güte Gottes wieder genesen und kann seinen alten Freunden wieder schreiben.</p>
+            <p corresp="#seg2">Durch das Ableben von <rs ref="index:d14380e26993">René Massuet</rs> hat sowohl der <rs ref="index:d14380e4919">Benediktinerorden</rs> als auch die Gelehrsamkeit einen schweren Verlust erlitten; niemand betrauert ihn mehr als BG und BP. Sie sollen sich jedoch in den Willen Gottes fügen und Trost im Gedanken finden, dass <rs ref="index:d14380e26993">Massuet</rs> nun unter den Seligen den Lohn seiner Mühen erhält, in der <rs ref="index:d10854e15615">Maurinerkongregation</rs> allerdings eine so reiche Ernte an gelehrten Männern vorhanden ist, dass es bei Verlust des einen nicht an einem anderen mangelt, welcher dessen Arbeiten und seinen Ruf als Gelehrter weiterführen kann. BG fordert BP nachdrücklich auf, sein Versprechen zu halten und so bald wie möglich seine Schrift über die Mauriner („<rs ref="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“) an BG zu senden.</p>
+            <p corresp="#seg3">Die Mitteilungen BPs über seine „<rs ref="index:d14380e33468">Bibliotheca Mellicensis</rs>“ <ref type="letter" target="letter:558">558</ref> waren BG in höchstem Maße willkommen. Bei der Erstellung von Katalogen, besonders über Handschriften, gibt es nach Ansicht BGs keine Methode, die frei von Schwierigkeiten wäre. BP zieht, wie er geschrieben hat, die alphabetische Anordnung vor und erspart hierdurch einen Autorenindex. BG verwirft diese Vorgangsweise keineswegs, geht selbst jedoch von einer thematischen Ordnung aus, indem er die Bestände nach Klassen oder Fächern (classes seu facultates) sowie nach Sprachen unterteilt und dann nach dem Format gliedert. Erst am Ende des Katalogs wird er einen entweder alphabetischen oder thematischen Autorenindex anfügen. Ein jeder kann das Seine tun, solange nur die in den Regalen verborgenen Bestände zugänglich gemacht und dadurch die Grenzen der Gelehrsamkeit erweitert werden.</p>
+            <p corresp="#seg4">BG würde gerne erfahren, was <rs ref="index:d14380e25581">Jean Mabillon</rs> in den „<rs ref="index:d14380e25705">Annales ordinis sancti Benedicti</rs>“ oder an anderem Ort über den Mönch von <rs ref="index:d14380e8579">Corbie</rs> Christian Druthmar (recte: <rs ref="index:d14380e8082">Christian von Stablo</rs>) geschrieben hat und wie er dessen Lehre vor den Irrtümern der Sakramentarier bewahrt hat. BG bittet daher BP, diese Stelle für ihn abschreiben zu lassen.</p>
+            <p corresp="#seg5">An den Schluss stellt BG eine Liste jener Bücher, um die seine Bibliothek in der vorausgehenden Zeit vermehrt wurde: <rs ref="index:d14380e15460">„Historia Neapolitana“ von Nicola Partenio Giannetasio</rs>, <rs ref="index:d14380e8005">„Caesenae historia“ von Scipione Chiaramonti</rs>, <rs ref="index:d14380e39492">„Dissertatio apologetica“ von Giuseppe Antonio Sassi</rs>, die <rs ref="index:d14380e16685">Werke Guiberts von Nogent</rs> in der Ausgabe von <rs ref="index:d14380e124">Jean-Luc d’Achery</rs>, <rs ref="index:d14380e18618">„Reflexions sur la critique“ von Honoré de Sainte-Marie</rs>, <rs ref="index:d14380e19901">„Historiae ecclesiasticae selecta capita“ von Thomas Ittig</rs>, <rs ref="index:d14380e26059">„Biblioteca Romana“ von Prospero Mandosio</rs>, <rs ref="index:d14380e26647">„Veterum scriptorum collectio nova“ von Edmond Martène</rs> sowie weitere, unbedeutendere. Demnächst erwartet BG die <rs ref="index:d14380e17201">Konziliensammlung von Jean Hardouin</rs> und die <rs ref="index:d14380e12290">„Histoire ecclesiastique“ von Claude Fleury</rs>, welche in Brüssel nachgedruckt wird. BG schließt mit Grüßen an <rs ref="index:d14380e34537">HP</rs>.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e9393"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> entschuldigt sich dafür, länger nicht geschrieben zu haben. Er war mehrere Tage krank, und dies gerade zu jener Zeit, als in der ganzen <rs key="index:d14380e45571">Stadt</rs> die größte Freude über die Niederkunft der Kaiserin <rs key="index:d10854e7663">Elisabeth Christine</rs> (mit Erzherzog <rs key="index:d14380e24743">Leopold Johann</rs>) herrschte. Nun aber ist <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> durch die Güte Gottes wieder genesen und kann seinen alten Freunden wieder schreiben.</seg><seg type="context" n="2" xml:id="d3e9395">Durch das Ableben von <rs key="index:d14380e26993">René Massuet</rs> hat sowohl der <rs key="index:d14380e4919">Benediktinerorden</rs> als auch die Gelehrsamkeit einen schweren Verlust erlitten; niemand betrauert ihn mehr als <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> und <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BP<?oxy_custom_end?>. Sie sollen sich jedoch in den Willen Gottes fügen und Trost im Gedanken finden, dass <rs key="index:d14380e26993">Massuet</rs> nun unter den Seligen den Lohn seiner Mühen erhält, in der <rs key="index:d10854e15615">Maurinerkongregation</rs> allerdings eine so reiche Ernte an gelehrten Männern vorhanden ist, dass es bei Verlust des einen nicht an einem anderen mangelt, welcher dessen Arbeiten und seinen Ruf als Gelehrter weiterführen kann. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> fordert <rs type="person" role="sender">BP</rs> nachdrücklich auf, sein Versprechen zu halten und so bald wie möglich seine Schrift über die Mauriner („<rs key="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“) an <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> zu senden.</seg><seg type="context" n="3" xml:id="d3e9397">Die Mitteilungen <rs type="person" role="sender">BPs</rs> über seine „<rs key="index:d14380e33468">Bibliotheca Mellicensis</rs>“ <ref type="letter">558</ref> waren BG in höchstem Maße willkommen. Bei der Erstellung von Katalogen, besonders über Handschriften, gibt es nach Ansicht <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BGs<?oxy_custom_end?> keine Methode, die frei von Schwierigkeiten wäre. <rs type="person" role="sender">BP</rs> zieht, wie er geschrieben hat, die alphabetische Anordnung vor und erspart hierdurch einen Autorenindex. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> verwirft diese Vorgangsweise keineswegs, geht selbst jedoch von einer thematischen Ordnung aus, indem er die Bestände nach Klassen oder Fächern (classes seu facultates) sowie nach Sprachen unterteilt und dann nach dem Format gliedert. Erst am Ende des Katalogs wird er einen entweder alphabetischen oder thematischen Autorenindex anfügen. Ein jeder kann das Seine tun, solange nur die in den Regalen verborgenen Bestände zugänglich gemacht und dadurch die Grenzen der Gelehrsamkeit erweitert werden.</seg><seg type="context" n="4" xml:id="d3e9402"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> würde gerne erfahren, was <rs key="index:d14380e25581">Jean Mabillon</rs> in den „<rs key="index:d14380e25705">Annales ordinis sancti Benedicti</rs>“ oder an anderem Ort über den Mönch von <rs key="index:d14380e8579">Corbie</rs> Christian Druthmar (recte: <rs key="index:d14380e8082">Christian von Stablo</rs>) geschrieben hat und wie er dessen Lehre vor den Irrtümern der Sakramentarier bewahrt hat. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> bittet daher <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BP<?oxy_custom_end?>, diese Stelle für ihn abschreiben zu lassen.</seg><seg type="context" n="5" xml:id="d3e9404">An den Schluss stellt <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> eine Liste jener Bücher, um die seine Bibliothek in der vorausgehenden Zeit vermehrt wurde: <rs key="index:d14380e15460">„Historia Neapolitana“ von Nicola Partenio Giannetasio</rs>, <rs key="index:d14380e8005">„Caesenae historia“ von Scipione Chiaramonti</rs>, <rs key="index:d14380e39492">„Dissertatio apologetica“ von Giuseppe Antonio Sassi</rs>, die <rs key="index:d14380e16685">Werke Guiberts von Nogent</rs> in der Ausgabe von <rs key="index:d14380e124">Jean-Luc d’Achery</rs>, <rs key="index:d14380e18618">„Reflexions sur la critique“ von Honoré de Sainte-Marie</rs>, <rs key="index:d14380e19901">„Historiae ecclesiasticae selecta capita“ von Thomas Ittig</rs>, <rs key="index:d14380e26059">„Biblioteca Romana“ von Prospero Mandosio</rs>, <rs key="index:d14380e26647">„Veterum scriptorum collectio nova“ von Edmond Martène</rs> sowie weitere, unbedeutendere. Demnächst erwartet <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> die <rs key="index:d14380e17201">Konziliensammlung von Jean Hardouin</rs> und die <rs key="index:d14380e12290">„Histoire ecclesiastique“ von Claude Fleury</rs>, welche in Brüssel nachgedruckt wird. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> schließt mit Grüßen an <rs key="index:d14380e34537">HP</rs>.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Summe venerando et doctissimo viro domno Bernardo Pez Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilottus ab Engelsbrun.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e9419">Ob caussam plane sonticam scribendi officium intermisi: aegrotavi scilicet complures dies atque eo molestius, quod eo tempore in morbum incidi, quo laetius atque iucundius post hominum memoriam fuisse non puto. Intelligis me de publica laetitia loqui ob exspectatissimum <seg type="lemma" corresp="#d3e9438">Christinae augustae puerperium</seg>, quae laetitia tanta fuit, ut eam neque animi hominum neque ipsa urbs caperet neque ulla oratio complecti possit. Urbe igitur tota pene sedibus suis convulsa et in gratulationem effusa, ego solus (o rem miseram!) tum in lectulo iacui. Nunc Dei benignitate convalui, ad scribendum sum confirmatus et cum veteribus amicis in gratiam redii. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e9421">Massueti excessu luculentam sane plagam accepit cum ordo vester tum res litteraria. Multis ille quidem flebilis occidit, nulli flebilior quam tibi et mihi. <pb n="1v"/> Sed nolim obductam fere cicatricem refricare. Conquiescamus in Dei voluntate eaque cogitatione dolorem nostrum levemus, quod ille quidem nunc sit ἐν ἁγίοις et praemium laboribus suis debitum capiat, in celeberrimo autem illo sancti Mauri coetu tam laeta sit doctorum virorum seges, ut uno avulso non deficiat alter, qui et eius labores prosequi et partam doctrinae famam nomenque tueri possit. Res ipsa me monet, ut, postquam in hunc sermonem incidi, a te non iam petam, sed flagitem, ut ea, quae de nobilissimo illo coetu es commentatus, quam primum ad nos, qui mirifice tuis scriptis capimur, mittas praestesque promissa. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e9425">Quae de Mellicensi Bibliotheca tua mecum communicasti, tam grata fuerunt quam quod gratissimum. In texendis catalogis, praesertim manuscriptorum, nulla ratio (ut mea quidem fert opinio) iniri potest, quae non in aliquam incurrat difficultatem. Tu elementorum <pb n="2r"/><seg type="lemma" corresp="#d3e9450"> ordinem, ut scribis, praefers eoque pacto indicem auctorum compendifacis; quod plane non improbo. Ego facta distributione in classes seu facultates, ut vocant, et linguas magnitudinem sequor et demum ad calcem indicem auctorum aut alphabeticum aut classicum adtexam</seg>. Tibi tuam, cuique suam: dummodo quacunque tandem ratione, quidquid in pluteis latet, aut evulgetur aut indicetur atque adeo rei litterariae pomoerium producatur. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e9429">Aveo scire, quid ὁ πάνυ Mabillonius in Annalibus aut forte alibi de <seg type="lemma" corresp="#d3e9454">Christiano Druthmaro</seg> monacho Corbeiensi senserit litterisque mandaverit, et quemadmodum eius doctrinam a <seg type="lemma" corresp="#d3e9460">sacramentariorum</seg> erroribus tueatur. Quare, ut <seg type="lemma" corresp="#d3e9464">eum locum</seg> mihi exscribi facias mittasque, te vehementer oro quaesoque. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e9431">In extremo ponam <seg type="lemma" corresp="#d3e9468">indiculum librorum</seg>, quibus <pb n="2v"/> proximo superiore tempore bibliotheca mea aucta est. Ii sunt: Parthenii Giannetasii Historia Neapolitana tomis tribus, quarto. Scipionis Claromontii Historia Caesenatensis, quarto. Josephi Antonii Saxii Dissertatio apologetica ad vindicandam Mediolano antiquissimam possessionem corporum sanctorum Protasii et Gervasii, quarto. Guiberti abbatis Opera cura Dacherii. Honoré de Sainte Marie Reflexions sur la critique, quarto. Ittigii Selecta capita historiae ecclesiasticae saeculorum I. et II., quarto. Joannis Alberti Fabricii Codex apocryphus Veteris et Novi Testamenti, octavo, tomis duobus. Mandosii Bibliotheca Romana tomis duobus, quarto. Edmundi Martene Veterum scriptorum collectio nova. Et alia minuscula. Propediem exspecto Collectionem conciliorum Harduini et Historiam ecclesiasticam abbatis Fleury, quae Bruxellis recuditur. Vale, mi suavissime Bernarde, cum germano tuo et vos me, si mutuo id facere scitis, amare pergite.</seg></p>
-            <p xml:space="preserve">Vindobona ante diem VII. Idus Maias MDCCXVI.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e9438">
-               <ref type="context">1</ref>
-               <label>Christinae augustae puerperium</label><p> Am 13. April 1716 war als erstes Kind Kaiser Karls VI. und Elisabeth Christines von Braunschweig-Wolfenbüttel der Thronfolger Erzherzog Leopold Johann geboren worden. Dem Ereignis wurde besonders hohe Bedeutung beigemessen, weil das Kind neben seinem Vater der einzige Habsburger im Mannesstamm war.</p></note>
-            <note xml:id="d3e9444">
-               <ref type="context">3</ref>
-               <label>elementorum ordinem</label><p>Der von BP angelegte Katalog der Melker
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>Christinae augustae puerperium</mentioned>
+            <p> Am 13. April 1716 war als erstes Kind Kaiser Karls VI. und Elisabeth Christines von Braunschweig-Wolfenbüttel der Thronfolger Erzherzog Leopold Johann geboren worden. Dem Ereignis wurde besonders hohe Bedeutung beigemessen, weil das Kind neben seinem Vater der einzige Habsburger im Mannesstamm war.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg3">
+            <mentioned>elementorum ordinem</mentioned>
+            <p>Der von BP angelegte Katalog der Melker
                   Handschriften teilt die Werke nach Klassen ein, innerhalb derselben sind die
-                  Einträge alphabetisch gereiht: StiB Melk, Cod. S. N.; vgl. <rs type="bibl"
-                     key="bibl:16526">Glassner–Haidinger, Inventar Melk 1</rs>/1 9.</p></note>
-            <note xml:id="d3e9450">
-               <ref type="context">3</ref>
-               <label> Ego ... classicum adtexam</label><p> Der auf BG zurückgehende
+                  Einträge alphabetisch gereiht: StiB Melk, Cod. S. N.; vgl. <rs type="bibl" ref="bibl:16526">Glassner–Haidinger, Inventar Melk 1</rs>/1 9.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned> Ego ... classicum adtexam</mentioned>
+            <p> Der auf BG zurückgehende
                   Handschriftenkatalog der Hofbibliothek entspricht im Wesentlichen dem hier
-                  dargelegten Plan: ÖNB, Cod. S. N. 2207–2221, 2231–2233; vgl. <rs type="bibl"
-                     key="bibl:19814">Strebl, Barocke Bibliothek</rs> 191. BP berichtete später
+                  dargelegten Plan: ÖNB, Cod. S. N. 2207–2221, 2231–2233; vgl. <rs type="bibl" ref="bibl:19814">Strebl, Barocke Bibliothek</rs> 191. BP berichtete später
                   davon, für die Arbeiten an diesem Katalog umfangreiche Angaben zu Inkunabeln und
                   Frühdrucken („Gothicae editiones“) der in den Handschriften der Hofbibliothek
                   überlieferten Werke selbst und durch Mitbrüder gesammelt und BG zur Verfügung
                   gestellt zu haben, ebenso Nachrichten über Handschriften, die er und HP bei ihren
                   Bibliotheksreisen bis 1716 gesehen hatten: Pez, Dissertatio apologetico-litteraria
-                  7.</p></note>
-            <note xml:id="d3e9454">
-               <ref type="context">4</ref>
-               <label>Christiano Druthmaro</label><p> Vgl. <ref type="letter">552</ref> &lt;4&gt;;
-                  vermutlich hatte BP Inhalte jenes Briefes mitgeteilt.</p></note>
-            <note xml:id="d3e9460">
-               <ref type="context">4</ref>
-               <label>sacramentariorum</label><p> Der Ausdruck „Sakramentarier“ war seit der
+                  7.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
+            <mentioned>Christiano Druthmaro</mentioned>
+            <p> Vgl. <ref type="letter" target="letter:552">552</ref> <ref target="letter:552#seg4">4</ref>;
+                  vermutlich hatte BP Inhalte jenes Briefes mitgeteilt.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>sacramentariorum</mentioned>
+            <p> Der Ausdruck „Sakramentarier“ war seit der
                   Reformationszeit, in aller Regel als Fremdbezeichnung von lutheranischer oder
                   katholischer Seite, als Etikett für theologische Richtungen gängig, welche die
-                  Realpräsenz des Leibs und Blutes Christi im Abendmahl ablehnten: vgl. <rs
-                     type="bibl" key="bibl:15258">Bizer, Studien</rs> 56, 275–284; <rs type="bibl"
-                     key="bibl:15714">Cristiani, Sacramentaire</rs> (Controverse) col. 441; <rs
-                     type="bibl" key="bibl:16130">Ewerszumrode, Mysterium</rs> 137f.; <rs
-                     type="bibl" key="bibl:18560">Neuser, Dogma</rs> 274f., 282. </p></note>
-            <note xml:id="d3e9464">
-               <ref type="context">4</ref>
-               <label>eum locum</label><p> Nur eine Erwähnung ist festzustellen: Mabillon, Acta sanctorum OSB 4/2 576f. Mabillon äußert sich hier allerdings nicht zur Abendmahlsfrage, sondern nur zur Unterscheidung zwischen Christian von Stablo und dem gleichnamigen Bischof von Auxerre.</p></note>
-            <note xml:id="d3e9468">
-               <ref type="context">5</ref>
-               <label>indiculum librorum</label><p>Mit einer einzigen Ausnahme – der „Historia Neapolitana“ von Giannetasio – sind die von BG angeführten Werke alle im von Giuseppe Maria Borzatti angelegten Katalog der „Bibliotheca Gentilotta“ nachzuweisen: Biblioteca Comunale di Trento, Ms. 5647, 68 (Chiaramonti), 103 (Fleury), 125 (Guibert von Nogent), 130 (Hardouin), 146 (Ittig), 176 (Mandosio), 181 (Martène), 253 (Honoré de Sainte-Marie), 258 (Sassi). Für die Mitteilung dieser Angaben sei Silvano Groff (Trento) gedankt.</p></note>
-         </div>
-      </back>
+                  Realpräsenz des Leibs und Blutes Christi im Abendmahl ablehnten: vgl. <rs type="bibl" ref="bibl:15258">Bizer, Studien</rs> 56, 275–284; <rs type="bibl" ref="bibl:15714">Cristiani, Sacramentaire</rs> (Controverse) col. 441; <rs type="bibl" ref="bibl:16130">Ewerszumrode, Mysterium</rs> 137f.; <rs type="bibl" ref="bibl:18560">Neuser, Dogma</rs> 274f., 282. </p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned>eum locum</mentioned>
+            <p> Nur eine Erwähnung ist festzustellen: Mabillon, Acta sanctorum OSB 4/2 576f. Mabillon äußert sich hier allerdings nicht zur Abendmahlsfrage, sondern nur zur Unterscheidung zwischen Christian von Stablo und dem gleichnamigen Bischof von Auxerre.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
+            <mentioned>indiculum librorum</mentioned>
+            <p>Mit einer einzigen Ausnahme – der „Historia Neapolitana“ von Giannetasio – sind die von BG angeführten Werke alle im von Giuseppe Maria Borzatti angelegten Katalog der „Bibliotheca Gentilotta“ nachzuweisen: Biblioteca Comunale di Trento, Ms. 5647, 68 (Chiaramonti), 103 (Fleury), 125 (Guibert von Nogent), 130 (Hardouin), 146 (Ittig), 176 (Mandosio), 181 (Martène), 253 (Honoré de Sainte-Marie), 258 (Sassi). Für die Mitteilung dieser Angaben sei Silvano Groff (Trento) gedankt.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Summe venerando et doctissimo viro domno Bernardo Pez Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilottus ab Engelsbrun.</opener>
+         <ab resp="#editor" xml:id="seg1">Ob caussam plane sonticam scribendi officium intermisi: aegrotavi scilicet complures dies atque eo molestius, quod eo tempore in morbum incidi, quo laetius atque iucundius post hominum memoriam fuisse non puto. Intelligis me de publica laetitia loqui ob exspectatissimum <anchor xml:id="n1"/>Christinae augustae puerperium<anchor xml:id="n1e"/>, quae laetitia tanta fuit, ut eam neque animi hominum neque ipsa urbs caperet neque ulla oratio complecti possit. Urbe igitur tota pene sedibus suis convulsa et in gratulationem effusa, ego solus (o rem miseram!) tum in lectulo iacui. Nunc Dei benignitate convalui, ad scribendum sum confirmatus et cum veteribus amicis in gratiam redii. </ab>
+         <ab resp="#editor" xml:id="seg2">Massueti excessu luculentam sane plagam accepit cum ordo vester tum res litteraria. Multis ille quidem flebilis occidit, nulli flebilior quam tibi et mihi. <pb n="1v"/> Sed nolim obductam fere cicatricem refricare. Conquiescamus in Dei voluntate eaque cogitatione dolorem nostrum levemus, quod ille quidem nunc sit ἐν ἁγίοις et praemium laboribus suis debitum capiat, in celeberrimo autem illo sancti Mauri coetu tam laeta sit doctorum virorum seges, ut uno avulso non deficiat alter, qui et eius labores prosequi et partam doctrinae famam nomenque tueri possit. Res ipsa me monet, ut, postquam in hunc sermonem incidi, a te non iam petam, sed flagitem, ut ea, quae de nobilissimo illo coetu es commentatus, quam primum ad nos, qui mirifice tuis scriptis capimur, mittas praestesque promissa. </ab>
+         <ab resp="#editor" xml:id="seg3">Quae de Mellicensi Bibliotheca tua mecum communicasti, tam grata fuerunt quam quod gratissimum. In texendis catalogis, praesertim manuscriptorum, nulla ratio (ut mea quidem fert opinio) iniri potest, quae non in aliquam incurrat difficultatem. Tu elementorum <pb n="2r"/><anchor xml:id="n2"/> ordinem, ut scribis, praefers eoque pacto indicem auctorum compendifacis; quod plane non improbo. Ego facta distributione in classes seu facultates, ut vocant, et linguas magnitudinem sequor et demum ad calcem indicem auctorum aut alphabeticum aut classicum adtexam<anchor xml:id="n2e"/>. Tibi tuam, cuique suam: dummodo quacunque tandem ratione, quidquid in pluteis latet, aut evulgetur aut indicetur atque adeo rei litterariae pomoerium producatur. </ab>
+         <ab resp="#editor" xml:id="seg4">Aveo scire, quid ὁ πάνυ Mabillonius in Annalibus aut forte alibi de <anchor xml:id="n3"/>Christiano Druthmaro<anchor xml:id="n3e"/> monacho Corbeiensi senserit litterisque mandaverit, et quemadmodum eius doctrinam a <anchor xml:id="n4"/>sacramentariorum<anchor xml:id="n4e"/> erroribus tueatur. Quare, ut <anchor xml:id="n5"/>eum locum<anchor xml:id="n5e"/> mihi exscribi facias mittasque, te vehementer oro quaesoque. </ab>
+         <ab resp="#editor" xml:id="seg5">In extremo ponam <anchor xml:id="n6"/>indiculum librorum<anchor xml:id="n6e"/>, quibus <pb n="2v"/> proximo superiore tempore bibliotheca mea aucta est. Ii sunt: Parthenii Giannetasii Historia Neapolitana tomis tribus, quarto. Scipionis Claromontii Historia Caesenatensis, quarto. Josephi Antonii Saxii Dissertatio apologetica ad vindicandam Mediolano antiquissimam possessionem corporum sanctorum Protasii et Gervasii, quarto. Guiberti abbatis Opera cura Dacherii. Honoré de Sainte Marie Reflexions sur la critique, quarto. Ittigii Selecta capita historiae ecclesiasticae saeculorum I. et II., quarto. Joannis Alberti Fabricii Codex apocryphus Veteris et Novi Testamenti, octavo, tomis duobus. Mandosii Bibliotheca Romana tomis duobus, quarto. Edmundi Martene Veterum scriptorum collectio nova. Et alia minuscula. Propediem exspecto Collectionem conciliorum Harduini et Historiam ecclesiasticam abbatis Fleury, quae Bruxellis recuditur. Vale, mi suavissime Bernarde, cum germano tuo et vos me, si mutuo id facere scitis, amare pergite.</ab>
+         <closer>Vindobona ante diem VII. Idus Maias MDCCXVI.</closer>
+      </body>
    </text>
 </TEI>

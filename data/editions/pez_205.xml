@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="205" xml:id="pez-0205">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">205 René Massuet an Bernhard Pez. 1712-01-20. Paris (St.-Germain-des-Prés).</title>
-            <title type="sub">Digital Edition</title>
+            <title>René Massuet an Bernhard Pez. 1712-01-20. Paris (St.-Germain-des-Prés).</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">205</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
@@ -22,32 +33,35 @@
             <relatedItem type="otherEdition">
                <bibl>Schelhorn, Amoenitates 13 289–297 Nr. III (S).</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:15152">Benz, Zwischen Tradition und
-                     Kritik</rs>564</bibl>
-                  <bibl><rs type="bibl" key="bibl:16792">Hammermayer, Forschungszentren</rs> 133f.,
-                     182f</bibl>
-                  <bibl><rs type="bibl" key="bibl:16794">Hammermayer, Maurinismus</rs> 396f. (irrig
-                     zum 13. Februar 1712)</bibl>
-                  <bibl><rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 27</bibl>
-                  <bibl><rs type="bibl" key="bibl:17988">Lhotsky, Historiographie</rs> 117</bibl>
-                  <bibl><rs type="bibl" key="bibl:36640">Mikoletzky, Österreich</rs> 162</bibl>
-                  <bibl><rs type="bibl" key="bibl:37320">Schönhofer, Pez</rs> 22</bibl>
-                  <bibl><rs type="bibl" key="bibl:20188">Wallnig, Gasthaus und Gelehrsamkeit</rs>
-                     98f</bibl>
-                  <bibl><rs type="bibl" key="bibl:20196">Wallnig, Mönch oder Gelehrter</rs>
-                     381</bibl>
-                  <bibl><rs type="bibl" key="bibl:14778">Ziegelbauer–Legipont, Historia rei
-                        literariae</rs> 1 271 (irrig zu 1715)</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Zur Edition bei Schelhorn vgl. Einleitung, Abschnitt III. Dem Editionstext wird die Überlieferung B zugrunde gelegt, jedoch nach der Edition S emendiert, wo diese eine eindeutig bessere Lesart bietet.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <p>Original verloren. Abschrift: StiA Melk, Karton 7 Patres 9, Abschriftencodex 128v–132v (B).</p>
+            <listWit>
+               <witness ana="cmif:manuscript"/>
+               <witness xml:id="B" ana="cmif:copy">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>StiA Melk</institution>
+                        <repository>Karton 7 Patres 9, Abschriftencodex</repository>
+                     </msIdentifier>
+                  </msDesc>
+                  <locus>128v–132v (B).</locus>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -62,129 +76,147 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">192</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">266</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">177</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">190</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">192</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">266</idno>
-               </ref>
+               <ptr type="prev" target="letter:192"/>
+               <ptr type="next" target="letter:266"/>
+               <ptr type="mentions" target="letter:177"/>
+               <ptr type="mentions" target="letter:190"/>
+               <ptr type="mentions" target="letter:192"/>
+               <ptr type="mentionedIn" target="letter:266"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person">RM</rs> bedauert, in seinem letzten Schreiben <ref type="letter" target="letter:192">192</ref> nur Dank für den Erhalt des von BP gesendeten Bücherpakets <ref type="letter" target="letter:177">177</ref>, nicht aber für den Brief BPs vom 28. Oktober <ref type="letter" target="letter:190">190</ref> gesagt zu haben, der acht Tage nach dem Paket angekommen ist.</p>
+            <p corresp="#seg2">Freilich sähe <rs type="person">RM</rs> aus diesem vierseitigen Brief am liebsten jene Seite gelöscht, auf der BP in höchsten Tönen seine <rs ref="index:d14380e19786">Edition der Schrift „Contra haereses“</rs> des <rs ref="index:d14380e19780">Irenäus von Lyon</rs> lobt. <rs type="person">RM</rs> kannte BP bisher als Historiker, als im <rs ref="index:d14380e16473">Griechischen</rs> und <rs ref="index:d14380e23973">Lateinischen</rs> versierten Gelehrten, nicht jedoch als Rhetor. <rs type="person">RM</rs> wendet ein, dass es wichtiger sei, jemanden nach der Wahrheit seiner Worte zu beurteilen als nach deren Schönheit. Korrekturen wären angebrachter gewesen, und BP hätte ein weites Feld dafür vorgefunden. In jedem Fall freut sich <rs type="person">RM</rs> über die gute Aufnahme des Werks.</p>
+            <p corresp="#seg3"><rs type="person">RM</rs> hat schon lange vermutet, dass BP am Rande der gelehrten Welt Probleme bei der Beschaffung von Büchern haben muss. Mit <rs ref="index:d14380e11399">England</rs> ist wegen der Distanz kaum ein Kontakt möglich, und gerade an <rs ref="index:d14380e11399">englischen</rs> Autoren mangelt es BP. Viele wichtige Werke zur <rs ref="index:d14380e11399">englischen</rs> Geschichte stammen nämlich von Benediktinern und wurden zu unterschiedlichen Zeiten in diversen Sammlungen veröffentlicht. Zur <rs ref="index:d14380e30878">normannischen</rs> Geschichte, die nach <rs ref="index:d10854e33949">Wilhelm dem Eroberer</rs> einige Zeit mit der <rs ref="index:d14380e11399">englischen</rs> Geschichte zusammengehört, empfiehlt <rs type="person">RM</rs> <rs ref="index:d10854e6911">Duchesnes „Historiae Normannorum scriptores“</rs>. Diese Sammlungen sind in <rs ref="index:d14380e32292">Paris</rs> zwar in den Bibliotheken vorhanden, jedoch kaum mehr auf dem Buchmarkt, auch nicht in <rs ref="index:d14380e4429">Belgien</rs> oder <rs ref="index:d14380e11399">England</rs>. Trotzdem will <rs type="person">RM</rs> versuchen, durch Nachforschungen bei Buchhändlern für BP <rs ref="index:d14380e35244">Pits</rs>’ „<rs ref="index:d14380e35252">Relationes historicae de rebus Anglicis</rs>“, <rs ref="index:d14380e45035">Wares</rs> „<rs ref="index:d14380e45041">De scriptoribus Hiberniae</rs>“ und die „<rs ref="index:d14380e25953">Congregationis Anglicanae trophaea</rs>“ von <rs ref="index:d14380e25947">Maihew</rs> zu bekommen, was bisher nicht gelungen ist.</p>
+            <p corresp="#seg4"><rs type="person">RM</rs> teilt BPs negative Einschätzung von <rs ref="index:d14380e23402">Labbes</rs> „<rs ref="index:d10854e16356">De scriptoribus ecclesiasticis</rs>“ und <rs ref="index:d14380e35647">Possevinos</rs> „<rs ref="index:d14380e35653">Apparatus</rs>“. Besser scheint ihm, mit Abstrichen, <rs ref="index:d14380e10181">Du Pins</rs> „<rs ref="index:d14380e10193">Nouvelle bibliothèque</rs>“; die „<rs ref="index:d10854e487">Historia ecclesiastica</rs>“ von <rs ref="index:d10854e481">Noël Alexandre</rs> ist hingegen eher ein ungeordneter Wust (farrago). BPs positives Urteil über <rs ref="index:d14380e9395">norddeutsche</rs> (protestantische) Bibliographen wie <rs ref="index:d10854e24488">Vinzenz Placcius</rs>, <rs ref="index:d14380e41737">Burkhard Gotthelf Struve</rs> und <rs ref="index:d10854e21784">Johann Gottfried Olearius</rs> hält <rs type="person">RM</rs> für unangebracht. <rs ref="index:d14380e11958">Johann Albert Fabricius</rs> ist eine Ausnahme, doch nützt er BPs Sache nicht. BP soll die Arbeiten der genannten Autoren zwar lesen, aber mit Misstrauen, und sie, die in der Gelehrtenwelt kein Ansehen genießen, auch nicht zitieren. BP soll auch deren schlechte Gewohnheit nicht übernehmen, die Ränder der Bücher mit nichtssagenden Zitaten unbekannter Autoren anzufüllen.</p>
+            <p corresp="#seg5">Noch strenger geht <rs type="person">RM</rs> mit <rs ref="index:d10854e2654">Bayles</rs> „<rs ref="index:d10854e2662">Dictionnaire</rs>“ ins Gericht, das BP gelobt hat. Der Autor besaß weder Glauben noch Urteil, ohne Unterscheidung hat er alles vermischt und dem Leser vorgesetzt. Die <rs ref="index:d10854e2674">zweite Ausgabe</rs> ist kaum besser als die erste; BP soll dem Werk misstrauen.</p>
+            <p corresp="#seg6"><rs type="person">RM</rs> ist zwar ansonsten in allem bereit, von BP zu lernen, doch soll dieser bei der Einschätzung von Büchern, die ihm weniger gut bekannt sind, Vorsicht walten lassen. Es ist gut, dass BP sich möglichst viele bibliographische Werke besorgt, doch soll er nur den Autoren mit geschärftem Urteil (iudicium) und genauer Arbeitsweise Vertrauen schenken. Diese Unterscheidung wird BP aus der Erfahrung lernen, noch besser wäre das Gespräch mit anderen Gelehrten.</p>
+            <p corresp="#seg7"><rs type="person">RM</rs> befürchtet allerdings, dass jene Gegend <rs ref="index:d14380e9395">Deutschlands</rs>, in der BP lebt, nur wenige davon besitzt. Daher wünscht sich <rs type="person">RM</rs>, Abt <rs ref="index:d14380e9628">Dietmayr</rs> möge erlauben, dass BP mindestens zwei Jahre in <rs ref="index:d14380e32292">Paris</rs> lebt, wo die Musen geehrt werden, gelehrte Zirkel bestehen und reichhaltige Bibliotheken vorhanden sind. Zahlreiche Äbte aus <rs ref="index:d14380e9395">Deutschland</rs>, <rs ref="index:d14380e4429">Belgien</rs> und <rs ref="index:d14380e19828">Italien</rs> haben bereits ihre Zöglinge zur Ausbildung nach <rs ref="index:d14380e32292">Paris</rs> geschickt, damit sie in Sitten, Sprache und Literatur <rs ref="index:d14380e12712">Frankreichs</rs> bewandert werden. Gerade derzeit weilen zwei <rs ref="index:d14380e19828">Italiener</rs> in <rs ref="index:d14380e32414">St.-Germain</rs>: Seit einem Jahrzehnt lebt <rs ref="index:d14380e3796">Anselmo Banduri</rs> aus <rs ref="index:d10854e25273">Ragusa</rs>, ein Mönch der <rs ref="index:d10854e15820">Kongregation von Meleda</rs>, bei den <rs ref="index:d10854e15615">Maurinern</rs>; er hat dort sein „<rs ref="index:d14380e3802">Imperium orientale</rs>“ in zwei Foliobänden verfasst, das sich gerade im Druck befindet. Der andere (<rs ref="index:d14380e36218">Angelo Maria Querini</rs>) ist <rs ref="index:d10854e31813">Venezianer</rs> aus der <rs ref="index:d10854e15502">Kongregation von S. Giustina</rs> und hält sich seit sechs Monaten in <rs ref="index:d14380e32292">Paris</rs> auf.</p>
+            <p corresp="#seg8">Die Angaben, die <rs type="person">RM</rs> aus <rs ref="index:d14380e25581">Mabillons</rs> <rs ref="index:d14380e25877">Kollektaneen</rs> (scrinia) für BP sammelt, will er spätestens mit dem <rs ref="index:d14380e25749">fünften Band der „Annales OSB“</rs> übersenden; wenn er früher fertig wird, dann mit den Büchern, die BP von ihm erwartet. Wiederum bittet <rs type="person">RM</rs> um Geduld.</p>
+            <p corresp="#seg9"><rs type="person">RM</rs> dankt BP für die Vermittlung des Kontaktes mit dem Abt von <rs ref="index:d10854e12149">Heiligkreuz</rs> in <rs ref="index:d14380e35438">Polen</rs>, <rs ref="index:d14380e29089">Stanisław Mirecki</rs>. <rs type="person">RM</rs> hat dem Generalprokurator der <rs ref="index:d10854e15615">Mauriner</rs> in <rs ref="index:d14380e37680">Rom</rs> (<rs ref="index:d10854e25262">Philippe Raffier</rs>) geschrieben, dieser wird sich mit <rs ref="index:d14380e29089">Mirecki</rs> in Verbindung setzen und das von ihm gelieferte Material exzerpieren.</p>
+            <p corresp="#seg10"><rs type="person">RM</rs> schließt mit Grüßen an <rs ref="index:d14380e34537">HP</rs> sowie Grüßen seines Gehilfen <rs ref="index:d10854e26800">Pierre Sabatier</rs> an BP und bekräftigt mit einem Zitat aus einer Rede des <rs ref="index:d10854e3731">Bocchus</rs> bei <rs ref="index:d14380e39033"><rs ref="index:d10854e27623">Sallust</rs></rs> seine Freundschaft zu BP.</p>
+            <p corresp="#seg11">In einem Postskriptum berichtet <rs type="person">RM</rs>, dass er gegenwärtig über keine Exemplare seiner gedruckten <rs ref="index:d10854e18873">Enzyklik</rs> mehr verfügt, weil er die letzten verbleibenden nach <rs ref="index:d14380e41211">Spanien</rs> geschickt hat. Wenn BP noch eine größere Anzahl benötigt, kann <rs type="person">RM</rs> eventuell einen neuerlichen Druck veranlassen. Weiters fragt <rs type="person">RM</rs>, ob seine Briefe statt nach <rs ref="index:d14380e45571">Wien</rs> direkt nach <rs ref="index:d14380e28088">Melk</rs> adressiert werden können, und ob die Adresse dann <rs ref="index:d14380e9395">deutsch</rs> oder <rs ref="index:d14380e23973">lateinisch</rs> sein soll.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e25468"><rs type="person" key="">RM</rs> bedauert, in seinem letzten Schreiben <ref type="letter">192</ref> nur Dank für den Erhalt des von <rs type="person" role="sender">BP</rs> gesendeten Bücherpakets <ref type="letter">177</ref>, nicht aber für den Brief <rs type="person" role="sender">BPs</rs> vom 28. Oktober <ref type="letter">190</ref> gesagt zu haben, der acht Tage nach dem Paket angekommen ist.</seg><seg type="context" n="2" xml:id="d4618e25479">Freilich sähe <rs type="person" key="">RM</rs> aus diesem vierseitigen Brief am liebsten jene Seite gelöscht, auf der <rs type="person" role="sender">BP</rs> in höchsten Tönen seine <rs key="index:d14380e19786">Edition der Schrift „Contra haereses“</rs> des <rs key="index:d14380e19780">Irenäus von Lyon</rs> lobt. <rs type="person" key="">RM</rs> kannte <rs type="person" role="sender">BP</rs> bisher als Historiker, als im <rs key="index:d14380e16473">Griechischen</rs> und <rs key="index:d14380e23973">Lateinischen</rs> versierten Gelehrten, nicht jedoch als Rhetor. <rs type="person" key="">RM</rs> wendet ein, dass es wichtiger sei, jemanden nach der Wahrheit seiner Worte zu beurteilen als nach deren Schönheit. Korrekturen wären angebrachter gewesen, und <rs type="person" role="sender">BP</rs> hätte ein weites Feld dafür vorgefunden. In jedem Fall freut sich <rs type="person" key="">RM</rs> über die gute Aufnahme des Werks.</seg><seg type="context" n="3" xml:id="d4618e25481"><rs type="person" key="">RM</rs> hat schon lange vermutet, dass <rs type="person" role="sender">BP</rs> am Rande der gelehrten Welt Probleme bei der Beschaffung von Büchern haben muss. Mit <rs key="index:d14380e11399">England</rs> ist wegen der Distanz kaum ein Kontakt möglich, und gerade an <rs key="index:d14380e11399">englischen</rs> Autoren mangelt es BP. Viele wichtige Werke zur <rs key="index:d14380e11399">englischen</rs> Geschichte stammen nämlich von Benediktinern und wurden zu unterschiedlichen Zeiten in diversen Sammlungen veröffentlicht. Zur <rs key="index:d14380e30878">normannischen</rs> Geschichte, die nach <rs key="index:d10854e33949">Wilhelm dem Eroberer</rs> einige Zeit mit der <rs key="index:d14380e11399">englischen</rs> Geschichte zusammengehört, empfiehlt <rs type="person" key="">RM</rs> <rs key="index:d10854e6911">Duchesnes „Historiae Normannorum scriptores“</rs>. Diese Sammlungen sind in <rs key="index:d14380e32292">Paris</rs> zwar in den Bibliotheken vorhanden, jedoch kaum mehr auf dem Buchmarkt, auch nicht in <rs key="index:d14380e4429">Belgien</rs> oder <rs key="index:d14380e11399">England</rs>. Trotzdem will <rs type="person" key="">RM</rs> versuchen, durch Nachforschungen bei Buchhändlern für <rs type="person" role="sender">BP</rs> <rs key="index:d14380e35244">Pits</rs>’ „<rs key="index:d14380e35252">Relationes historicae de rebus Anglicis</rs>“, <rs key="index:d14380e45035">Wares</rs> „<rs key="index:d14380e45041">De scriptoribus Hiberniae</rs>“ und die „<rs key="index:d14380e25953">Congregationis Anglicanae trophaea</rs>“ von <rs key="index:d14380e25947">Maihew</rs> zu bekommen, was bisher nicht gelungen ist.</seg><seg type="context" n="4" xml:id="d4618e25483"><rs type="person" key="">RM</rs> teilt <rs type="person" role="sender">BPs</rs> negative Einschätzung von <rs key="index:d14380e23402">Labbes</rs> „<rs key="index:d10854e16356">De scriptoribus ecclesiasticis</rs>“ und <rs key="index:d14380e35647">Possevinos</rs> „<rs key="index:d14380e35653">Apparatus</rs>“. Besser scheint ihm, mit Abstrichen, <rs key="index:d14380e10181">Du Pins</rs> „<rs key="index:d14380e10193">Nouvelle bibliothèque</rs>“; die „<rs key="index:d10854e487">Historia ecclesiastica</rs>“ von <rs key="index:d10854e481">Noël Alexandre</rs> ist hingegen eher ein ungeordneter Wust (farrago). <rs type="person" role="sender">BPs</rs> positives Urteil über <rs key="index:d14380e9395"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>norddeutsche<?oxy_custom_end?></rs> (<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>protestantische<?oxy_custom_end?>) Bibliographen wie <rs key="index:d10854e24488">Vinzenz Placcius</rs>, <rs key="index:d14380e41737">Burkhard Gotthelf Struve</rs> und <rs key="index:d10854e21784">Johann Gottfried Olearius</rs> hält <rs type="person" key="">RM</rs> für unangebracht. <rs key="index:d14380e11958">Johann Albert Fabricius</rs> ist eine Ausnahme, doch nützt er <rs type="person" role="sender">BPs</rs> Sache nicht. <rs type="person" role="sender">BP</rs> soll die Arbeiten der genannten Autoren zwar lesen, aber mit Misstrauen, und sie, die in der Gelehrtenwelt kein Ansehen genießen, auch nicht zitieren. <rs type="person" role="sender">BP</rs> soll auch deren schlechte Gewohnheit nicht übernehmen, die Ränder der Bücher mit nichtssagenden Zitaten unbekannter Autoren anzufüllen.</seg><seg type="context" n="5" xml:id="d4618e25485">Noch strenger geht <rs type="person" key="">RM</rs> mit <rs key="index:d10854e2654">Bayles</rs> „<rs key="index:d10854e2662">Dictionnaire</rs>“ ins Gericht, das <rs type="person" role="sender">BP</rs> gelobt hat. Der Autor besaß weder Glauben noch Urteil, ohne Unterscheidung hat er alles vermischt und dem Leser vorgesetzt. Die <rs key="index:d10854e2674">zweite Ausgabe</rs> ist kaum besser als die erste; <rs type="person" role="sender">BP</rs> soll dem Werk misstrauen.</seg><seg type="context" n="6" xml:id="d4618e25487"><rs type="person" key="">RM</rs> ist zwar ansonsten in allem bereit, von <rs type="person" role="sender">BP</rs> zu lernen, doch soll dieser bei der Einschätzung von Büchern, die ihm weniger gut bekannt sind, Vorsicht walten lassen. Es ist gut, dass <rs type="person" role="sender">BP</rs> sich möglichst viele bibliographische Werke besorgt, doch soll er nur den Autoren mit geschärftem Urteil (iudicium) und genauer Arbeitsweise Vertrauen schenken. Diese Unterscheidung wird <rs type="person" role="sender">BP</rs> aus der Erfahrung lernen, noch besser wäre das Gespräch mit anderen Gelehrten.</seg><seg type="context" n="7" xml:id="d4618e25489"><rs type="person" key="">RM</rs> befürchtet allerdings, dass jene Gegend <rs key="index:d14380e9395">Deutschlands</rs>, in der <rs type="person" role="sender">BP</rs> lebt, nur wenige davon besitzt. Daher wünscht sich <rs type="person" key="">RM</rs>, Abt <rs key="index:d14380e9628">Dietmayr</rs> möge erlauben, dass <rs type="person" role="sender">BP</rs> mindestens zwei Jahre in <rs key="index:d14380e32292">Paris</rs> lebt, wo die Musen geehrt werden, gelehrte Zirkel bestehen und reichhaltige Bibliotheken vorhanden sind. Zahlreiche Äbte aus <rs key="index:d14380e9395">Deutschland</rs>, <rs key="index:d14380e4429">Belgien</rs> und <rs key="index:d14380e19828">Italien</rs> haben bereits ihre Zöglinge zur Ausbildung nach <rs key="index:d14380e32292">Paris</rs> geschickt, damit sie in Sitten, Sprache und Literatur <rs key="index:d14380e12712">Frankreichs</rs> bewandert werden. Gerade derzeit weilen zwei <rs key="index:d14380e19828">Italiener</rs> in <rs key="index:d14380e32414">St.-Germain</rs>: Seit einem Jahrzehnt lebt <rs key="index:d14380e3796">Anselmo Banduri</rs> aus <rs key="index:d10854e25273">Ragusa</rs>, ein Mönch der <rs key="index:d10854e15820">Kongregation von Meleda</rs>, bei den <rs key="index:d10854e15615">Maurinern</rs>; er hat dort sein „<rs key="index:d14380e3802">Imperium orientale</rs>“ in zwei Foliobänden verfasst, das sich gerade im Druck befindet. Der andere (<rs key="index:d14380e36218">Angelo Maria Querini</rs>) ist <rs key="index:d10854e31813">Venezianer</rs> aus der <rs key="index:d10854e15502">Kongregation von S. Giustina</rs> und hält sich seit sechs Monaten in <rs key="index:d14380e32292">Paris</rs> auf.</seg><seg type="context" n="8" xml:id="d4618e25491">Die Angaben, die <rs type="person" key="">RM</rs> aus <rs key="index:d14380e25581">Mabillons</rs> <rs key="index:d14380e25877">Kollektaneen</rs> (scrinia) für <rs type="person" role="sender">BP</rs> sammelt, will er spätestens mit dem <rs key="index:d14380e25749">fünften Band der „Annales OSB“</rs> übersenden; wenn er früher fertig wird, dann mit den Büchern, die <rs type="person" role="sender">BP</rs> von ihm erwartet. Wiederum bittet <rs type="person" key="">RM</rs> um Geduld.</seg><seg type="context" n="9" xml:id="d4618e25493"><rs type="person" key="">RM</rs> dankt <rs type="person" role="sender">BP</rs> für die Vermittlung des Kontaktes mit dem Abt von <rs key="index:d10854e12149">Heiligkreuz</rs> in <rs key="index:d14380e35438">Polen</rs>, <rs key="index:d14380e29089">Stanisław Mirecki</rs>. <rs type="person" key="">RM</rs> hat dem Generalprokurator der <rs key="index:d10854e15615">Mauriner</rs> in <rs key="index:d14380e37680">Rom</rs> (<rs key="index:d10854e25262">Philippe Raffier</rs>) geschrieben, dieser wird sich mit <rs key="index:d14380e29089">Mirecki</rs> in Verbindung setzen und das von ihm gelieferte <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Material<?oxy_custom_end?> exzerpieren.</seg><seg type="context" n="10" xml:id="d4618e25495"><rs type="person" key="">RM</rs> schließt mit Grüßen an <rs key="index:d14380e34537">HP</rs> sowie Grüßen seines Gehilfen <rs key="index:d10854e26800">Pierre Sabatier</rs> an <rs type="person" role="sender">BP</rs> und bekräftigt mit einem<?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?> Zitat<?oxy_custom_end?> aus einer Rede des <rs key="index:d10854e3731">Bocchus</rs> bei <rs key="index:d14380e39033"><rs key="index:d10854e27623">Sallust</rs></rs> seine Freundschaft zu <rs type="person" role="sender">BP</rs>.</seg><seg type="context" n="11" xml:id="d4618e25497">In einem Postskriptum berichtet <rs type="person" key="">RM</rs>, dass er gegenwärtig über keine Exemplare seiner gedruckten <rs key="index:d10854e18873">Enzyklik</rs> mehr verfügt, weil er die letzten verbleibenden nach <rs key="index:d14380e41211">Spanien</rs> geschickt hat. Wenn <rs type="person" role="sender">BP</rs> noch eine größere Anzahl benötigt, kann <rs type="person" key="">RM</rs> eventuell einen neuerlichen Druck veranlassen. Weiters fragt <rs type="person" key="">RM</rs>, ob seine Briefe statt nach <rs key="index:d14380e45571">Wien</rs> direkt nach <rs key="index:d14380e28088">Melk</rs> adressiert werden können, und ob die Adresse dann <rs key="index:d14380e9395">deutsch</rs> oder <rs key="index:d14380e23973">lateinisch</rs> sein soll.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Zur Edition bei Schelhorn vgl. Einleitung, Abschnitt III. Dem Editionstext wird die Überlieferung B zugrunde gelegt, jedoch nach der Edition S emendiert, wo diese eine eindeutig bessere Lesart bietet.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverendo religiosissimo ac clarissimo domino et patri Bernardo Pez amico dulcissimo frater Renatus Massuet San-Germanensis monachus salutem plurimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e25515">Quod nuper tibi scripserim, quam maximas possem gratias acturus pro accepta librorum et manuscriptorum a te missorum sarcina, cito poenituit; non quod gratias egerim: ecquas enim tantae humanitati pares agere unquam<note place="foot" xml:id="d4618e25517">	<hi rend="italic">umquam</hi> S.</note> possem? sed quod nulla<note place="foot" xml:id="d4618e25523">	Korrigiert aus <hi rend="italic">nullae</hi> B.</note> postremae epistolae <pb n="1v"/> tuae, quam nondum acceperam, mentione facta tibi forte curas addiderim. Quas ergo imprudens inicere potui, iam tandem abigi iubeo, monens octo circiter post acceptam sarcinam diebus redditam mihi fuisse et epistolam, datam licet V. Kalendas Novembris. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e25531">Quid vero de ipsa tandem? Totum dixerim, si totum<note place="foot" xml:id="d4618e25533">	<hi rend="italic">totam</hi> S.</note> Bernardum meum, pectoris mei delicias, fidissimum illum amicum dulcissimum ac certissimum spirare dixerim. Ut tamen fatear, quod res est, candidiusque loquar, ex quatuor omnino paginis, quibus constat, una est, quam spongia deleri velim, ea videlicet, in qua mutato stylo te totum in Irenaei mei laudes effundis. Hem! Bernarde mi, quam disertus orator! Te quidem hactenus historicum ad conscribendam historiam egregie a natura comparatum, virum Graece et Latine doctum, in bonorum auctorum lectione subactum, nitore sermonis nulli secundum noveram: at rhetorem nondum. Id forsitan laudi tuae deesse apud me putabas: sed defuisset, nihil de ea, qua apud me vales, existimatione decessisset. Scis, amice, quid de rhetorica sentiam? Artem esse bene<note place="foot" xml:id="d4618e25539">	<hi rend="italic">esse bene: bene esse</hi> S.</note> dicendi iam puer in scholis didici. Sed meo<note place="foot" xml:id="d4618e25545">	Danach <hi rend="italic">quidem</hi> S.</note> iudicio nemo bene dicit, nisi qui vere. Ad eam regulam expende laudes tuas et vide, cui conveniant. Non certe mihi, ad quem nullum fere orationis tuae bene longae membrum <pb n="2r"/> quadrat. Sane praestitisset, obducta fronte virga censoria notasses, quaecunque<note place="foot" xml:id="d4618e25553">	<hi rend="italic">quaecumque</hi> S.</note> mihi vel incauto vel imperito excidere potuerunt. Haud angustus tibi dicendi campus fuisset. Utut est, cum<note place="foot" xml:id="d4618e25560">	S; <hi rend="italic">eum</hi> B.</note> tibi fucum fecerit amicitia, qua me colis, id unum ex oratione tua colligere licebit, opus meum qualecunque<note place="foot" xml:id="d4618e25566">	<hi rend="italic">qualecumque</hi> S.</note> tibi non displicuisse nec ingratum fuisse munus meum. In hoc gaudeo; si quid amplius sit, <seg type="lemma" corresp="#d4618e25742">Deo patri luminum sint laudes, a quo descendit omne datum optimum</seg>. Sed de his satis, iam ad res nostras. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e25572">Id semper suspicatus sum, te in extremis orbis eruditi partibus commorantem longe maiorem in opere tuo condendo difficultatem experturum ex librorum penuria quam ex re ipsa. Vix ullum tibi ob locorum distantiam cum Anglia commercium esse potest; et si bene ex epistola tua coniciam, Anglorum auctorum inopia laboras. Atqui tamen praecipui rerum Anglicarum scriptores Benedictini fuerunt, quorum opera diversis temporibus et voluminibus collecta et edita tibi saltem delibanda essent, ut iudicium de iis ferre tutius posses. Idem fere de Normannicis<note place="foot" xml:id="d4618e25574">	S; <hi rend="italic">Normanicis</hi> B.</note> rebus dixerim, quamdiu saltem regibus Anglorum a Willelmo Conquaestore paruit Normannia nostra, quarum scriptores in unum volumen congessit Andreas du Chesne. Sed eae omnes collectiones, licet in bibliothecis Parisiensibus frequentes, cum tamen <pb n="2v"/> iam vel omnino senuerint vel in senium declinare incipiant, difficile venales occurrunt, frustraque vel in Belgio vel in Anglia ipsa requirerentur. Pitseum tamen, Waraeum et Maihew quoquo pretio tibi reperire conabor: iamque bibliopolarum officinas easque varia nec spernenda librorum omnigenorum suppellectile refertas lustravi; sed frustra. Iterum plus semel adibo, scrutabor, versabo nullosque libros non movebo, ut te tandem voti tui compotem faciam. Ecquid non tentarem, ut amico tam benefico et officioso gratificarer? </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e25582">De Bibliotheca auctorum ecclesiasticorum Labbei et Apparatu Possevini recte censes. Melior Eliae Du Pin Bibliotheca, sed nec ipsa accurata et satis limata; sed<note place="foot" xml:id="d4618e25584">	<hi rend="italic">et</hi> S.</note> Natalis Alexandri Historia farrago potius quam historia dicenda est. At certe flores prodigis, cum plenis manibus effundis in Placcium, Struvium, Gothofredum Olearium et si quos alios recentiores bibliographos septentrionales. Unum excipio <seg type="lemma" corresp="#d4618e25749">Fabricium, haud contemnendum authorem</seg><note place="foot" xml:id="d4618e25590">	<hi rend="italic">auctorem</hi> S.</note>, sed qui nihil ad rem tuam faciat. Alii offensatores sunt, offendiculum incautis praebere nati, duces infidi, a quibus proinde caveas. Eos tamen omnes auctores percurras<note place="foot" xml:id="d4618e25596">	S; <hi rend="italic">procurras</hi> B.</note> necesse est, sed cauto semper pede; haecque tibi prae oculis regula semper esse debet, ut quotiescunque<note place="foot" xml:id="d4618e25602">	<hi rend="italic">quotiescumque</hi> S.</note> <pb n="3r"/> soli quidpiam proferunt, toties, si non falsum, saltem valde dubium tibi videri debeat<note place="foot" xml:id="d4618e25611">	Korrigiert aus <hi rend="italic">debet</hi> B.</note> nec proinde a te unquam<note place="foot" xml:id="d4618e25617">	<hi rend="italic">umquam</hi> S.</note> in eorum fide asseri. Multo minus eos auctores nullius certe in republica litteraria auctoritatis assertionis tuae vades citare unquam<note place="foot" xml:id="d4618e25623">	<hi rend="italic">umquam</hi> S.</note> debes. Acriori quippe iudicio polles, quam ut perversum septentrionalium tuorum morem imiteris, qui multum se fecisse putant, cum librorum suorum margines oppleverint infinitis auctorum nullius nominis citationibus: quae quisquis nasutior<note place="foot" xml:id="d4618e25629">	S; <hi rend="italic">maturior</hi> B.</note> legit, miratur quidem vastissimam scriptoris lectionem, sed temporis iacturam dolet iudiciumque desiderat. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e25635">Sed vix ab ira tempero, cum <seg type="lemma" corresp="#d4618e25756">Bailium</seg> a te laudibus efferri audio. Virum nosti, amice? Homo fuit nullius religionis, nullius fidei, nullius iudicii, qui obvia quaeque, vera an falsa, prout sub manum veniunt, temere arripit, permiscet, confundit fucumque lectoribus incredibili dicendi audacia, etiam ubi turpius fallit aut fallitur, facit; qui denique vanos rumores, aniles fabulas ac misellorum auctorum testimonia plerumque captat sequiturque. Paulo quidem accuratior<note place="foot" xml:id="d4618e25637">	S; <hi rend="italic">accurratior</hi> B.</note> secunda Dictionarii eius editio quam prima, quam<note place="foot" xml:id="d4618e25643">	Danach durchgestrichen <hi rend="italic">primus</hi> B.</note> probus nemo sine rubore legisset: sed illa mendis adhuc et erroribus scatens<note place="foot" xml:id="d4618e25649">	S; <hi rend="italic">scantent</hi> B.</note>. Sic igitur legas, ut quam maxime diffidas, nec quidquam eius <pb n="3v"/> auctoritate nixus unquam<note place="foot" xml:id="d4618e25657">	<hi rend="italic">umquam</hi> S.</note> asseras. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e25663">Aequi bonique consules<note place="foot" xml:id="d4618e25665">	S; <hi rend="italic">consulas</hi> B.</note>, puto, si liberius ac candidius tecum loquar sententiamque meam, imo<note place="foot" xml:id="d4618e25671">	<hi rend="italic">immo</hi> S.</note> et eruditorum omnium, tibi pandam. Quamvis enim in omnibus tibi facile concedam teque magistrum lubens audirem, in eorum tamen librorum, qui tibi minus noti sunt, lectione paulo magis versatus amicum monere debeo, quo loco auctores numerare debeat, ne duces parum tutos secutus cum iis offendat maleque apud eruditos audiat. Quod ergo bibliographos, quoscunque potes, tibi comparas, bene facis; audiendi siquidem omnes, sed paucis adhibenda fides, iis nimirum solis, in quibus mens in bonorum auctorum lectione subacta, acre iudicium, diligens et accurata<note place="foot" xml:id="d4618e25677">	S; <hi rend="italic">accurrata</hi> B.</note> rerum inquisitio aliaeque eiusmodi dotes eluceant. Haec te facile docebit usus, facilius doceret assiduum cum viris eruditis et exquisiti iudicii colloquium. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d4618e25683">Sed vereor, ut pluribus abundet ea Germaniae pars, in qua degis, quippe quae nec litteras nec libros admodum colat. O utinam, Bernarde mi, tibi liceret per annos aliquot hic mecum Parisiis versari, ubi Musae in honore sunt, frequentes eruditi, bibliothecae libris omnigenis instructae, aptissima denique omnia ad iudicium informandum. Si quid certe apud reverendissimum abbatem tuum<note place="foot" xml:id="d4618e25685">	Korrigiert aus <hi rend="italic">tuam</hi> B.</note> valerem, id ab eo precibus extorquerem, ut te huc per biennium saltem <pb n="4r"/> nobiscum victurum in hoc San-Germanensi coenobio mitteret: nec ipsum nec te itineris et expensarum poeniteret. Quidni a vobis fieri posset, quod a tot aliis <seg type="lemma" corresp="#d4618e25763">abbatibus Germanis</seg>, Belgis et Italis factitatum non raro vidimus. Ii nempe iuniores optimae spei monachos ad nos miserunt Gallicis moribus, lingua, litteris et studiis informandos. Etiamnum<note place="foot" xml:id="d4618e25693">	<hi rend="italic">Etiam nunc</hi> S.</note> duos e nostris Italos habemus in hoc monasterio hospites, alterum a decennio, <seg type="lemma" corresp="#d4618e25770">Ragusinum e congregatione Benedictina Meletensi</seg>, <seg type="lemma" corresp="#d4618e25775">alterum Venetum</seg> e congregatione sanctae Justinae a sex circiter mensibus. Prior in patriam mox reversurus egregia hic ingenii sui monumenta relinquit, duo scilicet nova volumina in folio De antiquitatibus Constantinopolitanis, quae e<note place="foot" xml:id="d4618e25699">	<hi rend="italic" xml:space="preserve">ex </hi>S.</note> praelo exeunt. Hi Parisinae commorationis fructus; nec minores de posteriori speramus. Fatetur uterque, fatentur et exteri omnes, quotquot ex omni orbe huc confluunt, nullam urbem litteris opportuniorem esse atque Lutetiam Parisiorum. Veni et experire, quid rei sit. </seg><seg type="context" n="8" xml:space="preserve" xml:id="d4618e25705">Interim iam paulo liberior, quam hactenus fuerim, rebus tuis deinceps naviter vacabo eaque omnia, quae tum in Mabillonii scriniis, tum alibi ad scopum tuum conducentia occurrent, sedulo colligam mittamque, tardius saltem cum quinto Annalium tomo; si prius parata sint, mittam cum aliis libris, quos a me <pb n="4v"/> exspectas, si tandem comparare possim. Iterum dicam, quod iam dixi: <seg type="lemma" corresp="#d4618e25780">Patientiam habe in me, et omnia reddam tibi</seg>. </seg><seg type="context" n="9" xml:space="preserve" xml:id="d4618e25709">Quod abbatem S. Crucis in Polonia in mei gratiam convenire dignatus sis, gratias ago. <seg type="lemma" corresp="#d4618e25787">Scripsi ad procuratorem</seg> nostrum generalem in curia Romana, ut eum adeat eiusque commentaria commodato<note place="foot" xml:id="d4618e25711">	Korrigiert aus <hi rend="italic">commendato</hi> B.</note> accipiat, ex iis excerpturus, quae utilia mihi fore noverit. </seg><seg type="context" n="10" xml:space="preserve" xml:id="d4618e25717">Plurimam salutem, quaeso, meo nomine dicas charissimo socio tuo reverendo patri Hieronymo Pez, quem ambabus ulnis complector. Multum etiam te salvere iubet tibi devotissimus socius meus Petrus Sabbatier. Vale, amicorum optime, haecque Bocchi apud Salustium<note place="foot" xml:id="d4618e25719">	S; <hi rend="italic">Salustium</hi> B.</note> verba tibi dicta puta: Fuerit mihi pretium eguisse aliquando tuae amicitiae, qua apud animum meum nihil carius habeo. Id adeo experiri licet: quidquid animo<note place="foot" xml:id="d4618e25725">	S; <hi rend="italic">animum</hi> B.</note> lubet, sume, utere, et quoad vives, nunquam tibi redditam gratiam putaveris, semper apud me integra erit; denique nihil me sciente frustra voles.</seg></p>
-            <p xml:space="preserve">Parisiis XIII. Kalendas Februarii MDCCXII<note place="foot" xml:id="d4618e25733">	S endet hier; das Postskriptum ist nur in B überliefert.</note>.</p>
-            <p xml:space="preserve"><seg type="context" n="11" xml:space="preserve" xml:id="d4618e25737">P.S. Encyclicae iam nullae supersunt epistolae; quae residuae erant, in Hispaniam missae sunt, quo nullusdum miseram. Si plures quam duodecim peteres, iterum recudi curarem, sed tam exiguus numerus praelo committi non potest. Faciam tamen, quod iusseris. Ex te discam, quaeso, cum rescribere dignatus fueris, an tibi recta Mellicium scribere possim non directis prius Viennam, ut hactenus feci, litteris, <pb n="5r"/> et qualis eo casu esse debeat epistolarum inscriptio, Latina an Germana?</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e25742">
-               <ref type="context">2</ref>
-               <label>Deo patri ... datum optimum</label>
-               <p>Vgl. Jak 1,17.</p>
-            </note>
-            <note xml:id="d4618e25749">
-               <ref type="context">4</ref>
-               <label>Fabricium, haud contemnendum authorem</label>
-               <p>Fabricius stand zu dieser Zeit, soweit sich feststellen lässt, noch nicht mit den
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>Deo patri ... datum optimum</mentioned>
+            <p>Vgl. Jak 1,17.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg4">
+            <mentioned>Fabricium, haud contemnendum authorem</mentioned>
+            <p>Fabricius stand zu dieser Zeit, soweit sich feststellen lässt, noch nicht mit den
                   Maurinern in Verbindung; der Kontakt zwischen ihm und Montfaucon wurde erst 1712
-                  über Konrad Widow während dessen Aufenthalt in Paris angebahnt: <rs type="bibl"
-                     key="bibl:18794">Petersen, Intellectum liberare</rs> 2 634f., 826, 904, 943;
-                  vgl. auch <ref type="letter">430</ref>.</p>
-            </note>
-            <note xml:id="d4618e25756">
-               <ref type="context">5</ref>
-               <label>Bailium</label>
-               <p>Zu Bayles „Dictionnaire“ und den Reaktionen darauf vgl. u. a. <rs type="bibl"
-                     key="bibl:36180">Gawlick–Kreimendahl, Einleitung</rs>, insb. XLIX–LVI; <rs
-                     type="bibl" key="bibl:18990">Raabe, Nachschlagewerke</rs> 101f.; <rs
-                     type="bibl" key="bibl:19960">Treskow, Bayle</rs>, insb. 16f.</p>
-            </note>
-            <note xml:id="d4618e25763">
-               <ref type="context">7</ref>
-               <label>abbatibus Germanis</label>
-               <p>Belege für Ansinnen, eigene Konventualen nach St.-Germain zu entsenden, finden sich etwa im Hinblick auf Disentis (BN FF 19678, 75r–77v: Adalbert Defuns an Generalsuperior der Mauriner, 16. Juni 1694) und Ottobeuren (BN FF 19679, 134r–v: Abt Benedikt Hornstein an Mabillon, undatiert, wahrscheinlich zwischen 1681 und 1688).</p>
-            </note>
-            <note xml:id="d4618e25770">
-               <ref type="context">7</ref>
-               <label>Ragusinum ... Meletensi</label>
-               <p>Anselmo Banduri lebte seit 1702 in St.-Germain-des-Prés. Er gehörte zwar der
-                  dalmatinischen Benediktinerkongregation von Meleda (Mljet; vgl. <rs type="bibl"
-                     key="bibl:18418">Molitor, Rechtsgeschichte</rs> 1 326) an, hatte jedoch vor
+                  über Konrad Widow während dessen Aufenthalt in Paris angebahnt: <rs type="bibl" ref="bibl:18794">Petersen, Intellectum liberare</rs> 2 634f., 826, 904, 943;
+                  vgl. auch <ref type="letter" target="letter:430">430</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg5">
+            <mentioned>Bailium</mentioned>
+            <p>Zu Bayles „Dictionnaire“ und den Reaktionen darauf vgl. u. a. <rs type="bibl" ref="bibl:36180">Gawlick–Kreimendahl, Einleitung</rs>, insb. XLIX–LVI; <rs type="bibl" ref="bibl:18990">Raabe, Nachschlagewerke</rs> 101f.; <rs type="bibl" ref="bibl:19960">Treskow, Bayle</rs>, insb. 16f.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg7">
+            <mentioned>abbatibus Germanis</mentioned>
+            <p>Belege für Ansinnen, eigene Konventualen nach St.-Germain zu entsenden, finden sich etwa im Hinblick auf Disentis (BN FF 19678, 75r–77v: Adalbert Defuns an Generalsuperior der Mauriner, 16. Juni 1694) und Ottobeuren (BN FF 19679, 134r–v: Abt Benedikt Hornstein an Mabillon, undatiert, wahrscheinlich zwischen 1681 und 1688).</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg7">
+            <mentioned>Ragusinum ... Meletensi</mentioned>
+            <p>Anselmo Banduri lebte seit 1702 in St.-Germain-des-Prés. Er gehörte zwar der
+                  dalmatinischen Benediktinerkongregation von Meleda (Mljet; vgl. <rs type="bibl" ref="bibl:18418">Molitor, Rechtsgeschichte</rs> 1 326) an, hatte jedoch vor
                   seiner Reise nach Paris bereits längere Zeit in Italien in cassinensischen
-                  Klöstern gelebt und den Übertritt zu dieser Kongregation angestrebt: <rs
-                     type="bibl" key="bibl:36376">Impellizzeri–Rotta, Bandur</rs> 739. Zu seinem
-                  Aufenthalt in Paris vgl. auch <rs type="bibl" key="bibl:15560">Castagna,
+                  Klöstern gelebt und den Übertritt zu dieser Kongregation angestrebt: <rs type="bibl" ref="bibl:36376">Impellizzeri–Rotta, Bandur</rs> 739. Zu seinem
+                  Aufenthalt in Paris vgl. auch <rs type="bibl" ref="bibl:15560">Castagna,
                      Corrispondenza</rs> 6 262–265.</p>
-            </note>
-            <note xml:id="d4618e25775">
-               <ref type="context">7</ref>
-               <label>alterum Venetum</label>
-               <p>Der spätere Kardinal Angelo Maria Querini, Professe von S. Maria zu Florenz (<rs
-                     type="bibl" key="bibl:15352">Bossi, Matricula 1</rs> 241f.), hielt sich von Mai
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg7">
+            <mentioned>alterum Venetum</mentioned>
+            <p>Der spätere Kardinal Angelo Maria Querini, Professe von S. Maria zu Florenz (<rs type="bibl" ref="bibl:15352">Bossi, Matricula 1</rs> 241f.), hielt sich von Mai
                   1711 bis Mai 1714 mit Unterbrechungen in St.-Germain-des-Prés auf. Er publizierte
-                  später ausführliche Erinnerungen an diese Reise: <rs type="bibl" key="bibl:36838"
-                     >Querini, Commentarius</rs> 1 85–286; vgl. <rs type="bibl" key="bibl:15056"
-                     >Baudrillart, Quirini vita</rs> 8–15; <rs type="bibl" key="bibl:36596"
-                     >Mainetti, Querini in viaggio</rs> 244–248; <rs type="bibl" key="bibl:36712"
-                     >Neveu, Mabillon</rs> 31–34.</p>
-            </note>
-            <note xml:id="d4618e25780">
-               <ref type="context">8</ref>
-               <label>Patientiam ... reddam tibi</label>
-               <p>Mt 18,26.29.</p>
-            </note>
-            <note xml:id="d4618e25787">
-               <ref type="context">9</ref>
-               <label>Scripsi ad procuratorem</label>
-               <p>Zu Philippe Raffier: <rs type="bibl" key="bibl:15602">Chaussy, Bénédictins</rs> 2
-                  54; <rs type="bibl" key="bibl:15604">Chaussy, Matricula</rs> 67; zu seiner
-                  Prokuratur vgl. <rs type="bibl" key="bibl:16448">Gasnault, Correspondance</rs>
-                  403; <rs type="bibl" key="bibl:20068">Vanel, Savants lyonnais</rs> 93f., 365–369.
+                  später ausführliche Erinnerungen an diese Reise: <rs type="bibl" ref="bibl:36838">Querini, Commentarius</rs> 1 85–286; vgl. <rs type="bibl" ref="bibl:15056">Baudrillart, Quirini vita</rs> 8–15; <rs type="bibl" ref="bibl:36596">Mainetti, Querini in viaggio</rs> 244–248; <rs type="bibl" ref="bibl:36712">Neveu, Mabillon</rs> 31–34.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg8">
+            <mentioned>Patientiam ... reddam tibi</mentioned>
+            <p>Mt 18,26.29.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg9">
+            <mentioned>Scripsi ad procuratorem</mentioned>
+            <p>Zu Philippe Raffier: <rs type="bibl" ref="bibl:15602">Chaussy, Bénédictins</rs> 2
+                  54; <rs type="bibl" ref="bibl:15604">Chaussy, Matricula</rs> 67; zu seiner
+                  Prokuratur vgl. <rs type="bibl" ref="bibl:16448">Gasnault, Correspondance</rs>
+                  403; <rs type="bibl" ref="bibl:20068">Vanel, Savants lyonnais</rs> 93f., 365–369.
                   In der hier gegenständlichen Angelegenheit meldete der Sekretär Raffiers, Claude
-                  de Vic, in einem Brief an RM vom 9. Januar 1712 die Einwilligung Abt Mireckis: <rs
-                     type="bibl" key="bibl:20068">Vanel, Savants lyonnais</rs> 352.</p>
-            </note>
-            <note xml:id="d4618e25794">
-               <ref type="context">10</ref>
-               <label>Fuerit mihi pretium ... frustra voles</label>
-               <p><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Sallust, Bellum
-                  Iugurthinum<?oxy_custom_end?> 110. RM gibt die Stelle gekürzt und mit
+                  de Vic, in einem Brief an RM vom 9. Januar 1712 die Einwilligung Abt Mireckis: <rs type="bibl" ref="bibl:20068">Vanel, Savants lyonnais</rs> 352.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg10">
+            <mentioned>Fuerit mihi pretium ... frustra voles</mentioned>
+            <p>Sallust, Bellum
+                  Iugurthinum 110. RM gibt die Stelle gekürzt und mit
                   Ungenauigkeiten wieder.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:15152">
+            <title type="short">Benz, Zwischen Tradition und Kritik</title>
+            <biblScope>564</biblScope>
+         </bibl>
+         <bibl corresp="bibl:16792">
+            <title type="short">Hammermayer, Forschungszentren</title>
+            <biblScope>133f., 182f</biblScope>
+         </bibl>
+         <bibl corresp="bibl:16794">
+            <title type="short">Hammermayer, Maurinismus</title>
+            <biblScope>396f.</biblScope>
+            <note>irrig
+                     zum 13. Februar 1712)</note>
+         </bibl>
+         <bibl corresp="bibl:17432">
+            <title type="short">Katschthaler, Briefnachlass</title>
+            <biblScope>27</biblScope>
+         </bibl>
+         <bibl corresp="bibl:17988">
+            <title type="short">Lhotsky, Historiographie</title>
+            <biblScope>117</biblScope>
+         </bibl>
+         <bibl corresp="bibl:36640">
+            <title type="short">Mikoletzky, Österreich</title>
+            <biblScope>162</biblScope>
+         </bibl>
+         <bibl corresp="bibl:37320">
+            <title type="short">Schönhofer, Pez</title>
+            <biblScope>22</biblScope>
+         </bibl>
+         <bibl corresp="bibl:20188">
+            <title type="short">Wallnig, Gasthaus und Gelehrsamkeit</title>
+            <biblScope>98f</biblScope>
+         </bibl>
+         <bibl corresp="bibl:20196">
+            <title type="short">Wallnig, Mönch oder Gelehrter</title>
+            <biblScope>381</biblScope>
+         </bibl>
+         <bibl corresp="bibl:14778">
+            <title type="short">Ziegelbauer–Legipont, Historia rei literariae</title>
+            <biblScope>1 271</biblScope>
+            <note>irrig zu 1715)</note>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverendo religiosissimo ac clarissimo domino et patri Bernardo Pez amico dulcissimo frater Renatus Massuet San-Germanensis monachus salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Quod nuper tibi scripserim, quam maximas possem gratias acturus pro accepta librorum et manuscriptorum a te missorum sarcina, cito poenituit; non quod gratias egerim: ecquas enim tantae humanitati pares agere <app><lem>unquam</lem><rdg wit="#S">umquam</rdg></app> possem? sed quod <app><lem>nulla</lem><rdg wit="#B"><choice><sic>nullae</sic><corr>nulla</corr></choice></rdg></app> postremae epistolae <pb n="1v"/> tuae, quam nondum acceperam, mentione facta tibi forte curas addiderim. Quas ergo imprudens inicere potui, iam tandem abigi iubeo, monens octo circiter post acceptam sarcinam diebus redditam mihi fuisse et epistolam, datam licet V. Kalendas Novembris. </ab>
+         <ab resp="#editor" xml:id="seg2">Quid vero de ipsa tandem? Totum dixerim, si <app><lem>totum</lem><rdg wit="#S">totam</rdg></app> Bernardum meum, pectoris mei delicias, fidissimum illum amicum dulcissimum ac certissimum spirare dixerim. Ut tamen fatear, quod res est, candidiusque loquar, ex quatuor omnino paginis, quibus constat, una est, quam spongia deleri velim, ea videlicet, in qua mutato stylo te totum in Irenaei mei laudes effundis. Hem! Bernarde mi, quam disertus orator! Te quidem hactenus historicum ad conscribendam historiam egregie a natura comparatum, virum Graece et Latine doctum, in bonorum auctorum lectione subactum, nitore sermonis nulli secundum noveram: at rhetorem nondum. Id forsitan laudi tuae deesse apud me putabas: sed defuisset, nihil de ea, qua apud me vales, existimatione decessisset. Scis, amice, quid de rhetorica sentiam? Artem <app><lem>esse bene</lem><rdg wit="#S">bene esse</rdg></app> dicendi iam puer in scholis didici. Sed meo<app><rdg wit="#S"><add place="after">quidem</add></rdg></app> iudicio nemo bene dicit, nisi qui vere. Ad eam regulam expende laudes tuas et vide, cui conveniant. Non certe mihi, ad quem nullum fere orationis tuae bene longae membrum <pb n="2r"/> quadrat. Sane praestitisset, obducta fronte virga censoria notasses, <app><lem>quaecunque</lem><rdg wit="#S">quaecumque</rdg></app> mihi vel incauto vel imperito excidere potuerunt. Haud angustus tibi dicendi campus fuisset. Utut est, <app><lem wit="#S">cum</lem><rdg wit="#B">eum</rdg></app> tibi fucum fecerit amicitia, qua me colis, id unum ex oratione tua colligere licebit, opus meum <app><lem>qualecunque</lem><rdg wit="#S">qualecumque</rdg></app> tibi non displicuisse nec ingratum fuisse munus meum. In hoc gaudeo; si quid amplius sit, <anchor xml:id="n1"/>Deo patri luminum sint laudes, a quo descendit omne datum optimum<anchor xml:id="n1e"/>. Sed de his satis, iam ad res nostras. </ab>
+         <ab resp="#editor" xml:id="seg3">Id semper suspicatus sum, te in extremis orbis eruditi partibus commorantem longe maiorem in opere tuo condendo difficultatem experturum ex librorum penuria quam ex re ipsa. Vix ullum tibi ob locorum distantiam cum Anglia commercium esse potest; et si bene ex epistola tua coniciam, Anglorum auctorum inopia laboras. Atqui tamen praecipui rerum Anglicarum scriptores Benedictini fuerunt, quorum opera diversis temporibus et voluminibus collecta et edita tibi saltem delibanda essent, ut iudicium de iis ferre tutius posses. Idem fere de <app><lem wit="#S">Normannicis</lem><rdg wit="#B">Normanicis</rdg></app> rebus dixerim, quamdiu saltem regibus Anglorum a Willelmo Conquaestore paruit Normannia nostra, quarum scriptores in unum volumen congessit Andreas du Chesne. Sed eae omnes collectiones, licet in bibliothecis Parisiensibus frequentes, cum tamen <pb n="2v"/> iam vel omnino senuerint vel in senium declinare incipiant, difficile venales occurrunt, frustraque vel in Belgio vel in Anglia ipsa requirerentur. Pitseum tamen, Waraeum et Maihew quoquo pretio tibi reperire conabor: iamque bibliopolarum officinas easque varia nec spernenda librorum omnigenorum suppellectile refertas lustravi; sed frustra. Iterum plus semel adibo, scrutabor, versabo nullosque libros non movebo, ut te tandem voti tui compotem faciam. Ecquid non tentarem, ut amico tam benefico et officioso gratificarer? </ab>
+         <ab resp="#editor" xml:id="seg4">De Bibliotheca auctorum ecclesiasticorum Labbei et Apparatu Possevini recte censes. Melior Eliae Du Pin Bibliotheca, sed nec ipsa accurata et satis limata; <app><lem>sed</lem><rdg wit="#S">et</rdg></app> Natalis Alexandri Historia farrago potius quam historia dicenda est. At certe flores prodigis, cum plenis manibus effundis in Placcium, Struvium, Gothofredum Olearium et si quos alios recentiores bibliographos septentrionales. Unum excipio <anchor xml:id="n2"/>Fabricium, haud contemnendum <app><lem>authorem</lem><rdg wit="#S">auctorem</rdg></app><anchor xml:id="n2e"/>, sed qui nihil ad rem tuam faciat. Alii offensatores sunt, offendiculum incautis praebere nati, duces infidi, a quibus proinde caveas. Eos tamen omnes auctores <app><lem wit="#S">percurras</lem><rdg wit="#B">procurras</rdg></app> necesse est, sed cauto semper pede; haecque tibi prae oculis regula semper esse debet, ut <app><lem>quotiescunque</lem><rdg wit="#S">quotiescumque</rdg></app> <pb n="3r"/> soli quidpiam proferunt, toties, si non falsum, saltem valde dubium tibi videri <app><lem>debeat</lem><rdg wit="#B"><choice><sic>debet</sic><corr>debeat</corr></choice></rdg></app> nec proinde a te <app><lem>unquam</lem><rdg wit="#S">umquam</rdg></app> in eorum fide asseri. Multo minus eos auctores nullius certe in republica litteraria auctoritatis assertionis tuae vades citare <app><lem>unquam</lem><rdg wit="#S">umquam</rdg></app> debes. Acriori quippe iudicio polles, quam ut perversum septentrionalium tuorum morem imiteris, qui multum se fecisse putant, cum librorum suorum margines oppleverint infinitis auctorum nullius nominis citationibus: quae quisquis <app><lem wit="#S">nasutior</lem><rdg wit="#B">maturior</rdg></app> legit, miratur quidem vastissimam scriptoris lectionem, sed temporis iacturam dolet iudiciumque desiderat. </ab>
+         <ab resp="#editor" xml:id="seg5">Sed vix ab ira tempero, cum <anchor xml:id="n3"/>Bailium<anchor xml:id="n3e"/> a te laudibus efferri audio. Virum nosti, amice? Homo fuit nullius religionis, nullius fidei, nullius iudicii, qui obvia quaeque, vera an falsa, prout sub manum veniunt, temere arripit, permiscet, confundit fucumque lectoribus incredibili dicendi audacia, etiam ubi turpius fallit aut fallitur, facit; qui denique vanos rumores, aniles fabulas ac misellorum auctorum testimonia plerumque captat sequiturque. Paulo quidem <app><lem wit="#S">accuratior</lem><rdg wit="#B">accurratior</rdg></app> secunda Dictionarii eius editio quam prima, quam<app><rdg wit="#B"><add place="after">primus</add></rdg></app> probus nemo sine rubore legisset: sed illa mendis adhuc et erroribus <app><lem wit="#S">scatens</lem><rdg wit="#B">scantent</rdg></app>. Sic igitur legas, ut quam maxime diffidas, nec quidquam eius <pb n="3v"/> auctoritate nixus <app><lem>unquam</lem><rdg wit="#S">umquam</rdg></app> asseras. </ab>
+         <ab resp="#editor" xml:id="seg6">Aequi bonique <app><lem wit="#S">consules</lem><rdg wit="#B">consulas</rdg></app>, puto, si liberius ac candidius tecum loquar sententiamque meam, <app><lem>imo</lem><rdg wit="#S">immo</rdg></app> et eruditorum omnium, tibi pandam. Quamvis enim in omnibus tibi facile concedam teque magistrum lubens audirem, in eorum tamen librorum, qui tibi minus noti sunt, lectione paulo magis versatus amicum monere debeo, quo loco auctores numerare debeat, ne duces parum tutos secutus cum iis offendat maleque apud eruditos audiat. Quod ergo bibliographos, quoscunque potes, tibi comparas, bene facis; audiendi siquidem omnes, sed paucis adhibenda fides, iis nimirum solis, in quibus mens in bonorum auctorum lectione subacta, acre iudicium, diligens et <app><lem wit="#S">accurata</lem><rdg wit="#B">accurrata</rdg></app> rerum inquisitio aliaeque eiusmodi dotes eluceant. Haec te facile docebit usus, facilius doceret assiduum cum viris eruditis et exquisiti iudicii colloquium. </ab>
+         <ab resp="#editor" xml:id="seg7">Sed vereor, ut pluribus abundet ea Germaniae pars, in qua degis, quippe quae nec litteras nec libros admodum colat. O utinam, Bernarde mi, tibi liceret per annos aliquot hic mecum Parisiis versari, ubi Musae in honore sunt, frequentes eruditi, bibliothecae libris omnigenis instructae, aptissima denique omnia ad iudicium informandum. Si quid certe apud reverendissimum abbatem <app><lem>tuum</lem><rdg wit="#B"><choice><sic>tuam</sic><corr>tuum</corr></choice></rdg></app> valerem, id ab eo precibus extorquerem, ut te huc per biennium saltem <pb n="4r"/> nobiscum victurum in hoc San-Germanensi coenobio mitteret: nec ipsum nec te itineris et expensarum poeniteret. Quidni a vobis fieri posset, quod a tot aliis <anchor xml:id="n4"/>abbatibus Germanis<anchor xml:id="n4e"/>, Belgis et Italis factitatum non raro vidimus. Ii nempe iuniores optimae spei monachos ad nos miserunt Gallicis moribus, lingua, litteris et studiis informandos. <app><lem>Etiamnum</lem><rdg wit="#S">Etiam nunc</rdg></app> duos e nostris Italos habemus in hoc monasterio hospites, alterum a decennio, <anchor xml:id="n5"/>Ragusinum e congregatione Benedictina Meletensi<anchor xml:id="n5e"/>, <anchor xml:id="n6"/>alterum Venetum<anchor xml:id="n6e"/> e congregatione sanctae Justinae a sex circiter mensibus. Prior in patriam mox reversurus egregia hic ingenii sui monumenta relinquit, duo scilicet nova volumina in folio De antiquitatibus Constantinopolitanis, quae <app><lem>e</lem><rdg wit="#S">ex</rdg></app> praelo exeunt. Hi Parisinae commorationis fructus; nec minores de posteriori speramus. Fatetur uterque, fatentur et exteri omnes, quotquot ex omni orbe huc confluunt, nullam urbem litteris opportuniorem esse atque Lutetiam Parisiorum. Veni et experire, quid rei sit. </ab>
+         <ab resp="#editor" xml:id="seg8">Interim iam paulo liberior, quam hactenus fuerim, rebus tuis deinceps naviter vacabo eaque omnia, quae tum in Mabillonii scriniis, tum alibi ad scopum tuum conducentia occurrent, sedulo colligam mittamque, tardius saltem cum quinto Annalium tomo; si prius parata sint, mittam cum aliis libris, quos a me <pb n="4v"/> exspectas, si tandem comparare possim. Iterum dicam, quod iam dixi: <anchor xml:id="n7"/>Patientiam habe in me, et omnia reddam tibi<anchor xml:id="n7e"/>. </ab>
+         <ab resp="#editor" xml:id="seg9">Quod abbatem S. Crucis in Polonia in mei gratiam convenire dignatus sis, gratias ago. <anchor xml:id="n8"/>Scripsi ad procuratorem<anchor xml:id="n8e"/> nostrum generalem in curia Romana, ut eum adeat eiusque commentaria <app><lem>commodato</lem><rdg wit="#B"><choice><sic>commendato</sic><corr>commodato</corr></choice></rdg></app> accipiat, ex iis excerpturus, quae utilia mihi fore noverit. </ab>
+         <ab resp="#editor" xml:id="seg10">Plurimam salutem, quaeso, meo nomine dicas charissimo socio tuo reverendo patri Hieronymo Pez, quem ambabus ulnis complector. Multum etiam te salvere iubet tibi devotissimus socius meus Petrus Sabbatier. Vale, amicorum optime, haecque Bocchi apud <app><lem wit="#S">Salustium</lem><rdg wit="#B">Salustium</rdg></app> verba tibi dicta puta: Fuerit mihi pretium eguisse aliquando tuae amicitiae, qua apud animum meum nihil carius habeo. Id adeo experiri licet: quidquid <app><lem wit="#S">animo</lem><rdg wit="#B">animum</rdg></app> lubet, sume, utere, et quoad vives, nunquam tibi redditam gratiam putaveris, semper apud me integra erit; denique nihil me sciente frustra voles.</ab>
+         <closer>Parisiis XIII. Kalendas Februarii MDCCXII<note place="foot" xml:id="d4618e25733">S endet hier; das Postskriptum ist nur in B überliefert.</note>.</closer>
+         <closer xml:id="seg11">P.S. Encyclicae iam nullae supersunt epistolae; quae residuae erant, in Hispaniam missae sunt, quo nullusdum miseram. Si plures quam duodecim peteres, iterum recudi curarem, sed tam exiguus numerus praelo committi non potest. Faciam tamen, quod iusseris. Ex te discam, quaeso, cum rescribere dignatus fueris, an tibi recta Mellicium scribere possim non directis prius Viennam, ut hactenus feci, litteris, <pb n="5r"/> et qualis eo casu esse debeat epistolarum inscriptio, Latina an Germana?</closer>
+      </body>
    </text>
 </TEI>

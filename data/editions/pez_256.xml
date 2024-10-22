@@ -1,47 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="256" xml:id="pez-0256">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">256 Benedikt Cherle an Bernhard Pez. 1712-07-11. Thierhaupten.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Benedikt Cherle an Bernhard Pez. 1712-07-11. Thierhaupten.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">256</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:15152">Benz, Zwischen Tradition und Kritik</rs>
-                     564</bibl>
-                  <bibl><rs type="bibl" key="bibl:18092">Machilek, Benedikt Cherle</rs> 59–61</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Bei Glassner, Verzeichnis 205, irrig zum 21.
+                  Juli 1712.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">554r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 554r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -56,88 +73,82 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">223</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">223</idno>
-               </ref>
+               <ptr type="prev" target="letter:223"/>
+               <ptr type="mentions" target="letter:223"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">BCh berichtet nun von den angekündigten <ref type="letter" target="letter:223">223</ref> Werken aus seiner Bibliothek: zum einen <rs ref="index:d10854e5230">Korbinian Cherles</rs> <rs ref="index:d10854e5245">„Explicatio“ zu den Psalmen Davids</rs>, zum anderen einen vor etwa hundert Jahren anonym gedruckten <rs ref="index:d10854e30724">Thierhauptener</rs> Katechismus (<rs ref="index:d10854e10140">Gaugenrieder, „Catholische fragstuck“</rs>).</p>
+            <p corresp="#seg2">BCh selbst hat aus (der „Aurifodina“ des) Robert von Cambrai ein Werk „<rs ref="index:d10854e5143">Annus sacerdotalis</rs>“ kompiliert, das bald erscheinen soll.</p>
+            <p corresp="#seg3">Auch hat BCh ein deutsches „<rs ref="index:d10854e5183">Martyrologium Benedictinum</rs>“ verfasst, das bereits seit einem Jahr in Thierhaupten als Mensallektüre dient und ebenfalls veröffentlicht werden soll.</p>
+            <p corresp="#seg4">Die Thesen, die demnächst in der <rs ref="index:d14380e22316">Bayerischen Kongregation</rs> (am <rs ref="index:d10854e15391">Kommunstudium</rs>) disputiert werden, sowie die Festschrift zum 700-Jahr-Jubiläum von St. Ulrich und Afra zu Augsburg, das am 4. Juli gefeiert wurde (<rs ref="index:d10854e35234">Zoller, „Höchst-schuldig vollbrachtes jubl- und dankfest“</rs>), will BCh bei nächster Gelegenheit an BP übermitteln.</p>
+            <p corresp="#seg5">In einem Postskriptum sendet BCh Prior <rs ref="index:d10854e16613">Valentin Larson</rs> seine Grüße.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e32183"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BCh<?oxy_custom_end?> berichtet nun von den angekündigten <ref type="letter">223</ref> Werken aus seiner Bibliothek: zum einen <rs key="index:d10854e5230">Korbinian Cherles</rs> <rs key="index:d10854e5245">„Explicatio“ zu den Psalmen Davids</rs>, zum anderen einen vor etwa hundert Jahren anonym gedruckten <rs key="index:d10854e30724">Thierhauptener</rs> Katechismus (<rs key="index:d10854e10140">Gaugenrieder, „Catholische fragstuck“</rs>).</seg><seg type="context" n="2" xml:id="d4618e32188"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BCh<?oxy_custom_end?> selbst hat aus (der „Aurifodina“ des) Robert von Cambrai ein Werk „<rs key="index:d10854e5143">Annus sacerdotalis</rs>“ kompiliert, das bald erscheinen soll.</seg><seg type="context" n="3" xml:id="d4618e32190">Auch hat <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BCh<?oxy_custom_end?> ein deutsches „<rs key="index:d10854e5183">Martyrologium Benedictinum</rs>“ verfasst, das bereits seit einem Jahr in Thierhaupten als Mensallektüre dient und ebenfalls veröffentlicht werden soll.</seg><seg type="context" n="4" xml:id="d4618e32192">Die Thesen, die demnächst in der <rs key="index:d14380e22316">Bayerischen Kongregation</rs> (am <rs key="index:d10854e15391">Kommunstudium</rs>) disputiert werden, sowie die Festschrift zum 700-Jahr-Jubiläum von St. Ulrich und Afra zu Augsburg, das am 4. Juli gefeiert wurde (<rs key="index:d10854e35234">Zoller, „Höchst-schuldig vollbrachtes jubl- und dankfest“</rs>), will <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BCh<?oxy_custom_end?> bei nächster Gelegenheit an <rs type="person" role="sender">BP</rs> übermitteln.</seg><seg type="context" n="5" xml:id="d4618e32194">In einem Postskriptum sendet <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BCh<?oxy_custom_end?> Prior <rs key="index:d10854e16613">Valentin Larson</rs> seine Grüße.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">V</hi>.</p>
-            <div type="remarks">
-               <p>Bei <rs type="bibl" key="bibl:16524">Glassner, Verzeichnis</rs> 205, irrig zum 21.
-                  Juli 1712.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime ac clarissime pater, domine ac patrone colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e32215">Literarum commercium, quod nuper mea absentia interrupit, hisce renovo et iuxta mea facta promissa manuscipta [<hi rend="italic">sic</hi>] in nostra bibliotheca inventa communico. Imprimis quidem <seg type="lemma" corresp="#d4618e32245">in quarto reperi Psalmos</seg> omnes Davidicos compendiose ac eleganter exsplicatos [<hi rend="italic">sic</hi>] a reverendissimo domino Corbiniano Cherle. <seg type="lemma" corresp="#d4618e32252">Cathecismum</seg> [<hi rend="italic">sic</hi>] insuper ante centum annos in monasterio nostro impressum cum pulcherrimis quaestiunculis ac exsplicatione [<hi rend="italic">sic</hi>] praecipuarum caeremoniarum ecclesiasticarum per totum annum, nullo addito nomine nisi sacerdote nostri monasterii. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e32229">Ego vero (ut paternitatis vestrae clarissimae imperio obsequar) collegi ex patre Roberto Cameracensi in unum libellum, censura iam absolutum, proxime imprimendum pro sacerdotibus ad singulos dies ex sanctis patribus sententias. Libellum indigito: <pb n="1v"/> <seg type="lemma" corresp="#d4618e32257">Annus sacerdotalis</seg> etc. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e32233">Praeterea conscripsi Germanice <seg type="lemma" corresp="#d4618e32264">Martyrologium Benedictinum</seg>, quod nobis iam per integrum annum ad mensam servit, typis evulgandum. Haec raptim cum mei commendatione. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e32235"><seg type="lemma" corresp="#d4618e32271">Theses in congregatione nostra proxime disputandae</seg> et <seg type="lemma" corresp="#d4618e32278">saeculum 700. ad S. Udalricum</seg> 4. huius celebratum sequentur proxima occasione.</seg></p>
-            <p xml:space="preserve">Plurimum reverendae religiosissimae ac clarissimae paternitatis vestrae servus in Christo paratissimus pater Benedictus Cherle prior manu propria.</p>
-            <p xml:space="preserve">Thierhaupten 11. Julii anno 1712.</p>
-            <p xml:space="preserve"><seg type="context" n="5" xml:space="preserve" xml:id="d4618e32242">P.S. Plurimum reverendo venerabili ac clarissimo domino patri priori mei commendationem.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e32245">
-               <ref type="context">1</ref>
-               <label>in quarto reperi Psalmos</label>
-               <p>In <ref type="letter">223</ref> beschreibt BCh das Format als Folio. Die
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>in quarto reperi Psalmos</mentioned>
+            <p>In <ref type="letter" target="letter:223">223</ref> beschreibt BCh das Format als Folio. Die
                   Handschrift scheint verloren zu sein.</p>
-            </note>
-            <note xml:id="d4618e32252">
-               <ref type="context">1</ref>
-               <label>Cathecismum</label>
-               <p>Der Beschreibung nach handelt es sich um eine der Ausgaben von Abt Benedikt
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>Cathecismum</mentioned>
+            <p>Der Beschreibung nach handelt es sich um eine der Ausgaben von Abt Benedikt
                   Gaugenrieders Katechismusbüchlein „Catholische fragstuck“ (1594), später
-                  „Nutzliche fragstuckh“ (1598): <rs type="bibl" key="bibl:15770">Debler,
-                     Thierhaupten </rs>311, 313; <rs type="bibl" key="bibl:36504">Künast,
+                  „Nutzliche fragstuckh“ (1598): <rs type="bibl" ref="bibl:15770">Debler,
+                     Thierhaupten </rs>311, 313; <rs type="bibl" ref="bibl:36504">Künast,
                      Druckerei</rs> 212f. Nr. 20, 217 Nr. 30, 223 Nr. 48.</p>
-            </note>
-            <note xml:id="d4618e32257">
-               <ref type="context">2</ref>
-               <label>Annus sacerdotalis</label>
-               <p>Zu einer Drucklegung kam es offenbar nicht, auch handschriftlich ist ein derartiges Werk nicht überliefert.</p>
-            </note>
-            <note xml:id="d4618e32264">
-               <ref type="context">3</ref>
-               <label>Martyrologium Benedictinum</label>
-               <p>Diese Arbeit BChs ist handschriftlich erhalten in BStB München, cgm 3859 und 3860;
-                  vgl. <rs type="bibl" key="bibl:18092">Machilek, Benedikt Cherle</rs> 59–61.
-                  Gedruckt wurde sie im Verlag von Daniel Walder zu Augsburg 1714; vgl. <rs
-                     type="bibl" key="bibl:16132">Eybl, Konfession und Buchwesen</rs> 649.</p>
-            </note>
-            <note xml:id="d4618e32271">
-               <ref type="context">4</ref>
-               <label>Theses ... disputandae</label>
-               <p>Vgl. BChs Bericht über das Kommunstudium in <ref type="letter">85</ref>.</p>
-            </note>
-            <note xml:id="d4618e32278">
-               <ref type="context">4</ref>
-               <label>saeculum 700. ad S. Udalricum</label>
-               <p>Vgl. <rs type="bibl" key="bibl:36888">Römmelt, Auseinandersetzung</rs> 269.
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>Annus sacerdotalis</mentioned>
+            <p>Zu einer Drucklegung kam es offenbar nicht, auch handschriftlich ist ein derartiges Werk nicht überliefert.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>Martyrologium Benedictinum</mentioned>
+            <p>Diese Arbeit BChs ist handschriftlich erhalten in BStB München, cgm 3859 und 3860;
+                  vgl. <rs type="bibl" ref="bibl:18092">Machilek, Benedikt Cherle</rs> 59–61.
+                  Gedruckt wurde sie im Verlag von Daniel Walder zu Augsburg 1714; vgl. <rs type="bibl" ref="bibl:16132">Eybl, Konfession und Buchwesen</rs> 649.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>Theses ... disputandae</mentioned>
+            <p>Vgl. BChs Bericht über das Kommunstudium in <ref type="letter" target="letter:85">85</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned>saeculum 700. ad S. Udalricum</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:36888">Römmelt, Auseinandersetzung</rs> 269.
                   Herausgeber der im Wesentlichen aus den gesammelten Festpredigten bestehenden
-                  Festschrift war nach <rs type="bibl" key="bibl:18028">Lindner, Memoriale
+                  Festschrift war nach <rs type="bibl" ref="bibl:18028">Lindner, Memoriale
                      San-Ulricanum</rs> 16 15, der Konventuale von St. Ulrich und Afra Joseph Zoller
                   von Zollershausen; zu seiner Person: ebd. 8 42.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>V</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:15152">
+            <title type="short">Benz, Zwischen Tradition und Kritik</title>
+            <biblScope>564</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18092">
+            <title type="short">Machilek, Benedikt Cherle</title>
+            <biblScope>59–61</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime pater, domine ac patrone colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Literarum commercium, quod nuper mea absentia interrupit, hisce renovo et iuxta mea facta promissa <sic>manuscipta</sic> in nostra bibliotheca inventa communico. Imprimis quidem <anchor xml:id="n1"/>in quarto reperi Psalmos<anchor xml:id="n1e"/> omnes Davidicos compendiose ac eleganter <sic>exsplicatos</sic> a reverendissimo domino Corbiniano Cherle. <anchor xml:id="n2"/>Cathecismum<anchor xml:id="n2e"/>  insuper ante centum annos in monasterio nostro impressum cum pulcherrimis quaestiunculis ac <sic>exsplicatione</sic> praecipuarum caeremoniarum ecclesiasticarum per totum annum, nullo addito nomine nisi sacerdote nostri monasterii. </ab>
+         <ab resp="#editor" xml:id="seg2">Ego vero (ut paternitatis vestrae clarissimae imperio obsequar) collegi ex patre Roberto Cameracensi in unum libellum, censura iam absolutum, proxime imprimendum pro sacerdotibus ad singulos dies ex sanctis patribus sententias. Libellum indigito: <pb n="1v"/> <anchor xml:id="n3"/>Annus sacerdotalis<anchor xml:id="n3e"/> etc. </ab>
+         <ab resp="#editor" xml:id="seg3">Praeterea conscripsi Germanice <anchor xml:id="n4"/>Martyrologium Benedictinum<anchor xml:id="n4e"/>, quod nobis iam per integrum annum ad mensam servit, typis evulgandum. Haec raptim cum mei commendatione. </ab>
+         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n5"/>Theses in congregatione nostra proxime disputandae<anchor xml:id="n5e"/> et <anchor xml:id="n6"/>saeculum 700. ad S. Udalricum<anchor xml:id="n6e"/> 4. huius celebratum sequentur proxima occasione.</ab>
+         <closer>Plurimum reverendae religiosissimae ac clarissimae paternitatis vestrae servus in Christo paratissimus pater Benedictus Cherle prior manu propria.</closer>
+         <closer>Thierhaupten 11. Julii anno 1712.</closer>
+         <closer xml:id="seg5">P.S. Plurimum reverendo venerabili ac clarissimo domino patri priori mei commendationem.</closer>
+      </body>
    </text>
 </TEI>

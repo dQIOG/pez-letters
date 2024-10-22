@@ -1,39 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="195" xml:id="pez-0195">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">195 Placidus Haiden an Bernhard Pez. 1711-12-12. Niederaltaich.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Placidus Haiden an Bernhard Pez. 1711-12-12. Niederaltaich.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">195</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">45r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 45r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -48,67 +68,51 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">193</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">202</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">193</idno>
-               </ref>
+               <ptr type="prev" target="letter:193"/>
+               <ptr type="next" target="letter:202"/>
+               <ptr type="mentions" target="letter:193"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person">PH</rs> hat BPs Brief <ref type="letter" target="letter:193">193</ref> vor acht Tagen erhalten und ist erfreut über die gute Aufnahme seiner Büchersendung.</p>
+            <p corresp="#seg2">Zugleich mit den Büchern haben die Schriften aus<rs ref="index:d14380e28088"> Melk</rs> ihr Ziel erreicht, darunter BPs „<rs ref="index:d14380e33515">De irruptione Bavarica</rs>“, das <rs type="person">PH</rs> nun als Vorboten künftiger Werke studiert.</p>
+            <p corresp="#seg3">Was das Werk über <rs ref="index:d14380e12712">französische</rs> Schriftsteller (<rs ref="index:d10854e6896">Duchesne, „Historiae Francorum scriptores“</rs>?) betrifft, so ist dieses in den Bibliotheken der näheren Umgebung wohl nicht verfügbar. <rs type="person">PH</rs> will daher demnächst in <rs ref="index:d14380e36631">Regensburg</rs> danach fragen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e24380"><rs type="person" key="">PH</rs> hat <rs type="person" role="sender">BPs</rs> Brief <ref type="letter">193</ref> vor acht Tagen erhalten und ist erfreut über die gute Aufnahme seiner Büchersendung.</seg><seg type="context" n="2" xml:id="d4618e24385">Zugleich mit den Büchern haben die Schriften aus<rs key="index:d14380e28088"> Melk</rs> ihr Ziel erreicht, darunter <rs type="person" role="sender">BPs</rs> „<rs key="index:d14380e33515">De irruptione Bavarica</rs>“, das <rs type="person" key="">PH</rs> nun als Vorboten künftiger Werke studiert.</seg><seg type="context" n="3" xml:id="d4618e24387">Was das Werk über <rs key="index:d14380e12712">französische</rs> Schriftsteller (<rs key="index:d10854e6896">Duchesne, „Historiae Francorum scriptores“</rs>?) betrifft, so ist dieses in den Bibliotheken der näheren Umgebung wohl nicht verfügbar. <rs type="person" key="">PH</rs> will daher demnächst in <rs key="index:d14380e36631">Regensburg</rs> danach fragen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">V</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, patrone colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e24404">Octiduum est, ex quo humanissimas litteras recipere mihi licuit, in quibus clarissima sua paternitas exiguum conatum meum <seg type="lemma" corresp="#d4618e24417">ob transmissos libros</seg> adeo honorifice et citra meritum respicere dignata est. Vellem! mihi tot vires, quot serviendi et gratificandi vota suppeterent! Et haberet forte plurimum reverenda sua dominatio, quem inter devotos suos recensere posset. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e24406">Caeterum praedicti libri portum suum tenuere <seg type="lemma" corresp="#d4618e24424">una cum opusculis Mellicensibus</seg>, quibus omnibus, ac praecipue adiecta Irruptione Gallo-Boica in Tyrolim, mirum quantum auxit clarissima sua dominatio obligationem meam: hodiedum eandem cum gustu volvo et veluti prodromum aliorum laborum, quibus consummata plurimum reverendae paternitatis eruditio et pulcherrima suada apud litteratos quosque inclarescere perget, veneror; simulque demissam gratiarum actionem depono. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e24408">Quod <pb n="1v"/> attinet <seg type="lemma" corresp="#d4618e24431">quatuor illa volumina de scriptoribus Francicis</seg>, omnem spondeo industriam, et ideo proxime Ratisbonenses bibliothecas tentabo, quia, quas propiores habemus, eiusmodi margaritas vix recondunt. Finio meque in omnia sacra humillime commendo.</seg></p>
-            <p xml:space="preserve">Plurimum reverendae religiosae ac clarissimae dominationis servus obligatissimus pater Placidus doctor et sacrorum canonum professor ordinarius manu propria.</p>
-            <p xml:space="preserve">Nidernaltahae 12. Decembris 1711.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e24417">
-               <ref type="context">1</ref>
-               <label>ob transmissos libros</label>
-               <p>Es handelte sich vermutlich um Bücher, die BP aus der Liste in <ref type="letter"
-                     >182</ref> ausgesucht hatte; in <ref type="letter">187</ref> hatte PH die
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>ob transmissos libros</mentioned>
+            <p>Es handelte sich vermutlich um Bücher, die BP aus der Liste in <ref type="letter" target="letter:182">182</ref> ausgesucht hatte; in <ref type="letter" target="letter:187">187</ref> hatte PH die
                   Versendung angekündigt. Darunter könnte sich die Ausgabe von Aimoins „Historia
-                  Francorum“ befunden haben; vgl. <ref type="letter">251</ref>.</p>
-            </note>
-            <note xml:id="d4618e24424">
-               <ref type="context">2</ref>
-               <label>una cum opusculis Mellicensibus</label>
-               <p>Gemeint ist wohl das gleichzeitige Eintreffen einander kreuzender Sendungen; eventuell könnte „una cum“ aber auch wörtlich als „zusammen mit“ zu verstehen sein, in welchem Falle bereits an eine Rücksendung einzelner entlehnter Bücher zu denken wäre.</p>
-            </note>
-            <note xml:id="d4618e24431">
-               <ref type="context">3</ref>
-               <label>quatuor illa volumina de scriptoribus Francicis</label>
-               <p>Eine sichere Bestimmung erscheint anhand dieser Bezeichnung (die auch bei den
-                  beiden weiteren Erwähnungen in <ref type="letter">203</ref> und <ref type="letter"
-                     >214</ref> gleich lautet) nicht möglich. René Massuet hatte BP im März 1711
-                  mehrere Werke zu diesem Thema empfohlen (<ref type="letter">154</ref> &lt;13&gt;).
+                  Francorum“ befunden haben; vgl. <ref type="letter" target="letter:251">251</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>una cum opusculis Mellicensibus</mentioned>
+            <p>Gemeint ist wohl das gleichzeitige Eintreffen einander kreuzender Sendungen; eventuell könnte „una cum“ aber auch wörtlich als „zusammen mit“ zu verstehen sein, in welchem Falle bereits an eine Rücksendung einzelner entlehnter Bücher zu denken wäre.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>quatuor illa volumina de scriptoribus Francicis</mentioned>
+            <p>Eine sichere Bestimmung erscheint anhand dieser Bezeichnung (die auch bei den
+                  beiden weiteren Erwähnungen in <ref type="letter" target="letter:203">203</ref> und <ref type="letter" target="letter:214">214</ref> gleich lautet) nicht möglich. René Massuet hatte BP im März 1711
+                  mehrere Werke zu diesem Thema empfohlen (<ref type="letter" target="letter:154">154</ref> <ref target="letter:154#seg13">13</ref>).
                   Die Wortwahl PHs hier lässt am ehesten an Duchesnes „Historiae Francorum
                   scriptores“ denken, die allerdings fünf Bände haben.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>V</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, patrone colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Octiduum est, ex quo humanissimas litteras recipere mihi licuit, in quibus clarissima sua paternitas exiguum conatum meum <anchor xml:id="n1"/>ob transmissos libros<anchor xml:id="n1e"/> adeo honorifice et citra meritum respicere dignata est. Vellem! mihi tot vires, quot serviendi et gratificandi vota suppeterent! Et haberet forte plurimum reverenda sua dominatio, quem inter devotos suos recensere posset. </ab>
+         <ab resp="#editor" xml:id="seg2">Caeterum praedicti libri portum suum tenuere <anchor xml:id="n2"/>una cum opusculis Mellicensibus<anchor xml:id="n2e"/>, quibus omnibus, ac praecipue adiecta Irruptione Gallo-Boica in Tyrolim, mirum quantum auxit clarissima sua dominatio obligationem meam: hodiedum eandem cum gustu volvo et veluti prodromum aliorum laborum, quibus consummata plurimum reverendae paternitatis eruditio et pulcherrima suada apud litteratos quosque inclarescere perget, veneror; simulque demissam gratiarum actionem depono. </ab>
+         <ab resp="#editor" xml:id="seg3">Quod <pb n="1v"/> attinet <anchor xml:id="n3"/>quatuor illa volumina de scriptoribus Francicis<anchor xml:id="n3e"/>, omnem spondeo industriam, et ideo proxime Ratisbonenses bibliothecas tentabo, quia, quas propiores habemus, eiusmodi margaritas vix recondunt. Finio meque in omnia sacra humillime commendo.</ab>
+         <closer>Plurimum reverendae religiosae ac clarissimae dominationis servus obligatissimus pater Placidus doctor et sacrorum canonum professor ordinarius manu propria.</closer>
+         <closer>Nidernaltahae 12. Decembris 1711.</closer>
+      </body>
    </text>
 </TEI>

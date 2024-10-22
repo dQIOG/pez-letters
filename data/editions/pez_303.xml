@@ -1,39 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="303" xml:id="pez-0303">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">303 Hyazinth Baumbach an Bernhard Pez. 1713-04-02. Würzburg (St. Stephan).</title>
-            <title type="sub">Digital Edition</title>
+            <title>Hyazinth Baumbach an Bernhard Pez. 1713-04-02. Würzburg (St. Stephan).</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">303</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
+            <note type="remarks">
+               Auf 2v der Vermerk von anderer Hand: <orig>1713. Herbipoli N. 20</orig>.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">196r–197v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 196r–197v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -48,89 +71,73 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">284</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">306</idno>
-               </ref>
+               <ptr type="prev" target="letter:284"/>
+               <ptr type="next" target="letter:306"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">HB übersendet als Lebenszeichen nach längerem Schweigen einen <rs ref="index:d10854e21145">Auszug</rs> aus dem <rs ref="index:d14380e24317">Leipziger</rs> „<rs ref="index:d10854e21135">Neuen bücher-saal</rs>“, welchen HB von <rs ref="index:d14380e40921">Konrad Sigler</rs> erhalten hat. Der Inhalt dürfte BP bekannt sein.</p>
+            <p corresp="#seg2">Durch <rs ref="index:d14380e40921">Siglers</rs> Abwesenheit und seine Übersiedlung sind viele seiner Materialien verloren gegangen. Nun will er eine neue Sammlung anlegen.</p>
+            <p corresp="#seg3">HBs Bibliothekar <rs ref="index:d10854e7124">Alberich Ebenhöch</rs> ist längere Zeit durch die Krankheiten der Schwestern (im <rs ref="index:d10854e34353">Kloster St. Afra</rs>), für die er als Beichtvater wirkt, aufgehalten worden. Sobald er das vierte <rs ref="index:d10854e34461">Antiphonar für den Chor</rs> fertig geschrieben hat, kann er sich der Sammlung benediktinischer Werke aus der <rs ref="index:d10854e34466">Bibliothek</rs> von <rs ref="index:d10854e34414">St. Stephan</rs> für BP widmen.</p>
+            <p corresp="#seg4">Jüngst hat <rs ref="index:d14380e10826">Felix Egger</rs> HB wiederum <rs ref="index:d10854e7367">Exemplare seiner Enzyklik</rs> zur Verteilung an die <rs ref="index:d14380e12652">fränkischen</rs> Klöster gesendet. HB will ihm bald antworten.</p>
+            <p corresp="#seg5">Er bedauert, nicht so viel für BP tun zu können, wie er will.</p>
+            <p corresp="#seg6">In einem Postskriptum berichtet HB von der Abschrift eines alten undatierten Briefs, welchen <rs ref="index:d14380e40921">Sigler</rs> in <rs ref="index:d10854e9767">Fulda</rs> gefunden und ihm mitgeteilt hat. Es handelt sich um ein Antwortschreiben der <rs ref="index:d14380e29411">Cassinenser</rs> an die Fuldenser („<rs ref="index:d10854e9832">Epistola monachorum Casinensium</rs>“), in dem diese über ihre Lebensweise berichten und mit einem Bibelwort ihre Skepsis gegenüber den Gewohnheiten der <rs ref="index:d10854e5406">Cluniazenser</rs> äußern. HB sendet das Stück vorerst nicht, will dies jedoch tun, wenn BP Interesse hat.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e38599"><rs type="person" role="sender">HB</rs> übersendet als Lebenszeichen nach längerem Schweigen einen <rs key="index:d10854e21145">Auszug</rs> aus dem <rs key="index:d14380e24317">Leipziger</rs> „<rs key="index:d10854e21135">Neuen bücher-saal</rs>“, welchen <rs type="person" role="sender">HB</rs> von <rs key="index:d14380e40921">Konrad Sigler</rs> erhalten hat. Der Inhalt dürfte <rs type="person" role="sender">BP</rs> bekannt sein.</seg><seg type="context" n="2" xml:id="d4618e38601">Durch <rs key="index:d14380e40921">Siglers</rs> Abwesenheit und seine Übersiedlung sind viele seiner Materialien verloren gegangen. Nun will er eine neue Sammlung anlegen.</seg><seg type="context" n="3" xml:id="d4618e38603"><rs type="person" role="sender">HBs</rs> Bibliothekar <rs key="index:d10854e7124">Alberich Ebenhöch</rs> ist längere Zeit durch die Krankheiten der Schwestern (im <rs key="index:d10854e34353">Kloster St. Afra</rs>), für die er als Beichtvater wirkt, aufgehalten worden. Sobald er das vierte <rs key="index:d10854e34461">Antiphonar für den Chor</rs> fertig geschrieben hat, kann er sich der Sammlung benediktinischer Werke aus der <rs key="index:d10854e34466">Bibliothek</rs> von <rs key="index:d10854e34414">St. Stephan</rs> für <rs type="person" role="sender">BP</rs> widmen.</seg><seg type="context" n="4" xml:id="d4618e38605">Jüngst hat <rs key="index:d14380e10826">Felix Egger</rs> <rs type="person" role="sender">HB</rs> wiederum <rs key="index:d10854e7367">Exemplare seiner Enzyklik</rs> zur Verteilung an die <rs key="index:d14380e12652">fränkischen</rs> Klöster gesendet. <rs type="person" role="sender">HB</rs> will ihm bald antworten.</seg><seg type="context" n="5" xml:id="d4618e38607">Er bedauert, nicht so viel für <rs type="person" role="sender">BP</rs> tun zu können, wie er will.</seg><seg type="context" n="6" xml:id="d4618e38609">In einem Postskriptum berichtet <rs type="person" role="sender">HB</rs> von der Abschrift eines alten undatierten Briefs, welchen <rs key="index:d14380e40921">Sigler</rs> in <rs key="index:d10854e9767">Fulda</rs> gefunden und ihm mitgeteilt hat. Es handelt sich um ein Antwortschreiben der <rs key="index:d14380e29411">Cassinenser</rs> an die Fuldenser („<rs key="index:d10854e9832">Epistola monachorum Casinensium</rs>“), in dem diese über ihre Lebensweise berichten und mit einem Bibelwort ihre Skepsis gegenüber den Gewohnheiten der <rs key="index:d10854e5406">Cluniazenser</rs> äußern. <rs type="person" role="sender">HB</rs> sendet das Stück vorerst nicht, will dies jedoch tun, wenn <rs type="person" role="sender">BP</rs> Interesse hat.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">92</hi>.</p>
-            <div type="remarks">
-               <p>Auf 2v der Vermerk von anderer Hand: <hi rend="italic">1713. Herbipoli N. 20</hi>.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende religiose eximie ac doctissime pater, colende domine.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e38631">Ne post longiorem silentii moram <seg type="lemma" corresp="#d4618e38656">calamus meus ex toto arefactus aut quassatus</seg> videri posset, <seg type="lemma" corresp="#d4618e38663">excerptionem</seg> hanc, rem indubie notam, e Lipsiensi librorum catalogo Bücher saall dicto mihi per dominum Siegler communicato saltem mittere volui. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e38633">Conqueritur dictus dominus in sua absentia et itinere ac mutatione multum <seg type="lemma" corresp="#d4618e38668">distracta manuscripta</seg> sua, promittens tamen se de novo quaedam utilia collecturum; quid futurum sit, cum patientia exspectabo. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e38635">Bibliothecarius quoque meus pater Albericus multo tempore infirmitatibus sororum sanctimonialium ut confessarius detentus fuit, ac nunc festinat <seg type="lemma" corresp="#d4618e38675">quartum antiphonarium</seg> in pergameno a se scriptum pro choro nostro absolvere, postmodum sine mora collecturus libros et authores sacri ordinis nostri in parva bibliotheca nostra reperiendos, prout desideravit admodum reverenda paternitas vestra. <pb n="1v"/> </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e38639">Misit interim denuo admodum reverendus pater <seg type="lemma" corresp="#d4618e38682">Felix Egger</seg> nova exemplaria encyclicae suae ad me pro quolibet Franconiae nostrae monasterio, cui etiam proxime respondebo ac pro posse serviam. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e38641">Unum est, quod doleo, me fervori accenso admodum reverendae paternitatis vestrae gratioribus servire non posse, ut opto, qui alias sub protectione divina semper ero et maneo</seg></p>
-            <p xml:space="preserve">Admodum reverendae eximiae paternitatis vestrae addictissimus Hyacinth abbas manu propria.</p>
-            <p xml:space="preserve">Herbipoli ex monasterio S. Stephani 2. Aprilis 1713.</p>
-            <p xml:space="preserve"><pb n="2r"/> <seg type="context" n="6" xml:space="preserve" xml:id="d4618e38650">P.S. Dominus Siegler communicavit mihi quidem etiam <seg type="lemma" corresp="#d4618e38689">copiam litterarum antiquissimarum</seg> in monasterio Fuldensi repertarum, quibus Cassinenses nostri respondent Fuldensibus interrogantibus de eorum conversatione et modo vivendi. Ast sine anno, sine die, quo dabantur; nisi quod ad quaestionem de tonsura et habitu Cluniacensium (forte tunc novissimorum) respondeant sibi non placere, consilium dantes ex apostolo: <seg type="lemma" corresp="#d4618e38696">doctrinis variis et peregrinis nolite abduci</seg>. Ideo non mitto modo<note place="foot" xml:id="d4618e38652">	Am linken Blattrand eingefügt.</note>. Si tamen admodum reverenda paternitas vestra videre desiderat, sine mora mittam.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e38656">
-               <ref type="context">1</ref>
-               <label>calamus ... quassatus</label>
-               <p>Vgl. Jes 42,3.</p>
-            </note>
-            <note xml:id="d4618e38663">
-               <ref type="context">1</ref>
-               <label>excerptionem</label>
-               <p>Der Auszug scheint nicht erhalten zu sein; vgl. <ref type="letter">308</ref>
-                  &lt;4&gt;.</p>
-            </note>
-            <note xml:id="d4618e38668">
-               <ref type="context">2</ref>
-               <label>distracta manuscripta</label>
-               <p>Zu Siglers Übersiedlung nach Würzburg vgl. <ref type="letter">196</ref>, <ref
-                     type="letter">267</ref>, <ref type="letter">284</ref>, <ref type="letter"
-                     >308</ref> &lt;2&gt;.</p>
-            </note>
-            <note xml:id="d4618e38675">
-               <ref type="context">3</ref>
-               <label>quartum antiphonarium</label>
-               <p>Derartige Handschriften Ebenhöchs sind unter den erhaltenen Beständen aus der
-                  Bibliothek von St. Stephan (<rs type="bibl" key="bibl:37100">Thurn, Handschriften
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>calamus ... quassatus</mentioned>
+            <p>Vgl. Jes 42,3.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>excerptionem</mentioned>
+            <p>Der Auszug scheint nicht erhalten zu sein; vgl. <ref type="letter" target="letter:308">308</ref>
+                  <ref target="letter:308#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>distracta manuscripta</mentioned>
+            <p>Zu Siglers Übersiedlung nach Würzburg vgl. <ref type="letter" target="letter:196">196</ref>, <ref type="letter" target="letter:267">267</ref>, <ref type="letter" target="letter:284">284</ref>, <ref type="letter" target="letter:308">308</ref> <ref target="letter:308#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>quartum antiphonarium</mentioned>
+            <p>Derartige Handschriften Ebenhöchs sind unter den erhaltenen Beständen aus der
+                  Bibliothek von St. Stephan (<rs type="bibl" ref="bibl:37100">Thurn, Handschriften
                      2/2</rs>) nicht nachzuweisen.</p>
-            </note>
-            <note xml:id="d4618e38682">
-               <ref type="context">4</ref>
-               <label>Felix Egger</label>
-               <p>Vgl. <ref type="letter">267</ref> &lt;4&gt;. Dass HB hier von einer neuerlichen
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>Felix Egger</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:267">267</ref> <ref target="letter:267#seg4">4</ref>. Dass HB hier von einer neuerlichen
                   Zusendung von Enzykliken spricht („Misit [...] denuo“), bestärkt die Annahme, dass
                   auch in dem früheren Brief von Egger die Rede war.</p>
-            </note>
-            <note xml:id="d4618e38689">
-               <ref type="context">6</ref>
-               <label>copiam litterarum antiquissimarum</label>
-               <p>Vgl. <ref type="letter">308</ref>&lt;4&gt;. Sigler hatte den Brief freilich nicht,
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg6">
+            <mentioned>copiam litterarum antiquissimarum</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:308">308</ref><ref target="letter:308#seg4">4</ref>. Sigler hatte den Brief freilich nicht,
                   wie HB hier meint, in Fulda gefunden, sondern in der Erfurter Handschrift des
                   Nikolaus von Siegen.</p>
-            </note>
-            <note xml:id="d4618e38696">
-               <ref type="context">6</ref>
-               <label>doctrinis ... nolite abduci</label>
-               <p>Hebr 13,9.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg6">
+            <mentioned>doctrinis ... nolite abduci</mentioned>
+            <p>Hebr 13,9.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Ordnungsvermerk: <orig>92</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende religiose eximie ac doctissime pater, colende domine.</opener>
+         <ab resp="#editor" xml:id="seg1">Ne post longiorem silentii moram <anchor xml:id="n1"/>calamus meus ex toto arefactus aut quassatus<anchor xml:id="n1e"/> videri posset, <anchor xml:id="n2"/>excerptionem<anchor xml:id="n2e"/> hanc, rem indubie notam, e Lipsiensi librorum catalogo Bücher saall dicto mihi per dominum Siegler communicato saltem mittere volui. </ab>
+         <ab resp="#editor" xml:id="seg2">Conqueritur dictus dominus in sua absentia et itinere ac mutatione multum <anchor xml:id="n3"/>distracta manuscripta<anchor xml:id="n3e"/> sua, promittens tamen se de novo quaedam utilia collecturum; quid futurum sit, cum patientia exspectabo. </ab>
+         <ab resp="#editor" xml:id="seg3">Bibliothecarius quoque meus pater Albericus multo tempore infirmitatibus sororum sanctimonialium ut confessarius detentus fuit, ac nunc festinat <anchor xml:id="n4"/>quartum antiphonarium<anchor xml:id="n4e"/> in pergameno a se scriptum pro choro nostro absolvere, postmodum sine mora collecturus libros et authores sacri ordinis nostri in parva bibliotheca nostra reperiendos, prout desideravit admodum reverenda paternitas vestra. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg4">Misit interim denuo admodum reverendus pater <anchor xml:id="n5"/>Felix Egger<anchor xml:id="n5e"/> nova exemplaria encyclicae suae ad me pro quolibet Franconiae nostrae monasterio, cui etiam proxime respondebo ac pro posse serviam. </ab>
+         <ab resp="#editor" xml:id="seg5">Unum est, quod doleo, me fervori accenso admodum reverendae paternitatis vestrae gratioribus servire non posse, ut opto, qui alias sub protectione divina semper ero et maneo</ab>
+         <closer>Admodum reverendae eximiae paternitatis vestrae addictissimus Hyacinth abbas manu propria.</closer>
+         <closer>Herbipoli ex monasterio S. Stephani 2. Aprilis 1713.</closer>
+         <closer xml:id="seg6">P.S. Dominus Siegler communicavit mihi quidem etiam <anchor xml:id="n6"/>copiam litterarum antiquissimarum<anchor xml:id="n6e"/> in monasterio Fuldensi repertarum, quibus Cassinenses nostri respondent Fuldensibus interrogantibus de eorum conversatione et modo vivendi. Ast sine anno, sine die, quo dabantur; nisi quod ad quaestionem de tonsura et habitu Cluniacensium (forte tunc novissimorum) respondeant sibi non placere, consilium dantes ex apostolo: <anchor xml:id="n7"/>doctrinis variis et peregrinis nolite abduci<anchor xml:id="n7e"/>. Ideo non mitto <add place="left-margin">modo</add>. Si tamen admodum reverenda paternitas vestra videre desiderat, sine mora mittam.<pb n="2r"/> </closer>
+      </body>
    </text>
 </TEI>

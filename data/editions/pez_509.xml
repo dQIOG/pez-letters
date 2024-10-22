@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="509" xml:id="pez-0509">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">509 Johann Benedikt Gentilotti von Engelsbrunn an Bernhard Pez. 1716-02-15. Wien.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Benedikt Gentilotti von Engelsbrunn an Bernhard Pez. 1716-02-15. Wien.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">509</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -21,32 +33,34 @@
             <relatedItem type="otherEdition">
                <bibl>Staufer, Litterae 16f.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:15152">Benz, Zwischen Tradition und Kritik</rs>
-                     564</bibl>
-                  <bibl><rs type="bibl" key="bibl:16792">Hammermayer, Forschungszentren</rs>
-                     134</bibl>
-                  <bibl><rs type="bibl" key="bibl:16794">Hammermayer, Maurinismus</rs> 397</bibl>
-                  <bibl><rs type="bibl" key="bibl:18770">Peper, Ohne Parteilichkeit</rs> 278</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Bei Glassner, Verzeichnis 214, ist das Datum mit 18. Januar 1716 angegeben, offenbar in der Annahme, dass vor <orig>Februarii</orig> das Wort <orig>Kalendas</orig> irrtümlich ausgelassen wurde. Eine solche Vermutung ist angesichts des sonstigen Gebrauchs BGs (vgl. Wallnig–Stockinger, Korrespondenz 1 40) nicht zwingend; auch der chronologische Zusammenhang im Hinblick auf die Krankheit Massuets und das Erscheinen der „Bibliotheca Benedictino-Mauriana“ spricht deutlich für ein Datum im Februar.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">III</biblScope>
-               <biblScope unit="page">268r–270v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 268r–270v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -61,53 +75,31 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">507</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">558</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">470</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">490</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">508</idno>
-               </ref>
+               <ptr type="prev" target="letter:507"/>
+               <ptr type="next" target="letter:558"/>
+               <ptr type="mentions" target="letter:470"/>
+               <ptr type="mentions" target="letter:490"/>
+               <ptr type="mentions" target="letter:508"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">BP hat recht daran getan, seine Freude über die Fertigstellung seines neuen Werkes („<rs ref="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“) BG zu eröffnen, da niemand ihm freundlicher gesinnt ist als dieser.</p>
+            <p corresp="#seg2">BG seinerseits teilt mit BP seinen Schmerz über die Nachricht, dass <rs ref="index:d14380e26993">René Massuet</rs> vermutlich unheilbar <rs ref="index:d14380e27059">erkrankt</rs> ist. <rs ref="index:d14380e4048">Johann Philipp Bartenstein</rs> hat dies durch einen Brief von <rs ref="index:d14380e29435">Bernard de Montfaucon</rs> erfahren und seinem Sohn <rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs> geschrieben. BG will gemeinsam mit BP den Freund, dessen Tod einen so großen Verlust für die Gelehrsamkeit und für den <rs ref="index:d14380e4919">Benediktinerorden</rs> bedeuten würde, in seine Gebete einschließen. Es ist zwar nicht alle Hoffnung verloren, aber auch wenn <rs ref="index:d14380e26993">Massuet</rs> wieder genesen sollte, wird er kaum in näherer Zeit seine Studien wieder aufnehmen können. BG empfiehlt BP, aus Massuets Schicksal die Lehre zu ziehen und aus Rücksicht auf seine nicht allzu kräftige (athletica aut pancratica) Konstitution in seinen Studien Maß zu halten.</p>
+            <p corresp="#seg3">BG gratuliert BP zur Fertigstellung seines <rs ref="index:d14380e33384">Werkes</rs> und freut sich darauf, ein Exemplar zu erhalten. Er zeigt sich jedoch überrascht von der Verschmitztheit BPs, welcher ihn in das Wagnis der (darin enthaltenen) Edition der anonymen Schrift „<rs ref="index:d14380e33455">De scriptoribus ecclesiasticis</rs>“ verwickelt hat, indem er ihn in der Vorrede als Befürworter derselben genannt hat. Mit derselben Schlauheit hat BP die Zustimmung eines anderen Gelehrten (<rs ref="index:d14380e10344">Jean-Baptiste Du Sollier</rs>) gesucht <ref type="letter" target="letter:490">490</ref>, aber dieser hat, soweit BG weiß, nicht geantwortet. BG scheut jedoch das Risiko nicht, mit der Auffassung BPs in Verbindung gebracht zu werden, da er ja tatsächlich den fraglichen Text anhand des Incipit für bislang noch nicht publiziert hält. Wäre dieser aber doch bereits irgendwann gedruckt worden, so wäre eine Neuausgabe jedenfalls zu begrüßen.</p>
+            <p corresp="#seg4">BG beschwört BP, seine „<rs ref="index:d14380e33468">Bibliotheca Mellicensis</rs>“ möglichst bald zu publizieren, wie er dies in seinem „<rs ref="index:d14380e10982">Triumphus castitatis</rs>“ versprochen hat; BP ist dadurch nicht nur der gelehrten Welt in der Pflicht, sondern auch <rs ref="index:d14380e45964">BG</rs> selbst erhofft sich aus diesem Werk Aufschlüsse über mehrere Codices der <rs ref="index:d14380e45820">Hofbibliothek</rs>.</p>
+            <p corresp="#seg5">BPs Plan, eine „<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“ zusammenzustellen, hat BG stets für lobenswert und der Gelehrsamkeit BPs angemessen gehalten; er befürchtet allerdings, dass BP die nötigen Hilfestellungen für ein so großes Unternehmen nicht erhalten wird. Selbst innerhalb von <rs ref="index:d14380e9395">Deutschland</rs> (Germania) hat BP große Verzögerungen und Schwierigkeiten erleben müssen; von den <rs ref="index:d14380e19828">Italienern</rs>, <rs ref="index:d14380e41211">Spaniern</rs>, <rs ref="index:d14380e4429">Belgiern</rs> und, falls <rs ref="index:d14380e26993">Massuet</rs> sterben sollte, auch von den <rs ref="index:d14380e12712">Franzosen</rs> ist keineswegs mehr Bereitwilligkeit zu erwarten. BG rät daher, das geplante Werk zu teilen und mit der Verzeichnung der <rs ref="index:d14380e9395">deutschen</rs> <rs ref="index:d14380e4919">Benediktinerschriftsteller</rs> zu beginnen, um erst danach zu den übrigen Nationen (nationes) fortzuschreiten; BP soll jedoch selbst entscheiden, welches Vorgehen ihm am aussichtsreichsten scheint.</p>
+            <p corresp="#seg6">Die zwei handschriftlichen Chroniken, nach denen BP gefragt hat, sind in zumindest ähnlicher Form auch in der <rs ref="index:d14380e45820">Hofbibliothek</rs> vorhanden. Für die <rs ref="index:d14380e42842">thüringische</rs> („<rs ref="index:d14380e45911">Liber cronicorum Erfordensis</rs>“) haben BGs Vorgänger (<rs ref="index:d14380e23599">Peter Lambeck</rs> und <rs ref="index:d14380e30345">Daniel Nessel</rs>) eine Edition angekündigt, die andere wird in den „<rs ref="index:d14380e8897">Annales Suevici</rs>“ von <rs ref="index:d14380e8891">Martin Crusius</rs> vielfach erwähnt. Eine bestimmte Aussage darüber will BG aber erst dann abgeben, wenn er wieder in die <rs ref="index:d14380e45820">Hofbibliothek</rs> kommt, was derzeit nur selten geschieht, und sowohl die Codices als auch seinen <rs ref="index:d14380e14904">Katalog</rs> dort einsehen kann.</p>
+            <p corresp="#seg7"><rs ref="index:d14380e41556">Anton Steyerer</rs> ist an einem Geschwür unter der linken Achsel erkrankt, weshalb BP sich nicht wundern soll, wenn jener auf seine Briefe (<ref type="letter" target="letter:470">470</ref>, <ref type="letter" target="letter:490">490</ref>) nur verspätet geantwortet hat <ref type="letter" target="letter:508">508</ref>. Allerdings weiß BP selbst am besten, warum er sich seitens der <rs ref="index:d14380e20126">Jesuiten</rs> keinen allzu freundschaftlichen Umgang erwarten kann. Über Steyerers geplantes <rs ref="index:d14380e41597">Werk</rs> (zur österreichischen Geschichte) lässt sich noch kein Urteil abgeben, weil noch keine Probe davon vorgelegt worden ist. <rs ref="index:d14380e41556">Steyerer</rs> hat eine Fülle von Material gesammelt, die Qualität seiner Darstellung werden die Gelehrten erst beurteilen können, wenn das Werk erschienen ist.</p>
+            <p corresp="#seg8">BP und HP tun <rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs> großes Unrecht, indem sie an seiner Zuneigung zu ihnen zweifeln; Bartenstein schätzt sie nicht nur sehr, sondern verehrt sie sogar. Dass er ihnen nicht häufiger schreibt, liegt daran, dass er zu beschäftigt ist.</p>
+            <p corresp="#seg9">BG ist gerne bereit, nicht nur die <rs ref="index:d14380e21903">„Arca Noe“ von Athanasius Kircher</rs>, sondern auch noch andere Dubletten der <rs ref="index:d14380e45820">Hofbibliothek</rs> zum Tausch anzubieten. Er schließt mit Grüßen an HP.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e3570"><rs type="person" role="sender">BP</rs> hat recht daran getan, seine Freude über die Fertigstellung seines neuen Werkes („<rs key="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“) <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> zu eröffnen, da niemand ihm freundlicher gesinnt ist als dieser.</seg><seg type="context" n="2" xml:id="d3e3572"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> seinerseits teilt mit <rs type="person" role="sender">BP</rs> seinen Schmerz über die Nachricht, dass <rs key="index:d14380e26993">René Massuet</rs> vermutlich unheilbar <rs key="index:d14380e27059">erkrankt</rs> ist. <rs key="index:d14380e4048">Johann Philipp Bartenstein</rs> hat dies durch einen Brief von <rs key="index:d14380e29435">Bernard de Montfaucon</rs> erfahren und seinem Sohn <rs key="index:d14380e4006">Johann Christoph Bartenstein</rs> geschrieben. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> will gemeinsam mit <rs type="person" role="sender">BP</rs> den Freund, dessen Tod einen so großen Verlust für die Gelehrsamkeit und für den <rs key="index:d14380e4919">Benediktinerorden</rs> bedeuten würde, in seine Gebete einschließen. Es ist zwar nicht alle Hoffnung verloren, aber auch wenn <rs key="index:d14380e26993">Massuet</rs> wieder genesen sollte, wird er kaum in näherer Zeit seine Studien wieder aufnehmen können. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> empfiehlt <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BP<?oxy_custom_end?>, aus Massuets Schicksal die Lehre zu ziehen und aus Rücksicht auf seine nicht allzu kräftige (athletica aut pancratica) Konstitution in seinen Studien Maß zu halten.</seg><seg type="context" n="3" xml:id="d3e3574">BG gratuliert <rs type="person" role="sender">BP</rs> zur Fertigstellung seines <rs key="index:d14380e33384">Werkes</rs> und freut sich darauf, ein Exemplar zu erhalten. Er zeigt sich jedoch überrascht von der Verschmitztheit <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BPs<?oxy_custom_end?>, welcher ihn in das Wagnis der (darin enthaltenen) Edition der anonymen Schrift „<rs key="index:d14380e33455">De scriptoribus ecclesiasticis</rs>“ verwickelt hat, indem er ihn in der Vorrede als Befürworter derselben genannt hat. Mit derselben Schlauheit hat <rs type="person" role="sender">BP</rs> die Zustimmung eines anderen Gelehrten (<rs key="index:d14380e10344">Jean-Baptiste Du Sollier</rs>) gesucht <ref type="letter">490</ref>, aber dieser hat, soweit <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> weiß, nicht geantwortet. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> scheut jedoch das Risiko nicht, mit der Auffassung <rs type="person" role="sender">BPs</rs> in Verbindung gebracht zu werden, da er ja tatsächlich den fraglichen Text anhand des Incipit für bislang noch nicht publiziert hält. Wäre dieser aber doch bereits irgendwann gedruckt worden, so wäre eine Neuausgabe jedenfalls zu begrüßen.</seg><seg type="context" n="4" xml:id="d3e3579"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> beschwört <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BP<?oxy_custom_end?>, seine „<rs key="index:d14380e33468">Bibliotheca Mellicensis</rs>“ möglichst bald zu publizieren, wie er dies in seinem „<rs key="index:d14380e10982">Triumphus castitatis</rs>“ versprochen hat; <rs type="person" role="sender">BP</rs> ist dadurch nicht nur der gelehrten Welt in der Pflicht, sondern auch <rs key="index:d14380e45964">BG</rs> selbst erhofft sich aus diesem Werk Aufschlüsse über mehrere Codices der <rs key="index:d14380e45820">Hofbibliothek</rs>.</seg><seg type="context" n="5" xml:id="d3e3581"><rs type="person" role="sender">BPs</rs> Plan, eine „<rs key="index:d14380e33227">Bibliotheca Benedictina</rs>“ zusammenzustellen, hat <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> stets für lobenswert und der Gelehrsamkeit <rs type="person" role="sender">BPs</rs> angemessen gehalten; er befürchtet allerdings, dass <rs type="person" role="sender">BP</rs> die nötigen Hilfestellungen für ein so großes Unternehmen nicht erhalten wird. Selbst innerhalb von <rs key="index:d14380e9395">Deutschland</rs> (Germania) hat <rs type="person" role="sender">BP</rs> große Verzögerungen und Schwierigkeiten erleben müssen; von den <rs key="index:d14380e19828">Italienern</rs>, <rs key="index:d14380e41211">Spaniern</rs>, <rs key="index:d14380e4429">Belgiern</rs> und, falls <rs key="index:d14380e26993">Massuet</rs> sterben sollte, auch von den <rs key="index:d14380e12712">Franzosen</rs> ist keineswegs mehr Bereitwilligkeit zu erwarten. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> rät daher, das geplante Werk zu teilen und mit der Verzeichnung der <rs key="index:d14380e9395">deutschen</rs> <rs key="index:d14380e4919">Benediktinerschriftsteller</rs> zu beginnen, um erst danach zu den übrigen Nationen (nationes) fortzuschreiten; <rs type="person" role="sender">BP</rs> soll jedoch selbst entscheiden, welches Vorgehen ihm am aussichtsreichsten scheint.</seg><seg type="context" n="6" xml:id="d3e3583">Die zwei handschriftlichen Chroniken, nach denen <rs type="person" role="sender">BP</rs> gefragt hat, sind in zumindest ähnlicher Form auch in der <rs key="index:d14380e45820">Hofbibliothek</rs> vorhanden. Für die <rs key="index:d14380e42842">thüringische</rs> („<rs key="index:d14380e45911">Liber cronicorum Erfordensis</rs>“) haben <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BGs<?oxy_custom_end?> Vorgänger (<rs key="index:d14380e23599">Peter Lambeck</rs> und <rs key="index:d14380e30345">Daniel Nessel</rs>) eine Edition angekündigt, die andere wird in den „<rs key="index:d14380e8897">Annales Suevici</rs>“ von <rs key="index:d14380e8891">Martin Crusius</rs> vielfach erwähnt. Eine bestimmte Aussage darüber will <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> aber erst dann abgeben, wenn er wieder in die <rs key="index:d14380e45820">Hofbibliothek</rs> kommt, was derzeit nur selten geschieht, und sowohl die Codices als auch seinen <rs key="index:d14380e14904">Katalog</rs> dort einsehen kann.</seg><seg type="context" n="7" xml:id="d3e3585"><rs key="index:d14380e41556">Anton Steyerer</rs> ist an einem Geschwür unter der linken Achsel erkrankt, weshalb <rs type="person" role="sender">BP</rs> sich nicht wundern soll, wenn jener auf seine Briefe (<ref type="letter">470</ref>, <ref type="letter">490</ref>) nur verspätet geantwortet hat <ref type="letter">508</ref>. Allerdings weiß <rs type="person" role="sender">BP</rs> selbst am besten, warum er sich seitens der <rs key="index:d14380e20126">Jesuiten</rs> keinen allzu freundschaftlichen Umgang erwarten kann. Über Steyerers geplantes <rs key="index:d14380e41597">Werk</rs> (zur österreichischen Geschichte) lässt sich noch kein Urteil abgeben, weil noch keine Probe davon vorgelegt worden ist. <rs key="index:d14380e41556">Steyerer</rs> hat eine Fülle von Material gesammelt, die Qualität seiner Darstellung werden die Gelehrten erst beurteilen können, wenn das Werk erschienen ist.</seg><seg type="context" n="8" xml:id="d3e3590"><rs type="person" role="sender">BP</rs> und <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>HP<?oxy_custom_end?> tun <rs key="index:d14380e4006">Johann Christoph Bartenstein</rs> großes Unrecht, indem sie an seiner Zuneigung zu ihnen zweifeln; Bartenstein schätzt sie nicht nur sehr, sondern verehrt sie sogar. Dass er ihnen nicht häufiger schreibt, liegt daran, dass er zu beschäftigt ist.</seg><seg type="context" n="9" xml:id="d3e3592"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> ist gerne bereit, nicht nur die <rs key="index:d14380e21903">„Arca Noe“ von Athanasius Kircher</rs>, sondern auch noch andere Dubletten der <rs key="index:d14380e45820">Hofbibliothek</rs> zum Tausch anzubieten. Er schließt mit Grüßen an <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>HP<?oxy_custom_end?>.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Bei Glassner, Verzeichnis 214, ist das Datum mit 18. Januar 1716 angegeben, offenbar in der Annahme, dass vor <hi rend="italic">Februarii</hi> das Wort <hi rend="italic" xml:space="preserve">Kalendas </hi>irrtümlich ausgelassen wurde. Eine solche Vermutung ist angesichts des sonstigen Gebrauchs BGs (vgl. Wallnig–Stockinger, Korrespondenz 1 40) nicht zwingend; auch der chronologische Zusammenhang im Hinblick auf die Krankheit Massuets und das Erscheinen der „Bibliotheca Benedictino-Mauriana“ spricht deutlich für ein Datum im Februar.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Venerabili doctissimoque viro domno Bernardo Pezio Benedictino et bibliothecario Mellicensi suo Joannes Benedictus Gentilottus ab Engelsbrun salutem plurimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e3617">Recte tu quidem atque ordine facis, quod gaudium tuum de novo opere absoluto in sinum meum effundis, cum perspectum habeas me tibi amiciorem esse neminem. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e3619">Ego e contrario dolorem, quem sane magnum atque incredibilem cepi ex nuntio adversae et prope perditae valetudinis domni Massueti, de qua Bartensteinius pater ex <seg type="lemma" corresp="#d3e3700">litteris Montefalconii</seg> ad filium perscripsit, tecum communico, tam ut curam, quae animum vehementer sollicitat<note place="foot" xml:id="d3e3621">	Über der Zeile eingefügt.</note>, tecum partitus leviorem reddam, quam ut ad vota pro tam caro capite mecum suscipienda te invitem: id quod eo diligentius te facturum scio, quo magis ex cognita tibi et perspecta eius viri virtute et doctrina cogitatione complecti potes, quantam eo amisso litterae et ordo vester iacturam facerent. <seg type="lemma" corresp="#d3e3706">Salus eius non omnino quidem desperata</seg> est, sed licet vim gravitatemque morbi superaverit, vix idoneum fore putant ad ea studia, quae hucusque maxima cum sui laude et publico bono coluit, deinceps persequenda. Hic casus te admonet, carissime Bernarde, ut modum in studiis serves <pb n="1v"/> tuaeque non admodum athleticae aut pancraticae corporis habitudinis ducas rationem. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e3626">Ad opus tuum redeo, quod feliciter perfectum tibi ex animo gratulor, eiusque exemplum ab humanitate tua cupidissime exspecto. Sed nae tu medius Fidius vir es vaferrimus: implicasti me scilicet periculo editionis anonymi tui <seg type="lemma" corresp="#d3e3710">De scriptoribus ecclesiasticis</seg>, quum me tibi auctorem suasoremque illius evulgandi fuisse praefatus es; eadem tu quidem calliditate <seg type="lemma" corresp="#d3e3716">alterius viri</seg> assensum captasti, sed ille cautior me fuit nec, quod sciam, tibi quidquam respondit. Ego vero periculi istius societatem non solum non refugio, sed tui consilii<note place="foot" xml:id="d3e3628">	Über der Zeile eingefügt.</note> propugnationem eo libentius suscipio, quod neque, quantum ex initio cognoscere potui, hactenus editum arbitrer, neque, si aliquando prodiisset, eius instauratione, tametsi novitatis gratia pereat, simul laus diligentiae studiique litterariam rem amplificandi amittatur. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e3631"><seg type="lemma" corresp="#d3e3720">Bibliothecam tuam Mellicensem</seg> <pb n="2r"/> eruditi omnes non solum exspectant, sed etiam flagitant: teneris enim ex <seg type="lemma" corresp="#d3e3726">pollicitatione reipublicae litterariae facta</seg> in Actis Wilburgis tuae; quare ut fidem primo quoque tempore, quoad eius fieri poterit, liberes, te non solum magnopere hortor, sed etiam quaeso obtestorque. Spero enim fore, ut magnum inde lumen sumere possim ad illustrandos complures codices caesareos. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e3635">Propositum tuum de contexenda Bibliotheca Benedictina generali laudabile illud quidem atque eruditione et instituto tuo dignum semper existimavi. Sed vereor, ut commentarii ceteraque ad tam<note place="foot" xml:id="d3e3637">	Über der Zeile eingefügt.</note> vastum opus necessaria adiumenta tibi subministrentur. Magnam in ipsa nostra Germania segnitiem dicam an difficultatem tute expertus es: num Italos, Hispanos, Belgas atque etiam Gallos, si (quod abominor) Massuetus e vita excesserit, promtiores futuros putas? Quid igitur, inquies, faciendum? Si consilium meum exquiris, <pb n="2v"/> separandum opus reor priusque illustrium ordinis vestri virorum, qui in Germania floruerunt, censum habendum, eoque<note place="foot" xml:id="d3e3642">	Korrigiert aus <hi rend="italic">quo</hi>.</note> peracto ad ceteras nationes adgrediendum. Mihi tamen non sumo, ut<note place="foot" xml:id="d3e3648">	Danach durchgestrichen <hi rend="italic">mea</hi>.</note> consilium meum valere debeat; tu illud sequere, quod se maxime explicare posse confides. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e3654">Ad duo illa chronica chirographa quod attinet, utraque, si non eadem omnino, saltem iis similia in caesarea quoque bibliotheca exstare comperi. <seg type="lemma" corresp="#d3e3730">Thuringici editionis</seg><note place="foot" xml:id="d3e3656">	Korrigiert aus <hi rend="italic">editionem</hi>.</note><seg type="lemma" corresp="#d3e3736"> decessores mei spem fecerunt</seg>; alterius saepe <seg type="lemma" corresp="#d3e3740">meminit Crusius</seg> in Annalibus Suevicis. Sed cum ad bibliothecam hoc tempore raro accedam, sententiam meam de iis tibi tum demum aperiam, cum codices ipsos et recensionem meam consuluero. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d3e3662">Pater Steyrerus ex tumore quodam sub axilla sinistra enato diu decubuit, quapropter mirari desine, si ad tuas litteras sero rescripsit<note place="foot" xml:id="d3e3664">	Korrigiert aus <hi rend="italic">rescrib</hi>.</note>. <seg type="lemma" corresp="#d3e3744">Cur autem in colenda amicitia mutuum a Sociis officium non magnopere debeas exspectare, tu tibi omnium optime es conscius</seg>. <seg type="lemma" corresp="#d3e3750">De eius opere</seg>, nullo adhuc specimine viso, quis iudicet? <seg type="lemma" corresp="#d3e3755">Festivam sane veterum monumentorum copiam</seg> collegit; an ea in bono lumine sit collocaturus, tum demum, cum opus eius apparuerit<note place="foot" xml:id="d3e3670">	Korrigiert aus <hi rend="italic">apparebit</hi>.</note>, eruditi decernent. </seg><seg type="context" n="8" xml:space="preserve" xml:id="d3e3676">Bartensteinio tu fraterque tuus insignitam <pb n="3r"/> iniuriam facitis, cum de eius in vos amore dubitatis. Ille<note place="foot" xml:id="d3e3680">	Davor durchgestrichen <hi rend="italic">Vos</hi>.</note> vos non solum mirifice diligit, sed et observat ac colit, immo in oculis fert. Quominus autem<note place="foot" xml:id="d3e3686">	Über der Zeile eingefügt.</note> saepius vobis litteras mittat, occupationes eius rei caussam sustinent<note place="foot" xml:id="d3e3689">	Korrigiert aus <hi rend="italic">sustinet</hi>.</note>. </seg><seg type="context" n="9" xml:space="preserve" xml:id="d3e3695">Non solum de <seg type="lemma" corresp="#d3e3759">Arca Noe</seg> Kircheriana, sed et de<seg type="lemma" corresp="#d3e3765"> aliis bibliothecae caesareae libris superfluis arbitratu tuo statues et aequis conditionibus permutationem</seg> mecum, si placet, facies. Vale, amicissime Bernarde, cum germano tuo Hieronymo meque, quod facis, dilige.</seg></p>
-            <p xml:space="preserve">Vindobona ad diem XV. Februarii MDCCXVI.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e3700">
-               <ref type="context">2</ref>
-               <label>litteris Montefalconii</label><p> In der erhaltenen Korrespondenz Montfaucons
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>litteris Montefalconii</mentioned>
+            <p> In der erhaltenen Korrespondenz Montfaucons
                   findet sich kein unmittelbarer Niederschlag der hier erwähnten Kontakte. Lediglich
                   in einem vorliegenden Brief vom 21. Januar 1717 (BN, FF 17702, 168r–169v)
                   erkundigt sich Johann Philipp Bartenstein unter Verweis auf eine „sub initium
@@ -116,17 +108,18 @@
                   dass der Kontakt der Mauriner mit dem älteren Bartenstein während des Jahres 1716
                   unterbrochen gewesen sein dürfte. – Die weitere Übermittlung der Information von
                   Johann Philipp Bartenstein an dessen Sohn entspricht den Angaben des Letzteren in
-                     <ref type="letter">500</ref> &lt;7&gt;, durch welchen Brief die Nachricht auch
+                     <ref type="letter" target="letter:500">500</ref> <ref target="letter:500#seg7">7</ref>, durch welchen Brief die Nachricht auch
                   BP bereits bekannt gewesen sein muss, bevor er sie von BG nochmals erhielt.
-               </p></note>
-            <note xml:id="d3e3706">
-               <ref type="context">2</ref>
-               <label>Salus ... desperata</label><p>Massuet war inzwischen gestorben: vgl. <ref
-                     type="letter">500</ref> &lt;7&gt;. </p></note>
-            <note xml:id="d3e3710">
-               <ref type="context">3</ref>
-               <label>De scriptoribus ecclesiasticis</label><p> Zur Melker Überlieferung dieses
-                  Textes vgl. <ref type="letter">490</ref> &lt;4&gt;. BP gab eine annotierte Edition
+               </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>Salus ... desperata</mentioned>
+            <p>Massuet war inzwischen gestorben: vgl. <ref type="letter" target="letter:500">500</ref> <ref target="letter:500#seg7">7</ref>. </p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>De scriptoribus ecclesiasticis</mentioned>
+            <p> Zur Melker Überlieferung dieses
+                  Textes vgl. <ref type="letter" target="letter:490">490</ref> <ref target="letter:490#seg4">4</ref>. BP gab eine annotierte Edition
                   seiner Abhandlung über die Maurinerschriftsteller als Anhang bei: Pez, Bibliotheca
                   Benedictino-Mauriana 417–496. In der unpaginierten Vorrede zu jenem Werk berief er
                   sich ausdrücklich auf die Empfehlung BGs: „Caeterum ad opusculi huius calcem
@@ -135,83 +128,114 @@
                   perillustri ac eruditissimo domino domino Joanne Benedicto Gentilloto ab
                   Engelsbrun, augustissimae bibliothecae caesareo-Vindobonensis praefecto longe
                   celeberrimo, cuius in me beneficia liberalissime collata nunquam sat potero
-                  praedicare“. Dies bezog sich offenbar auf BGs in <ref type="letter">485</ref>
-                  &lt;4&gt; geäußertes Urteil. </p></note>
-            <note xml:id="d3e3716">
-               <ref type="context">3</ref>
-               <label>alterius viri</label><p> Vgl. <ref type="letter">490</ref> &lt;4&gt;.
-               </p></note>
-            <note xml:id="d3e3720">
-               <ref type="context">4</ref>
-               <label>Bibliothecam ... Mellicensem</label><p> Zu diesem Plan vgl. <rs type="bibl"
-                     key="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 12; sowie Einleitung,
-                  Abschnitt I.4. </p></note>
-            <note xml:id="d3e3726">
-               <ref type="context">4</ref>
-               <label>pollicitatione ... facta</label><p>Pez, Triumphus castitatis 43. </p></note>
-            <note xml:id="d3e3730">
-               <ref type="context">6</ref>
-               <label>Thuringici editionis</label><p>Gemeint ist sehr wahrscheinlich der „Liber
+                  praedicare“. Dies bezog sich offenbar auf BGs in <ref type="letter" target="letter:485">485</ref>
+                  <ref target="letter:485#seg4">4</ref> geäußertes Urteil. </p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>alterius viri</mentioned>
+            <p> Vgl. <ref type="letter" target="letter:490">490</ref> <ref target="letter:490#seg4">4</ref>.
+               </p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>Bibliothecam ... Mellicensem</mentioned>
+            <p> Zu diesem Plan vgl. <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 12; sowie Einleitung,
+                  Abschnitt I.4. </p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned>pollicitatione ... facta</mentioned>
+            <p>Pez, Triumphus castitatis 43. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg6">
+            <mentioned>Thuringici editionis</mentioned>
+            <p>Gemeint ist sehr wahrscheinlich der „Liber
                   cronicorum Erfordensis“, eine Erfurter Chronik aus dem 14. Jh., von der sich eine
-                  Überlieferung in der Hofbibliothek befand: heute ÖNB, Cod. 3375; vgl. <rs
-                     type="bibl" key="bibl:17036">Hesse, Handschriften</rs> 433–446; <rs type="bibl"
-                     key="bibl:17140">Holder-Egger, Geschichtsquellen</rs> 21 253–261; <rs
-                     type="bibl" key="bibl:20294">Wenck, Liber Cronicorum</rs> 191–194. Dass sich
+                  Überlieferung in der Hofbibliothek befand: heute ÖNB, Cod. 3375; vgl. <rs type="bibl" ref="bibl:17036">Hesse, Handschriften</rs> 433–446; <rs type="bibl" ref="bibl:17140">Holder-Egger, Geschichtsquellen</rs> 21 253–261; <rs type="bibl" ref="bibl:20294">Wenck, Liber Cronicorum</rs> 191–194. Dass sich
                   auch die zu vermutende Anfrage BPs auf dieses Werk bezog, ist jedoch wenig
                   wahrscheinlich, da nicht anzunehmen ist, dass ihm eine der anderen Überlieferungen
-                  bekannt gewesen sein kann.</p></note>
-            <note xml:id="d3e3736">
-               <ref type="context">6</ref>
-               <label> decessores mei ... fecerunt</label><p>Lambeck, Catalogus librorum 54f.;
+                  bekannt gewesen sein kann.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg6">
+            <mentioned> decessores mei ... fecerunt</mentioned>
+            <p>Lambeck, Catalogus librorum 54f.;
                   Nessel, Sciagraphia 12. Eine Abschrift des „Liber cronicorum“ aus dem 18. Jh.
-                  könnte zum Zweck einer Edition entstanden sein: ÖNB, Cod. 12516. </p></note>
-            <note xml:id="d3e3740">
-               <ref type="context">6</ref>
-               <label>meminit Crusius</label><p> Die hier gemeinte Chronik ist anhand der Angabe BGs nicht zu bestimmen. </p></note>
-            <note xml:id="d3e3744">
-               <ref type="context">7</ref>
-               <label>Cur autem ... conscius</label><p> Zum Konflikt um die „Epistolae apologeticae“
-                  vgl. <rs type="bibl" key="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 14.
-               </p></note>
-            <note xml:id="d3e3750">
-               <ref type="context">7</ref>
-               <label>De eius opere</label><p> Anton Steyerer arbeitete an einer Hausgeschichte der
-                  Habsburger, zu welcher er eine umfangreiche Materialsammlung anlegte: vgl. <rs
-                     type="bibl" key="bibl:15152">Benz, Zwischen Tradition und Kritik</rs> 432–438;
-                  sowie <ref type="letter">462</ref> &lt;3&gt;, <ref type="letter">469</ref>. In
+                  könnte zum Zweck einer Edition entstanden sein: ÖNB, Cod. 12516. </p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg6">
+            <mentioned>meminit Crusius</mentioned>
+            <p> Die hier gemeinte Chronik ist anhand der Angabe BGs nicht zu bestimmen. </p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg7">
+            <mentioned>Cur autem ... conscius</mentioned>
+            <p> Zum Konflikt um die „Epistolae apologeticae“
+                  vgl. <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 14.
+               </p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg7">
+            <mentioned>De eius opere</mentioned>
+            <p> Anton Steyerer arbeitete an einer Hausgeschichte der
+                  Habsburger, zu welcher er eine umfangreiche Materialsammlung anlegte: vgl. <rs type="bibl" ref="bibl:15152">Benz, Zwischen Tradition und Kritik</rs> 432–438;
+                  sowie <ref type="letter" target="letter:462">462</ref> <ref target="letter:462#seg3">3</ref>, <ref type="letter" target="letter:469">469</ref>. In
                   diesem Zusammenhang sind auch die von ihm an HP und BP gerichteten Anfragen zur
-                  Genealogie der Habsburger und Babenberger zu verstehen: vgl. <ref type="letter"
-                     >490</ref>, <ref type="letter">491</ref>. Gedruckt wurde, nachdem Steyerers
+                  Genealogie der Habsburger und Babenberger zu verstehen: vgl. <ref type="letter" target="letter:490">490</ref>, <ref type="letter" target="letter:491">491</ref>. Gedruckt wurde, nachdem Steyerers
                   Abreise nach Sachsen als Beichtvater der dorthin verheirateten Erzherzogin Maria
                   Josepha die Fortsetzung seiner Arbeiten wesentlich erschwert hatte, letztlich nur
                   der Band „Commentarii pro historia Alberti ducis Austriae cognomento Sapientis“,
-                  der 1725 zu Leipzig erschien. </p></note>
-            <note xml:id="d3e3755">
-               <ref type="context">7</ref>
-               <label>Festivam ... copiam</label><p> Eine bedeutende Menge der Kollektaneen
-                  Steyerers ist erhalten: HHStA Wien, Hs. Rot 8 und Weiß 43; vgl. <rs type="bibl"
-                     key="bibl:15308">Böhm, Handschriften</rs> 1 24–26, 52–54.</p></note>
-            <note xml:id="d3e3759">
-               <ref type="context">9</ref>
-               <label>Arca Noe</label><p>Zu diesem Tausch kam es letztlich nicht: vgl. <ref
-                     type="letter">610</ref> &lt;3&gt;. Zum Werk vgl. <rs type="bibl"
-                     key="bibl:16104">Englmann, Sphärenharmonie</rs> 71, 172, 178, 319f.; <rs
-                     type="bibl" key="bibl:16210">Findlen, Last Man</rs> 2f.; <rs type="bibl"
-                     key="bibl:16258">Fletcher, Study</rs> 189f.; <rs type="bibl" key="bibl:16554"
-                     >Godwin, Theatre</rs> 99–108; <rs type="bibl" key="bibl:16620">Grafton,
-                     Kircher’s Chronology</rs> 181f.</p></note>
-            <note xml:id="d3e3765">
-               <ref type="context">9</ref>
-               <label> aliis ... permutationem</label><p> Zu dem von BP mit verschiedenen
-                  Bibliotheken gepflogenen Dublettentausch vgl. <rs type="bibl" key="bibl:19780"
-                     >Stockinger, Klosterbibliothekar</rs> 214–217; <rs type="bibl" key="bibl:20210"
-                     >Wallnig–Stockinger, Korrespondenz 1</rs> 5. Nachweislich gab BG auch an
+                  der 1725 zu Leipzig erschien. </p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg7">
+            <mentioned>Festivam ... copiam</mentioned>
+            <p> Eine bedeutende Menge der Kollektaneen
+                  Steyerers ist erhalten: HHStA Wien, Hs. Rot 8 und Weiß 43; vgl. <rs type="bibl" ref="bibl:15308">Böhm, Handschriften</rs> 1 24–26, 52–54.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg9">
+            <mentioned>Arca Noe</mentioned>
+            <p>Zu diesem Tausch kam es letztlich nicht: vgl. <ref type="letter" target="letter:610">610</ref> <ref target="letter:610#seg3">3</ref>. Zum Werk vgl. <rs type="bibl" ref="bibl:16104">Englmann, Sphärenharmonie</rs> 71, 172, 178, 319f.; <rs type="bibl" ref="bibl:16210">Findlen, Last Man</rs> 2f.; <rs type="bibl" ref="bibl:16258">Fletcher, Study</rs> 189f.; <rs type="bibl" ref="bibl:16554">Godwin, Theatre</rs> 99–108; <rs type="bibl" ref="bibl:16620">Grafton,
+                     Kircher’s Chronology</rs> 181f.</p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg9">
+            <mentioned> aliis ... permutationem</mentioned>
+            <p> Zu dem von BP mit verschiedenen
+                  Bibliotheken gepflogenen Dublettentausch vgl. <rs type="bibl" ref="bibl:19780">Stockinger, Klosterbibliothekar</rs> 214–217; <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 5. Nachweislich gab BG auch an
                   Buchhändler Dubletten der Hofbibliothek ab, zog sich damit jedoch die Kritik des
                   Obersthofmeisteramtes zu, welches die eigenmächtige Veräußerung von
                   Bibliotheksbeständen ebenso beanstandete wie den Umstand, dass BG die Titel nicht
-                  verzeichnet hatte: <rs type="bibl" key="bibl:19814">Strebl, Barocke
-                     Bibliothek</rs> 193.</p></note>
-         </div>
-      </back>
+                  verzeichnet hatte: <rs type="bibl" ref="bibl:19814">Strebl, Barocke
+                     Bibliothek</rs> 193.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:15152">
+            <title type="short">Benz, Zwischen Tradition und Kritik</title>
+            <biblScope>564</biblScope>
+         </bibl>
+         <bibl corresp="bibl:16792">
+            <title type="short">Hammermayer, Forschungszentren</title>
+            <biblScope>134</biblScope>
+         </bibl>
+         <bibl corresp="bibl:16794">
+            <title type="short">Hammermayer, Maurinismus</title>
+            <biblScope>397</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18770">
+            <title type="short">Peper, Ohne Parteilichkeit</title>
+            <biblScope>278</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Venerabili doctissimoque viro domno Bernardo Pezio Benedictino et bibliothecario Mellicensi suo Joannes Benedictus Gentilottus ab Engelsbrun salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Recte tu quidem atque ordine facis, quod gaudium tuum de novo opere absoluto in sinum meum effundis, cum perspectum habeas me tibi amiciorem esse neminem. </ab>
+         <ab resp="#editor" xml:id="seg2">Ego e contrario dolorem, quem sane magnum atque incredibilem cepi ex nuntio adversae et prope perditae valetudinis domni Massueti, de qua Bartensteinius pater ex <anchor xml:id="n1"/>litteris Montefalconii<anchor xml:id="n1e"/> ad filium perscripsit, tecum communico, tam ut curam, quae animum vehementer <add place="above">sollicitat</add>, tecum partitus leviorem reddam, quam ut ad vota pro tam caro capite mecum suscipienda te invitem: id quod eo diligentius te facturum scio, quo magis ex cognita tibi et perspecta eius viri virtute et doctrina cogitatione complecti potes, quantam eo amisso litterae et ordo vester iacturam facerent. <anchor xml:id="n2"/>Salus eius non omnino quidem desperata<anchor xml:id="n2e"/> est, sed licet vim gravitatemque morbi superaverit, vix idoneum fore putant ad ea studia, quae hucusque maxima cum sui laude et publico bono coluit, deinceps persequenda. Hic casus te admonet, carissime Bernarde, ut modum in studiis serves <pb n="1v"/> tuaeque non admodum athleticae aut pancraticae corporis habitudinis ducas rationem. </ab>
+         <ab resp="#editor" xml:id="seg3">Ad opus tuum redeo, quod feliciter perfectum tibi ex animo gratulor, eiusque exemplum ab humanitate tua cupidissime exspecto. Sed nae tu medius Fidius vir es vaferrimus: implicasti me scilicet periculo editionis anonymi tui <anchor xml:id="n3"/>De scriptoribus ecclesiasticis<anchor xml:id="n3e"/>, quum me tibi auctorem suasoremque illius evulgandi fuisse praefatus es; eadem tu quidem calliditate <anchor xml:id="n4"/>alterius viri<anchor xml:id="n4e"/> assensum captasti, sed ille cautior me fuit nec, quod sciam, tibi quidquam respondit. Ego vero periculi istius societatem non solum non refugio, sed tui <add place="above">consilii</add> propugnationem eo libentius suscipio, quod neque, quantum ex initio cognoscere potui, hactenus editum arbitrer, neque, si aliquando prodiisset, eius instauratione, tametsi novitatis gratia pereat, simul laus diligentiae studiique litterariam rem amplificandi amittatur. </ab>
+         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n5"/>Bibliothecam tuam Mellicensem<anchor xml:id="n5e"/> <pb n="2r"/> eruditi omnes non solum exspectant, sed etiam flagitant: teneris enim ex <anchor xml:id="n6"/>pollicitatione reipublicae litterariae facta<anchor xml:id="n6e"/> in Actis Wilburgis tuae; quare ut fidem primo quoque tempore, quoad eius fieri poterit, liberes, te non solum magnopere hortor, sed etiam quaeso obtestorque. Spero enim fore, ut magnum inde lumen sumere possim ad illustrandos complures codices caesareos. </ab>
+         <ab resp="#editor" xml:id="seg5">Propositum tuum de contexenda Bibliotheca Benedictina generali laudabile illud quidem atque eruditione et instituto tuo dignum semper existimavi. Sed vereor, ut commentarii ceteraque ad <add place="above">tam</add> vastum opus necessaria adiumenta tibi subministrentur. Magnam in ipsa nostra Germania segnitiem dicam an difficultatem tute expertus es: num Italos, Hispanos, Belgas atque etiam Gallos, si (quod abominor) Massuetus e vita excesserit, promtiores futuros putas? Quid igitur, inquies, faciendum? Si consilium meum exquiris, <pb n="2v"/> separandum opus reor priusque illustrium ordinis vestri virorum, qui in Germania floruerunt, censum habendum, <choice><sic>quo</sic><corr>eoque</corr></choice> peracto ad ceteras nationes adgrediendum. Mihi tamen non sumo, ut<del ana="#after">mea</del> consilium meum valere debeat; tu illud sequere, quod se maxime explicare posse confides. </ab>
+         <ab resp="#editor" xml:id="seg6">Ad duo illa chronica chirographa quod attinet, utraque, si non eadem omnino, saltem iis similia in caesarea quoque bibliotheca exstare comperi. <anchor xml:id="n7"/>Thuringici <choice><sic>editionem</sic><corr>editionis</corr></choice><anchor xml:id="n7e"/><anchor xml:id="n8"/> decessores mei spem fecerunt<anchor xml:id="n8e"/>; alterius saepe <anchor xml:id="n9"/>meminit Crusius<anchor xml:id="n9e"/> in Annalibus Suevicis. Sed cum ad bibliothecam hoc tempore raro accedam, sententiam meam de iis tibi tum demum aperiam, cum codices ipsos et recensionem meam consuluero. </ab>
+         <ab resp="#editor" xml:id="seg7">Pater Steyrerus ex tumore quodam sub axilla sinistra enato diu decubuit, quapropter mirari desine, si ad tuas litteras sero <choice><sic>rescrib</sic><corr>rescripsit</corr></choice>. <anchor xml:id="n10"/>Cur autem in colenda amicitia mutuum a Sociis officium non magnopere debeas exspectare, tu tibi omnium optime es conscius<anchor xml:id="n10e"/>. <anchor xml:id="n11"/>De eius opere<anchor xml:id="n11e"/>, nullo adhuc specimine viso, quis iudicet? <anchor xml:id="n12"/>Festivam sane veterum monumentorum copiam<anchor xml:id="n12e"/> collegit; an ea in bono lumine sit collocaturus, tum demum, cum opus eius <choice><sic>apparebit</sic><corr>apparuerit</corr></choice>, eruditi decernent. </ab>
+         <ab resp="#editor" xml:id="seg8">Bartensteinio tu fraterque tuus insignitam <pb n="3r"/> iniuriam facitis, cum de eius in vos amore dubitatis. Ille<del ana="#before">Vos</del> vos non solum mirifice diligit, sed et observat ac colit, immo in oculis fert. Quominus <add place="above">autem</add> saepius vobis litteras mittat, occupationes eius rei caussam <choice><sic>sustinet</sic><corr>sustinent</corr></choice>. </ab>
+         <ab resp="#editor" xml:id="seg9">Non solum de <anchor xml:id="n13"/>Arca Noe<anchor xml:id="n13e"/> Kircheriana, sed et de<anchor xml:id="n14"/> aliis bibliothecae caesareae libris superfluis arbitratu tuo statues et aequis conditionibus permutationem<anchor xml:id="n14e"/> mecum, si placet, facies. Vale, amicissime Bernarde, cum germano tuo Hieronymo meque, quod facis, dilige.</ab>
+         <closer>Vindobona ad diem XV. Februarii MDCCXVI.</closer>
+      </body>
    </text>
 </TEI>

@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="506" xml:id="pez-0506">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">506 Karl Meichelbeck an Bernhard Pez. 1716-02-12. Benediktbeuern.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Karl Meichelbeck an Bernhard Pez. 1716-02-12. Benediktbeuern.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">506</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -21,21 +33,33 @@
             <relatedItem type="otherEdition">
                <bibl>Siegmund, Meichelbecks Briefe 80/1–2 154–155.</bibl>
             </relatedItem>
+            <note type="remarks">
+               Der Brief ist im Diarium KMs nicht vermerkt.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">680r–681v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 680r–681v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -50,150 +74,137 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">497</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">540</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">486</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">493</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">498</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">540</idno>
-               </ref>
+               <ptr type="prev" target="letter:497"/>
+               <ptr type="next" target="letter:540"/>
+               <ptr type="mentions" target="letter:486"/>
+               <ptr type="mentions" target="letter:493"/>
+               <ptr type="mentions" target="letter:498"/>
+               <ptr type="mentionedIn" target="letter:540"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">KM hat gemäß seinem Versprechen <ref type="letter" target="letter:486">486</ref> nicht nur den Äbten <rs ref="index:d14380e28852">Benedikt Meyding</rs> von <rs ref="index:d14380e39711">Scheyern</rs>, <rs ref="index:d14380e18863">Ildephons Huber</rs> von <rs ref="index:d14380e45067">Weihenstephan</rs> und <rs ref="index:d14380e40573">Placidus Seiz</rs> von <rs ref="index:d14380e11731">Ettal</rs>, sondern auch <rs ref="index:d14380e31203">Aemilian Oetlinger</rs> von <rs ref="index:d10854e26457">Rott am Inn</rs> und <rs ref="index:d14380e39702">Kajetan Scheyerl</rs> von <rs ref="index:d14380e3167">Attel</rs> geschrieben und die <rs ref="index:d14380e33611">Enzykliken</rs> BPs (<ref type="letter" target="letter:493">493</ref>, <ref type="letter" target="letter:498">498</ref>) mit einem eigenen Rundschreiben begleitet. Zudem ist er selbst kürzlich in <rs ref="index:d14380e11731">Ettal</rs> gewesen, wo er Abt <rs ref="index:d14380e40573">Seiz</rs>, welcher der Gelehrsamkeit sehr zugetan ist, BPs Schreiben im Original vorgewiesen und von diesem mehrere Bücher erhalten hat: zwei lateinische Exemplare von <rs ref="index:d14380e3590">Ludwig Babenstubers</rs> „<rs ref="index:d14380e3605">Fundatrix Ettalensis</rs>“ sowie ein Exemplar der deutschen Übersetzung („<rs ref="index:d14380e3615">Stiffterin von Ettal</rs>“), weiters zwei Exemplare von <rs ref="index:d14380e3620">Babenstubers „Sacrae deliciae Mariani amoris“</rs> und ein <rs ref="index:d14380e39474">deutsches Büchlein</rs> des Subpriors <rs ref="index:d14380e39466">Engelbert Sartori</rs>. All dies will er BP bei Gelegenheit zukommen lassen, um vor diesem nicht allein mit seinen eigenen geringfügigen Schriften erscheinen zu müssen. Diese an BP zu senden, wurde KM jüngst in einem Schreiben von <rs ref="index:d14380e18904">Alphons Hueber</rs> nachdrücklich aufgefordert.</p>
+            <p corresp="#seg2">In <rs ref="index:d14380e11731">Ettal</rs> blühen zwar derzeit die Studien: Die dortige <rs ref="index:d14380e11758">Ritterakademie</rs> zählt über 50 Schüler, davon 32 Adelige. Nach einer kurzen Durchsicht der <rs ref="index:d14380e11745">Bibliothek</rs> hat KM jedoch nicht den Eindruck, dass das Kloster auch in früheren Zeiten so florierte, und bezweifelt deshalb, dass von dort viel Material für die „<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“ kommen wird. Bald wird man dieser allerdings <rs ref="index:d14380e3600">Ludwig Babenstubers Salzburger „Ethica supernaturalis“</rs> hinzufügen können, welche bereits im Druck sein soll.</p>
+            <p corresp="#seg3">Aus <rs ref="index:d14380e4706">Benediktbeuern</rs> kann KM einiges versprechen, aber nicht viel. Ihm liegen zwar <rs ref="index:d14380e4814">Kataloge</rs> der einst vorhandenen Bücher vor, diese selbst sind allerdings Kriegen und Bränden zum Opfer gefallen, oder aber Fürsten, falsche Mitbrüder oder die <rs ref="index:d14380e20126">Jesuiten</rs> haben sie sich angeeignet. Von dem, was verblieben ist, will KM für BP ein Verzeichnis erstellen, sobald es ihm seine Verpflichtungen gestatten.</p>
+            <p corresp="#seg4"><rs ref="index:d14380e19689">Der Index der verbotenen Bücher</rs> in der römischen <rs ref="index:d14380e19695">Ausgabe von 1704</rs>, <rs ref="index:d14380e19700">neu aufgelegt 1711</rs>, verzeichnet <rs ref="index:d14380e13787">Costantino Gaetanis „De religiosa sancti Ignatii institutione“</rs>, vermerkt dazu aber, dass <rs ref="index:d14380e13779">Gaetani</rs> das Werk als ihm unterschoben zurückgewiesen hat. KM unterbreitet dies dem Urteil BPs.</p>
+            <p corresp="#seg5">Für BPs Absicht, ihm den Kontakt zu <rs ref="index:d14380e26993">René Massuet</rs> zu vermitteln, bedankt sich KM herzlich.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e3285"><rs type="person" role="sender">KM</rs> hat gemäß seinem Versprechen <ref type="letter">486</ref> nicht nur den Äbten <rs key="index:d14380e28852">Benedikt Meyding</rs> von <rs key="index:d14380e39711">Scheyern</rs>, <rs key="index:d14380e18863">Ildephons Huber</rs> von <rs key="index:d14380e45067">Weihenstephan</rs> und <rs key="index:d14380e40573">Placidus Seiz</rs> von <rs key="index:d14380e11731">Ettal</rs>, sondern auch <rs key="index:d14380e31203">Aemilian Oetlinger</rs> von <rs key="index:d10854e26457">Rott am Inn</rs> und <rs key="index:d14380e39702">Kajetan Scheyerl</rs> von <rs key="index:d14380e3167">Attel</rs> geschrieben und die <rs key="index:d14380e33611">Enzykliken</rs> <rs type="person" role="sender">BPs</rs> (<ref type="letter">493</ref>, <ref type="letter">498</ref>) mit einem eigenen Rundschreiben begleitet. Zudem ist er selbst kürzlich in <rs key="index:d14380e11731">Ettal</rs> gewesen, wo er Abt <rs key="index:d14380e40573">Seiz</rs>, welcher der Gelehrsamkeit sehr zugetan ist, <rs type="person" role="sender">BPs</rs> Schreiben im Original vorgewiesen und von diesem mehrere Bücher erhalten hat: zwei lateinische Exemplare von <rs key="index:d14380e3590">Ludwig Babenstubers</rs> „<rs key="index:d14380e3605">Fundatrix Ettalensis</rs>“ sowie ein Exemplar der deutschen Übersetzung („<rs key="index:d14380e3615">Stiffterin von Ettal</rs>“), weiters zwei Exemplare von <rs key="index:d14380e3620">Babenstubers „Sacrae deliciae Mariani amoris“</rs> und ein <rs key="index:d14380e39474">deutsches Büchlein</rs> des Subpriors <rs key="index:d14380e39466">Engelbert Sartori</rs>. All dies will er <rs type="person" role="sender">BP</rs> bei Gelegenheit zukommen lassen, um vor diesem nicht allein mit seinen eigenen geringfügigen <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Schriften<?oxy_custom_end?> erscheinen zu müssen. Diese an <rs type="person" role="sender">BP</rs> zu senden, wurde <rs type="person" role="sender">KM</rs> jüngst in einem Schreiben von <rs key="index:d14380e18904">Alphons Hueber</rs> nachdrücklich aufgefordert.</seg><seg type="context" n="2" xml:id="d3e3290">In <rs key="index:d14380e11731">Ettal</rs> blühen zwar derzeit die Studien: Die dortige <rs key="index:d14380e11758">Ritterakademie</rs> zählt über 50 Schüler, davon 32 Adelige. Nach einer kurzen Durchsicht der <rs key="index:d14380e11745">Bibliothek</rs> hat <rs type="person" role="sender">KM</rs> jedoch nicht den Eindruck, dass das Kloster auch in früheren Zeiten so florierte, und bezweifelt deshalb, dass von dort viel Material für die „<rs key="index:d14380e33227">Bibliotheca Benedictina</rs>“ kommen wird. Bald wird man dieser allerdings <rs key="index:d14380e3600">Ludwig Babenstubers Salzburger „Ethica supernaturalis“</rs> hinzufügen können, welche bereits im Druck sein soll.</seg><seg type="context" n="3" xml:id="d3e3292">Aus <rs key="index:d14380e4706">Benediktbeuern</rs> kann <rs type="person" role="sender">KM</rs> einiges versprechen, aber nicht viel. Ihm liegen zwar <rs key="index:d14380e4814">Kataloge</rs> der einst vorhandenen Bücher vor, diese selbst sind allerdings Kriegen und Bränden zum Opfer gefallen, oder aber Fürsten, falsche Mitbrüder oder die <rs key="index:d14380e20126">Jesuiten</rs> haben sie sich angeeignet. Von dem, was verblieben ist, will <rs type="person" role="sender">KM</rs> für <rs type="person" role="sender">BP</rs> ein Verzeichnis erstellen, sobald es ihm seine Verpflichtungen gestatten.</seg><seg type="context" n="4" xml:id="d3e3294"><rs key="index:d14380e19689">Der Index der verbotenen Bücher</rs> in der römischen <rs key="index:d14380e19695">Ausgabe von 1704</rs>, <rs key="index:d14380e19700">neu aufgelegt 1711</rs>, verzeichnet <rs key="index:d14380e13787">Costantino Gaetanis „De religiosa sancti Ignatii institutione“</rs>, vermerkt dazu aber, dass <rs key="index:d14380e13779">Gaetani</rs> das Werk als ihm unterschoben zurückgewiesen hat. <rs type="person" role="sender">KM</rs> unterbreitet dies dem Urteil BPs.</seg><seg type="context" n="5" xml:id="d3e3296">Für <rs type="person" role="sender">BPs</rs> Absicht, ihm den Kontakt zu <rs key="index:d14380e26993">René Massuet</rs> zu vermitteln, bedankt sich <rs type="person" role="sender">KM</rs> herzlich.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">IV</hi>.</p>
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">124</hi>.</p>
-            <div type="remarks">
-               <p>Der Brief ist im Diarium KMs nicht vermerkt.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende religiosissime et clarissime domine pater Bernarde, patrone colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e3323">Steti promissis meis fideliter nec Schyrensi, Weihenstephanensi atque Ettallensi reverendissimis dominis abbatibus tantum, verum etiam Rottensi atque Attilensi scripsi atque <seg type="lemma" corresp="#d3e3353">encyclicam vestram nova encyclica comitatus</seg> sum. Faxint boni Superi, ut efficiam, quod optamus. Interim his ipsis diebus <seg type="lemma" corresp="#d3e3359">fui ipsemet</seg> in celebri illo monasterio Ettallensi et exhibito literarum vestrarum autographo ocyus a reverendissimo domino abbate, studiis nostris longe addictissimo, impetravi<seg type="lemma" corresp="#d3e3363"> Historiae Ettalensis</seg> Latina exemplaria duo, Germanicum unum, duo item exemplaria<seg type="lemma" corresp="#d3e3367"> Sacrarum deliciarum Mariani amoris</seg> <pb n="1v"/> patris Babenstuberi nec non alium quendam libellum patris <seg type="lemma" corresp="#d3e3371">Engelberti Sartorii</seg> subprioris Ettallensis in vernacula scriptum: quae omnia suo tempore, Deo dante, ad manus vestras transmittam, ne cogar comparere coram eruditissima paternitate vestra cum meris meis minutiis, quas ut cum eadem communicem, recentibus literis opportune importune <seg type="lemma" corresp="#d3e3375">urget Alphonsus</seg> ille noster. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e3327">Caeterum tametsi <seg type="lemma" corresp="#d3e3379">in dicto monasterio Ettallensi scientiarum studia hodie magnopere ferveant (gymnasium</seg> enim nobile habent, in quo numerant ultra 50 discipulos, et inter hos 32 illustres), attamen perlustrata obiter bibliotheca non apparet etiam superioribus temporibus aeque floruisse, ut merito dubitem, num multum subsidii sive <pb n="2r"/> incrementi Bibliothecae vestrae Benedictinae ex loco illo accedere possit. Auctarium tamen addere poterit <seg type="lemma" corresp="#d3e3385">Theologia moralis</seg> Salisburgensis, quae sub praelo iamiam sudare dicitur, patris Ludovici Ettallensis opus. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e3331">Ex nostris Benedictoburanis rebus promittere possum aliqua, sed plane non multa. Video enim equidem antiquos librorum olim nostrorum <seg type="lemma" corresp="#d3e3389">catalogos</seg>; verum ubi hodie libri ipsi? Marti, Vulcano, principibus, falsis fratribus et Jesuitis cessere<seg type="lemma" corresp="#d3e3395"> in praedam</seg>, iactura fere intolerabili. Interea tamen servata<note place="foot" xml:id="d3e3333">	Korrigiert aus <hi rend="italic">servatas</hi>.</note> est pars aliqua, quam diligenter<seg type="lemma" corresp="#d3e3399"> annotabo</seg>, cum per negotia (quibus vere sum implicatus) licuerit. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e3339">Caeterum <seg type="lemma" corresp="#d3e3404">Index librorum prohibitorum impressus <pb n="2v"/> Romae anno 1704 et rursus 1711 sic habet</seg>: De religiosa sancti Ignatii sive sancti Enneconis fundatoris Societatis Jesu per patres Benedictinos institutione deque libello Exercitiorum etc. Constantini abbatis Caietani vindicis Benedictini; N.B.<note place="foot" xml:id="d3e3343">	Nachträglich eingefügt.</note> quos ipse abbas Constantinus tanquam supposititios sive adulteratos non agnoscit. Visum est ista exscribere et iudicio vestro subicere. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e3346">Caeterum quod paternitas vestra me insinuare voluerit patri domino Renato, obligatissimum me profiteor et gratias impensissimas dico, maneoque post devotam mei commendationem</seg></p>
-            <p xml:space="preserve">Paternitatis vestrae admodum reverendae uti obstrictissimus, ita semper paratissimus famulus pater Carolus.</p>
-            <p xml:space="preserve">In monasterio Benedictoburano 12. Februarii 1716.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e3353">
-               <ref type="context">1</ref>
-               <label>encyclicam ... nova encyclica comitatus</label><p> Diese Aussage wird auf die
-                  LE 1 und LE 3 bezogen bei <rs type="bibl" key="bibl:19582">Siegmund, Meichelbecks
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>encyclicam ... nova encyclica comitatus</mentioned>
+            <p> Diese Aussage wird auf die
+                  LE 1 und LE 3 bezogen bei <rs type="bibl" ref="bibl:19582">Siegmund, Meichelbecks
                      Briefe</rs> 80/1–2 155. Gemeint sein dürften jedoch eher die Begleitschreiben
                   KMs zur Weitergabe der LE 3, von denen jenes an Aemilian Oetlinger von Rott am Inn
                   abschriftlich erhalten ist; es ist ediert bei Siegmund, Meichelbecks Briefe 80/1–2
                   153. Die in derselben Handschrift aus Rott am Inn abgeschriebene LE 3 (493) ist
                   mit 18. Januar 1716 datiert, was auf eine neuerliche Übermittlung von Exemplaren
-                  durch BP aufgrund der Bitte in 486 &lt;1&gt; hindeutet. Die Weiterleitung an die
+                  durch BP aufgrund der Bitte in 486 <ref target="#seg1">1</ref> hindeutet. Die Weiterleitung an die
                   Äbte von Rott und von Attel erfolgte laut dem Diarium KMs am 31. Januar 1716: BStB
-                  München, Meichelbeckiana 18b, 268v. </p></note>
-            <note xml:id="d3e3359">
-               <ref type="context">1</ref>
-               <label>fui ipsemet</label><p> Nach KMs Diarium reiste dieser am 4. Februar 1716 nach
+                  München, Meichelbeckiana 18b, 268v. </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>fui ipsemet</mentioned>
+            <p> Nach KMs Diarium reiste dieser am 4. Februar 1716 nach
                   Ettal und kehrte am 7. Februar nach Benediktbeuern zurück; er kommentiert den
                   Besuch mit den Worten „Ego etiam pro patre Pezio obtinui, quod volui atque
-                  optavi“: BStB München, Meichelbeckiana 18b, 269r; vgl. <rs type="bibl"
-                     key="bibl:19582">Siegmund, Meichelbecks Briefe</rs> 80/1–2 155. Welches oder
+                  optavi“: BStB München, Meichelbeckiana 18b, 269r; vgl. <rs type="bibl" ref="bibl:19582">Siegmund, Meichelbecks Briefe</rs> 80/1–2 155. Welches oder
                   welche der insgesamt wohl vier Schreiben, die KM bis zu diesem Zeitpunkt von BP
-                  erhalten hatte, Abt Seiz vorgezeigt wurden, ist nicht festzustellen.</p></note>
-            <note xml:id="d3e3363">
-               <ref type="context">1</ref>
-               <label> Historiae Ettalensis</label><p> Zu Ludwig Babenstuber und seinen Schriften
-                  vgl. <rs type="bibl" key="bibl:15058">Bauer, Thomistische Metaphysik</rs> 22f.,
-                  765f.; <rs type="bibl" key="bibl:16404">Gahbauer, Ettaler Benediktiner</rs> 13–35;
-                     <rs type="bibl" key="bibl:16544">Glückert, Babenstuber</rs>; <rs type="bibl"
-                     key="bibl:17590">Kolb, Präsidium</rs> 125, 131–133, 144; <rs type="bibl"
-                     key="bibl:18016">Lindner, Album Ettalense</rs> 266; <rs type="bibl"
-                     key="bibl:18022">Lindner, Babenstuber</rs>; <rs type="bibl" key="bibl:18514"
-                     >Muschard, Kirchenrecht</rs> 253–256; <rs type="bibl" key="bibl:19270">Sattler,
+                  erhalten hatte, Abt Seiz vorgezeigt wurden, ist nicht festzustellen.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned> Historiae Ettalensis</mentioned>
+            <p> Zu Ludwig Babenstuber und seinen Schriften
+                  vgl. <rs type="bibl" ref="bibl:15058">Bauer, Thomistische Metaphysik</rs> 22f.,
+                  765f.; <rs type="bibl" ref="bibl:16404">Gahbauer, Ettaler Benediktiner</rs> 13–35;
+                     <rs type="bibl" ref="bibl:16544">Glückert, Babenstuber</rs>; <rs type="bibl" ref="bibl:17590">Kolb, Präsidium</rs> 125, 131–133, 144; <rs type="bibl" ref="bibl:18016">Lindner, Album Ettalense</rs> 266; <rs type="bibl" ref="bibl:18022">Lindner, Babenstuber</rs>; <rs type="bibl" ref="bibl:18514">Muschard, Kirchenrecht</rs> 253–256; <rs type="bibl" ref="bibl:19270">Sattler,
                      Collectaneen-Blätter</rs> 248–252. Speziell zur „Fundatrix Ettalensis“ vgl.
-                     <ref type="letter">464</ref> &lt;8&gt;. Von der lateinischen Ausgabe, nicht
+                     <ref type="letter" target="letter:464">464</ref> <ref target="letter:464#seg8">8</ref>. Von der lateinischen Ausgabe, nicht
                   aber von der deutschen, ist in Melk ein Exemplar vorhanden: StiB Melk
-               8810.</p></note>
-            <note xml:id="d3e3367">
-               <ref type="context">1</ref>
-               <label> Sacrarum deliciarum Mariani amoris</label><p>Das erstmals 1700 zu Salzburg erschienene Werk war zuletzt 1712 zu Augsburg neu aufgelegt worden. In Melk ist heute kein Exemplar festzustellen. </p></note>
-            <note xml:id="d3e3371">
-               <ref type="context">1</ref>
-               <label>Engelberti Sartorii</label><p>
-                  <rs type="bibl" key="bibl:16404">Gahbauer, Ettaler Benediktiner</rs> 145f.; <rs
-                     type="bibl" key="bibl:18016">Lindner, Album Ettalense</rs> 265. Er war ein
-                  leiblicher Bruder des Benediktbeurer Konventualen Maurus Sartori: vgl. <ref
-                     type="letter">644</ref> &lt;3&gt;. Zu einem gedruckten Werk von Sartori ist
-                  nichts zu ermitteln. </p></note>
-            <note xml:id="d3e3375">
-               <ref type="context">1</ref>
-               <label>urget Alphonsus</label><p> KM vermerkte den Erhalt dieses Briefes in seinem Diarium zum 7. Februar 1716: BStB München, Meichelbeckiana 18b, 269r.</p></note>
-            <note xml:id="d3e3379">
-               <ref type="context">2</ref>
-               <label>in dicto monasterio ... gymnasium</label><p> Zu dieser Einrichtung vgl. <rs
-                     type="bibl" key="bibl:17394">Kainz, Ritterakademie</rs>. </p></note>
-            <note xml:id="d3e3385">
-               <ref type="context">2</ref>
-               <label>Theologia moralis</label><p> Die „Ethica supernaturalis“ Babenstubers erschien
+               8810.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
+            <mentioned> Sacrarum deliciarum Mariani amoris</mentioned>
+            <p>Das erstmals 1700 zu Salzburg erschienene Werk war zuletzt 1712 zu Augsburg neu aufgelegt worden. In Melk ist heute kein Exemplar festzustellen. </p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg1">
+            <mentioned>Engelberti Sartorii</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:16404">Gahbauer, Ettaler Benediktiner</rs> 145f.; <rs type="bibl" ref="bibl:18016">Lindner, Album Ettalense</rs> 265. Er war ein
+                  leiblicher Bruder des Benediktbeurer Konventualen Maurus Sartori: vgl. <ref type="letter" target="letter:644">644</ref> <ref target="letter:644#seg3">3</ref>. Zu einem gedruckten Werk von Sartori ist
+                  nichts zu ermitteln. </p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg1">
+            <mentioned>urget Alphonsus</mentioned>
+            <p> KM vermerkte den Erhalt dieses Briefes in seinem Diarium zum 7. Februar 1716: BStB München, Meichelbeckiana 18b, 269r.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg2">
+            <mentioned>in dicto monasterio ... gymnasium</mentioned>
+            <p> Zu dieser Einrichtung vgl. <rs type="bibl" ref="bibl:17394">Kainz, Ritterakademie</rs>. </p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg2">
+            <mentioned>Theologia moralis</mentioned>
+            <p> Die „Ethica supernaturalis“ Babenstubers erschien
                   erst 1718 zu Augsburg. Ihr Autor hatte in Salzburg von 1695 bis 1702
                   Moraltheologie, danach bis 1716 andere theologische Fächer unterrichtet; zum
-                  Zeitpunkt dieses Briefes wirkte er also noch dort: <rs type="bibl"
-                     key="bibl:17590">Kolb, Präsidium</rs> 131–133.</p></note>
-            <note xml:id="d3e3389">
-               <ref type="context">3</ref>
-               <label>catalogos</label><p> Zu mittelalterlichen Bibliothekskatalogen aus
-                  Benediktbeuern vgl. <rs type="bibl" key="bibl:19204">Ruf, Bibliothekskataloge
-                     3/1</rs> 63–78.</p></note>
-            <note xml:id="d3e3395">
-               <ref type="context">3</ref>
-               <label> in praedam</label><p> Zu den Fährnissen der Benediktbeurer
+                  Zeitpunkt dieses Briefes wirkte er also noch dort: <rs type="bibl" ref="bibl:17590">Kolb, Präsidium</rs> 131–133.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg3">
+            <mentioned>catalogos</mentioned>
+            <p> Zu mittelalterlichen Bibliothekskatalogen aus
+                  Benediktbeuern vgl. <rs type="bibl" ref="bibl:19204">Ruf, Bibliothekskataloge
+                     3/1</rs> 63–78.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg3">
+            <mentioned> in praedam</mentioned>
+            <p> Zu den Fährnissen der Benediktbeurer
                   Bibliotheksgeschichte zählten vor allem ein schwerer Brand im Jahr 1490, Verluste
                   bei umfangreichen Entlehnungen an Johannes Aventin, Kaspar Brusch und an die
                   Hofhistoriographen Maximilians I. von Bayern, sowie Flüchtungen im Dreißigjährigen
-                  Krieg: <rs type="bibl" key="bibl:16970">Hemmerle, Benediktbeuern</rs> 61, 68, 70,
+                  Krieg: <rs type="bibl" ref="bibl:16970">Hemmerle, Benediktbeuern</rs> 61, 68, 70,
                   486, 515–518. Akten aus dem Schriftverkehr zu den genannten Entlehnungen zeigen
                   noch die von KM vergebene Benediktbeurer Archivsignatur „1.C Landsfirstliche
                   befelch, biecher unnd documenta nacher München zuschickhen“: HStA München, KL
                   Fasz. 111/43, 36r–59v. Die Vorgänge werden ihm zur Zeit dieses Briefes mithin wohl
                   durchaus bekannt gewesen sein, vermutlich auf diese spielt er mit der Erwähnung
-                  von „principes“ an. Dazu vgl. <rs type="bibl" key="bibl:17466">Kellner–Spethmann,
-                     Historische Kataloge</rs> 163; <rs type="bibl" key="bibl:19132">Rockinger,
-                     Pflege der Geschichte</rs> 43, 51–54; <rs type="bibl" key="bibl:19204">Ruf,
-                     Bibliothekskataloge 3/1</rs> 68f.</p></note>
-            <note xml:id="d3e3399">
-               <ref type="context">3</ref>
-               <label> annotabo</label><p>Ein solches Verzeichnis erhielt BP erst erheblich später
-                  von KMs Mitbruder Gregor Zödl: vgl. <ref type="letter">876</ref>. </p></note>
-            <note xml:id="d3e3404">
-               <ref type="context">4</ref>
-               <label>Index ... sic habet</label><p> Index librorum prohibitorum (Rom 1711) 427. Die
+                  von „principes“ an. Dazu vgl. <rs type="bibl" ref="bibl:17466">Kellner–Spethmann,
+                     Historische Kataloge</rs> 163; <rs type="bibl" ref="bibl:19132">Rockinger,
+                     Pflege der Geschichte</rs> 43, 51–54; <rs type="bibl" ref="bibl:19204">Ruf,
+                     Bibliothekskataloge 3/1</rs> 68f.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg3">
+            <mentioned> annotabo</mentioned>
+            <p>Ein solches Verzeichnis erhielt BP erst erheblich später
+                  von KMs Mitbruder Gregor Zödl: vgl. <ref type="letter" target="letter:876">876</ref>. </p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg4">
+            <mentioned>Index ... sic habet</mentioned>
+            <p> Index librorum prohibitorum (Rom 1711) 427. Die
                   Wiedergabe durch KM ist abgesehen von der durch „etc.“ angezeigten Kürzung des
                   Titels exakt. Zur Indizierung dieser Schrift vgl. Martínez de Bujanda–Richter,
-                  Index 11 367; <rs type="bibl" key="bibl:19080">Reusch, Index</rs> 2 294f.; sowie
-                     <ref type="letter">464 </ref>&lt;5&gt;, <ref type="letter">474</ref>
-                  &lt;5&gt;.</p></note>
-         </div>
-      </back>
+                  Index 11 367; <rs type="bibl" ref="bibl:19080">Reusch, Index</rs> 2 294f.; sowie
+                     <ref type="letter" target="letter:464">464 </ref><ref target="letter:464 #seg5">5</ref>, <ref type="letter" target="letter:474">474</ref>
+                  <ref target="letter:474#seg5">5</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>IV</orig>.</note>
+         <note anchored="false">Ordnungsvermerk: <orig>124</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende religiosissime et clarissime domine pater Bernarde, patrone colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Steti promissis meis fideliter nec Schyrensi, Weihenstephanensi atque Ettallensi reverendissimis dominis abbatibus tantum, verum etiam Rottensi atque Attilensi scripsi atque <anchor xml:id="n1"/>encyclicam vestram nova encyclica comitatus<anchor xml:id="n1e"/> sum. Faxint boni Superi, ut efficiam, quod optamus. Interim his ipsis diebus <anchor xml:id="n2"/>fui ipsemet<anchor xml:id="n2e"/> in celebri illo monasterio Ettallensi et exhibito literarum vestrarum autographo ocyus a reverendissimo domino abbate, studiis nostris longe addictissimo, impetravi<anchor xml:id="n3"/> Historiae Ettalensis<anchor xml:id="n3e"/> Latina exemplaria duo, Germanicum unum, duo item exemplaria<anchor xml:id="n4"/> Sacrarum deliciarum Mariani amoris<anchor xml:id="n4e"/> <pb n="1v"/> patris Babenstuberi nec non alium quendam libellum patris <anchor xml:id="n5"/>Engelberti Sartorii<anchor xml:id="n5e"/> subprioris Ettallensis in vernacula scriptum: quae omnia suo tempore, Deo dante, ad manus vestras transmittam, ne cogar comparere coram eruditissima paternitate vestra cum meris meis minutiis, quas ut cum eadem communicem, recentibus literis opportune importune <anchor xml:id="n6"/>urget Alphonsus<anchor xml:id="n6e"/> ille noster. </ab>
+         <ab resp="#editor" xml:id="seg2">Caeterum tametsi <anchor xml:id="n7"/>in dicto monasterio Ettallensi scientiarum studia hodie magnopere ferveant (gymnasium<anchor xml:id="n7e"/> enim nobile habent, in quo numerant ultra 50 discipulos, et inter hos 32 illustres), attamen perlustrata obiter bibliotheca non apparet etiam superioribus temporibus aeque floruisse, ut merito dubitem, num multum subsidii sive <pb n="2r"/> incrementi Bibliothecae vestrae Benedictinae ex loco illo accedere possit. Auctarium tamen addere poterit <anchor xml:id="n8"/>Theologia moralis<anchor xml:id="n8e"/> Salisburgensis, quae sub praelo iamiam sudare dicitur, patris Ludovici Ettallensis opus. </ab>
+         <ab resp="#editor" xml:id="seg3">Ex nostris Benedictoburanis rebus promittere possum aliqua, sed plane non multa. Video enim equidem antiquos librorum olim nostrorum <anchor xml:id="n9"/>catalogos<anchor xml:id="n9e"/>; verum ubi hodie libri ipsi? Marti, Vulcano, principibus, falsis fratribus et Jesuitis cessere<anchor xml:id="n10"/> in praedam<anchor xml:id="n10e"/>, iactura fere intolerabili. Interea tamen <choice><sic>servatas</sic><corr>servata</corr></choice> est pars aliqua, quam diligenter<anchor xml:id="n11"/> annotabo<anchor xml:id="n11e"/>, cum per negotia (quibus vere sum implicatus) licuerit. </ab>
+         <ab resp="#editor" xml:id="seg4">Caeterum <anchor xml:id="n12"/>Index librorum prohibitorum impressus <pb n="2v"/> Romae anno 1704 et rursus 1711 sic habet<anchor xml:id="n12e"/>: De religiosa sancti Ignatii sive sancti Enneconis fundatoris Societatis Jesu per patres Benedictinos institutione deque libello Exercitiorum etc. Constantini abbatis Caietani vindicis Benedictini; N.B.<note type="annotation" xml:id="d3e3343">Nachträglich eingefügt.</note> quos ipse abbas Constantinus tanquam supposititios sive adulteratos non agnoscit. Visum est ista exscribere et iudicio vestro subicere. </ab>
+         <ab resp="#editor" xml:id="seg5">Caeterum quod paternitas vestra me insinuare voluerit patri domino Renato, obligatissimum me profiteor et gratias impensissimas dico, maneoque post devotam mei commendationem</ab>
+         <closer>Paternitatis vestrae admodum reverendae uti obstrictissimus, ita semper paratissimus famulus pater Carolus.</closer>
+         <closer>In monasterio Benedictoburano 12. Februarii 1716.</closer>
+      </body>
    </text>
 </TEI>

@@ -1,29 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="290" xml:id="pez-0290">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">[290] Adalbert Defuns an Bernhard Pez. &lt; 1712-12-18.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Adalbert Defuns an Bernhard Pez. &lt; 1712-12-18.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">290</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
+            <note type="remarks">
+               Nach der Aussage
+                  ADes
+                  in 291, dass er auf die im März empfangene Enzyklik 233 „statim“ geantwortet hatte, wurde dieser Brief im
+                  Frühjahr 1712 verschickt; eine genaue Datumsansetzung ist jedoch nicht
+                  möglich.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <p>No direct source, inferred letter.</p>
+            <listWit>
+               <witness ana="cmif:noTextBase"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -37,42 +66,18 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">233</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">291</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">291</idno>
-               </ref>
+               <ptr type="prev" target="letter:233"/>
+               <ptr type="next" target="letter:291"/>
+               <ptr type="mentionedIn" target="letter:291"/>
             </correspContext>
          </correspDesc>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
    <text>
-      <front>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Nach der Aussage
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>ADe<?oxy_custom_end?>s
-                  in <ref type="letter">291</ref>, dass er auf die im März empfangene Enzyklik <ref
-                     type="letter">233</ref> „statim“ geantwortet hatte, wurde dieser Brief im
-                  Frühjahr 1712 verschickt; eine genaue Datumsansetzung ist jedoch nicht
-                  möglich.</p>
-            </div>
-         </div>
-      </front>
       <body>
          <ab>
             <gap reason="inferred letter"/>
          </ab>
       </body>
-      <back/>
    </text>
 </TEI>

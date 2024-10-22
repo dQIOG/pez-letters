@@ -1,38 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="720" xml:id="pez-0720">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">720 Theodor Thier an Bernhard Pez. 1717-01-12. Werden.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Theodor Thier an Bernhard Pez. 1717-01-12. Werden.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">720</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">420r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 420r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,48 +68,55 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">667</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">667</idno>
-               </ref>
+               <ptr type="prev" target="letter:667"/>
+               <ptr type="mentions" target="letter:667"/>
             </correspContext>
          </correspDesc>
+         <textClass><keywords>
+            <term ref="index:d14380e3666">Baker, Augustine</term>
+            <term ref="index:d14380e3974">Barrali, Vincenzo ; Chronologia sanctorum et aliorum virorum illustrium ac abbatum
+         sacrae insulae Lerinensis. Lyon 1613</term>
+            <term ref="index:d14380e3988">Barrali, Vincenzo ; Chronologia sanctorum et aliorum virorum illustrium ac abbatum
+         sacrae insulae Lerinensis. Lyon 1613 ; Auszüge von Johann Buchels. Ms</term>
+            <term ref="index:d14380e6918">Buchels, Johann</term>
+            <term ref="index:d14380e11399">England, Engländer , englisch</term>
+            <term ref="index:d14380e23675">Lamspringe</term>
+            <term ref="index:d14380e25953">Maihew, Edward ; Congregationis Anglicanae ordinis sanctissimi patriarchae Benedicti
+         trophaea tribus tabulis comprehensa, in quibus plurima, non tantum quae ad res Angliae, sed
+         etiam quae ad historias Germaniae, Hyberniae, Scotiae et Belgii spectant, accurate
+         traduntur et discutiuntur, nonnullae etiam sanctorum vitae nondum in lucem editae habentur.
+         Reims 1625</term>
+            <term ref="index:d14380e34970">Pfalz</term>
+            <term ref="index:d14380e42509">Tempest, Augustine</term></keywords></textClass>
+         <abstract>
+            <p corresp="#seg1">TT hat BP im Oktober 1716 geschrieben <ref type="letter" target="letter:667">667</ref> und ein Blatt mit <rs ref="index:d14380e3988">Auszügen</rs> des <rs ref="index:d14380e34970">kurfürstlich pfälzischen</rs> Bibliothekars (<rs ref="index:d14380e6918">Johann Buchels</rs>) aus <rs ref="index:d14380e3974">Vincenzo Barralis „Chronologia“</rs> beigelegt. Er fände es bedauerlich, wenn die Sendung verloren sein sollte, was er befürchtet, da er keine Antwort erhalten hat.</p>
+            <p corresp="#seg2">Nun legt TT einen Werkskatalog des <rs ref="index:d14380e11399">englischen</rs> Benediktiners <rs ref="index:d14380e3666">Augustine Baker</rs> bei.</p>
+            <p corresp="#seg3">Der Abt von <rs ref="index:d14380e23675">Lamspringe</rs> <rs ref="index:d14380e42509">Augustine Tempest</rs> hat nach mehreren Orten wegen <rs ref="index:d14380e25953">Edward Maihews „Trophaea“</rs> geschrieben; mit welchem Ergebnis, wird sich weisen.</p>
+            <p corresp="#seg4">TT schließt mit Neujahrswünschen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>accludo ... folium</mentioned>
+            <p>Die Beilage scheint in Melk nicht erhalten zu sein.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg3">
+            <mentioned>Dominus ... Lambspringensis</mentioned>
+            <p> Zu Augustine Tempest vgl. <rs type="bibl" ref="bibl:14866">Allanson, Biography</rs> 155f.; <rs type="bibl" ref="bibl:15126">Bellenger, Abbots</rs> 27; <rs type="bibl" ref="bibl:19546">Scott, Gothic Rage Undone</rs> 30f.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
    <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e26317"><rs type="person" key="">TT</rs> hat <rs type="person" role="sender">BP</rs> im Oktober 1716 geschrieben <ref type="letter">667</ref> und ein Blatt mit Auszügen des kurfürstlich pfälzischen Bibliothekars (Johann Buchels) aus Vincenzo Barralis „Chronologia“ beigelegt. Er fände es bedauerlich, wenn die Sendung verloren sein sollte, was er befürchtet, da er keine Antwort erhalten hat.</seg><seg type="context" n="2" xml:id="d3e26322">Nun legt <rs type="person" key="">TT</rs> einen Werkskatalog des englischen Benediktiners Augustine Baker bei.</seg><seg type="context" n="3" xml:id="d3e26324">Der Abt von Lamspringe Augustine Tempest hat nach mehreren Orten wegen Edward Maihews „Trophaea“ geschrieben; mit welchem Ergebnis, wird sich weisen.</seg><seg type="context" n="4" xml:id="d3e26326"><rs type="person" key="">TT</rs> schließt mit Neujahrswünschen.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
       <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende doctissimeque pater et domine.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e26339">Sub initium Octobris elapsi anni dedi literas ad admodum reverendam dominationem vestram, quibus incluseram folium, in quo varii authores ex Vincentio Barralio manu bibliothecarii electoris Palatini designati erant. Dolerem certe, si intercidissent literae istae; quod metuo, eo quod nihil ad eas responsi acceperim. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e26341">Modo <seg type="lemma" corresp="#d3e26364">accludo folium</seg> concernens potissimum opera Augustini Baker natione Angli. Si quid utilitatis ex eo hauriri poterit, gratum mihi erit, quod ex meo adhuc aliquid contulerim. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e26343"><seg type="lemma" corresp="#d3e26370">Dominus praelatus Lambspringensis</seg><note place="foot" xml:id="d3e26345">	Korrigiert aus <hi rend="italic">Lampsbr</hi>.</note> ipse scripsit ad varia loca pro comparando authore Maiheu; an fructus corresponsurus sit impenso labori, tempus dabit. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e26351">Apprecor admodum reverendae dominationi vestrae faustissimum, quem nuper novum coepimus, annum et in eo et pluribus subsequentibus constantem inter sanctos labores<note place="foot" xml:id="d3e26353">	Danach durchgestrichen <hi rend="italic">cons</hi>.</note> sanitatem, qui sum</seg></p>
-            <p xml:space="preserve">Admodum reverendae doctissimaeque dominationis vestrae servus obsequiosissimus frater Theodorus Thier prior.</p>
-            <p xml:space="preserve">Werdenae die 12. Januarii 1717.</p>
-         </div>
+         <opener><pb n="1r"/> Admodum reverende doctissimeque pater et domine.</opener>
+         <ab resp="#editor" xml:id="seg1">Sub initium Octobris elapsi anni dedi literas ad admodum reverendam dominationem vestram, quibus incluseram folium, in quo varii authores ex Vincentio Barralio manu bibliothecarii electoris Palatini designati erant. Dolerem certe, si intercidissent literae istae; quod metuo, eo quod nihil ad eas responsi acceperim. </ab>
+         <ab resp="#editor" xml:id="seg2">Modo <anchor xml:id="n1"/>accludo folium<anchor xml:id="n1e"/> concernens potissimum opera Augustini Baker natione Angli. Si quid utilitatis ex eo hauriri poterit, gratum mihi erit, quod ex meo adhuc aliquid contulerim. </ab>
+         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n2"/>Dominus praelatus <choice><sic>Lampsbr</sic><corr>Lambspringensis</corr></choice><anchor xml:id="n2e"/> ipse scripsit ad varia loca pro comparando authore Maiheu; an fructus corresponsurus sit impenso labori, tempus dabit. </ab>
+         <ab resp="#editor" xml:id="seg4">Apprecor admodum reverendae dominationi vestrae faustissimum, quem nuper novum coepimus, annum et in eo et pluribus subsequentibus constantem inter sanctos labores<del ana="#after">cons</del> sanitatem, qui sum</ab>
+         <closer>Admodum reverendae doctissimaeque dominationis vestrae servus obsequiosissimus frater Theodorus Thier prior.</closer>
+         <closer>Werdenae die 12. Januarii 1717.</closer>
       </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e26364">
-               <ref type="context">2</ref>
-               <label>accludo ... folium</label><p>Die Beilage scheint in Melk nicht erhalten zu sein.</p></note>
-            <note xml:id="d3e26370">
-               <ref type="context">3</ref>
-               <label>Dominus ... Lambspringensis</label><p> Zu Augustine Tempest vgl. <rs
-                     type="bibl" key="bibl:14866">Allanson, Biography</rs> 155f.; <rs type="bibl"
-                     key="bibl:15126">Bellenger, Abbots</rs> 27; <rs type="bibl" key="bibl:19546"
-                     >Scott, Gothic Rage Undone</rs> 30f.</p></note>
-         </div>
-      </back>
    </text>
 </TEI>

@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="514" xml:id="pez-0514">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">514 Bernhard Pez an NN (St.-Germain-des-Prés?). LE 3. 1716-02-21. Melk.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Bernhard Pez an NN (St.-Germain-des-Prés?). LE 3. 1716-02-21. Melk.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">514</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -25,11 +36,33 @@
                   <title>Litterae encyclicae 3</title>
                </bibl>
             </relatedItem>
+            <note type="remarks">
+               Die Abschrift ist am Anfang unvollständig, der Text setzt – gemessen an jenem der vollständigen Überlieferungen – im letzten Satz von &lt;4&gt; ein. Der vorhandene Text ist nahezu wortgleich mit 477, 493 und 570; sinnstörende Abschreibfehler werden mit <orig>[</orig>sic<orig>]</orig> gekennzeichnet, sonst aber sind die Abweichungen zu den parallelen Überlieferungen nicht ausgewiesen. Als Kommentar ist jener zu 477 heranzuziehen; weiters vgl. Einleitung, Abschnitt I.3.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <p>Original verloren. Abschrift: BN, FF 12804, 214r–215v.</p>
+            <listWit>
+               <witness ana="cmif:manuscript"/>
+               <witness ana="cmif:copy">
+                  <msDesc>
+                     <msIdentifier>
+                        <repository>BN</repository>
+                        <idno>FF 12804, 214r–215v.</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -44,37 +77,27 @@
                <orgName type="monastery">St.-Germain-des-Prés?</orgName>
             </correspAction>
             <correspContext>
-               <ref type="sentWith">
-                  <idno type="pezEd">526645</idno>
-               </ref>
+               <ptr type="sentWith" target="letter:526645"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Viele Quellen liegen auch in den Archiven verborgen – zum großen Schaden der Gelehrtenwelt.</p>
+            <p corresp="#seg2">BP bittet neuerlich, sein Anliegen an Mitbrüder wie an Gelehrte aller Orden und Stände zu verbreiten. Im Einzelnen ersucht er um zwei Dinge: Zum einen soll in jedem Kloster der Abt oder Prior einen oder mehrere Konventualen dazu bestimmen, die Bibliothek und das Archiv zu durchforsten und BP die gewünschten Informationen zu den Schriftstellern aus dem eigenen Konvent mitzuteilen. Zum anderen bittet BP um die Erstellung von Katalogen sämtlicher Werke von Benediktinern, die in der Bibliothek oder in den Zellen der Mönche vorhanden sind. Dabei sollte man die Handschriften genau durchsehen, da oft auf den Buchrücken nur falsche oder unvollständige Angaben zu finden sind. Was die paläographischen Schwierigkeiten betrifft, so baut BP darauf, dass in jedem Kloster zumindest ein versierter Mann zu finden sein wird oder zumindest aus der Umgebung herangezogen werden kann. Auch mahnt BP die weniger erfahrenen Bearbeiter, Autorennamen nicht aus Schreibervermerken herzuleiten. Werden diese Hinweise beachtet, dann wird BP aus den Einsendungen seine „<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“ so gestalten können, wie die Gelehrten sie erwarten.</p>
+            <p corresp="#seg3">Es wird Leute geben, die BP selbst die Durchforstung auswärtiger Bestände nahelegen. Wer ihn kennt, weiß, dass er dies auch bereits in etlichen Klöstern getan hat. Da BP jedoch nicht überallhin reisen kann, ist er auf fremde Hilfe angewiesen, für die er sich in seinem Werk in gebührender Weise erkenntlich zeigen will.</p>
+            <p corresp="#seg4">Die Materialien sollen an BP entweder direkt nach <rs ref="index:d14380e28088">Melk</rs> oder in den <rs ref="index:d10854e33557">Melkerhof zu Wien</rs> eingesendet werden. BP schließt mit einem Appell an die Leidenschaft seines Adressaten für die <rs ref="index:d14380e4919">benediktinische</rs> Gelehrsamkeit, die dem Orden zu so großer Ehre gereicht, und wünscht ihm Gottes Segen.</p>
+            <p corresp="#seg5">In einem Postskriptum bittet BP um Weitergabe dieses Schreibens an die umliegenden Klöster sowie an andere Gelehrte, besonders Bibliotheksvorsteher.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
    <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="4" xml:id="d3e4243">Viele Quellen liegen auch in den Archiven verborgen – zum großen Schaden der Gelehrtenwelt.</seg><seg type="context" n="5" xml:id="d3e4245"><rs type="person" role="sender">BP</rs> bittet neuerlich, sein Anliegen an Mitbrüder wie an Gelehrte aller Orden und Stände zu verbreiten. Im Einzelnen ersucht er um zwei Dinge: Zum einen soll in jedem Kloster der Abt oder Prior einen oder mehrere Konventualen dazu bestimmen, die Bibliothek und das Archiv zu durchforsten und <rs type="person" role="sender">BP</rs> die gewünschten Informationen zu den Schriftstellern aus dem eigenen Konvent mitzuteilen. Zum anderen bittet <rs type="person" role="sender">BP</rs> um die Erstellung von Katalogen sämtlicher Werke von Benediktinern, die in der Bibliothek oder in den Zellen der Mönche vorhanden sind. Dabei sollte man die Handschriften genau durchsehen, da oft auf den Buchrücken nur falsche oder unvollständige Angaben zu finden sind. Was die paläographischen Schwierigkeiten betrifft, so baut <rs type="person" role="sender">BP</rs> darauf, dass in jedem Kloster zumindest ein versierter Mann zu finden sein wird oder zumindest aus der Umgebung herangezogen werden kann. Auch mahnt <rs type="person" role="sender">BP</rs> die weniger erfahrenen Bearbeiter, Autorennamen nicht aus Schreibervermerken herzuleiten. Werden diese Hinweise beachtet, dann wird <rs type="person" role="sender">BP</rs> aus den Einsendungen seine „<rs key="index:d14380e33227">Bibliotheca Benedictina</rs>“ so gestalten können, wie die Gelehrten sie erwarten.</seg><seg type="context" n="6" xml:id="d3e4247">Es wird Leute geben, die <rs type="person" role="sender">BP</rs> selbst die Durchforstung auswärtiger Bestände nahelegen. Wer ihn kennt, weiß, dass er dies auch bereits in etlichen Klöstern getan hat. Da <rs type="person" role="sender">BP</rs> jedoch nicht überallhin reisen kann, ist er auf fremde Hilfe angewiesen, für die er sich in seinem Werk in gebührender Weise erkenntlich zeigen will.</seg><seg type="context" n="7" xml:id="d3e4249">Die Materialien sollen an <rs type="person" role="sender">BP</rs> entweder direkt nach <rs key="index:d14380e28088">Melk</rs> oder in den <rs key="index:d10854e33557">Melkerhof zu Wien</rs> eingesendet werden. <rs type="person" role="sender">BP</rs> schließt mit einem Appell an die Leidenschaft seines Adressaten für die <rs key="index:d14380e4919">benediktinische</rs> Gelehrsamkeit, die dem Orden zu so großer Ehre gereicht, und wünscht ihm Gottes Segen.</seg><seg type="context" n="8" xml:id="d3e4251">In einem Postskriptum bittet <rs type="person" role="sender">BP</rs> um Weitergabe dieses Schreibens an die umliegenden Klöster sowie an andere Gelehrte, besonders Bibliotheksvorsteher.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Die Abschrift ist am Anfang unvollständig, der Text setzt – gemessen an jenem der vollständigen Überlieferungen – im letzten Satz von &lt;4&gt; ein. Der vorhandene Text ist nahezu wortgleich mit 477, 493 und 570; sinnstörende Abschreibfehler werden mit <hi rend="italic">[</hi>sic<hi rend="italic">]</hi> gekennzeichnet, sonst aber sind die Abweichungen zu den parallelen Überlieferungen nicht ausgewiesen. Als Kommentar ist jener zu 477 heranzuziehen; weiters vgl. Einleitung, Abschnitt I.3.</p>
-            </div>
-         </div>
-      </front>
       <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> <seg type="context" n="4" xml:space="preserve" xml:id="d3e4270">[...] archivis plerumque delitescunt non sine gravissimo rei literariae, praesertim historiae ecclesiasticae, detrimento. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e4272">Ecce, admodum reverende ac clarissime domine, haec fere ratio et facies est Bibliothecae nostrae Benedictinae, ad quam splendidius adornandam si opem ferre tuoque exemplo reliquis tuis sodalibus aliisque cuiuscunque ordinis aut status eruditis viris hortamento esse volueris, erit profecto, cur tibi amplissimas gratias non ego modo, sed universus ordo, imo totus eruditus orbis aliquando agat et referat. Nec modus mihi gratificandi admodum difficilis erit, si ad subiuncta praecipua precum mearum capita nonnihil attendere dignaberis. Primum, quod demissime [<hi rend="italic">sic</hi>] rogem, est, ut reverendissimi domini abbates vel priores in suis monasteriis unum et item alterum ex doctissimis dominis capitularibus seligant, qui domesticam bibliothecam et archiva diligenter perlustrent indeque nomina eorum concapitularium, qui aliquid literis commendarunt aut typis commiserunt, item titulos operum, aut, si tituli allegorici perplexioresque sint, etiam eorum argumenta, vitam scriptoris et caetera, quae supra in conspectu exposui, eruant et mihi transmittant. Alterum est, ut in singulis monasteriis conficiantur accurati catalogi omnium operum tum typis vulgatorum tum manuscriptorum a Benedictinis auctoribus nigris, cuiuscunque monasterii fuerint, conditorum, quae extant et habentur in domestica bibliotheca et privatis religiosorum cubiculis, non omisso anno, forma editionis aut nomine typographi. Res haec nec gravior paulo nec admodum multarum horarum erit, si plures domini capitulares iunctis operis bibliothecae perlustrationem in sese suscipere non dedignabuntur. Nonnihil maioris operae fuerit evolutio et perlustratio (nam tituli et rubricae a tergo exstantes plerumque falluntur nec omnia contenta indicant) codicum manuscriptorum, qui <pb n="1v"/> scripturae difficultate negotium facessunt. Sed quum ii vulgo non adeo copiosi sint, nec ullum fere monasterium esse putem, in quo non unus aliquis reperiatur, qui veteres codices, saltem quod satis sit, legere noverit, aut alium eruditum hacque in re versatum virum ad manum habere possit, votis meis facillime poterit satisfieri. Id minus expertos hic paucis moneo, ne mox pro auctore operis habeant illum, qui ad eius finem<note place="foot" xml:id="d3e4279">	Danach durchgestrichen <hi rend="italic">ads</hi>.</note> suum nomen adscripsit hoc vel simili modo: explicit per manum Rudberti monachi, finivi in Dei nomine, hunc librum scripsit frater Johannes huius loci monachus etc. Nisi enim aliud ad haec argumentum accesserit, ea verba nequaquam auctorem et compilatorem, sed scribam seu librarium indicant. Sed haec adolescentibus nostris sodalibus, non viris eruditis, a quibus ipse docendus sum, scripta sunto. Iam vero sic confectos et instructos catalogos si accepero, non potero non in uberrimam nostrorum scriptorum cognitionem venire atque adeo Bibliothecam producere, qualem viri docti optant et exspectant. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e4285">Non deerunt quidem, qui itinera bibliothecarumque exterarum perlustrationem a me ipso suscipienda esse reponent; nec id sane male. Verum cum hoc nec semper nec ubique locorum (nam in non paucis monasteriis eo labore me defunctum amici non ignorant) fieri possit, restat, ut alienis quoque manibus et oculis utar. Certe pro adeo insigni erga me benevolentia et favore gratum memoremque animum praestabo inseramque operi meo accuratum syllabum eorum omnium, qui laboranti mihi suppetias tulerunt aut quoquo modo maiorum nostrorum<note place="foot" xml:id="d3e4287">	Danach durchgestrichen <hi rend="italic">a tenebris</hi>.</note> nominibus a tenebris et oblivione vindicandis adlaborarunt. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d3e4293">Atque haec pauca sunt, quae insigni tuo, admodum reverende ac religiosissime domine, patrocinio commendanda et promovenda <pb n="2r"/> videbantur. Porro literae et catalogi ad me mittendi tutissime Mellicium perferentur, si haec inscriptio adhibita fuerit: Patri Bernardo Pez Benedictino Mellicensi et bibliothecario. Et infra: Mellicii vulgo Mölk in Oesterrich [<hi rend="italic">sic</hi>], vel sic: Viennae Austriae in Mölker-hof. Caeterum nullus dubito, quin tanto benevolentiorem te facilioremque mea epistola habitura sit, quanto luculentiori desiderio tuum religiosissimum pectus iam dudum ardet nobilissimum illum Benedictinorum exercitum videndi, quorum doctrina et eruditio tantam ordini nostro gloriam peperere. Interea ut Deus ter optimus maximus, cuius gloriam hic ante omnia specto, te, charissime domine, quam diutissime sospitem incolumemque conservet, ex animo precor.</seg></p>
-            <p xml:space="preserve">Admodum reverendae ac clarissimae dominationis servus ad obsquia paratissimus pater Bernardus Pez professus Mellicensis ordinis sancti Benedicti et bibliothecarius.</p>
-            <p xml:space="preserve">Dedi in exemto monasterio Mellicensi die 21. mensis Februarii anno 1716.</p>
-            <p xml:space="preserve"><seg type="context" n="8" xml:space="preserve" xml:id="d3e4306">P.S. Magnae gratiae loco habebo, si haec epistola cum vicinis quoque monasteriis aliisque eruditis viris, praecipue bibliothecarum praefectis, communicabitur.</seg></p>
-         </div>
+         <ab resp="#editor" xml:id="seg4">[...] archivis plerumque delitescunt non sine gravissimo rei literariae, praesertim historiae ecclesiasticae, detrimento. </ab>
+         <ab resp="#editor" xml:id="seg5">Ecce, admodum reverende ac clarissime domine, haec fere ratio et facies est Bibliothecae nostrae Benedictinae, ad quam splendidius adornandam si opem ferre tuoque exemplo reliquis tuis sodalibus aliisque cuiuscunque ordinis aut status eruditis viris hortamento esse volueris, erit profecto, cur tibi amplissimas gratias non ego modo, sed universus ordo, imo totus eruditus orbis aliquando agat et referat. Nec modus mihi gratificandi admodum difficilis erit, si ad subiuncta praecipua precum mearum capita nonnihil attendere dignaberis. Primum, quod <sic>demissime</sic> rogem, est, ut reverendissimi domini abbates vel priores in suis monasteriis unum et item alterum ex doctissimis dominis capitularibus seligant, qui domesticam bibliothecam et archiva diligenter perlustrent indeque nomina eorum concapitularium, qui aliquid literis commendarunt aut typis commiserunt, item titulos operum, aut, si tituli allegorici perplexioresque sint, etiam eorum argumenta, vitam scriptoris et caetera, quae supra in conspectu exposui, eruant et mihi transmittant. Alterum est, ut in singulis monasteriis conficiantur accurati catalogi omnium operum tum typis vulgatorum tum manuscriptorum a Benedictinis auctoribus nigris, cuiuscunque monasterii fuerint, conditorum, quae extant et habentur in domestica bibliotheca et privatis religiosorum cubiculis, non omisso anno, forma editionis aut nomine typographi. Res haec nec gravior paulo nec admodum multarum horarum erit, si plures domini capitulares iunctis operis bibliothecae perlustrationem in sese suscipere non dedignabuntur. Nonnihil maioris operae fuerit evolutio et perlustratio (nam tituli et rubricae a tergo exstantes plerumque falluntur nec omnia contenta indicant) codicum manuscriptorum, qui <pb n="1v"/> scripturae difficultate negotium facessunt. Sed quum ii vulgo non adeo copiosi sint, nec ullum fere monasterium esse putem, in quo non unus aliquis reperiatur, qui veteres codices, saltem quod satis sit, legere noverit, aut alium eruditum hacque in re versatum virum ad manum habere possit, votis meis facillime poterit satisfieri. Id minus expertos hic paucis moneo, ne mox pro auctore operis habeant illum, qui ad eius finem<del ana="#after">ads</del> suum nomen adscripsit hoc vel simili modo: explicit per manum Rudberti monachi, finivi in Dei nomine, hunc librum scripsit frater Johannes huius loci monachus etc. Nisi enim aliud ad haec argumentum accesserit, ea verba nequaquam auctorem et compilatorem, sed scribam seu librarium indicant. Sed haec adolescentibus nostris sodalibus, non viris eruditis, a quibus ipse docendus sum, scripta sunto. Iam vero sic confectos et instructos catalogos si accepero, non potero non in uberrimam nostrorum scriptorum cognitionem venire atque adeo Bibliothecam producere, qualem viri docti optant et exspectant. </ab>
+         <ab resp="#editor" xml:id="seg6">Non deerunt quidem, qui itinera bibliothecarumque exterarum perlustrationem a me ipso suscipienda esse reponent; nec id sane male. Verum cum hoc nec semper nec ubique locorum (nam in non paucis monasteriis eo labore me defunctum amici non ignorant) fieri possit, restat, ut alienis quoque manibus et oculis utar. Certe pro adeo insigni erga me benevolentia et favore gratum memoremque animum praestabo inseramque operi meo accuratum syllabum eorum omnium, qui laboranti mihi suppetias tulerunt aut quoquo modo maiorum nostrorum<del ana="#after">a tenebris</del> nominibus a tenebris et oblivione vindicandis adlaborarunt. </ab>
+         <ab resp="#editor" xml:id="seg7">Atque haec pauca sunt, quae insigni tuo, admodum reverende ac religiosissime domine, patrocinio commendanda et promovenda <pb n="2r"/> videbantur. Porro literae et catalogi ad me mittendi tutissime Mellicium perferentur, si haec inscriptio adhibita fuerit: Patri Bernardo Pez Benedictino Mellicensi et bibliothecario. Et infra: Mellicii vulgo Mölk in <sic>Oesterrich</sic>, vel sic: Viennae Austriae in Mölker-hof. Caeterum nullus dubito, quin tanto benevolentiorem te facilioremque mea epistola habitura sit, quanto luculentiori desiderio tuum religiosissimum pectus iam dudum ardet nobilissimum illum Benedictinorum exercitum videndi, quorum doctrina et eruditio tantam ordini nostro gloriam peperere. Interea ut Deus ter optimus maximus, cuius gloriam hic ante omnia specto, te, charissime domine, quam diutissime sospitem incolumemque conservet, ex animo precor.</ab>
+         <closer>Admodum reverendae ac clarissimae dominationis servus ad obsquia paratissimus pater Bernardus Pez professus Mellicensis ordinis sancti Benedicti et bibliothecarius.</closer>
+         <closer>Dedi in exemto monasterio Mellicensi die 21. mensis Februarii anno 1716.</closer>
+         <closer xml:id="seg8">P.S. Magnae gratiae loco habebo, si haec epistola cum vicinis quoque monasteriis aliisque eruditis viris, praecipue bibliothecarum praefectis, communicabitur.</closer>
       </body>
-      <back/>
    </text>
 </TEI>

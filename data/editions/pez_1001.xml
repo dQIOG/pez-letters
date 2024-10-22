@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="1001" xml:id="pez-1001">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">1001 Joachim Edlinger an Hieronymus Pez. 1718-10-15. Seitenstetten.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Joachim Edlinger an Hieronymus Pez. 1718-10-15. Seitenstetten.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">1001</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -21,17 +33,30 @@
             <relatedItem type="otherEdition">
                <bibl>Spevak, Edlinger 69–72.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl>Rabl, Briefe 330</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <p>StiA Melk, Karton 7 Patres 13, Fasz. 1, 28r–v.</p>
+            <listWit><witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Karton 7 Patres 13, Fasz. 1, 28r–v.</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -46,99 +71,148 @@
                <persName>Hieronymus Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">999</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">1010</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">994</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">999</idno>
-               </ref>
+               <ptr type="prev" target="letter:999"/>
+               <ptr type="next" target="letter:1010"/>
+               <ptr type="mentions" target="letter:994"/>
+               <ptr type="mentions" target="letter:999"/>
             </correspContext>
          </correspDesc>
+         
+         <textClass><keywords>
+            <term ref="index:d14380e4919">Benediktiner</term>
+            <term ref="index:d14380e10733">Edlinger, Joachim ; *Werk über richtige Aussprache</term>
+            <term ref="index:d14380e11852">Evangelische allgemein</term>
+            <term ref="index:d14380e11916">Evangelische allgemein ; Lutheraner</term>
+            <term ref="index:d14380e16018">Göttweig</term>
+            <term ref="index:d14380e16100">Göttweig ; *Proprium Gotvicense. Krems 1683</term>
+            <term ref="index:d14380e16577">Grössing, Theophil</term>
+            <term ref="index:d14380e16887">Hager, Martin</term>
+            <term ref="index:d14380e19689">Index librorum prohibitorum</term>
+            <term ref="index:d14380e20126">Jesuiten</term>
+            <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
+            <term ref="index:d10854e15231">Kolberer, Kajetan</term>
+            <term ref="index:d14380e23156">Krems</term>
+            <term ref="index:d14380e25561">Lyrtzer, Anselm</term>
+            <term ref="index:d14380e25981">Maimbourg, Louis</term>
+            <term ref="index:d14380e28088">Melk</term>
+            <term ref="index:d14380e28582">Melk ; Poststation</term>
+            <term ref="index:d14380e32226">Pallestrazzi, Augustin von</term>
+            <term ref="index:d14380e32235">Pallestrazzi, Franz Karl von</term>
+            <term ref="index:d14380e33148">Pez, Bernhard</term>
+            <term ref="index:d14380e34429">Pez, Bernhard ; Konflikt mit dem Abt im Sommer 1718</term>
+            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+            <term ref="index:d14380e39253">*Sandner, NN</term>
+            <term ref="index:d14380e40507">Seitenstetten ; *Drei Seitenstettener, die sich 1718 in Wien aufhalten</term>
+            <term ref="index:d14380e45571">Wien</term>
+            <term ref="index:d14380e46141">Wien ; Schwarzspanierkloster</term></keywords></textClass>
+         <abstract>
+            <p corresp="#seg1">Bereits einmal <ref type="letter" target="letter:999">999</ref> hat JE um die Sendung von zwei Exemplaren
+               des <rs ref="index:d14380e16100">Göttweiger Propriums</rs> durch den <rs ref="index:d14380e28088">Melker</rs> Kustos (Sakristan <rs ref="index:d14380e16887">Martin Hager</rs>) gebeten. Er erneuert
+               die Bitte und weist zugleich auf eine günstige Gelegenheit zur <rs ref="index:d14380e35665">Beförderung</rs> hin, die sich am 21. oder 22. Oktober bei der Rückkehr von <rs ref="index:d14380e40507">drei Seitenstettenern</rs> aus <rs ref="index:d14380e45571">Wien</rs> ergeben
+               wird, wenn diese in Melk die Pferde wechseln. Den Preis will JE rasch durch die örtlichen Kaufleute
+               begleichen. Ihm wäre lieber, HP in dieser Sache keine Unannehmlichkeiten zu bereiten, doch ist weder in
+               <rs ref="index:d14380e23156">Krems</rs> noch in <rs ref="index:d14380e16018">Göttweig</rs> ein Exemplar
+               des Propriums zu bekommen, und JE benötigt es unbedingt.</p>
+            <p corresp="#seg2">Mit dem Verhalten der gegenwärtig in Seitenstetten lebenden <rs ref="index:d14380e16018">Göttweiger </rs>
+               (<rs ref="index:d14380e25561">Anselm Lyrtzer</rs> und <rs ref="index:d14380e16577">Theophil
+                  Grössing</rs>) sind alle sehr zufrieden; auch sie selbst scheinen gegen ihre Behandlung keine Klagen
+               zu haben. HP und BP haben ausreichend Kenntnis von Anselm Lyrtzer: Er hört nicht auf, sich selbst zu
+               verherrlichen, seine Reden sind aber oft schlecht begründet, vor allem wenn es um Literargeschichte
+               (histoire literaire) geht. So behauptet er, dass <rs ref="index:d14380e25981">Louis Maimbourg</rs> nie
+               <rs ref="index:d14380e20126">Jesuit</rs> oder auch nur <rs ref="index:d14380e21679">Katholik</rs>,
+               sondern stets <rs ref="index:d14380e11852">Häretiker</rs> gewesen sei, und dass dessen Werke zur ersten
+               Klasse der verbotenen Bücher gehören.</p>
+            <p corresp="#seg3">Bevor er von dem Briefverkehr erfahren hat, den JE mit HP und BP unterhält, hat Lyrtzer kritisiert, dass
+               es BP trotz aller Gelehrsamkeit an Umsicht mangele. Deswegen wird die Unterhaltung mit ihm höchst
+               ärgerlich, zumal er auch über nichts anderes als Bücher sprechen kann. Er hat auch behauptet, dass die
+               <rs ref="index:d14380e11916">lutherischen</rs> Gelehrten, die sich mit der Kritik von Büchern befassen,
+               BPs Werke zu dessen Nachteil beurteilt haben, weil sie genauere historische Kenntnisse vermissen. Daraus
+               wird sich HP einen Reim auf die Gelehrtenwissenschaft (science litteraire) und den Charakter dieses
+               Mannes machen; er möge BP aber mit solchen Possen nicht belasten, zumal sie BPs Ansehen ohnehin nicht
+               schmälern können. HP hingegen wird von Lyrtzer sehr geschätzt, weil bei ihm Umsicht mit Wissenschaft
+               (sapientia) einhergeht; auch an BP hat er allerdings dessen Einsatz für den Ruhm des <rs ref="index:d14380e4919">Benediktinerordens</rs> gelobt.</p>
+            <p corresp="#seg4">Der Gast aus dem <rs ref="index:d14380e46141">Schwarzspanierkloster</rs>, von dem JE kürzlich geschrieben
+               hat <ref type="letter" target="letter:994">994</ref>, dass er Pallestrazzi heiße, trägt vielmehr den
+               Namen <rs ref="index:d14380e39253">Sandner</rs>. Er ist der Schwager des Herrn (<rs ref="index:d14380e32226">Augustin</rs>? <rs ref="index:d14380e32235">Franz Karl</rs>?) Pallestrazzi,
+               nicht, wie JE angenommen hatte, dessen Bruder.</p>
+            <p corresp="#seg5">HP, dem Richter und Leitgestirn seiner Studien, will JE nicht verheimlichen, dass er in naher Zukunft
+               mehr Muße genießen wird, wenn er die Aufgaben erledigt hat, die bislang sein Vorhaben (<rs ref="index:d14380e10733">Werk über richtige Aussprache</rs>) aufgehalten haben. Die Freude darüber
+               wird dadurch gesteigert, dass sich die beschafften Bücher als sehr geeignet erwiesen haben. HP kann noch
+               weiter zu JEs guter Stimmung beitragen, wenn er berichtet, dass die unangenehme <rs ref="index:d14380e34429">Situation</rs>, in der sich BP befunden hat, bereinigt ist. JE schließt mit
+               Grüßen an HP und BP als hellste Sterne des Ordens und des Vaterlandes (patria).</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e65966">Bereits einmal <ref type="letter">999</ref> hat <rs type="person" role="sender">JE</rs> um die Sendung von zwei Exemplaren des Göttweiger Propriums durch den Melker Kustos (Sakristan Martin Hager) gebeten. Er erneuert die Bitte und weist zugleich auf eine günstige Gelegenheit zur Beförderung hin, die sich am 21. oder 22. Oktober bei der Rückkehr von drei Seitenstettenern aus Wien ergeben wird, wenn diese in Melk die Pferde wechseln. Den Preis will <rs type="person" role="sender">JE</rs> rasch durch die örtlichen Kaufleute begleichen. Ihm wäre lieber, <rs type="person" role="sender">HP</rs> in dieser Sache keine Unannehmlichkeiten zu bereiten, doch ist weder in Krems noch in Göttweig ein Exemplar des Propriums zu bekommen, und <rs type="person" role="sender">JE</rs> benötigt es unbedingt.</seg><seg type="context" n="2" xml:id="d3e65971">Mit dem Verhalten der gegenwärtig in Seitenstetten lebenden Göttweiger (Anselm Lyrtzer und Theophil Grössing) sind alle sehr zufrieden; auch sie selbst scheinen gegen ihre Behandlung keine Klagen zu haben. <rs type="person" role="sender">HP</rs> und BP haben ausreichend Kenntnis von Anselm Lyrtzer: Er hört nicht auf, sich selbst zu verherrlichen, seine Reden sind aber oft schlecht begründet, vor allem wenn es um Literargeschichte (histoire literaire) geht. So behauptet er, dass Louis Maimbourg nie Jesuit oder auch nur Katholik, sondern stets Häretiker gewesen sei, und dass dessen Werke zur ersten Klasse der verbotenen Bücher gehören.</seg><seg type="context" n="3" xml:id="d3e65973">Bevor er von dem Briefverkehr erfahren hat, den <rs type="person" role="sender">JE</rs> mit <rs type="person" role="sender">HP</rs> und BP unterhält, hat Lyrtzer kritisiert, dass es BP trotz aller Gelehrsamkeit an Umsicht mangele. Deswegen wird die Unterhaltung mit ihm höchst ärgerlich, zumal er auch über nichts anderes als Bücher sprechen kann. Er hat auch behauptet, dass die lutherischen Gelehrten, die sich mit der Kritik von Büchern befassen, BPs Werke zu dessen Nachteil beurteilt haben, weil sie genauere historische Kenntnisse vermissen. Daraus wird sich <rs type="person" role="sender">HP</rs> einen Reim auf die Gelehrtenwissenschaft (science litteraire) und den Charakter dieses Mannes machen; er möge BP aber mit solchen Possen nicht belasten, zumal sie BPs Ansehen ohnehin nicht schmälern können. <rs type="person" role="sender">HP</rs> hingegen wird von Lyrtzer sehr geschätzt, weil bei ihm Umsicht mit Wissenschaft (sapientia) einhergeht; auch an BP hat er allerdings dessen Einsatz für den Ruhm des Benediktinerordens gelobt.</seg><seg type="context" n="4" xml:id="d3e65975">Der Gast aus dem Schwarzspanierkloster, von dem <rs type="person" role="sender">JE</rs> kürzlich geschrieben hat <ref type="letter">994</ref>, dass er Pallestrazzi heiße, trägt vielmehr den Namen Sandner. Er ist der Schwager des Herrn (Augustin? Franz Karl?) Pallestrazzi, nicht, wie <rs type="person" role="sender">JE</rs> angenommen hatte, dessen Bruder.</seg><seg type="context" n="5" xml:id="d3e65980">HP, dem Richter und Leitgestirn seiner Studien, will <rs type="person" role="sender">JE</rs> nicht verheimlichen, dass er in naher Zukunft mehr Muße genießen wird, wenn er die Aufgaben erledigt hat, die bislang sein Vorhaben (Werk über richtige Aussprache) aufgehalten haben. Die Freude darüber wird dadurch gesteigert, dass sich die beschafften Bücher als sehr geeignet erwiesen haben. <rs type="person" role="sender">HP</rs> kann noch weiter zu <rs type="person" role="sender">JEs</rs> guter Stimmung beitragen, wenn er berichtet, dass die unangenehme Situation, in der sich BP befunden hat, bereinigt ist. <rs type="person" role="sender">JE</rs> schließt mit Grüßen an <rs type="person" role="sender">HP</rs> und BP als hellste Sterne des Ordens und des Vaterlandes (patria).</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverendo religiosissimo ac clarissimo viro domino patri Hieronymo Pez Benedictino Mellicensi etc. penitus suo etc. pater Joachimus<note place="foot" xml:id="d3e65995">	Korrigiert aus <hi rend="italic">Bened</hi>.</note> Edlinger Benedictinus Seitenstettensis salutem plurimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e66003">Rogavi nuper, amicorum meorum primipile, ut duo, si potes, exemplaria proprii missalis Gottvicensis a domino custode vestro mihi impetres. Has preces iam repeto iuxtaque commoditatem, qua eadem ad me perferenda curare poteris, indigito. Offeret se ista 21. forte vel probabilius 22. huius, cum <seg type="lemma" corresp="#d3e66052">trias quaedam nostrorum</seg> Viennam abhinc biduo profecta redux<seg type="lemma" corresp="#d3e66058"> veredos in vestro oppido mutabit</seg>; eorum pretium per caupones nostros brevi exsolvam. Optarem quidem, ut absque tuo incommodo hac in re mihi consuli posset; verum cum certum habeam nec Crembsii nec Gotvici exemplar ullum huius proprii, quo summe tamen indigeo, superesse, haud indignanter te laturum confido meam hanc praesumtionem. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e66005">Touchant les hommes de monastere tout-maintenant nommé, nous sommes assez satisfaits de leur conduite, comme ainsi ils le semblent de la nôtre. De le pere Anshelm vous avez tous deux une suffisante connoissance; il ne cesse point de se glorifier, mais ses discours sont parfois fort mal-fondés, specialement quand il se méle en l’histoire literaire. Ainsi il<note place="foot" xml:id="d3e66007">	Danach durchgestrichen <hi rend="italic">a</hi>.</note> soûtient avec opiniatreté, que le pere <seg type="lemma" corresp="#d3e66062">Maimbourg</seg> n’a jamais été ni Jesuite, ni catholique, mais toûjours heretique, et les oeuvres de lui sont entre les defendûs de la premiere classe. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e66013">Avant qu’il a été averti du commerce des lettres, qui j’ai l’honneur d’entretenir<note place="foot" xml:id="d3e66015">	Korrigiert aus <hi rend="italic">et</hi>.</note> avec vous, et<note place="foot" xml:id="d3e66021">	Davor durchgestrichen <hi rend="italic">il</hi>.</note> le quel je dissimulois<note place="foot" xml:id="d3e66027">	Danach durchgestrichen <hi rend="italic">avec</hi>.</note> soigneusement, il a blamé le monsieur vôtre frere en disant, qu’il manque souvent, quelque savant qu’il soit, de prudence; pour ce la conversation de lui devient fort facheuse, attendû qu’il ne sait rien discourir si non des livres. Il ajoûta, que les <seg type="lemma" corresp="#d3e66068">savans Lutheriens</seg>, qui font profession de la censure des livres, ont jugé des oeuvres du sudit pere au desavantage de l’auteur, desirans en lui une plus exacte notice des histoires. Vous ferez en, monsieur reverend pere, <pb n="1v"/> le conte [<hi rend="italic">sic</hi>] de la science literaire et universellement du caractere de cet homme-là; mais prenez garde, je vous prie, de chagriner le reverend pere Bernard par cettes badineries, qui ne sont pas capables d’obscurcir la renommée, qui il s’a acqueri par tout. Quant à vous, il fait grande<note place="foot" xml:id="d3e66039">	Korrigiert aus <hi rend="italic">grandes</hi>.</note> estime de votre personne, disant que vous accompagnez la prudence à la sagesse; nouvellement il loua encore le soin, qui votre frere prend par la gloire du saint ordre. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e66045"><seg type="lemma" corresp="#d3e66074">Celui de Montserrat</seg>, lequel je dernierement ecrivis etre surnommé Palestrazzi, s’appelle Sandner, étant seulement beau-frere de<seg type="lemma" corresp="#d3e66080"> monsieur Palestrazzi</seg>, dont je le pensois d’étre frere. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e66047">Ceterum celare te, vir eruditissime studiorumque meorum arbiter ac cynosura, haud possum, quod confectis pene omnibus, quae propositum meum tamdiu suspenderunt, iucundo intra paucos dies otio sim fruiturus, id quod tanto maiori me laetitia imbuit, quanto magis ad prosequenda cepta idonei videntur libri recens obtenti. Tu momentum huic voluptati addes haud contemnendum, ubi certum me feceris, que le monsieur votre frere s’est demélé de la <seg type="lemma" corresp="#d3e66084">facheuse affaire</seg>, dont il a été accablé. Denique me utrique vestrum vosque mecum benignissimo Numini commendo, quod valere vos, clarissima qua sacri ordinis qua patriae sidera, iuxta votum meum diu recteque faciet.</seg></p>
-            <p xml:space="preserve">Scribebam Seitenstadii Idibus Octobris MDCCXVIII.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e66052">
-               <ref type="context">1</ref>
-               <label>trias quaedam nostrorum</label><p>Die Identität dieser Personen konnte nicht ermittelt werden.</p></note>
-            <note xml:id="d3e66058">
-               <ref type="context">1</ref>
-               <label> veredos ... mutabit</label><p>Zur Melker Poststation vgl. <rs type="bibl"
-                     key="bibl:16034">Effenberger, Beiträge</rs> 22; <rs type="bibl"
-                     key="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 26. </p></note>
-            <note xml:id="d3e66062">
-               <ref type="context">2</ref>
-               <label>Maimbourg</label><p>Louis Maimbourg hatte von 1626 bis 1681 der Gesellschaft
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>trias quaedam nostrorum</mentioned>
+            <p>Die Identität dieser Personen konnte nicht ermittelt werden.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> veredos ... mutabit</mentioned>
+            <p>Zur Melker Poststation vgl. <rs type="bibl" ref="bibl:16034">Effenberger, Beiträge</rs> 22; <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 26. </p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>Maimbourg</mentioned>
+            <p>Louis Maimbourg hatte von 1626 bis 1681 der Gesellschaft
                   Jesu angehört und den größten Teil seiner Werke während dieser Zeit verfasst. Weit
                   entfernt, Protestant zu sein, lieferte er sich vielmehr heftige Kontroversen mit
                   calvinistischen Gelehrten. Wegen der starken gallikanischen Tendenz einiger Werke
                   und der harten Kritik am Verhalten einzelner Päpste wurde ihm in hohem Alter von
-                  Innozenz XI. der Austritt aus der Gesellschaft befohlen: <rs type="bibl"
-                     key="bibl:15226">Beylard, Maimbourg</rs>; <rs type="bibl" key="bibl:15552"
-                     >Carreyre, Maimbourg</rs>; <rs type="bibl" key="bibl:19624">Sommervogel,
-                     Bibliothèque</rs> 5 col. 343–356; vgl. <rs type="bibl" key="bibl:18966"
-                     >Quantin, Croisades</rs> 625f. Mehrere der kirchengeschichtlichen Werke
-                  Maimbourgs wurden indiziert, aber keineswegs alle: <rs type="bibl"
-                     key="bibl:18172">Martínez de Bujanda–Richter, Index 11</rs> 571f.; <rs
-                     type="bibl" key="bibl:19080">Reusch, Index</rs> 2 583–585. Lyrtzers Irrtum
+                  Innozenz XI. der Austritt aus der Gesellschaft befohlen: <rs type="bibl" ref="bibl:15226">Beylard, Maimbourg</rs>; <rs type="bibl" ref="bibl:15552">Carreyre, Maimbourg</rs>; <rs type="bibl" ref="bibl:19624">Sommervogel,
+                     Bibliothèque</rs> 5 col. 343–356; vgl. <rs type="bibl" ref="bibl:18966">Quantin, Croisades</rs> 625f. Mehrere der kirchengeschichtlichen Werke
+                  Maimbourgs wurden indiziert, aber keineswegs alle: <rs type="bibl" ref="bibl:18172">Martínez de Bujanda–Richter, Index 11</rs> 571f.; <rs type="bibl" ref="bibl:19080">Reusch, Index</rs> 2 583–585. Lyrtzers Irrtum
                   beruhte möglicherweise auf einer Verwechslung mit Louis Maimbourgs Cousin, dem
-                  Mehrfachkonvertiten Théodore Maimbourg.</p></note>
-            <note xml:id="d3e66068">
-               <ref type="context">3</ref>
-               <label>savans Lutheriens</label><p>Zu den Reaktionen auf BPs Werke in den
-                  protestantischen Rezensionszeitschriften des deutschsprachigen Raumes vgl. <rs
-                     type="bibl" key="bibl:18772">Peper, Österreichische Gelehrtenwelt</rs> 11,
-                  13f., 18f., 22–25; sowie Einleitung, Abschnitt I.5; Anhang III.1.</p></note>
-            <note xml:id="d3e66074">
-               <ref type="context">4</ref>
-               <label>Celui de Montserrat</label><p>Zu dieser Person konnte weiter nichts ermittelt
+                  Mehrfachkonvertiten Théodore Maimbourg.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>savans Lutheriens</mentioned>
+            <p>Zu den Reaktionen auf BPs Werke in den
+                  protestantischen Rezensionszeitschriften des deutschsprachigen Raumes vgl. <rs type="bibl" ref="bibl:18772">Peper, Österreichische Gelehrtenwelt</rs> 11,
+                  13f., 18f., 22–25; sowie Einleitung, Abschnitt I.5; Anhang III.1.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>Celui de Montserrat</mentioned>
+            <p>Zu dieser Person konnte weiter nichts ermittelt
                   werden. Nach JEs früherer Angabe wurde der Gast als Beichtiger auf dem Sonntagberg
-                  eingesetzt: vgl. <ref type="letter">994</ref> &lt;3&gt;. Demzufolge muss es sich
+                  eingesetzt: vgl. <ref type="letter" target="letter:994">994</ref> <ref target="letter:994#seg3">3</ref>. Demzufolge muss es sich
                   um einen Priester gehandelt haben. Die Formulierung hier erweckt den Anschein,
                   dass Sandner aus dem Konvent des Wiener Schwarzspanierklosters gekommen wäre. Die
                   Reste aus dem Archiv dieses Klosters, die heute im Stiftsarchiv des Wiener
                   Schottenklosters verwahrt werden, bieten jedoch keinerlei Angaben zu ihm; für
                   diese Auskunft sei Maximilian Trofaier (Wien) gedankt. Ebenso wenig findet sich
-                  eine Erwähnung bei <rs type="bibl" key="bibl:14860">Albareda,
-                  Congregació</rs>.</p></note>
-            <note xml:id="d3e66080">
-               <ref type="context">4</ref>
-               <label> monsieur Palestrazzi</label><p>Augustin Pallestrazzi, seit 1726 Edler von
+                  eine Erwähnung bei <rs type="bibl" ref="bibl:14860">Albareda,
+                  Congregació</rs>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned> monsieur Palestrazzi</mentioned>
+            <p>Augustin Pallestrazzi, seit 1726 Edler von
                   Pallestrazzi, ist seit 1713 bis 1756, Franz Karl von Pallestrazzi seit 1725 bis
-                  1760 am Wiener Hof nachweisbar; beide bekleideten das Amt eines Kammerdieners: <rs
-                     type="bibl" key="bibl:17724">Kubiska-Scharl–Pölzl, Karrieren</rs> 659. Es ist
+                  1760 am Wiener Hof nachweisbar; beide bekleideten das Amt eines Kammerdieners: <rs type="bibl" ref="bibl:17724">Kubiska-Scharl–Pölzl, Karrieren</rs> 659. Es ist
                   wahrscheinlich, dass einer dieser beiden Männer hier gemeint ist. Warum JE
                   anscheinend voraussetzte, dass diese Familie BP bekannt sei, bleibt unklar.
-               </p></note>
-            <note xml:id="d3e66084">
-               <ref type="context">5</ref>
-               <label>facheuse affaire</label><p> Zur Auseinandersetzung zwischen BP und Abt Dietmayr im Sommer 1718 vgl. Einleitung, Abschnitt I.1.</p></note>
-         </div>
-      </back>
+               </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
+            <mentioned>facheuse affaire</mentioned>
+            <p> Zur Auseinandersetzung zwischen BP und Abt Dietmayr im Sommer 1718 vgl. Einleitung, Abschnitt I.1.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl>Rabl, Briefe 330</bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverendo religiosissimo ac clarissimo viro domino patri Hieronymo Pez Benedictino Mellicensi etc. penitus suo etc. pater <choice><sic>Bened</sic><corr>Joachimus</corr></choice> Edlinger Benedictinus Seitenstettensis salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Rogavi nuper, amicorum meorum primipile, ut duo, si potes, exemplaria proprii missalis Gottvicensis a domino custode vestro mihi impetres. Has preces iam repeto iuxtaque commoditatem, qua eadem ad me perferenda curare poteris, indigito. Offeret se ista 21. forte vel probabilius 22. huius, cum <anchor xml:id="n1"/>trias quaedam nostrorum<anchor xml:id="n1e"/> Viennam abhinc biduo profecta redux<anchor xml:id="n2"/> veredos in vestro oppido mutabit<anchor xml:id="n2e"/>; eorum pretium per caupones nostros brevi exsolvam. Optarem quidem, ut absque tuo incommodo hac in re mihi consuli posset; verum cum certum habeam nec Crembsii nec Gotvici exemplar ullum huius proprii, quo summe tamen indigeo, superesse, haud indignanter te laturum confido meam hanc praesumtionem. </ab>
+         <ab resp="#editor" xml:id="seg2">Touchant les hommes de monastere tout-maintenant nommé, nous sommes assez satisfaits de leur conduite, comme ainsi ils le semblent de la nôtre. De le pere Anshelm vous avez tous deux une suffisante connoissance; il ne cesse point de se glorifier, mais ses discours sont parfois fort mal-fondés, specialement quand il se méle en l’histoire literaire. Ainsi il<del ana="#after">a</del> soûtient avec opiniatreté, que le pere <anchor xml:id="n3"/>Maimbourg<anchor xml:id="n3e"/> n’a jamais été ni Jesuite, ni catholique, mais toûjours heretique, et les oeuvres de lui sont entre les defendûs de la premiere classe. </ab>
+         <ab resp="#editor" xml:id="seg3">Avant qu’il a été averti du commerce des lettres, qui j’ai l’honneur <choice><sic>et</sic><corr>d’entretenir</corr></choice> avec vous, et<del ana="#before">il</del> le quel je dissimulois<del ana="#after">avec</del> soigneusement, il a blamé le monsieur vôtre frere en disant, qu’il manque souvent, quelque savant qu’il soit, de prudence; pour ce la conversation de lui devient fort facheuse, attendû qu’il ne sait rien discourir si non des livres. Il ajoûta, que les <anchor xml:id="n4"/>savans Lutheriens<anchor xml:id="n4e"/>, qui font profession de la censure des livres, ont jugé des oeuvres du sudit pere au desavantage de l’auteur, desirans en lui une plus exacte notice des histoires. Vous ferez en, monsieur reverend pere, <pb n="1v"/> le <sic>conte</sic> de la science literaire et universellement du caractere de cet homme-là; mais prenez garde, je vous prie, de chagriner le reverend pere Bernard par cettes badineries, qui ne sont pas capables d’obscurcir la renommée, qui il s’a acqueri par tout. Quant à vous, il fait <choice><sic>grandes</sic><corr>grande</corr></choice> estime de votre personne, disant que vous accompagnez la prudence à la sagesse; nouvellement il loua encore le soin, qui votre frere prend par la gloire du saint ordre. </ab>
+         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n5"/>Celui de Montserrat<anchor xml:id="n5e"/>, lequel je dernierement ecrivis etre surnommé Palestrazzi, s’appelle Sandner, étant seulement beau-frere de<anchor xml:id="n6"/> monsieur Palestrazzi<anchor xml:id="n6e"/>, dont je le pensois d’étre frere. </ab>
+         <ab resp="#editor" xml:id="seg5">Ceterum celare te, vir eruditissime studiorumque meorum arbiter ac cynosura, haud possum, quod confectis pene omnibus, quae propositum meum tamdiu suspenderunt, iucundo intra paucos dies otio sim fruiturus, id quod tanto maiori me laetitia imbuit, quanto magis ad prosequenda cepta idonei videntur libri recens obtenti. Tu momentum huic voluptati addes haud contemnendum, ubi certum me feceris, que le monsieur votre frere s’est demélé de la <anchor xml:id="n7"/>facheuse affaire<anchor xml:id="n7e"/>, dont il a été accablé. Denique me utrique vestrum vosque mecum benignissimo Numini commendo, quod valere vos, clarissima qua sacri ordinis qua patriae sidera, iuxta votum meum diu recteque faciet.</ab>
+         <closer>Scribebam Seitenstadii Idibus Octobris MDCCXVIII.</closer>
+      </body>
    </text>
 </TEI>

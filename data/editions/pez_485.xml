@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="485" xml:id="pez-0485">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">485 Johann Benedikt Gentilotti von Engelsbrunn an Bernhard Pez. 1716-01-04. Wien.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Benedikt Gentilotti von Engelsbrunn an Bernhard Pez. 1716-01-04. Wien.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">485</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -23,19 +35,28 @@
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">III</biblScope>
-               <biblScope unit="page">252r–253v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 252r–253v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -50,102 +71,97 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">480</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">507</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">467</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">478</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">480</idno>
-               </ref>
+               <ptr type="prev" target="letter:480"/>
+               <ptr type="next" target="letter:507"/>
+               <ptr type="mentions" target="letter:467"/>
+               <ptr type="mentions" target="letter:478"/>
+               <ptr type="mentions" target="letter:480"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">BG entschuldigt sich für seine späte Antwort auf BPs Brief <ref type="letter" target="letter:480">480</ref> und erwidert dessen Neujahrswünsche.</p>
+            <p corresp="#seg2">Was BP für seine „<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“ erbeten hat, steht zu seiner Verfügung, und sein Mitbruder <rs ref="index:d14380e1139">Kaspar Altlechner</rs> kann sowohl aus den von BG erschlossenen Büchern der <rs ref="index:d14380e45820">Hofbibliothek</rs> als auch aus jenen Werken, die BG kürzlich aus <rs ref="index:d14380e19828">Italien</rs> erhalten hat, das Einschlägige exzerpieren, sobald der Frost nachlässt und BG wieder in die Bibliothek kommt.</p>
+            <p corresp="#seg3">Was <rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs> BP über die Arbeiten BGs (Handschriftenkatalogisierung) mitgeteilt hat <ref type="letter" target="letter:478">478</ref>, weiß BG nicht genau; diese werden von <rs ref="index:d14380e21188">Kaiser Karl VI.</rs> nicht missbilligt. BG will BP bei dessen nächstem Besuch zeigen, was der Kaiser ihm dazu geschrieben hat.</p>
+            <p corresp="#seg4">Über den von BP erwähnten <rs ref="index:d14380e28366">Melker Codex</rs> (<rs ref="index:d14380e2701">Anonymus Mellicensis, „De scriptoribus ecclesiasticis“</rs>) ist BG nichts bekannt; auch erinnert er sich nicht, in den von ihm bisher durchgesehenen Beständen (der Hofbibliothek) dergleichen gesehen zu haben. Wäre der Text aber schon irgendwann veröffentlicht worden, dann würden ihn die immer wieder erscheinenden Editionen derartiger Schriftsteller sicherlich nicht übergehen. BG billigt deshalb BPs Entschluss, jenen seiner Abhandlung („<rs ref="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“) beizugeben.</p>
+            <p corresp="#seg5">Den Brief <rs ref="index:d14380e26993">René Massuets</rs> <ref type="letter" target="letter:467">467</ref>, den BP ihm mitgeteilt hat, hat BG bald wieder an <rs ref="index:d14380e1139">Altlechner</rs> zurückgegeben. Massuet hat sichtlich BPs „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“ und die darin enthaltenen ausfallenden Passagen nicht gelesen. BG will allerdings in dieser Sache mit BP nicht, wie Tertullian sagt, <rs type="cit" ref="citIndex:ix2_d763e2427">endlos hin- und hersägen</rs>; auch kommt es ihm nicht zu, diesen Streit (zwischen <rs ref="index:d14380e4919">Benediktinern</rs> und <rs ref="index:d14380e20126">Jesuiten</rs>) zu schlichten.</p>
+            <p corresp="#seg6">BG legt BP ans Herz, auf seine Gesundheit zu achten. Er fordert ihn auf, bei jeder Gelegenheit seine Hilfe in Anspruch zu nehmen und häufig zu schreiben, und schließt mit Grüßen an <rs ref="index:d14380e34537">HP</rs>.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e370"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> entschuldigt sich für seine späte Antwort auf <rs type="person" role="sender">BPs</rs> Brief <ref type="letter">480</ref> und erwidert dessen Neujahrswünsche.</seg><seg type="context" n="2" xml:id="d3e375">Was <rs type="person" role="sender">BP</rs> für seine „<rs key="index:d14380e33227">Bibliotheca Benedictina</rs>“ erbeten hat, steht zu seiner Verfügung, und sein Mitbruder <rs key="index:d14380e1139">Kaspar Altlechner</rs> kann sowohl aus den von <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> erschlossenen Büchern der <rs key="index:d14380e45820">Hofbibliothek</rs> als auch aus jenen Werken, die <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> kürzlich aus <rs key="index:d14380e19828">Italien</rs> erhalten hat, das Einschlägige exzerpieren, sobald der Frost nachlässt und <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> wieder in die Bibliothek kommt.</seg><seg type="context" n="3" xml:id="d3e377">Was <rs key="index:d14380e4006">Johann Christoph Bartenstein</rs> <rs type="person" role="sender">BP</rs> über die Arbeiten <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BGs<?oxy_custom_end?> (Handschriftenkatalogisierung) mitgeteilt hat <ref type="letter">478</ref>, weiß <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> nicht genau; diese werden von <rs key="index:d14380e21188">Kaiser Karl VI.</rs> nicht missbilligt. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> will <rs type="person" role="sender">BP</rs> bei dessen nächstem Besuch zeigen, was der Kaiser ihm dazu geschrieben hat.</seg><seg type="context" n="4" xml:id="d3e382">Über den von <rs type="person" role="sender">BP</rs> erwähnten <rs key="index:d14380e28366">Melker Codex</rs> (<rs key="index:d14380e2701">Anonymus Mellicensis, „De scriptoribus ecclesiasticis“</rs>) ist <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> nichts bekannt; auch erinnert er sich nicht, in den von ihm bisher durchgesehenen Beständen (der Hofbibliothek) dergleichen gesehen zu haben. Wäre der Text aber schon irgendwann veröffentlicht worden, dann würden ihn die immer wieder erscheinenden Editionen derartiger Schriftsteller sicherlich nicht übergehen. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> billigt deshalb <rs type="person" role="sender">BPs</rs> Entschluss, jenen seiner Abhandlung („<rs key="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“) beizugeben.</seg><seg type="context" n="5" xml:id="d3e384">Den Brief <rs key="index:d14380e26993">René Massuets</rs> <ref type="letter">467</ref>, den <rs type="person" role="sender">BP</rs> ihm mitgeteilt hat, hat <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> bald wieder an <rs key="index:d14380e1139">Altlechner</rs> zurückgegeben. Massuet hat sichtlich <rs type="person" role="sender">BPs</rs> „<rs key="index:d14380e33682">Epistolae apologeticae</rs>“ und die darin enthaltenen ausfallenden Passagen nicht gelesen. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> will allerdings in dieser Sache mit <rs type="person" role="sender">BP</rs> nicht, wie Tertullian sagt, <rs type="cit" key="citIndex:ix2_d763e2427">endlos hin- und hersägen</rs>; auch kommt es ihm nicht zu, diesen Streit (zwischen <rs key="index:d14380e4919">Benediktinern</rs> und <rs key="index:d14380e20126">Jesuiten</rs>) zu schlichten.</seg><seg type="context" n="6" xml:id="d3e389"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> legt <rs type="person" role="sender">BP</rs> ans Herz, auf seine Gesundheit zu achten. Er fordert ihn auf, bei jeder Gelegenheit seine Hilfe in Anspruch zu nehmen und häufig zu schreiben, und schließt mit Grüßen an <rs key="index:d14380e34537">HP</rs>.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">IX</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Summe venerando et doctissimo viro domno Bernardo Pezio Benedictino et bibliothecario Mellicensi Joannes Benedictus Gentilottus ab Engelsbrun salutem plurimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e409">Antiquum meum obtineo, ut in rescribendo a<note place="foot" xml:id="d3e411">	Über der Zeile eingefügt.</note> tarditatis excusatione exordiar, de qua tamen ut minus sim solicitus, perspecta tua bonitas facit. Quod in hunc annum mihi felicitatem precaris, agnosco amorem et humanitatem tuam, tibique vicissim faustum eiusdem exorsum, cursum facilem et expeditum atque exitum cum multorum annorum serie coniunctum a Superis opto. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e414">Ea, quae ad augendam ornandamque Bibliothecam ordinis tui a me petis, tibi omnia promta et parata sunt, et quodcunque ad illam aut ex recensione mea caesareae bibliothecae aut aliis <seg type="lemma" corresp="#d3e431">libris, quos nuper admodum ex Italia nactus sum</seg>, conferri potest, humanissimus sodalis tuus domnus <seg type="lemma" corresp="#d3e437">Gaspar exscribet</seg>; id quod, antequam frigus remittat egoque rursus ad bibliothecam accedam, vix fieri poterit. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e416">Quid tibi Bartensteinius noster de <pb n="1v"/> <seg type="lemma" corresp="#d3e441">laboribus meis</seg> significaverit, compertum non habeo. De eo te amicum optimum celare nolo, a caesare eos non improbari. Si quando ad nos veneris (quem utinam diem brevi videam), <seg type="lemma" corresp="#d3e447">sacros apices</seg> ea de re tibi inspiciendos et legendos dabo. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e420">De <seg type="lemma" corresp="#d3e451">codice vestro</seg> mihi plane non liquet; nec memini me hucusque in similem incidere inter eos, quos recensui. Si tamen aliquando vulgatus fuisset, ii, qui eiusmodi scriptorum<seg type="lemma" corresp="#d3e457"> syllogen semel atque iterum ediderunt</seg>, illum profecto non praetermisissent. Probo igitur vehementer consilium tuum illum dissertationi tuae subtexendi. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e422">De <seg type="lemma" corresp="#d3e461">litteris domni Massueti</seg>, quas mecum communicasti et ego domno Gasparo mox reddidi, valde te amo. Scilicet ille Epistolas tuas non legit, et in iis aspera et rabiosula illa verba, quae mihi molesta sunt. Sed nolim ea de re tecum <seg type="lemma" corresp="#d3e467">serram reciprocare</seg>, ut Tertulliani utar verbis, <pb n="2r"/><seg type="lemma" corresp="#d3e471"> nec nostrum est inter vos tantas componere lites</seg>. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e426">Tu, iocundissime Bernarde, valetudinem tuam cura diligenter et me tui observantissimum dilige, quod te demum facere putabo, si, quandocunque usus venerit, opera mea uteris et quam saepissime litteras ad me dederis. Vale cum doctissimo germano tuo, cuius in me animum exosculor.</seg></p>
-            <p xml:space="preserve">Scribebam festinanter Vindobonae pridie Nonas Januarii MDCCXVI.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e431">
-               <ref type="context">2</ref>
-               <label>libris ... nactus sum</label><p>Es ist gut möglich, jedoch nicht sicher
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>libris ... nactus sum</mentioned>
+            <p>Es ist gut möglich, jedoch nicht sicher
                   festzustellen, dass BG an dieser Stelle von Buchanschaffungen für seine
                   persönliche Bibliothek spricht, wie er dies auch in einigen seiner früheren Briefe
-                  getan hatte: vgl. <ref type="letter">406</ref> &lt;5&gt;, <ref type="letter"
-                     >427</ref> &lt;5&gt;. </p></note>
-            <note xml:id="d3e437">
-               <ref type="context">2</ref>
-               <label>Gaspar exscribet</label><p> Zu Arbeiten Kaspar Altlechners für BP im
-                  Zusammenhang mit der Hofbibliothek vgl. <ref type="letter">466 </ref>&lt;5&gt;,
-                     <ref type="letter">478</ref> &lt;3&gt;. </p></note>
-            <note xml:id="d3e441">
-               <ref type="context">3</ref>
-               <label>laboribus meis</label><p> Aus <ref type="letter">478 </ref>&lt;3&gt; ist
+                  getan hatte: vgl. <ref type="letter" target="letter:406">406</ref> <ref target="letter:406#seg5">5</ref>, <ref type="letter" target="letter:427">427</ref> <ref target="letter:427#seg5">5</ref>. </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>Gaspar exscribet</mentioned>
+            <p> Zu Arbeiten Kaspar Altlechners für BP im
+                  Zusammenhang mit der Hofbibliothek vgl. <ref type="letter" target="letter:466">466 </ref><ref target="letter:466 #seg5">5</ref>,
+                     <ref type="letter" target="letter:478">478</ref> <ref target="letter:478#seg3">3</ref>. </p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>laboribus meis</mentioned>
+            <p> Aus <ref type="letter" target="letter:478">478 </ref><ref target="letter:478 #seg3">3</ref> ist
                   ersichtlich, dass hiermit vor allem die Katalogisierung der lateinischen
-                  Handschriften gemeint sein dürfte. Dazu und zum heute erhaltenen Katalog vgl. <ref
-                     type="letter">378</ref> &lt;3&gt;, <ref type="letter">559</ref> &lt;3&gt;.
-               </p></note>
-            <note xml:id="d3e447">
-               <ref type="context">3</ref>
-               <label>sacros apices</label><p> Aus den Monaten November und Dezember 1715 sind
+                  Handschriften gemeint sein dürfte. Dazu und zum heute erhaltenen Katalog vgl. <ref type="letter" target="letter:378">378</ref> <ref target="letter:378#seg3">3</ref>, <ref type="letter" target="letter:559">559</ref> <ref target="letter:559#seg3">3</ref>.
+               </p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>sacros apices</mentioned>
+            <p> Aus den Monaten November und Dezember 1715 sind
                   insgesamt fünf Schreiben Karls VI. an BG erhalten: Biblioteca Comunale di Trento,
                   Ms. 2505, Nr. 5–9. Zu den Briefen BGs an den Kaiser, die diesen vorangingen, vgl.
-                     <ref type="letter">478</ref> &lt;3&gt;.</p></note>
-            <note xml:id="d3e451">
-               <ref type="context">4</ref>
-               <label>codice vestro</label><p> Dass es sich um die Schrift „De scriptoribus
+                     <ref type="letter" target="letter:478">478</ref> <ref target="letter:478#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>codice vestro</mentioned>
+            <p> Dass es sich um die Schrift „De scriptoribus
                   ecclesiasticis“ des sogenannten „Anonymus Mellicensis“ handeln muss, ergibt sich
-                  aus dem Vergleich mit den hierauf bezüglichen Ausführungen in <ref type="letter"
-                     >490</ref> &lt;4&gt; und <ref type="letter">509</ref> &lt;3&gt;.</p></note>
-            <note xml:id="d3e457">
-               <ref type="context">4</ref>
-               <label> syllogen ... ediderunt</label><p> In <ref type="letter">490</ref> &lt;4&gt;
+                  aus dem Vergleich mit den hierauf bezüglichen Ausführungen in <ref type="letter" target="letter:490">490</ref> <ref target="letter:490#seg4">4</ref> und <ref type="letter" target="letter:509">509</ref> <ref target="letter:509#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned> syllogen ... ediderunt</mentioned>
+            <p> In <ref type="letter" target="letter:490">490</ref> <ref target="letter:490#seg4">4</ref>
                   bezieht sich BP in demselben Zusammenhang auf Aubert Le Mires „Bibliotheca
-                  ecclesiastica“; sehr wahrscheinlich hatte er dasselbe auch in <ref type="letter"
-                     >480</ref> getan. </p></note>
-            <note xml:id="d3e461">
-               <ref type="context">5</ref>
-               <label>litteris ... Massueti</label><p>Gemeint ist gewiss <ref type="letter"
-                     >467</ref>, der einzige Brief, in dem Massuet auf die „Epistolae apologeticae“
-                  zu sprechen kam: vgl. <ref type="letter">467</ref> &lt;4&gt;. Für die
+                  ecclesiastica“; sehr wahrscheinlich hatte er dasselbe auch in <ref type="letter" target="letter:480">480</ref> getan. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
+            <mentioned>litteris ... Massueti</mentioned>
+            <p>Gemeint ist gewiss <ref type="letter" target="letter:467">467</ref>, der einzige Brief, in dem Massuet auf die „Epistolae apologeticae“
+                  zu sprechen kam: vgl. <ref type="letter" target="letter:467">467</ref> <ref target="letter:467#seg4">4</ref>. Für die
                   Rückübermittlung über Altlechner wird keine Versendung mit einem anderen Brief
-                  angesetzt. </p></note>
-            <note xml:id="d3e467">
-               <ref type="context">5</ref>
-               <label>serram reciprocare</label><p> Tertullian, De corona militis 3,1: „Et quamdiu
+                  angesetzt. </p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
+            <mentioned>serram reciprocare</mentioned>
+            <p> Tertullian, De corona militis 3,1: „Et quamdiu
                   per hanc lineam serram reciprocabimus, habentes observationem inveteratam, quae
                   praeveniendo statum fecit?“ Zu BGs Haltung zu den „Epistolae apologeticae“ vgl.
-                     <ref type="letter">466</ref> &lt;2&gt;.</p></note>
-            <note xml:id="d3e471">
-               <ref type="context">5</ref>
-               <label> nec nostrum ... lites</label><p>Nach Vergil, Ekloge 3,108.</p></note>
-         </div>
-      </back>
+                     <ref type="letter" target="letter:466">466</ref> <ref target="letter:466#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
+            <mentioned> nec nostrum ... lites</mentioned>
+            <p>Nach Vergil, Ekloge 3,108.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>IX</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Summe venerando et doctissimo viro domno Bernardo Pezio Benedictino et bibliothecario Mellicensi Joannes Benedictus Gentilottus ab Engelsbrun salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Antiquum meum obtineo, ut in rescribendo <add place="above">a</add> tarditatis excusatione exordiar, de qua tamen ut minus sim solicitus, perspecta tua bonitas facit. Quod in hunc annum mihi felicitatem precaris, agnosco amorem et humanitatem tuam, tibique vicissim faustum eiusdem exorsum, cursum facilem et expeditum atque exitum cum multorum annorum serie coniunctum a Superis opto. </ab>
+         <ab resp="#editor" xml:id="seg2">Ea, quae ad augendam ornandamque Bibliothecam ordinis tui a me petis, tibi omnia promta et parata sunt, et quodcunque ad illam aut ex recensione mea caesareae bibliothecae aut aliis <anchor xml:id="n1"/>libris, quos nuper admodum ex Italia nactus sum<anchor xml:id="n1e"/>, conferri potest, humanissimus sodalis tuus domnus <anchor xml:id="n2"/>Gaspar exscribet<anchor xml:id="n2e"/>; id quod, antequam frigus remittat egoque rursus ad bibliothecam accedam, vix fieri poterit. </ab>
+         <ab resp="#editor" xml:id="seg3">Quid tibi Bartensteinius noster de <pb n="1v"/> <anchor xml:id="n3"/>laboribus meis<anchor xml:id="n3e"/> significaverit, compertum non habeo. De eo te amicum optimum celare nolo, a caesare eos non improbari. Si quando ad nos veneris (quem utinam diem brevi videam), <anchor xml:id="n4"/>sacros apices<anchor xml:id="n4e"/> ea de re tibi inspiciendos et legendos dabo. </ab>
+         <ab resp="#editor" xml:id="seg4">De <anchor xml:id="n5"/>codice vestro<anchor xml:id="n5e"/> mihi plane non liquet; nec memini me hucusque in similem incidere inter eos, quos recensui. Si tamen aliquando vulgatus fuisset, ii, qui eiusmodi scriptorum<anchor xml:id="n6"/> syllogen semel atque iterum ediderunt<anchor xml:id="n6e"/>, illum profecto non praetermisissent. Probo igitur vehementer consilium tuum illum dissertationi tuae subtexendi. </ab>
+         <ab resp="#editor" xml:id="seg5">De <anchor xml:id="n7"/>litteris domni Massueti<anchor xml:id="n7e"/>, quas mecum communicasti et ego domno Gasparo mox reddidi, valde te amo. Scilicet ille Epistolas tuas non legit, et in iis aspera et rabiosula illa verba, quae mihi molesta sunt. Sed nolim ea de re tecum <anchor xml:id="n8"/>serram reciprocare<anchor xml:id="n8e"/>, ut Tertulliani utar verbis, <pb n="2r"/><anchor xml:id="n9"/> nec nostrum est inter vos tantas componere lites<anchor xml:id="n9e"/>. </ab>
+         <ab resp="#editor" xml:id="seg6">Tu, iocundissime Bernarde, valetudinem tuam cura diligenter et me tui observantissimum dilige, quod te demum facere putabo, si, quandocunque usus venerit, opera mea uteris et quam saepissime litteras ad me dederis. Vale cum doctissimo germano tuo, cuius in me animum exosculor.</ab>
+         <closer>Scribebam festinanter Vindobonae pridie Nonas Januarii MDCCXVI.</closer>
+      </body>
    </text>
 </TEI>

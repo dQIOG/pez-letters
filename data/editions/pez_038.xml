@@ -1,39 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="38" xml:id="pez-0038">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">38 Roman Doll an Bernhard Pez. 1710-02-11. Wiblingen.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Roman Doll an Bernhard Pez. 1710-02-11. Wiblingen.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">38</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">155r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 155r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -48,68 +68,46 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">37</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">51</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">32</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">32</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">37</idno>
-               </ref>
+               <ptr type="prev" target="letter:037"/>
+               <ptr type="next" target="letter:051"/>
+               <ptr type="sentWith" target="letter:032"/>
+               <ptr type="mentions" target="letter:032"/>
+               <ptr type="mentions" target="letter:037"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person">RD</rs> hat BPs Brief <ref type="letter" target="letter:37">37</ref> am Abend des Vortages mitsamt dem beigelegten Buch („<rs ref="index:d14380e33515">De irruptione Bavarica</rs>“) durch den <rs ref="index:d14380e28088">Melker</rs> <rs ref="index:d10854e19695">Boten</rs> erhalten. Er dankt für das Geschenk, das er seinem Abt <rs ref="index:d10854e13151">Modest Huber</rs> zeigen wird, sobald dieser von einer Reise zurückgekehrt ist.</p>
+            <p corresp="#seg2"><rs type="person">RD</rs> freut sich, BP für dessen Vorhaben („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) seine Dienste anzubieten, und will auch von den benachbarten Klöstern Materialien erbitten.</p>
+            <p corresp="#seg3"><rs type="person">RD</rs> hat außerdem am Vortag einen Brief an BP aus <rs ref="index:d10854e27374">St. Gallen</rs> <ref type="letter" target="letter:32">32</ref> erhalten, den er beilegt. Er schließt seinen Brief, weil der <rs ref="index:d10854e19695">Bote</rs> bereits am Aufbrechen ist.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e4500"><rs type="person" key="">RD</rs> hat <rs type="person" role="sender">BPs</rs> Brief <ref type="letter">37</ref> am Abend des Vortages mitsamt dem beigelegten Buch („<rs key="index:d14380e33515">De irruptione Bavarica</rs>“) durch den <rs key="index:d14380e28088">Melker</rs> <rs key="index:d10854e19695">Boten</rs> erhalten. Er dankt für das Geschenk, das er seinem Abt <rs key="index:d10854e13151">Modest Huber</rs> zeigen wird, sobald dieser von einer Reise zurückgekehrt ist.</seg><seg type="context" n="2" xml:id="d4618e4505"><rs type="person" key="">RD</rs> freut sich, <rs type="person" role="sender">BP</rs> für dessen Vorhaben („<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“) seine Dienste anzubieten, und will auch von den benachbarten Klöstern Materialien erbitten.</seg><seg type="context" n="3" xml:id="d4618e4507"><rs type="person" key="">RD</rs> hat außerdem am Vortag einen Brief an <rs type="person" role="sender">BP</rs> aus <rs key="index:d10854e27374">St. Gallen</rs> <ref type="letter">32</ref> erhalten, den er beilegt. Er schließt seinen Brief, weil der <rs key="index:d10854e19695">Bote</rs> bereits am Aufbrechen ist.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">I</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende religiosissime ac clarissime domine ac patrone colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e4527">Humanissimas per <seg type="lemma" corresp="#d4618e4540">baiulum Mellicensem</seg> heri sub noctem debita veneratione accepi una cum <seg type="lemma" corresp="#d4618e4547">opusculo politico</seg>, quod cum gustu proxime legam. Sed inpraesentiarum pro beneficio immerito quidem exhibito debitas refero gratias, exhibebo illud reverendissimo meo, postquam de itinere coepto redierit. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e4529">Me felicem reputabo, si parva obsequia mea pro vestra voluntate applicanda sint, sicut pronissimus ea spondeo; placeat tantum mandare, ut intelligat servus, in quo gratum quid praestare possit. Conabor interea, ut pro intentione inserviam, de vicinis monasteriis conquirendo talia, quae forte non displiceant. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e4531">Accepi etiam heri litteras e S. Gallo clarissimae dominationi vestrae destinatas, quas meis hic includo <pb n="1v"/> et simul claudo, siquidem nuntius abitum maturat. Qui cum repetita servitiorum oblatione et ferventissima mei recommendatione perenno</seg></p>
-            <p xml:space="preserve">Admodum reverendae religiosissimae ac clarissimae dominationis vestrae obligatissimus in Christo servus pater Romanus Doll professus Wiblingensis capituli secretarius manu propria.</p>
-            <p xml:space="preserve">Wiblingae 11 Februarii 1710.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e4540">
-               <ref type="context">1</ref>
-               <label>baiulum Mellicensem</label>
-               <p>Wohl derselbe Rotelbote mit der Rotel auf Rupert Eckmüller, der in <ref
-                     type="letter">28</ref> als Überbringer genannt wird. Auch <ref type="letter"
-                     >34</ref> könnte auf diesem Wege transportiert worden sein.</p>
-            </note>
-            <note xml:id="d4618e4547">
-               <ref type="context">1</ref>
-               <label>opusculo politico</label>
-               <p>Aller Wahrscheinlichkeit nach BPs „De irruptione Bavarica“, von dem anscheinend
-                  auch mit <ref type="letter">28</ref> und <ref type="letter">34</ref> jeweils ein
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>baiulum Mellicensem</mentioned>
+            <p>Wohl derselbe Rotelbote mit der Rotel auf Rupert Eckmüller, der in <ref type="letter" target="letter:28">28</ref> als Überbringer genannt wird. Auch <ref type="letter" target="letter:34">34</ref> könnte auf diesem Wege transportiert worden sein.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>opusculo politico</mentioned>
+            <p>Aller Wahrscheinlichkeit nach BPs „De irruptione Bavarica“, von dem anscheinend
+                  auch mit <ref type="letter" target="letter:28">28</ref> und <ref type="letter" target="letter:34">34</ref> jeweils ein
                   Exemplar versendet worden war. Die Beförderung durch den Rotelboten war für
-                  Büchersendungen billiger und sicherer als jene mit der Post; vgl. <ref
-                     type="letter">125</ref>, <ref type="letter">168</ref>, <ref type="letter"
-                     >223</ref>, <ref type="letter">288</ref> &lt;10&gt;, <ref type="letter"
-                     >293</ref>, <ref type="letter">335</ref>.</p>
-            </note>
-         </div>
-      </back>
+                  Büchersendungen billiger und sicherer als jene mit der Post; vgl. <ref type="letter" target="letter:125">125</ref>, <ref type="letter" target="letter:168">168</ref>, <ref type="letter" target="letter:223">223</ref>, <ref type="letter" target="letter:288">288</ref> <ref target="letter:288#seg10">10</ref>, <ref type="letter" target="letter:293">293</ref>, <ref type="letter" target="letter:335">335</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>I</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende religiosissime ac clarissime domine ac patrone colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Humanissimas per <anchor xml:id="n1"/>baiulum Mellicensem<anchor xml:id="n1e"/> heri sub noctem debita veneratione accepi una cum <anchor xml:id="n2"/>opusculo politico<anchor xml:id="n2e"/>, quod cum gustu proxime legam. Sed inpraesentiarum pro beneficio immerito quidem exhibito debitas refero gratias, exhibebo illud reverendissimo meo, postquam de itinere coepto redierit. </ab>
+         <ab resp="#editor" xml:id="seg2">Me felicem reputabo, si parva obsequia mea pro vestra voluntate applicanda sint, sicut pronissimus ea spondeo; placeat tantum mandare, ut intelligat servus, in quo gratum quid praestare possit. Conabor interea, ut pro intentione inserviam, de vicinis monasteriis conquirendo talia, quae forte non displiceant. </ab>
+         <ab resp="#editor" xml:id="seg3">Accepi etiam heri litteras e S. Gallo clarissimae dominationi vestrae destinatas, quas meis hic includo <pb n="1v"/> et simul claudo, siquidem nuntius abitum maturat. Qui cum repetita servitiorum oblatione et ferventissima mei recommendatione perenno</ab>
+         <closer>Admodum reverendae religiosissimae ac clarissimae dominationis vestrae obligatissimus in Christo servus pater Romanus Doll professus Wiblingensis capituli secretarius manu propria.</closer>
+         <closer>Wiblingae 11 Februarii 1710.</closer>
+      </body>
    </text>
 </TEI>

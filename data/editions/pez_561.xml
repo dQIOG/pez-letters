@@ -1,38 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="561" xml:id="pez-0561">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">561 Johann Christoph Bartenstein an Bernhard Pez. 1716-05-10.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Christoph Bartenstein an Bernhard Pez. 1716-05-10.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">561</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
+            <note type="remarks">
+               Eine Angabe des Absendeortes fehlt; als solcher zu vermuten ist Wien.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">334r–335v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 334r–335v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -46,163 +70,133 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">560</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">581</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">555</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">560</idno>
-               </ref>
+               <ptr type="prev" target="letter:560"/>
+               <ptr type="next" target="letter:581"/>
+               <ptr type="mentions" target="letter:555"/>
+               <ptr type="mentions" target="letter:560"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">BP will sich wohl für CBs vorangehendes kurzes Schweigen rächen, denn er hat auf zwei Schreiben von CB (<ref type="letter" target="letter:555">555</ref>, <ref type="letter" target="letter:560">560</ref>), welche ihm schon ihres Themas wegen hätten gefallen müssen, bislang nicht geantwortet. CB hört dennoch nicht auf, BP prompt alles mitzuteilen, was er von Freunden erfährt. Vor einigen Tagen wurde CB der Conspectus eines Werkes „<rs ref="index:d14380e10554">Thesaurus antiquitatum Germanicarum</rs>“ übermittelt, das ein Professor zu <rs ref="index:d14380e17865">Helmstedt</rs> namens <rs ref="index:d14380e10463">Johann Georg Eckhart</rs> nach dem Vorbild der Publikationen von <rs ref="index:d14380e16177">Johann Georg Graeve</rs> („<rs ref="index:d14380e16183">Thesaurus antiquitatum Romanarum</rs>“, „<rs ref="index:d14380e16188">Thesaurus antiquitatum Italiae</rs>“) sowie von <rs ref="index:d14380e16529">Jakob Gronovius</rs> („<rs ref="index:d14380e16535">Thesaurus antiquitatum Graecarum</rs>“) herausgeben will. Die Anlage der Sammlung kann BP aus dem mitgesendeten Schema ersehen; CB missbilligt sie allerdings aus mehreren Gründen. Vor allem stört ihn, dass in <rs ref="index:d14380e10546">Eckharts „Thesaurus“</rs> vor allem Schriften aufgenommen werden sollen, die ohnedies weit verbreitet sind; wenn nun aber jemand im „Thesaurus“ einzelne Abhandlungen etwa aus den Sammlungen von <rs ref="index:d14380e40137">Konrad Samuel Schurzfleisch</rs> („<rs ref="index:d14380e40143">Disputationes historicae civiles</rs>“, „<rs ref="index:d14380e40148">Opera historica politica</rs>“), <rs ref="index:d14380e31065">Ulrich Obrecht („Academica collecta“)</rs> oder <rs ref="index:d14380e5994">Johann Heinrich Boeckler („Dissertationes academicae“)</rs> besäße, könnte er doch die übrigen nicht entbehren. Die Buchkäufer werden dadurch genötigt, ein und dieselbe Schrift zweifach zu erwerben. Derselbe Mangel ist an den meisten bislang von den <rs ref="index:d10854e26814">Sachsen</rs> (Saxones) veranstalteten Sammlungen festzustellen; das Ziel dieser Männer ist offenbar, als Autoren gewichtiger Bände bekannt zu werden.</p>
+            <p corresp="#seg2"><rs ref="index:d14380e25240">Johann Peter Ludewig</rs>, Professor zu <rs ref="index:d14380e16962">Halle</rs>, hat einen Kommentar („<rs ref="index:d14380e25253">Vollständige erläuterung</rs>“) zur <rs ref="index:d14380e21183">Goldenen Bulle (Karls IV. von 1356)</rs> veröffentlicht, der etliche gewagte Vermutungen enthält und eher das vielfältige Wissen Ludewigs als genaues und solides Urteilsvermögen unter Beweis stellt. Erschienen ist auch das umfangreiche „<rs ref="index:d14380e41771">Syntagma historiae Germanicae</rs>“ des berühmten <rs ref="index:d14380e41737">Burkhard Gotthelf Struve</rs>, das aus einer Reihe von Thesen zusammengesetzt ist; wie schon daraus ersichtlich, verdient es eher die Bezeichnung „Abhandlungen“ (commentarii) als jene einer richtigen „Geschichte“, welche gewiss mehr Geist, Fleiß, Eleganz und Ordnung erfordert.</p>
+            <p corresp="#seg3"><rs ref="index:d14380e29435">Bernard de Montfaucon</rs> ist damit beschäftigt, die Kupferstiche für sein Werk „<rs ref="index:d10854e20504">Antiquité expliquée</rs>“ anfertigen zu lassen. Wegen des in <rs ref="index:d14380e12712">Frankreich</rs> herrschenden Geldmangels soll die Veröffentlichung durch Subskriptionen finanziert werden, wie es auch in <rs ref="index:d14380e11399">England</rs> üblich ist. CB will BP den <rs ref="index:d14380e10554">Conspectus</rs> schicken, sobald er ihn selbst erhält, denn er zweifelt nicht, dass BP das Werk kaufen wollen wird.</p>
+            <p corresp="#seg4">Für die von <rs ref="index:d14380e3697">Étienne Baluze</rs> vorbereitete Ausgabe der <rs ref="index:d14380e8938">Werke</rs> des <rs ref="index:d14380e8930">Cyprian von Karthago</rs> findet sich kein Verleger, weil das Alter des Autors von 86 Jahren alle abschreckt: Man fürchtet, dass im Falle seines Todes vor der Fertigstellung der Edition deren Preis sinken würde.</p>
+            <p corresp="#seg5">Der <rs ref="index:d14380e9873">Dominikaner</rs> <rs ref="index:d14380e24770">Michel Lequien</rs>, der die <rs ref="index:d14380e20451">Werke</rs> des <rs ref="index:d14380e20445">Johannes Damascenus</rs> ediert hat, bereitet eine Ausgabe des <rs ref="index:d14380e24636">Leontios</rs> (siehe Kommentar) vor. Er ist mit <rs ref="index:d14380e29435">Montfaucon</rs> befreundet, auf dessen Anregung er auch eine Geschichte der Patriarchen von <rs ref="index:d14380e22995">Konstantinopel</rs>, <rs ref="index:d14380e987">Alexandria</rs> und <rs ref="index:d14380e2790">Antiochia</rs> mit dem Titel „<rs ref="index:d14380e24778">Oriens Christianus</rs>“ verfassen will. Ein anderer <rs ref="index:d14380e12712">Franzose</rs>, <rs ref="index:d14380e24116">Jean-Baptiste Lebrun-Desmarettes</rs>, arbeitet an einer Edition der <rs ref="index:d14380e23564">Werke des Laktanz</rs>. Er ist derjenige, der die Schrift „<rs ref="index:d14380e23553">De mortibus persecutorum</rs>“ wieder Laktanz zugeschrieben hat, nachdem <rs ref="index:d14380e24532">Nicolas Le Nourry</rs> sie jenem abgesprochen hatte („<rs ref="index:d14380e23559">Lucii Caecilii liber De mortibus persecutorum</rs>“). CB schließt mit Grüßen an <rs ref="index:d14380e34537">HP</rs>.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e9579"><rs type="person" role="sender">BP</rs> will sich wohl für <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CBs<?oxy_custom_end?> vorangehendes kurzes Schweigen rächen, denn er hat auf zwei Schreiben von <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> (<ref type="letter">555</ref>, <ref type="letter">560</ref>), welche ihm schon ihres Themas wegen hätten gefallen müssen, bislang nicht geantwortet. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> hört dennoch nicht auf, <rs type="person" role="sender">BP</rs> prompt alles mitzuteilen, was er von Freunden erfährt. Vor einigen Tagen wurde <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> der Conspectus eines Werkes „<rs key="index:d14380e10554">Thesaurus antiquitatum Germanicarum</rs>“ übermittelt, das ein Professor zu <rs key="index:d14380e17865">Helmstedt</rs> namens <rs key="index:d14380e10463">Johann Georg Eckhart</rs> nach dem Vorbild der Publikationen von <rs key="index:d14380e16177">Johann Georg Graeve</rs> („<rs key="index:d14380e16183">Thesaurus antiquitatum Romanarum</rs>“, „<rs key="index:d14380e16188">Thesaurus antiquitatum Italiae</rs>“) sowie von <rs key="index:d14380e16529">Jakob Gronovius</rs> („<rs key="index:d14380e16535">Thesaurus antiquitatum Graecarum</rs>“) herausgeben will. Die Anlage der Sammlung kann <rs type="person" role="sender">BP</rs> aus dem mitgesendeten Schema ersehen; <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> missbilligt sie allerdings aus mehreren Gründen. Vor allem stört ihn, dass in <rs key="index:d14380e10546">Eckharts „Thesaurus“</rs> vor allem Schriften aufgenommen werden sollen, die ohnedies weit verbreitet sind; wenn nun aber jemand im „Thesaurus“ einzelne Abhandlungen etwa aus den Sammlungen von <rs key="index:d14380e40137">Konrad Samuel Schurzfleisch</rs> („<rs key="index:d14380e40143">Disputationes historicae civiles</rs>“, „<rs key="index:d14380e40148">Opera historica politica</rs>“), <rs key="index:d14380e31065">Ulrich Obrecht („Academica collecta“)</rs> oder <rs key="index:d14380e5994">Johann Heinrich Boeckler („Dissertationes academicae“)</rs> besäße, könnte er doch die übrigen nicht entbehren. Die Buchkäufer werden dadurch genötigt, ein und dieselbe Schrift zweifach zu erwerben. Derselbe Mangel ist an den meisten bislang von den <rs key="index:d10854e26814">Sachsen</rs> (Saxones) veranstalteten Sammlungen festzustellen; das Ziel dieser Männer ist offenbar, als Autoren gewichtiger Bände bekannt zu werden.</seg><seg type="context" n="2" xml:id="d3e9581"><rs key="index:d14380e25240">Johann Peter Ludewig</rs>, Professor zu <rs key="index:d14380e16962">Halle</rs>, hat einen Kommentar („<rs key="index:d14380e25253">Vollständige erläuterung</rs>“) zur <rs key="index:d14380e21183">Goldenen Bulle (Karls IV. von 1356)</rs> veröffentlicht, der etliche gewagte Vermutungen enthält und eher das vielfältige Wissen Ludewigs als genaues und solides Urteilsvermögen unter Beweis stellt. Erschienen ist auch das umfangreiche „<rs key="index:d14380e41771">Syntagma historiae Germanicae</rs>“ des berühmten <rs key="index:d14380e41737">Burkhard Gotthelf Struve</rs>, das aus einer Reihe von Thesen zusammengesetzt ist; wie schon daraus ersichtlich, verdient es eher die Bezeichnung „Abhandlungen“ (commentarii) als jene einer richtigen „Geschichte“, welche gewiss mehr Geist, Fleiß, Eleganz und Ordnung erfordert.</seg><seg type="context" n="3" xml:id="d3e9583"><rs key="index:d14380e29435">Bernard de Montfaucon</rs> ist damit beschäftigt, die Kupferstiche für sein Werk „<rs key="index:d10854e20504">Antiquité expliquée</rs>“ anfertigen zu lassen. Wegen des in <rs key="index:d14380e12712">Frankreich</rs> herrschenden Geldmangels soll die Veröffentlichung durch Subskriptionen finanziert werden, wie es auch in <rs key="index:d14380e11399">England</rs> üblich ist. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> will <rs type="person" role="sender">BP</rs> den <rs key="index:d14380e10554">Conspectus</rs> schicken, sobald er ihn selbst erhält, denn er zweifelt nicht, dass <rs type="person" role="sender">BP</rs> das Werk kaufen wollen wird.</seg><seg type="context" n="4" xml:id="d3e9585">Für die von <rs key="index:d14380e3697">Étienne Baluze</rs> vorbereitete Ausgabe der <rs key="index:d14380e8938">Werke</rs> des <rs key="index:d14380e8930">Cyprian von Karthago</rs> findet sich kein Verleger, weil das Alter des Autors von 86 Jahren alle abschreckt: Man fürchtet, dass im Falle seines Todes vor der Fertigstellung der Edition deren Preis sinken würde.</seg><seg type="context" n="5" xml:id="d3e9587">Der <rs key="index:d14380e9873">Dominikaner</rs> <rs key="index:d14380e24770">Michel Lequien</rs>, der die <rs key="index:d14380e20451">Werke</rs> des <rs key="index:d14380e20445">Johannes Damascenus</rs> ediert hat, bereitet eine Ausgabe des <rs key="index:d14380e24636">Leontios</rs> (siehe Kommentar) vor. Er ist mit <rs key="index:d14380e29435">Montfaucon</rs> befreundet, auf dessen Anregung er auch eine Geschichte der Patriarchen von <rs key="index:d14380e22995">Konstantinopel</rs>, <rs key="index:d14380e987">Alexandria</rs> und <rs key="index:d14380e2790">Antiochia</rs> mit dem Titel „<rs key="index:d14380e24778">Oriens Christianus</rs>“ verfassen will. Ein anderer <rs key="index:d14380e12712">Franzose</rs>, <rs key="index:d14380e24116">Jean-Baptiste Lebrun-Desmarettes</rs>, arbeitet an einer Edition der <rs key="index:d14380e23564">Werke des Laktanz</rs>. Er ist derjenige, der die Schrift „<rs key="index:d14380e23553">De mortibus persecutorum</rs>“ wieder Laktanz zugeschrieben hat, nachdem <rs key="index:d14380e24532">Nicolas Le Nourry</rs> sie jenem abgesprochen hatte („<rs key="index:d14380e23559">Lucii Caecilii liber De mortibus persecutorum</rs>“). <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> schließt mit Grüßen an <rs key="index:d14380e34537">HP</rs>.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">XV</hi>.</p>
-            <div type="remarks">
-               <p>Eine Angabe des Absendeortes fehlt; als solcher zu vermuten ist Wien.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverendo in Christo patri domino Bernhardo Petzio bibliothecario Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e9607">Iniquus prorsus es ultor silentii, quod per exiguum tempus tenui. Nec enim ad binas literas meas, quas vel argumentum commendare tibi debuisset, quicquam hactenus reposuisti. Ego tamen ideo non cessabo te amare et promptus impertire tibi, quaecunque <seg type="lemma" corresp="#d3e9642">ab amicis relata</seg> mihi erunt. Scias igitur, velim, vir amicissime, ante aliquot dies communicatum mihi fuisse conspectum operis, quod professor quidam Helmstadiensis, quem<seg type="lemma" corresp="#d3e9648"> Eccardum vocant, adornat, et quo is Thesaurum</seg> Germanicarum antiquitatum ad instar Graeviani Gronovianique exhibere orbi erudito intendit. Totius instituti rationem ex adiuncto schemate omnium optime cognosces; quae tamen, ut verum fatear, plurimis de causis mihi haudquaquam probatur. Nam, ut alia mittam, pleraque ex inserendis isti Thesauro operibus ita comparata sunt, ut fere in omnium versentur manibus; et licet quis exempli gratia insertas ex Schurtzfleischio,<seg type="lemma" corresp="#d3e9652"> Obrechto</seg>,<seg type="lemma" corresp="#d3e9656"> Boeclero</seg> operi diatribas in isto Thesauro possideat, non poterit tamen ob paucas istas carere reliquis omnibus. Cui consequens est, ut una res binis vicibus in posterum nobis comparanda sit, quam defectum in plurimis, quae hactenus a Saxonibus <pb n="1v"/> adornatae fuerunt, collectionibus observare licuit. Scilicet illi homines id tantum agunt, ut magnorum et ingentis ponderis voluminum auctores ferantur. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e9611">Ludwigius Hallensis professor commentarium in Auream Bullam edidit refertum plurimis ut <seg type="lemma" corresp="#d3e9660">audacibus coniecturis</seg>, et qui multiiugam potius hominis<note place="foot" xml:id="d3e9613">	Danach durchgestrichen <hi rend="italic">lect</hi>.</note> scientiam quam exactum, temperatum solidumque iudicium prodat.<seg type="lemma" corresp="#d3e9666"> Prodiit quoque clarissimi Struvii Historia Germanica</seg> magnae satis molis per modum thesium conscripta, quo ex solo iam satis patescit eam commentariorum titulum mereri, iustae historiae nomen haud aeque: quae certe plus ingenii, plus studii, plus elegantiae et plus ordinis desiderat. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e9619">Montefalconius in eo est, ut aeri incudi curet figuras operi de Antiquitatibus inserendas. Hoc opus ob argenti, quo Gallia laborat, penuriam <seg type="lemma" corresp="#d3e9670">per modum subscriptionis</seg>, qui et in Anglia observari solet, prodibit. Conspectum eius mox, ubi in manus meas pervenerit, tibi transmittam, nullus dubitans, quin et tu ex illis futurus sis, qui opus istud comparare sibi volent. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e9621"><seg type="lemma" corresp="#d3e9676">Baluzii Cyprianus</seg><note place="foot" xml:id="d3e9623">	Danach durchgestrichen <hi rend="italic">bib</hi>.</note> typographum non invenit. Viri aetas iam sex annos ultra 80. nati omnes absterret. Timent enim, ne interveniente ante opus absolutum illius morte libri pretium decrescat. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e9629">Reverendus pater Le Quien Dominicanus, auctor Johannis Damasceni, <seg type="lemma" corresp="#d3e9682">Leontii editionem</seg> parat. Summus est Montefalconii amicus, cuius etiam suasu <pb n="2r"/> hortatuque historiam patriarcharum Constantinopolitanorum, Alexandrinorum atque Antiochenorum sub titulo <seg type="lemma" corresp="#d3e9688">Orientis Christiani</seg> idem ille nobis dabit. Alius Gallus, qui se <seg type="lemma" corresp="#d3e9692">Desmarezium</seg> vocat, Lactantium publici iuris faciet. Hic ille est, qui<seg type="lemma" corresp="#d3e9697"> dissertatione singulari</seg> tractatum De mortibus persecutorum Lactantio asseruit, cui <seg type="lemma" corresp="#d3e9701">Nourrius illum ereptum iverat</seg>. Clarissimo fratri tuo plurimam eandemque tenerrimi affectus plenissimam salutem adscribo. Vale, vir suavissime, meque amare, uti ego te amo, perge.</seg></p>
-            <p xml:space="preserve">Scribebam die 10. Maii MDCCXVI<note place="foot" xml:id="d3e9635">	Korrigiert aus <hi rend="italic">MDD</hi>.</note>.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e9642">
-               <ref type="context">1</ref>
-               <label>ab amicis relata</label><p> Die Angaben CBs erlauben keine nähere Bestimmung
-                  seiner Quellen. Für die Informationen aus Frankreich in &lt;3&gt; bis &lt;5&gt;
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>ab amicis relata</mentioned>
+            <p> Die Angaben CBs erlauben keine nähere Bestimmung
+                  seiner Quellen. Für die Informationen aus Frankreich in <ref target="#seg3">3</ref> bis <ref target="#seg5">5</ref>
                   ist jedoch wohl an indirekte Übermittlung über einen deutschen Briefpartner,
-                  möglicherweise Konrad Widow, zu denken: vgl. <ref type="letter">555
-                  </ref>&lt;4&gt;.</p></note>
-            <note xml:id="d3e9648">
-               <ref type="context">1</ref>
-               <label> Eccardum ... Thesaurum</label><p> Zu dem nicht realisierten Plan eines
+                  möglicherweise Konrad Widow, zu denken: vgl. <ref type="letter" target="letter:555">555
+                  </ref><ref target="letter:555&#xA;                  #seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> Eccardum ... Thesaurum</mentioned>
+            <p> Zu dem nicht realisierten Plan eines
                   „Thesaurus antiquitatum Germanicarum“, den Eckhart mit dem Leipziger Verleger
-                  Thomas Fritsch verfolgte, vgl. <rs type="bibl" key="bibl:15142">Benz, Eckhart</rs>
-                  141; <rs type="bibl" key="bibl:17972">Leskien, Eckhart</rs> 149–155. Übersichten
+                  Thomas Fritsch verfolgte, vgl. <rs type="bibl" ref="bibl:15142">Benz, Eckhart</rs>
+                  141; <rs type="bibl" ref="bibl:17972">Leskien, Eckhart</rs> 149–155. Übersichten
                   der darin aufzunehmenden Texte – überwiegend Nachdrucke von Abhandlungen, daneben
                   nur zu einem geringen Teil Editionen vorher ungedruckter Quellen – sind
                   handschriftlich in mehreren zeitlich auseinanderliegenden Fassungen erhalten,
                   außerdem beträchtliche Mengen diesbezüglicher Korrespondenz, vor allem in HStA
                   Hannover, Hann. 93 179; StA Würzburg, Ms. f. 184. Hingegen liegt auf einen Druck
-                  eines solchen Conspectus kein Hinweis vor: vgl. <rs type="bibl" key="bibl:17972"
-                     >Leskien, Eckhart</rs> 211–213. Das an CB gelangte Stück ebenso wie die von ihm
+                  eines solchen Conspectus kein Hinweis vor: vgl. <rs type="bibl" ref="bibl:17972">Leskien, Eckhart</rs> 211–213. Das an CB gelangte Stück ebenso wie die von ihm
                   weitergegebenen Angaben waren daher wohl handschriftlich. Der früheste bisher
                   bekannte Beleg für das Vorliegen eines solchen Conspectus ist ein darauf
                   reagierendes Schreiben Fritschs an Eckhart vom 3. April 1717: HStA Hannover, Hann.
                   93 179, 83r–v. Im Lichte der vorliegenden Stelle zu revidieren ist die auf
                   Grundlage jenes Briefes vorgenommene Datierung auf „die Mitte des Jahres 1717“ bei
-                     <rs type="bibl" key="bibl:17972">Leskien, Eckhart</rs> 150. Zu Eckharts Werben
-                  um Materialien vgl. <ref type="letter">870</ref> &lt;6&gt;.</p></note>
-            <note xml:id="d3e9652">
-               <ref type="context">1</ref>
-               <label> Obrechto</label><p>Der Strassburger Professor für Rhetorik, Geschichte und
+                     <rs type="bibl" ref="bibl:17972">Leskien, Eckhart</rs> 150. Zu Eckharts Werben
+                  um Materialien vgl. <ref type="letter" target="letter:870">870</ref> <ref target="letter:870#seg6">6</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned> Obrechto</mentioned>
+            <p>Der Strassburger Professor für Rhetorik, Geschichte und
                   Staatsrecht sowie spätere Prätor Ulrich Obrecht war als Schwiegersohn von Johann
-                  Heinrich Boeckler ein angeheirateter Verwandter CBs: <rs type="bibl"
-                     key="bibl:15398">Braubach, Bartenstein</rs> 103, 110. Zu ihm vgl. <rs
-                     type="bibl" key="bibl:15162">Berger-Levrault, Annales</rs> 176; <rs type="bibl"
-                     key="bibl:15500">Bursian, Philologie</rs> 1 331f.; <rs type="bibl"
-                     key="bibl:18338">Metzenthin, Obrecht</rs>; <rs type="bibl" key="bibl:19602"
-                     >Sitzmann, Dictionnaire</rs> 2 386f.</p></note>
-            <note xml:id="d3e9656">
-               <ref type="context">1</ref>
-               <label> Boeclero</label><p>Johann Heinrich Boeckler der Ältere hatte zu den
+                  Heinrich Boeckler ein angeheirateter Verwandter CBs: <rs type="bibl" ref="bibl:15398">Braubach, Bartenstein</rs> 103, 110. Zu ihm vgl. <rs type="bibl" ref="bibl:15162">Berger-Levrault, Annales</rs> 176; <rs type="bibl" ref="bibl:15500">Bursian, Philologie</rs> 1 331f.; <rs type="bibl" ref="bibl:18338">Metzenthin, Obrecht</rs>; <rs type="bibl" ref="bibl:19602">Sitzmann, Dictionnaire</rs> 2 386f.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
+            <mentioned> Boeclero</mentioned>
+            <p>Johann Heinrich Boeckler der Ältere hatte zu den
                   bedeutendsten Gelehrten der Strassburger Universität im 17. Jh. gezählt. Sein
                   Schüler und späterer Schwager Johann Christoph Artopoeus war CBs Großvater
                   mütterlicherseits; sein Sohn Johann Boeckler, Professor der Medizin, Botanik und
-                  Chemie, war einer von CBs Taufpaten gewesen: vgl. <rs type="bibl" key="bibl:15398"
-                     >Braubach, Bartenstein</rs> 101, 103, 107, 110. Zu Johann Heinrich Boeckler
-                  vgl. <rs type="bibl" key="bibl:15162">Berger-Levrault, Annales</rs> 26; <rs
-                     type="bibl" key="bibl:15500">Bursian, Philologie</rs> 1 329–331; <rs
-                     type="bibl" key="bibl:17332">Jirgal, Bökler</rs>; <rs type="bibl"
-                     key="bibl:19328">Scherer, Geschichte</rs> 180f.; <rs type="bibl"
-                     key="bibl:19602">Sitzmann, Dictionnaire</rs> 1 182; <rs type="bibl"
-                     key="bibl:20180">Wallmann, Spener</rs> 80f., 124f.</p></note>
-            <note xml:id="d3e9660">
-               <ref type="context">2</ref>
-               <label>audacibus coniecturis</label><p> Zu dem genannten Werk und seiner kontroversen
-                  Aufnahme vgl. <rs type="bibl" key="bibl:16854">Hattenhauer, Einleitung</rs>
+                  Chemie, war einer von CBs Taufpaten gewesen: vgl. <rs type="bibl" ref="bibl:15398">Braubach, Bartenstein</rs> 101, 103, 107, 110. Zu Johann Heinrich Boeckler
+                  vgl. <rs type="bibl" ref="bibl:15162">Berger-Levrault, Annales</rs> 26; <rs type="bibl" ref="bibl:15500">Bursian, Philologie</rs> 1 329–331; <rs type="bibl" ref="bibl:17332">Jirgal, Bökler</rs>; <rs type="bibl" ref="bibl:19328">Scherer, Geschichte</rs> 180f.; <rs type="bibl" ref="bibl:19602">Sitzmann, Dictionnaire</rs> 1 182; <rs type="bibl" ref="bibl:20180">Wallmann, Spener</rs> 80f., 124f.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned>audacibus coniecturis</mentioned>
+            <p> Zu dem genannten Werk und seiner kontroversen
+                  Aufnahme vgl. <rs type="bibl" ref="bibl:16854">Hattenhauer, Einleitung</rs>
                   XVII–XXI. Zu Ludewigs Ansichten und Arbeitsweise sowie zur zeitgenössischen Kritik
-                  daran vgl. <rs type="bibl" key="bibl:16800">Hammerstein, Jus und Historie</rs>
-                  177–195; <rs type="bibl" key="bibl:19136">Roeck, Reichssystem</rs>
-               110–112.</p></note>
-            <note xml:id="d3e9666">
-               <ref type="context">2</ref>
-               <label> Prodiit ... Historia Germanica</label><p>Struves „Syntagma historiae
+                  daran vgl. <rs type="bibl" ref="bibl:16800">Hammerstein, Jus und Historie</rs>
+                  177–195; <rs type="bibl" ref="bibl:19136">Roeck, Reichssystem</rs>
+               110–112.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
+            <mentioned> Prodiit ... Historia Germanica</mentioned>
+            <p>Struves „Syntagma historiae
                   Germanicae“ wurde – ab der vermehrten Neuausgabe von 1730 unter dem Titel „Corpus
                   historiae Germanicae“, später auch in deutschen Fassungen – ein beliebtes Lehrbuch
-                  zur Reichsgeschichte: <rs type="bibl" key="bibl:18396">Mitzschke, Struve</rs> 675;
-                     <rs type="bibl" key="bibl:19328">Scherer, Geschichte</rs> 155, 490; <rs
-                     type="bibl" key="bibl:20256">Wegele, Historiographie</rs> 616.</p></note>
-            <note xml:id="d3e9670">
-               <ref type="context">3</ref>
-               <label>per modum subscriptionis</label><p> Vgl. <ref type="letter">700</ref>
-                  &lt;6&gt;.</p></note>
-            <note xml:id="d3e9676">
-               <ref type="context">4</ref>
-               <label>Baluzii Cyprianus</label><p> Die Edition der Werke des Kirchenvaters Cyprian,
+                  zur Reichsgeschichte: <rs type="bibl" ref="bibl:18396">Mitzschke, Struve</rs> 675;
+                     <rs type="bibl" ref="bibl:19328">Scherer, Geschichte</rs> 155, 490; <rs type="bibl" ref="bibl:20256">Wegele, Historiographie</rs> 616.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned>per modum subscriptionis</mentioned>
+            <p> Vgl. <ref type="letter" target="letter:700">700</ref>
+                  <ref target="letter:700#seg6">6</ref>.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
+            <mentioned>Baluzii Cyprianus</mentioned>
+            <p> Die Edition der Werke des Kirchenvaters Cyprian,
                   an der Baluze während seiner letzten Lebensjahre arbeitete, blieb bei seinem Tod
                   1718 unvollendet; von dem Mauriner Prudent Maran aufgenommen, erschien sie 1726:
-                     <rs type="bibl" key="bibl:18798">Petitmengin, Monument controversé</rs>; vgl.
-                     <rs type="bibl" key="bibl:15372">Boutier, Stephanus Baluzius</rs> 14f., 127f.;
-                     <rs type="bibl" key="bibl:16446">Gasnault, Baluze éditeur</rs>
-               135–139.</p></note>
-            <note xml:id="d3e9682">
-               <ref type="context">5</ref>
-               <label>Leontii editionem</label><p>Zwei Autoren dieses Namens, die beide annähernd
+                     <rs type="bibl" ref="bibl:18798">Petitmengin, Monument controversé</rs>; vgl.
+                     <rs type="bibl" ref="bibl:15372">Boutier, Stephanus Baluzius</rs> 14f., 127f.;
+                     <rs type="bibl" ref="bibl:16446">Gasnault, Baluze éditeur</rs>
+               135–139.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
+            <mentioned>Leontii editionem</mentioned>
+            <p>Zwei Autoren dieses Namens, die beide annähernd
                   gleichzeitig gegen die Nestorianer und die Monophysiten schrieben, werden in der
                   neueren Forschung als „Leontios von Byzanz“ respektive „Leontios von Jerusalem“
-                  voneinander unterschieden:<rs type="bibl" key="bibl:15812"> Dell’Osso,
-                     Leonzio</rs>; <rs type="bibl" key="bibl:17478">Kettern, Leontios von
-                     Byzanz</rs>; <rs type="bibl" key="bibl:19090">Richard, Léonce de
+                  voneinander unterschieden:<rs type="bibl" ref="bibl:15812"> Dell’Osso,
+                     Leonzio</rs>; <rs type="bibl" ref="bibl:17478">Kettern, Leontios von
+                     Byzanz</rs>; <rs type="bibl" ref="bibl:19090">Richard, Léonce de
                   Jérusalem</rs>. Bis ins frühe 20. Jh. wurden jedoch beide allgemein für ein und
                   dieselbe Person gehalten. Zum Plan einer Edition der diesem „Leontios“
                   zugeschriebenen Werke durch Lequien, der bereits 1712 bezeugt ist, aber
-                  schließlich nicht realisiert wurde, vgl. <rs type="bibl" key="bibl:15694"
-                     >Coulon–Papillon, Scriptores 3</rs> 539. </p></note>
-            <note xml:id="d3e9688">
-               <ref type="context">5</ref>
-               <label>Orientis Christiani</label><p>Für das Werk wurde 1722 ein Vertrag mit dem
-                  Pariser Verleger Nicolas Simart geschlossen: <rs type="bibl" key="bibl:18646"
-                     >Omont, Traité</rs>. Es konnte jedoch erst 1740 nach Lequiens Tod erscheinen:
-                  vgl. <rs type="bibl" key="bibl:15694">Coulon–Papillon, Scriptores 3</rs>539–541.
-               </p></note>
-            <note xml:id="d3e9692">
-               <ref type="context">5</ref>
-               <label>Desmarezium</label><p>Zur Person vgl. <rs type="bibl" key="bibl:16288">Fouré,
+                  schließlich nicht realisiert wurde, vgl. <rs type="bibl" ref="bibl:15694">Coulon–Papillon, Scriptores 3</rs> 539. </p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
+            <mentioned>Orientis Christiani</mentioned>
+            <p>Für das Werk wurde 1722 ein Vertrag mit dem
+                  Pariser Verleger Nicolas Simart geschlossen: <rs type="bibl" ref="bibl:18646">Omont, Traité</rs>. Es konnte jedoch erst 1740 nach Lequiens Tod erscheinen:
+                  vgl. <rs type="bibl" ref="bibl:15694">Coulon–Papillon, Scriptores 3</rs>539–541.
+               </p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg5">
+            <mentioned>Desmarezium</mentioned>
+            <p>Zur Person vgl. <rs type="bibl" ref="bibl:16288">Fouré,
                      Le Brun</rs> 73–82. Die Laktanz-Edition, die Lebrun-Desmarettes bei seinem
                   Ableben 1731 nicht ganz fertig hinterließ, wurde erst 1748 durch Nicolas Lenglet
-                  Dufresnoy veröffentlicht: vgl. <rs type="bibl" key="bibl:15802"
-                     >Delforge–McKenna</rs>, Le Brun; Moreau, Bibliographie 141.</p></note>
-            <note xml:id="d3e9697">
-               <ref type="context">5</ref>
-               <label> dissertatione singulari</label><p>Eine solche Schrift von Lebrun-Desmarettes,
+                  Dufresnoy veröffentlicht: vgl. <rs type="bibl" ref="bibl:15802">Delforge–McKenna</rs>, Le Brun; Moreau, Bibliographie 141.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg5">
+            <mentioned> dissertatione singulari</mentioned>
+            <p>Eine solche Schrift von Lebrun-Desmarettes,
                   die zum Zeitpunkt dieses Briefes veröffentlicht gewesen wäre, ist nicht bekannt.
                   Vielmehr scheint aus mehreren erhaltenen Briefen an Baluze aus diesem Zeitraum
                   hervorzugehen, dass Lebrun-Desmarettes zwar an eine Abhandlung gegen den
                   Standpunkt Le Nourrys zur Verfasserschaft von „De mortibus persecutorum“ dachte,
-                  aber keine solche geschrieben hatte: <rs type="bibl" key="bibl:18602">Nouaillac,
+                  aber keine solche geschrieben hatte: <rs type="bibl" ref="bibl:18602">Nouaillac,
                      Lettres inédites</rs> 302–306. Auch in der posthum veröffentlichten Edition ist
                   kein solcher Text zu finden; Lebrun-Desmarettes dürfte ihn demnach wohl nie fertig
                   gestellt haben. Zur Erklärung der Erwähnung hier ist möglicherweise an die anonyme
@@ -212,18 +206,16 @@
                   nicht zuletzt wegen ihrer heftigen persönlichen Untergriffe gegen Le Nourry
                   Aufsehen erregt hatte, war in der Zeitschrift als Einsendung mit dem angeblichen
                   Absendeort Paris präsentiert worden; als Verfasser verdächtigten die Mauriner
-                  offenbar zeitweise Baluze, kamen davon aber wieder ab: <rs type="bibl"
-                     key="bibl:18602">Nouaillac, Lettres inédites</rs> 304f. Ein ebenso unrichtiger
+                  offenbar zeitweise Baluze, kamen davon aber wieder ab: <rs type="bibl" ref="bibl:18602">Nouaillac, Lettres inédites</rs> 304f. Ein ebenso unrichtiger
                   Verdacht gegen Lebrun-Desmarettes könnte die Grundlage der hier von CB
                   mitgeteilten Nachricht gewesen sein. Der tatsächliche Urheber war Mathurin
-                  Veyssière de La Croze: <rs type="bibl" key="bibl:16566">Burger, Veyssière de La
+                  Veyssière de La Croze: <rs type="bibl" ref="bibl:16566">Burger, Veyssière de La
                      Croze</rs> 992. Zu dessen Verhältnis zu Le Nourry, dessen Gehilfe er vor seiner
-                  Flucht aus der Maurinerkongregation gewesen war, vgl. <rs type="bibl"
-                     key="bibl:16566">Goldgar, Impolite Learning</rs> 306; <rs type="bibl"
-                     key="bibl:18502">Mulsow, Drei Ringe</rs> 17f. </p></note>
-            <note xml:id="d3e9701">
-               <ref type="context">5</ref>
-               <label>Nourrius ... iverat</label><p>Le Nourry hatte 1710 eine Neuausgabe der
+                  Flucht aus der Maurinerkongregation gewesen war, vgl. <rs type="bibl" ref="bibl:16566">Goldgar, Impolite Learning</rs> 306; <rs type="bibl" ref="bibl:18502">Mulsow, Drei Ringe</rs> 17f. </p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg5">
+            <mentioned>Nourrius ... iverat</mentioned>
+            <p>Le Nourry hatte 1710 eine Neuausgabe der
                   erstmals 1680 von Baluze publizierten Schrift „De mortibus persecutorum“
                   veranstaltet, wobei er in einer einleitenden Abhandlung die Identifikation des
                   Verfassers „Lucius Caecilius“ mit Laktanz ablehnte. Die unmittelbaren Reaktionen
@@ -231,10 +223,22 @@
                   18. und 19. Jh. immer wieder ohne endgültiges Ergebnis erörtert. Einen Überblick
                   der Debatten mit zahlreichen Literaturnachweisen bietet Brandt,
                   Entstehungsverhältnisse 22–26. In der gegenwärtigen Forschung gilt hingegen die
-                  Zuschreibung der Schrift an Laktanz als gesichert: vgl. <rs type="bibl"
-                     key="bibl:19658">Städele, Einleitung</rs> 8–10; <rs type="bibl"
-                     key="bibl:20418">Wlosok, Lactantius</rs> 397.</p></note>
-         </div>
-      </back>
+                  Zuschreibung der Schrift an Laktanz als gesichert: vgl. <rs type="bibl" ref="bibl:19658">Städele, Einleitung</rs> 8–10; <rs type="bibl" ref="bibl:20418">Wlosok, Lactantius</rs> 397.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>XV</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverendo in Christo patri domino Bernhardo Petzio bibliothecario Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</opener>
+         <ab resp="#editor" xml:id="seg1">Iniquus prorsus es ultor silentii, quod per exiguum tempus tenui. Nec enim ad binas literas meas, quas vel argumentum commendare tibi debuisset, quicquam hactenus reposuisti. Ego tamen ideo non cessabo te amare et promptus impertire tibi, quaecunque <anchor xml:id="n1"/>ab amicis relata<anchor xml:id="n1e"/> mihi erunt. Scias igitur, velim, vir amicissime, ante aliquot dies communicatum mihi fuisse conspectum operis, quod professor quidam Helmstadiensis, quem<anchor xml:id="n2"/> Eccardum vocant, adornat, et quo is Thesaurum<anchor xml:id="n2e"/> Germanicarum antiquitatum ad instar Graeviani Gronovianique exhibere orbi erudito intendit. Totius instituti rationem ex adiuncto schemate omnium optime cognosces; quae tamen, ut verum fatear, plurimis de causis mihi haudquaquam probatur. Nam, ut alia mittam, pleraque ex inserendis isti Thesauro operibus ita comparata sunt, ut fere in omnium versentur manibus; et licet quis exempli gratia insertas ex Schurtzfleischio,<anchor xml:id="n3"/> Obrechto<anchor xml:id="n3e"/>,<anchor xml:id="n4"/> Boeclero<anchor xml:id="n4e"/> operi diatribas in isto Thesauro possideat, non poterit tamen ob paucas istas carere reliquis omnibus. Cui consequens est, ut una res binis vicibus in posterum nobis comparanda sit, quam defectum in plurimis, quae hactenus a Saxonibus <pb n="1v"/> adornatae fuerunt, collectionibus observare licuit. Scilicet illi homines id tantum agunt, ut magnorum et ingentis ponderis voluminum auctores ferantur. </ab>
+         <ab resp="#editor" xml:id="seg2">Ludwigius Hallensis professor commentarium in Auream Bullam edidit refertum plurimis ut <anchor xml:id="n5"/>audacibus coniecturis<anchor xml:id="n5e"/>, et qui multiiugam potius hominis<del ana="#after">lect</del> scientiam quam exactum, temperatum solidumque iudicium prodat.<anchor xml:id="n6"/> Prodiit quoque clarissimi Struvii Historia Germanica<anchor xml:id="n6e"/> magnae satis molis per modum thesium conscripta, quo ex solo iam satis patescit eam commentariorum titulum mereri, iustae historiae nomen haud aeque: quae certe plus ingenii, plus studii, plus elegantiae et plus ordinis desiderat. </ab>
+         <ab resp="#editor" xml:id="seg3">Montefalconius in eo est, ut aeri incudi curet figuras operi de Antiquitatibus inserendas. Hoc opus ob argenti, quo Gallia laborat, penuriam <anchor xml:id="n7"/>per modum subscriptionis<anchor xml:id="n7e"/>, qui et in Anglia observari solet, prodibit. Conspectum eius mox, ubi in manus meas pervenerit, tibi transmittam, nullus dubitans, quin et tu ex illis futurus sis, qui opus istud comparare sibi volent. </ab>
+         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n8"/>Baluzii Cyprianus<del ana="#after">bib</del><anchor xml:id="n8e"/> typographum non invenit. Viri aetas iam sex annos ultra 80. nati omnes absterret. Timent enim, ne interveniente ante opus absolutum illius morte libri pretium decrescat. </ab>
+         <ab resp="#editor" xml:id="seg5">Reverendus pater Le Quien Dominicanus, auctor Johannis Damasceni, <anchor xml:id="n9"/>Leontii editionem<anchor xml:id="n9e"/> parat. Summus est Montefalconii amicus, cuius etiam suasu <pb n="2r"/> hortatuque historiam patriarcharum Constantinopolitanorum, Alexandrinorum atque Antiochenorum sub titulo <anchor xml:id="n10"/>Orientis Christiani<anchor xml:id="n10e"/> idem ille nobis dabit. Alius Gallus, qui se <anchor xml:id="n11"/>Desmarezium<anchor xml:id="n11e"/> vocat, Lactantium publici iuris faciet. Hic ille est, qui<anchor xml:id="n12"/> dissertatione singulari<anchor xml:id="n12e"/> tractatum De mortibus persecutorum Lactantio asseruit, cui <anchor xml:id="n13"/>Nourrius illum ereptum iverat<anchor xml:id="n13e"/>. Clarissimo fratri tuo plurimam eandemque tenerrimi affectus plenissimam salutem adscribo. Vale, vir suavissime, meque amare, uti ego te amo, perge.</ab>
+         <closer>Scribebam die 10. Maii <choice><sic>MDD</sic><corr>MDCCXVI</corr></choice>.</closer>
+      </body>
    </text>
 </TEI>

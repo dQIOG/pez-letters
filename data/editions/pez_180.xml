@@ -1,39 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="180" xml:id="pez-0180">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">180 Petrus Friderici an Bernhard Pez. 1711-07-14. Erfurt.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Petrus Friderici an Bernhard Pez. 1711-07-14. Erfurt.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">180</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">372r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 372r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -48,89 +68,67 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">179</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">222</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">179</idno>
-               </ref>
+               <ptr type="prev" target="letter:179"/>
+               <ptr type="next" target="letter:222"/>
+               <ptr type="mentions" target="letter:179"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Nach jenem anonymen <rs ref="index:d10854e7974">Erfurter</rs> Autor, zu dem ihn BP in seinem letzten Brief <ref type="letter" target="letter:179">179</ref> befragt hat, hatte <rs type="person">PF</rs> schon zuvor mehrmals geforscht, jedoch ohne Resultat. In jener Zeit, in welcher das <rs ref="index:d10854e16487">Geschichtswerk</rs> (<rs ref="index:d10854e16452">Lamperts von Hersfeld</rs>) von dem Anonymus fortgesetzt wurde, regierte Abt <rs ref="index:d10854e11564">Günther von Nordhausen</rs> im <rs ref="index:d10854e8069">Peterskloster</rs>; dieses hatte 24 Priestermönche, von denen mehrere später in anderen Klöstern Äbte, Prioren oder Novizenmeister wurden; keiner von diesen ist jedoch als Autor der Fortsetzung fassbar.</p>
+            <p corresp="#seg2">Noch heute gibt es in <rs ref="index:d10854e7974">Erfurt</rs> neben dem <rs ref="index:d10854e8069">Peterskloster</rs> ein <rs ref="index:d10854e8218">Schottenkloster</rs> – nun Priorat –, ein <rs ref="index:d10854e8059">Karthäuser-</rs> und ein <rs ref="index:d10854e8020">Augustiner-Eremiten-Kloster</rs> sowie ein <rs ref="index:d10854e8054">Jesuitenkolleg</rs>. Im 15. Jahrhundert bestanden zudem Niederlassungen der <rs ref="index:d10854e8039">Dominikaner</rs>, <rs ref="index:d10854e8044">Franziskaner</rs>, <rs ref="index:d10854e8015">Augustiner-Chorherren</rs> und <rs ref="index:d10854e8229">Serviten</rs>; all diesen könnte der Anonymus angehört haben. <rs type="person">PF</rs> vermag also nichts Genaues zu sagen; er beklagt, dass durch die <rs ref="index:d14380e11916">Lutheraner</rs> und den <rs ref="index:d14380e40231">Schwedeneinfall</rs> vieles zerstört worden ist. Sollte er auf weitere Informationen stoßen, will er BP diese gerne mitteilen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e23003">Nach jenem anonymen <rs key="index:d10854e7974">Erfurter</rs> Autor, zu dem ihn <rs type="person" role="sender">BP</rs> in seinem letzten Brief <ref type="letter">179</ref> befragt hat, hatte <rs type="person" key="">PF</rs> schon zuvor mehrmals geforscht, jedoch ohne Resultat. In jener Zeit, in welcher das <rs key="index:d10854e16487">Geschichtswerk</rs> (<rs key="index:d10854e16452"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Lamperts von Hersfeld<?oxy_custom_end?></rs>) von dem Anonymus fortgesetzt wurde, regierte Abt <rs key="index:d10854e11564">Günther von Nordhausen</rs> im <rs key="index:d10854e8069">Peterskloster</rs>; dieses hatte 24 Priestermönche, von denen mehrere später in anderen Klöstern Äbte, Prioren oder Novizenmeister wurden; keiner von diesen ist jedoch als Autor der Fortsetzung fassbar.</seg><seg type="context" n="2" xml:id="d4618e23008">Noch heute gibt es in <rs key="index:d10854e7974">Erfurt</rs> neben dem <rs key="index:d10854e8069">Peterskloster</rs> ein <rs key="index:d10854e8218">Schottenkloster</rs> – nun Priorat –, ein <rs key="index:d10854e8059">Karthäuser-</rs> und ein <rs key="index:d10854e8020">Augustiner-Eremiten-Kloster</rs> sowie ein <rs key="index:d10854e8054">Jesuitenkolleg</rs>. Im 15. Jahrhundert bestanden zudem Niederlassungen der <rs key="index:d10854e8039">Dominikaner</rs>, <rs key="index:d10854e8044">Franziskaner</rs>, <rs key="index:d10854e8015">Augustiner-Chorherren</rs> und <rs key="index:d10854e8229">Serviten</rs>; all diesen könnte der Anonymus angehört haben. <rs type="person" key="">PF</rs> vermag also nichts Genaues zu sagen; er beklagt, dass durch die <rs key="index:d14380e11916">Lutheraner</rs> und den <rs key="index:d14380e40231">Schwedeneinfall</rs> vieles zerstört worden ist. Sollte er auf weitere Informationen stoßen, will er <rs type="person" role="sender">BP</rs> diese gerne mitteilen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">III</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende et eximie domine, domine confrater colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e23025">Iam dudum desideraveram adinvenire nomenclaturam istius <seg type="lemma" corresp="#d4618e23042">anonymi monachi Erffurtensis</seg>, de quo admodum reverenda dominatio sua mihi in postremis perscripsit: iterato postea ea de re pervestigavi, sed conatu frustraneo. Eo tempore, quo historia citata continuata legitur, monasterium nostrum sub domino <seg type="lemma" corresp="#d4618e23049">Gunthero de Northausen</seg> abbate floruit habuitque sacerdotes 24, plerosque viros egregios et eruditos, quorum diversi alio <seg type="lemma" corresp="#d4618e23054">in abbates, priores, novitiorum magistros assumpti</seg> fuere, quos omnes singulatim perlustravi, nemini autem tale quid adscriptum reperi. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e23027"><seg type="lemma" corresp="#d4618e23059">Non defuerunt tunc temporis Erffurti aliorum ordinum monachi</seg>; hodiedum inibi extant coenobia Scotorum sacri ordinis nostri, modo prioratus, Carthusianorum, Augustinianorum et collegium Societatis, tunc praeterea aderant Praedicatores, Franciscani<note place="foot" xml:id="d4618e23029">	Korrigiert aus <hi rend="italic">Frans</hi>.</note>, regulares sancti Augustini et Servitae, potuit ex illis anonymus iste fuisse, de quo certi nihil affirmare possum; certum <pb n="1v"/> dolendumque est, quod Lutheranismus et subsequens direptio Suecica omnia hisce partibus pessum dederit confuderitque. Si contingat me aliquid invenire, quo reverentiae vestrae deservire queam, haud gravate submittam, persistens semper</seg></p>
-            <p xml:space="preserve">Plurimum reverendae ac eximiae dominationis vestrae servus ac confrater fidelissimus et ad officia paratissimus frater Petrus Friderici professus ad S. Petrum manu propria.</p>
-            <p xml:space="preserve">Erffurti 14. Julii 1711.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e23042">
-               <ref type="context">1</ref>
-               <label>anonymi monachi Erffurtensis</label>
-               <p>Dass hier von den Fortsetzungen der Annalen Lamperts von Hersfeld die Rede ist,
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>anonymi monachi Erffurtensis</mentioned>
+            <p>Dass hier von den Fortsetzungen der Annalen Lamperts von Hersfeld die Rede ist,
                   wird dadurch nahegelegt, dass in mehreren späteren Briefen diese Frage in
-                  ähnlicher Weise erörtert wird: <ref type="letter">248</ref> &lt;8&gt;, <ref
-                     type="letter">268</ref> &lt;4&gt;. Es existieren zahlreiche Fortsetzungen und
+                  ähnlicher Weise erörtert wird: <ref type="letter" target="letter:248">248</ref> <ref target="letter:248#seg8">8</ref>, <ref type="letter" target="letter:268">268</ref> <ref target="letter:268#seg4">4</ref>. Es existieren zahlreiche Fortsetzungen und
                   Erweiterungen der Annalen Lamperts, die im Erfurter Peterskloster zwischen dem 12.
-                  und 14. Jh. geschrieben wurden (<rs type="bibl" key="bibl:35746">Monumenta
+                  und 14. Jh. geschrieben wurden (<rs type="bibl" ref="bibl:35746">Monumenta
                      Erphesfurtensia</rs> 3–20, 45–67, 117–398). BP war durch Konrad Sigler (vgl.
-                     <ref type="letter">145</ref> &lt;1&gt;) von der Edition bei Pistorius,
+                     <ref type="letter" target="letter:145">145</ref> <ref target="letter:145#seg1">1</ref>) von der Edition bei Pistorius,
                   Illustrium veterum scriptorum 1 253–265, unterrichtet, in welcher die
                   verschiedenen Continuationes miteinander vermischt und mit „Additiones ad
                   Lambertum Schafnaburgensem appositae ab Erphefordiensi monacho ignoti nominis
                   [...] in quibus res CCC annis post Lambertum gestae breviter explicantur“
                   überschrieben sind. Diese Ausgabe stand BP jedoch offenbar nicht zur Verfügung;
-                  vgl. <ref type="letter">346</ref> &lt;5&gt; sowie <ref type="letter">301</ref>. In
+                  vgl. <ref type="letter" target="letter:346">346</ref> <ref target="letter:346#seg5">5</ref> sowie <ref type="letter" target="letter:301">301</ref>. In
                   seinen deutlich später geschriebenen Notizen zur „Bibliotheca Benedictina“ (StiA
                   Melk, Karton 85 Varia 24, ad annum 1472) beruft sich BP für seine Angaben zum
                   Continuator Lamperts auf
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Wion, Lignum
-                  vitae<?oxy_custom_end?> 439;
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Mabillon,
-                  Annales<?oxy_custom_end?> OSB 4 597.</p>
-            </note>
-            <note xml:id="d4618e23049">
-               <ref type="context">1</ref>
-               <label>Gunthero de Northausen</label>
-               <p>Zu Günther von Nordhausen, welcher von 1458 bis 1501 regierte, vgl. <rs
-                     type="bibl" key="bibl:36146">Frank, Peterskloster</rs> 245f. und passim.</p>
-            </note>
-            <note xml:id="d4618e23054">
-               <ref type="context">1</ref>
-               <label>in abbates ... assumpti</label>
-               <p>Vgl. <rs type="bibl" key="bibl:35922">Böckner, Peterskloster</rs> 10 23, 64; <rs
-                     type="bibl" key="bibl:36264">Hammer, Reformzentrum</rs> 139.</p>
-            </note>
-            <note xml:id="d4618e23059">
-               <ref type="context">2</ref>
-               <label>Non defuerunt ... monachi</label>
-               <p>Vgl. dazu die gegenteilige Behauptung in <ref type="letter">268</ref> &lt;4&gt;.
-                  Eine Übersicht über die Klöster im mittelalterlichen Erfurt bietet <rs type="bibl"
-                     key="bibl:36734">Overmann, Urkundenbuch</rs> 1 XIV–XVI; vgl. <rs type="bibl"
-                     key="bibl:37002">Schwineköper, Gesamtübersicht</rs> 2 452f.</p>
-            </note>
-         </div>
-      </back>
+                  Wion, Lignum
+                  vitae 439;
+                  Mabillon,
+                  Annales OSB 4 597.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>Gunthero de Northausen</mentioned>
+            <p>Zu Günther von Nordhausen, welcher von 1458 bis 1501 regierte, vgl. <rs type="bibl" ref="bibl:36146">Frank, Peterskloster</rs> 245f. und passim.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned>in abbates ... assumpti</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:35922">Böckner, Peterskloster</rs> 10 23, 64; <rs type="bibl" ref="bibl:36264">Hammer, Reformzentrum</rs> 139.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>Non defuerunt ... monachi</mentioned>
+            <p>Vgl. dazu die gegenteilige Behauptung in <ref type="letter" target="letter:268">268</ref> <ref target="letter:268#seg4">4</ref>.
+                  Eine Übersicht über die Klöster im mittelalterlichen Erfurt bietet <rs type="bibl" ref="bibl:36734">Overmann, Urkundenbuch</rs> 1 XIV–XVI; vgl. <rs type="bibl" ref="bibl:37002">Schwineköper, Gesamtübersicht</rs> 2 452f.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>III</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende et eximie domine, domine confrater colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Iam dudum desideraveram adinvenire nomenclaturam istius <anchor xml:id="n1"/>anonymi monachi Erffurtensis<anchor xml:id="n1e"/>, de quo admodum reverenda dominatio sua mihi in postremis perscripsit: iterato postea ea de re pervestigavi, sed conatu frustraneo. Eo tempore, quo historia citata continuata legitur, monasterium nostrum sub domino <anchor xml:id="n2"/>Gunthero de Northausen<anchor xml:id="n2e"/> abbate floruit habuitque sacerdotes 24, plerosque viros egregios et eruditos, quorum diversi alio <anchor xml:id="n3"/>in abbates, priores, novitiorum magistros assumpti<anchor xml:id="n3e"/> fuere, quos omnes singulatim perlustravi, nemini autem tale quid adscriptum reperi. </ab>
+         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n4"/>Non defuerunt tunc temporis Erffurti aliorum ordinum monachi<anchor xml:id="n4e"/>; hodiedum inibi extant coenobia Scotorum sacri ordinis nostri, modo prioratus, Carthusianorum, Augustinianorum et collegium Societatis, tunc praeterea aderant Praedicatores, <choice><sic>Frans</sic><corr>Franciscani</corr></choice>, regulares sancti Augustini et Servitae, potuit ex illis anonymus iste fuisse, de quo certi nihil affirmare possum; certum <pb n="1v"/> dolendumque est, quod Lutheranismus et subsequens direptio Suecica omnia hisce partibus pessum dederit confuderitque. Si contingat me aliquid invenire, quo reverentiae vestrae deservire queam, haud gravate submittam, persistens semper</ab>
+         <closer>Plurimum reverendae ac eximiae dominationis vestrae servus ac confrater fidelissimus et ad officia paratissimus frater Petrus Friderici professus ad S. Petrum manu propria.</closer>
+         <closer>Erffurti 14. Julii 1711.</closer>
+      </body>
    </text>
 </TEI>

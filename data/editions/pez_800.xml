@@ -1,38 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="800" xml:id="pez-0800">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">800 Placidus Böckhn an Bernhard Pez. 1717-07-15. Salzburg (St. Peter).</title>
-            <title type="sub">Digital Edition</title>
+            <title>Placidus Böckhn an Bernhard Pez. 1717-07-15. Salzburg (St. Peter).</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">800</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
+            <note type="remarks">
+               Bei Glassner, Verzeichnis 202, ist die Beilage zu 635 (I, 60r–68v) irrig diesem Brief zugeordnet.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">59r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 59r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,58 +71,84 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">649</idno>
-               </ref>
+               <ptr type="prev" target="letter:649"/>
             </correspContext>
          </correspDesc>
+         <textClass><keywords>
+            <term ref="index:d14380e228">Acta eruditorum. Leipzig 1682–1732</term>
+            <term ref="index:d14380e5949">Böckhn, Michael</term>
+            <term ref="index:d14380e13461">Friedrich August I</term>
+            <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
+         Epistola ad virum clarissimum Joannem Burchardum Menkenium Lipsiensem de Conspectu insignis
+         codicis diplomatico-historico-epistolaris ex ἀυτογράφῳ, ut quidem videtur, dato ad Actorum
+         eruditorum Lipsiensium collectores a reverendo patre Bernardo Pez Benedictino et
+         bibliothecario Mellicensi in Austria. Verona [Wien] 1717</term>
+            <term ref="index:d14380e14931">Gentilotti von Engelsbrunn, Johann Franz</term>
+            <term ref="index:d14380e23265">Kröll, Gottfried</term>
+            <term ref="index:d14380e24317">Leipzig</term>
+            <term ref="index:d14380e24410">Leipzig ; Universität</term>
+            <term ref="index:d14380e27355">Mayrhauser, Placidus</term>
+            <term ref="index:d14380e28088">Melk</term>
+            <term ref="index:d14380e28279">Melk ; Bibliothek</term>
+            <term ref="index:d14380e28655">Mencke, Johann Burkhard</term>
+            <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
+            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+            <term ref="index:d14380e33485">Pez, Bernhard ; Conspectus insignis Codicis diplomatico-historico-epistularis Udalrici
+         Babenbergensis. In: Acta eruditorum</term>
+            <term ref="index:d14380e34537">Pez, Hieronymus</term>
+            <term ref="index:d14380e35438">Polen</term>
+            <term ref="index:d14380e35989">Presinger, Rupert</term>
+            <term ref="index:d14380e39115">Salzburg ; St. Peter</term></keywords></textClass>
+         <abstract>
+            <p corresp="#seg1">Dass PB es wagt, BP während <rs ref="index:d14380e34236">dessen Reise</rs> zu lästig zu fallen, liegt
+               daran, dass der fürsterzbischöfliche Kanzler <rs ref="index:d14380e14931">Johann Franz Gentilotti</rs>
+               dem Abt von <rs ref="index:d14380e39115">St. Peter</rs> <rs ref="index:d14380e27355">Placidus
+                  Mayrhauser</rs> die <rs ref="index:d14380e14825">„Epistola“ des „Angelus Fonteius“</rs> (Johann
+               Benedikt Gentilotti) an den Professor der Geschichte zu <rs ref="index:d14380e24317">Leipzig</rs> und
+               Herausgeber der <rs ref="index:d14380e228">„Acta eruditorum“</rs>, <rs ref="index:d14380e28655">Johann
+                  Burkhard Mencke</rs>, zukommen hat lassen. In dieser wird auf BPs, des <rs ref="index:d14380e28279">Melker Bibliothekars</rs>, <rs ref="index:d14380e33485">„Conspectus“ des „Codex Udalrici“</rs>
+               geantwortet, und „Fonteius“ kann dabei nachweisen, dass einige der von BP als Inedita ausgewiesenen
+               Stücke tatsächlich schon gedruckt sind. Weitere Bemerkungen will PB nicht wiedergeben, da die
+               „Epistola ad Menkenium“ BP entweder bereits bekannt sein wird oder andernfalls leicht beschafft werden
+               kann.</p>
+            <p corresp="#seg2">PB hofft, dass es BP und HP gut geht, und wünscht den Brüdern zum Wohl der Gelehrtenwelt gute Gesundheit.</p>
+            <p corresp="#seg3">In einem Postskriptum bestellt PB ihnen Grüße von seinem Abt Mayrhauser, Prior <rs ref="index:d14380e23265">Gottfried Kröll</rs>, seinem Bruder <rs ref="index:d14380e5949">Michael
+                  Böckhn</rs> sowie <rs ref="index:d14380e35989">Rupert Presinger</rs>. Alle wünschen sie gute
+               Fortschritte und Erfolg für die <rs ref="index:d14380e33227">„Bibliotheca Benedictina“</rs>.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>Gentilotti ... cancellario</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:719">719</ref>
+                  <ref target="letter:719#seg6">6</ref>, <ref type="letter" target="letter:796">796</ref> <ref target="letter:796#seg5">5</ref>. Zu den Brüdern Gentilotti in
+                  Diensten des Salzburger Fürsterzbischofs vgl. <rs type="bibl" ref="bibl:18776">Peper–Wallnig, Ex nihilo</rs> 173f.; sowie 434 <ref target="letter:796#seg3">3</ref>. – Zur Kontroverse
+                  zwischen BP und Gentilotti vgl. Einleitung, Abschnitt I.5.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> iam sit nota</mentioned>
+            <p>Dies war tatsächlich nicht der Fall; BP erhielt durch Placidus Mayrhauser ein Exemplar der Schrift mit 816. Dass dieser Übermittlung eine Reaktion BPs auf diesen Brief vorangegangen war, ist gut möglich, es fehlt aber an einem konkreten Beleg dafür. Daher wird ein verlorenes Antwortschreiben BPs nicht angesetzt.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>prior ... Rupertus</mentioned>
+            <p>Zu Prior Gottfried Kröll, Michael Böckhn und
+                  Rupert Presinger: <rs type="bibl" ref="bibl:18036">Lindner, Professbuch St.
+                     Peter</rs> 97f., 108–120. Zu Kröll vgl. <rs type="bibl" ref="bibl:17590">Kolb,
+                     Präsidium</rs> 126, 133; <rs type="bibl" ref="bibl:19270">Sattler,
+                     Collectaneen-Blätter</rs> 305.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
    <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e38009">Dass <rs type="person" key="">PB</rs> es wagt, <rs type="person" role="sender">BP</rs> während dessen Reise zu lästig zu fallen, liegt daran, dass der fürsterzbischöfliche Kanzler Johann Franz Gentilotti dem Abt von St. Peter Placidus Mayrhauser die „Epistola“ des „Angelus Fonteius“ (Johann Benedikt Gentilotti) an den Professor der Geschichte zu Leipzig und Herausgeber der „Acta eruditorum“, Johann Burkhard Mencke, zukommen hat lassen. In dieser wird auf BPs, des Melker Bibliothekars, „Conspectus“ des „Codex Udalrici“ geantwortet, und „Fonteius“ kann dabei nachweisen, dass einige der von <rs type="person" role="sender">BP</rs> als Inedita ausgewiesenen Stücke tatsächlich schon gedruckt sind. Weitere Bemerkungen will <rs type="person" key="">PB</rs> nicht wiedergeben, da die „Epistola ad Menkenium“ <rs type="person" role="sender">BP</rs> entweder bereits bekannt sein wird oder andernfalls leicht beschafft werden kann.</seg><seg type="context" n="2" xml:id="d3e38011"><rs type="person" key="">PB</rs> hofft, dass es <rs type="person" role="sender">BP</rs> und HP gut geht, und wünscht den Brüdern zum Wohl der Gelehrtenwelt gute Gesundheit.</seg><seg type="context" n="3" xml:id="d3e38013">In einem Postskriptum bestellt <rs type="person" key="">PB</rs> ihnen Grüße von seinem Abt Mayrhauser, Prior Gottfried Kröll, seinem Bruder Michael Böckhn sowie Rupert Presinger. Alle wünschen sie gute Fortschritte und Erfolg für die „Bibliotheca Benedictina“.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Bei Glassner, Verzeichnis 202, ist die Beilage zu 635 (I, 60r–68v) irrig diesem Brief zugeordnet.</p>
-            </div>
-         </div>
-      </front>
       <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater Bernarde, patrone colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e38028">Ut plurimum reverendae suae paternitati sub ipso itinere ac operosis laboribus importunus esse praesumerem, causa est, quod reverendissimo meo domino domino praesuli a perillustri domino Gentiloti<note place="foot" xml:id="d3e38030">	Korrigiert aus <hi rend="italic">Gentill</hi>.</note> archiepiscopali cancellario communicata fuerit quaedam epistola typis impressa in quarto, quinque philyris comprehensa, cui titulus: Angeli Fontei Veronensis Epistola ad virum clarissimum Joannem Burchardum Menkenium Lipsiensem iuris utriusque doctorem, potentissimi regis Poloniarum et electoris Saxoniae consiliarium et historiographum ac historiarum in academia patria professorem publicum celeberrimum, de Conspectu insignis codicis diplomatico-historico-epistolaris ex ἀυτογράφῳ, ut quidem videtur, dato ad Actorum eruditorum Lipsiensium collectores a reverendo patre Bernardo Pez Benedictino et bibliothecario Mellicensi in Austria anno 1716, excusa Veronae anno MDCCXVII in aedibus Petri Tuditani. Scripta autem fuit dicta epistola Kalendis Maii. Argumentum eiusdem est, <pb n="1v"/> quod Angelus Fonteius repererit multa in memorato Conspectu pro ineditis habita iam in lucem prodiisse. Adicit alias animadversiones, quas, ne forte frustra sim, transcribere omitto, cum illa epistola aut prius forsitan<seg type="lemma" corresp="#d3e38061"> iam sit nota</seg> aut facile acquiri possit. Ego tamen, cum de hac<note place="foot" xml:id="d3e38038">	Korrigiert aus <hi rend="italic">eius</hi>.</note> notitia non omnino sim certus, significare volui, ipsam epistolam, nisi restituenda fuisset, transmissurus. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e38044">Spero caeteroquin clarissimam paternitatem suam cum clarissimo domino germano optime valere, prout et constantem utriusque incolumitatem ad literariae reipublicae emolumentum nostrique ordinis immortale decus enixissime apprecor ac aeviternum maneo</seg></p>
-            <p xml:space="preserve">Plurimum reverendae ac clarissimae paternitatis suae servus obligatissimus pater Placidus Böckh ibidem professus manu propria.</p>
-            <p xml:space="preserve">Salisburgi ad S. Petrum 1717 5. Julii.</p>
-            <p xml:space="preserve"><seg type="context" n="3" xml:space="preserve" xml:id="d3e38052">P.S. Reverendissimus dominus dominus abbas, clarissimums dominus pater <seg type="lemma" corresp="#d3e38065">prior, meus germanus et reverendus pater Rupertus</seg> clarissimas dominationes suas omnimode venerantur optatumque famosissimi operis progressum ac exitum vovent.</seg></p>
-         </div>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater Bernarde, patrone colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Ut plurimum reverendae suae paternitati sub ipso itinere ac operosis laboribus importunus esse praesumerem, causa est, quod reverendissimo meo domino domino praesuli a perillustri domino <choice><sic>Gentill</sic><corr>Gentiloti</corr></choice> archiepiscopali cancellario communicata fuerit quaedam epistola typis impressa in quarto, quinque philyris comprehensa, cui titulus: Angeli Fontei Veronensis Epistola ad virum clarissimum Joannem Burchardum Menkenium Lipsiensem iuris utriusque doctorem, potentissimi regis Poloniarum et electoris Saxoniae consiliarium et historiographum ac historiarum in academia patria professorem publicum celeberrimum, de Conspectu insignis codicis diplomatico-historico-epistolaris ex ἀυτογράφῳ, ut quidem videtur, dato ad Actorum eruditorum Lipsiensium collectores a reverendo patre Bernardo Pez Benedictino et bibliothecario Mellicensi in Austria anno 1716, excusa Veronae anno MDCCXVII in aedibus Petri Tuditani. Scripta autem fuit dicta epistola Kalendis Maii. Argumentum eiusdem est, <pb n="1v"/> quod Angelus Fonteius repererit multa in memorato Conspectu pro ineditis habita iam in lucem prodiisse. Adicit alias animadversiones, quas, ne forte frustra sim, transcribere omitto, cum illa epistola aut prius forsitan<anchor xml:id="n1"/> iam sit nota<anchor xml:id="n1e"/> aut facile acquiri possit. Ego tamen, cum de <choice><sic>eius</sic><corr>hac</corr></choice> notitia non omnino sim certus, significare volui, ipsam epistolam, nisi restituenda fuisset, transmissurus. </ab>
+         <ab resp="#editor" xml:id="seg2">Spero caeteroquin clarissimam paternitatem suam cum clarissimo domino germano optime valere, prout et constantem utriusque incolumitatem ad literariae reipublicae emolumentum nostrique ordinis immortale decus enixissime apprecor ac aeviternum maneo</ab>
+         <closer>Plurimum reverendae ac clarissimae paternitatis suae servus obligatissimus pater Placidus Böckh ibidem professus manu propria.</closer>
+         <closer>Salisburgi ad S. Petrum 1717 5. Julii.</closer>
+         <closer xml:id="seg3">P.S. Reverendissimus dominus dominus abbas, clarissimums dominus pater <anchor xml:id="n2"/>prior, meus germanus et reverendus pater Rupertus<anchor xml:id="n2e"/> clarissimas dominationes suas omnimode venerantur optatumque famosissimi operis progressum ac exitum vovent.</closer>
       </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e38055">
-               <ref type="context">1</ref>
-               <label>Gentilotti ... cancellario</label><p>Vgl. <ref type="letter">719</ref>
-                  &lt;6&gt;, <ref type="letter">796</ref> &lt;5&gt;. Zu den Brüdern Gentilotti in
-                  Diensten des Salzburger Fürsterzbischofs vgl. <rs type="bibl" key="bibl:18776"
-                     >Peper–Wallnig, Ex nihilo</rs> 173f.; sowie 434 &lt;3&gt;. – Zur Kontroverse
-                  zwischen BP und Gentilotti vgl. Einleitung, Abschnitt I.5.</p></note>
-            <note xml:id="d3e38061">
-               <ref type="context">1</ref>
-               <label> iam sit nota</label><p>Dies war tatsächlich nicht der Fall; BP erhielt durch Placidus Mayrhauser ein Exemplar der Schrift mit 816. Dass dieser Übermittlung eine Reaktion BPs auf diesen Brief vorangegangen war, ist gut möglich, es fehlt aber an einem konkreten Beleg dafür. Daher wird ein verlorenes Antwortschreiben BPs nicht angesetzt.</p></note>
-            <note xml:id="d3e38065">
-               <ref type="context">3</ref>
-               <label>prior ... Rupertus</label><p>Zu Prior Gottfried Kröll, Michael Böckhn und
-                  Rupert Presinger: <rs type="bibl" key="bibl:18036">Lindner, Professbuch St.
-                     Peter</rs> 97f., 108–120. Zu Kröll vgl. <rs type="bibl" key="bibl:17590">Kolb,
-                     Präsidium</rs> 126, 133; <rs type="bibl" key="bibl:19270">Sattler,
-                     Collectaneen-Blätter</rs> 305.</p></note>
-         </div>
-      </back>
    </text>
 </TEI>

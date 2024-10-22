@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="19" xml:id="pez-0019">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">19 Bernhard Pez an NN (Monte Cassino). LE 1. 1709-11-17. Melk.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Bernhard Pez an NN (Monte Cassino). LE 1. 1709-11-17. Melk.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">19</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
@@ -27,9 +38,29 @@
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <p>Original verloren (vormals Archiv Monte Cassino, Capsula 43). Abschrift von Bruno Albers (laut Vermerk Katschthalers vom 24. Oktober 1901): StiA Melk, Karton 7 Patres 9, Fasz. 2, Nr. 3.</p>
+            <listWit>
+               <witness ana="cmif:manuscript"><note>vormals Archiv Monte Cassino, Capsula 43.</note></witness>
+               <witness ana="cmif:copy">
+                  <msDesc>
+                     <msIdentifier>
+                        <repository>StiA Melk</repository>
+                        <idno>Karton 7 Patres 9, Fasz. 2, Nr. 3.</idno>
+                     </msIdentifier>
+                     <ab>Abschrift von Bruno Albers (laut Vermerk Katschthalers vom 24. Oktober 1901): StiA Melk, Karton 7 Patres 9, Fasz. 2, Nr. 3.</ab>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -44,57 +75,42 @@
                <orgName type="monastery">Monte Cassino</orgName>
             </correspAction>
             <correspContext>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">91</idno>
-               </ref>
+               <ptr type="mentionedIn" target="letter:091"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">BP unterbreitet dem Abt sein Vorhaben, ein Schriftstellerlexikon des Benediktinerordens mit dem Namen „<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“ zu verfassen. Sein Ansinnen entspringt dem Wunsch, den Ruhm des Ordens – nicht den eigenen – zu vermehren. Gegenstand der dreizehn Bücher des Werks sollen alle benediktinischen Schriftsteller sein, die seit der Gründung des Ordens bis in die Gegenwart gewirkt haben.</p>
+            <p corresp="#seg2">Im Fortgang der Arbeit ist BP jedoch auf große Schwierigkeiten gestoßen, besonders, da in <rs ref="index:d14380e9395">deutschen</rs> Klöstern die benediktinischen Schriftsteller wenig bekannt sind. Aus diesem Grund hat BP bereits an viele Benediktinerklöster geschrieben, um Informationen zu deren Schriftstellern zu erhalten. Zahlreiche Klosterobere in <rs ref="index:d14380e9395">Deutschland</rs> und <rs ref="index:d14380e6032">Böhmen</rs> unterstützen sein Vorhaben. So tritt BP auch an den Abt von <rs ref="index:d14380e29411">Monte Cassino</rs> heran, weil er bereits an mehrere <rs ref="index:d14380e19828">italienische</rs> Klöster geschrieben, jedoch keine Antworten erhalten hat. Er bittet den Abt, einen Konventualen mit der Sammlung der Schriftsteller von <rs ref="index:d14380e29411">Monte Cassino</rs> zu beauftragen und die Ergebnisse entweder direkt nach <rs ref="index:d14380e28088">Melk</rs> oder in den <rs ref="index:d10854e33557">Melkerhof</rs> zu Wien einzusenden. Auf einem der Kapitel der <rs ref="index:d14380e22371">Cassinensischen Kongregation</rs> kann veranlasst werden, dass andere Äbte ein Gleiches tun.</p>
+            <p corresp="#seg3">An Informationen zu den Schriftstellern wünscht BP Angaben zu Herkunft, Profess, Ausbildung, gedruckten oder ungedruckten Werken, bemerkenswerten Aussprüchen oder Taten sowie zum Todesjahr. BP verspricht, die erhoffte Mitarbeit in seinem Werk entsprechend zu würdigen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e2021"><rs type="person" role="sender">BP</rs> unterbreitet dem Abt sein Vorhaben, ein Schriftstellerlexikon des Benediktinerordens mit dem Namen „<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“ zu verfassen. Sein Ansinnen entspringt dem Wunsch, den Ruhm des Ordens – nicht den eigenen – zu vermehren. Gegenstand der dreizehn Bücher des Werks sollen alle benediktinischen Schriftsteller sein, die seit der Gründung des Ordens bis in die Gegenwart gewirkt haben.</seg><seg type="context" n="2" xml:id="d4618e2023">Im Fortgang der Arbeit ist <rs type="person" role="sender">BP</rs> jedoch auf große Schwierigkeiten gestoßen, besonders, da in <rs key="index:d14380e9395">deutschen</rs> Klöstern die benediktinischen Schriftsteller wenig bekannt sind. Aus diesem Grund hat <rs type="person" role="sender">BP</rs> bereits an viele Benediktinerklöster geschrieben, um Informationen zu deren Schriftstellern zu erhalten. Zahlreiche Klosterobere in <rs key="index:d14380e9395">Deutschland</rs> und <rs key="index:d14380e6032">Böhmen</rs> unterstützen sein Vorhaben. So tritt <rs type="person" role="sender">BP</rs> auch an den Abt von <rs key="index:d14380e29411">Monte Cassino</rs> heran, weil er bereits an mehrere <rs key="index:d14380e19828">italienische</rs> Klöster geschrieben, jedoch keine Antworten erhalten hat. Er bittet den Abt, einen Konventualen mit der Sammlung der Schriftsteller von <rs key="index:d14380e29411">Monte Cassino</rs> zu beauftragen und die Ergebnisse entweder direkt nach <rs key="index:d14380e28088">Melk</rs> oder in den <rs key="index:d10854e33557">Melkerhof</rs> zu Wien einzusenden. Auf einem der Kapitel der <rs key="index:d14380e22371">Cassinensischen Kongregation</rs> kann veranlasst werden, dass andere Äbte ein Gleiches tun.</seg><seg type="context" n="3" xml:id="d4618e2025">An Informationen zu den Schriftstellern wünscht <rs type="person" role="sender">BP</rs> Angaben zu Herkunft, Profess, Ausbildung, gedruckten oder ungedruckten Werken, bemerkenswerten Aussprüchen oder Taten sowie zum Todesjahr. <rs type="person" role="sender">BP</rs> verspricht, die erhoffte Mitarbeit in seinem Werk entsprechend zu würdigen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Reverendissimo perillustri ac amplissimo domino domino N. celeberrimi et florentissimi archimonasterii Casinensis ordinis sancti patris Benedicti abbati regulari vigilantissimo etc., patrono gratiosissimo. Per Romam. Monte Cassin in Neapoli</hi>.</ab>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Reverendissime perillustris ac amplissime domine domine praesul, patrone gratiosissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e2042">Quod per praesentes litteras reverendissimi ac perillustris domini oculos subire non verear, id non tam a privati spe commodi quam a Benedictinae gloriae atque adeo communis causae promovendae desiderio proficiscitur. Constitui pauco abhinc tempore Bibliothecam Benedictinam scribere, hoc est tredecim fere libris scriptores Benedictinos omnes, quotquot a sacro nostro ordine condito ad hanc usque aetatem ubicumque floruere, complecti. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e2044">Enimvero hoc opus, tametsi gloriae sanctissimi patriarchae nostri eiusque filiorum plenum, non paucis tamen nec levibus scatere difficultatibus in processu scriptionis depraehendi, maxime quod clarissimorum quorumque nostrorum virorum ne nomina quidem, nedum opera in nostra Germania sat cognita sint. Cui malo ut medelam facerem, decrevi ad omnia, quo literis via foret, sacri ordinis nostri monasteria scribere rogareque, ut suorum quaeque professorum scriptorum nomina etc. ad me mittere ne graventur. Nec mea adhuc me spes fefellit, praesulibus Germaniae Bohemiaeque tanto me favore, studio et opera iuvantibus, ut nunc demum intelligam me hoc opus auspicato recteque suscepisse. Atque hoc idem fuit, quod me ad appellandum reverendissimum ac perillustrem praesulem animavit extorsitque has literas, quibus eundem quam obnixissime rogo, ut pro sua in sacrum ordinem universum authoritate nobiliumque illius membrorum gloria unum aliquem ex admodum reverendis ac clarissimis dominis capitularibus suis deligere dignetur, qui omnium Cassinensium, qui aliqua scribendi laude saltem a proximis ducentis annis claruerunt, nomina etc. colligat eaque ad me seu recta Mellicium seu Viennam Austriae, ubi celebrem quoque domum vulgo Mölker-hoff dictam possidemus, emittat. Dedi quidem in hoc negotio ad diversa Italiae monasteria iam pridem literas, sed vereor, ne maiori id a me labore quam fructu actitatum sit, nullo hactenus a quoquam accepto responso. Res facilis mihi fore videtur, si in <seg type="lemma" corresp="#d4618e2058">conventibus celeberrimae congregationis Cassinensis</seg> frequenter institui solitis aliqua de hocce consilio meo mentio iniceretur. Neque enim dubito fore plerosque reverendissimos abbates, qui si operis elegantiam, ordinis sacri decus et gloriam prae oculis habuerint, illico in suis quique monasteriis fieri iubeant, quod a vertice et totius nostri sacri ordinis Benedictini principe nunc coram petere praesumo. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e2046">Porro ut exacto, quid in describendis Cassinatibus scriptoribus fieri velim, intelligatur, adscribo brevem petitorum elenchum, qui huiusmodi est: <pb n="1v"/> Primo. Nomen, cognomen, patria scriptoris Casinatis. Secundo. Locus professionis, si forte scriptor ut hospes Cassinum accessisset. Tertio. Locus, ubi studuerit. Quarto. Catalogus operum typis editorum aut etiam manuscriptorum, si haec alicuius momenti sint. Quinto. Locus, tempus et forma editionis. Sexto. Dictum vel factum nobile, pium etc. in vita. Septimo. Annus obitus aut saltem probabiliter [<hi rend="italic">sic</hi>] de hoc coniectura. Quae pauca ubi consecutus fuero, nihil sane intermittam, quod ad illustrandum amplius splendidissimum reverendissimi ac perillustris domini domini monasterium spectabit. Quibus me commendans Deum optimum maximum precor, ut reverendissimum perillustrem ac amplissimum dominum dominum in sui colendissimi asceterii, sacrae congregationis Cassinensis universique nostri ordinis commodum quam diutissime incolumem florentemque conservet.</seg></p>
-            <p xml:space="preserve">Cliens infimus pater Bernardus Pez ordinis sancti patris Benedicti praefati monasterii professus et bibliothecarius.</p>
-            <p xml:space="preserve">Dedi in exempto nostro monasterio Mellicensi vulgo Mölk in Austria ad Danubium XV milliaribus supra Viennam die 17. Novembris 1709.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e2058">
-               <ref type="context">2</ref>
-               <label>conventibus ... congregationis Cassinensis</label>
-               <p>Im Gegensatz zu seinem recht mangelhaften Informationsstand etwa über die
-                  Maurinerkongregation (vgl. <ref type="letter">15</ref> &lt;4&gt;,<ref
-                     type="letter"> 32</ref> &lt;3&gt;) oder die Böhmische Kongregation (vgl. <ref
-                     type="letter">7</ref> &lt;4&gt;) war BP sichtlich über die Verfassung der
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>conventibus ... congregationis Cassinensis</mentioned>
+            <p>Im Gegensatz zu seinem recht mangelhaften Informationsstand etwa über die
+                  Maurinerkongregation (vgl. <ref type="letter" target="letter:15">15</ref> <ref target="letter:15#seg4">4</ref>, <ref type="letter" target="letter:32">32</ref> <ref target="letter:32#seg3">3</ref>) oder die Böhmische Kongregation (vgl. <ref type="letter" target="letter:7">7</ref> <ref target="letter:7#seg4">4</ref>) war BP sichtlich über die Verfassung der
                   Cassinensischen Kongregation einigermaßen unterrichtet. Von deren Konstitutionen
                   war aufgrund der 1699 erfolgten Übertragung der Cassinensischen Privilegien an
-                  Melk dort sicherlich zumindest einiges bekannt; vgl. <rs type="bibl"
-                     key="bibl:17456">Keiblinger, Melk </rs>1 925; <rs type="bibl" key="bibl:20188"
-                     >Wallnig, Gasthaus und Gelehrsamkeit</rs> 90f. Dass hingegen ein regulärer
+                  Melk dort sicherlich zumindest einiges bekannt; vgl. <rs type="bibl" ref="bibl:17456">Keiblinger, Melk </rs>1 925; <rs type="bibl" ref="bibl:20188">Wallnig, Gasthaus und Gelehrsamkeit</rs> 90f. Dass hingegen ein regulärer
                   Kontakt nicht bestand, zeigt schon der Umstand, dass es BP erst 1710 gelang, einen
-                  Kontakt zum Präses der Cassinenser herzustellen (vgl. <ref type="letter">56</ref>,
-                     <ref type="letter">67</ref>, <ref type="letter">81</ref>).</p>
-            </note>
-         </div>
-      </back>
+                  Kontakt zum Präses der Cassinenser herzustellen (vgl. <ref type="letter" target="letter:56">56</ref>,
+                     <ref type="letter" target="letter:67">67</ref>, <ref type="letter" target="letter:81">81</ref>).</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <front>
+         <p>Reverendissimo perillustri ac amplissimo domino domino N. celeberrimi et florentissimi archimonasterii Casinensis ordinis sancti patris Benedicti abbati regulari vigilantissimo etc., patrono gratiosissimo. Per Romam. Monte Cassin in Neapoli.</p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Reverendissime perillustris ac amplissime domine domine praesul, patrone gratiosissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Quod per praesentes litteras reverendissimi ac perillustris domini oculos subire non verear, id non tam a privati spe commodi quam a Benedictinae gloriae atque adeo communis causae promovendae desiderio proficiscitur. Constitui pauco abhinc tempore Bibliothecam Benedictinam scribere, hoc est tredecim fere libris scriptores Benedictinos omnes, quotquot a sacro nostro ordine condito ad hanc usque aetatem ubicumque floruere, complecti. </ab>
+         <ab resp="#editor" xml:id="seg2">Enimvero hoc opus, tametsi gloriae sanctissimi patriarchae nostri eiusque filiorum plenum, non paucis tamen nec levibus scatere difficultatibus in processu scriptionis depraehendi, maxime quod clarissimorum quorumque nostrorum virorum ne nomina quidem, nedum opera in nostra Germania sat cognita sint. Cui malo ut medelam facerem, decrevi ad omnia, quo literis via foret, sacri ordinis nostri monasteria scribere rogareque, ut suorum quaeque professorum scriptorum nomina etc. ad me mittere ne graventur. Nec mea adhuc me spes fefellit, praesulibus Germaniae Bohemiaeque tanto me favore, studio et opera iuvantibus, ut nunc demum intelligam me hoc opus auspicato recteque suscepisse. Atque hoc idem fuit, quod me ad appellandum reverendissimum ac perillustrem praesulem animavit extorsitque has literas, quibus eundem quam obnixissime rogo, ut pro sua in sacrum ordinem universum authoritate nobiliumque illius membrorum gloria unum aliquem ex admodum reverendis ac clarissimis dominis capitularibus suis deligere dignetur, qui omnium Cassinensium, qui aliqua scribendi laude saltem a proximis ducentis annis claruerunt, nomina etc. colligat eaque ad me seu recta Mellicium seu Viennam Austriae, ubi celebrem quoque domum vulgo Mölker-hoff dictam possidemus, emittat. Dedi quidem in hoc negotio ad diversa Italiae monasteria iam pridem literas, sed vereor, ne maiori id a me labore quam fructu actitatum sit, nullo hactenus a quoquam accepto responso. Res facilis mihi fore videtur, si in <anchor xml:id="n1"/>conventibus celeberrimae congregationis Cassinensis<anchor xml:id="n1e"/> frequenter institui solitis aliqua de hocce consilio meo mentio iniceretur. Neque enim dubito fore plerosque reverendissimos abbates, qui si operis elegantiam, ordinis sacri decus et gloriam prae oculis habuerint, illico in suis quique monasteriis fieri iubeant, quod a vertice et totius nostri sacri ordinis Benedictini principe nunc coram petere praesumo. </ab>
+         <ab resp="#editor" xml:id="seg3">Porro ut exacto, quid in describendis Cassinatibus scriptoribus fieri velim, intelligatur, adscribo brevem petitorum elenchum, qui huiusmodi est: <pb n="1v"/> Primo. Nomen, cognomen, patria scriptoris Casinatis. Secundo. Locus professionis, si forte scriptor ut hospes Cassinum accessisset. Tertio. Locus, ubi studuerit. Quarto. Catalogus operum typis editorum aut etiam manuscriptorum, si haec alicuius momenti sint. Quinto. Locus, tempus et forma editionis. Sexto. Dictum vel factum nobile, pium etc. in vita. Septimo. Annus obitus aut saltem <sic>probabiliter</sic> de hoc coniectura. Quae pauca ubi consecutus fuero, nihil sane intermittam, quod ad illustrandum amplius splendidissimum reverendissimi ac perillustris domini domini monasterium spectabit. Quibus me commendans Deum optimum maximum precor, ut reverendissimum perillustrem ac amplissimum dominum dominum in sui colendissimi asceterii, sacrae congregationis Cassinensis universique nostri ordinis commodum quam diutissime incolumem florentemque conservet.</ab>
+         <closer>Cliens infimus pater Bernardus Pez ordinis sancti patris Benedicti praefati monasterii professus et bibliothecarius.</closer>
+         <closer>Dedi in exempto nostro monasterio Mellicensi vulgo Mölk in Austria ad Danubium XV milliaribus supra Viennam die 17. Novembris 1709.</closer>
+      </body>
    </text>
 </TEI>

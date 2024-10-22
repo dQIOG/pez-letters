@@ -1,39 +1,72 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="317" xml:id="pez-0317">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">317 Konrad Sigler an Bernhard Pez. 1713-07-11. Würzburg.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Konrad Sigler an Bernhard Pez. 1713-07-11. Würzburg.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">317</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
+            <note type="remarks">
+               Der Brief ist von demselben Sekretär geschrieben wie 308,
+                  nur das Datum vielleicht von
+                  KS.
+                  Bei Glassner, Verzeichnis 236, ist das irrige Jahresdatum 1712 aus dem Original
+                  übernommen, wo es anscheinend durch eine Auslassung und unvollständig ausgeführte
+                  Korrektur (<orig>MDCCIII</orig> zu <orig>MDCCXII</orig>)
+                  zustande kam. Dem Inhalt und den Bezügen auf Vorbriefe zufolge muss der Brief
+                  jedoch aus dem Sommer 1713 stammen. – Auf 4r mehrere Vermerke: <orig>Utiles epistolae pro Bibliotheca Benedictina maxime Germanica. Herbipoli. 1713.</orig> – Auf den beiden ersten Blättern befinden sich im unteren Bereich
+                  einige dunkle Flecken, deren ringförmige Anordnung an ein abgestelltes Gefäß mit
+                  Flüssigkeit denken lässt. Die Lesbarkeit ist beeinträchtigt, Textverlust entsteht
+                  jedoch nicht.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">207r–210v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 207r–210v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -48,189 +81,148 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">311</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">308</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">311</idno>
-               </ref>
+               <ptr type="prev" target="letter:311"/>
+               <ptr type="mentions" target="letter:308"/>
+               <ptr type="mentions" target="letter:311"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">KS hat BPs Antwort <ref type="letter" target="letter:311">311</ref> vom 18. Mai (recte: 17. Juni?) auf seinen letzten Brief <ref type="letter" target="letter:308">308</ref> mit Freude und Schmerz erhalten: Freude, weil darin BPs Wertschätzung und Nachsicht zum Ausdruck kommt; Schmerz, weil es KS nicht möglich ist, BP die versprochene Sammlung von <rs ref="index:d10854e9767">Fuldaer</rs> Schriftstellern („<rs ref="index:d10854e29006">Semicenturia scriptorum</rs>“) zu senden. Etliches ist KS verloren gegangen, das wiederzuerlangen er nun viel gäbe. Er zählt auch nicht zu jenen, die ständig der Schreibreiz juckt. Ansonsten freilich hat er kein höheres Ziel, als gelehrten Männern wie BP Hilfe zu leisten.</p>
+            <p corresp="#seg2">Davon legen die Arbeiten von <rs ref="index:d10854e19243">Konrad Mel</rs> und <rs ref="index:d10854e14353">Christian Juncker</rs> Zeugnis ab, außerdem <rs ref="index:d10854e25358">Rasslers „Vindicatio contra vindicias“</rs> sowie besonders der dritte Band der „<rs ref="index:d10854e16855">Scriptores rerum Brunsvicensium</rs>“ von <rs ref="index:d14380e24248">Leibniz</rs>, zu dem KS mit Genehmigung des <rs ref="index:d10854e9767">Fuldaer</rs> Fürstabtes <rs ref="index:d10854e27857">Adalbert von Schleifras</rs> einiges beigetragen hat. Damit hätte er in der Gelehrtenwelt denselben Ruhm erringen können wie jener große Mann. KS sendet BP Notizen, die er aus seinem Exemplar von <rs ref="index:d10854e4375">Brouwers „Fuldenses antiquitates“</rs> entnommen hat.</p>
+            <p corresp="#seg3">Wenn er in den kommenden Tagen Zeit findet, will KS das <rs ref="index:d10854e34226">Würzburger</rs> <rs ref="index:d14380e46684">Schottenkloster</rs> aufsuchen, um dort für BP Informationen über J<rs ref="index:d14380e43380">ohannes Trithemius</rs> einzuholen. Inzwischen sendet er BP einen Auszug aus einem Brief, den er vor einiger Zeit an einen Freund geschrieben hat; darin wird auch „Johannes von Erfurt“ erwähnt, welchen KS mit <rs ref="index:d10854e14124">Johannes von Lauterbach</rs> identifiziert. Dies wird er an anderem Ort ausführlicher darlegen.</p>
+            <p corresp="#seg4">KS teilt BPs Einschätzung der „<rs ref="index:d10854e20414">Epistola monachorum Casinensium</rs>“; besondere Freude bereitet ihm jedoch die „<rs ref="index:d10854e4025">Praedicatio de abrenuntiatione</rs>“ des <rs ref="index:d10854e3976">Hl. Bonifatius</rs>, die ihm BP zugesendet hat. Er fragt nach paläographischen und kodikologischen Details und fordert BP auf, den Schatz der annähernd 2000 Melker Handschriften der gelehrten Welt bekannt zu machen.</p>
+            <p corresp="#seg5">Das Leben Bischof <rs ref="index:d14380e16920">Haimos von Halberstadt</rs> wurde 1700 von <rs ref="index:d10854e1184">Paul Anton</rs> in Halle herausgegeben („<rs ref="index:d10854e1190">Exercitatio historico-theologica</rs>“), KS ist sich aber nicht sicher, ob dieses flüchtige Werk (opella fugitiva) – wie die F<rs ref="index:d14380e12712">ranzosen</rs> solche Drucke nennen – noch auf dem Markt ist. Wenn BP es wünscht, kann KS sein eigenes Exemplar senden. Den Erscheinungsort von <rs ref="index:d10854e20297">Mollers „Homonymoscopia“</rs> kann KS nicht nennen, da er das Werk nicht bei der Hand hat. Was KS daraus exzerpiert hat, findet BP in der Beilage. Wenn er dann das Werk selbst haben will, kann er es in <rs ref="index:d14380e24317">Leipzig</rs> bestellen. KS verweist besonders auf die <rs ref="index:d10854e9713"><rs ref="index:d10854e10629">Kataloge</rs></rs> von <rs ref="index:d14380e13571">Fritsch</rs> und <rs ref="index:d10854e10619">Gleditsch</rs> und empfiehlt den Buchhändler Kaspar <rs ref="index:d10854e8392">Jakob Eyssel</rs>, von dem er öfters Bücher bezieht. Bei den alle zwei Monate stattfindenden Buchmessen rechnet KS mit <rs ref="index:d10854e8392">Eyssel</rs> ab. <rs ref="index:d10854e2662">Bayles „Dictionnaire“</rs> und <rs ref="index:d14380e29693">jenes</rs> von <rs ref="index:d14380e29687">Moréri</rs> dürfte BP ebenso bereits in seiner Bibliothek haben wie die „<rs ref="index:d14380e228">Acta eruditorum</rs>“ und andere gelehrte Zeitschriften (ephemerides). <rs ref="index:d10854e8392">Eyssel</rs> kann diese und andere Werke, die in <rs ref="index:d14380e9395">Deutschland</rs> gedruckt werden, besorgen, und zwar zu günstigeren Konditionen als die <rs ref="index:d14380e30963">Nürnberger</rs> Buchhändler. KS hat <rs ref="index:d10854e8392">Eyssel</rs> auch empfohlen, BP die <rs ref="index:d10854e9713"><rs ref="index:d10854e10629">Kataloge</rs></rs> von <rs ref="index:d14380e13571">Fritsch</rs> und <rs ref="index:d10854e10619">Gleditsch</rs> zuzusenden.</p>
+            <p corresp="#seg6">Demnächst soll bei <rs ref="index:d14380e13571">Thomas Fritsch</rs> eine Sammeledition <rs ref="index:d14380e12652">fränkischer</rs> Historiographen (<rs ref="index:d10854e17472">Ludewig, „Geschicht-schreiber von Wirtzburg“</rs>) erscheinen, unter denen die <rs ref="index:d10854e9694">Würzburger Chronik</rs> von <rs ref="index:d10854e9686">Lorenz Fries</rs> aus dem 16. Jahrhundert an erster Stelle steht. In der Einleitung unter dem Titel „Vorbereitung zu der fränckischen special-historie“ spricht der Autor den <rs ref="index:d10854e34226">Würzburger</rs> Bischöfen unter Berufung auf <rs ref="index:d10854e9686">Fries</rs> das Recht ab, den fränkischen Herzogstitel zu führen, und kritisiert <rs ref="index:d14380e43380">Trithemius</rs>, den er mit <rs ref="index:d10854e837">Giovanni Annio</rs> vergleicht: Die von<rs ref="index:d14380e43380"> Trithemius</rs> („<rs ref="index:d10854e31254">De origine gentis Francorum</rs>“) gegebene Reihe der <rs ref="index:d14380e12643">fränkischen</rs> Herrscher sei frei erfunden, die als Quellen genannten Chronisten <rs ref="index:d10854e13332">Hunibald</rs> und <rs ref="index:d10854e32381">Wastald</rs> hätten nie existiert. Der <rs ref="index:d10854e34226">Würzburger</rs> Fürstbischof <rs ref="index:d10854e11166">Johann Philipp von Greiffenclau</rs> kann das Erscheinen des Werks nicht verhindern, hat aber KS beauftragt, sich in einer Schrift von <rs ref="index:d10854e17472">Ludewigs Edition</rs> zu distanzieren und die Glaubwürdigkeit der <rs ref="index:d10854e9694">Fries’schen Handschrift</rs> in Zweifel zu ziehen. KS will dabei auch <rs ref="index:d14380e43380">Trithemius</rs> verteidigen, da dieser auch selbst Zweifel an <rs ref="index:d10854e13332">Hunibald</rs> äußert. Zudem geht aus dem Widmungsbrief von <rs ref="index:d10854e24428">Willibald Pirckheimer</rs> an seine Schwester <rs ref="index:d10854e24421">Caritas</rs> in seiner Ausgabe der Werke des Fulgentius („<rs ref="index:d10854e9901">Opera Fulgentii Aphri</rs>“) hervor, dass zahlreiche der von <rs ref="index:d14380e43380">Trithemius</rs> gesammelten Handschriften nach dessen Tod verloren gegangen sind; darunter könnten sich auch die möglicherweise einzigen Textzeugen der umstrittenen Autoren befunden haben. Ohne weiteres könnte man wohl eine ganze „Bibliotheca“ der verlorenen Bücher schreiben. Eine umfassende Verteidigung des <rs ref="index:d14380e43380">Trithemius</rs> kann KS zwar nicht leisten, will aber wenigstens in diesem einen Punkt die Glaubwürdigkeit der <rs ref="index:d14380e11852">Evangelischen</rs> erschüttern. Er bittet BP um Rat.</p>
+            <p corresp="#seg7">Wegen des Todes von <rs ref="index:d10854e2493">Hyazinth Baumbach</rs> soll BP eine allfällige Antwort über den Weihbischof von Würzburg und Titularbischof von <rs ref="index:d10854e5337">Chrysopolis</rs>, <rs ref="index:d14380e27327">Johann Bernhard Meyer</rs>, an KS richten.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e40378"><rs type="person" role="sender">KS</rs> hat <rs type="person" role="sender">BPs</rs> Antwort <ref type="letter">311</ref> vom 18. Mai (recte: 17. Juni?) auf seinen letzten Brief <ref type="letter">308</ref> mit Freude und Schmerz erhalten: Freude, weil darin <rs type="person" role="sender">BPs</rs> Wertschätzung und Nachsicht zum Ausdruck kommt; Schmerz, weil es <rs type="person" role="sender">KS</rs> nicht möglich ist, <rs type="person" role="sender">BP</rs> die versprochene Sammlung von <rs key="index:d10854e9767">Fuldaer</rs> Schriftstellern („<rs key="index:d10854e29006">Semicenturia scriptorum</rs>“) zu senden. Etliches ist <rs type="person" role="sender">KS</rs> verloren gegangen, das wiederzuerlangen er nun viel gäbe. Er zählt auch nicht zu jenen, die ständig der Schreibreiz juckt. Ansonsten freilich hat er kein höheres Ziel, als gelehrten Männern wie <rs type="person" role="sender">BP</rs> Hilfe zu leisten.</seg><seg type="context" n="2" xml:id="d4618e40386">Davon legen die Arbeiten von <rs key="index:d10854e19243">Konrad Mel</rs> und <rs key="index:d10854e14353">Christian Juncker</rs> Zeugnis ab, außerdem <rs key="index:d10854e25358">Rasslers „Vindicatio contra vindicias“</rs> sowie besonders der dritte Band der „<rs key="index:d10854e16855">Scriptores rerum Brunsvicensium</rs>“ von <rs key="index:d14380e24248">Leibniz</rs>, zu dem <rs type="person" role="sender">KS</rs> mit Genehmigung des <rs key="index:d10854e9767">Fuldaer</rs> Fürstabtes <rs key="index:d10854e27857">Adalbert von Schleifras</rs> einiges beigetragen hat. Damit hätte er in der Gelehrtenwelt denselben Ruhm erringen können wie jener große Mann. <rs type="person" role="sender">KS</rs> sendet <rs type="person" role="sender">BP</rs> Notizen, die er aus seinem Exemplar von <rs key="index:d10854e4375">Brouwers „Fuldenses antiquitates“</rs> entnommen hat.</seg><seg type="context" n="3" xml:id="d4618e40388">Wenn er in den kommenden Tagen Zeit findet, will <rs type="person" role="sender">KS</rs> das <rs key="index:d10854e34226">Würzburger</rs> <rs key="index:d14380e46684">Schottenkloster</rs> aufsuchen, um dort für <rs type="person" role="sender">BP</rs> Informationen über J<rs key="index:d14380e43380">ohannes Trithemius</rs> einzuholen. Inzwischen sendet er <rs type="person" role="sender">BP</rs> einen Auszug aus einem Brief, den er vor einiger Zeit an einen Freund geschrieben hat; darin wird auch „Johannes von Erfurt“ erwähnt, welchen <rs type="person" role="sender">KS</rs> mit <rs key="index:d10854e14124">Johannes von Lauterbach</rs> identifiziert. Dies wird er an anderem Ort ausführlicher darlegen.</seg><seg type="context" n="4" xml:id="d4618e40390"><rs type="person" role="sender">KS</rs> teilt <rs type="person" role="sender">BPs</rs> Einschätzung der „<rs key="index:d10854e20414">Epistola monachorum Casinensium</rs>“; besondere Freude bereitet ihm jedoch die „<rs key="index:d10854e4025">Praedicatio de abrenuntiatione</rs>“ des <rs key="index:d10854e3976">Hl. Bonifatius</rs>, die ihm <rs type="person" role="sender">BP</rs> zugesendet hat. Er fragt nach paläographischen und kodikologischen Details und fordert <rs type="person" role="sender">BP</rs> auf, den Schatz der annähernd 2000 Melker Handschriften der gelehrten Welt bekannt zu machen.</seg><seg type="context" n="5" xml:id="d4618e40392">Das Leben Bischof <rs key="index:d14380e16920">Haimos von Halberstadt</rs> wurde 1700 von <rs key="index:d10854e1184">Paul Anton</rs> in Halle herausgegeben („<rs key="index:d10854e1190">Exercitatio historico-theologica</rs>“), <rs type="person" role="sender">KS</rs> ist sich aber nicht sicher, ob dieses flüchtige Werk (opella fugitiva) – wie die F<rs key="index:d14380e12712">ranzosen</rs> solche Drucke nennen – noch auf dem Markt ist. Wenn <rs type="person" role="sender">BP</rs> es wünscht, kann <rs type="person" role="sender">KS</rs> sein eigenes Exemplar senden. Den Erscheinungsort von <rs key="index:d10854e20297">Mollers „Homonymoscopia“</rs> kann <rs type="person" role="sender">KS</rs> nicht nennen, da er das Werk nicht bei der Hand hat. Was <rs type="person" role="sender">KS</rs> daraus exzerpiert hat, findet <rs type="person" role="sender">BP</rs> in der Beilage. Wenn er dann das Werk selbst haben will, kann er es in <rs key="index:d14380e24317">Leipzig</rs> bestellen. <rs type="person" role="sender">KS</rs> verweist besonders auf die <rs key="index:d10854e9713"><rs key="index:d10854e10629">Kataloge</rs></rs> von <rs key="index:d14380e13571">Fritsch</rs> und <rs key="index:d10854e10619">Gleditsch</rs> und empfiehlt den Buchhändler Kaspar <rs key="index:d10854e8392">Jakob Eyssel</rs>, von dem er öfters Bücher bezieht. Bei den alle zwei Monate stattfindenden Buchmessen rechnet <rs type="person" role="sender">KS</rs> mit <rs key="index:d10854e8392">Eyssel</rs> ab. <rs key="index:d10854e2662">Bayles „Dictionnaire“</rs> und <rs key="index:d14380e29693">jenes</rs> von <rs key="index:d14380e29687">Moréri</rs> dürfte <rs type="person" role="sender">BP</rs> ebenso bereits in seiner Bibliothek haben wie die „<rs key="index:d14380e228">Acta eruditorum</rs>“ und andere gelehrte Zeitschriften (ephemerides). <rs key="index:d10854e8392">Eyssel</rs> kann diese und andere Werke, die in <rs key="index:d14380e9395">Deutschland</rs> gedruckt werden, besorgen, und zwar zu günstigeren Konditionen als die <rs key="index:d14380e30963">Nürnberger</rs> Buchhändler. <rs type="person" role="sender">KS</rs> hat <rs key="index:d10854e8392">Eyssel</rs> auch empfohlen, <rs type="person" role="sender">BP</rs> die <rs key="index:d10854e9713"><rs key="index:d10854e10629">Kataloge</rs></rs> von <rs key="index:d14380e13571">Fritsch</rs> und <rs key="index:d10854e10619">Gleditsch</rs> zuzusenden.</seg><seg type="context" n="6" xml:id="d4618e40394">Demnächst soll bei <rs key="index:d14380e13571">Thomas Fritsch</rs> eine Sammeledition <rs key="index:d14380e12652">fränkischer</rs> Historiographen (<rs key="index:d10854e17472">Ludewig, „Geschicht-schreiber von Wirtzburg“</rs>) erscheinen, unter denen die <rs key="index:d10854e9694">Würzburger Chronik</rs> von <rs key="index:d10854e9686">Lorenz Fries</rs> aus dem 16. Jahrhundert an erster Stelle steht. In der Einleitung unter dem Titel „Vorbereitung zu der fränckischen special-historie“ spricht der Autor den <rs key="index:d10854e34226">Würzburger</rs> Bischöfen unter Berufung auf <rs key="index:d10854e9686">Fries</rs> das Recht ab, den fränkischen Herzogstitel zu führen, und kritisiert <rs key="index:d14380e43380">Trithemius</rs>, den er mit <rs key="index:d10854e837">Giovanni Annio</rs> vergleicht: Die von<rs key="index:d14380e43380"> Trithemius</rs> („<rs key="index:d10854e31254">De origine gentis Francorum</rs>“) gegebene Reihe der <rs key="index:d14380e12643">fränkischen</rs> Herrscher sei frei erfunden, die als Quellen genannten Chronisten <rs key="index:d10854e13332">Hunibald</rs> und <rs key="index:d10854e32381">Wastald</rs> hätten nie existiert. Der <rs key="index:d10854e34226">Würzburger</rs> Fürstbischof <rs key="index:d10854e11166">Johann Philipp von Greiffenclau</rs> kann das Erscheinen des Werks nicht verhindern, hat aber <rs type="person" role="sender">KS</rs> beauftragt, sich in einer Schrift von <rs key="index:d10854e17472">Ludewigs Edition</rs> zu distanzieren und die Glaubwürdigkeit der <rs key="index:d10854e9694">Fries’schen Handschrift</rs> in Zweifel zu ziehen. <rs type="person" role="sender">KS</rs> will dabei auch <rs key="index:d14380e43380">Trithemius</rs> verteidigen, da dieser auch selbst Zweifel an <rs key="index:d10854e13332">Hunibald</rs> äußert. Zudem geht aus dem Widmungsbrief von <rs key="index:d10854e24428">Willibald Pirckheimer</rs> an seine Schwester <rs key="index:d10854e24421">Caritas</rs> in seiner Ausgabe der Werke des Fulgentius („<rs key="index:d10854e9901">Opera Fulgentii Aphri</rs>“) hervor, dass zahlreiche der von <rs key="index:d14380e43380">Trithemius</rs> gesammelten Handschriften nach dessen Tod verloren gegangen sind; darunter könnten sich auch die möglicherweise einzigen Textzeugen der umstrittenen Autoren befunden haben. Ohne weiteres könnte man wohl eine ganze „Bibliotheca“ der verlorenen Bücher schreiben. Eine umfassende Verteidigung des <rs key="index:d14380e43380">Trithemius</rs> kann <rs type="person" role="sender">KS</rs> zwar nicht leisten, will aber wenigstens in diesem einen Punkt die Glaubwürdigkeit der <rs key="index:d14380e11852">Evangelischen</rs> erschüttern. Er bittet <rs type="person" role="sender">BP</rs> um Rat.</seg><seg type="context" n="7" xml:id="d4618e40396">Wegen des Todes von <rs key="index:d10854e2493">Hyazinth Baumbach</rs> soll <rs type="person" role="sender">BP</rs> eine allfällige Antwort über den Weihbischof von Würzburg und Titularbischof von <rs key="index:d10854e5337">Chrysopolis</rs>, <rs key="index:d14380e27327">Johann Bernhard Meyer</rs>, an <rs type="person" role="sender">KS</rs> richten.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">98</hi> (mit dem richtigen Datum <hi rend="italic">11. Julii 1713</hi>).</p>
-            <div type="remarks">
-               <p>Der Brief ist von demselben Sekretär geschrieben wie <ref type="letter">308</ref>,
-                  nur das Datum vielleicht von
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>KS<?oxy_custom_end?>.
-                  Bei Glassner, Verzeichnis 236, ist das irrige Jahresdatum 1712 aus dem Original
-                  übernommen, wo es anscheinend durch eine Auslassung und unvollständig ausgeführte
-                  Korrektur (<hi rend="italic">MDCCIII</hi> zu <hi rend="italic">MDCCXII</hi>)
-                  zustande kam. Dem Inhalt und den Bezügen auf Vorbriefe zufolge muss der Brief
-                  jedoch aus dem Sommer 1713 stammen. – Auf 4r mehrere Vermerke: <hi rend="italic"
-                     >Utiles epistolae pro Bibliotheca Benedictina maxime Germanica. Herbipoli.
-                     1713.</hi> – Auf den beiden ersten Blättern befinden sich im unteren Bereich
-                  einige dunkle Flecken, deren ringförmige Anordnung an ein abgestelltes Gefäß mit
-                  Flüssigkeit denken lässt. Die Lesbarkeit ist beeinträchtigt, Textverlust entsteht
-                  jedoch nicht.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Viro admodum reverendo eruditissimoque domino patri Bernardo Pez presbytero Mellicensi ordinis sancti Benedicti Georgius Conradus Sigler salutem plurimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e40427">Suavissimae literae tuae, quibus <seg type="lemma" corresp="#d4618e40512">XV. Kalendas Junii</seg> [<hi rend="italic">sic</hi>] ad meas respondes, mihi gaudii plurimum, sed et doloris nonnihil attulere: enimvero quod tam benigne a culpa omni liberatus gratiam adhuc et pretium ferrem ab eruditissimo illo calamo, insigniter fui laetatus, dolorem autem propterea sensi, quia voti te tui plene compotem reddere collectionemque scriptorum Fuldensium olim abs me institutam mittere, utut maxime velim, haud aeque possim; idque vel iniurato credes, vir optime, pluscula mihi intercidisse, quae magno nunc pretio redimerem. Neque is etiam ego sum, quem scribendi urtica momordit, qui caeterum nihil antiquius habeo, quam ut viris tui similibus et me ingenio longe multumque praecellentibus ultro symbolas meas offeram atque reipsa praestem. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e40432">Dicti fidem faciunt publicam <seg type="lemma" corresp="#d4618e40519">Conradi Mel</seg>, Christiani Junckeri scripta, patris <seg type="lemma" corresp="#d4618e40526">Rassleri Vindicatio</seg> diplomatis Lindaviensis nuper edita, cumprimis vero <seg type="lemma" corresp="#d4618e40531">Leibnizii Scriptorum Brunsvicensium tomus tertius</seg> circa finem, ubi talia permissu celsissimi Fuldensis me procurante publicata sunt, quibus, si modo voluissem, eandem a republica literaria gratiam inire poteram, quam consecutus est vel ideo vir ille summus. Cupio<note place="foot" xml:id="d4618e40434">	Über der Zeile eingefügt.</note> sane quam maxime nihilque magis in votis habeo, quam ut aliquod huius rei tibi etiam, vir suavissime, documentum dare possim; nullus certe committam, ut frustra a me exspectes, quod scivero positum esse in viribus meis. Nunc habe<note place="foot" xml:id="d4618e40437">	Korrigiert aus <hi rend="italic">habeo</hi>.</note>, quae quantulacunque sint <pb n="1v"/> ad meum Broweri exemplar adnotata; inopinanti sub oculos veniunt. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e40445">Proximis diebus, si modo plus otii suppetat, Scotos nostros accedam et accuratiore calamo notabo, quae de Trithemio scire desideras. Interim percurrere non pigeat <seg type="lemma" corresp="#d4618e40541">epitomen literarum</seg> ad amicum olim a me perscriptarum, quae si sitim tuam non extinguere, lenire saltem poterunt. Observabis his in literis mentionem fieri fratris Joannis de Erfordia: <seg type="lemma" corresp="#d4618e40548">hunc eumdem esse</seg> cum Joanne de Lauterbach compertum habeo. Sed hoc argumentum alias luculentius absolvam. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e40447">Tuae <seg type="lemma" corresp="#d4618e40553">de Cassinensi epistola</seg> coniecturae libens subscribo; sed explicare haud valeo, qua aviditate quoque animi solamine sancti <seg type="lemma" corresp="#d4618e40560">Bonifacii nostri sermonem</seg> perlegerim. Nae, totus quantus est apostolicus dignissimusque, qui propediem edatur. Vah, quam est tersus, quam instruens quamque ad simplicitatem gentilium parentum nostrorum <sic>accomodatus</sic> [<hi rend="italic">sic</hi>]. Gratias summas tibi debeo, easque publice olim rependam, quando hunc eximium plane sermonem cum erudito orbe communicare continget. Satis quidem abundeque abs te factum est cuique erudito in exscribendo hoc tanta cura sermone, attamen unicum restat, quod te rogare debeo: dabis hoc meae curiositati atque, si grave non est, docebis, qua characterum forma exaratus sit codex et quid praeter hunc sermonem contineat aliud, ut vel hinc de aetate iuste iudicare lector queat. Scire autem praeprimis aveo, qua ratione formata sit diphtongus ae, an ae aut separatim ae<note place="foot" xml:id="d4618e40452">	KS schreibt <hi rend="italic">ae</hi> zunächst als Ligatur, dann als zwei Buchstaben.</note>; dein an litera s <pb n="2r"/> (ad usum circa initium saeculi undecimi exorsum) in fine dictionum parvula sit an longiuscula, hoc vel alio modo: s s<note place="foot" xml:id="d4618e40460">	KS gibt zwei Formen eines langen <hi rend="italic">s</hi> wieder, von denen eine in die Unterlänge geht.</note>. Salivam non mediocriter mihi moves asserendo manuscriptorum Mellicensium numerum ad MM ascendere; fac, quaeso, ut thesaurus tam praeclarus, quo fieri poterit, citius eruditorum oculis subiciatur; nullus enim dubito, quin plurima in scriniis vestris lateant non ubivis cognita. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e40466">Haymonis vita Halae Magdeburgicae MDCC typis fuit exscripta, dubito autem, an adhuc extet, ut enim subito disparere solent eiusmodi opellae fugitivae, ut a Gallis audiunt; ita si non erit ingratum, meum libens transmittam exemplar. <seg type="lemma" corresp="#d4618e40565">Molleri Homonymoscopiam quod concernit, nunc vere non occurrit editionis locus, nec ipsum opus ad manum amplius est. Ex hoc de Haymone quaedam excerpsi</seg>, quae hic degustare potes; quod si necessum dein iudices ipsum opus inspicere, facili id negotio a Lipsiensibus procurabis. Ibi enim celeberrima hac nostra aetate bibliopolia meo quidem iudicio prostant, id quod vel ex duobus Fritschii et Gleditschii catalogis videre est. Lipsiae bibliopola degit Caspar Jacob <seg type="lemma" corresp="#d4618e40572">Eyssel</seg>; huius viri veteris amici opera libenter utor in emendis libris, <pb n="2v"/> quos iste iustissimo semper pretio procurat mittitque petenti et meam exin fidem in singulas nundinas bimestres numerata pecunia liberanti. Baelii et Moreri Lexicon universale patrio sermone editum et Acta eruditorum Lipsiensium caeterasque ephemerides suum iam locum in suppellectile tua libraria haud dubie occupabunt; quod si tamen his vel aliis libris, maxime qui in Germania indies eduntur, opus tibi fuerit, hoc viro uti poteris tutius ac Norimbergensibus, quos in constituendis librorum pretiis admodum iniquos comperio. Ipsi <seg type="lemma" corresp="#d4618e40572">Eyssel</seg>io iam suggessi suasorque extiti, quatenus catalogos supra adductos data occasione ad te destinet suaque offerat servitia. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e40470">Ibidem <seg type="lemma" corresp="#d4618e40578">Thomae Fritschii</seg> praelum mox deseret <sic>prodetque</sic> [<hi rend="italic">sic</hi>]<note place="foot" xml:id="d4618e40475">	Wohl für <hi rend="italic">prodibitque</hi>.</note> in publicum conlectio scriptorum Francicorum, quos inter primus omnium conspicitur Laurentius Fries, qui Cronicon Herbipolense, opus prolixum, scripsit saeculo XVI., hactenus ineditum. Praemittitur huic collectioni <seg type="lemma" corresp="#d4618e40585">Vorbereitung</seg> zu der fränckischen special-historie, ubi autor temere satis episcopis huiatibus negat esse ius ad ducum Franciae Orientalis titulum, quem possident, ipsumque Frisium testem adducit. Hac occasione in Trithemium acerbius agit eumque tanquam mendacem, obtrectatorem <seg type="lemma" corresp="#d4618e40590">Annioque Viterbiensi parem</seg> traducit, utpote qui seriem regum et ducum Franciae Orientalis ex suo capite prognatam obtrudere ausus fuerit, allegata <pb n="3r"/> auctoritate veterum scriptorum <seg type="lemma" corresp="#d4618e40595">Hunibaldi et Wasthaldi</seg>, qui tamen nunquam extiterunt. Celsissimus herus meus optaret quidem, ut ineditum plane maneat hoc opus; editionem tamen impedire non valens mihi in mandatis dedit curare, ut publico scripto constet nos in nullam prorsus huius Frisianae editionis partem venire, labefactata etiam ipsius Frisiani operis manuscripti probitate; quo munere clementissime mihi iniuncto dum pro viribus imparibus quidem illis defungi conabor, id simul agere mens est, ut Trithemius, qui, prout notum est, iamdudum laudatur ab his, culpatur ab illis, plane non indefensus abeat. Mea quidem sententia non absque iniuria fit, quod viro huic summo obicitur, siquidem ipse Trithemius, ubi de Hunibaldi historia circa originem gentis Francorum agit, eam disertis verbis asserit sibi videri in pluribus fabulosam. Deinde cum ex <sic>Bilibaldi</sic> [<hi rend="italic">sic</hi>] <seg type="lemma" corresp="#d4618e40600">Pirckhaymeri epistola</seg> dedicatoria operum Fulgentii ad sororem suam appareat<note place="foot" xml:id="d4618e40486">	Korrigiert aus unleserlicher Streichung im Ausmaß von ca. 8–9 Buchstaben.</note> Trithemio fuisse plurimos ex tota Germania conquisitos veterrimos codices, qui post mortem omnes distracti fuerint, quis non persuadere sibi patiatur intercidisse pariter hos unicos forte auctores; neque etiam hoc mirum cuiquam videri debet, non enim difficile adeo esset<note place="foot" xml:id="d4618e40490">	Korrigiert aus <hi rend="italic">est</hi>.</note> integram librorum deperditorum Bibliothecam conscribere, et reliqua. <pb n="3v"/> Is ego non sim licet, qui Trithemii fidem post tot alios pro dignitate queam vindicare, studebo tamen, ut vel inde etiam sumpto argumento conatibus haereticorum contraeatur, et fides eorum suspecta saltem fiat. Consilium hoc tecum, si cum quoquam alio, communicare non dubito, ea spe fretus, ut me pro humanitate tua summa, si quae occurrant monenda, haud gravate moneas. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d4618e40498">Caeterum <seg type="lemma" corresp="#d4618e40605">sublato nunc e vivis, quod summe merito dolendum, reverendissimo domino Hyacintho</seg> nostro, non pigeat ei, si quo forte me dignari volueris responso, chartam addere involucri loco, cui inscribas nomen reverendissimi domini Joannis Bernardi episcopi Chrysopolitani et <seg type="lemma" corresp="#d4618e40612">suffraganei</seg> Herbipolensis, patroni mei, utpote cuius rei venia a me iam est impetrata. Vale.</seg></p>
-            <p xml:space="preserve">Herbipoli die XI. Julii MDCCXII<note place="foot" xml:id="d4618e40502">	Korrigiert aus <hi rend="italic">MDCCIII</hi>.</note> [<hi rend="italic">sic</hi>].</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e40512">
-               <ref type="context">1</ref>
-               <label>XV. Kalendas Junii</label>
-               <p>Vgl. Bemerkungen zu <ref type="letter">311</ref>.</p>
-            </note>
-            <note xml:id="d4618e40519">
-               <ref type="context">2</ref>
-               <label>Conradi Mel</label>
-               <p>Vgl. <ref type="letter">145</ref> &lt;1&gt;.</p>
-            </note>
-            <note xml:id="d4618e40526">
-               <ref type="context">2</ref>
-               <label>Rassleri Vindicatio</label>
-               <p>Beiträge von KS sind vermerkt bei
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Rassler,
-                  Vindicatio<?oxy_custom_end?> 2 116 Nr. 134, 148 Nr. 167. Zum Lindauer
-                  Urkundenstreit: <rs type="bibl" key="bibl:36636">Meyer von Knonau, Bellum
-                     diplomaticum</rs>; vgl. <rs type="bibl" key="bibl:15152">Benz, Zwischen
-                     Tradition und Kritik</rs> 618–621; <rs type="bibl" key="bibl:16000">Duhr,
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>XV. Kalendas Junii</mentioned>
+            <p>Vgl. Bemerkungen zu <ref type="letter" target="letter:311">311</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>Conradi Mel</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:145">145</ref> <ref target="letter:145#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>Rassleri Vindicatio</mentioned>
+            <p>Beiträge von KS sind vermerkt bei
+                  Rassler,
+                  Vindicatio 2 116 Nr. 134, 148 Nr. 167. Zum Lindauer
+                  Urkundenstreit: <rs type="bibl" ref="bibl:36636">Meyer von Knonau, Bellum
+                     diplomaticum</rs>; vgl. <rs type="bibl" ref="bibl:15152">Benz, Zwischen
+                     Tradition und Kritik</rs> 618–621; <rs type="bibl" ref="bibl:16000">Duhr,
                      Jesuiten</rs> 3 567.</p>
-            </note>
-            <note xml:id="d4618e40531">
-               <ref type="context">2</ref>
-               <label>Leibnizii ... tomus tertius</label>
-               <p>Bei Leibniz,
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Scriptores
-                  rerum Brunsvicensium<?oxy_custom_end?> 3 759–769, sind Auszüge aus dem ältesten
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>Leibnizii ... tomus tertius</mentioned>
+            <p>Bei Leibniz,
+                  Scriptores
+                  rerum Brunsvicensium 3 759–769, sind Auszüge aus dem ältesten
                   Fuldaer Nekrologium abgedruckt; in der Vorbemerkung (ebd. 31) wird für die
                   Einwilligung des Fürstabtes Schleifras zur Übermittlung der Quelle gedankt. KS ist
                   dort nicht namentlich genannt, seine Beteiligung wird jedoch durch einen Brief
                   Leibniz’ an Muratori vom 18. Februar 1712 explizit bestätigt: „M. Sigler [...]
                   avec permission du Prince son maître, nous a communiqué quantité de vieux monumens
-                  de cette grande et celebre Abbaye“ (<rs type="bibl" key="bibl:35974">Campori,
-                     Corrispondenza</rs> 179f.); vgl. <rs type="bibl" key="bibl:16024">Eckert,
+                  de cette grande et celebre Abbaye“ (<rs type="bibl" ref="bibl:35974">Campori,
+                     Corrispondenza</rs> 179f.); vgl. <rs type="bibl" ref="bibl:16024">Eckert,
                      Scriptores</rs> 36.</p>
-            </note>
-            <note xml:id="d4618e40536">
-               <ref type="context">2</ref>
-               <label>habe ... adnotata</label>
-               <p>Die Beilage scheint nicht erhalten zu sein.</p>
-            </note>
-            <note xml:id="d4618e40541">
-               <ref type="context">3</ref>
-               <label>epitomen literarum</label>
-               <p>Dieser Auszug ist im Original erhalten in I, 213r–v; weiters abschriftlich in StiA
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned>habe ... adnotata</mentioned>
+            <p>Die Beilage scheint nicht erhalten zu sein.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned>epitomen literarum</mentioned>
+            <p>Dieser Auszug ist im Original erhalten in I, 213r–v; weiters abschriftlich in StiA
                   Melk, Karton 7 Patres 9, Abschriftencodex 74v–77v. In dem von 1710 datierten Brief
                   an einen ungenannten Adressaten berichtet KS von einer Bibliotheksreise nach
                   Würzburg, wo er die Bestände im Karmeliterkloster, im Schottenkloster St. Jakob,
                   in St. Stephan und in der Kartause eingesehen hat. KS teilt etliches über Zustand
                   und Inhalt der Bibliotheken mit. Auf der Verso-Seite findet sich der Vermerk „No.
                   40“, mit dem das Blatt irrig dem unmittelbar davor eingebundenen Brief KS’ an
-                  Baumbach vom 14. Februar 1711 (vgl. <ref type="letter">145</ref> &lt;1&gt;) als
+                  Baumbach vom 14. Februar 1711 (vgl. <ref type="letter" target="letter:145">145</ref> <ref target="letter:145#seg1">1</ref>) als
                   Beilage zugeordnet wird.</p>
-            </note>
-            <note xml:id="d4618e40548">
-               <ref type="context">3</ref>
-               <label>hunc eumdem esse</label>
-               <p>Johannes von Lauterbach war aus Erfurt gebürtig, Benediktiner im Peterskloster
-                  dortselbst, später in St. Stephan zu Würzburg: <rs type="bibl" key="bibl:37102"
-                     >Thurn, Lauterbach.</rs> Vgl. <ref type="letter">308</ref> &lt;6&gt;.</p>
-            </note>
-            <note xml:id="d4618e40553">
-               <ref type="context">4</ref>
-               <label>de Cassinensi epistola</label>
-               <p>Vgl. <ref type="letter">308</ref> &lt;4&gt;.</p>
-            </note>
-            <note xml:id="d4618e40560">
-               <ref type="context">4</ref>
-               <label>Bonifacii nostri sermonem</label>
-               <p>Vgl. <ref type="letter">308</ref> &lt;5&gt;.</p>
-            </note>
-            <note xml:id="d4618e40565">
-               <ref type="context">5</ref>
-               <label>Molleri Homonymoscopiam ... excerpsi</label>
-               <p>Dieser Auszug ist im Original erhalten in StiA Melk, Karton 85 Varia 25, Fasz. 1, Nr. 20; er trägt den Vermerk BPs: „hae litteris domini Sigler annexae erant“. Eine Abschrift hiervon findet sich in StiA Melk, Karton 7 Patres 9, Abschriftencodex 78v–79v.</p>
-            </note>
-            <note xml:id="d4618e40572">
-               <ref type="context">5</ref>
-               <label>Eyssel</label>
-               <p><rs type="bibl" key="bibl:18698">Paisey, Buchdrucker</rs>57.</p>
-            </note>
-            <note xml:id="d4618e40578">
-               <ref type="context">6</ref>
-               <label>Thomae Fritschii</label>
-               <p><rs type="bibl" key="bibl:18698">Paisey, Buchdrucker</rs> 68.</p>
-            </note>
-            <note xml:id="d4618e40585">
-               <ref type="context">6</ref>
-               <label>Vorbereitung</label>
-               <p>Der von Johann Peter Ludewig herausgegebenen Sammlung ist ein anonymer Text
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned>hunc eumdem esse</mentioned>
+            <p>Johannes von Lauterbach war aus Erfurt gebürtig, Benediktiner im Peterskloster
+                  dortselbst, später in St. Stephan zu Würzburg: <rs type="bibl" ref="bibl:37102">Thurn, Lauterbach.</rs> Vgl. <ref type="letter" target="letter:308">308</ref> <ref target="letter:308#seg6">6</ref>.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
+            <mentioned>de Cassinensi epistola</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:308">308</ref> <ref target="letter:308#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg4">
+            <mentioned>Bonifacii nostri sermonem</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:308">308</ref> <ref target="letter:308#seg5">5</ref>.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
+            <mentioned>Molleri Homonymoscopiam ... excerpsi</mentioned>
+            <p>Dieser Auszug ist im Original erhalten in StiA Melk, Karton 85 Varia 25, Fasz. 1, Nr. 20; er trägt den Vermerk BPs: „hae litteris domini Sigler annexae erant“. Eine Abschrift hiervon findet sich in StiA Melk, Karton 7 Patres 9, Abschriftencodex 78v–79v.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg5">
+            <mentioned>Eyssel</mentioned>
+            <p><rs type="bibl" ref="bibl:18698">Paisey, Buchdrucker</rs>57.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg6">
+            <mentioned>Thomae Fritschii</mentioned>
+            <p><rs type="bibl" ref="bibl:18698">Paisey, Buchdrucker</rs> 68.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg6">
+            <mentioned>Vorbereitung</mentioned>
+            <p>Der von Johann Peter Ludewig herausgegebenen Sammlung ist ein anonymer Text
                   „Vorbereitung zu der ost-fränckischen special-historie“ vorangestellt (in:
                   Ludewig, Geschicht-schreiber 1–352). Darin findet sich die Leugnung der
                   Herzogswürde der Würzburger Bischöfe (ebd. 352) in Verbindung mit einem längeren
                   Zitat aus der Fries’schen Chronik; der Angriff gegen Trithemius und Vergleich
                   desselben mit Annio (ebd. 345) steht hiermit nicht in unmittelbarem Zusammenhang.
                   Zur angeblichen Übertragung der Herzogswürde an die Bischöfe von Würzburg in den
-                  Darstellungen von Trithemius und Fries vgl. <rs type="bibl" key="bibl:35928"
-                     >Borchardt, Franken</rs> 108–111; <rs type="bibl" key="bibl:36296">Heiler,
+                  Darstellungen von Trithemius und Fries vgl. <rs type="bibl" ref="bibl:35928">Borchardt, Franken</rs> 108–111; <rs type="bibl" ref="bibl:36296">Heiler,
                      Bischofschronik</rs> 239–249; zur Edition von Ludewig ebd. 387–396.</p>
-            </note>
-            <note xml:id="d4618e40590">
-               <ref type="context">6</ref>
-               <label>Annioque ... parem</label>
-               <p>Annio galt im 16. bis 18. Jh. als Paradebeispiel eines Geschichtsfälschers: z. B.
-                     <rs type="bibl" key="bibl:35762">Zedlers Universal-Lexicon</rs> 2 col. 394f.;
-                  vgl. <rs type="bibl" key="bibl:36148">Franklin, Jean Bodin</rs> 121–126; <rs
-                     type="bibl" key="bibl:36218">Grafton, Invention</rs> 24–31; <rs type="bibl"
-                     key="bibl:20130">Völkel, Pyrrhonismus</rs> 179.</p>
-            </note>
-            <note xml:id="d4618e40595">
-               <ref type="context">6</ref>
-               <label>Hunibaldi et Wasthaldi</label>
-               <p>Zu den fiktiven Chronisten Hunibald und Wastald (oder „Guisogastald“) vgl.
-                  ausführlich <rs type="bibl" key="bibl:14950">Arnold, Trithemius</rs> 165–179; <rs
-                     type="bibl" key="bibl:36974">Schreiner, Trithemius</rs> 128–137.</p>
-            </note>
-            <note xml:id="d4618e40600">
-               <ref type="context">6</ref>
-               <label>Pirckhaymeri epistola</label>
-               <p>Opera Fulgentii IIr–v, hier IIr: „Quum [...] Joannem Tritemium [...] conveni [...] vetustissimorum quoque codicum mentio incidit, quibus ille oppido quidem abundabat, utpote qui eos undique ex Germaniae etiam magnae corraserat monasteriis [...]. Verum postquam vir tantus rebus exemptus esset humanis [...] repente cuncta, quae reliquerat, disparuere, ut ne vestigia quidem superesse viderentur“. Ein Auszug dieses Widmungsbriefs, der etwa die Hälfte von dessen Text ausmacht, ist abschriftlich erhalten in StiA Melk, Karton 7 Patres 9, Abschriftencodex 77v–78v. Vermutlich war die Vorlage dazu eine Beilage zu diesem Brief, obwohl KS eine solche nicht ankündigt.</p>
-            </note>
-            <note xml:id="d4618e40605">
-               <ref type="context">7</ref>
-               <label>sublato ... Hyacintho</label>
-               <p>Baumbach war am 7. Juli verstorben; vgl. <ref type="letter">319</ref>.</p>
-            </note>
-            <note xml:id="d4618e40612">
-               <ref type="context">7</ref>
-               <label>suffraganei</label>
-               <p>Vgl. <ref type="letter">99</ref> &lt;1&gt;.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg6">
+            <mentioned>Annioque ... parem</mentioned>
+            <p>Annio galt im 16. bis 18. Jh. als Paradebeispiel eines Geschichtsfälschers: z. B.
+                     <rs type="bibl" ref="bibl:35762">Zedlers Universal-Lexicon</rs> 2 col. 394f.;
+                  vgl. <rs type="bibl" ref="bibl:36148">Franklin, Jean Bodin</rs> 121–126; <rs type="bibl" ref="bibl:36218">Grafton, Invention</rs> 24–31; <rs type="bibl" ref="bibl:20130">Völkel, Pyrrhonismus</rs> 179.</p>
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg6">
+            <mentioned>Hunibaldi et Wasthaldi</mentioned>
+            <p>Zu den fiktiven Chronisten Hunibald und Wastald (oder „Guisogastald“) vgl.
+                  ausführlich <rs type="bibl" ref="bibl:14950">Arnold, Trithemius</rs> 165–179; <rs type="bibl" ref="bibl:36974">Schreiner, Trithemius</rs> 128–137.</p>
+         </note>
+         <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg6">
+            <mentioned>Pirckhaymeri epistola</mentioned>
+            <p>Opera Fulgentii IIr–v, hier IIr: „Quum [...] Joannem Tritemium [...] conveni [...] vetustissimorum quoque codicum mentio incidit, quibus ille oppido quidem abundabat, utpote qui eos undique ex Germaniae etiam magnae corraserat monasteriis [...]. Verum postquam vir tantus rebus exemptus esset humanis [...] repente cuncta, quae reliquerat, disparuere, ut ne vestigia quidem superesse viderentur“. Ein Auszug dieses Widmungsbriefs, der etwa die Hälfte von dessen Text ausmacht, ist abschriftlich erhalten in StiA Melk, Karton 7 Patres 9, Abschriftencodex 77v–78v. Vermutlich war die Vorlage dazu eine Beilage zu diesem Brief, obwohl KS eine solche nicht ankündigt.</p>
+         </note>
+         <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg7">
+            <mentioned>sublato ... Hyacintho</mentioned>
+            <p>Baumbach war am 7. Juli verstorben; vgl. <ref type="letter" target="letter:319">319</ref>.</p>
+         </note>
+         <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg7">
+            <mentioned>suffraganei</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:99">99</ref> <ref target="letter:99#seg1">1</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Ordnungsvermerk: <orig>98</orig> (mit dem richtigen Datum <orig>11. Julii 1713</orig>).</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Viro admodum reverendo eruditissimoque domino patri Bernardo Pez presbytero Mellicensi ordinis sancti Benedicti Georgius Conradus Sigler salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Suavissimae literae tuae, quibus <anchor xml:id="n1"/>XV. Kalendas Junii<anchor xml:id="n1e"/>  ad meas respondes, mihi gaudii plurimum, sed et doloris nonnihil attulere: enimvero quod tam benigne a culpa omni liberatus gratiam adhuc et pretium ferrem ab eruditissimo illo calamo, insigniter fui laetatus, dolorem autem propterea sensi, quia voti te tui plene compotem reddere collectionemque scriptorum Fuldensium olim abs me institutam mittere, utut maxime velim, haud aeque possim; idque vel iniurato credes, vir optime, pluscula mihi intercidisse, quae magno nunc pretio redimerem. Neque is etiam ego sum, quem scribendi urtica momordit, qui caeterum nihil antiquius habeo, quam ut viris tui similibus et me ingenio longe multumque praecellentibus ultro symbolas meas offeram atque reipsa praestem. </ab>
+         <ab resp="#editor" xml:id="seg2">Dicti fidem faciunt publicam <anchor xml:id="n2"/>Conradi Mel<anchor xml:id="n2e"/>, Christiani Junckeri scripta, patris <anchor xml:id="n3"/>Rassleri Vindicatio<anchor xml:id="n3e"/> diplomatis Lindaviensis nuper edita, cumprimis vero <anchor xml:id="n4"/>Leibnizii Scriptorum Brunsvicensium tomus tertius<anchor xml:id="n4e"/> circa finem, ubi talia permissu celsissimi Fuldensis me procurante publicata sunt, quibus, si modo voluissem, eandem a republica literaria gratiam inire poteram, quam consecutus est vel ideo vir ille summus. <add place="above">Cupio</add> sane quam maxime nihilque magis in votis habeo, quam ut aliquod huius rei tibi etiam, vir suavissime, documentum dare possim; nullus certe committam, ut frustra a me exspectes, quod scivero positum esse in viribus meis. Nunc <choice><sic>habeo</sic><corr>habe</corr></choice>, quae quantulacunque sint <pb n="1v"/> ad meum Broweri exemplar adnotata; inopinanti sub oculos veniunt. </ab>
+         <ab resp="#editor" xml:id="seg3">Proximis diebus, si modo plus otii suppetat, Scotos nostros accedam et accuratiore calamo notabo, quae de Trithemio scire desideras. Interim percurrere non pigeat <anchor xml:id="n5"/>epitomen literarum<anchor xml:id="n5e"/> ad amicum olim a me perscriptarum, quae si sitim tuam non extinguere, lenire saltem poterunt. Observabis his in literis mentionem fieri fratris Joannis de Erfordia: <anchor xml:id="n6"/>hunc eumdem esse<anchor xml:id="n6e"/> cum Joanne de Lauterbach compertum habeo. Sed hoc argumentum alias luculentius absolvam. </ab>
+         <ab resp="#editor" xml:id="seg4">Tuae <anchor xml:id="n7"/>de Cassinensi epistola<anchor xml:id="n7e"/> coniecturae libens subscribo; sed explicare haud valeo, qua aviditate quoque animi solamine sancti <anchor xml:id="n8"/>Bonifacii nostri sermonem<anchor xml:id="n8e"/> perlegerim. Nae, totus quantus est apostolicus dignissimusque, qui propediem edatur. Vah, quam est tersus, quam instruens quamque ad simplicitatem gentilium parentum nostrorum <sic>accomodatus</sic> . Gratias summas tibi debeo, easque publice olim rependam, quando hunc eximium plane sermonem cum erudito orbe communicare continget. Satis quidem abundeque abs te factum est cuique erudito in exscribendo hoc tanta cura sermone, attamen unicum restat, quod te rogare debeo: dabis hoc meae curiositati atque, si grave non est, docebis, qua characterum forma exaratus sit codex et quid praeter hunc sermonem contineat aliud, ut vel hinc de aetate iuste iudicare lector queat. Scire autem praeprimis aveo, qua ratione formata sit diphtongus ae, an ae aut separatim ae<note place="foot" xml:id="d4618e40452">KS schreibt <hi rend="italic">ae</hi> zunächst als Ligatur, dann als zwei Buchstaben.</note>; dein an litera s <pb n="2r"/> (ad usum circa initium saeculi undecimi exorsum) in fine dictionum parvula sit an longiuscula, hoc vel alio modo: s s<note place="foot" xml:id="d4618e40460">KS gibt zwei Formen eines langen <hi rend="italic">s</hi> wieder, von denen eine in die Unterlänge geht.</note>. Salivam non mediocriter mihi moves asserendo manuscriptorum Mellicensium numerum ad MM ascendere; fac, quaeso, ut thesaurus tam praeclarus, quo fieri poterit, citius eruditorum oculis subiciatur; nullus enim dubito, quin plurima in scriniis vestris lateant non ubivis cognita. </ab>
+         <ab resp="#editor" xml:id="seg5">Haymonis vita Halae Magdeburgicae MDCC typis fuit exscripta, dubito autem, an adhuc extet, ut enim subito disparere solent eiusmodi opellae fugitivae, ut a Gallis audiunt; ita si non erit ingratum, meum libens transmittam exemplar. <anchor xml:id="n9"/>Molleri Homonymoscopiam quod concernit, nunc vere non occurrit editionis locus, nec ipsum opus ad manum amplius est. Ex hoc de Haymone quaedam excerpsi<anchor xml:id="n9e"/>, quae hic degustare potes; quod si necessum dein iudices ipsum opus inspicere, facili id negotio a Lipsiensibus procurabis. Ibi enim celeberrima hac nostra aetate bibliopolia meo quidem iudicio prostant, id quod vel ex duobus Fritschii et Gleditschii catalogis videre est. Lipsiae bibliopola degit Caspar Jacob <anchor xml:id="n10"/>Eyssel<anchor xml:id="n10e"/>; huius viri veteris amici opera libenter utor in emendis libris, <pb n="2v"/> quos iste iustissimo semper pretio procurat mittitque petenti et meam exin fidem in singulas nundinas bimestres numerata pecunia liberanti. Baelii et Moreri Lexicon universale patrio sermone editum et Acta eruditorum Lipsiensium caeterasque ephemerides suum iam locum in suppellectile tua libraria haud dubie occupabunt; quod si tamen his vel aliis libris, maxime qui in Germania indies eduntur, opus tibi fuerit, hoc viro uti poteris tutius ac Norimbergensibus, quos in constituendis librorum pretiis admodum iniquos comperio. Ipsi <anchor xml:id="n11"/>Eyssel<anchor xml:id="n11e"/>io iam suggessi suasorque extiti, quatenus catalogos supra adductos data occasione ad te destinet suaque offerat servitia. </ab>
+         <ab resp="#editor" xml:id="seg6">Ibidem <anchor xml:id="n12"/>Thomae Fritschii<anchor xml:id="n12e"/> praelum mox deseret <sic>prodetque</sic> <note type="annotation" xml:id="d4618e40475">Wohl für <orig>prodibitque</orig>.</note> in publicum conlectio scriptorum Francicorum, quos inter primus omnium conspicitur Laurentius Fries, qui Cronicon Herbipolense, opus prolixum, scripsit saeculo XVI., hactenus ineditum. Praemittitur huic collectioni <anchor xml:id="n13"/>Vorbereitung<anchor xml:id="n13e"/> zu der fränckischen special-historie, ubi autor temere satis episcopis huiatibus negat esse ius ad ducum Franciae Orientalis titulum, quem possident, ipsumque Frisium testem adducit. Hac occasione in Trithemium acerbius agit eumque tanquam mendacem, obtrectatorem <anchor xml:id="n14"/>Annioque Viterbiensi parem<anchor xml:id="n14e"/> traducit, utpote qui seriem regum et ducum Franciae Orientalis ex suo capite prognatam obtrudere ausus fuerit, allegata <pb n="3r"/> auctoritate veterum scriptorum <anchor xml:id="n15"/>Hunibaldi et Wasthaldi<anchor xml:id="n15e"/>, qui tamen nunquam extiterunt. Celsissimus herus meus optaret quidem, ut ineditum plane maneat hoc opus; editionem tamen impedire non valens mihi in mandatis dedit curare, ut publico scripto constet nos in nullam prorsus huius Frisianae editionis partem venire, labefactata etiam ipsius Frisiani operis manuscripti probitate; quo munere clementissime mihi iniuncto dum pro viribus imparibus quidem illis defungi conabor, id simul agere mens est, ut Trithemius, qui, prout notum est, iamdudum laudatur ab his, culpatur ab illis, plane non indefensus abeat. Mea quidem sententia non absque iniuria fit, quod viro huic summo obicitur, siquidem ipse Trithemius, ubi de Hunibaldi historia circa originem gentis Francorum agit, eam disertis verbis asserit sibi videri in pluribus fabulosam. Deinde cum ex <sic>Bilibaldi</sic>  <anchor xml:id="n16"/>Pirckhaymeri epistola<anchor xml:id="n16e"/> dedicatoria operum Fulgentii ad sororem suam appareat<note type="annotation" xml:id="d4618e40486">Korrigiert aus unleserlicher Streichung im Ausmaß von ca. 8–9 Buchstaben.</note> Trithemio fuisse plurimos ex tota Germania conquisitos veterrimos codices, qui post mortem omnes distracti fuerint, quis non persuadere sibi patiatur intercidisse pariter hos unicos forte auctores; neque etiam hoc mirum cuiquam videri debet, non enim difficile adeo <choice><sic>est</sic><corr>esset</corr></choice> integram librorum deperditorum Bibliothecam conscribere, et reliqua. <pb n="3v"/> Is ego non sim licet, qui Trithemii fidem post tot alios pro dignitate queam vindicare, studebo tamen, ut vel inde etiam sumpto argumento conatibus haereticorum contraeatur, et fides eorum suspecta saltem fiat. Consilium hoc tecum, si cum quoquam alio, communicare non dubito, ea spe fretus, ut me pro humanitate tua summa, si quae occurrant monenda, haud gravate moneas. </ab>
+         <ab resp="#editor" xml:id="seg7">Caeterum <anchor xml:id="n17"/>sublato nunc e vivis, quod summe merito dolendum, reverendissimo domino Hyacintho<anchor xml:id="n17e"/> nostro, non pigeat ei, si quo forte me dignari volueris responso, chartam addere involucri loco, cui inscribas nomen reverendissimi domini Joannis Bernardi episcopi Chrysopolitani et <anchor xml:id="n18"/>suffraganei<anchor xml:id="n18e"/> Herbipolensis, patroni mei, utpote cuius rei venia a me iam est impetrata. Vale.</ab>
+         <closer>Herbipoli die XI. Julii <choice><sic>MDCCIII</sic><corr>MDCCXII</corr></choice> .</closer>
+      </body>
    </text>
 </TEI>

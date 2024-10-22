@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="48" xml:id="pez-0048">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">48 René Massuet an Bernhard Pez. 1710-03-07. Paris (St.-Germain-des-Prés).</title>
-            <title type="sub">Digital Edition</title>
+            <title>René Massuet an Bernhard Pez. 1710-03-07. Paris (St.-Germain-des-Prés).</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">48</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
@@ -22,18 +33,10 @@
             <relatedItem type="otherEdition">
                <bibl xml:id="schelhorn_ed">Schelhorn, Amoenitates 13 279–284 Nr. I (S).</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:16792">Hammermayer, Forschungszentren</rs>
-                     182</bibl>
-                  <bibl><rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 26 (nennt
-                     den Brief nicht, gibt aber Inhalte wieder)</bibl>
-                  <bibl><rs type="bibl" key="bibl:17892">Lecomte, Publication</rs> 268</bibl>
-                  <bibl><rs type="bibl" key="bibl:37320">Schönhofer, Pez</rs> 20</bibl>
-                  <bibl><rs type="bibl" key="bibl:20068">Vanel, Savants lyonnais</rs> 346f</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Zur Edition bei Schelhorn vgl. Einleitung, Abschnitt III.
+            </note>
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -41,17 +44,22 @@
                    - Wie wird der Verlust des Originals kodiert? (eigentlich nicht Teil der Liste, weil eben kein Textzeuge.)
                    - wie wird die Typologie der Textzeugen kodiert? 
                -->
-               <witness ana="#original">...</witness>
-               <witness xml:id="B" ana="#manuscriptCopy"><rs type="ms">StiA Melk Karton 7 Patres 9, Abschriftencodex</rs> <locus>117r–119v</locus></witness>
-               <witness xml:id="C" ana="#concept"><rs type="ms">BN FF 17680</rs> <locus>244r–v</locus></witness>
-               <witness xml:id="S" ana="#edition" sameAs="#schelhorn_ed"></witness>
+               <witness ana="cmif:manuscript"/>
+               <witness xml:id="B" ana="cmif:copy"><rs type="ms">StiA Melk Karton 7 Patres 9, Abschriftencodex</rs> <locus>117r–119v</locus></witness>
+               <witness xml:id="C" ana="cmif:draft"><rs type="ms">BN FF 17680</rs> <locus>244r–v</locus></witness>
+               <witness xml:id="S" sameAs="#schelhorn_ed" ana="cmif:print"/>
+            
             </listWit>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <editorialDecl>
-            <p>Dem Editionstext wird die Überlieferung B zugrunde gelegt, jedoch nach C und S emendiert, wo diese miteinander übereinstimmend eine andere Lesart bieten. Inhalte aus dem Konzept, die in den auf der Ausfertigung fußenden Überlieferungen fehlen, werden im Regest zwischen Asterisci gesetzt.</p>
-         </editorialDecl>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
       </encodingDesc>
       <profileDesc>
          <textClass>
@@ -67,143 +75,124 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">24</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">68</idno>
-               </ref>
-               <ref type="sentWith" xml:space="preserve">Versendet von <rs key="index:d10854e27374" role="source">St. Gallen</rs> bis <rs key="index:d14380e28088" role="destination">Melk</rs> mit <idno type="pezEd">53</idno>.</ref>
-               <ref type="sentWith" xml:space="preserve">Versendet von <rs key="index:d10854e32902" role="origin">Wiblingen</rs> bis <rs key="index:d14380e28088" role="destination">Melk</rs> mit <idno type="pezEd">58</idno>.</ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">58</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">24</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">57</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">58</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">62</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">68</idno>
-               </ref>
+               <ptr type="prev" target="letter:024"/>
+               <ptr type="next" target="letter:068"/>
+               <ptr type="sentWith" target="letter:053"/>
+               <ptr type="sentWith" target="letter:058"/>
+               <ptr type="sentWith" target="letter:058"/>
+               <ptr type="mentions" target="letter:024"/>
+               <ptr type="mentionedIn" target="letter:057"/>
+               <ptr type="mentionedIn" target="letter:058"/>
+               <ptr type="mentionedIn" target="letter:062"/>
+               <ptr type="mentionedIn" target="letter:068"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">RM begrüßt BPs Vorhaben („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“; 24) und sagt namens der <rs ref="index:d14380e22462">Mauriner</rs> Hilfe zu, weil das Unternehmen zur Ehre des Ordens *und zum Nutzen der Gelehrtenrepublik* gereicht. Zugleich bittet er um Geduld.</p>
+            <p corresp="#seg2">RM berichtet von <rs ref="index:d14380e25581">Jean Mabillons</rs> Werk der „<rs ref="index:d14380e25705">Annales OSB</rs>“, das bei dessen Tod <rs ref="index:d10854e17940">vier erschienene Bände</rs> und das druckfertige Manuskript eines <rs ref="index:d14380e25749">fünften Bandes</rs> umfasste, welcher bis zum Tod des <rs ref="index:d14380e5312">Hl. Bernhard</rs> reicht. <rs ref="index:d14380e25581">Mabillons</rs> Schüler <rs ref="index:d14380e38364">Thierry Ruinart</rs> hat die Fortführung auf sich genommen, ist aber selbst vor wenigen Monaten gestorben, sodass die Oberen nun RM gegen seinen Willen mit der Weiterführung beauftragt haben.</p>
+            <p corresp="#seg3">Bevor er sich mit den „<rs ref="index:d14380e25705">Annales OSB</rs>“ beschäftigt, möchte RM noch die Edition der Schrift „<rs ref="index:d14380e19786">Contra haereses</rs>“ des <rs ref="index:d14380e19780">Irenäus von Lyon</rs> abschließen, die bereits im Druck ist und im kommenden Sommer erscheinen soll. Anschließend wird er <rs ref="index:d14380e25581">Mabillons</rs> <rs ref="index:d14380e25877">Nachlass</rs> (Mabillonii scrinia) sowie die bereits eingelangten und noch einlangenden Zusendungen aus anderen Klöstern sichten. Nützliches für BP will er dabei abschreiben und zusenden lassen.</p>
+            <p corresp="#seg4">Ohne von BPs Vorhaben zu wissen, haben die <rs ref="index:d14380e22462">Mauriner</rs> bereits vor einiger Zeit einen Rundbrief an die <rs ref="index:d14380e12712">französischen</rs> Klöster (Gallicana monasteria) ausgesendet und unter anderem zur Zusammenstellung von Schriftstellerkatalogen aufgefordert. RM will demnächst *nach Ostern* ein weiteres Schreiben versenden. RMs und BPs Unternehmen haben zwar die benediktinischen Schriftsteller als gemeinsamen Gegenstand, doch sind diese bei BP das hauptsächliche Thema, bei RM nur ein Nebenaspekt. Sobald er sich der <rs ref="index:d14380e25749">Arbeit an den Annalen</rs> widmen kann, wird RM BP alles, was von Nutzen sein könnte, gerne überlassen. Gegenwärtig wäre die sichere Zusendung wegen der <rs ref="index:d10854e29346">turbulenten Zeiten</rs> schwierig.</p>
+            <p corresp="#seg5">RM empfiehlt BP, die folgenden Werke anzukaufen und zu verwenden: die vier erschienenen Bände der von <rs ref="index:d14380e25581">Mabillon</rs> herausgegebenen „<rs ref="index:d10854e17940">Annales OSB</rs>“; die neun Bände der „<rs ref="index:d14380e25664">Acta sanctorum OSB</rs>“; die vier Bände der „<rs ref="index:d14380e25828">Vetera analecta</rs>“ (von Mabillon); die dreizehn Bände des „<rs ref="index:d14380e150">Veterum scriptorum spicilegium</rs>“ (von d’Achery). Diese letzteren beiden <rs ref="index:d14380e22462">maurinischen</rs> Werke sind inzwischen auch in <rs ref="index:d14380e12712">Frankreich</rs> schwer zu bekommen. Sollte BP <rs ref="index:d14380e12712">Französisch</rs> lesen können, so empfiehlt RM die „<rs ref="index:d14380e10193">Nouvelle bibliothèque</rs>“ des <rs ref="index:d14380e32292">Pariser</rs> Theologen <rs ref="index:d14380e10181">Louis Ellies Du Pin</rs>. Die von dem <rs ref="index:d14380e11399">Engländer</rs> <rs ref="index:d14380e7705">William Cave</rs> verfasste „<rs ref="index:d14380e7715">Scriptorum ecclesiasticorum historia literaria</rs>“ wird BP wohl bekannt sein, da sie 1693 zu <rs ref="index:d14380e14682">Genf </rs>neu <rs ref="index:d10854e5031">aufgelegt</rs> worden ist. Die „<rs ref="index:d14380e10021">Bibliotheca Cluniacensis</rs>“ (von Duchesne und Marrier), die „<rs ref="index:d10854e30928">Bibliotheca Cisterciensis</rs>“ (von Tissier), die „<rs ref="index:d14380e10008">Floriacensis bibliotheca</rs>“ (von Du Bois-Olivier) sowie die Arbeiten des <rs ref="index:d14380e24482">Aubert Le Mire</rs> sind weithin geläufige Werke. Diese Hinweise schickt RM vorläufig, bis er Näheres mitteilen kann.</p>
+            <p corresp="#seg6">Im Gegenzug erhofft sich RM seinerseits Unterstützung von BP. Er benötigt Informationen zu <rs ref="index:d14380e28088">Melk</rs> und den umliegenden Klöstern: Angaben zu Gründung und Privilegien, Stiftern und Schenkungen, die Reihen der Äbte und Angaben zu berühmten Männern, Memorabilien aus der Klostergeschichte, Urkunden sowie Denkmäler und Inschriften. BP soll sich jedoch nicht selbst mit diesen Arbeiten belasten, sondern dafür Freiwillige unter seinen Ordensbrüdern gewinnen.</p>
+            <p corresp="#seg7">RM versendet den Brief über den Bibliothekar <rs ref="index:d10854e20658">Moritz Müller</rs> in <rs ref="index:d10854e27374">St. Gallen</rs>, weil es bis zu einem Friedensschluss keinen anderen Weg gibt.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e5550">RM begrüßt BPs Vorhaben („<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“; 24) und sagt namens der <rs key="index:d14380e22462">Mauriner</rs> Hilfe zu, weil das Unternehmen zur Ehre des Ordens *und zum Nutzen der <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>Gelehrtenrepublik<?oxy_custom_end?>* gereicht. Zugleich bittet er um Geduld.</seg><seg type="context" n="2" xml:id="d4618e5552">RM berichtet von <rs key="index:d14380e25581">Jean Mabillons</rs> Werk der „<rs key="index:d14380e25705">Annales OSB</rs>“, das bei dessen Tod <rs key="index:d10854e17940">vier erschienene Bände</rs> und das druckfertige Manuskript eines <rs key="index:d14380e25749">fünften Bandes</rs> umfasste, welcher bis zum Tod des <rs key="index:d14380e5312">Hl. Bernhard</rs> reicht. <rs key="index:d14380e25581">Mabillons</rs> Schüler <rs key="index:d14380e38364">Thierry Ruinart</rs> hat die Fortführung auf sich genommen, ist aber selbst vor wenigen Monaten gestorben, sodass die Oberen nun RM gegen seinen Willen mit der Weiterführung beauftragt haben.</seg><seg type="context" n="3" xml:id="d4618e5554">Bevor er sich mit den „<rs key="index:d14380e25705">Annales OSB</rs>“ beschäftigt, möchte RM noch die Edition der Schrift „<rs key="index:d14380e19786">Contra haereses</rs>“ des <rs key="index:d14380e19780">Irenäus von Lyon</rs> abschließen, die bereits im Druck ist und im kommenden Sommer erscheinen soll. Anschließend wird er <rs key="index:d14380e25581">Mabillons</rs> <rs key="index:d14380e25877">Nachlass</rs> (Mabillonii scrinia) sowie die bereits eingelangten und noch einlangenden Zusendungen aus anderen Klöstern sichten. Nützliches für BP will er dabei abschreiben und zusenden lassen.</seg><seg type="context" n="4" xml:id="d4618e5556">Ohne von BPs Vorhaben zu wissen, haben die <rs key="index:d14380e22462">Mauriner</rs> bereits vor einiger Zeit einen Rundbrief an die <rs key="index:d14380e12712">französischen</rs> Klöster (Gallicana monasteria) ausgesendet und unter anderem zur Zusammenstellung von Schriftstellerkatalogen aufgefordert. RM will demnächst *nach Ostern* ein weiteres Schreiben versenden. RMs und BPs Unternehmen haben zwar die benediktinischen Schriftsteller als gemeinsamen Gegenstand, doch sind diese bei BP das hauptsächliche Thema, bei RM nur ein Nebenaspekt. Sobald er sich der <rs key="index:d14380e25749">Arbeit an den Annalen</rs> widmen kann, wird RM BP alles, was von Nutzen sein könnte, gerne überlassen. Gegenwärtig wäre die sichere Zusendung wegen der <rs key="index:d10854e29346"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><?oxy_comment_start author="Mayer" timestamp="20170410T170137+0200" comment="Bester Anknüpfungspuunkt für Span. Erbfolgekrieg? Oder weiter unten Friedensschluss?" mid="2"?>turbulenten Zeiten<?oxy_custom_end?><?oxy_comment_end mid="2"?></rs> schwierig.</seg><seg type="context" n="5" xml:id="d4618e5558">RM empfiehlt BP, die folgenden Werke anzukaufen und zu verwenden: die vier erschienenen Bände der von <rs key="index:d14380e25581">Mabillon</rs> herausgegebenen „<rs key="index:d10854e17940">Annales OSB</rs>“; die neun Bände der „<rs key="index:d14380e25664">Acta sanctorum OSB</rs>“; die vier Bände der „<rs key="index:d14380e25828">Vetera analecta</rs>“ (von Mabillon); die dreizehn Bände des „<rs key="index:d14380e150">Veterum scriptorum spicilegium</rs>“ (von d’Achery). Diese letzteren beiden <rs key="index:d14380e22462">maurinischen</rs> Werke sind inzwischen auch in <rs key="index:d14380e12712">Frankreich</rs> schwer zu bekommen. Sollte BP <rs key="index:d14380e12712">Französisch</rs> lesen können, so empfiehlt RM die „<rs key="index:d14380e10193">Nouvelle bibliothèque</rs>“ des <rs key="index:d14380e32292">Pariser</rs> Theologen <rs key="index:d14380e10181">Louis Ellies Du Pin</rs>. Die von dem <rs key="index:d14380e11399">Engländer</rs> <rs key="index:d14380e7705">William Cave</rs> verfasste „<rs key="index:d14380e7715">Scriptorum ecclesiasticorum historia literaria</rs>“ wird BP wohl bekannt sein, da sie 1693 zu <rs key="index:d14380e14682">Genf </rs>neu <rs key="index:d10854e5031">aufgelegt</rs> worden ist. Die „<rs key="index:d14380e10021">Bibliotheca Cluniacensis</rs>“ (von Duchesne und Marrier), die „<rs key="index:d10854e30928">Bibliotheca Cisterciensis</rs>“ (von Tissier), die „<rs key="index:d14380e10008">Floriacensis bibliotheca</rs>“ (von Du Bois-Olivier) sowie die Arbeiten des <rs key="index:d14380e24482">Aubert Le Mire</rs> sind weithin geläufige Werke. Diese Hinweise schickt RM vorläufig, bis er Näheres mitteilen kann.</seg><seg type="context" n="6" xml:id="d4618e5560">Im Gegenzug erhofft sich RM seinerseits Unterstützung von BP. Er benötigt Informationen zu <rs key="index:d14380e28088">Melk</rs> und den umliegenden Klöstern: Angaben zu Gründung und Privilegien, Stiftern und Schenkungen, die Reihen der Äbte und Angaben zu berühmten Männern, Memorabilien aus der Klostergeschichte, Urkunden sowie Denkmäler und Inschriften. BP soll sich jedoch nicht selbst mit diesen Arbeiten belasten, sondern dafür Freiwillige unter seinen Ordensbrüdern gewinnen.</seg><seg type="context" n="7" xml:id="d4618e5562">RM versendet den Brief über den Bibliothekar <rs key="index:d10854e20658">Moritz Müller</rs> in <rs key="index:d10854e27374">St. Gallen</rs>, weil es bis zu einem Friedensschluss keinen anderen Weg gibt.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Plurimum reverendo religiosissimo et clarissimo domino et patri Bernardo Pez exempti monasterii Mellicensis in Inferiori Austria ad Danubium ordinis sancti Benedicti capitulari ac bibliothecae praefecto, patrono colendissimo. Mölckh.</hi> Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 117r.</ab>
-            </div>
-            <div type="remarks">
-               <p>Zur Edition bei Schelhorn vgl. Einleitung, Abschnitt III.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/><app><lem wit="#B">Reverende admodum pater ac religiosissime domine</lem><rdg wit="#C" xml:id="app001_c"><witDetail wit="#C" target="#app001_c">In <ref target="#C">C</ref> statt der Anrede: </witDetail>Reverendo patri Bernardo Pez Melli censi monacho ac bibliothecario.</rdg></app>.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e5591"><app><lem wit="#B" n="Cum nihil … renuemus">Cum nihil aequius esse videatur, quam ut fratres ad eiusdem familiae decus promovendum conspirantes mutuo sese auxilio iuvent, is nedum urbanitatis, sed et humanitatis expers sit, qui laborum tuorum ordinis nostri gloriae atque utilitati cessurorum consors <pb n="1v"/> esse manum commodando refugiat. <seg type="lemma" corresp="#d4618e6102">Adiutores igitur in partem operis vocati</seg> venire non renuemus.</lem><rdg wit="#C">Nihil aequius videtur, quam ut fratres a fratribus adiuventur, ubi potissimum illi in eiusdem familiae decus promovendum toto pectore incumbunt. Quin consilium a reverenda paternitate vestra susceptum laudem mereatur et in ordinis nostri gloriam, immo et totius reipublicae literariae utilitatem redundet, nemo negaverit. Absit igitur, honorificis laboribus vestris favorem denegemus manumque commodare detrectemus ei, qui scriptorum nostrorum nominis memoriam cum omni posteritate adaequare studet. Suppetias lubenter feremus, ut et ipsi ea ratione in operis partem venire possimus.</rdg><!-- im Apparat steht der satzabschließende Punkt HINTER der Sigle. --></app> Me prae caeteris ad ferendam opem, quamcunque potuerim, paratum inveniet reverenda paternitas vestra. Sed moram, quaeso, aliis curis <app><lem wit="#B">iam nimium</lem><rdg wit="#C"/></app> distracto tantillam concedat, donec solutus historiam ordinis <app><lem wit="#C #S">nostri</lem><rdg wit="#B">nostri ordinis</rdg></app> iam coeptam <app><lem wit="#B #S">persequi</lem><rdg wit="#C">prosequi</rdg></app> valeam. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e5619"><app><lem wit="#B">Non te fugit</lem><rdg wit="#C">Novisti sane</rdg></app>, reverende admodum pater, nostrum domnum Joannem Mabillonium <app><lem n="toto orbe … celeberrimum">toto orbe eruditionis laude celeberrimum</lem><rdg wit="#C">toto orbe nominis gloria <sic>celeberrimus</sic></rdg></app> Annales ordinis <app><lem wit="#B">Benedictini</lem><wit wit="#C">nostri</wit></app> Latino <app><lem wit="#B">sermone</lem><rdg wit="#C">idiomate</rdg></app> conscribere coepisse. Quatuor iam operis volumina in folio magno omnium eruditorum applausu prodierunt. Quintum, quo rerum historia usque ad sancti Bernardi obitum <app><lem wit="#B">perducitur</lem><rdg wit="#C">pertexitur</rdg></app>, praelo paratum habebat, cum mors nihil miserans senem <app><lem wit="#B">septuagenario maiorem</lem><rdg wit="#C">fere octogenarium</rdg></app> e vivis sustulit. Continuandum opus sibi susceperat discipulus eius domnus <app><lem wit="#B">Theodoricus</lem><rdg wit="#C">Theodericus</rdg></app> Ruinart, sed et ipsum iam manum <app><lem wit="#B">admovere</lem><witDetail wit="#C">danach durchgestrichen <mentioned>para</mentioned></witDetail></app><!-- Der Text von C lässt sich so allerdings nicht wiederherstellen! --> meditantem mors nondum <app><lem wit="#B">exsatiata</lem><rdg wit="#C">nondum satiata: inclementer</rdg></app> paucis abhinc mensibus <app><lem wit="#B #C">absumpsit</lem><rdg wit="#S"><!-- oder @source ?! -->absumsit</rdg></app>. Ne vero tam praeclarum opus imperfectum iaceret (quod timebant eruditi quique), mihi coepta persequendi provinciam demandarunt superiores <app><lem wit="#B #C">nostrae congregationis</lem><rdg wit="#C">congregationis nostrae</rdg></app>. <app><lem wit="#B" n="Utinam alteri ... submisi">Utinam alteri cuipiam peritiori demandassent, ingeniique ac eruditionis tenuitatem iure merito excusantem audire voluissent! Sed demum detrectatum <pb n="2r"/> onus subire compulsus collum gemebundus submisi</lem><rdg wit="#C">Detrectavi quidem diutius, suscepi tandem gemebundus, ingenii ac eruditionis meae tenuitatis probe conscius</rdg></app>. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e5700"><app><lem wit="#B" n="Prius … accingam">Prius tamen, quam operi me accingam</lem><rdg wit="#C">Sed prius</rdg></app>, absolvenda mihi est nova <seg type="lemma" corresp="#d4618e6116">editio, quam suscepi, librorum sancti Irenaei</seg> episcopi Lugdunensis et martyris Adversus haereses<note place="foot" xml:id="d4618e5708">	<hi rend="italic">quam suscepi ... Adversus haereses: a me concinnata operum sancti Irenaei episcopi Lugdunensis ac martyris</hi> C.</note>, quae sub praelo est aestate proxima Deo favente<note place="foot" xml:id="d4618e5714">	<hi rend="italic" xml:space="preserve">dante </hi>C.</note> exitura. His<note place="foot" xml:id="d4618e5720">	Davor durchgestrichen <hi rend="italic">Tum</hi> C.</note> curis solutus totus in Annales incumbam<note place="foot" xml:id="d4618e5726">	<hi rend="italic">incubam</hi> S.</note>, tumque <seg type="lemma" corresp="#d4618e6123">Mabillonii scrinia</seg> omnia commentariosque e<note place="foot" xml:id="d4618e5733">	<hi rend="italic">a</hi> C, davor durchgestrichen <hi rend="italic">a iam</hi>.</note> variis monasteriis vel iam missos vel posthac mittendos diligentius recensens inspiciensque, si quid occurrerit<note place="foot" xml:id="d4618e5742">	<hi rend="italic">occurrit</hi> S.</note>, quo reverendae paternitatis vestrae consilium<note place="foot" xml:id="d4618e5748">	<hi rend="italic">reverendae ... consilium: consilium vestrum</hi> C.</note> iuvari posse putem, id exscribi quantocyusque<note place="foot" xml:id="d4618e5754">	<hi rend="italic">quantociusque</hi> S; <hi rend="italic">et ad [</hi>durchgestrichen <hi rend="italic">vestram] paternitatem vestram</hi> C.</note> mitti curabo. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e5766">Iam dudum vota tua adhuc tamen ignota antevenientes<note place="foot" xml:id="d4618e5768">	<hi rend="italic">dudum ... antevenientes</hi> fehlt C.</note> <seg type="lemma" corresp="#d4618e6128">encyclicas ad Gallicana monasteria litteras scripsimus</seg><note place="foot" xml:id="d4618e5774">	<hi rend="italic" xml:space="preserve">dedimus </hi>C.</note>, quibus inter alia plura de iisdem omnino ea percontamur, quae tu sciscitaris ex nobis<note place="foot" xml:id="d4618e5780">	<hi rend="italic">quibus ... ex nobis: quibus rogavimus, ut nobiscum communicare dignentur, quaecumque ad illustrandam ordinis historiam ab anno praesertim 1000 conferre posse noverint, ac inprimis non omittant viros illustres uniuscuiusque monasterii, et si quid scriptis mandaverint aut iam editum aut hactenus in bibliothecarum forulis delitescens, id diligenter significent</hi> C.</note>. Easdem brevi<note place="foot" xml:id="d4618e5786">	<hi rend="italic" xml:space="preserve">Easdem brevi: Post Pascha epistolas </hi>C.</note> <seg type="lemma" corresp="#d4618e6135">iterabo</seg>; minusque festinantium tarditatem urgens<note place="foot" xml:id="d4618e5792">	Danach durchgestrichen <hi rend="italic">in viris illustribus</hi> C.</note> virorum illustrium historiae, operum eorum catalogo etc.<note place="foot" xml:id="d4618e5799">	C, S; fehlt B.</note> acrius adhuc insistam. Hoc enim utrique nostrum commune est argumentum, ut de ordinis scriptoribus<note place="foot" xml:id="d4618e5802">	<hi rend="italic">ordinis scriptoribus: [</hi>durchgestrichen <hi rend="italic">viris illustri] ordinis nostri viris illustribus</hi> C.</note> agamus; cum eo tantum<note place="foot" xml:id="d4618e5811">	C, S; <hi rend="italic">tamen</hi> B.</note> discrimine, quod id operis tui primarium ac praecipuum sit caput, mei vero accessio quaedam<note place="foot" xml:id="d4618e5817">	<hi rend="italic">id operis ... quaedam</hi> fehlt C.</note>; quaeque<note place="foot" xml:id="d4618e5823">	<hi rend="italic">quae</hi> C.</note> tu<note place="foot" xml:id="d4618e5829">	Danach <hi rend="italic">reverende admodum pater</hi> C.</note> fusiori<note place="foot" xml:id="d4618e5836">	Davor durchgestrichen <hi rend="italic">fusiori st</hi> C.</note> ac enucleatiori stylo persecuturus<note place="foot" xml:id="d4618e5842">	C, S; <hi rend="italic">prosecuturus</hi> B.</note> es, eadem<note place="foot" xml:id="d4618e5848">	<hi rend="italic">eodem</hi> S.</note> ego breviori complexurus<note place="foot" xml:id="d4618e5854">	C, S; <hi rend="italic">complexus</hi> B.</note> sum. Tantisper igitur exspectare si velis, donec a caeteris negotiis vacuus operi <pb n="2v"/> manum admoveam<note place="foot" xml:id="d4618e5862">	C, S; <hi rend="italic">adhibeam</hi> B.</note>, quidquid<note place="foot" xml:id="d4618e5869">	Davor <hi rend="italic">si</hi> C.</note> sub manum venerit, quod in rem tuam faciat, id ex animo communicabo. Nam alioqui turbulentis hisce temporibus quidpiam ad vos tuto<note place="foot" xml:id="d4618e5875">	Fehlt C.</note> transmittere difficillimum esset<note place="foot" xml:id="d4618e5878">	<hi rend="italic">difficillimum esset: vix ac ne vix quidem possemus</hi> C.</note>. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e5884">Interim, reverende admodum pater<note place="foot" xml:id="d4618e5886">	<hi rend="italic">reverende ... pater</hi> fehlt C.</note>, tibi omnino comparanda sunt<note place="foot" xml:id="d4618e5892">	<hi rend="italic">comparanda sunt</hi> über der Zeile eingefügt C.</note> nec segni manu evolvenda<note place="foot" xml:id="d4618e5898">	Danach durchgestrichen <hi rend="italic">sunt</hi> C.</note> priora quatuor Annalium ordinis nostri volumina a Mabillonio in lucem emissa. Neque te laboris poenitebit: plura enim in iis de scriptoribus nostris dicta<note place="foot" xml:id="d4618e5904">	<hi rend="italic">de scriptoribus ... dicta: haud dubie</hi> C.</note> reperies, quae ad rem tuam faciant quam maxime. Idem fere dixerim de Actis sanctorum ordinis nostri ab eodem Mabillonio collectis novem voluminibus in folio, quorum singulis praemissae sunt praefationes omni eruditionis genere refertae. Idem etiam de Veteribus analectis quatuor voluminibus<note place="foot" xml:id="d4618e5910">	<hi rend="italic">tomis</hi> C.</note> in octavo et de Veterum scriptorum spicilegio 13<note place="foot" xml:id="d4618e5917">	Auslassung in C.</note> voluminibus in quarto, quos quidem libros commemoro, quia licet iam dudum<note place="foot" xml:id="d4618e5920">	<hi rend="italic">quia ... dudum</hi> in C wiederholt.</note> tum a Mabillonio, tum ab aliis e<note place="foot" xml:id="d4618e5926">	Fehlt C.</note> nostris vulgati sint, iamque in his ipsis regionibus rarissimi<note place="foot" xml:id="d4618e5929">	Danach <hi rend="italic">sint</hi> C.</note>, in vestras remotiores nondum forte penetrare potuerint. <seg type="lemma" corresp="#d4618e6140">Si Gallice nosset</seg> reverenda paternitas vestra, consulerem etiam, sibi emeret Gallice scriptum<note place="foot" xml:id="d4618e5935">	<hi rend="italic" xml:space="preserve">Gallice scriptum: Gallicum </hi>C.</note> librum, cui titulus est: Bibliotheca auctorum<note place="foot" xml:id="d4618e5941">	C, S; <hi rend="italic" xml:space="preserve">authorum </hi>B.</note> ecclesiasticorum ab Elia Du Pin doctore theologo<note place="foot" xml:id="d4618e5948">	Fehlt C.</note> Parisiensi collecta et in plures tomos in octavo distributa, in qua auctorum omnium ecclesiasticorum librorumque ab iis conscriptorum <pb n="3r"/> historia, catalogus et argumentum a primis ecclesiae temporibus ad nostra usque pertexitur, auctoresque etiamnum viventes recensentur. Hic nequicquam mentionem inicerem Guillelmi <seg type="lemma" corresp="#d4618e6147">Cave Angli Historiae litterariae</seg> scriptorum ecclesiasticorum a Christo nato ad annum usque 1517 duobus tomis in folio. Cum enim Genevae excusa sit anno 1693, haud<note place="foot" xml:id="d4618e5953">	Davor durchgestrichen <hi rend="italic">forte ad vos usque pervenit</hi> C.</note> dubium, quin ad vos usque pervenerit. Bibliothecae Cluniacensis, Cisterciensis, Floriacensis variaeque Auberti Miraei elucubrationes<note place="foot" xml:id="d4618e5959">	<hi rend="italic">lucubrationes</hi> S.</note> libri notissimi sunt<note place="foot" xml:id="d4618e5965">	<hi rend="italic">Bibliothecae ... sunt</hi> fehlt C.</note>. Haec interim ad reverendam paternitatem vestram<note place="foot" xml:id="d4618e5971">	Danach durchgestrichen <hi rend="italic">scr</hi> C.</note> rescribo, donec alia, quae<note place="foot" xml:id="d4618e5978">	Danach durchgestrichen <hi rend="italic">votis eius</hi> C.</note> exspectationi<note place="foot" xml:id="d4618e5984">	Davor <hi rend="italic">ac</hi> C.</note> eius<note place="foot" xml:id="d4618e5990">	Über der Zeile eingefügt C.</note> paulo magis respondeant, scribere possim. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e5993">Sed si quid pro votis deinceps<note place="foot" xml:id="d4618e5995">	Danach durchgestrichen <hi rend="italic">communi</hi> C.</note> vobiscum communicare valeam<note place="foot" xml:id="d4618e6001">	<hi rend="italic">communicare valeam: communicem</hi> C.</note>, spero vicissim ea a vobis pro humanitate vestra subsidia<note place="foot" xml:id="d4618e6007">	<hi rend="italic">pro ... subsidia: subsidia mihi</hi> C.</note> non denegatum iri, quae ad illustrandam tum Mellicensis, tum vicinorum monasteriorum historiam conferre posse intellexeritis: qualia sunt<note place="foot" xml:id="d4618e6013">	<hi rend="italic">qualia sunt: qualis est</hi> C.</note> fundationis monasteriorum origo et historia, privilegia et immunitates; fundatorum ac praecipuorum benefactorum nomina, dotes et chartae donationum; abbatum series, viri illustres ac tum horum, tum illorum praecipua quaeque gesta, scripta, dies obitus etc.; quid memoria dignius in monasteriis acciderit; antiqua, si quae sint, summorum pontificum, imperatorum, regum aut aliarum nobilium personarum diplomata; vetera monumenta, sepulchra<note place="foot" xml:id="d4618e6019">	<hi rend="italic">sepulcra</hi> S.</note>, epitaphia, inscriptiones et alia id genus, quae Annalibus <pb n="3v"/> inseri pro iure suo debeant<note place="foot" xml:id="d4618e6028">	<hi rend="italic">fundationis monasteriorum ... debeant: [</hi>durchgestrichen <hi rend="italic">abbatum vestr] fundationis vestrae historia, fundatorum ac praecipuorum benefactorum nomina, abbatum vestrorum series, viri illustres ac tum horum, tum illorum praecipua quaeque gesta, scripta, dies obitus etc.; antiqua, si quae habeatis, imperatorum ac summorum pontificum diplomata, vetera monumenta, epitaphia et alia id genus</hi> C.</note>. Cuius quidem investigationis curam nollem, sibi ipsi sumeret<note place="foot" xml:id="d4618e6037">	<hi rend="italic" xml:space="preserve">ipsi sumeret: sumeret ipsa </hi>C.</note> reverenda paternitas vestra; absit enim, ut a melioribus studiis eam interpellem; sed forte benevolos quospiam e suis reperiet, qui hanc a me, imo<note place="foot" xml:id="d4618e6043">	<hi rend="italic">immo</hi> S.</note> a toto ordine Benedictino<note place="foot" xml:id="d4618e6049">	<hi rend="italic">imo ... Benedictino</hi> fehlt C.</note> gratiam inire non dedignabuntur. Utere tu, reverende admodum pater, meam operam, ut voles: totum<note place="foot" xml:id="d4618e6055">	<hi rend="italic">Utere ... totum: Quidquid est operae meae quantulaecumque, id tibi lubens offero; totumque</hi> C.</note> me tibi mandatisque tuis<note place="foot" xml:id="d4618e6062">	Danach <hi rend="italic">ex animo</hi> C.</note> addico. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d4618e6068">Hanc epistolam ad reverendum patrem Mauritium Müllerum S. Galli bibliothecae praefectum<note place="foot" xml:id="d4618e6070">	<hi rend="italic">bibliothecae praefectum: bibliothecarium</hi> C.</note> mitto, ut tibi perferendam curet. Neque enim alia scribendi suppetit via, donec tam diu optatam pacem Deus terris<note place="foot" xml:id="d4618e6076">	<hi rend="italic">Deus terris: terris Deus</hi> C.</note> reddiderit. Vale, reverende admodum et erudite pater<note place="foot" xml:id="d4618e6082">	<hi rend="italic" xml:space="preserve">Vale ... pater: Vale, admodum reverende ac erudite [erudite </hi>korrigiert aus <hi rend="italic">de] pater</hi> C; C endet hier.</note> ac religiosissime domine, cuius consila fortunet Deus, precor.</seg></p>
-            <p xml:space="preserve">Reverendae admodum paternitatis ac religiosissimae dominationis vestrae devotissimus et obsequentissimus in Christo servus ac frater frater Renatus Massuet monachus Benedictinus manu propria<note place="foot" xml:id="d4618e6093">	<hi rend="italic">manu propria</hi> fehlt S.</note>.</p>
-            <p xml:space="preserve">Parisiis. In monasterio S. Germani a Pratis die 7. Martii 1710.</p>
-         </div>
-      </body>
-      <back>
-         <div type="apparatus">
-            <app>
-            </app>
-         </div>
-         <div type="commentary">
-            <note xml:id="d4618e6102">
-               <ref type="context">1</ref>
-               <label>Adiutores ... vocati</label>
-               <p>Die Enzyklik BPs (<ref type="letter">24</ref>) war von ihrem Empfänger, Prior
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>Adiutores ... vocati</mentioned>
+            <p>Die Enzyklik BPs (<ref type="letter" target="letter:24">24</ref>) war von ihrem Empfänger, Prior
                   Achille-Robert Marcland von St.-Germain-des-Prés, an RM zur Beantwortung
-                  weitergegeben worden; vgl. <ref type="letter">32</ref> &lt;3&gt;.</p>
-            </note>
-            <note xml:id="d4618e6109">
-               <ref type="context">2</ref>
-               <label>Ruinart ... absumpsit</label>
-               <p>Ruinart war im Alter von 52 Jahren während einer Bibliotheksreise in die Champagne
+                  weitergegeben worden; vgl. <ref type="letter" target="letter:32">32</ref> <ref target="letter:32#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>Ruinart ... absumpsit</mentioned>
+            <p>Ruinart war im Alter von 52 Jahren während einer Bibliotheksreise in die Champagne
                   plötzlich erkrankt und nach wenigen Tagen, am 27. September 1709, im Kloster
-                  Hautvillers verstorben. Zu ihm vgl. <rs type="bibl" key="bibl:15602">Chaussy,
-                     Bénédictins</rs> 2 50; <rs type="bibl" key="bibl:15604">Chaussy, Matricula</rs>
-                  63; <rs type="bibl" key="bibl:36380">Jadart, Origine</rs> 30–38; <rs type="bibl"
-                     key="bibl:14772">Tassin, Histoire littéraire</rs> 273–283; <rs type="bibl"
-                     key="bibl:20066">Vanel, Nécrologe</rs> 87–90; <rs type="bibl" key="bibl:20356"
-                     >Wilhelm et al., Nouveau supplément 2</rs> 200–205; zuletzt: <rs type="bibl"
-                     key="bibl:15032">Barbeau, Présentation</rs> X–XXXVIII.</p>
-            </note>
-            <note xml:id="d4618e6116">
-               <ref type="context">3</ref>
-               <label>editio ... sancti Irenaei</label>
-               <p>Zu RMs Irenäus-Ausgabe vgl. am ausführlichsten <rs type="bibl" key="bibl:20068"
-                     >Vanel, Savants lyonnais</rs> 334–362.</p>
-            </note>
-            <note xml:id="d4618e6123">
-               <ref type="context">3</ref>
-               <label>Mabillonii scrinia</label>
-               <p>Die Reste dieses Materials finden sich heute in den Codices BN FF 17696–17700 („Papiers de D. Jean Mabillon“).</p>
-            </note>
-            <note xml:id="d4618e6128">
-               <ref type="context">4</ref>
-               <label>encyclicas ... scripsimus</label>
-               <p>Im Zuge der Arbeiten an den „Acta sanctorum OSB“ und „Annales OSB“ waren schon
-                  mehrfach Rundschreiben versendet worden: <rs type="bibl" key="bibl:17880"
-                     >Leclercq, Mabillon 2</rs> 752, 759f.; <rs type="bibl" key="bibl:17892"
-                     >Lecomte, Publication</rs> 256, 258. Von jener Enzyklik, die Ruinart im März
-                  1709 u. a. an Anselm Fischer gesendet hatte, jener an BP weiterleitete (<ref
-                     type="letter">43</ref>) und dieser wiederum an etliche Korrespondenten
-                  verteilte (<ref type="letter">110</ref>, <ref type="letter">111</ref>, <ref
-                     type="letter">134</ref>), ist anscheinend kein Exemplar erhalten: vgl. <rs
-                     type="bibl" key="bibl:17880">Leclercq, Mabillon 2</rs> 774, 989–992; <rs
-                     type="bibl" key="bibl:17892">Lecomte, Publication</rs> 262. Unter
+                  Hautvillers verstorben. Zu ihm vgl. <rs type="bibl" ref="bibl:15602">Chaussy,
+                     Bénédictins</rs> 2 50; <rs type="bibl" ref="bibl:15604">Chaussy, Matricula</rs>
+                  63; <rs type="bibl" ref="bibl:36380">Jadart, Origine</rs> 30–38; <rs type="bibl" ref="bibl:14772">Tassin, Histoire littéraire</rs> 273–283; <rs type="bibl" ref="bibl:20066">Vanel, Nécrologe</rs> 87–90; <rs type="bibl" ref="bibl:20356">Wilhelm et al., Nouveau supplément 2</rs> 200–205; zuletzt: <rs type="bibl" ref="bibl:15032">Barbeau, Présentation</rs> X–XXXVIII.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>editio ... sancti Irenaei</mentioned>
+            <p>Zu RMs Irenäus-Ausgabe vgl. am ausführlichsten <rs type="bibl" ref="bibl:20068">Vanel, Savants lyonnais</rs> 334–362.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>Mabillonii scrinia</mentioned>
+            <p>Die Reste dieses Materials finden sich heute in den Codices BN FF 17696–17700 („Papiers de D. Jean Mabillon“).</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>encyclicas ... scripsimus</mentioned>
+            <p>Im Zuge der Arbeiten an den „Acta sanctorum OSB“ und „Annales OSB“ waren schon
+                  mehrfach Rundschreiben versendet worden: <rs type="bibl" ref="bibl:17880">Leclercq, Mabillon 2</rs> 752, 759f.; <rs type="bibl" ref="bibl:17892">Lecomte, Publication</rs> 256, 258. Von jener Enzyklik, die Ruinart im März
+                  1709 u. a. an Anselm Fischer gesendet hatte, jener an BP weiterleitete (<ref type="letter" target="letter:43">43</ref>) und dieser wiederum an etliche Korrespondenten
+                  verteilte (<ref type="letter" target="letter:110">110</ref>, <ref type="letter" target="letter:111">111</ref>, <ref type="letter" target="letter:134">134</ref>), ist anscheinend kein Exemplar erhalten: vgl. <rs type="bibl" ref="bibl:17880">Leclercq, Mabillon 2</rs> 774, 989–992; <rs type="bibl" ref="bibl:17892">Lecomte, Publication</rs> 262. Unter
                   Briefkonzepten Ruinarts aus dem Frühjahr 1709 in BN FF 19665 (u. a. an Anselm
-                  Fischer: 81r–v, 85r–v; Placidus Mayrhauser: 84r–v; vgl. <rs type="bibl"
-                     key="bibl:20204">Wallnig, Pez und Mauriner</rs>162) findet sich kein
+                  Fischer: 81r–v, 85r–v; Placidus Mayrhauser: 84r–v; vgl. <rs type="bibl" ref="bibl:20204">Wallnig, Pez und Mauriner</rs>162) findet sich kein
                   „Standardtext“ einer Enzyklik. Möglicherweise gebrauchte Ruinart noch Exemplare
                   der gedruckten Enzyklik von 1702.</p>
-            </note>
-            <note xml:id="d4618e6135">
-               <ref type="context">4</ref>
-               <label>iterabo</label>
-               <p>RMs Enzyklik wurde im Sommer 1710 versendet; zu Überlieferungen vgl. <ref
-                     type="letter">113</ref>. Der Fragenkatalog in &lt;6&gt; entspricht inhaltlich
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned>iterabo</mentioned>
+            <p>RMs Enzyklik wurde im Sommer 1710 versendet; zu Überlieferungen vgl. <ref type="letter" target="letter:113">113</ref>. Der Fragenkatalog in <ref target="letter:113#seg6">6</ref> entspricht inhaltlich
                   diesem Rundschreiben.</p>
-            </note>
-            <note xml:id="d4618e6140">
-               <ref type="context">5</ref>
-               <label>Si Gallice nosset</label>
-               <p>RM scheint nicht bewusst zu sein, dass von Du Pins „Nouvelle bibliothèque“
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
+            <mentioned>Si Gallice nosset</mentioned>
+            <p>RM scheint nicht bewusst zu sein, dass von Du Pins „Nouvelle bibliothèque“
                   1692–1693 zu Paris drei Bände einer lateinischen Übersetzung erschienen waren;
-                  vgl. <ref type="letter">143</ref> &lt;16&gt;. Zu BPs Kenntnis des Französischen
-                  vgl. <ref type="letter">68</ref> &lt;3&gt;, <ref type="letter">154</ref>
-                  &lt;14&gt;.</p>
-            </note>
-            <note xml:id="d4618e6147">
-               <ref type="context">5</ref>
-               <label>Cave ... Historiae litterariae</label>
-               <p>Vgl. <ref type="letter">143</ref> &lt;16&gt;, <ref type="letter">379</ref>
-                  &lt;5&gt;, <ref type="letter">384</ref> &lt;6&gt;.</p>
-            </note>
-         </div>
-      </back>
+                  vgl. <ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg16">16</ref>. Zu BPs Kenntnis des Französischen
+                  vgl. <ref type="letter" target="letter:68">68</ref> <ref target="letter:68#seg3">3</ref>, <ref type="letter" target="letter:154">154</ref>
+                  <ref target="letter:154#seg14">14</ref>.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
+            <mentioned>Cave ... Historiae litterariae</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg16">16</ref>, <ref type="letter" target="letter:379">379</ref>
+                  <ref target="letter:379#seg5">5</ref>, <ref type="letter" target="letter:384">384</ref> <ref target="letter:384#seg6">6</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:16792">
+            <title type="short">Hammermayer, Forschungszentren</title>
+            <biblScope>182</biblScope>
+         </bibl>
+         <bibl corresp="bibl:17432">
+            <title type="short">Katschthaler, Briefnachlass</title>
+            <biblScope>26</biblScope>
+            <note>nennt
+                     den Brief nicht, gibt aber Inhalte wieder)</note>
+         </bibl>
+         <bibl corresp="bibl:17892">
+            <title type="short">Lecomte, Publication</title>
+            <biblScope>268</biblScope>
+         </bibl>
+         <bibl corresp="bibl:37320">
+            <title type="short">Schönhofer, Pez</title>
+            <biblScope>20</biblScope>
+         </bibl>
+         <bibl corresp="bibl:20068">
+            <title type="short">Vanel, Savants lyonnais</title>
+            <biblScope>346f</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <front>
+         <p>Plurimum reverendo religiosissimo et clarissimo domino et patri Bernardo Pez exempti monasterii Mellicensis in Inferiori Austria ad Danubium ordinis sancti Benedicti capitulari ac bibliothecae praefecto, patrono colendissimo. Mölckh.<note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 117r.</note></p>
+      </front>
+      <body>
+         <opener><pb n="1r"/><app><lem wit="#B">Reverende admodum pater ac religiosissime domine</lem><rdg wit="#C"><witDetail wit="#C">In <ref target="#C">C</ref> statt der Anrede: </witDetail>Reverendo patri Bernardo Pez Melli censi monacho ac bibliothecario.</rdg></app>.</opener>
+         <ab resp="#editor" xml:id="seg1"><app><lem wit="#B">Cum nihil aequius esse videatur, quam ut fratres ad eiusdem familiae decus promovendum conspirantes mutuo sese auxilio iuvent, is nedum urbanitatis, sed et humanitatis expers sit, qui laborum tuorum ordinis nostri gloriae atque utilitati cessurorum consors <pb n="1v"/> esse manum commodando refugiat. <anchor xml:id="n1"/>Adiutores igitur in partem operis vocati<anchor xml:id="n1e"/> venire non renuemus.</lem><rdg wit="#C">Nihil aequius videtur, quam ut fratres a fratribus adiuventur, ubi potissimum illi in eiusdem familiae decus promovendum toto pectore incumbunt. Quin consilium a reverenda paternitate vestra susceptum laudem mereatur et in ordinis nostri gloriam, immo et totius reipublicae literariae utilitatem redundet, nemo negaverit. Absit igitur, honorificis laboribus vestris favorem denegemus manumque commodare detrectemus ei, qui scriptorum nostrorum nominis memoriam cum omni posteritate adaequare studet. Suppetias lubenter feremus, ut et ipsi ea ratione in operis partem venire possimus.</rdg><!-- im Apparat steht der satzabschließende Punkt HINTER der Sigle. --></app> Me prae caeteris ad ferendam opem, quamcunque potuerim, paratum inveniet reverenda paternitas vestra. Sed moram, quaeso, aliis curis <app><lem wit="#B">iam nimium</lem><rdg wit="#C"/></app> distracto tantillam concedat, donec solutus historiam ordinis <app><lem wit="#C #S">nostri</lem><rdg wit="#B">nostri ordinis</rdg></app> iam coeptam <app><lem wit="#B #S">persequi</lem><rdg wit="#C">prosequi</rdg></app> valeam. </ab>
+         <ab resp="#editor" xml:id="seg2"><app><lem wit="#B">Non te fugit</lem><rdg wit="#C">Novisti sane</rdg></app>, reverende admodum pater, nostrum domnum Joannem Mabillonium <app><lem>toto orbe eruditionis laude celeberrimum</lem><rdg wit="#C">toto orbe nominis gloria <sic>celeberrimus</sic></rdg></app> Annales ordinis <app><lem wit="#B">Benedictini</lem><wit wit="#C">nostri</wit></app> Latino <app><lem wit="#B">sermone</lem><rdg wit="#C">idiomate</rdg></app> conscribere coepisse. Quatuor iam operis volumina in folio magno omnium eruditorum applausu prodierunt. Quintum, quo rerum historia usque ad sancti Bernardi obitum <app><lem wit="#B">perducitur</lem><rdg wit="#C">pertexitur</rdg></app>, praelo paratum habebat, cum mors nihil miserans senem <app><lem wit="#B">septuagenario maiorem</lem><rdg wit="#C">fere octogenarium</rdg></app> e vivis sustulit. Continuandum opus sibi susceperat discipulus eius domnus <app><lem wit="#B">Theodoricus</lem><rdg wit="#C">Theodericus</rdg></app> Ruinart, sed et ipsum iam manum <app><lem wit="#B">admovere</lem><witDetail wit="#C">danach durchgestrichen <mentioned>para</mentioned></witDetail></app><!-- Der Text von C lässt sich so allerdings nicht wiederherstellen! --> meditantem mors nondum <app><lem wit="#B">exsatiata</lem><rdg wit="#C">nondum satiata: inclementer</rdg></app> paucis abhinc mensibus <app><lem wit="#B #C">absumpsit</lem><rdg wit="#S"><!-- oder @source ?! -->absumsit</rdg></app>. Ne vero tam praeclarum opus imperfectum iaceret (quod timebant eruditi quique), mihi coepta persequendi provinciam demandarunt superiores <app><lem wit="#B #C">nostrae congregationis</lem><rdg wit="#C">congregationis nostrae</rdg></app>. <app><lem wit="#B">Utinam alteri cuipiam peritiori demandassent, ingeniique ac eruditionis tenuitatem iure merito excusantem audire voluissent! Sed demum detrectatum <pb n="2r"/> onus subire compulsus collum gemebundus submisi</lem><rdg wit="#C">Detrectavi quidem diutius, suscepi tandem gemebundus, ingenii ac eruditionis meae tenuitatis probe conscius</rdg></app>. </ab>
+         <ab resp="#editor" xml:id="seg3"><app><lem wit="#B">Prius tamen, quam operi me accingam</lem><rdg wit="#C">Sed prius</rdg></app>, absolvenda mihi est nova <anchor xml:id="n2"/>editio, quam suscepi, librorum sancti Irenaei<anchor xml:id="n2e"/> episcopi Lugdunensis et martyris Adversus haereses<note place="foot" xml:id="d4618e5708"><hi rend="italic">quam suscepi ... Adversus haereses: a me concinnata operum sancti Irenaei episcopi Lugdunensis ac martyris</hi> C.</note>, quae sub praelo est aestate proxima Deo <app><lem>favente</lem><rdg wit="#C">dante</rdg></app> exitura. His<app><rdg wit="#C"><add place="before">Tum</add></rdg></app> curis solutus totus in Annales <app><lem>incumbam</lem><rdg wit="#S">incubam</rdg></app>, tumque <anchor xml:id="n3"/>Mabillonii scrinia<anchor xml:id="n3e"/> omnia commentariosque e<note place="foot" xml:id="d4618e5733"><hi rend="italic">a</hi> C, davor durchgestrichen <hi rend="italic">a iam</hi>.</note> variis monasteriis vel iam missos vel posthac mittendos diligentius recensens inspiciensque, si quid <app><lem>occurrerit</lem><rdg wit="#S">occurrit</rdg></app>, quo <app><lem>reverendae paternitatis vestrae consilium</lem><rdg wit="#C">consilium vestrum</rdg></app> iuvari posse putem, id exscribi quantocyusque<note place="foot" xml:id="d4618e5754"><hi rend="italic">quantociusque</hi> S; <hi rend="italic">et ad [</hi>durchgestrichen <hi rend="italic">vestram] paternitatem vestram</hi> C.</note> mitti curabo. </ab>
+         <ab resp="#editor" xml:id="seg4">Iam <app><lem>dudum vota tua adhuc tamen ignota antevenientes</lem><rdg wit="#C"/></app> <anchor xml:id="n4"/>encyclicas ad Gallicana monasteria litteras <app><lem>scripsimus</lem><rdg wit="#C">dedimus</rdg></app><anchor xml:id="n4e"/>, <app><lem>quibus inter alia plura de iisdem omnino ea percontamur, quae tu sciscitaris ex nobis</lem><rdg wit="#C">quibus rogavimus, ut nobiscum communicare dignentur, quaecumque ad illustrandam ordinis historiam ab anno praesertim 1000 conferre posse noverint, ac inprimis non omittant viros illustres uniuscuiusque monasterii, et si quid scriptis mandaverint aut iam editum aut hactenus in bibliothecarum forulis delitescens, id diligenter significent</rdg></app>. <app><lem>Easdem brevi</lem><rdg wit="#C">Post Pascha epistolas</rdg></app> <anchor xml:id="n5"/>iterabo<anchor xml:id="n5e"/>; minusque festinantium tarditatem urgens<app><rdg wit="#C"><add place="after">in viris illustribus</add></rdg></app> virorum illustrium historiae, operum eorum catalogo <app><lem wit="#C #S">etc.</lem><rdg wit="#B"/></app> acrius adhuc insistam. Hoc enim utrique nostrum commune est argumentum, ut de ordinis scriptoribus<note place="foot" xml:id="d4618e5802"><hi rend="italic">ordinis scriptoribus: [</hi>durchgestrichen <hi rend="italic">viris illustri] ordinis nostri viris illustribus</hi> C.</note> agamus; cum eo <app><lem wit="#C #S">tantum</lem><rdg wit="#B">tamen</rdg></app> discrimine, quod <app><lem>id operis tui primarium ac praecipuum sit caput, mei vero accessio quaedam</lem><rdg wit="#C"/></app>; <app><lem>quaeque</lem><rdg wit="#C">quae</rdg></app> tu<app><rdg wit="#C"><add place="after">reverende admodum pater</add></rdg></app> fusiori<app><rdg wit="#C"><add place="before">fusiori st</add></rdg></app> ac enucleatiori stylo <app><lem wit="#C #S">persecuturus</lem><rdg wit="#B">prosecuturus</rdg></app> es, <app><lem>eadem</lem><rdg wit="#S">eodem</rdg></app> ego breviori <app><lem wit="#C #S">complexurus</lem><rdg wit="#B">complexus</rdg></app> sum. Tantisper igitur exspectare si velis, donec a caeteris negotiis vacuus operi <pb n="2v"/> manum <app><lem wit="#C #S">admoveam</lem><rdg wit="#B">adhibeam</rdg></app>, quidquid<app><rdg wit="#C"><add place="before">si</add></rdg></app> sub manum venerit, quod in rem tuam faciat, id ex animo communicabo. Nam alioqui turbulentis hisce temporibus quidpiam ad vos <app><lem>tuto</lem><rdg wit="#C"/></app> transmittere <app><lem>difficillimum esset</lem><rdg wit="#C">vix ac ne vix quidem possemus</rdg></app>. </ab>
+         <ab resp="#editor" xml:id="seg5">Interim, <app><lem>reverende admodum pater</lem><rdg wit="#C"/></app>, tibi omnino <app><lem wit="#C"><add place="above">comparanda sunt</add></lem></app> nec segni manu evolvenda<app><rdg wit="#C"><add place="after">sunt</add></rdg></app> priora quatuor Annalium ordinis nostri volumina a Mabillonio in lucem emissa. Neque te laboris poenitebit: plura enim in iis <app><lem>de scriptoribus nostris dicta</lem><rdg wit="#C">haud dubie</rdg></app> reperies, quae ad rem tuam faciant quam maxime. Idem fere dixerim de Actis sanctorum ordinis nostri ab eodem Mabillonio collectis novem voluminibus in folio, quorum singulis praemissae sunt praefationes omni eruditionis genere refertae. Idem etiam de Veteribus analectis quatuor <app><lem>voluminibus</lem><rdg wit="#C">tomis</rdg></app> in octavo et de Veterum scriptorum spicilegio 13<note place="foot" xml:id="d4618e5917">Auslassung in C.</note> voluminibus in quarto, quos quidem libros commemoro, quia licet iam dudum<note place="foot" xml:id="d4618e5920"><hi rend="italic">quia ... dudum</hi> in C wiederholt.</note> tum a Mabillonio, tum ab aliis <app><lem>e</lem><rdg wit="#C"/></app> nostris vulgati sint, iamque in his ipsis regionibus rarissimi<app><rdg wit="#C"><add place="after">sint</add></rdg></app>, in vestras remotiores nondum forte penetrare potuerint. <anchor xml:id="n6"/>Si Gallice nosset<anchor xml:id="n6e"/> reverenda paternitas vestra, consulerem etiam, sibi emeret <app><lem>Gallice scriptum</lem><rdg wit="#C">Gallicum</rdg></app> librum, cui titulus est: Bibliotheca <app><lem wit="#C #S">auctorum</lem><rdg wit="#B">authorum</rdg></app> ecclesiasticorum ab Elia Du Pin doctore <app><lem>theologo</lem><rdg wit="#C"/></app> Parisiensi collecta et in plures tomos in octavo distributa, in qua auctorum omnium ecclesiasticorum librorumque ab iis conscriptorum <pb n="3r"/> historia, catalogus et argumentum a primis ecclesiae temporibus ad nostra usque pertexitur, auctoresque etiamnum viventes recensentur. Hic nequicquam mentionem inicerem Guillelmi <anchor xml:id="n7"/>Cave Angli Historiae litterariae<anchor xml:id="n7e"/> scriptorum ecclesiasticorum a Christo nato ad annum usque 1517 duobus tomis in folio. Cum enim Genevae excusa sit anno 1693, haud<app><rdg wit="#C"><add place="before">forte ad vos usque pervenit</add></rdg></app> dubium, quin ad vos usque pervenerit. Bibliothecae Cluniacensis, Cisterciensis, Floriacensis variaeque Auberti Miraei <app><lem>elucubrationes</lem><rdg wit="#S">lucubrationes</rdg></app> libri notissimi sunt<note place="foot" xml:id="d4618e5965"><hi rend="italic">Bibliothecae ... sunt</hi> fehlt C.</note>. Haec interim ad reverendam paternitatem vestram<app><rdg wit="#C"><add place="after">scr</add></rdg></app> rescribo, donec alia, quae<app><rdg wit="#C"><add place="after">votis eius</add></rdg></app> exspectationi<app><rdg wit="#C"><add place="before">ac</add></rdg></app> <app><lem/><rdg wit="#C"><add place="above">eius</add></rdg></app> paulo magis respondeant, scribere possim. </ab>
+         <ab resp="#editor" xml:id="seg6">Sed si quid pro votis deinceps<app><rdg wit="#C"><add place="after">communi</add></rdg></app> vobiscum <app><lem>communicare valeam</lem><rdg wit="#C">communicem</rdg></app>, spero vicissim ea a vobis <app><lem>pro humanitate vestra subsidia</lem><rdg wit="#C">subsidia mihi</rdg></app> non denegatum iri, quae ad illustrandam tum Mellicensis, tum vicinorum monasteriorum historiam conferre posse intellexeritis: <app><lem>qualia sunt</lem><rdg wit="#C">qualis est</rdg></app> fundationis monasteriorum origo et historia, privilegia et immunitates; fundatorum ac praecipuorum benefactorum nomina, dotes et chartae donationum; abbatum series, viri illustres ac tum horum, tum illorum praecipua quaeque gesta, scripta, dies obitus etc.; quid memoria dignius in monasteriis acciderit; antiqua, si quae sint, summorum pontificum, imperatorum, regum aut aliarum nobilium personarum diplomata; vetera monumenta, <app><lem>sepulchra</lem><rdg wit="#S">sepulcra</rdg></app>, epitaphia, inscriptiones et alia id genus, quae Annalibus <pb n="3v"/> inseri pro iure suo debeant<note place="foot" xml:id="d4618e6028"><hi rend="italic">fundationis monasteriorum ... debeant: [</hi>durchgestrichen <hi rend="italic">abbatum vestr] fundationis vestrae historia, fundatorum ac praecipuorum benefactorum nomina, abbatum vestrorum series, viri illustres ac tum horum, tum illorum praecipua quaeque gesta, scripta, dies obitus etc.; antiqua, si quae habeatis, imperatorum ac summorum pontificum diplomata, vetera monumenta, epitaphia et alia id genus</hi> C.</note>. Cuius quidem investigationis curam nollem, sibi <app><lem>ipsi sumeret</lem><rdg wit="#C">sumeret ipsa</rdg></app> reverenda paternitas vestra; absit enim, ut a melioribus studiis eam interpellem; sed forte benevolos quospiam e suis reperiet, qui hanc a me, <app><lem>imo</lem><rdg wit="#S">immo</rdg></app> a toto ordine Benedictino<note place="foot" xml:id="d4618e6049"><hi rend="italic">imo ... Benedictino</hi> fehlt C.</note> gratiam inire non dedignabuntur. <app><lem>Utere tu, reverende admodum pater, meam operam, ut voles: totum</lem><rdg wit="#C">Quidquid est operae meae quantulaecumque, id tibi lubens offero; totumque</rdg></app> me tibi mandatisque tuis<app><rdg wit="#C"><add place="after">ex animo</add></rdg></app> addico. </ab>
+         <ab resp="#editor" xml:id="seg7">Hanc epistolam ad reverendum patrem Mauritium Müllerum S. Galli <app><lem>bibliothecae praefectum</lem><rdg wit="#C">bibliothecarium</rdg></app> mitto, ut tibi perferendam curet. Neque enim alia scribendi suppetit via, donec tam diu optatam pacem <app><lem>Deus terris</lem><rdg wit="#C">terris Deus</rdg></app> reddiderit. <choice><sic>de] pater</sic><corr>Vale, reverende admodum et erudite pater</corr></choice> ac religiosissime domine, cuius consila fortunet Deus, precor.</ab>
+         <closer>Reverendae admodum paternitatis ac religiosissimae dominationis vestrae devotissimus et obsequentissimus in Christo servus ac frater frater Renatus Massuet monachus Benedictinus <app><lem>manu propria</lem><rdg wit="#S"/></app>.</closer>
+         <closer>Parisiis. In monasterio S. Germani a Pratis die 7. Martii 1710.</closer>
+      </body>
    </text>
 </TEI>

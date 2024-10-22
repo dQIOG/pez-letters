@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="255" xml:id="pez-0255">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">255 Alphons Hueber an Bernhard Pez. 1712-07-10. Tegernsee.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Alphons Hueber an Bernhard Pez. 1712-07-10. Tegernsee.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">255</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
@@ -22,20 +33,23 @@
             <relatedItem type="otherEdition">
                <bibl>Lindner, Familia S. Quirini Ergh. 283–286.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:16512">Glassner, Handschriften</rs> 121</bibl>
-                  <bibl><rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 52</bibl>
-                  <bibl><rs type="bibl" key="bibl:18024">Lindner, Familia S. Quirini</rs> Ergh.
-                     91</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <p>StiB Melk, Cod. 1637, 1r–4v.</p>
+            <listWit>
+               <witness>StiB Melk, Cod. 1637, 1r–4v.   </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -50,263 +64,215 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">254</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">269</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">254</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">273</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">453</idno>
-               </ref>
+               <ptr type="prev" target="letter:254"/>
+               <ptr type="next" target="letter:269"/>
+               <ptr type="mentions" target="letter:254"/>
+               <ptr type="mentionedIn" target="letter:273"/>
+               <ptr type="mentionedIn" target="letter:453"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">AH sendet in der Beilage einen Schriftstellerkatalog von <rs ref="index:d14380e42111">Tegernsee</rs>. Er erfüllt damit den Auftrag seines Abtes <rs ref="index:d14380e29011">Quirin Millon</rs>, auf BPs Begehren <ref type="letter" target="letter:254">254</ref> zu antworten. Seine Angaben entnimmt AH aus einem von ihm zusammengestellten, 1709 abgeschlossenen handschriftlichen Werk „<rs ref="index:d10854e13219">Hortus Quirinalis Benedictino-Bavaricus</rs>“. Er wünscht BP ein langes Leben, damit dessen Werk („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) bald der gelehrten Welt vorliege und, gemäß Kapitel 57 der <rs ref="index:d10854e2817">Benediktsregel</rs>, zur Verherrlichung Gottes in allem gereiche.</p>
+            <p corresp="#seg2">AH verfügt weiters noch über eine Zusammenstellung der Namen von<rs ref="index:d14380e42111"> Tegernseern</rs>, welche als Äbte in andere Klöster postuliert wurden, und zwar vier nach <rs ref="index:d10854e714">Andechs</rs> (<rs ref="index:d10854e29874">Eberhard Stöckl</rs>, <rs ref="index:d10854e12034">Johannes Hausmann</rs>, <rs ref="index:d10854e21751">Andreas Oertel</rs>, <rs ref="index:d10854e10070">Georg Gänsdorfer</rs>), vier nach <rs ref="index:d14380e4706">Benediktbeuren</rs> (<rs ref="index:d14380e11190">Ellinger</rs>, <rs ref="index:d10854e10791">Gothalm</rs>, <rs ref="index:d10854e6349">Wilhelm Diepolzkircher</rs>, <rs ref="index:d10854e25885">Matthias Reuchlen</rs>), je einer nach <rs ref="index:d14380e10433">Ebersberg</rs> (<rs ref="index:d10854e7555">Ekbert</rs>), <rs ref="index:d14380e11731">Ettal</rs> (Konrad Kummersprugger), <rs ref="index:d14380e28774">Metten</rs> (<rs ref="index:d10854e7208">Andreas Eckler</rs>) und <rs ref="index:d10854e20054">Michelfeld</rs> (<rs ref="index:d10854e26109">Wolfgang Rinswerger</rs>), zwei nach <rs ref="index:d14380e39337">St. Georgenberg</rs> (<rs ref="index:d10854e29659">Gotthard Stark</rs>, <rs ref="index:d10854e12542">Benedikt Herschl</rs>), sechs nach <rs ref="index:d14380e31025">Oberaltaich</rs> (Konrad IV., <rs ref="index:d10854e31464">Ulrich IV.</rs>, <rs ref="index:d14380e30482">Raphael Neupöck</rs>, <rs ref="index:d14380e42580">Christian Tesenbacher</rs>, <rs ref="index:d10854e33942">Andreas Wild</rs>, <rs ref="index:d10854e12977">Sebastian Hofmann</rs>), je einer nach <rs ref="index:d14380e37010">Reichenbach</rs> (<rs ref="index:d10854e21625">Bonaventura Oberhueber</rs>) und <rs ref="index:d10854e26457">Rott am Inn</rs> (<rs ref="index:d10854e32388">Georg Weckerlein</rs>), zwei nach <rs ref="index:d14380e39711">Scheyern</rs> (<rs ref="index:d10854e31517">Ulrich Perchtinger</rs>, <rs ref="index:d10854e33982">Wilhelm von Kienberg</rs>), einer nach <rs ref="index:d14380e40312">Seeon</rs> (<rs ref="index:d10854e15215">Martin Kötterlein</rs>), je zwei nach <rs ref="index:d10854e27563">St. Veit an der Rott</rs> (<rs ref="index:d10854e34010">Hieronymus Wimber</rs>, <rs ref="index:d10854e16143">Raphael Kraz</rs>) und <rs ref="index:d14380e45067">Weihenstephan</rs> (<rs ref="index:d10854e31471">Ulrich IV.</rs>, <rs ref="index:d10854e12335">Heinrich Seefelder</rs>), einer nach <rs ref="index:d14380e45389">Wessobrunn</rs> (<rs ref="index:d10854e10688">Petrus Göbl</rs>); <rs ref="index:d14380e3303">St. Ulrich und Afra</rs> zu <rs ref="index:d14380e3233">Augsburg</rs>, das im Juli 1712 seinen 700. Jahrestag gefeiert hat, wurde bei seiner Gründung von <rs ref="index:d14380e42111">Tegernsee</rs> aus besiedelt, seine ersten drei Äbte (<rs ref="index:d10854e5934">Dego</rs>, <rs ref="index:d10854e10811">Gotisgen</rs>, <rs ref="index:d10854e9615">Fridebold</rs>) waren <rs ref="index:d14380e42111">Tegernseer</rs> Professen. AH wird die Namen sowie weitere Angaben zu diesen Personen nachliefern, falls BP dies wünscht.</p>
+            <p corresp="#seg3">AH freut sich über die Gelegenheit, zu BPs Werk beizutragen, auch deswegen besonders, weil er der einzige geborene <rs ref="index:d10854e21970">Österreicher</rs> im Konvent von <rs ref="index:d14380e42111">Tegernsee</rs> ist. Er wurde am 15. Juni 1668 zu <rs ref="index:d10854e21632">Obertrattnach</rs> bei <rs ref="index:d10854e11325">Grieskirchen</rs> in <rs ref="index:d10854e22102">Oberösterreich</rs> geboren und am folgenden Tag, dem Translationsfest des <rs ref="index:d14380e42111">Tegernseer</rs> Patrons <rs ref="index:d14380e36264">Quirinus</rs>, getauft. Er absolvierte das <rs ref="index:d10854e26978">Gymnasium</rs> zu <rs ref="index:d14380e39054">Salzburg</rs>, wo er BPs Mitbrüder <rs ref="index:d14380e39962">Anselm Schramb</rs> und <rs ref="index:d14380e39695">Koloman Scherb</rs> kannte, die dort die Rechte studierten; danach trat er 1688 in das <rs ref="index:d10854e32417">Kommunnoviziat der Bayerischen Benediktinerkongregation</rs> zu <rs ref="index:d14380e45067">Weihenstephan</rs> ein und legte am 13. November 1689, dem Fest Aller Heiligen Mönche, gemeinsam mit seinem Salzburger Mitschüler, dem nunmehrigen Tegernseer Prior <rs ref="index:d14380e16651">Petrus Guetrather</rs>, Profess ab. Die beiden hörten dann auch gemeinsam die Philosophie und Theologie am Kommunstudium der Kongregation und verteidigten Thesen „De essentia, attributis et gratia Dei“. Am 14. Oktober 1696 feierte AH am Festtag der Weihe der Tegernseer <rs ref="index:d14380e42431">Stiftskirche</rs> seine Primiz, 1698 wurde er an das neuerrichtete <rs ref="index:d14380e13219">benediktinische Lyzeum</rs> zu <rs ref="index:d14380e13185">Freising</rs> berufen, wo er Rudimenta und Grammatik unterrichtete und nach dem Vorbild des <rs ref="index:d10854e26978">Salzburger Gymnasiums</rs> für die Zöglinge eine „<rs ref="index:d10854e9583">Congregatio angelica</rs>“ einrichtete, deren von ihm verfasste <rs ref="index:d10854e13228">Statuten</rs> 1701 zu <rs ref="index:d14380e3233">Augsburg</rs> gedruckt wurden. 1702 wurde er nach <rs ref="index:d14380e42111">Tegernsee</rs> zurückgerufen und in der Seelsorge eingesetzt, am 28. Februar 1705 zum Vikar der Pfarre <rs ref="index:d10854e7282">St. Laurenz zu Egern</rs> bestellt. Dieser steht er bis zum gegenwärtigen Tage vor und hat die Predigten, die er während dieser Zeit vor seinen etwa 1200 Schäfchen (oviculae) gehalten hat, in elf Bänden „<rs ref="index:d10854e13214">Collectaria discursuum moralium</rs>“ gesammelt. Mit der Gnade Gottes und der wundertätigen <rs ref="index:d14380e10821">Muttergottes von Egern</rs> hofft er, diese wie auch ein deutschsprachiges Andachtsbuch „<rs ref="index:d14380e18971">Geistliche einöde</rs>“, welches er vor kurzem zu schreiben begonnen hat, fertig zu stellen und zu veröffentlichen. Allerdings lassen ihm seine Pflichten in der Pfarre wenig Zeit. Diese Informationen teilt er nicht aus verwerflichem Stolz mit, sondern aus wahrem benediktinischem Eifer, den er bei BP in noch größerem Maße vorhanden sieht, worüber er sich für den Benediktinerorden, für das <rs ref="index:d14380e28088">Stift Melk</rs> und für die ganze gelehrte Welt freut und nochmals Segenswünsche und Fürbitten sendet.</p>
+            <p corresp="#seg4">In der von BP gesendeten gedruckten Schriftstellerliste hat AH gesehen, dass die<rs ref="index:d10854e26978"> Salzburger</rs> Professoren <rs ref="index:d10854e33891">Marian Wieser</rs> und <rs ref="index:d10854e347">Otto Aicher</rs> als „aus Rott“ bezeichnet werden; um Verwechslungen mit <rs ref="index:d10854e26457">Rott am Inn</rs> zu vermeiden, ist klarzustellen, dass sie aus <rs ref="index:d10854e27563">St. Veit an der Rott</rs> sind.</p>
+            <p corresp="#seg5">Auch wird in der Liste <rs ref="index:d14380e21859">Ägidius Kibler</rs> aus <rs ref="index:d10854e714">Andechs</rs> zum Jahre 1644 genannt, in welchem er kaum geboren sein kann. <rs ref="index:d14380e21859">Kibler</rs> verteidigte erst 1682 seine Thesen („<rs ref="index:d10854e20024">Verbum incarnatum</rs>“) zu <rs ref="index:d14380e39054">Salzburg</rs>; 1689 veröffentlichte er die Thesen „<rs ref="index:d10854e14822">Decisiones logicae et problemata ascetica</rs>“, 1691 „<rs ref="index:d10854e14839">Physica supernaturalis</rs>“, später „Resolutiones selectae ex iure canonico“ (recte: „<rs ref="index:d10854e14799">Casus ex iure canonico</rs>“) und „<rs ref="index:d10854e14848">Quaestiones theologicae</rs>“, die alle am Kommunstudium unter seinem Vorsitz verteidigt worden waren. Er war auch der erste Novizenmeister des Kommunnoviziats, später Professor der Philosophie, der Theologie und des Kirchenrechts am Kommunstudium. <rs ref="index:d14380e21859">Kibler</rs> starb am 27. November 1701. AH überlässt es dem Ermessen BPs, wie jener diese Angaben verwenden will.</p>
+            <p corresp="#seg6">In einem Postskriptum lässt AH <rs ref="index:d14380e39695">Koloman Scherb</rs> und <rs ref="index:d14380e39962">Anselm Schramb</rs> grüßen und äußert die Hoffnung, dass <rs ref="index:d14380e39962">Schramb</rs> die von <rs ref="index:d14380e16651">Guetrather</rs> veröffentlichten Thesen „<rs ref="index:d10854e11490">Sextus Decretalium Bonifacii VIII., liber primus</rs>“ erhalten hat, die ihm AH vor etwa einem Jahr geschickt hat.</p>
+            <p corresp="#seg7">In einem Nachsatz bittet AH um Bestätigung des Erhalts.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e31851"><rs type="person" role="sender">AH</rs> sendet in der Beilage einen Schriftstellerkatalog von <rs key="index:d14380e42111">Tegernsee</rs>. Er erfüllt damit den Auftrag seines Abtes <rs key="index:d14380e29011">Quirin Millon</rs>, auf <rs type="person" role="sender">BPs</rs> Begehren <ref type="letter">254</ref> zu antworten. Seine Angaben entnimmt <rs type="person" role="sender">AH</rs> aus einem von ihm zusammengestellten, 1709 abgeschlossenen handschriftlichen Werk „<rs key="index:d10854e13219">Hortus Quirinalis Benedictino-Bavaricus</rs>“. Er wünscht <rs type="person" role="sender">BP</rs> ein langes Leben, damit dessen Werk („<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“) bald der gelehrten Welt vorliege und, gemäß Kapitel 57 der <rs key="index:d10854e2817">Benediktsregel</rs>, zur Verherrlichung Gottes in allem gereiche.</seg><seg type="context" n="2" xml:id="d4618e31856"><rs type="person" role="sender">AH</rs> verfügt weiters noch über eine Zusammenstellung der Namen von<rs key="index:d14380e42111"> Tegernseern</rs>, welche als Äbte in andere Klöster postuliert wurden, und zwar vier nach <rs key="index:d10854e714">Andechs</rs> (<rs key="index:d10854e29874">Eberhard Stöckl</rs>, <rs key="index:d10854e12034">Johannes Hausmann</rs>, <rs key="index:d10854e21751">Andreas Oertel</rs>, <rs key="index:d10854e10070">Georg Gänsdorfer</rs>), vier nach <rs key="index:d14380e4706">Benediktbeuren</rs> (<rs key="index:d14380e11190">Ellinger</rs>, <rs key="index:d10854e10791">Gothalm</rs>, <rs key="index:d10854e6349">Wilhelm Diepolzkircher</rs>, <rs key="index:d10854e25885">Matthias Reuchlen</rs>), je einer nach <rs key="index:d14380e10433">Ebersberg</rs> (<rs key="index:d10854e7555">Ekbert</rs>), <rs key="index:d14380e11731">Ettal</rs> (<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><?oxy_comment_start author="Mayer" timestamp="20171103T161316+0100" comment="Fehlt im DigiReg.
-Konrad nachbearbeiten!" mid="1"?>Konrad Kummersprugger<?oxy_custom_end?><?oxy_comment_end mid="1"?>), <rs key="index:d14380e28774">Metten</rs> (<rs key="index:d10854e7208">Andreas Eckler</rs>) und <rs key="index:d10854e20054">Michelfeld</rs> (<rs key="index:d10854e26109">Wolfgang Rinswerger</rs>), zwei nach <rs key="index:d14380e39337">St. Georgenberg</rs> (<rs key="index:d10854e29659">Gotthard Stark</rs>, <rs key="index:d10854e12542">Benedikt Herschl</rs>), sechs nach <rs key="index:d14380e31025">Oberaltaich</rs> (<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Konrad IV.<?oxy_custom_end?>, <rs key="index:d10854e31464">Ulrich IV.</rs>, <rs key="index:d14380e30482">Raphael Neupöck</rs>, <rs key="index:d14380e42580">Christian Tesenbacher</rs>, <rs key="index:d10854e33942">Andreas Wild</rs>, <rs key="index:d10854e12977">Sebastian Hofmann</rs>), je einer nach <rs key="index:d14380e37010">Reichenbach</rs> (<rs key="index:d10854e21625">Bonaventura Oberhueber</rs>) und <rs key="index:d10854e26457">Rott am Inn</rs> (<rs key="index:d10854e32388">Georg Weckerlein</rs>), zwei nach <rs key="index:d14380e39711">Scheyern</rs> (<rs key="index:d10854e31517">Ulrich Perchtinger</rs>, <rs key="index:d10854e33982">Wilhelm von Kienberg</rs>), einer nach <rs key="index:d14380e40312">Seeon</rs> (<rs key="index:d10854e15215">Martin Kötterlein</rs>), je zwei nach <rs key="index:d10854e27563">St. Veit an der Rott</rs> (<rs key="index:d10854e34010">Hieronymus Wimber</rs>, <rs key="index:d10854e16143">Raphael Kraz</rs>) und <rs key="index:d14380e45067">Weihenstephan</rs> (<rs key="index:d10854e31471">Ulrich IV.</rs>, <rs key="index:d10854e12335">Heinrich Seefelder</rs>), einer nach <rs key="index:d14380e45389">Wessobrunn</rs> (<rs key="index:d10854e10688">Petrus Göbl</rs>); <rs key="index:d14380e3303">St. Ulrich und Afra</rs> zu <rs key="index:d14380e3233">Augsburg</rs>, das im Juli 1712 seinen 700. Jahrestag gefeiert hat, wurde bei seiner Gründung von <rs key="index:d14380e42111">Tegernsee</rs> aus besiedelt, seine ersten drei Äbte (<rs key="index:d10854e5934">Dego</rs>, <rs key="index:d10854e10811">Gotisgen</rs>, <rs key="index:d10854e9615">Fridebold</rs>) waren <rs key="index:d14380e42111">Tegernseer</rs> Professen. <rs type="person" role="sender">AH</rs> wird die Namen sowie weitere Angaben zu diesen Personen nachliefern, falls <rs type="person" role="sender">BP</rs> dies wünscht.</seg><seg type="context" n="3" xml:id="d4618e31858"><rs type="person" role="sender">AH</rs> freut sich über die Gelegenheit, zu <rs type="person" role="sender">BPs</rs> Werk beizutragen, auch deswegen besonders, weil er der einzige geborene <rs key="index:d10854e21970">Österreicher</rs> im Konvent von <rs key="index:d14380e42111">Tegernsee</rs> ist. Er wurde am 15. Juni 1668 zu <rs key="index:d10854e21632">Obertrattnach</rs> bei <rs key="index:d10854e11325">Grieskirchen</rs> in <rs key="index:d10854e22102">Oberösterreich</rs> geboren und am folgenden Tag, dem <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>Translationsfest<?oxy_custom_end?> des <rs key="index:d14380e42111">Tegernseer</rs> Patrons <rs key="index:d14380e36264">Quirinus</rs>, getauft. Er absolvierte das <rs key="index:d10854e26978">Gymnasium</rs> zu <rs key="index:d14380e39054">Salzburg</rs>, wo er <rs type="person" role="sender">BPs</rs> Mitbrüder <rs key="index:d14380e39962">Anselm Schramb</rs> und <rs key="index:d14380e39695">Koloman Scherb</rs> kannte, die dort die Rechte studierten; danach trat er 1688 in das <rs key="index:d10854e32417">Kommunnoviziat der Bayerischen Benediktinerkongregation</rs> zu <rs key="index:d14380e45067">Weihenstephan</rs> ein und legte am 13. November 1689, dem <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>Fest Aller Heiligen Mönche<?oxy_custom_end?>, gemeinsam mit seinem Salzburger Mitschüler, dem nunmehrigen Tegernseer Prior <rs key="index:d14380e16651">Petrus Guetrather</rs>, Profess ab. Die beiden hörten dann auch gemeinsam die Philosophie und Theologie am Kommunstudium der Kongregation und verteidigten Thesen „<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>De essentia, attributis et gratia Dei<?oxy_custom_end?>“. Am 14. Oktober 1696 feierte <rs type="person" role="sender">AH</rs> am Festtag der Weihe der Tegernseer <rs key="index:d14380e42431">Stiftskirche</rs> seine Primiz, 1698 wurde er an das neuerrichtete <rs key="index:d14380e13219">benediktinische Lyzeum</rs> zu <rs key="index:d14380e13185">Freising</rs> berufen, wo er Rudimenta und Grammatik unterrichtete und nach dem Vorbild des <rs key="index:d10854e26978">Salzburger Gymnasiums</rs> für die Zöglinge eine „<rs key="index:d10854e9583">Congregatio angelica</rs>“ einrichtete, deren von ihm verfasste <rs key="index:d10854e13228">Statuten</rs> 1701 zu <rs key="index:d14380e3233">Augsburg</rs> gedruckt wurden. 1702 wurde er nach <rs key="index:d14380e42111">Tegernsee</rs> zurückgerufen und in der Seelsorge eingesetzt, am 28. Februar 1705 zum Vikar der Pfarre <rs key="index:d10854e7282">St. Laurenz zu Egern</rs> bestellt. Dieser steht er bis zum gegenwärtigen Tage vor und hat die Predigten, die er während dieser Zeit vor seinen etwa 1200 Schäfchen (oviculae) gehalten hat, in elf Bänden „<rs key="index:d10854e13214">Collectaria discursuum moralium</rs>“ gesammelt. Mit der Gnade Gottes und der wundertätigen <rs key="index:d14380e10821">Muttergottes von Egern</rs> hofft er, diese wie auch ein deutschsprachiges Andachtsbuch „<rs key="index:d14380e18971">Geistliche einöde</rs>“, welches er vor kurzem zu schreiben begonnen hat, fertig zu stellen und zu veröffentlichen. Allerdings lassen ihm seine Pflichten in der Pfarre wenig Zeit. Diese Informationen teilt er nicht aus verwerflichem Stolz mit, sondern aus wahrem benediktinischem Eifer, den er bei <rs type="person" role="sender">BP</rs> in noch größerem Maße vorhanden sieht, worüber er sich für den Benediktinerorden, für das <rs key="index:d14380e28088">Stift Melk</rs> und für die ganze gelehrte Welt freut und nochmals Segenswünsche und Fürbitten sendet.</seg><seg type="context" n="4" xml:id="d4618e31860">In der von <rs type="person" role="sender">BP</rs> gesendeten gedruckten <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Schriftstellerliste<?oxy_custom_end?> hat <rs type="person" role="sender">AH</rs> gesehen, dass die<rs key="index:d10854e26978"> Salzburger</rs> Professoren <rs key="index:d10854e33891">Marian Wieser</rs> und <rs key="index:d10854e347">Otto Aicher</rs> als „aus Rott“ bezeichnet werden; um Verwechslungen mit <rs key="index:d10854e26457">Rott am Inn</rs> zu vermeiden, ist klarzustellen, dass sie aus <rs key="index:d10854e27563">St. Veit an der Rott</rs> sind.</seg><seg type="context" n="5" xml:id="d4618e31862">Auch wird in der Liste <rs key="index:d14380e21859">Ägidius Kibler</rs> aus <rs key="index:d10854e714">Andechs</rs> zum Jahre 1644 genannt, in welchem er kaum geboren sein kann. <rs key="index:d14380e21859">Kibler</rs> verteidigte erst 1682 seine Thesen („<rs key="index:d10854e20024">Verbum incarnatum</rs>“) zu <rs key="index:d14380e39054">Salzburg</rs>; 1689 veröffentlichte er die Thesen „<rs key="index:d10854e14822">Decisiones logicae et problemata ascetica</rs>“, 1691 „<rs key="index:d10854e14839">Physica supernaturalis</rs>“, später „Resolutiones selectae ex iure canonico“ (recte: „<rs key="index:d10854e14799">Casus ex iure canonico</rs>“) und „<rs key="index:d10854e14848">Quaestiones theologicae</rs>“, die alle am Kommunstudium unter seinem Vorsitz verteidigt worden waren. Er war auch der erste Novizenmeister des Kommunnoviziats, später Professor der Philosophie, der Theologie und des Kirchenrechts am Kommunstudium. <rs key="index:d14380e21859">Kibler</rs> starb am 27. November 1701. <rs type="person" role="sender">AH</rs> überlässt es dem Ermessen <rs type="person" role="sender">BPs</rs>, wie jener diese Angaben verwenden will.</seg><seg type="context" n="6" xml:id="d4618e31864">In einem Postskriptum lässt <rs type="person" role="sender">AH</rs> <rs key="index:d14380e39695">Koloman Scherb</rs> und <rs key="index:d14380e39962">Anselm Schramb</rs> grüßen und äußert die Hoffnung, dass <rs key="index:d14380e39962">Schramb</rs> die von <rs key="index:d14380e16651">Guetrather</rs> veröffentlichten Thesen „<rs key="index:d10854e11490">Sextus Decretalium Bonifacii VIII., liber primus</rs>“ erhalten hat, die ihm <rs type="person" role="sender">AH</rs> vor etwa einem Jahr geschickt hat.</seg><seg type="context" n="7" xml:id="d4618e31866">In einem Nachsatz bittet <rs type="person" role="sender">AH</rs> um Bestätigung des Erhalts.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Benedictus Deus!</p>
-            <p xml:space="preserve">Tegernsee ex cella mea dilecta 10. Julii 1712.</p>
-            <p xml:space="preserve">Admodum reverende religiosissime ac clarissime domine pater, patrone colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e31886">Transmitto hic clarissimae paternitati vestrae <seg type="lemma" corresp="#d4618e31993">nomina quorundam religiosorum</seg> nostrorum Tegernseensium, qui aut litteris aliquid aut typis commendarunt publicis, aut etiam suis nobilissimis manuscriptis bibliothecam nostram Tegernseensem illustrarunt. Utinam hisce tam gratiosissimo mandato reverendissimi et amplissimi mei domini abbatis, quam etiam iustissimae petitioni et sanctissimis votis paternitatis vestrae satisfecissem! Feci, quod potui, et quae hic communico, omnia et singula ex libro quodam a me magno labore et industria hinc inde ex antiquitatibus nostri monasterii per plures annos collecto et anno 1709 in unum a me conscripto desumpsi, cuius titulus: <seg type="lemma" corresp="#d4618e32000">Hortus Quirinalis Benedictino-Bavaricus</seg> in suas areolas distinctus etc. Doleo certe inscitiam et tenuitatem calami ac ingenii mei, cuius defectus et ruditatem <pb n="1v"/> maximam clarissimae paternitatis vestrae foecundissimo ingenio ac doctissimo calamo depraedicandos et haec mea exigua folia insignis doctrinae suae radiis illustranda relinquo. Deus ter optimus maximus admodum reverendam ac clarissimam dominationem suam tanquam praecipuum sacri ordinis nostri et celeberrimi monasterii sui ornamentum salvam et incolumem diutissime conservet, ut insigne hoc opus universus orbis litterarius brevi videat et admiretur, Deumque laudet pro eo in saecula iuxta mentem sanctissimi legislatoris nostri, capite 57. sacrae Regulae: <seg type="lemma" corresp="#d4618e32005">Ut in omnibus glorificetur Deus</seg>! </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e31890">Occurrissent caeteroquin adhuc et alia, forte ad honorem nostri antiquissimi asceterii foliis meis hic transmissis etiam inserenda, specialiter de caeteris reverendissimis dominis <seg type="lemma" corresp="#d4618e32010">abbatibus ex monasterio nostro Tegernseensi ad aliorum monasteriorum infulas postulatis</seg>. (Habet enim a nobis <seg type="lemma" corresp="#d4618e32017">Andecense seu Montis Sancti quattuor abbates</seg>, Benedictoburanum <pb n="2r"/> itidem quattuor, <seg type="lemma" corresp="#d4618e32027">Eberspergense unum</seg>, Ettalense unum, Mettenense unum, Michlfeldense unum, monasterium <seg type="lemma" corresp="#d4618e32032">Montis S. Georgii in Tyroli duos, Oberaltaichense sex, Reichenbacense unum, Rotense unum, Schyrense duos, Seonense unum, monasterium SS. Udalrici et Affrae Augustae Vindelicorum, quod hoc anno et mense Julio annum suum saecularem 700. celebravit, accepit ex nostro gremio et monasterio Tegernseensi primas suas colonias, duodecim nempe viros religiosos, et ex his tres primos suos abbates, monasterium S. Viti cis Rotham duos, Weichenstephanense duos</seg> et <seg type="lemma" corresp="#d4618e32058">Wessofontanum unum</seg>.) Sed haec horumque specialia nomina, eorum annos et alia, cum nimis longum foret describere, studio praeterii et clarissimae paternitati vestrae eiusque prudentissimo iudicio relinquo, <seg type="lemma" corresp="#d4618e32063">utrum notatu digna videantur</seg>, ut horum aliqualis mentio <pb n="2v"/> in suo insigni opere fiat. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e31896">Gratulor mihi de caeteris saltem quam maxime spartam hanc mihi confratrum meorum minimo et ineptissimo fuisse a reverendissimo domino domino abbate nostro oblatam, meque occasionem adeptum fuisse clarissimae dominationi vestrae aliquale servitium meum praestandi utpote patriotae meo colendissimo, sum enim solus in nostro monasterio natus Austriacus ex pago Trattnach Superioris Austriae prope <sic>Krieskärchen</sic> [<hi rend="italic">sic</hi>], natus anno 1668 die 15. Junii et baptizatus 16. Junii (quo die apud nos hic celebratur festum principalissimum translationis sancti Quirini regis et martyris); absolutis inferioribus scholis Salisburgi (tempore, quo clarissimi vestri patres <seg type="lemma" corresp="#d4618e32068">Anselmus et Colomannus</seg> studiis iuridicis vacabant, patroni mei semper colendissimi) anno 1688 ad <seg type="lemma" corresp="#d4618e32075">communem novitiatum nostrum Weichenstephanii</seg> tunc institutum missus, anno sequenti 13. Novembris in festo scilicet Omnium sanctorum monachorum cum moderno venerabili patre priore nostro Petro condiscipulo olim <pb n="3r"/> Salisburgi meo, tunc connovitio ac conprofesso meo, nunc superiore colendissimo, sacram professionem emisi; absolutis deinde cum eo tam philosophicis quam theologicis studiis <seg type="lemma" corresp="#d4618e32080">in communibus congregationis nostrae studiis</seg>, defensisque thesibus publicis impressis in quarto De essentia, attributis et gratia Dei specialiter scientia media etc. cum <sic>parrergis</sic> [<hi rend="italic">sic</hi>] ex universa theologia<note place="foot" xml:id="d4618e31906">	<hi rend="italic">defensisque ... theologia</hi> mit Verweiszeichen am unteren Blattrand eingefügt. Im Text vor dem Verweiszeichen durchgestrichen <hi rend="italic">nostrae</hi>.</note>, anno 1696<note place="foot" xml:id="d4618e31915">	Danach unleserliche Streichung im Ausmaß von 2–3 Buchstaben oder Ziffern.</note> 14. Octobris in dedicatione ecclesiae nostrae indignissimus neomysta factus. Anno 1698 ex obedientia<note place="foot" xml:id="d4618e31919">	Danach durchgestrichen <hi rend="italic">Fir</hi>.</note> <seg type="lemma" corresp="#d4618e32085">Frisingam ad instruendam iuventutem studiosam ad neo-erectum gymnasium</seg> missus fui, quam spartam etiam per quattuor annos docendo ibidem primus rudimenta et grammaticen<note place="foot" xml:id="d4618e31925">	<hi rend="italic">ibidem ... grammaticen</hi> mit Verweiszeichen am linken Blattrand eingefügt.</note> obii, instituens simul ibidem pro iuventute ad modum Salisburgensium tyrocinium angelicum seu congregationem (datis etiam a me pro tyronibus typis<note place="foot" xml:id="d4618e31931">	Danach durchgestrichen <hi rend="italic">re</hi>.</note> Augustanis anno 1701 regulis et constitutionibus angelicae huius unionis certo<note place="foot" xml:id="d4618e31937">	Mit Verweiszeichen über der Zeile eingefügt.</note> libello expressis). Tandem rursus domum vocatus sum ad animarum curam anno 1702, et anno 1705 28. Februarii licet omnium meorum confratrum indignissimus et minimus ad parochiam S. Laurentii in Egern administrandam assumptus fui, cui in hunc usque diem (utinam etiam cum fructu animarum curae meae commissarum!) praesum, conscriptis et ex cathedra ad plebem meam 1200 ovicularum iam habitis et <pb n="3v"/> huius temporis vicariatus mei decursu a me collectis undecim Collectariis discursuum moralium, seu undecim operibus manuscriptis moralibus concionum in quarto<note place="foot" xml:id="d4618e31942">	<hi rend="italic">in quarto</hi> mit Verweiszeichen am linken Blattrand eingefügt.</note> et discursuum moralium etc. Faxint Superi intercedente thaumaturga Matre mea Virgine Egernensi, ut brevi opus et librum meum asceticum, quem nuper idiomate Germanico conscribere incepi (cuius titulus: Geistliche einöde, in welcher Cosmophilus und Monophilus auf denen drey weegen der reinigung, erleichtung und vereinigung mit Gott zur christlichen vollkhommenheit angeführt und nuzlich geleitet werden) ad optatum finem perducere et typis dare possim publicis. Utinam temporis penuriam tantam non paterer ratione parochiae meae etc.! Scribo haec, clarissime ac colendissime pater Bernarde, non inflatus<note place="foot" xml:id="d4618e31949">	Über der Zeile eingefügt.</note> maligno superbiae spiritu, sed ex<note place="foot" xml:id="d4618e31952">	Über der Zeile eingefügt.</note> zelo Benedictino <pb n="4r"/> bono, vero ac sincero, qualem video, sed maiorem, imo maximum, clarissimae paternitati vestrae a Deo datum, et ex corde intimo gratulor ordini universo, monasterio suo celeberrimo congaudeo et cum orbe litterario exulto et opto a Deo optimo, ut <seg type="lemma" corresp="#d4618e32095">ILLI aD saLVteM fLVant</seg> omnia vota mea et preces meae humillimae ad Deum et thaumaturgam Matrem meam pro eo<note place="foot" xml:id="d4618e31957">	<hi rend="italic">pro eo</hi> am linken Blattrand eingefügt.</note> fidelissime fundendae. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e31963">Legi caeteroquin in impresso et communicato nobis catalogo ad saeculum XVII. <seg type="lemma" corresp="#d4618e32100">Marianum Wiser et Ottonem Aicher</seg> universitatis nostrae Salisburgensis viros celeberrimos <seg type="lemma" corresp="#d4618e32107">Rottenses</seg>, cum ad devitandam confusionem cum monasterio Rottensi <seg type="lemma" corresp="#d4618e32113">magis scribendi et imprimendi forent S. Viti</seg> cis Rotham, ubi professi sunt. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e31965">Item deprehendi patrem <seg type="lemma" corresp="#d4618e32118">Aegidium Kibler Andecensem</seg> positum ad annum 1644 floruisse, quem hoc anno vix natum fuisse puto, <pb n="4v"/> cum primum anno 1682 Salisburgi theses theologicas defenderit et <sic>anno</sic> [<hi rend="italic">sic</hi>] 1689 et 1691 et sequentibus theses suas philosophicas ac Problemata ascetica, item Physicam supernaturalem nec non <seg type="lemma" corresp="#d4618e32125">Resolutiones suas selectas ex iure canonico</seg>, item<note place="foot" xml:id="d4618e31972">	Davor durchgestrichen <hi rend="italic">nec non</hi>.</note> Quaestiones theologicas in communibus studiis congregationis nostrae ediderit, primus congregationis nostrae communis novitiatus novitiorum magister ac postmodum philosophiae, theologiae ac sacrorum canonum professor dignissimus, qui obiit anno 1701 27. Novembris. Atque haec obiter ad preces clarissimae paternitatis vestrae annotare volui, iuxta prudentissimum paternitatis vestrae iudicium forte aliqualiter immutanda. Cui me totum, meos calami exiguos labores enixissime commendans, consecro, dico et dedico maneoque</seg></p>
-            <p xml:space="preserve">Admodum reverendae religiosissimae ac clarissimae paternitatis vestrae servus et amicus addictissimus indignissimus pater Alphonsus Hueber Tegernseensis, pro tempore vicarius ad thaumaturgam Matrem et S. Laurentium in Egern.</p>
-            <p xml:space="preserve"><seg type="context" n="6" xml:space="preserve" xml:id="d4618e31981">P.S. Clarissimis ac colendissimis dominis patribus Colomanno et Anselmo humillimam mei recommendationem rogo. Spero ultimum theses nostri patris Petri ante annum a me transmissas rite accepisse, librum primum scilicet Decretalium.</seg></p>
-            <p xml:space="preserve"><seg type="context" n="7" xml:space="preserve" xml:id="d4618e31984">Optarem unam alteramque lineam responsoriam, utrum, quae hic transmitto, ad manus pervenerint<note place="foot" xml:id="d4618e31986">	<hi rend="italic" xml:space="preserve">Optarem ... pervenerint </hi>am linken Blattrand von 1r nachgetragen.</note>?</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e31993">
-               <ref type="context">1</ref>
-               <label>nomina quorundam religiosorum</label>
-               <p>Der Katalog ist im Anschluss an <ref type="letter">255</ref> überliefert in StiB
-                  Melk, Cod. 1637, 5r–28v; vgl. <rs type="bibl" key="bibl:18024">Lindner, Familia S.
-                     Quirini</rs> Ergh. 91. Genannt werden: Abt <rs key="index:d14380e11190"
-                     >Ellinger</rs>; <rs key="index:d14380e28767">„Metellus“ von Tegernsee</rs>; <rs
-                     key="index:d14380e20597">Johannes Keck</rs>; <rs key="index:d14380e5403"
-                     >Bernhard von Waging</rs>; <rs key="index:d10854e31486">Ulrich von Landau</rs>;
-                     <rs key="index:d10854e16332">Wolfgang Kyderer</rs>; <rs
-                     key="index:d10854e12993">Augustin Holzapfler</rs>; <rs key="index:d14380e40370"
-                     >Wolfgang Seidel</rs>; Abt <rs key="index:d14380e21574">Kaspar Ayndorffer</rs>;
-                  Abt <rs key="index:d10854e25852">Quirin Rest</rs>; <rs key="index:d10854e25294"
-                     >Georg Raisberger</rs>; <rs key="index:d10854e32960">Benedikt Wider</rs>; <rs
-                     key="index:d10854e25104">Johann Jakob von Preysing</rs>; <rs
-                     key="index:d10854e13404">Gregor Ilmperger</rs>; Abt <rs
-                     key="index:d10854e32683">Bernhard Wenzl</rs>; Abt <rs key="index:d14380e29011"
-                     >Quirin Millon</rs>; <rs key="index:d10854e26109">Wolfgang Rinswerger</rs>; <rs
-                     key="index:d14380e16651">Petrus Guetrather</rs>; <rs key="index:d10854e27724"
-                     >Paul</rs> und <rs key="index:d14380e39552">Bernhard Schalhamer</rs>. Die
-                  biographischen Angaben im Register nach <rs type="bibl" key="bibl:18024">Lindner,
-                     Familia S. Quirini</rs>. Zu „Metellus“ vgl. <ref type="letter">453</ref>
-                  &lt;2&gt;.</p>
-            </note>
-            <note xml:id="d4618e32000">
-               <ref type="context">1</ref>
-               <label>Hortus Quirinalis Benedictino-Bavaricus</label>
-               <p>Zu dieser Schrift AHs <rs type="bibl" key="bibl:18024">Lindner, Familia S.
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>nomina quorundam religiosorum</mentioned>
+            <p>Der Katalog ist im Anschluss an <ref type="letter" target="letter:255">255</ref> überliefert in StiB
+                  Melk, Cod. 1637, 5r–28v; vgl. <rs type="bibl" ref="bibl:18024">Lindner, Familia S.
+                     Quirini</rs> Ergh. 91. Genannt werden: Abt <rs ref="index:d14380e11190">Ellinger</rs>; <rs ref="index:d14380e28767">„Metellus“ von Tegernsee</rs>; <rs ref="index:d14380e20597">Johannes Keck</rs>; <rs ref="index:d14380e5403">Bernhard von Waging</rs>; <rs ref="index:d10854e31486">Ulrich von Landau</rs>;
+                     <rs ref="index:d10854e16332">Wolfgang Kyderer</rs>; <rs ref="index:d10854e12993">Augustin Holzapfler</rs>; <rs ref="index:d14380e40370">Wolfgang Seidel</rs>; Abt <rs ref="index:d14380e21574">Kaspar Ayndorffer</rs>;
+                  Abt <rs ref="index:d10854e25852">Quirin Rest</rs>; <rs ref="index:d10854e25294">Georg Raisberger</rs>; <rs ref="index:d10854e32960">Benedikt Wider</rs>; <rs ref="index:d10854e25104">Johann Jakob von Preysing</rs>; <rs ref="index:d10854e13404">Gregor Ilmperger</rs>; Abt <rs ref="index:d10854e32683">Bernhard Wenzl</rs>; Abt <rs ref="index:d14380e29011">Quirin Millon</rs>; <rs ref="index:d10854e26109">Wolfgang Rinswerger</rs>; <rs ref="index:d14380e16651">Petrus Guetrather</rs>; <rs ref="index:d10854e27724">Paul</rs> und <rs ref="index:d14380e39552">Bernhard Schalhamer</rs>. Die
+                  biographischen Angaben im Register nach <rs type="bibl" ref="bibl:18024">Lindner,
+                     Familia S. Quirini</rs>. Zu „Metellus“ vgl. <ref type="letter" target="letter:453">453</ref>
+                  <ref target="letter:453#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>Hortus Quirinalis Benedictino-Bavaricus</mentioned>
+            <p>Zu dieser Schrift AHs <rs type="bibl" ref="bibl:18024">Lindner, Familia S.
                      Quirini</rs> Ergh. 283: „Scheint verloren zu sein“.</p>
-            </note>
-            <note xml:id="d4618e32005">
-               <ref type="context">1</ref>
-               <label>Ut in omnibus glorificetur Deus</label>
-               <p>RB 57,9, in Anlehnung an 1 Petr 4,11. In der Neuzeit wurde die Phrase von den Benediktinern häufig als Motto gebraucht.</p>
-            </note>
-            <note xml:id="d4618e32010">
-               <ref type="context">2</ref>
-               <label>abbatibus ... postulatis</label>
-               <p>Die Identifizierung der von AH gemeinten Personen stützt sich auf einen
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned>Ut in omnibus glorificetur Deus</mentioned>
+            <p>RB 57,9, in Anlehnung an 1 Petr 4,11. In der Neuzeit wurde die Phrase von den Benediktinern häufig als Motto gebraucht.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>abbatibus ... postulatis</mentioned>
+            <p>Die Identifizierung der von AH gemeinten Personen stützt sich auf einen
                   autographen Band AHs mit historischem Material zu Tegernsee (BStB München, cgm
                   3302; möglicherweise eine deutsche Übersetzung des verlorenen lateinischen „Hortus
                   Quirinalis Benedictino-Bavaricus“). Diese Handschrift enthält ein längeres Kapitel
-                  über aus Tegernsee postulierte Äbte anderer Klöster (ebd. 43–70). Vgl. <rs
-                     type="bibl" key="bibl:18024">Lindner, Familia S. Quirini</rs> Ergh. 243–245;
-                     <rs type="bibl" key="bibl:36564">Lindner, Monasticon</rs> 535f.</p>
-            </note>
-            <note xml:id="d4618e32017">
-               <ref type="context">2</ref>
-               <label>Andecense ... quattuor abbates</label>
-               <p>Andechs wurde, ähnlich wie St. Ulrich und Afra zu Augsburg, bei seiner Gründung
+                  über aus Tegernsee postulierte Äbte anderer Klöster (ebd. 43–70). Vgl. <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> Ergh. 243–245;
+                     <rs type="bibl" ref="bibl:36564">Lindner, Monasticon</rs> 535f.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned>Andecense ... quattuor abbates</mentioned>
+            <p>Andechs wurde, ähnlich wie St. Ulrich und Afra zu Augsburg, bei seiner Gründung
                   als Benediktinerkloster im Jahre 1455 von Tegernsee aus besiedelt und erhielt
-                  seine ersten drei Äbte von dort: <rs type="bibl" key="bibl:17876">Lechner,
-                     Benediktiner</rs> 135; <rs type="bibl" key="bibl:19268">Sattler, Andechs</rs>
+                  seine ersten drei Äbte von dort: <rs type="bibl" ref="bibl:17876">Lechner,
+                     Benediktiner</rs> 135; <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs>
                   142–204. In cgm 3302 gibt AH die Sterbedaten aller drei deutlich zu früh an und
                   nennt zudem den dritten irrig „Ulrich“.</p>
-            </note>
-            <note xml:id="d4618e32022">
-               <ref type="context">2</ref>
-               <label>Benedictoburanum ... quattuor</label>
-               <p>Dieselben vier wie AH in cgm 3302 nennt <rs type="bibl" key="bibl:18024">Lindner,
-                     Familia S. Quirini</rs> Ergh. 243. Dagegen werden bei <rs type="bibl"
-                     key="bibl:18030">Lindner, Professbuch Benediktbeuern</rs> 6–8; <rs type="bibl"
-                     key="bibl:36564">Lindner, Monasticon</rs> 535, zusätzlich noch die beiden Äbte
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
+            <mentioned>Benedictoburanum ... quattuor</mentioned>
+            <p>Dieselben vier wie AH in cgm 3302 nennt <rs type="bibl" ref="bibl:18024">Lindner,
+                     Familia S. Quirini</rs> Ergh. 243. Dagegen werden bei <rs type="bibl" ref="bibl:18030">Lindner, Professbuch Benediktbeuern</rs> 6–8; <rs type="bibl" ref="bibl:36564">Lindner, Monasticon</rs> 535, zusätzlich noch die beiden Äbte
                   Heinrich VI. von Pinzenau († 1400) sowie Friedrich von Weiching (1409–1422)
                   aufgrund des Beisatzes „n. c.“ („nostrae congregationis“) zu ihren Namen im
                   Tegernseer Nekrologium als Tegernseer Professen angenommen.</p>
-            </note>
-            <note xml:id="d4618e32027">
-               <ref type="context">2</ref>
-               <label>Eberspergense unum</label>
-               <p>AH meint hier Ekbert, der nach kurzen Amtszeiten als Abt von Tegernsee und von
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg2">
+            <mentioned>Eberspergense unum</mentioned>
+            <p>AH meint hier Ekbert, der nach kurzen Amtszeiten als Abt von Tegernsee und von
                   Ebersberg schließlich Abt von Fulda wurde (1047–1058). Letzteres scheint AH ebenso
                   unbekannt zu sein wie der Umstand, dass jener kein Tegernseer, sondern Hersfelder
-                  Professe war: <rs type="bibl" key="bibl:36544">Leinweber, Fuldaer Äbte</rs> 41–43;
-                     <rs type="bibl" key="bibl:18024">Lindner, Familia S. Quirini</rs> 29, Ergh.
-                  245; <rs type="bibl" key="bibl:18238">Mayr, Ebersberg</rs> 22; <rs type="bibl"
-                     key="bibl:36752">Paulhuber, Ebersberg</rs> 354f.</p>
-            </note>
-            <note xml:id="d4618e32032">
-               <ref type="context">2</ref>
-               <label>Montis S. Georgii ... duos</label>
-               <p><rs type="bibl" key="bibl:18024">Lindner, Familia S. Quirini</rs> Ergh. 243, weist
-                  auch noch Abt Werner (1212–1242) als Tegernseer Professen aus; vgl. <rs
-                     type="bibl" key="bibl:36458">Kramer, St. Georgenberg</rs> 35–37, 100, 102f.;
-                     <rs type="bibl" key="bibl:36694">Naupp, Fiecht </rs>443, 477.</p>
-            </note>
-            <note xml:id="d4618e32037">
-               <ref type="context">2</ref>
-               <label>Oberaltaichense sex</label>
-               <p>Die sechs Genannten führt auch <rs type="bibl" key="bibl:18024">Lindner, Familia
+                  Professe war: <rs type="bibl" ref="bibl:36544">Leinweber, Fuldaer Äbte</rs> 41–43;
+                     <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> 29, Ergh.
+                  245; <rs type="bibl" ref="bibl:18238">Mayr, Ebersberg</rs> 22; <rs type="bibl" ref="bibl:36752">Paulhuber, Ebersberg</rs> 354f.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg2">
+            <mentioned>Montis S. Georgii ... duos</mentioned>
+            <p><rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> Ergh. 243, weist
+                  auch noch Abt Werner (1212–1242) als Tegernseer Professen aus; vgl. <rs type="bibl" ref="bibl:36458">Kramer, St. Georgenberg</rs> 35–37, 100, 102f.;
+                     <rs type="bibl" ref="bibl:36694">Naupp, Fiecht </rs>443, 477.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg2">
+            <mentioned>Oberaltaichense sex</mentioned>
+            <p>Die sechs Genannten führt auch <rs type="bibl" ref="bibl:18024">Lindner, Familia
                      S. Quirini</rs> Ergh. 244, an (mit irrigen Ordnungszahlen „Konrad III.“ und
-                  „Heinrich III.“). <rs type="bibl" key="bibl:36938">Schlecht, Wissenschaftliche
+                  „Heinrich III.“). <rs type="bibl" ref="bibl:36938">Schlecht, Wissenschaftliche
                      Betätigung</rs> 337, belegt Konrad IV. als Tegernseer Professen, nicht jedoch
                   Ulrich IV., den er bereits vor seiner Abtwahl als Infirmar und Cellerar in
                   Oberaltaich nachweisen will.</p>
-            </note>
-            <note xml:id="d4618e32042">
-               <ref type="context">2</ref>
-               <label>Reichenbacense</label>
-               <p>Vgl. <rs type="bibl" key="bibl:36936">Schindler, Zivilisation</rs> 191–200; <rs
-                     type="bibl" key="bibl:36964">Schöberl, Oberhueber</rs>.</p>
-            </note>
-            <note xml:id="d4618e32047">
-               <ref type="context">2</ref>
-               <label>Udalrici et Affrae ... tres primos</label>
-               <p>In cgm 3302 nennt AH die ersten vier Äbte von St. Ulrich und Afra als Tegernseer,
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg2">
+            <mentioned>Reichenbacense</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:36936">Schindler, Zivilisation</rs> 191–200; <rs type="bibl" ref="bibl:36964">Schöberl, Oberhueber</rs>.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg2">
+            <mentioned>Udalrici et Affrae ... tres primos</mentioned>
+            <p>In cgm 3302 nennt AH die ersten vier Äbte von St. Ulrich und Afra als Tegernseer,
                   auch Reginbald (ca. 1012–1015), welcher eigentlich aus St. Gallen gekommen war:
-                     <rs type="bibl" key="bibl:16972">Hemmerle, Benediktinerklöster</rs> 45.</p>
-            </note>
-            <note xml:id="d4618e32053">
-               <ref type="context">2</ref>
-               <label>S. Viti cis Rotham duos</label>
-               <p>Nach cgm 3302 sind Wimber und Kraz gemeint. Anscheinend war AH nicht bekannt, dass
+                     <rs type="bibl" ref="bibl:16972">Hemmerle, Benediktinerklöster</rs> 45.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg2">
+            <mentioned>S. Viti cis Rotham duos</mentioned>
+            <p>Nach cgm 3302 sind Wimber und Kraz gemeint. Anscheinend war AH nicht bekannt, dass
                   zuvor bereits der Tegernseer Professe Job von Lauterbach erst Administrator, dann
-                  Abt von St. Veit an der Rott gewesen war: <rs type="bibl" key="bibl:36420"
-                     >Kißlinger, St. Veit</rs> 135f.</p>
-            </note>
-            <note xml:id="d4618e32058">
-               <ref type="context">2</ref>
-               <label>Wessofontanum unum</label>
-               <p>Bei <rs type="bibl" key="bibl:18040">Lindner, Professbuch Wessobrunn</rs> 5, wird
+                  Abt von St. Veit an der Rott gewesen war: <rs type="bibl" ref="bibl:36420">Kißlinger, St. Veit</rs> 135f.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg2">
+            <mentioned>Wessofontanum unum</mentioned>
+            <p>Bei <rs type="bibl" ref="bibl:18040">Lindner, Professbuch Wessobrunn</rs> 5, wird
                   außer Petrus Göbl noch Abt Ulrich Stöckl (1438–1443) als Tegernseer Professe
                   genannt.</p>
-            </note>
-            <note xml:id="d4618e32063">
-               <ref type="context">2</ref>
-               <label>utrum notatu digna videantur</label>
-               <p>Das Material wurde offenbar von BP nicht gewünscht; es findet sich jedenfalls nicht in den Beilagen zu den weiteren Briefen AHs.</p>
-            </note>
-            <note xml:id="d4618e32068">
-               <ref type="context">3</ref>
-               <label>Anselmus et Colomannus</label>
-               <p>Vgl. <ref type="letter">43</ref> &lt;9&gt;, <ref type="letter">216</ref>, <ref
-                     type="letter">219</ref>.</p>
-            </note>
-            <note xml:id="d4618e32075">
-               <ref type="context">3</ref>
-               <label>communem novitiatum ... Weichenstephanii</label>
-               <p>Das Kommunnoviziat der Bayerischen Kongregation befand sich 1688–1699 in
-                  Weihenstephan. Zu seinen weiteren Standorten vgl. <rs type="bibl" key="bibl:16730"
-                     >Haering, Bayerische Benediktinerkongregation</rs> 639; <rs type="bibl"
-                     key="bibl:19054">Reichhold, 300 Jahre</rs> 667–670. Zur Institution allgemein
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg2">
+            <mentioned>utrum notatu digna videantur</mentioned>
+            <p>Das Material wurde offenbar von BP nicht gewünscht; es findet sich jedenfalls nicht in den Beilagen zu den weiteren Briefen AHs.</p>
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg3">
+            <mentioned>Anselmus et Colomannus</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:43">43</ref> <ref target="letter:43#seg9">9</ref>, <ref type="letter" target="letter:216">216</ref>, <ref type="letter" target="letter:219">219</ref>.</p>
+         </note>
+         <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg3">
+            <mentioned>communem novitiatum ... Weichenstephanii</mentioned>
+            <p>Das Kommunnoviziat der Bayerischen Kongregation befand sich 1688–1699 in
+                  Weihenstephan. Zu seinen weiteren Standorten vgl. <rs type="bibl" ref="bibl:16730">Haering, Bayerische Benediktinerkongregation</rs> 639; <rs type="bibl" ref="bibl:19054">Reichhold, 300 Jahre</rs> 667–670. Zur Institution allgemein
                   vgl. 36.</p>
-            </note>
-            <note xml:id="d4618e32080">
-               <ref type="context">3</ref>
-               <label>in communibus ... studiis</label>
-               <p>Die Standorte des Kommunstudiums wechselten häufig. Die philosophischen Studien
+         </note>
+         <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg3">
+            <mentioned>in communibus ... studiis</mentioned>
+            <p>Die Standorte des Kommunstudiums wechselten häufig. Die philosophischen Studien
                   wurden von 1689 bis 1692 in Scheyern gehalten, die theologischen 1689–1691 in
-                  Mallersdorf, 1692–1693 in Frauenzell und 1694–1697 in Prüfening: <rs type="bibl"
-                     key="bibl:19054">Reichhold, 300 Jahre</rs> 671f. Zur Institution allgemein vgl.
+                  Mallersdorf, 1692–1693 in Frauenzell und 1694–1697 in Prüfening: <rs type="bibl" ref="bibl:19054">Reichhold, 300 Jahre</rs> 671f. Zur Institution allgemein vgl.
                   36.</p>
-            </note>
-            <note xml:id="d4618e32085">
-               <ref type="context">3</ref>
-               <label>Frisingam ... neo-erectum gymnasium</label>
-               <p>Das bischöfliche Lyzeum in Freising wurde 1697 von Bischof Johann Franz Eckher von
+         </note>
+         <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg3">
+            <mentioned>Frisingam ... neo-erectum gymnasium</mentioned>
+            <p>Das bischöfliche Lyzeum in Freising wurde 1697 von Bischof Johann Franz Eckher von
                   Kapfing eingerichtet und der Leitung der Benediktiner unterstellt, woran sich
                   neben der Bayerischen Benediktinerkongregation noch andere bayerische und
-                  schwäbische Abteien beteiligten: <rs type="bibl" key="bibl:16214">Fink,
-                     Beiträge</rs> 247f.; <rs type="bibl" key="bibl:16730">Haering, Bayerische
-                     Benediktinerkongregation</rs> 628; <rs type="bibl" key="bibl:17206"
-                     >Hubensteiner, Geistliche Stadt</rs> 156–168; <rs type="bibl" key="bibl:19054"
-                     >Reichhold, 300 Jahre</rs> 679f.</p>
-            </note>
-            <note xml:id="d4618e32090">
-               <ref type="context">3</ref>
-               <label>Collectariis discursuum moralium ... librum meum asceticum</label>
-               <p>Die „Geistliche einöde“ erschien 1718; die Egerner Predigten AHs scheinen hingegen
-                  weder gedruckt worden noch handschriftlich erhalten zu sein. <rs type="bibl"
-                     key="bibl:18024">Lindner, Familia S. Quirini</rs> Ergh. 92f., verzeichnet
+                  schwäbische Abteien beteiligten: <rs type="bibl" ref="bibl:16214">Fink,
+                     Beiträge</rs> 247f.; <rs type="bibl" ref="bibl:16730">Haering, Bayerische
+                     Benediktinerkongregation</rs> 628; <rs type="bibl" ref="bibl:17206">Hubensteiner, Geistliche Stadt</rs> 156–168; <rs type="bibl" ref="bibl:19054">Reichhold, 300 Jahre</rs> 679f.</p>
+         </note>
+         <note target="#range(right('n19'), left('n19e'))" n="19" anchored="false" corresp="#seg3">
+            <mentioned>Collectariis discursuum moralium ... librum meum asceticum</mentioned>
+            <p>Die „Geistliche einöde“ erschien 1718; die Egerner Predigten AHs scheinen hingegen
+                  weder gedruckt worden noch handschriftlich erhalten zu sein. <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> Ergh. 92f., verzeichnet
                   mehrere erhaltene handschriftliche Bände von Predigten aus AHs Wirken in Freising
                   (1699–1702) sowie in Loiben (1721–1731); von Letzteren wurde auch 1727 und 1732
                   jeweils ein Band gedruckt.</p>
-            </note>
-            <note xml:id="d4618e32095">
-               <ref type="context">3</ref>
-               <label>ILLI aD saLVteM fLVant</label>
-               <p>AH gebraucht ein Chronogramm auf die Jahreszahl 1712.</p>
-            </note>
-            <note xml:id="d4618e32100">
-               <ref type="context">4</ref>
-               <label>Marianum Wiser et Ottonem Aicher</label>
-               <p>Wieser war 1686–1688 Professor der Philosophie, Aicher 1676–1705 Professor der
+         </note>
+         <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg3">
+            <mentioned>ILLI aD saLVteM fLVant</mentioned>
+            <p>AH gebraucht ein Chronogramm auf die Jahreszahl 1712.</p>
+         </note>
+         <note target="#range(right('n21'), left('n21e'))" n="21" anchored="false" corresp="#seg4">
+            <mentioned>Marianum Wiser et Ottonem Aicher</mentioned>
+            <p>Wieser war 1686–1688 Professor der Philosophie, Aicher 1676–1705 Professor der
                   Ethik an der Universität gewesen. Aicher hatte außerdem am akademischen Gymnasium
                   unterrichtet und 1664–1676 als dessen Präfekt sowie 1660–1705 als Bibliothekar
-                  gewirkt: <rs type="bibl" key="bibl:17590">Kolb, Präsidium</rs> 144f., 150–155. AH
+                  gewirkt: <rs type="bibl" ref="bibl:17590">Kolb, Präsidium</rs> 144f., 150–155. AH
                   müsste also vermutlich beide, jedenfalls aber Aicher in seiner Salzburger Zeit
                   gekannt haben.</p>
-            </note>
-            <note xml:id="d4618e32107">
-               <ref type="context">4</ref>
-               <label>Rottenses</label>
-               <p>Vgl. Abb. 5.4.</p>
-            </note>
-            <note xml:id="d4618e32113">
-               <ref type="context">4</ref>
-               <label>magis scribendi ... S. Viti</label>
-               <p>Vgl. <ref type="letter">206</ref> sowie Bemerkungen zu <ref type="letter"
-                     >226</ref>.</p>
-            </note>
-            <note xml:id="d4618e32118">
-               <ref type="context">5</ref>
-               <label>Aegidium Kibler Andecensem</label>
-               <p>Vgl. 36, von wo allerdings die irrige Floruit-Angabe BPs (vgl. Abb. 5.3) nicht genommen sein kann.</p>
-            </note>
-            <note xml:id="d4618e32125">
-               <ref type="context">5</ref>
-               <label>Resolutiones ... ex iure canonico</label>
-               <p>Unter diesem Titel nicht nachweisbar, jedoch wohl identisch mit den Thesen „Casus ex iure canonico“ (Regensburg 1697).</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg4">
+            <mentioned>Rottenses</mentioned>
+            <p>Vgl. Abb. 5.4.</p>
+         </note>
+         <note target="#range(right('n23'), left('n23e'))" n="23" anchored="false" corresp="#seg4">
+            <mentioned>magis scribendi ... S. Viti</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:206">206</ref> sowie Bemerkungen zu <ref type="letter" target="letter:226">226</ref>.</p>
+         </note>
+         <note target="#range(right('n24'), left('n24e'))" n="24" anchored="false" corresp="#seg5">
+            <mentioned>Aegidium Kibler Andecensem</mentioned>
+            <p>Vgl. 36, von wo allerdings die irrige Floruit-Angabe BPs (vgl. Abb. 5.3) nicht genommen sein kann.</p>
+         </note>
+         <note target="#range(right('n25'), left('n25e'))" n="25" anchored="false" corresp="#seg5">
+            <mentioned>Resolutiones ... ex iure canonico</mentioned>
+            <p>Unter diesem Titel nicht nachweisbar, jedoch wohl identisch mit den Thesen „Casus ex iure canonico“ (Regensburg 1697).</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:16512">
+            <title type="short">Glassner, Handschriften</title>
+            <biblScope>121</biblScope>
+         </bibl>
+         <bibl corresp="bibl:17432">
+            <title type="short">Katschthaler, Briefnachlass</title>
+            <biblScope>52</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18024">
+            <title type="short">Lindner, Familia S. Quirini</title>
+            <biblScope>Ergh. 91</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Benedictus Deus!</opener>
+         <opener>Tegernsee ex cella mea dilecta 10. Julii 1712.</opener>
+         <opener>Admodum reverende religiosissime ac clarissime domine pater, patrone colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Transmitto hic clarissimae paternitati vestrae <anchor xml:id="n1"/>nomina quorundam religiosorum<anchor xml:id="n1e"/> nostrorum Tegernseensium, qui aut litteris aliquid aut typis commendarunt publicis, aut etiam suis nobilissimis manuscriptis bibliothecam nostram Tegernseensem illustrarunt. Utinam hisce tam gratiosissimo mandato reverendissimi et amplissimi mei domini abbatis, quam etiam iustissimae petitioni et sanctissimis votis paternitatis vestrae satisfecissem! Feci, quod potui, et quae hic communico, omnia et singula ex libro quodam a me magno labore et industria hinc inde ex antiquitatibus nostri monasterii per plures annos collecto et anno 1709 in unum a me conscripto desumpsi, cuius titulus: <anchor xml:id="n2"/>Hortus Quirinalis Benedictino-Bavaricus<anchor xml:id="n2e"/> in suas areolas distinctus etc. Doleo certe inscitiam et tenuitatem calami ac ingenii mei, cuius defectus et ruditatem <pb n="1v"/> maximam clarissimae paternitatis vestrae foecundissimo ingenio ac doctissimo calamo depraedicandos et haec mea exigua folia insignis doctrinae suae radiis illustranda relinquo. Deus ter optimus maximus admodum reverendam ac clarissimam dominationem suam tanquam praecipuum sacri ordinis nostri et celeberrimi monasterii sui ornamentum salvam et incolumem diutissime conservet, ut insigne hoc opus universus orbis litterarius brevi videat et admiretur, Deumque laudet pro eo in saecula iuxta mentem sanctissimi legislatoris nostri, capite 57. sacrae Regulae: <anchor xml:id="n3"/>Ut in omnibus glorificetur Deus<anchor xml:id="n3e"/>! </ab>
+         <ab resp="#editor" xml:id="seg2">Occurrissent caeteroquin adhuc et alia, forte ad honorem nostri antiquissimi asceterii foliis meis hic transmissis etiam inserenda, specialiter de caeteris reverendissimis dominis <anchor xml:id="n4"/>abbatibus ex monasterio nostro Tegernseensi ad aliorum monasteriorum infulas postulatis<anchor xml:id="n4e"/>. (Habet enim a nobis <anchor xml:id="n5"/>Andecense seu Montis Sancti quattuor abbates<anchor xml:id="n5e"/>, Benedictoburanum <pb n="2r"/> itidem quattuor, <anchor xml:id="n6"/>Eberspergense unum<anchor xml:id="n6e"/>, Ettalense unum, Mettenense unum, Michlfeldense unum, monasterium <anchor xml:id="n7"/>Montis S. Georgii in Tyroli duos, Oberaltaichense sex, Reichenbacense unum, Rotense unum, Schyrense duos, Seonense unum, monasterium SS. Udalrici et Affrae Augustae Vindelicorum, quod hoc anno et mense Julio annum suum saecularem 700. celebravit, accepit ex nostro gremio et monasterio Tegernseensi primas suas colonias, duodecim nempe viros religiosos, et ex his tres primos suos abbates, monasterium S. Viti cis Rotham duos, Weichenstephanense duos<anchor xml:id="n7e"/> et <anchor xml:id="n8"/>Wessofontanum unum<anchor xml:id="n8e"/>.) Sed haec horumque specialia nomina, eorum annos et alia, cum nimis longum foret describere, studio praeterii et clarissimae paternitati vestrae eiusque prudentissimo iudicio relinquo, <anchor xml:id="n9"/>utrum notatu digna videantur<anchor xml:id="n9e"/>, ut horum aliqualis mentio <pb n="2v"/> in suo insigni opere fiat. </ab>
+         <ab resp="#editor" xml:id="seg3">Gratulor mihi de caeteris saltem quam maxime spartam hanc mihi confratrum meorum minimo et ineptissimo fuisse a reverendissimo domino domino abbate nostro oblatam, meque occasionem adeptum fuisse clarissimae dominationi vestrae aliquale servitium meum praestandi utpote patriotae meo colendissimo, sum enim solus in nostro monasterio natus Austriacus ex pago Trattnach Superioris Austriae prope <sic>Krieskärchen</sic> , natus anno 1668 die 15. Junii et baptizatus 16. Junii (quo die apud nos hic celebratur festum principalissimum translationis sancti Quirini regis et martyris); absolutis inferioribus scholis Salisburgi (tempore, quo clarissimi vestri patres <anchor xml:id="n10"/>Anselmus et Colomannus<anchor xml:id="n10e"/> studiis iuridicis vacabant, patroni mei semper colendissimi) anno 1688 ad <anchor xml:id="n11"/>communem novitiatum nostrum Weichenstephanii<anchor xml:id="n11e"/> tunc institutum missus, anno sequenti 13. Novembris in festo scilicet Omnium sanctorum monachorum cum moderno venerabili patre priore nostro Petro condiscipulo olim <pb n="3r"/> Salisburgi meo, tunc connovitio ac conprofesso meo, nunc superiore colendissimo, sacram professionem emisi; absolutis deinde cum eo tam philosophicis quam theologicis studiis <anchor xml:id="n12"/>in communibus congregationis nostrae studiis<anchor xml:id="n12e"/>, defensisque thesibus publicis impressis in quarto De essentia, attributis et gratia Dei specialiter scientia media etc. cum <sic>parrergis</sic>  ex universa theologia<note place="foot" xml:id="d4618e31906"><hi rend="italic">defensisque ... theologia</hi> mit Verweiszeichen am unteren Blattrand eingefügt. Im Text vor dem Verweiszeichen durchgestrichen <hi rend="italic">nostrae</hi>.</note>, anno 1696<note type="annotation" xml:id="d4618e31915">Danach unleserliche Streichung im Ausmaß von 2–3 Buchstaben oder Ziffern.</note> 14. Octobris in dedicatione ecclesiae nostrae indignissimus neomysta factus. Anno 1698 ex obedientia<del ana="#after">Fir</del> <anchor xml:id="n13"/>Frisingam ad instruendam iuventutem studiosam ad neo-erectum gymnasium<anchor xml:id="n13e"/> missus fui, quam spartam etiam per quattuor annos docendo <add place="left-margin"><witDetail wit="#A">mit Verweiszeichen am linken Blattrand</witDetail>ibidem primus rudimenta et grammaticen</add> obii, instituens simul ibidem pro iuventute ad modum Salisburgensium tyrocinium angelicum seu congregationem (datis etiam a me pro tyronibus typis<del ana="#after">re</del> Augustanis anno 1701 regulis et constitutionibus angelicae huius unionis certo<note place="foot" xml:id="d4618e31937">Mit Verweiszeichen über der Zeile eingefügt.</note> libello expressis). Tandem rursus domum vocatus sum ad animarum curam anno 1702, et anno 1705 28. Februarii licet omnium meorum confratrum indignissimus et minimus ad parochiam S. Laurentii in Egern administrandam assumptus fui, cui in hunc usque diem (utinam etiam cum fructu animarum curae meae commissarum!) praesum, conscriptis et ex cathedra ad plebem meam 1200 ovicularum iam habitis et <pb n="3v"/> huius temporis vicariatus mei decursu a me collectis undecim Collectariis discursuum moralium, seu undecim operibus manuscriptis moralibus concionum <add place="left-margin"><witDetail wit="#A">mit Verweiszeichen am linken Blattrand</witDetail>in quarto</add> et discursuum moralium etc. Faxint Superi intercedente thaumaturga Matre mea Virgine Egernensi, ut brevi opus et librum meum asceticum, quem nuper idiomate Germanico conscribere incepi (cuius titulus: Geistliche einöde, in welcher Cosmophilus und Monophilus auf denen drey weegen der reinigung, erleichtung und vereinigung mit Gott zur christlichen vollkhommenheit angeführt und nuzlich geleitet werden) ad optatum finem perducere et typis dare possim publicis. Utinam temporis penuriam tantam non paterer ratione parochiae meae etc.! Scribo haec, clarissime ac colendissime pater Bernarde, non <add place="above">inflatus</add> maligno superbiae spiritu, sed <add place="above">ex</add> zelo Benedictino <pb n="4r"/> bono, vero ac sincero, qualem video, sed maiorem, imo maximum, clarissimae paternitati vestrae a Deo datum, et ex corde intimo gratulor ordini universo, monasterio suo celeberrimo congaudeo et cum orbe litterario exulto et opto a Deo optimo, ut <anchor xml:id="n14"/>ILLI aD saLVteM fLVant<anchor xml:id="n14e"/> omnia vota mea et preces meae humillimae ad Deum et thaumaturgam Matrem meam <add place="left-margin">pro eo</add> fidelissime fundendae. </ab>
+         <ab resp="#editor" xml:id="seg4">Legi caeteroquin in impresso et communicato nobis catalogo ad saeculum XVII. <anchor xml:id="n15"/>Marianum Wiser et Ottonem Aicher<anchor xml:id="n15e"/> universitatis nostrae Salisburgensis viros celeberrimos <anchor xml:id="n16"/>Rottenses<anchor xml:id="n16e"/>, cum ad devitandam confusionem cum monasterio Rottensi <anchor xml:id="n17"/>magis scribendi et imprimendi forent S. Viti<anchor xml:id="n17e"/> cis Rotham, ubi professi sunt. </ab>
+         <ab resp="#editor" xml:id="seg5">Item deprehendi patrem <anchor xml:id="n18"/>Aegidium Kibler Andecensem<anchor xml:id="n18e"/> positum ad annum 1644 floruisse, quem hoc anno vix natum fuisse puto, <pb n="4v"/> cum primum anno 1682 Salisburgi theses theologicas defenderit et <sic>anno</sic>  1689 et 1691 et sequentibus theses suas philosophicas ac Problemata ascetica, item Physicam supernaturalem nec non <anchor xml:id="n19"/>Resolutiones suas selectas ex iure canonico<anchor xml:id="n19e"/>, item<del ana="#before">nec non</del> Quaestiones theologicas in communibus studiis congregationis nostrae ediderit, primus congregationis nostrae communis novitiatus novitiorum magister ac postmodum philosophiae, theologiae ac sacrorum canonum professor dignissimus, qui obiit anno 1701 27. Novembris. Atque haec obiter ad preces clarissimae paternitatis vestrae annotare volui, iuxta prudentissimum paternitatis vestrae iudicium forte aliqualiter immutanda. Cui me totum, meos calami exiguos labores enixissime commendans, consecro, dico et dedico maneoque</ab>
+         <closer>Admodum reverendae religiosissimae ac clarissimae paternitatis vestrae servus et amicus addictissimus indignissimus pater Alphonsus Hueber Tegernseensis, pro tempore vicarius ad thaumaturgam Matrem et S. Laurentium in Egern.</closer>
+         <closer xml:id="seg6">P.S. Clarissimis ac colendissimis dominis patribus Colomanno et Anselmo humillimam mei recommendationem rogo. Spero ultimum theses nostri patris Petri ante annum a me transmissas rite accepisse, librum primum scilicet Decretalium.</closer>
+         <closer xml:id="seg7">Optarem unam alteramque lineam responsoriam, utrum, quae hic transmitto, ad manus pervenerint<note place="foot" xml:id="d4618e31986"><hi rend="italic" xml:space="preserve">Optarem ... pervenerint </hi>am linken Blattrand von 1r nachgetragen.</note>?</closer>
+      </body>
    </text>
 </TEI>

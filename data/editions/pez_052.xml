@@ -1,47 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="52" xml:id="pez-0052">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">52 Benedikt Cherle an Bernhard Pez. 1710-03-28. Thierhaupten.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Benedikt Cherle an Bernhard Pez. 1710-03-28. Thierhaupten.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">52</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:18092">Machilek, Benedikt Cherle</rs> 51, 58f.,
-                     61</bibl>
-                  <bibl><rs type="bibl" key="bibl:18236">Mayer, Nachlaß</rs> 18 499</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Das Schreiben ist sichtlich eine Reaktion auf einen Aufruf im Sinne einer
+                  LE
+                  1. Da kein Brief BPs erwähnt wird und für den Aufruf
+                  verschiedene, auch indirekte Transmissionswege vorstellbar sind, wird kein
+                  Vorbrief angesetzt. – Am Ende von &lt;2&gt; eine Hinzufügung BPs, die in
+                  geschwungenen Klammern wiedergegeben wird.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">549r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 549r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -56,105 +77,92 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="next">
-                  <idno type="pezEd">84</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">143</idno>
-               </ref>
+               <ptr type="next" target="letter:084"/>
+               <ptr type="mentionedIn" target="letter:143"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">BCh lobt BPs Forschungseifer und berichtet über <rs ref="index:d10854e30724">Thierhaupten</rs>, dass im Laufe der Zeit viel von der Überlieferung durch die Brüder Krieg (Mars) und Brand (Vulcanus) zugrunde gegangen ist, zuletzt im Jahr 1704. Deswegen kann BCh auch nur wenig mitteilen, einiges zur Geschichte des Klosters hat er jedoch bereits in seiner beigelegten „<rs ref="index:d10854e5148">Chronologia monastico-philosophica</rs>“ erarbeitet.</p>
+            <p corresp="#seg2">An gedruckten Werken erwähnt BCh die „<rs ref="index:d10854e5257">Quinque gemitus</rs>“ (von <rs ref="index:d10854e5230">Korbinian Cherle</rs>); zum Autor, der in <rs ref="index:d10854e9955">Gaimersheim</rs> bei <rs ref="index:d14380e19712">Ingolstadt</rs> geboren wurde, finden sich in BChs „<rs ref="index:d10854e5148">Chronologia</rs>“ weitere Angaben. Er hinterließ unter anderen Handschriften ein „<rs ref="index:d10854e5238">Compendium zu den Predigtwerken</rs>“ von <rs ref="index:d10854e6454">Felipe Diez</rs> sowie eine „<rs ref="index:d10854e5252">Gloria Benedictina</rs>“ über die Heiligen des Ordens. {<rs ref="index:d10854e5230">Korbinian Cherle</rs> starb um 1670 (recte: 1681).}</p>
+            <p corresp="#seg3">Weiters wird in BChs „<rs ref="index:d10854e5148">Chronologia</rs>“ Abt <rs ref="index:d10854e10132">Benedikt Gaugenrieder</rs> behandelt, welcher mathematische Schriften und Instrumente hinterließ.</p>
+            <p corresp="#seg4">Von <rs ref="index:d10854e29452">Veit Spanney</rs> besitzt die <rs ref="index:d10854e30746">Thierhauptener Bibliothek</rs> <rs ref="index:d10854e29465">Handschriften mit qualitätvoller Poesie</rs> und <rs ref="index:d10854e29458">Prosa</rs>.</p>
+            <p corresp="#seg5">Auch andere Informationen wird BP in BChs „<rs ref="index:d10854e5148">Chronologia</rs>“ finden. Nicht erwähnt wird dort, dass Abt <rs ref="index:d10854e26654">Johann Rumpfart</rs> im Ruf der Heiligkeit starb.</p>
+            <p corresp="#seg6">Selbst erlebt hat BCh im Kloster 1686 den Tod von <rs ref="index:d10854e5888">Augustin Darwey</rs> aus <rs ref="index:d14380e29936">München</rs>, der Zeit seines Lebens ein steter Verehrer der <rs ref="index:d14380e26169">Gottesmutter</rs> war und viele Jahre einen schweren umgürteten Rosenkranz trug, mit dem er auch starb und so in den himmlischen Rosengarten verpflanzt wurde.</p>
+            <p corresp="#seg7">BCh weiß sonst nicht mehr zu berichten, als in seiner „<rs ref="index:d10854e5148">Chronologia</rs>“ steht – BP kann sie lesen und die Fehler ausbessern. Noch im selben Jahr sollen auch BChs <rs ref="index:d10854e5196">Werk zum Buch Genesis</rs> sowie seine „<rs ref="index:d14380e7955">Conciones extraordinariae</rs>“ erscheinen, die er bei Gelegenheit übersenden will.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e6436"><rs type="person" role="sender">BCh</rs> lobt <rs type="person" role="sender">BPs</rs> Forschungseifer und berichtet über <rs key="index:d10854e30724">Thierhaupten</rs>, dass im Laufe der Zeit viel von der Überlieferung durch die Brüder Krieg (<?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>Mars<?oxy_custom_end?>) und Brand (<?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>Vulcanus<?oxy_custom_end?>) zugrunde gegangen ist, zuletzt im Jahr 1704. Deswegen kann <rs type="person" role="sender">BCh</rs> auch nur wenig mitteilen, einiges zur Geschichte des <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Klosters<?oxy_custom_end?> hat er jedoch bereits in seiner beigelegten „<rs key="index:d10854e5148">Chronologia monastico-philosophica</rs>“ erarbeitet.</seg><seg type="context" n="2" xml:id="d4618e6438">An gedruckten Werken erwähnt <rs type="person" role="sender">BCh</rs> die „<rs key="index:d10854e5257">Quinque gemitus</rs>“ (von <rs key="index:d10854e5230">Korbinian Cherle</rs>); zum Autor, der in <rs key="index:d10854e9955">Gaimersheim</rs> bei <rs key="index:d14380e19712">Ingolstadt</rs> geboren wurde, finden sich in <rs type="person" role="sender">BChs</rs> „<rs key="index:d10854e5148">Chronologia</rs>“ weitere Angaben. Er hinterließ unter anderen Handschriften ein „<rs key="index:d10854e5238">Compendium zu den Predigtwerken</rs>“ von <rs key="index:d10854e6454">Felipe Diez</rs> sowie eine „<rs key="index:d10854e5252">Gloria Benedictina</rs>“ über die Heiligen des Ordens. {<rs key="index:d10854e5230">Korbinian Cherle</rs> starb um 1670 (recte: 1681).}</seg><seg type="context" n="3" xml:id="d4618e6440">Weiters wird in <rs type="person" role="sender">BChs</rs> „<rs key="index:d10854e5148">Chronologia</rs>“ Abt <rs key="index:d10854e10132">Benedikt Gaugenrieder</rs> behandelt, welcher mathematische Schriften und Instrumente hinterließ.</seg><seg type="context" n="4" xml:id="d4618e6442">Von <rs key="index:d10854e29452">Veit Spanney</rs> besitzt die <rs key="index:d10854e30746">Thierhauptener Bibliothek</rs> <rs key="index:d10854e29465"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Handschriften mit qualitätvoller Poesie<?oxy_custom_end?></rs> und <rs key="index:d10854e29458"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Prosa<?oxy_custom_end?></rs>.</seg><seg type="context" n="5" xml:id="d4618e6444">Auch andere Informationen wird <rs type="person" role="sender">BP</rs> in <rs type="person" role="sender">BChs</rs> „<rs key="index:d10854e5148">Chronologia</rs>“ finden. Nicht erwähnt wird dort, dass Abt <rs key="index:d10854e26654">Johann Rumpfart</rs> im Ruf der Heiligkeit starb.</seg><seg type="context" n="6" xml:id="d4618e6446">Selbst erlebt hat <rs type="person" role="sender">BCh</rs> im Kloster 1686 den Tod von <rs key="index:d10854e5888">Augustin Darwey</rs> aus <rs key="index:d14380e29936">München</rs>, der Zeit seines Lebens ein steter Verehrer der <rs key="index:d14380e26169">Gottesmutter</rs> war und viele Jahre einen schweren umgürteten Rosenkranz trug, mit dem er auch starb und so in den himmlischen Rosengarten verpflanzt wurde.</seg><seg type="context" n="7" xml:id="d4618e6448"><rs type="person" role="sender">BCh</rs> weiß sonst nicht mehr zu berichten, als in seiner „<rs key="index:d10854e5148">Chronologia</rs>“ steht – <rs type="person" role="sender">BP</rs> kann sie lesen und die Fehler ausbessern. Noch im selben Jahr sollen auch <rs type="person" role="sender">BChs</rs> <rs key="index:d10854e5196">Werk zum Buch Genesis</rs> sowie seine „<rs key="index:d14380e7955">Conciones extraordinariae</rs>“ erscheinen, die er bei Gelegenheit übersenden will.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">I</hi>.</p>
-            <div type="remarks">
-               <p>Das Schreiben ist sichtlich eine Reaktion auf einen Aufruf im Sinne einer
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>LE
-                  1<?oxy_custom_end?>. Da kein Brief BPs erwähnt wird und für den Aufruf
-                  verschiedene, auch indirekte Transmissionswege vorstellbar sind, wird kein
-                  Vorbrief angesetzt. – Am Ende von &lt;2&gt; eine Hinzufügung BPs, die in
-                  geschwungenen Klammern wiedergegeben wird.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende, religiosissime ac clarissime pater, domine colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e6469">Laudabilem eumque specialem ac indefessum paternitatis vestrae in conscribendis libris conatum promoturus sequentia de monasterio Thierhauptano communico: Primo quidem veneranda antiquitas multa de monasterio nostro posteritati consignavit, quae tamen duorum fratrum Martis et Vulcani rabies ferro flamaque alterno nempe furore pessum dedere: adeoque in petita communicatione parcum me esse cogunt; et ideo vel maxime, cum iterum in hoc ferreo saeculo <seg type="lemma" corresp="#d4618e6520">anno 1704 ex integro spoliati rotulae et alia Marti in praedam</seg> cesserint. Plura constabunt ex lectione laboris mei, quo ego pro modulo meo hac in parte laboravi, ut monasterii nostri originem, progressum, adversus [<hi rend="italic">sic</hi>] casus conscriberem, uti adiacens libellus indicat, Chronologiae monastico-philosophicae titulum prae se ferens. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e6474">Ex scriptoribus impressis est unus libellus, Quinque gemitus etc. indigitatus<note place="foot" xml:id="d4618e6476">	Danach durchgestrichen <hi rend="italic">indicat</hi>.</note>. Natus est author Gamershaimae prope Ingolstadium, caetera et satis notabillia [<hi rend="italic">sic</hi>] indicant <seg type="lemma" corresp="#d4618e6527">meae theses folio 177</seg>, ad quas paternitatem vestram mitto. Reliquit etiam egregius et praeclarus iste dominus inter plurima manuscripta Compendium in omnes partes Philippi Diez, item Gloriam Benedictinam sive praecipua gesta sanctorum ordinis nostri. Mortuus est anno<note place="foot" xml:id="d4618e6485">	Danach Auslassung.</note> {Obiit circiter anno domini 1670}. <pb n="1v"/> </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e6490">Huic annumero <seg type="lemma" corresp="#d4618e6534">Benedictum huius nominis abbatem</seg> primum, qui plurima reliquit scientiae magnae vestigia; reperitur et<note place="foot" xml:id="d4618e6492">	Über der Zeile eingefügt.</note> a me notatur folio 173. Fuit is matheseos peritissimus, cuius testes agunt annotationes et experientiae relictae ac instrumenta varia posteritati consignata. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e6495">Praeter hos duos invenio <seg type="lemma" corresp="#d4618e6541">Vitum Spannei</seg>, virum omni exceptione maiorem, qui rara et praeclara reliquit manuscripta stylo ligato et soluto elaborata, bibliothecae nostrae ornamenta. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e6497">Alia facile erunt invenienda in mea Chronologia, specialia in quaestione nona, praesertim apud dominum Corbinianum praelibatum. Unum calamus reticuit <seg type="lemma" corresp="#d4618e6548">de abbate Joanne</seg> folio 171, eum nempe in spe et fama sanctitatis decessisse. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e6499">Tempore, quo ego in monasterio vixi, mortuus est pater <seg type="lemma" corresp="#d4618e6555">Augustinus Darewey</seg> Monacensis, anno nempe 1686, singularis Deipare [<hi rend="italic">sic</hi>] cultor, qui rosario satis forti cinctus per multos annos ita vivere et mori voluit, dum illud etiam in extremo articulo deponere noluit, sed cum summa mortificatione gestare et sic mediante morte transplantari in aeternae felicitatis rosetum et florere ante Deum Reginamque sacri rosarii constans surculus. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d4618e6504">Plura non habeo, quam in <seg type="lemma" corresp="#d4618e6562">meis thesibus</seg> continentur; dignetur paternitas vestra eas legere, meos ac typogravi [<hi rend="italic">sic</hi>] errore [<hi rend="italic">sic</hi>] corrigere. Praeterea hoc anno typis mandabo <seg type="lemma" corresp="#d4618e6569">Problemata biblica in librum Genesis et Conciones</seg> meas extrordinarias [<hi rend="italic">sic</hi>], quibus et data occasione inserviam. Interim me commendo ac maneo</seg></p>
-            <p xml:space="preserve">Plurimum reverendae religiosissimae ac clarissimae paternitatis vestrae servus in Christo paratissimus pater Benedictus Cherle prior manu propria.</p>
-            <p xml:space="preserve">Dabam in exempto nostro monasterio Thierhauptano ordinis sancti Benedicti die 28. Martii anno 1710.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e6520">
-               <ref type="context">1</ref>
-               <label>anno 1704 ... Marti in praedam</label>
-               <p>Kloster Thierhaupten, aus dem Abt und Konvent geflohen waren, wurde im August und
-                  September 1704 von kaiserlichen Truppen geplündert: <rs type="bibl"
-                     key="bibl:15770">Debler, Thierhaupten</rs> 120f.; <rs type="bibl"
-                     key="bibl:18092">Machilek, Benedikt Cherle</rs> 55.</p>
-            </note>
-            <note xml:id="d4618e6527">
-               <ref type="context">2</ref>
-               <label>meae theses folio 177</label>
-               <p>Cherle, Chronologia 177–181; zu Korbinian Cherle, dem Onkel von BCh, vgl. <rs
-                     type="bibl" key="bibl:15770">Debler, Thierhaupten</rs> 76–113; <rs type="bibl"
-                     key="bibl:18092">Machilek, Benedikt Cherle</rs> 52f. Die genannten
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>anno 1704 ... Marti in praedam</mentioned>
+            <p>Kloster Thierhaupten, aus dem Abt und Konvent geflohen waren, wurde im August und
+                  September 1704 von kaiserlichen Truppen geplündert: <rs type="bibl" ref="bibl:15770">Debler, Thierhaupten</rs> 120f.; <rs type="bibl" ref="bibl:18092">Machilek, Benedikt Cherle</rs> 55.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>meae theses folio 177</mentioned>
+            <p>Cherle, Chronologia 177–181; zu Korbinian Cherle, dem Onkel von BCh, vgl. <rs type="bibl" ref="bibl:15770">Debler, Thierhaupten</rs> 76–113; <rs type="bibl" ref="bibl:18092">Machilek, Benedikt Cherle</rs> 52f. Die genannten
                   handschriftlichen Werke scheinen verloren zu sein. Die irrige Annahme BPs über das
                   Todesjahr dürfte daher rühren, dass Cherle 1669 resigniert hatte und erst zwölf
                   Jahre später verstorben war.</p>
-            </note>
-            <note xml:id="d4618e6534">
-               <ref type="context">3</ref>
-               <label>Benedictum ... abbatem</label>
-               <p>Cherle, Chronologia 173f.; zu ihm vgl. <rs type="bibl" key="bibl:15770">Debler,
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>Benedictum ... abbatem</mentioned>
+            <p>Cherle, Chronologia 173f.; zu ihm vgl. <rs type="bibl" ref="bibl:15770">Debler,
                      Thierhaupten</rs> 41–49.</p>
-            </note>
-            <note xml:id="d4618e6541">
-               <ref type="context">4</ref>
-               <label>Vitum Spannei</label>
-               <p>Vgl. <rs type="bibl" key="bibl:15770">Debler, Thierhaupten</rs> 256f.; zu den
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
+            <mentioned>Vitum Spannei</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:15770">Debler, Thierhaupten</rs> 256f.; zu den
                   handschriftlichen Werken bietet BCh etwas mehr in 85.</p>
-            </note>
-            <note xml:id="d4618e6548">
-               <ref type="context">5</ref>
-               <label>de abbate Joanne</label>
-               <p>Cherle, Chronologia 171, behandelt Abt Johannes Rumpfart (1533–1547). Dass er im
-                  Rufe der Heiligkeit gestorben sei, wird auch dort erwähnt. Zu Rumpfart vgl. <rs
-                     type="bibl" key="bibl:15770">Debler, Thierhaupten</rs> 39f.; <rs type="bibl"
-                     key="bibl:18028">Lindner, Memoriale San-Ulricanum</rs> 15 42.</p>
-            </note>
-            <note xml:id="d4618e6555">
-               <ref type="context">6</ref>
-               <label>Augustinus Darewey</label>
-               <p>Vgl. <rs type="bibl" key="bibl:15770">Debler, Thierhaupten</rs> 257.</p>
-            </note>
-            <note xml:id="d4618e6562">
-               <ref type="context">7</ref>
-               <label>meis thesibus</label>
-               <p><rs type="bibl" key="bibl:18092">Machilek, Benedikt Cherle</rs> 59, schließt aus
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg5">
+            <mentioned>de abbate Joanne</mentioned>
+            <p>Cherle, Chronologia 171, behandelt Abt Johannes Rumpfart (1533–1547). Dass er im
+                  Rufe der Heiligkeit gestorben sei, wird auch dort erwähnt. Zu Rumpfart vgl. <rs type="bibl" ref="bibl:15770">Debler, Thierhaupten</rs> 39f.; <rs type="bibl" ref="bibl:18028">Lindner, Memoriale San-Ulricanum</rs> 15 42.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg6">
+            <mentioned>Augustinus Darewey</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:15770">Debler, Thierhaupten</rs> 257.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg7">
+            <mentioned>meis thesibus</mentioned>
+            <p><rs type="bibl" ref="bibl:18092">Machilek, Benedikt Cherle</rs> 59, schließt aus
                   dieser Stelle auf ein weiteres verlorenes Thesenwerk BChs. Der Kontext legt jedoch
                   eine Identifikation mit der „Chronologia“ nahe.</p>
-            </note>
-            <note xml:id="d4618e6569">
-               <ref type="context">7</ref>
-               <label>Problemata ... Conciones</label>
-               <p>Die beiden Werke scheinen nicht erschienen zu sein; vgl. <rs type="bibl"
-                     key="bibl:18092">Machilek, Benedikt Cherle</rs> 57, 59, 62f.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg7">
+            <mentioned>Problemata ... Conciones</mentioned>
+            <p>Die beiden Werke scheinen nicht erschienen zu sein; vgl. <rs type="bibl" ref="bibl:18092">Machilek, Benedikt Cherle</rs> 57, 59, 62f.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>I</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:18092">
+            <title type="short">Machilek, Benedikt Cherle</title>
+            <biblScope>51, 58f., 61</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18236">
+            <title type="short">Mayer, Nachlaß</title>
+            <biblScope>18 499</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende, religiosissime ac clarissime pater, domine colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Laudabilem eumque specialem ac indefessum paternitatis vestrae in conscribendis libris conatum promoturus sequentia de monasterio Thierhauptano communico: Primo quidem veneranda antiquitas multa de monasterio nostro posteritati consignavit, quae tamen duorum fratrum Martis et Vulcani rabies ferro flamaque alterno nempe furore pessum dedere: adeoque in petita communicatione parcum me esse cogunt; et ideo vel maxime, cum iterum in hoc ferreo saeculo <anchor xml:id="n1"/>anno 1704 ex integro spoliati rotulae et alia Marti in praedam<anchor xml:id="n1e"/> cesserint. Plura constabunt ex lectione laboris mei, quo ego pro modulo meo hac in parte laboravi, ut monasterii nostri originem, progressum, <sic>adversus</sic> casus conscriberem, uti adiacens libellus indicat, Chronologiae monastico-philosophicae titulum prae se ferens. </ab>
+         <ab resp="#editor" xml:id="seg2">Ex scriptoribus impressis est unus libellus, Quinque gemitus etc. indigitatus<del ana="#after">indicat</del>. Natus est author Gamershaimae prope Ingolstadium, caetera et satis <sic>notabillia</sic> indicant <anchor xml:id="n2"/>meae theses folio 177<anchor xml:id="n2e"/>, ad quas paternitatem vestram mitto. Reliquit etiam egregius et praeclarus iste dominus inter plurima manuscripta Compendium in omnes partes Philippi Diez, item Gloriam Benedictinam sive praecipua gesta sanctorum ordinis nostri. Mortuus est anno<note place="foot" xml:id="d4618e6485">Danach Auslassung.</note> {Obiit circiter anno domini 1670}. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg3">Huic annumero <anchor xml:id="n3"/>Benedictum huius nominis abbatem<anchor xml:id="n3e"/> primum, qui plurima reliquit scientiae magnae vestigia; reperitur <add place="above">et</add> a me notatur folio 173. Fuit is matheseos peritissimus, cuius testes agunt annotationes et experientiae relictae ac instrumenta varia posteritati consignata. </ab>
+         <ab resp="#editor" xml:id="seg4">Praeter hos duos invenio <anchor xml:id="n4"/>Vitum Spannei<anchor xml:id="n4e"/>, virum omni exceptione maiorem, qui rara et praeclara reliquit manuscripta stylo ligato et soluto elaborata, bibliothecae nostrae ornamenta. </ab>
+         <ab resp="#editor" xml:id="seg5">Alia facile erunt invenienda in mea Chronologia, specialia in quaestione nona, praesertim apud dominum Corbinianum praelibatum. Unum calamus reticuit <anchor xml:id="n5"/>de abbate Joanne<anchor xml:id="n5e"/> folio 171, eum nempe in spe et fama sanctitatis decessisse. </ab>
+         <ab resp="#editor" xml:id="seg6">Tempore, quo ego in monasterio vixi, mortuus est pater <anchor xml:id="n6"/>Augustinus Darewey<anchor xml:id="n6e"/> Monacensis, anno nempe 1686, singularis <sic>Deipare</sic> cultor, qui rosario satis forti cinctus per multos annos ita vivere et mori voluit, dum illud etiam in extremo articulo deponere noluit, sed cum summa mortificatione gestare et sic mediante morte transplantari in aeternae felicitatis rosetum et florere ante Deum Reginamque sacri rosarii constans surculus. </ab>
+         <ab resp="#editor" xml:id="seg7">Plura non habeo, quam in <anchor xml:id="n7"/>meis thesibus<anchor xml:id="n7e"/> continentur; dignetur paternitas vestra eas legere, meos ac <sic>typogravi</sic> <sic>errore</sic> corrigere. Praeterea hoc anno typis mandabo <anchor xml:id="n8"/>Problemata biblica in librum Genesis et Conciones<anchor xml:id="n8e"/> meas <sic>extrordinarias</sic>, quibus et data occasione inserviam. Interim me commendo ac maneo</ab>
+         <closer>Plurimum reverendae religiosissimae ac clarissimae paternitatis vestrae servus in Christo paratissimus pater Benedictus Cherle prior manu propria.</closer>
+         <closer>Dabam in exempto nostro monasterio Thierhauptano ordinis sancti Benedicti die 28. Martii anno 1710.</closer>
+      </body>
    </text>
 </TEI>

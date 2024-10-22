@@ -1,29 +1,61 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="446" xml:id="pez-0446">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">[446] Bernhard Pez an Joachim Edlinger. &lt; 1715-10-03.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Bernhard Pez an Joachim Edlinger. &lt; 1715-10-03.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">446</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
+            <note type="remarks">
+               Aus der Formulierung <orig>utriusque vestrum [...] epistolis</orig> in
+                     448 &lt;2&gt; ist zu entnehmen, dass
+                  BP
+                  und
+                  HP
+                  separate Briefe an
+                  JE
+                  geschrieben hatten.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <p>No direct source, inferred letter.</p>
+            <listWit>
+               <witness ana="cmif:noTextBase"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -37,44 +69,18 @@
                <persName>Joachim Edlinger</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">444</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">447</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">448</idno>
-               </ref>
+               <ptr type="prev" target="letter:444"/>
+               <ptr type="next" target="letter:447"/>
+               <ptr type="mentionedIn" target="letter:448"/>
             </correspContext>
          </correspDesc>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
    <text>
-      <front>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Aus der Formulierung <hi rend="italic">utriusque vestrum [...] epistolis</hi> in
-                     <ref type="letter">448</ref> &lt;2&gt; ist zu entnehmen, dass
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BP<?oxy_custom_end?>
-                  und
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>HP<?oxy_custom_end?>
-                  separate Briefe an
-                  <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>JE<?oxy_custom_end?>
-                  geschrieben hatten.</p>
-            </div>
-         </div>
-      </front>
       <body>
          <ab>
             <gap reason="inferred letter"/>
          </ab>
       </body>
-      <back/>
    </text>
 </TEI>

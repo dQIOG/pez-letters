@@ -1,38 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="819" xml:id="pez-0819">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">819 Alphons Hueber an Bernhard Pez. 1717-09-12. Tegernsee.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Alphons Hueber an Bernhard Pez. 1717-09-12. Tegernsee.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">819</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">589r–590v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 589r–590v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,100 +68,115 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">727</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">869</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">818</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">820</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">818</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">820</idno>
-               </ref>
+               <ptr type="prev" target="letter:727"/>
+               <ptr type="next" target="letter:869"/>
+               <ptr type="mentions" target="letter:818"/>
+               <ptr type="mentions" target="letter:820"/>
+               <ptr type="sentWith" target="letter:818"/>
+               <ptr type="sentWith" target="letter:820"/>
             </correspContext>
          </correspDesc>
+         
+         <textClass><keywords>
+            <term ref="index:d14380e4170">Bayern, Bayern</term>
+            <term ref="index:d14380e9152">Degler, Castorius</term>
+            <term ref="index:d14380e16887">Hager, Martin</term>
+            <term ref="index:d14380e18936">Hueber, Alphons ; Inhaltsübersichten zu acht Handschriften von Wolfgang Seidel.
+         Ms</term>
+            <term ref="index:d14380e18952">Hueber, Alphons ; *Notizen zu Tegernseer Handschriften. Ms</term>
+            <term ref="index:d14380e20779">Johannes von Speyer ; Briefe. Ms. Tegernsee ; Abschrift von Roman Krinner. Ms</term>
+            <term ref="index:d14380e23222">Krinner, Roman</term>
+            <term ref="index:d14380e31465">Österreich, Österreicher</term>
+            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+            <term ref="index:d14380e34537">Pez, Hieronymus</term>
+            <term ref="index:d14380e39962">Schramb, Anselm</term>
+            <term ref="index:d14380e40370">Seidel, Wolfgang</term>
+            <term ref="index:d14380e40382">Seidel, Wolfgang ; Predigthandschriften. Mss. Tegernsee</term>
+            <term ref="index:d14380e42111">Tegernsee</term>
+            <term ref="index:d14380e45099">Wein</term></keywords></textClass>
+         <abstract>
+            <p corresp="#seg1">AH geht davon aus, dass BP und HP wohlbehalten von ihrer <rs ref="index:d14380e34236">Bibliotheksreise</rs> heimgekehrt sind. Er übermittelt in der Beilage unter der Hand (sub rosa) die
+               noch ausstehenden <rs ref="index:d14380e18952">Angaben zu alten Tegernseer Handschriften</rs> und
+               zugleich die noch fehlenden der von <rs ref="index:d14380e23222">Roman Krinner</rs> <rs ref="index:d14380e20779">abgeschriebenen Briefe</rs> (<ref type="letter" target="letter:818">818</ref>, <ref type="letter" target="letter:820">820</ref>) sowie eine von ihm selbst
+               zusammengestellte <rs ref="index:d14380e18936">Übersicht der Inhalte</rs> der<rs ref="index:d14380e40382"> weiteren acht Handschriften</rs>
+               von <rs ref="index:d14380e40370">Wolfgang Seidel</rs>.</p>
+            <p corresp="#seg2">AH selbst bereitet sich derzeit darauf vor, gemeinsam mit <rs ref="index:d14380e9152">Castorius
+                  Degler</rs> nach <rs ref="index:d14380e31465">Österreich</rs> zur Beaufsichtigung der <rs ref="index:d14380e45099">Weinlese</rs> zu reisen. Bei dieser Gelegenheit wird er das Brüderpaar
+               besuchen, das eben noch das unbedeutende <rs ref="index:d14380e4170">Bayern</rs> mit seiner Anwesenheit
+               erleuchtete. In <rs ref="index:d14380e42111">Tegernsee</rs> erinnert man sich des Besuches gerne, doch
+               wünscht AH, dass man den Gästen mehr Ehre hätte erweisen können. Seine eigenen Versäumnisse will AH
+               mündlich entschuldigen, wenn er Melk besucht, was spätestens auf seiner Rückreise aus Österreich gegen
+               Ende des Monats Oktober möglich sein wird.</p>
+            <p corresp="#seg3">In einem Postskriptum lässt AH <rs ref="index:d14380e39962">Anselm Schramb</rs> und <rs ref="index:d14380e16887">Martin Hager</rs> grüßen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e41128"><rs type="person" role="sender">AH</rs> geht davon aus, dass <rs type="person" role="sender">BP</rs> und HP wohlbehalten von ihrer Bibliotheksreise heimgekehrt sind. Er übermittelt in der Beilage unter der Hand (sub rosa) die noch ausstehenden Angaben zu alten Tegernseer Handschriften und zugleich die noch fehlenden der von Roman Krinner abgeschriebenen Briefe (818, 820) sowie eine von ihm selbst zusammengestellte Übersicht der Inhalte der weiteren acht Handschriften von Wolfgang Seidel.</seg><seg type="context" n="2" xml:id="d3e41130"><rs type="person" role="sender">AH</rs> selbst bereitet sich derzeit darauf vor, gemeinsam mit Castorius Degler nach Österreich zur Beaufsichtigung der Weinlese zu reisen. Bei dieser Gelegenheit wird er das Brüderpaar besuchen, das eben noch das unbedeutende Bayern mit seiner Anwesenheit erleuchtete. In Tegernsee erinnert man sich des Besuches gerne, doch wünscht AH, dass man den Gästen mehr Ehre hätte erweisen können. Seine eigenen Versäumnisse will <rs type="person" role="sender">AH</rs> mündlich entschuldigen, wenn er Melk besucht, was spätestens auf seiner Rückreise aus Österreich gegen Ende des Monats Oktober möglich sein wird.</seg><seg type="context" n="3" xml:id="d3e41132">In einem Postskriptum lässt <rs type="person" role="sender">AH</rs> Anselm Schramb und Martin Hager grüßen.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Tegernsee die 12. Septembris 1717.</p>
-            <p xml:space="preserve">Plurimum reverende religiosissime ac clarissime domine Bernarde, colendissime frater, amice observandissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e41147"><seg type="lemma" corresp="#d3e41196">Salvum te in tuo dilectissimo gremio cum germano tuo, filio meo dulcissimo, advenisse</seg> firmissime spero et ex corde gaudeo. En<seg type="lemma" corresp="#d3e41202"> promissos adhuc desideratos antiquissimos codices</seg> e scrinio thesauri mei pectoralis hic sub rosa communico, et cum reliquis adhuc exoptatis<seg type="lemma" corresp="#d3e41206"> epistolis</seg> a patre Romano nostro descriptis, nec non et a me<note place="foot" xml:id="d3e41149"><hi rend="italic" xml:space="preserve">	a me </hi>über der Zeile eingefügt.</note> collectis<seg type="lemma" corresp="#d3e41210"> materiis in octo libris Sedelii</seg> nostri comprehensis demisso animo offero ac transmitto. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e41154">Sed ubi Alphonsus? Detentusne haerebit<note place="foot" xml:id="d3e41156">	Korrigiert aus<hi rend="italic" xml:space="preserve"> haeret.</hi></note> domi? Neutiquam. Reculas <pb n="1v"/> meas actualiter colligo ac utensilia etc., abiturus post duos vel tres dies cum <seg type="lemma" corresp="#d3e41214">fratre Castorio</seg> in Austriam etc. als Tegernseeischer herr abgesandter <seg type="lemma" corresp="#d3e41220">zum heyrigen weinlesen</seg>. Hac exoptatissima occasione amplectar nobile par fratrum, qui sua acceptissima ubique praesentia virtutumque ac doctrinae radiis<seg type="lemma" corresp="#d3e41224"> illustrarunt minimam Bavariam</seg> nostram. O quoties, amandissima pectora, vestri dulcissima memoria resonat in auribus nostris! O utinam dignis vos honoribus et <pb n="2r"/> obsequiis<note place="foot" xml:id="d3e41165">	Korrigiert aus <hi rend="italic">obsequissimum.</hi></note> minimum nostrum monasterium venerari potuisset; deprecabor errores<note place="foot" xml:id="d3e41170">	Danach durchgestrichen <hi rend="italic">meos.</hi></note> ac negligentias meas praesens et oretenus, ubi plura de itinere vestro. Fra tanto mi raccommando demississime ac humillime utrique cordi fraterno ac filiali, quod certissime amplecti spero, si non citius, saltem in reditu ad finem circiter Octobris<note place="foot" xml:id="d3e41176"><hi rend="italic" xml:space="preserve">	ad ... Octobris </hi>mit Verweiszeichen am unteren Blattrand eingefügt.</note>. Valete meique ad Deum memores vivite, ut brevi vos <pb n="2v"/> videre et venerari possim, qui sum</seg></p>
-            <p xml:space="preserve">Plurimum reverendae religiosissimae ac clarissimae paternitatis vestrae, fratris mei amandissimi, germanique tui, filii mei dulcissimi, indignissimus frater et pater Alphonsus.</p>
-            <p xml:space="preserve"><seg type="context" n="3" xml:space="preserve" xml:id="d3e41187">P.S. Clarissimo domino patri <seg type="lemma" corresp="#d3e41228">Anselmo nec non et patri Martino</seg> humillimam<note place="foot" xml:id="d3e41189">	Abkürzung <hi rend="italic">hullmam</hi>, Auflösung unsicher.</note> mei recommendationem rogo.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e41196">
-               <ref type="context">1</ref>
-               <label>Salvum ... advenisse</label><p> Tatsächlich erreichten BP und HP Melk erst am 22. September: vgl. Einleitung, Abschnitt I.2; sowie Anhang III.2.</p></note>
-            <note xml:id="d3e41202">
-               <ref type="context">1</ref>
-               <label> promissos ... antiquissimos codices</label><p> Die Beilage ist anhand dieser
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>Salvum ... advenisse</mentioned>
+            <p> Tatsächlich erreichten BP und HP Melk erst am 22. September: vgl. Einleitung, Abschnitt I.2; sowie Anhang III.2.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> promissos ... antiquissimos codices</mentioned>
+            <p> Die Beilage ist anhand dieser
                   Angabe nicht sicher zu bestimmen. Auch die Aussagen AHs bezüglich der
-                  Geheimhaltung der Übermittlung sind nicht näher zu deuten: doch vgl. <ref
-                     type="letter">907</ref> &lt;1&gt; und &lt;2&gt;. Möglicherweise handelte es
+                  Geheimhaltung der Übermittlung sind nicht näher zu deuten: doch vgl. <ref type="letter" target="letter:907">907</ref> <ref target="letter:907#seg1">1</ref> und <ref target="letter:907#seg2">2</ref>. Möglicherweise handelte es
                   sich um von AH unbefugt entnommene Materialien aus dem sogenannten „Tempel“,
-                  welche er als Bestand seiner Zelle tarnte.</p></note>
-            <note xml:id="d3e41206">
-               <ref type="context">1</ref>
-               <label> epistolis</label><p>Es ist anzunehmen, dass sowohl 818 mit Krinners Abschriften der Briefe des Johannes von Speyer, auf welche die Formulierung AHs zutrifft, als auch 820, der dasselbe Datum trägt wie dieser Brief, gemeinsam mit ihm verschickt wurden.</p></note>
-            <note xml:id="d3e41210">
-               <ref type="context">1</ref>
-               <label> materiis ... Sedelii</label><p>Die Beilage ist erhalten: StiA Melk, Kt. 85
+                  welche er als Bestand seiner Zelle tarnte.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned> epistolis</mentioned>
+            <p>Es ist anzunehmen, dass sowohl 818 mit Krinners Abschriften der Briefe des Johannes von Speyer, auf welche die Formulierung AHs zutrifft, als auch 820, der dasselbe Datum trägt wie dieser Brief, gemeinsam mit ihm verschickt wurden.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
+            <mentioned> materiis ... Sedelii</mentioned>
+            <p>Die Beilage ist erhalten: StiA Melk, Kt. 85
                   Varia 23, Fasz. 1, Nr. 23. Sie trägt den Titel „Wolfgangi Sedelii professi
                   Tegernseensis residuorum adhuc sermonum et tractatuum in octo libris
                   comprehensorum contenta“ und bietet Aufstellungen des Inhalts von acht
                   Handschriften: BStB München, clm 18682, clm 18683, clm 18695, clm 18687, clm
                   18688, clm 18690, clm 18692, cgm 4304. Die Identifizierung erfolgt nach der
-                  Übersicht bei <rs type="bibl" key="bibl:18884">Pöhlein, Wolfgang Seidel</rs>
-                  194–242.</p></note>
-            <note xml:id="d3e41214">
-               <ref type="context">2</ref>
-               <label>fratre Castorio</label><p><rs type="bibl" key="bibl:18024">Lindner, Familia S.
-                     Quirini</rs> Ergh. 123. </p></note>
-            <note xml:id="d3e41220">
-               <ref type="context">2</ref>
-               <label>zum heyrigen weinlesen</label><p>AH war seit dem 2. April 1717 mit dem Amt des
-                  Zellerars betraut: <rs type="bibl" key="bibl:18024">Lindner, Familia S.
+                  Übersicht bei <rs type="bibl" ref="bibl:18884">Pöhlein, Wolfgang Seidel</rs>
+                  194–242.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned>fratre Castorio</mentioned>
+            <p><rs type="bibl" ref="bibl:18024">Lindner, Familia S.
+                     Quirini</rs> Ergh. 123. </p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
+            <mentioned>zum heyrigen weinlesen</mentioned>
+            <p>AH war seit dem 2. April 1717 mit dem Amt des
+                  Zellerars betraut: <rs type="bibl" ref="bibl:18024">Lindner, Familia S.
                      Quirini</rs> Ergh. 85. Zu den Besitzungen seines Klosters in Österreich vgl.
-                     <ref type="letter">655</ref> &lt;8&gt;.</p></note>
-            <note xml:id="d3e41224">
-               <ref type="context">2</ref>
-               <label> illustrarunt ... Bavariam</label><p>Zum Besuch BPs und HPs in Tegernsee vgl.
-                     <ref type="letter">798</ref> &lt;5&gt;, <ref type="letter">804 </ref>&lt;1&gt;;
-                  sowie <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs> 1 xii–xvi. AH wird dort
+                     <ref type="letter" target="letter:655">655</ref> <ref target="letter:655#seg8">8</ref>.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg2">
+            <mentioned> illustrarunt ... Bavariam</mentioned>
+            <p>Zum Besuch BPs und HPs in Tegernsee vgl.
+                     <ref type="letter" target="letter:798">798</ref> <ref target="letter:798#seg5">5</ref>, <ref type="letter" target="letter:804">804 </ref><ref target="letter:804 #seg1">1</ref>;
+                  sowie <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 1 xii–xvi. AH wird dort
                   – entgegen seinen Beteuerungen hier – in höchsten Tönen gelobt. Der Aufenthalt
-                  dauerte vom 30. Juni bis zum 12. Juli 1717: vgl. <rs type="bibl" key="bibl:16214"
-                     >Fink, Beiträge</rs> 224; <rs type="bibl" key="bibl:16794">Hammermayer,
-                     Maurinismus</rs> 400; <rs type="bibl" key="bibl:18024">Lindner, Familia S.
-                     Quirini</rs> Ergh. 87f.</p></note>
-            <note xml:id="d3e41228">
-               <ref type="context">3</ref>
-               <label>Anselmo ... Martino</label><p> Vgl. <ref type="letter">505</ref>
-                  &lt;8&gt;.</p></note>
-         </div>
-      </back>
+                  dauerte vom 30. Juni bis zum 12. Juli 1717: vgl. <rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 224; <rs type="bibl" ref="bibl:16794">Hammermayer,
+                     Maurinismus</rs> 400; <rs type="bibl" ref="bibl:18024">Lindner, Familia S.
+                     Quirini</rs> Ergh. 87f.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
+            <mentioned>Anselmo ... Martino</mentioned>
+            <p> Vgl. <ref type="letter" target="letter:505">505</ref>
+                  <ref target="letter:505#seg8">8</ref>.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Tegernsee die 12. Septembris 1717.</opener>
+         <opener>Plurimum reverende religiosissime ac clarissime domine Bernarde, colendissime frater, amice observandissime.</opener>
+         <ab resp="#editor" xml:id="seg1"><anchor xml:id="n1"/>Salvum te in tuo dilectissimo gremio cum germano tuo, filio meo dulcissimo, advenisse<anchor xml:id="n1e"/> firmissime spero et ex corde gaudeo. En<anchor xml:id="n2"/> promissos adhuc desideratos antiquissimos codices<anchor xml:id="n2e"/> e scrinio thesauri mei pectoralis hic sub rosa communico, et cum reliquis adhuc exoptatis<anchor xml:id="n3"/> epistolis<anchor xml:id="n3e"/> a patre Romano nostro descriptis, nec non et <add place="above">a me</add> collectis<anchor xml:id="n4"/> materiis in octo libris Sedelii<anchor xml:id="n4e"/> nostri comprehensis demisso animo offero ac transmitto. </ab>
+         <ab resp="#editor" xml:id="seg2">Sed ubi Alphonsus? Detentusne <choice><sic>haeret.</sic><corr>haerebit</corr></choice> domi? Neutiquam. Reculas <pb n="1v"/> meas actualiter colligo ac utensilia etc., abiturus post duos vel tres dies cum <anchor xml:id="n5"/>fratre Castorio<anchor xml:id="n5e"/> in Austriam etc. als Tegernseeischer herr abgesandter <anchor xml:id="n6"/>zum heyrigen weinlesen<anchor xml:id="n6e"/>. Hac exoptatissima occasione amplectar nobile par fratrum, qui sua acceptissima ubique praesentia virtutumque ac doctrinae radiis<anchor xml:id="n7"/> illustrarunt minimam Bavariam<anchor xml:id="n7e"/> nostram. O quoties, amandissima pectora, vestri dulcissima memoria resonat in auribus nostris! O utinam dignis vos honoribus et <pb n="2r"/> <choice><sic>obsequissimum.</sic><corr>obsequiis</corr></choice> minimum nostrum monasterium venerari potuisset; deprecabor errores<del ana="#after">meos.</del> ac negligentias meas praesens et oretenus, ubi plura de itinere vestro. Fra tanto mi raccommando demississime ac humillime utrique cordi fraterno ac filiali, quod certissime amplecti spero, si non citius, saltem in reditu <add place="lower-margin"><witDetail wit="#A">mit Verweiszeichen am unteren Blattrand</witDetail>ad finem circiter Octobris</add>. Valete meique ad Deum memores vivite, ut brevi vos <pb n="2v"/> videre et venerari possim, qui sum</ab>
+         <closer>Plurimum reverendae religiosissimae ac clarissimae paternitatis vestrae, fratris mei amandissimi, germanique tui, filii mei dulcissimi, indignissimus frater et pater Alphonsus.</closer>
+         <closer xml:id="seg3">P.S. Clarissimo domino patri <anchor xml:id="n8"/>Anselmo nec non et patri Martino<anchor xml:id="n8e"/> humillimam<note type="annotation" xml:id="d3e41189">Abkürzung <orig>hullmam</orig>, Auflösung unsicher.</note> mei recommendationem rogo.</closer>
+      </body>
    </text>
 </TEI>

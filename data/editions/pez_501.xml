@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="501" xml:id="pez-0501">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">501 Wolfgang Dullinger an Bernhard Pez. 1716-02-06. Rott am Inn.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Wolfgang Dullinger an Bernhard Pez. 1716-02-06. Rott am Inn.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">501</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -23,9 +35,38 @@
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <p>Original: I, 436r–v (A); Abschrift WDs: BStB München, clm 1445, 451 (B).</p>
+            <listWit>
+               <witness xml:id="A" ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 436r–v</idno>
+                     </msIdentifier>
+                     <ab>(A);</ab>
+                  </msDesc>
+               </witness>
+               <witness xml:id="B" ana="cmif:copy">
+                  <msDesc>
+                     <msIdentifier>
+                        <repository>BStB München</repository>
+                        <idno>clm 1445, 451</idno>
+                     </msIdentifier>
+                     <ab>(B).</ab>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -40,76 +81,47 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">493</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">527</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">527</idno>
-               </ref>
+               <ptr type="prev" target="letter:493"/>
+               <ptr type="next" target="letter:527"/>
+               <ptr type="mentionedIn" target="letter:527"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Vier Jahre sind vergangen, seit <rs type="person">WD</rs> auf Anweisung seiner Oberen (Abt <rs ref="index:d14380e31203">Aemilian Oetlinger</rs>) mit der Abfassung eines <rs ref="index:d14380e10144">Schriftstellerkatalogs</rs> von <rs ref="index:d10854e26457">Rott am Inn</rs> begonnen hat. Da er jedoch feststellte, dass die wenigen Autoren in ihrer Qualität den Anforderungen von BPs Werk („<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“) nicht entsprechen würden, sah er von einer Übermittlung ab.</p>
+            <p corresp="#seg2">Dasselbe gilt auch für die <rs ref="index:d14380e10135">Beschreibung</rs> seines Klosters, die <rs type="person">WD</rs> (für die <rs ref="index:d10854e15615">Mauriner</rs>) erstellt hat, die ihm und anderen jedoch dann nach dem Erscheinen des fünften Bandes der „<rs ref="index:d14380e25749">Annales OSB</rs>“ zu spät zu kommen schien.</p>
+            <p corresp="#seg3">Nun aber hat jüngst die allen gefällige Mensallesung von BPs „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“, und besonders die darin genannten Namen von <rs ref="index:d14380e4919">Benediktinerschriftstellern</rs>, dazu angeregt, die beiden unterbrochenen Vorhaben für BP wie auch für die <rs ref="index:d14380e12712">französischen</rs> Mitbrüder von Neuem aufzunehmen. BP soll über die mitgeschickte Hausgeschichte („Monasterii Rotensis in Superiore Bavaria descriptio“) urteilen, ob es wert {und noch angebracht} ist, sie nach <rs ref="index:d14380e32292">Paris</rs> zu versenden; andernfalls erwartet man die Rücksendung der Schrift.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e2546">Vier Jahre sind vergangen, seit <rs type="person" key="">WD</rs> auf Anweisung seiner Oberen (Abt <rs key="index:d14380e31203">Aemilian Oetlinger</rs>) mit der Abfassung eines <rs key="index:d14380e10144">Schriftstellerkatalogs</rs> von <rs key="index:d10854e26457">Rott am Inn</rs> begonnen hat. Da er jedoch feststellte, dass die wenigen Autoren in ihrer Qualität den Anforderungen von <rs type="person" role="sender">BPs</rs> Werk („<rs key="index:d14380e33227">Bibliotheca Benedictina</rs>“) nicht entsprechen würden, sah er von einer Übermittlung ab.</seg><seg type="context" n="2" xml:id="d3e2548">Dasselbe gilt auch für die <rs key="index:d14380e10135">Beschreibung</rs> seines Klosters, die <rs type="person" key="">WD</rs> (für die <rs key="index:d10854e15615">Mauriner</rs>) erstellt hat, die ihm und anderen jedoch dann nach dem Erscheinen des fünften Bandes der „<rs key="index:d14380e25749">Annales OSB</rs>“ zu spät zu kommen schien.</seg><seg type="context" n="3" xml:id="d3e2550">Nun aber hat jüngst die allen gefällige Mensallesung von <rs type="person" role="sender">BPs</rs> „<rs key="index:d14380e33682">Epistolae apologeticae</rs>“, und besonders die darin genannten Namen von <rs key="index:d14380e4919">Benediktinerschriftstellern</rs>, dazu angeregt, die beiden unterbrochenen Vorhaben für <rs type="person" role="sender">BP</rs> wie auch für die <rs key="index:d14380e12712">französischen</rs> Mitbrüder von Neuem aufzunehmen. <rs type="person" role="sender">BP</rs> soll über die mitgeschickte Hausgeschichte („<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Monasterii Rotensis in Superiore Bavaria descriptio<?oxy_custom_end?>“) urteilen, ob es wert {und noch angebracht} ist, sie nach <rs key="index:d14380e32292">Paris</rs> zu versenden; andernfalls erwartet man die Rücksendung der Schrift.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic">Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Bez in exemto et celeberrimo monasterio Mellicensi ordinis sanctissimi patris nostri Benedicti theologo ac bibliothecario etc., domino colendissimo. Melck. Osterreich.</hi> B.</ab>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e2570">Quadriennium iam abiit, ubi superioribus meis volentibus <seg type="lemma" corresp="#d3e2641">conquirere coeperam</seg> quosdam e gremio nostro religiosos scriptores: verum quod paucos eos et tenuioris, quam meditatum a sua clarissima dominatione opus exigere videbatur, materiae authores eosdem cernerem, abstinendum duxi, aliis etiam probantibus, ab eorum iam in chartam collectorum communicatione. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e2572">Quae etiam ratio fuit, quod confectam pariter monasterii nostri <seg type="lemma" corresp="#d3e2647">Descriptionem</seg> retinuerim, vel ideo etiam, quod edito paulatim tomo quinto<note place="foot" xml:id="d3e2574">	Korrigiert aus <hi rend="italic">primo</hi> A.</note> Annalium Benedictinorum eam seram nimis futuram mihi aliisque persuasum haberem. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e2580">Enimvero lectae nuper et ab omnibus mensae assidentibus cum delectatione auditae praeclarissimae pro stabilitatem profitentibus<note place="foot" xml:id="d3e2582">	Korrigiert aus <hi rend="italic">profidentibus</hi> A.</note> ordinibus <seg type="lemma" corresp="#d3e2657">Epistolae et quorundam nostrorum in iisdem contentorum</seg> nomina<seg type="lemma" corresp="#d3e2663"> animum denuo excitarunt</seg>, ut intermissum negotium iterum assumerem et tam<note place="foot" xml:id="d3e2588">	Über der Zeile eingefügt A.</note> pro clarissima sua dominatione quosdam religiosorum nostrorum quam pro admodum reverendis patribus Gallis Benedictinis monasterium<note place="foot" xml:id="d3e2591">	<hi rend="italic">monasterium nostrum</hi> B.</note> paulo amplius<note place="foot" xml:id="d3e2597">	<hi rend="italic">uberius</hi> B.</note> describerem. <pb n="1v"/> Dominationis suae clarissimae erit ferre iudicium praeprimis, utrum acclusa hic Descriptio monasterii ad mentem patrum Gallorum sufficienter<note place="foot" xml:id="d3e2606">	<hi rend="italic">sufficienter et etiamnum opportune</hi> B.</note> facta<note place="foot" xml:id="d3e2612">	Korrigiert aus <hi rend="italic">fata</hi> A.</note> sit<note place="foot" xml:id="d3e2618">	Fehlt B.</note> mereaturque Parisios usque dimitti<note place="foot" xml:id="d3e2621">	<hi rend="italic">mereaturque ... dimitti: adeoque Parisios usque mittenda videatur</hi> B.</note>; quam (secus) reducem exspectamus<note place="foot" xml:id="d3e2627">	<hi rend="italic">exspecto</hi> korrigiert aus <hi rend="italic">respecto</hi> B.</note>. Superi, quos impense desuper colo, suam clarissimam dominationem pro sacri ordinis honore et augmento sospitem servent et diutissime superstitem.</seg></p>
-            <p xml:space="preserve">Rotae ad Oenum 6. Februarii 1716.</p>
-            <p xml:space="preserve">Suae admodum reverendae religiosissimae ac clarissimae dominationis servus in Christo pater Wolfgangus professus ibidem.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e2641">
-               <ref type="context">1</ref>
-               <label>conquirere coeperam</label><p> Eine LE 2 war bereits 1711 nach Rott am Inn
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>conquirere coeperam</mentioned>
+            <p> Eine LE 2 war bereits 1711 nach Rott am Inn
                   weitergegeben worden, eine weitere wurde von BP im März 1712 unmittelbar dorthin
                   gerichtet, worauf eine briefliche Zusage von Unterstützung an ihn erging: vgl.
-                     <ref type="letter">188</ref>, <ref type="letter">225</ref>, <ref type="letter"
-                     >226</ref>. Von dem Vorbehalt der Superioren hinsichtlich einer Versendung
-                  berichtet WD auch in BStB München, clm 1445, 444–445. Aus dem Dank BPs in <ref
-                     type="letter">527</ref> &lt;1&gt; geht eindeutig hervor, dass der
+                     <ref type="letter" target="letter:188">188</ref>, <ref type="letter" target="letter:225">225</ref>, <ref type="letter" target="letter:226">226</ref>. Von dem Vorbehalt der Superioren hinsichtlich einer Versendung
+                  berichtet WD auch in BStB München, clm 1445, 444–445. Aus dem Dank BPs in <ref type="letter" target="letter:527">527</ref> <ref target="letter:527#seg1">1</ref> geht eindeutig hervor, dass der
                   Schriftstellerkatalog mit diesem Brief übermittelt wurde. Er ist erhalten in StiA
                   Melk, Karton 85 Varia 25, Fasz. 1, Nr. 49; eine Abschrift findet sich in BStB
                   München, clm 1445, 439–450. Behandelt werden darin Roman Stöger, Severin Conradi,
                   Korbinian Tettelbach, Placidus Taller, Gregor Müllpacher, Felician Kobolt und
                   Korbinian Gräz. Die Ansetzung der biographischen Daten im Register folgt Ruf,
                   Profeßbuch 89–92, 101–106, 189f., 209–211, 213–215, 232–235, 387, 390. Zu Stöger
-                  vgl. <rs type="bibl" key="bibl:15058">Bauer, Thomistische Metaphysik</rs> 755,
-                  791; <rs type="bibl" key="bibl:19270">Sattler, Collectaneen-Blätter</rs> 168; zu
-                  ihm und Tettelbach vgl. <rs type="bibl" key="bibl:17590">Kolb, Präsidium</rs> 142,
+                  vgl. <rs type="bibl" ref="bibl:15058">Bauer, Thomistische Metaphysik</rs> 755,
+                  791; <rs type="bibl" ref="bibl:19270">Sattler, Collectaneen-Blätter</rs> 168; zu
+                  ihm und Tettelbach vgl. <rs type="bibl" ref="bibl:17590">Kolb, Präsidium</rs> 142,
                   155. – Der Schriftstellerliste folgt ein Abschnitt zur Hausgeschichte, in dem auch
-                  auf Verluste historischer Dokumente verwiesen wird: vgl. <ref type="letter"
-                     >527</ref> &lt;2&gt;.</p></note>
-            <note xml:id="d3e2647">
-               <ref type="context">2</ref>
-               <label>Descriptionem</label><p> Das Original dieser Beilage ist erhalten in StiB
-                  Melk, Cod. 396, 165r–203v; vgl. <rs type="bibl" key="bibl:16512">Glassner,
+                  auf Verluste historischer Dokumente verwiesen wird: vgl. <ref type="letter" target="letter:527">527</ref> <ref target="letter:527#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>Descriptionem</mentioned>
+            <p> Das Original dieser Beilage ist erhalten in StiB
+                  Melk, Cod. 396, 165r–203v; vgl. <rs type="bibl" ref="bibl:16512">Glassner,
                      Handschriften</rs> 88. Es ist von WD eigenhändig geschrieben und trägt den
                   Titel „Monasterii Rotensis ordinis sanctissimi patris Benedicti in Superiori
                   Bavaria anno 1073 fundati descriptio“. Eine Abschrift von einer unbekannten Hand
-                  des 18. Jh. findet sich in StiB Melk, Cod. 394, 1r–33v; vgl. <rs type="bibl"
-                     key="bibl:16512">Glassner, Handschriften</rs> 73. Eine weitere von WD selbst
+                  des 18. Jh. findet sich in StiB Melk, Cod. 394, 1r–33v; vgl. <rs type="bibl" ref="bibl:16512">Glassner, Handschriften</rs> 73. Eine weitere von WD selbst
                   abgeschriebene Überlieferung desselben Textes ist vorhanden in BStB München, clm
                   1445, 333–417. Einleitende Bemerkungen über seine Erstellung durch WD
                   einschließlich einer Abschrift der Enzyklik René Massuets von 1711 gehen voran.
@@ -118,32 +130,45 @@
                   kürzer, an vielen Stellen umformuliert und weist im Gegensatz zu jener keine
                   sichtbare Gliederung nach dem Fragenkatalog der Enzyklik auf. Zur oftmals
                   fragwürdigen Praxis Mayers bei der Wiedergabe von Texten aus der Korrespondenz und
-                  aus dem Nachlass der Brüder Pez vgl. Bemerkungen zu 504; sowie <rs type="bibl"
-                     key="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 29.</p></note>
-            <note xml:id="d3e2653">
-               <ref type="context">2</ref>
-               <label> tomo quinto Annalium</label><p>Zu den Bemühungen der Mauriner, über BP
-                  Material für die Fortsetzung der „Annales OSB“ zu erhalten, vgl. <rs type="bibl"
-                     key="bibl:17892">Lecomte, Publication</rs> 270f.; <rs type="bibl"
-                     key="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 8. Der fünfte Band,
+                  aus dem Nachlass der Brüder Pez vgl. Bemerkungen zu 504; sowie <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 29.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned> tomo quinto Annalium</mentioned>
+            <p>Zu den Bemühungen der Mauriner, über BP
+                  Material für die Fortsetzung der „Annales OSB“ zu erhalten, vgl. <rs type="bibl" ref="bibl:17892">Lecomte, Publication</rs> 270f.; <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 8. Der fünfte Band,
                   von Massuet auf der Grundlage der von Jean Mabillon und Thierry Ruinart
                   hinterlassenen Kollektaneen zum Druck vorbereitet, war 1713 erschienen; er umfasst
-                  die Jahre von 1067 bis 1116.</p></note>
-            <note xml:id="d3e2657">
-               <ref type="context">3</ref>
-               <label>Epistolae ... contentorum</label><p> Zur Anlage der „Epistolae apologeticae“
-                  vgl. <rs type="bibl" key="bibl:20186">Wallnig, Epistolae</rs> 11–14; <rs
-                     type="bibl" key="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs>
-               14.</p></note>
-            <note xml:id="d3e2663">
-               <ref type="context">3</ref>
-               <label> animum ... excitarunt</label><p> Die wenige Tage vor diesem Brief von Karl
+                  die Jahre von 1067 bis 1116.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>Epistolae ... contentorum</mentioned>
+            <p> Zur Anlage der „Epistolae apologeticae“
+                  vgl. <rs type="bibl" ref="bibl:20186">Wallnig, Epistolae</rs> 11–14; <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs>
+               14.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned> animum ... excitarunt</mentioned>
+            <p> Die wenige Tage vor diesem Brief von Karl
                   Meichelbeck an Abt Oetlinger weitergeleitete Enzyklik 493 war sichtlich noch nicht
-                  in Rott eingetroffen; vgl. <ref type="letter">506</ref> &lt;1&gt;.</p></note>
-            <note xml:id="d3e2667">
-               <ref type="context">3</ref>
-               <label> dimitti ... exspectamus</label><p>Wie sich aus der Überlieferungslage der „Monasterii Rotensis descriptio“ ergibt, dürfte BP weder das eine noch das andere ausgeführt haben; die Anfertigung der in StiB Melk, Cod. 394, erhaltenen Abschrift könnte aber mit einer Absicht zur Weiterversendung des Originals in Zusammenhang gestanden sein.</p></note>
-         </div>
-      </back>
+                  in Rott eingetroffen; vgl. <ref type="letter" target="letter:506">506</ref> <ref target="letter:506#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned> dimitti ... exspectamus</mentioned>
+            <p>Wie sich aus der Überlieferungslage der „Monasterii Rotensis descriptio“ ergibt, dürfte BP weder das eine noch das andere ausgeführt haben; die Anfertigung der in StiB Melk, Cod. 394, erhaltenen Abschrift könnte aber mit einer Absicht zur Weiterversendung des Originals in Zusammenhang gestanden sein.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <front>
+         <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Bez in exemto et celeberrimo monasterio Mellicensi ordinis sanctissimi patris nostri Benedicti theologo ac bibliothecario etc., domino colendissimo. Melck. Osterreich.<note type="annotation">B.</note></p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Quadriennium iam abiit, ubi superioribus meis volentibus <anchor xml:id="n1"/>conquirere coeperam<anchor xml:id="n1e"/> quosdam e gremio nostro religiosos scriptores: verum quod paucos eos et tenuioris, quam meditatum a sua clarissima dominatione opus exigere videbatur, materiae authores eosdem cernerem, abstinendum duxi, aliis etiam probantibus, ab eorum iam in chartam collectorum communicatione. </ab>
+         <ab resp="#editor" xml:id="seg2">Quae etiam ratio fuit, quod confectam pariter monasterii nostri <anchor xml:id="n2"/>Descriptionem<anchor xml:id="n2e"/> retinuerim, vel ideo etiam, quod edito paulatim tomo <app><lem>quinto</lem><rdg wit="#A"><choice><sic>primo</sic><corr>quinto</corr></choice></rdg></app> Annalium Benedictinorum eam seram nimis futuram mihi aliisque persuasum haberem. </ab>
+         <ab resp="#editor" xml:id="seg3">Enimvero lectae nuper et ab omnibus mensae assidentibus cum delectatione auditae praeclarissimae pro stabilitatem <app><lem>profitentibus</lem><rdg wit="#A"><choice><sic>profidentibus</sic><corr>profitentibus</corr></choice></rdg></app> ordinibus <anchor xml:id="n3"/>Epistolae et quorundam nostrorum in iisdem contentorum<anchor xml:id="n3e"/> nomina<anchor xml:id="n4"/> animum denuo excitarunt<anchor xml:id="n4e"/>, ut intermissum negotium iterum assumerem et <app><lem/><rdg wit="#A"><add place="above">tam</add></rdg></app> pro clarissima sua dominatione quosdam religiosorum nostrorum quam pro admodum reverendis patribus Gallis Benedictinis <app><lem>monasterium</lem><rdg wit="#B">monasterium nostrum</rdg></app> paulo <app><lem>amplius</lem><rdg wit="#B">uberius</rdg></app> describerem. <pb n="1v"/> Dominationis suae clarissimae erit ferre iudicium praeprimis, utrum acclusa hic Descriptio monasterii ad mentem patrum Gallorum <app><lem>sufficienter</lem><rdg wit="#B">sufficienter et etiamnum opportune</rdg></app> <app><lem>facta</lem><rdg wit="#A"><choice><sic>fata</sic><corr>facta</corr></choice></rdg></app> <app><lem>sit</lem><rdg wit="#B"/></app> <app><lem>mereaturque Parisios usque dimitti</lem><rdg wit="#B">adeoque Parisios usque mittenda videatur</rdg></app>; quam (secus) reducem <app><lem>exspectamus</lem><rdg wit="#B"><choice><sic>respecto</sic><corr>exspecto</corr></choice></rdg></app>. Superi, quos impense desuper colo, suam clarissimam dominationem pro sacri ordinis honore et augmento sospitem servent et diutissime superstitem.</ab>
+         <closer>Rotae ad Oenum 6. Februarii 1716.</closer>
+         <closer>Suae admodum reverendae religiosissimae ac clarissimae dominationis servus in Christo pater Wolfgangus professus ibidem.</closer>
+      </body>
    </text>
 </TEI>

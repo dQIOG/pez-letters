@@ -1,45 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="219" xml:id="pez-0219">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">219 Anselm Fischer an Bernhard Pez. 1712-03-06. Ochsenhausen.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Anselm Fischer an Bernhard Pez. 1712-03-06. Ochsenhausen.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">219</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:19778">Stockinger, Fidelis</rs> 359f</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">106r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 106r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -54,112 +69,94 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">218</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">244</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">177</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">218</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">266</idno>
-               </ref>
+               <ptr type="prev" target="letter:218"/>
+               <ptr type="next" target="letter:244"/>
+               <ptr type="mentions" target="letter:177"/>
+               <ptr type="mentions" target="letter:218"/>
+               <ptr type="mentionedIn" target="letter:266"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">AF dankt für die Zusendung einer asketischen Schrift („<rs ref="index:d10854e16635">Theatrum dolorum Jesu Christi</rs>“ von <rs ref="index:d10854e16613">Valentin Larson</rs>?), welche er nach erster Anschauung für sehr lobenswert befindet. Weil ihm BP in seinem letzten Brief <ref type="letter" target="letter:218">218</ref> geschrieben hat, dass er in einem <rs ref="index:d14380e45571">Wiener</rs> <rs ref="index:d10854e33244">Buchhandelskatalog</rs> von AFs neuestem Werk „<rs ref="index:d10854e8886">Conversatio externa religiosa</rs>“ gelesen hat, schickt ihm AF sein letztes Exemplar davon.</p>
+            <p corresp="#seg2">Er erwartet die baldige Rückgabe der ausgeliehenen sechs Bände von <rs ref="index:d14380e124">d’Acherys</rs> „<rs ref="index:d14380e150">Spicilegium</rs>“.</p>
+            <p corresp="#seg3">AF hat ein Schreiben<rs ref="index:d14380e26993"> René Massuets</rs> aus <rs ref="index:d14380e32292">Paris</rs> erhalten, in dem dieser von seiner Korrespondenz mit BP berichtet, unter anderem, dass BP die Verbreitung der <rs ref="index:d10854e18873">Enzyklik</rs> <rs ref="index:d14380e26993">Massuets</rs> an etliche <rs ref="index:d14380e9395">deutsche</rs> Klöster übernommen hat und dass ein von BP gesendetes Paket mit Schriften und Büchern <ref type="letter" target="letter:177">177</ref> auf dem Weg über <rs ref="index:d14380e39290">St. Gallen</rs> nach <rs ref="index:d14380e32292">Paris</rs> sein soll. Sendungen AFs an <rs ref="index:d14380e26993">Massuet</rs> sind bereits zweimal abgefangen worden, weshalb er diesem mitgeteilt hat, dass er bis zum bevorstehenden <rs ref="index:d10854e29410">Friedensschluss</rs> – der allerdings hoffentlich nicht nach den Wünschen der<rs ref="index:d14380e12712"> Franzosen</rs> ausfallen wird – nichts mehr senden will.</p>
+            <p corresp="#seg4">In einem Postskriptum lässt sich AF dem <rs ref="index:d14380e28088">Melker</rs> Prior <rs ref="index:d10854e16613">Larson</rs>, <rs ref="index:d14380e39962">Anselm Schramb</rs> und <rs ref="index:d14380e39695">Koloman Scherb</rs> empfehlen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e27118"><rs type="person" role="sender">AF</rs> dankt für die Zusendung einer asketischen Schrift („<rs key="index:d10854e16635">Theatrum dolorum Jesu Christi</rs>“ von <rs key="index:d10854e16613">Valentin Larson</rs>?), welche er nach erster Anschauung für sehr lobenswert befindet. Weil ihm <rs type="person" role="sender">BP</rs> in seinem letzten Brief <ref type="letter">218</ref> geschrieben hat, dass er in einem <rs key="index:d14380e45571">Wiener</rs> <rs key="index:d10854e33244">Buchhandelskatalog</rs> von <rs type="person" role="sender">AFs</rs> neuestem Werk „<rs key="index:d10854e8886">Conversatio externa religiosa</rs>“ gelesen hat, schickt ihm <rs type="person" role="sender">AF</rs> sein letztes Exemplar davon.</seg><seg type="context" n="2" xml:id="d4618e27123">Er erwartet die baldige Rückgabe der ausgeliehenen sechs Bände von <rs key="index:d14380e124">d’Acherys</rs> „<rs key="index:d14380e150">Spicilegium</rs>“.</seg><seg type="context" n="3" xml:id="d4618e27125"><rs type="person" role="sender">AF</rs> hat ein Schreiben<rs key="index:d14380e26993"> René Massuets</rs> aus <rs key="index:d14380e32292">Paris</rs> erhalten, in dem dieser von seiner Korrespondenz mit <rs type="person" role="sender">BP</rs> berichtet, unter anderem, dass <rs type="person" role="sender">BP</rs> die Verbreitung der <rs key="index:d10854e18873">Enzyklik</rs> <rs key="index:d14380e26993">Massuets</rs> an etliche <rs key="index:d14380e9395">deutsche</rs> Klöster übernommen hat und dass ein von <rs type="person" role="sender">BP</rs> gesendetes Paket mit Schriften und Büchern <ref type="letter">177</ref> auf dem Weg über <rs key="index:d14380e39290">St. Gallen</rs> nach <rs key="index:d14380e32292">Paris</rs> sein soll. Sendungen <rs type="person" role="sender">AFs</rs> an <rs key="index:d14380e26993">Massuet</rs> sind bereits zweimal abgefangen worden, weshalb er diesem mitgeteilt hat, dass er bis zum bevorstehenden <rs key="index:d10854e29410">Friedensschluss</rs> – der allerdings hoffentlich nicht nach den Wünschen der<rs key="index:d14380e12712"> Franzosen</rs> ausfallen wird – nichts mehr senden will.</seg><seg type="context" n="4" xml:id="d4618e27130">In einem Postskriptum lässt sich <rs type="person" role="sender">AF</rs> dem <rs key="index:d14380e28088">Melker</rs> Prior <rs key="index:d10854e16613">Larson</rs>, <rs key="index:d14380e39962">Anselm Schramb</rs> und <rs key="index:d14380e39695">Koloman Scherb</rs> empfehlen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">V</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende religiosissime et clarissime pater bibliothecarie, patrone colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e27149">Pro transmisso insigni, ut ex subita apertione et lectione hucusque videre potui, <seg type="lemma" corresp="#d4618e27177">opusculo ascetico</seg> refero grates maximas, et quod ex litteris nuper acceptis colligere possum legisse reverendam paternitatem vestram <seg type="lemma" corresp="#d4618e27184">in cathalogo Viennensi</seg> aliquid de Conversatione externa religiosa a me elucubrata, eius exemplar ultimum per praesentem mitto baiulum. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e27151">Sex autem tomulos Spicilegii proxime expecto. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e27153">De caetero significo accepisse me litteras a reverendo patre Massuet Parisiensi, ubi etiam mentionem facit admodum reverendae dominationis vestrae, ubi praemisso nomine ita scribit: cum quo et litterarum et amicitiae commercio iunctus sum. Is distribuendi (Nota bene: agit hic de suis litteris typo expressis et communicatis) per varia monasteria Germaniae curam suscepit, reque vere distribuit, nostrorum moras opportune importune arguens. Quo fructu, nondum expertus sum, nisi quod <seg type="lemma" corresp="#d4618e27196">sarcinam seu chartarum seu librorum ab eo per Sancti Galli monasterium transmissam in dies expecto</seg> etc. Ego praecipue sum infelix, iam enim duo fasciculi <pb n="1v"/> mihi sunt intercepti, quapropter <seg type="lemma" corresp="#d4618e27208">nuper eidem insinuavi</seg>, ut nil simile<note place="foot" xml:id="d4618e27157">	Abkürzung <hi rend="italic">sle</hi>, Auflösung unsicher (eventuell auch <hi rend="italic">speciale</hi>).</note> deinceps a me expectet, usque ad futuram pacem (<seg type="lemma" corresp="#d4618e27213">sed neutiquam ad Gallorum intentionem</seg>) ineundam: quo tempore de his rebus tutius et uberius agi poterit. Ego de caetero me in omnia sacra <sic><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>me<?oxy_custom_end?></sic> [<hi rend="italic">sic</hi>] commendo, et dum vivo persevero</seg></p>
-            <p xml:space="preserve">Admodum reverendae dominationis vestrae servus paratissimus pater Anselmus Fischer Ochsenhusanus manu propria.</p>
-            <p xml:space="preserve">Ochsenhusii 6. Martii 1712.</p>
-            <p xml:space="preserve"><seg type="context" n="4" xml:space="preserve" xml:id="d4618e27174">P.S. Commendari rogo plurimum reverendo domino patri priori vestro authori transmissi opusculi. Idem rogo fieri reverendis dominis patribus <seg type="lemma" corresp="#d4618e27218">Anselmo et Colomanno</seg>.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e27177">
-               <ref type="context">1</ref>
-               <label>opusculo ascetico</label>
-               <p>Aufgrund der Nennung im Postskriptum steht Prior Valentin Larson als Verfasser
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>opusculo ascetico</mentioned>
+            <p>Aufgrund der Nennung im Postskriptum steht Prior Valentin Larson als Verfasser
                   fest. Neben dem „Theatrum dolorum“ (1709) käme auch das ältere Werk „Hoher
-                  adler-flug nach dem marckt deß cederbaums“ (Wien 1707; vgl. <rs type="bibl"
-                     key="bibl:14732">Kropff, Bibliotheca Mellicensis</rs> 545f.) möglicherweise in
+                  adler-flug nach dem marckt deß cederbaums“ (Wien 1707; vgl. <rs type="bibl" ref="bibl:14732">Kropff, Bibliotheca Mellicensis</rs> 545f.) möglicherweise in
                   Frage.</p>
-            </note>
-            <note xml:id="d4618e27184">
-               <ref type="context">1</ref>
-               <label>in cathalogo Viennensi</label>
-               <p>Sammelkataloge wie jene für die Buchmesse in Leipzig gab es für die Wiener
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>in cathalogo Viennensi</mentioned>
+            <p>Sammelkataloge wie jene für die Buchmesse in Leipzig gab es für die Wiener
                   Büchermärkte nicht. Es muss sich also um den Katalog eines einzelnen Verlagshauses
                   handeln, deren etliche in Wien aufgelegt wurden, etwa von den Verlagen Veith, Mayr
-                  oder Krauß: <rs type="bibl" key="bibl:14994">Bachleitner–Eybl–Fischer,
+                  oder Krauß: <rs type="bibl" ref="bibl:14994">Bachleitner–Eybl–Fischer,
                      Buchhandel</rs> 86f. 96, 119f.</p>
-            </note>
-            <note xml:id="d4618e27189">
-               <ref type="context">2</ref>
-               <label>Sex autem tomos ... expecto</label>
-               <p>Seit der ersten Mahnung zur Rückgabe (<ref type="letter">191</ref>) waren mehr als
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>Sex autem tomos ... expecto</mentioned>
+            <p>Seit der ersten Mahnung zur Rückgabe (<ref type="letter" target="letter:191">191</ref>) waren mehr als
                   drei Monate verstrichen.</p>
-            </note>
-            <note xml:id="d4618e27196">
-               <ref type="context">3</ref>
-               <label>sarcinam ... in dies expecto</label>
-               <p>Laut <ref type="letter">192</ref> &lt;1&gt; erhielt Massuet die Sendung Ende
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>sarcinam ... in dies expecto</mentioned>
+            <p>Laut <ref type="letter" target="letter:192">192</ref> <ref target="letter:192#seg1">1</ref> erhielt Massuet die Sendung Ende
                   November 1711. Der Brief Massuets an AF müsste folglich noch vor diesem Zeitpunkt
                   geschrieben worden sein.</p>
-            </note>
-            <note xml:id="d4618e27203">
-               <ref type="context">3</ref>
-               <label>per Sancti Galli monasterium</label>
-               <p>Die Versendung von <ref type="letter">177</ref> über St. Gallen bestätigen neben
-                  der Aussage Massuets in <ref type="letter">192</ref> &lt;1&gt; noch Erwähnungen in
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>per Sancti Galli monasterium</mentioned>
+            <p>Die Versendung von <ref type="letter" target="letter:177">177</ref> über St. Gallen bestätigen neben
+                  der Aussage Massuets in <ref type="letter" target="letter:192">192</ref> <ref target="letter:192#seg1">1</ref> noch Erwähnungen in
                   einem Schreiben Massuets an Moritz Müller vom 23. Oktober 1711 (StiA St. Gallen,
                   Bd. 322, 447–448) sowie in der Antwort Müllers vom 13. Dezember 1711 (BN FF 19664,
                   217r–218v).</p>
-            </note>
-            <note xml:id="d4618e27208">
-               <ref type="context">3</ref>
-               <label>nuper eidem insinuavi</label>
-               <p>Der Brief AFs vom 1. März 1712 ist erhalten: BN FF 19664, 138r–139v. Zu seinen
-                  Schwierigkeiten mit Sendungen nach Paris für Massuet vgl. <ref type="letter"
-                     >94</ref>, <ref type="letter">246</ref> &lt;5&gt;, <ref type="letter">266</ref>
-                  &lt;7&gt;, <ref type="letter">285</ref> &lt;4&gt;.</p>
-            </note>
-            <note xml:id="d4618e27213">
-               <ref type="context">3</ref>
-               <label>sed neutiquam ... intentionem</label>
-               <p>Diese kurze Erwähnung könnte eine Reaktion auf einschlägige Äußerungen BPs sein,
-                  der das Thema offenbar auch in andere Korrespondenzen einbrachte: vgl. <ref
-                     type="letter">201</ref> &lt;1&gt;, <ref type="letter">209</ref> &lt;7&gt;.</p>
-            </note>
-            <note xml:id="d4618e27218">
-               <ref type="context">4</ref>
-               <label>Anselmo et Colomanno</label>
-               <p>Vgl. <ref type="letter">43</ref> &lt;9&gt;, <ref type="letter">216,</ref>
-                  <ref type="letter">255</ref>.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned>nuper eidem insinuavi</mentioned>
+            <p>Der Brief AFs vom 1. März 1712 ist erhalten: BN FF 19664, 138r–139v. Zu seinen
+                  Schwierigkeiten mit Sendungen nach Paris für Massuet vgl. <ref type="letter" target="letter:94">94</ref>, <ref type="letter" target="letter:246">246</ref> <ref target="letter:246#seg5">5</ref>, <ref type="letter" target="letter:266">266</ref>
+                  <ref target="letter:266#seg7">7</ref>, <ref type="letter" target="letter:285">285</ref> <ref target="letter:285#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned>sed neutiquam ... intentionem</mentioned>
+            <p>Diese kurze Erwähnung könnte eine Reaktion auf einschlägige Äußerungen BPs sein,
+                  der das Thema offenbar auch in andere Korrespondenzen einbrachte: vgl. <ref type="letter" target="letter:201">201</ref> <ref target="letter:201#seg1">1</ref>, <ref type="letter" target="letter:209">209</ref> <ref target="letter:209#seg7">7</ref>.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
+            <mentioned>Anselmo et Colomanno</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:43">43</ref> <ref target="letter:43#seg9">9</ref>, <ref type="letter" target="letter:216,">216,</ref>
+                  <ref type="letter" target="letter:255">255</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>V</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:19778">
+            <title type="short">Stockinger, Fidelis</title>
+            <biblScope>359f</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende religiosissime et clarissime pater bibliothecarie, patrone colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Pro transmisso insigni, ut ex subita apertione et lectione hucusque videre potui, <anchor xml:id="n1"/>opusculo ascetico<anchor xml:id="n1e"/> refero grates maximas, et quod ex litteris nuper acceptis colligere possum legisse reverendam paternitatem vestram <anchor xml:id="n2"/>in cathalogo Viennensi<anchor xml:id="n2e"/> aliquid de Conversatione externa religiosa a me elucubrata, eius exemplar ultimum per praesentem mitto baiulum. </ab>
+         <ab resp="#editor" xml:id="seg2">Sex autem tomulos Spicilegii proxime expecto. </ab>
+         <ab resp="#editor" xml:id="seg3">De caetero significo accepisse me litteras a reverendo patre Massuet Parisiensi, ubi etiam mentionem facit admodum reverendae dominationis vestrae, ubi praemisso nomine ita scribit: cum quo et litterarum et amicitiae commercio iunctus sum. Is distribuendi (Nota bene: agit hic de suis litteris typo expressis et communicatis) per varia monasteria Germaniae curam suscepit, reque vere distribuit, nostrorum moras opportune importune arguens. Quo fructu, nondum expertus sum, nisi quod <anchor xml:id="n3"/>sarcinam seu chartarum seu librorum ab eo per Sancti Galli monasterium transmissam in dies expecto<anchor xml:id="n3e"/> etc. Ego praecipue sum infelix, iam enim duo fasciculi <pb n="1v"/> mihi sunt intercepti, quapropter <anchor xml:id="n4"/>nuper eidem insinuavi<anchor xml:id="n4e"/>, ut nil simile<note type="annotation" xml:id="d4618e27157">Abkürzung <orig>sle</orig>, Auflösung unsicher (eventuell auch <orig>speciale</orig>).</note> deinceps a me expectet, usque ad futuram pacem (<anchor xml:id="n5"/>sed neutiquam ad Gallorum intentionem<anchor xml:id="n5e"/>) ineundam: quo tempore de his rebus tutius et uberius agi poterit. Ego de caetero me in omnia sacra <sic>me</sic>  commendo, et dum vivo persevero</ab>
+         <closer>Admodum reverendae dominationis vestrae servus paratissimus pater Anselmus Fischer Ochsenhusanus manu propria.</closer>
+         <closer>Ochsenhusii 6. Martii 1712.</closer>
+         <closer xml:id="seg4">P.S. Commendari rogo plurimum reverendo domino patri priori vestro authori transmissi opusculi. Idem rogo fieri reverendis dominis patribus <anchor xml:id="n6"/>Anselmo et Colomanno<anchor xml:id="n6e"/>.</closer>
+      </body>
    </text>
 </TEI>

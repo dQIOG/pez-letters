@@ -1,46 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="230" xml:id="pez-0230">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">230 Moritz Müller an Bernhard Pez. 1712-03-20. St. Gallen.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Moritz Müller an Bernhard Pez. 1712-03-20. St. Gallen.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">230</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:19778">Stockinger, Fidelis</rs> 358, 371, 380f.,
-                     410</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">99r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 99r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -55,154 +69,130 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">209</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">235</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">204</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">208</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">209</idno>
-               </ref>
+               <ptr type="prev" target="letter:209"/>
+               <ptr type="next" target="letter:235"/>
+               <ptr type="mentions" target="letter:204"/>
+               <ptr type="mentions" target="letter:208"/>
+               <ptr type="mentions" target="letter:209"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">MM hat zwei Schreiben BPs erhalten: die <rs ref="index:d10854e23782">Enzyklik</rs> vor acht Tagen über <rs ref="index:d10854e20625">Felician Müller</rs> aus <rs ref="index:d10854e32902">Wiblingen</rs> <ref type="letter" target="letter:208">208</ref>, einen zweiten Brief am Vortag mit der <rs ref="index:d14380e35665">Ordinaripost</rs> <ref type="letter" target="letter:209">209</ref>. So hat er vom Eintreffen seiner letzten Sendung <ref type="letter" target="letter:204">204</ref> in <rs ref="index:d14380e28088">Melk</rs> erfahren. MM fühlt sich von BP über das gebührende Maß hinaus für seine geringen Dienste bedankt und ersucht in Hinkunft um Zurückhaltung in dieser Hinsicht.</p>
+            <p corresp="#seg2">MM lobt BPs <rs ref="index:d10854e23782">Enzyklik</rs> und wünscht, dass die angesprochenen Klöster mitarbeiten mögen. Es beschämt ihn, unter so vielen gelehrten Namen angeführt zu sein, wo doch seine bisherigen Leistungen so gering sind. Müsste er sich nicht mit so vielen Ämtern abgeben, dann könnte er seine seit langem gehegten Vorhaben endlich ausführen, und BP hätte in ihm einen treuen Mitarbeiter.</p>
+            <p corresp="#seg3">Den versprochenen Traktat „<rs ref="index:d10854e20696">De viris illustribus S. Galli</rs>“ will MM bald fertig stellen und übersenden. Indem er durch den Glanz anderer glänzt, will MM das Eigene begraben. In BPs Schriftstellerkatalog hat er viele <rs ref="index:d14380e39290">St. Galler</rs> angeführt gefunden, andere aber vermisst, wieder andere sind der <rs ref="index:d14380e37019">Reichenau</rs> zugeschrieben, obwohl fraglos <rs ref="index:d14380e39290">St. Gallen</rs> zugehörig. MM rät BP, bei dem großen Werk („<rs ref="index:d10854e23377">Bibliotheca benedictina</rs>“) bedachtsam vorzugehen (lentius festinare). In diesem Zusammenhang möchte MM wissen, ob BP auch die Namen von St. Gallern aufnehmen will, die im Studium des <rs ref="index:d14380e16473">Griechischen</rs> und <rs ref="index:d14380e17409">Hebräischen</rs> verdient waren, jedoch nichts veröffentlicht haben. Weiters fragt er, ob BP auch jüngere Handschriften berücksichtigen will, etwa die Werke <rs ref="index:d14380e40803">Cölestin Sfondratis</rs>.</p>
+            <p corresp="#seg4">BPs versprochenes Werk „<rs ref="index:d14380e33515">De irruptione Bavarica</rs>“ wird MM gerne lesen; er bittet, zugleich mit diesem zehn bis zwölf Exemplare der <rs ref="index:d10854e23782">Enzyklik</rs> zu senden, die er an die umliegenden<rs ref="index:d14380e40241"> Schweizer</rs> Klöster verteilen will.</p>
+            <p corresp="#seg5">Die in <rs ref="index:d14380e32292">Paris</rs> bereits bestellten „<rs ref="index:d14380e25664">Acta sanctorum OSB</rs>“ will MM, sobald sie in <rs ref="index:d14380e39290">St. Gallen</rs> eintreffen, bei günstiger und billiger Gelegenheit über <rs ref="index:d14380e43652">Ulm</rs> nach <rs ref="index:d14380e28088">Melk</rs> weiterversenden.</p>
+            <p corresp="#seg6">Dem neuen Kaiser <rs ref="index:d14380e21188">Karl VI.</rs> wünscht MM, dass er über seine Feinde siegen und wie einst <rs ref="index:d14380e3453">Augustus</rs> in Frieden über den ganzen Erdkreis herrschen soll; für St. Gallen hofft MM auf die Unterstützung und den Schutz des Kaisers, insbesondere gegen die rebellischen <rs ref="index:d10854e30940">Toggenburger</rs>, und betont die besondere Verbundenheit <rs ref="index:d10854e21970">Österreichs</rs> mit <rs ref="index:d14380e39290">St. Gallen</rs>. Er lässt <rs ref="index:d14380e39962">Anselm Schramb</rs> bitten, in dieser Richtung für <rs ref="index:d14380e39290">St. Gallen</rs> zu intervenieren, und kündigt an, dass die Gesandten (<rs ref="index:d10854e8631">Adalbert von Falkenstein</rs>?) des St. Galler Fürstabtes <rs ref="index:d14380e7141">Leodegar Bürgisser</rs>, die demnächst wegen Bestätigung der Regalien des Klosters nach <rs ref="index:d14380e45571">Wien</rs> abgeordnet werden, auch bei <rs ref="index:d14380e39962">Schramb</rs> vorsprechen werden.</p>
+            <p corresp="#seg7">In einem Postskriptum sendet MM Osterwünsche an BP und den gesamten <rs ref="index:d14380e28088">Melker</rs> Konvent.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e28390"><rs type="person" role="sender">MM</rs> hat zwei Schreiben <rs type="person" role="sender">BPs</rs> erhalten: die <rs key="index:d10854e23782">Enzyklik</rs> vor acht Tagen über <rs key="index:d10854e20625">Felician Müller</rs> aus <rs key="index:d10854e32902">Wiblingen</rs> <ref type="letter">208</ref>, einen zweiten Brief am Vortag mit der <rs key="index:d14380e35665">Ordinaripost</rs> <ref type="letter">209</ref>. So hat er vom Eintreffen seiner letzten Sendung <ref type="letter">204</ref> in <rs key="index:d14380e28088">Melk</rs> erfahren. <rs type="person" role="sender">MM</rs> fühlt sich von <rs type="person" role="sender">BP</rs> über das gebührende Maß hinaus für seine geringen Dienste bedankt und ersucht in Hinkunft um Zurückhaltung in dieser Hinsicht.</seg><seg type="context" n="2" xml:id="d4618e28401"><rs type="person" role="sender">MM</rs> lobt <rs type="person" role="sender">BPs</rs> <rs key="index:d10854e23782">Enzyklik</rs> und wünscht, dass die angesprochenen Klöster mitarbeiten mögen. Es beschämt ihn, unter so vielen gelehrten Namen angeführt zu sein, wo doch seine bisherigen Leistungen so gering sind. Müsste er sich nicht mit so vielen Ämtern abgeben, dann könnte er seine seit langem gehegten Vorhaben endlich ausführen, und <rs type="person" role="sender">BP</rs> hätte in ihm einen treuen Mitarbeiter.</seg><seg type="context" n="3" xml:id="d4618e28403">Den versprochenen Traktat „<rs key="index:d10854e20696">De viris illustribus S. Galli</rs>“ will <rs type="person" role="sender">MM</rs> bald fertig stellen und übersenden. Indem er durch den Glanz anderer glänzt, will <rs type="person" role="sender">MM</rs> das Eigene begraben. In <rs type="person" role="sender">BPs</rs> Schriftstellerkatalog hat er viele <rs key="index:d14380e39290">St. Galler</rs> angeführt gefunden, andere aber vermisst, wieder andere sind der <rs key="index:d14380e37019">Reichenau</rs> zugeschrieben, obwohl fraglos <rs key="index:d14380e39290">St. Gallen</rs> zugehörig. <rs type="person" role="sender">MM</rs> rät BP, bei dem großen Werk („<rs key="index:d10854e23377">Bibliotheca benedictina</rs>“) bedachtsam vorzugehen (<?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>lentius festinare<?oxy_custom_end?>). In diesem Zusammenhang möchte <rs type="person" role="sender">MM</rs> wissen, ob <rs type="person" role="sender">BP</rs> auch die Namen von St. Gallern aufnehmen will, die im Studium des <rs key="index:d14380e16473">Griechischen</rs> und <rs key="index:d14380e17409">Hebräischen</rs> verdient waren, jedoch nichts veröffentlicht haben. Weiters fragt er, ob <rs type="person" role="sender">BP</rs> auch jüngere Handschriften berücksichtigen will, etwa die Werke <rs key="index:d14380e40803">Cölestin Sfondratis</rs>.</seg><seg type="context" n="4" xml:id="d4618e28405"><rs type="person" role="sender">BPs</rs> versprochenes Werk „<rs key="index:d14380e33515">De irruptione Bavarica</rs>“ wird <rs type="person" role="sender">MM</rs> gerne lesen; er bittet, zugleich mit diesem zehn bis zwölf Exemplare der <rs key="index:d10854e23782">Enzyklik</rs> zu senden, die er an die umliegenden<rs key="index:d14380e40241"> Schweizer</rs> Klöster verteilen will.</seg><seg type="context" n="5" xml:id="d4618e28407">Die in <rs key="index:d14380e32292">Paris</rs> bereits bestellten „<rs key="index:d14380e25664">Acta sanctorum OSB</rs>“ will <rs type="person" role="sender">MM</rs>, sobald sie in <rs key="index:d14380e39290">St. Gallen</rs> eintreffen, bei günstiger und billiger Gelegenheit über <rs key="index:d14380e43652">Ulm</rs> nach <rs key="index:d14380e28088">Melk</rs> weiterversenden.</seg><seg type="context" n="6" xml:id="d4618e28409">Dem neuen Kaiser <rs key="index:d14380e21188">Karl VI.</rs> wünscht <rs type="person" role="sender">MM</rs>, dass er über seine Feinde siegen und wie einst <rs key="index:d14380e3453"><?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>Augustus<?oxy_custom_end?></rs> in Frieden über den ganzen Erdkreis herrschen soll; für St. Gallen hofft <rs type="person" role="sender">MM</rs> auf die Unterstützung und den Schutz des Kaisers, insbesondere gegen die rebellischen <rs key="index:d10854e30940">Toggenburger</rs>, und betont die besondere Verbundenheit <rs key="index:d10854e21970">Österreichs</rs> mit <rs key="index:d14380e39290">St. Gallen</rs>. Er lässt <rs key="index:d14380e39962">Anselm Schramb</rs> bitten, in dieser Richtung für <rs key="index:d14380e39290">St. Gallen</rs> zu intervenieren, und kündigt an, dass die Gesandten (<rs key="index:d10854e8631">Adalbert von Falkenstein</rs>?) des St. Galler Fürstabtes <rs key="index:d14380e7141">Leodegar Bürgisser</rs>, die demnächst wegen Bestätigung der Regalien des Klosters nach <rs key="index:d14380e45571">Wien</rs> abgeordnet werden, auch bei <rs key="index:d14380e39962">Schramb</rs> vorsprechen werden.</seg><seg type="context" n="7" xml:id="d4618e28411">In einem Postskriptum sendet <rs type="person" role="sender">MM</rs> Osterwünsche an <rs type="person" role="sender">BP</rs> und den gesamten <rs key="index:d14380e28088">Melker</rs> Konvent.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">VIII</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Ex S. Gallo 1712 die 20. Martii.</p>
-            <p xml:space="preserve">Admodum reverende religiosissime ac clarissime domine in Christo pater ac domine confrater et amice colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e28432">Et primas vestras encyclicas ante octiduum per patrem dominum Felicianum Wiblingensem mihi transmissas, et alteras heri per postam ordinariam ad me delatas, utrasque rite accepi et fasciculum illum quoque meum nuper submissum Melicii appulisse cum gaudio intellexi. Illud tamen et dolori et rubori non modico mihi fuit, quod tam magnas mihi semper grates referat, cum tam parva a me obsequia accipiat, ut adeo me tenuitatis meae nimis probe conscium magis confundat, quam grates tam indebitas quam inutiles in immeritum, imo omnis beneficii ignarum refundat. Parcat, quaeso, deinceps et sibi a nimia humanitate sua et mihi ab ista confusione mea, credatque pro certo me quidem verum amicum ac fidelem servum, non tamen mercenarium et dici et esse velle, qui nec stipendium immeritae laudis nec mercedem tam excessivae gratitudinis sibi velit sperare aut sine rubore ac vulnere possit sufferre. Sufficiet mihi meis me utut modicis obsequiis placuisse. Ignoscat, quaeso, mihi, si suboffensus ipse prior offendo, dum amici excessus amice carpo; vestra enim culpa et mea impatientia haec acciderunt. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e28434">Caeterum, ut ad utrasque, quid sentiam, respondeam breviter (aliis utpote negotiis hodie mactandus), significo: Primo. Encyclicas illas vestras mihi summopere placere, idque unicum mihi in votis esse, ut singula monasteria in subsidium vocata efficaciter, non tam verbis quam opere, dignentur respondere et sociata manu Benedictinam gloriam augere. Illud tamen nescio quo cum rubore meo aspexi, inter tot illustrissima <seg type="lemma" corresp="#d4618e28461">nomina etiam meum fuisse insertum</seg>, cum tamen, quod ego erudito orbi contuli hactenus, tam nihil sit et modicum. Mererer forsan in ultimis subselliis locum habere, si <seg type="lemma" corresp="#d4618e28468">consilia et cogitationes meas possem in opus deducere et typis mandare, quae ante annos potui concipere</seg>. Sed longe alia sors mea ac vestra est: qui tot aliis perpetim negotiis obrutus vix recogitare possum, quae cogitavi semel, ne dicam efficere. Utinam uno alterove anno optata iam tot annis frui possem quiete, fidelem me haberet collaboratorem in suo opere; videretque et opuscula mea (ut<note place="foot" xml:id="d4618e28436">	Korrigiert aus <hi rend="italic">haud</hi>.</note> spero) haud<note place="foot" xml:id="d4618e28442">	Am linken Blattrand eingefügt.</note> displicitura! </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e28445">Interim id saltem, quod promisi nuper, curabo, ut exequar, et tractatum illum desideratum De viris illustribus S. Galli absolvam et submittam. <pb n="1v"/> Sic saltem aliorum opera et laudes luci publicae committam et aliorum splendore ac fama splendebo, dum propria nequeo; et mea sepelio. Fateor, in illo scriptorum syllabo multos Sanct-Gallenses nostros legi; sed plurimos adhuc desideravi, qui forsan adhuc incogniti sunt; <seg type="lemma" corresp="#d4618e28473">nonnullos etiam Augiensibus adscriptos</seg> legi, qui tamen citra disputatione nostri sunt. Sed de his et aliis in opusculo meo plura, ad rem et votum vestrum factura. Interim patientia! moneoque in tanto opere (ne quid praetermittatur) <seg type="lemma" corresp="#d4618e28480">lentius festinare</seg>. Illud rescire percuperem, cum apud nos in nostro monasterio Graecae Hebraicaeque linguae cultus semper floreat aliarumque sacrarum linguarum (quod in nostris monasteriis rarum est): num etiam illos viros nostros, qui his floruerunt, nihil tamen typis dederunt, inseri placeat? Itemque: an etiam manuscripta recentiora (si quae digna sunt) notari debeant, qualia sunt oppido multa apud nos, ut verbi gratia <seg type="lemma" corresp="#d4618e28485">opera eminentissimi cardinalis Sfondrati posthuma</seg> nondum edita, et aliorum? Sed haec prohic satis: alias cum meliori occasione plura. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e28449">Secundo. <seg type="lemma" corresp="#d4618e28490">Libellum vestrum De bello Tirolensi</seg> editum mihi adpromissum cum gaudio legam, et venerabor tam charam manum. Si tamen eumdem aut quaedam alia mittere velit, quaeso, addere dignetur adhuc aliquot litteras encyclicas, ad minimum decem vel duodecim, in vicina Helvetiae nostrae monasteria a me dimittendas. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e28451">Tertio. Acta sanctorum ordinis nostri iamiam Parisiis procurata, proxime ut advenerint, Ulmam et inde Melicium transmittam. Exspecto tamen occasionem opportunam et commodam, ut minoribus sumptibus procurari queant. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e28453">Quarto. Pro novellis communicatis uti plurimum recreatus, ita et obligatus sum, quamvis iam pri<seg type="lemma" corresp="#d4618e28497">dem totus orbis idem de augustissimo caesare nostro Carolo testimonium dixerit, omnesque boni non aliud optent, quam ut princeps tantis donis divinitus ornatus et his luctuosis temporibus reservatus, devictis omnibus suis hostibus quam diutissime quam felicissime regnet, et cum Augusto illo iterum totum orbem sibi vectigalem et in bona pace compositum habeat. Certe post Deum spes tota nostra in Carolo</seg> fixa est, qui Sanct-Gallense monasterium ac territorium ab origine imperio et <seg type="lemma" corresp="#d4618e28504">Austriae devotissimum et arctius confoederatum</seg> potentissima manu sua defendet et proteget; et <seg type="lemma" corresp="#d4618e28509">rebelles quoque Doggenburgenses</seg> nostros subditos ad fidem et obedientiam debitam iterum reducet, et vel invitos compellet. Recommendo et causam illam et me ipsum specialiter plurimum reverendo domino Anselmo vestro Viennae degenti. Illuc venient <seg type="lemma" corresp="#d4618e28514">legati nostri a celsissimo principe meo mittendi, ut solita regalia a caesare suscipiant; quibus mandabo, ut meo nomine dictum patronum meum salutent</seg>. Interim, dum alio avocor et vix mihi praesens ob tot interpellationes, dum haec scribo, finio, sed sine fine manebo ut semper</seg></p>
-            <p xml:space="preserve">Totus vester pater Mauritius manu propria.</p>
-            <p xml:space="preserve"><seg type="context" n="7" xml:space="preserve" xml:id="d4618e28458">P.S. <seg type="lemma" corresp="#d4618e28519">Felicissimum fraterno ex corde Alleluia</seg>! et toti venerandissimo Melicensi catalogo 1.000.000 oscula et obsequia.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e28461">
-               <ref type="context">2</ref>
-               <label>nomina ... insertum</label>
-               <p>Im Schriftstellerkatalog zu <ref type="letter">238</ref> scheint MM unter den
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>nomina ... insertum</mentioned>
+            <p>Im Schriftstellerkatalog zu <ref type="letter" target="letter:238">238</ref> scheint MM unter den
                   lebenden Autoren gegen Schluss auf (Abb. 5.4).</p>
-            </note>
-            <note xml:id="d4618e28468">
-               <ref type="context">2</ref>
-               <label>consilia ... ante annos potui concipere</label>
-               <p>Die Anfänge von MMs hausgeschichtlicher Betätigung fallen wohl ins Jahr 1701, als
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>consilia ... ante annos potui concipere</mentioned>
+            <p>Die Anfänge von MMs hausgeschichtlicher Betätigung fallen wohl ins Jahr 1701, als
                   er bald nach seiner Priesterweihe von seinem Abt Bürgisser mit der Fortführung der
                   Hauschronik beauftragt wurde; diese Arbeiten kamen aber bald zum Stehen,
                   abgeschlossen wurde nur die Darstellung der Regierungszeit von Abt Pius Reher
-                  (1630–1654); vgl. <rs type="bibl" key="bibl:16896">Heer, Mabillon</rs> 308; <rs
-                     type="bibl" key="bibl:19778">Stockinger, Fidelis</rs> 346f. Über sonstige
+                  (1630–1654); vgl. <rs type="bibl" ref="bibl:16896">Heer, Mabillon</rs> 308; <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 346f. Über sonstige
                   historiographische Tätigkeit vor dem Beginn seiner Korrespondenz mit BP ist
-                  (abgesehen von der „Idea congregationis Helveto-Benedictinae“, vgl. <ref
-                     type="letter">15</ref>, <ref type="letter">63</ref>, <ref type="letter"
-                     >204</ref>) nichts Näheres bekannt.</p>
-            </note>
-            <note xml:id="d4618e28473">
-               <ref type="context">3</ref>
-               <label>nonnullos ... Augiensibus adscriptos</label>
-               <p>Jodok Metzler hatte in seiner Abhandlung „De viris illustribus S. Galli“ (ca.
-                  1606; vgl. <ref type="letter">204</ref> &lt;4&gt;) mehrere bedeutende
+                  (abgesehen von der „Idea congregationis Helveto-Benedictinae“, vgl. <ref type="letter" target="letter:15">15</ref>, <ref type="letter" target="letter:63">63</ref>, <ref type="letter" target="letter:204">204</ref>) nichts Näheres bekannt.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>nonnullos ... Augiensibus adscriptos</mentioned>
+            <p>Jodok Metzler hatte in seiner Abhandlung „De viris illustribus S. Galli“ (ca.
+                  1606; vgl. <ref type="letter" target="letter:204">204</ref> <ref target="letter:204#seg4">4</ref>) mehrere bedeutende
                   Persönlichkeiten, darunter Abt Waldo von St.-Denis, Walahfrid Strabo und Hermann
                   „den Lahmen“, als St. Galler reklamiert, wobei er sich vor allem auf Trithemius
                   stützte. Der Reichenauer Prior Johann Egon hatte als Antwort darauf seine Schrift
-                  „De viris illustribus monasterii Augiae Maioris seu Divitis“ verfasst (vgl. <ref
-                     type="letter">21</ref>, <ref type="letter">204 </ref>&lt;5&gt;), worin er sie
+                  „De viris illustribus monasterii Augiae Maioris seu Divitis“ verfasst (vgl. <ref type="letter" target="letter:21">21</ref>, <ref type="letter" target="letter:204">204 </ref><ref target="letter:204 #seg5">5</ref>), worin er sie
                   als Reichenauer zu erweisen suchte. Beide Abhandlungen waren 1712 noch ungedruckt,
                   doch kannte MM nicht nur die Metzlers, sondern auch die Egons; kurz vor dem
                   Zeitpunkt dieses Briefs hatte er eine Abschrift der letzteren an René Massuet in
-                  Paris übermittelt: <rs type="bibl" key="bibl:19778">Stockinger, Fidelis</rs> 380f.
+                  Paris übermittelt: <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 380f.
                   BP hatte die Angaben über die Schriftsteller der Reichenau, die er in seinem
                   Katalog verwendete, von Wolfgang Wetter (21), der sie nach eigenem Bekunden vor
                   allem aus dem Traktat Egons geschöpft hatte; MM hatte also aus eigener Sicht guten
                   Grund, den Katalog zu beanstanden, der im Wesentlichen den Reichenauer Standpunkt
-                  wiedergab. Zu BPs Kenntnis von Metzler vgl. <ref type="letter">92</ref> &lt;7&gt;;
-                  zum weiteren Verlauf dieser Angelegenheit vgl. <ref type="letter">259</ref>
-                  &lt;6&gt; sowie die dort angeführten Stellen.</p>
-            </note>
-            <note xml:id="d4618e28480">
-               <ref type="context">3</ref>
-               <label>lentius festinare</label>
-               <p>Von dem Sprichwort „Festina lente!“ (Sueton, Oct. 25).</p>
-            </note>
-            <note xml:id="d4618e28485">
-               <ref type="context">3</ref>
-               <label>opera ... Sfondrati posthuma</label>
-               <p><rs type="bibl" key="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs> 331, führt
+                  wiedergab. Zu BPs Kenntnis von Metzler vgl. <ref type="letter" target="letter:92">92</ref> <ref target="letter:92#seg7">7</ref>;
+                  zum weiteren Verlauf dieser Angelegenheit vgl. <ref type="letter" target="letter:259">259</ref>
+                  <ref target="letter:259#seg6">6</ref> sowie die dort angeführten Stellen.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>lentius festinare</mentioned>
+            <p>Von dem Sprichwort „Festina lente!“ (Sueton, Oct. 25).</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>opera ... Sfondrati posthuma</mentioned>
+            <p><rs type="bibl" ref="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs> 331, führt
                   sechs ungedruckte Werke Sfondratis in der StiB St. Gallen an. Zu den
-                  archivalischen Quellen über die Prälatur Sfondratis vgl. <rs type="bibl"
-                     key="bibl:36248">Gustapane, Fonti archivistiche</rs>. Zur Person: <rs
-                     type="bibl" key="bibl:15058">Bauer, Thomistische Metaphysik</rs> 20–22, 789 und
-                  passim; <rs type="bibl" key="bibl:15998">Duft–Gössi–Vogler, St. Gallen</rs>
-                  1335–1338; <rs type="bibl" key="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs>
-                  149–151, 328–331; <rs type="bibl" key="bibl:17110">Hofstetter,
-                     Barockscholastik</rs>; <rs type="bibl" key="bibl:17590">Kolb, Präsidium</rs>
-                  138; <rs type="bibl" key="bibl:18514">Muschard, Kirchenrecht</rs> 257–262; <rs
-                     type="bibl" key="bibl:18956">Putzer, Aspekte</rs> 144f.; <rs type="bibl"
-                     key="bibl:19320">Scheiwiler, Sfondrati</rs>; <rs type="bibl" key="bibl:19320"
-                     >Zihlmann, Cursus</rs>, insb. 72–75.</p>
-            </note>
-            <note xml:id="d4618e28490">
-               <ref type="context">4</ref>
-               <label>Libellum ... De bello Tirolensi</label>
-               <p>Vgl. <ref type="letter">209</ref> &lt;2&gt;.</p>
-            </note>
-            <note xml:id="d4618e28497">
-               <ref type="context">6</ref>
-               <label>de ... Carolo</label>
-               <p>Vgl. <ref type="letter">209</ref> &lt;8&gt;. Der plötzliche Tod Josephs I., der
+                  archivalischen Quellen über die Prälatur Sfondratis vgl. <rs type="bibl" ref="bibl:36248">Gustapane, Fonti archivistiche</rs>. Zur Person: <rs type="bibl" ref="bibl:15058">Bauer, Thomistische Metaphysik</rs> 20–22, 789 und
+                  passim; <rs type="bibl" ref="bibl:15998">Duft–Gössi–Vogler, St. Gallen</rs>
+                  1335–1338; <rs type="bibl" ref="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs>
+                  149–151, 328–331; <rs type="bibl" ref="bibl:17110">Hofstetter,
+                     Barockscholastik</rs>; <rs type="bibl" ref="bibl:17590">Kolb, Präsidium</rs>
+                  138; <rs type="bibl" ref="bibl:18514">Muschard, Kirchenrecht</rs> 257–262; <rs type="bibl" ref="bibl:18956">Putzer, Aspekte</rs> 144f.; <rs type="bibl" ref="bibl:19320">Scheiwiler, Sfondrati</rs>; <rs type="bibl" ref="bibl:19320">Zihlmann, Cursus</rs>, insb. 72–75.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned>Libellum ... De bello Tirolensi</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:209">209</ref> <ref target="letter:209#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg6">
+            <mentioned>de ... Carolo</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:209">209</ref> <ref target="letter:209#seg8">8</ref>. Der plötzliche Tod Josephs I., der
                   St. Gallen freundlich gestimmt war, hatte die Bemühungen des Fürstabtes Bürgisser
-                  um kaiserliche Unterstützung in der Toggenburger Angelegenheit zurückgeworfen: <rs
-                     type="bibl" key="bibl:19918">Thürer, St. Galler Geschichte</rs> 1 521.</p>
-            </note>
-            <note xml:id="d4618e28504">
-               <ref type="context">6</ref>
-               <label>Austriae ... confoederatum</label>
-               <p>Vgl. <ref type="letter">32</ref> &lt;4&gt;.</p>
-            </note>
-            <note xml:id="d4618e28509">
-               <ref type="context">6</ref>
-               <label>rebelles ... Doggenburgenses</label>
-               <p>Die Lage im Toggenburg spitzte sich zu diesem Zeitpunkt bereits bedrohlich zu. Am
+                  um kaiserliche Unterstützung in der Toggenburger Angelegenheit zurückgeworfen: <rs type="bibl" ref="bibl:19918">Thürer, St. Galler Geschichte</rs> 1 521.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg6">
+            <mentioned>Austriae ... confoederatum</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:32">32</ref> <ref target="letter:32#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg6">
+            <mentioned>rebelles ... Doggenburgenses</mentioned>
+            <p>Die Lage im Toggenburg spitzte sich zu diesem Zeitpunkt bereits bedrohlich zu. Am
                   20. Februar 1712 hatten die Toggenburger die äbtischen Güter in ihrem Land
-                  beschlagnahmt und die Klöster St. Johann und Magdenau besetzt: <rs type="bibl"
-                     key="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs> 153; <rs type="bibl"
-                     key="bibl:19918">Thürer, St. Galler Geschichte</rs> 1 522. Der Ausbruch des
+                  beschlagnahmt und die Klöster St. Johann und Magdenau besetzt: <rs type="bibl" ref="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs> 153; <rs type="bibl" ref="bibl:19918">Thürer, St. Galler Geschichte</rs> 1 522. Der Ausbruch des
                   offenen Krieges zwischen dem Abt, den Toggenburgern und den mit ihnen verbündeten
                   reformierten Kantonen stand unmittelbar bevor.</p>
-            </note>
-            <note xml:id="d4618e28514">
-               <ref type="context">6</ref>
-               <label>legati ... salutent</label>
-               <p>Die förmliche Bestätigung der Privilegien St. Gallens durch Karl VI. erfolgte mit einem „Hauptlehenbrief“ vom 24. März 1713 (HHStA Wien, Reichsregister Karl VI., Bd. 5, 387r–389v). Als Unterhändler, der diese Urkunde erwirkt hatte, wird darin ein Adalbert Freiherr von Falkenstein genannt; ob er bereits zum Zeitpunkt dieses Briefs für diese Aufgabe vorgesehen war, ist unbekannt.</p>
-            </note>
-            <note xml:id="d4618e28519">
-               <ref type="context">7</ref>
-               <label>Felicissimum ... Alleluia</label>
-               <p>Der Ostersonntag fiel 1712 auf den 27. März, der Tag der Versendung dieses Briefs war Palmsonntag.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg6">
+            <mentioned>legati ... salutent</mentioned>
+            <p>Die förmliche Bestätigung der Privilegien St. Gallens durch Karl VI. erfolgte mit einem „Hauptlehenbrief“ vom 24. März 1713 (HHStA Wien, Reichsregister Karl VI., Bd. 5, 387r–389v). Als Unterhändler, der diese Urkunde erwirkt hatte, wird darin ein Adalbert Freiherr von Falkenstein genannt; ob er bereits zum Zeitpunkt dieses Briefs für diese Aufgabe vorgesehen war, ist unbekannt.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg7">
+            <mentioned>Felicissimum ... Alleluia</mentioned>
+            <p>Der Ostersonntag fiel 1712 auf den 27. März, der Tag der Versendung dieses Briefs war Palmsonntag.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>VIII</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:19778">
+            <title type="short">Stockinger, Fidelis</title>
+            <biblScope>358, 371, 380f., 410</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Ex S. Gallo 1712 die 20. Martii.</opener>
+         <opener>Admodum reverende religiosissime ac clarissime domine in Christo pater ac domine confrater et amice colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Et primas vestras encyclicas ante octiduum per patrem dominum Felicianum Wiblingensem mihi transmissas, et alteras heri per postam ordinariam ad me delatas, utrasque rite accepi et fasciculum illum quoque meum nuper submissum Melicii appulisse cum gaudio intellexi. Illud tamen et dolori et rubori non modico mihi fuit, quod tam magnas mihi semper grates referat, cum tam parva a me obsequia accipiat, ut adeo me tenuitatis meae nimis probe conscium magis confundat, quam grates tam indebitas quam inutiles in immeritum, imo omnis beneficii ignarum refundat. Parcat, quaeso, deinceps et sibi a nimia humanitate sua et mihi ab ista confusione mea, credatque pro certo me quidem verum amicum ac fidelem servum, non tamen mercenarium et dici et esse velle, qui nec stipendium immeritae laudis nec mercedem tam excessivae gratitudinis sibi velit sperare aut sine rubore ac vulnere possit sufferre. Sufficiet mihi meis me utut modicis obsequiis placuisse. Ignoscat, quaeso, mihi, si suboffensus ipse prior offendo, dum amici excessus amice carpo; vestra enim culpa et mea impatientia haec acciderunt. </ab>
+         <ab resp="#editor" xml:id="seg2">Caeterum, ut ad utrasque, quid sentiam, respondeam breviter (aliis utpote negotiis hodie mactandus), significo: Primo. Encyclicas illas vestras mihi summopere placere, idque unicum mihi in votis esse, ut singula monasteria in subsidium vocata efficaciter, non tam verbis quam opere, dignentur respondere et sociata manu Benedictinam gloriam augere. Illud tamen nescio quo cum rubore meo aspexi, inter tot illustrissima <anchor xml:id="n1"/>nomina etiam meum fuisse insertum<anchor xml:id="n1e"/>, cum tamen, quod ego erudito orbi contuli hactenus, tam nihil sit et modicum. Mererer forsan in ultimis subselliis locum habere, si <anchor xml:id="n2"/>consilia et cogitationes meas possem in opus deducere et typis mandare, quae ante annos potui concipere<anchor xml:id="n2e"/>. Sed longe alia sors mea ac vestra est: qui tot aliis perpetim negotiis obrutus vix recogitare possum, quae cogitavi semel, ne dicam efficere. Utinam uno alterove anno optata iam tot annis frui possem quiete, fidelem me haberet collaboratorem in suo opere; videretque et opuscula mea <choice><sic>haud</sic><corr>(ut</corr></choice> spero) <add place="left-margin">haud</add> displicitura! </ab>
+         <ab resp="#editor" xml:id="seg3">Interim id saltem, quod promisi nuper, curabo, ut exequar, et tractatum illum desideratum De viris illustribus S. Galli absolvam et submittam. <pb n="1v"/> Sic saltem aliorum opera et laudes luci publicae committam et aliorum splendore ac fama splendebo, dum propria nequeo; et mea sepelio. Fateor, in illo scriptorum syllabo multos Sanct-Gallenses nostros legi; sed plurimos adhuc desideravi, qui forsan adhuc incogniti sunt; <anchor xml:id="n3"/>nonnullos etiam Augiensibus adscriptos<anchor xml:id="n3e"/> legi, qui tamen citra disputatione nostri sunt. Sed de his et aliis in opusculo meo plura, ad rem et votum vestrum factura. Interim patientia! moneoque in tanto opere (ne quid praetermittatur) <anchor xml:id="n4"/>lentius festinare<anchor xml:id="n4e"/>. Illud rescire percuperem, cum apud nos in nostro monasterio Graecae Hebraicaeque linguae cultus semper floreat aliarumque sacrarum linguarum (quod in nostris monasteriis rarum est): num etiam illos viros nostros, qui his floruerunt, nihil tamen typis dederunt, inseri placeat? Itemque: an etiam manuscripta recentiora (si quae digna sunt) notari debeant, qualia sunt oppido multa apud nos, ut verbi gratia <anchor xml:id="n5"/>opera eminentissimi cardinalis Sfondrati posthuma<anchor xml:id="n5e"/> nondum edita, et aliorum? Sed haec prohic satis: alias cum meliori occasione plura. </ab>
+         <ab resp="#editor" xml:id="seg4">Secundo. <anchor xml:id="n6"/>Libellum vestrum De bello Tirolensi<anchor xml:id="n6e"/> editum mihi adpromissum cum gaudio legam, et venerabor tam charam manum. Si tamen eumdem aut quaedam alia mittere velit, quaeso, addere dignetur adhuc aliquot litteras encyclicas, ad minimum decem vel duodecim, in vicina Helvetiae nostrae monasteria a me dimittendas. </ab>
+         <ab resp="#editor" xml:id="seg5">Tertio. Acta sanctorum ordinis nostri iamiam Parisiis procurata, proxime ut advenerint, Ulmam et inde Melicium transmittam. Exspecto tamen occasionem opportunam et commodam, ut minoribus sumptibus procurari queant. </ab>
+         <ab resp="#editor" xml:id="seg6">Quarto. Pro novellis communicatis uti plurimum recreatus, ita et obligatus sum, quamvis iam pri<anchor xml:id="n7"/>dem totus orbis idem de augustissimo caesare nostro Carolo testimonium dixerit, omnesque boni non aliud optent, quam ut princeps tantis donis divinitus ornatus et his luctuosis temporibus reservatus, devictis omnibus suis hostibus quam diutissime quam felicissime regnet, et cum Augusto illo iterum totum orbem sibi vectigalem et in bona pace compositum habeat. Certe post Deum spes tota nostra in Carolo<anchor xml:id="n7e"/> fixa est, qui Sanct-Gallense monasterium ac territorium ab origine imperio et <anchor xml:id="n8"/>Austriae devotissimum et arctius confoederatum<anchor xml:id="n8e"/> potentissima manu sua defendet et proteget; et <anchor xml:id="n9"/>rebelles quoque Doggenburgenses<anchor xml:id="n9e"/> nostros subditos ad fidem et obedientiam debitam iterum reducet, et vel invitos compellet. Recommendo et causam illam et me ipsum specialiter plurimum reverendo domino Anselmo vestro Viennae degenti. Illuc venient <anchor xml:id="n10"/>legati nostri a celsissimo principe meo mittendi, ut solita regalia a caesare suscipiant; quibus mandabo, ut meo nomine dictum patronum meum salutent<anchor xml:id="n10e"/>. Interim, dum alio avocor et vix mihi praesens ob tot interpellationes, dum haec scribo, finio, sed sine fine manebo ut semper</ab>
+         <closer>Totus vester pater Mauritius manu propria.</closer>
+         <closer xml:id="seg7">P.S. <anchor xml:id="n11"/>Felicissimum fraterno ex corde Alleluia<anchor xml:id="n11e"/>! et toti venerandissimo Melicensi catalogo 1.000.000 oscula et obsequia.</closer>
+      </body>
    </text>
 </TEI>

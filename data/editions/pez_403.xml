@@ -1,46 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="403" xml:id="pez-0403">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">403 Adalbert Defuns an Bernhard Pez. 1715-05-01. Disentis.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Adalbert Defuns an Bernhard Pez. 1715-05-01. Disentis.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">403</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:16898">Heer, Pez</rs> 426</bibl>
-                  <bibl><rs type="bibl" key="bibl:18482">Müller, Disentis 1696–1742</rs> 659</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">658r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 658r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -55,62 +69,52 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">402</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">476</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">320</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">402</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">467</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">476</idno>
-               </ref>
+               <ptr type="prev" target="letter:402"/>
+               <ptr type="next" target="letter:476"/>
+               <ptr type="mentions" target="letter:320"/>
+               <ptr type="mentions" target="letter:402"/>
+               <ptr type="mentionedIn" target="letter:467"/>
+               <ptr type="mentionedIn" target="letter:476"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">ADe ist nach mehr als einem Jahr von schwerer Gicht einigermaßen genesen und schickt BP einen mit zittriger Hand geschriebenen, oder wie man im Mittelalter (<rs type="cit" ref="citIndex:ix2_d653e1338">media aetas</rs>) sagte, gekritzelten (caraxatus) Brief, um sich zu erkundigen, wie die Arbeit an der „<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“ vorankommt.</p>
+            <p corresp="#seg2">Er hat BP vor seiner Krankheit zwei Briefe (<ref type="letter" target="letter:320">320</ref>, <ref type="letter" target="letter:402">402</ref>) gesendet, jedoch keine Antwort erhalten; vielleicht wegen der Nachlässigkeit der Boten, vielleicht aber ist es sein Schicksal, mit einem so bedeutenden Mann wie BP keine Freundschaft pflegen zu dürfen. Er hofft, dass BP noch lebt, bittet um den Segen Gottes für dessen Vorhaben und für sich selbst um Gedenken im Gebet.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e51992"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>ADe<?oxy_custom_end?> ist nach mehr als einem Jahr von schwerer Gicht einigermaßen genesen und schickt <rs type="person" role="sender">BP</rs> einen mit zittriger Hand geschriebenen, oder wie man im Mittelalter (<rs type="cit" key="citIndex:ix2_d653e1338">media aetas</rs>) sagte, gekritzelten (caraxatus) Brief, um sich zu erkundigen, wie die Arbeit an der „<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“ vorankommt.</seg><seg type="context" n="2" xml:id="d4618e51994">Er hat <rs type="person" role="sender">BP</rs> vor seiner Krankheit zwei Briefe (<ref type="letter">320</ref>, <ref type="letter">402</ref>) gesendet, jedoch keine Antwort erhalten; vielleicht wegen der Nachlässigkeit der Boten, vielleicht aber ist es sein Schicksal, mit einem so bedeutenden Mann wie <rs type="person" role="sender">BP</rs> keine Freundschaft pflegen zu dürfen. Er hofft, dass <rs type="person" role="sender">BP</rs> noch lebt, bittet um den Segen Gottes für dessen Vorhaben und für sich selbst um Gedenken im Gebet.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende eruditissime et clarissime domine.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e52008">Ex diuturna chiragra, qua iam per integrum annum et ultro misere laboravi, aliquantum, quae miserentis Dei in me bonitas fuit, restitutus, hasce ad te, vir clarissime, tremula manu exaratas seu potius, ut <seg type="lemma" corresp="#d4618e52017">verbo mediae aetatis scriptoribus interdum usitato loquar, caraxatas</seg> transmitto, non alio quidem impulsu, quam ut ad incrementum gaudii mei successum praeclarissimi operis tui De scriptoribus Benedictinis a me toties tamque ardenter desiderati ex te discerem. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e52010">Miseram ante morbum ad te binas, ad quas tamen nullum hactenus responsum obtinui; sive ea nuntiorum incuria fuit, seu fatum meum potius amicitiam cum tanto viro prohibens, quem etiam subinde ob diuturnum silentium superstitem dubitabam. At superstitem etiamnum credo et voveo, ac insuper hortor et rogo, ut Deus ter optimus maximus eiusdem studia et heroicos labores dignanter secundet. Vale mei memor in precibus.</seg></p>
-            <p xml:space="preserve">Tuae clarissimae dominationis amantissimus confrater Adalbertus abbas.</p>
-            <p xml:space="preserve">Disertinae Calendas Maii 1715.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e52017">
-               <ref type="context">1</ref>
-               <label>verbo mediae aetatis ... caraxatas</label>
-               <p>Von χαράσσω „ritzen“, „kratzen“. Aus der Spätantike und dem Mittelalter finden
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>verbo mediae aetatis ... caraxatas</mentioned>
+            <p>Von χαράσσω „ritzen“, „kratzen“. Aus der Spätantike und dem Mittelalter finden
                   sich zahlreiche Belege für den Gebrauch im Sinne von „schreiben“, allerdings meist
                   ohne die hier anscheinend intendierte Nebenbedeutung „ungelenk schreiben“,
                   „kritzeln“. Iso Müller paraphrasiert die Stelle wie folgt: „Infolge seiner
                   zitternden Hand (tremula manu) waren seine Zeilen mehr Zeichnungen (caraxatas)
-                  geworden“ (<rs type="bibl" key="bibl:18482">Müller, Disentis 1696–1742</rs>
+                  geworden“ (<rs type="bibl" ref="bibl:18482">Müller, Disentis 1696–1742</rs>
                   659).</p>
-            </note>
-         </div>
-      </back>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:16898">
+            <title type="short">Heer, Pez</title>
+            <biblScope>426</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18482">
+            <title type="short">Müller, Disentis 1696–1742</title>
+            <biblScope>659</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende eruditissime et clarissime domine.</opener>
+         <ab resp="#editor" xml:id="seg1">Ex diuturna chiragra, qua iam per integrum annum et ultro misere laboravi, aliquantum, quae miserentis Dei in me bonitas fuit, restitutus, hasce ad te, vir clarissime, tremula manu exaratas seu potius, ut <anchor xml:id="n1"/>verbo mediae aetatis scriptoribus interdum usitato loquar, caraxatas<anchor xml:id="n1e"/> transmitto, non alio quidem impulsu, quam ut ad incrementum gaudii mei successum praeclarissimi operis tui De scriptoribus Benedictinis a me toties tamque ardenter desiderati ex te discerem. </ab>
+         <ab resp="#editor" xml:id="seg2">Miseram ante morbum ad te binas, ad quas tamen nullum hactenus responsum obtinui; sive ea nuntiorum incuria fuit, seu fatum meum potius amicitiam cum tanto viro prohibens, quem etiam subinde ob diuturnum silentium superstitem dubitabam. At superstitem etiamnum credo et voveo, ac insuper hortor et rogo, ut Deus ter optimus maximus eiusdem studia et heroicos labores dignanter secundet. Vale mei memor in precibus.</ab>
+         <closer>Tuae clarissimae dominationis amantissimus confrater Adalbertus abbas.</closer>
+         <closer>Disertinae Calendas Maii 1715.</closer>
+      </body>
    </text>
 </TEI>

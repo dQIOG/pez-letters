@@ -1,46 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="272" xml:id="pez-0272">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">272 Moritz Müller an Bernhard Pez. 1712-09-14. Zwiefalten.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Moritz Müller an Bernhard Pez. 1712-09-14. Zwiefalten.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">272</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:19778">Stockinger, Fidelis</rs> 358f., 381, 392f.,
-                     407f</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">101r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 101r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -55,122 +69,85 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">271</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">296</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">259</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">260</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">271</idno>
-               </ref>
+               <ptr type="prev" target="letter:271"/>
+               <ptr type="next" target="letter:296"/>
+               <ptr type="mentions" target="letter:259"/>
+               <ptr type="mentions" target="letter:260"/>
+               <ptr type="mentions" target="letter:271"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">MM hat in <rs ref="index:d10854e35314">Zwiefalten</rs>, wo er sich derzeit aufhält, zwei Briefe BPs erhalten: einen vom 18. Juli aus <rs ref="index:d14380e45571">Wien</rs> <ref type="letter" target="letter:259">259</ref>, einen weiteren vom 7. September aus <rs ref="index:d14380e28088">Melk</rs> <ref type="letter" target="letter:271">271</ref>. Auf den ersten Brief hatte MM bereits im Juli aus <rs ref="index:d10854e32902">Wiblingen</rs> geantwortet <ref type="letter" target="letter:260">260</ref> und sein Schreiben <rs ref="index:d10854e20625">Felician Müller</rs> zur Weiterleitung anvertraut, doch ist diese Antwort offenbar nicht angekommen. <rs ref="index:d10854e20625">Felician Müller</rs> soll der Sache nachgehen; MM hofft aber, dass sein Brief unterdessen bei BP eingetroffen ist.</p>
+            <p corresp="#seg2">MM dankt für die große Hilfsbereitschaft, welche die <rs ref="index:d14380e28088">Melker</rs> den <rs ref="index:d14380e39290">St. Gallern</rs> in ihrem Unglück angedeihen lassen. BPs jüngsten Brief hat MM, nachdem er ihn unter Freudentränen gelesen hatte, an seinen Dekan <rs ref="index:d10854e20651">Jodok Müller</rs> gesendet, der sich zusammen mit dem Fürstabt <rs ref="index:d14380e7141">Leodegar Bürgisser</rs> in der <rs ref="index:d14380e39290">St. Galler</rs> Besitzung <rs ref="index:d10854e21189">Neu-Ravensburg</rs> aufhält und diesem den Brief zeigen soll. Zudem will MM durch die Fürsprache BPs und <rs ref="index:d14380e39962">Anselm Schrambs</rs> Abt <rs ref="index:d14380e9628">Dietmayr</rs> besonders seinen Mitbruder <rs ref="index:d10854e10965">Lukas Grass</rs> ans Herz legen.</p>
+            <p corresp="#seg3"><rs ref="index:d14380e25664">Mabillons „Acta sanctorum OSB“ </rs>hatte sich MM vor Beginn des <rs ref="index:d14380e39321">Krieges</rs> aus <rs ref="index:d14380e32292">Paris</rs> schicken lassen. Einen Tag nach der Einnahme des Klosters ist dort ein Paket mit Büchern angekommen, von dem MM nicht sicher weiß, was es enthielt. Er hat es einem befreundeten <rs ref="index:d10854e27374">St. Galler</rs> Händler (<rs ref="index:d10854e32402">Kaspar Wegelin</rs>?) anvertraut, welcher ihm bereits geschrieben hat, dass er das Paket sicher in Verwahrung hat. Was sich in diesem tatsächlich befindet, will MM demnächst erfragen.</p>
+            <p corresp="#seg4">Das von ihm zusammengestellte <rs ref="index:d10854e20715">„Elogium“ des Kardinals Sfondrati</rs> hat MM schon vor fast einem halben Jahr mit der Ordinaripost nach Wien geschickt. Er beklagt sich über die Unzuverlässigkeit der <rs ref="index:d14380e35665">Post</rs>, räumt aber ein, dass das Werk auch in <rs ref="index:d10854e32902">Wiblingen</rs> hängengeblieben sein könnte, wo man an seinem Inhalt interessiert ist; außer an BP hat es MM bisher niemandem geschickt.</p>
+            <p corresp="#seg5">Die widrigen Umstände halten MM derzeit von der versprochenen Weiterarbeit an dem Traktat <rs ref="index:d10854e20696">„De viris illustribus S. Galli“</rs> ab.</p>
+            <p corresp="#seg6">MM bittet, den beigelegten Brief an seinen Mitbruder <rs ref="index:d10854e10965">Lukas Grass</rs>, der als Legat in Wien weilt, weiterzuleiten und diesen zu einer raschen Antwort anzuhalten.</p>
+            <p corresp="#seg7">In einem Postskriptum gratuliert MM BP zum <rs ref="index:d10854e23965">Amt des Novizenmeisters</rs> und bittet ihn um den Namen und die richtige Titulatur von Abt <rs ref="index:d14380e9628">Dietmayr</rs>.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e34363"><rs type="person" role="sender">MM</rs> hat in <rs key="index:d10854e35314">Zwiefalten</rs>, wo er sich derzeit aufhält, zwei Briefe <rs type="person" role="sender">BPs</rs> erhalten: einen vom 18. Juli aus <rs key="index:d14380e45571">Wien</rs> <ref type="letter">259</ref>, einen weiteren vom 7. September aus <rs key="index:d14380e28088">Melk</rs> <ref type="letter">271</ref>. Auf den ersten Brief hatte <rs type="person" role="sender">MM</rs> bereits im Juli aus <rs key="index:d10854e32902">Wiblingen</rs> geantwortet <ref type="letter">260</ref> und sein Schreiben <rs key="index:d10854e20625">Felician Müller</rs> zur Weiterleitung anvertraut, doch ist diese Antwort offenbar nicht angekommen. <rs key="index:d10854e20625">Felician Müller</rs> soll der Sache nachgehen; <rs type="person" role="sender">MM</rs> hofft aber, dass sein Brief unterdessen bei <rs type="person" role="sender">BP</rs> eingetroffen ist.</seg><seg type="context" n="2" xml:id="d4618e34374"><rs type="person" role="sender">MM</rs> dankt für die große Hilfsbereitschaft, welche die <rs key="index:d14380e28088">Melker</rs> den <rs key="index:d14380e39290">St. Gallern</rs> in ihrem Unglück angedeihen lassen. <rs type="person" role="sender">BPs</rs> jüngsten Brief hat <rs type="person" role="sender">MM</rs>, nachdem er ihn unter Freudentränen gelesen hatte, an seinen Dekan <rs key="index:d10854e20651">Jodok Müller</rs> gesendet, der sich zusammen mit dem Fürstabt <rs key="index:d14380e7141">Leodegar Bürgisser</rs> in der <rs key="index:d14380e39290">St. Galler</rs> Besitzung <rs key="index:d10854e21189">Neu-Ravensburg</rs> aufhält und diesem den Brief zeigen soll. Zudem will <rs type="person" role="sender">MM</rs> durch die Fürsprache <rs type="person" role="sender">BPs</rs> und <rs key="index:d14380e39962">Anselm Schrambs</rs> Abt <rs key="index:d14380e9628">Dietmayr</rs> besonders seinen Mitbruder <rs key="index:d10854e10965">Lukas Grass</rs> ans Herz legen.</seg><seg type="context" n="3" xml:id="d4618e34376"><rs key="index:d14380e25664">Mabillons „Acta sanctorum OSB“ </rs>hatte sich <rs type="person" role="sender">MM</rs> vor Beginn des <rs key="index:d14380e39321">Krieges</rs> aus <rs key="index:d14380e32292">Paris</rs> schicken lassen. Einen Tag nach der Einnahme des Klosters ist dort ein Paket mit Büchern angekommen, von dem <rs type="person" role="sender">MM</rs> nicht sicher weiß, was es enthielt. Er hat es einem befreundeten <rs key="index:d10854e27374">St. Galler</rs> Händler (<rs key="index:d10854e32402">Kaspar Wegelin</rs>?) anvertraut, welcher ihm bereits geschrieben hat, dass er das Paket sicher in Verwahrung hat. Was sich in diesem tatsächlich befindet, will <rs type="person" role="sender">MM</rs> demnächst erfragen.</seg><seg type="context" n="4" xml:id="d4618e34378">Das von ihm zusammengestellte <rs key="index:d10854e20715">„Elogium“ des Kardinals Sfondrati</rs> hat <rs type="person" role="sender">MM</rs> schon vor fast einem halben Jahr mit der Ordinaripost nach Wien geschickt. Er beklagt sich über die Unzuverlässigkeit der <rs key="index:d14380e35665">Post</rs>, räumt aber ein, dass das Werk auch in <rs key="index:d10854e32902">Wiblingen</rs> hängengeblieben sein könnte, wo man an seinem Inhalt interessiert ist; außer an <rs type="person" role="sender">BP</rs> hat es <rs type="person" role="sender">MM</rs> bisher niemandem geschickt.</seg><seg type="context" n="5" xml:id="d4618e34380">Die widrigen Umstände halten <rs type="person" role="sender">MM</rs> derzeit von der versprochenen Weiterarbeit an dem Traktat <rs key="index:d10854e20696">„De viris illustribus S. Galli“</rs> ab.</seg><seg type="context" n="6" xml:id="d4618e34382"><rs type="person" role="sender">MM</rs> bittet, den beigelegten Brief an seinen Mitbruder <rs key="index:d10854e10965">Lukas Grass</rs>, der als Legat in Wien weilt, weiterzuleiten und diesen zu einer raschen Antwort anzuhalten.</seg><seg type="context" n="7" xml:id="d4618e34384">In einem Postskriptum gratuliert <rs type="person" role="sender">MM</rs> <rs type="person" role="sender">BP</rs> zum <rs key="index:d10854e23965">Amt des Novizenmeisters</rs> und bittet ihn um den Namen und die richtige Titulatur von Abt <rs key="index:d14380e9628">Dietmayr</rs>.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">X</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Zwyfuldae 1712 die 14 Septembris.</p>
-            <p xml:space="preserve">Plurimum reverende religiosissime ac clarissime domine, domine patrone et amice in paucis colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e34405">Binas, <seg type="lemma" corresp="#d4618e34446">dum Zwyfuldae moror</seg>, easque solita humanitate plenissimas et ab amica et veneranda manu mihi charissimas accepi; alteras quidem Vienna sub 18. Julii, alteras vestro Melicio sub 7. Septembris ad me datas. Et ad priores quidem mense Julio ex <seg type="lemma" corresp="#d4618e34453">Wiblinga</seg>, ubi eram, respondi, litterasque patri domino Feliciano tradidi, utque secure et mature ad dominationem suam pervenirent, impense recommendavi. Vehementer miror et doleo, dum eas aut interceptas aut saltem nondum receptas esse ex ultimis intelligo. Poterit sane et debebit dictus pater Felicianus Müller rationem reddere et inquirere, quo illae devenerint cuive postae commissae fuerint. Spero tamen eas interim alicubi remoram passas tandem fuisse adhuc ad patronum meum delatas suoque loco restitutas. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e34407">Nunc ut ad ultimas respondeam: primum est, ut infinitas, quas debemus, grates pro omnium Melicensium in nos exules iam et<note place="foot" xml:id="d4618e34409">	Über der Zeile eingefügt.</note> miseros affectu et studio reponamus. Vix enim sine lacrymis a gaudio natis ultimas legere potui, dum tot calentissimos erga nos affectus luculenter expressos in iis legi. Illas reverendissimo domino <seg type="lemma" corresp="#d4618e34458">decano nostro</seg> cum celsissimo principe <seg type="lemma" corresp="#d4618e34465">Ravensburgi in castro nostro</seg> moranti transmisi, <seg type="lemma" corresp="#d4618e34470">ut easdem etiam altefato principi meo pro grandi solatio monstraret</seg>. Certe<note place="foot" xml:id="d4618e34412">	Davor durchgestrichen <hi rend="italic">Erit</hi>.</note> S. Gallus (olim utique, et utinam brevi, suo pristino flori restituendus) totus quantus, dum fuerit, obaeratus erit. Interim id unum oro, ut mediante vestro et plurimum reverendi patris Anselmi patrocinio potentissimo dominus confrater meus pater Lucas porro semper commendatus habeatur et in amplissimo gremio reverendissimi domini praesulis vestri (non ingratus utique olim domini <seg type="lemma" corresp="#d4618e34475">Galli pullus</seg>) gratiosissime foveatur semper. Cui et ego cum humillimo sacrarum manuum osculo me profundissime inclino et in amplissimos gratiae suae sinus totum me demergo. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e34418">Secundo. Quod attinet ad Acta sanctorum ordinis nostri patris Mabillonii: ea ego mihi Parisiis mitti curavi atque constitui ante bellum ortum; venitque illa ipsa die postera, <pb n="1v"/> qua ego, omnium ultimus et hoste iam muros habente, e S. Gallo fuga elapsus sum, una balla, ut vocant, libris plena. Qui autem et quales illi fuerint, adhuc ignoro, quia balla illa a me mercatori cuidam celeberrimo et <seg type="lemma" corresp="#d4618e34480">amico meo</seg> ex urbe S. Galli commendata fuit, quam etiam se salvasse et in sua domo a se mihi asservatam fuisse nuper perscripsit. Indagabo proxime, et si in<note place="foot" xml:id="d4618e34422">	Über der Zeile eingefügt.</note> illis Acta sanctorum fuerint, renuntiabo. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e34425">Tertio. <seg type="lemma" corresp="#d4618e34487">Elogium eminentissimi cardinalis Sfondrati nostri a me compositum et descriptum in 14 circiter quaternionibus ante dimidium ferme annum per postam ordinariam transmisi</seg> Viennam, et vehementer indignor ac doleo de<note place="foot" xml:id="d4618e34427">	Am linken Blattrand eingefügt.</note> tanta postae infidelitate. Suspicor Wiblingae forsan haesisse, quia illa scripta, pluribus desiderata, a me tamen nulli communicata fuere nisi amico meo et patrono. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e34430">Quarto. In ultimis scripsi me tractatum illum De viris illustribus S. Galli, in S. Gallo iam coeptum, etiam hic in exilio in gratiam amici mei absoluturum. Et erit opusculum labori vestro certe commodum et ad intentionem operis vestri plurimum serviturum nec, spero, ingratum. Sed patientia tot inter alia <sic>fasdidia</sic> [<hi rend="italic">sic</hi>] et negotia nobis interim, dum perficiatur, erit necesse. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e34435">Postremum est, ut rogem, quatenus his acclusae ad dominum confratrem meum patrem Lucam Grass Viennae causam nostram agentem mature et secure transmittantur isque moneatur, ut mihi certo et cito responsum det. Spero illud per vos secure ad me rediturum. Qui interim eodem semper ac immutato animo, ut domi semper fui, ita et in exilio sum eroque semper toto corde</seg></p>
-            <p xml:space="preserve">Plurimum reverendae clarissimae dominationis suae ex asse totus vester pater Mauritius Miller S. Gallensis capitularis et professus manu propria.</p>
-            <p xml:space="preserve"><seg type="context" n="7" xml:space="preserve" xml:id="d4618e34440">P.S. <seg type="lemma" corresp="#d4618e34494">Gratulor ex animo novi magistratus aditi dignam pro meritis spartam</seg>. Utinam et ego sub tanto Chirone haberi possem pro tyrone. Rogo, dignetur mihi in proximis litteris nomen et titulum debitum reverendissimi et amplissimi domini praesulis et abbatis vestri, patroni mei gratiosissimi, <sic>mihi</sic> [<hi rend="italic">sic</hi>] perscribere.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e34446">
-               <ref type="context">1</ref>
-               <label>dum Zwyfuldae moror</label>
-               <p>Vgl. 259 &lt;2&gt;.</p>
-            </note>
-            <note xml:id="d4618e34453">
-               <ref type="context">1</ref>
-               <label>Wiblinga</label>
-               <p>MMs Besuch in Wiblingen ist sonst nicht belegt. Vgl. <ref type="letter">15</ref>
-                  &lt;3&gt;, <ref type="letter">32</ref> &lt;1&gt;, <ref type="letter">57</ref>
-                  &lt;7&gt;, <ref type="letter">204</ref> &lt;3&gt;, <ref type="letter">230</ref>
-                  &lt;1&gt;.</p>
-            </note>
-            <note xml:id="d4618e34458">
-               <ref type="context">2</ref>
-               <label>decano nostro</label>
-               <p>Dieser Titel bezeichnete in einigen der reichsunmittelbaren Klöster der Schweiz
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>dum Zwyfuldae moror</mentioned>
+            <p>Vgl. 259 <ref target="#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>Wiblinga</mentioned>
+            <p>MMs Besuch in Wiblingen ist sonst nicht belegt. Vgl. <ref type="letter" target="letter:15">15</ref>
+                  <ref target="letter:15#seg3">3</ref>, <ref type="letter" target="letter:32">32</ref> <ref target="letter:32#seg1">1</ref>, <ref type="letter" target="letter:57">57</ref>
+                  <ref target="letter:57#seg7">7</ref>, <ref type="letter" target="letter:204">204</ref> <ref target="letter:204#seg3">3</ref>, <ref type="letter" target="letter:230">230</ref>
+                  <ref target="letter:230#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>decano nostro</mentioned>
+            <p>Dieser Titel bezeichnete in einigen der reichsunmittelbaren Klöster der Schweiz
                   und Süddeutschlands den Stellvertreter des Abts; der Dekan entsprach somit in etwa
                   dem Prior in anderen Benediktinerkonventen. In St. Gallen wurde dieses Amt von
                   1705 bis 1722 von dem mit MM (soweit feststellbar) nicht verwandten Jodok Müller
-                  bekleidet: <rs type="bibl" key="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs>
+                  bekleidet: <rs type="bibl" ref="bibl:16988">Henggeler, Profeßbuch St. Gallen</rs>
                   347. MMs Verhältnis zu diesem war anscheinend zumindest zeitweise nicht ganz
-                  spannungsfrei; vgl. <rs type="bibl" key="bibl:19778">Stockinger, Fidelis</rs>
+                  spannungsfrei; vgl. <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs>
                   412.</p>
-            </note>
-            <note xml:id="d4618e34465">
-               <ref type="context">2</ref>
-               <label>Ravensburgi in castro nostro</label>
-               <p>Die Burg Neu-Ravensburg bei Wangen hatte seit ca. 1270 (mit einigen
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>Ravensburgi in castro nostro</mentioned>
+            <p>Die Burg Neu-Ravensburg bei Wangen hatte seit ca. 1270 (mit einigen
                   Unterbrechungen) St. Gallen gehört; unter Fürstabt Bernhard Müller wurde sie
                   1613–1617 zum repräsentativen Schloss umgebaut. Fürstabt Bürgisser war vor der
                   Einnahme St. Gallens über die Mehrerau dorthin geflohen; das Schloss blieb bis zur
                   Rückkehr nach St. Gallen Residenz der Äbte und Mittelpunkt für die verstreuten
-                  Konventualen. Vgl. <rs type="bibl" key="bibl:16988">Henggeler, Profeßbuch St.
-                     Gallen</rs> 145, 154; <rs type="bibl" key="bibl:36958">Schneider, In oppido
+                  Konventualen. Vgl. <rs type="bibl" ref="bibl:16988">Henggeler, Profeßbuch St.
+                     Gallen</rs> 145, 154; <rs type="bibl" ref="bibl:36958">Schneider, In oppido
                      Ravensburg</rs> 144–146.</p>
-            </note>
-            <note xml:id="d4618e34470">
-               <ref type="context">2</ref>
-               <label>ut easdem ... monstraret</label>
-               <p>In der Übermittlung an den Abt liegt der Grund für die Erhaltung von <ref
-                     type="letter">271</ref> im Gegensatz zu den früheren Briefen BPs an MM in St.
-                  Gallen. Karton R 13 des StiA St. Gallen, in dem sich das Original von <ref
-                     type="letter">271</ref> befindet, enthält Akten Abt Bürgissers aus der
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned>ut easdem ... monstraret</mentioned>
+            <p>In der Übermittlung an den Abt liegt der Grund für die Erhaltung von <ref type="letter" target="letter:271">271</ref> im Gegensatz zu den früheren Briefen BPs an MM in St.
+                  Gallen. Karton R 13 des StiA St. Gallen, in dem sich das Original von <ref type="letter" target="letter:271">271</ref> befindet, enthält Akten Abt Bürgissers aus der
                   Exilszeit in Neu-Ravensburg.</p>
-            </note>
-            <note xml:id="d4618e34475">
-               <ref type="context">2</ref>
-               <label>Galli pullus</label>
-               <p>Wortspiel mit „gallus“ im Sinne von „Hahn“; vgl. <ref type="letter">235</ref>
-                  &lt;1&gt;. Zum Aufenthalt des Lukas Grass in Wien vgl. 271, 316; <rs type="bibl"
-                     key="bibl:19778">Stockinger, Fidelis</rs> 404, 407f., 412.</p>
-            </note>
-            <note xml:id="d4618e34480">
-               <ref type="context">3</ref>
-               <label>amico meo</label>
-               <p>Wahrscheinlich Kaspar Wegelin, ein Ratsherr von St. Gallen, der (obwohl
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
+            <mentioned>Galli pullus</mentioned>
+            <p>Wortspiel mit „gallus“ im Sinne von „Hahn“; vgl. <ref type="letter" target="letter:235">235</ref>
+                  <ref target="letter:235#seg1">1</ref>. Zum Aufenthalt des Lukas Grass in Wien vgl. 271, 316; <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 404, 407f., 412.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned>amico meo</mentioned>
+            <p>Wahrscheinlich Kaspar Wegelin, ein Ratsherr von St. Gallen, der (obwohl
                   Protestant) MM freundschaftlich verbunden war und während der Besetzung des
-                  Klosters viel zur Rettung von Handschriften und Kunstwerken getan haben soll: <rs
-                     type="bibl" key="bibl:20258">Weidmann, Bibliothek</rs> 151f. In MMs
+                  Klosters viel zur Rettung von Handschriften und Kunstwerken getan haben soll: <rs type="bibl" ref="bibl:20258">Weidmann, Bibliothek</rs> 151f. In MMs
                   Korrespondenz mit René Massuet wird Wegelin in den Jahren 1710 bis 1712 oft als
-                  Mittelsmann bei Buchankäufen MMs genannt: <rs type="bibl" key="bibl:15750"
-                     >Dantier, Pièces annexées</rs> 455, 457–460.</p>
-            </note>
-            <note xml:id="d4618e34487">
-               <ref type="context">4</ref>
-               <label>Elogium ... transmisi</label>
-               <p>In II, 80r–83v, findet sich ein Text mit dem Titel „Elogium eminentissimi et
+                  Mittelsmann bei Buchankäufen MMs genannt: <rs type="bibl" ref="bibl:15750">Dantier, Pièces annexées</rs> 455, 457–460.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
+            <mentioned>Elogium ... transmisi</mentioned>
+            <p>In II, 80r–83v, findet sich ein Text mit dem Titel „Elogium eminentissimi et
                   reverendissimi domini cardinalis Coelestini Sfondrati“, an dessen Ende der St.
                   Galler Hermann Schenk als Verfasser genannt wird. Der Text ist ein Auszug aus
-                  Schenks längerem „Elogium et itinerarium“ (vgl. <ref type="letter">235</ref>
-                  &lt;2&gt;), der dessen einleitende Seiten über das Leben Sfondratis bis zur
+                  Schenks längerem „Elogium et itinerarium“ (vgl. <ref type="letter" target="letter:235">235</ref>
+                  <ref target="letter:235#seg2">2</ref>), der dessen einleitende Seiten über das Leben Sfondratis bis zur
                   Kardinalserhebung wortwörtlich wiedergibt, dann Kardinalat und Tod sehr kurz
                   beschreibt. Derselbe Auszug ist auch in St. Gallen (StiA St. Gallen, Bd. 360,
                   738–745) ohne Verfasserangabe überliefert. Bei den Melker Blättern kann es sich
@@ -181,23 +158,41 @@
                   Blätter sind ebenso wenig von der Hand MMs wie ein offenbar diese begleitender
                   Zettel (II, 84r–v) mit zwei kurzen ergänzenden Notizen von einer zweiten Hand.
                   Schließlich ist festzuhalten, dass MM in weiteren Briefen an BP noch wiederholt
-                  über den Verlust des von ihm gesendeten „Elogium“ klagte (<ref type="letter"
-                     >327</ref>, <ref type="letter">337</ref>, <ref type="letter">345</ref>, <ref
-                     type="letter">367</ref>). Dieses ist somit als verschollen anzusehen und für
+                  über den Verlust des von ihm gesendeten „Elogium“ klagte (<ref type="letter" target="letter:327">327</ref>, <ref type="letter" target="letter:337">337</ref>, <ref type="letter" target="letter:345">345</ref>, <ref type="letter" target="letter:367">367</ref>). Dieses ist somit als verschollen anzusehen und für
                   das vorhandene kurze „Elogium“ eine Übermittlung nach 1715 anzunehmen; die
                   Vermutung der bisherigen Literatur, wonach dieses eine Beilage zu einem der Briefe
-                  MMs gewesen sei (<rs type="bibl" key="bibl:16524">Glassner, Verzeichnis</rs>228;
-                     <rs type="bibl" key="bibl:17432">Katschthaler, Briefnachlass</rs> 24; vgl. <rs
-                     type="bibl" key="bibl:16898">Heer, Pez</rs> 412), lässt sich nicht
+                  MMs gewesen sei (<rs type="bibl" ref="bibl:16524">Glassner, Verzeichnis</rs>228;
+                     <rs type="bibl" ref="bibl:17432">Katschthaler, Briefnachlass</rs> 24; vgl. <rs type="bibl" ref="bibl:16898">Heer, Pez</rs> 412), lässt sich nicht
                   aufrechterhalten.</p>
-            </note>
-            <note xml:id="d4618e34494">
-               <ref type="context">7</ref>
-               <label>Gratulor ... spartam</label>
-               <p>Zu BPs Amt als Novizenmeister vgl. Einleitung, Abschnitt I.1; sowie <ref
-                     type="letter">266</ref> &lt;15&gt;.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg7">
+            <mentioned>Gratulor ... spartam</mentioned>
+            <p>Zu BPs Amt als Novizenmeister vgl. Einleitung, Abschnitt I.1; sowie <ref type="letter" target="letter:266">266</ref> <ref target="letter:266#seg15">15</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>X</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:19778">
+            <title type="short">Stockinger, Fidelis</title>
+            <biblScope>358f., 381, 392f., 407f</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Zwyfuldae 1712 die 14 Septembris.</opener>
+         <opener>Plurimum reverende religiosissime ac clarissime domine, domine patrone et amice in paucis colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Binas, <anchor xml:id="n1"/>dum Zwyfuldae moror<anchor xml:id="n1e"/>, easque solita humanitate plenissimas et ab amica et veneranda manu mihi charissimas accepi; alteras quidem Vienna sub 18. Julii, alteras vestro Melicio sub 7. Septembris ad me datas. Et ad priores quidem mense Julio ex <anchor xml:id="n2"/>Wiblinga<anchor xml:id="n2e"/>, ubi eram, respondi, litterasque patri domino Feliciano tradidi, utque secure et mature ad dominationem suam pervenirent, impense recommendavi. Vehementer miror et doleo, dum eas aut interceptas aut saltem nondum receptas esse ex ultimis intelligo. Poterit sane et debebit dictus pater Felicianus Müller rationem reddere et inquirere, quo illae devenerint cuive postae commissae fuerint. Spero tamen eas interim alicubi remoram passas tandem fuisse adhuc ad patronum meum delatas suoque loco restitutas. </ab>
+         <ab resp="#editor" xml:id="seg2">Nunc ut ad ultimas respondeam: primum est, ut infinitas, quas debemus, grates pro omnium Melicensium in nos exules iam <add place="above">et</add> miseros affectu et studio reponamus. Vix enim sine lacrymis a gaudio natis ultimas legere potui, dum tot calentissimos erga nos affectus luculenter expressos in iis legi. Illas reverendissimo domino <anchor xml:id="n3"/>decano nostro<anchor xml:id="n3e"/> cum celsissimo principe <anchor xml:id="n4"/>Ravensburgi in castro nostro<anchor xml:id="n4e"/> moranti transmisi, <anchor xml:id="n5"/>ut easdem etiam altefato principi meo pro grandi solatio monstraret<anchor xml:id="n5e"/>. Certe<del ana="#before">Erit</del> S. Gallus (olim utique, et utinam brevi, suo pristino flori restituendus) totus quantus, dum fuerit, obaeratus erit. Interim id unum oro, ut mediante vestro et plurimum reverendi patris Anselmi patrocinio potentissimo dominus confrater meus pater Lucas porro semper commendatus habeatur et in amplissimo gremio reverendissimi domini praesulis vestri (non ingratus utique olim domini <anchor xml:id="n6"/>Galli pullus<anchor xml:id="n6e"/>) gratiosissime foveatur semper. Cui et ego cum humillimo sacrarum manuum osculo me profundissime inclino et in amplissimos gratiae suae sinus totum me demergo. </ab>
+         <ab resp="#editor" xml:id="seg3">Secundo. Quod attinet ad Acta sanctorum ordinis nostri patris Mabillonii: ea ego mihi Parisiis mitti curavi atque constitui ante bellum ortum; venitque illa ipsa die postera, <pb n="1v"/> qua ego, omnium ultimus et hoste iam muros habente, e S. Gallo fuga elapsus sum, una balla, ut vocant, libris plena. Qui autem et quales illi fuerint, adhuc ignoro, quia balla illa a me mercatori cuidam celeberrimo et <anchor xml:id="n7"/>amico meo<anchor xml:id="n7e"/> ex urbe S. Galli commendata fuit, quam etiam se salvasse et in sua domo a se mihi asservatam fuisse nuper perscripsit. Indagabo proxime, et si <add place="above">in</add> illis Acta sanctorum fuerint, renuntiabo. </ab>
+         <ab resp="#editor" xml:id="seg4">Tertio. <anchor xml:id="n8"/>Elogium eminentissimi cardinalis Sfondrati nostri a me compositum et descriptum in 14 circiter quaternionibus ante dimidium ferme annum per postam ordinariam transmisi<anchor xml:id="n8e"/> Viennam, et vehementer indignor ac doleo <add place="left-margin">de</add> tanta postae infidelitate. Suspicor Wiblingae forsan haesisse, quia illa scripta, pluribus desiderata, a me tamen nulli communicata fuere nisi amico meo et patrono. </ab>
+         <ab resp="#editor" xml:id="seg5">Quarto. In ultimis scripsi me tractatum illum De viris illustribus S. Galli, in S. Gallo iam coeptum, etiam hic in exilio in gratiam amici mei absoluturum. Et erit opusculum labori vestro certe commodum et ad intentionem operis vestri plurimum serviturum nec, spero, ingratum. Sed patientia tot inter alia <sic>fasdidia</sic>  et negotia nobis interim, dum perficiatur, erit necesse. </ab>
+         <ab resp="#editor" xml:id="seg6">Postremum est, ut rogem, quatenus his acclusae ad dominum confratrem meum patrem Lucam Grass Viennae causam nostram agentem mature et secure transmittantur isque moneatur, ut mihi certo et cito responsum det. Spero illud per vos secure ad me rediturum. Qui interim eodem semper ac immutato animo, ut domi semper fui, ita et in exilio sum eroque semper toto corde</ab>
+         <closer>Plurimum reverendae clarissimae dominationis suae ex asse totus vester pater Mauritius Miller S. Gallensis capitularis et professus manu propria.</closer>
+         <closer xml:id="seg7">P.S. <anchor xml:id="n9"/>Gratulor ex animo novi magistratus aditi dignam pro meritis spartam<anchor xml:id="n9e"/>. Utinam et ego sub tanto Chirone haberi possem pro tyrone. Rogo, dignetur mihi in proximis litteris nomen et titulum debitum reverendissimi et amplissimi domini praesulis et abbatis vestri, patroni mei gratiosissimi, <sic>mihi</sic>  perscribere.</closer>
+      </body>
    </text>
 </TEI>

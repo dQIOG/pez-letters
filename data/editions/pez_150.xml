@@ -1,45 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="150" xml:id="pez-0150">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">150 Petrus Friderici an Bernhard Pez. 1711-03-11. Erfurt.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Petrus Friderici an Bernhard Pez. 1711-03-11. Erfurt.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">150</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:18236">Mayer, Nachlaß</rs> 18 499</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">368r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 368r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -54,136 +69,104 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">146</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">165</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">156</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">146</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">156</idno>
-               </ref>
+               <ptr type="prev" target="letter:146"/>
+               <ptr type="next" target="letter:165"/>
+               <ptr type="sentWith" target="letter:156"/>
+               <ptr type="mentions" target="letter:146"/>
+               <ptr type="mentionedIn" target="letter:156"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1"><rs type="person">PF</rs> antwortet im Auftrag seines Abtes <rs ref="index:d10854e4919">Placidus Casselmann</rs> auf BPs Schreiben vom 25. Februar <ref type="letter" target="letter:146">146</ref> und berichtet über das <rs ref="index:d10854e8069">Peterskloster</rs>, das 706 vom Frankenkönig <rs ref="index:d10854e5824">Dagobert II.</rs> in der Stadt <rs ref="index:d10854e7974">Erfurt</rs> gegründet wurde (recte: siehe Kommentar). Im Jahr 1059 entfernte der <rs ref="index:d14380e25988">Mainzer</rs> Erzbischof <rs ref="index:d10854e28922">Siegfried</rs>, zuvor Abt von <rs ref="index:d10854e9767">Fulda</rs>, die Kanoniker aus dem Kloster und übergab es wiederum den Benediktinern; aus der Zeit dazwischen ist jedoch keine Überlieferung erhalten.</p>
+            <p corresp="#seg2">Von jenem Zeitpunkt an existieren in der <rs ref="index:d10854e8106">Bibliothek</rs> des <rs ref="index:d10854e8069">Petersklosters</rs> jedoch eine Annalenüberlieferung und <rs ref="index:d10854e8171">Professenkataloge</rs>, die <rs type="person">PF</rs> durchgesehen hat, ohne aber etwas für BPs Vorhaben („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) zu finden. Zahlreiche Mönche werden wegen ihres Lebenswandels gelobt, keiner wegen seiner Schriften.</p>
+            <p corresp="#seg3">BP hat <rs ref="index:d10854e2429">Basilius Valentinus</rs> angesprochen, der angeblich Professe des <rs ref="index:d10854e8069">Petersklosters</rs> war, was aber von einigen Autoren bestritten wird. <rs type="person">PF</rs> kann ihn im <rs ref="index:d10854e8171">Professenkatalog</rs> nicht finden und auch keine Schriften von ihm vorweisen.</p>
+            <p corresp="#seg4">Die Petrenser haben, wie <rs type="person">PF</rs> von Mitbrüdern erfahren hat, Materialien zur Gründung des Klosters bereits vor Jahren an die <rs ref="index:d10854e15615">Mauriner</rs> nach <rs ref="index:d14380e32292">Paris</rs> geschickt. <rs type="person">PF</rs> hält es für unnütz, dies nun zu wiederholen, zumal die „<rs ref="index:d14380e25705">Annales OSB</rs>“ inzwischen bei einem viel späteren Zeitpunkt angelangt sind.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e18165"><rs type="person" key="">PF</rs> antwortet im Auftrag seines Abtes <rs key="index:d10854e4919">Placidus Casselmann</rs> auf <rs type="person" role="sender">BPs</rs> Schreiben vom 25. Februar <ref type="letter">146</ref> und berichtet über das <rs key="index:d10854e8069">Peterskloster</rs>, das 706 vom Frankenkönig<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?> <?oxy_custom_end?><rs key="index:d10854e5824"><?oxy_comment_start author="Mayer" timestamp="20170816T173716+0200" comment="Zu Dagobert III. getaggt, wie in Bd. 1. Irrig?"?>Dagobert II.<?oxy_comment_end?></rs> in der Stadt <rs key="index:d10854e7974">Erfurt</rs> gegründet wurde (recte: siehe Kommentar). Im Jahr 1059 entfernte der <rs key="index:d14380e25988">Mainzer</rs> Erzbischof <rs key="index:d10854e28922">Siegfried</rs>, zuvor Abt von <rs key="index:d10854e9767">Fulda</rs>, die Kanoniker aus dem Kloster und übergab es wiederum den Benediktinern; aus der Zeit dazwischen ist jedoch keine Überlieferung erhalten.</seg><seg type="context" n="2" xml:id="d4618e18170">Von jenem Zeitpunkt an existieren in der <rs key="index:d10854e8106">Bibliothek</rs> des <rs key="index:d10854e8069">Petersklosters</rs> jedoch eine Annalenüberlieferung und <rs key="index:d10854e8171">Professenkataloge</rs>, die <rs type="person" key="">PF</rs> durchgesehen hat, ohne aber etwas für <rs type="person" role="sender">BPs</rs> Vorhaben („<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“) zu finden. Zahlreiche Mönche werden wegen ihres Lebenswandels gelobt, keiner wegen seiner Schriften.</seg><seg type="context" n="3" xml:id="d4618e18172"><rs type="person" role="sender">BP</rs> hat <rs key="index:d10854e2429">Basilius Valentinus</rs> angesprochen, der angeblich Professe des <rs key="index:d10854e8069">Petersklosters</rs> war, was aber von einigen Autoren bestritten wird. <rs type="person" key="">PF</rs> kann ihn im <rs key="index:d10854e8171">Professenkatalog</rs> nicht finden und auch keine Schriften von ihm vorweisen.</seg><seg type="context" n="4" xml:id="d4618e18174">Die Petrenser haben, wie <rs type="person" key="">PF</rs> von Mitbrüdern erfahren hat, Materialien zur Gründung des Klosters bereits vor Jahren an die <rs key="index:d10854e15615">Mauriner</rs> nach <rs key="index:d14380e32292">Paris</rs> geschickt. <rs type="person" key="">PF</rs> hält es für unnütz, dies nun zu wiederholen, zumal die „<rs key="index:d14380e25705">Annales OSB</rs>“ inzwischen bei einem viel späteren Zeitpunkt angelangt sind.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic" xml:space="preserve">Plurimum reverendo ac eximio domino domino Bernardo Pez sacri ordinis sancti patris Benedicti in celeberrimo et exempto monasterio Mellicensi professo, presbytero, domino confratri suo colendissimo. Viennam. </hi>Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 28r.</ab>
-            </div>
-            <div>
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">I</hi>.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende domine confrater.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e18198">Ex mandato <seg type="lemma" corresp="#d4618e18213">reverendissimi mei</seg> ad amabiles litteras admodum reverendae paternitatis vestrae de dato 25. Februarii currentis anni propediem hisce inservire debui. Sciat itaque reverentia vestra, quod monasterium nostrum vulgo Petrense dictum <seg type="lemma" corresp="#d4618e18220">a Dagoberto secundo Francorum rege anno 706</seg> intra Erffordiam fundatum sit, ab eo vero tempore usque <seg type="lemma" corresp="#d4618e18225">ad annum 1059 (quo a canonicis insessum per Sigfridum ex abbate Fuldensi archiepiscopum Moguntinum sacro ordini restitutum est) vix aliquid</seg> inibi gestorum conscripta habeamus, et si quae fuerint, temporum vicissitudine aut incendiis crebrioribus perierunt. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e18200">A restitutione autem usque in praesens <seg type="lemma" corresp="#d4618e18235">annales quosdam</seg> in bibliotheca nostra reperio, quos in gratiam dilectae confraternitatis vestrae cum <seg type="lemma" corresp="#d4618e18242">catalogo professorum</seg> nostrorum studio perlustravi, ast hactenus nihil inveni, quo laudabilissimam intentionem admodum reverendae dominationis suae secundare queam: laudantur quidem in iis aliqui ex religiosis nostris de regulari exemplarique vita, nemo vero scriptis aliquid vulgasse, quod momenti esset et ad intentum reverentiae vestrae, perhibetur. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e18202">Meminit plurimum veneranda <pb n="1v"/> dominatio sua famosi illius patris <seg type="lemma" corresp="#d4618e18247">Basilii Valentini</seg>, quem et communis fama et typici libri professum nostrorum faciunt, ast id asseverare pro certo nequeo, cum non desint, qui contrarium scribant, nec annales nostri id evincant, cum nec nomen quidem eius inter professos inveniam, nec scripta eiusdem exhibere possim. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e18206">Quantum autem ad fundationem monasterii eoque pertinentia, iam dudum, quemadmodum a nostris intellexi, ea <seg type="lemma" corresp="#d4618e18254">Parisios transmissa sunt</seg>; nec utilitatis ullius putem illa modo reiterare, cum fundatio antiquior reverendi patris Mabillonis modernum typum multis annis transcendat. Hisce pro nunc valere seseque recommendatum habere cupit</seg></p>
-            <p xml:space="preserve">Admodum reverendae paternitatis servus ac confrater obsequiosissimus pater Petrus Friderici professus ad S. Petrum manu propria.</p>
-            <p xml:space="preserve">Erffurti 11. Martii 1711.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e18213">
-               <ref type="context">1</ref>
-               <label>reverendissimi mei</label>
-               <p>Zu Placidus Casselmann: <rs type="bibl" key="bibl:35922">Böckner,
-                     Peterskloster</rs> 10 83f.; <rs type="bibl" key="bibl:36658">Motschmann,
-                     Erfordia literata</rs> 3 383–385; vgl. <rs type="bibl" key="bibl:37066"
-                     >Stievermann, Geschichte</rs> 146.</p>
-            </note>
-            <note xml:id="d4618e18220">
-               <ref type="context">1</ref>
-               <label>a Dagoberto secundo ... anno 706</label>
-               <p>Die angebliche Gründungsurkunde des Petersklosters zu Erfurt von 706 ist eine
-                  Fälschung: <rs type="bibl" key="bibl:35742">MGH DD.Merov.</rs> 1 177–180 Nr. 70;
-                     <rs type="bibl" key="bibl:36734">Overmann, Urkundenbuch</rs> 1 1–3 Nr. 1. Die
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>reverendissimi mei</mentioned>
+            <p>Zu Placidus Casselmann: <rs type="bibl" ref="bibl:35922">Böckner,
+                     Peterskloster</rs> 10 83f.; <rs type="bibl" ref="bibl:36658">Motschmann,
+                     Erfordia literata</rs> 3 383–385; vgl. <rs type="bibl" ref="bibl:37066">Stievermann, Geschichte</rs> 146.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>a Dagoberto secundo ... anno 706</mentioned>
+            <p>Die angebliche Gründungsurkunde des Petersklosters zu Erfurt von 706 ist eine
+                  Fälschung: <rs type="bibl" ref="bibl:35742">MGH DD.Merov.</rs> 1 177–180 Nr. 70;
+                     <rs type="bibl" ref="bibl:36734">Overmann, Urkundenbuch</rs> 1 1–3 Nr. 1. Die
                   Tradition, wonach das Kloster auf einen Frankenkönig namens Dagobert zurückgehe,
-                  war bereits im 12. Jh. aufgekommen: <rs type="bibl" key="bibl:17142">Holder-Egger,
-                     Handschriften</rs> 537f.; <rs type="bibl" key="bibl:37238">Werner,
+                  war bereits im 12. Jh. aufgekommen: <rs type="bibl" ref="bibl:17142">Holder-Egger,
+                     Handschriften</rs> 537f.; <rs type="bibl" ref="bibl:37238">Werner,
                      Gründungstradition</rs> 13–61. Auf die Frage, ob die unzweifelhaft falsche
                   Urkunde auf eine echte Vorlage zurückgeht oder wenigstens glaubwürdige
-                  Traditionskerne enthält, kann hier nicht eingegangen werden; vgl. <rs type="bibl"
-                     key="bibl:37040">Staab, Gründungstradition</rs>; <rs type="bibl"
-                     key="bibl:37190">Wagner, Dagobert-Fälschung</rs>; <rs type="bibl"
-                     key="bibl:37240">Werner, Klösterliches Leben</rs>. Die Unechtheit der Urkunde
+                  Traditionskerne enthält, kann hier nicht eingegangen werden; vgl. <rs type="bibl" ref="bibl:37040">Staab, Gründungstradition</rs>; <rs type="bibl" ref="bibl:37190">Wagner, Dagobert-Fälschung</rs>; <rs type="bibl" ref="bibl:37240">Werner, Klösterliches Leben</rs>. Die Unechtheit der Urkunde
                   war bis zur Zeit PFs bereits mehrmals festgestellt worden, etwa von Trithemius und
-                  Sagittarius; vgl. auch <rs type="bibl" key="bibl:14984">Babin–Van den Heuvel,
+                  Sagittarius; vgl. auch <rs type="bibl" ref="bibl:14984">Babin–Van den Heuvel,
                      Leibniz Schriften und Briefe</rs> 122.</p>
-            </note>
-            <note xml:id="d4618e18225">
-               <ref type="context">1</ref>
-               <label>ad annum 1059 ... vix aliquid</label>
-               <p>Vgl. <rs type="bibl" key="bibl:35728">Chronicon Ecclesiasticum Nicolai de
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned>ad annum 1059 ... vix aliquid</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de
                      Siegen</rs> 138f.</p>
-            </note>
-            <note xml:id="d4618e18230">
-               <ref type="context">1</ref>
-               <label>canonicis insessum ... ordini restitutum</label>
-               <p>Der Bericht PFs entspricht im Wesentlichen der Darstellung im <rs type="bibl"
-                     key="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs> 231f.; vgl.
-                     <rs type="bibl" key="bibl:36734">Overmann, Urkundenbuch</rs> 1 4f. Nr. 3.</p>
-            </note>
-            <note xml:id="d4618e18235">
-               <ref type="context">2</ref>
-               <label>annales quosdam</label>
-               <p>Zur Historiographie im Peterskloster: <rs type="bibl" key="bibl:35922">Böckner,
-                     Peterskloster</rs> 11 172–174; <rs type="bibl" key="bibl:36146">Frank,
-                     Peterskloster</rs> 135–145; <rs type="bibl" key="bibl:37094">Theele,
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
+            <mentioned>canonicis insessum ... ordini restitutum</mentioned>
+            <p>Der Bericht PFs entspricht im Wesentlichen der Darstellung im <rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs> 231f.; vgl.
+                     <rs type="bibl" ref="bibl:36734">Overmann, Urkundenbuch</rs> 1 4f. Nr. 3.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
+            <mentioned>annales quosdam</mentioned>
+            <p>Zur Historiographie im Peterskloster: <rs type="bibl" ref="bibl:35922">Böckner,
+                     Peterskloster</rs> 11 172–174; <rs type="bibl" ref="bibl:36146">Frank,
+                     Peterskloster</rs> 135–145; <rs type="bibl" ref="bibl:37094">Theele,
                      Handschriften</rs> 10–13. Von den annalistischen Arbeiten aus dem 12. bis 14.
-                  Jh. (Kontinuationen zu Lampert von Hersfeld sowie zu Frutolf-Ekkehard: <rs
-                     type="bibl" key="bibl:35746">Monumenta Erphesfurtensia</rs> 3–71, 117–398; vgl.
-                     <rs type="bibl" key="bibl:17140">Holder-Egger, Geschichtsquellen</rs> 21
+                  Jh. (Kontinuationen zu Lampert von Hersfeld sowie zu Frutolf-Ekkehard: <rs type="bibl" ref="bibl:35746">Monumenta Erphesfurtensia</rs> 3–71, 117–398; vgl.
+                     <rs type="bibl" ref="bibl:17140">Holder-Egger, Geschichtsquellen</rs> 21
                   443–546, 687–735) dürfte PF wenig oder gar nichts zugänglich gewesen sein. Zentral
                   ist dagegen die Chronik des Nikolaus von Siegen aus dem Ende des 15. Jh., aus der
                   PF den Großteil seiner historischen Nachrichten schöpft. Zu ihrer Überlieferung
-                  (das Original heute Landeshauptarchiv Weimar, Hs. F 166) vgl. <rs type="bibl"
-                     key="bibl:36146">Frank, Peterskloster</rs> 267; <rs type="bibl"
-                     key="bibl:37094">Theele, Handschriften</rs> 191f.; <rs type="bibl"
-                     key="bibl:37212">Wegele, Vorwort</rs> VI–VIII.</p>
-            </note>
-            <note xml:id="d4618e18242">
-               <ref type="context">2</ref>
-               <label>catalogo professorum</label>
-               <p>Sicherlich das in der Zeit der Bursfelder Reform durch Rüdiger von Venlo angelegte
+                  (das Original heute Landeshauptarchiv Weimar, Hs. F 166) vgl. <rs type="bibl" ref="bibl:36146">Frank, Peterskloster</rs> 267; <rs type="bibl" ref="bibl:37094">Theele, Handschriften</rs> 191f.; <rs type="bibl" ref="bibl:37212">Wegele, Vorwort</rs> VI–VIII.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
+            <mentioned>catalogo professorum</mentioned>
+            <p>Sicherlich das in der Zeit der Bursfelder Reform durch Rüdiger von Venlo angelegte
                   Nekrologium, das noch im 18. Jh. in Gebrauch war, heute aber verloren ist.
                   Erhalten sind nur neuzeitliche Auszüge, deren umfangreichste von Gallus Stassen
-                  aus dem späten 18. Jh. stammen (Bistumsarchiv Erfurt, Hs. Erfurt 18); dazu <rs
-                     type="bibl" key="bibl:36146">Frank, Peterskloster</rs> 407–409; <rs type="bibl"
-                     key="bibl:17142">Holder-Egger, Handschriften</rs> 503–508, 525–529; <rs
-                     type="bibl" key="bibl:37094">Theele, Handschriften</rs> 13, 134–140, 203; vgl.
-                  auch <rs type="bibl" key="bibl:35922">Böckner, Peterskloster</rs> 11 159f.</p>
-            </note>
-            <note xml:id="d4618e18247">
-               <ref type="context">3</ref>
-               <label>Basilii Valentini</label>
-               <p>Vgl. <ref type="letter">166</ref>.</p>
-            </note>
-            <note xml:id="d4618e18254">
-               <ref type="context">4</ref>
-               <label>Parisios transmissa sunt</label>
-               <p>Erwähnungen von St. Peter zu Erfurt finden sich bei Mabillon, Acta sanctorum OSB 6 721; Mabillon, Annales OSB 4 597; freilich in beiden Fällen zum 11. Jh.</p>
-            </note>
-         </div>
-      </back>
+                  aus dem späten 18. Jh. stammen (Bistumsarchiv Erfurt, Hs. Erfurt 18); dazu <rs type="bibl" ref="bibl:36146">Frank, Peterskloster</rs> 407–409; <rs type="bibl" ref="bibl:17142">Holder-Egger, Handschriften</rs> 503–508, 525–529; <rs type="bibl" ref="bibl:37094">Theele, Handschriften</rs> 13, 134–140, 203; vgl.
+                  auch <rs type="bibl" ref="bibl:35922">Böckner, Peterskloster</rs> 11 159f.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned>Basilii Valentini</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:166">166</ref>.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
+            <mentioned>Parisios transmissa sunt</mentioned>
+            <p>Erwähnungen von St. Peter zu Erfurt finden sich bei Mabillon, Acta sanctorum OSB 6 721; Mabillon, Annales OSB 4 597; freilich in beiden Fällen zum 11. Jh.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:18236">
+            <title type="short">Mayer, Nachlaß</title>
+            <biblScope>18 499</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <front>
+         <p>Plurimum reverendo ac eximio domino domino Bernardo Pez sacri ordinis sancti patris Benedicti in celeberrimo et exempto monasterio Mellicensi professo, presbytero, domino confratri suo colendissimo. Viennam. <note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 28r.</note></p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende domine confrater.</opener>
+         <ab resp="#editor" xml:id="seg1">Ex mandato <anchor xml:id="n1"/>reverendissimi mei<anchor xml:id="n1e"/> ad amabiles litteras admodum reverendae paternitatis vestrae de dato 25. Februarii currentis anni propediem hisce inservire debui. Sciat itaque reverentia vestra, quod monasterium nostrum vulgo Petrense dictum <anchor xml:id="n2"/>a Dagoberto secundo Francorum rege anno 706<anchor xml:id="n2e"/> intra Erffordiam fundatum sit, ab eo vero tempore usque <anchor xml:id="n3"/>ad annum 1059 (quo a canonicis insessum per Sigfridum ex abbate Fuldensi archiepiscopum Moguntinum sacro ordini restitutum est) vix aliquid<anchor xml:id="n3e"/> inibi gestorum conscripta habeamus, et si quae fuerint, temporum vicissitudine aut incendiis crebrioribus perierunt. </ab>
+         <ab resp="#editor" xml:id="seg2">A restitutione autem usque in praesens <anchor xml:id="n4"/>annales quosdam<anchor xml:id="n4e"/> in bibliotheca nostra reperio, quos in gratiam dilectae confraternitatis vestrae cum <anchor xml:id="n5"/>catalogo professorum<anchor xml:id="n5e"/> nostrorum studio perlustravi, ast hactenus nihil inveni, quo laudabilissimam intentionem admodum reverendae dominationis suae secundare queam: laudantur quidem in iis aliqui ex religiosis nostris de regulari exemplarique vita, nemo vero scriptis aliquid vulgasse, quod momenti esset et ad intentum reverentiae vestrae, perhibetur. </ab>
+         <ab resp="#editor" xml:id="seg3">Meminit plurimum veneranda <pb n="1v"/> dominatio sua famosi illius patris <anchor xml:id="n6"/>Basilii Valentini<anchor xml:id="n6e"/>, quem et communis fama et typici libri professum nostrorum faciunt, ast id asseverare pro certo nequeo, cum non desint, qui contrarium scribant, nec annales nostri id evincant, cum nec nomen quidem eius inter professos inveniam, nec scripta eiusdem exhibere possim. </ab>
+         <ab resp="#editor" xml:id="seg4">Quantum autem ad fundationem monasterii eoque pertinentia, iam dudum, quemadmodum a nostris intellexi, ea <anchor xml:id="n7"/>Parisios transmissa sunt<anchor xml:id="n7e"/>; nec utilitatis ullius putem illa modo reiterare, cum fundatio antiquior reverendi patris Mabillonis modernum typum multis annis transcendat. Hisce pro nunc valere seseque recommendatum habere cupit</ab>
+         <closer>Admodum reverendae paternitatis servus ac confrater obsequiosissimus pater Petrus Friderici professus ad S. Petrum manu propria.</closer>
+         <closer>Erffurti 11. Martii 1711.</closer>
+      </body>
    </text>
 </TEI>

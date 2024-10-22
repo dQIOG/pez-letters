@@ -1,29 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="560" xml:id="pez-0560">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">[560] Johann Christoph Bartenstein an Bernhard Pez. &lt; 1716-05-10.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Christoph Bartenstein an Bernhard Pez. &lt; 1716-05-10.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">560</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
+            <note type="remarks">
+               Die in 561 &lt;1&gt; erwähnten zwei vorangegangenen Briefe CBs, welche BP nicht beantwortet hatte, können nicht plausibel mit 500 und 555 identifiziert werden, da BP zwischen diesen beiden nach den Angaben in 555 zweimal an CB geschrieben hatte. Es ist daher ein weiterer, nicht erhaltener Brief CBs anzusetzen. Da CB in 555 &lt;1&gt; keinen knapp vorher geschriebenen Brief erwähnt, sondern vielmehr ein längeres eigenes Schweigen entschuldigt, ist zu vermuten, dass der verlorene Brief zeitlich zwischen 555 und 561 fiel.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <p>No direct source, inferred letter.</p>
+            <listWit>
+               <witness ana="cmif:noTextBase"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -37,37 +62,18 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">555</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">561</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">561</idno>
-               </ref>
+               <ptr type="prev" target="letter:555"/>
+               <ptr type="next" target="letter:561"/>
+               <ptr type="mentionedIn" target="letter:561"/>
             </correspContext>
          </correspDesc>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
    <text>
-      <front>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Die in 561 &lt;1&gt; erwähnten zwei vorangegangenen Briefe CBs, welche BP nicht beantwortet hatte, können nicht plausibel mit 500 und 555 identifiziert werden, da BP zwischen diesen beiden nach den Angaben in 555 zweimal an CB geschrieben hatte. Es ist daher ein weiterer, nicht erhaltener Brief CBs anzusetzen. Da CB in 555 &lt;1&gt; keinen knapp vorher geschriebenen Brief erwähnt, sondern vielmehr ein längeres eigenes Schweigen entschuldigt, ist zu vermuten, dass der verlorene Brief zeitlich zwischen 555 und 561 fiel.</p>
-            </div>
-         </div>
-      </front>
       <body>
          <ab>
             <gap reason="inferred letter"/>
          </ab>
       </body>
-      <back/>
    </text>
 </TEI>

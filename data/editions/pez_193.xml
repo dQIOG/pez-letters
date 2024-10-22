@@ -1,29 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="193" xml:id="pez-0193">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">[193] Bernhard Pez an Placidus Haiden. &lt; 1711-12-05.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Bernhard Pez an Placidus Haiden. &lt; 1711-12-05.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">193</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
+            <note type="remarks">
+               Die Datierung ergibt sich aus der Bemerkung in 195, PH
+                  habe den Brief vor acht Tagen erhalten.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <p>No direct source, inferred letter.</p>
+            <listWit>
+               <witness ana="cmif:noTextBase"/>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -37,38 +63,18 @@
                <persName>Placidus Haiden</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">187</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">195</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">195</idno>
-               </ref>
+               <ptr type="prev" target="letter:187"/>
+               <ptr type="next" target="letter:195"/>
+               <ptr type="mentionedIn" target="letter:195"/>
             </correspContext>
          </correspDesc>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
    <text>
-      <front>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Die Datierung ergibt sich aus der Bemerkung in <ref type="letter">195</ref>, PH
-                  habe den Brief vor acht Tagen erhalten.</p>
-            </div>
-         </div>
-      </front>
       <body>
          <ab>
             <gap reason="inferred letter"/>
          </ab>
       </body>
-      <back/>
    </text>
 </TEI>

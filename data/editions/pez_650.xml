@@ -1,46 +1,72 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="650" xml:id="pez-0650">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">650 Johann Gottlieb Krause an Bernhard Pez. 1716-09-11. Leipzig.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Gottlieb Krause an Bernhard Pez. 1716-09-11. Leipzig.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">650</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:18770">Peper, Ohne Parteilichkeit</rs> 270</bibl>
-                  <bibl><rs type="bibl" key="bibl:18772">Peper, Österreichische Gelehrtenwelt</rs>
-                     12f</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Irrig zum 11. August 1716 datiert bei Glassner,
+                     Verzeichnis 221. – Die in &lt;2&gt; und &lt;3&gt; erwähnten
+                  vorangegangenen Kontakte erlauben keinen Schluss auf unmittelbaren Briefverkehr;
+                  als einziger Vorbrief wird deshalb 293a angesetzt. – Auf
+                  2v Vermerk von anderer
+                  Hand: <orig>N.B. Johannes ille diaconus ad Athanasium episcopum floruit circa</orig> (danach
+                  durchgestrichen <orig>saeculum X.</orig>) <orig>finem saeculi IX. Bollandus tomo quinto Junii pagina 14</orig>.
+                  Die hier notierte Passage der „Acta sanctorum“ hat keinen erkennbaren Bezug zum
+                  Inhalt des Briefes; vgl. jedoch 490 &lt;3&gt;. – Die
+                  Seite 1v ist unbeschrieben.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">397r–398v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 397r–398v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -55,64 +81,30 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">293</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">709</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">293</idno>
-               </ref>
+               <ptr type="prev" target="letter:293"/>
+               <ptr type="next" target="letter:709"/>
+               <ptr type="mentions" target="letter:293"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">GK bezweifelt, BP für die bereits lange zurückliegende Zusendung des Conspectus der „<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“ (<ref type="letter" target="letter:293a">293a</ref>) genug danken zu können; dieses Werk wird von den Gelehrten sehnlichst erwartet. GK hat den Conspectus in der 16. Abteilung des von ihm herausgegebenen „<rs ref="index:d14380e30381">Neuen bücher-saals der gelehrten welt</rs>“ inseriert und dabei auch den Codex über die Gelehrten des <rs ref="index:d14380e4919">Benediktinerordens</rs> (<rs ref="index:d14380e24393"><rs ref="index:d14380e44841">Wagner, „Series monachorum litteratorum“</rs></rs>) in der <rs ref="index:d14380e24317">Leipziger</rs> <rs ref="index:d14380e24387">Bibliotheca Paulina</rs> erwähnt.</p>
+            <p corresp="#seg2">Weiters hat BP mehr als einmal Beiträge für die „<rs ref="index:d14380e30388">Neuen zeitungen</rs>“ geliefert, die GK in deutscher Sprache herausgibt.</p>
+            <p corresp="#seg3">Vor allem aber hat BP eine Liste der hervorragendsten Handschriften in den <rs ref="index:d10854e22102">oberösterreichischen</rs> Klöstern („<rs ref="index:d14380e33760">Nachricht von den vornehmsten codicibus</rs>“) über Vermittlung von <rs ref="index:d14380e28655">Johann Burkhard Mencke</rs> geschickt, damit sie an angemessener Stelle veröffentlicht wird. GK hat sie in seiner „<rs ref="index:d14380e43730">Umständlichen bücher-historie</rs>“ publiziert, von der er ein Exemplar beilegt. Er hofft, dass BP auch die von ihm, wie GK gehört hat, angefertigten Kataloge zu weiteren <rs ref="index:d10854e21970">österreichischen</rs> Klosterbliotheken, insbesondere jener von <rs ref="index:d14380e28088">Melk</rs>, ihm und der ganzen gelehrten Welt nicht vorenthalten wird.</p>
+            <p corresp="#seg4">GK fragt, wann mit der Fertigstellung von <rs ref="index:d14380e34754">HPs „Scriptores rerum Austriacarum“</rs> zu rechnen ist.</p>
+            <p corresp="#seg5">Falls BP künftig etwas im „<rs ref="index:d14380e30381">Neuen bücher-saal</rs>“ publizieren möchte, soll er es über die Verleger <rs ref="index:d14380e15642">Johann Ludwig Gleditsch</rs> und <rs ref="index:d14380e45053">Georg Moritz Weidmann</rs> an GK schicken, denn <rs ref="index:d14380e28655">Mencke</rs> und <rs ref="index:d10854e18739">Johann Jakob Mascov</rs> sind derzeit nicht sehr gut auf <rs ref="index:d14380e45053">Weidmann</rs> zu sprechen. Manuskripte zuerst an GK zu schicken, ist auch deshalb wichtig, weil für den „<rs ref="index:d14380e30381">Neuen bücher-saal</rs>“ die Regel besteht, nichts zu veröffentlichen, was zuvor bereits in einer anderen Zeitschrift mitgeteilt worden ist. Dahingegen sammelt GK für die unter Leitung <rs ref="index:d14380e28655">Menckes</rs> herausgegebenen „<rs ref="index:d14380e30388">Neuen zeitungen</rs>“ Nachrichten aus allen gelehrten Zeitschriften. GK begründet seine Haltung unter der Bitte um Vertraulichkeit damit, dass es in <rs ref="index:d14380e24317">Leipzig</rs> viele Rivalitäten gibt und er keine Partei gegen sich aufbringen will. GK schließt mit Grüßen an <rs ref="index:d14380e34537">HP</rs>, wobei er beide Brüder als Ehre und Zierde ihres Ordens bezeichnet.</p>
+            <p corresp="#seg6">In einem Nachsatz bemerkt GK, dass er den Brief erst Monate nach der Abfassung versendet, da derjenige, der seine Übermittlung versprochen hatte, dies nicht erfüllt hat. Nun hat <rs ref="index:d14380e15642">Gleditsch</rs> angeboten, dies zu übernehmen. Beigelegt ist auch ein Brief an <rs ref="index:d14380e17987">Karl Gustav Heraeus</rs> samt dem neuesten Band des „<rs ref="index:d14380e30381">Neuen bücher-saals</rs>“; GK bittet BP um die Weitergabe.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e17098"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?> bezweifelt, <rs type="person" role="sender">BP</rs> für die bereits lange zurückliegende Zusendung des Conspectus der „<rs key="index:d14380e33227">Bibliotheca Benedictina</rs>“ (<ref type="letter">293a</ref>) genug danken zu können; dieses Werk wird von den Gelehrten sehnlichst erwartet. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?> hat den Conspectus in der 16. Abteilung des von ihm herausgegebenen „<rs key="index:d14380e30381">Neuen bücher-saals der gelehrten welt</rs>“ inseriert und dabei auch den Codex über die Gelehrten des <rs key="index:d14380e4919">Benediktinerordens</rs> (<rs key="index:d14380e24393"><rs key="index:d14380e44841">Wagner, „Series monachorum litteratorum“</rs></rs>) in der <rs key="index:d14380e24317">Leipziger</rs> <rs key="index:d14380e24387">Bibliotheca Paulina</rs> erwähnt.</seg><seg type="context" n="2" xml:id="d3e17100">Weiters hat <rs type="person" role="sender">BP</rs> mehr als einmal Beiträge für die „<rs key="index:d14380e30388">Neuen zeitungen</rs>“ geliefert, die <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?> in deutscher Sprache herausgibt.</seg><seg type="context" n="3" xml:id="d3e17102">Vor allem aber hat <rs type="person" role="sender">BP</rs> eine Liste der hervorragendsten Handschriften in den <rs key="index:d10854e22102">oberösterreichischen</rs> Klöstern („<rs key="index:d14380e33760">Nachricht von den vornehmsten codicibus</rs>“) über Vermittlung von <rs key="index:d14380e28655">Johann Burkhard Mencke</rs> geschickt, damit sie an angemessener Stelle veröffentlicht wird. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?> hat sie in seiner „<rs key="index:d14380e43730">Umständlichen bücher-historie</rs>“ publiziert, von der er ein Exemplar beilegt. Er hofft, dass <rs type="person" role="sender">BP</rs> auch die von ihm, wie <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?> gehört hat, angefertigten Kataloge zu weiteren <rs key="index:d10854e21970">österreichischen</rs> Klosterbliotheken, insbesondere jener von <rs key="index:d14380e28088">Melk</rs>, ihm und der ganzen gelehrten Welt nicht vorenthalten wird.</seg><seg type="context" n="4" xml:id="d3e17104"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?> fragt, wann mit der Fertigstellung von <rs key="index:d14380e34754">HPs „Scriptores rerum Austriacarum“</rs> zu rechnen ist.</seg><seg type="context" n="5" xml:id="d3e17106">Falls <rs type="person" role="sender">BP</rs> künftig etwas im „<rs key="index:d14380e30381">Neuen bücher-saal</rs>“ publizieren möchte, soll er es über die Verleger <rs key="index:d14380e15642">Johann Ludwig Gleditsch</rs> und <rs key="index:d14380e45053">Georg Moritz Weidmann</rs> an <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?> schicken, denn <rs key="index:d14380e28655">Mencke</rs> und <rs key="index:d10854e18739">Johann Jakob Mascov</rs> sind derzeit nicht sehr gut auf <rs key="index:d14380e45053">Weidmann</rs> zu sprechen. Manuskripte zuerst an <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?> zu schicken, ist auch deshalb wichtig, weil für den „<rs key="index:d14380e30381">Neuen bücher-saal</rs>“ die Regel besteht, nichts zu veröffentlichen, was zuvor bereits in einer anderen Zeitschrift mitgeteilt worden ist. Dahingegen sammelt <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?> für die unter Leitung <rs key="index:d14380e28655">Menckes</rs> herausgegebenen „<rs key="index:d14380e30388">Neuen zeitungen</rs>“ Nachrichten aus allen gelehrten Zeitschriften. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?> begründet seine Haltung unter der Bitte um Vertraulichkeit damit, dass es in <rs key="index:d14380e24317">Leipzig</rs> viele Rivalitäten gibt und er keine Partei gegen sich aufbringen will. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?> schließt mit Grüßen an <rs key="index:d14380e34537">HP</rs>, wobei er beide Brüder als Ehre und Zierde ihres Ordens bezeichnet.</seg><seg type="context" n="6" xml:id="d3e17108">In einem Nachsatz bemerkt <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?>, dass er den Brief erst Monate nach der Abfassung versendet, da derjenige, der seine Übermittlung versprochen hatte, dies nicht erfüllt hat. Nun hat <rs key="index:d14380e15642">Gleditsch</rs> angeboten, dies zu übernehmen. Beigelegt ist auch ein Brief an <rs key="index:d14380e17987">Karl Gustav Heraeus</rs> samt dem neuesten Band des „<rs key="index:d14380e30381">Neuen bücher-saals</rs>“; <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>GK<?oxy_custom_end?> bittet <rs type="person" role="sender">BP</rs> um die Weitergabe.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">I.</hi></p>
-            <div type="remarks">
-               <p>Irrig zum 11. August 1716 datiert bei <rs type="bibl" key="bibl:16524">Glassner,
-                     Verzeichnis</rs> 221. – Die in &lt;2&gt; und &lt;3&gt; erwähnten
-                  vorangegangenen Kontakte erlauben keinen Schluss auf unmittelbaren Briefverkehr;
-                  als einziger Vorbrief wird deshalb <ref type="letter">293a</ref> angesetzt. – Auf
-                  2v Vermerk von anderer
-                  Hand:<hi rend="italic" xml:space="preserve"> N.B. Johannes ille diaconus ad Athanasium episcopum floruit circa </hi>(danach
-                  durchgestrichen<hi rend="italic" xml:space="preserve"> saeculum X.</hi>)<hi rend="italic" xml:space="preserve"> finem saeculi IX. Bollandus tomo quinto Junii pagina 14</hi>.
-                  Die hier notierte Passage der „Acta sanctorum“ hat keinen erkennbaren Bezug zum
-                  Inhalt des Briefes; vgl. jedoch <ref type="letter">490</ref> &lt;3&gt;. – Die
-                  Seite 1v ist unbeschrieben.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverendo religiosissimo atque celeberrimo viro patri Bernhardo Pez salutem dicit Joannes Gottlieb Krause.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e17138">Quantum me tibi sentiam obstrictum de insigni tuo in me affectu, cuius dudum praeclara edidisti specimina, brevi equidem epistola pro dignitate rei explicare haud valeo. Dudum est, cum benevole ad me mitteres Bibliothecae Benedictinae, cuius operis praestantissimi expectatione fere contabescunt eruditi, conspectum, laudatum a me ex merito,<seg type="lemma" corresp="#d3e17182"> codicis</seg><seg type="lemma" corresp="#d3e17186"> bibliothecae nostrae Paulinae</seg> manuscripti de claris Benedictinis mentione simul iniecta<note place="foot" xml:id="d3e17140">	Korrigiert aus <hi rend="italic">adiecta</hi>.</note>, sectione XVI. <seg type="lemma" corresp="#d3e17176">Novae orbis eruditi, quam in lucem dedi, bibliothecae</seg>. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e17146"><seg type="lemma" corresp="#d3e17190">Symbolam deinde tuam</seg> vice plus simplici contulisti ad Nova, quae vernaculo idiomate a me septimo quovis die publicantur, litteraria. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e17148">Sed longe reliqua superat, quod celeberrimo Menckenio nostro interprete concedere nobis volueris catalogum praestantiorum, <sic>quae</sic> [<hi rend="italic">sic</hi>] in monasteriis Austriae Superioris custodiuntur, codicum manu exaratorum, nostris, sicubi videretur, inserendum; pro quo laudatissimo bonas litteras iuvandi studio debent tibi debebuntque, quicunque veram solidamque venerantur eruditionem, gratias immortales. Addidi itaque istum catalogum<note place="foot" xml:id="d3e17153"><hi rend="italic">	istum catalogum</hi> über der Zeile eingefügt.</note> <seg type="lemma" corresp="#d3e17202">Historiae meae librorum veterum pariter atque recentium, quae has litteras comitatur</seg>; tuoque hoc in me favore erectus spem <pb n="2r"/> de te concepi amplissimam fore, ut reliquorum etiam Austriae monasteriorum (et Mellicensis quidem in primis), quos confecisse te audio, catalogos minime nobis, quid nobis? orbi invideas erudito. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e17160">De Scriptoribus rerum Austriacarum, quaeso, quid sperare nos iubet eruditissimus frater tuus? Quando eos habituri sumus? </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e17162">Unum addo. Si volueris in posterum mittere ad nos aliqua inserenda Bibliothecae librorum novorum, dem Neuen bücher-saale<note place="foot" xml:id="d3e17164"><hi rend="italic">	dem Neuen bücher-saale</hi> am linken Blattrand eingefügt.</note>, necesse est, ut ad me perscribantur et litterae <seg type="lemma" corresp="#d3e17206">Gleditschio Weidmannoque</seg> bibliopolis nostris commendentur. Non enim adeo bene Menckenio nostro Mascovioque cum Weidmanno convenit. Ad nos quoque ea mittenda sunt prius, quam ad aliorum manus pervenerint; eam enim nobis legem praescripsimus, ut Bibliothecae nostrae nihil novorum ab aliis ephemeridum scriptoribus nostris iam relatum inseratur. Contra in<seg type="lemma" corresp="#d3e17212"> Novis litterariis</seg>, quae celeberrimus Menckenius imprimi curat, ego data opera omnia colligo, quae in omnibus ephemeridibus eruditorum relata leguntur. Sed haec in aurem: partium enim studio distrahuntur plerorumque apud nos animi, quarum ego neutram offendere velim. Deus te servet, vir eruditissime, cumque fratre eruditissimo decus et ornamentum ordinis vestri reique litterariae seros in annos sustinere jubeat! Sic vale et salve.</seg></p>
-            <p xml:space="preserve">Dabam Lipsiae ante diem III. Idus Septembres anno salutis reparatae MDCCXVI.</p>
-            <p xml:space="preserve"><seg type="context" n="6" xml:space="preserve" xml:id="d3e17173">Has litteras ante unum alterumve mensem exaratas, cum is, <seg type="lemma" corresp="#d3e17216">qui curare eas promiserat</seg>, officium non praestiterit, nunc demum ad te mitto, Gleditschio operam suam sponte offerente. Inclusas adiecta Novae bibliothecae nostrae, quam hic addo, parte postrema ut ad celeberrimum<seg type="lemma" corresp="#d3e17222"> Heraeum</seg> transmittas, obnixe a te contendo. Iterum vale.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e17176">
-               <ref type="context">1</ref>
-               <label>Novae orbis eruditi ... bibliothecae</label><p> Der „Neue bücher-saal“, der
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>Novae orbis eruditi ... bibliothecae</mentioned>
+            <p> Der „Neue bücher-saal“, der
                   von 1710 bis 1717 zu Leipzig erschien, wurde von GK zunächst gemeinsam mit Johann
                   Georg Walch, zum Zeitpunkt dieses Briefes jedoch bereits von ihm allein
-                  herausgegeben: vgl. <rs type="bibl" key="bibl:16718">Habel, Gelehrte Journale</rs>
-                  411; <rs type="bibl" key="bibl:17492">Kirchner, Bibliographie 1</rs> 2; <rs
-                     type="bibl" key="bibl:18680">Otto, Krause</rs> 226–233; sowie <ref
-                     type="letter">386</ref> &lt;2&gt;. In der 1712 herausgekommenen „XVI. Oeffnung“
+                  herausgegeben: vgl. <rs type="bibl" ref="bibl:16718">Habel, Gelehrte Journale</rs>
+                  411; <rs type="bibl" ref="bibl:17492">Kirchner, Bibliographie 1</rs> 2; <rs type="bibl" ref="bibl:18680">Otto, Krause</rs> 226–233; sowie <ref type="letter" target="letter:386">386</ref> <ref target="letter:386#seg2">2</ref>. In der 1712 herausgekommenen „XVI. Oeffnung“
                   dieser Zeitschrift ist eine deutsche Paraphrase der zweiten Enzyklik BPs
                   eingerückt; seitens der Herausgeber beigefügt sind ihr eine Übersicht früherer
                   Überblickswerke zu Ordensgelehrten sowie der hier von GK erwähnte Hinweis auf eine
@@ -120,34 +112,36 @@
                   möglich, dass dieser Beitrag durch Vermittlung des zur fraglichen Zeit in
                   kursächsischen Diensten stehenden Konrad Sigler zustande gekommen sein kann, zumal
                   dieser BP 1713 über Hyazinth Baumbach einen Auszug aus dem „Neuen bücher-saal“
-                  sendete: vgl. <ref type="letter">303</ref> &lt;1&gt;, <ref type="letter">308</ref>
-                  &lt;4&gt;. Dabei dürfte es sich um die hier angeführte Stelle gehandelt haben; der
-                  Kommentar zu <ref type="letter">308</ref> &lt;4&gt; ist entsprechend zu
-                  ergänzen.</p></note>
-            <note xml:id="d3e17182">
-               <ref type="context">1</ref>
-               <label> codicis</label><p>Gemeint ist die „Series monachorum litteratorum“ des Abtes
+                  sendete: vgl. <ref type="letter" target="letter:303">303</ref> <ref target="letter:303#seg1">1</ref>, <ref type="letter" target="letter:308">308</ref>
+                  <ref target="letter:308#seg4">4</ref>. Dabei dürfte es sich um die hier angeführte Stelle gehandelt haben; der
+                  Kommentar zu <ref type="letter" target="letter:308">308</ref> <ref target="letter:308#seg4">4</ref> ist entsprechend zu
+                  ergänzen.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> codicis</mentioned>
+            <p>Gemeint ist die „Series monachorum litteratorum“ des Abtes
                   Petrus Wagner von Thierhaupten: heute UB Leipzig, Ms. 852. Vermutlich durch den
                   Hinweis im „Neuen bücher-saal“ auf sie aufmerksam geworden, hatte BP 1715 über
                   Johann Christoph Bartenstein und Mascov die Erstellung einer Abschrift durch
-                  Christian Friedrich Börner veranlasst: vgl. <ref type="letter">386</ref>
-                  &lt;2&gt;, <ref type="letter">393 </ref>&lt;1&gt;, <ref type="letter">455</ref>
-                  &lt;1&gt;, <ref type="letter">478</ref> &lt;2&gt;, <ref type="letter">500</ref>
-                  &lt;3&gt;, <ref type="letter">555</ref> &lt;2&gt;.</p></note>
-            <note xml:id="d3e17186">
-               <ref type="context">1</ref>
-               <label> bibliothecae ... Paulinae</label><p> Es handelt sich um eine Teilbibliothek
+                  Christian Friedrich Börner veranlasst: vgl. <ref type="letter" target="letter:386">386</ref>
+                  <ref target="letter:386#seg2">2</ref>, <ref type="letter" target="letter:393">393 </ref><ref target="letter:393 #seg1">1</ref>, <ref type="letter" target="letter:455">455</ref>
+                  <ref target="letter:455#seg1">1</ref>, <ref type="letter" target="letter:478">478</ref> <ref target="letter:478#seg2">2</ref>, <ref type="letter" target="letter:500">500</ref>
+                  <ref target="letter:500#seg3">3</ref>, <ref type="letter" target="letter:555">555</ref> <ref target="letter:555#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned> bibliothecae ... Paulinae</mentioned>
+            <p> Es handelt sich um eine Teilbibliothek
                   der Bibliotheca Albertina der Leipziger Universität, welche die Bibliotheken
                   mehrerer in der Reformationszeit säkularisierter Klöster in sich vereinte und nach
-                  dem ehemaligen Leipziger Dominikanerkloster St. Paul benannt war: <rs type="bibl"
-                     key="bibl:15768">Debes, Universitätsbibliothek</rs> 37–41. Seit 1711 war GK
+                  dem ehemaligen Leipziger Dominikanerkloster St. Paul benannt war: <rs type="bibl" ref="bibl:15768">Debes, Universitätsbibliothek</rs> 37–41. Seit 1711 war GK
                   Kustos an der nach dem albertinischen Herzogshaus benannten Leipziger
                   Universitätsblibliothek; diese Funktion erlaubte ihm unbegrenzten Zugang zu den
                   Beständen und brachte ihn mit Gelehrten in Kontakt, die Anfragen an ihn richteten:
-                     <rs type="bibl" key="bibl:18680">Otto, Krause</rs> 222. </p></note>
-            <note xml:id="d3e17190">
-               <ref type="context">2</ref>
-               <label>Symbolam ... tuam</label><p>Zunächst war am 10. Mai 1715 eine kurze Meldung
+                     <rs type="bibl" ref="bibl:18680">Otto, Krause</rs> 222. </p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>Symbolam ... tuam</mentioned>
+            <p>Zunächst war am 10. Mai 1715 eine kurze Meldung
                   über die Arbeit BPs an der „Bibliotheca Benedictina“ und jene HPs an den
                   „Scriptores rerum Austriacarum“ erschienen: Neue zeitungen (1715) 152. Es folgte
                   am 4. Dezember 1715 eine Notiz über BPs „Triumphus castitatis“ und „Epistolae
@@ -160,8 +154,8 @@
                   Besprechungen der „Epistolae apologeticae“ und des „Triumphus castitatis“ sowie
                   den Abdruck eines Conspectus der „Bibliotheca Benedictina“ in den „Acta
                   eruditorum“ berichtet: ebd. 308f. Später folgte am 4. November eine Rezension der
-                  „Bibliotheca Benedictino-Mauriana“: ebd. 358f.; vgl. <ref type="letter">690</ref>
-                  &lt;3&gt;. Die Quelle der Informationen ist aus den Meldungen selbst jeweils nicht
+                  „Bibliotheca Benedictino-Mauriana“: ebd. 358f.; vgl. <ref type="letter" target="letter:690">690</ref>
+                  <ref target="letter:690#seg3">3</ref>. Die Quelle der Informationen ist aus den Meldungen selbst jeweils nicht
                   ersichtlich; insbesondere bieten sie keinen Hinweis auf direkten Briefverkehr
                   zwischen BP und GK. Aufgrund der in diesem Brief von GK geäußerten Aufforderung,
                   künftig unmittelbar an ihn zu schreiben, ist vielmehr davon auszugehen, dass er
@@ -173,14 +167,15 @@
                   „Angelus Fonteius“, wiederum meist aus den „Acta eruditorum“ referierend,
                   berichtet: Neue zeitungen (1717) 15, 503, 616; ebd. (1718) 147f., 509. Auch
                   während der 1720er Jahre wurden die Publikationen BPs und HPs mehrfach in den
-                  „Neuen zeitungen“ rezensiert.</p></note>
-            <note xml:id="d3e17196">
-               <ref type="context">3</ref>
-               <label>catalogum ... manu exaratorum</label><p>Diese Liste von Handschriften in den
+                  „Neuen zeitungen“ rezensiert.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>catalogum ... manu exaratorum</mentioned>
+            <p>Diese Liste von Handschriften in den
                   Bibliotheken mehrerer oberösterreichischer Klöster war das Ergebnis der Reise BPs
-                  und HPs im Mai 1715; zu dieser vgl. <rs type="bibl" key="bibl:17432">Katschthaler,
-                     Briefnachlass</rs> 30; <rs type="bibl" key="bibl:19788">Stockinger, Stift
-                     Lambach</rs> 278–282; <rs type="bibl" key="bibl:20210">Wallnig–Stockinger,
+                  und HPs im Mai 1715; zu dieser vgl. <rs type="bibl" ref="bibl:17432">Katschthaler,
+                     Briefnachlass</rs> 30; <rs type="bibl" ref="bibl:19788">Stockinger, Stift
+                     Lambach</rs> 278–282; <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger,
                      Korrespondenz 1</rs> 5. Die Liste erschien in Form einer deutschen Paraphrase
                   GKs: Umständliche bücher-historie 2 (1716) 176–206. Unmittelbar nach ihr folgt
                   eine Besprechung zu John Lockes „Essay concerning humane understanding“. Der
@@ -192,45 +187,71 @@
                   impostoribus“ beanstandet. Obwohl in dieser Rezension eindeutig gegen
                   atheistisches Gedankengut Stellung bezogen wurde, musste sich GK in der Folge
                   einige Zeit versteckt halten und verlor eine Anstellungsmöglichkeit am Breslauer
-                  Elisabethgymnasium: <rs type="bibl" key="bibl:18680">Otto, Krause</rs> 236–246.
-               </p></note>
-            <note xml:id="d3e17202">
-               <ref type="context">3</ref>
-               <label>Historiae meae ... comitatur</label><p>Der Zeitschriftenband ist heute in Melk vorhanden: StiB Melk 28373.</p></note>
-            <note xml:id="d3e17206">
-               <ref type="context">5</ref>
-               <label>Gleditschio Weidmannoque</label><p> Johann Ludwig Gleditsch gemeinsam mit
+                  Elisabethgymnasium: <rs type="bibl" ref="bibl:18680">Otto, Krause</rs> 236–246.
+               </p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned>Historiae meae ... comitatur</mentioned>
+            <p>Der Zeitschriftenband ist heute in Melk vorhanden: StiB Melk 28373.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
+            <mentioned>Gleditschio Weidmannoque</mentioned>
+            <p> Johann Ludwig Gleditsch gemeinsam mit
                   seinem Stiefsohn Georg Moritz Weidmann gehörte zum Zeitpunkt dieses Briefes jene
-                  Leipziger Verlagsbuchhandlung, in welcher der „Neue bücher-saal“ erschien: <rs
-                     type="bibl" key="bibl:15410">Brauer, Gleditsch</rs> col. 77f. Die
+                  Leipziger Verlagsbuchhandlung, in welcher der „Neue bücher-saal“ erschien: <rs type="bibl" ref="bibl:15410">Brauer, Gleditsch</rs> col. 77f. Die
                   Unstimmigkeiten zwischen Mencke und Mascov einerseits und Weidmann andererseits
                   könnten das Resultat des oft angespannten Verhältnisses zwischen den Herausgebern
-                  beziehungsweise Verlegern konkurrierender Periodika sein: vgl. <rs type="bibl"
-                     key="bibl:18680">Otto, Krause</rs> 233f.</p></note>
-            <note xml:id="d3e17212">
-               <ref type="context">5</ref>
-               <label> Novis litterariis</label><p>Den weiteren Äußerungen GKs zufolge dürften die
+                  beziehungsweise Verlegern konkurrierender Periodika sein: vgl. <rs type="bibl" ref="bibl:18680">Otto, Krause</rs> 233f.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
+            <mentioned> Novis litterariis</mentioned>
+            <p>Den weiteren Äußerungen GKs zufolge dürften die
                   „Neuen zeitungen“ gemeint sein. Deren Herausgabe erfolgte zwar in Abhängigkeit von
-                  Mencke, jedoch nicht durch ihn persönlich: <rs type="bibl" key="bibl:18680">Otto,
+                  Mencke, jedoch nicht durch ihn persönlich: <rs type="bibl" ref="bibl:18680">Otto,
                      Krause</rs> 234f. Eine als Ergänzung zu den „Acta eruditorum“ konzipierte, von
                   GK herausgegebene lateinische Zeitschrift unter dem Titel „Nova litteraria“
-                  erschien erst ab 1718: <rs type="bibl" key="bibl:17492">Kirchner, Bibliographie
-                     1</rs> 4; <rs type="bibl" key="bibl:18680">Otto, Krause</rs> 287–292.
-               </p></note>
-            <note xml:id="d3e17216">
-               <ref type="context">6</ref>
-               <label>qui ... promiserat</label><p> Zu einer Identifizierung dieser Person fehlt jeder Hinweis.</p></note>
-            <note xml:id="d3e17222">
-               <ref type="context">6</ref>
-               <label> Heraeum</label><p> Die „LV. Oeffnung“ des „Neuen bücher-saals“ enthielt eine
+                  erschien erst ab 1718: <rs type="bibl" ref="bibl:17492">Kirchner, Bibliographie
+                     1</rs> 4; <rs type="bibl" ref="bibl:18680">Otto, Krause</rs> 287–292.
+               </p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg6">
+            <mentioned>qui ... promiserat</mentioned>
+            <p> Zu einer Identifizierung dieser Person fehlt jeder Hinweis.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg6">
+            <mentioned> Heraeum</mentioned>
+            <p> Die „LV. Oeffnung“ des „Neuen bücher-saals“ enthielt eine
                   ausführliche Würdigung der Biographie und der Werke des kaiserlichen
                   Münzinspektors Karl Gustav Heraeus: Neuer bücher-saal 55 (1716) 477–499. Zu den
-                  Kontakten desselben mit der Leipziger Gelehrtenwelt vgl. <rs type="bibl"
-                     key="bibl:15152">Benz, Zwischen Kritik und Tradition</rs> 441; <rs type="bibl"
-                     key="bibl:16780">Hammarlund, Heraeus</rs> 99; <rs type="bibl" key="bibl:18680"
-                     >Otto, Krause</rs> 313f. Eine Verbindung BPs mit Heraeus ist nicht nachweisbar,
-                  kann aber auch nicht ausgeschlossen werden.</p></note>
-         </div>
-      </back>
+                  Kontakten desselben mit der Leipziger Gelehrtenwelt vgl. <rs type="bibl" ref="bibl:15152">Benz, Zwischen Kritik und Tradition</rs> 441; <rs type="bibl" ref="bibl:16780">Hammarlund, Heraeus</rs> 99; <rs type="bibl" ref="bibl:18680">Otto, Krause</rs> 313f. Eine Verbindung BPs mit Heraeus ist nicht nachweisbar,
+                  kann aber auch nicht ausgeschlossen werden.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>I.</orig></note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:18770">
+            <title type="short">Peper, Ohne Parteilichkeit</title>
+            <biblScope>270</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18772">
+            <title type="short">Peper, Österreichische Gelehrtenwelt</title>
+            <biblScope>12f</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverendo religiosissimo atque celeberrimo viro patri Bernhardo Pez salutem dicit Joannes Gottlieb Krause.</opener>
+         <ab resp="#editor" xml:id="seg1">Quantum me tibi sentiam obstrictum de insigni tuo in me affectu, cuius dudum praeclara edidisti specimina, brevi equidem epistola pro dignitate rei explicare haud valeo. Dudum est, cum benevole ad me mitteres Bibliothecae Benedictinae, cuius operis praestantissimi expectatione fere contabescunt eruditi, conspectum, laudatum a me ex merito,<anchor xml:id="n1"/> codicis<anchor xml:id="n1e"/><anchor xml:id="n2"/> bibliothecae nostrae Paulinae<anchor xml:id="n2e"/> manuscripti de claris Benedictinis mentione simul <choice><sic>adiecta</sic><corr>iniecta</corr></choice>, sectione XVI. <anchor xml:id="n3"/>Novae orbis eruditi, quam in lucem dedi, bibliothecae<anchor xml:id="n3e"/>. </ab>
+         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n4"/>Symbolam deinde tuam<anchor xml:id="n4e"/> vice plus simplici contulisti ad Nova, quae vernaculo idiomate a me septimo quovis die publicantur, litteraria. </ab>
+         <ab resp="#editor" xml:id="seg3">Sed longe reliqua superat, quod celeberrimo Menckenio nostro interprete concedere nobis volueris catalogum praestantiorum, <sic>quae</sic>  in monasteriis Austriae Superioris custodiuntur, codicum manu exaratorum, nostris, sicubi videretur, inserendum; pro quo laudatissimo bonas litteras iuvandi studio debent tibi debebuntque, quicunque veram solidamque venerantur eruditionem, gratias immortales. Addidi itaque <add place="above">istum catalogum</add> <anchor xml:id="n5"/>Historiae meae librorum veterum pariter atque recentium, quae has litteras comitatur<anchor xml:id="n5e"/>; tuoque hoc in me favore erectus spem <pb n="2r"/> de te concepi amplissimam fore, ut reliquorum etiam Austriae monasteriorum (et Mellicensis quidem in primis), quos confecisse te audio, catalogos minime nobis, quid nobis? orbi invideas erudito. </ab>
+         <ab resp="#editor" xml:id="seg4">De Scriptoribus rerum Austriacarum, quaeso, quid sperare nos iubet eruditissimus frater tuus? Quando eos habituri sumus? </ab>
+         <ab resp="#editor" xml:id="seg5">Unum addo. Si volueris in posterum mittere ad nos aliqua inserenda Bibliothecae librorum novorum, <add place="left-margin">dem Neuen bücher-saale</add>, necesse est, ut ad me perscribantur et litterae <anchor xml:id="n6"/>Gleditschio Weidmannoque<anchor xml:id="n6e"/> bibliopolis nostris commendentur. Non enim adeo bene Menckenio nostro Mascovioque cum Weidmanno convenit. Ad nos quoque ea mittenda sunt prius, quam ad aliorum manus pervenerint; eam enim nobis legem praescripsimus, ut Bibliothecae nostrae nihil novorum ab aliis ephemeridum scriptoribus nostris iam relatum inseratur. Contra in<anchor xml:id="n7"/> Novis litterariis<anchor xml:id="n7e"/>, quae celeberrimus Menckenius imprimi curat, ego data opera omnia colligo, quae in omnibus ephemeridibus eruditorum relata leguntur. Sed haec in aurem: partium enim studio distrahuntur plerorumque apud nos animi, quarum ego neutram offendere velim. Deus te servet, vir eruditissime, cumque fratre eruditissimo decus et ornamentum ordinis vestri reique litterariae seros in annos sustinere jubeat! Sic vale et salve.</ab>
+         <closer>Dabam Lipsiae ante diem III. Idus Septembres anno salutis reparatae MDCCXVI.</closer>
+         <closer xml:id="seg6">Has litteras ante unum alterumve mensem exaratas, cum is, <anchor xml:id="n8"/>qui curare eas promiserat<anchor xml:id="n8e"/>, officium non praestiterit, nunc demum ad te mitto, Gleditschio operam suam sponte offerente. Inclusas adiecta Novae bibliothecae nostrae, quam hic addo, parte postrema ut ad celeberrimum<anchor xml:id="n9"/> Heraeum<anchor xml:id="n9e"/> transmittas, obnixe a te contendo. Iterum vale.</closer>
+      </body>
    </text>
 </TEI>

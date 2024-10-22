@@ -1,46 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="345" xml:id="pez-0345">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">345 Moritz Müller an Bernhard Pez. 1714-06-20. Rheinau.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Moritz Müller an Bernhard Pez. 1714-06-20. Rheinau.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">345</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:19778">Stockinger, Fidelis </rs>355f., 358, 370,
-                     374, 385, 392, 408, 414</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">115r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 115r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -55,128 +69,116 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">344</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">346</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">337</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">344</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">346</idno>
-               </ref>
+               <ptr type="prev" target="letter:344"/>
+               <ptr type="next" target="letter:346"/>
+               <ptr type="mentions" target="letter:337"/>
+               <ptr type="mentions" target="letter:344"/>
+               <ptr type="mentionedIn" target="letter:346"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">MM entschuldigt sich für sein langes Schweigen mit seiner Inanspruchnahme durch öffentliche Geschäfte: Er hat seinen Abt <rs ref="index:d14380e7141">Bürgisser</rs> in <rs ref="index:d10854e21183">Neu-Ravensburg</rs> besucht und ist dann weiter nach <rs ref="index:d10854e1848">Baden</rs> gefahren, wo der <rs ref="index:d10854e1859">Friedenskongress</rs> stattfindet. Insgesamt war er sechs Wochen von <rs ref="index:d14380e37324">Rheinau</rs> abwesend und antwortet nun BP als Erstem auf seinen Brief <ref type="letter" target="letter:344">344</ref>.</p>
+            <p corresp="#seg2">MM wollte BP die Blätter aus der <rs ref="index:d10854e33723"><rs ref="index:d14380e45571">Wiener</rs> Handschrift von Jodok Metzlers „De viris illustribus S. Galli“</rs> zurückschicken und dabei den Traktat „<rs ref="index:d14380e10907">De viris illustribus Augiae Divitis</rs>“ (von <rs ref="index:d14380e10901">Johann Egon</rs>) wie auch sein <rs ref="index:d10854e20715">„Elogium“ auf Kardinal Sfondrati</rs> beilegen, doch schien ihm die Übermittlung über <rs ref="index:d14380e43652">Ulm</rs> und <rs ref="index:d10854e20625">Felician Müller</rs> (in <rs ref="index:d10854e32902">Wiblingen</rs>) zu unsicher. Auf demselben Weg ist bereits eine Abschrift des „<rs ref="index:d10854e20715">Elogium</rs>“ sowie von BP geschicktes Gold verloren gegangen. MM wartet deshalb auf eine bessere Gelegenheit.</p>
+            <p corresp="#seg3">MM ist erfreut, dass <rs ref="index:d14380e28088">Melk</rs> die Bücher, die er in seinem letzten Brief <ref type="letter" target="letter:337">337</ref> beworben hat, bereits besitzt. Er zitiert aus einem Brief <rs ref="index:d14380e26993">René Massuets</rs> an ihn, dass wegen des Zustroms fremder Buchhändler nach dem <rs ref="index:d10854e1859">Friedensschluss</rs> und durch die Schwäche der <rs ref="index:d14380e12712">französischen</rs> Währung die Buchpreise in <rs ref="index:d14380e32292">Paris</rs> von Tag zu Tag steigen. MM beteuert, dass BP über ihn zum Selbstkostenpreis einkaufen kann.</p>
+            <p corresp="#seg4">MM ist erstaunt, dass BP <rs ref="index:d10854e22552">Palazzis „Gesta pontificum Romanorum“</rs> nicht schätzt, und mutmaßt eine Verwechslung des Titels.</p>
+            <p corresp="#seg5">Wenn die <rs ref="index:d14380e28088">Melker</rs> tatsächlich die königliche Ausgabe der „Concilia omnia generalia“ um 300 Gulden gekauft haben, so war dies wohlfeil, da sie nun nicht einmal mehr um 400 Gulden zu haben ist. Freilich existieren verschiedene Konzilieneditionen.</p>
+            <p corresp="#seg6">Mit <rs ref="index:d14380e26993">Massuet</rs> steht MM in regelmäßigem Briefverkehr; jener wünscht sehnlich, MM auch persönlich kennenzulernen, mit dem er seit zwölf (recte: vier) Jahren einen Briefwechsel unterhält. Ein aus Frankreich zurückgekehrter Adeliger (<rs ref="index:d10854e32219">Johann Franz Anton von Waldkirch?</rs>) hat MM berichtet, <rs ref="index:d14380e26993">Massuet</rs> plane im Herbst eine Reise nach <rs ref="index:d14380e9395">Deutschland</rs>. MM wäre erfreut, wenn sich hieraus eine Gelegenheit ergäbe, dass auch er und BP einander persönlich begegnen.</p>
+            <p corresp="#seg7">Von den historischen Büchern will MM demnächst ausführlicher berichten. Er schließt den Brief, weil ihn andere geschäftliche Verpflichtungen in Anspruch nehmen.</p>
+            <p corresp="#seg8">In einem Postskriptum erkundigt sich MM nach <rs ref="index:d14380e39962">Anselm Schramb</rs> in <rs ref="index:d14380e45571">Wien</rs> und fragt nach dem Ausgang der Beratung der <rs ref="index:d14380e39290">St. Galler</rs> Sache durch Kaiser <rs ref="index:d14380e21188">Karl VI.</rs> und seine Berater in <rs ref="index:d10854e16746">Laxenburg</rs>. Von dem <rs ref="index:d14380e39290">St. Galler</rs> Agenten <rs ref="index:d10854e27943">Beat Anton von Schnorf</rs> hat MM nichts gehört und fürchtet deshalb, dass sein letzter Brief an diesen abgefangen worden ist.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e44120"><rs type="person" role="sender">MM</rs> entschuldigt sich für sein langes Schweigen mit seiner Inanspruchnahme durch öffentliche Geschäfte: Er hat seinen Abt <rs key="index:d14380e7141">Bürgisser</rs> in <rs key="index:d10854e21183">Neu-Ravensburg</rs> besucht und ist dann weiter nach <rs key="index:d10854e1848">Baden</rs> gefahren, wo der <rs key="index:d10854e1859">Friedenskongress</rs> stattfindet. Insgesamt war er sechs Wochen von <rs key="index:d14380e37324">Rheinau</rs> abwesend und antwortet nun <rs type="person" role="sender">BP</rs> als Erstem auf seinen Brief <ref type="letter">344</ref>.</seg><seg type="context" n="2" xml:id="d4618e44125"><rs type="person" role="sender">MM</rs> wollte <rs type="person" role="sender">BP</rs> die Blätter aus der <rs key="index:d10854e33723"><rs key="index:d14380e45571">Wiener</rs> Handschrift von Jodok Metzlers „De viris illustribus S. Galli“</rs> zurückschicken und dabei den Traktat „<rs key="index:d14380e10907">De viris illustribus Augiae Divitis</rs>“ (von <rs key="index:d14380e10901">Johann Egon</rs>) wie auch sein <rs key="index:d10854e20715">„Elogium“ auf Kardinal Sfondrati</rs> beilegen, doch schien ihm die Übermittlung über <rs key="index:d14380e43652">Ulm</rs> und <rs key="index:d10854e20625">Felician Müller</rs> (in <rs key="index:d10854e32902">Wiblingen</rs>) zu unsicher. Auf demselben Weg ist bereits eine Abschrift des „<rs key="index:d10854e20715">Elogium</rs>“ sowie von <rs type="person" role="sender">BP</rs> geschicktes Gold verloren gegangen. <rs type="person" role="sender">MM</rs> wartet deshalb auf eine bessere Gelegenheit.</seg><seg type="context" n="3" xml:id="d4618e44127"><rs type="person" role="sender">MM</rs> ist erfreut, dass <rs key="index:d14380e28088">Melk</rs> die Bücher, die er in seinem letzten Brief <ref type="letter">337</ref> beworben hat, bereits besitzt. Er zitiert aus einem Brief <rs key="index:d14380e26993">René Massuets</rs> an ihn, dass wegen des Zustroms fremder Buchhändler nach dem <rs key="index:d10854e1859">Friedensschluss</rs> und durch die Schwäche der <rs key="index:d14380e12712">französischen</rs> Währung die Buchpreise in <rs key="index:d14380e32292">Paris</rs> von Tag zu Tag steigen. <rs type="person" role="sender">MM</rs> beteuert, dass <rs type="person" role="sender">BP</rs> über ihn zum Selbstkostenpreis einkaufen kann.</seg><seg type="context" n="4" xml:id="d4618e44132"><rs type="person" role="sender">MM</rs> ist erstaunt, dass <rs type="person" role="sender">BP</rs> <rs key="index:d10854e22552">Palazzis „Gesta pontificum Romanorum“</rs> nicht schätzt, und mutmaßt eine Verwechslung des Titels.</seg><seg type="context" n="5" xml:id="d4618e44134">Wenn die <rs key="index:d14380e28088">Melker</rs> tatsächlich die königliche Ausgabe der „Concilia omnia generalia“ um 300 Gulden gekauft haben, so war dies wohlfeil, da sie nun nicht einmal mehr um 400 Gulden zu haben ist. Freilich existieren verschiedene Konzilieneditionen.</seg><seg type="context" n="6" xml:id="d4618e44136">Mit <rs key="index:d14380e26993">Massuet</rs> steht <rs type="person" role="sender">MM</rs> in regelmäßigem Briefverkehr; jener wünscht sehnlich, <rs type="person" role="sender">MM</rs> auch persönlich kennenzulernen, mit dem er seit zwölf (recte: vier) Jahren einen Briefwechsel unterhält. Ein aus Frankreich zurückgekehrter Adeliger (<rs key="index:d10854e32219">Johann Franz Anton von Waldkirch?</rs>) hat <rs type="person" role="sender">MM</rs> berichtet, <rs key="index:d14380e26993">Massuet</rs> plane im Herbst eine Reise nach <rs key="index:d14380e9395">Deutschland</rs>. <rs type="person" role="sender">MM</rs> wäre erfreut, wenn sich hieraus eine Gelegenheit ergäbe, dass auch er und <rs type="person" role="sender">BP</rs> einander persönlich begegnen.</seg><seg type="context" n="7" xml:id="d4618e44138">Von den historischen Büchern will <rs type="person" role="sender">MM</rs> demnächst ausführlicher berichten. Er schließt den Brief, weil ihn andere geschäftliche Verpflichtungen in Anspruch nehmen.</seg><seg type="context" n="8" xml:id="d4618e44140">In einem Postskriptum erkundigt sich <rs type="person" role="sender">MM</rs> nach <rs key="index:d14380e39962">Anselm Schramb</rs> in <rs key="index:d14380e45571">Wien</rs> und fragt nach dem Ausgang der Beratung der <rs key="index:d14380e39290">St. Galler</rs> Sache durch Kaiser <rs key="index:d14380e21188">Karl VI.</rs> und seine Berater in <rs key="index:d10854e16746">Laxenburg</rs>. Von dem <rs key="index:d14380e39290">St. Galler</rs> Agenten <rs key="index:d10854e27943">Beat Anton von Schnorf</rs> hat <rs type="person" role="sender">MM</rs> nichts gehört und fürchtet deshalb, dass sein letzter Brief an diesen abgefangen worden ist.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">XVII</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Rheinauw 1714 die 20. Junii.</p>
-            <p xml:space="preserve">Plurimum reverende clarissime domine pater ac amice in paucis colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e44161">Primum est, quod te rogem (amice colendissime), ut longiori silentio meo ignoscas nec illud in sequiorem partem accipias. Publicis enim distentus negotiis tantisper respondere non poteram privatis. Evocatus nuperrime ad celsissimum <seg type="lemma" corresp="#d4618e44192">principem meum in Neoravensburgi</seg> arcem, inde <seg type="lemma" corresp="#d4618e44199">Badenam, ubi congressus pacis</seg> est, destinatus, sex fere septimanas domo abesse coactus fui. Redux inter ingentem litterarum cumulum absenti interim adgregatum tuas, ut primo loco mihi semper gratas, vidi et, ut illico responderem, et animum et calamum sumpsi. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e44163">Volebam etiam mittere cum foliis Mezlerianis nuper mihi ostensis Elogium Sfondratianum et opusculum De viris illustribus Augiae conscriptum. Sed quid? dicebam mihi, si iterum infidelitas postae obrepat? et desideriis tuis et conatibus meis malignior fortuna invideat? Certe ultimum illud scriptum, Sfondrati Elogium<note place="foot" xml:id="d4618e44165">	<hi rend="italic">Sfondrati Elogium</hi> über der Zeile eingefügt.</note>, non alia via quam Ulmam ad dominum patrem Felicianum, uti iusseras, transmissum, tu non accepisti, nec aurum illud ad me destinatum unquam vidi. Securiorem ergo occasionem exspectare volui, ut de receptione certior possem esse, ne iterum cum iactura irreparabili novo afficeremur vulnere. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e44171">De libris, de quibus nuper mentionem feci et mea obsequia detuli, gaudeo et gratulor Melicio meo iisdem fere omnibus iam proviso; non enim ea iam facilitate compararentur, si non iam haberentur. Audi, quae in ultimis suis ad me <seg type="lemma" corresp="#d4618e44204">scribit Massuetus</seg> noster: Moneo tamen librorum pretium hic in dies augeri et quidem saepius ultra modum excrescere. Facit tum monetae nostrae instabilitas, tum adventantium huc exterorum reformata iam pace confluxus mercatorum, qui peccuniis abundantes libros nostros quoquo pretio avide coemunt bibliopolisque supercilium addunt. Haec ille mihi, et ego tibi eodem amico et syncero animo. Et haec ipsa ratio est, cur pretium determinatum librorum ex Gallia comparandorum nullus certo assignare queat, dum illud ob instabilitatem monetae in diem et horam variat. <pb n="1v"/> Id unum tibi sufficiat, me libros, si quos expetieris, tibi comparaturum eo modo et pretio, quo meos solvo; ut qui <sic>comodo</sic> [<hi rend="italic">sic</hi>] tuo sine meo lucro studeo, nec duos obulos petam, si uno comparare queam. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e44178">Id sane miror summopere, Palatii opus De vitis et gestis sanctissimorum pontificum tibi cognitum, nec tamen aestimatum esse. Meo quidem iudicio ex recentioribus historicis vix melius aut nobilius opus hactenus prodiisse censeo. Forsan tu alium authorem aut opus putas quam ego; hoc enim te aestimaturum prorsus mihi persuadeo. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e44180">Si Concilia regiae editionis 37 tomis grandibus compacta <seg type="lemma" corresp="#d4618e44211">300 florenis</seg> emistis, vili certe pretio opus tantum comparastis. Nunc 400 florenis illam, quam ego puto, editionem non amplius obtinebitis. Sed variae horum conciliorum editiones sunt. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e44182">Pater Massuet singulis 14 diebus mecum correspondet, nec opus est, ut te eidem commendem, qui omnes bonos ac eruditos amat. Ego eiusdem in me studia et amores vix mereor; avidissimus est me in persona videre, cui iam <seg type="lemma" corresp="#d4618e44218">per duodecim annos</seg> per litteras loquebar. Et <seg type="lemma" corresp="#d4618e44225">veniet forsan ad authumnum in Germaniam</seg>, ut ex nupero <seg type="lemma" corresp="#d4618e44230">nobili domino ex Gallia reduce</seg> intellexi. Utinam fieret! Certe, ut spero, et Bernardus et Mauritius eidem inserviret, et hac occasione convenire possent. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d4618e44184">De historicis libris proxime plura. Iam alio me vocant negotia. Vale, amicorum colendissime, et semper me amare perge, qui sum ut semper</seg></p>
-            <p xml:space="preserve">Totus tuus pater Mauriz manu propria.</p>
-            <p xml:space="preserve"><seg type="context" n="8" xml:space="preserve" xml:id="d4618e44189">P.S. Et qui vivit pater dominus Anselmus noster Viennae? Et quid solatii boni inde de negotio nostro nuper Laxenburgi <seg type="lemma" corresp="#d4618e44235">coram caesare et ministerio</seg> tractato? Avidus sum aliquid a te audire. A domino <seg type="lemma" corresp="#d4618e44242">barone Schnorppffio</seg> nostro agente Viennae degente nihil audivi, et vereor etiam meas ultimas fuisse interceptas.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e44192">
-               <ref type="context">1</ref>
-               <label>principem ... Neoravensburgi</label>
-               <p>Vgl. <ref type="letter">272</ref> &lt;2&gt;.</p>
-            </note>
-            <note xml:id="d4618e44199">
-               <ref type="context">1</ref>
-               <label>Badenam, ubi congressus pacis</label>
-               <p>Der von zahlreichen Reichsständen beschickte Friedenskongress im schweizerischen
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>principem ... Neoravensburgi</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:272">272</ref> <ref target="letter:272#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>Badenam, ubi congressus pacis</mentioned>
+            <p>Der von zahlreichen Reichsständen beschickte Friedenskongress im schweizerischen
                   Baden hatte in der zweiten Maihälfte 1714 begonnen und endete am 7. September 1714
                   mit der Unterzeichnung eines Friedensvertrages, der substantiell wenig an jenem
                   von Rastatt änderte. MM traf in Baden Anfang Juni den Freiherrn Johann Friedrich
                   Karg von Bebenburg, Kanzler und Gesandten des Kurfürst-Erzbischofs von Köln, von
                   dem man sich ein Wirken zugunsten der St. Galler Interessen auf dem Kongress
-                  erhoffen konnte. Diesen Kontakt hatte René Massuet hergestellt: <rs type="bibl"
-                     key="bibl:19778">Stockinger, Fidelis</rs> 413f.; vgl. <rs type="bibl"
-                     key="bibl:15750">Dantier, Pièces annexées</rs> 468f., 471. Zur Person Kargs
-                  vgl. <rs type="bibl" key="bibl:35938">Braubach, Kurköln</rs> 181–200.</p>
-            </note>
-            <note xml:id="d4618e44204">
-               <ref type="context">3</ref>
-               <label>scribit Massuetus</label>
-               <p>Aus demselben Brief vom 23. März 1714 (StiA St. Gallen, Bd. 322, 582–585; gedruckt
-                  bei <rs type="bibl" key="bibl:15750">Dantier, Pièces annexées</rs> 467–469) hatte
-                  MM schon in <ref type="letter">337</ref> &lt;3&gt; referiert. Die Worte „augeri“,
+                  erhoffen konnte. Diesen Kontakt hatte René Massuet hergestellt: <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 413f.; vgl. <rs type="bibl" ref="bibl:15750">Dantier, Pièces annexées</rs> 468f., 471. Zur Person Kargs
+                  vgl. <rs type="bibl" ref="bibl:35938">Braubach, Kurköln</rs> 181–200.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>scribit Massuetus</mentioned>
+            <p>Aus demselben Brief vom 23. März 1714 (StiA St. Gallen, Bd. 322, 582–585; gedruckt
+                  bei <rs type="bibl" ref="bibl:15750">Dantier, Pièces annexées</rs> 467–469) hatte
+                  MM schon in <ref type="letter" target="letter:337">337</ref> <ref target="letter:337#seg3">3</ref> referiert. Die Worte „augeri“,
                   „mercatorum“ und „avide“ finden sich nicht im Brief Massuets, sondern sind von MM
                   hinzugefügt; auch hat das Original „emunt“ statt „coemunt“.</p>
-            </note>
-            <note xml:id="d4618e44211">
-               <ref type="context">5</ref>
-               <label>300 florenis</label>
-               <p>Vgl. <ref type="letter">270</ref> &lt;3&gt;.</p>
-            </note>
-            <note xml:id="d4618e44218">
-               <ref type="context">6</ref>
-               <label>per duodecim annos</label>
-               <p>Die behauptete Dauer ist stark übertrieben: Die Korrespondenz zwischen MM und
-                  Massuet hatte erst 1710 angefangen, vgl. <ref type="letter">32</ref>
-                  &lt;3&gt;.</p>
-            </note>
-            <note xml:id="d4618e44225">
-               <ref type="context">6</ref>
-               <label>veniet ... in Germaniam</label>
-               <p>In den erhaltenen Briefen Massuets an MM aus der fraglichen Zeit (<rs type="bibl"
-                     key="bibl:15750">Dantier, Pièces annexées</rs> 464–470) findet sich kein
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg5">
+            <mentioned>300 florenis</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:270">270</ref> <ref target="letter:270#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg6">
+            <mentioned>per duodecim annos</mentioned>
+            <p>Die behauptete Dauer ist stark übertrieben: Die Korrespondenz zwischen MM und
+                  Massuet hatte erst 1710 angefangen, vgl. <ref type="letter" target="letter:32">32</ref>
+                  <ref target="letter:32#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg6">
+            <mentioned>veniet ... in Germaniam</mentioned>
+            <p>In den erhaltenen Briefen Massuets an MM aus der fraglichen Zeit (<rs type="bibl" ref="bibl:15750">Dantier, Pièces annexées</rs> 464–470) findet sich kein
                   Hinweis auf ein solches Vorhaben.</p>
-            </note>
-            <note xml:id="d4618e44230">
-               <ref type="context">6</ref>
-               <label>nobili domino ex Gallia reduce</label>
-               <p>Wahrscheinlich ist hiermit jener junge Herr von Waldkirch gemeint, den Massuet in
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg6">
+            <mentioned>nobili domino ex Gallia reduce</mentioned>
+            <p>Wahrscheinlich ist hiermit jener junge Herr von Waldkirch gemeint, den Massuet in
                   einem Schreiben vom 18. Januar 1714 als „nobilis optimaeque indolis Helvetius
                   adolescens“ und „familiaris“ MMs bezeichnete, der ihn in Paris besucht hatte: StiA
-                  St. Gallen, Bd. 322, 536–539; gedruckt bei <rs type="bibl" key="bibl:15750"
-                     >Dantier, Pièces annexées</rs> 466f. Die von Waldkirch waren eine
+                  St. Gallen, Bd. 322, 536–539; gedruckt bei <rs type="bibl" ref="bibl:15750">Dantier, Pièces annexées</rs> 466f. Die von Waldkirch waren eine
                   Schaffhausener Familie, deren einzig katholischer Zweig die Besitzer der
                   Herrschaft Schollenberg mit Sitz in Rheinau waren. Der mit Massuet und MM bekannte
                   Herr von Waldkirch könnte Johann Franz Anton (geb. 1690), später
                   kurfürstlich-bayerischer Kämmerer und Reichsfreiherr, gewesen sein.</p>
-            </note>
-            <note xml:id="d4618e44235">
-               <ref type="context">8</ref>
-               <label>coram caesare et ministerio</label>
-               <p>Am 5. Juni 1714 war auf Schloss Laxenburg in der Geheimen Konferenz der in den
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg8">
+            <mentioned>coram caesare et ministerio</mentioned>
+            <p>Am 5. Juni 1714 war auf Schloss Laxenburg in der Geheimen Konferenz der in den
                   Rorschacher Verhandlungen zwischen St. Gallen einerseits, Zürich und Bern
-                  andererseits ausgehandelte Friedensentwurf (vgl. <ref type="letter">335</ref>
-                  &lt;2&gt;) zur Sprache gekommen und beschlossen worden, den Fürstabt Bürgisser in
+                  andererseits ausgehandelte Friedensentwurf (vgl. <ref type="letter" target="letter:335">335</ref>
+                  <ref target="letter:335#seg2">2</ref>) zur Sprache gekommen und beschlossen worden, den Fürstabt Bürgisser in
                   seiner Ablehnung desselben zu unterstützen: HHStA Wien, Geheime Konferenz
                   Vorträge, Karton 19, Fasz. 3, 31r–32v. Die Relationen von Blasius Bender und Beat
                   Anton von Schnorf darüber finden sich in StiA St. Gallen, Bd. 1614, 362–365,
                   377–380, 478–481, 488f.</p>
-            </note>
-            <note xml:id="d4618e44242">
-               <ref type="context">8</ref>
-               <label>barone Schnorppffio</label>
-               <p>Vgl. 302.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg8">
+            <mentioned>barone Schnorppffio</mentioned>
+            <p>Vgl. 302.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>XVII</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:19778">
+            <title type="short">Stockinger, Fidelis</title>
+            <biblScope>355f., 358, 370, 374, 385, 392, 408, 414</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Rheinauw 1714 die 20. Junii.</opener>
+         <opener>Plurimum reverende clarissime domine pater ac amice in paucis colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Primum est, quod te rogem (amice colendissime), ut longiori silentio meo ignoscas nec illud in sequiorem partem accipias. Publicis enim distentus negotiis tantisper respondere non poteram privatis. Evocatus nuperrime ad celsissimum <anchor xml:id="n1"/>principem meum in Neoravensburgi<anchor xml:id="n1e"/> arcem, inde <anchor xml:id="n2"/>Badenam, ubi congressus pacis<anchor xml:id="n2e"/> est, destinatus, sex fere septimanas domo abesse coactus fui. Redux inter ingentem litterarum cumulum absenti interim adgregatum tuas, ut primo loco mihi semper gratas, vidi et, ut illico responderem, et animum et calamum sumpsi. </ab>
+         <ab resp="#editor" xml:id="seg2">Volebam etiam mittere cum foliis Mezlerianis nuper mihi ostensis Elogium Sfondratianum et opusculum De viris illustribus Augiae conscriptum. Sed quid? dicebam mihi, si iterum infidelitas postae obrepat? et desideriis tuis et conatibus meis malignior fortuna invideat? Certe ultimum illud scriptum, <add place="above">Sfondrati Elogium</add>, non alia via quam Ulmam ad dominum patrem Felicianum, uti iusseras, transmissum, tu non accepisti, nec aurum illud ad me destinatum unquam vidi. Securiorem ergo occasionem exspectare volui, ut de receptione certior possem esse, ne iterum cum iactura irreparabili novo afficeremur vulnere. </ab>
+         <ab resp="#editor" xml:id="seg3">De libris, de quibus nuper mentionem feci et mea obsequia detuli, gaudeo et gratulor Melicio meo iisdem fere omnibus iam proviso; non enim ea iam facilitate compararentur, si non iam haberentur. Audi, quae in ultimis suis ad me <anchor xml:id="n3"/>scribit Massuetus<anchor xml:id="n3e"/> noster: Moneo tamen librorum pretium hic in dies augeri et quidem saepius ultra modum excrescere. Facit tum monetae nostrae instabilitas, tum adventantium huc exterorum reformata iam pace confluxus mercatorum, qui peccuniis abundantes libros nostros quoquo pretio avide coemunt bibliopolisque supercilium addunt. Haec ille mihi, et ego tibi eodem amico et syncero animo. Et haec ipsa ratio est, cur pretium determinatum librorum ex Gallia comparandorum nullus certo assignare queat, dum illud ob instabilitatem monetae in diem et horam variat. <pb n="1v"/> Id unum tibi sufficiat, me libros, si quos expetieris, tibi comparaturum eo modo et pretio, quo meos solvo; ut qui <sic>comodo</sic>  tuo sine meo lucro studeo, nec duos obulos petam, si uno comparare queam. </ab>
+         <ab resp="#editor" xml:id="seg4">Id sane miror summopere, Palatii opus De vitis et gestis sanctissimorum pontificum tibi cognitum, nec tamen aestimatum esse. Meo quidem iudicio ex recentioribus historicis vix melius aut nobilius opus hactenus prodiisse censeo. Forsan tu alium authorem aut opus putas quam ego; hoc enim te aestimaturum prorsus mihi persuadeo. </ab>
+         <ab resp="#editor" xml:id="seg5">Si Concilia regiae editionis 37 tomis grandibus compacta <anchor xml:id="n4"/>300 florenis<anchor xml:id="n4e"/> emistis, vili certe pretio opus tantum comparastis. Nunc 400 florenis illam, quam ego puto, editionem non amplius obtinebitis. Sed variae horum conciliorum editiones sunt. </ab>
+         <ab resp="#editor" xml:id="seg6">Pater Massuet singulis 14 diebus mecum correspondet, nec opus est, ut te eidem commendem, qui omnes bonos ac eruditos amat. Ego eiusdem in me studia et amores vix mereor; avidissimus est me in persona videre, cui iam <anchor xml:id="n5"/>per duodecim annos<anchor xml:id="n5e"/> per litteras loquebar. Et <anchor xml:id="n6"/>veniet forsan ad authumnum in Germaniam<anchor xml:id="n6e"/>, ut ex nupero <anchor xml:id="n7"/>nobili domino ex Gallia reduce<anchor xml:id="n7e"/> intellexi. Utinam fieret! Certe, ut spero, et Bernardus et Mauritius eidem inserviret, et hac occasione convenire possent. </ab>
+         <ab resp="#editor" xml:id="seg7">De historicis libris proxime plura. Iam alio me vocant negotia. Vale, amicorum colendissime, et semper me amare perge, qui sum ut semper</ab>
+         <closer>Totus tuus pater Mauriz manu propria.</closer>
+         <closer xml:id="seg8">P.S. Et qui vivit pater dominus Anselmus noster Viennae? Et quid solatii boni inde de negotio nostro nuper Laxenburgi <anchor xml:id="n8"/>coram caesare et ministerio<anchor xml:id="n8e"/> tractato? Avidus sum aliquid a te audire. A domino <anchor xml:id="n9"/>barone Schnorppffio<anchor xml:id="n9e"/> nostro agente Viennae degente nihil audivi, et vereor etiam meas ultimas fuisse interceptas.</closer>
+      </body>
    </text>
 </TEI>

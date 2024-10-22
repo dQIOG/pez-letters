@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="378" xml:id="pez-0378">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">378 Johann Benedikt Gentilotti an Hieronymus Pez. 1714-12-22. Wien.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Benedikt Gentilotti an Hieronymus Pez. 1714-12-22. Wien.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">378</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
@@ -22,27 +33,34 @@
             <relatedItem type="otherEdition">
                <bibl>Staufer, Litterae 27f.</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:18236">Mayer, Nachlaß</rs> 18 544</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Bei Glassner, Verzeichnis 213, irrig zum 22. Dezember 1713.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">III</biblScope>
-               <biblScope unit="page">281r–282v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 281r–282v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -57,94 +75,77 @@
                <persName>Hieronymus Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">377</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">389</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">377</idno>
-               </ref>
+               <ptr type="prev" target="letter:377"/>
+               <ptr type="next" target="letter:389"/>
+               <ptr type="mentions" target="letter:377"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">BG bittet HP, die späte Antwort auf seinen Brief <ref type="letter" target="letter:377">377</ref> und den späten Dank für sein Geschenk („<rs ref="index:d14380e34725">Acta sancti Colomanni</rs>“) zu verzeihen: Erst litt BG an einer Erkältung, dann kamen ihm einige lästige Geschäfte dazwischen; schließlich erzeugte der tägliche Umgang mit HPs Bruder <rs ref="index:d14380e33148">BP</rs> den Eindruck, selbst mit HP zu sprechen. BG hofft, sich bei HP einmal revanchieren zu können.</p>
+            <p corresp="#seg2">BG hat <rs ref="index:d14380e34725">das Buch</rs> wegen der Säumigkeit des Buchbinders noch nicht lesen können, hat aber von anderen günstige Urteile dazu gehört. Indem HP für das Andenken gelehrter Männer sorgt, empfiehlt er selbst seinen Namen der Unvergänglichkeit.</p>
+            <p corresp="#seg3"><rs ref="index:d14380e33148">BP</rs> hat BG von dem gemeinsamen Plan der Brüder berichtet, Werke österreichischer Geschichtsschreiber unter dem Titel „<rs ref="index:d14380e34754">Scriptores rerum Austriacarum</rs>“ herauszugeben, und hat BG zur Mitarbeit eingeladen. BG plant selbst schon länger die Herausgabe eines „<rs ref="index:d10854e10298">Syntagma</rs>“ der zahlreichen historiographischen Werke der <rs ref="index:d14380e45820">Hofbibliothek</rs>, wie dies bereits seine Vorgänger (<rs ref="index:d14380e23599">Lambeck</rs> und <rs ref="index:d14380e30345">Nessel</rs>) <rs ref="index:d10854e16438">in Aussicht</rs> gestellt haben. Wegen der Arbeit am <rs ref="index:d14380e14904">Katalog</rs> der lateinischen und romanischsprachigen (sequior dialectus) Handschriften hat BG dieses Projekt jedoch vorerst aufgeschoben.</p>
+            <p corresp="#seg4">BG schließt mit Weihnachts- und Neujahrswünschen, wobei er die Inschrift einer <rs ref="index:d10854e1203">Münze</rs> des <rs ref="index:d10854e1197">Antoninus Pius</rs> zitiert.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e48766"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> bittet <rs type="person" role="sender">HP</rs>, die späte Antwort auf seinen Brief <ref type="letter">377</ref> und den späten Dank für sein Geschenk („<rs key="index:d14380e34725">Acta sancti Colomanni</rs>“) zu verzeihen: Erst litt <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> an einer Erkältung, dann kamen ihm einige lästige Geschäfte dazwischen; schließlich erzeugte der tägliche Umgang mit <rs type="person" role="sender">HPs</rs> Bruder <rs key="index:d14380e33148">BP</rs> den Eindruck, selbst mit <rs type="person" role="sender">HP</rs> zu sprechen. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> hofft, sich bei <rs type="person" role="sender">HP</rs> einmal revanchieren zu können.</seg><seg type="context" n="2" xml:id="d4618e48771"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> hat <rs key="index:d14380e34725">das Buch</rs> wegen der Säumigkeit des Buchbinders noch nicht lesen können, hat aber von anderen günstige Urteile dazu gehört. Indem <rs type="person" role="sender">HP</rs> für das Andenken gelehrter Männer sorgt, empfiehlt er selbst seinen Namen der Unvergänglichkeit.</seg><seg type="context" n="3" xml:id="d4618e48773"><rs key="index:d14380e33148">BP</rs> hat <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> von dem gemeinsamen Plan der Brüder berichtet, Werke österreichischer Geschichtsschreiber unter dem Titel „<rs key="index:d14380e34754">Scriptores rerum Austriacarum</rs>“ herauszugeben, und hat <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> zur Mitarbeit eingeladen. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> plant selbst schon länger die Herausgabe eines „<rs key="index:d10854e10298">Syntagma</rs>“ der zahlreichen historiographischen Werke der <rs key="index:d14380e45820">Hofbibliothek</rs>, wie dies bereits seine Vorgänger (<rs key="index:d14380e23599">Lambeck</rs> und <rs key="index:d14380e30345">Nessel</rs>) <rs key="index:d10854e16438">in Aussicht</rs> gestellt haben. Wegen der Arbeit am <rs key="index:d14380e14904">Katalog</rs> der lateinischen und romanischsprachigen (sequior dialectus) Handschriften hat <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> dieses Projekt jedoch vorerst aufgeschoben.</seg><seg type="context" n="4" xml:id="d4618e48775"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BG<?oxy_custom_end?> schließt mit Weihnachts- und Neujahrswünschen, wobei er die Inschrift einer <rs key="index:d10854e1203">Münze</rs> des <rs key="index:d10854e1197">Antoninus Pius</rs> zitiert.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="remarks">
-               <p>Bei Glassner, Verzeichnis 213, irrig zum 22. Dezember 1713.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Venerabili et doctissimo viro domno Hieronymo Pez Benedictino Mellicensi Joannes Benedictus Gentilott ab Engelsbrun salutem plurimam dicit.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e48793">Peto a te, ne aut oblivione aut negligentia contigisse putes, quod serius, ac par erat, litteris tuis humanissimis iisdemque elegantissimis respondeam et pro <seg type="lemma" corresp="#d4618e48808">munere misso</seg> gratias agam. Nam iis litteris acceptis ex pituita graviter complures dies laboravi; dein molesta quaedam negotia ex transverso incurrentia officium sunt remorata. Ad haec quotidiano fere <seg type="lemma" corresp="#d4618e48815">congressu et sermone domni Bernardi</seg> suavissimi fratris tui ita affectus fui, ut tecum ipso coram colloqui viderer et ad scribendum propterea minus attenderim. Sed quid multis? Nulla gratiarum actio sera est, quae perpetua. Maximas itaque tibi gratias ago atque habeo de pergrato perque accepto munere tuo; id unum optans, ut idoneam quandoque occasionem nanciscar eas tibi pro merito <pb n="1v"/> referendi. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e48797">Liber autem a me nondum lectus est, quod glutinator me hucusque frustratur. Ex aliorum tamen iudicio, quorum auctoritati ego plurimum tribuo, tibi possum affirmare et laborem illum tuum undique probari et studium, quod egregio illo specimine declarasti, vetusta monumenta, quae iniquo fato diu in tenebris latuerunt, in medium proferendi magnopere laudari. Macte hac virtute; et dum memoriae doctorum virorum consulis, nomen tuum immortalitati commendare perge. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e48799">Domnus Bernardus frater tuus contulit mecum consilium vestrum de colligendis et divulgandis Scriptoribus rerum Austriacarum, meque ad sociandam operam invitavit. Verum ego, quamquam dudum apud animum meum constitui <pb n="2r"/> <seg type="lemma" corresp="#d4618e48820">Syntagma</seg> eiusmodi scriptorum, quorum in bibliotheca caesarea habeo festivam copiam, in vulgus edere et decessorum meorum fidem liberare, nondum tamen explicatam atque exploratam eius rei rationem habeo, quod nunc ad commentarios seu catalogum manuscriptorum codicum <seg type="lemma" corresp="#d4618e48827">Latinorum et sequioris dialecti</seg> texendum intentus, donec eo labore defunctus fuerim, de alio cogitare non possum. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e48803">Tu interim cum fratre tuo, qui nuper a nobis plane invitis divulsus vobisque redditus est, anniversarios dies festos Natalium Christi laetus age et annum novum faustis ominibus inchoa: quem vobis, ut in <seg type="lemma" corresp="#d4618e48832">nummo Antonini</seg> Pii legitur, precor Annum Novum Felicem Faustumque. Vale.</seg></p>
-            <p xml:space="preserve">Vindobona XI. Kalendas Januarias MDCCXIIII.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e48808">
-               <ref type="context">1</ref>
-               <label>munere misso</label>
-               <p>Dem Folgenden nach handelte es sich bei dem Geschenk um eine Schrift HPs, also
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>munere misso</mentioned>
+            <p>Dem Folgenden nach handelte es sich bei dem Geschenk um eine Schrift HPs, also
                   zweifellos um die „Acta sancti Colomanni“, da HP zu diesem Zeitpunkt noch nichts
-                  anderes veröffentlicht hatte. Um die „Acta“ hatte BG zudem in <ref type="letter"
-                     >363</ref> nachdrücklich gebeten.</p>
-            </note>
-            <note xml:id="d4618e48815">
-               <ref type="context">1</ref>
-               <label>congressu ... Bernardi</label>
-               <p>Zu BPs Aufenthalt in Wien vgl. <ref type="letter">375</ref>.</p>
-            </note>
-            <note xml:id="d4618e48820">
-               <ref type="context">3</ref>
-               <label>Syntagma</label>
-               <p>Vgl. Einleitung, Abschnitt I.5. Lambeck hatte ein „Syntagma rerum Germanicarum“
-                  geplant, vgl. <rs type="bibl" key="bibl:36518">Lambeck–Kollár, Commentarii</rs> 1
+                  anderes veröffentlicht hatte. Um die „Acta“ hatte BG zudem in <ref type="letter" target="letter:363">363</ref> nachdrücklich gebeten.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>congressu ... Bernardi</mentioned>
+            <p>Zu BPs Aufenthalt in Wien vgl. <ref type="letter" target="letter:375">375</ref>.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
+            <mentioned>Syntagma</mentioned>
+            <p>Vgl. Einleitung, Abschnitt I.5. Lambeck hatte ein „Syntagma rerum Germanicarum“
+                  geplant, vgl. <rs type="bibl" ref="bibl:36518">Lambeck–Kollár, Commentarii</rs> 1
                   500: „Hoc Syntagma quod post Lambecii mortem vix inchoatum in ejus Museo repertum
                   est, jussus fuit perficere edereque successor ipsius Daniel Nesselius: At nec ab
                   eo quicquam in hoc genere prodiit praeter solam Sciagraphiam quam vocat Magni
                   Corporis Historici hactenus inediti, brevi tamen, Deo volente, edendi, in varia
-                  Syntagmata diversosque tomos divisi etc. Vindobonae 1693“. Vgl. <rs type="bibl"
-                     key="bibl:15152">Benz, Zwischen Tradition und Kritik</rs> 380, 391; <rs
-                     type="bibl" key="bibl:19814">Strebl, Barocke Bibliothek</rs> 182.</p>
-            </note>
-            <note xml:id="d4618e48827">
-               <ref type="context">3</ref>
-               <label>Latinorum et sequioris dialecti</label>
-               <p>BG hatte von diesem Vorhaben auch in seinem Brief an Montfaucon vom 26. September
+                  Syntagmata diversosque tomos divisi etc. Vindobonae 1693“. Vgl. <rs type="bibl" ref="bibl:15152">Benz, Zwischen Tradition und Kritik</rs> 380, 391; <rs type="bibl" ref="bibl:19814">Strebl, Barocke Bibliothek</rs> 182.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
+            <mentioned>Latinorum et sequioris dialecti</mentioned>
+            <p>BG hatte von diesem Vorhaben auch in seinem Brief an Montfaucon vom 26. September
                   unter exakt derselben Bezeichnung berichtet: BN FF 17708, 105r–106v. Montfaucon
                   wusste bereits durch Bartenstein von dem Vorhaben und hatte sich darüber sehr
                   erfreut gezeigt: BN FF 17701, 43r–v. Der Katalog umfasst in seiner fertig
                   gestellten Form nur die lateinischen Handschriften in fünfzehn Bänden und drei
-                  Registerbänden: ÖNB, Cod. S.N. 2207–2221, 2231–2233. Vgl. <rs type="bibl"
-                     key="bibl:19814">Strebl, Barocke Bibliothek</rs> 191f.; <rs type="bibl"
-                     key="bibl:19818">Strnad, Gentilotti</rs> 140.</p>
-            </note>
-            <note xml:id="d4618e48832">
-               <ref type="context">4</ref>
-               <label>nummo Antonini</label>
-               <p>Ein Medaillon des römischen Senats für Kaiser Antoninus Pius, vermutlich aus dem
+                  Registerbänden: ÖNB, Cod. S.N. 2207–2221, 2231–2233. Vgl. <rs type="bibl" ref="bibl:19814">Strebl, Barocke Bibliothek</rs> 191f.; <rs type="bibl" ref="bibl:19818">Strnad, Gentilotti</rs> 140.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>nummo Antonini</mentioned>
+            <p>Ein Medaillon des römischen Senats für Kaiser Antoninus Pius, vermutlich aus dem
                   Jahr 139, enthält den Neujahrswunsch „S. P. Q. R. A. N. F. F. OPTIMO PRINCIPI
                   PIO“, was aufzulösen ist mit „Senatus populusque Romanus annum novum faustum
-                  felicem optimo principi Pio“: vgl. <rs type="bibl" key="bibl:37070">Strack,
+                  felicem optimo principi Pio“: vgl. <rs type="bibl" ref="bibl:37070">Strack,
                      Untersuchungen 3</rs> 35 Nr. 525. Die Inschrift war 1685 veröffentlicht worden:
-                     <rs type="bibl" key="bibl:35870">Bellori, Selecti nummi</rs> 3–35. Zweifellos
+                     <rs type="bibl" ref="bibl:35870">Bellori, Selecti nummi</rs> 3–35. Zweifellos
                   bezieht sich BG hier auf diese Veröffentlichung.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:18236">
+            <title type="short">Mayer, Nachlaß</title>
+            <biblScope>18 544</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Venerabili et doctissimo viro domno Hieronymo Pez Benedictino Mellicensi Joannes Benedictus Gentilott ab Engelsbrun salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Peto a te, ne aut oblivione aut negligentia contigisse putes, quod serius, ac par erat, litteris tuis humanissimis iisdemque elegantissimis respondeam et pro <anchor xml:id="n1"/>munere misso<anchor xml:id="n1e"/> gratias agam. Nam iis litteris acceptis ex pituita graviter complures dies laboravi; dein molesta quaedam negotia ex transverso incurrentia officium sunt remorata. Ad haec quotidiano fere <anchor xml:id="n2"/>congressu et sermone domni Bernardi<anchor xml:id="n2e"/> suavissimi fratris tui ita affectus fui, ut tecum ipso coram colloqui viderer et ad scribendum propterea minus attenderim. Sed quid multis? Nulla gratiarum actio sera est, quae perpetua. Maximas itaque tibi gratias ago atque habeo de pergrato perque accepto munere tuo; id unum optans, ut idoneam quandoque occasionem nanciscar eas tibi pro merito <pb n="1v"/> referendi. </ab>
+         <ab resp="#editor" xml:id="seg2">Liber autem a me nondum lectus est, quod glutinator me hucusque frustratur. Ex aliorum tamen iudicio, quorum auctoritati ego plurimum tribuo, tibi possum affirmare et laborem illum tuum undique probari et studium, quod egregio illo specimine declarasti, vetusta monumenta, quae iniquo fato diu in tenebris latuerunt, in medium proferendi magnopere laudari. Macte hac virtute; et dum memoriae doctorum virorum consulis, nomen tuum immortalitati commendare perge. </ab>
+         <ab resp="#editor" xml:id="seg3">Domnus Bernardus frater tuus contulit mecum consilium vestrum de colligendis et divulgandis Scriptoribus rerum Austriacarum, meque ad sociandam operam invitavit. Verum ego, quamquam dudum apud animum meum constitui <pb n="2r"/> <anchor xml:id="n3"/>Syntagma<anchor xml:id="n3e"/> eiusmodi scriptorum, quorum in bibliotheca caesarea habeo festivam copiam, in vulgus edere et decessorum meorum fidem liberare, nondum tamen explicatam atque exploratam eius rei rationem habeo, quod nunc ad commentarios seu catalogum manuscriptorum codicum <anchor xml:id="n4"/>Latinorum et sequioris dialecti<anchor xml:id="n4e"/> texendum intentus, donec eo labore defunctus fuerim, de alio cogitare non possum. </ab>
+         <ab resp="#editor" xml:id="seg4">Tu interim cum fratre tuo, qui nuper a nobis plane invitis divulsus vobisque redditus est, anniversarios dies festos Natalium Christi laetus age et annum novum faustis ominibus inchoa: quem vobis, ut in <anchor xml:id="n5"/>nummo Antonini<anchor xml:id="n5e"/> Pii legitur, precor Annum Novum Felicem Faustumque. Vale.</ab>
+         <closer>Vindobona XI. Kalendas Januarias MDCCXIIII.</closer>
+      </body>
    </text>
 </TEI>

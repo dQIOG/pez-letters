@@ -1,39 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="156" xml:id="pez-0156">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">156 Hieronymus Pez an Bernhard Pez. 1711-03-28. Wien.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Hieronymus Pez an Bernhard Pez. 1711-03-28. Wien.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">156</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">742r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 742r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -48,155 +68,138 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">155</idno>
-               </ref>
-               <ref type="sentWith">
-                  <idno type="pezEd">150</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">150</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">155</idno>
-               </ref>
+               <ptr type="prev" target="letter:155"/>
+               <ptr type="sentWith" target="letter:150"/>
+               <ptr type="mentions" target="letter:150"/>
+               <ptr type="mentions" target="letter:155"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Aus mehreren Gründen zieht HP vor, dass das Geld, das er zur Anschaffung eines Buches von <rs ref="index:d14380e18876">Hübner</rs> für <rs ref="index:d10854e29590">Alphons Stadler</rs> ausgegeben hat, ihm selbst und nicht BP erstattet wird. BP soll dafür sorgen, dass es durch den <rs ref="index:d14380e28088">Melker</rs> <rs ref="index:d10854e19676">Kammerdiener</rs> (cubicularius), falls dieser mit Abt <rs ref="index:d14380e9628">Dietmayr</rs> nach <rs ref="index:d14380e28088">Melk</rs> reist, oder durch eine andere vertrauenswürdige Person an HP überbracht wird.</p>
+            <p corresp="#seg2">Die „<rs ref="index:d10854e21803">Conciones</rs>“ von <rs ref="index:d10854e21797">Giovanni Paolo Oliva</rs> im Quartformat kosten 2 Gulden und 5 Kreuzer.</p>
+            <p corresp="#seg3">HP wünscht BP glückliche Ostertage. Er ist erfreut, dass BP besonders eifrig beim Gottesdienst ist, und hofft mit seinen studierenden Mitbrüdern auf dessen Spuren zu wandeln.</p>
+            <p corresp="#seg4">Die Beschwerlichkeit des Theologiestudiums und andere in <rs ref="index:d14380e45571">Wien</rs> zu ertragende Unannehmlichkeiten rechnen sie sich als gute Werke an und trösten sich mit einem Psalmwort.</p>
+            <p corresp="#seg5">HP ist erstaunt über den <rs ref="index:d14380e28088">Melker</rs> <rs ref="index:d10854e19681">Komödiendichter</rs>, dass ein Mensch allein so viele Aufgaben bewältigen kann. Das von diesem geplante Drama könnte, fürchtet er, wie <rs ref="index:d10854e19762">Menanders</rs> „<rs ref="index:d10854e19770">Andria</rs>“ werden, die von <rs ref="index:d10854e30502">Terenz</rs> für sein Werk ausgegeben wurde.</p>
+            <p corresp="#seg6">HP nimmt an, dass BPs Vorhaben („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) gut vorankommt, und fragt, weshalb in BPs Brief <ref type="letter" target="letter:155">155</ref> so wenig die Rede davon ist. Er will dazu beitragen, soviel er kann.</p>
+            <p corresp="#seg7">BP soll mitteilen, was hinsichtlich der letzten Bände von <rs ref="index:d14380e10181">Du Pins</rs> „<rs ref="index:d10854e7009">Nova bibliotheca</rs>“ geschehen soll, falls der Buchhändler <rs ref="index:d10854e11952">Hartung</rs> sie auf dem kommenden Pfingstmarkt (<rs ref="index:d10854e33233">Wiener Ascensionis-Markt</rs>) bekommen kann.</p>
+            <p corresp="#seg8">Weiters fragt HP, ob <rs ref="index:d14380e7705">Caves</rs> „<rs ref="index:d14380e7715">Scriptorum ecclesiasticorum historia litteraria</rs>“ und <rs ref="index:d10854e31973">Vischs</rs> „<rs ref="index:d10854e31979">Bibliotheca ordinis Cisterciensis</rs>“ für die „<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“ nützlich sind.</p>
+            <p corresp="#seg9">HP legt einen an BP gerichteten Brief (<ref type="letter" target="letter:150">150</ref>?) bei und bewundert die Höflichkeit des ihm unbekannten Absenders (<rs ref="index:d10854e9622">Petrus Friderici</rs>?) gegenüber BP. Er fragt, ob aus <rs ref="index:d14380e12712">Frankreich</rs> oder <rs ref="index:d14380e19828">Italien</rs> Antworten vorliegen.</p>
+            <p corresp="#seg10">Den <rs ref="index:d14380e20126">Jesuiten</rs> <rs ref="index:d10854e24211">Philipp Pez</rs> hat HP seit der letzten Zusammenkunft nicht gesehen und weiß auch nichts Neues von ihm.</p>
+            <p corresp="#seg11">HP wünscht <rs ref="index:d10854e29590">Alphons Stadler</rs> ein frohes Osterfest. Er schließt mit der Aufforderung an BP, auf seine Gesundheit zu achten.</p>
+            <p corresp="#seg12">In einem Notabene-Vermerk bittet HP, ein weiteres beiliegendes Schreiben an <rs ref="index:d14380e11208">Franz Embler</rs> zu übergeben.</p>
+            <p corresp="#seg13">In einem Postskriptum möchte HP wissen, ob <rs ref="index:d14380e27341">Jakob Mayr</rs> will, dass er für ihn die „<rs ref="index:d10854e21803">Conciones</rs>“ von <rs ref="index:d10854e21797">Oliva</rs> kauft. In diesem Fall möge er das Geld dafür im Voraus übermitteln und mitteilen, ob er das Buch in <rs ref="index:d14380e45571">Wien</rs> oder anderswo binden lassen will.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e20125">Aus mehreren Gründen zieht <rs type="person" role="sender">HP</rs> vor, dass das Geld, das er zur Anschaffung eines Buches von <rs key="index:d14380e18876">Hübner</rs> für <rs key="index:d10854e29590">Alphons Stadler</rs> ausgegeben hat, ihm selbst und nicht <rs type="person" role="sender">BP</rs> erstattet wird. <rs type="person" role="sender">BP</rs> soll dafür sorgen, dass es durch den <rs key="index:d14380e28088">Melker</rs> <rs key="index:d10854e19676">Kammerdiener</rs> (cubicularius), falls dieser mit Abt <rs key="index:d14380e9628">Dietmayr</rs> nach <rs key="index:d14380e28088">Melk</rs> reist, oder durch eine andere vertrauenswürdige Person an <rs type="person" role="sender">HP</rs> überbracht wird.</seg><seg type="context" n="2" xml:id="d4618e20127">Die „<rs key="index:d10854e21803">Conciones</rs>“ von <rs key="index:d10854e21797">Giovanni Paolo Oliva</rs> im Quartformat kosten 2 Gulden und 5 Kreuzer.</seg><seg type="context" n="3" xml:id="d4618e20129"><rs type="person" role="sender">HP</rs> wünscht <rs type="person" role="sender">BP</rs> glückliche Ostertage. Er ist erfreut, dass <rs type="person" role="sender">BP</rs> besonders eifrig beim Gottesdienst ist, und hofft mit seinen studierenden Mitbrüdern auf dessen Spuren zu wandeln.</seg><seg type="context" n="4" xml:id="d4618e20131">Die Beschwerlichkeit des Theologiestudiums und andere in <rs key="index:d14380e45571">Wien</rs> zu ertragende Unannehmlichkeiten rechnen sie sich als gute Werke an und trösten sich mit einem Psalmwort.</seg><seg type="context" n="5" xml:id="d4618e20133"><rs type="person" role="sender">HP</rs> ist erstaunt über den <rs key="index:d14380e28088">Melker</rs> <rs key="index:d10854e19681">Komödiendichter</rs>, dass ein Mensch allein so viele Aufgaben bewältigen kann. Das von diesem geplante Drama könnte, fürchtet er, wie <rs key="index:d10854e19762">Menanders</rs> „<rs key="index:d10854e19770">Andria</rs>“ werden, die von <rs key="index:d10854e30502">Terenz</rs> für sein Werk ausgegeben wurde.</seg><seg type="context" n="6" xml:id="d4618e20135"><rs type="person" role="sender">HP</rs> nimmt an, dass <rs type="person" role="sender">BPs</rs> Vorhaben („<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“) gut vorankommt, und fragt, weshalb in <rs type="person" role="sender">BPs</rs> Brief <ref type="letter">155</ref> so wenig die Rede davon ist. Er will dazu beitragen, soviel er kann.</seg><seg type="context" n="7" xml:id="d4618e20140"><rs type="person" role="sender">BP</rs> soll mitteilen, was hinsichtlich der letzten Bände von <rs key="index:d14380e10181">Du Pins</rs> „<rs key="index:d10854e7009">Nova bibliotheca</rs>“ geschehen soll, falls der Buchhändler <rs key="index:d10854e11952">Hartung</rs> sie auf dem kommenden Pfingstmarkt (<rs key="index:d10854e33233">Wiener Ascensionis-Markt</rs>) bekommen kann.</seg><seg type="context" n="8" xml:id="d4618e20142">Weiters fragt <rs type="person" role="sender">HP</rs>, ob <rs key="index:d14380e7705">Caves</rs> „<rs key="index:d14380e7715">Scriptorum ecclesiasticorum historia litteraria</rs>“ und <rs key="index:d10854e31973">Vischs</rs> „<rs key="index:d10854e31979">Bibliotheca ordinis Cisterciensis</rs>“ für die „<rs key="index:d10854e23377">Bibliotheca Benedictina</rs>“ nützlich sind.</seg><seg type="context" n="9" xml:id="d4618e20144"><rs type="person" role="sender">HP</rs> legt einen an <rs type="person" role="sender">BP</rs> gerichteten Brief (<ref type="letter">150</ref>?) bei und bewundert die Höflichkeit des ihm unbekannten Absenders (<rs key="index:d10854e9622">Petrus Friderici</rs>?) gegenüber <rs type="person" role="sender">BP</rs>. Er fragt, ob aus <rs key="index:d14380e12712">Frankreich</rs> oder <rs key="index:d14380e19828">Italien</rs> Antworten vorliegen.</seg><seg type="context" n="10" xml:id="d4618e20146">Den <rs key="index:d14380e20126">Jesuiten</rs> <rs key="index:d10854e24211">Philipp Pez</rs> hat <rs type="person" role="sender">HP</rs> seit der letzten Zusammenkunft nicht gesehen und weiß auch nichts Neues von ihm.</seg><seg type="context" n="11" xml:id="d4618e20148"><rs type="person" role="sender">HP</rs> wünscht <rs key="index:d10854e29590">Alphons Stadler</rs> ein frohes Osterfest. Er schließt mit der Aufforderung an BP, auf seine Gesundheit zu achten.</seg><seg type="context" n="12" xml:id="d4618e20151">In einem Notabene-Vermerk bittet <rs type="person" role="sender">HP</rs>, ein weiteres beiliegendes Schreiben an <rs key="index:d14380e11208">Franz Embler</rs> zu übergeben.</seg><seg type="context" n="13" xml:id="d4618e20153">In einem Postskriptum möchte <rs type="person" role="sender">HP</rs> wissen, ob <rs key="index:d14380e27341">Jakob Mayr</rs> will, dass er für ihn die „<rs key="index:d10854e21803">Conciones</rs>“ von <rs key="index:d10854e21797">Oliva</rs> kauft. In diesem Fall möge er das Geld dafür im Voraus übermitteln und mitteilen, ob er das Buch in <rs key="index:d14380e45571">Wien</rs> oder anderswo binden lassen will.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Multum reverende religiosissime ac doctissime domine pater Bernarde.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e20165">Obsequium meum gratum fuisse adversum reverentiam vestram habeo gratiam. Pecuniam pro <seg type="lemma" corresp="#d4618e20207">Hübnero</seg> expensam mihi potius quam reverentiae vestrae a reverendo <seg type="lemma" corresp="#d4618e20214">patre Alphonso</seg> reddi malo. Id ut velim, complures mihi gravesque causae sunt. Itaque reverentia vestra curet, obsecro, ut illam summam per cubicularium nostrum, siquidem is <seg type="lemma" corresp="#d4618e20219">cum reverendissimo domino Mellicium ascendet</seg>, aut alium quemquam fidum modo hominem quam primum accipiam. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e20167">Reverendi patris <seg type="lemma" corresp="#d4618e20224">Olivae Conciones</seg> in quarto 2 fl. et 5<note place="foot" xml:id="d4618e20169">	Davor ein Fleck, bei welchem es sich um eine Korrektur HPs oder eine spätere Verschmutzung handeln könnte; in letzterem Fall ist darunter die erste Stelle einer zweistelligen Zahl zu vermuten.</note> x. vaeneunt. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d4618e20172">Ferias Paschales reverentiae vestrae quam laetissimas evenire cupio. Alacriores solito vos in officiis pietatis esse impendio gavisus sum. Vestra utinam vestigia ex aequo premeremus. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d4618e20174">Interim laborem nostrum <seg type="lemma" corresp="#d4618e20231">in theologiae studio</seg> caeteraque incommoda, quorum hic neque pauca neque levia ferenda sunt, bonis in operibus ponimus, pieque confidimus divinam bonitatem haec qualiacunque nostra non aspernaturam. Solatur nos illud Davidis: <seg type="lemma" corresp="#d4618e20238">Particeps ego sum omnium timentium te et custodientium mandata tua</seg>. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d4618e20176"><seg type="lemma" corresp="#d4618e20243">Comicum illum Mellicensem</seg> vestrum tot unum laboribus <sic>suficere</sic> [<hi rend="italic">sic</hi>] demiror; drama, quod molitur, vereor, ne sit Andria Menandri, qua se fatetur Terentius usum pro sua. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d4618e20181">Res reverentiae vestrae feliciter ire nullus dubito. Miror, quamobrem de iis tam parce atque adeo pene nihil in literis. Deus optimus maximus bene vertat, quod agendum reverentia vestra suscepit. Ego certe, quae ad id pertinere videbuntur, quantum in me fuerit, omni cura, opera et diligentia providebo. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d4618e20183">Quid circa Eliae <seg type="lemma" corresp="#d4618e20250">Dupinii posteriores tomos, siquidem eos Latinitate donatos</seg> dominus <seg type="lemma" corresp="#d4618e20257">Hartung</seg> appetentibus <seg type="lemma" corresp="#d4618e20262">Pentecostalibus nundinis</seg> accepturus est, reverentia vestra fieri velit, cupio quam diligentissime edoceri. </seg><seg type="context" n="8" xml:space="preserve" xml:id="d4618e20185">Cave et Visch multumne ad Benedictinam Bibliothecam conferant, e reverentia vestra rescire aveo. </seg><seg type="context" n="9" xml:space="preserve" xml:id="d4618e20187"><seg type="lemma" corresp="#d4618e20267">Literae hae praesentibus iunctae</seg> satis, ut quidem opinor, reverentiae vestrae optatae accident. Miror viri, quisquis ille est, singularem humanitatem et, ut ex inscriptione paret, erga reverentiam vestram studium. Nihilne e Gallia? Nihil ex Italia? </seg><seg type="context" n="10" xml:space="preserve" xml:id="d4618e20189"><seg type="lemma" corresp="#d4618e20275">Philippum Jesuitam</seg> ab ultimo illo congressu non vidi, nec, quid eo agatur, scio; spero bene omnia. </seg><seg type="context" n="11" xml:space="preserve" xml:id="d4618e20191">Reverendum dominum patrem Alphonsum suavissima salute impertio, cui, velim, reverentia vestra nomine meo sancti <seg type="lemma" corresp="#d4618e20282"><sic><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Pachatis<?oxy_custom_end?></sic></seg> [<hi rend="italic">sic</hi>] sollennitatem quam iucundissimam precetur. Reverentia vestra valetudinem suam diligenter accuret, meque measque rationes sibi non secus ac suas habeat commendatas.</seg></p>
-            <p xml:space="preserve">Reverentiae vestrae obsequiosissimus in Christo frater Hieronymus Pez comprofessus Mellicensis.</p>
-            <p xml:space="preserve">Datum Viennae 28. Martii 1711.</p>
-            <p xml:space="preserve"><seg type="context" n="12" xml:space="preserve" xml:id="d4618e20201">N.B. Alteras adiectas reverentia vestra reverendo <seg type="lemma" corresp="#d4618e20289">patri Francisco</seg> reddat, oro.</seg></p>
-            <p xml:space="preserve"><seg type="context" n="13" xml:space="preserve" xml:id="d4618e20204">P.S. Quod si reverendus <seg type="lemma" corresp="#d4618e20296">pater Jacobus</seg> emi sibi per me velit Olivae Conciones, moneat eum, quaeso, reverentia vestra, ut pecuniam antea mittat; doceatque, Viennae an alibi velit librum compingi, ad quod et nummi ab eodem submittantur.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e20207">
-               <ref type="context">1</ref>
-               <label>Hübnero</label>
-               <p>Es handelt sich vermutlich um ein Werk Johann Hübners, doch ist eine nähere
-                  Bestimmung nicht möglich. Vgl. <ref type="letter">323</ref> &lt;6&gt;, wo BP
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>Hübnero</mentioned>
+            <p>Es handelt sich vermutlich um ein Werk Johann Hübners, doch ist eine nähere
+                  Bestimmung nicht möglich. Vgl. <ref type="letter" target="letter:323">323</ref> <ref target="letter:323#seg6">6</ref>, wo BP
                   Sebastian Schott Hübners „Kurtze fragen aus der alten und neuen geographie“ als
                   Einstiegswerk empfiehlt.</p>
-            </note>
-            <note xml:id="d4618e20214">
-               <ref type="context">1</ref>
-               <label>patre Alphonso</label>
-               <p>Alphons Stadler, Konventuale von St. Paul im Lavanttal, weilte vom 4. November
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>patre Alphonso</mentioned>
+            <p>Alphons Stadler, Konventuale von St. Paul im Lavanttal, weilte vom 4. November
                   1709 bis zum 16. April 1711 als Gast in Melk (PE 5 25, 27, 59). Seine Abreise
-                  stand also zum Zeitpunkt dieses Briefs nahe bevor. Zu ihm <rs type="bibl"
-                     key="bibl:36982">Schroll, Necrologium</rs> 43, 93; Salzburg, StiA St. Peter,
+                  stand also zum Zeitpunkt dieses Briefs nahe bevor. Zu ihm <rs type="bibl" ref="bibl:36982">Schroll, Necrologium</rs> 43, 93; Salzburg, StiA St. Peter,
                   Cod. A 573, 351r–v.</p>
-            </note>
-            <note xml:id="d4618e20219">
-               <ref type="context">1</ref>
-               <label>cum reverendissimo domino Mellicium ascendet</label>
-               <p>Abt Dietmayr reiste zu den Osterfesttagen von Wien nach Melk, wo er am 1. April ankam und sich bis 9. April aufhielt (PE 5 59).</p>
-            </note>
-            <note xml:id="d4618e20224">
-               <ref type="context">2</ref>
-               <label>Olivae Conciones</label>
-               <p>Neben verschiedenen italienischen Ausgaben seit 1659, die hier eher ausgeschlossen werden können, existierten von den Predigten des Jesuitengenerals Oliva in lateinischer Übersetzung eine zweibändige Lyoner Ausgabe (1664–1665) sowie eine weitere aus Mainz (1668–1669), welche hier am wahrscheinlichsten anzunehmen ist.</p>
-            </note>
-            <note xml:id="d4618e20231">
-               <ref type="context">4</ref>
-               <label>in theologiae studio</label>
-               <p>HP befand sich gemeinsam mit seinen Mitbrüdern Ignaz Müller und Ambros Steinhardt im vierten Jahr des Studiums der Theologie (PE 5 55); vgl. Einleitung, Abschnitt I.1.</p>
-            </note>
-            <note xml:id="d4618e20238">
-               <ref type="context">4</ref>
-               <label>Particeps ... mandata tua</label>
-               <p>Ps 118,63.</p>
-            </note>
-            <note xml:id="d4618e20243">
-               <ref type="context">5</ref>
-               <label>Comicum illum Mellicensem</label>
-               <p>Die Identität dieser Person ist nicht sicher zu bestimmen. <rs type="bibl"
-                     key="bibl:16312">Freeman, Practice of Music</rs> 315, belegt für 1709 und 1710
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned>cum reverendissimo domino Mellicium ascendet</mentioned>
+            <p>Abt Dietmayr reiste zu den Osterfesttagen von Wien nach Melk, wo er am 1. April ankam und sich bis 9. April aufhielt (PE 5 59).</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned>Olivae Conciones</mentioned>
+            <p>Neben verschiedenen italienischen Ausgaben seit 1659, die hier eher ausgeschlossen werden können, existierten von den Predigten des Jesuitengenerals Oliva in lateinischer Übersetzung eine zweibändige Lyoner Ausgabe (1664–1665) sowie eine weitere aus Mainz (1668–1669), welche hier am wahrscheinlichsten anzunehmen ist.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
+            <mentioned>in theologiae studio</mentioned>
+            <p>HP befand sich gemeinsam mit seinen Mitbrüdern Ignaz Müller und Ambros Steinhardt im vierten Jahr des Studiums der Theologie (PE 5 55); vgl. Einleitung, Abschnitt I.1.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
+            <mentioned>Particeps ... mandata tua</mentioned>
+            <p>Ps 118,63.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
+            <mentioned>Comicum illum Mellicensem</mentioned>
+            <p>Die Identität dieser Person ist nicht sicher zu bestimmen. <rs type="bibl" ref="bibl:16312">Freeman, Practice of Music</rs> 315, belegt für 1709 und 1710
                   Schuldramen, jedoch keines für 1711. Das Verfassen der Stücke oblag in der Regel
                   einem der Professoren der Stiftsschule (vgl. ebd. 253); 1711 waren dies Viktorin
                   Haan (Grammatik, Syntax, Rhetorik und Poesie) sowie Gabriel Wengemayr (Tertia und
                   Rudimenta): PE 5 53.</p>
-            </note>
-            <note xml:id="d4618e20250">
-               <ref type="context">7</ref>
-               <label>Dupinii ... Latinitate donatos</label>
-               <p>Vgl. <ref type="letter">48</ref> &lt;5&gt;, <ref type="letter">68</ref> &lt;3&gt;,
-                     <ref type="letter">143</ref> &lt;16&gt;. Falls man hier – wie es den Anschein
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg7">
+            <mentioned>Dupinii ... Latinitate donatos</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:48">48</ref> <ref target="letter:48#seg5">5</ref>, <ref type="letter" target="letter:68">68</ref> <ref target="letter:68#seg3">3</ref>,
+                     <ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg16">16</ref>. Falls man hier – wie es den Anschein
                   hat – nach weiteren als den ersten drei Bänden der lateinischen Übersetzung suchen
                   ließ, dann gewiss vergeblich, zumal keine weiteren jemals erschienen waren.</p>
-            </note>
-            <note xml:id="d4618e20257">
-               <ref type="context">7</ref>
-               <label>Hartung</label>
-               <p>Hier dürfte es sich um den in diesen Jahren als Lieferanten Augustin Eraths
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg7">
+            <mentioned>Hartung</mentioned>
+            <p>Hier dürfte es sich um den in diesen Jahren als Lieferanten Augustin Eraths
                   nachweisbaren Johann Friedrich Hartung handeln (StiA Herzogenburg, A3. F. 86/6;
-                  vgl. <rs type="bibl" key="bibl:19776">Stockinger, Felix mansurus</rs>178). Einen
-                  Beleg für Hartungs Tätigkeit in Wien zum Jahr 1691 bieten <rs type="bibl"
-                     key="bibl:14994">Bachleitner–Eybl–Fischer, Buchhandel</rs> 77.</p>
-            </note>
-            <note xml:id="d4618e20262">
-               <ref type="context">7</ref>
-               <label>Pentecostalibus nundinis</label>
-               <p>Gemeint ist wohl der Wiener „Ascensionis-Markt“, der von zwei Wochen vor bis zwei
-                  Wochen nach dem Fest Christi Himmelfahrt gehalten wurde: <rs type="bibl"
-                     key="bibl:14994">Bachleitner–Eybl–Fischer, Buchhandel </rs>11. Dieses Fest fiel
+                  vgl. <rs type="bibl" ref="bibl:19776">Stockinger, Felix mansurus</rs>178). Einen
+                  Beleg für Hartungs Tätigkeit in Wien zum Jahr 1691 bieten <rs type="bibl" ref="bibl:14994">Bachleitner–Eybl–Fischer, Buchhandel</rs> 77.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg7">
+            <mentioned>Pentecostalibus nundinis</mentioned>
+            <p>Gemeint ist wohl der Wiener „Ascensionis-Markt“, der von zwei Wochen vor bis zwei
+                  Wochen nach dem Fest Christi Himmelfahrt gehalten wurde: <rs type="bibl" ref="bibl:14994">Bachleitner–Eybl–Fischer, Buchhandel </rs>11. Dieses Fest fiel
                   1711 auf den 14. Mai.</p>
-            </note>
-            <note xml:id="d4618e20267">
-               <ref type="context">9</ref>
-               <label>Literae ... iunctae</label>
-               <p>Unter den bekannten Briefen an BP aus dem vorangegangenen Zeitraum wird am ehesten
-                     <ref type="letter">150</ref> gemeint sein; dieser erste Brief Petrus Fridericis
-                  war an BP in Wien adressiert. Albert Reichart (<ref type="letter">151</ref>) war
-                  HP sicherlich bekannt, Hyazinth Baumbach (<ref type="letter">144</ref>, <ref
-                     type="letter">145</ref>) müsste dies auch gewesen sein. Der Brief Bernardo
-                  Cretonis (<ref type="letter">148</ref>) würde schlecht zu der Frage nach Antworten
-                  aus Italien passen; jene Gregor Imfelds und René Massuets (<ref type="letter"
-                     >153</ref>, <ref type="letter">154</ref>) können vor dem 28. März nicht in Wien
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg9">
+            <mentioned>Literae ... iunctae</mentioned>
+            <p>Unter den bekannten Briefen an BP aus dem vorangegangenen Zeitraum wird am ehesten
+                     <ref type="letter" target="letter:150">150</ref> gemeint sein; dieser erste Brief Petrus Fridericis
+                  war an BP in Wien adressiert. Albert Reichart (<ref type="letter" target="letter:151">151</ref>) war
+                  HP sicherlich bekannt, Hyazinth Baumbach (<ref type="letter" target="letter:144">144</ref>, <ref type="letter" target="letter:145">145</ref>) müsste dies auch gewesen sein. Der Brief Bernardo
+                  Cretonis (<ref type="letter" target="letter:148">148</ref>) würde schlecht zu der Frage nach Antworten
+                  aus Italien passen; jene Gregor Imfelds und René Massuets (<ref type="letter" target="letter:153">153</ref>, <ref type="letter" target="letter:154">154</ref>) können vor dem 28. März nicht in Wien
                   eingelangt sein.</p>
-            </note>
-            <note xml:id="d4618e20275">
-               <ref type="context">10</ref>
-               <label>Philippum Jesuitam</label>
-               <p>Der jüngere Bruder von BP und HP war im Herbst 1710 zu Wien in die Gesellschaft
-                  Jesu eingetreten. Vgl. <rs type="bibl" key="bibl:18084">Lukács, Catalogus</rs> 2
-                  1206; <rs type="bibl" key="bibl:20188">Wallnig, Gasthaus und Gelehrsamkeit</rs>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg10">
+            <mentioned>Philippum Jesuitam</mentioned>
+            <p>Der jüngere Bruder von BP und HP war im Herbst 1710 zu Wien in die Gesellschaft
+                  Jesu eingetreten. Vgl. <rs type="bibl" ref="bibl:18084">Lukács, Catalogus</rs> 2
+                  1206; <rs type="bibl" ref="bibl:20188">Wallnig, Gasthaus und Gelehrsamkeit</rs>
                   34, 39, 177; sowie Einleitung, Abschnitt I.1, Anm. 16.</p>
-            </note>
-            <note xml:id="d4618e20282">
-               <ref type="context">11</ref>
-               <label>Pachatis</label>
-               <p>Der Ostersonntag fiel 1711 auf den 5. April.</p>
-            </note>
-            <note xml:id="d4618e20289">
-               <ref type="context">12</ref>
-               <label>patri Francisco</label>
-               <p>Dieser junge Melker Konventuale war ein ungefährer Altersgenosse HPs, hatte jedoch schon 1709 die Priesterweihe empfangen (StiB Melk, Cod. 493, 76v; PE 5 22). In den PE wird er 1711 als „concionator“ geführt (PE 5 54). Da die Formulierung HPs keinen konkreten Anhaltspunkt dafür bietet, dass der Brief an Embler von HP stammte, wird er nicht als erschlossener Pez-Brief angesetzt.</p>
-            </note>
-            <note xml:id="d4618e20296">
-               <ref type="context">13</ref>
-               <label>pater Jacobus</label>
-               <p>Jakob Mayr war 1711 erster Vikar der Melker Stiftspfarre (PE 5 53); zu ihm StiB Melk, Cod. 493, 74r.</p>
-            </note>
-         </div>
-      </back>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg11">
+            <mentioned>Pachatis</mentioned>
+            <p>Der Ostersonntag fiel 1711 auf den 5. April.</p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg12">
+            <mentioned>patri Francisco</mentioned>
+            <p>Dieser junge Melker Konventuale war ein ungefährer Altersgenosse HPs, hatte jedoch schon 1709 die Priesterweihe empfangen (StiB Melk, Cod. 493, 76v; PE 5 22). In den PE wird er 1711 als „concionator“ geführt (PE 5 54). Da die Formulierung HPs keinen konkreten Anhaltspunkt dafür bietet, dass der Brief an Embler von HP stammte, wird er nicht als erschlossener Pez-Brief angesetzt.</p>
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg13">
+            <mentioned>pater Jacobus</mentioned>
+            <p>Jakob Mayr war 1711 erster Vikar der Melker Stiftspfarre (PE 5 53); zu ihm StiB Melk, Cod. 493, 74r.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Multum reverende religiosissime ac doctissime domine pater Bernarde.</opener>
+         <ab resp="#editor" xml:id="seg1">Obsequium meum gratum fuisse adversum reverentiam vestram habeo gratiam. Pecuniam pro <anchor xml:id="n1"/>Hübnero<anchor xml:id="n1e"/> expensam mihi potius quam reverentiae vestrae a reverendo <anchor xml:id="n2"/>patre Alphonso<anchor xml:id="n2e"/> reddi malo. Id ut velim, complures mihi gravesque causae sunt. Itaque reverentia vestra curet, obsecro, ut illam summam per cubicularium nostrum, siquidem is <anchor xml:id="n3"/>cum reverendissimo domino Mellicium ascendet<anchor xml:id="n3e"/>, aut alium quemquam fidum modo hominem quam primum accipiam. </ab>
+         <ab resp="#editor" xml:id="seg2">Reverendi patris <anchor xml:id="n4"/>Olivae Conciones<anchor xml:id="n4e"/> in quarto 2 fl. et 5<note place="foot" xml:id="d4618e20169">Davor ein Fleck, bei welchem es sich um eine Korrektur HPs oder eine spätere Verschmutzung handeln könnte; in letzterem Fall ist darunter die erste Stelle einer zweistelligen Zahl zu vermuten.</note> x. vaeneunt. </ab>
+         <ab resp="#editor" xml:id="seg3">Ferias Paschales reverentiae vestrae quam laetissimas evenire cupio. Alacriores solito vos in officiis pietatis esse impendio gavisus sum. Vestra utinam vestigia ex aequo premeremus. </ab>
+         <ab resp="#editor" xml:id="seg4">Interim laborem nostrum <anchor xml:id="n5"/>in theologiae studio<anchor xml:id="n5e"/> caeteraque incommoda, quorum hic neque pauca neque levia ferenda sunt, bonis in operibus ponimus, pieque confidimus divinam bonitatem haec qualiacunque nostra non aspernaturam. Solatur nos illud Davidis: <anchor xml:id="n6"/>Particeps ego sum omnium timentium te et custodientium mandata tua<anchor xml:id="n6e"/>. </ab>
+         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n7"/>Comicum illum Mellicensem<anchor xml:id="n7e"/> vestrum tot unum laboribus <sic>suficere</sic>  demiror; drama, quod molitur, vereor, ne sit Andria Menandri, qua se fatetur Terentius usum pro sua. </ab>
+         <ab resp="#editor" xml:id="seg6">Res reverentiae vestrae feliciter ire nullus dubito. Miror, quamobrem de iis tam parce atque adeo pene nihil in literis. Deus optimus maximus bene vertat, quod agendum reverentia vestra suscepit. Ego certe, quae ad id pertinere videbuntur, quantum in me fuerit, omni cura, opera et diligentia providebo. </ab>
+         <ab resp="#editor" xml:id="seg7">Quid circa Eliae <anchor xml:id="n8"/>Dupinii posteriores tomos, siquidem eos Latinitate donatos<anchor xml:id="n8e"/> dominus <anchor xml:id="n9"/>Hartung<anchor xml:id="n9e"/> appetentibus <anchor xml:id="n10"/>Pentecostalibus nundinis<anchor xml:id="n10e"/> accepturus est, reverentia vestra fieri velit, cupio quam diligentissime edoceri. </ab>
+         <ab resp="#editor" xml:id="seg8">Cave et Visch multumne ad Benedictinam Bibliothecam conferant, e reverentia vestra rescire aveo. </ab>
+         <ab resp="#editor" xml:id="seg9"><anchor xml:id="n11"/>Literae hae praesentibus iunctae<anchor xml:id="n11e"/> satis, ut quidem opinor, reverentiae vestrae optatae accident. Miror viri, quisquis ille est, singularem humanitatem et, ut ex inscriptione paret, erga reverentiam vestram studium. Nihilne e Gallia? Nihil ex Italia? </ab>
+         <ab resp="#editor" xml:id="seg10"><anchor xml:id="n12"/>Philippum Jesuitam<anchor xml:id="n12e"/> ab ultimo illo congressu non vidi, nec, quid eo agatur, scio; spero bene omnia. </ab>
+         <ab resp="#editor" xml:id="seg11">Reverendum dominum patrem Alphonsum suavissima salute impertio, cui, velim, reverentia vestra nomine meo sancti <anchor xml:id="n13"/><sic>Pachatis</sic><anchor xml:id="n13e"/>  sollennitatem quam iucundissimam precetur. Reverentia vestra valetudinem suam diligenter accuret, meque measque rationes sibi non secus ac suas habeat commendatas.</ab>
+         <closer>Reverentiae vestrae obsequiosissimus in Christo frater Hieronymus Pez comprofessus Mellicensis.</closer>
+         <closer>Datum Viennae 28. Martii 1711.</closer>
+         <closer xml:id="seg12">N.B. Alteras adiectas reverentia vestra reverendo <anchor xml:id="n14"/>patri Francisco<anchor xml:id="n14e"/> reddat, oro.</closer>
+         <closer xml:id="seg13">P.S. Quod si reverendus <anchor xml:id="n15"/>pater Jacobus<anchor xml:id="n15e"/> emi sibi per me velit Olivae Conciones, moneat eum, quaeso, reverentia vestra, ut pecuniam antea mittat; doceatque, Viennae an alibi velit librum compingi, ad quod et nummi ab eodem submittantur.</closer>
+      </body>
    </text>
 </TEI>

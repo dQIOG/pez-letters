@@ -1,50 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="555" xml:id="pez-0555">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">555 Johann Christoph Bartenstein an Bernhard Pez. 1716-04-26.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Johann Christoph Bartenstein an Bernhard Pez. 1716-04-26.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">555</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:15398">Braubach, Bartenstein</rs> 134</bibl>
-                  <bibl><rs type="bibl" key="bibl:18232">Mayer, Bartenstein</rs> 27</bibl>
-                  <bibl><rs type="bibl" key="bibl:18236">Mayer, Nachlaß</rs> 18 533f</bibl>
-                  <bibl><rs type="bibl" key="bibl:18770">Peper, Ohne Parteilichkeit</rs> 267,
-                     280</bibl>
-                  <bibl><rs type="bibl" key="bibl:18772">Peper, Österreichische Gelehrtenwelt</rs>
-                     18f</bibl>
-               </listBibl>
-            </relatedItem>
+            
+            <note type="remarks">
+               Eine Angabe des Absendeortes in Verbindung mit dem Datum fehlt; aufgrund des expliziten Bezugs auf den Aufenthalt CBs in Wien in &lt;4&gt; ist dieses als Absendeort anzunehmen.
+            </note>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">332r–333v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 332r–333v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -58,146 +71,115 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">554</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">560</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">553</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">554</idno>
-               </ref>
-               <ref type="mentionedIn">
-                  <idno type="pezEd">561</idno>
-               </ref>
+               <ptr type="prev" target="letter:554"/>
+               <ptr type="next" target="letter:560"/>
+               <ptr type="mentions" target="letter:553"/>
+               <ptr type="mentions" target="letter:554"/>
+               <ptr type="mentionedIn" target="letter:561"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Dass CB die Briefe BPs (<ref type="letter" target="letter:553">553</ref>, <ref type="letter" target="letter:554">554</ref>) nicht eher beantwortet hat, lag daran, dass er immer wieder durch Freunde oder dringende Geschäfte davon abgehalten wurde. Er hätte bereits auf den ersten Brief BPs unverzüglich reagiert, wenn er nicht eine – noch immer ausständige – Sendung von <rs ref="index:d10854e18739">Johann Jakob Mascov</rs> sowie Nachrichten von <rs ref="index:d10854e32969">Konrad Widow</rs> abgewartet hätte, deren Weitergabe sein eigenes Schreiben bereichert hätte. Mit diesen Erklärungen will sich CB nicht von aller Schuld für sein Schweigen freisprechen, sondern nur BP überzeugen, dass weder böse Absicht noch Gleichgültigkeit der Grund waren, denn seine Zuneigung zu BP könnte gar nicht größer sein, als sie ist.</p>
+            <p corresp="#seg2">CB hat <rs ref="index:d10854e18739">Mascov</rs> schon längst gebeten, ihm mitzuteilen, welche Kosten für die Abschrift eines Codex (<rs ref="index:d14380e44841">Wagner, „Series monachorum litteratorum“</rs>) entstanden sind; er hat aber von Mascov noch keine Antwort erhalten. Wenn BP mehr als die tatsächlichen Ausgaben bezahlen wollte, würde Mascov sich gekränkt fühlen; denn derlei Dienste werden unter Gelehrten unentgeltlich verrichtet.</p>
+            <p corresp="#seg3">Vom Stand seiner eigenen Angelegenheiten hat CB nichts zu berichten, außer dass er die Wünsche der anderen erfüllt, diese aber nicht die seinen. Jede Verzögerung ist ihm nicht nur unwillkommen, sondern schadet auch seinen Interessen; doch vertraut er auf die göttliche Vorsehung.</p>
+            <p corresp="#seg4">Seit er in <rs ref="index:d14380e45571">Wien</rs> ist, führt CB keinen Briefwechsel mit Gelehrten in <rs ref="index:d14380e12712">Frankreich</rs> mehr, damit nicht Böswillige seine Sympathie für die <rs ref="index:d14380e12712">Franzosen</rs> gegen ihn verwenden können. Von <rs ref="index:d10854e32969">Widow</rs> erfährt er jedoch immer wieder, was französische Freunde diesem mitteilen. Für BP liefert CB einen Auszug aus dem letzten Brief von <rs ref="index:d14380e9205">Charles de la Rue</rs> an <rs ref="index:d10854e32969">Widow</rs>; um die Anmut von dessen Diktion zu erhalten, gibt er den französischen Text wörtlich wieder.</p>
+            <p corresp="#seg5"><rs ref="index:d14380e9205">De la Rue</rs> weiß nicht, ob die „<rs ref="index:d14380e28610">Mémoires de Trévoux</rs>“ weiter erscheinen; deren Redakteur <rs ref="index:d14380e43096">René-Joseph Tournemine</rs> allerdings hatte kürzlich Schwierigkeiten. Ein Schriftsteller namens <rs ref="index:d14380e35316">Guillaume Plantavit de la Pause</rs>, abbé de Margon, der unter der vergangenen Regierung (<rs ref="index:d14380e25343">Ludwigs XIV.</rs>) mit aller Gewalt nach oben gelangen wollte, diente sich mit diesem Ziel den <rs ref="index:d14380e20126">Jesuiten</rs> an und wurde von ihnen dazu verwendet, ein Buch mit dem Titel „<rs ref="index:d14380e35326">Le Jansenisme demasqué</rs>“ zu verfassen. Das Material hierzu lieferten ihm die <rs ref="index:d14380e20126">Jesuiten</rs>; Margon versuchte damit den Nachweis zu führen, dass die <rs ref="index:d14380e20029">Jansenisten</rs> sämtlich Atheisten und Spinozisten seien. Vor seiner Veröffentlichung wurde dieses Buch in den „<rs ref="index:d14380e28610">Mémoires de Trévoux</rs>“ als unvergleichliches Werk angekündigt. Aber als es erschienen war, wollten die <rs ref="index:d14380e20126">Jesuiten</rs> zeigen, dass sie nicht die Einzigen seien, die die <rs ref="index:d14380e20029">Jansenisten</rs> des Atheismus beschuldigen; außerdem sollte niemand erkennen, dass das Buch im Grunde von ihnen kam und Margon nur ein vorgeschobener Autor war. Daher schrieben sie in einer Rezension in den „<rs ref="index:d14380e28610">Mémoires de Trévoux</rs>“ recht ungünstig über das Werk. Der Autor war empört über ihre Hinterhältigkeit und hat kürzlich einen offenen Brief an Tournemine („<rs type="org"><rs ref="index:d14380e35331">Réponse au pere Tournemin</rs>e</rs>“) drucken lassen, in dem er die teuflische Politik der <rs ref="index:d14380e20126">Jesuiten</rs> durch Auszüge aus Briefen mehrerer Angehöriger dieser Gesellschaft an ihn offenlegt und anbietet, die Originale dieser Briefe vor Gericht zu zeigen. Ganz Paris rennt nach dieser Schrift.</p>
+            <p corresp="#seg6">CB gibt noch weitere gelehrte Nachrichten aus <rs ref="index:d14380e9205">De la Rues</rs> Brief wieder: Der erste Band der „<rs ref="index:d14380e38739">Gallia Christiana</rs>“, die von dem Prior (von <rs ref="index:d14380e32414">St.-Germain-des-Prés</rs>) <rs ref="index:d14380e38706">Denis de Sainte-Marthe</rs> bearbeitet wird, beginnt zu erscheinen. Er ist dem Regenten <rs ref="index:d14380e35028">Philipp II.</rs>, Herzog von <rs ref="index:d14380e31332">Orléans</rs>, gewidmet, welcher der <rs ref="index:d10854e15615">Maurinerkongregation</rs> seinen Schutz gewährt und kürzlich gegenüber ihren Superioren gesagt hat, er schätze die <rs ref="index:d10854e15615">Mauriner</rs>, weil sie sich nur mit Gebet und Gelehrsamkeit befassen. Tatsächlich mischen sie sich niemals in Staatsangelegenheiten ein.</p>
+            <p corresp="#seg7"><rs ref="index:d14380e17187">Jean Hardouins</rs> <rs ref="index:d14380e17201">Konzilienedition</rs> („Acta conciliorum et epistolae decretales“) ist einer vom <rs ref="index:d14380e32403">Parlement de Paris</rs> eingesetzten Zensurkommission übergeben worden, unter deren sechs Mitgliedern sich <rs ref="index:d14380e10181">Louis Ellies Du Pin</rs>, <rs ref="index:d14380e2718">Philippe Anquetil</rs> und <rs ref="index:d14380e46437">Charles Witasse</rs> befinden. Sie haben noch kein Gutachten vorgelegt; allgemein wird jedoch erwartet, dass dieses nicht sehr vorteilhaft für die <rs ref="index:d14380e20126">Jesuiten</rs> ausfallen wird. Der Drucker <rs ref="index:d14380e37514">Claude Rigaud</rs> fordert, dass ihm im Falle eines Verbots eine Entschädigung bezahlt wird, da er das Werk nicht ohne Privileg hergestellt hat; er hat jedoch die Antwort erhalten, dass er die Bedingungen des Privilegs nicht erfüllt hat, von denen eine in der vorhergehenden Prüfung durch zwei Doktoren der <rs ref="index:d14380e32479">Sorbonne</rs> bestanden hätte. <rs ref="index:d14380e17187">Hardouin</rs> war vor kurzem noch in eine andere unerquickliche Affäre verwickelt, welche sogar dem Regenten zu Ohren gekommen ist: <rs ref="index:d14380e34963">Christoph Pfaff</rs>, ein <rs ref="index:d14380e9395">deutscher</rs> Gelehrter, der sich im Gefolge des Erbprinzen <rs ref="index:d14380e13495">Friedrich Ludwig</rs> von <rs ref="index:d10854e34213">Württemberg</rs> derzeit in Paris aufhält und bei allen dortigen Gelehrten sehr angesehen ist, wollte <rs ref="index:d14380e17187">Hardouin</rs> einen Besuch abstatten. Dieser fragte ihn auf der Stelle, ob er <rs ref="index:d14380e21679">Katholik</rs> oder <rs ref="index:d10854e25113">Protestant</rs> sei. <rs ref="index:d14380e34963">Pfaff</rs> gab zur Antwort, er sei nicht gekommen, um Rechenschaft über seine Religion abzulegen, sondern um mit einem großen Gelehrten zu sprechen, im Übrigen bekenne er aber ohne Verlegenheit, <rs ref="index:d10854e25113">Lutheraner</rs> zu sein. <rs ref="index:d14380e17187">Hardouin</rs> beschimpfte ihn daraufhin als „Schwein“ und „Ketzer“ und versperrte ihm vor der Nase die Tür zur Bibliothek. <rs ref="index:d14380e34963">Pfaff</rs> erzählte dies dem Erbprinzen von Württemberg, welcher seine Beschwerde bei dem Regenten vorbrachte; dieser wünscht, dass Hardouin sich bei Pfaff entschuldigt.</p>
+            <p corresp="#seg8">So weit die Neuigkeiten aus dem Brief <rs ref="index:d14380e9205">De la Rues</rs>, von denen CB hofft, dass BP sie auch <rs ref="index:d14380e34537">HP</rs> mitteilen wird. CB hat kürzlich mit dem <rs ref="index:d14380e28088">Melker</rs> Abt <rs ref="index:d10854e6356">Berthold Dietmayr</rs> im Palais Starhemberg gesprochen; zu seiner Freude hat er erfahren, dass dieser BP und <rs ref="index:d14380e34537">HP</rs> sehr schätzt, wie sie es verdienen.</p>
+            <p corresp="#seg9">In einem Nachsatz sendet CB Grüße an <rs ref="index:d14380e34537">HP</rs>.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e9004">Dass <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> die Briefe <rs type="person" role="sender">BPs</rs> (<ref type="letter">553</ref>, <ref type="letter">554</ref>) nicht eher beantwortet hat, lag daran, dass er immer wieder durch Freunde oder dringende Geschäfte davon abgehalten wurde. Er hätte bereits auf den ersten Brief <rs type="person" role="sender">BPs</rs> unverzüglich reagiert, wenn er nicht eine – noch immer ausständige – Sendung von <rs key="index:d10854e18739">Johann Jakob Mascov</rs> sowie Nachrichten von <rs key="index:d10854e32969">Konrad Widow</rs> abgewartet hätte, deren Weitergabe sein eigenes Schreiben bereichert hätte. Mit diesen Erklärungen will sich <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> nicht von aller Schuld für sein Schweigen freisprechen, sondern nur <rs type="person" role="sender">BP</rs> überzeugen, dass weder böse Absicht noch Gleichgültigkeit der Grund waren, denn seine Zuneigung zu <rs type="person" role="sender">BP</rs> könnte gar nicht größer sein, als sie ist.</seg><seg type="context" n="2" xml:id="d3e9006"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> hat <rs key="index:d10854e18739">Mascov</rs> schon längst gebeten, ihm mitzuteilen, welche Kosten für die Abschrift eines Codex (<rs key="index:d14380e44841">Wagner, „Series monachorum litteratorum“</rs>) entstanden sind; er hat aber von Mascov noch keine Antwort erhalten. Wenn <rs type="person" role="sender">BP</rs> mehr als die tatsächlichen Ausgaben bezahlen wollte, würde Mascov sich gekränkt fühlen; denn derlei Dienste werden unter Gelehrten unentgeltlich verrichtet.</seg><seg type="context" n="3" xml:id="d3e9008">Vom Stand seiner eigenen Angelegenheiten hat <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> nichts zu berichten, außer dass er die Wünsche der anderen erfüllt, diese aber nicht die seinen. Jede Verzögerung ist ihm nicht nur unwillkommen, sondern schadet auch seinen Interessen; doch vertraut er auf die göttliche Vorsehung.</seg><seg type="context" n="4" xml:id="d3e9010">Seit er in <rs key="index:d14380e45571">Wien</rs> ist, führt <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> keinen Briefwechsel mit Gelehrten in <rs key="index:d14380e12712">Frankreich</rs> mehr, damit nicht Böswillige seine Sympathie für die <rs key="index:d14380e12712">Franzosen</rs> gegen ihn verwenden können. Von <rs key="index:d10854e32969">Widow</rs> erfährt er jedoch immer wieder, was französische Freunde diesem mitteilen. Für <rs type="person" role="sender">BP</rs> liefert <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> einen Auszug aus dem letzten Brief von <rs key="index:d14380e9205">Charles de la Rue</rs> an <rs key="index:d10854e32969">Widow</rs>; um die Anmut von dessen Diktion zu erhalten, gibt er den französischen Text wörtlich wieder.</seg><seg type="context" n="5" xml:id="d3e9012"><rs key="index:d14380e9205">De la Rue</rs> weiß nicht, ob die „<rs key="index:d14380e28610">Mémoires de Trévoux</rs>“ weiter erscheinen; deren Redakteur <rs key="index:d14380e43096">René-Joseph Tournemine</rs> allerdings hatte kürzlich Schwierigkeiten. Ein Schriftsteller namens <rs key="index:d14380e35316">Guillaume Plantavit de la Pause</rs>, abbé de <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Margon<?oxy_custom_end?>, der unter der vergangenen Regierung (<rs key="index:d14380e25343">Ludwigs XIV.</rs>) mit aller Gewalt nach oben gelangen wollte, diente sich mit diesem Ziel den <rs key="index:d14380e20126">Jesuiten</rs> an und wurde von ihnen dazu verwendet, ein Buch mit dem Titel „<rs key="index:d14380e35326">Le Jansenisme demasqué</rs>“ zu verfassen. Das Material hierzu lieferten ihm die <rs key="index:d14380e20126">Jesuiten</rs>; <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Margon<?oxy_custom_end?> versuchte damit den Nachweis zu führen, dass die <rs key="index:d14380e20029">Jansenisten</rs> sämtlich Atheisten und Spinozisten seien. Vor seiner Veröffentlichung wurde dieses Buch in den „<rs key="index:d14380e28610">Mémoires de Trévoux</rs>“ als unvergleichliches Werk angekündigt. Aber als es erschienen war, wollten die <rs key="index:d14380e20126">Jesuiten</rs> zeigen, dass sie nicht die Einzigen seien, die die <rs key="index:d14380e20029">Jansenisten</rs> des Atheismus beschuldigen; außerdem sollte niemand erkennen, dass das Buch im Grunde von ihnen kam und <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Margon<?oxy_custom_end?> nur ein vorgeschobener Autor war. Daher schrieben sie in einer Rezension in den „<rs key="index:d14380e28610">Mémoires de Trévoux</rs>“ recht ungünstig über das Werk. Der Autor war empört über ihre Hinterhältigkeit und hat kürzlich einen offenen Brief an Tournemine („<rs type="org"><rs key="index:d14380e35331">Réponse au pere Tournemin</rs>e</rs>“) drucken lassen, in dem er die teuflische Politik der <rs key="index:d14380e20126">Jesuiten</rs> durch Auszüge aus Briefen mehrerer Angehöriger dieser Gesellschaft an ihn offenlegt und anbietet, die Originale dieser Briefe vor Gericht zu zeigen. Ganz Paris rennt nach dieser Schrift.</seg><seg type="context" n="6" xml:id="d3e9014"><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> gibt noch weitere gelehrte Nachrichten aus <rs key="index:d14380e9205">De la Rues</rs> Brief wieder: Der erste Band der „<rs key="index:d14380e38739">Gallia Christiana</rs>“, die von dem Prior (von <rs key="index:d14380e32414">St.-Germain-des-Prés</rs>) <rs key="index:d14380e38706">Denis de Sainte-Marthe</rs> bearbeitet wird, beginnt zu erscheinen. Er ist dem Regenten <rs key="index:d14380e35028">Philipp II.</rs>, Herzog von <rs key="index:d14380e31332">Orléans</rs>, gewidmet, welcher der <rs key="index:d10854e15615">Maurinerkongregation</rs> seinen Schutz gewährt und kürzlich gegenüber ihren Superioren gesagt hat, er schätze die <rs key="index:d10854e15615">Mauriner</rs>, weil sie sich nur mit Gebet und Gelehrsamkeit befassen. Tatsächlich mischen sie sich niemals in Staatsangelegenheiten ein.</seg><seg type="context" n="7" xml:id="d3e9016"><rs key="index:d14380e17187">Jean Hardouins</rs> <rs key="index:d14380e17201">Konzilienedition</rs> („Acta conciliorum et epistolae decretales“) ist einer vom <rs key="index:d14380e32403">Parlement de Paris</rs> eingesetzten Zensurkommission übergeben worden, unter deren sechs Mitgliedern sich <rs key="index:d14380e10181">Louis Ellies Du Pin</rs>, <rs key="index:d14380e2718">Philippe Anquetil</rs> und <rs key="index:d14380e46437">Charles Witasse</rs> befinden. Sie haben noch kein Gutachten vorgelegt; allgemein wird jedoch erwartet, dass dieses nicht sehr vorteilhaft für die <rs key="index:d14380e20126">Jesuiten</rs> ausfallen wird. Der Drucker <rs key="index:d14380e37514">Claude Rigaud</rs> fordert, dass ihm im Falle eines Verbots eine Entschädigung bezahlt wird, da er das Werk nicht ohne Privileg hergestellt hat; er hat jedoch die Antwort erhalten, dass er die Bedingungen des Privilegs nicht erfüllt hat, von denen eine in der vorhergehenden Prüfung durch zwei Doktoren der <rs key="index:d14380e32479">Sorbonne</rs> bestanden hätte. <rs key="index:d14380e17187">Hardouin</rs> war vor kurzem noch in eine andere unerquickliche Affäre verwickelt, welche sogar dem Regenten zu Ohren gekommen ist: <rs key="index:d14380e34963">Christoph Pfaff</rs>, ein <rs key="index:d14380e9395">deutscher</rs> Gelehrter, der sich im Gefolge des Erbprinzen <rs key="index:d14380e13495">Friedrich Ludwig</rs> von <rs key="index:d10854e34213">Württemberg</rs> derzeit in Paris aufhält und bei allen dortigen Gelehrten sehr angesehen ist, wollte <rs key="index:d14380e17187">Hardouin</rs> einen Besuch abstatten. Dieser fragte ihn auf der Stelle, ob er <rs key="index:d14380e21679">Katholik</rs> oder <rs key="index:d10854e25113">Protestant</rs> sei. <rs key="index:d14380e34963">Pfaff</rs> gab zur Antwort, er sei nicht gekommen, um Rechenschaft über seine Religion abzulegen, sondern um mit einem großen Gelehrten zu sprechen, im Übrigen bekenne er aber ohne Verlegenheit, <rs key="index:d10854e25113">Lutheraner</rs> zu sein. <rs key="index:d14380e17187">Hardouin</rs> beschimpfte ihn daraufhin als „Schwein“ und „Ketzer“ und versperrte ihm vor der Nase die Tür zur Bibliothek. <rs key="index:d14380e34963">Pfaff</rs> erzählte dies dem Erbprinzen von Württemberg, welcher seine Beschwerde bei dem Regenten vorbrachte; dieser wünscht, dass Hardouin sich bei Pfaff entschuldigt.</seg><seg type="context" n="8" xml:id="d3e9018">So weit die Neuigkeiten aus dem Brief <rs key="index:d14380e9205">De la Rues</rs>, von denen <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> hofft, dass <rs type="person" role="sender">BP</rs> sie auch <rs key="index:d14380e34537">HP</rs> mitteilen wird. <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> hat kürzlich mit dem <rs key="index:d14380e28088">Melker</rs> Abt <rs key="index:d10854e6356">Berthold Dietmayr</rs> im <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Palais Starhemberg<?oxy_custom_end?> gesprochen; zu seiner Freude hat er erfahren, dass dieser <rs type="person" role="sender">BP</rs> und <rs key="index:d14380e34537">HP</rs> sehr schätzt, wie sie es verdienen.</seg><seg type="context" n="9" xml:id="d3e9020">In einem Nachsatz sendet <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>CB<?oxy_custom_end?> Grüße an <rs key="index:d14380e34537">HP</rs>.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">XIV</hi>.</p>
-            <div type="remarks">
-               <p>Eine Angabe des Absendeortes in Verbindung mit dem Datum fehlt; aufgrund des expliziten Bezugs auf den Aufenthalt CBs in Wien in &lt;4&gt; ist dieses als Absendeort anzunehmen.</p>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverendo in Christo patri domino Bernhardo Petzio bibliothecario Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e9042">Nescio, quo malo fato meo, quoties ad literas tuas respondere in animum induxi, interventu amicorum vel negotiorum, quae moram non patiebantur, quo minus officio meo facerem satis, fuerim distentus. Et ad priores quidem literas tuas statim respondissem, nisi partim a Mascowio literas expectassem, quae necdum mihi redditae fuerunt, partim etiam a Widowio me nonnulla percepturum sperassem, quorum communicatione vel aliqua saltem literis meis gratia accederet. Haec tamen non eum in finem allego, amice integerrime, ut omnem silentii culpam a me amoliar. Dolum aut oblivionem tui abfuisse ubi persuasum habebis, iam id mihi satis erit. Et sane esses haud parum in me iniurius, si vel levissimae de mei in te amoris tenerrimique<note place="foot" xml:id="d3e9044"><hi rend="italic">	mei ... tenerrimique:</hi> Korrigiert aus <hi rend="italic">meo in te amore tenerrimoque</hi>.</note> affectus remissione suspicioni locum relinqueres. Namque is tantus est, ut novis<note place="foot" xml:id="d3e9052">	Korrigiert aus <hi rend="italic">nova.</hi></note> augeri incrementis nequeat. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e9057">Mascowium iam dudum est, quod rogavi, ut factas in <seg type="lemma" corresp="#d3e9103">descriptionem istius manuscripti</seg> impensas mihi significet. Sed is omnia sua tarde molitur. Responsum nondum accepi. Plura autem, quam quae ipse expendit, a te persolvi<note place="foot" xml:id="d3e9059">	Danach durchgestrichen <hi rend="italic">et</hi>.</note> aegre, mihi crede, feret. Eiusmodi enim officia literatis a literarum amantibus gratis impendi par est. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e9065">De mearum rerum statu quod ad te scribam, non habeo, nisi quod ego aliis satisfaciam, alii mihi non aeque. Omnis mihi mora ingrata, sed <pb n="1v"/> et rebus meis perniciosa est. <seg type="lemma" corresp="#d3e9109">Dominus providebit</seg>, cuius curae me totum relinquo. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e9069">Ex quo Vindobonae sum, nullum prorsus mihi cum doctis in Gallia viris literarum commercium intercedit. Causam haud difficulter ipse divinabis. Scilicet malevolis omnis ansa praescindenda meum in Galliam affectum criminandi. Ex Widowio tamen subinde ea intelligo, quae isti ab amicis Gallis communicantur. Quo vero illa et in tuam, vir amicissime, notitiam perveniant, en extractum literarum, <seg type="lemma" corresp="#d3e9115">quas reverendus pater De la Ruë ultimo loco ad communem amicum nostrum scripsit</seg>. Gallicis verbis omnia expressa transcribam, ne quid de illorum gratia pereat. </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e9071">Je ne sais si les Journaux de Trevoux continuent<note place="foot" xml:id="d3e9073">	Korrigiert aus <hi rend="italic">continuant.</hi></note>, mais le pere Tournemine, president de ces journaux, vient de recevoir une etrange mortification. En voici le sujet. Un nommé l’abbé <seg type="lemma" corresp="#d3e9121">Margon voulant à toute force se pousser sous le precedent gouvernement prit la voye ordinaire de se vendre à la Societé, qui l’emploia aussitot à la composition d’un livre intitulé Le Jansenisme demasqué</seg> dans une refutation complete de l’action de Dieu sur les creatures. Les Jesuites lui fournirent eux memes les materiaux dont l’autheur se servit pour faire voir que les Jansenistes sont des atheés et des Spinosistes. Avant que le livre parut, les Trevousiens l’annoncerent au public comme une piece incomparable, mais des qu’il parut, afin de faire connoitre qu’ils ne sont pas les seuls qui accusent les Jansenistes d’atheisme, et afin qu’on ne crut pas que le fond de cet ouvrage etoit d’eux, et que Margon n’etoit qu’un pretenom, ils jugerent à propos de parler assez mal de ce livre dans l’extrait qu’ils en firent. L’autheur indigné de leur <pb n="2r"/> mauvaise foy vient de rendre publique une letre qu’il adresse au pere Tournemine et dans laquelle il decouvre une politique diabolique des Jesuites, qu’il pretend prouver par des extraits de differentes letres que plusieurs Jesuites lui ont ecrites et dont il est pret de representer en justice les originaux. Tout Paris court apres cete letre comme au feu. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e9080">Quae ad nova literaria pertinent, ita ab eodem patre recensentur. Le premier volume de <seg type="lemma" corresp="#d3e9131">Gallia Christiana</seg> composé par dom Denis de Sainte Marthe, notre prieur, commence à paroitre. Il est dedié à monsieur le regent, notre bon prince, qui <seg type="lemma" corresp="#d3e9137">nous honore de sa protection</seg>, et qui dit dernierement à nos superieurs qu’il nous aimoit et consideroit parceque nous ne nous melions que de prier Dieu et d’etudier<note place="foot" xml:id="d3e9082">	Korrigiert aus <hi rend="italic">etudier.</hi></note>. En effet nous ne nous melons jamais des affaires d’etat. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d3e9087">Les <seg type="lemma" corresp="#d3e9141">Conciles du pere Hardouin</seg> sont entre les mains de six examinateurs habiles nommés par le parlement. Messieurs<seg type="lemma" corresp="#d3e9147"> Du Pin</seg>,<seg type="lemma" corresp="#d3e9151"> Hancquefille</seg> [<hi rend="italic">sic</hi>],<seg type="lemma" corresp="#d3e9155"> Vitasse</seg> etc. sont de ce nombre. Ils n’ont pas encore fait leur rapport. Le public est bien seur qu’il ne sera pas bien avantageux aux bons peres. Monsieur<seg type="lemma" corresp="#d3e9160"> Rigaud</seg>, imprimeur de cet ouvrage, demande qu’en cas qu’on supprime l’ouvrage, on le rembourse de ses frais, puisqu’il n’a pas imprimé sans privilege, mais on lui repond qu’il n’a pas satisfait aux conditions du privilege, dont l’une etoit que l’ouvrage seroit examiné feuille à feuille par deux docteurs de Sorbonne. Le bon pere Hardouin a encore eu depuis peu <pb n="2v"/> une affaire fascheuse qui est allé jusqu’aux oreilles de monsieur le regent. Un scavant d’Allemagne nommé<seg type="lemma" corresp="#d3e9164"> Pfaff, qui est ici à la suite du prince de Wirtemberg, et qui est fort aimé et consideré de touts les scavants de Paris, s’avisa d’aller rendre visite à ce pere, qui lui demanda tout d’abord s’il etoit catholique ou protestant. Monsieur Pfaff lui repondit fort honnetement qu’il n’etoit pas venu pour lui rendre compte de sa religion, mais pour conferer avec un habile homme comme le pere Hardouin, qu’au reste il ne rougissoit pas de lui avouer qu’il estoit Lutherien. Sortez d’ici cochon, s’ecria le bon pere, sortez d’ici heretique, et il lui ferma aussitot la porte de la bibliotheque au nez. Monsieur Pfaff n’a pas manqué de raconter cete scene au prince de Wirtemberg</seg>, qui en a porté ses plaintes à monsieur le regent, qui veut que le pere Hardouin fasse satisfaction à monsieur Pfaff. </seg><seg type="context" n="8" xml:space="preserve" xml:id="d3e9094">Haec sunt, quae ad te perscribenda duxi, et quae tu suavissimo fratri tuo haud aegre, uti spero, communicabis. Cum reverendissimo monasterii Mellicensis praelato diu nuper de te fratreque tuo in <seg type="lemma" corresp="#d3e9168">Starembergianis aedibus</seg> locutus sum. Praecipuo me gaudio affecit, quod ex eo cognoscem te ab illo aeque ac fratrem tuum maximi, uti par est, fieri. Plura addere hac vice non licet. Tu me amare perge ac vale.</seg></p>
-            <p xml:space="preserve">Scribebam die 26. Aprilis 1716.</p>
-            <p xml:space="preserve"><seg type="context" n="9" xml:space="preserve" xml:id="d3e9100">Plurimam a me salutem suavissimo domino fratri tuo etiam non rogatus semper imperties.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e9103">
-               <ref type="context">2</ref>
-               <label>descriptionem ... manuscripti</label><p> Aller Wahrscheinlichkeit nach Petrus
-                  Wagners „Series monachorum litteratorum“ aus UB Leipzig, Ms. 852: vgl. <ref
-                     type="letter">500</ref> &lt;3&gt;. </p></note>
-            <note xml:id="d3e9109">
-               <ref type="context">3</ref>
-               <label>Dominus providebit</label><p>Gen 22,8.</p></note>
-            <note xml:id="d3e9115">
-               <ref type="context">4</ref>
-               <label>quas ... De la Ruë ... scripsit</label><p>Zur Weiterverbreitung von Angaben
-                  aus Briefen De la Rues durch Widow und CB vgl. <ref type="letter">359</ref>
-                  &lt;7&gt;. Der dort angeführte Brief Widows an Johann Christoph Wolf vom 19.
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
+            <mentioned>descriptionem ... manuscripti</mentioned>
+            <p> Aller Wahrscheinlichkeit nach Petrus
+                  Wagners „Series monachorum litteratorum“ aus UB Leipzig, Ms. 852: vgl. <ref type="letter" target="letter:500">500</ref> <ref target="letter:500#seg3">3</ref>. </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg3">
+            <mentioned>Dominus providebit</mentioned>
+            <p>Gen 22,8.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg4">
+            <mentioned>quas ... De la Ruë ... scripsit</mentioned>
+            <p>Zur Weiterverbreitung von Angaben
+                  aus Briefen De la Rues durch Widow und CB vgl. <ref type="letter" target="letter:359">359</ref>
+                  <ref target="letter:359#seg7">7</ref>. Der dort angeführte Brief Widows an Johann Christoph Wolf vom 19.
                   September 1714 ist im Original erhalten in SUB Hamburg, Sup. ep. 121,
-                  299r–300v.</p></note>
-            <note xml:id="d3e9121">
-               <ref type="context">5</ref>
-               <label>Margon ... Le Jansenisme demasqué</label><p> Zu diesem Buch und der
+                  299r–300v.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg5">
+            <mentioned>Margon ... Le Jansenisme demasqué</mentioned>
+            <p> Zu diesem Buch und der
                   Kontroverse um dessen wohl von Tournemine selbst verfasste Rezension in den
-                  „Mémoires de Trévoux“ vgl. <rs type="bibl" key="bibl:15580">Ceyssens, Margon</rs>
-                  140f., 144–146; <rs type="bibl" key="bibl:15786">De Franceschi, Entre saint
-                     Augustin</rs> 60f.; <rs type="bibl" key="bibl:15852">Desautels, Mémoires de
+                  „Mémoires de Trévoux“ vgl. <rs type="bibl" ref="bibl:15580">Ceyssens, Margon</rs>
+                  140f., 144–146; <rs type="bibl" ref="bibl:15786">De Franceschi, Entre saint
+                     Augustin</rs> 60f.; <rs type="bibl" ref="bibl:15852">Desautels, Mémoires de
                      Trévoux</rs> 133. Margon wurde noch im Lauf des Jahres 1716 durch den Regenten
                   von Paris nach Versailles verbannt, erlangte aber bald seine Freiheit wieder;
                   wegen Streitschriften gegen Kardinal Fleury verbrachte er allerdings ab 1726 seine
-                  letzten 34 Lebensjahre in Festungs- und Klosterhaft: <rs type="bibl"
-                     key="bibl:15580">Ceyssens, Margon</rs> 150–155. Zu Versuchen einzelner Jesuiten
+                  letzten 34 Lebensjahre in Festungs- und Klosterhaft: <rs type="bibl" ref="bibl:15580">Ceyssens, Margon</rs> 150–155. Zu Versuchen einzelner Jesuiten
                   (unter anderen Jean Hardouin und Claude-René Hongnant), jansenistische
-                  theologische Positionen mit dem Vorwurf des Atheismus zu belegen, vgl. <rs
-                     type="bibl" key="bibl:18598">Northeast, Parisian Jesuits</rs> 81–87; zum
-                  weiteren Kontext ähnlicher Anschuldigungen vgl. <rs type="bibl" key="bibl:18598"
-                     >Betts, Early Deism</rs> 38f., 82f., 264; <rs type="bibl" key="bibl:17506"
-                     >Klausnitzer, Poesie und Konspiration</rs> 114–120, 133f.; <rs type="bibl"
-                     key="bibl:17612">Kors, Atheism</rs> 271f., 312f.; <rs type="bibl"
-                     key="bibl:18446">Mücke, Aufklärung</rs> 170–172. Zur Vorstellung eines
+                  theologische Positionen mit dem Vorwurf des Atheismus zu belegen, vgl. <rs type="bibl" ref="bibl:18598">Northeast, Parisian Jesuits</rs> 81–87; zum
+                  weiteren Kontext ähnlicher Anschuldigungen vgl. <rs type="bibl" ref="bibl:18598">Betts, Early Deism</rs> 38f., 82f., 264; <rs type="bibl" ref="bibl:17506">Klausnitzer, Poesie und Konspiration</rs> 114–120, 133f.; <rs type="bibl" ref="bibl:17612">Kors, Atheism</rs> 271f., 312f.; <rs type="bibl" ref="bibl:18446">Mücke, Aufklärung</rs> 170–172. Zur Vorstellung eines
                   „Spinozismus“, der mit dem Atheismus verwandt oder nahezu deckungsgleich sei – und
                   der meist ohne eingehendes Verständnis oder auch nur Rezeption der Schriften
-                  Spinozas konstruiert wurde –, vgl. <rs type="bibl" key="bibl:15628">Citton, Envers
-                     de la liberté</rs> 37–56.</p></note>
-            <note xml:id="d3e9127">
-               <ref type="context">5</ref>
-               <label> extrait ... firent</label><p> Memoires pour l’histoire des sciences (1715) 1575–1590.</p></note>
-            <note xml:id="d3e9131">
-               <ref type="context">6</ref>
-               <label>Gallia Christiana</label><p>Vgl. <ref type="letter">702</ref> &lt;2&gt; und
-                  &lt;4&gt;. </p></note>
-            <note xml:id="d3e9137">
-               <ref type="context">6</ref>
-               <label>nous honore ... protection</label><p> Von der vorübergehenden Milderung der
+                  Spinozas konstruiert wurde –, vgl. <rs type="bibl" ref="bibl:15628">Citton, Envers
+                     de la liberté</rs> 37–56.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg5">
+            <mentioned> extrait ... firent</mentioned>
+            <p> Memoires pour l’histoire des sciences (1715) 1575–1590.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg6">
+            <mentioned>Gallia Christiana</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:702">702</ref> <ref target="letter:702#seg2">2</ref> und
+                  <ref target="letter:702#seg4">4</ref>. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg6">
+            <mentioned>nous honore ... protection</mentioned>
+            <p> Von der vorübergehenden Milderung der
                   königlichen Politik im Streit um die Bulle „Unigenitus“ nach dem Tod Ludwigs XIV.
                   profitierten unter anderen auch einige Benediktiner der Maurinerkongregation, die
-                  zuvor wegen Nähe zum Jansenismus inhaftiert oder verbannt gewesen waren: vgl. <rs
-                     type="bibl" key="bibl:15602">Chaussy, Bénédictins</rs> 1 113; <rs type="bibl"
-                     key="bibl:15824">Denis, Charles de l’Hostallerie</rs> 376–378.</p></note>
-            <note xml:id="d3e9141">
-               <ref type="context">7</ref>
-               <label>Conciles du pere Hardouin</label><p> Hardouins Konziliensammlung wurde seit
+                  zuvor wegen Nähe zum Jansenismus inhaftiert oder verbannt gewesen waren: vgl. <rs type="bibl" ref="bibl:15602">Chaussy, Bénédictins</rs> 1 113; <rs type="bibl" ref="bibl:15824">Denis, Charles de l’Hostallerie</rs> 376–378.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg7">
+            <mentioned>Conciles du pere Hardouin</mentioned>
+            <p> Hardouins Konziliensammlung wurde seit
                   1714 mit königlicher Unterstützung gedruckt, 1716 unter der Regentschaft jedoch
                   von einer vom Parlement de Paris eingesetzten Kommission verboten; der
                   Hauptvorwurf lautete, dass die Inhalte den Freiheiten der gallikanischen Kirche
                   zuwiderliefen. Auch Verfälschung der edierten Dokumente durch Auslassungen und
                   Zusätze wurde Hardouin in diesem Zusammenhang angelastet. Zum Gutachten der
-                  Kommission vgl. <ref type="letter">581</ref> &lt;3&gt;. Nach dem Druck eines
+                  Kommission vgl. <ref type="letter" target="letter:581">581</ref> <ref target="letter:581#seg3">3</ref>. Nach dem Druck eines
                   Bandes mit Berichtigungen im Sinne der Parlamentskommission wurde das Werk erst
-                  1725 wieder zum Verkauf in Frankreich zugelassen: vgl. <rs type="bibl"
-                     key="bibl:16618">Grafton, Hardouin</rs> 246–248; <rs type="bibl"
-                     key="bibl:18976">Quentin, Mansi</rs> 33–35, 38–54, 202f.; <rs type="bibl"
-                     key="bibl:19514">Schulte, Quellen</rs> 3/1 95f.; <rs type="bibl"
-                     key="bibl:19624">Sommervogel, Bibliothèque</rs> 4 col. 97–99. Bereits vor dem
+                  1725 wieder zum Verkauf in Frankreich zugelassen: vgl. <rs type="bibl" ref="bibl:16618">Grafton, Hardouin</rs> 246–248; <rs type="bibl" ref="bibl:18976">Quentin, Mansi</rs> 33–35, 38–54, 202f.; <rs type="bibl" ref="bibl:19514">Schulte, Quellen</rs> 3/1 95f.; <rs type="bibl" ref="bibl:19624">Sommervogel, Bibliothèque</rs> 4 col. 97–99. Bereits vor dem
                   Verbot hatten freilich sowohl BP als auch Johann Benedikt Gentilotti für die von
-                  ihnen geleiteten Bibliotheken Ausgaben dieser Sammlung erworben: vgl. <ref
-                     type="letter">530</ref> &lt;6&gt;, <ref type="letter">610
-               </ref>&lt;5&gt;.</p></note>
-            <note xml:id="d3e9147">
-               <ref type="context">7</ref>
-               <label> Du Pin</label><p>Er zählte zu den prominentesten gallikanischen Theologen. Zu
-                  seiner Person vgl. <rs type="bibl" key="bibl:15268">Blanchet, Louis Ellies Du
-                     Pin</rs>; Carreyre, Pin; Féret, Faculté 7 5–20; <rs type="bibl"
-                     key="bibl:16648">Gres-Gayer, Du Pin</rs>; <rs type="bibl" key="bibl:16654"
-                     >Gres-Gayer, Théologien gallican</rs>; <rs type="bibl" key="bibl:18960"
-                     >Quantin, Catholicisme classique</rs> 105, 107f., 539–541.</p></note>
-            <note xml:id="d3e9151">
-               <ref type="context">7</ref>
-               <label> Hancquefille</label><p>Es muss Philippe Anquetil gemeint sein; zu ihm vgl.
-                     <rs type="bibl" key="bibl:16646">Gres-Gayer, D’un jansénisme à l’autre</rs>
+                  ihnen geleiteten Bibliotheken Ausgaben dieser Sammlung erworben: vgl. <ref type="letter" target="letter:530">530</ref> <ref target="letter:530#seg6">6</ref>, <ref type="letter" target="letter:610">610
+               </ref><ref target="letter:610&#xA;               #seg5">5</ref>.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg7">
+            <mentioned> Du Pin</mentioned>
+            <p>Er zählte zu den prominentesten gallikanischen Theologen. Zu
+                  seiner Person vgl. <rs type="bibl" ref="bibl:15268">Blanchet, Louis Ellies Du
+                     Pin</rs>; Carreyre, Pin; Féret, Faculté 7 5–20; <rs type="bibl" ref="bibl:16648">Gres-Gayer, Du Pin</rs>; <rs type="bibl" ref="bibl:16654">Gres-Gayer, Théologien gallican</rs>; <rs type="bibl" ref="bibl:18960">Quantin, Catholicisme classique</rs> 105, 107f., 539–541.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg7">
+            <mentioned> Hancquefille</mentioned>
+            <p>Es muss Philippe Anquetil gemeint sein; zu ihm vgl.
+                     <rs type="bibl" ref="bibl:16646">Gres-Gayer, D’un jansénisme à l’autre</rs>
                   470. Er hatte sich in den Konflikten um die Bulle „Unigenitus“ lange auf der Seite
                   ihrer Gegner engagiert und schloss sich später der Appellation der theologischen
-                  Fakultät an: <rs type="bibl" key="bibl:16652">Gres-Gayer, Théologie et
-                     pouvoir</rs> 44, 50–52, 58, 61, 99, 110.</p></note>
-            <note xml:id="d3e9155">
-               <ref type="context">7</ref>
-               <label> Vitasse</label><p><rs type="bibl" key="bibl:16182">Féret, Faculté </rs>7
-                  193–199; <rs type="bibl" key="bibl:16646">Gres-Gayer, D’un jansénisme à
-                     l’autre</rs> 482; <rs type="bibl" key="bibl:16652">Gres-Gayer, Théologie et
+                  Fakultät an: <rs type="bibl" ref="bibl:16652">Gres-Gayer, Théologie et
+                     pouvoir</rs> 44, 50–52, 58, 61, 99, 110.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg7">
+            <mentioned> Vitasse</mentioned>
+            <p><rs type="bibl" ref="bibl:16182">Féret, Faculté </rs>7
+                  193–199; <rs type="bibl" ref="bibl:16646">Gres-Gayer, D’un jansénisme à
+                     l’autre</rs> 482; <rs type="bibl" ref="bibl:16652">Gres-Gayer, Théologie et
                      pouvoir</rs> 29, 33, 95, 98, 110, 235. Er war 1714 wegen Nichtannahme des
                   Universitätsdekrets zur Registrierung der Bulle unter Verlust seiner Professur
                   nach Noyon verbannt worden, hatte sich bis zum Ableben Ludwigs XIV. versteckt
@@ -206,39 +188,77 @@
                   gallikanischen und pro-jansenistischen Theologen ließ ein negatives Resultat der
                   Prüfung erwarten, zumal Hardouin die Bulle nicht nur angenommen, sondern in der
                   Widmung seiner Konziliensammlung an Ludwig XIV. ausdrücklich befürwortet
-                  hatte.</p></note>
-            <note xml:id="d3e9160">
-               <ref type="context">7</ref>
-               <label> Rigaud</label><p> Zu Claude Rigaud, dem Direktor der Imprimerie royale, vgl.
-                     <ref type="letter">71</ref> &lt;9&gt;.</p></note>
-            <note xml:id="d3e9164">
-               <ref type="context">7</ref>
-               <label> Pfaff ... prince de Wirtemberg</label><p>Zu Friedrich Ludwig von Württemberg
-                  vgl. <rs type="bibl" key="bibl:19762">Stievermann, Friedrich Ludwig</rs>; zu
-                  seinem Aufenthalt in Paris von 1715 bis 1716 vgl. <rs type="bibl" key="bibl:19272"
-                     >Sauer, Musen</rs> 97f. Zur Stellung Pfaffs als Informator des Erbprinzen vgl.
-                     <rs type="bibl" key="bibl:19298">Schäufele, Pfaff</rs> 42f. Der von De la Rue
+                  hatte.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg7">
+            <mentioned> Rigaud</mentioned>
+            <p> Zu Claude Rigaud, dem Direktor der Imprimerie royale, vgl.
+                     <ref type="letter" target="letter:71">71</ref> <ref target="letter:71#seg9">9</ref>.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg7">
+            <mentioned> Pfaff ... prince de Wirtemberg</mentioned>
+            <p>Zu Friedrich Ludwig von Württemberg
+                  vgl. <rs type="bibl" ref="bibl:19762">Stievermann, Friedrich Ludwig</rs>; zu
+                  seinem Aufenthalt in Paris von 1715 bis 1716 vgl. <rs type="bibl" ref="bibl:19272">Sauer, Musen</rs> 97f. Zur Stellung Pfaffs als Informator des Erbprinzen vgl.
+                     <rs type="bibl" ref="bibl:19298">Schäufele, Pfaff</rs> 42f. Der von De la Rue
                   geschilderte Vorfall wurde viel später von Pfaff selbst in recht ähnlicher
-                  Darstellung öffentlich berichtet: <rs type="bibl" key="bibl:14760">Pfaff,
-                     Beantwortung</rs>, Vorrede 104–106; vgl. <rs type="bibl" key="bibl:19010">Räß,
-                     Convertiten</rs> 10 67f.</p></note>
-            <note xml:id="d3e9168">
-               <ref type="context">8</ref>
-               <label>Starembergianis aedibus</label><p> Spätestens seit dem Anfang seines zweiten
+                  Darstellung öffentlich berichtet: <rs type="bibl" ref="bibl:14760">Pfaff,
+                     Beantwortung</rs>, Vorrede 104–106; vgl. <rs type="bibl" ref="bibl:19010">Räß,
+                     Convertiten</rs> 10 67f.</p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg8">
+            <mentioned>Starembergianis aedibus</mentioned>
+            <p> Spätestens seit dem Anfang seines zweiten
                   Aufenthalts in Wien 1715 hatte CB das Wohlwollen des Geheimen Konferenzrats und
                   gewesenen Hofkammerpräsidenten Gundacker Thomas Grafen Starhemberg gewonnen, der
-                  auf Jahre hinaus zu seinen wichtigsten Förderern zählen sollte: <rs type="bibl"
-                     key="bibl:15398">Braubach, Bartenstein</rs> 134f., 139. Bei dem erwähnten
+                  auf Jahre hinaus zu seinen wichtigsten Förderern zählen sollte: <rs type="bibl" ref="bibl:15398">Braubach, Bartenstein</rs> 134f., 139. Bei dem erwähnten
                   Palais dürfte es sich demnach am ehesten um jenes in der Dorotheergasse handeln,
                   zumal das größere Stadtpalais am Minoritenplatz zu dieser Zeit im Besitz von
                   Gundacker Thomas’ Neffen Konrad Sigismund Grafen Starhemberg stand. Eventuell
                   kommt allerdings auch das vor 1706 für Gundacker Thomas von Starhemberg errichtete
-                  Vorstadtpalais auf der Wieden in Frage: vgl. <rs type="bibl" key="bibl:15730"
-                     >Czeike, Wien Innere Stadt</rs> 34; <rs type="bibl" key="bibl:16666"
-                     >Grimschitz, Barockpaläste</rs> 3, 20f.; <rs type="bibl" key="bibl:18244"
-                     >Mazakarini, Barockpaläste</rs> 2 10f.; <rs type="bibl" key="bibl:20178"
-                     >Waitzbauer, Haus am Minoritenplatz</rs> 21.</p></note>
-         </div>
-      </back>
+                  Vorstadtpalais auf der Wieden in Frage: vgl. <rs type="bibl" ref="bibl:15730">Czeike, Wien Innere Stadt</rs> 34; <rs type="bibl" ref="bibl:16666">Grimschitz, Barockpaläste</rs> 3, 20f.; <rs type="bibl" ref="bibl:18244">Mazakarini, Barockpaläste</rs> 2 10f.; <rs type="bibl" ref="bibl:20178">Waitzbauer, Haus am Minoritenplatz</rs> 21.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>XIV</orig>.</note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:15398">
+            <title type="short">Braubach, Bartenstein</title>
+            <biblScope>134</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18232">
+            <title type="short">Mayer, Bartenstein</title>
+            <biblScope>27</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18236">
+            <title type="short">Mayer, Nachlaß</title>
+            <biblScope>18 533f</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18770">
+            <title type="short">Peper, Ohne Parteilichkeit</title>
+            <biblScope>267, 280</biblScope>
+         </bibl>
+         <bibl corresp="bibl:18772">
+            <title type="short">Peper, Österreichische Gelehrtenwelt</title>
+            <biblScope>18f</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverendo in Christo patri domino Bernhardo Petzio bibliothecario Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</opener>
+         <ab resp="#editor" xml:id="seg1">Nescio, quo malo fato meo, quoties ad literas tuas respondere in animum induxi, interventu amicorum vel negotiorum, quae moram non patiebantur, quo minus officio meo facerem satis, fuerim distentus. Et ad priores quidem literas tuas statim respondissem, nisi partim a Mascowio literas expectassem, quae necdum mihi redditae fuerunt, partim etiam a Widowio me nonnulla percepturum sperassem, quorum communicatione vel aliqua saltem literis meis gratia accederet. Haec tamen non eum in finem allego, amice integerrime, ut omnem silentii culpam a me amoliar. Dolum aut oblivionem tui abfuisse ubi persuasum habebis, iam id mihi satis erit. Et sane esses haud parum in me iniurius, si vel levissimae de mei in te amoris tenerrimique<note place="foot" xml:id="d3e9044"><hi rend="italic">	mei ... tenerrimique:</hi> Korrigiert aus <hi rend="italic">meo in te amore tenerrimoque</hi>.</note> affectus remissione suspicioni locum relinqueres. Namque is tantus est, ut <choice><sic>nova.</sic><corr>novis</corr></choice> augeri incrementis nequeat. </ab>
+         <ab resp="#editor" xml:id="seg2">Mascowium iam dudum est, quod rogavi, ut factas in <anchor xml:id="n1"/>descriptionem istius manuscripti<anchor xml:id="n1e"/> impensas mihi significet. Sed is omnia sua tarde molitur. Responsum nondum accepi. Plura autem, quam quae ipse expendit, a te persolvi<del ana="#after">et</del> aegre, mihi crede, feret. Eiusmodi enim officia literatis a literarum amantibus gratis impendi par est. </ab>
+         <ab resp="#editor" xml:id="seg3">De mearum rerum statu quod ad te scribam, non habeo, nisi quod ego aliis satisfaciam, alii mihi non aeque. Omnis mihi mora ingrata, sed <pb n="1v"/> et rebus meis perniciosa est. <anchor xml:id="n2"/>Dominus providebit<anchor xml:id="n2e"/>, cuius curae me totum relinquo. </ab>
+         <ab resp="#editor" xml:id="seg4">Ex quo Vindobonae sum, nullum prorsus mihi cum doctis in Gallia viris literarum commercium intercedit. Causam haud difficulter ipse divinabis. Scilicet malevolis omnis ansa praescindenda meum in Galliam affectum criminandi. Ex Widowio tamen subinde ea intelligo, quae isti ab amicis Gallis communicantur. Quo vero illa et in tuam, vir amicissime, notitiam perveniant, en extractum literarum, <anchor xml:id="n3"/>quas reverendus pater De la Ruë ultimo loco ad communem amicum nostrum scripsit<anchor xml:id="n3e"/>. Gallicis verbis omnia expressa transcribam, ne quid de illorum gratia pereat. </ab>
+         <ab resp="#editor" xml:id="seg5">Je ne sais si les Journaux de Trevoux <choice><sic>continuant.</sic><corr>continuent</corr></choice>, mais le pere Tournemine, president de ces journaux, vient de recevoir une etrange mortification. En voici le sujet. Un nommé l’abbé <anchor xml:id="n4"/>Margon voulant à toute force se pousser sous le precedent gouvernement prit la voye ordinaire de se vendre à la Societé, qui l’emploia aussitot à la composition d’un livre intitulé Le Jansenisme demasqué<anchor xml:id="n4e"/> dans une refutation complete de l’action de Dieu sur les creatures. Les Jesuites lui fournirent eux memes les materiaux dont l’autheur se servit pour faire voir que les Jansenistes sont des atheés et des Spinosistes. Avant que le livre parut, les Trevousiens l’annoncerent au public comme une piece incomparable, mais des qu’il parut, afin de faire connoitre qu’ils ne sont pas les seuls qui accusent les Jansenistes d’atheisme, et afin qu’on ne crut pas que le fond de cet ouvrage etoit d’eux, et que Margon n’etoit qu’un pretenom, ils jugerent à propos de parler assez mal de ce livre dans l’extrait qu’ils en firent. L’autheur indigné de leur <pb n="2r"/> mauvaise foy vient de rendre publique une letre qu’il adresse au pere Tournemine et dans laquelle il decouvre une politique diabolique des Jesuites, qu’il pretend prouver par des extraits de differentes letres que plusieurs Jesuites lui ont ecrites et dont il est pret de representer en justice les originaux. Tout Paris court apres cete letre comme au feu. </ab>
+         <ab resp="#editor" xml:id="seg6">Quae ad nova literaria pertinent, ita ab eodem patre recensentur. Le premier volume de <anchor xml:id="n5"/>Gallia Christiana<anchor xml:id="n5e"/> composé par dom Denis de Sainte Marthe, notre prieur, commence à paroitre. Il est dedié à monsieur le regent, notre bon prince, qui <anchor xml:id="n6"/>nous honore de sa protection<anchor xml:id="n6e"/>, et qui dit dernierement à nos superieurs qu’il nous aimoit et consideroit parceque nous ne nous melions que de prier Dieu et <choice><sic>etudier.</sic><corr>d’etudier</corr></choice>. En effet nous ne nous melons jamais des affaires d’etat. </ab>
+         <ab resp="#editor" xml:id="seg7">Les <anchor xml:id="n7"/>Conciles du pere Hardouin<anchor xml:id="n7e"/> sont entre les mains de six examinateurs habiles nommés par le parlement. Messieurs<anchor xml:id="n8"/> Du Pin<anchor xml:id="n8e"/>,<anchor xml:id="n9"/> Hancquefille<anchor xml:id="n9e"/> ,<anchor xml:id="n10"/> Vitasse<anchor xml:id="n10e"/> etc. sont de ce nombre. Ils n’ont pas encore fait leur rapport. Le public est bien seur qu’il ne sera pas bien avantageux aux bons peres. Monsieur<anchor xml:id="n11"/> Rigaud<anchor xml:id="n11e"/>, imprimeur de cet ouvrage, demande qu’en cas qu’on supprime l’ouvrage, on le rembourse de ses frais, puisqu’il n’a pas imprimé sans privilege, mais on lui repond qu’il n’a pas satisfait aux conditions du privilege, dont l’une etoit que l’ouvrage seroit examiné feuille à feuille par deux docteurs de Sorbonne. Le bon pere Hardouin a encore eu depuis peu <pb n="2v"/> une affaire fascheuse qui est allé jusqu’aux oreilles de monsieur le regent. Un scavant d’Allemagne nommé<anchor xml:id="n12"/> Pfaff, qui est ici à la suite du prince de Wirtemberg, et qui est fort aimé et consideré de touts les scavants de Paris, s’avisa d’aller rendre visite à ce pere, qui lui demanda tout d’abord s’il etoit catholique ou protestant. Monsieur Pfaff lui repondit fort honnetement qu’il n’etoit pas venu pour lui rendre compte de sa religion, mais pour conferer avec un habile homme comme le pere Hardouin, qu’au reste il ne rougissoit pas de lui avouer qu’il estoit Lutherien. Sortez d’ici cochon, s’ecria le bon pere, sortez d’ici heretique, et il lui ferma aussitot la porte de la bibliotheque au nez. Monsieur Pfaff n’a pas manqué de raconter cete scene au prince de Wirtemberg<anchor xml:id="n12e"/>, qui en a porté ses plaintes à monsieur le regent, qui veut que le pere Hardouin fasse satisfaction à monsieur Pfaff. </ab>
+         <ab resp="#editor" xml:id="seg8">Haec sunt, quae ad te perscribenda duxi, et quae tu suavissimo fratri tuo haud aegre, uti spero, communicabis. Cum reverendissimo monasterii Mellicensis praelato diu nuper de te fratreque tuo in <anchor xml:id="n13"/>Starembergianis aedibus<anchor xml:id="n13e"/> locutus sum. Praecipuo me gaudio affecit, quod ex eo cognoscem te ab illo aeque ac fratrem tuum maximi, uti par est, fieri. Plura addere hac vice non licet. Tu me amare perge ac vale.</ab>
+         <closer>Scribebam die 26. Aprilis 1716.</closer>
+         <closer xml:id="seg9">Plurimam a me salutem suavissimo domino fratri tuo etiam non rogatus semper imperties.</closer>
+      </body>
    </text>
 </TEI>

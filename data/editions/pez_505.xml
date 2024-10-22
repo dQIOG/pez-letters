@@ -1,38 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="505" xml:id="pez-0505">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">505 Alphons Hueber an Bernhard Pez. 1716-02-09. Tegernsee.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Alphons Hueber an Bernhard Pez. 1716-02-09. Tegernsee.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">505</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">583r–584v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 583r–584v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,183 +68,176 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">496</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">595</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">273</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">496</idno>
-               </ref>
+               <ptr type="prev" target="letter:496"/>
+               <ptr type="next" target="letter:595"/>
+               <ptr type="mentions" target="letter:273"/>
+               <ptr type="mentions" target="letter:496"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">Den Brief BPs vom 25. Januar 1716 <ref type="letter" target="letter:496">496</ref> hat AH vor einer Woche, am vierten Sonntag nach der Erscheinung des Herrn und am Fest Mariä Lichtmess (2. Februar 1716), mit großer Freude erhalten. <rs ref="index:d14380e35944">Marian Praunsperger</rs> und <rs ref="index:d14380e44815">Gotthard Wagner</rs> haben AH Verzeichnisse ihrer Kompositionen übergeben, die er in eigener Abschrift zusammen mit kurzen Lebensgeschichten beider an BP übermittelt. Beide lassen auch Empfehlungen ausrichten. Wagner hat noch eine Predigt („<rs ref="index:d14380e44825">Sancta Barbara, ara Deo dicata</rs>“) hinzugefügt, die er erst am Vortag aus <rs ref="index:d14380e13185">Freising</rs> aus der Druckerei erhalten hat.</p>
+            <p corresp="#seg2">Sobald Kälte und Schnee nachlassen, will AH sich bemühen, der <rs ref="index:d14380e33611">Enzyklik</rs> BPs zu entsprechen, die am Vortag auch bei Tisch vorgelesen worden ist. Die <rs ref="index:d14380e42178">Tegernseer Bibliothek</rs> befindet sich jedoch noch nicht in einem brauchbaren Zustand; die Schreiner sind freilich hart am Werk und werden auf eine Fertigstellung nach Ostern bedacht sein. Dann werden die inzwischen in einem Turm aufbewahrten Bücher wieder benutzbar sein. AH will freilich selbst ins Innerste der Erde vordringen, um aufzusuchen, womit er BP dienen kann. Dasselbe gelobt Abt <rs ref="index:d14380e16651">Petrus von Guetrather</rs>.</p>
+            <p corresp="#seg3">Über den <rs ref="index:d14380e36264">hl. Quirinus</rs> schreibt BP, dass alte Autoren nichts darüber berichten, dass dieser ein Sohn des römischen Kaisers <rs ref="index:d14380e35072">Philippus</rs> gewesen sei. AH verweist auf uralte Schriftdenkmäler in <rs ref="index:d14380e42111">Tegernsee</rs> sowie auf zahlreiche bildliche Darstellungen, auf denen Taufe, Exil und Martyrium des Quirinus wie auch seiner Eltern <rs ref="index:d14380e35072">Philippus Arabs</rs> und <rs ref="index:d14380e40789">Severa</rs> sowie seines Bruders <rs ref="index:d14380e35080">Philippus II.</rs> zu sehen sind; diese beruhen auf Traditionen, die über tausend Jahre zurückreichen. Wer würde bei solchen Belegen nicht einen Gesinnungswandel BPs erhoffen, wenn er diese sehen könnte? AH fügt hinzu, dass die gedruckte <rs ref="index:d14380e29023">Lebensbeschreibung</rs> des <rs ref="index:d14380e36264">hl. Quirinus</rs>, die der verstorbene Abt <rs ref="index:d14380e29011">Quirin Millon</rs> aus alten Quellen zusammengestellt hat, von dem gegenwärtigen Bischof von <rs ref="index:d14380e13185">Freising</rs> <rs ref="index:d14380e10663">Johann Franz Eckher</rs> von Kapfing selbst mündlich (vivae vocis oraculo) approbiert worden ist. AH bittet BP zudem, die Ausführungen zu Quirinus im <rs ref="index:d14380e6109">dritten März-Band</rs> der „<rs ref="index:d14380e6100">Acta sanctorum</rs>“ der <rs ref="index:d14380e6075">Bollandisten</rs> einzusehen, wo die alten <rs ref="index:d14380e42111">Tegernseer</rs> Quellen wörtlich wiedergegeben sind. Auch <rs ref="index:d14380e19233">Wiguleus Hund von Sulzenmoos</rs> in seiner „<rs ref="index:d14380e19239">Metropolis Salisburgensis</rs>“ und zahlreiche weitere Schriftsteller bestätigen die Lebensumstände des <rs ref="index:d14380e36264">Quirinus</rs>; AH unterbreitet all dies dem Urteil BPs.</p>
+            <p corresp="#seg4">An <rs ref="index:d14380e27919">Karl Meichelbeck</rs> in <rs ref="index:d14380e4706">Benediktbeuern</rs>, seinen ehemaligen Kollegen am <rs ref="index:d14380e13219">Lyzeum zu Freising</rs>, hat AH in der Sache BPs geschrieben. <rs ref="index:d14380e27919">Meichelbeck</rs> wird BP bald ein ganzes Paket mit Materialien schicken, die er für ihn aus <rs ref="index:d14380e11731">Ettal</rs> mitgebracht hat. <rs ref="index:d14380e27919">Meichelbeck</rs> ist ein arbeitsamer und gelehrter Mann und wird mit BP ausgiebig korrespondieren.</p>
+            <p corresp="#seg5">AHs asketische Schrift („<rs ref="index:d14380e18971">Wegzehrung der reisenden</rs>“) hat der <rs ref="index:d14380e3233">Augsburger</rs> Verleger <rs ref="index:d14380e44885">Daniel Walder</rs> selbst am 26. Januar von <rs ref="index:d14380e42111">Tegernsee</rs> nach Augsburg mitgenommen, um sie dort der bischöflichen Zensur zu unterbreiten. AH hofft, dass sie noch im laufenden Jahr erscheinen kann, und will BP dann umgehend ein Exemplar zukommen lassen. Sie enthält nichts Gelehrtes oder Elegantes, sondern Einfaches für einfache Leser, für das Seelenheil und zur Ehre des <rs ref="index:d14380e4919">Benediktinerordens</rs>; als Quellen haben AH nur die besten asketischen Autoren und die Kirchenväter gedient.</p>
+            <p corresp="#seg6">BPs angekündigte „<rs ref="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“ erwartet AH begierig. Er bittet Gott, BP zu beschützen, und will deswegen auch die wundertätige <rs ref="index:d14380e10821">Muttergottes von Egern</rs> beständig anrufen. Zudem gratuliert er BP zu dessen Erfolg gegen die Jesuiten und wünscht ihm noch viele weitere.</p>
+            <p corresp="#seg7">Vor wenigen Tagen ist AH eine Predigt („<rs ref="index:d14380e30490">Oratio de nativitate Domini</rs>“) von Abt <rs ref="index:d14380e30482">Raphael Neupöck</rs> (von <rs ref="index:d14380e31025">Oberaltaich</rs>) in die Hände gefallen, der einst unter Abt <rs ref="index:d14380e21574">Kaspar Ayndorffer</rs> in <rs ref="index:d14380e42111">Tegernsee</rs> seine Profess abgelegt hatte; AH hat ihn bereits in einem seiner ersten Briefe <ref type="letter" target="letter:273">273</ref> erwähnt. Er übermittelt die Predigt an BP, zumal es sich um eines der ersten Erzeugnisse der <rs ref="index:d14380e42417">Tegernseer Klosterdruckerei</rs> handelt. Er schließt, indem er BP nochmals den <rs ref="index:d14380e36264">hl. Quirinus</rs> und (dessen Biographen) „<rs ref="index:d14380e28767">Metellus von Tegernsee</rs>“ empfiehlt.</p>
+            <p corresp="#seg8">In einem Nachsatz sendet AH Grüße an <rs ref="index:d14380e39962">Anselm Schramb</rs> und an <rs ref="index:d14380e16887">Martin Hager</rs>, der ihm besonders lieb ist.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e3026">Den Brief <rs type="person" role="sender">BPs</rs> vom 25. Januar 1716 <ref type="letter">496</ref> hat <rs type="person" role="sender">AH</rs> vor einer Woche, am vierten Sonntag nach der Erscheinung des Herrn und am Fest Mariä Lichtmess (2. Februar 1716), mit großer Freude erhalten. <rs key="index:d14380e35944">Marian Praunsperger</rs> und <rs key="index:d14380e44815">Gotthard Wagner</rs> haben <rs type="person" role="sender">AH</rs> Verzeichnisse ihrer Kompositionen übergeben, die er in eigener Abschrift zusammen mit kurzen Lebensgeschichten beider an <rs type="person" role="sender">BP</rs> übermittelt. Beide lassen auch Empfehlungen ausrichten. Wagner hat noch eine Predigt („<rs key="index:d14380e44825">Sancta Barbara, ara Deo dicata</rs>“) hinzugefügt, die er erst am Vortag aus <rs key="index:d14380e13185">Freising</rs> aus der Druckerei erhalten hat.</seg><seg type="context" n="2" xml:id="d3e3031">Sobald Kälte und Schnee nachlassen, will <rs type="person" role="sender">AH</rs> sich bemühen, der <rs key="index:d14380e33611">Enzyklik</rs> <rs type="person" role="sender">BPs</rs> zu entsprechen, die am Vortag auch bei Tisch vorgelesen worden ist. Die <rs key="index:d14380e42178">Tegernseer Bibliothek</rs> befindet sich jedoch noch nicht in einem brauchbaren Zustand; die Schreiner sind freilich hart am Werk und werden auf eine Fertigstellung nach Ostern bedacht sein. Dann werden die inzwischen in einem Turm aufbewahrten Bücher wieder benutzbar sein. <rs type="person" role="sender">AH</rs> will freilich selbst ins Innerste der Erde vordringen, um aufzusuchen, womit er <rs type="person" role="sender">BP</rs> dienen kann. Dasselbe gelobt Abt <rs key="index:d14380e16651">Petrus von Guetrather</rs>.</seg><seg type="context" n="3" xml:id="d3e3033">Über den <rs key="index:d14380e36264">hl. Quirinus</rs> schreibt <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BP<?oxy_custom_end?>, dass alte Autoren nichts darüber berichten, dass dieser ein Sohn des römischen Kaisers <rs key="index:d14380e35072">Philippus</rs> gewesen sei. <rs type="person" role="sender">AH</rs> verweist auf uralte Schriftdenkmäler in <rs key="index:d14380e42111">Tegernsee</rs> sowie auf zahlreiche bildliche Darstellungen, auf denen Taufe, Exil und Martyrium des Quirinus wie auch seiner Eltern <rs key="index:d14380e35072">Philippus Arabs</rs> und <rs key="index:d14380e40789">Severa</rs> sowie seines Bruders <rs key="index:d14380e35080">Philippus II.</rs> zu sehen sind; diese beruhen auf Traditionen, die über tausend Jahre zurückreichen. Wer würde bei solchen Belegen nicht einen Gesinnungswandel <rs type="person" role="sender">BPs</rs> erhoffen, wenn er diese sehen könnte? <rs type="person" role="sender">AH</rs> fügt hinzu, dass die gedruckte <rs key="index:d14380e29023">Lebensbeschreibung</rs> des <rs key="index:d14380e36264">hl. Quirinus</rs>, die der verstorbene Abt <rs key="index:d14380e29011">Quirin Millon</rs> aus alten Quellen zusammengestellt hat, von dem gegenwärtigen Bischof von <rs key="index:d14380e13185">Freising</rs> <rs key="index:d14380e10663">Johann Franz Eckher</rs> von Kapfing selbst mündlich (vivae vocis oraculo) approbiert worden ist. <rs type="person" role="sender">AH</rs> bittet <rs type="person" role="sender">BP</rs> zudem, die Ausführungen zu Quirinus im <rs key="index:d14380e6109">dritten März-Band</rs> der „<rs key="index:d14380e6100">Acta sanctorum</rs>“ der <rs key="index:d14380e6075">Bollandisten</rs> einzusehen, wo die alten <rs key="index:d14380e42111">Tegernseer</rs> Quellen wörtlich wiedergegeben sind. Auch <rs key="index:d14380e19233">Wiguleus Hund von Sulzenmoos</rs> in seiner „<rs key="index:d14380e19239">Metropolis Salisburgensis</rs>“ und zahlreiche weitere Schriftsteller bestätigen die Lebensumstände des <rs key="index:d14380e36264">Quirinus</rs>; <rs type="person" role="sender">AH</rs> unterbreitet all dies dem Urteil <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>BPs<?oxy_custom_end?>.</seg><seg type="context" n="4" xml:id="d3e3035">An <rs key="index:d14380e27919">Karl Meichelbeck</rs> in <rs key="index:d14380e4706">Benediktbeuern</rs>, seinen ehemaligen Kollegen am <rs key="index:d14380e13219">Lyzeum zu Freising</rs>, hat <rs type="person" role="sender">AH</rs> in der Sache <rs type="person" role="sender">BPs</rs> geschrieben. <rs key="index:d14380e27919">Meichelbeck</rs> wird <rs type="person" role="sender">BP</rs> bald ein ganzes Paket mit Materialien schicken, die er für ihn aus <rs key="index:d14380e11731">Ettal</rs> mitgebracht hat. <rs key="index:d14380e27919">Meichelbeck</rs> ist ein arbeitsamer und gelehrter Mann und wird mit <rs type="person" role="sender">BP</rs> ausgiebig korrespondieren.</seg><seg type="context" n="5" xml:id="d3e3037"><rs type="person" role="sender">AHs</rs> asketische Schrift („<rs key="index:d14380e18971">Wegzehrung der reisenden</rs>“) hat der <rs key="index:d14380e3233">Augsburger</rs> Verleger <rs key="index:d14380e44885">Daniel Walder</rs> selbst am 26. Januar von <rs key="index:d14380e42111">Tegernsee</rs> nach Augsburg mitgenommen, um sie dort der bischöflichen Zensur zu unterbreiten. <rs type="person" role="sender">AH</rs> hofft, dass sie noch im laufenden Jahr erscheinen kann, und will <rs type="person" role="sender">BP</rs> dann umgehend ein Exemplar zukommen lassen. Sie enthält nichts Gelehrtes oder Elegantes, sondern Einfaches für einfache Leser, für das Seelenheil und zur Ehre des <rs key="index:d14380e4919">Benediktinerordens</rs>; als Quellen haben <rs type="person" role="sender">AH</rs> nur die besten asketischen Autoren und die Kirchenväter gedient.</seg><seg type="context" n="6" xml:id="d3e3039"><rs type="person" role="sender">BPs</rs> angekündigte „<rs key="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“ erwartet <rs type="person" role="sender">AH</rs> begierig. Er bittet Gott, <rs type="person" role="sender">BP</rs> zu beschützen, und will deswegen auch die wundertätige <rs key="index:d14380e10821">Muttergottes von Egern</rs> beständig anrufen. Zudem gratuliert er <rs type="person" role="sender">BP</rs> zu dessen Erfolg gegen die Jesuiten und wünscht ihm noch viele weitere.</seg><seg type="context" n="7" xml:id="d3e3041">Vor wenigen Tagen ist <rs type="person" role="sender">AH</rs> eine Predigt („<rs key="index:d14380e30490">Oratio de nativitate Domini</rs>“) von Abt <rs key="index:d14380e30482">Raphael Neupöck</rs> (von <rs key="index:d14380e31025">Oberaltaich</rs>) in die Hände gefallen, der einst unter Abt <rs key="index:d14380e21574">Kaspar Ayndorffer</rs> in <rs key="index:d14380e42111">Tegernsee</rs> seine Profess abgelegt hatte; <rs type="person" role="sender">AH</rs> hat ihn bereits in einem seiner ersten Briefe <ref type="letter">273</ref> erwähnt. Er übermittelt die Predigt an BP, zumal es sich um eines der ersten Erzeugnisse der <rs key="index:d14380e42417">Tegernseer Klosterdruckerei</rs> handelt. Er schließt, indem er <rs type="person" role="sender">BP</rs> nochmals den <rs key="index:d14380e36264">hl. Quirinus</rs> und (dessen Biographen) „<rs key="index:d14380e28767">Metellus von Tegernsee</rs>“ empfiehlt.</seg><seg type="context" n="8" xml:id="d3e3046">In einem Nachsatz sendet <rs type="person" role="sender">AH</rs> Grüße an <rs key="index:d14380e39962">Anselm Schramb</rs> und an <rs key="index:d14380e16887">Martin Hager</rs>, der ihm besonders lieb ist.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">V</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater Bernarde, patrone ac amice colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e3064">Dulcissimam manum tertia Dominica post Epiphaniam mihi porrectam ante octiduum, quarta scilicet Dominica in festo Purificationis beatae Virginis osculo de condigno veneratus sum. Certe nihil dulcius, nihil iucundius mihi est quam <seg type="lemma" corresp="#d3e3136">mellifluo Bernardo meo</seg> frui eiusque dulcissimo in suis epistolis alloquio et colloquio. Etsi me mactaveris epistolis tuis, Bernarde, vivam tamen ad servitia semper paratissimus in Christo servus.<seg type="lemma" corresp="#d3e3142"> Marianus et Gotthardus</seg> suarum compositionum catalogum calamo meo transscribendum tradiderunt, quem una cum brevi utriusque vitae historiola hic communico cum devotissima ab utroque recommendatione. Addidit pater Gotthardus concionem e typis primum heri Frisinga acceptam. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e3066">Remittente nonnihil frigore et nive satisfacere studebo, charissime amice, tuae transmissae encyclicae (heri cum omnium gaudio et solatio ad mensam publicam nobis lectae), quantum potero, id unum tantum dolens iterumque ex intimo corde dolens, bibliothecam nostram nondum in eum statum et ordinem redactam esse, qualem omnes optamus. Sudant et <seg type="lemma" corresp="#d3e3146">laborant scrinarii</seg> vix non diu noctuque, et post Pascha omnibus viribus operi huic amplissimo insistent, <pb n="1v"/> et Superi boni! libri nostri praestantissimi turri interim inclusi exspectant in dies redemptionem suam. Quidquid sit, ego, quam primum potero, ipsa terrae viscera penetrabo, perscrutabor omnes angulos et quaeram, quo inservire possim Bernardo meo amandissimo eiusque iustissimae ac sanctissimae petitioni satisfacere. Spondet id ipsum clarissimo patri Bernardo cum sui devotissima recommendatione reverendissimus noster dominus dominus<seg type="lemma" corresp="#d3e3152"> abbas Petrus</seg>. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e3070">Sed quid de sanctissimo patrono <seg type="lemma" corresp="#d3e3156">nostro Quirino</seg>?<seg type="lemma" corresp="#d3e3162"> Veteres, ut scribit paternitas vestra, de hoc nihil tradiderunt</seg>, fuisse nempe filium Philippi imperatoris etc. Utinam Bernardo meo amandissimo perlustrare liceret antiquissima nostra monumenta Tegernseensia, videre tot et tot antiquissimas picturas et tabulas, in quibus specialiter intuentium oculis obicitur huius sanctissimi martyris<note place="foot" xml:id="d3e3072">	Danach durchgestrichen <hi rend="italic">exitus</hi>.</note> baptismus, exilium, passio etc., eiusque parentum augustissimorum Philippi et Severae germanique Philippi etc., et haec ex traditionibus continuis a 1000 prope annis, quis non speret mentis mutationem? Ego nihil addo nisi praeter [<hi rend="italic">sic</hi>] <seg type="lemma" corresp="#d3e3166">impressam vitae periodum</seg> huius sanctissimi martyris a reverendissimo domino Quirino piae memoriae conscriptam pro choro etc. ex antiquissimis <pb n="2r"/> manuscriptis nostris, a celsissimo moderno principe nostro et ordinario<seg type="lemma" corresp="#d3e3170"> vivae vocis oraculo</seg> approbatam etc. Id unice rogo, pro ulteriori verborum meorum testimonio legat Pollandi [<hi rend="italic">sic</hi>] Acta sanctorum tomo tertio mense Martio a<note place="foot" xml:id="d3e3086">	Neben der Zeile eingefügt.</note> folio 543 de sancto Cyrino seu Quirino usque 547 etc. Habet ipsissima antiquissimorum nostrorum manuscriptorum formlia [<hi rend="italic">sic</hi>]. Taceo<seg type="lemma" corresp="#d3e3178"> Hundium</seg> in sua Salisburgensi Metropoli aliosque probatissimos authores sacros et profanos, quorum omnium sententiam prudentissimo iudicio paternitatis vestrae relinquo. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e3093">Admodum reverendo domino Carolo Benedictoburano, meo <seg type="lemma" corresp="#d3e3182">olim Frisingensi in gymnasio collegae</seg> colendissimo, omnia de te, pater colendissime, suavissime et amandissime,<seg type="lemma" corresp="#d3e3189"> scripsi</seg>; inserviet proxime suo Bernardo integro novorum fasciculo specialiter secum pro clarissima paternitate vestra secum [<hi rend="italic">sic</hi>]<seg type="lemma" corresp="#d3e3193"> ex monasterio Ettalensi</seg> reportato. Vir est laboriosissimus et<note place="foot" xml:id="d3e3098">	Danach durchgestrichen <hi rend="italic">erdit</hi>.</note> eruditus. Superi, quibus literarum negotiis occupabit Bernardum meum! </seg><seg type="context" n="5" xml:space="preserve" xml:id="d3e3104"><seg type="lemma" corresp="#d3e3197">Opus meum exiguum asceticum</seg> (cuius titulum hic communico) 26. Januarii bibliopola Augustanus<seg type="lemma" corresp="#d3e3203"> Daniel Walder</seg> hic praesens secum Augustam Vindelicorum accepit pro subeunda censura ordinarii, typis publicis postmodum ab eo dandum. Speramus illud adhuc hoc currente anno. Citissime postmodum ad sinum tuum mellifluum pervolabit. Videbis idipsum sanctissimo tutelari nostro ac patrono gloriosissimo Quirino regi et martyri esse dedicatum. Nil vere in eo<note place="foot" xml:id="d3e3106">	Danach durchgestrichen <hi rend="italic">eleeg</hi>.</note> elegans, doctum aut suave invenies, sed simplicissima quaeque simplicibus conscripta ad animarum salutem et honorem ordinis <pb n="2v"/> nostri, omnia ex probatissimis ascetis ac patribus desumpta. </seg><seg type="context" n="6" xml:space="preserve" xml:id="d3e3114">Bibliothecam Benedictino-Maurianam, Superi! quantis iam suspiriis exspecto! Deus ter optimus te clarissimum virum, totius ordinis nostri specialissimum decus ac ornamentum quam diutissime salvum et incolumem conservet<note place="foot" xml:id="d3e3116">	Korrigiert aus <hi rend="italic">conservent</hi>.</note>! Hoc maximum erit, cuius specialissimam apud thaumaturgam meam Egernensem memoriam in dies faciam; cui interim <seg type="lemma" corresp="#d3e3207">contra Socios</seg> felicissime triumphanti etiam atque etiam aggratulor et adhuc similes centenos triumphos enixissime apprecor et exopto. </seg><seg type="context" n="7" xml:space="preserve" xml:id="d3e3122">Ad manus venit paucis ante diebus oratio quaedam <seg type="lemma" corresp="#d3e3213">abbatis Raphaelis</seg> professi olim huius loci (cuius in primis statim litteris aliquando mentionem feci) sub nobilissimo<seg type="lemma" corresp="#d3e3219"> abbate nostro Casparo</seg>; non potui non transmittere, quia inter prima typographiae nostrae Tegernseensis eleementa [<hi rend="italic">sic</hi>] prodiit. Vale, pater clarissime, et affectum erga te meum optimum ac sincerissimum aequi bonique consule, ac Quirinum nostrum tibi cum Metello nostro recommendatum habe. Vale iterumque vale et Alphonso servo tuo ulterius fave, qui se hisce Bernardo suo humillime commendans manet</seg></p>
-            <p xml:space="preserve">Clarissimae paternitatis vestrae servus et amicus addictissimus obstrictissimus pater Alphonsus manu propria.</p>
-            <p xml:space="preserve">Ex cella sua dilecta Dominica Septuagesimae 1716.</p>
-            <p xml:space="preserve"><seg type="context" n="8" xml:space="preserve" xml:id="d3e3133">Clarissimis dominis patribus <seg type="lemma" corresp="#d3e3227">Anselmo et Martino</seg> dilectissimo a me suavissima quaeque.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e3136">
-               <ref type="context">1</ref>
-               <label>mellifluo Bernardo meo</label><p> Vgl. <rs type="bibl" key="bibl:20210"
-                     >Wallnig–Stockinger, Korrespondenz 1</rs> 23.</p></note>
-            <note xml:id="d3e3142">
-               <ref type="context">1</ref>
-               <label> Marianus et Gotthardus</label><p><rs type="bibl" key="bibl:18024">Lindner,
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>mellifluo Bernardo meo</mentioned>
+            <p> Vgl. <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 23.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> Marianus et Gotthardus</mentioned>
+            <p><rs type="bibl" ref="bibl:18024">Lindner,
                      Familia S. Quirini</rs> Ergh. 116–123. Musikalische Kompositionen beider hatte
-                  AH bereits früher beschrieben und übermittelt: vgl. <ref type="letter">453</ref>
-                  &lt;5&gt;. Von den Beilagen zu diesem Brief scheint keine heute in Melk erhalten
+                  AH bereits früher beschrieben und übermittelt: vgl. <ref type="letter" target="letter:453">453</ref>
+                  <ref target="letter:453#seg5">5</ref>. Von den Beilagen zu diesem Brief scheint keine heute in Melk erhalten
                   zu sein. Bei der genannten Predigt Wagners kann es sich nur um „Sancta Barbara,
-                  ara Deo dicata“ handeln: vgl. <rs type="bibl" key="bibl:18024">Lindner, Familia S.
-                     Quirini</rs> Ergh. 122.</p></note>
-            <note xml:id="d3e3146">
-               <ref type="context">2</ref>
-               <label>laborant scrinarii</label><p>Zu den Arbeiten in der Tegernseer Bibliothek und
-                  zur Auslagerung der Bücher vgl. <ref type="letter">273</ref> &lt;2&gt;.</p></note>
-            <note xml:id="d3e3152">
-               <ref type="context">2</ref>
-               <label> abbas Petrus</label><p> Zu Guetrather: <rs type="bibl" key="bibl:18024"
-                     >Lindner, Familia S. Quirini</rs> Ergh. 76–83; vgl. <rs type="bibl"
-                     key="bibl:14882">Amann, Buchdruckerei</rs> 141–152; <rs type="bibl"
-                     key="bibl:16658">Gressierer, General-Kapitel</rs> 494–497; <rs type="bibl"
-                     key="bibl:17590">Kolb, Präsidium</rs> 126; <rs type="bibl" key="bibl:17684"
-                     >Krausen, Herkunft</rs> 281; <rs type="bibl" key="bibl:19054">Reichhold, 300
-                     Jahre</rs> 659, 672; <rs type="bibl" key="bibl:19580">Siegmund, Annales</rs>
-                  145, 152f.</p></note>
-            <note xml:id="d3e3156">
-               <ref type="context">3</ref>
-               <label>nostro Quirino</label><p> BP hatte offenbar auf den von AH in <ref
-                     type="letter">453</ref> &lt;2&gt; geäußerten Unmut der Tegernseer reagiert,
+                  ara Deo dicata“ handeln: vgl. <rs type="bibl" ref="bibl:18024">Lindner, Familia S.
+                     Quirini</rs> Ergh. 122.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>laborant scrinarii</mentioned>
+            <p>Zu den Arbeiten in der Tegernseer Bibliothek und
+                  zur Auslagerung der Bücher vgl. <ref type="letter" target="letter:273">273</ref> <ref target="letter:273#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
+            <mentioned> abbas Petrus</mentioned>
+            <p> Zu Guetrather: <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> Ergh. 76–83; vgl. <rs type="bibl" ref="bibl:14882">Amann, Buchdruckerei</rs> 141–152; <rs type="bibl" ref="bibl:16658">Gressierer, General-Kapitel</rs> 494–497; <rs type="bibl" ref="bibl:17590">Kolb, Präsidium</rs> 126; <rs type="bibl" ref="bibl:17684">Krausen, Herkunft</rs> 281; <rs type="bibl" ref="bibl:19054">Reichhold, 300
+                     Jahre</rs> 659, 672; <rs type="bibl" ref="bibl:19580">Siegmund, Annales</rs>
+                  145, 152f.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
+            <mentioned>nostro Quirino</mentioned>
+            <p> BP hatte offenbar auf den von AH in <ref type="letter" target="letter:453">453</ref> <ref target="letter:453#seg2">2</ref> geäußerten Unmut der Tegernseer reagiert,
                   welcher sich gegen eine Stelle in seiner Edition der „Vita Wilbirgis“ richtete, in
                   der er die Tegernseer Tradition anzweifelte, wonach der dortige Klosterheilige
                   Quirinus ein Sohn des römischen Kaisers Philippus gewesen sei: Pez, Triumphus
                   castitatis 50. Mit seiner Anschauung hatte BP recht, zumal diese Ansippung auch
                   nach Erkenntnis der aktuellen Forschung eine freie Erfindung des „Metellus von
-                  Tegernsee“ aus dem späten 12. Jh. sein dürfte: <rs type="bibl" key="bibl:17276"
-                     >Jacobsen, Quirinalien</rs> 33–35; <rs type="bibl" key="bibl:20278"
-                     >Weißensteiner, Tegernsee</rs> 38f. Die hier vorgebrachten Argumente AHs
-                  dürften wenig geeignet gewesen sein, die Meinung BPs zu ändern.</p></note>
-            <note xml:id="d3e3162">
-               <ref type="context">3</ref>
-               <label> Veteres ... tradiderunt</label><p> Die zitierten Worte dürften aus 496 stammen; an der relevanten Stelle des „Triumphus castitatis“ findet sich keine solche Formulierung. </p></note>
-            <note xml:id="d3e3166">
-               <ref type="context">3</ref>
-               <label>impressam vitae periodum</label><p>Eine solche Arbeit Abt Quirin Millons ist
-                  nicht bekannt: vgl. <rs type="bibl" key="bibl:18024">Lindner, Familia S. Quirini
-                  </rs>Ergh. 60.</p></note>
-            <note xml:id="d3e3170">
-               <ref type="context">3</ref>
-               <label> vivae vocis oraculo</label><p> Der Ausdruck bezeichnet im Kirchenrecht eine
-                  mündliche Verfügung oder Gewährung einer Gnade: vgl. <rs type="bibl"
-                     key="bibl:14884">Amann, Verwaltungsakt</rs> 35f., 185f.; <rs type="bibl"
-                     key="bibl:20326">Wetzstein, Heilige vor Gericht</rs> 94f., 138f., 376–378. Mit
+                  Tegernsee“ aus dem späten 12. Jh. sein dürfte: <rs type="bibl" ref="bibl:17276">Jacobsen, Quirinalien</rs> 33–35; <rs type="bibl" ref="bibl:20278">Weißensteiner, Tegernsee</rs> 38f. Die hier vorgebrachten Argumente AHs
+                  dürften wenig geeignet gewesen sein, die Meinung BPs zu ändern.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
+            <mentioned> Veteres ... tradiderunt</mentioned>
+            <p> Die zitierten Worte dürften aus 496 stammen; an der relevanten Stelle des „Triumphus castitatis“ findet sich keine solche Formulierung. </p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
+            <mentioned>impressam vitae periodum</mentioned>
+            <p>Eine solche Arbeit Abt Quirin Millons ist
+                  nicht bekannt: vgl. <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini
+                  </rs>Ergh. 60.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
+            <mentioned> vivae vocis oraculo</mentioned>
+            <p> Der Ausdruck bezeichnet im Kirchenrecht eine
+                  mündliche Verfügung oder Gewährung einer Gnade: vgl. <rs type="bibl" ref="bibl:14884">Amann, Verwaltungsakt</rs> 35f., 185f.; <rs type="bibl" ref="bibl:20326">Wetzstein, Heilige vor Gericht</rs> 94f., 138f., 376–378. Mit
                   ihm wollte AH vermutlich die Rechtsverbindlichkeit der Approbation unterstreichen.
-               </p></note>
-            <note xml:id="d3e3174">
-               <ref type="context">3</ref>
-               <label>Pollandi Acta sanctorum</label><p> AASS Martii 3 543–554. Der dort
+               </p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg3">
+            <mentioned>Pollandi Acta sanctorum</mentioned>
+            <p> AASS Martii 3 543–554. Der dort
                   wiedergegebene Text „Acta S. Quirini“ ist jedoch entgegen der Implikation AHs kein
                   Abdruck einer der mittelalterlichen Quirinusviten, sondern eine Bearbeitung der in
                   den 1580er Jahren von Johann Fabricius verfassten „Historia sancti Quirini regis
-                  et martyris“: <rs type="bibl" key="bibl:20278">Weißensteiner, Tegernsee</rs> 22;
-                  vgl. <rs type="bibl" key="bibl:16920">Heinemann, Tegernseer Geschichtsquellen</rs>
+                  et martyris“: <rs type="bibl" ref="bibl:20278">Weißensteiner, Tegernsee</rs> 22;
+                  vgl. <rs type="bibl" ref="bibl:16920">Heinemann, Tegernseer Geschichtsquellen</rs>
                   145. Dieses hagiographische Werk diskutiert eingehend Schmeidler, Studien 6f.,
-                  14–17, 58–65; vgl. <rs type="bibl" key="bibl:16920">Heinemann, Tegernseer
-                     Geschichtsquellen</rs> 150f.; <rs type="bibl" key="bibl:17142">Holder-Egger,
+                  14–17, 58–65; vgl. <rs type="bibl" ref="bibl:16920">Heinemann, Tegernseer
+                     Geschichtsquellen</rs> 150f.; <rs type="bibl" ref="bibl:17142">Holder-Egger,
                      Handschriften München</rs> 404, 410. Zur mittelalterlichen Überlieferung über
-                  Quirinus vgl. <rs type="bibl" key="bibl:17276">Jacobsen, Quirinalien</rs> 119–136;
-                     <rs type="bibl" key="bibl:19384">Schmeidler, Studien</rs> 77–85; <rs
-                     type="bibl" key="bibl:20278">Weißensteiner, Tegernsee</rs> 13–21.</p></note>
-            <note xml:id="d3e3178">
-               <ref type="context">3</ref>
-               <label> Hundium</label><p>Hund, Metropolis 109f. Quirinus wird dort unter den angeblichen Bischöfen von Lorch als der fünfte geführt. Hund berichtet auch von der Translation der Reliquien nach Tegernsee und beruft sich dafür auf Angaben „ex eius loci annalibus“ und auf die Quirinalien des „Metellus“.</p></note>
-            <note xml:id="d3e3182">
-               <ref type="context">4</ref>
-               <label>olim ... collegae</label><p>AH hatte von 1698 bis 1702 am Lyzeum zu Freising
-                  unterrichtet, Meichelbeck von 1697 bis 1701: <rs type="bibl" key="bibl:15078"
-                     >Baumann, Meichelbeck</rs> 11; <rs type="bibl" key="bibl:15856">Deutinger,
-                     Geschichte des Schulwesens</rs> 453; <rs type="bibl" key="bibl:16970">Hemmerle,
-                     Benediktbeuern</rs> 629; <rs type="bibl" key="bibl:18024">Lindner, Familia S.
-                     Quirini</rs> Ergh. 84; <rs type="bibl" key="bibl:18376">Mindera, Jugend</rs>
-                  97f.</p></note>
-            <note xml:id="d3e3189">
-               <ref type="context">4</ref>
-               <label> scripsi</label><p>Vgl. <ref type="letter">506</ref> &lt;1&gt;.</p></note>
-            <note xml:id="d3e3193">
-               <ref type="context">4</ref>
-               <label> ex monasterio Ettalensi</label><p> Zu Meichelbecks Aufenthalt in Ettal vgl.
-                     <ref type="letter">506</ref> &lt;1&gt; und &lt;2&gt;.</p></note>
-            <note xml:id="d3e3197">
-               <ref type="context">5</ref>
-               <label>Opus ... asceticum</label><p>Zweifellos die „Wegzehrung der reisenden“, die
-                  jedoch erst 1718 erschien: vgl. <ref type="letter">453 </ref>&lt;6&gt;, <ref
-                     type="letter">907</ref> &lt;5&gt;.</p></note>
-            <note xml:id="d3e3203">
-               <ref type="context">5</ref>
-               <label> Daniel Walder</label><p>
-                  <rs type="bibl" key="bibl:17756">Künast, Dokumentation</rs> 1260; <rs type="bibl"
-                     key="bibl:18698">Paisey, Buchdrucker</rs> 277.</p></note>
-            <note xml:id="d3e3207">
-               <ref type="context">6</ref>
-               <label>contra Socios</label><p>Gemeint sind vermutlich die vor Kaiser Karl VI.
+                  Quirinus vgl. <rs type="bibl" ref="bibl:17276">Jacobsen, Quirinalien</rs> 119–136;
+                     <rs type="bibl" ref="bibl:19384">Schmeidler, Studien</rs> 77–85; <rs type="bibl" ref="bibl:20278">Weißensteiner, Tegernsee</rs> 13–21.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg3">
+            <mentioned> Hundium</mentioned>
+            <p>Hund, Metropolis 109f. Quirinus wird dort unter den angeblichen Bischöfen von Lorch als der fünfte geführt. Hund berichtet auch von der Translation der Reliquien nach Tegernsee und beruft sich dafür auf Angaben „ex eius loci annalibus“ und auf die Quirinalien des „Metellus“.</p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg4">
+            <mentioned>olim ... collegae</mentioned>
+            <p>AH hatte von 1698 bis 1702 am Lyzeum zu Freising
+                  unterrichtet, Meichelbeck von 1697 bis 1701: <rs type="bibl" ref="bibl:15078">Baumann, Meichelbeck</rs> 11; <rs type="bibl" ref="bibl:15856">Deutinger,
+                     Geschichte des Schulwesens</rs> 453; <rs type="bibl" ref="bibl:16970">Hemmerle,
+                     Benediktbeuern</rs> 629; <rs type="bibl" ref="bibl:18024">Lindner, Familia S.
+                     Quirini</rs> Ergh. 84; <rs type="bibl" ref="bibl:18376">Mindera, Jugend</rs>
+                  97f.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg4">
+            <mentioned> scripsi</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:506">506</ref> <ref target="letter:506#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg4">
+            <mentioned> ex monasterio Ettalensi</mentioned>
+            <p> Zu Meichelbecks Aufenthalt in Ettal vgl.
+                     <ref type="letter" target="letter:506">506</ref> <ref target="letter:506#seg1">1</ref> und <ref target="letter:506#seg2">2</ref>.</p>
+         </note>
+         <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg5">
+            <mentioned>Opus ... asceticum</mentioned>
+            <p>Zweifellos die „Wegzehrung der reisenden“, die
+                  jedoch erst 1718 erschien: vgl. <ref type="letter" target="letter:453">453 </ref><ref target="letter:453 #seg6">6</ref>, <ref type="letter" target="letter:907">907</ref> <ref target="letter:907#seg5">5</ref>.</p>
+         </note>
+         <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg5">
+            <mentioned> Daniel Walder</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:17756">Künast, Dokumentation</rs> 1260; <rs type="bibl" ref="bibl:18698">Paisey, Buchdrucker</rs> 277.</p>
+         </note>
+         <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg6">
+            <mentioned>contra Socios</mentioned>
+            <p>Gemeint sind vermutlich die vor Kaiser Karl VI.
                   gebrachten, von diesem jedoch abgewiesenen Beschwerden gegen BP im Zusammenhang
                   mit den „Epistolae apologeticae“, von denen BP verschiedenen Korrespondenten
-                  berichtete: vgl. <ref type="letter">474</ref> &lt;4&gt;, <ref type="letter"
-                     >476</ref> &lt;3&gt;.</p></note>
-            <note xml:id="d3e3213">
-               <ref type="context">7</ref>
-               <label>abbatis Raphaelis</label><p><rs type="bibl" key="bibl:18024">Lindner, Familia
-                     S. Quirini</rs> 99f.; <rs type="bibl" key="bibl:18552">Neueder,
-                     Oberaltaich</rs> 86f.; <rs type="bibl" key="bibl:19036">Redlich, Tegernsee</rs>
-                  61, 74–76.</p></note>
-            <note xml:id="d3e3219">
-               <ref type="context">7</ref>
-               <label> abbate ... Casparo</label><p>Zu Kaspar Ayndorffer vgl. <rs type="bibl"
-                     key="bibl:14908">Angerer, Bräuche</rs> 27–57; <rs type="bibl" key="bibl:14914"
-                     >Angerer, Reform von Melk</rs> 274, 284, 291f.; <rs type="bibl"
-                     key="bibl:16596">Götz, Tegernsee</rs>; <rs type="bibl" key="bibl:18024"
-                     >Lindner, Familia S. Quirini</rs> 62–66; <rs type="bibl" key="bibl:18498"
-                     >Müller, Anfänge</rs> 42–46; <rs type="bibl" key="bibl:19036">Redlich,
-                     Tegernsee</rs>; <rs type="bibl" key="bibl:20322">Wessinger, Kaspar
-                     Aindorffer</rs>.</p></note>
-            <note xml:id="d3e3223">
-               <ref type="context">7</ref>
-               <label> inter prima ... prodiit</label><p>Vgl. <rs type="bibl" key="bibl:14882"
-                     >Amann, Buchdruckerei</rs> 124. </p></note>
-            <note xml:id="d3e3227">
-               <ref type="context">8</ref>
-               <label>Anselmo et Martino</label><p> AH kannte Schramb aus dessen Studienjahren in
+                  berichtete: vgl. <ref type="letter" target="letter:474">474</ref> <ref target="letter:474#seg4">4</ref>, <ref type="letter" target="letter:476">476</ref> <ref target="letter:476#seg3">3</ref>.</p>
+         </note>
+         <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg7">
+            <mentioned>abbatis Raphaelis</mentioned>
+            <p><rs type="bibl" ref="bibl:18024">Lindner, Familia
+                     S. Quirini</rs> 99f.; <rs type="bibl" ref="bibl:18552">Neueder,
+                     Oberaltaich</rs> 86f.; <rs type="bibl" ref="bibl:19036">Redlich, Tegernsee</rs>
+                  61, 74–76.</p>
+         </note>
+         <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg7">
+            <mentioned> abbate ... Casparo</mentioned>
+            <p>Zu Kaspar Ayndorffer vgl. <rs type="bibl" ref="bibl:14908">Angerer, Bräuche</rs> 27–57; <rs type="bibl" ref="bibl:14914">Angerer, Reform von Melk</rs> 274, 284, 291f.; <rs type="bibl" ref="bibl:16596">Götz, Tegernsee</rs>; <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> 62–66; <rs type="bibl" ref="bibl:18498">Müller, Anfänge</rs> 42–46; <rs type="bibl" ref="bibl:19036">Redlich,
+                     Tegernsee</rs>; <rs type="bibl" ref="bibl:20322">Wessinger, Kaspar
+                     Aindorffer</rs>.</p>
+         </note>
+         <note target="#range(right('n19'), left('n19e'))" n="19" anchored="false" corresp="#seg7">
+            <mentioned> inter prima ... prodiit</mentioned>
+            <p>Vgl. <rs type="bibl" ref="bibl:14882">Amann, Buchdruckerei</rs> 124. </p>
+         </note>
+         <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg8">
+            <mentioned>Anselmo et Martino</mentioned>
+            <p> AH kannte Schramb aus dessen Studienjahren in
                   Salzburg zwischen 1685 und 1688, mit Hager hatte er das Salzburger akademische
-                  Gymnasium besucht: vgl. <ref type="letter">43</ref> &lt;9&gt;, <ref type="letter"
-                     >255</ref> &lt;3&gt; und &lt;6&gt;, <ref type="letter">288 </ref>&lt;9&gt;. Zu
-                  Hager: StiB Melk, Cod. 493, 73r; vgl. <rs type="bibl" key="bibl:19786">Stockinger,
-                     Stabilitas loci</rs> 257.</p></note>
-         </div>
-      </back>
+                  Gymnasium besucht: vgl. <ref type="letter" target="letter:43">43</ref> <ref target="letter:43#seg9">9</ref>, <ref type="letter" target="letter:255">255</ref> <ref target="letter:255#seg3">3</ref> und <ref target="letter:255#seg6">6</ref>, <ref type="letter" target="letter:288">288 </ref><ref target="letter:288 #seg9">9</ref>. Zu
+                  Hager: StiB Melk, Cod. 493, 73r; vgl. <rs type="bibl" ref="bibl:19786">Stockinger,
+                     Stabilitas loci</rs> 257.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>V</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater Bernarde, patrone ac amice colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Dulcissimam manum tertia Dominica post Epiphaniam mihi porrectam ante octiduum, quarta scilicet Dominica in festo Purificationis beatae Virginis osculo de condigno veneratus sum. Certe nihil dulcius, nihil iucundius mihi est quam <anchor xml:id="n1"/>mellifluo Bernardo meo<anchor xml:id="n1e"/> frui eiusque dulcissimo in suis epistolis alloquio et colloquio. Etsi me mactaveris epistolis tuis, Bernarde, vivam tamen ad servitia semper paratissimus in Christo servus.<anchor xml:id="n2"/> Marianus et Gotthardus<anchor xml:id="n2e"/> suarum compositionum catalogum calamo meo transscribendum tradiderunt, quem una cum brevi utriusque vitae historiola hic communico cum devotissima ab utroque recommendatione. Addidit pater Gotthardus concionem e typis primum heri Frisinga acceptam. </ab>
+         <ab resp="#editor" xml:id="seg2">Remittente nonnihil frigore et nive satisfacere studebo, charissime amice, tuae transmissae encyclicae (heri cum omnium gaudio et solatio ad mensam publicam nobis lectae), quantum potero, id unum tantum dolens iterumque ex intimo corde dolens, bibliothecam nostram nondum in eum statum et ordinem redactam esse, qualem omnes optamus. Sudant et <anchor xml:id="n3"/>laborant scrinarii<anchor xml:id="n3e"/> vix non diu noctuque, et post Pascha omnibus viribus operi huic amplissimo insistent, <pb n="1v"/> et Superi boni! libri nostri praestantissimi turri interim inclusi exspectant in dies redemptionem suam. Quidquid sit, ego, quam primum potero, ipsa terrae viscera penetrabo, perscrutabor omnes angulos et quaeram, quo inservire possim Bernardo meo amandissimo eiusque iustissimae ac sanctissimae petitioni satisfacere. Spondet id ipsum clarissimo patri Bernardo cum sui devotissima recommendatione reverendissimus noster dominus dominus<anchor xml:id="n4"/> abbas Petrus<anchor xml:id="n4e"/>. </ab>
+         <ab resp="#editor" xml:id="seg3">Sed quid de sanctissimo patrono <anchor xml:id="n5"/>nostro Quirino<anchor xml:id="n5e"/>?<anchor xml:id="n6"/> Veteres, ut scribit paternitas vestra, de hoc nihil tradiderunt<anchor xml:id="n6e"/>, fuisse nempe filium Philippi imperatoris etc. Utinam Bernardo meo amandissimo perlustrare liceret antiquissima nostra monumenta Tegernseensia, videre tot et tot antiquissimas picturas et tabulas, in quibus specialiter intuentium oculis obicitur huius sanctissimi martyris<del ana="#after">exitus</del> baptismus, exilium, passio etc., eiusque parentum augustissimorum Philippi et Severae germanique Philippi etc., et haec ex traditionibus continuis a 1000 prope annis, quis non speret mentis mutationem? Ego nihil addo nisi <sic>praeter</sic> <anchor xml:id="n7"/>impressam vitae periodum<anchor xml:id="n7e"/> huius sanctissimi martyris a reverendissimo domino Quirino piae memoriae conscriptam pro choro etc. ex antiquissimis <pb n="2r"/> manuscriptis nostris, a celsissimo moderno principe nostro et ordinario<anchor xml:id="n8"/> vivae vocis oraculo<anchor xml:id="n8e"/> approbatam etc. Id unice rogo, pro ulteriori verborum meorum testimonio legat <sic>Pollandi</sic> Acta sanctorum tomo tertio mense Martio a<note place="foot" xml:id="d3e3086">Neben der Zeile eingefügt.</note> folio 543 de sancto Cyrino seu Quirino usque 547 etc. Habet ipsissima antiquissimorum nostrorum manuscriptorum <sic>formlia</sic>. Taceo<anchor xml:id="n9"/> Hundium<anchor xml:id="n9e"/> in sua Salisburgensi Metropoli aliosque probatissimos authores sacros et profanos, quorum omnium sententiam prudentissimo iudicio paternitatis vestrae relinquo. </ab>
+         <ab resp="#editor" xml:id="seg4">Admodum reverendo domino Carolo Benedictoburano, meo <anchor xml:id="n10"/>olim Frisingensi in gymnasio collegae<anchor xml:id="n10e"/> colendissimo, omnia de te, pater colendissime, suavissime et amandissime,<anchor xml:id="n11"/> scripsi<anchor xml:id="n11e"/>; inserviet proxime suo Bernardo integro novorum fasciculo specialiter secum pro clarissima paternitate vestra <sic>secum</sic><anchor xml:id="n12"/> ex monasterio Ettalensi<anchor xml:id="n12e"/> reportato. Vir est laboriosissimus et<del ana="#after">erdit</del> eruditus. Superi, quibus literarum negotiis occupabit Bernardum meum! </ab>
+         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n13"/>Opus meum exiguum asceticum<anchor xml:id="n13e"/> (cuius titulum hic communico) 26. Januarii bibliopola Augustanus<anchor xml:id="n14"/> Daniel Walder<anchor xml:id="n14e"/> hic praesens secum Augustam Vindelicorum accepit pro subeunda censura ordinarii, typis publicis postmodum ab eo dandum. Speramus illud adhuc hoc currente anno. Citissime postmodum ad sinum tuum mellifluum pervolabit. Videbis idipsum sanctissimo tutelari nostro ac patrono gloriosissimo Quirino regi et martyri esse dedicatum. Nil vere in eo<del ana="#after">eleeg</del> elegans, doctum aut suave invenies, sed simplicissima quaeque simplicibus conscripta ad animarum salutem et honorem ordinis <pb n="2v"/> nostri, omnia ex probatissimis ascetis ac patribus desumpta. </ab>
+         <ab resp="#editor" xml:id="seg6">Bibliothecam Benedictino-Maurianam, Superi! quantis iam suspiriis exspecto! Deus ter optimus te clarissimum virum, totius ordinis nostri specialissimum decus ac ornamentum quam diutissime salvum et incolumem <choice><sic>conservent</sic><corr>conservet</corr></choice>! Hoc maximum erit, cuius specialissimam apud thaumaturgam meam Egernensem memoriam in dies faciam; cui interim <anchor xml:id="n15"/>contra Socios<anchor xml:id="n15e"/> felicissime triumphanti etiam atque etiam aggratulor et adhuc similes centenos triumphos enixissime apprecor et exopto. </ab>
+         <ab resp="#editor" xml:id="seg7">Ad manus venit paucis ante diebus oratio quaedam <anchor xml:id="n16"/>abbatis Raphaelis<anchor xml:id="n16e"/> professi olim huius loci (cuius in primis statim litteris aliquando mentionem feci) sub nobilissimo<anchor xml:id="n17"/> abbate nostro Casparo<anchor xml:id="n17e"/>; non potui non transmittere, quia inter prima typographiae nostrae Tegernseensis <sic>eleementa</sic> prodiit. Vale, pater clarissime, et affectum erga te meum optimum ac sincerissimum aequi bonique consule, ac Quirinum nostrum tibi cum Metello nostro recommendatum habe. Vale iterumque vale et Alphonso servo tuo ulterius fave, qui se hisce Bernardo suo humillime commendans manet</ab>
+         <closer>Clarissimae paternitatis vestrae servus et amicus addictissimus obstrictissimus pater Alphonsus manu propria.</closer>
+         <closer>Ex cella sua dilecta Dominica Septuagesimae 1716.</closer>
+         <closer xml:id="seg8">Clarissimis dominis patribus <anchor xml:id="n18"/>Anselmo et Martino<anchor xml:id="n18e"/> dilectissimo a me suavissima quaeque.</closer>
+      </body>
    </text>
 </TEI>

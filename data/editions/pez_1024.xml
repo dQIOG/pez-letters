@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="1024" xml:id="pez-1024">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">1024 Karl Meichelbeck an Bernhard Pez. 1718-12-06. Benediktbeuern.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Karl Meichelbeck an Bernhard Pez. 1718-12-06. Benediktbeuern.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">1024</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
@@ -23,19 +35,28 @@
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">706r–707v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 706r–707v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -50,139 +71,193 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">995</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">989</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">995</idno>
-               </ref>
+               <ptr type="prev" target="letter:995"/>
+               <ptr type="mentions" target="letter:989"/>
+               <ptr type="mentions" target="letter:995"/>
             </correspContext>
          </correspDesc>
+         
+         <textClass><keywords>
+            <term ref="index:d14380e4706">Benediktbeuern</term>
+            <term ref="index:d14380e4849">Benediktbeuern ; Bibliothek ; Gerhoch von Reichersberg, De aedificio Dei. Ms</term>
+            <term ref="index:d14380e4865">Benediktbeuern ; Bibliothek ; Johannes Rode von Trier, De bono regimine abbatis.
+         Ms</term>
+            <term ref="index:d14380e4919">Benediktiner</term>
+            <term ref="index:d14380e6458">Bozen</term>
+            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+            <term ref="index:d14380e10463">Eckhart, Johann Georg</term>
+            <term ref="index:d14380e11399">England, Engländer , englisch</term>
+            <term ref="index:d14380e11723">Etschtal</term>
+            <term ref="index:d14380e13461">Friedrich August I</term>
+            <term ref="index:d14380e15215">Gerhoch von Reichersberg ; De aedificio Dei. Ms. Benediktbeuern</term>
+            <term ref="index:d14380e15717">Gnesen</term>
+            <term ref="index:d14380e16543">Gross, Bernhard</term>
+            <term ref="index:d14380e17030">Hannover</term>
+            <term ref="index:d14380e17578">Heiligkreuz</term>
+            <term ref="index:d14380e20667">Johannes Rode von Trier</term>
+            <term ref="index:d14380e20677">Johannes Rode von Trier ; De bono regimine abbatis. Ms. Benediktbeuern</term>
+            <term ref="index:d14380e21188">Karl VI</term>
+            <term ref="index:d14380e21347">Karlsteen, Arvid ; *Medaille auf Ernst August von Hannover</term>
+            <term ref="index:d14380e22647">Kongregationen des Benediktinerordens ; Polnische Kongregation</term>
+            <term ref="index:d14380e23102">Krakau</term>
+            <term ref="index:d14380e24473">Lemberg</term>
+            <term ref="index:d14380e27638">Medizin, medizinische Begriffe, gesundheitliche Belange ; Kopfschmerz</term>
+            <term ref="index:d14380e28000">Meichelbeck, Karl ; *Fürst, an den Meichelbeck 1718 ein Schreiben aufsetzt</term>
+            <term ref="index:d14380e28729">Meran</term>
+            <term ref="index:d14380e31969">Pachinger, Magnus</term>
+            <term ref="index:d14380e34157">Pez, Bernhard ; Akademie- bzw. Kongregationspläne 1717/18</term>
+            <term ref="index:d14380e34537">Pez, Hieronymus</term>
+            <term ref="index:d14380e35438">Polen</term>
+            <term ref="index:d14380e39952">Schrader, Kilian</term>
+            <term ref="index:d14380e41084">Skarbek, Jan</term>
+            <term ref="index:d14380e41091">Skarbek, Władysław Józef, Graf</term>
+            <term ref="index:d14380e41441">Steingaden</term>
+            <term ref="index:d14380e41961">Szembek, Stanisław</term>
+            <term ref="index:d14380e42540">Terlan</term>
+            <term ref="index:d14380e43357">Trier ; St. Matthias</term>
+            <term ref="index:d14380e43832">Untermais</term>
+            <term ref="index:d14380e45099">Wein</term>
+            <term ref="index:d14380e45213">Welfen</term>
+            <term ref="index:d14380e46721">Wychowski, Aleksander</term>
+            <term ref="index:d14380e46908">Zallinger, Joseph</term>
+            <term ref="index:d10854e35200">Zödl, Gregor</term></keywords></textClass>
+         <abstract>
+            <p corresp="#seg1">Der Brief BPs vom 3. September <ref type="letter" target="letter:989">989</ref> hat KM zusammen mit einem
+               zweiten, späteren <ref type="letter" target="letter:995">995</ref> am 21. September erreicht. KM befand
+               sich damals nicht in <rs ref="index:d14380e4706">Benediktbeuern</rs>. Der Ökonom seines Klosters, <rs ref="index:d14380e46908">Joseph Zallinger</rs>, war am Tag des hl. Bernhard (20. August) nach fünf
+               Wochen andauernden schweren <rs ref="index:d14380e27638">Kopfschmerzen</rs> gestorben; KM empfiehlt ihn
+               BP und HP zum Gedenken im Gebet. Dadurch wurde es notwendig, dass ein anderer aus dem Konvent an der
+               Stelle Zallingers ins <rs ref="index:d14380e11723">Etschtal</rs> reiste, um auf den Gütern des Klosters
+               bei <rs ref="index:d14380e6458">Bozen</rs>, <rs ref="index:d14380e43832">Untermais</rs> und <rs ref="index:d14380e42540">Terlan</rs> die <rs ref="index:d14380e45099">Weinlese</rs> zu beaufsichtigen.
+               Diese Aufgabe fiel am 8. September, an dem die meisten sich von Studien und Arbeit für eine Weile
+               verabschieden, KM zu und erwies sich als höchst mühselig, da zwar die Weinernte selbst günstig ausfiel,
+               die Angelegenheiten des Klosters in dieser Gegend sich hingegen in einer seit 120 Jahren eingerissenen
+               Unordnung befanden. Die Arbeiten zur Bereinigung dieses Zustandes werden noch viele Wochen fortdauern,
+               erweisen sich aber bereits jetzt für Benediktbeuern als sehr nützlich. In dieser Situation musste KM, als
+               er BPs Briefe zusammen mit einem ganzen Stoß weiterer von anderen Korrespondenten in Terlan, einem Dorf
+               etwa drei Stunden von Bozen in Richtung <rs ref="index:d14380e28729">Meran</rs>, erhielt, sich
+               entscheiden, die Antworten an alle zurückzustellen. Er hat aus jener Gegend nur seinem Abt <rs ref="index:d14380e31969">Magnus Pachinger</rs> geschrieben. Deshalb hat er erst jetzt Gelegenheit, auf
+               die Briefe BPs knapp zu antworten.</p>
+            <p corresp="#seg2">Auf die Abhandlung („<rs ref="index:d14380e15215">De aedificio Dei</rs>“) des Gerhoch (von Reichersberg)
+               wird KM vielleicht später eingehen können. <rs ref="index:d10854e35200">Gregor Zödl</rs> hat es
+               übernommen, die Schrift („<rs ref="index:d14380e20677">De bono regimine abbatis</rs>“) des Abtes von <rs ref="index:d14380e43357">St. Matthias zu Trier</rs> (<rs ref="index:d14380e20667">Johannes Rode</rs>)
+               für BP abzuschreiben. In <rs ref="index:d14380e41441">Steingaden</rs> sind KM vor einiger Zeit Quellen zu
+               den <rs ref="index:d14380e45213">Welfen</rs> untergekommen, die er für unpubliziert hält; da diese jedoch
+               bereits von dem <rs ref="index:d14380e17030">Hannoveraner</rs> <rs ref="index:d14380e39952">Kilian
+                  Schrader</rs>, den KM darauf hingewiesen hatte, abgeschrieben worden sind, nimmt KM an, dass sie bald
+               durch Schrader oder <rs ref="index:d14380e10463">Johann Georg Eckhart</rs> veröffentlicht werden dürften.
+               Sollte KM anderswo etwas finden, was den Wünschen BPs zugunsten von dessen Freund (Eckhart) entspricht,
+               will er dies mitteilen. Zu der königlich englischen (recte: hannoveranischen) <rs ref="index:d14380e21347">Medaille</rs>, wie man sie in den deutschen Klöstern selten finden wird,
+               gratuliert er BP.</p>
+            <p corresp="#seg3">KM hat auch seinerseits eine Bitte. Er beabsichtigt, einen Brief an Abt „Alexander“ (<rs ref="index:d14380e46721">Aleksander Wychowski</rs>?) im Kloster „S. Crux bei <rs ref="index:d14380e23102">Krakau</rs>“ (<rs ref="index:d14380e17578">Heiligkreuz</rs> in <rs ref="index:d14380e35438">Polen</rs>?) zu schreiben, weiß allerdings nicht, auf welchem Weg er diesen
+               erreichen kann. Er vertraut auf BP, welcher bereits der ganzen <rs ref="index:d14380e4919">benediktinischen</rs> Welt bekannt ist; diesem will er mit einem späteren Brief sein Schreiben an den
+               Abt schicken, damit er es weiterleitet. Vorerst bittet er um Nachrichten aus „<rs ref="index:d14380e35438">Polen</rs>“, falls BP darüber verfügt. Der „Erzbischof von <rs ref="index:d14380e15717">Gnesen</rs>“ (<rs ref="index:d14380e41961">Stanisław Szembek</rs>?), über
+               dessen Absichten KM durch einen Verwandten unterrichtet ist, droht alles an sich zu reißen, vor allem,
+               wenn er die Unterstützung des „Königs“ (<rs ref="index:d14380e13461">August II.</rs>?) erlangen kann. KM
+               wünscht, sich am „Krakauer Hof“
+               aufhalten und dort mit dem „Bruder“ (<rs ref="index:d14380e41091">Władysław Józef Graf Skarbek?</rs>) des
+               „Bischofs von <rs ref="index:d14380e24473">Lemberg</rs>“ (<rs ref="index:d14380e41084">Jan Skarbek</rs>?)
+               sprechen zu können, der ein Förderer der „polnischen Benediktiner“ ist. Wenn KM die Kraft und das
+               Einverständnis seiner Oberen dazu hätte, würde er sogar selbst nach „Polen“ reisen. Inzwischen aber
+               ersucht er BP, mit ihm für die Sache der „polnischen Mitbrüder“ zu beten (zur Deutung dieser gesamten
+               Passage siehe Kommentar).</p>
+            <p corresp="#seg4">KM übermittelt Grüße von <rs ref="index:d14380e16543">Bernhard Gross</rs>; <rs ref="index:d10854e35200">Gregor Zödl</rs> wird BP selbst schreiben. <rs ref="index:d14380e31969">Abt Pachinger</rs> geht es nicht
+               sehr gut, was die Arbeitsbelastung KMs erhöht. Noch während er an dem Brief an BP arbeitete, ist ihm
+               aufgetragen worden, einen Brief an einen <rs ref="index:d14380e28000">Fürsten</rs> aufzusetzen.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e68677">Der Brief <rs type="person" role="sender">BPs</rs> vom 3. September <ref type="letter">989</ref> hat <rs type="person" role="sender">KM</rs> zusammen mit einem zweiten, späteren <ref type="letter">995</ref> am 21. September erreicht. <rs type="person" role="sender">KM</rs> befand sich damals nicht in Benediktbeuern. Der Ökonom seines Klosters, Joseph Zallinger, war am Tag des hl. Bernhard (20. August) nach fünf Wochen andauernden schweren Kopfschmerzen gestorben; <rs type="person" role="sender">KM</rs> empfiehlt ihn <rs type="person" role="sender">BP</rs> und HP zum Gedenken im Gebet. Dadurch wurde es notwendig, dass ein anderer aus dem Konvent an der Stelle Zallingers ins Etschtal reiste, um auf den Gütern des Klosters bei Bozen, Untermais und Terlan die Weinlese zu beaufsichtigen. Diese Aufgabe fiel am 8. September, an dem die meisten sich von Studien und Arbeit für eine Weile verabschieden, <rs type="person" role="sender">KM</rs> zu und erwies sich als höchst mühselig, da zwar die Weinernte selbst günstig ausfiel, die Angelegenheiten des Klosters in dieser Gegend sich hingegen in einer seit 120 Jahren eingerissenen Unordnung befanden. Die Arbeiten zur Bereinigung dieses Zustandes werden noch viele Wochen fortdauern, erweisen sich aber bereits jetzt für Benediktbeuern als sehr nützlich. In dieser Situation musste KM, als er <rs type="person" role="sender">BPs</rs> Briefe zusammen mit einem ganzen Stoß weiterer von anderen Korrespondenten in Terlan, einem Dorf etwa drei Stunden von Bozen in Richtung Meran, erhielt, sich entscheiden, die Antworten an alle zurückzustellen. Er hat aus jener Gegend nur seinem Abt Magnus Pachinger geschrieben. Deshalb hat er erst jetzt Gelegenheit, auf die Briefe <rs type="person" role="sender">BPs</rs> knapp zu antworten.</seg><seg type="context" n="2" xml:id="d3e68685">Auf die Abhandlung („De aedificio Dei“) des Gerhoch (von Reichersberg) wird <rs type="person" role="sender">KM</rs> vielleicht später eingehen können. Gregor Zödl hat es übernommen, die Schrift („De bono regimine abbatis“) des Abtes von St. Matthias zu Trier (Johannes Rode) für <rs type="person" role="sender">BP</rs> abzuschreiben. In Steingaden sind <rs type="person" role="sender">KM</rs> vor einiger Zeit Quellen zu den Welfen untergekommen, die er für unpubliziert hält; da diese jedoch bereits von dem Hannoveraner Kilian Schrader, den <rs type="person" role="sender">KM</rs> darauf hingewiesen hatte, abgeschrieben worden sind, nimmt <rs type="person" role="sender">KM</rs> an, dass sie bald durch Schrader oder Johann Georg Eckhart veröffentlicht werden dürften. Sollte <rs type="person" role="sender">KM</rs> anderswo etwas finden, was den Wünschen <rs type="person" role="sender">BPs</rs> zugunsten von dessen Freund (Eckhart) entspricht, will er dies mitteilen. Zu der königlich englischen (recte: hannoveranischen) Medaille, wie man sie in den deutschen Klöstern selten finden wird, gratuliert er BP.</seg><seg type="context" n="3" xml:id="d3e68687"><rs type="person" role="sender">KM</rs> hat auch seinerseits eine Bitte. Er beabsichtigt, einen Brief an Abt „Alexander“ (Aleksander Wychowski?) im Kloster „S. Crux bei Krakau“ (Heiligkreuz in Polen?) zu schreiben, weiß allerdings nicht, auf welchem Weg er diesen erreichen kann. Er vertraut auf BP, welcher bereits der ganzen benediktinischen Welt bekannt ist; diesem will er mit einem späteren Brief sein Schreiben an den Abt schicken, damit er es weiterleitet. Vorerst bittet er um Nachrichten aus „Polen“, falls <rs type="person" role="sender">BP</rs> darüber verfügt. Der „Erzbischof von Gnesen“ (Stanisław Szembek?), über dessen Absichten <rs type="person" role="sender">KM</rs> durch einen Verwandten unterrichtet ist, droht alles an sich zu reißen, vor allem, wenn er die Unterstützung des „Königs“ (August II.?) erlangen kann. <rs type="person" role="sender">KM</rs> wünscht, sich am „Krakauer Hof“ aufhalten und dort mit dem „Bruder“ (Władysław Józef Graf Skarbek?) des „Bischofs von Lemberg“ (Jan Skarbek?) sprechen zu können, der ein Förderer der „polnischen Benediktiner“ ist. Wenn <rs type="person" role="sender">KM</rs> die Kraft und das Einverständnis seiner Oberen dazu hätte, würde er sogar selbst nach „Polen“ reisen. Inzwischen aber ersucht er BP, mit ihm für die Sache der „polnischen Mitbrüder“ zu beten (zur Deutung dieser gesamten Passage siehe Kommentar).</seg><seg type="context" n="4" xml:id="d3e68689"><rs type="person" role="sender">KM</rs> übermittelt Grüße von Bernhard Gross; Gregor Zödl wird <rs type="person" role="sender">BP</rs> selbst schreiben. Abt Pachinger geht es nicht sehr gut, was die Arbeitsbelastung <rs type="person" role="sender">KMs</rs> erhöht. Noch während er an dem Brief an <rs type="person" role="sender">BP</rs> arbeitete, ist ihm aufgetragen worden, einen Brief an einen Fürsten aufzusetzen.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Nummerierung: <hi rend="italic">XII</hi>.</p>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende et clarissime domine pater Bernarde, amice colendissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e68709">Quam ad me 3. Nonas Septembris misisti epistolam, ea una cum alia posterius exarata tandem 11. Kalendas Octobris mihi est reddita: sed ubi gentium, Bernarde? Nosti, amice integerrime, reverendum patrem <seg type="lemma" corresp="#d3e68728">Josephum nostrum, oeconomum monasterii nostri, supremum post acerbissimos capitis dolores quinque septimanarum spatio patienter toleratos denique desiisse</seg><seg type="lemma" corresp="#d3e68734"> in caput mortuum, et quidem ea die mensis Augusti, qua sanctum tuum euergetam Bernardum venerabamur; cuius animam tibi germanoque tuo Hieronymo fautori meo impensissime commendo. Interim aestus huius anni urgebat, ut e nostris in regionem Athesinam mitteretur, qui vices obiret Josephi et vineis nostris ac vindemiis iuribusque invigilaret. Ea sors 6. Idus Septembris (quo die alii studiis et laboribus nuncium tantisper mittunt</seg>)<seg type="lemma" corresp="#d3e68738"> in me cecidit</seg>, sed sors sane dura et laboribus refertissima. Quantumvis enim in omnibus nostris tribus vineis, Bulsanensi, Maiensi et <pb n="1v"/> Terlanensi, vindemiam viderim felicem, vidi tamen etiam, proh dolor, tantam rerum nostrarum in ea provincia confusionem ab annis fere 120 sive introductam sive introgressam, ut vel meminisse acerbo dolore non careat. Non hic multa retexo, sed certum te esse iubeo, vir optime, me vix alias unquam uno eodemque tempore tot curis fuisse obrutum; e quibus hodiedum me nondum potui expedire, imo video his laboribus finem nonnisi post multas septimanas posse imponi. Interim dico gratias benignissimo Deo, qui noluit curas et labores meos esse inutiles, sed abundantem ac luculentam in plerisque negotiis conficiendis benedictionem mihi e caelo suppeditavit;<seg type="lemma" corresp="#d3e68746"> cui soli honor et gloria</seg>! Eo rerum articulo constitutus literas illas tuas una cum integro alio epistolarum ad me aliunde datarum fasciculo accepi Terlani, qui pagus est trium fere horarum spatio distans Bulsano versus Meraniam. Accepi, inquam, literas tuas aliasque aliorum non paucas. Sed quis ego eram, ut inter tot illas curas responderem tot amicis ac fautoribus meis? Certe multitudine et varietate idearum fatigatus constitui denique nemini alteri e regione illa <pb n="2r"/> scribere praeterquam soli meo reverendissimo domino praesuli. Et hinc tu, vir eruditissime, nihil a me literarum poteras hactenus accipere. Sed hem! Nunc tandem ad tuas illas suavissimas, quamquam non nisi cursim, respondeo. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e68715">De opere Gerhohiano forte cum tempore plura licebit conferre. <seg type="lemma" corresp="#d3e68750">Trevirensis abbatis opusculum</seg> Gregorius noster suscepit tibi exscribendum. De Gwelfis nuper aliqua hactenus, ni fallor, inedita vidi in monasterio Steingadensi; verum quia vir eruditissimus<seg type="lemma" corresp="#d3e68756"> Schraderus, minister Hannoveranus, ea ante pauculos annos, et quidem me monstrante viam</seg>, iam exscripsit, nullus dubito, quin brevi sint proditura in lucem sive Schraderi sive Eccardi opera. Si alibi invenero, unde tuis<seg type="lemma" corresp="#d3e68760"> pro amico votis</seg> possim servire, habes me, Bernarde, servum paratissimum, qui tibi regium illud ex Anglia<seg type="lemma" corresp="#d3e68764"> numisma</seg> (qualia utique non multa reperiuntur in monasteriis Germaniae) ex animo gratulor. </seg><seg type="context" n="3" xml:space="preserve" xml:id="d3e68717">Est vero, amice integerrime, quod etiam ego contendam abs te. Literas ego imposterum constitui scribere ad reverendissimum <seg type="lemma" corresp="#d3e68768">abbatem Alexandrum</seg> monasterii S. Crucis prope Cracoviam ordinis nostri praesulem. Sed amabo! Qua via illuc pervenient? <pb n="2v"/> Ego fiduciam in te colloco meam, qui nosti totum orbem Benedictinum, uti toti Benedictino orbi iamiam ipse innotuisti. Literas itaque meas includam aliis ad te dandis. Tu viam porro monstrabis, sed tamen interim mihi nunciabis, si quid ex Polonia nostra Benedictina tibi nunciatum fuerit. Gnesnensis archiepiscopus (cuius mens mihi ex quodam consanguineo est perspecta) omnia auferet, maxime si rex Augustus sua cum illo vota et consilia communicaverit. O si mihi detur ad unius horae spatium vivere in angulo quodam palatinatus Cracoviensis! Quam utilia conferrem cum fratre germano episcopi Leopolitani, viro in paucis insigni et Polonis nostris addictissimo! Sed committamus ista serio Superum curis. Ego, si quid virium in me foret, et superiores annuerent, usque in Poloniam excurrere paratus essem, ut amicis praesto forem. Tu, Bernarde, vale et res Polonorum nostrorum Deo mecum commenda. </seg><seg type="context" n="4" xml:space="preserve" xml:id="d3e68721">Salutat te Bernardus noster, tuus mecum ad aram amicus. Gregorius ipsemet suos tibi sensus exprimet. Reverendissimus meus dominus abbas <seg type="lemma" corresp="#d3e68774">non habet optime</seg>. Et hinc cumulantur mihi labores adeo, ut, dum has ipsissimas ad te scribo, iubear alias<seg type="lemma" corresp="#d3e68781"> literas ad quendam principem serenissimum exarare</seg>. Quod etiam iamiam est mandatum executioni. Vale, Bernarde, iterumque vale. Maneo ego cum mei devotissima commendatione</seg></p>
-            <p xml:space="preserve">Paternitatis tuae clarissimae idem, qui semper, obligatissimus in Christo servus pater Carolus manu propria.</p>
-            <p xml:space="preserve">In Benedictbeurn 6. Decembris 1718.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e68728">
-               <ref type="context">1</ref>
-               <label>Josephum ... desiisse</label><p>
-                  <rs type="bibl" key="bibl:16970">Hemmerle, Benediktbeuern</rs> 562, 627f.; <rs
-                     type="bibl" key="bibl:18030">Lindner, Professbuch Benediktbeuern</rs>
-                  56–60.</p></note>
-            <note xml:id="d3e68734">
-               <ref type="context">1</ref>
-               <label> quo die ... mittunt</label><p>Die jährlichen Ferien begannen am Kommunstudium
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>Josephum ... desiisse</mentioned>
+            <p>
+                  <rs type="bibl" ref="bibl:16970">Hemmerle, Benediktbeuern</rs> 562, 627f.; <rs type="bibl" ref="bibl:18030">Lindner, Professbuch Benediktbeuern</rs>
+                  56–60.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> quo die ... mittunt</mentioned>
+            <p>Die jährlichen Ferien begannen am Kommunstudium
                   der Bayerischen Benediktinerkongregation jeweils am 8. September, dem Fest Mariä
-                  Geburt: <rs type="bibl" key="bibl:16732">Haering, Rechtsgeschichtliche
-                     Untersuchung</rs> 169; <rs type="bibl" key="bibl:19054">Reichhold, 300
+                  Geburt: <rs type="bibl" ref="bibl:16732">Haering, Rechtsgeschichtliche
+                     Untersuchung</rs> 169; <rs type="bibl" ref="bibl:19054">Reichhold, 300
                      Jahre</rs> 535, 543. Der Termin galt auch an vielen anderen katholischen
-                  Bildungsanstalten, so an der Universität Salzburg: <rs type="bibl"
-                     key="bibl:19270">Sattler, Collectaneen-Blätter</rs> 38, 224; <rs type="bibl"
-                     key="bibl:20172">Wagner, Studenten</rs> 76; vgl. <rs type="bibl"
-                     key="bibl:17926">Leinsle, Studium im Kloster</rs> 29.</p></note>
-            <note xml:id="d3e68738">
-               <ref type="context">1</ref>
-               <label> in me cecidit</label><p>Die Reise KMs dauerte laut seinem Diarium vom 8.
+                  Bildungsanstalten, so an der Universität Salzburg: <rs type="bibl" ref="bibl:19270">Sattler, Collectaneen-Blätter</rs> 38, 224; <rs type="bibl" ref="bibl:20172">Wagner, Studenten</rs> 76; vgl. <rs type="bibl" ref="bibl:17926">Leinsle, Studium im Kloster</rs> 29.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
+            <mentioned> in me cecidit</mentioned>
+            <p>Die Reise KMs dauerte laut seinem Diarium vom 8.
                   September bis zum 9. November 1718: BStB München, Meichelbeckiana 18b, 329v–335v;
-                  vgl. <rs type="bibl" key="bibl:19582">Siegmund, Meichelbecks Briefe</rs> 80/1–2
-                  177.</p></note>
-            <note xml:id="d3e68742">
-               <ref type="context">1</ref>
-               <label> Bulsanensi ... Terlanensi</label><p>Zu diesen Gütern vgl. <rs type="bibl"
-                     key="bibl:16970">Hemmerle, Benediktbeuern</rs> 344, 381, 403, 408–412; zu KMs
-                  Einschätzung ihrer Rentabilität vgl. <rs type="bibl" key="bibl:19412">Schmid,
-                     Nachblüte</rs> 104f.</p></note>
-            <note xml:id="d3e68746">
-               <ref type="context">1</ref>
-               <label> cui soli honor et gloria</label><p>Nach 1 Tim 1,17.</p></note>
-            <note xml:id="d3e68750">
-               <ref type="context">2</ref>
-               <label>Trevirensis abbatis opusculum</label><p>Gemeint ist die Schrift „De bono
+                  vgl. <rs type="bibl" ref="bibl:19582">Siegmund, Meichelbecks Briefe</rs> 80/1–2
+                  177.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
+            <mentioned> Bulsanensi ... Terlanensi</mentioned>
+            <p>Zu diesen Gütern vgl. <rs type="bibl" ref="bibl:16970">Hemmerle, Benediktbeuern</rs> 344, 381, 403, 408–412; zu KMs
+                  Einschätzung ihrer Rentabilität vgl. <rs type="bibl" ref="bibl:19412">Schmid,
+                     Nachblüte</rs> 104f.</p>
+         </note>
+         <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg1">
+            <mentioned> cui soli honor et gloria</mentioned>
+            <p>Nach 1 Tim 1,17.</p>
+         </note>
+         <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
+            <mentioned>Trevirensis abbatis opusculum</mentioned>
+            <p>Gemeint ist die Schrift „De bono
                   regimine abbatis“ des Johannes Rode von St. Matthias zu Trier, die BP später
-                  edierte: <rs type="bibl" key="bibl:14758">Pez, Bibliotheca ascetica</rs> 1
+                  edierte: <rs type="bibl" ref="bibl:14758">Pez, Bibliotheca ascetica</rs> 1
                   157–204. Als Vorlagen dienten der von Zödl übermittelte Text und eine Melker
                   Handschrift: StiB Melk, Cod. 1468. Die damals Benediktbeurer Überlieferung ist
                   heute BStB München, clm 4790, 134v–153v. BP und HP hatten sie 1717 in
                   Benediktbeuern gesehen: StiB Melk, Cod. 1850, 424r. BP erwähnt den Codex und die
-                  Übermittlung auch in <rs type="bibl" key="bibl:36782">Pez, Thesaurus</rs> 3/3 col.
-                  627f. Zu dem Werk und seiner Überlieferung: <rs type="bibl" key="bibl:19152"
-                     >Rohtert, Johannes Rode</rs> 50–53, 56; vgl. <rs type="bibl" key="bibl:15102"
-                     >Becker, Reformprogramm</rs> 34–37; <rs type="bibl" key="bibl:19030">Redlich,
-                     Johann Rode</rs> 97–99.</p></note>
-            <note xml:id="d3e68756">
-               <ref type="context">2</ref>
-               <label> Schraderus ... monstrante viam</label><p>Zur Reise Schraders vgl. <ref
-                     type="letter">886</ref> &lt;1&gt;. KM begegnete ihm am 1. Juli 1709 in München;
+                  Übermittlung auch in <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 3/3 col.
+                  627f. Zu dem Werk und seiner Überlieferung: <rs type="bibl" ref="bibl:19152">Rohtert, Johannes Rode</rs> 50–53, 56; vgl. <rs type="bibl" ref="bibl:15102">Becker, Reformprogramm</rs> 34–37; <rs type="bibl" ref="bibl:19030">Redlich,
+                     Johann Rode</rs> 97–99.</p>
+         </note>
+         <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg2">
+            <mentioned> Schraderus ... monstrante viam</mentioned>
+            <p>Zur Reise Schraders vgl. <ref type="letter" target="letter:886">886</ref> <ref target="letter:886#seg1">1</ref>. KM begegnete ihm am 1. Juli 1709 in München;
                   die kaiserliche Okkupationsverwaltung hatte Schrader keinen Zutritt zum
                   kurfürstlichen Archiv gewährt, sondern über Abt Pachinger gebeten, KM möge jenem
                   Auskunft erteilen. Nach seinem späteren Bericht war es KM, der Schrader auf die
-                  Steingadener Quellen zur frühen Geschichte der Welfen hinwies: <rs type="bibl"
-                     key="bibl:14746">Meichelbeck, Chronicon Benedictoburanum</rs> 1 368; vgl. <rs
-                     type="bibl" key="bibl:15078">Baumann, Meichelbeck</rs> 33f.; <rs type="bibl"
-                     key="bibl:15764">Davillé, Leibniz historien</rs> 233. In Steingaden waren
+                  Steingadener Quellen zur frühen Geschichte der Welfen hinwies: <rs type="bibl" ref="bibl:14746">Meichelbeck, Chronicon Benedictoburanum</rs> 1 368; vgl. <rs type="bibl" ref="bibl:15078">Baumann, Meichelbeck</rs> 33f.; <rs type="bibl" ref="bibl:15764">Davillé, Leibniz historien</rs> 233. In Steingaden waren
                   allerdings um 1700 nach mehreren Stiftsbränden kaum noch mittelalterliche Quellen
                   vorhanden, wohl aber frühneuzeitliche historiographische Werke, die sich auch mit
-                  den Welfen befassten: vgl. <rs type="bibl" key="bibl:19398">Schmid,
-                     Geschichtsschreibung</rs> 165–171.</p></note>
-            <note xml:id="d3e68760">
-               <ref type="context">2</ref>
-               <label> pro amico votis</label><p>BP hatte sichtlich die Bitte Eckharts um Mitteilung
-                  von weiteren Quellen zur Geschichte der Welfen weitergeleitet: vgl. <ref
-                     type="letter">981</ref> &lt;7&gt;.</p></note>
-            <note xml:id="d3e68764">
-               <ref type="context">2</ref>
-               <label> numisma</label><p>Vgl. <ref type="letter">934</ref> &lt;1&gt;. Es handelte
+                  den Welfen befassten: vgl. <rs type="bibl" ref="bibl:19398">Schmid,
+                     Geschichtsschreibung</rs> 165–171.</p>
+         </note>
+         <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg2">
+            <mentioned> pro amico votis</mentioned>
+            <p>BP hatte sichtlich die Bitte Eckharts um Mitteilung
+                  von weiteren Quellen zur Geschichte der Welfen weitergeleitet: vgl. <ref type="letter" target="letter:981">981</ref> <ref target="letter:981#seg7">7</ref>.</p>
+         </note>
+         <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg2">
+            <mentioned> numisma</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:934">934</ref> <ref target="letter:934#seg1">1</ref>. Es handelte
                   sich streng genommen nicht um eine königlich englische Medaille, sondern um eine
                   hannoversche, die freilich Kurfürst Georg Ludwig bereits als König Georg I. von
                   England BP zukommen ließ. KM selbst hatte von Schrader 1709 eine Medaille
-                  erhalten: <rs type="bibl" key="bibl:15078">Baumann, Meichelbeck</rs> 33. Von
+                  erhalten: <rs type="bibl" ref="bibl:15078">Baumann, Meichelbeck</rs> 33. Von
                   dieser dürfte BP bereits seit seinem Besuch in Benediktbeuern 1717 gewusst haben:
-                  vgl. <ref type="letter">886</ref> &lt;1&gt;.</p></note>
-            <note xml:id="d3e68768">
-               <ref type="context">3</ref>
-               <label>abbatem Alexandrum</label><p>Die Angaben KMs sind mit dem, was über die
+                  vgl. <ref type="letter" target="letter:886">886</ref> <ref target="letter:886#seg1">1</ref>.</p>
+         </note>
+         <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg3">
+            <mentioned>abbatem Alexandrum</mentioned>
+            <p>Die Angaben KMs sind mit dem, was über die
                   Verhältnisse der polnischen Benediktiner zur Zeit dieses Briefes bekannt ist, kaum
                   in Einklang zu bringen. Zu einem Abt „Alexander“ eines Klosters „S. Crux prope
-                  Cracoviam“ vgl. <ref type="letter">847</ref> &lt;6&gt;. Albert Siegmund vermutete,
-                  es könnte das Kloster Kleparz bei Krakau gemeint sein: <rs type="bibl"
-                     key="bibl:19582">Siegmund, Meichelbecks Briefe</rs> 80/1–2 188f. Dieses war
-                  jedoch bereits im 15. Jh. ausgestorben: vgl. <rs type="bibl" key="bibl:14862"
-                     >Albers, Geschichte</rs> 196f. Als Erzbischof von Gnesen amtierte seit 1706
-                  Stanisław Szembek: <rs type="bibl" key="bibl:19122">Ritzler–Sefrin, Hierarchia
+                  Cracoviam“ vgl. <ref type="letter" target="letter:847">847</ref> <ref target="letter:847#seg6">6</ref>. Albert Siegmund vermutete,
+                  es könnte das Kloster Kleparz bei Krakau gemeint sein: <rs type="bibl" ref="bibl:19582">Siegmund, Meichelbecks Briefe</rs> 80/1–2 188f. Dieses war
+                  jedoch bereits im 15. Jh. ausgestorben: vgl. <rs type="bibl" ref="bibl:14862">Albers, Geschichte</rs> 196f. Als Erzbischof von Gnesen amtierte seit 1706
+                  Stanisław Szembek: <rs type="bibl" ref="bibl:19122">Ritzler–Sefrin, Hierarchia
                      catholica 5</rs> 185, 210, 418. Das Erzbistum (nicht Bistum) Lemberg hatte seit
-                  1713 Jan Skarbek inne: <rs type="bibl" key="bibl:17754">Kumor, Skarbek</rs>; <rs
-                     type="bibl" key="bibl:19122">Ritzler–Sefrin, Hierarchia catholica 5</rs> 243,
+                  1713 Jan Skarbek inne: <rs type="bibl" ref="bibl:17754">Kumor, Skarbek</rs>; <rs type="bibl" ref="bibl:19122">Ritzler–Sefrin, Hierarchia catholica 5</rs> 243,
                   257. Mit einem bei Hof einflussreichen Bruder desselben könnte Władysław Józef
                   Graf Skarbek, Kastellan von Halicz, gemeint sein, der freilich bereits 1713
-                  verstorben war: <rs type="bibl" key="bibl:17446">Kaźmierczyk, Skarbek
-                     Władysław</rs>. Über einen weiteren Bruder Antoni ist wenig bekannt: vgl. <rs
-                     type="bibl" key="bibl:17444">Kaźmierczyk, Skarbek Krzysztof</rs> 21. Die
+                  verstorben war: <rs type="bibl" ref="bibl:17446">Kaźmierczyk, Skarbek
+                     Władysław</rs>. Über einen weiteren Bruder Antoni ist wenig bekannt: vgl. <rs type="bibl" ref="bibl:17444">Kaźmierczyk, Skarbek Krzysztof</rs> 21. Die
                   Anerkennung der Polnischen Benediktinerkongregation durch den Papst war im Übrigen
-                  schon 1709 erfolgt: <rs type="bibl" key="bibl:17406">Kanior, Polska
+                  schon 1709 erfolgt: <rs type="bibl" ref="bibl:17406">Kanior, Polska
                      kongregacja</rs> 45. Wären die Ausführungen KMs wörtlich zu nehmen, so müsste
                   folglich davon ausgegangen werden, dass diese auf einem um mehrere Jahre
                   veralteten Informationsstand beruhten. – Allerdings ist aufgrund zweier
@@ -194,28 +269,40 @@
                   Vermutung ginge dahin, dass sich die Äußerungen auf den Plan zur Errichtung einer
                   benediktinischen Gelehrtenkongregation in Österreich beziehen, den BP um diese
                   Zeit auch mit anderen Korrespondenten seines besonderen Vertrauens erörterte: vgl.
-                     <ref type="letter">967</ref>, <ref type="letter">1003</ref> &lt;6&gt;, <ref
-                     type="letter">1023</ref> &lt;8&gt;. In diesem Fall würde sich die Vermutung von
-                  Ludwig Hammermayer bestätigen, wonach KM von diesen Plänen unterrichtet war: <rs
-                     type="bibl" key="bibl:16792">Hammermayer, Forschungszentren</rs> 144;
-                  ausgeräumt würden hingegen die Zweifel von <rs type="bibl" key="bibl:16508"
-                     >Glassner, Académie</rs> 494. – Wenn diese Annahme richtig ist, dann wäre mit
+                     <ref type="letter" target="letter:967">967</ref>, <ref type="letter" target="letter:1003">1003</ref> <ref target="letter:1003#seg6">6</ref>, <ref type="letter" target="letter:1023">1023</ref> <ref target="letter:1023#seg8">8</ref>. In diesem Fall würde sich die Vermutung von
+                  Ludwig Hammermayer bestätigen, wonach KM von diesen Plänen unterrichtet war: <rs type="bibl" ref="bibl:16792">Hammermayer, Forschungszentren</rs> 144;
+                  ausgeräumt würden hingegen die Zweifel von <rs type="bibl" ref="bibl:16508">Glassner, Académie</rs> 494. – Wenn diese Annahme richtig ist, dann wäre mit
                   dem „rex Augustus“ sicherlich Kaiser Karl VI. gemeint; hinsichtlich der übrigen
                   vorkommenden Personen lassen sich allenfalls Vermutungen vorbringen. So könnte
                   „Abt Alexander“ mit Abt Alexander Strasser von Kremsmünster in Verbindung gebracht
-                  werden, der in einen späteren Versuch BPs im Jahr 1728 eingebunden war: <rs
-                     type="bibl" key="bibl:16508">Glassner, Académie</rs> 495–497. Bei dem Protektor
+                  werden, der in einen späteren Versuch BPs im Jahr 1728 eingebunden war: <rs type="bibl" ref="bibl:16508">Glassner, Académie</rs> 495–497. Bei dem Protektor
                   des Kongregationsplanes am Hof ließe sich an Gundacker Thomas Grafen Starhemberg
                   denken, doch ist nicht einsichtig, weshalb – außer allenfalls wegen eines gewissen
                   Anklangs der Namen „Starhemberg“ und „Skarbek“ – er als „Bruder des Bischofs von
-                  Lemberg“ umschrieben werden sollte. </p></note>
-            <note xml:id="d3e68774">
-               <ref type="context">4</ref>
-               <label>non habet optime</label><p>In seinem Diarium vermerkte KM zum 5. Dezember 1718: „Iterum prandeo cum reverendissimo, qui apparet corpore et mente male dispositus et tristis, auditis hoc tempore et visis tot“. Am darauffolgenden Tag wurde bei Pachinger ein Aderlass vorgenommen: BStB München, Meichelbeckiana 18b, 337v–338r. Die Krankheit dürfte mit einem Sturz des Abtes zusammenhängen, der KM am 1. November gemeldet worden war: ebd. 334v. In dieser Zeit scheinen beträchtliche Spannungen zwischen KM und seinem Abt bestanden zu haben; insbesondere zum 27. November bietet das Diarium eine lange Klage über dessen Amtsführung: ebd. 336v–337r.</p></note>
-            <note xml:id="d3e68781">
-               <ref type="context">4</ref>
-               <label> literas ad ... exarare</label><p>Zu dieser Angelegenheit konnte nichts Näheres ermittelt werden, auch das Diarium KMs bietet keine Hinweise.</p></note>
-         </div>
-      </back>
+                  Lemberg“ umschrieben werden sollte. </p>
+         </note>
+         <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg4">
+            <mentioned>non habet optime</mentioned>
+            <p>In seinem Diarium vermerkte KM zum 5. Dezember 1718: „Iterum prandeo cum reverendissimo, qui apparet corpore et mente male dispositus et tristis, auditis hoc tempore et visis tot“. Am darauffolgenden Tag wurde bei Pachinger ein Aderlass vorgenommen: BStB München, Meichelbeckiana 18b, 337v–338r. Die Krankheit dürfte mit einem Sturz des Abtes zusammenhängen, der KM am 1. November gemeldet worden war: ebd. 334v. In dieser Zeit scheinen beträchtliche Spannungen zwischen KM und seinem Abt bestanden zu haben; insbesondere zum 27. November bietet das Diarium eine lange Klage über dessen Amtsführung: ebd. 336v–337r.</p>
+         </note>
+         <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg4">
+            <mentioned> literas ad ... exarare</mentioned>
+            <p>Zu dieser Angelegenheit konnte nichts Näheres ermittelt werden, auch das Diarium KMs bietet keine Hinweise.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Nummerierung: <orig>XII</orig>.</note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende et clarissime domine pater Bernarde, amice colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Quam ad me 3. Nonas Septembris misisti epistolam, ea una cum alia posterius exarata tandem 11. Kalendas Octobris mihi est reddita: sed ubi gentium, Bernarde? Nosti, amice integerrime, reverendum patrem <anchor xml:id="n1"/>Josephum nostrum, oeconomum monasterii nostri, supremum post acerbissimos capitis dolores quinque septimanarum spatio patienter toleratos denique desiisse<anchor xml:id="n1e"/><anchor xml:id="n2"/> in caput mortuum, et quidem ea die mensis Augusti, qua sanctum tuum euergetam Bernardum venerabamur; cuius animam tibi germanoque tuo Hieronymo fautori meo impensissime commendo. Interim aestus huius anni urgebat, ut e nostris in regionem Athesinam mitteretur, qui vices obiret Josephi et vineis nostris ac vindemiis iuribusque invigilaret. Ea sors 6. Idus Septembris (quo die alii studiis et laboribus nuncium tantisper mittunt<anchor xml:id="n2e"/>)<anchor xml:id="n3"/> in me cecidit<anchor xml:id="n3e"/>, sed sors sane dura et laboribus refertissima. Quantumvis enim in omnibus nostris tribus vineis, Bulsanensi, Maiensi et <pb n="1v"/> Terlanensi, vindemiam viderim felicem, vidi tamen etiam, proh dolor, tantam rerum nostrarum in ea provincia confusionem ab annis fere 120 sive introductam sive introgressam, ut vel meminisse acerbo dolore non careat. Non hic multa retexo, sed certum te esse iubeo, vir optime, me vix alias unquam uno eodemque tempore tot curis fuisse obrutum; e quibus hodiedum me nondum potui expedire, imo video his laboribus finem nonnisi post multas septimanas posse imponi. Interim dico gratias benignissimo Deo, qui noluit curas et labores meos esse inutiles, sed abundantem ac luculentam in plerisque negotiis conficiendis benedictionem mihi e caelo suppeditavit;<anchor xml:id="n4"/> cui soli honor et gloria<anchor xml:id="n4e"/>! Eo rerum articulo constitutus literas illas tuas una cum integro alio epistolarum ad me aliunde datarum fasciculo accepi Terlani, qui pagus est trium fere horarum spatio distans Bulsano versus Meraniam. Accepi, inquam, literas tuas aliasque aliorum non paucas. Sed quis ego eram, ut inter tot illas curas responderem tot amicis ac fautoribus meis? Certe multitudine et varietate idearum fatigatus constitui denique nemini alteri e regione illa <pb n="2r"/> scribere praeterquam soli meo reverendissimo domino praesuli. Et hinc tu, vir eruditissime, nihil a me literarum poteras hactenus accipere. Sed hem! Nunc tandem ad tuas illas suavissimas, quamquam non nisi cursim, respondeo. </ab>
+         <ab resp="#editor" xml:id="seg2">De opere Gerhohiano forte cum tempore plura licebit conferre. <anchor xml:id="n5"/>Trevirensis abbatis opusculum<anchor xml:id="n5e"/> Gregorius noster suscepit tibi exscribendum. De Gwelfis nuper aliqua hactenus, ni fallor, inedita vidi in monasterio Steingadensi; verum quia vir eruditissimus<anchor xml:id="n6"/> Schraderus, minister Hannoveranus, ea ante pauculos annos, et quidem me monstrante viam<anchor xml:id="n6e"/>, iam exscripsit, nullus dubito, quin brevi sint proditura in lucem sive Schraderi sive Eccardi opera. Si alibi invenero, unde tuis<anchor xml:id="n7"/> pro amico votis<anchor xml:id="n7e"/> possim servire, habes me, Bernarde, servum paratissimum, qui tibi regium illud ex Anglia<anchor xml:id="n8"/> numisma<anchor xml:id="n8e"/> (qualia utique non multa reperiuntur in monasteriis Germaniae) ex animo gratulor. </ab>
+         <ab resp="#editor" xml:id="seg3">Est vero, amice integerrime, quod etiam ego contendam abs te. Literas ego imposterum constitui scribere ad reverendissimum <anchor xml:id="n9"/>abbatem Alexandrum<anchor xml:id="n9e"/> monasterii S. Crucis prope Cracoviam ordinis nostri praesulem. Sed amabo! Qua via illuc pervenient? <pb n="2v"/> Ego fiduciam in te colloco meam, qui nosti totum orbem Benedictinum, uti toti Benedictino orbi iamiam ipse innotuisti. Literas itaque meas includam aliis ad te dandis. Tu viam porro monstrabis, sed tamen interim mihi nunciabis, si quid ex Polonia nostra Benedictina tibi nunciatum fuerit. Gnesnensis archiepiscopus (cuius mens mihi ex quodam consanguineo est perspecta) omnia auferet, maxime si rex Augustus sua cum illo vota et consilia communicaverit. O si mihi detur ad unius horae spatium vivere in angulo quodam palatinatus Cracoviensis! Quam utilia conferrem cum fratre germano episcopi Leopolitani, viro in paucis insigni et Polonis nostris addictissimo! Sed committamus ista serio Superum curis. Ego, si quid virium in me foret, et superiores annuerent, usque in Poloniam excurrere paratus essem, ut amicis praesto forem. Tu, Bernarde, vale et res Polonorum nostrorum Deo mecum commenda. </ab>
+         <ab resp="#editor" xml:id="seg4">Salutat te Bernardus noster, tuus mecum ad aram amicus. Gregorius ipsemet suos tibi sensus exprimet. Reverendissimus meus dominus abbas <anchor xml:id="n10"/>non habet optime<anchor xml:id="n10e"/>. Et hinc cumulantur mihi labores adeo, ut, dum has ipsissimas ad te scribo, iubear alias<anchor xml:id="n11"/> literas ad quendam principem serenissimum exarare<anchor xml:id="n11e"/>. Quod etiam iamiam est mandatum executioni. Vale, Bernarde, iterumque vale. Maneo ego cum mei devotissima commendatione</ab>
+         <closer>Paternitatis tuae clarissimae idem, qui semper, obligatissimus in Christo servus pater Carolus manu propria.</closer>
+         <closer>In Benedictbeurn 6. Decembris 1718.</closer>
+      </body>
    </text>
 </TEI>

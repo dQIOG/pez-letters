@@ -1,39 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="307" xml:id="pez-0307">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">307 Hyazinth Baumbach an Bernhard Pez. 1713-04-30. Würzburg (St. Stephan).</title>
-            <title type="sub">Digital Edition</title>
+            <title>Hyazinth Baumbach an Bernhard Pez. 1713-04-30. Würzburg (St. Stephan).</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">307</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">199r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 199r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -48,58 +68,42 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">306</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">309</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">306</idno>
-               </ref>
+               <ptr type="prev" target="letter:306"/>
+               <ptr type="next" target="letter:309"/>
+               <ptr type="mentions" target="letter:306"/>
             </correspContext>
          </correspDesc>
+         <abstract>
+            <p corresp="#seg1">HB entspricht BPs Wunsch aus dessen letztem Schreiben <ref type="letter" target="letter:306">306</ref> und übersendet ihm eine Abschrift der „<rs ref="index:d10854e20414">Epistola monachorum Casinensium</rs>“. Zwar trägt diese kein Datum, doch kann man aus der Erwähnung der offensichtlich jüngst begründeten <rs ref="index:d10854e5406">Cluniazenser</rs> das Alter ersehen. HB ist froh, wenn er BP damit gedient hat, und will das gerne wieder tun.</p>
+            <p corresp="#seg2">Den <rs ref="index:d14380e45571">Wiener</rs> <rs ref="index:d14380e45794">Hof</rs> wird die Ankunft der Kaiserin <rs ref="index:d10854e7663">Elisabeth Christine</rs> erfreuen; HB hofft, selbst bald durch den <rs ref="index:d10854e29346">Frieden</rs> erfreut zu werden. Kaiser <rs ref="index:d14380e21188">Karl VI.</rs> sollte das <rs ref="index:d14380e12712">französische</rs> Angebot annehmen, auch wenn es unbillig ist, sonst droht der Gegend, in der HB lebt, vom <rs ref="index:d14380e37308">Rhein</rs> her noch Schlimmeres als bisher.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-02-27T09:44:16.455+01:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>litterarum Cassinensium</mentioned>
+            <p>Vgl. <ref type="letter" target="letter:308">308</ref> <ref target="letter:308#seg4">4</ref>.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
+            <mentioned>consolabitur adventus imperatricis</mentioned>
+            <p>Kaiserin Elisabeth Christine hatte Barcelona im März 1713 verlassen und war Anfang
+                  April in Italien gelandet. In Wien traf sie jedoch erst am 13. Juli 1713 ein: <rs type="bibl" ref="bibl:36884">Rill, Karl VI.</rs> 119, 123, 130, 183. Zur
+                  Position Würzburgs im Spanischen Erbfolgekrieg vgl. <ref type="letter" target="letter:250">250</ref>,
+                     <ref type="letter" target="letter:267">267</ref>.</p>
+         </note>
+      </listAnnotation>
+      <listAnnotation type="editorialNotes">
+         <note anchored="false">Ordnungsvermerk: <orig>94</orig>.</note>
+      </listAnnotation>
+   </standOff>
    <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d4618e39175"><rs type="person" role="sender">HB</rs> entspricht <rs type="person" role="sender">BPs</rs> Wunsch aus dessen letztem Schreiben <ref type="letter">306</ref> und übersendet ihm eine Abschrift der „<rs key="index:d10854e20414">Epistola monachorum Casinensium</rs>“. Zwar trägt diese kein Datum, doch kann man aus der Erwähnung der offensichtlich jüngst begründeten <rs key="index:d10854e5406">Cluniazenser</rs> das Alter ersehen. <rs type="person" role="sender">HB</rs> ist froh, wenn er <rs type="person" role="sender">BP</rs> damit gedient hat, und will das gerne wieder tun.</seg><seg type="context" n="2" xml:id="d4618e39180">Den <rs key="index:d14380e45571">Wiener</rs> <rs key="index:d14380e45794">Hof</rs> wird die Ankunft der Kaiserin <rs key="index:d10854e7663">Elisabeth Christine</rs> erfreuen; <rs type="person" role="sender">HB</rs> hofft, selbst bald durch den <rs key="index:d10854e29346">Frieden</rs> erfreut zu werden. Kaiser <rs key="index:d14380e21188">Karl VI.</rs> sollte das <rs key="index:d14380e12712">französische</rs> Angebot annehmen, auch wenn es unbillig ist, sonst droht der Gegend, in der <rs type="person" role="sender">HB</rs> lebt, vom <rs key="index:d14380e37308">Rhein</rs> her noch Schlimmeres als bisher.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <p xml:space="preserve">Ordnungsvermerk: <hi rend="italic">94</hi>.</p>
-         </div>
-      </front>
       <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende religiose eximie ac doctissime in Christo pater, domine colende.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d4618e39197">Ut iusto desiderio admodum reverendae paternitatis vestrae in ultimis civilitate nimia in me supereffluentibus explicato maturius satisfaciam, mitto hinc copiam <seg type="lemma" corresp="#d4618e39223">litterarum Cassinensium</seg> ad Fuldenses sine anno, sine mense et die, quarum tamen antiquitas meo iudicio colligi forte poterit a tempore novellae plantationis <sic>Gluniacensis</sic> [<hi rend="italic">sic</hi>], quam tunc hae litterae novissimam scribere videntur. Si beneplacitum in eis habuerit admodum reverenda paternitas vestra, gaudebo atque, quae potero, plura beneplacita subministrare studebo. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d4618e39202">Aulam Viennensem <seg type="lemma" corresp="#d4618e39230">consolabitur adventus imperatricis</seg> augustissimae; modo et nos consolaretur pace acceptata. Si enim imperator augustissimus <pb n="1v"/> pacem licet iniquam non acceptaverit oblatam, nos hisce partibus ex Rheno de novo<note place="foot" xml:id="d4618e39206">	Danach durchgestrichen <hi rend="italic">in</hi>.</note> summo<note place="foot" xml:id="d4618e39212">	Danach durchgestrichen <hi rend="italic">periculo</hi>.</note> erimus expositi periculo, et fient novissima peiora prioribus. Quod igitur et nos Deo optimo maximo humillime commendo et permaneo sub eius protectione</seg></p>
-            <p xml:space="preserve">Admodum reverendae et eximiae paternitatis vestrae addictissimus Hyacinth abbas manu propria.</p>
-            <p xml:space="preserve">Herbipoli ex monasterio S. Stephani 30. Aprilis 1713.</p>
-         </div>
+         <opener><pb n="1r"/> Admodum reverende religiose eximie ac doctissime in Christo pater, domine colende.</opener>
+         <ab resp="#editor" xml:id="seg1">Ut iusto desiderio admodum reverendae paternitatis vestrae in ultimis civilitate nimia in me supereffluentibus explicato maturius satisfaciam, mitto hinc copiam <anchor xml:id="n1"/>litterarum Cassinensium<anchor xml:id="n1e"/> ad Fuldenses sine anno, sine mense et die, quarum tamen antiquitas meo iudicio colligi forte poterit a tempore novellae plantationis <sic>Gluniacensis</sic> , quam tunc hae litterae novissimam scribere videntur. Si beneplacitum in eis habuerit admodum reverenda paternitas vestra, gaudebo atque, quae potero, plura beneplacita subministrare studebo. </ab>
+         <ab resp="#editor" xml:id="seg2">Aulam Viennensem <anchor xml:id="n2"/>consolabitur adventus imperatricis<anchor xml:id="n2e"/> augustissimae; modo et nos consolaretur pace acceptata. Si enim imperator augustissimus <pb n="1v"/> pacem licet iniquam non acceptaverit oblatam, nos hisce partibus ex Rheno de novo<del ana="#after">in</del> summo<del ana="#after">periculo</del> erimus expositi periculo, et fient novissima peiora prioribus. Quod igitur et nos Deo optimo maximo humillime commendo et permaneo sub eius protectione</ab>
+         <closer>Admodum reverendae et eximiae paternitatis vestrae addictissimus Hyacinth abbas manu propria.</closer>
+         <closer>Herbipoli ex monasterio S. Stephani 30. Aprilis 1713.</closer>
       </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d4618e39223">
-               <ref type="context">1</ref>
-               <label>litterarum Cassinensium</label>
-               <p>Vgl. <ref type="letter">308</ref> &lt;4&gt;.</p>
-            </note>
-            <note xml:id="d4618e39230">
-               <ref type="context">2</ref>
-               <label>consolabitur adventus imperatricis</label>
-               <p>Kaiserin Elisabeth Christine hatte Barcelona im März 1713 verlassen und war Anfang
-                  April in Italien gelandet. In Wien traf sie jedoch erst am 13. Juli 1713 ein: <rs
-                     type="bibl" key="bibl:36884">Rill, Karl VI.</rs> 119, 123, 130, 183. Zur
-                  Position Würzburgs im Spanischen Erbfolgekrieg vgl. <ref type="letter">250</ref>,
-                     <ref type="letter">267</ref>.</p>
-            </note>
-         </div>
-      </back>
    </text>
 </TEI>

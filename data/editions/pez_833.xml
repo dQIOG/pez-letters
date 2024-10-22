@@ -1,44 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="833" xml:id="pez-0833">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">833 Basil Bischoff an Bernhard Pez. 1717-10-18. Laax.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Basil Bischoff an Bernhard Pez. 1717-10-18. Laax.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">833</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            <relatedItem type="secondaryLiterature">
-               <listBibl>
-                  <head>Literatur</head>
-                  <bibl><rs type="bibl" key="bibl:16898">Heer, Pez</rs> 428</bibl>
-               </listBibl>
-            </relatedItem>
+            
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">II</biblScope>
-               <biblScope unit="page">88r–v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 7, 88r–v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -53,50 +69,59 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="mentions">
-                  <idno type="pezEd">291</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">676</idno>
-               </ref>
+               <ptr type="mentions" target="letter:291"/>
+               <ptr type="mentions" target="letter:676"/>
             </correspContext>
          </correspDesc>
+         
+         <textClass><keywords>
+            <term ref="index:d14380e5824">Bischoff, Basil ; Bio-bibliographische Angaben zu Maurus Wenzin</term>
+            <term ref="index:d10854e3676">Bischoff, Basil ; Scriptores monasterii Disertinensis. Ms</term>
+            <term ref="index:d14380e9072">Defuns, Adalbert</term>
+            <term ref="index:d14380e9796">Disentis</term>
+            <term ref="index:d14380e10268">Dürler, Adalgott</term>
+            <term ref="index:d14380e45305">Wenzin, Maurus</term></keywords></textClass>
+         <abstract>
+            <p corresp="#seg1">BBi hat BP (durch Abt <rs ref="index:d14380e9072">Adalbert Defuns</rs>) vor einigen Jahren einen <rs ref="index:d10854e3676">Katalog der Schriftsteller</rs> von <rs ref="index:d14380e9796">Disentis</rs>
+               zukommen lassen <ref type="letter" target="letter:291">291</ref>, in welchem er aber einige Personen
+               ausgelassen hat, da sie damals noch am Leben waren (<rs ref="index:d14380e10268">Adalgott Dürler</rs> und
+               <rs ref="index:d14380e9072">Adalbert Defuns</rs>). Nunmehr aber ist BBi zu Kenntnis gekommen, dass sein
+               Mitbruder <rs ref="index:d14380e45305">Maurus Wenzin</rs> die fehlenden Informationen geliefert hat <ref type="letter" target="letter:676">676</ref>. BBi hält allerdings auch die Werke von Wenzin selbst für
+               mitteilenswert; <rs ref="index:d14380e5824">Angaben zu diesen</rs> legt er deswegen auf einem separaten
+               Blatt bei.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e42660">BBi hat <rs type="person" role="sender">BP</rs> (durch Abt Adalbert Defuns) vor einigen Jahren einen Katalog der Schriftsteller von Disentis zukommen lassen <ref type="letter">291</ref>, in welchem er aber einige Personen ausgelassen hat, da sie damals noch am Leben waren (Adalgott Dürler und Adalbert Defuns). Nunmehr aber ist BBi zu Kenntnis gekommen, dass sein Mitbruder Maurus Wenzin die fehlenden Informationen geliefert hat <ref type="letter">676</ref>. BBi hält allerdings auch die Werke von Wenzin selbst für mitteilenswert; Angaben zu diesen legt er deswegen auf einem separaten Blatt bei.</seg></p>
-         </div>
-         <div type="editorialNote"/>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Admodum reverende clarissime domine pater.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e42681">Transmiseram paternitati clarissimae ante aliquot annos scriptores monasterii nostri, ubi aliquot e nostris omiseram, eo quod tunc temporis adhuc in vivis degerent. At modo mortalibus exemptos a patre Mauro sodali meo suae paternitati clarissimae transmissos intelligo; sed inter ipsos ipse quoque dominus pater Maurus [<hi rend="italic">sic</hi>] recensendus [<hi rend="italic">sic</hi>] existimo, cuius proinde opera si admodum reverendae paternitati mitterem, haud ingratum eidem fore putavi, sicut in <seg type="lemma" corresp="#d3e42703">apposita pagella</seg> praesto; dum interea ad ulteriora obsequia me promptum offero et maneo</seg></p>
-            <p xml:space="preserve">Admodum reverendae clarissimae paternitatis vestrae himilimus<note place="foot" xml:id="d3e42691">	Korrigiert aus <hi rend="italic">himilil</hi>.</note> [<hi rend="italic">sic</hi>] servus pater Basilius Bischoff parochus ibidem manu propria.</p>
-            <p xml:space="preserve">Laxii in Rhaetia die 18. Octobris anno salutis 1717.</p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e42703">
-               <ref type="context">1</ref>
-               <label>apposita pagella</label><p> Die Beilage ist erhalten: I, 654r–655v. Sie trägt
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>apposita pagella</mentioned>
+            <p> Die Beilage ist erhalten: I, 654r–655v. Sie trägt
                   den Ordnungsvermerk „ad Nr. 560“ und bietet neben bibliographischen Angaben auch
                   eine Lebensbeschreibung von Maurus Wenzin. Unrichtig als Brief geführt wird das
-                  Stück bei <rs type="bibl" key="bibl:16524">Glassner, Verzeichnis</rs>
-               202.</p></note>
-            <note xml:id="d3e42709">
-               <ref type="context">1</ref>
-               <label> parochus ibidem</label><p>Der Aufenthalt BBis in Laax währte nur etwa fünf
-                  Monate: <rs type="bibl" key="bibl:16898">Heer, Pez</rs> 428.</p></note>
-         </div>
-      </back>
+                  Stück bei <rs type="bibl" ref="bibl:16524">Glassner, Verzeichnis</rs>
+               202.</p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned> parochus ibidem</mentioned>
+            <p>Der Aufenthalt BBis in Laax währte nur etwa fünf
+                  Monate: <rs type="bibl" ref="bibl:16898">Heer, Pez</rs> 428.</p>
+         </note>
+      </listAnnotation>
+      <listBibl>
+         <head>Literatur</head>
+         <bibl corresp="bibl:16898">
+            <title type="short">Heer, Pez</title>
+            <biblScope>428</biblScope>
+         </bibl>
+      </listBibl>
+   </standOff>
+   <text>
+      <body>
+         <opener><pb n="1r"/> Admodum reverende clarissime domine pater.</opener>
+         <ab resp="#editor" xml:id="seg1">Transmiseram paternitati clarissimae ante aliquot annos scriptores monasterii nostri, ubi aliquot e nostris omiseram, eo quod tunc temporis adhuc in vivis degerent. At modo mortalibus exemptos a patre Mauro sodali meo suae paternitati clarissimae transmissos intelligo; sed inter ipsos ipse quoque dominus pater <sic>Maurus</sic> <sic>recensendus</sic> existimo, cuius proinde opera si admodum reverendae paternitati mitterem, haud ingratum eidem fore putavi, sicut in <anchor xml:id="n1"/>apposita pagella<anchor xml:id="n1e"/> praesto; dum interea ad ulteriora obsequia me promptum offero et maneo</ab>
+         <closer>Admodum reverendae clarissimae paternitatis vestrae <choice><sic>himilil</sic><corr>himilimus</corr></choice>  servus pater Basilius Bischoff parochus ibidem manu propria.</closer>
+         <closer>Laxii in Rhaetia die 18. Octobris anno salutis 1717.</closer>
+      </body>
    </text>
 </TEI>

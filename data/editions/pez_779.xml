@@ -1,38 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" n="779" xml:id="pez-0779">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">779 Benedikt Friepeis an Hieronymus Pez. 1717-05-07. Andechs.</title>
-            <title type="sub">Digital Edition</title>
+            <title>Benedikt Friepeis an Hieronymus Pez. 1717-05-07. Andechs.</title>
+            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
                <persName>Daniel Schopper</persName>
             </respStmt>
+            <respStmt>
+               <resp>Postprocessing</resp>
+               <orgName>Rechercheagentur Patrick Fiska</orgName>
+               <persName>Dario Kampkaspar</persName>
+            </respStmt>
          </titleStmt>
+         <editionStmt>
+            <p>digital edition</p>
+         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities</publisher>
             <idno type="pezEd">779</idno>
          </publicationStmt>
+         <seriesStmt>
+            <title>dQIÖG</title>
+            <biblScope>1</biblScope>
+         </seriesStmt>
          <notesStmt>
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <institution>Stift Melk</institution>
-                  <repository>Stiftsbibliothek</repository>
-                  <idno type="signatory">???</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <biblScope unit="volume">I</biblScope>
-               <biblScope unit="page">511r–512v</biblScope>
-            </bibl>
+            <listWit>
+               <witness ana="cmif:manuscript">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Stift Melk</institution>
+                        <repository>Stiftsarchiv</repository>
+                        <idno>Kartons 7 Patres 6, 511r–512v</idno>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
+               <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <textClass>
             <classCode scheme="pez">letter</classCode>
@@ -47,81 +68,102 @@
                <persName>Hieronymus Pez</persName>
             </correspAction>
             <correspContext>
-               <ref type="prev">
-                  <idno type="pezEd">778</idno>
-               </ref>
-               <ref type="next">
-                  <idno type="pezEd">812</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">747</idno>
-               </ref>
-               <ref type="mentions">
-                  <idno type="pezEd">778</idno>
-               </ref>
+               <ptr type="prev" target="letter:778"/>
+               <ptr type="next" target="letter:812"/>
+               <ptr type="mentions" target="letter:747"/>
+               <ptr type="mentions" target="letter:778"/>
             </correspContext>
          </correspDesc>
+         
+         <textClass><keywords>
+            <term ref="index:d14380e4170">Bayern, Bayern</term>
+            <term ref="index:d14380e10440">Eberschwang, Benedikt</term>
+            <term ref="index:d14380e10663">Eckher von Kapfing, Johann Franz</term>
+            <term ref="index:d14380e12078">Ferb, Philipp Alois</term>
+            <term ref="index:d14380e13185">Freising</term>
+            <term ref="index:d14380e13239">Freising ; Domkapitelarchiv</term>
+            <term ref="index:d14380e18508">Hohenwaldeck und Maxlrain, Johann Heinrich Franz, Graf</term>
+            <term ref="index:d14380e29936">München</term>
+            <term ref="index:d14380e29990">München ; *Dame, die für Benedikt Friepeis Erkundigungen über die Hofbibliothek
+         einzieht</term>
+            <term ref="index:d14380e30013">München ; Kurfürstlicher Hof ; Hofbibliothek</term>
+            <term ref="index:d14380e31465">Österreich, Österreicher</term>
+            <term ref="index:d14380e33148">Pez, Bernhard</term>
+            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+            <term ref="index:d14380e46945">Zeller von Leibersdorf, Johann Sigismund, Freiherr</term></keywords></textClass>
+         <abstract>
+            <p corresp="#seg1">Der Grund für die späte Antwort BFs liegt darin, dass der Zugang nicht nur zu den Fürsten, sondern auch
+               zu anderen Großen schwierig ist, vor allem auf schriftlichem Weg. Unmittelbar nach dem Eintreffen von HPs
+               Brief <ref type="letter" target="letter:778">778</ref> hat BF nach <rs ref="index:d14380e29936">München</rs> geschrieben, um Auskunft einzuholen, ob der <rs ref="index:d14380e30013">kurfürstliche
+                  Bibliothekar</rs> (<rs ref="index:d14380e12078">Philipp Alois Ferb</rs>) Besucher einlassen und ihnen
+               auch die Einsichtnahme von Handschriften gestatten würde. Aus dem Antwortschreiben einer <rs ref="index:d14380e29990">Dame, welche für ihn bei dem Bibliothekar vorgesprochen</rs> hat, zitiert BF
+               eine Passage, wonach die Benutzung der Bibliothek für Fremde erlaubt ist, sofern sie keine für <rs ref="index:d14380e4170">Bayern</rs> möglicherweise schädlichen Dokumente einsehen wollen; sollten sie
+               aber Bücher entlehnen wollen, um Abschriften anfertigen zu lassen, muss an höherer Stelle um Erlaubnis
+               gefragt werden. Selbst an den Bibliothekar zu schreiben, wie dies BP beabsichtigt, wird daher von großem
+               Vorteil sein. Falls HP wünscht, dass BF in dieser Angelegenheit noch weitere Schritte setzt, soll er ihn
+               davon benachrichtigen.</p>
+            <p corresp="#seg2">Der Familienname jenes Paters <rs ref="index:d14380e10440">Benedikt</rs>, der in <rs ref="index:d14380e13185">Freising</rs> dem Bischof als Geistlicher Rat, nicht als Beichtvater, dient,
+               lautet Eberschwang. Ein Brief an ihn würde sicher nicht ohne günstige Wirkung bleiben. Hingegen rät BF
+               davon ab, an den Präfekten des <rs ref="index:d14380e13239">Archivs</rs> zu schreiben; dies ist nämlich
+               nicht, wie er selbst jüngst fälschlich mitgeteilt hat <ref type="letter" target="letter:747">747</ref>,
+               <rs ref="index:d14380e18508">Johann Heinrich Franz Graf von Hohenwaldegg und Maxlrain</rs>, sondern der
+               Weihbischof <rs ref="index:d14380e46945">Johann Sigismund Zeller Freiherr von Leibersdorf</rs>. Dieser
+               ist zumeist weniger umgänglich als der Fürstbischof <rs ref="index:d14380e10663">Johann Franz Eckher von
+                  Kapfing</rs> selbst.</p>
+            <p corresp="#seg3">In einem Nachsatz spricht BF Grüße an BP aus.</p>
+            <p corresp="#seg4">In einem weiteren Nachsatz bemerkt BF, dass er mit einer Antwort noch vor der Abreise HPs und BPs aus
+               Österreich rechnet und diese seinerseits so rasch wie möglich erwidern will.</p>
+            </abstract>
       </profileDesc>
-      <revisionDesc>
-         <listChange>
-            <change type="creation" who="#ds" when="2017-06-19T11:37:26.074+02:00">Automatically upconverted from DOCX document.</change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
-   <text>
-      <front>
-         <div type="regest">
-            <p xml:space="preserve"><seg type="context" n="1" xml:id="d3e34004">Der Grund für die späte Antwort <rs type="person" role="sender">BFs</rs> liegt darin, dass der Zugang nicht nur zu den Fürsten, sondern auch zu anderen Großen schwierig ist, vor allem auf schriftlichem Weg. Unmittelbar nach dem Eintreffen von <rs type="person" role="sender">HPs</rs> Brief <ref type="letter">778</ref> hat <rs type="person" role="sender">BF</rs> nach München geschrieben, um Auskunft einzuholen, ob der kurfürstliche Bibliothekar (Philipp Alois Ferb) Besucher einlassen und ihnen auch die Einsichtnahme von Handschriften gestatten würde. Aus dem Antwortschreiben einer Dame, welche für ihn bei dem Bibliothekar vorgesprochen hat, zitiert <rs type="person" role="sender">BF</rs> eine Passage, wonach die Benutzung der Bibliothek für Fremde erlaubt ist, sofern sie keine für Bayern möglicherweise schädlichen Dokumente einsehen wollen; sollten sie aber Bücher entlehnen wollen, um Abschriften anfertigen zu lassen, muss an höherer Stelle um Erlaubnis gefragt werden. Selbst an den Bibliothekar zu schreiben, wie dies BP beabsichtigt, wird daher von großem Vorteil sein. Falls <rs type="person" role="sender">HP</rs> wünscht, dass <rs type="person" role="sender">BF</rs> in dieser Angelegenheit noch weitere Schritte setzt, soll er ihn davon benachrichtigen.</seg><seg type="context" n="2" xml:id="d3e34009">Der Familienname jenes Paters Benedikt, der in Freising dem Bischof als Geistlicher Rat, nicht als Beichtvater, dient, lautet Eberschwang. Ein Brief an ihn würde sicher nicht ohne günstige Wirkung bleiben. Hingegen rät <rs type="person" role="sender">BF</rs> davon ab, an den Präfekten des Archivs zu schreiben; dies ist nämlich nicht, wie er selbst jüngst fälschlich mitgeteilt hat <ref type="letter">747</ref>, Johann Heinrich Franz Graf von Hohenwaldegg und Maxlrain, sondern der Weihbischof Johann Sigismund Zeller Freiherr von Leibersdorf. Dieser ist zumeist weniger umgänglich als der Fürstbischof Johann Franz Eckher von Kapfing selbst.</seg><seg type="context" n="3" xml:id="d3e34014">In einem Nachsatz spricht <rs type="person" role="sender">BF</rs> Grüße an BP aus.</seg><seg type="context" n="4" xml:id="d3e34016">In einem weiteren Nachsatz bemerkt BF, dass er mit einer Antwort noch vor der Abreise <rs type="person" role="sender">HPs</rs> und BPs aus Österreich rechnet und diese seinerseits so rasch wie möglich erwidern will.</seg></p>
-         </div>
-         <div type="editorialNote">
-            <div type="address">
-               <ab>
-                  <hi rend="italic" xml:space="preserve">Plurimum reverendo religiosissimo ac clarissimo domino patri Hieronymo Pez ordinis sanctissimi patris Benedicti, antiquissimi ac florentissimi monasterii Mellicensis capitulari dignissimo, domino patrono ac amico suo plurimum observando. Closter Mölkh in Oesterreich. Cito cito. </hi>Siegel.</ab>
-            </div>
-         </div>
-      </front>
-      <body>
-         <div type="edition">
-            <p xml:space="preserve"><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater Hieronyme, patrone ac amice observandissime.</p>
-            <p xml:space="preserve"><seg type="context" n="1" xml:space="preserve" xml:id="d3e34034">Cur in reddendis hucusque fuerim tardior? paucis accipe: velut principum, ita hodie etiam magnatum difficilior solet esse accessus, praesertim si negotia calamo expedienda. Vix tuas acceperam, mox alias Monachium destinabam, ut inquirerem, an <seg type="lemma" corresp="#d3e34057">bibliothecarius</seg> serenissimi electoris venturos aliquando admissurus et codicum manuscriptorum liberam facturus sit copiam? Responsum, quod tuli, cape in terminis: Wan frembde leut khomen etwas zusuechen in der bibliothec, so darf man ihnens schon verlauben, was nichts wider Bayrn ist, aufzusuechen; wan sie es aber gar haben wolten, ein oder anders buech mitzunehmen, umb herauszuschreiben, so mieste man hocher orths anfragen. Haec ex litteris <seg type="lemma" corresp="#d3e34063">cuiusdam dominae</seg>, quae domino bibliothecario meo nomine inserviit; plurimum proinde commodi habebunt litterae, quas clarissimus tuus germanus ad praefatum dominum destinare cogitat. Si ulteriora desuper a me petas, instrui cupio; agam vestrum <pb n="1v"/> hoc negotium quasi meum. </seg><seg type="context" n="2" xml:space="preserve" xml:id="d3e34038">Patris Benedicti Frisingensis celsissimo a consiliis, non confessionibus, cognomen est Eberschwang; hunc si litteris conveniret melleus tuus Bernardus, haud absque fructu futuras crederem. Nolim tamen similes ad archivii praesidem dirigi, is siquidem reverendissimus dominus dominus <seg type="lemma" corresp="#d3e34067">baro a Zallern</seg> suffraganeus (non comes a Mäxlrain, velut nuper, sed perperam, scripsi) difficilior ipso solet esse celsissimo principe. Et haec fere sunt, quae proximis a me litteris scire desiderabas. Da veniam, amice, succincto nimium hodie calamo, futuro deinceps prolixiori; et interim vale.</seg></p>
-            <p xml:space="preserve">Amicissimi Hieronymi sincerissimus pater Benedictus Friepeis manu propria.</p>
-            <p xml:space="preserve">Raptim ex Monte Sancto Andex 7. Maii 1717.</p>
-            <p xml:space="preserve"><seg type="context" n="3" xml:space="preserve" xml:id="d3e34046">Singulari patrono ac amico meo domino patri Bernardo devotissima mea obsequia.</seg></p>
-            <p xml:space="preserve"><pb n="2r"/> <seg type="context" n="4" xml:space="preserve" xml:id="d3e34051">Expsecto [<hi rend="italic">sic</hi>] responsorias <seg type="lemma" corresp="#d3e34073">ante vestrum ex Austria abitum</seg>, daturus quam primum reciprocas.</seg></p>
-         </div>
-      </body>
-      <back>
-         <div type="commentary">
-            <note xml:id="d3e34057">
-               <ref type="context">1</ref>
-               <label>bibliothecarius</label><p> Vgl. <ref type="letter">747</ref> &lt;4&gt;.
-               </p></note>
-            <note xml:id="d3e34063">
-               <ref type="context">1</ref>
-               <label>cuiusdam dominae</label><p>Die Angabe ist in Ermangelung weiterer Hinweise zu
+   <standOff>
+      <listAnnotation type="commentary">
+         <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
+            <mentioned>bibliothecarius</mentioned>
+            <p> Vgl. <ref type="letter" target="letter:747">747</ref> <ref target="letter:747#seg4">4</ref>.
+               </p>
+         </note>
+         <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
+            <mentioned>cuiusdam dominae</mentioned>
+            <p>Die Angabe ist in Ermangelung weiterer Hinweise zu
                   einer Identifizierung nicht ausreichend. Eine Präsenz in München einschließlich
                   der Möglichkeit von Kontakten zum Umfeld des Hofes ergab sich für Andechs
                   insbesondere aus dem Besitz der Gruftkirche sowie aus der Betreuung des
-                  Benediktinerinnenklosters auf dem Lilienberg: vgl. <rs type="bibl"
-                     key="bibl:17876">Lechner, Benediktiner</rs> 137; <rs type="bibl"
-                     key="bibl:19268">Sattler, Andechs</rs> 539–543.</p></note>
-            <note xml:id="d3e34067">
-               <ref type="context">2</ref>
-               <label>baro a Zallern</label><p><rs type="bibl" key="bibl:15306">Bögl,
-                     Weihbischöfe</rs> 450; <rs type="bibl" key="bibl:16642">Greipl, Zeller</rs>;
-                  vgl. <rs type="bibl" key="bibl:16598">Götz, Kunst in Freising</rs> 86, 88, 222;
-                     <rs type="bibl" key="bibl:17206">Hubensteiner, Geistliche Stadt</rs> 47–50.
+                  Benediktinerinnenklosters auf dem Lilienberg: vgl. <rs type="bibl" ref="bibl:17876">Lechner, Benediktiner</rs> 137; <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs> 539–543.</p>
+         </note>
+         <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
+            <mentioned>baro a Zallern</mentioned>
+            <p><rs type="bibl" ref="bibl:15306">Bögl,
+                     Weihbischöfe</rs> 450; <rs type="bibl" ref="bibl:16642">Greipl, Zeller</rs>;
+                  vgl. <rs type="bibl" ref="bibl:16598">Götz, Kunst in Freising</rs> 86, 88, 222;
+                     <rs type="bibl" ref="bibl:17206">Hubensteiner, Geistliche Stadt</rs> 47–50.
                   Hinsichtlich der Zuständigkeit für das Domkapitelarchiv scheint freilich BFs
-                  frühere Auskunft doch richtig gewesen zu sein: vgl. <ref type="letter">747</ref>
-                  &lt;5&gt;. Möglicherweise war es die Annahme einer Verknüpfung dieser
+                  frühere Auskunft doch richtig gewesen zu sein: vgl. <ref type="letter" target="letter:747">747</ref>
+                  <ref target="letter:747#seg5">5</ref>. Möglicherweise war es die Annahme einer Verknüpfung dieser
                   Verantwortung mit der Dignität des Dompropstes – welche nicht Maxlrain, sondern
                   Zeller bekleidete –, die BF veranlasste, seine früheren Angaben zu korrigieren,
                   allerdings in einer Weise, die anscheinend einen neuerlichen Irrtum mit sich
-                  brachte.</p></note>
-            <note xml:id="d3e34073">
-               <ref type="context">4</ref>
-               <label>ante ... abitum</label><p>Der Aufbruch HPs und BPs zu ihrer Bibliotheksreise fiel wohl auf den 1. Juni 1717: vgl. Anhang III.2. Ob HP bis dahin nochmals an BF schrieb, ist nicht festzustellen.</p></note>
-         </div>
-      </back>
+                  brachte.</p>
+         </note>
+         <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
+            <mentioned>ante ... abitum</mentioned>
+            <p>Der Aufbruch HPs und BPs zu ihrer Bibliotheksreise fiel wohl auf den 1. Juni 1717: vgl. Anhang III.2. Ob HP bis dahin nochmals an BF schrieb, ist nicht festzustellen.</p>
+         </note>
+      </listAnnotation>
+   </standOff>
+   <text>
+      <front>
+         <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Hieronymo Pez ordinis sanctissimi patris Benedicti, antiquissimi ac florentissimi monasterii Mellicensis capitulari dignissimo, domino patrono ac amico suo plurimum observando. Closter Mölkh in Oesterreich. Cito cito. <note type="annotation">Siegel.</note></p>
+      </front>
+      <body>
+         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater Hieronyme, patrone ac amice observandissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Cur in reddendis hucusque fuerim tardior? paucis accipe: velut principum, ita hodie etiam magnatum difficilior solet esse accessus, praesertim si negotia calamo expedienda. Vix tuas acceperam, mox alias Monachium destinabam, ut inquirerem, an <anchor xml:id="n1"/>bibliothecarius<anchor xml:id="n1e"/> serenissimi electoris venturos aliquando admissurus et codicum manuscriptorum liberam facturus sit copiam? Responsum, quod tuli, cape in terminis: Wan frembde leut khomen etwas zusuechen in der bibliothec, so darf man ihnens schon verlauben, was nichts wider Bayrn ist, aufzusuechen; wan sie es aber gar haben wolten, ein oder anders buech mitzunehmen, umb herauszuschreiben, so mieste man hocher orths anfragen. Haec ex litteris <anchor xml:id="n2"/>cuiusdam dominae<anchor xml:id="n2e"/>, quae domino bibliothecario meo nomine inserviit; plurimum proinde commodi habebunt litterae, quas clarissimus tuus germanus ad praefatum dominum destinare cogitat. Si ulteriora desuper a me petas, instrui cupio; agam vestrum <pb n="1v"/> hoc negotium quasi meum. </ab>
+         <ab resp="#editor" xml:id="seg2">Patris Benedicti Frisingensis celsissimo a consiliis, non confessionibus, cognomen est Eberschwang; hunc si litteris conveniret melleus tuus Bernardus, haud absque fructu futuras crederem. Nolim tamen similes ad archivii praesidem dirigi, is siquidem reverendissimus dominus dominus <anchor xml:id="n3"/>baro a Zallern<anchor xml:id="n3e"/> suffraganeus (non comes a Mäxlrain, velut nuper, sed perperam, scripsi) difficilior ipso solet esse celsissimo principe. Et haec fere sunt, quae proximis a me litteris scire desiderabas. Da veniam, amice, succincto nimium hodie calamo, futuro deinceps prolixiori; et interim vale.</ab>
+         <closer>Amicissimi Hieronymi sincerissimus pater Benedictus Friepeis manu propria.</closer>
+         <closer>Raptim ex Monte Sancto Andex 7. Maii 1717.</closer>
+         <closer xml:id="seg3">Singulari patrono ac amico meo domino patri Bernardo devotissima mea obsequia.</closer>
+         <closer xml:id="seg4">  responsorias <anchor xml:id="n4"/>ante vestrum ex Austria abitum<anchor xml:id="n4e"/>, daturus quam primum reciprocas.<pb n="2r"/> </closer>
+      </body>
    </text>
 </TEI>
