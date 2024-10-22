@@ -20,6 +20,7 @@ COL_URIS = set()
 
 
 files = sorted(glob.glob("data/editions/*.xml"))
+files = files[:20]
 for x in tqdm(files):
     doc = TeiReader(x)
     cur_col_id = os.path.split(x)[-1].replace(".xml", "")
@@ -71,7 +72,7 @@ for x in tqdm(files):
         )
     if end:
         g.add(
-            (cur_doc_uri, ACDH["hasCoverageEndDate"], Literal(start, datatype=XSD.date))
+            (cur_doc_uri, ACDH["hasCoverageEndDate"], Literal(start, datatype=XSD.date))  # noqa: 501
         )
 
     # hasExtent
