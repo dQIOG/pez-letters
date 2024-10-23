@@ -8,6 +8,7 @@ from acdh_tei_pyutils.utils import extract_fulltext
 from rdflib import Namespace, URIRef, RDF, Graph, Literal, XSD
 
 to_ingest = "to_ingest"
+shutil.rmtree(to_ingest, ignore_errors=True)
 os.makedirs(to_ingest, exist_ok=True)
 g = Graph().parse("arche_seed_files/arche_constants.ttl")
 g_repo_objects = Graph().parse("arche_seed_files/repo_objects_constants.ttl")
@@ -35,6 +36,20 @@ for x in tqdm(files):
             cur_doc_uri,
             ACDH["hasLicense"],
             URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-4-0"),
+        )
+    )
+    g.add(
+        (
+            cur_doc_uri,
+            ACDH["hasLanguage"],
+            URIRef("https://vocabs.acdh.oeaw.ac.at/iso6393/deu"),
+        )
+    )
+    g.add(
+        (
+            cur_doc_uri,
+            ACDH["hasLanguage"],
+            URIRef("https://vocabs.acdh.oeaw.ac.at/iso6393/lat"),
         )
     )
 
@@ -105,6 +120,8 @@ print("writing graph to file")
 g.serialize("to_ingest/arche.ttl")
 
 files_to_ingest = glob.glob("./data/*/*.xml")
+files_to_ingest = files[:20]
+
 print(f"copying {len(files_to_ingest)} into {to_ingest}")
 for x in files_to_ingest:
     _, tail = os.path.split(x)
