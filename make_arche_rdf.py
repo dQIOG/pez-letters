@@ -34,13 +34,6 @@ for x in tqdm(files):
     g.add(
         (
             cur_doc_uri,
-            ACDH["hasLicense"],
-            URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-4-0"),
-        )
-    )
-    g.add(
-        (
-            cur_doc_uri,
             ACDH["hasLanguage"],
             URIRef("https://vocabs.acdh.oeaw.ac.at/iso6393/deu"),
         )
@@ -104,6 +97,39 @@ for x in tqdm(files):
         g.add(
             (cur_doc_uri, ACDH["hasExtent"], Literal("1 Seite", lang="de"))
         )
+    _, tail = os.path.split(x)
+    new_name = os.path.join(to_ingest, tail)
+    shutil.copy(x, new_name)
+
+# indices
+files = sorted(glob.glob("data/indices/*.xml"))
+
+for x in tqdm(files):
+    doc = TeiReader(x)
+    cur_col_id = os.path.split(x)[-1].replace(".xml", "")
+    # cur_doc_id = f"register-{cur_col_id}.xml"
+    cur_doc_id = f"{cur_col_id}.xml"
+    cur_doc_uri = URIRef(f"{TOP_COL_URI}/{cur_doc_id}")
+    g.add((cur_doc_uri, RDF.type, ACDH["Resource"]))
+    g.add((cur_doc_uri, ACDH["isPartOf"], URIRef(f"{TOP_COL_URI}/indices")))
+    title = extract_fulltext(doc.any_xpath(".//tei:titleStmt/tei:title[1]")[0])
+    g.add(
+        (
+            cur_doc_uri,
+            ACDH["hasTitle"],
+            Literal(f"{title}", lang="de"),
+        )
+    )
+    g.add(
+        (
+            cur_doc_uri,
+            ACDH["hasCategory"],
+            URIRef("https://vocabs.acdh.oeaw.ac.at/archecategory/text/tei"),
+        )
+    )
+    _, tail = os.path.split(x)
+    new_name = os.path.join(to_ingest, cur_doc_id)
+    shutil.copy(x, new_name)
 
 for x in COLS:
     for s in g.subjects(None, x):
@@ -118,12 +144,3 @@ g.parse("arche_seed_files/other_things.ttl")
 
 print("writing graph to file")
 g.serialize("to_ingest/arche.ttl")
-
-files_to_ingest = glob.glob("./data/*/*.xml")
-files_to_ingest = files[:20]
-
-print(f"copying {len(files_to_ingest)} into {to_ingest}")
-for x in files_to_ingest:
-    _, tail = os.path.split(x)
-    new_name = os.path.join(to_ingest, tail)
-    shutil.copy(x, new_name)
