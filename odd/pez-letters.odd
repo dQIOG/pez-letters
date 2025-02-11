@@ -49,12 +49,16 @@
                <constraintSpec ident="ref-assert-letter-links" scheme="schematron">
                   <constraint>
                      <!-- Letter references -->
-                     <sch:rule context="tei:ref[@type = 'letter'][. castable as xs:integer]">
-                        <sch:let name="letterPath" value="concat('../data/editions/pez_',format-number(xs:integer(.),'000'),'.xml')"/>
+                     <sch:rule context="tei:ref[@type = 'letter'][not(exists(@target))][if (contains(.,'#')) then substring-before(.,'#') castable as xs:integer else . castable as xs:integer]">
+                        <sch:let name="letterPath"
+                           value="concat('../data/editions/pez_',format-number(xs:integer(if (contains(.,'#')) then substring-before(.,'#') else .) ,'000'),'.xml')"/>
                         <sch:report test="not(doc-available($letterPath))">Referenz auf Brief ID <sch:value-of select="."/> lässt sich nicht auflösen. Document <sch:value-of select="$letterPath"/> not avaiable.</sch:report>
                      </sch:rule>
-                     <sch:rule context="tei:ref[@type = 'letter']">
-                        <sch:assert test=". castable as xs:integer">Briefreferenz ist keine Nummer</sch:assert>
+                     <sch:rule context="tei:ref[@type = 'letter'][not(exists(@target))]">
+                        <sch:assert test="if (contains(.,'#')) then substring-before(.,'#') castable as xs:integer else . castable as xs:integer">Briefreferenz ist keine Nummer</sch:assert>
+                     </sch:rule>
+                     <sch:rule context="tei:ref[exists(@target)][some $ref in tokenize(@target,' ') satisfies starts-with($ref, 'letter:')]">
+                        <sch:report test="some $ref in tokenize(@target,' ') satisfies not(doc-available(concat('../data/editions/pez_',format-number(xs:integer(if (contains($ref,'#')) then substring-before(substring-after($ref,'letter:'),'#') else substring-after($ref,'letter:')),'000'),'.xml',if(substring-after($ref,'#') != '') then concat('#',substring-after($ref,'#')) else '')))">Ein oder mehrere Referenzen auf Brief-IDs in "<sch:value-of select="@target"/>" lassen sich nicht auflösen.</sch:report>
                      </sch:rule>
                   </constraint>
                </constraintSpec>
