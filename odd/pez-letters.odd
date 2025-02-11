@@ -45,6 +45,45 @@
             <moduleRef key="textcrit" select="app lem listWit rdg witDetail witness"/>
             <moduleRef key="textstructure" select="TEI back body closer div front opener text"/>
 
+            <elementSpec ident="ref" module="core" mode="change">
+               <constraintSpec ident="ref-assert-letter-links" scheme="schematron">
+                  <constraint>
+                     <!-- Letter references -->
+                     <sch:rule context="tei:ref[@type = 'letter'][. castable as xs:integer]">
+                        <sch:let name="letterPath" value="concat('../data/editions/pez_',format-number(xs:integer(.),'000'),'.xml')"/>
+                        <sch:report test="not(doc-available($letterPath))">Referenz auf Brief ID <sch:value-of select="."/> lässt sich nicht auflösen. Document <sch:value-of select="$letterPath"/> not avaiable.</sch:report>
+                     </sch:rule>
+                     <sch:rule context="tei:ref[@type = 'letter']">
+                        <sch:assert test=". castable as xs:integer">Briefreferenz ist keine Nummer</sch:assert>
+                     </sch:rule>
+                  </constraint>
+               </constraintSpec>
+            </elementSpec>
+            
+            <elementSpec ident="ptr" module="core" mode="change">
+               <constraintSpec ident="ptr-assert-letter-links" scheme="schematron">
+                  <constraint>
+                     <!-- Letter references -->
+                     <sch:rule context="tei:ptr[some $ref in tokenize(@target,' ') satisfies starts-with($ref, 'letter:')]">
+                        <sch:report test="some $ref in tokenize(@target,' ') satisfies not(doc-available(concat('../data/editions/pez_',substring-after($ref,'letter:'),'.xml')))">Ein oder mehrere Referenzen auf Brief-IDs in "<sch:value-of select="@target"/>" lassen sich nicht auflösen.</sch:report>
+                     </sch:rule>
+                  </constraint>
+               </constraintSpec>
+               <attList>
+                  <attDef ident="type" mode="change">
+                     <valList type="closed">
+                        <valItem ident="next"/>
+                        <valItem ident="mentionedIn"/>
+                        <valItem ident="prev"/>
+                        <valItem ident="mentions"/>
+                        <valItem ident="relatedToTraditionOf"/>
+                        <valItem ident="sentWith"/>
+                        <valItem ident="UNKNOWN"/>
+                     </valList>
+                  </attDef>
+               </attList>
+            </elementSpec>
+            
             <elementSpec ident="rs" module="core" mode="change">
                <constraintSpec ident="rs-assert-index-links" scheme="schematron">
                   <constraint>
