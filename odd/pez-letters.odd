@@ -2,51 +2,70 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"  xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>TEI Customization for <title>Pez Digital Edition</title></title>
+            <principal>Thomas Wallnig</principal>
             <respStmt>
                <name>Daniel Schopper</name>
                <resp>creator</resp>
             </respStmt>
          </titleStmt>
          <publicationStmt>
-            <p>Publication Information</p>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Center for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2025-02-01">February 2025</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
          </publicationStmt>
          <sourceDesc>
-            <p>Information about the source</p>
+            <p>This is a born-digital document.</p>
          </sourceDesc>
       </fileDesc>
    </teiHeader>
    <text>
       <body>
          <schemaSpec ident="pez" start="TEI">
-            <moduleRef key="tei"/>
-            <moduleRef key="header"/>
-            <moduleRef key="core"/>
-            <moduleRef key="textstructure"/>
-            <moduleRef key="linking" include="seg ab anchor"/>
-            <moduleRef key="namesdates"/>
-            <moduleRef key="msdescription"/>
             <moduleRef key="analysis"/>
-            <moduleRef key="textcrit" include="app rdg lem witDetail listWit witness"/>
-            <moduleRef key="transcr" include="subst"/>
+            <moduleRef key="tei"/>
+            <moduleRef key="core" select="add author bibl biblScope choice corr date del gap head hi listBibl mentioned note orig p pb ptr publisher ref relatedItem resp respStmt rs sic term title"/>
+            <moduleRef key="header" select="abstract classCode correspAction correspContext correspDesc editionStmt encodingDesc fileDesc idno keywords listPrefixDef notesStmt prefixDef principal profileDesc publicationStmt seriesStmt sourceDesc teiHeader textClass titleStmt"/>
+            <moduleRef key="linking" select="ab anchor listAnnotation seg standOff"/>
+            <moduleRef key="msdescription" select="institution locus msDesc msIdentifier repository"/>
+            <moduleRef key="namesdates" select="orgName persName placeName"/>
+            <moduleRef key="textcrit" select="app lem listWit rdg witDetail witness"/>
+            <moduleRef key="textstructure" select="TEI back body closer div front opener text"/>
+
             <elementSpec ident="rs" module="core" mode="change">
                <constraintSpec ident="rs-assert-index-links" scheme="schematron">
                   <constraint>
                      <!-- Index references -->
                      <sch:rule context="tei:rs[starts-with(@key, 'index:')]">
                         <sch:let name="path-to-indexes" value="'../data/legacy_indices/'"/>
-                        <sch:let name="index-files" value="for $i in (65 to 90) return doc(concat($path-to-indexes,'/',codepoints-to-string($i),'.xml')) "/>
-                        <sch:assert test="substring-after(@key,'index:') = $index-files//tei:item/@xml:id">Kein Index-Eintrag für ID '<sch:value-of select="substring-after(@key,'index:')"/>' gefunden.</sch:assert>
+                        <sch:let name="index-files"
+                           value="for $i in (65 to 90) return doc(concat($path-to-indexes,'/',codepoints-to-string($i),'.xml')) "/>
+                        <sch:assert
+                           test="substring-after(@key,'index:') = $index-files//tei:item/@xml:id"
+                           >Kein Index-Eintrag für ID '<sch:value-of
+                              select="substring-after(@key,'index:')"/>' gefunden.</sch:assert>
                      </sch:rule>
                      <!-- Bibliography references -->
                      <sch:rule context="tei:rs[@type = 'bibl']">
                         <sch:let name="path-to-bibliography" value="'../data/indices/listbibl.xml'"/>
                         <sch:let name="bibliography" value="doc($path-to-bibliography)"/>
-                        <sch:assert test="concat('b',substring-after(@key,'bibl:')) = $bibliography//tei:biblStruct/@xml:id">Kein Index-Eintrag für "<sch:value-of select="."/>" (ID <sch:value-of select="substring-after(@key,'bibl:')"/>) gefunden.</sch:assert>
+                        <sch:assert
+                           test="concat('b',substring-after(@ref,'bibl:')) = $bibliography//tei:biblStruct/@xml:id"
+                           >Kein Index-Eintrag für "<sch:value-of select="."/>" (ID <sch:value-of
+                              select="substring-after(@ref,'bibl:')"/>) gefunden.</sch:assert>
                      </sch:rule>
                   </constraint>
                </constraintSpec>
