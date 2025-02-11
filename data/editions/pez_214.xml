@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="214" xml:id="pez-0214">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Placidus Haiden an Bernhard Pez. 1712-02-27. Niederaltaich.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">214</idno>
          </publicationStmt>
          <seriesStmt>
@@ -41,10 +53,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -67,10 +80,12 @@
             </correspContext>
          </correspDesc>
          <abstract>
-            <p corresp="#seg1"><rs type="person">PH</rs> hat nach seiner Rückkehr aus <rs ref="index:d14380e29936">München</rs> die <rs ref="index:d10854e23782">Enzyklik</rs> BPs <ref type="letter" target="letter:212">212</ref> samt dem Schriftstellerkatalog vorgefunden. Er hofft, dass die bisher säumigen deutschen Klöster einen gebührlichen Beitrag leisten werden, und bittet BP um weitere Exemplare, damit <rs type="person">PH</rs> sie an alle jene Klöster in <rs ref="index:d10854e2645">Ober-</rs> und <rs ref="index:d14380e4305">Niederbayern</rs> (utraque Bavaria) bis <rs ref="index:d14380e3233">Augsburg</rs> verteilen kann, die bisher nichts geliefert haben. Das Eingesendete will <rs type="person">PH</rs> dann für BP auf eigene Kosten nach <rs ref="index:d14380e28088">Melk</rs> weiterleiten.</p>
-            <p corresp="#seg2"><rs type="person">PH</rs> möchte gerne mehr erfahren über die schriftstellerische Tätigkeit des <rs ref="index:d10854e1397">Arnold</rs> von <rs ref="index:d10854e21230">Niederaltaich</rs>, der in BPs Katalog zum 10. Jahrhundert aufscheint, sowie des Erzbischofs <rs ref="index:d10854e30717">Thiemo</rs> von <rs ref="index:d14380e39054">Salzburg</rs>, der Professe von Niederaltaich war.</p>
+            <p corresp="#seg1">
+               <rs type="person">PH</rs> hat nach seiner Rückkehr aus <rs ref="index:d14380e29936">München</rs> die <rs ref="index:d10854e23782">Enzyklik</rs> BPs <ref type="letter" target="letter:212">212</ref> samt dem Schriftstellerkatalog vorgefunden. Er hofft, dass die bisher säumigen deutschen Klöster einen gebührlichen Beitrag leisten werden, und bittet BP um weitere Exemplare, damit <rs type="person">PH</rs> sie an alle jene Klöster in <rs ref="index:d10854e2645">Ober-</rs> und <rs ref="index:d14380e4305">Niederbayern</rs> (utraque Bavaria) bis <rs ref="index:d14380e3233">Augsburg</rs> verteilen kann, die bisher nichts geliefert haben. Das Eingesendete will <rs type="person">PH</rs> dann für BP auf eigene Kosten nach <rs ref="index:d14380e28088">Melk</rs> weiterleiten.</p>
+            <p corresp="#seg2">
+               <rs type="person">PH</rs> möchte gerne mehr erfahren über die schriftstellerische Tätigkeit des <rs ref="index:d10854e1397">Arnold</rs> von <rs ref="index:d10854e21230">Niederaltaich</rs>, der in BPs Katalog zum 10. Jahrhundert aufscheint, sowie des Erzbischofs <rs ref="index:d10854e30717">Thiemo</rs> von <rs ref="index:d14380e39054">Salzburg</rs>, der Professe von Niederaltaich war.</p>
             <p corresp="#seg3">Das Werk über die <rs ref="index:d14380e12712">französischen</rs> Schriftsteller (<rs ref="index:d10854e6896">Duchesne, „Historiae Francorum scriptores“</rs>?) findet sich weder in <rs ref="index:d14380e36631">Regensburg</rs>, wie <rs type="person">PH</rs> unlängst brieflich erfahren hat, noch in <rs ref="index:d14380e29936">München</rs>, wo er selbst nachforschen konnte.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -115,7 +130,8 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, patrone colendissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, patrone colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">Monachio redux plurimum reverendae dominationis suae literas reperi <anchor xml:id="n1"/>cum accluso catalogo<anchor xml:id="n1e"/>. Deus optimus maximus fortunet consilia et Germanos nostros plus aequo negotium morantes tandem conspirare faciat ad ferendas in communi causa suppetias! Ego sane obtestor iterum clarissimam dominationem, ut <sic>nae</sic>  mihi parcat, sed iussa et voluntatem suam in promovendo opere confidenter semper aperiat; quem in finem optarem plura exemplaria epistolae encyclicae cum elencho scriptorum sacri ordinis nostri, quae una cum monitoriis per utramque Bavariam Augustam usque Vindelicorum ad illos saltem destinare proposui, qui nullam hactenus iuxta informationem mihi desuper faciendam pro egregio argumento contulerunt operam: quorum deinde monumenta hic recipere et absque cuiusvis impensis aut apprehensa forte molestia plurimum reverendae suae dominationi transmittere vellem. </ab>
          <ab resp="#editor" xml:id="seg2">Interea curiosius exspecto, quonam scribendi genere <anchor xml:id="n2"/>Arnoldus<anchor xml:id="n2e"/> Nideraltahensis, quem catalogus decimo Christi saeculo floruisse perhibet, occupatus fuerit, sicuti et beatus <anchor xml:id="n3"/>Thiemo archiepiscopus<anchor xml:id="n3e"/> Salisburgensis huius <pb n="1v"/> loci professus. </ab>
          <ab resp="#editor" xml:id="seg3">Tomi desiderati <anchor xml:id="n4"/>scriptorum Francicorum<anchor xml:id="n4e"/> nec Ratisbonae, ut novissimae ferunt literae, nec Monachii, ut ipsemet fui expertus, reperti fuere. Commendo me et properanti calamo veniam quam humillime precor.</ab>

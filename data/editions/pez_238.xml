@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="238" xml:id="pez-0238">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an die deutschen Benediktinerklöster. LE 2. 1712-04-14. Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">238</idno>
          </publicationStmt>
          <seriesStmt>
@@ -32,10 +44,11 @@
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1:
                   1709–1715.</bibl>
             </relatedItem>
-            
             <relatedItem type="instanceOf">
                <bibl>
-                  <author><rs type="bibl" ref="bibl:20186">Bernhard Pez</rs></author>
+                  <author>
+                     <rs type="bibl" ref="bibl:20186">Bernhard Pez</rs>
+                  </author>
                   <title>Litterae encyclicae 2</title>
                </bibl>
             </relatedItem>
@@ -52,10 +65,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,7 +91,7 @@
             <p corresp="#seg2">Dennoch verbleiben zahlreiche Benediktinerklöster in <rs ref="index:d14380e9395">Deutschland</rs> (Germania), die noch keine Schriftstellerkataloge eingesendet haben. BP bittet deshalb nochmals darum, in jedem Kloster einen Mitbruder mit dem Erstellen eines solchen Verzeichnisses aus den hauseigenen Quellen zu beauftragen. Diese sollen dann an ihn entweder direkt nach <rs ref="index:d14380e28088">Melk</rs> oder in den <rs ref="index:d10854e33557">Melkerhof</rs> zu <rs ref="index:d14380e45571">Wien</rs> eingesendet werden.</p>
             <p corresp="#seg3">Da BP nicht wie <rs ref="index:d14380e43380">Trithemius</rs> und <rs ref="index:d14380e46413">Wion</rs> eine bloße Namensliste bieten will, ersucht er die beauftragten Berichterstatter, auch über Herkunft, Ehren und Ämter, Tugenden, Lehrer und Schüler, Freunde und Korrespondenten sowie über das Todesdatum oder wenigstens ein Floruit der genannten Schriftsteller Auskunft zu geben. Bei handschriftlichen Werken soll angegeben werden, ob sie noch vorhanden sind; bei gedruckten Werken, wo, wann und in welchem Format sie erschienen sind. Besonders für die Zeit vor 1500 wünscht BP, auch von den geringsten Werken unterrichtet zu werden, etwa Chroniken oder Heiligenviten; denn alle Gelehrten wissen, wie nutzbringend derlei Informationen für die Literargeschichte (res litteraria), besonders für die Erforschung des Mittelalters (historicum mediae aetatis studium) sind.</p>
             <p corresp="#seg4">Als Ansporn legt BP eine provisorische Liste (catalogus) benediktinischer Schriftsteller in Deutschland vor. Er ersucht alle Gelehrten gleich welchen Ordens oder Standes, ihm Auslassungen oder Fehler darin zur Kenntnis zu bringen, und verspricht, alle, die solche Beiträge leisten, im fertigen Werk ehrenvoll zu erwähnen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -97,7 +111,9 @@
             <mentioned>praeceptorum ... litterarium commercium</mentioned>
             <p>Diese Frage nach den gelehrten Kontakten ist in solcher Ausführlichkeit
                   gleichfalls neu. Jene nach dem „iudicium“ anderer Gelehrter über die Werke (vgl.
-                     <ref type="letter" target="letter:91">91</ref> <ref target="letter:91#seg3">3</ref>, <ref type="letter" target="letter:188">188</ref> <ref target="letter:188#seg2">2</ref>)
+                     <ref type="letter" target="letter:91">91</ref>
+               <ref target="letter:91#seg3">3</ref>, <ref type="letter" target="letter:188">188</ref>
+               <ref target="letter:188#seg2">2</ref>)
                   hat hingegen keinen Eingang in die gedruckte Enzyklik gefunden.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
@@ -119,12 +135,14 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Reverendissimi perillustres ac amplissimi domini domini abbates, plurimum reverendi religiosissimi ac clarissimi domini patres priores, caeterique admodum reverendi ac doctissimi domini ordinis sancti patris Benedicti professi in Germania.</opener>
+         <opener>
+            <pb n="1r"/> Reverendissimi perillustres ac amplissimi domini domini abbates, plurimum reverendi religiosissimi ac clarissimi domini patres priores, caeterique admodum reverendi ac doctissimi domini ordinis sancti patris Benedicti professi in Germania.</opener>
          <ab resp="#editor" xml:id="seg1">Nullus dubito, quin <anchor xml:id="n1"/>Bibliothecae Benedictinae universalis<anchor xml:id="n1e"/> a me scribendae fama ad plerosque vestrum pervenerit, reverendissimi perillustres ac amplissimi domini abbates etc., utpote quos encyclica epistola ad conferendam opem et symbolam dudum invitaveram. Nec est, quod me laboris tametsi pene infiniti admodum poeniteat. Namque tot tamque in me adiuvando ferventes vestrum quam plurimos adeo diligentes in submittendis doctissimorum concapitularium nominibus amicos adhuc expertus sum, ut nihil supra sit. </ab>
          <ab resp="#editor" xml:id="seg2">Enimvero utut haec ita se habeant, restant tamen non pauca ordinis Benedictini in Germania monasteria, quae mihi nullam penitus suorum scriptorum notitiam copiamve adhuc fecere. Quare denuo et iteratis precibus omnes reverendissimi perillustres ac amplissimi domini abbates etc. enixissime rogandi videbantur, ut in suis quique celeberrimis monasteriis unum aliquem eruditum virum deligere dignarentur, qui omnium suorum clarissimorum dominorum concapitularium, qui aliquid unquam litteris commendarunt, nomina ex loci monumentis eruta et collecta ad me seu recta Mellicium seu Viennam ad nostram domum Mellicensem vulgo Mölcker-Hof dictam mittat. </ab>
          <ab resp="#editor" xml:id="seg3">Porro autem, cum mihi <anchor xml:id="n2"/>non sit animus cum Trithemio et Wione<anchor xml:id="n2e"/> nudum solummodo nostrorum authorum catalogum texere, sed etiam congruo quemque elogio exornare constitutum sit, hunc admodum reverendum dominum collectorem vehementer rogo, ut ne obliviscatur patriae authoris, item honorum, munerum, virtutum, <anchor xml:id="n3"/>praeceptorum et discipulorum, quos audiit docuitve, amicorum, quibuscum litterarium commercium<anchor xml:id="n3e"/> exercuit, anni, diei et loci, quo et ubi obierit aut saltem floruerit. An libri sint manuscripti, et exstent adhuc? an typis ubi, quando et in qua forma editi etc., quae ad uberiorem authoris commendationem aliquid faciant. Optarem omnino, ut etiam minimorum libellorum ante annum 1500 conscriptorum, uti sunt chronica, vitae sanctorum etc., ratio haberetur. Norunt enim <anchor xml:id="n4"/>eruditi omnes, quantum commodi exinde in rem litterariam, praesertim in historicum mediae aetatis studium<anchor xml:id="n4e"/> derivetur. </ab>
          <ab resp="#editor" xml:id="seg4">Ad quod praestandum ut omnes, maxime meos Germanos, incitarem, en interim subiectum catalogum eorum ordinis Benedictini scriptorum, qui in una nostra Germania floruerunt! Et quoniam hoc opus non nisi omnibus numeris absolutum in lucem edere constitui, omnes cuiuscunque demum ordinis aut status eruditos viros, quibuscum hunc qualemcunque catalogum communicari percupio, rogo et hortor, ut si quid a me omissum, erratum aut quomodocunque peccatum deprehenderint, in tempore monere ne dedignentur. Agam tam collectoribus quam correctoribus maximas gratias eorumque honorificam in ipso opere facere mentionem neutiquam gravabor. Deus ter optimus maximus reverendissimas perillustres et amplissimas dominationes vestras tanquam praecipua sacri ordinis nostri ornamenta perpetuo fortunet!</ab>
-         <closer>Dedi in exempto nostro monasterio Mellicensi vulgo Mölck ordinis sancti patris Benedicti in Austria Inferiore ad Danubium anno 1712 <add><witDetail wit="#A">handschriftlich</witDetail>14. Aprilis</add>.</closer>
+         <closer>Dedi in exempto nostro monasterio Mellicensi vulgo Mölck ordinis sancti patris Benedicti in Austria Inferiore ad Danubium anno 1712 <add>
+               <witDetail wit="#A">handschriftlich</witDetail>14. Aprilis</add>.</closer>
          <closer>Pater Bernardus Pez ibidem professus et bibliothecarius.</closer>
       </body>
    </text>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="834" xml:id="pez-0834">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Roman Krinner an Bernhard Pez. 1717-10-18. Tegernsee.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">834</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -76,30 +89,33 @@
                <ptr type="mentions" target="letter:832"/>
             </correspContext>
          </correspDesc>
-         <textClass><keywords>
-            <term ref="index:d14380e5403">Bernhard von Waging</term>
-            <term ref="index:d14380e5419">Bernhard von Waging ; Defensorium Speculi pastorum. Ms. Tegernsee</term>
-            <term ref="index:d14380e5439">Bernhard von Waging ; Speculum pastorum. Ms. Tegernsee</term>
-            <term ref="index:d14380e10929">Eichstätt</term>
-            <term ref="index:d14380e16651">Guetrather, Petrus von</term>
-            <term ref="index:d14380e18904">Hueber, Alphons</term>
-            <term ref="index:d14380e20495">Johannes von Eych ; Epistola impugnatoria Speculi pastorum. Ms. Tegernsee</term>
-            <term ref="index:d14380e20854">Johannes von Würzburg ; Descriptio Terrae sanctae ; Ms. Tegernsee</term>
-            <term ref="index:d14380e23236">Krinner, Roman ; *Inhaltsangaben zur Kontroverse zwischen Bernhard von Waging und
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e5403">Bernhard von Waging</term>
+               <term ref="index:d14380e5419">Bernhard von Waging ; Defensorium Speculi pastorum. Ms. Tegernsee</term>
+               <term ref="index:d14380e5439">Bernhard von Waging ; Speculum pastorum. Ms. Tegernsee</term>
+               <term ref="index:d14380e10929">Eichstätt</term>
+               <term ref="index:d14380e16651">Guetrather, Petrus von</term>
+               <term ref="index:d14380e18904">Hueber, Alphons</term>
+               <term ref="index:d14380e20495">Johannes von Eych ; Epistola impugnatoria Speculi pastorum. Ms. Tegernsee</term>
+               <term ref="index:d14380e20854">Johannes von Würzburg ; Descriptio Terrae sanctae ; Ms. Tegernsee</term>
+               <term ref="index:d14380e23236">Krinner, Roman ; *Inhaltsangaben zur Kontroverse zwischen Bernhard von Waging und
          Johannes von Eych. Ms</term>
-            <term ref="index:d14380e34189">Pez, Bernhard ; Amt als Novizenmeister</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
-            <term ref="index:d14380e42111">Tegernsee</term>
-            <term ref="index:d14380e42212">Tegernsee ; Bibliothek ; Bernhard von Waging, Speculum pastorum. Ms</term>
-            <term ref="index:d14380e42219">Tegernsee ; Bibliothek ; Bernhard von Waging, Defensorium Speculi pastorum. Ms</term>
-            <term ref="index:d14380e42270">Tegernsee ; Bibliothek ; Johannes von Eych, Epistola impugnatoria Speculi pastorum.
+               <term ref="index:d14380e34189">Pez, Bernhard ; Amt als Novizenmeister</term>
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
+               <term ref="index:d14380e42111">Tegernsee</term>
+               <term ref="index:d14380e42212">Tegernsee ; Bibliothek ; Bernhard von Waging, Speculum pastorum. Ms</term>
+               <term ref="index:d14380e42219">Tegernsee ; Bibliothek ; Bernhard von Waging, Defensorium Speculi pastorum. Ms</term>
+               <term ref="index:d14380e42270">Tegernsee ; Bibliothek ; Johannes von Eych, Epistola impugnatoria Speculi pastorum.
          Ms</term>
-            <term ref="index:d14380e42294">Tegernsee ; Bibliothek ; Johannes von Speyer, Briefe. Ms</term>
-            <term ref="index:d14380e42303">Tegernsee ; Bibliothek ; Johannes von Würzburg, Descriptio Terrae sanctae. Ms</term>
-            <term ref="index:d14380e42401">Tegernsee ; Bibliothek ; Tesenbacher, Exhortatio ad fratres iuniores in Ebersberg
-         professos. Ms</term></keywords></textClass>
+               <term ref="index:d14380e42294">Tegernsee ; Bibliothek ; Johannes von Speyer, Briefe. Ms</term>
+               <term ref="index:d14380e42303">Tegernsee ; Bibliothek ; Johannes von Würzburg, Descriptio Terrae sanctae. Ms</term>
+               <term ref="index:d14380e42401">Tegernsee ; Bibliothek ; Tesenbacher, Exhortatio ad fratres iuniores in Ebersberg
+         professos. Ms</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">RKr ist höchst erfreut über den Brief BPs <ref type="letter" target="letter:832">832</ref> und über
                dessen wohlbehaltene Rückkehr von seiner <rs ref="index:d14380e34236">Bibliotheksreise</rs>. Er kann sich
@@ -127,19 +143,22 @@
             <p corresp="#seg5">In einem Postskriptum übermittelt RKr Empfehlungen seines Abtes <rs ref="index:d14380e16651">Petrus von
                Guetrather</rs>, der BP und <rs ref="index:d14380e34537">HP</rs> gerne bei einer anderen Gelegenheit,
                wenn sie weniger durch ihre gelehrten Arbeiten in Anspruch genommen sind, angemessen bewirten möchte.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>reditus</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:819">819</ref> <ref target="letter:819#seg1">1</ref>.</p>
+            <p> Vgl. <ref type="letter" target="letter:819">819</ref>
+               <ref target="letter:819#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>perpetuos carceres</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:273">273</ref> <ref target="letter:273#seg2">2</ref>,
-                     <ref type="letter" target="letter:505">505</ref> <ref target="letter:505#seg2">2</ref>.</p>
+            <p> Vgl. <ref type="letter" target="letter:273">273</ref>
+               <ref target="letter:273#seg2">2</ref>,
+                     <ref type="letter" target="letter:505">505</ref>
+               <ref target="letter:505#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned> Ex his ... descripsi</mentioned>
@@ -147,7 +166,8 @@
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
             <mentioned>Joannis ... non reperi</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:907">907</ref> <ref target="letter:907#seg3">3</ref>.
+            <p>Vgl. <ref type="letter" target="letter:907">907</ref>
+               <ref target="letter:907#seg3">3</ref>.
                   Die Bezeichnung des Verfassers als Bischof von Würzburg ist ein Irrtum
                RKrs.</p>
          </note>
@@ -185,13 +205,20 @@
    </standOff>
    <text>
       <front>
-         <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez, inclyti et exempti asceterii Mellicensis in Austria Inferiori ordinis sancti Benedicti capitulari, novitiorum magistro, historiographo, bibliothecario etc., patrono, confratri ac amico suo plurimum venerando. Closter Mölckh.<note type="annotation">Siegel.</note></p>
+         <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez, inclyti et exempti asceterii Mellicensis in Austria Inferiori ordinis sancti Benedicti capitulari, novitiorum magistro, historiographo, bibliothecario etc., patrono, confratri ac amico suo plurimum venerando. Closter Mölckh.<note type="annotation">Siegel.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater Bernarde, vir ac patrone pretiosissime et praecipue venerande etc.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater Bernarde, vir ac patrone pretiosissime et praecipue venerande etc.</opener>
          <ab resp="#editor" xml:id="seg1">Quanta me voluptate perfuderint tum tua, vir pretiosissime, epistola, tum tuus ex laboriosissimo itinere <anchor xml:id="n1"/>reditus<anchor xml:id="n1e"/>, nullis et ego sat verbis expressero. Imaginari mihi possum, quot labores, sudores ac molestias in perscrutandis antiquitatum monumentis ubique locorum pervoraveritis. Sed Deo laus, honor et gloria, quod comitantibus sanctis angelis suis viros de sacro ordine optime meritos salvos et incolumes reduxerit. </ab>
-         <ab resp="#editor" xml:id="seg2">Impensam a me operam non est, charissime Bernarde, quod laudes aut eapropter grates referas; si quid in vestras laudatissimas intentiones et desideria conferre potero, nunquam non in obsequia praesto ero. Interim doleo meas vices, quod tantus non sim, qui tam litteratis viris lumen opemque dare queat. Et quomodo dem, libris et antiquitatibus nostris velut ad <anchor xml:id="n2"/>perpetuos carceres<anchor xml:id="n2e"/> damnatis nec unquam visis mihi? Proinde in sancta quiete locatus, litterarios in communem usum scriptores precibus potius iuvabo quam opere. A vestro abitu quatuor codices impositis schedulis notati ad meas manus pervenerunt.<anchor xml:id="n3"/> Ex his, quae desiderabantur, descripsi<anchor xml:id="n3e"/>. <pb n="1v"/> </ab>
-         <ab resp="#editor" xml:id="seg3"> <choice><sic>Sed his</sic><corr>Quibus etiam</corr></choice> ex integro perlustratis <anchor xml:id="n4"/>Joannis episcopi Herbipolensis Itinerarium in Terram sanctam non reperi<anchor xml:id="n4e"/>. Forte erit in alio codice; hoc a reverendo patre Alphonso nostro edoctus, inserviam. </ab>
+         <ab resp="#editor" xml:id="seg2">Impensam a me operam non est, charissime Bernarde, quod laudes aut eapropter grates referas; si quid in vestras laudatissimas intentiones et desideria conferre potero, nunquam non in obsequia praesto ero. Interim doleo meas vices, quod tantus non sim, qui tam litteratis viris lumen opemque dare queat. Et quomodo dem, libris et antiquitatibus nostris velut ad <anchor xml:id="n2"/>perpetuos carceres<anchor xml:id="n2e"/> damnatis nec unquam visis mihi? Proinde in sancta quiete locatus, litterarios in communem usum scriptores precibus potius iuvabo quam opere. A vestro abitu quatuor codices impositis schedulis notati ad meas manus pervenerunt.<anchor xml:id="n3"/> Ex his, quae desiderabantur, descripsi<anchor xml:id="n3e"/>. <pb n="1v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <choice>
+               <sic>Sed his</sic>
+               <corr>Quibus etiam</corr>
+            </choice> ex integro perlustratis <anchor xml:id="n4"/>Joannis episcopi Herbipolensis Itinerarium in Terram sanctam non reperi<anchor xml:id="n4e"/>. Forte erit in alio codice; hoc a reverendo patre Alphonso nostro edoctus, inserviam. </ab>
          <ab resp="#editor" xml:id="seg4">Porro ut mihi antiquorum nostrorum characterem nonnihil familiarem redderem, perlegi <anchor xml:id="n5"/>Speculum pastorum et animarum rectorum authore Bernardo nostro de Bäging; et huius Speculi Refutationem a Joanne episcopo Eystettensi; ac demum Vindicias<anchor xml:id="n5e"/> seu Defensorium Speculi pastorum itidem Bernardi nostri. In horum tractatuum pia lectione video virum fuisse Bernardum dignum, qui prioratus munere fungeretur apud suos, et etiam suspiceretur ab episcopis. Ipsi tractatus, praecipue ultimus, sat longi sunt; et ingentem in describendo molem facerent, alias iam pridem avidis calamis in horum descriptionem depugnassem. Ne autem nescias, vir clarissime, horum tractatuum materiam capitumque ordinem, en tibi omnia<anchor xml:id="n6"/> in separata charta<anchor xml:id="n6e"/> exhibeo. Si quid ad rem vestram haec faciunt serviuntve, <pb n="2r"/> demum non paterer vestris desideriis a me deesse quidquam; dummodo iustum tempus indulseritis. Quare a vobis exspecto, quid sit factu opus. Me interim tibi tuoque amandissimo germano fratri praecipue in sanctas memorias animitus commendo ac perenno</ab>
          <closer>Charitatum vestrarum sincerissimus amicus et confrater pater Romanus manu propria.</closer>
          <closer>Sub dato Tegernsee 18. Octobris anno 1717.</closer>

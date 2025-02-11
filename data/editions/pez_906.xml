@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="906" xml:id="pez-0906">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Gerhard Cornelius van den Driesch an Bernhard Pez. 1718-02-19. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">906</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Die eindeutig lesbare Datumsangabe, der auch die Nummerierung entspricht, ist als Fehler GDs einzustufen, vor allem deswegen, weil dieser in 853 &lt;3&gt; angibt, die im Sommer 1717 erschienene „Epistola ad Menkenium“ des „Angelus Fonteius“ (Johann Benedikt Gentilotti) gelesen zu haben, bevor er BP kennenlernte, was die Existenz eines Briefes vom Februar 1717 ausschließt. Aufgrund der Inhalte des Briefes, die an jene von 897 anschließen, ist er in den Februar 1718 zu setzen.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,11 +89,13 @@
                <ptr type="next" target="letter:943"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e6918">Buchels, Johann</term>
-            <term ref="index:d14380e44110">Van den Driesch, Gerhard Cornelius ; Exercitationes oratoriae. Wien 1718 [recte:
-         Nürnberg oder Leipzig 1717]</term></keywords></textClass>
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e6918">Buchels, Johann</term>
+               <term ref="index:d14380e44110">Van den Driesch, Gerhard Cornelius ; Exercitationes oratoriae. Wien 1718 [recte:
+         Nürnberg oder Leipzig 1717]</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">GD hat <rs ref="index:d14380e6918">Johann Buchels</rs> übermittelt, was vereinbart war. Wenn BP in
                irgendeiner Sache weitere Hilfe brauchen kann, soll er nicht zögern, sie in Anspruch zu nehmen;
@@ -89,14 +103,15 @@
             <p corresp="#seg2">GD hat BP seine Werke („<rs ref="index:d14380e44110">Exercitationes oratoriae</rs>“) geschickt, obgleich
                er sie nicht für würdig hält, BPs Lippen als Salat zu dienen; er bittet um Mitteilung etwa gefundener
                Fehler. Er hofft, dass die Sendung für ihn Nutzen abwerfen wird.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>ad Buchelsium</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:897">897</ref> <ref target="letter:897#seg2">2</ref>.
+            <p> Vgl. <ref type="letter" target="letter:897">897</ref>
+               <ref target="letter:897#seg2">2</ref>.
                </p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2 839 897 897 Orationes sacrae miscellae patrum Societatis Jesu novissimae“">
@@ -124,9 +139,18 @@
    </standOff>
    <text>
       <body>
-         <opener><hi rend="Formatvorlage_Editionstext_+_(Latein)_Georgia_11_pt_Zchn">[</hi><pb n="1r"/> Admodum reverendo patri Bernardo Petzio viro doctissimo Gerardus Cornelius Drieschius salutem plurimam dicit.</opener>
-         <ab resp="#editor" xml:id="seg1">Dedi diligenter <anchor xml:id="n1"/>ad Buchelsium<anchor xml:id="n1e"/>, quas constitutas per nos <choice><sic>voluisse</sic><corr>voluisti</corr></choice>. Si qua in re opera nostra egeas, mi amantissime Pezi, cave sis, me praetereas; malam rem tibi accerses, si nimia me humanitate tua irritassis. Bene agier inter amicos et fideliter oportet. Haec mea est opinio de faciundis et colendis amicitiis. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n2"/>Opera<anchor xml:id="n2e"/> mea, tametsi minime dignas iudicarim tuis labris lactucas, misi tamen, ut amice abs te monear, si quid peccatum in iis deprehendas. Abeuntibus precatus sum bene: ite, inquiebam, hinc et ex institutione vestra curate, ut fructus aliquis ad <choice><sic>nos</sic><corr>me</corr></choice> perveniat. Vale meque, quod facis, ama.</ab>
+         <opener>
+            <hi rend="Formatvorlage_Editionstext_+_(Latein)_Georgia_11_pt_Zchn">[</hi>
+            <pb n="1r"/> Admodum reverendo patri Bernardo Petzio viro doctissimo Gerardus Cornelius Drieschius salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Dedi diligenter <anchor xml:id="n1"/>ad Buchelsium<anchor xml:id="n1e"/>, quas constitutas per nos <choice>
+               <sic>voluisse</sic>
+               <corr>voluisti</corr>
+            </choice>. Si qua in re opera nostra egeas, mi amantissime Pezi, cave sis, me praetereas; malam rem tibi accerses, si nimia me humanitate tua irritassis. Bene agier inter amicos et fideliter oportet. Haec mea est opinio de faciundis et colendis amicitiis. </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n2"/>Opera<anchor xml:id="n2e"/> mea, tametsi minime dignas iudicarim tuis labris lactucas, misi tamen, ut amice abs te monear, si quid peccatum in iis deprehendas. Abeuntibus precatus sum bene: ite, inquiebam, hinc et ex institutione vestra curate, ut fructus aliquis ad <choice>
+               <sic>nos</sic>
+               <corr>me</corr>
+            </choice> perveniat. Vale meque, quod facis, ama.</ab>
          <closer>Dabam Viennae ad Istrum XI. Kalendas Martias MDCCXVII.</closer>
       </body>
    </text>

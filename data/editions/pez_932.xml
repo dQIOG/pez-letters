@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="932" xml:id="pez-0932">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Edmond Martène an Bernhard Pez. 1718-04-21. Paris.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">932</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -75,58 +87,60 @@
                <ptr type="mentions" target="letter:931"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e83">Abdias ; De historia certaminis apostolici</term>
-            <term ref="index:d14380e1247">Ambrosius, hl ; Sancti Ambrosii Mediolanensis episcopi Opera ad manuscriptos codices
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e83">Abdias ; De historia certaminis apostolici</term>
+               <term ref="index:d14380e1247">Ambrosius, hl ; Sancti Ambrosii Mediolanensis episcopi Opera ad manuscriptos codices
          Vaticanos, Gallicanos, Belgicos etc. necnon ad editiones veteres emendata. Hg. von Jacques
          Du Frische und Nicolas Le Nourry. 2 Bde. Paris 1686–1690</term>
-            <term ref="index:d14380e2750">Anselm von Canterbury ; Sancti Anselmi ex Beccensi abbate Cantuarienis archiepiscopi
+               <term ref="index:d14380e2750">Anselm von Canterbury ; Sancti Anselmi ex Beccensi abbate Cantuarienis archiepiscopi
          Opera, nec non Eadmeri monachi Cantuariensis Historia novorum et alia opuscula. Hg. von
          Gabriel Gerberon. Paris 1675</term>
-            <term ref="index:d14380e3132">Athanasius, hl ; Sancti patris nostri Athanasii archiepiscopi Alexandrini Opera omnia,
+               <term ref="index:d14380e3132">Athanasius, hl ; Sancti patris nostri Athanasii archiepiscopi Alexandrini Opera omnia,
          quae extant vel quae eius nomine circumferuntur, ad manuscriptos codices Gallicanos,
          Vaticanos necnon ad Commelinas lectiones castigata. Hg. von Jacques Loppin, Bernard de
          Montfaucon und Antoine Pouget. 2 Bde. Paris 1698</term>
-            <term ref="index:d14380e5217">Berengar von Tours ; [unsichere Zuschreibung] Iuste iudex Jesu Christe</term>
-            <term ref="index:d14380e5312">Bernhard von Clairvaux, hl</term>
-            <term ref="index:d14380e8048">Christentum</term>
-            <term ref="index:d14380e10242">Durand, Ursin</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e12909">Frankreich, Franzosen , französisch ; Währung</term>
-            <term ref="index:d14380e16348">Gregor von Tours, hl ; Liber de miraculis sancti Andreae apostoli</term>
-            <term ref="index:d14380e17908">Helperich von Auxerre ; De computo</term>
-            <term ref="index:d14380e19180">Hugo von St. Viktor</term>
-            <term ref="index:d14380e20526">Johannes Gersen</term>
-            <term ref="index:d14380e22922">Konrad von Hirsau ; [unsichere Zuschreibung] Speculum virginum</term>
-            <term ref="index:d14380e25840">Mabillon, Jean ; Vetera analecta cum adnotationibus et aliquot disquisitionibus. 4 Bde.
+               <term ref="index:d14380e5217">Berengar von Tours ; [unsichere Zuschreibung] Iuste iudex Jesu Christe</term>
+               <term ref="index:d14380e5312">Bernhard von Clairvaux, hl</term>
+               <term ref="index:d14380e8048">Christentum</term>
+               <term ref="index:d14380e10242">Durand, Ursin</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e12909">Frankreich, Franzosen , französisch ; Währung</term>
+               <term ref="index:d14380e16348">Gregor von Tours, hl ; Liber de miraculis sancti Andreae apostoli</term>
+               <term ref="index:d14380e17908">Helperich von Auxerre ; De computo</term>
+               <term ref="index:d14380e19180">Hugo von St. Viktor</term>
+               <term ref="index:d14380e20526">Johannes Gersen</term>
+               <term ref="index:d14380e22922">Konrad von Hirsau ; [unsichere Zuschreibung] Speculum virginum</term>
+               <term ref="index:d14380e25840">Mabillon, Jean ; Vetera analecta cum adnotationibus et aliquot disquisitionibus. 4 Bde.
          Paris 1675–1685 ; Bd. 1 ; Darin: Helperich von Auxerre, Prologus in librum De
          computo</term>
-            <term ref="index:d14380e26614">Martène, Edmond ; [Edmond Martène, Ursin Durand] Thesaurus novus anecdotorum. 5 Bde.
+               <term ref="index:d14380e26614">Martène, Edmond ; [Edmond Martène, Ursin Durand] Thesaurus novus anecdotorum. 5 Bde.
          Paris 1717 ; Bd. 4 ; Darin: Berengar von Tours, Iuste iudex Jesu Christe</term>
-            <term ref="index:d14380e26669">Martène, Edmond ; Bibliotheksreise 1718 gemeinsam mit Ursin Durand</term>
-            <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
-            <term ref="index:d14380e29643">Mont-St.-Michel ; Bibliothek ; Petrus Abaelard, Sic et non. Ms</term>
-            <term ref="index:d14380e32978">Petrus Abaelard</term>
-            <term ref="index:d14380e32988">Petrus Abaelard ; Scito te ipsum</term>
-            <term ref="index:d14380e32993">Petrus Abaelard ; Sic et non</term>
-            <term ref="index:d14380e33001">Petrus Abaelard ; Sic et non ; Ms. Marmoutier</term>
-            <term ref="index:d14380e33008">Petrus Abaelard ; Sic et non ; Ms. Mont-St.-Michel</term>
-            <term ref="index:d14380e34102">Pez, Bernhard ; Bezeichnung als „ Spicilegium“</term>
-            <term ref="index:d14380e34132">Pez, Bernhard ; Syllabus. Ms</term>
-            <term ref="index:d14380e37588">Robert Pullen ; Roberti Pulli sacrae Romanae ecclesiae cardinalis et cancellarii,
+               <term ref="index:d14380e26669">Martène, Edmond ; Bibliotheksreise 1718 gemeinsam mit Ursin Durand</term>
+               <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
+               <term ref="index:d14380e29643">Mont-St.-Michel ; Bibliothek ; Petrus Abaelard, Sic et non. Ms</term>
+               <term ref="index:d14380e32978">Petrus Abaelard</term>
+               <term ref="index:d14380e32988">Petrus Abaelard ; Scito te ipsum</term>
+               <term ref="index:d14380e32993">Petrus Abaelard ; Sic et non</term>
+               <term ref="index:d14380e33001">Petrus Abaelard ; Sic et non ; Ms. Marmoutier</term>
+               <term ref="index:d14380e33008">Petrus Abaelard ; Sic et non ; Ms. Mont-St.-Michel</term>
+               <term ref="index:d14380e34102">Pez, Bernhard ; Bezeichnung als „ Spicilegium“</term>
+               <term ref="index:d14380e34132">Pez, Bernhard ; Syllabus. Ms</term>
+               <term ref="index:d14380e37588">Robert Pullen ; Roberti Pulli sacrae Romanae ecclesiae cardinalis et cancellarii,
          theologorum scholasticorum antiquissimi, Sententiarum libri octo. Item Petri Pictaviensis
          academiae Parisiensis olim cancellarii Sententiarum libri quinque. Hg. von Hugues Mathoud.
          Paris 1655</term>
-            <term ref="index:d14380e37598">Robert Pullen ; Roberti Pulli sacrae Romanae ecclesiae cardinalis et cancellarii,
+               <term ref="index:d14380e37598">Robert Pullen ; Roberti Pulli sacrae Romanae ecclesiae cardinalis et cancellarii,
          theologorum scholasticorum antiquissimi, Sententiarum libri octo. Item Petri Pictaviensis
          academiae Parisiensis olim cancellarii Sententiarum libri quinque. Hg. von Hugues Mathoud.
          Paris 1655 ; Darin: Walter von Mortagne, Epistola de anima Christi</term>
-            <term ref="index:d14380e38678">St.-Denis-en-France</term>
-            <term ref="index:d14380e38706">Sainte-Marthe, Denis de</term>
-            <term ref="index:d14380e44988">Walter von Mortagne ; Epistola de anima Christi</term>
-            <term ref="index:d14380e45012">Walter von Speyer ; ; Vita sancti Christophori</term>
-            <term ref="index:d14380e46348">Wilhelm Peraldus ; Expositio professionis monachorum</term></keywords></textClass>
+               <term ref="index:d14380e38678">St.-Denis-en-France</term>
+               <term ref="index:d14380e38706">Sainte-Marthe, Denis de</term>
+               <term ref="index:d14380e44988">Walter von Mortagne ; Epistola de anima Christi</term>
+               <term ref="index:d14380e45012">Walter von Speyer ; ; Vita sancti Christophori</term>
+               <term ref="index:d14380e46348">Wilhelm Peraldus ; Expositio professionis monachorum</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Den Brief BPs <ref type="letter" target="letter:931">931</ref> hat EM erhalten, ebenso acht Tage später
                das <rs ref="index:d14380e34132">Verzeichnis der unedierten Texte</rs> in BPs Besitz. Er gratuliert
@@ -170,7 +184,7 @@
             <p corresp="#seg5">Die <rs ref="index:d14380e26669">Reise EMs</rs> und <rs ref="index:d14380e10242">Ursin Durands</rs>
                verzögert sich und wird vielleicht sogar abgesagt werden müssen, weil einige Mitbrüder schwer erkrankt
                sind. Insbesondere <rs ref="index:d14380e38706">Denis de Sainte-Marthe</rs>, Prior von <rs ref="index:d14380e38678">St.-Denis</rs>, schwebt in Lebensgefahr.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -216,10 +230,11 @@
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
             <mentioned> edita ... Mathoud</mentioned>
             <p>Der Text ist tatsächlich an der von EM genannten
-                  Stelle publiziert: Roberti Pulli Sententiarum libri 332–334. Zu Mathoud vgl. <ref type="letter" target="letter:749">749 </ref><ref target="letter:749 #seg5">5</ref>. Auf den Hinweis EMs unterließ BP eine
+                  Stelle publiziert: Roberti Pulli Sententiarum libri 332–334. Zu Mathoud vgl. <ref type="letter" target="letter:749">749 </ref>
+               <ref target="letter:749 #seg5">5</ref>. Auf den Hinweis EMs unterließ BP eine
                   Edition, wies jedoch auf die Salzburger Überlieferung hin: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 1 lxxi. Zur gleichfalls letztlich nicht
                   ausgeführten Edition des anderen Briefes vgl. <ref type="letter" target="letter:1020">1020</ref>
-                  <ref target="letter:1020#seg3">3</ref>. </p>
+               <ref target="letter:1020#seg3">3</ref>. </p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg1">
             <mentioned>Hilperici ... De computo</mentioned>
@@ -232,7 +247,7 @@
                   in seiner Vorbemerkung hin: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 2
                   xxv. Zur irrigen Annahme, es habe sich bei dem Verfasser Helperich um einen
                   Benediktiner von St. Gallen gehandelt, vgl. <ref type="letter" target="letter:224">224</ref>
-                  <ref target="letter:224#seg6">6</ref>.</p>
+               <ref target="letter:224#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
             <mentioned>Sic et non</mentioned>
@@ -295,7 +310,8 @@
                   Zuschreibungen wurden zur Sprache gebracht, aber ohne Bezug auf den Hinweis EMs:
                      <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 1 lxxx f. Zur Kontroverse
                   um die Autorschaft von „De imitatione Christi“ vgl. <ref type="letter" target="letter:675">675</ref>
-                  <ref target="letter:675#seg2">2</ref>, <ref type="letter" target="letter:691">691</ref> <ref target="letter:691#seg3">3</ref>.</p>
+               <ref target="letter:675#seg2">2</ref>, <ref type="letter" target="letter:691">691</ref>
+               <ref target="letter:691#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg3">
             <mentioned> Liber miraculorum</mentioned>
@@ -386,11 +402,30 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo patri atque erudito viro domno Bernardo Pez monacho Mellicensi frater Edmundus Martene humilis monachus Benedictinus salutem plurimam dicit.</opener>
-         <ab resp="#editor" xml:id="seg1">Epistolam accepi tuam, vir erudite, atque etiam <choice><sic>t</sic><corr>octo</corr></choice> post dies <anchor xml:id="n1"/>syllabum anecdotorum<anchor xml:id="n1e"/> tuorum amplissimum. Non possum non tibi multum iterum gratulari de tot a te repertis thesauris, ex quibus in immensum ditescet res litteraria. Ex his tamen edita est<anchor xml:id="n2"/> Berengarii oratio<anchor xml:id="n2e"/>, quae incipit Iuste iudex Jesu Christe, eamque reperies in tomo quarto Anecdotorum nostrorum.<anchor xml:id="n3"/> Walterii <choice><sic>epistolam</sic><corr>epistola</corr></choice><anchor xml:id="n3e"/> ad Hugonem de S. Victore De anima Christi vide, ne sit<anchor xml:id="n4"/> edita in notis Hugonis Mathoud<anchor xml:id="n4e"/> ad Roberti Pulli libros Sententiarum. <anchor xml:id="n5"/>Hilperici praefatio in librum De computo<anchor xml:id="n5e"/> extat inter Analecta Mabillonii. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverendo patri atque erudito viro domno Bernardo Pez monacho Mellicensi frater Edmundus Martene humilis monachus Benedictinus salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Epistolam accepi tuam, vir erudite, atque etiam <choice>
+               <sic>t</sic>
+               <corr>octo</corr>
+            </choice> post dies <anchor xml:id="n1"/>syllabum anecdotorum<anchor xml:id="n1e"/> tuorum amplissimum. Non possum non tibi multum iterum gratulari de tot a te repertis thesauris, ex quibus in immensum ditescet res litteraria. Ex his tamen edita est<anchor xml:id="n2"/> Berengarii oratio<anchor xml:id="n2e"/>, quae incipit Iuste iudex Jesu Christe, eamque reperies in tomo quarto Anecdotorum nostrorum.<anchor xml:id="n3"/> Walterii <choice>
+               <sic>epistolam</sic>
+               <corr>epistola</corr>
+            </choice>
+            <anchor xml:id="n3e"/> ad Hugonem de S. Victore De anima Christi vide, ne sit<anchor xml:id="n4"/> edita in notis Hugonis Mathoud<anchor xml:id="n4e"/> ad Roberti Pulli libros Sententiarum. <anchor xml:id="n5"/>Hilperici praefatio in librum De computo<anchor xml:id="n5e"/> extat inter Analecta Mabillonii. </ab>
          <ab resp="#editor" xml:id="seg2">Petri Abaelardi librum de <anchor xml:id="n6"/>Sic et non<anchor xml:id="n6e"/> habemus <anchor xml:id="n7"/>in duobus antiquissimis manuscriptis<anchor xml:id="n7e"/>, sed opus aeternis sepeliendum tenebris publica luce non iudicavimus dignum, neve illud typis mandaremus, hortati sunt viri eruditi subinde ac pii, utpote quod hominibus<note place="foot" xml:id="d3e56479">Korrigiert, vielleicht aus <hi rend="italic">amicis</hi>.</note> inquietis materiam subsannandi religionis Christianae <add place="above">mysteria</add> subministrare posset. Neve illud edas, auctor tibi sum. Idem potest esse iudicium de altero libro eiusdem auctoris, cui titulus <anchor xml:id="n8"/>Scito te ipsum<anchor xml:id="n8e"/>; quem tamen non vidi, sed in eum <anchor xml:id="n9"/>invectus est<anchor xml:id="n9e"/> sanctus Bernardus. </ab>
-         <ab resp="#editor" xml:id="seg3">Johannis abbatis liber tripartitus <anchor xml:id="n10"/>De professione monachorum<anchor xml:id="n10e"/> <choice><sic>idem</sic><corr>non</corr></choice> potest esse opus Guillelmi Peraldi, qui<del ana="#after">idem</del> tribus libris tractavit eamdem materiam.<anchor xml:id="n11"/> Liber miraculorum<anchor xml:id="n11e"/> sancti Andreae apocryphus, vide, ne extet<anchor xml:id="n12"/> apud Abdiam<anchor xml:id="n12e"/> Babilonicum.<anchor xml:id="n13"/> Conradi cuiusdam liber De virginitate<anchor xml:id="n13e"/><anchor xml:id="n14"/> editus est<anchor xml:id="n14e"/>; an vero is sit idem cum Hirsaugiensi tuo, divinare non possum. <anchor xml:id="n15"/>Vita metrica sancti Christophori<anchor xml:id="n15e"/> apud viros litterarios an alicui <choice><sic>possint</sic><corr>possit esse</corr></choice> usui, valde dubito. <pb n="1v"/> Haec de tuis anecdotis, si quidem iubes, annotanda habui <add place="above">tibi</add> scribenda. Ceterum ut quam primum ea publici iuris facias, maxime deprecor. </ab>
-         <ab resp="#editor" xml:id="seg4">De libris autem, quos tibi emendos mandasti, scias omnes fere penes me esse, at bibliopolae extra regnum transferri non sinunt, nisi prius sibi numerata pecunia. Anselmi tamen Opera ex reeditione Gerberonii an mittere tibi potero, non ausim promittere, nam exhausta omni iam edition[e vix]<note type="annotation" xml:id="d3e56518">Textverlust im Ausmaß von ca. 4–6 Buchstaben durch Loch.</note> reperiri <choice><sic>potest</sic><corr>possunt</corr></choice>; dabo tamen operam, ut, si fieri possit, ea habeas. Ambrosii etiam editio omnis exhausta est nec iam invenitur nisi in maiori carta, quae 100 libris venit. Unum tamen exemplar pro 60 libris occurrit mihi compactum, alterum etiam in maiori carta emi in albo 70 libris. Sancti Athanasii Opera cum adiuncta sibi collectione patrum emere tibi non ausus fui propter immensum pretium 160 librarum, quod bibliopola requirit. Mittam tamen, si iusseris. Itaque mandata hac de re expectabo tua. Reliqua vero, quae postulasti, penes me habeo tibi mittenda, statim atque pecuniam accepero. </ab>
+         <ab resp="#editor" xml:id="seg3">Johannis abbatis liber tripartitus <anchor xml:id="n10"/>De professione monachorum<anchor xml:id="n10e"/>
+            <choice>
+               <sic>idem</sic>
+               <corr>non</corr>
+            </choice> potest esse opus Guillelmi Peraldi, qui<del ana="#after">idem</del> tribus libris tractavit eamdem materiam.<anchor xml:id="n11"/> Liber miraculorum<anchor xml:id="n11e"/> sancti Andreae apocryphus, vide, ne extet<anchor xml:id="n12"/> apud Abdiam<anchor xml:id="n12e"/> Babilonicum.<anchor xml:id="n13"/> Conradi cuiusdam liber De virginitate<anchor xml:id="n13e"/>
+            <anchor xml:id="n14"/> editus est<anchor xml:id="n14e"/>; an vero is sit idem cum Hirsaugiensi tuo, divinare non possum. <anchor xml:id="n15"/>Vita metrica sancti Christophori<anchor xml:id="n15e"/> apud viros litterarios an alicui <choice>
+               <sic>possint</sic>
+               <corr>possit esse</corr>
+            </choice> usui, valde dubito. <pb n="1v"/> Haec de tuis anecdotis, si quidem iubes, annotanda habui <add place="above">tibi</add> scribenda. Ceterum ut quam primum ea publici iuris facias, maxime deprecor. </ab>
+         <ab resp="#editor" xml:id="seg4">De libris autem, quos tibi emendos mandasti, scias omnes fere penes me esse, at bibliopolae extra regnum transferri non sinunt, nisi prius sibi numerata pecunia. Anselmi tamen Opera ex reeditione Gerberonii an mittere tibi potero, non ausim promittere, nam exhausta omni iam edition[e vix]<note type="annotation" xml:id="d3e56518">Textverlust im Ausmaß von ca. 4–6 Buchstaben durch Loch.</note> reperiri <choice>
+               <sic>potest</sic>
+               <corr>possunt</corr>
+            </choice>; dabo tamen operam, ut, si fieri possit, ea habeas. Ambrosii etiam editio omnis exhausta est nec iam invenitur nisi in maiori carta, quae 100 libris venit. Unum tamen exemplar pro 60 libris occurrit mihi compactum, alterum etiam in maiori carta emi in albo 70 libris. Sancti Athanasii Opera cum adiuncta sibi collectione patrum emere tibi non ausus fui propter immensum pretium 160 librarum, quod bibliopola requirit. Mittam tamen, si iusseris. Itaque mandata hac de re expectabo tua. Reliqua vero, quae postulasti, penes me habeo tibi mittenda, statim atque pecuniam accepero. </ab>
          <ab resp="#editor" xml:id="seg5">Iter nostrum retardavit, nescio, an omnino impediat, quorumdam fratrum nostrorum morbus. De vita maxime periclitatur noster Dionysius de Sainte Marthe prior S. Dionysii in Francia. Vale et me amare perge.</ab>
          <closer>Lutetiae Parisiorum 21. Aprilis 1718.</closer>
       </body>

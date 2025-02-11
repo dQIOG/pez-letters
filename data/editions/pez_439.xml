@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="439" xml:id="pez-0439">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Philibert Hueber an Bernhard Pez. 1715-09-11. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">439</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -75,10 +87,12 @@
             </correspContext>
          </correspDesc>
          <abstract>
-            <p corresp="#seg1"><rs type="person">PHu</rs> hat in einem jüngst gesendeten Brief <ref type="letter" target="letter:438">438</ref> noch 50 Exemplare der „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“ angefordert, die Zahl derer, die weitere bestellen wollen, ist aber seither derart gestiegen, dass 100 Exemplare nicht ausreichen. Die 90 Stück, die <rs type="person">PHu</rs> anfangs erhalten hatte, sind bereits vergriffen, fast alle auch schon bezahlt worden, worüber <rs type="person">PHu</rs> eine Rechnung ablegen wird. <rs type="person">PHu</rs> hat den weiteren Interessenten versprochen, sie innerhalb von längstens zwei Wochen zufrieden zu stellen.</p>
-            <p corresp="#seg2"><rs type="person">PHu</rs> bittet BP nochmals, dem Buchhändler <rs ref="index:d14380e11656">Esslinger</rs> hiervon nichts mitzuteilen.</p>
+            <p corresp="#seg1">
+               <rs type="person">PHu</rs> hat in einem jüngst gesendeten Brief <ref type="letter" target="letter:438">438</ref> noch 50 Exemplare der „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“ angefordert, die Zahl derer, die weitere bestellen wollen, ist aber seither derart gestiegen, dass 100 Exemplare nicht ausreichen. Die 90 Stück, die <rs type="person">PHu</rs> anfangs erhalten hatte, sind bereits vergriffen, fast alle auch schon bezahlt worden, worüber <rs type="person">PHu</rs> eine Rechnung ablegen wird. <rs type="person">PHu</rs> hat den weiteren Interessenten versprochen, sie innerhalb von längstens zwei Wochen zufrieden zu stellen.</p>
+            <p corresp="#seg2">
+               <rs type="person">PHu</rs> bittet BP nochmals, dem Buchhändler <rs ref="index:d14380e11656">Esslinger</rs> hiervon nichts mitzuteilen.</p>
             <p corresp="#seg3">Unter den Gelehrten und Religiosen mit Ausnahme der <rs ref="index:d14380e20126">Jesuiten</rs> ist die Aufnahme dieser hervorragenden Abfertigung (emunctorium) der <rs ref="index:d14380e20126">Jesuiten</rs> höchst positiv. <rs type="person">PHu</rs> schließt mit der nochmaligen Bitte, BP wolle ihm helfen, die vielen Interessenten, unter welchen sich auch weltliche Personen von Bildung und Stand befinden, zu befriedigen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -86,7 +100,8 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
             <mentioned>Esslinger ... communiciren</mentioned>
             <p>Mit Johann Martin Esslinger stand BP ansonsten offenbar in regelmäßigem
-                  geschäftlichem Kontakt; vgl. <ref type="letter" target="letter:270">270</ref>, <ref type="letter" target="letter:391">391</ref> <ref target="letter:391#seg2">2</ref>. Die Verbreitung der „Epistolae apologeticae“ in eigener
+                  geschäftlichem Kontakt; vgl. <ref type="letter" target="letter:270">270</ref>, <ref type="letter" target="letter:391">391</ref>
+               <ref target="letter:391#seg2">2</ref>. Die Verbreitung der „Epistolae apologeticae“ in eigener
                   Regie wird bei <rs type="bibl" ref="bibl:14994">Bachleitner–Eybl–Fischer,
                      Buchhandel</rs> 95, mit dem Umstand in Verbindung gebracht, dass das Werk (wie
                   auch Anselm Schrambs „Antilogia“, vgl. 401) ohne Approbation „und somit im Grunde
@@ -119,7 +134,11 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende <choice><sic>regl</sic><corr>religiosissime</corr></choice> ac clarissime domine, confrater colendissime!</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverende <choice>
+               <sic>regl</sic>
+               <corr>religiosissime</corr>
+            </choice> ac clarissime domine, confrater colendissime!</opener>
          <ab resp="#editor" xml:id="seg1">In nuperna epistola 50 alia exemplaria rogavi transmittenda, nunc autem numerus eorum, qui plura expetunt, in tantum excrevit, ut 100 non sufficiant. Euer wohl ehrwürden können nicht glauben, wie ich umb noch mehrer exemplaria tribulirt und überloffen werde. Die 90 mir überschikte seyndt schon forth, und ist das gelt von mir bis auff etliche wenige schon ein cassirt wordten, ich werdte alle fideliter verrechnen, und habe mir sonderlichen gusto mit diser curiosen händtirung. Ich habe denen übrigen partheyen versprochen, <add place="above">sie</add> noch dise oder lengstens künfftige wochen zu consoliren, welche mit grössten verlangen <add place="above">es</add> erwarthen. </ab>
          <ab resp="#editor" xml:id="seg2">Dem herrn <anchor xml:id="n1"/>Esslinger bitte nochmahlen, aus neülich bedeüthen und noch anderen ursachen, nichts zu communiciren<anchor xml:id="n1e"/>. </ab>
          <ab resp="#editor" xml:id="seg3">Inter viros doctos et religiosos exceptis patribus Societatis incredibilis applausus est de hoc insigni <anchor xml:id="n2"/>Jesuitarum emunctorio<anchor xml:id="n2e"/>. Proinde iterum iterumque rogo, sua paternitas admodum reverenda iuvet me satisfacere votis tot praestantissimorum <pb n="1v"/> virorum etiam saecularium non inferioris doctrinae et conditionis. Interea<del ana="#after">dum expecto proxime</del> me in omnia sacra mandans permaneo</ab>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="717" xml:id="pez-0717">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Jean-Baptiste Poncet an Bernhard Pez. 1717-01-06. St.-Maixent.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">717</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,44 +90,47 @@
                <ptr type="mentionedIn" target="letter:764"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e2614">Anonyme Werke ; Vita sancti Leodegarii</term>
-            <term ref="index:d14380e2638">Anonyme Werke ; Vita sancti Maxentii</term>
-            <term ref="index:d14380e3226">Audulfus</term>
-            <term ref="index:d14380e7933">Chaussandier, Claude</term>
-            <term ref="index:d14380e7940">Chazal, François</term>
-            <term ref="index:d14380e11678">Estiennot de la Serre, Claude</term>
-            <term ref="index:d14380e11901">Evangelische allgemein ; Calvinisten</term>
-            <term ref="index:d14380e16736">Guillaume de Vezençay</term>
-            <term ref="index:d14380e16743">Guinamundus</term>
-            <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
-            <term ref="index:d14380e24607">Leodegar, hl</term>
-            <term ref="index:d14380e24861">Liabeuf, André</term>
-            <term ref="index:d14380e26955">Massiot, Léonard de</term>
-            <term ref="index:d14380e27272">Maxentius, hl</term>
-            <term ref="index:d14380e30164">Musik, musikalische Begriffe</term>
-            <term ref="index:d14380e30940">Nouaillé</term>
-            <term ref="index:d14380e33124">Petrus Raymundi</term>
-            <term ref="index:d14380e33611">Pez, Bernhard ; Enzyklik 1715/16</term>
-            <term ref="index:d14380e35146">Pierre Baston</term>
-            <term ref="index:d14380e35153">Pierre de Clervaux</term>
-            <term ref="index:d14380e35405">Poitiers</term>
-            <term ref="index:d14380e35551">Poncet, Jean-Baptiste</term>
-            <term ref="index:d14380e35561">Poncet, Jean-Baptiste ; Schriftstellerkatalog von St.-Maixent. Ms</term>
-            <term ref="index:d14380e36271">Rabusseau, Joachim</term>
-            <term ref="index:d14380e38861">St.-Maixent</term>
-            <term ref="index:d14380e38873">St.-Maixent ; Abteikirche</term>
-            <term ref="index:d14380e38878">St.-Maixent ; Konzil 1075</term>
-            <term ref="index:d14380e44059">Vallée, François-Boniface</term></keywords></textClass>
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e2614">Anonyme Werke ; Vita sancti Leodegarii</term>
+               <term ref="index:d14380e2638">Anonyme Werke ; Vita sancti Maxentii</term>
+               <term ref="index:d14380e3226">Audulfus</term>
+               <term ref="index:d14380e7933">Chaussandier, Claude</term>
+               <term ref="index:d14380e7940">Chazal, François</term>
+               <term ref="index:d14380e11678">Estiennot de la Serre, Claude</term>
+               <term ref="index:d14380e11901">Evangelische allgemein ; Calvinisten</term>
+               <term ref="index:d14380e16736">Guillaume de Vezençay</term>
+               <term ref="index:d14380e16743">Guinamundus</term>
+               <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
+               <term ref="index:d14380e24607">Leodegar, hl</term>
+               <term ref="index:d14380e24861">Liabeuf, André</term>
+               <term ref="index:d14380e26955">Massiot, Léonard de</term>
+               <term ref="index:d14380e27272">Maxentius, hl</term>
+               <term ref="index:d14380e30164">Musik, musikalische Begriffe</term>
+               <term ref="index:d14380e30940">Nouaillé</term>
+               <term ref="index:d14380e33124">Petrus Raymundi</term>
+               <term ref="index:d14380e33611">Pez, Bernhard ; Enzyklik 1715/16</term>
+               <term ref="index:d14380e35146">Pierre Baston</term>
+               <term ref="index:d14380e35153">Pierre de Clervaux</term>
+               <term ref="index:d14380e35405">Poitiers</term>
+               <term ref="index:d14380e35551">Poncet, Jean-Baptiste</term>
+               <term ref="index:d14380e35561">Poncet, Jean-Baptiste ; Schriftstellerkatalog von St.-Maixent. Ms</term>
+               <term ref="index:d14380e36271">Rabusseau, Joachim</term>
+               <term ref="index:d14380e38861">St.-Maixent</term>
+               <term ref="index:d14380e38873">St.-Maixent ; Abteikirche</term>
+               <term ref="index:d14380e38878">St.-Maixent ; Konzil 1075</term>
+               <term ref="index:d14380e44059">Vallée, François-Boniface</term>
+            </keywords>
+         </textClass>
          <abstract>
-            <p corresp="#seg1">Der Prior von <rs ref="index:d14380e38861">St.-Maixent</rs> (<rs ref="index:d14380e7940">François Chazal</rs>) hat die <rs ref="index:d14380e33611">Enzyklik BPs</rs> <ref type="letter" target="letter:622">622</ref> mit dem „Conspectus“ der „Bibliotheca Benedictina“, sobald er sie erhalten hatte, an JPo mit dem Auftrag übergeben, dem Ansinnen BPs zu entsprechen.</p>
+            <p corresp="#seg1">Der Prior von <rs ref="index:d14380e38861">St.-Maixent</rs> (<rs ref="index:d14380e7940">François Chazal</rs>) hat die <rs ref="index:d14380e33611">Enzyklik BPs</rs>
+               <ref type="letter" target="letter:622">622</ref> mit dem „Conspectus“ der „Bibliotheca Benedictina“, sobald er sie erhalten hatte, an JPo mit dem Auftrag übergeben, dem Ansinnen BPs zu entsprechen.</p>
             <p corresp="#seg2">JPo legt nun vor, <rs ref="index:d14380e35561">was er zu den Schriftstellern seines Klosters zusammenstellen konnte</rs>. Es ist wenig, doch bedenkt man die wiederholten Plünderungen und Brände und insbesondere die noch nicht lange zurückliegende Zerstörung des Klosters durch die <rs ref="index:d14380e11901">Calvinisten</rs>, so ist es erstaunlich, dass von dem einst reichen Urkundenschatz auch nur ein geringer Teil noch vorhanden ist.</p>
             <p corresp="#seg3">JPo hat in der Beilage sowohl die älteren als auch die neueren Schriftsteller von <rs ref="index:d14380e38861">St.-Maixent</rs> behandelt und auch eine kurze Darstellung der Gründung beigefügt. Über die <rs ref="index:d14380e2614">Verfasser</rs> der <rs ref="index:d14380e2638">Viten</rs> der Heiligen <rs ref="index:d14380e27272">Maxentius</rs> und <rs ref="index:d14380e24607">Leodegar</rs> hat sich JPo ausführlich geäußert, weil auswärtige Autoren bislang nur sehr knapp darüber gehandelt haben. Auch hat JPo für nötig befunden, ausdrücklich darzulegen, dass diese Verfasser Mönche von <rs ref="index:d14380e38861">St.-Maixent</rs> waren. Es steht BP frei, hier nach Belieben zu kürzen.</p>
             <p corresp="#seg4">Über das <rs ref="index:d14380e38878">Konzil von St.-Maixent</rs> konnte JPo nichts weiter finden, als was er geschrieben hat. Die Dekrete der Generalkapitel erwähnt er, weil sie wertvolle Aufschlüsse über den früheren Stand der Dinge bieten; wenn BP sie einzeln dargestellt wünscht, soll er Bescheid geben, und man wird sie ihm senden.</p>
             <p corresp="#seg5">Über die Autoren aus der <rs ref="index:d14380e22462">Maurinerkongregation</rs> hat sich JPo in größerer Breite geäußert. Unter ihnen hervorzuheben ist der gegenwärtige Prior <rs ref="index:d14380e7940">François Chazal</rs>, der sich sehr um die Ordnung der Dokumente, um die feierliche Gestaltung der Liturgie und die Beschaffung neuer Paramente bemüht, um die Verluste kostbarer Stücke am Ende des 16. Jahrhunderts auszugleichen und damit der Pracht der jüngst erneuerten <rs ref="index:d14380e38873">Kirche</rs> zu entsprechen. Da Chazal aus Bescheidenheit verboten hat, dass JPo in dem Schriftstellerkatalog etwas über seine Herkunft geschrieben hätte, vermerkt JPo nun, dass Chazal aus einer ehrenwerten und sehr wohlhabenden Bürgerfamilie stammt, seine Mutter adelig und sehr fromm war. Alle Angaben, die JPo in der Beilage macht, sind aus den Arbeiten Chazals entnommen; dieser zeichnet sich vor allem durch ein hervorragendes Gedächtnis aus. Über sich selbst als Neuling auf dem Gebiet der Gelehrsamkeit hat JPo einiges Wenige geschrieben, das BP verwenden oder auch weglassen kann. Gemäß den Vorgaben in der Enzyklik BPs hat JPo auch den jeweils bedeutendsten Musiker (<rs ref="index:d14380e7933">Claude Chaussandier</rs>), Maler (André Guérin) und Bildhauer (<rs ref="index:d14380e36271">Joachim Rabusseau</rs>) behandelt.</p>
             <p corresp="#seg6">JPo hätte gerne einen längeren Brief geschrieben, doch fehlt ihm die Zeit dazu. Er verlässt demnächst <rs ref="index:d14380e38861">St.-Maixent</rs>, weil er als Prior des gleichfalls in der Diözese <rs ref="index:d14380e35405">Poitiers</rs> gelegenen Klosters St.-Junien zu <rs ref="index:d14380e30940">Nouaillé</rs> designiert worden ist. Sollte er dort etwas finden, das für BPs Werk nützlich sein kann, will er es mitteilen. Er schließt mit Gebeten für BPs Gesundheit.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -213,7 +229,7 @@
             <p>JPo bezieht sich offenbar auf die Stelle in
                   der LE 3: „Scriptoribus nostris accensentur etiam anonymi, musici, pictores et
                   cuiuscunque generis insignes artifices“; vgl. <ref type="letter" target="letter:477">477</ref>
-                  <ref target="letter:477#seg4">4</ref>.</p>
+               <ref target="letter:477#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg6">
             <mentioned>Nobiliacensis ... prior</mentioned>
@@ -227,17 +243,28 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Pax Christi.</opener>
+         <opener>
+            <pb n="1r"/> Pax Christi.</opener>
          <opener>Admodum reverende religiosissime ac clarissime pater.</opener>
-         <ab resp="#editor" xml:id="seg1">Statim ut ad reverendum et intimo cordis affectu colendissimum superiorem meum, huius monasterii priorem doctissimum doctorumque cultorem, <choice><sic>tuam epistolam encyclicam</sic><corr>tua epistola encyclica</corr></choice> cum conspectu Bibliothecae Benedictinae generalis, cui operam navas, pervenit, <choice><sic>paratissimus</sic><corr>illico</corr></choice> in manibus meis eam credidit commisitque, ut iustis postulationibus reverentiae tuae fieret satis, quod lubenti animo sum aggressus, gaudens, si quid tam utili et glorioso operi conferre et contribuere possim. </ab>
+         <ab resp="#editor" xml:id="seg1">Statim ut ad reverendum et intimo cordis affectu colendissimum superiorem meum, huius monasterii priorem doctissimum doctorumque cultorem, <choice>
+               <sic>tuam epistolam encyclicam</sic>
+               <corr>tua epistola encyclica</corr>
+            </choice> cum conspectu Bibliothecae Benedictinae generalis, cui operam navas, pervenit, <choice>
+               <sic>paratissimus</sic>
+               <corr>illico</corr>
+            </choice> in manibus meis eam credidit commisitque, ut iustis postulationibus reverentiae tuae fieret satis, quod lubenti animo sum aggressus, gaudens, si quid tam utili et glorioso operi conferre et contribuere possim. </ab>
          <ab resp="#editor" xml:id="seg2">Haec sunt, quae colligere mihi licuit e scriptoribus monasterii nostri. Pauca videbuntur, sed si ad<note type="annotation" xml:id="d3e25942">Nachträglich eingefügt.</note> frequentes illius depraedationes, incensiones, vastationes et nuperas <anchor xml:id="n1"/>a Calvinistis direptiones<anchor xml:id="n1e"/> et totius monasterii desolationem et destructionem attendatur, mirum, quod nobis supersit minima chartarum nostrarum pars ex illo maximo numero, qui alias apud nos servabatur. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n2"/>En igitur<anchor xml:id="n2e"/>, reverende admodum pater, et veteres et novos abbatiae Sancti Maxentii scriptores cum brevi idea fundationis istius monasterii. Longiorem fortassis enumerationem sive dissertationem<anchor xml:id="n3"/> auctorum vitae sanctorum Maxentii et Leodegarii<anchor xml:id="n3e"/> fecisse videbimur, eam tamen assumere operae praetium existimavi, quia exteri de illis, quod sciam, non satis expresse egere. Necesse etiam duxi demonstrandum illos fuisse omnes monachos nostri coenobii; quod si existimet reverentia tua extra modum me processisse, coarctare tuum erit, ut videbitur; nec displiceat, si ultra scopum rem perduxerim, volui tam praetioso operi tuo secundum posse meum utilis fieri et esse. </ab>
-         <ab resp="#editor" xml:id="seg4">De <anchor xml:id="n4"/>concilio Sammaxentiano<anchor xml:id="n4e"/> nihil aliud reperi, quam scripsi; illud parum tibi sufficiat. Adieci<anchor xml:id="n5"/> capitulorum generalium decreta<anchor xml:id="n5e"/>, utpote quae ad antiquum ordinem maxime conferant et sint curiosa; si illa statuta tibi singillatim exponi desideres, scribere digneris, et ad te transmittentur. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n2"/>En igitur<anchor xml:id="n2e"/>, reverende admodum pater, et veteres et novos abbatiae Sancti Maxentii scriptores cum brevi idea fundationis istius monasterii. Longiorem fortassis enumerationem sive dissertationem<anchor xml:id="n3"/> auctorum vitae sanctorum Maxentii et Leodegarii<anchor xml:id="n3e"/> fecisse videbimur, eam tamen assumere operae praetium existimavi, quia exteri de illis, quod sciam, non satis expresse egere. Necesse etiam duxi demonstrandum illos fuisse omnes monachos nostri coenobii; quod si existimet reverentia tua extra modum me processisse, coarctare tuum erit, ut videbitur; nec displiceat, si ultra scopum rem perduxerim, volui tam praetioso operi tuo secundum posse meum utilis fieri et esse. </ab>
+         <ab resp="#editor" xml:id="seg4">De <anchor xml:id="n4"/>concilio Sammaxentiano<anchor xml:id="n4e"/> nihil aliud reperi, quam scripsi; illud parum tibi sufficiat. Adieci<anchor xml:id="n5"/> capitulorum generalium decreta<anchor xml:id="n5e"/>, utpote quae ad antiquum ordinem maxime conferant et sint curiosa; si illa statuta tibi singillatim exponi desideres, scribere digneris, et ad te transmittentur. <pb n="1v"/>
+         </ab>
          <ab resp="#editor" xml:id="seg5">De auctoribus nostrae congregationis, qui istic scripsere, fuse egi, et inter alios notandus religiosissimus <anchor xml:id="n6"/>superior noster<anchor xml:id="n6e"/>, monasterii prior multum amabilis et dilectus, qui curam adhibet omnimodam in scrutandis et notandis scriniis nostris, in componendo magnifice et ordinando divino officio, cum maximis impensis ad comparanda praetiosa ornamenta, ut non amplius lugeamus amissionem praetiosissimorum, a quibus 16. exeunte saeculo expoliati fuimus, utque nova magnificentissime a nobis nuper<anchor xml:id="n7"/> reparatae nostrae basilicae<anchor xml:id="n7e"/> respondeant. Nec passus est pro sua innata humilitate modestus prior, ut de suis natalibus aliquid in cathalogo nostro annotarem; inde iudico opportunum et congruum hic edocere te ipsum honestissimo parente, <sic>oppulentissimo</sic> cive, matre pia ac nobili femina oriundum. A se<anchor xml:id="n8"/> mutuari mihi permisit<anchor xml:id="n8e"/> eruditus prior, zelo in ecclesiasticum et monasticum ordinem plenus, quaecumque ad te mitto: ille enim praesentem, facilem et opportunam memoriae facultatem cum iugi lectione et studio coniungit. Unde extra laudem debitam laudari nequit.<anchor xml:id="n9"/> De me quasi novitio aliqua<anchor xml:id="n9e"/> scripsi, quae si notatu digna reverentiae tuae videantur, his utere, ut placebit; ast si non, sileantur.<anchor xml:id="n10"/> Musicum, pictorem et sculptorem<anchor xml:id="n10e"/> expertissimos ostendo; tu postulasti, et pro voluntate et<anchor xml:id="n11"/> regula a te perscripta<anchor xml:id="n11e"/> omnia facere nisus sum. </ab>
-         <ab resp="#editor" xml:id="seg6">Hanc brevem epistolam ad te dirigo, cum per tempus mihi non sit permissum longiorem, ut volebam, conscribere. Ex hoc enim monasterio egredior electus abbatiae Sancti Iuniani <anchor xml:id="n12"/>Nobiliacensis, ista in dioecesi Pictaviensi consistentis, indignus quamvis, prior<anchor xml:id="n12e"/>. In illa si quid utilis operi tuo invenire valuero, lubens ad te transmittam. Interim Deum precor, ut te conservet incolumem ad gloriam ordinis nostri Benedictini, ipsumque dignare precari pro me; habeas me, velim, tanquam<note place="foot" xml:id="d3e25958"><hi rend="italic">	habeas ... tanquam</hi> nachträglich von JPo angefügt.</note>,</ab>
+         <ab resp="#editor" xml:id="seg6">Hanc brevem epistolam ad te dirigo, cum per tempus mihi non sit permissum longiorem, ut volebam, conscribere. Ex hoc enim monasterio egredior electus abbatiae Sancti Iuniani <anchor xml:id="n12"/>Nobiliacensis, ista in dioecesi Pictaviensi consistentis, indignus quamvis, prior<anchor xml:id="n12e"/>. In illa si quid utilis operi tuo invenire valuero, lubens ad te transmittam. Interim Deum precor, ut te conservet incolumem ad gloriam ordinis nostri Benedictini, ipsumque dignare precari pro me; habeas me, velim, tanquam<note place="foot" xml:id="d3e25958">
+               <hi rend="italic">	habeas ... tanquam</hi> nachträglich von JPo angefügt.</note>,</ab>
          <closer>Admodum reverende pater, reverentiae tuae servum humilem et fratrem ad obsequia paratum Joannem Baptistam Poncet subpriorem et bibliothecarium, nunc abbatiae Sancti Juniani Nobiliacensis in Pictonibus priorem.</closer>
          <closer>In monasterio Sancti Maxentii Pictaviensis 1. Decembris anno 1716.</closer>
-         <closer>6. Januarii 1717<note place="foot" xml:id="d3e25969"><hi rend="italic">	6. Januarii 1717</hi> von JPo eigenhändig nachgetragen.</note>.</closer>
+         <closer>6. Januarii 1717<note place="foot" xml:id="d3e25969">
+               <hi rend="italic">	6. Januarii 1717</hi> von JPo eigenhändig nachgetragen.</note>.</closer>
       </body>
    </text>
 </TEI>

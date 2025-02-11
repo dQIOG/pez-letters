@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="22" xml:id="pez-0022">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Robert König an Bernhard Pez. 1709-12-07. Steyr.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">22</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -73,9 +86,10 @@
             </correspContext>
          </correspDesc>
          <abstract>
-            <p corresp="#seg1"><rs type="person">RK</rs> hat einen Katalog aller von <rs ref="index:d14380e14516">Garstenern</rs> im Druck herausgebrachten Schriften erstellt und würde ihn an BPs Schwester (<rs ref="index:d10854e23075">Susanna Maria Paumgartner</rs>, geb. Pez) zur Weiterleitung übergeben, wenn nicht <rs ref="index:d14380e13821">Bonifaz Gallner</rs> demnächst mit seinen Zeichnerarbeiten fertig würde und sich so eine günstigere Gelegenheit zur Übersendung ergäbe.</p>
+            <p corresp="#seg1">
+               <rs type="person">RK</rs> hat einen Katalog aller von <rs ref="index:d14380e14516">Garstenern</rs> im Druck herausgebrachten Schriften erstellt und würde ihn an BPs Schwester (<rs ref="index:d10854e23075">Susanna Maria Paumgartner</rs>, geb. Pez) zur Weiterleitung übergeben, wenn nicht <rs ref="index:d14380e13821">Bonifaz Gallner</rs> demnächst mit seinen Zeichnerarbeiten fertig würde und sich so eine günstigere Gelegenheit zur Übersendung ergäbe.</p>
             <p corresp="#seg2">Besonders willkommen wäre freilich, wenn BP persönlich nach <rs ref="index:d14380e14516">Garsten</rs> käme, um <rs ref="index:d14380e13821">Gallner</rs> zurück nach <rs ref="index:d14380e28088">Melk</rs> zu begleiten. <rs type="person">RK</rs> könnte mit ihm vieles bereden, das bei der letzten Gelegenheit nicht angesprochen werden konnte, und in der <rs ref="index:d14380e14538">Garstener Bibliothek</rs> könnte man Nützliches finden. Die Kosten der Reise will <rs type="person">RK</rs> übernehmen. <rs type="person">RK</rs> empfiehlt sich BP und allen <rs ref="index:d14380e28088">Melkern</rs>.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -121,7 +135,8 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiosissime ac eximie domine pater Bernarde, domine ac patrone colendissime etc.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiosissime ac eximie domine pater Bernarde, domine ac patrone colendissime etc.</opener>
          <ab resp="#editor" xml:id="seg1">Desiderata <anchor xml:id="n1"/>scripta Garstensium<anchor xml:id="n1e"/> hactenus typis data collegi omnia, quae reperire potui, eaque <anchor xml:id="n2"/>dominae sorori<anchor xml:id="n2e"/>, ut transmitteret, consignarem, nisi propediem admodum reverendus dominus <anchor xml:id="n3"/>pater Bonifacius insignes suas picturas<anchor xml:id="n3e"/> absolveret, et ita per illum ea mittendi occasio commodior videretur; </ab>
          <ab resp="#editor" xml:id="seg2">imo gratissimum mihi foret, si admodum reverenda paternitas ipsamet ad nos veniret et charissimum confratrem patrem Bonifacium in monasterium reduceret. Possemus hic coram de multis conferre, quasi profuturis, de quibus loquendi facultas <anchor xml:id="n4"/>nuper<anchor xml:id="n4e"/> non erat, et forte etiam in bibliotheca Garstensi quaedam utilia occurrerent. Sumptus itineris libentissime, ut debeo, ego suppeditabo. Interim me in perennes favores admodum reverendae dominationis suae omniumque amicissimorum Mellicensium officiosissime commendo et voluptatissimum adventum vel ad has breve responsum exspecto.</ab>
          <closer>Styrae die 7. Decembris 1709.</closer>

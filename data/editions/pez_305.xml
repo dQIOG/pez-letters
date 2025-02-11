@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="305" xml:id="pez-0305">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Moritz Müller an Bernhard Pez. 1713-04-29. Rheinau.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">305</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,11 +89,13 @@
          <abstract>
             <p corresp="#seg1">MM hat eben aus <rs ref="index:d14380e32292">Paris</rs> erfahren, dass <rs ref="index:d14380e25664">Mabillons „Acta sanctorum OSB“ </rs>in <rs ref="index:d14380e4064">Basel</rs> eingetroffen sind, und will sie sich nun von dort schicken lassen, um sie über <rs ref="index:d14380e43652">Ulm</rs> nach <rs ref="index:d14380e28088">Melk</rs> weiterzusenden. Es dürfte die letzte vollständige Ausgabe sein, die nach <rs ref="index:d14380e9395">Deutschland</rs> gelangt. Aus dem beiliegenden Blatt, einem Auszug aus dem Schreiben des Pariser Buchhändlers (siehe Kommentar), wird BP den Grund für die Seltenheit und den Preis des Werks ersehen können.</p>
             <p corresp="#seg2">MM bittet um möglichst rasche Erstattung des Kaufpreises, da er ihn an die <rs ref="index:d14380e4064">Basler</rs> Händler bereits begleichen und das Geld hierzu leihen musste, zumal er im Exil von eigenen Geldmitteln abgeschnitten ist. MM verlangt bloß den reinen Kaufpreis und die Transportkosten bis <rs ref="index:d14380e39541">Schaffhausen</rs>, macht also selbst keinen Gewinn; das Werk über Buchhändler zu beziehen, käme BP viel teurer.</p>
-            <p corresp="#seg3">Was die Zahlungsabwicklung betrifft, schlägt MM einen Wechselbrief vor. BP soll einen <rs ref="index:d14380e43652">Ulmer</rs> <rs ref="index:d14380e43662">Händler</rs> beauftragen, dass dieser die <rs ref="index:d14380e39541">Schaffhausener</rs> Wechsler <rs ref="index:d10854e13356">Hurter</rs>, <rs ref="index:d10854e22255">Ott</rs> und <rs ref="index:d10854e23347">Peyer</rs> anweist, die Summe an MM in <rs ref="index:d14380e37324">Rheinau</rs> zu schicken, der sie seinen Gläubigern weiterleiten wird. Sollte aber BP die Zahlung lieber mit der Post schicken wollen, so empfiehlt MM wegen der geringeren Beförderungskosten eine Übermittlung in Gold statt in Silber; auch dies wäre gefahrlos möglich, doch sollte dabei als Adressat der Prior von <rs ref="index:d14380e37324">Rheinau</rs> <rs ref="index:d10854e17132">Joachim Letter</rs> angegeben werden. MM bittet BP eindringlich, nun auch seinen Teil gewissenhaft zu erledigen.</p>
+            <p corresp="#seg3">Was die Zahlungsabwicklung betrifft, schlägt MM einen Wechselbrief vor. BP soll einen <rs ref="index:d14380e43652">Ulmer</rs>
+               <rs ref="index:d14380e43662">Händler</rs> beauftragen, dass dieser die <rs ref="index:d14380e39541">Schaffhausener</rs> Wechsler <rs ref="index:d10854e13356">Hurter</rs>, <rs ref="index:d10854e22255">Ott</rs> und <rs ref="index:d10854e23347">Peyer</rs> anweist, die Summe an MM in <rs ref="index:d14380e37324">Rheinau</rs> zu schicken, der sie seinen Gläubigern weiterleiten wird. Sollte aber BP die Zahlung lieber mit der Post schicken wollen, so empfiehlt MM wegen der geringeren Beförderungskosten eine Übermittlung in Gold statt in Silber; auch dies wäre gefahrlos möglich, doch sollte dabei als Adressat der Prior von <rs ref="index:d14380e37324">Rheinau</rs>
+               <rs ref="index:d10854e17132">Joachim Letter</rs> angegeben werden. MM bittet BP eindringlich, nun auch seinen Teil gewissenhaft zu erledigen.</p>
             <p corresp="#seg4">MM wird das Bücherpaket alsbald an den Buchhändler <rs ref="index:d10854e3388">Beuerlein</rs> nach <rs ref="index:d14380e43652">Ulm</rs> schicken mit dem Auftrag, es möglichst schnell nach <rs ref="index:d14380e28088">Melk</rs> weiterzusenden.</p>
             <p corresp="#seg5">In einem Postskriptum gibt MM an, dass er noch nicht weiß, wie hoch die Transportkosten bis <rs ref="index:d14380e39541">Schaffhausen</rs> sind; diese wird er auslegen, jene ab <rs ref="index:d14380e43652">Ulm</rs> soll BP selbst übernehmen. Sie werden aber wegen des bequemen Frachtweges über den <rs ref="index:d10854e3742">Bodensee</rs> und die <rs ref="index:d14380e9895">Donau</rs> niedriger sein.</p>
             <p corresp="#seg6">Wenn BP aber 24 <rs ref="index:d14380e12712">französische</rs> Louisdor sendet, so dürfte das ausreichen; MM will hinzugeben, was fehlt, oder zurücksenden, was zu viel ist. Doch glaubt er nicht, dass von der Summe etwas überbleiben wird, wenn er damit die neun Bände der <rs ref="index:d14380e25664">„Acta sanctorum OSB“</rs> sowie <rs ref="index:d14380e25581">Mabillons</rs> großes, mit Kupferstichen versehenes Werk „<rs ref="index:d14380e25780">De re diplomatica</rs>“ bezahlt.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -93,7 +107,7 @@
                   Gallico verbatim in Latinum translatis“. Der Absender erklärt, warum die „Acta
                   sanctorum OSB“ so teuer sind: Einer der königlichen Buchhändler hat nahezu alle
                   Exemplare der ersten beiden Bände aufgekauft (vgl. <ref type="letter" target="letter:88">88</ref>
-                  <ref target="letter:88#seg2">2</ref>) und diktiert nun den Preis, der für jeden Band um die 60 Livres liegt.
+               <ref target="letter:88#seg2">2</ref>) und diktiert nun den Preis, der für jeden Band um die 60 Livres liegt.
                   Deshalb ist es vorteilhafter, Bücher gleich nach dem Erscheinen zu erwerben. Eine
                   ähnliche Gefahr besteht bei den „Annales OSB“, deren vierter und fünfter Band
                   bereits auf dem Markt sind, der sechste ist in Vorbereitung; sowie bei Mabillons
@@ -104,12 +118,14 @@
                   Werk kreditiert haben, und nichts schuldig bleiben muss. – Bei <rs type="bibl" ref="bibl:16524">Glassner, Verzeichnis</rs> 199, wird das Stück als Brief eines
                   Pariser Buchhändlers an BP geführt; bei <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 359, 428, entsprechend der Angabe MMs als Brief eines
                   Pariser Buchhändlers an diesen, mit der Vermutung, der Absender könnte Jean
-                  Anisson (vgl. <ref type="letter" target="letter:32">32</ref> <ref target="letter:32#seg4">4</ref>, <ref type="letter" target="letter:71">71</ref>
-                  <ref target="letter:71#seg9">9</ref>) gewesen sein. Demgegenüber ist aber darauf hinzuweisen, dass sowohl
+                  Anisson (vgl. <ref type="letter" target="letter:32">32</ref>
+               <ref target="letter:32#seg4">4</ref>, <ref type="letter" target="letter:71">71</ref>
+               <ref target="letter:71#seg9">9</ref>) gewesen sein. Demgegenüber ist aber darauf hinzuweisen, dass sowohl
                   sprachliche Merkmale (etwa die durchgehende Anrede mit „tu“ und als „amice
                   colendissime“) als auch Teile des Inhalts (etwa betreffend den Bezug des Werks auf
                   Kredit von ungenannten Buchhändlern) dazu schlecht passen. Angesichts dessen, dass
-                  MM bereits in <ref type="letter" target="letter:302">302</ref> <ref target="letter:302#seg2">2</ref> davon gesprochen hatte, an
+                  MM bereits in <ref type="letter" target="letter:302">302</ref>
+               <ref target="letter:302#seg2">2</ref> davon gesprochen hatte, an
                   Anisson zu schreiben, dabei aber eine tatsächlich am selben Tag erfolgte Bitte an
                   René Massuet um Beschaffung der „Acta sanctorum OSB“ nicht erwähnt hatte, wäre
                   durchaus denkbar, dass in dem ungenannten Absender Massuet zu sehen ist. In einem
@@ -139,7 +155,8 @@
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned>nec obolum fecisse lucrum</mentioned>
-            <p>Vgl. Einleitung, Abschnitt II.1.4; außerdem <ref type="letter" target="letter:71">71</ref> <ref target="letter:71#seg5">5</ref>;
+            <p>Vgl. Einleitung, Abschnitt II.1.4; außerdem <ref type="letter" target="letter:71">71</ref>
+               <ref target="letter:71#seg5">5</ref>;
                      <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 370f.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
@@ -165,7 +182,8 @@
                   seines oben zitierten Briefs an Massuet vom 30. April bekannt gewesen zu sein. In
                   ihr waren aber auch noch weitere Bücher inbegriffen, die nicht für BP bestimmt
                   waren: BN FF 19664, 226r–228v (MM an Massuet, 22. März 1713). Bezahlt wurden von
-                  den Melkern letztendlich 194 fl. (<ref type="letter" target="letter:318">318</ref> <ref target="letter:318#seg1">1</ref>), somit
+                  den Melkern letztendlich 194 fl. (<ref type="letter" target="letter:318">318</ref>
+               <ref target="letter:318#seg1">1</ref>), somit
                   etwas weniger als der hier von MM genannte Betrag.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg6">
@@ -187,14 +205,19 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine in Christo pater ac domine amice in paucis colendissime amatissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine in Christo pater ac domine amice in paucis colendissime amatissime.</opener>
          <ab resp="#editor" xml:id="seg1">Hac ipsa hora, qua haec scribo, laetum Parisiis nuntium accipio, desideratos scilicet Mabillonii libros iam Basileam esse dimissos ibidemque iacere paratos, quos hodie adhuc advehi curo, ut per Ulmam tibi Melicium transmittam. Felices fuimus utrinque, et tu in petendo, et ego in procurando tempore opportuno: hoc enim vix non ultimum erit exemplar integrum, quod Germania videbit, ob raritatem operis iam penitus quoad priores tomos distracti nec amplius ex integro reperibilis. <sic>Comunico</sic>  hic <anchor xml:id="n1"/>in adiecta charta<anchor xml:id="n1e"/> verba formalia Parisiis mihi perscripta, ex quibus facile pretium et raritatem illiusque causam <sic>inteligere</sic>  poteris. </ab>
          <ab resp="#editor" xml:id="seg2">Ego certe, tametsi tot aliis distentus negotiis, nullis pro te (amice colendissime) laboribus peperci, nec ullos horrebo unquam, ut serviam, et quidem gratis et gratanter. Illud tamen enixe oro: ut (quia in antecessum <anchor xml:id="n2"/>mercatoribus Basileensibus<anchor xml:id="n2e"/> pretium solvere debui et peccuniam interim mutuam accepi, utpote exul <anchor xml:id="n3"/>sine sacculo et pera<anchor xml:id="n3e"/> ab aerario proprio procul) ut, inquam, mihi pretium seu peccunias pro libris expensas mature remitti cures. Ego mittendorum vicissim curam librorum et obligationem in me suscipiam. Illud scias velim, me praeter pretium a prima manu mihi assignatum et vecturae sumptus Schaffhusium usque <pb n="1v"/> expensos <anchor xml:id="n4"/>nec obolum fecisse lucrum<anchor xml:id="n4e"/>. Ut adeo libri illi longe carius <sic>voenirent</sic> , si per librarios in sua commoda intentos tibi advenire debuissent. </ab>
-         <ab resp="#editor" xml:id="seg3">Porro <sic>securissima</sic>  tibique mihique <sic>comodissima</sic>  peccuniam transmittendi viam credo, si negotium peragatur per aliquod cambium (vulgo ein wexel brieff). Scribe, si lubet, alicui mercatori noto Ulmensi, ut is dominis <anchor xml:id="n5"/><sic>Heuster</sic><anchor xml:id="n5e"/> , Ott et Peyer numulariis et mercatoribus Schaffhusianis mandet, quatenus mihi (patri Mauritio Müller degenti in Rheinauw) debitam peccuniae summam mox <sic>mittat</sic>  Rhenovium; et hoc modo sine periculo peccuniae ad me et inde ad creditores meos redibunt. Si autem peccunias postae velit <sic>comittere</sic> , suadeo aurum potius quam argentum mittere ob minores portitorii sumptus, et sic etiam secure ad me redibunt. <sic>Attressa</sic>  tamen fiat ad admodum reverendum etc. dominum patrem Joachimum Letter priorem Rhenoviensem. Spero, cum ego negotium tuum et causam probe fideliterque non sine labore magno egerim, te quoque nunc meam, imo etiamnum<note place="foot" xml:id="d4618e38981"><hi rend="italic">num</hi> über der Zeile eingefügt.</note> tuam, quoad solutionem graviter acturum et peccunias, quam citissime fieri poterit, submissurum. </ab>
+         <ab resp="#editor" xml:id="seg3">Porro <sic>securissima</sic>  tibique mihique <sic>comodissima</sic>  peccuniam transmittendi viam credo, si negotium peragatur per aliquod cambium (vulgo ein wexel brieff). Scribe, si lubet, alicui mercatori noto Ulmensi, ut is dominis <anchor xml:id="n5"/>
+            <sic>Heuster</sic>
+            <anchor xml:id="n5e"/> , Ott et Peyer numulariis et mercatoribus Schaffhusianis mandet, quatenus mihi (patri Mauritio Müller degenti in Rheinauw) debitam peccuniae summam mox <sic>mittat</sic>  Rhenovium; et hoc modo sine periculo peccuniae ad me et inde ad creditores meos redibunt. Si autem peccunias postae velit <sic>comittere</sic> , suadeo aurum potius quam argentum mittere ob minores portitorii sumptus, et sic etiam secure ad me redibunt. <sic>Attressa</sic>  tamen fiat ad admodum reverendum etc. dominum patrem Joachimum Letter priorem Rhenoviensem. Spero, cum ego negotium tuum et causam probe fideliterque non sine labore magno egerim, te quoque nunc meam, imo etiamnum<note place="foot" xml:id="d4618e38981">
+               <hi rend="italic">num</hi> über der Zeile eingefügt.</note> tuam, quoad solutionem graviter acturum et peccunias, quam citissime fieri poterit, submissurum. </ab>
          <ab resp="#editor" xml:id="seg4">Sarcinam librorum mox Ulmam <sic>a</sic>  dominum <anchor xml:id="n6"/>Beürlin<anchor xml:id="n6e"/> librarium transmittam eique commendabo, ut mox Melicium <sic>a</sic>  te <sic>avehatur</sic> . Qui dum responsum citatissimum cum effectu sperato exspecto, me in omnia sacra et perennes favores commendo et cum fraterno osculo maneo ut semper</ab>
          <closer>Totus vester pater Mauritius Miller manu propria.</closer>
          <closer>Rheinauw 1713 die 29. Aprilis.</closer>
-         <closer xml:id="seg6">P.S. NB. Cum vecturae sumptus hucusque factos nondum sciam, pretium librorum et expensarum nondum scribere possum. Sumptus tamen vecturae Schaffhusium usque ego solvam; reliquos Ulma Melicium usque tu expendes, qui longe faciliores erunt ob commoditatem navigii per lacum <add place="above">hic</add> et Danubium ibi. Si mitteres proxima posta ordinaria dubliones sive <sic>luisdor</sic>  Gallicos <add place="left-margin">24</add>, spero me interim solutionem cum iis expuncturum. Addam, quae addenda sunt, remittam, quae superflua erunt. Credo tamen nihil superfluum fore pro omnibus, scilicet: novem tomis Actorum, et grandi illo opere <anchor xml:id="n7"/>De re diplomatica<anchor xml:id="n7e"/> multis figuris aeneis referto. Qui dum hoc interim exspecto, sive per cambium sive per paratum aurum postae committendum, maneo ut supra.<pb n="2r"/> </closer>
+         <closer xml:id="seg6">P.S. NB. Cum vecturae sumptus hucusque factos nondum sciam, pretium librorum et expensarum nondum scribere possum. Sumptus tamen vecturae Schaffhusium usque ego solvam; reliquos Ulma Melicium usque tu expendes, qui longe faciliores erunt ob commoditatem navigii per lacum <add place="above">hic</add> et Danubium ibi. Si mitteres proxima posta ordinaria dubliones sive <sic>luisdor</sic>  Gallicos <add place="left-margin">24</add>, spero me interim solutionem cum iis expuncturum. Addam, quae addenda sunt, remittam, quae superflua erunt. Credo tamen nihil superfluum fore pro omnibus, scilicet: novem tomis Actorum, et grandi illo opere <anchor xml:id="n7"/>De re diplomatica<anchor xml:id="n7e"/> multis figuris aeneis referto. Qui dum hoc interim exspecto, sive per cambium sive per paratum aurum postae committendum, maneo ut supra.<pb n="2r"/>
+         </closer>
       </body>
    </text>
 </TEI>

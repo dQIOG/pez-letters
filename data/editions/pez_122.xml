@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="122" xml:id="pez-0122">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Ambros Dietmayr an Bernhard Pez. 1710-10-29. Admont.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">122</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -83,7 +96,7 @@
             <p corresp="#seg2">Die Unterlagen zur Geschichte von <rs ref="index:d14380e421">Admont</rs>, die die <rs ref="index:d10854e15615">Mauriner</rs> – <rs ref="index:d14380e25581">Mabillons</rs> Nachfolger in der Bearbeitung der „<rs ref="index:d14380e25705">Annales OSB</rs>“ – angefordert haben, hat <rs ref="index:d10854e31900">Karlmann Vierholz</rs> bereits vor Jahren nach <rs ref="index:d10854e23168">Petershausen</rs> geschickt. Den Auszug daraus findet er nun in seinen Papieren nicht mehr. AD will sich bemühen, dennoch der Bitte zu entsprechen.</p>
             <p corresp="#seg3">Den Patres Albert und Adalbert sollen gewisse <rs ref="index:d10854e269">Musikalien</rs> mit der Empfehlung ADs ausgefolgt werden; sie können bei Gelegenheit zusammen mit der genannten <rs ref="index:d10854e260">Handschrift</rs> retourniert werden.</p>
             <p corresp="#seg4">In einem Postskriptum lässt AD Prior <rs ref="index:d10854e16613">Valentin Larson</rs> und den <rs ref="index:d14380e28088">Melker</rs> Konvent grüßen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -142,7 +155,8 @@
             <mentioned>Petershusanis</mentioned>
             <p>Vielleicht im Zusammenhang des Rangstreites zwischen Petershausen und dem
                   Augustiner-Chorherrenstift Kreuzlingen, in dem Petershausen Mabillon konsultierte:
-                  vgl. <ref type="letter" target="letter:154">154</ref> <ref target="letter:154#seg6">6</ref>; Einleitung, Abschnitt I.5.</p>
+                  vgl. <ref type="letter" target="letter:154">154</ref>
+               <ref target="letter:154#seg6">6</ref>; Einleitung, Abschnitt I.5.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
             <mentioned>Res musicas ... Alberto ac Adalberto</mentioned>
@@ -170,16 +184,21 @@
    </standOff>
    <text>
       <front>
-         <p>Monsieur le tres-reverend pere Bernard Pez Benedictin de Melck et present à Mölckh.<note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 2r.</note></p>
+         <p>Monsieur le tres-reverend pere Bernard Pez Benedictin de Melck et present à Mölckh.<note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 2r.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiosissime ac doctissime domine, domine ac patrone honorandissime.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiosissime ac doctissime domine, domine ac patrone honorandissime.</opener>
          <ab resp="#editor" xml:id="seg1">Ex gratiosa reverendissimi domini <anchor xml:id="n1"/>abbatis mei<anchor xml:id="n1e"/> permissione mitto tandem codicem manuscriptum <anchor xml:id="n2"/>non Modesti Preinger<anchor xml:id="n2e"/>, ut erronee putatur, <anchor xml:id="n3"/>sed Modesti Puterer<anchor xml:id="n3e"/> senioris quondam nostri, instanter multoties desideratum; missurus pridem, si commoda sese prius occasio praesentasset. Poterit dein liber isthic, postquam praeconceptis usibus deservierit, fidis iterum tradi manibus, <pb n="1v"/> ut ad me perferatur. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n4"/>Monumenta monasterii nostri, quae patres illi Mabillonii successores eidemque in continuandis sacri instituti nostri memorabilibus succenturiati communicari sibi flagitant, pater Carolomannus<anchor xml:id="n4e"/> noster annis superioribus <anchor xml:id="n5"/>Petershusanis<anchor xml:id="n5e"/> communicaverat, quorum tamen epitomen, esto omnia sua schediasmata in gratiam mei operose excusserit, reperire non potest, fors amica cuiusdam confidentia sublatam <pb n="2r"/> aut prorsus interciduam. Dabo nilominus operam, ut petitis paulo post fiat satis. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n6"/>Res musicas cum mei commendatione extradi rogo admodum reverendis dominis Alberto ac Adalberto<anchor xml:id="n6e"/>, quae suo tempore cum memorato codice remitti poterunt. Finio raptissime sub acceleratum tabellarii abitum meque in omnia sancta ac constantem affectum impense commendo.</ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n4"/>Monumenta monasterii nostri, quae patres illi Mabillonii successores eidemque in continuandis sacri instituti nostri memorabilibus succenturiati communicari sibi flagitant, pater Carolomannus<anchor xml:id="n4e"/> noster annis superioribus <anchor xml:id="n5"/>Petershusanis<anchor xml:id="n5e"/> communicaverat, quorum tamen epitomen, esto omnia sua schediasmata in gratiam mei operose excusserit, reperire non potest, fors amica cuiusdam confidentia sublatam <pb n="2r"/> aut prorsus interciduam. Dabo nilominus operam, ut petitis paulo post fiat satis. </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n6"/>Res musicas cum mei commendatione extradi rogo admodum reverendis dominis Alberto ac Adalberto<anchor xml:id="n6e"/>, quae suo tempore cum memorato codice remitti poterunt. Finio raptissime sub acceleratum tabellarii abitum meque in omnia sancta ac constantem affectum impense commendo.</ab>
          <closer>Admodum reverendae paternitatis vestrae servus studiosissimus pater Ambrosius.</closer>
          <closer>Admont 29. Octobris 1710.</closer>
-         <closer xml:id="seg4">P.S. Plurimum reverendum dominum patrem priorem cum caeteris de venerabili capitulo submisse revereor.<pb n="2v"/> </closer>
+         <closer xml:id="seg4">P.S. Plurimum reverendum dominum patrem priorem cum caeteris de venerabili capitulo submisse revereor.<pb n="2v"/>
+         </closer>
       </body>
    </text>
 </TEI>

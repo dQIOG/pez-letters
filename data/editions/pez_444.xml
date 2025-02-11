@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="444" xml:id="pez-0444">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Joachim Edlinger an Hieronymus Pez. 1715-09-22. Seitenstetten.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">444</idno>
          </publicationStmt>
          <seriesStmt>
@@ -36,7 +48,8 @@
             </relatedItem>
          </notesStmt>
          <sourceDesc>
-            <listWit><witness ana="cmif:manuscript">
+            <listWit>
+               <witness ana="cmif:manuscript">
                   <msDesc>
                      <msIdentifier>
                         <institution>Stift Melk</institution>
@@ -51,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -80,26 +94,30 @@
          <abstract>
             <p corresp="#seg1">In der durch die verfrühte Abreise <rs ref="index:d10854e7225">Anton Eders</rs> verursachten Eile hat JE vergessen, jene Materialien (reculae), die er in einem Brief an BP <ref type="letter" target="letter:440">440</ref> versprochen hatte, von <rs ref="index:d10854e7225">Eder</rs> überbringen zu lassen. Er bittet um Entschuldigung und holt nun die Versendung nach.</p>
             <p corresp="#seg2">Das Versäumnis verschafft JE nun allerdings die Gelegenheit, HP über den Aufbau des von ihm <rs ref="index:d10854e7245">geplanten Werks</rs> zu unterrichten, was ihm in seinem jüngsten Brief <ref type="letter" target="letter:442">442</ref> aus Mangel an Platz nicht möglich gewesen ist. Erstens will JE darlegen, was bei einer öffentlichen Lesung im Allgemeinen zu beachten ist. Zweitens will er die richtige Aussprache aller Buchstaben und Diphthonge sowohl der <rs ref="index:d14380e23973">lateinischen</rs> Sprache als auch des <rs ref="index:d14380e9395">Deutschen</rs> (vernaculum idioma) behandeln, zumal viele bei Letzterem fast mehr Fehler begehen. Drittens will JE nicht alle Wörter, deren Quantität in der vorletzten Silbe nicht auf den ersten Blick erkennbar ist, einzeln anführen, damit das Buch nicht über ein handliches und tragbares Format hinaus anwächst. Vielmehr will er ähnlich dem <rs ref="index:d10854e5881">„Amaltheum prosodicum“ von Dangalières</rs> allgemeine Regeln für Wörter mit der gleichen Endung angeben, im Gegensatz zu diesem aber in einer praktischeren, nämlich alphabetischen Ordnung. Viertens sollen jene Wörter, die sich nicht unter solchen Regeln zusammenfassen lassen oder Ausnahmen bilden, in einem alphabetischen Verzeichnis aufgeführt werden. Fünftens sollen die in Druckwerken gebräuchlichen Abkürzungen beigefügt werden, zusammen mit mathematischen und medizinischen Zeichen. Sechstens soll eine Anleitung zum Lesen von juristischen Zitaten geboten werden. Weiters denkt JE auch daran, die <rs ref="index:d14380e19828">italienische</rs> und <rs ref="index:d14380e12712">französische</rs> Aussprache am Beispiel der Namen von Provinzen und Orten zu erläutern; diese kommen in den <rs ref="index:d10854e35082">Zeitungen (novellae)</rs> häufig vor, die immer öfter bei den Tischlesungen verwendet werden, und verursachen Lesern wie Hörern Unannehmlichkeiten. JE bittet um HPs und <rs ref="index:d14380e33148">BPs</rs> Urteil zu diesem Entwurf.</p>
-            <p corresp="#seg3">JE bittet um die Übermittlung der <rs ref="index:d14380e18247">„Prosodia“ von Hesius</rs>, falls sie für HP greifbar ist; JE konnte sie nirgends, auch nicht auf dem <rs ref="index:d14380e24970"><rs ref="index:d14380e24970">Linzer</rs> Markt</rs>, bekommen.</p>
+            <p corresp="#seg3">JE bittet um die Übermittlung der <rs ref="index:d14380e18247">„Prosodia“ von Hesius</rs>, falls sie für HP greifbar ist; JE konnte sie nirgends, auch nicht auf dem <rs ref="index:d14380e24970">
+                  <rs ref="index:d14380e24970">Linzer</rs> Markt</rs>, bekommen.</p>
             <p corresp="#seg4">Ferner bittet JE um eine Schwanenfeder, weil er auch eine solche bislang selbst nicht hat beschaffen können.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>Canis ... catulos</mentioned>
-            <p><rs type="bibl" ref="bibl:20224">Walther, Proverbia</rs> 7 318 Nr. 35384.</p>
+            <p>
+               <rs type="bibl" ref="bibl:20224">Walther, Proverbia</rs> 7 318 Nr. 35384.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned>dominus Eder</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:442">442</ref> <ref target="letter:442#seg1">1</ref>. Es sind vermutlich in beiden Briefen
+            <p>Vgl. <ref type="letter" target="letter:442">442</ref>
+               <ref target="letter:442#seg1">1</ref>. Es sind vermutlich in beiden Briefen
                   dieselben Ereignisse (im Zusammenhang mit der Versendung des „indiculus librorum“,
                   vor derjenigen von <ref type="letter" target="letter:442">442</ref>) gemeint.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
             <mentioned>reculas istas</mentioned>
-            <p>Schwerlich der in <ref type="letter" target="letter:442">442</ref> <ref target="letter:442#seg1">1</ref> als bereits versendet
+            <p>Schwerlich der in <ref type="letter" target="letter:442">442</ref>
+               <ref target="letter:442#seg1">1</ref> als bereits versendet
                   erwähnte „indiculus librorum“, sondern eher weitere Materialien, die zusammen mit
                   diesem hätten übermittelt werden sollen.</p>
          </note>
@@ -107,7 +125,8 @@
             <mentioned>Hesium ... potui acquirere</mentioned>
             <p>Neben der ersten Ausgabe (Parma 1624) gab es mindestens zwei aus Deutschland
                   (Freiburg im Breisgau 1627; Köln 1630). Dennoch war dies ein erheblich selteneres
-                  Werk als die drei in <ref type="letter" target="letter:442">442</ref> <ref target="letter:442#seg2">2</ref> angeführten.</p>
+                  Werk als die drei in <ref type="letter" target="letter:442">442</ref>
+               <ref target="letter:442#seg2">2</ref> angeführten.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>nundinis Lincensibus</mentioned>
@@ -118,8 +137,10 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiosissime ac eximie domine pater Hieronyme, domine ac patrone plurimum colende.</opener>
-         <ab resp="#editor" xml:id="seg1"><anchor xml:id="n1"/>Canis festinans caecos parit catulos<anchor xml:id="n1e"/>: ita et mihi nuperrime contigit; dum enim tam mea opinione quam suo promisso citius abiit <anchor xml:id="n2"/>dominus Eder<anchor xml:id="n2e"/>, omnia deproperare coactus fui adeo, ut nec ad revidendum literas mihi tempus suppetierit. Et hinc facile contigit, ut ad <anchor xml:id="n3"/>reculas istas<anchor xml:id="n3e"/>, quarum tamen in epistola ad colendissimum dominum germanum tuum mentionem feci, plane non adverterem. Eas itaque incuriae meae veniam petens impraesentiarum transmitto. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiosissime ac eximie domine pater Hieronyme, domine ac patrone plurimum colende.</opener>
+         <ab resp="#editor" xml:id="seg1">
+            <anchor xml:id="n1"/>Canis festinans caecos parit catulos<anchor xml:id="n1e"/>: ita et mihi nuperrime contigit; dum enim tam mea opinione quam suo promisso citius abiit <anchor xml:id="n2"/>dominus Eder<anchor xml:id="n2e"/>, omnia deproperare coactus fui adeo, ut nec ad revidendum literas mihi tempus suppetierit. Et hinc facile contigit, ut ad <anchor xml:id="n3"/>reculas istas<anchor xml:id="n3e"/>, quarum tamen in epistola ad colendissimum dominum germanum tuum mentionem feci, plane non adverterem. Eas itaque incuriae meae veniam petens impraesentiarum transmitto. </ab>
          <ab resp="#editor" xml:id="seg2">Interim hoc saltem emolumenti ex hac non admodum paenitenda incuria emersit, ut de oeconomia eius, quod meditor, opusculi te hic instruere valeam, quod nuper ob defectum spatii non potui, tametsi ad rite de proposito meo ferendum, uti rogavi, iudicium fere sit necessarium. Ea igitur huiusmodi erit: primo, quid generatim in lectione publica sit observandum, ostendam. Secundo rectam pronuntiationem omnium literarum ac diphthongorum tam Latini quam vernaculi idiomatis, quia non pauci maiorem fere quam in priori difficultatem patiuntur, ordinate tradam. Tertio ne, si omnes <pb n="1v"/> omnino voces, de quarum penultimae quantitate vel ob positionem vel ob vocalem ante vocalem non cuivis constat, vellem expresse ponere, liber, qui tamen manualis et in quovis sacculo portabilis esse debet, nimium excrescat, ad eum fere modum, quo in Amaltheo prosodico, sed longe commodiorem ordine alphabetico regulas quam plurimas, ordinatissime tamen, tradam circa eas voces, quarum plures eandem terminationem habent. Quae vero sub communi regula haud facile comprehendi queunt vel ab eadem recedunt, ea quarto ordine alphabetico in repertorium sive indiculum coniciam, ubi commodissime inter legendum fere inquiri poterunt. Quinto abbreviaturas in impressis libris usitatiores una cum signis mathematicis et medicis adiciam. Sexto methodum legendi citationes iuris docebo. Et quid, si in novellistarum (cum novellae saepe saepius etiam in mensa legantur) gratiam Italicam quoque et Gallicam pronuntiationem annecterem, exemplorum loco meras provincias et loca illarum regionum ponendo? Utpote quae in libris etiam Germanicis passim sunt obvia, et tam lectorem quam audientes mire torquent. De his ergo tuum tuique admodum reverendi domini germani iudicium, vir amicissime, ne me celes, rogo. </ab>
          <ab resp="#editor" xml:id="seg3">Si vel absolute vel cum limitatione approbes, hanc porro petitionem adicio, ut <anchor xml:id="n4"/>Hesium, quem aliqui hac in re citant, sed nonnunquam tamen reiciunt, mihi ad tempus communices, si eum habeas aut scias; quia nullibi, nec in nundinis Lincensibus, adhucdum potui acquirere<anchor xml:id="n4e"/>. </ab>
          <ab resp="#editor" xml:id="seg4">Si vel unicam pennam cygneam posses absque incommodo adicere, favorem mihi exhibiturus esses haud exiguum, quia pariter aliunde nusquam etiam constitutas acquiro. Vale et mihi fave.</ab>

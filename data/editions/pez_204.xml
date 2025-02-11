@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="204" xml:id="pez-0204">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Moritz Müller an Bernhard Pez. 1712-01-16. St. Gallen.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">204</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -82,11 +94,12 @@
             <p corresp="#seg2">Er wird demnächst <rs ref="index:d14380e25581">Mabillons</rs> „<rs ref="index:d14380e25664">Acta sanctorum OSB</rs>“ in<rs ref="index:d14380e32292"> Paris</rs> für BP beschaffen. Von den neun Bänden, die das Werk bislang umfasst, sind allerdings die ersten beiden vergriffen und schwer zu bekommen, wie MM vor kurzem erfahren musste, als er das Werk für den Abt <rs ref="index:d10854e35275">Bonifaz Zurgilgen</rs> von <rs ref="index:d14380e34947">Pfäfers</rs> besorgte. Sie sind im Buchhandel nicht mehr erhältlich, sondern nur aus Privatbibliotheken zu bekommen, was allein durch Beziehungen möglich ist. MM hofft, die Bände entweder über den königlichen Buchhändler <rs ref="index:d14380e1795">Anisson</rs> oder aber aus der <rs ref="index:d10854e17111">Bibliothek</rs> des Erzbischofs <rs ref="index:d10854e17105">Le Tellier</rs> beschaffen zu können. Der Preis schwankt, zuletzt hat MM aber 100 Gulden für das Werk ausgegeben, wie er seinem Rechnungsbuch entnimmt. MM betont, dass kein Buchhändler billiger sein kann.</p>
             <p corresp="#seg3">MM hebt seine Ersparnis an Transportkosten hervor, die sich aus der Benutzung der Handelsverbindung zwischen <rs ref="index:d10854e27374">St. Gallen</rs> und <rs ref="index:d14380e25537">Lyon</rs> ergibt. Von <rs ref="index:d10854e27374">St. Gallen</rs> bis <rs ref="index:d14380e43652">Ulm</rs> ist die Beförderung leicht und die Kosten gering. Als Vermittler können <rs ref="index:d10854e20625">Felician Müller</rs> in <rs ref="index:d10854e32902">Wiblingen</rs> und (der Buchhändler) <rs ref="index:d10854e3388">Beuerlein</rs> in <rs ref="index:d14380e43652">Ulm</rs> dienen.</p>
             <p corresp="#seg4">BPs anderem Anliegen will MM durch die Fertigstellung und die Übersendung seines Werks „<rs ref="index:d10854e20696">De viris illustribus et scriptoribus Sanct-Gallensibus</rs>“ nachkommen, sobald es die Zeit zulässt.</p>
-            <p corresp="#seg5"><rs ref="index:d14380e26993">René Massuet</rs>, dem Nachfolger <rs ref="index:d14380e25581">Mabillons</rs>, hat MM schon mehrfach Material für die „<rs ref="index:d14380e25705">Annales OSB</rs>“ geliefert. Nun hat er eine Schrift „<rs ref="index:d10854e20687">De viris illustribus Augiae Divitis</rs>“ aus <rs ref="index:d14380e39290">St. Galler</rs> und <rs ref="index:d14380e37019">Reichenauer</rs> Quellen zusammengestellt und nach <rs ref="index:d14380e32292">Paris</rs> gesendet. Sobald <rs ref="index:d14380e26993">Massuet</rs> den <rs ref="index:d10854e20687">Traktat</rs> zurückschickt, will MM ihn nach <rs ref="index:d14380e28088">Melk</rs> weitersenden.</p>
+            <p corresp="#seg5">
+               <rs ref="index:d14380e26993">René Massuet</rs>, dem Nachfolger <rs ref="index:d14380e25581">Mabillons</rs>, hat MM schon mehrfach Material für die „<rs ref="index:d14380e25705">Annales OSB</rs>“ geliefert. Nun hat er eine Schrift „<rs ref="index:d10854e20687">De viris illustribus Augiae Divitis</rs>“ aus <rs ref="index:d14380e39290">St. Galler</rs> und <rs ref="index:d14380e37019">Reichenauer</rs> Quellen zusammengestellt und nach <rs ref="index:d14380e32292">Paris</rs> gesendet. Sobald <rs ref="index:d14380e26993">Massuet</rs> den <rs ref="index:d10854e20687">Traktat</rs> zurückschickt, will MM ihn nach <rs ref="index:d14380e28088">Melk</rs> weitersenden.</p>
             <p corresp="#seg6">MM weist auf die Bedeutung der benediktinischen Schriftsteller in <rs ref="index:d14380e41211">Spanien</rs> und <rs ref="index:d14380e11399">England</rs> hin und empfiehlt das „<rs ref="index:d10854e6959">Monasticon Anglicanum</rs>“ von <rs ref="index:d10854e6953">Dugdale</rs> und<rs ref="index:d10854e6598"> Dodsworth</rs>. Auch verweist er auf Schriftstellerkataloge von <rs ref="index:d14380e12712">Frankreich</rs>,<rs ref="index:d14380e41211"> Spanien</rs> und <rs ref="index:d14380e19828">Italien</rs> und bedauert die große räumliche Distanz zu BP. MM fragt, ob BP in seinem Werk („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) alle benediktinischen Schriftsteller insgemein berücksichtigen will oder bloß jene einer Nation, etwa <rs ref="index:d14380e9395">Deutschlands</rs>, und bittet um eine kurze Beschreibung des Vorhabens. Schließlich erwidert MM BPs Wünsche zum Neuen Jahr.</p>
             <p corresp="#seg7">In einem Postskriptum bewirbt MM die in <rs ref="index:d10854e27374">St. Gallen</rs> gedruckten „<rs ref="index:d10854e31172">Annales Hirsaugienses</rs>“ des <rs ref="index:d14380e43380">Trithemius</rs> und seine eigene „<rs ref="index:d10854e20740">Idea congregationis Helveto-Benedictinae</rs>“, die er gerne in <rs ref="index:d10854e21970">Österreichs</rs> Klöstern verbreitet wissen würde. Er bietet gemäßigte Preise an und schickt ein Exemplar der „<rs ref="index:d10854e20740">Idea</rs>“ als Geschenk, zusammen mit seiner jüngst gedruckten Predigt („<rs ref="index:d10854e20680">Coelum novum et terram novam</rs>“). MM bittet sich aus, auch seinerseits über Neuigkeiten informiert zu werden.</p>
             <p corresp="#seg8">In einem zweiten Postskriptum lässt er <rs ref="index:d14380e39962">Anselm Schramb</rs> in <rs ref="index:d14380e45571">Wien</rs> grüßen und erbittet sich auch von ihm Nachrichten.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -97,13 +110,15 @@
                   beinahe eineinhalb Jahre. Der Hauptgrund für diese Unterbrechung war sicherlich
                   der längere Aufenthalt MMs in Pfäfers, während dessen er auch mit René Massuet
                   nicht korrespondierte; doch wurde der Briefverkehr mit BP erst einige Monate nach
-                  MMs Rückkehr wieder aufgenommen. Vgl. <ref type="letter" target="letter:15">15</ref> <ref target="letter:15#seg2">2</ref>; sowie
+                  MMs Rückkehr wieder aufgenommen. Vgl. <ref type="letter" target="letter:15">15</ref>
+               <ref target="letter:15#seg2">2</ref>; sowie
                      <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 344, 355.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>Acta sanctorum ... comparanda</mentioned>
             <p>BP hatte MM offenbar schon 1710 nach einem Ankauf der „Acta sanctorum OSB“
-                  gefragt, vgl. <ref type="letter" target="letter:92">92</ref> <ref target="letter:92#seg6">6</ref>.</p>
+                  gefragt, vgl. <ref type="letter" target="letter:92">92</ref>
+               <ref target="letter:92#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>pro ... Fabariano comparavi</mentioned>
@@ -112,7 +127,9 @@
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned>libraria ... Anissoniana</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:32">32</ref> <ref target="letter:32#seg4">4</ref>, <ref type="letter" target="letter:71">71</ref> <ref target="letter:71#seg9">9</ref>.
+            <p>Vgl. <ref type="letter" target="letter:32">32</ref>
+               <ref target="letter:32#seg4">4</ref>, <ref type="letter" target="letter:71">71</ref>
+               <ref target="letter:71#seg9">9</ref>.
                   In StiA St. Gallen, Bd. 322, 481–482, ist ein Brief der Lyoner Buchhändler
                   (Jacques) Anisson, Posuel und Rigaud an MM vom 12. April 1712 erhalten, in dem
                   neben anderen Buchkäufen auch davon die Rede ist, die „Acta sanctorum OSB“ in
@@ -148,7 +165,8 @@
                   Bei MMs Vorhaben dürfte es sich um eine Überarbeitung und Fortsetzung handeln;
                   charakteristischerweise erwähnt MM Metzlers Werk nicht. BP selbst brachte es
                   später zur Sprache, nachdem er eine Abschrift davon im Wiener Schottenkloster
-                  entdeckt hatte: vgl. <ref type="letter" target="letter:259">259</ref> <ref target="letter:259#seg6">6</ref> und die weiteren dort
+                  entdeckt hatte: vgl. <ref type="letter" target="letter:259">259</ref>
+               <ref target="letter:259#seg6">6</ref> und die weiteren dort
                   angeführten Stellen. Es ist zweifelhaft, ob MMs Werk fertig gestellt wurde; man
                   weiß von diesem nur durch Erwähnungen MMs, die er außer in Briefen auch in seinen
                   „Notae ad necrologium“ gemacht hat: <rs type="bibl" ref="bibl:16988">Henggeler,
@@ -164,8 +182,10 @@
                   217r–218v, und BN FF 17680, 281r–282v). Dies versuchte er anscheinend BP gegenüber
                   als eigene Abfassung eines Traktats darzustellen. BP freilich wusste durch
                   Wolfgang Wetter (<ref type="letter" target="letter:21">21</ref>; vgl. <ref type="letter" target="letter:32">32</ref>
-                  <ref target="letter:32#seg3">3</ref>) von der Schrift Egons und hatte Massuet davon berichtet (<ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg14">14</ref>), was wohl der Anstoß für dessen Anfrage an
-                  MM gewesen war. Zu den zwei „Viri illustres“-Traktaten: <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 380–391; vgl. auch <ref type="letter" target="letter:230">230</ref> <ref target="letter:230#seg3">3</ref>. BP erhielt das Werk Egons später von dem Reichenauer
+               <ref target="letter:32#seg3">3</ref>) von der Schrift Egons und hatte Massuet davon berichtet (<ref type="letter" target="letter:143">143</ref>
+               <ref target="letter:143#seg14">14</ref>), was wohl der Anstoß für dessen Anfrage an
+                  MM gewesen war. Zu den zwei „Viri illustres“-Traktaten: <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 380–391; vgl. auch <ref type="letter" target="letter:230">230</ref>
+               <ref target="letter:230#seg3">3</ref>. BP erhielt das Werk Egons später von dem Reichenauer
                   Prior Maurus Hummel und edierte es (<rs type="bibl" ref="bibl:36782">Pez,
                      Thesaurus</rs> 1/3 col. 627–772).</p>
          </note>
@@ -211,9 +231,11 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Ex S. Gallo. 1712 die 16. Januarii.</opener>
+         <opener>
+            <pb n="1r"/> Ex S. Gallo. 1712 die 16. Januarii.</opener>
          <opener>Admodum reverende religiosissime ac clarissime domine in Christo pater ac domine amice et confrater colendissime.</opener>
-         <ab resp="#editor" xml:id="seg1">Humanissimas iuxta ac gratissimas admodum reverendae dominationis suae sub 31. Decembris ad me datas nudiustertius modo accepi, e quibus non sine grandi gaudio legi amicum meum in paucis colendissimum etiamnum post <anchor xml:id="n1"/>tantam temporis intercapedinem<anchor xml:id="n1e"/> mei memorem vivere et opera mea uti velle; quo gratius aliquid mihi accidere potuisset nihil. Certe uti iam olim non una et oris et operis contestatione me totum obsequiis admodum reverendae paternitatis suae devovi, ita etiamnum mihi <sic>domique</sic>  meae restitutus totus vester sum. Quamvis (ut fatear, quod res est) nec meus totus esse possim, utpote quem tot alia negotia, inter quae paene mactatus vix respiro, sibi <sic>vendicant</sic> <note type="annotation" xml:id="d4618e25296">Wohl für <orig>vindicent</orig>.</note> et in tot partes secant. Utut sit, saltem animi mei conatus semper in vos erit integerrimus et in Mellicensium obsequia semper fervebit. </ab>
+         <ab resp="#editor" xml:id="seg1">Humanissimas iuxta ac gratissimas admodum reverendae dominationis suae sub 31. Decembris ad me datas nudiustertius modo accepi, e quibus non sine grandi gaudio legi amicum meum in paucis colendissimum etiamnum post <anchor xml:id="n1"/>tantam temporis intercapedinem<anchor xml:id="n1e"/> mei memorem vivere et opera mea uti velle; quo gratius aliquid mihi accidere potuisset nihil. Certe uti iam olim non una et oris et operis contestatione me totum obsequiis admodum reverendae paternitatis suae devovi, ita etiamnum mihi <sic>domique</sic>  meae restitutus totus vester sum. Quamvis (ut fatear, quod res est) nec meus totus esse possim, utpote quem tot alia negotia, inter quae paene mactatus vix respiro, sibi <sic>vendicant</sic>
+            <note type="annotation" xml:id="d4618e25296">Wohl für <orig>vindicent</orig>.</note> et in tot partes secant. Utut sit, saltem animi mei conatus semper in vos erit integerrimus et in Mellicensium obsequia semper fervebit. </ab>
          <ab resp="#editor" xml:id="seg2">Atque ut ad vota respondeam, significo <anchor xml:id="n2"/>Acta sanctorum saeculorum ordinis sancti Benedicti in Gallia a nostris patribus edita et hactenus in novem tomos in folio excrescentia, proxime a me Parisiis in gratiam vestri fore comparanda<anchor xml:id="n2e"/>. Illud tamen certum ac mihi <anchor xml:id="n3"/>probe compertum est, primos duos tomos priorum saeculorum vix amplius nec nisi cum magno labore et sumptibus esse inveniendos; prout nuperrime expertus fui, dum eadem opera pro reverendissimo et illustrissimo principe et abbate Fabariano comparavi<anchor xml:id="n3e"/>. Non enim amplius in ulla libraria priores illi tomi supersunt, utpote prius, quam caeteri tomi in lucem ederentur, iam passim ac successive distracti. Proinde illos non nisi ex privata bibliotheca et aliquorum amicorum studio et labore non modico <sic>eos</sic>  obtinere potui. Spero tamen etiamnum <pb n="1v"/> me illos adhuc obtenturum, si non ex <anchor xml:id="n4"/>libraria regia Anissoniana<anchor xml:id="n4e"/>, saltem ex <anchor xml:id="n5"/>bibliotheca Telleriana<anchor xml:id="n5e"/> per patres Benedictinos singulares meos amicos. Illud tamen candide dico, in priores illos tomos fere maiores sumptus respective fore impendendos quam in reliquos paene omnes; ut adeo mirari non debeat, si totum opus maiori pretio veneat. Illud vero pariter assecurare audeo, neminem alium librarium viliori pretio aut minoribus sumptibus <add place="above">prae me</add> id fore comparaturum. Pretium determinatum ac certum de facto assignare non possum; illud enim pro temporis et monetae varietate variat. Pro ultimo tamen opere comparato ad 100 fl. circiter nostratis monetae expendi, uti in <anchor xml:id="n6"/>libro rationum<anchor xml:id="n6e"/> mearum inveni. </ab>
          <ab resp="#editor" xml:id="seg3">Caeterum magnum habeo <anchor xml:id="n7"/>vecturae commodum<anchor xml:id="n7e"/> ob mulos mercatorum nostrorum Sanct-Gallensium singulis mensibus Lugduno ad S. Gallum et inde iterum Lugdunum cum clitellariis suis ac mercibus euntes et redeuntes. E S. Gallo vero Ulmam usque facilis via, et modica erunt vecturae dispendia. Noti sunt mihi et reverendus dominus pater Felicianus Wiblingensis et dominus Beürlin Ulmensis, et cuicunque placuerit secure advenientes libros commendabo. Haec de his. </ab>
          <ab resp="#editor" xml:id="seg4">Ad alterum votum ad me delatum quod attinet: curabo, ut et istud expleam et desiderio vestro, quantum per otium licuerit, aliquando satisfaciam et <anchor xml:id="n8"/>opusculum illud a me olim iam coeptum (De viris illustribus et scriptoribus Sanct-Gallensibus<anchor xml:id="n8e"/>) absolvam et transmittam. Sed patientia vobis erit necessaria, et longior mora non negligentiae, sed impotentiae meae imputanda. Certe hoc opus modico tempore absolverem, si vel modica momenta temporis non aliis destinata negotiis suffurari mihi possem. </ab>
@@ -221,7 +243,8 @@
          <ab resp="#editor" xml:id="seg6">Multa alia sunt, quae in coepto intento admodum reverendam dominationem vestram iuvare possent, maxime si notitiam habuerit Hispaniae Benedictinae, ubi plurimi olim et eruditissimi scriptores claruere. Idem fuit in Anglia. Sed numquid rarum illud opus ad manus habetis, quod vocatur: Magnum monasticon Anglicum in tribus tomis in folio cum figuris? Magnam illud de rebus et scriptoribus ordinis nostri eruditionem subministrabit. Nosse item opporteret omnes indices universales authorum omnium, qui hactenus prodierunt aut scriptis suis inclaruerunt: quorum oppido multos ex Gallia, Hispania et Italia habeo et habere possum. Nisi tanta nos inter distantia foret, sperarem maiori me auxilio vobis succollare potuisse. Illud interim subit mirari: num scilicet reverenda admodum dominatio sua de scriptoribus Benedictinis universim omnibus, an tantum de alicuius nationis (verbi gratia Germanis) opus suum moliatur? Sane rescire percuperem intentionis suae finem brevemque operis ideam et synopsin. Primum enim illud opus multorum videtur esse annorum et laborum. Sed finio pro hac vice; alias plura. Qui interim, dum syncerissima illa novi iam fluentis anni vota in me copiose effusa cum omni affectu restituo milliesque et meo et omnium salutatorum nomine reduplico, maneo eodem semper animo, ut in veteri, sic et in novo anno, imo tota vita mea</ab>
          <closer>Totus vester pater Mauritius Miller manu propria.</closer>
          <closer xml:id="seg7">P.S. <anchor xml:id="n10"/>Annales Trithemii<anchor xml:id="n10e"/> nostris Sanct-Gallensibus typis editi sine dubio vobis noti erunt. Sane et hoc opus magnam de ordine nostro Benedictino eruditionem continet. Quod si illud non haberetur et forsan desideraretur, tollerabili pretio ex nostra libraria haberi poterit. Idea quoque congregationis nostrae Helveto-Benedictinae (a me <sic>editae</sic> ) in folio cum figuris, quae continet breves omnium nostrorum monasteriorum historias et elogia cum annotationibus, optarem, ut in Austriae monasteriis magis nota fieret, ut tollerabili pretio distrahi posset. <anchor xml:id="n11"/>Addo inpraesentiarum unum exemplar<anchor xml:id="n11e"/> una cum <anchor xml:id="n12"/>concione mea iussu superiorum nuper typis data<anchor xml:id="n12e"/>. Vos si quid novi habetis, et me informate vicissim.</closer>
-         <closer xml:id="seg8">P.S. Admodum reverendus clarissimus dominus pater Anselmus Schramb etiamne Viennae degit et qui vivit? Eidem cum summo respectu 100.000 salutationes meas. Forsan is Viennae nova habet, quae mihi communicet.<pb n="2v"/> </closer>
+         <closer xml:id="seg8">P.S. Admodum reverendus clarissimus dominus pater Anselmus Schramb etiamne Viennae degit et qui vivit? Eidem cum summo respectu 100.000 salutationes meas. Forsan is Viennae nova habet, quae mihi communicet.<pb n="2v"/>
+         </closer>
       </body>
    </text>
 </TEI>

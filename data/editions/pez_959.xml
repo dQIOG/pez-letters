@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="959" xml:id="pez-0959">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Georg Eckhart an Bernhard Pez. 1718-07-07. Hannover.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">959</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -75,50 +87,52 @@
                <ptr type="mentionedIn" target="letter:976"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e3233">Augsburg</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e5752">Bier</term>
-            <term ref="index:d14380e6557">Braunschweig</term>
-            <term ref="index:d14380e6579">Braunschweig ; Eiermarkt</term>
-            <term ref="index:d14380e6584">Braunschweig ; Martinskirchhof</term>
-            <term ref="index:d14380e6589">Braunschweig ; Messe</term>
-            <term ref="index:d14380e10509">Eckhart, Johann Georg ; -Etymologisches Wörterbuch</term>
-            <term ref="index:d14380e10559">Eckhart, Johann Georg ; -Welfengeschichte Begonnen von Gottfried Wilhelm
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e3233">Augsburg</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e5752">Bier</term>
+               <term ref="index:d14380e6557">Braunschweig</term>
+               <term ref="index:d14380e6579">Braunschweig ; Eiermarkt</term>
+               <term ref="index:d14380e6584">Braunschweig ; Martinskirchhof</term>
+               <term ref="index:d14380e6589">Braunschweig ; Messe</term>
+               <term ref="index:d14380e10509">Eckhart, Johann Georg ; -Etymologisches Wörterbuch</term>
+               <term ref="index:d14380e10559">Eckhart, Johann Georg ; -Welfengeschichte Begonnen von Gottfried Wilhelm
          Leibniz</term>
-            <term ref="index:d14380e10613">Eckhart, Johann Georg ; Plan einer Reise nach Süddeutschland, Österreich und Italien
+               <term ref="index:d14380e10613">Eckhart, Johann Georg ; Plan einer Reise nach Süddeutschland, Österreich und Italien
          gemeinsam mit BP und HP</term>
-            <term ref="index:d14380e10642">Eckhart, Johann Georg ; Reise nach Helmstedt 1718</term>
-            <term ref="index:d14380e10654">Eckhart, Rosina Elisabeth</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e17865">Helmstedt</term>
-            <term ref="index:d14380e17877">Helmstedt ; St. Ludgeri</term>
-            <term ref="index:d14380e17888">Helmstedt ; Universität</term>
-            <term ref="index:d14380e21188">Karl VI</term>
-            <term ref="index:d14380e24305">Leibniz, Gottfried Wilhelm ; Scriptores rerum Brunsvicensium illustrationi
+               <term ref="index:d14380e10642">Eckhart, Johann Georg ; Reise nach Helmstedt 1718</term>
+               <term ref="index:d14380e10654">Eckhart, Rosina Elisabeth</term>
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e17865">Helmstedt</term>
+               <term ref="index:d14380e17877">Helmstedt ; St. Ludgeri</term>
+               <term ref="index:d14380e17888">Helmstedt ; Universität</term>
+               <term ref="index:d14380e21188">Karl VI</term>
+               <term ref="index:d14380e24305">Leibniz, Gottfried Wilhelm ; Scriptores rerum Brunsvicensium illustrationi
          inservientes, antiqui omnes et religionis reformatione priores. 3 Bde. Hannover
          1707–1711</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e28713">Menthe, Rosine Elisabeth</term>
-            <term ref="index:d14380e32535">Paschasius Radbertus, hl ; De fide, spe et charitate ; Ms. Corvey ; Abschrift für
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e28713">Menthe, Rosine Elisabeth</term>
+               <term ref="index:d14380e32535">Paschasius Radbertus, hl ; De fide, spe et charitate ; Ms. Corvey ; Abschrift für
          Johann Wilhelm Göbel. Ms</term>
-            <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
+               <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
          dominum dominum Joannem Benedictum Gentilottum ab Engelsbrunn pro editione integri
          syntagmatis diplomatico-historico-epistolaris Udalrici Babenbergensis ex codice Zwetlensi,
          impugnata a viro clarissimo Angelo Fonteio Veronensi. Augsburg 1717</term>
-            <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
+               <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
          1721–1729</term>
-            <term ref="index:d14380e34051">Pez, Bernhard ; Bd. 2</term>
-            <term ref="index:d14380e34068">Pez, Bernhard ; Bd. 2 ; -Darin: Ratram von Corbie, De anima</term>
-            <term ref="index:d14380e34102">Pez, Bernhard ; Bezeichnung als „ Spicilegium“</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
-            <term ref="index:d14380e36533">Ratram von Corbie ; Liber de anima</term>
-            <term ref="index:d14380e37878">Rom, Römer ; Päpstliche Kurie, Papsttum ; Propagandakongregation</term>
-            <term ref="index:d14380e43638">Uffelmann, Ilse</term>
-            <term ref="index:d14380e43645">Uffelmann, Johann Friedrich</term>
-            <term ref="index:d14380e44327">Verbockhorst, Robert</term>
-            <term ref="index:d14380e45099">Wein</term></keywords></textClass>
+               <term ref="index:d14380e34051">Pez, Bernhard ; Bd. 2</term>
+               <term ref="index:d14380e34068">Pez, Bernhard ; Bd. 2 ; -Darin: Ratram von Corbie, De anima</term>
+               <term ref="index:d14380e34102">Pez, Bernhard ; Bezeichnung als „ Spicilegium“</term>
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+               <term ref="index:d14380e36533">Ratram von Corbie ; Liber de anima</term>
+               <term ref="index:d14380e37878">Rom, Römer ; Päpstliche Kurie, Papsttum ; Propagandakongregation</term>
+               <term ref="index:d14380e43638">Uffelmann, Ilse</term>
+               <term ref="index:d14380e43645">Uffelmann, Johann Friedrich</term>
+               <term ref="index:d14380e44327">Verbockhorst, Robert</term>
+               <term ref="index:d14380e45099">Wein</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">GE bekundet Zustimmung zu BPs „<rs ref="index:d14380e33532">Dissertatio apologetico-litteraria</rs>“
                gegen <rs ref="index:d14380e14738">Johann Benedikt Gentilotti</rs> und bekräftigt, dass seine
@@ -157,7 +171,7 @@
                eine Reinschrift auszufertigen. Er gesteht BP dieselbe Freiheit zu. Es ist ihm jedoch wichtig gewesen, zu
                sagen, was er zu sagen hatte. <rs ref="index:d14380e10613">Es besteht Hoffnung</rs>, dass er im Laufe
                seines Lebens einmal nach <rs ref="index:d14380e28088">Melk</rs> wird kommen können.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -179,14 +193,17 @@
                   zu einer Edition ermutigt, und dieser hat seither den Text überarbeitet,
                   kommentiert und zum Druck vorbereitet. Gegenwärtig steht er mit Druckern in
                   Verhandlung. GE bittet er um Hilfe bei seinem Unterfangen. – Zu Göbels Rolle bei
-                  der Beschaffung vgl. <ref type="letter" target="letter:870">870</ref> <ref target="letter:870#seg5">5</ref>, <ref type="letter" target="letter:981">981</ref> <ref target="letter:981#seg4">4</ref>.</p>
+                  der Beschaffung vgl. <ref type="letter" target="letter:870">870</ref>
+               <ref target="letter:870#seg5">5</ref>, <ref type="letter" target="letter:981">981</ref>
+               <ref target="letter:981#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned> viduae de Uffelmann</mentioned>
             <p>Zu Ilse Uffelmann vgl. <rs type="bibl" ref="bibl:20550">Zimmermann, Rudolf August</rs> 529. Ihr 1707 verstorbener
                   Ehemann Johann Friedrich Uffelmann war herzoglicher Hofrat und Dekan der Stifte
                   St. Cyriakus und St. Blasius zu Braunschweig gewesen: <rs type="bibl" ref="bibl:15916">Döll, Kollegiatstifte</rs> 191, 194. Ob GEs Gattin die
-                  leibliche Tochter von Ilse Uffelmann war, hat als unklar zu gelten: vgl. <ref type="letter" target="letter:976">976</ref> <ref target="letter:976#seg6">6</ref>.</p>
+                  leibliche Tochter von Ilse Uffelmann war, hat als unklar zu gelten: vgl. <ref type="letter" target="letter:976">976</ref>
+               <ref target="letter:976#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned> dominae Rudolphinae</mentioned>
@@ -198,7 +215,9 @@
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>Ratramnus sequetur</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:870">870</ref> <ref target="letter:870#seg5">5</ref>, <ref type="letter" target="letter:912">912</ref> <ref target="letter:912#seg10">10</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:870">870</ref>
+               <ref target="letter:870#seg5">5</ref>, <ref type="letter" target="letter:912">912</ref>
+               <ref target="letter:912#seg10">10</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
             <mentioned>praepositum S. Ludgeri</mentioned>
@@ -262,15 +281,43 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Vir maxime reverende, amice inter paucos.</opener>
+         <opener>
+            <pb n="1r"/> Vir maxime reverende, amice inter paucos.</opener>
          <ab resp="#editor" xml:id="seg1">Amo te, etsi non satis notum, et peramo te. <anchor xml:id="n1"/>Dissertatio<anchor xml:id="n1e"/> tua Gentilotto opposita me de mentis tuae honestate ita convicit, ut non potuerim aliter agere. Amemus itaque nos in commune reipublicae literariae bonum. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n2"/>Radbertum De fide, spe et charitate recepi<anchor xml:id="n2e"/>. Iam tibi <choice><sic>illud</sic><corr>illum</corr></choice> <choice><sic>per</sic><corr>offero</corr></choice>. Sed litteris includi nequit grandiusculum opus. Augspurgi si amicos habes, fac, ut mercatori nundinas Brunsvicenses instantes frequentaturo et bonae fidei homini in commissis dent, ut eat ad domum dominae<anchor xml:id="n3"/> viduae de Uffelmann<anchor xml:id="n3e"/> natae de Menten, quae<del ana="#before">mat</del> mater est uxoris meae et soror <pb n="1v"/> beatae memoriae<anchor xml:id="n4"/> dominae Rudolphinae<anchor xml:id="n4e"/>, atque non multum remota, si cognationem <choice><sic>spec</sic><corr>aut</corr></choice> potius <choice><sic>affinis</sic><corr>affinitatem</corr></choice> spectes, ab imperatoria maiestate. Viden’ arrogantiam amici tui? Sed in domo eius homo, quem designavi, fide dignus inveniet Radbertum tibi tuisque usibus adscriptum. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n5"/>Ratramnus sequetur<anchor xml:id="n5e"/> suo tempore et poterit commode in alium Spicilegii tomum reici. Neque enim, quod iam sub genubus et satis superque instructum est, opus morabor. </ab>
-         <ab resp="#editor" xml:id="seg4">Intra octiduum Helmstadium proficiscor, apud <anchor xml:id="n6"/>praepositum S. Ludgeri<anchor xml:id="n6e"/> hospitium sumturus,<anchor xml:id="n7"/> amicis licet in urbe abundem<anchor xml:id="n7e"/>. Vestri enim ordinis honestos viros amo. Latent ibi multa, quae boni isti viri non intelligunt et tamen non nisi tremula manu communia faciunt. Aliud agendo quaedam ipsis extorsi, <anchor xml:id="n8"/>quae inter Scriptores Brunsvicenses<anchor xml:id="n8e"/> edi curavi in commoda <pb n="2r"/> ipsorum. Agnoscunt id; nec tamen adeo sapiunt, ut et ad reliqua aditum concedant. Videbo, an <choice><sic>p</sic><corr>hauriendo</corr></choice> vitra et cervisia et vino plena bonis litteris apud ipsos aliquid prodesse possim. Ultra enim pocula parum sapiunt; nisi sapientia est coenobium<anchor xml:id="n9"/> altissimo muro<anchor xml:id="n9e"/> includere et intus bacchanalia vivere. Si ego inter membra<anchor xml:id="n10"/> congregationis de propaganda<anchor xml:id="n10e"/>, quam nosti, essem, obicem<del ana="#after">ego</del> huic rei ponerem et bonos istos viros multo cum ecclesiae lucro ad frugem reducerem. Quam non illi occasionem habent bene de studiis et rebus sacris merendi? Versantur inter exasciatae scientiae theologos, discretos et probos, totque alios literatos academiae istius; sed nihilominus torpent. Praepositus vir magni animi est et vellet quidem, ut sui monachi saperent, sed quid non eruditus ipse alios erudiat? <pb n="2v"/> Habeo, quae me <add place="above">intus</add> <choice><sic>crucient</sic><corr>cruciant</corr></choice>, unde asperior, credo, sum in mores aliorum; tu boni confer singula. Commoda historiae nostrae et etymologici mei si curabis, gaudebo.</ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n2"/>Radbertum De fide, spe et charitate recepi<anchor xml:id="n2e"/>. Iam tibi <choice>
+               <sic>illud</sic>
+               <corr>illum</corr>
+            </choice>
+            <choice>
+               <sic>per</sic>
+               <corr>offero</corr>
+            </choice>. Sed litteris includi nequit grandiusculum opus. Augspurgi si amicos habes, fac, ut mercatori nundinas Brunsvicenses instantes frequentaturo et bonae fidei homini in commissis dent, ut eat ad domum dominae<anchor xml:id="n3"/> viduae de Uffelmann<anchor xml:id="n3e"/> natae de Menten, quae<del ana="#before">mat</del> mater est uxoris meae et soror <pb n="1v"/> beatae memoriae<anchor xml:id="n4"/> dominae Rudolphinae<anchor xml:id="n4e"/>, atque non multum remota, si cognationem <choice>
+               <sic>spec</sic>
+               <corr>aut</corr>
+            </choice> potius <choice>
+               <sic>affinis</sic>
+               <corr>affinitatem</corr>
+            </choice> spectes, ab imperatoria maiestate. Viden’ arrogantiam amici tui? Sed in domo eius homo, quem designavi, fide dignus inveniet Radbertum tibi tuisque usibus adscriptum. </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n5"/>Ratramnus sequetur<anchor xml:id="n5e"/> suo tempore et poterit commode in alium Spicilegii tomum reici. Neque enim, quod iam sub genubus et satis superque instructum est, opus morabor. </ab>
+         <ab resp="#editor" xml:id="seg4">Intra octiduum Helmstadium proficiscor, apud <anchor xml:id="n6"/>praepositum S. Ludgeri<anchor xml:id="n6e"/> hospitium sumturus,<anchor xml:id="n7"/> amicis licet in urbe abundem<anchor xml:id="n7e"/>. Vestri enim ordinis honestos viros amo. Latent ibi multa, quae boni isti viri non intelligunt et tamen non nisi tremula manu communia faciunt. Aliud agendo quaedam ipsis extorsi, <anchor xml:id="n8"/>quae inter Scriptores Brunsvicenses<anchor xml:id="n8e"/> edi curavi in commoda <pb n="2r"/> ipsorum. Agnoscunt id; nec tamen adeo sapiunt, ut et ad reliqua aditum concedant. Videbo, an <choice>
+               <sic>p</sic>
+               <corr>hauriendo</corr>
+            </choice> vitra et cervisia et vino plena bonis litteris apud ipsos aliquid prodesse possim. Ultra enim pocula parum sapiunt; nisi sapientia est coenobium<anchor xml:id="n9"/> altissimo muro<anchor xml:id="n9e"/> includere et intus bacchanalia vivere. Si ego inter membra<anchor xml:id="n10"/> congregationis de propaganda<anchor xml:id="n10e"/>, quam nosti, essem, obicem<del ana="#after">ego</del> huic rei ponerem et bonos istos viros multo cum ecclesiae lucro ad frugem reducerem. Quam non illi occasionem habent bene de studiis et rebus sacris merendi? Versantur inter exasciatae scientiae theologos, discretos et probos, totque alios literatos academiae istius; sed nihilominus torpent. Praepositus vir magni animi est et vellet quidem, ut sui monachi saperent, sed quid non eruditus ipse alios erudiat? <pb n="2v"/> Habeo, quae me <add place="above">intus</add>
+            <choice>
+               <sic>crucient</sic>
+               <corr>cruciant</corr>
+            </choice>, unde asperior, credo, sum in mores aliorum; tu boni confer singula. Commoda historiae nostrae et etymologici mei si curabis, gaudebo.</ab>
          <closer>Maxime reverendi nominis tui cultor devotus Eccardus.</closer>
          <closer>Hanoverae die 7. Julii 1718.</closer>
          <closer xml:id="seg5">P.S. Zu Braunschweig bey madame Uffelman, des seeligen hofrath und dechants Uffelmans witwe am Martins-Kirchhofe auf dem <anchor xml:id="n11"/>Eyermarkte<anchor xml:id="n11e"/> ist nach einem paquete an des herrn patris Petzen hochwürden zu Mölk wohnend nach zu fragen. Ita Augspurgum scribi potest. Sed an factum hoc sit, scribe proxime.</closer>
-         <closer xml:id="seg6">Ignoscas lituras. Neque enim tempus sufficit, ut munde describere literas possim. Tibi eandem libertatem concedas. Satis est me, quod dicendum erat, effudisse. Spes est me, dum adhuc vixero, <choice><sic>ad</sic><corr>apud</corr></choice> Mellicenses diversurum. Quid putas?<note place="foot" xml:id="d3e61306"><hi rend="italic">Ignoscas ... putas?</hi> am linken Blattrand senkrecht eingefügt.</note></closer>
+         <closer xml:id="seg6">Ignoscas lituras. Neque enim tempus sufficit, ut munde describere literas possim. Tibi eandem libertatem concedas. Satis est me, quod dicendum erat, effudisse. Spes est me, dum adhuc vixero, <choice>
+               <sic>ad</sic>
+               <corr>apud</corr>
+            </choice> Mellicenses diversurum. Quid putas?<note place="foot" xml:id="d3e61306">
+               <hi rend="italic">Ignoscas ... putas?</hi> am linken Blattrand senkrecht eingefügt.</note>
+         </closer>
       </body>
    </text>
 </TEI>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="547" xml:id="pez-0547">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Benedikt Cherle an Bernhard Pez. 1716-04-19. Thierhaupten.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">547</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Die bei Glassner, Verzeichnis 205; Machilek, Benedikt Cherle 61, diesem Brief zugerechnete Beilage (I, 556r–v) gehörte tatsächlich zu 85.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -79,9 +91,12 @@
          <abstract>
             <p corresp="#seg1">Da die <rs ref="index:d14380e9895">Donau</rs> nach dem Winter wieder schiffbar ist, greift <rs type="person">BCh</rs> den Briefwechsel mit BP wieder auf und teilt mit, dass dessen „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“ durch ihn in ganz <rs ref="index:d10854e28377">Schwaben</rs> verbreitet worden sind. Überall sind sie gut angekommen, und <rs type="person">BCh</rs> kennt kein Kloster in der Umgebung, wo das Werk nicht an der Mensa verlesen worden wäre.</p>
             <p corresp="#seg2">Durch einen Schüler der Rhetorikklasse hat <rs type="person">BCh</rs> die „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“ auch den <rs ref="index:d14380e20126">Jesuiten</rs> zu <rs ref="index:d14380e3233">Augsburg</rs> vorbringen lassen, die aber versucht haben, sich aus der Sache herauszuwinden. <rs type="person">BCh</rs> weiß, dass ihnen verboten worden ist, die „<rs ref="index:d14380e18286">Cura salutis</rs>“ (von <rs ref="index:d14380e18274">Gábor Hevenesi</rs>) in Zukunft ihren Studenten zu geben, selbst zu lesen oder darüber zu sprechen.</p>
-            <p corresp="#seg3"><rs type="person">BCh</rs> schließt ein eigenes Werk bei; es handelt sich um eine von ihm ins Deutsche übertragene Schrift für den <rs ref="index:d14380e29936">Münchner</rs> <rs ref="index:d14380e5121">Benediktinerinnenkonvent</rs> (<rs ref="index:d14380e30000">auf dem Lilienberg</rs>).</p>
-            <p corresp="#seg4"><rs type="person">BChs</rs> „<rs ref="index:d14380e7955">Conciones extraordinariae</rs>“ befinden sich gegenwärtig in der Zensur, an der Abfassung seiner „<rs ref="index:d14380e7960">Exhortationes ascetico-morales</rs>“ arbeitet er.</p>
-            </abstract>
+            <p corresp="#seg3">
+               <rs type="person">BCh</rs> schließt ein eigenes Werk bei; es handelt sich um eine von ihm ins Deutsche übertragene Schrift für den <rs ref="index:d14380e29936">Münchner</rs>
+               <rs ref="index:d14380e5121">Benediktinerinnenkonvent</rs> (<rs ref="index:d14380e30000">auf dem Lilienberg</rs>).</p>
+            <p corresp="#seg4">
+               <rs type="person">BChs</rs> „<rs ref="index:d14380e7955">Conciones extraordinariae</rs>“ befinden sich gegenwärtig in der Zensur, an der Abfassung seiner „<rs ref="index:d14380e7960">Exhortationes ascetico-morales</rs>“ arbeitet er.</p>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -145,7 +160,8 @@
                   wahrscheinlichsten ist freilich, dass die Predigten als religiöse Druckschrift der
                   Zensur des Augsburger Ordinariats vorgelegt worden waren, wie dies auch bei den
                   Arbeiten von Alphons Hueber durch seinen Augsburger Verleger Daniel Walder
-                  vorgenommen wurde: vgl. <ref type="letter" target="letter:505">505</ref> <ref target="letter:505#seg5">5</ref>.</p>
+                  vorgenommen wurde: vgl. <ref type="letter" target="letter:505">505</ref>
+               <ref target="letter:505#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
             <mentioned> Exhortationes ascetico-morales</mentioned>
@@ -170,11 +186,22 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, pater colendissime.</opener>
-         <ab resp="#editor" xml:id="seg1">Raptissime. Restauro antiquum litterarum commercium Danubio iterum liquefacto una significando paternitatis vestrae Epistolas a me per totam<del ana="#after">fu</del> Sueviam<del ana="#after">divug</del> divulgatas magnum ad omnium, ad quos <sic>pervenit</sic>, solatium, nec scio monasterium in vicinia, in quo, omnium <sic>cupitati</sic> cito satisfaciendi, non <choice><sic>fuerit lecta</sic><corr>fuerint lectae</corr></choice> ad mensam. </ab>
-         <ab resp="#editor" xml:id="seg2">Et <anchor xml:id="n1"/>Jesuitis Augustae<anchor xml:id="n1e"/> per <anchor xml:id="n2"/>studiosum rhetorem<anchor xml:id="n2e"/> obtrudi. Mirati sunt et sine effectu varias<del ana="#after">obtru</del> afferendo excusationes sese purgarunt aut omnino Societatis <choice><sic>partem</sic><corr>partum</corr></choice> negarunt. Hoc scio, ipsis<anchor xml:id="n3"/> inhibitionem factam, ne imposterum aut studiosis tradant aut ipsimet ulterius legant vel de ea loquantur, Cura<anchor xml:id="n3e"/> nempe salutis. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n4"/>His comitem adiungo libellum<anchor xml:id="n4e"/> a me in Germanicam linguam ad <anchor xml:id="n5"/>monialium Monachii<anchor xml:id="n5e"/> introductarum ordinis nostri <sic>instantiam</sic><note place="foot" xml:id="d3e7794">Hier wäre ein auf <hi rend="italic">libellum</hi> bezogenes Partizip, etwa <hi rend="italic">translatum</hi>, zu erwarten.</note>. </ab>
-         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n6"/>Conciones<anchor xml:id="n6e"/> meae extraordinariae<anchor xml:id="n7"/> censurae subsunt<anchor xml:id="n7e"/>; calamo vero<anchor xml:id="n8"/> Exhortationes ascetico-morales<anchor xml:id="n8e"/> <pb n="1v"/> in axiomata sancti patris nostri Benedicti. Plura non habeo quam mei in omnia sancta commendationem.</ab>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, pater colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Raptissime. Restauro antiquum litterarum commercium Danubio iterum liquefacto una significando paternitatis vestrae Epistolas a me per totam<del ana="#after">fu</del> Sueviam<del ana="#after">divug</del> divulgatas magnum ad omnium, ad quos <sic>pervenit</sic>, solatium, nec scio monasterium in vicinia, in quo, omnium <sic>cupitati</sic> cito satisfaciendi, non <choice>
+               <sic>fuerit lecta</sic>
+               <corr>fuerint lectae</corr>
+            </choice> ad mensam. </ab>
+         <ab resp="#editor" xml:id="seg2">Et <anchor xml:id="n1"/>Jesuitis Augustae<anchor xml:id="n1e"/> per <anchor xml:id="n2"/>studiosum rhetorem<anchor xml:id="n2e"/> obtrudi. Mirati sunt et sine effectu varias<del ana="#after">obtru</del> afferendo excusationes sese purgarunt aut omnino Societatis <choice>
+               <sic>partem</sic>
+               <corr>partum</corr>
+            </choice> negarunt. Hoc scio, ipsis<anchor xml:id="n3"/> inhibitionem factam, ne imposterum aut studiosis tradant aut ipsimet ulterius legant vel de ea loquantur, Cura<anchor xml:id="n3e"/> nempe salutis. </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n4"/>His comitem adiungo libellum<anchor xml:id="n4e"/> a me in Germanicam linguam ad <anchor xml:id="n5"/>monialium Monachii<anchor xml:id="n5e"/> introductarum ordinis nostri <sic>instantiam</sic>
+            <note place="foot" xml:id="d3e7794">Hier wäre ein auf <hi rend="italic">libellum</hi> bezogenes Partizip, etwa <hi rend="italic">translatum</hi>, zu erwarten.</note>. </ab>
+         <ab resp="#editor" xml:id="seg4">
+            <anchor xml:id="n6"/>Conciones<anchor xml:id="n6e"/> meae extraordinariae<anchor xml:id="n7"/> censurae subsunt<anchor xml:id="n7e"/>; calamo vero<anchor xml:id="n8"/> Exhortationes ascetico-morales<anchor xml:id="n8e"/>
+            <pb n="1v"/> in axiomata sancti patris nostri Benedicti. Plura non habeo quam mei in omnia sancta commendationem.</ab>
          <closer>Paternitati vestrae addictus Benedictus abbas manu propria.</closer>
          <closer>Thierhaupten 19. Aprilis anno 1716.</closer>
       </body>

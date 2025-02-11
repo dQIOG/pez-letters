@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="346" xml:id="pez-0346">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an Moritz Müller. 1714-06-28. Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">346</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Die Jahresangabe fehlt in der Datierung, das Jahr ergibt sich jedoch zweifelsfrei aus der Abfolge der Korrespondenz. – Der rechte Rand des zweiten Blattes ist mit bedeutenden Textverlusten abgerissen. – Die Bücherliste am Ende von 1v ist stark gekürzt; einige Lesungen sind hinsichtlich der Kasusendungen unsicher.
             </note>
@@ -45,10 +56,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -74,16 +86,18 @@
          </correspDesc>
          <abstract>
             <p corresp="#seg1">MMs neuester Brief <ref type="letter" target="letter:345">345</ref> hat BP von großer Sorge befreit, die er sich wegen dessen langen Schweigens bereits machte.</p>
-            <p corresp="#seg2">Die Erwähnung, <rs ref="index:d14380e26993">René Massuet</rs> werde vielleicht nach <rs ref="index:d14380e9395">Deutschland</rs> reisen, hat in <rs ref="index:d14380e28088">Melk</rs> große Freude ausgelöst; BP kann den Herbst kaum erwarten. Wenn bei einer solchen Reise MM Massuet als Erster empfängt, soll er diesen überzeugen, auch nach <rs ref="index:d14380e28088">Melk</rs> und <rs ref="index:d14380e45571">Wien</rs> zu reisen. Wenn es irgendwo in <rs ref="index:d14380e9395">Deutschland</rs> noch wertvolle unentdeckte Buchbestände gibt, dann in der <rs ref="index:d14380e45571">Wiener</rs> <rs ref="index:d14380e45820">Hofbibliothek</rs>, zu welcher BP über den Bibliothekar <rs ref="index:d14380e14738">Johann Benedikt Gentilotti</rs> leichten Zugang hat. BP will selbst bald über <rs ref="index:d14380e41684">Straßburg</rs> nach <rs ref="index:d14380e32292">Paris</rs> schreiben <ref type="letter" target="letter:354">354</ref>, um <rs ref="index:d14380e26993">Massuet</rs> zu der Reise zu ermuntern.</p>
+            <p corresp="#seg2">Die Erwähnung, <rs ref="index:d14380e26993">René Massuet</rs> werde vielleicht nach <rs ref="index:d14380e9395">Deutschland</rs> reisen, hat in <rs ref="index:d14380e28088">Melk</rs> große Freude ausgelöst; BP kann den Herbst kaum erwarten. Wenn bei einer solchen Reise MM Massuet als Erster empfängt, soll er diesen überzeugen, auch nach <rs ref="index:d14380e28088">Melk</rs> und <rs ref="index:d14380e45571">Wien</rs> zu reisen. Wenn es irgendwo in <rs ref="index:d14380e9395">Deutschland</rs> noch wertvolle unentdeckte Buchbestände gibt, dann in der <rs ref="index:d14380e45571">Wiener</rs>
+               <rs ref="index:d14380e45820">Hofbibliothek</rs>, zu welcher BP über den Bibliothekar <rs ref="index:d14380e14738">Johann Benedikt Gentilotti</rs> leichten Zugang hat. BP will selbst bald über <rs ref="index:d14380e41684">Straßburg</rs> nach <rs ref="index:d14380e32292">Paris</rs> schreiben <ref type="letter" target="letter:354">354</ref>, um <rs ref="index:d14380e26993">Massuet</rs> zu der Reise zu ermuntern.</p>
             <p corresp="#seg3">Was MM über den Buchpreis in <rs ref="index:d14380e12712">Frankreich</rs> berichtet, ist unerfreulich, aber wahr, wie BP bereits selbst erfahren musste. Er kann MM nicht beauftragen, für ihn <rs ref="index:d10854e6077">Philippe Desponts „Maxima bibliotheca veterum patrum“</rs> zu beschaffen, weil er eben 150 Gulden für die sechs Bände der <rs ref="index:d10854e6896">„Historiae Francorum scriptores“</rs> und <rs ref="index:d10854e6911">„Historiae Normannorum scriptores“ von André Duchesne</rs> ausgegeben hat und seine Geldmittel aufgebraucht sind. Ein <rs ref="index:d14380e45571">Wiener</rs> Buchhändler hat BP mitgeteilt, dass er jüngst das Werk <rs ref="index:d10854e6077">Desponts</rs> gebunden um 190 Gulden verkauft hat; BP bezweifelt, dass es in Frankreich so billig zu haben wäre.</p>
             <p corresp="#seg4">Zu <rs ref="index:d10854e22552">Palazzis „Gesta pontificum Romanorum“</rs> kann BP gegen MMs Standpunkt nichts Konkretes einwenden, meint jedoch, dass man eine wahrheitsgetreue Papstgeschichte von einem Italiener nicht erwarten kann, zumindest nicht, wenn sie in <rs ref="index:d14380e19828">Italien</rs> erschienen ist.</p>
             <p corresp="#seg5">Wenn MM sonst etwas über Veröffentlichungen von Werken alter Geschichtsschreiber erfährt, soll er es mitteilen. Besonders dringend wünscht BP zu wissen, ob und wo die drei Bände der <rs ref="index:d10854e24445">„Illustres veteres scriptores“ von Johann Pistorius</rs> beschafft werden können. Auch zu anderen vergleichbaren Sammlungen von <rs ref="index:d14380e12712">französischen</rs>, <rs ref="index:d10854e471">alemannischen</rs> oder <rs ref="index:d14380e9395">deutschen</rs> Schriftstellern wünscht BP Informationen.</p>
             <p corresp="#seg6">Zur Ergötzung MMs schickt BP eine Aufstellung der Preise für neun Werke der <rs ref="index:d10854e15615">Mauriner</rs>, die er im Laufe des vergangenen Jahres erworben hat, insgesamt 303 Gulden.</p>
             <p corresp="#seg7">Die <rs ref="index:d10854e1160">von Gerberon herausgegebenen Werke des Hl. Anselm von Canterbury</rs> waren ebenso wenig zu bekommen wie die <rs ref="index:d14380e3132">von Montfaucon edierten Werke des Hl. Athanasius</rs>; BP ist dennoch weiterhin eifrig darauf bedacht. Die <rs ref="index:d10854e15615">maurinische</rs> Edition der <rs ref="index:d10854e4937">Werke Cassiodors</rs> ist in <rs ref="index:d14380e45571">Wien</rs> (nicht?) erhältlich, die <rs ref="index:d14380e20451">Werke des Hl. Johannes Damascenus in der Edition von Lequien</rs> kosten 25 Gulden. BP fragt MM nach seiner Meinung dazu.</p>
-            <p corresp="#seg8"><rs ref="index:d14380e39962">Anselm Schramb</rs> ist bei schlechter Gesundheit, er leidet an schwerem Husten. BP selbst hat von ihm seit längerem nur wenige Zeilen erhalten.</p>
+            <p corresp="#seg8">
+               <rs ref="index:d14380e39962">Anselm Schramb</rs> ist bei schlechter Gesundheit, er leidet an schwerem Husten. BP selbst hat von ihm seit längerem nur wenige Zeilen erhalten.</p>
             <p corresp="#seg9">Welches Ergebnis die Besprechung der St. Galler Angelegenheiten (in der Geheimen Konferenz) zu <rs ref="index:d10854e16746">Laxenburg</rs> gezeitigt hat, weiß BP noch nicht. Er rät MM, in dieser Sache an <rs ref="index:d14380e39962">Schramb</rs> zu schreiben, der durch seine häufigen Kontakte mit Angehörigen des Hofes mehr herausfinden kann.</p>
             <p corresp="#seg10">Es wird BP im laufenden Jahr kaum mehr möglich sein, MM zu besuchen, obgleich er für den Herbst eine neuerliche <rs ref="index:d10854e24016">Bibliotheksreise</rs> geplant hat. Er ermutigt MM, wenn möglich gemeinsam mit <rs ref="index:d14380e26993">Massuet</rs> nach <rs ref="index:d14380e28088">Melk</rs> zu kommen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -91,7 +105,7 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
             <mentioned>per Argentoratum</mentioned>
             <p>Zu früheren Sendungen nach Paris auf dieser Route vgl. <ref type="letter" target="letter:88">88</ref>
-                  <ref target="letter:88#seg7">7</ref>, <ref type="letter" target="letter:194">194</ref>. Obwohl BP den hier angekündigten Brief
+               <ref target="letter:88#seg7">7</ref>, <ref type="letter" target="letter:194">194</ref>. Obwohl BP den hier angekündigten Brief
                      (<ref type="letter" target="letter:354">354</ref>) erst im September, etwa zur Zeit der ersten
                   Kontakte mit Johann Christoph Bartenstein, tatsächlich schrieb und versendete,
                   zeigt die Erwähnung hier, dass der Übermittlungsweg über Straßburg schon vorher
@@ -99,7 +113,9 @@
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg3">
             <mentioned>Scriptorum ... Du Chesne</mentioned>
-            <p>Diese Werke waren BP von Massuet mehrfach empfohlen worden (<ref type="letter" target="letter:154">154</ref> <ref target="letter:154#seg13">13</ref>, <ref type="letter" target="letter:205">205</ref> <ref target="letter:205#seg3">3</ref>). Beide sind
+            <p>Diese Werke waren BP von Massuet mehrfach empfohlen worden (<ref type="letter" target="letter:154">154</ref>
+               <ref target="letter:154#seg13">13</ref>, <ref type="letter" target="letter:205">205</ref>
+               <ref target="letter:205#seg3">3</ref>). Beide sind
                   heute in Melk vorhanden: StiB Melk 3455 und 26686.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
@@ -133,7 +149,8 @@
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg8">
             <mentioned>Anselmus ... tussi ... afflictus</mentioned>
-            <p><rs type="bibl" ref="bibl:14732">Kropff, Bibliotheca Mellicensis</rs> 527,
+            <p>
+               <rs type="bibl" ref="bibl:14732">Kropff, Bibliotheca Mellicensis</rs> 527,
                   berichtet von Kränklichkeit Schrambs im hohen Alter, nennt aber nicht ausdrücklich
                   Husten oder Lungenleiden.</p>
          </note>
@@ -155,17 +172,32 @@
          <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Mauritio Miller ordinis sancti patris Benedicti, sacrae theologiae professori emerito etc., domino amicoque singulari. Rhinoviae.</p>
       </front>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine amice.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine amice.</opener>
          <ab resp="#editor" xml:id="seg1">Liberasti me, amice optime, magno metu et sollicitudine, quem diuturnum tuum silentium animo tui amantissimo iniecit. Ast nunc vales? Et recte? Deos precor omnes, ut te etiam deinceps optime valentem et inter tot adversa rerum incolumem servent.</ab>
          <ab resp="#editor" xml:id="seg2">Quod fere ad epistolae tuae calcem adscripseras de spe videndi Renati nostri, incredibile est, quo gaudio et triumpho Mellicenses fratres compleverit. Crede, mi Mauriti, amo virum plus oculis meis. Itaque o ut brevi revoluto sole autumnus adsit! Quod si tu primus suavissimum hunc et doctissimum hominem amplexurus es, per omnia te obtestor, ut ei accessum ad nos quoque persuadeas. Immo ante omnia Viennam ut alacriter pergat, etiam atque etiam hortaberis. Ibi, si quae egregiae rerum litterariarum reliquiae adhuc in Germania supersunt, in caesarea bibliotheca reperiet. Accessus ad hanc facillimus est, utpote cui Benedictus Gentillotus, vir totus ex eruditione, humanitate et nostrum amore factus, praesidet. Aut nimius me hominis amor fascinat, aut certe eius adventus res omnes meas reddet salvas et florentes. Ipse proxime <anchor xml:id="n1"/>per Argentoratum<anchor xml:id="n1e"/> Parisios scribam nullaque non amicitiae et officii testificatione ordinis nobile hoc decus in Germaniam elicere studebo. </ab>
-         <ab resp="#editor" xml:id="seg3">De libris Gallicis submolestiora nuntias, licet verissima. Ipse malo cum nostro fere quotidie experior, quae scribis. Tanta nunc ubique indignitas iniquitasque hominum rerumque est, ut vel librorum meminisse non raro terrori sit. Bibliothecam patrum Lugdunensem quominus meo nomine emas, obstant sex vasta volumina Scriptorum Francicorum et <pb n="1v"/> Nortmannicorum Du Chesne, fl. 150 nuper a me comparata. Itaque aerarium iterum exhaustum. Vienna nuntiatum mihi a <anchor xml:id="n2"/>bibliopola<anchor xml:id="n2e"/> est se hoc opus (Bibliothecam Lugdunensem <choice><sic>volo</sic><corr>innuo</corr></choice>) una cum compactura fl. 190 vendidisse. Vix puto nunc in Gallia tam vili pretio prostare. </ab>
-         <ab resp="#editor" xml:id="seg4">De Pallatio nihil admodum, quod<del ana="#before">Qu</del> tibi opponam, habeo. Interim ea stat animo sententia, ab homine Italo <choice><sic>genuinnam</sic><corr>genuinam</corr></choice> paparum historiam frustra exspectari, saltem si necesse sit opus intra Italiae limites typis commendare. </ab>
-         <ab resp="#editor" xml:id="seg5">Si quaedam de aliis historicis, maxime veteribus, qui subinde ex manuscriptis eruti prodeunt, intellexeris, obsecro, nuntia. Quam ego scire aveo, immo flagro, an et ubi Joannis <anchor xml:id="n3"/>Pistorii tomi tres<anchor xml:id="n3e"/> Rerum Germanicarum haberi possint? Idem iudica, eruditissime amice, de aliis huiusmodi collectionibus scriptorum Francicorum, <choice><sic>Alemannicarum</sic><corr>Alemannicorum</corr></choice>, Germanicorum etc., quorum mihi maximus usus et necessarius est. </ab>
-         <ab resp="#editor" xml:id="seg6">Ut autem te nonnihil oblectem, scribam et recensebo tibi <anchor xml:id="n4"/>patrum e congregatione sancti Mauri<anchor xml:id="n4e"/> pretium a nobis intra annum fere Viennae persolutum. Sancti Augustini tomi undecim Parisiis fl. 93. Sancti Ambrosii volumina duo compacta fl. 42. Sancti Gregorii tomi quattuor compacti fl. 50. Sancti Hieronymi tomi quinque compacti fl. 65. Sancti Bernardi recentissima Mabillonii fl. 22. <anchor xml:id="n5"/>Sancti Hilarii recentissima Mabillonii<anchor xml:id="n5e"/> fl. 12 x. 30. Sancti Hildeberti et Marbodi fl. 11 x. 30. Venerabilis Guiberti abbatis Novigentensis folio fl. 5. Venerabilis Petri Cellensis quarto fl. 2. <pb n="2r"/> </ab>
-         <ab resp="#editor" xml:id="seg7">Sancti Anselmi Opera cum notis Gabrielis Gerberonii [...]<note type="annotation" xml:id="d4618e44389">Textverlust im Ausmaß von ca. 10–12 Buchstaben. Der ganze rechte Rand dieses Blattes abgerissen.</note> bibliopola habere potuit, uti nec Athanas[... Mont]fauconii<note type="annotation" xml:id="d4618e44392">Textverlust im Ausmaß von ca. 10–12 Buchstaben.</note>, ea tamen impatientissime exspecto [...]<note type="annotation" xml:id="d4618e44395">Textverlust im Ausmaß von ca. 10–12 Buchstaben.</note> Cassiodori e congregatione sancti Mauri Viennae prostant [...]<note type="annotation" xml:id="d4618e44398">Textverlust im Ausmaß von ca. 10–12 Buchstaben.</note> Nova editio Damasceni De Lequin pote[st ...]<note type="annotation" xml:id="d4618e44401">Textverlust im Ausmaß von ca. 9–11 Buchstaben.</note> haberi 25 fl. Quid tu ad <choice><sic>hoc</sic><corr>haec</corr></choice>, qui quasi [...]<note type="annotation" xml:id="d4618e44411">Textverlust im Ausmaß von ca. 9–11 Buchstaben.</note> in regno librario es? </ab>
+         <ab resp="#editor" xml:id="seg3">De libris Gallicis submolestiora nuntias, licet verissima. Ipse malo cum nostro fere quotidie experior, quae scribis. Tanta nunc ubique indignitas iniquitasque hominum rerumque est, ut vel librorum meminisse non raro terrori sit. Bibliothecam patrum Lugdunensem quominus meo nomine emas, obstant sex vasta volumina Scriptorum Francicorum et <pb n="1v"/> Nortmannicorum Du Chesne, fl. 150 nuper a me comparata. Itaque aerarium iterum exhaustum. Vienna nuntiatum mihi a <anchor xml:id="n2"/>bibliopola<anchor xml:id="n2e"/> est se hoc opus (Bibliothecam Lugdunensem <choice>
+               <sic>volo</sic>
+               <corr>innuo</corr>
+            </choice>) una cum compactura fl. 190 vendidisse. Vix puto nunc in Gallia tam vili pretio prostare. </ab>
+         <ab resp="#editor" xml:id="seg4">De Pallatio nihil admodum, quod<del ana="#before">Qu</del> tibi opponam, habeo. Interim ea stat animo sententia, ab homine Italo <choice>
+               <sic>genuinnam</sic>
+               <corr>genuinam</corr>
+            </choice> paparum historiam frustra exspectari, saltem si necesse sit opus intra Italiae limites typis commendare. </ab>
+         <ab resp="#editor" xml:id="seg5">Si quaedam de aliis historicis, maxime veteribus, qui subinde ex manuscriptis eruti prodeunt, intellexeris, obsecro, nuntia. Quam ego scire aveo, immo flagro, an et ubi Joannis <anchor xml:id="n3"/>Pistorii tomi tres<anchor xml:id="n3e"/> Rerum Germanicarum haberi possint? Idem iudica, eruditissime amice, de aliis huiusmodi collectionibus scriptorum Francicorum, <choice>
+               <sic>Alemannicarum</sic>
+               <corr>Alemannicorum</corr>
+            </choice>, Germanicorum etc., quorum mihi maximus usus et necessarius est. </ab>
+         <ab resp="#editor" xml:id="seg6">Ut autem te nonnihil oblectem, scribam et recensebo tibi <anchor xml:id="n4"/>patrum e congregatione sancti Mauri<anchor xml:id="n4e"/> pretium a nobis intra annum fere Viennae persolutum. Sancti Augustini tomi undecim Parisiis fl. 93. Sancti Ambrosii volumina duo compacta fl. 42. Sancti Gregorii tomi quattuor compacti fl. 50. Sancti Hieronymi tomi quinque compacti fl. 65. Sancti Bernardi recentissima Mabillonii fl. 22. <anchor xml:id="n5"/>Sancti Hilarii recentissima Mabillonii<anchor xml:id="n5e"/> fl. 12 x. 30. Sancti Hildeberti et Marbodi fl. 11 x. 30. Venerabilis Guiberti abbatis Novigentensis folio fl. 5. Venerabilis Petri Cellensis quarto fl. 2. <pb n="2r"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg7">Sancti Anselmi Opera cum notis Gabrielis Gerberonii [...]<note type="annotation" xml:id="d4618e44389">Textverlust im Ausmaß von ca. 10–12 Buchstaben. Der ganze rechte Rand dieses Blattes abgerissen.</note> bibliopola habere potuit, uti nec Athanas[... Mont]fauconii<note type="annotation" xml:id="d4618e44392">Textverlust im Ausmaß von ca. 10–12 Buchstaben.</note>, ea tamen impatientissime exspecto [...]<note type="annotation" xml:id="d4618e44395">Textverlust im Ausmaß von ca. 10–12 Buchstaben.</note> Cassiodori e congregatione sancti Mauri Viennae prostant [...]<note type="annotation" xml:id="d4618e44398">Textverlust im Ausmaß von ca. 10–12 Buchstaben.</note> Nova editio Damasceni De Lequin pote[st ...]<note type="annotation" xml:id="d4618e44401">Textverlust im Ausmaß von ca. 9–11 Buchstaben.</note> haberi 25 fl. Quid tu ad <choice>
+               <sic>hoc</sic>
+               <corr>haec</corr>
+            </choice>, qui quasi [...]<note type="annotation" xml:id="d4618e44411">Textverlust im Ausmaß von ca. 9–11 Buchstaben.</note> in regno librario es? </ab>
          <ab resp="#editor" xml:id="seg8">Pater Anselmus no[ster ...]<note type="annotation" xml:id="d4618e44416">Textverlust im Ausmaß von ca. 8–10 Buchstaben.</note> valet, tussi supra modum afflictus et agita[...]<note type="annotation" xml:id="d4618e44419">Textverlust im Ausmaß von ca. 8–10 Buchstaben.</note> tamen cave, exprimas in litteris ad eum scrib[endis ...]<note type="annotation" xml:id="d4618e44422">Textverlust im Ausmaß von ca. 6–8 Buchstaben.</note> Ipse non nisi paucissimas lineolas ab ipso acc[epi ...]<note type="annotation" xml:id="d4618e44425">Textverlust im Ausmaß von ca. 6–8 Buchstaben.</note> sat multo tempore. </ab>
          <ab resp="#editor" xml:id="seg9">Quis eventus ex illo tra[...]<note type="annotation" xml:id="d4618e44430">Textverlust im Ausmaß von ca. 6–8 Buchstaben.</note> Laxenburgensi in vestra causa fuerit, nondum cog[novi. ...]<note type="annotation" xml:id="d4618e44433">Textverlust im Ausmaß von ca. 6–8 Buchstaben.</note> Deus bonum! Si quid rescire cupis, suadeo, ad ip[sum]<note type="annotation" xml:id="d4618e44436">Textverlust im Ausmaß von ca. 3–4 Buchstaben.</note> patrem Anselmum des litteras, qui cum aulicis non raro agens plura expiscari poterit. Sed de his forte proxime plura. </ab>
-         <ab resp="#editor" xml:id="seg10">Hoc anno te, amicissime hominum, invisere vix licebit; tametsi <anchor xml:id="n6"/>sub autumnum non paucas monasteriorum bibliothecas iterum perlustraturus<anchor xml:id="n6e"/> <sic>sum</sic> . Veni, quaeso, cum patre Renato, et Mellicensium tibi addictissimorum ora geminato gaudio replere dignare. Sed iam vale iterumque vale.</ab>
+         <ab resp="#editor" xml:id="seg10">Hoc anno te, amicissime hominum, invisere vix licebit; tametsi <anchor xml:id="n6"/>sub autumnum non paucas monasteriorum bibliothecas iterum perlustraturus<anchor xml:id="n6e"/>
+            <sic>sum</sic> . Veni, quaeso, cum patre Renato, et Mellicensium tibi addictissimorum ora geminato gaudio replere dignare. Sed iam vale iterumque vale.</ab>
          <closer>Tuus ut olim pater Bernardus Pez Mellicensis.</closer>
          <closer>Mellicii raptissime in vigilia sanctorum Petri et Pauli.</closer>
       </body>

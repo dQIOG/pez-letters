@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="1012" xml:id="pez-1012">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Jacques Boyer an Bernhard Pez. 1718-10-31. Chanteuges.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">1012</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -76,27 +89,29 @@
                <ptr type="mentions" target="letter:1011"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e6451">Boyer, Jacques ; Verzeichnisse von Benediktinerwerken in verschiedenen südfranzösischen
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e6451">Boyer, Jacques ; Verzeichnisse von Benediktinerwerken in verschiedenen südfranzösischen
          Bibliotheken. Ms</term>
-            <term ref="index:d14380e10181">Du Pin, Louis Ellies</term>
-            <term ref="index:d14380e10193">Du Pin, Louis Ellies ; Nouvelle bibliothèque des auteurs ecclesiastiques. 2 Bde. Paris
+               <term ref="index:d14380e10181">Du Pin, Louis Ellies</term>
+               <term ref="index:d14380e10193">Du Pin, Louis Ellies ; Nouvelle bibliothèque des auteurs ecclesiastiques. 2 Bde. Paris
          1686–1687</term>
-            <term ref="index:d14380e25581">Mabillon, Jean</term>
-            <term ref="index:d14380e25664">Mabillon, Jean ; Acta sanctorum ordinis sancti Benedicti, in saeculorum classes
+               <term ref="index:d14380e25581">Mabillon, Jean</term>
+               <term ref="index:d14380e25664">Mabillon, Jean ; Acta sanctorum ordinis sancti Benedicti, in saeculorum classes
          distributa, ab anno Christi D ad annum MC. 9 Bde. Paris 1668–1701</term>
-            <term ref="index:d14380e25705">Mabillon, Jean ; Annales ordinis sancti Benedicti, occidentalium monachorum
+               <term ref="index:d14380e25705">Mabillon, Jean ; Annales ordinis sancti Benedicti, occidentalium monachorum
          patriarchae, in quibus non modo res monasticae, sed etiam ecclesiasticae historiae non
          minima pars continetur. 6 Bde. Paris 1703–1739</term>
-            <term ref="index:d14380e25810">Mabillon, Jean ; -Schriftstellerkatalog der Maurinerkongregation</term>
-            <term ref="index:d14380e32292">Paris</term>
-            <term ref="index:d14380e32414">Paris ; St.-Germain-des-Prés</term>
-            <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
-            <term ref="index:d14380e33611">Pez, Bernhard ; Enzyklik 1715/16</term>
-            <term ref="index:d14380e38678">St.-Denis-en-France</term>
-            <term ref="index:d14380e38706">Sainte-Marthe, Denis de</term></keywords></textClass>
+               <term ref="index:d14380e25810">Mabillon, Jean ; -Schriftstellerkatalog der Maurinerkongregation</term>
+               <term ref="index:d14380e32292">Paris</term>
+               <term ref="index:d14380e32414">Paris ; St.-Germain-des-Prés</term>
+               <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
+               <term ref="index:d14380e33611">Pez, Bernhard ; Enzyklik 1715/16</term>
+               <term ref="index:d14380e38678">St.-Denis-en-France</term>
+               <term ref="index:d14380e38706">Sainte-Marthe, Denis de</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">JBo hat schon lange gewünscht, dass die Schriftsteller des <rs ref="index:d14380e4919">Benediktinerordens</rs> dem Vergessen entrissen werden. Die mehrfach erfolgten Publikationen zu den
                Schriftstellern anderer Orden haben diesen Wunsch weiter verstärkt, wo doch der Benediktinerorden seit
@@ -118,7 +133,7 @@
             <p corresp="#seg4">In einem Nachsatz bemerkt JBo, dass eine allfällige Antwort an ihn zur Bestätigung des Erhalts seiner
                Sendung an <rs ref="index:d14380e38706">Denis de Sainte-Marthe</rs>, den Prior von <rs ref="index:d14380e38678">St.-Denis</rs>, in <rs ref="index:d14380e32414">St.-Germain-des-Prés</rs> zu
                <rs ref="index:d14380e32292">Paris</rs> adressiert werden soll.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -132,7 +147,7 @@
                   24. Deren Inhalte stehen mit dem hier Geschilderten nicht in Verbindung; zu
                   Ansinnen, Mabillon mit der Bearbeitung eines benediktinischen
                   Schriftstellerlexikons zu betrauen, vgl. <ref type="letter" target="letter:678">678</ref>
-                  <ref target="letter:678#seg1">1</ref>.</p>
+               <ref target="letter:678#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>Bibliothecam ecclesiasticam</mentioned>
@@ -154,8 +169,12 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo religiosissimo ac eruditissimo patri domno Bernardo Pez Mellicensis abbatiae monacho et bibliothecario humillimus ac obsequentissimus frater Jacobus Boyer presbyter congregationis sancti Mauri salutem plurimam dicit.</opener>
-         <ab resp="#editor" xml:id="seg1">Ut ordinis nostri scriptores e tenebris ac oblivione eruerentur, sane iam dudum peroptabam. Desiderium, quod ipsa cogebat aequitas, accendebant in dies aliorum ordinum scriptores passim novam in lucem emissi. Conquerebar identidem, cur amplissimo ordini Benedictino a saeculis XIII suus non esset catalogus scriptorum. Et quidem <anchor xml:id="n1"/>Mabillonio nostro litteras<anchor xml:id="n1e"/> dedi, quibus eruditum virum enixius rogabam, inhiantius perurgebam, ut tot eruditos familiae Benedictinae alumnos illustri calamo illustraret; congruumque videbatur, ut, qui Acta sanctorum ordinis nostri vulgaverat, doctorum scripta recenseret. Spopondit pro sua in omnes humanitate talis tantusque vir daturum se in appendice Annalium ordinis brevem scriptorum eiusdem catalogum; at amplum percupiebam, et talis debebatur ordini de universa ecclesia meritissimo. Tandem votis meis abunde factum est satis: cum tuam, admodum reverende religiosissime ac eruditissime pater, legi epistolam encyclicam, novum de instruenda Bibliotheca Benedictina consilium <choice><sic>admirand</sic><corr>admirabundus</corr></choice> et ultra, quam dici queat, laetus suspexi. <pb n="1v"/> Gratias immortales Deo immortali, a quo tam bonum, tam pium, tam nobile consilium, quo immortalitate donandi sunt auctores morituri nunquam, semper victuri. Gratias amplissimas amplissimis praelatis, qui perhonorificam reverendae paternitati vestrae provinciam detulerunt. Gratias et tibi, pater colendissime, qui opus immensum suscepisti, immensas ago, quando referre inde non est opis; cum de universo ordine, quin et de toto orbe litterario meritus sis in aeternum et ultra. Immensum quippe tibi debent, eruditissime domine, eruditi omnes, quorum scripta scriptis tuis illustras, si quid tantis meritis, tanto labore dignum valeat reperiri. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverendo religiosissimo ac eruditissimo patri domno Bernardo Pez Mellicensis abbatiae monacho et bibliothecario humillimus ac obsequentissimus frater Jacobus Boyer presbyter congregationis sancti Mauri salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Ut ordinis nostri scriptores e tenebris ac oblivione eruerentur, sane iam dudum peroptabam. Desiderium, quod ipsa cogebat aequitas, accendebant in dies aliorum ordinum scriptores passim novam in lucem emissi. Conquerebar identidem, cur amplissimo ordini Benedictino a saeculis XIII suus non esset catalogus scriptorum. Et quidem <anchor xml:id="n1"/>Mabillonio nostro litteras<anchor xml:id="n1e"/> dedi, quibus eruditum virum enixius rogabam, inhiantius perurgebam, ut tot eruditos familiae Benedictinae alumnos illustri calamo illustraret; congruumque videbatur, ut, qui Acta sanctorum ordinis nostri vulgaverat, doctorum scripta recenseret. Spopondit pro sua in omnes humanitate talis tantusque vir daturum se in appendice Annalium ordinis brevem scriptorum eiusdem catalogum; at amplum percupiebam, et talis debebatur ordini de universa ecclesia meritissimo. Tandem votis meis abunde factum est satis: cum tuam, admodum reverende religiosissime ac eruditissime pater, legi epistolam encyclicam, novum de instruenda Bibliotheca Benedictina consilium <choice>
+               <sic>admirand</sic>
+               <corr>admirabundus</corr>
+            </choice> et ultra, quam dici queat, laetus suspexi. <pb n="1v"/> Gratias immortales Deo immortali, a quo tam bonum, tam pium, tam nobile consilium, quo immortalitate donandi sunt auctores morituri nunquam, semper victuri. Gratias amplissimas amplissimis praelatis, qui perhonorificam reverendae paternitati vestrae provinciam detulerunt. Gratias et tibi, pater colendissime, qui opus immensum suscepisti, immensas ago, quando referre inde non est opis; cum de universo ordine, quin et de toto orbe litterario meritus sis in aeternum et ultra. Immensum quippe tibi debent, eruditissime domine, eruditi omnes, quorum scripta scriptis tuis illustras, si quid tantis meritis, tanto labore dignum valeat reperiri. </ab>
          <ab resp="#editor" xml:id="seg2">Et certe si dares analysim cuiusque libri, si crisim cuiusque operis adhiberes, ad eum fere modum, quo clarissimus vir Ludovicus Ellies du Pin suam adtexuit <anchor xml:id="n2"/>Bibliothecam ecclesiasticam<anchor xml:id="n2e"/>, opus omnibus absolutum numeris ac prorsus perfectum videretur. Quod tamen dictum velis, non ut Minervam doceam aut in silvam ligna audeam ferre. </ab>
          <ab resp="#editor" xml:id="seg3">Felix nimiumque felix, si quid symbolarum conferre possem tali tantove operi, quod, uti sperare fas est, adamabitur, rapietur omniumque manibus evolutione teretur assidua. Tua tamen ego fretus benignitate, tuo hortatu effectus audacior, pluteo adornando, <anchor xml:id="n3"/>quae pauca sparsim collegi<anchor xml:id="n3e"/> diversis in archivis, in tuum lubens libens immitto gazophilacium, in quo Croesi divitiis<anchor xml:id="n4"/> aera duo viduae<anchor xml:id="n4e"/> praeferuntur. Hoc igitur, pater optime, qualecumque tenuitatis nostrae munusculum, qua soles, benignitate suscipias, amabo; meosque conatus aequi consule. Utinam plus praestare possem, ita credens nihil esse adeo magnum, quod non summis virtutibus tuis debeatur! Deum interim animitus precor, ut tua sospitet studia, tuum ad felicem exitum perducat opus eximium ad laudem nominis sui, cuius gloriam hic ante omnia spectare te nullus dubito. Vale et vive, meque tuis habeto precibus commendatum.</ab>
          <closer>Scribebam in monasterio S. Marcellini Cantogilensis in Arvernia pridie Calendas Novembris anno Christi 1718.</closer>

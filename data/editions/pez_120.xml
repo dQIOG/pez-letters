@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="120" xml:id="pez-0120">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Hyazinth Baumbach an Bernhard Pez. 1710-10-24. Würzburg (St. Stephan).</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">120</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -83,17 +95,20 @@
             <p corresp="#seg3">Gerade ist HB auf eine Quarthandschrift gestoßen, in der die „<rs ref="index:d10854e1006">Vita sancti Burchardi</rs>“, ein anonymes „<rs ref="index:d10854e868">Epitheton episcoporum</rs>“, asketische und rhetorische Schriften (<rs ref="index:d10854e8792">Fieschi, „Praecepta grammaticae“</rs>) enthalten sind, außerdem die <rs ref="index:d10854e1017">Vita der Heiligen Eucharius, Valerius und Maternus</rs>. In der Handschrift ist von jüngerer Hand vermerkt, dass sie – nach dem <rs ref="index:d10854e31236">„De viris illustribus OSB“ von Trithemius</rs>, zitiert in den <rs ref="index:d10854e30119">„Historiae“ des Surius</rs> zum 14. Oktober – von <rs ref="index:d10854e7386">Egilward</rs>, einem Mönch des Klosters <rs ref="index:d10854e34368">St. Burchard</rs>, stammen soll. HB konnte die Stelle bei <rs ref="index:d10854e30119">Surius</rs> nachprüfen, das Werk des <rs ref="index:d10854e31236">Trithemius</rs> hat er aber in seiner <rs ref="index:d10854e34466">Bibliothek</rs> nicht gefunden. Er will danach suchen, weil er sich davon nähere Informationen zu <rs ref="index:d10854e7386">Egilward</rs> erhofft.</p>
             <p corresp="#seg4">Entgegen allen Versprechungen hat der <rs ref="index:d10854e34226">Würzburger</rs> Weihbischof (<rs ref="index:d14380e27327">Johann Bernhard Mayer</rs>) noch nichts zu <rs ref="index:d10854e7386">Egilward</rs> geschickt.</p>
             <p corresp="#seg5">In einem Postskriptum berichtet HB, die <rs ref="index:d10854e26618">Enzyklik Ruinarts</rs> an sämtliche Äbte gesendet, jedoch noch keine Antwort erhalten zu haben.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>prioribus deperditis</mentioned>
-            <p>Die Formulierung in <ref type="letter" target="letter:110">110</ref> <ref target="letter:110#seg3">3</ref> scheint zu meinen, dass
+            <p>Die Formulierung in <ref type="letter" target="letter:110">110</ref>
+               <ref target="letter:110#seg3">3</ref> scheint zu meinen, dass
                   HB seine erste Ausarbeitung einer Hausgeschichte nicht nach Paris abgesendet
                   hatte. Anscheinend war sie inzwischen unauffindbar. Das von HB gesendete Material
-                  ist in Melk nicht erhalten; zur Weiterversendung nach Paris vgl. <ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg12">12</ref> (wo BP kurze Angaben zum Inhalt macht), <ref type="letter" target="letter:177">177</ref> <ref target="letter:177#seg12">12</ref>, 192. Nach einer Bemerkung in den Notizen
+                  ist in Melk nicht erhalten; zur Weiterversendung nach Paris vgl. <ref type="letter" target="letter:143">143</ref>
+               <ref target="letter:143#seg12">12</ref> (wo BP kurze Angaben zum Inhalt macht), <ref type="letter" target="letter:177">177</ref>
+               <ref target="letter:177#seg12">12</ref>, 192. Nach einer Bemerkung in den Notizen
                   zur „Bibliotheca Benedictina“ (StiA Melk, Karton 85 Varia 24, Fasz. 2, ad annum
                   1097) enthielt dieses Konvolut (neben anderem) einen „Catalogus abbatum S.
                   Stephani Herbipoli a reverendissimo domino Jodoco eiusdem loci abbate trigesimo
@@ -113,19 +128,22 @@
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned>Meginhardo et Emerhardo episcopis</mentioned>
-            <p><rs type="bibl" ref="bibl:37228">Wendehorst, Bistum Würzburg 1</rs> 117–124.</p>
+            <p>
+               <rs type="bibl" ref="bibl:37228">Wendehorst, Bistum Würzburg 1</rs> 117–124.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>librum ... Vitam sancti Burchardi</mentioned>
             <p>Heute UB Würzburg, M.ch.q. 150; vgl. <rs type="bibl" ref="bibl:19920">Thurn,
                      Handschriften 2/1</rs> 175–179. Enthalten sind darin u. a. die Vita Burchardi;
                   Stefano Fieschi, Praecepta grammaticae; Anonymus, Vita Eucharii, Valerii et
-                  Materni (vgl. <ref type="letter" target="letter:144">144</ref> <ref target="letter:144#seg5">5</ref>); Anonymus, Epitheton
+                  Materni (vgl. <ref type="letter" target="letter:144">144</ref>
+               <ref target="letter:144#seg5">5</ref>); Anonymus, Epitheton
                   episcoporum Herbipolensium; Anonymus, Catalogus abbatum S. Stephani.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
             <mentioned>recentiori manu praepositum</mentioned>
-            <p><rs type="bibl" ref="bibl:36944">Schmale, Glaubwürdigkeit</rs> 49, schreibt den
+            <p>
+               <rs type="bibl" ref="bibl:36944">Schmale, Glaubwürdigkeit</rs> 49, schreibt den
                   Vermerk (M.ch.q. 150, 47v) einer Hand des 18. Jh. zu und liest ihn folgendermaßen:
                   „Teste Trithemio nostro auctor huius libri est Eigilwardus apud Surium“; danach
                   will er von anderer Hand „cf. octob.“ lesen, zweifellos irrig für eine
@@ -169,9 +187,12 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiose eximie ac doctissime pater, colende domine.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiose eximie ac doctissime pater, colende domine.</opener>
          <ab resp="#editor" xml:id="seg1">Haec tandem sunt, quae de origine et statu monasterii nostri S. Stephani Herbipoli <anchor xml:id="n1"/>prioribus deperditis<anchor xml:id="n1e"/> post iteratas interruptiones noviter congessi, quae, rogo, dignabitur admodum reverenda paternitas vestra Parisios mittere, et si authori prosecutionis Annalium Benedictinorum quaedam ex iis quinto volumini inserenda videbuntur, ea inserta videre gaudebo. Quamprimum enim editum resciero aut audiero, habere cupidus ero et comparare studebo. </ab>
-         <ab resp="#editor" xml:id="seg2">Hac occasione legi in <anchor xml:id="n2"/>catalogo abbatum<anchor xml:id="n2e"/> nostrorum de secundo abbate haec formalia: <anchor xml:id="n3"/>Ezzo<anchor xml:id="n3e"/> <add place="left-margin"><witDetail wit="#A">mit Verweiszeichen am linken Blattrand</witDetail>(nomen hoc inveni antiquis usitatum)</add> secundus abbas fuit in regimine annis 1098, 1100, 1104, 1108 etc. sub <anchor xml:id="n4"/>Meginhardo et Emerhardo episcopis<anchor xml:id="n4e"/>, multorum librorum author, scriptor et dictator. Si forte hoc servire posset ad opus celebre admodum reverendae paternitatis vestrae, libros habemus multos scriptos et quosdam vix legibiles; quorum autem hic abbas author sit, nescimus, cum nomen authoris operi tunc raro solerent praefigere. </ab>
+         <ab resp="#editor" xml:id="seg2">Hac occasione legi in <anchor xml:id="n2"/>catalogo abbatum<anchor xml:id="n2e"/> nostrorum de secundo abbate haec formalia: <anchor xml:id="n3"/>Ezzo<anchor xml:id="n3e"/>
+            <add place="left-margin">
+               <witDetail wit="#A">mit Verweiszeichen am linken Blattrand</witDetail>(nomen hoc inveni antiquis usitatum)</add> secundus abbas fuit in regimine annis 1098, 1100, 1104, 1108 etc. sub <anchor xml:id="n4"/>Meginhardo et Emerhardo episcopis<anchor xml:id="n4e"/>, multorum librorum author, scriptor et dictator. Si forte hoc servire posset ad opus celebre admodum reverendae paternitatis vestrae, libros habemus multos scriptos et quosdam vix legibiles; quorum autem hic abbas author sit, nescimus, cum nomen authoris operi tunc raro solerent praefigere. </ab>
          <ab resp="#editor" xml:id="seg3">Sicut modo incido in <anchor xml:id="n5"/>librum, dum haec scribo, in quarto continentem Vitam sancti Burchardi<anchor xml:id="n5e"/>, seriem episcoporum, quaedam ascetica, item praecepta <sic>rhethoricae</sic> , <add place="left-margin">item Vitam sanctorum Eucharii, Valerii, Materni</add>; et <anchor xml:id="n6"/>recentiori manu praepositum<anchor xml:id="n6e"/> est hoc: Author huius libri est <anchor xml:id="n7"/>Egilwardus monachus Burchardinus<anchor xml:id="n7e"/> teste Trithemio <anchor xml:id="n8"/>apud Surium<anchor xml:id="n8e"/> 14. Octobris. Inquisivi statim <anchor xml:id="n9"/>apud Surium<anchor xml:id="n9e"/> et ita inveni, sed <anchor xml:id="n10"/>Trithemium, quem citat De viris illustribus nostri ordinis, in nostra bibliotheca non invenio<anchor xml:id="n10e"/>, apud quem sperabam aliquid plus de Egilwardo invenire. Inquiram in hoc opus Trithemii; <pb n="1v"/> si quid invenero, communicabo. </ab>
          <ab resp="#editor" xml:id="seg4">Hactenus autem nihil adhuc de vel<note type="annotation" xml:id="d4618e14803">Unsichere Lesung. Der erste Buchstabe ist korrigiert. Möglicherweise ist das Wort unvollständig und hätte zusammen mit <orig>de</orig> gestrichen werden sollen, nachdem der Satz anders als zunächst begonnen weitergeschrieben wurde.</note> a reverendissimo domino nostro suffraganeo de eo obtinui. Saepius promisit, nunquam adhuc implevit. Sed ne inutilibus longior sim, hisce concludo hac vice et nos divinae protectioni commendans maneo</ab>
          <closer>Admodum reverendae paternitatis vestrae paratissimus Hyacinth abbas manu propria.</closer>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="857" xml:id="pez-0857">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Leopold Wydemann an Hieronymus Pez. 1717-12-04. Gaming.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">857</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -81,43 +94,45 @@
                <ptr type="mentionedIn" target="letter:880"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e827">Albrecht II</term>
-            <term ref="index:d14380e1968">Anonyme Werke ; Annales Mellicenses. Ms. Melk</term>
-            <term ref="index:d14380e2044">Anonyme Werke ; Chronicae omnium principum. Ms. Gaming</term>
-            <term ref="index:d14380e2165">Anonyme Werke ; Chronicon Zwethalense. Ms. Wien, Hofbibliothek</term>
-            <term ref="index:d14380e2298">Anonyme Werke ; Flores chronicarum Austriae. Mss. Melk</term>
-            <term ref="index:d14380e3821">Barbara von Cilli</term>
-            <term ref="index:d14380e6032">Böhmen</term>
-            <term ref="index:d14380e8225">Cilli</term>
-            <term ref="index:d14380e11107">Elisabeth von Luxemburg</term>
-            <term ref="index:d14380e13828">Gaming</term>
-            <term ref="index:d14380e13991">Gaming ; Bibliothek ; Chronicae omnium principum. Ms</term>
-            <term ref="index:d14380e16234">Graz ; Landesfürstliches Schatzarchiv</term>
-            <term ref="index:d14380e17537">Heiliges Römisches Reich</term>
-            <term ref="index:d14380e18050">Hermann II</term>
-            <term ref="index:d14380e19774">Innsbruck ; Landesfürstliches Schatzarchiv</term>
-            <term ref="index:d14380e20126">Jesuiten</term>
-            <term ref="index:d14380e21396">Kartäuser</term>
-            <term ref="index:d14380e21506">Kartäuser ; Ordensstatuten</term>
-            <term ref="index:d14380e28344">Melk ; Bibliothek ; Annales Mellicenses Ms</term>
-            <term ref="index:d14380e28404">Melk ; Bibliothek ; Flores chronicarum Austriae</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e33148">Pez, Bernhard</term>
-            <term ref="index:d14380e35336">Pletriach</term>
-            <term ref="index:d14380e37308">Rhein</term>
-            <term ref="index:d14380e37914">Roo, Gerard van ; Annales rerum belli domique ab Austriacis Habspurgicae gentis
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e827">Albrecht II</term>
+               <term ref="index:d14380e1968">Anonyme Werke ; Annales Mellicenses. Ms. Melk</term>
+               <term ref="index:d14380e2044">Anonyme Werke ; Chronicae omnium principum. Ms. Gaming</term>
+               <term ref="index:d14380e2165">Anonyme Werke ; Chronicon Zwethalense. Ms. Wien, Hofbibliothek</term>
+               <term ref="index:d14380e2298">Anonyme Werke ; Flores chronicarum Austriae. Mss. Melk</term>
+               <term ref="index:d14380e3821">Barbara von Cilli</term>
+               <term ref="index:d14380e6032">Böhmen</term>
+               <term ref="index:d14380e8225">Cilli</term>
+               <term ref="index:d14380e11107">Elisabeth von Luxemburg</term>
+               <term ref="index:d14380e13828">Gaming</term>
+               <term ref="index:d14380e13991">Gaming ; Bibliothek ; Chronicae omnium principum. Ms</term>
+               <term ref="index:d14380e16234">Graz ; Landesfürstliches Schatzarchiv</term>
+               <term ref="index:d14380e17537">Heiliges Römisches Reich</term>
+               <term ref="index:d14380e18050">Hermann II</term>
+               <term ref="index:d14380e19774">Innsbruck ; Landesfürstliches Schatzarchiv</term>
+               <term ref="index:d14380e20126">Jesuiten</term>
+               <term ref="index:d14380e21396">Kartäuser</term>
+               <term ref="index:d14380e21506">Kartäuser ; Ordensstatuten</term>
+               <term ref="index:d14380e28344">Melk ; Bibliothek ; Annales Mellicenses Ms</term>
+               <term ref="index:d14380e28404">Melk ; Bibliothek ; Flores chronicarum Austriae</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e33148">Pez, Bernhard</term>
+               <term ref="index:d14380e35336">Pletriach</term>
+               <term ref="index:d14380e37308">Rhein</term>
+               <term ref="index:d14380e37914">Roo, Gerard van ; Annales rerum belli domique ab Austriacis Habspurgicae gentis
          principibus a Rudolpho primo usque ad Carolum V. gestarum. Innsbruck 1592</term>
-            <term ref="index:d14380e40832">Sigismund</term>
-            <term ref="index:d14380e41556">Steyerer, Anton</term>
-            <term ref="index:d14380e41597">Steyerer, Anton ; -Plan einer österreichischen Geschichte</term>
-            <term ref="index:d14380e42794">Thomas Ebendorfer von Haselbach ; Chronica Austriae</term>
-            <term ref="index:d14380e43779">Ungarn, Ungarn</term>
-            <term ref="index:d14380e45571">Wien</term>
-            <term ref="index:d14380e45815">Wien ; Kaiserhof ; Archiv</term>
-            <term ref="index:d14380e45869">Wien ; Kaiserhof ; Hofbibliothek ; Chronicon Zwethalense. Ms</term>
-            <term ref="index:d14380e46776">Wydemann, Leopold ; Selbstwahrnehmung als Mönch</term></keywords></textClass>
+               <term ref="index:d14380e40832">Sigismund</term>
+               <term ref="index:d14380e41556">Steyerer, Anton</term>
+               <term ref="index:d14380e41597">Steyerer, Anton ; -Plan einer österreichischen Geschichte</term>
+               <term ref="index:d14380e42794">Thomas Ebendorfer von Haselbach ; Chronica Austriae</term>
+               <term ref="index:d14380e43779">Ungarn, Ungarn</term>
+               <term ref="index:d14380e45571">Wien</term>
+               <term ref="index:d14380e45815">Wien ; Kaiserhof ; Archiv</term>
+               <term ref="index:d14380e45869">Wien ; Kaiserhof ; Hofbibliothek ; Chronicon Zwethalense. Ms</term>
+               <term ref="index:d14380e46776">Wydemann, Leopold ; Selbstwahrnehmung als Mönch</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">LW schreibt HP, wie erbeten <ref type="letter" target="letter:856">856</ref>, ohne Verzögerung und
                antwortet, um ihn und BP von ihrer Sorge zu befreien, auf die Frage, ob LW in eigener Sache oder aber ein
@@ -175,7 +190,7 @@
                („<rs ref="index:d14380e37914">Annales</rs>“) Elisabeth zur Zeit ihrer Verlobung noch sehr jung war,
                weshalb LW vermutet, dass sie 1422 vielleicht nicht zur Hochzeit nach <rs ref="index:d14380e45571">Wien</rs> gebracht wurde, sondern um dort erzogen zu werden. Hieraus müsste ersichtlich sein, warum
                LW seine Fragen gestellt hat.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -215,16 +230,21 @@
                   könnte diese direkt benutzt haben, zumal sie ihm sicherlich zugänglich war;
                   vielleicht verwendete er aber auch eine heute anscheinend verlorene Abschrift in
                   der Bibliothek der Mannagetta-Stiftung, wie dies von Gerhard Cornelius van den
-                  Driesch behauptet wurde: vgl. <ref type="letter" target="letter:462">462</ref> <ref target="letter:462#seg9">9</ref>, <ref type="letter" target="letter:877">877</ref> <ref target="letter:877#seg4">4</ref>; sowie <rs type="bibl" ref="bibl:15152">Benz, Zwischen Tradition und Kritik</rs> 463. – Zu weiteren
+                  Driesch behauptet wurde: vgl. <ref type="letter" target="letter:462">462</ref>
+               <ref target="letter:462#seg9">9</ref>, <ref type="letter" target="letter:877">877</ref>
+               <ref target="letter:877#seg4">4</ref>; sowie <rs type="bibl" ref="bibl:15152">Benz, Zwischen Tradition und Kritik</rs> 463. – Zu weiteren
                   historiographischen Quellen, die unter ähnlichen Bezeichnungen diskutiert wurden,
-                  vgl. <ref type="letter" target="letter:539">539</ref> <ref target="letter:539#seg2">2</ref>, <ref type="letter" target="letter:725">725</ref>
-                  <ref target="letter:725#seg2">2</ref>, <ref type="letter" target="letter:845">845</ref> <ref target="letter:845#seg2">2</ref>, <ref type="letter" target="letter:972">972</ref>
-                  <ref target="letter:972#seg3">3</ref>.</p>
+                  vgl. <ref type="letter" target="letter:539">539</ref>
+               <ref target="letter:539#seg2">2</ref>, <ref type="letter" target="letter:725">725</ref>
+               <ref target="letter:725#seg2">2</ref>, <ref type="letter" target="letter:845">845</ref>
+               <ref target="letter:845#seg2">2</ref>, <ref type="letter" target="letter:972">972</ref>
+               <ref target="letter:972#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
             <mentioned> Hasselbachianum</mentioned>
             <p>Zur Überlieferung der Chronik Thomas Ebendorfers
-                  vgl. <ref type="letter" target="letter:363">363</ref> <ref target="letter:363#seg6">6</ref>. Steyerer benutzte die damals der
+                  vgl. <ref type="letter" target="letter:363">363</ref>
+               <ref target="letter:363#seg6">6</ref>. Steyerer benutzte die damals der
                   Wiener Universitätsbibliothek gehörige Handschrift: jetzt ÖNB, Cod. 7583; vgl. <rs type="bibl" ref="bibl:17986">Lhotsky, Einleitung</rs> LII–LXIV. Dieser Codex
                   wird mit seinem Aufbewahrungsort genannt und ausführlich beschrieben bei Steyerer,
                   Commentarii, Praefatio (unpag.): „Thomae Ebendorffer de Haselbach [...] Chronicon
@@ -237,8 +257,9 @@
             <mentioned> Flores Mellicenses</mentioned>
             <p>Zu den „Flores chronicarum“ und ihren
                   Überlieferungen sowie zur Entlehnung eines Exemplars aus Melk an Steyerer 1715
-                  vgl. <ref type="letter" target="letter:469">469</ref> <ref target="letter:469#seg1">1</ref>, <ref type="letter" target="letter:845">845</ref>
-                  <ref target="letter:845#seg2">2</ref>.</p>
+                  vgl. <ref type="letter" target="letter:469">469</ref>
+               <ref target="letter:469#seg1">1</ref>, <ref type="letter" target="letter:845">845</ref>
+               <ref target="letter:845#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg2">
             <mentioned> deinde patri ... propositas</mentioned>
@@ -247,12 +268,15 @@
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg3">
             <mentioned>Chronico Mellicensi</mentioned>
             <p>Dabei handelte es sich nicht, wie LW vermutete,
-                  um die „Flores chronicarum“, sondern die Melker Annalen: vgl. <ref type="letter" target="letter:865">865</ref> <ref target="letter:865#seg7">7</ref>, <ref type="letter" target="letter:880">880</ref> <ref target="letter:880#seg1">1</ref>. </p>
+                  um die „Flores chronicarum“, sondern die Melker Annalen: vgl. <ref type="letter" target="letter:865">865</ref>
+               <ref target="letter:865#seg7">7</ref>, <ref type="letter" target="letter:880">880</ref>
+               <ref target="letter:880#seg1">1</ref>. </p>
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg4">
             <mentioned>anonymi cuiusdam chronicon</mentioned>
             <p>LW lieferte wenig später eine nähere
-                  Beschreibung dieser Chronik: vgl. <ref type="letter" target="letter:865">865</ref> <ref target="letter:865#seg1">1</ref> bis
+                  Beschreibung dieser Chronik: vgl. <ref type="letter" target="letter:865">865</ref>
+               <ref target="letter:865#seg1">1</ref> bis
                   <ref target="letter:865#seg5">5</ref>. Auf dieser Grundlage ist sie mit Gewissheit zu identifizieren als ÖNB,
                   Cod. 3358, 23r–47r. In einem Brief an Steyerer vom 22. Dezember 1717 berichtete
                   LW, dass diese Handschrift an die Kapuziner im Kloster zu Scheibbs ausgeliehen und
@@ -287,7 +311,8 @@
                   Hälfte der 1390er Jahre gesetzt: vgl. <rs type="bibl" ref="bibl:16276">Fößel,
                      Barbara von Cilli</rs> 102f.; <rs type="bibl" ref="bibl:17616">Kos, Burg und
                      Stadt</rs> 559. LW revidierte seine Rechnung später erheblich und nahm eine
-                  viel frühere Geburt an: vgl. <ref type="letter" target="letter:880">880</ref> <ref target="letter:880#seg8">8</ref>.</p>
+                  viel frühere Geburt an: vgl. <ref type="letter" target="letter:880">880</ref>
+               <ref target="letter:880#seg8">8</ref>.</p>
          </note>
          <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg4">
             <mentioned> si Elisabetha ... actuali matrimonio</mentioned>
@@ -306,11 +331,19 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo religiosissimo ac doctissimo patri Hieronymo Pez Mellicensi salutem plurimam dicit frater Leopoldus Wydeman Gemnicensis.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo religiosissimo ac doctissimo patri Hieronymo Pez Mellicensi salutem plurimam dicit frater Leopoldus Wydeman Gemnicensis.</opener>
          <ab resp="#editor" xml:id="seg1">Sine mora, quia urges, vir doctissime, et ut tibi fratrique tuo scrupulum conceptum eximam, quaestioni tuae uni quidem quoad intentionem, sed duplici quoad substantiam (quaeris enim, an ego pro me, an alius per me interroget) candide respondeo: primo me nihil operis in publicum edendi in praesens moliri. Et qua ratione molirer in historia Austriaca nimium perturbata ego solitarius, ad quem nec authentica documenta nec vetusti manuscripti codices sponte veniunt, nec mihi ea accedere <anchor xml:id="n1"/>ex regula<anchor xml:id="n1e"/> conceditur? Uti autem authoribus typo datis et eos sequi in tempore, quo singula critice examinantur, praesertim ubi tot errores se ingerunt per recentiores introducti, mihi temerarium videretur potius quam honorificum. Aliis igitur relinquam opus istud, quibus nec occasio deest investigandi necessaria et adest eruditio investigata suis locis interserendi. </ab>
-         <ab resp="#editor" xml:id="seg2">Respondeo secundo omnino quendam e Societate Jesu iam <anchor xml:id="n2"/>fere a biennio mecum literis egisse<anchor xml:id="n2e"/>; sed de hoc patre etiam illud utrique vestrum sancte affirmo, quod in hanc usque diem et horam idem de reverentiis vestris mihi nec unicum apicem <choice><sic>scripserim.</sic><corr>scripserit</corr></choice> multoque minus hamum in piscinas vestras<del ana="#after">hamum.</del> per me mittere conatus fuerit.<anchor xml:id="n3"/> Petiit ille a me, quae haberem de fundatore Cartusiae nostrae certiora; et haec libenter, licet non sine labore quaesita, misi<anchor xml:id="n3e"/>; et inter ista etiam dubia non pauca, propter quorum elucidationem literis ultro citroque missis invicem saepius scripsimus et scribimus. Quin et dubia a me proposita eidem ansam tribuerunt plura inquirendi et obtinendi ex variorum locorum<anchor xml:id="n4"/> archivis caesareis<anchor xml:id="n4e"/> documenta, ut illis et sibi et mihi satisfaceret. Caeteroquin, uti ipsi non ignorabitis, pater iste iam <pb n="1v"/> a multis annis in opere suo desudat. Et quia omnia et singula, ut ita dicam, scrupulose examinat, ex archivis sibi apertis documenta adsunt nec manuscripti historiarum codices (praeter alia chronica enim etiam<anchor xml:id="n5"/> Zwethalense<anchor xml:id="n5e"/>,<anchor xml:id="n6"/> Hasselbachianum<anchor xml:id="n6e"/> et alia in literis<del ana="#after">me.</del> ad me datis citata habet et<anchor xml:id="n7"/> Flores Mellicenses<anchor xml:id="n7e"/>, si non habet, saltem vidit) desunt, non dubito, quin opera eius et studio egregium aliquando opus prodibit, quo ad oculum errores<del ana="#after">moder.</del> recentiorum a saeculo XVI. demonstrabuntur. Quod si huius operi vestrum concorde fuerit et vestro ipsius opus conforme, Austria habebit historicos, de quibus gaudeat; sin secus, periculum erit, ne in pristinos prolabatur errores. Quod ne eveniat, providendum erit summopere. Absit ergo iterumque absit et longius repellatur suspicio illa, quam de patre hoc (si tamen est, de quo suspicamini) concepisse videmini. Et ut illa repellatur fortius, scire velitis quaestiones illas duas puro motu a me primum vobis, deinde patri <choice><sic>isto.</sic><corr>isti</corr></choice> die 1. Decembris huius anni fuisse propositas, nec sine ratione, dum ex harum resolutione quaestio magna dependet. Quid ille mihi sit responsurus, adhuc ignoro. </ab>
+         <ab resp="#editor" xml:id="seg2">Respondeo secundo omnino quendam e Societate Jesu iam <anchor xml:id="n2"/>fere a biennio mecum literis egisse<anchor xml:id="n2e"/>; sed de hoc patre etiam illud utrique vestrum sancte affirmo, quod in hanc usque diem et horam idem de reverentiis vestris mihi nec unicum apicem <choice>
+               <sic>scripserim.</sic>
+               <corr>scripserit</corr>
+            </choice> multoque minus hamum in piscinas vestras<del ana="#after">hamum.</del> per me mittere conatus fuerit.<anchor xml:id="n3"/> Petiit ille a me, quae haberem de fundatore Cartusiae nostrae certiora; et haec libenter, licet non sine labore quaesita, misi<anchor xml:id="n3e"/>; et inter ista etiam dubia non pauca, propter quorum elucidationem literis ultro citroque missis invicem saepius scripsimus et scribimus. Quin et dubia a me proposita eidem ansam tribuerunt plura inquirendi et obtinendi ex variorum locorum<anchor xml:id="n4"/> archivis caesareis<anchor xml:id="n4e"/> documenta, ut illis et sibi et mihi satisfaceret. Caeteroquin, uti ipsi non ignorabitis, pater iste iam <pb n="1v"/> a multis annis in opere suo desudat. Et quia omnia et singula, ut ita dicam, scrupulose examinat, ex archivis sibi apertis documenta adsunt nec manuscripti historiarum codices (praeter alia chronica enim etiam<anchor xml:id="n5"/> Zwethalense<anchor xml:id="n5e"/>,<anchor xml:id="n6"/> Hasselbachianum<anchor xml:id="n6e"/> et alia in literis<del ana="#after">me.</del> ad me datis citata habet et<anchor xml:id="n7"/> Flores Mellicenses<anchor xml:id="n7e"/>, si non habet, saltem vidit) desunt, non dubito, quin opera eius et studio egregium aliquando opus prodibit, quo ad oculum errores<del ana="#after">moder.</del> recentiorum a saeculo XVI. demonstrabuntur. Quod si huius operi vestrum concorde fuerit et vestro ipsius opus conforme, Austria habebit historicos, de quibus gaudeat; sin secus, periculum erit, ne in pristinos prolabatur errores. Quod ne eveniat, providendum erit summopere. Absit ergo iterumque absit et longius repellatur suspicio illa, quam de patre hoc (si tamen est, de quo suspicamini) concepisse videmini. Et ut illa repellatur fortius, scire velitis quaestiones illas duas puro motu a me primum vobis, deinde patri <choice>
+               <sic>isto.</sic>
+               <corr>isti</corr>
+            </choice> die 1. Decembris huius anni fuisse propositas, nec sine ratione, dum ex harum resolutione quaestio magna dependet. Quid ille mihi sit responsurus, adhuc ignoro. </ab>
          <ab resp="#editor" xml:id="seg3">Responsio vestra (pro qua gratias refero) mihi nondum, ut pace vestra loquar, nodum solvit, et ideo pro repetitis ad ulteriorem informationem haberi desidero. De Barbara, quo anno nupserit, mecum ignoratis. Elisabetham anno 1422 nupsisse ex <anchor xml:id="n8"/>Chronico Mellicensi<anchor xml:id="n8e"/> creditis uti certum, ego habeo uti dubium, praesertim si per Chronicum illud intelligitis Flores chronicarum, quos ad me nuper gratiose mittere voluistis. Habent enim isti veris mixta erronea quaedam, ex quibus et Elisabethae matrimonium esse posset. </ab>
-         <ab resp="#editor" xml:id="seg4">Cur autem, patres reverendi, quaestiones illas vobis proposuerim resolvendas, audite rationem etiam patri Societatis proponendam, quamprimum eius responsum accepero. Est mihi anonymi cuiusdam <pb n="2r"/> chronicon ab anno DCLXXXXVII incipiens et anno MCCCCLII desinens, vix ultra<del ana="#after">diem.</del> dies decem a me inventum; in hoc lego sequentia: Anno MCCCCXIIII in die Matthaei apostoli<note type="annotation" xml:id="d3e45802">Abgekürzt <orig>Apli.</orig></note> filia comitis de Cilia intravit Viennam, oppidum in provincia Austriae, pro tunc regis Sigismundi Ungariae, Bohemiae et Romanorum uxor; et quarto die sequenti recedens ad Renum, ubi rex praedictus statim post sancti Galli debebat coronari. Ita ibi. Vix illa legeram, et, quia, si non evidenter, saltem moraliter aut fere certus sum<anchor xml:id="n9"/> Hermannum Ciliae comitem, Cartusiae quondam Pletriacensis fundatorem, Barbarae patrem, adhuc anno 1393 vixisse in coelibatu<anchor xml:id="n9e"/>, et proinde Barbaram post annum 1393 (anno,<anchor xml:id="n10"/> uti puto, 1397<anchor xml:id="n10e"/>) natam, occurrit cogitatio, an forte<anchor xml:id="n11"/> Barbara fuerit nupta<anchor xml:id="n11e"/> anno 1414. Suspicionem auxit textus citatus, in quo legitur filia comitis Ciliae intravisse Viennam. An tanta dignitas comitis, ut hoc nomine vocetur Barbara, casu quo illa fuisset ante annum 1412, imo ante annum 1410 (si Elisabetha anno 1422 apta actuali matrimonio) Sigismundi iam pridem regis Hungariae, imo ab anno 1411 imperatoris, uxor? Cur non potius Viennam intravisse narratur Barbara regina Hungariae et imperatrix, si non coronata, saltem privilegio mariti, quam comitis filia? Et quid sibi vult istud pro tunc? An non etiam ante erat uxor? Accedit, quod Elisabetha tempore sponsalium fuerit<anchor xml:id="n12"/> teste Rhoo<anchor xml:id="n12e"/> valde iuvenis; et quid, si anno 1422 introducta quidem fuisset Viennam ad sponsum, non ut ei iungeretur, sed ibidem educaretur? Temporis brevitas non sinit, ut ea clarius scribam; puto tamen, quod ex his videatis rationem, cur quaestiones proposuerim et nunc repetam. Utrumque vestrum diu conservet.</ab>
+         <ab resp="#editor" xml:id="seg4">Cur autem, patres reverendi, quaestiones illas vobis proposuerim resolvendas, audite rationem etiam patri Societatis proponendam, quamprimum eius responsum accepero. Est mihi anonymi cuiusdam <pb n="2r"/> chronicon ab anno DCLXXXXVII incipiens et anno MCCCCLII desinens, vix ultra<del ana="#after">diem.</del> dies decem a me inventum; in hoc lego sequentia: Anno MCCCCXIIII in die Matthaei apostoli<note type="annotation" xml:id="d3e45802">Abgekürzt <orig>Apli.</orig>
+            </note> filia comitis de Cilia intravit Viennam, oppidum in provincia Austriae, pro tunc regis Sigismundi Ungariae, Bohemiae et Romanorum uxor; et quarto die sequenti recedens ad Renum, ubi rex praedictus statim post sancti Galli debebat coronari. Ita ibi. Vix illa legeram, et, quia, si non evidenter, saltem moraliter aut fere certus sum<anchor xml:id="n9"/> Hermannum Ciliae comitem, Cartusiae quondam Pletriacensis fundatorem, Barbarae patrem, adhuc anno 1393 vixisse in coelibatu<anchor xml:id="n9e"/>, et proinde Barbaram post annum 1393 (anno,<anchor xml:id="n10"/> uti puto, 1397<anchor xml:id="n10e"/>) natam, occurrit cogitatio, an forte<anchor xml:id="n11"/> Barbara fuerit nupta<anchor xml:id="n11e"/> anno 1414. Suspicionem auxit textus citatus, in quo legitur filia comitis Ciliae intravisse Viennam. An tanta dignitas comitis, ut hoc nomine vocetur Barbara, casu quo illa fuisset ante annum 1412, imo ante annum 1410 (si Elisabetha anno 1422 apta actuali matrimonio) Sigismundi iam pridem regis Hungariae, imo ab anno 1411 imperatoris, uxor? Cur non potius Viennam intravisse narratur Barbara regina Hungariae et imperatrix, si non coronata, saltem privilegio mariti, quam comitis filia? Et quid sibi vult istud pro tunc? An non etiam ante erat uxor? Accedit, quod Elisabetha tempore sponsalium fuerit<anchor xml:id="n12"/> teste Rhoo<anchor xml:id="n12e"/> valde iuvenis; et quid, si anno 1422 introducta quidem fuisset Viennam ad sponsum, non ut ei iungeretur, sed ibidem educaretur? Temporis brevitas non sinit, ut ea clarius scribam; puto tamen, quod ex his videatis rationem, cur quaestiones proposuerim et nunc repetam. Utrumque vestrum diu conservet.</ab>
          <closer>Scripsi raptim Gemnici die 4. Decembris.</closer>
       </body>
    </text>

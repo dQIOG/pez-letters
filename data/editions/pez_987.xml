@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="987" xml:id="pez-0987">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Joachim Edlinger an Hieronymus Pez. 1718-08-31. Seitenstetten.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">987</idno>
          </publicationStmt>
          <seriesStmt>
@@ -34,10 +46,10 @@
             <relatedItem type="otherEdition">
                <bibl>Spevak, Edlinger 58–61.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
-            <listWit><witness ana="cmif:manuscript">
+            <listWit>
+               <witness ana="cmif:manuscript">
                   <msDesc>
                      <msIdentifier>
                         <institution>Stift Melk</institution>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,37 +90,39 @@
                <ptr type="mentions" target="letter:986"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e1169">Altötting</term>
-            <term ref="index:d14380e3802">Banduri, Anselmo ; Imperium orientale sive Antiquitates Constantinopolitanae in quatuor
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e1169">Altötting</term>
+               <term ref="index:d14380e3802">Banduri, Anselmo ; Imperium orientale sive Antiquitates Constantinopolitanae in quatuor
          partes distributae, quae ex variis scriptorum Graecorum operibus et praesertim ineditis
          adornatae. 2 Bde. Paris 1711</term>
-            <term ref="index:d14380e10784">Edlinger, Martin</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e15623">Gleditsch, Johann Gottlieb</term>
-            <term ref="index:d14380e16127">Götz, Veit Daniel</term>
-            <term ref="index:d14380e16825">Haag</term>
-            <term ref="index:d14380e22118">Knoblach, Marzellin</term>
-            <term ref="index:d14380e23178">Kremsmünster</term>
-            <term ref="index:d10854e16187">Kremsmünster ; Bibliothek ; Berchtold von Kremsmünster, Historia Cremifanensis</term>
-            <term ref="index:d14380e24970">Linz</term>
-            <term ref="index:d14380e24983">Linz ; Buchmärkte</term>
-            <term ref="index:d14380e26594">Martène, Edmond ; [Edmond Martène, Ursin Durand] Thesaurus novus anecdotorum. 5 Bde.
+               <term ref="index:d14380e10784">Edlinger, Martin</term>
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e15623">Gleditsch, Johann Gottlieb</term>
+               <term ref="index:d14380e16127">Götz, Veit Daniel</term>
+               <term ref="index:d14380e16825">Haag</term>
+               <term ref="index:d14380e22118">Knoblach, Marzellin</term>
+               <term ref="index:d14380e23178">Kremsmünster</term>
+               <term ref="index:d10854e16187">Kremsmünster ; Bibliothek ; Berchtold von Kremsmünster, Historia Cremifanensis</term>
+               <term ref="index:d14380e24970">Linz</term>
+               <term ref="index:d14380e24983">Linz ; Buchmärkte</term>
+               <term ref="index:d14380e26594">Martène, Edmond ; [Edmond Martène, Ursin Durand] Thesaurus novus anecdotorum. 5 Bde.
          Paris 1717</term>
-            <term ref="index:d14380e26892">Maße, Gewichte, Währung ; Gulden</term>
-            <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
+               <term ref="index:d14380e26892">Maße, Gewichte, Währung ; Gulden</term>
+               <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
          dominum dominum Joannem Benedictum Gentilottum ab Engelsbrunn pro editione integri
          syntagmatis diplomatico-historico-epistolaris Udalrici Babenbergensis ex codice Zwetlensi,
          impugnata a viro clarissimo Angelo Fonteio Veronensi. Augsburg 1717</term>
-            <term ref="index:d14380e34754">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
+               <term ref="index:d14380e34754">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
          Leipzig–Regensburg 1721–1745</term>
-            <term ref="index:d14380e34804">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
+               <term ref="index:d14380e34804">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
          Leipzig–Regensburg 1721–1745 ; Bd. 1</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
-            <term ref="index:d14380e44714">Vornbach</term>
-            <term ref="index:d14380e44736">Vornbach ; Bibliothek</term>
-            <term ref="index:d14380e44885">Walder, Daniel</term></keywords></textClass>
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+               <term ref="index:d14380e44714">Vornbach</term>
+               <term ref="index:d14380e44736">Vornbach ; Bibliothek</term>
+               <term ref="index:d14380e44885">Walder, Daniel</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Wie von HP gewünscht <ref type="letter" target="letter:986">986</ref>, berichtet JE, da er es mit der
                letzten nicht konnte, mit der bevorstehenden <rs ref="index:d14380e35665">Post</rs>, dass er und sein
@@ -132,7 +147,7 @@
             <p corresp="#seg6">JE hat vor kurzem von jemandem erfahren, dass HP bald den <rs ref="index:d14380e34804">ersten Band</rs>
                seiner „<rs ref="index:d14380e34754">Scriptores rerum Austriacarum</rs>“ herausbringen will; JE
                gratuliert HP und allen Gelehrten dazu.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -156,25 +171,30 @@
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
             <mentioned> Marcellinus</mentioned>
-            <p><rs type="bibl" ref="bibl:17460">Kellner,
+            <p>
+               <rs type="bibl" ref="bibl:17460">Kellner,
                      Profeßbuch</rs> 239f.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
             <mentioned>Lincenses nundinae</mentioned>
-            <p>Zum Linzer Bartholomäusmarkt vgl. <ref type="letter" target="letter:843">843</ref> <ref target="letter:843#seg3">3</ref>. </p>
+            <p>Zum Linzer Bartholomäusmarkt vgl. <ref type="letter" target="letter:843">843</ref>
+               <ref target="letter:843#seg3">3</ref>. </p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
             <mentioned>Gleditschio</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:974">974</ref> <ref target="letter:974#seg6">6</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:974">974</ref>
+               <ref target="letter:974#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
             <mentioned> Walder</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:505">505</ref> <ref target="letter:505#seg5">5</ref>, <ref type="letter" target="letter:841">841</ref> <ref target="letter:841#seg4">4</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:505">505</ref>
+               <ref target="letter:505#seg5">5</ref>, <ref type="letter" target="letter:841">841</ref>
+               <ref target="letter:841#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
             <mentioned>In anonymi ... iudicium</mentioned>
             <p>Vgl. <ref type="letter" target="letter:974">974</ref>
-                  <ref target="letter:974#seg6">6</ref>.</p>
+               <ref target="letter:974#seg6">6</ref>.</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -187,12 +207,17 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo clarissimo ac eruditissimo viro domino patri Hieronymo Pezio Benedictino Mellicensi etc. pater Joachimus Edlinger Benedictinus Seitenstettensis salutem plurimam dicit.</opener>
-         <ab resp="#editor" xml:id="seg1">Iusseras, vir amicissime, ut meum ad lares patrios reditum quam celerrime tibi nuntiem, quod itaque cum nupera posta non potui, cum crastina saltem effectum dabo, me cum parente meo, postquam in itinere nostro e voto fere nobis <choice><sic>ceciderant</sic><corr>ceciderint</corr></choice> omnia, die 26. huius denuo domum appulisse significans<note place="foot" xml:id="d3e64527">Mit Verweiszeichen am linken Blattrand eingefügt.</note>. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverendo clarissimo ac eruditissimo viro domino patri Hieronymo Pezio Benedictino Mellicensi etc. pater Joachimus Edlinger Benedictinus Seitenstettensis salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Iusseras, vir amicissime, ut meum ad lares patrios reditum quam celerrime tibi nuntiem, quod itaque cum nupera posta non potui, cum crastina saltem effectum dabo, me cum parente meo, postquam in itinere nostro e voto fere nobis <choice>
+               <sic>ceciderant</sic>
+               <corr>ceciderint</corr>
+            </choice> omnia, die 26. huius denuo domum appulisse significans<note place="foot" xml:id="d3e64527">Mit Verweiszeichen am linken Blattrand eingefügt.</note>. </ab>
          <ab resp="#editor" xml:id="seg2">Bis ad principem sacri loci aram feci et in ipso quidem divi Bernardi festo praecipue pro Bernardo Pezio meo, cui te, vir clarissime, et <anchor xml:id="n1"/>parochum in Haag<anchor xml:id="n1e"/> aliosque (si qui tamen alii hoc nomine digni veniant) amicos comites dedi, quorum rationem assidue in meis quoque precibus habui. Sane haud suppetebat aliud, quo diem tot mihi titulis festivum digne exciperem, nisi ardentissimum candidi pectoris pro viri tam pretiosi iugi incolumitate votum coram prodigiosa Virgine fusum. Si quid, ut optarem equidem, in me porro resideat, quod eidem usui esse possit, pergratum mihi accidet, si suo iure in me usus fuerit. </ab>
          <ab resp="#editor" xml:id="seg3">Lustravi in transitu bibliothecas <anchor xml:id="n2"/>Cremifanensem<anchor xml:id="n2e"/> multis recens coemtis libris auctam et <anchor xml:id="n3"/>Varnbacensem<anchor xml:id="n3e"/>, quarum prioris praefectus pater<anchor xml:id="n4"/> Marcellinus<anchor xml:id="n4e"/> utrumque vestrum officiosissime salutat optatos vestris conatibus successus apprecans. Iucundissimum viro erat ex me demum, quod dudum scire avebat, percipere, quae simultas Bernardo, cuius Dissertationem habet, intercedat cum Angelo Fonteio, et quis sit ille Angelus etc. </ab>
          <ab resp="#editor" xml:id="seg4">In reditu constitutum <anchor xml:id="n5"/>Lincenses nundinae<anchor xml:id="n5e"/> seu potius aeris, quod totum iam <pb n="1v"/> erogaveram, defectus in poenam me coniecerunt Tantalea vix mitiorem, dum in instructissimis tabernis cernere erat vim magnam omnis generis librorum, nec tamen emere dabatur; et eo minus id quidem, quod in fasciculum librorum partim a <anchor xml:id="n6"/>Gleditschio<anchor xml:id="n6e"/> submissorum, partim a Daniele<anchor xml:id="n7"/> Walder<anchor xml:id="n7e"/> allatorum expendere oportuerit ipsos 50 florenos, cum vix 30 habuerim, residuumque adhuc ipse debeam. Erat inibi inter alia venalis Thesaurus anecdotorum patris <sic>Martené</sic>, Imperium orientale Bandurii ac plures alii non infimae sortis libri. </ab>
-         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n8"/>In anonymi illius de meis ceptis iudicium<anchor xml:id="n8e"/> non est, cur laboriose inquiras, cum nulli mihi usui esse queat; Gleditschianam tamen, si remiseris, quod plures exspectem, asservabo. </ab>
+         <ab resp="#editor" xml:id="seg5">
+            <anchor xml:id="n8"/>In anonymi illius de meis ceptis iudicium<anchor xml:id="n8e"/> non est, cur laboriose inquiras, cum nulli mihi usui esse queat; Gleditschianam tamen, si remiseris, quod plures exspectem, asservabo. </ab>
          <ab resp="#editor" xml:id="seg6">Didici nuper a nonnemine brevi nos beandos fore primo tuarum lucubrationum tomo, de quo – tibi, dicam? an eruditis potius omnibus? – imo utrisque multum gratulor. Prosequere, vir clarissime, tam animosos ac nulla non laude dignos ausus et<del ana="#after">nulla non laude dignos ausus</del> cum suavissimo domino germano tuo me usque amans diutissime vale.</ab>
          <closer>Dabam Seitenstadii pridie Kalendas Septembris MDCCXVIII.</closer>
       </body>

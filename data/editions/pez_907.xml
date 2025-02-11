@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="907" xml:id="pez-0907">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Alphons Hueber an Bernhard Pez. 1718-02-21. Tegernsee.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">907</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Das Jahresdatum fehlt im Brief und im Ordnungsvermerk. Die Ansetzung zu 1718 ergibt sich insbesondere aus dem Bezug zur Abschrift der „Descriptio Terrae sanctae“ des Johannes von Würzburg durch Roman Krinner, deren Fertigstellung mit 20. März 1718 datiert ist (vgl. Kommentar), sowie aus der Erwähnung von AHs „Wegzehrung der reisenden“ als gedruckt, aber noch nicht ausgeliefert.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -78,37 +90,39 @@
                <ptr type="mentions" target="letter:881"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e2220">Anonyme Werke ; Cronica dominorum abbatum huius Tegernseensis monasterii. Ms.
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e2220">Anonyme Werke ; Cronica dominorum abbatum huius Tegernseensis monasterii. Ms.
          Tegernsee</term>
-            <term ref="index:d14380e3233">Augsburg</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e9835">Distl, Adalbert</term>
-            <term ref="index:d14380e16651">Guetrather, Petrus von</term>
-            <term ref="index:d14380e18929">Hueber, Alphons ; Chronicon monasterii Tegernseensis ordinis sancti Benedicti in
+               <term ref="index:d14380e3233">Augsburg</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e9835">Distl, Adalbert</term>
+               <term ref="index:d14380e16651">Guetrather, Petrus von</term>
+               <term ref="index:d14380e18929">Hueber, Alphons ; Chronicon monasterii Tegernseensis ordinis sancti Benedicti in
          Bavaria</term>
-            <term ref="index:d14380e18971">Hueber, Alphons ; Wegzehrung der reisenden nach ihrem vatterland oder Geistliche
+               <term ref="index:d14380e18971">Hueber, Alphons ; Wegzehrung der reisenden nach ihrem vatterland oder Geistliche
          einöde. 3 Bde. Augsburg 1718</term>
-            <term ref="index:d14380e20854">Johannes von Würzburg ; Descriptio Terrae sanctae ; Ms. Tegernsee</term>
-            <term ref="index:d14380e20864">Johannes von Würzburg ; Descriptio Terrae sanctae ; Ms. Tegernsee ; Abschrift von Roman
+               <term ref="index:d14380e20854">Johannes von Würzburg ; Descriptio Terrae sanctae ; Ms. Tegernsee</term>
+               <term ref="index:d14380e20864">Johannes von Würzburg ; Descriptio Terrae sanctae ; Ms. Tegernsee ; Abschrift von Roman
          Krinner. Ms</term>
-            <term ref="index:d14380e21574">Kaspar Ayndorffer</term>
-            <term ref="index:d14380e21803">Kempten</term>
-            <term ref="index:d14380e23222">Krinner, Roman</term>
-            <term ref="index:d14380e27605">Medizin, medizinische Begriffe, gesundheitliche Belange ; Gicht</term>
-            <term ref="index:d14380e29936">München</term>
-            <term ref="index:d14380e30070">München ; Messe</term>
-            <term ref="index:d14380e32766">Perkhofer, Bonaventura</term>
-            <term ref="index:d14380e32950">Petrus, hl</term>
-            <term ref="index:d14380e39648">Schellkopf, Kajetan</term>
-            <term ref="index:d14380e42111">Tegernsee</term>
-            <term ref="index:d14380e42178">Tegernsee ; Bibliothek</term>
-            <term ref="index:d14380e42233">Tegernsee ; Bibliothek ; Cronica dominorum abbatum huius Tegernseensis monasterii.
+               <term ref="index:d14380e21574">Kaspar Ayndorffer</term>
+               <term ref="index:d14380e21803">Kempten</term>
+               <term ref="index:d14380e23222">Krinner, Roman</term>
+               <term ref="index:d14380e27605">Medizin, medizinische Begriffe, gesundheitliche Belange ; Gicht</term>
+               <term ref="index:d14380e29936">München</term>
+               <term ref="index:d14380e30070">München ; Messe</term>
+               <term ref="index:d14380e32766">Perkhofer, Bonaventura</term>
+               <term ref="index:d14380e32950">Petrus, hl</term>
+               <term ref="index:d14380e39648">Schellkopf, Kajetan</term>
+               <term ref="index:d14380e42111">Tegernsee</term>
+               <term ref="index:d14380e42178">Tegernsee ; Bibliothek</term>
+               <term ref="index:d14380e42233">Tegernsee ; Bibliothek ; Cronica dominorum abbatum huius Tegernseensis monasterii.
          Ms</term>
-            <term ref="index:d14380e42303">Tegernsee ; Bibliothek ; Johannes von Würzburg, Descriptio Terrae sanctae. Ms</term>
-            <term ref="index:d14380e42422">Tegernsee ; Bücherkammer bei der Prälatur, genannt „Tempel“</term>
-            <term ref="index:d14380e44885">Walder, Daniel</term></keywords></textClass>
+               <term ref="index:d14380e42303">Tegernsee ; Bibliothek ; Johannes von Würzburg, Descriptio Terrae sanctae. Ms</term>
+               <term ref="index:d14380e42422">Tegernsee ; Bücherkammer bei der Prälatur, genannt „Tempel“</term>
+               <term ref="index:d14380e44885">Walder, Daniel</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Die Briefe BPs vom 26. Dezember 1717 <ref type="letter" target="letter:869">869</ref> und vom 13. Januar
                1718 <ref type="letter" target="letter:881">881</ref> hat AH erhalten, den letzteren am 16. Januar in <rs ref="index:d14380e29936">München</rs>, wo er sich aus Anlass einer <rs ref="index:d14380e30070">Warenmesse</rs> aufhielt. Dass er nicht eher geantwortet hat, liegt daran, dass er zwar den letzteren
@@ -124,7 +138,8 @@
                an AH zu verweisen und zu betonen, dass es ihm um nichts anderes als die Ehre des <rs ref="index:d14380e4919">Ordens</rs> und den Ruhm der <rs ref="index:d14380e42178">Bibliothek</rs> und
                des Abtes von <rs ref="index:d14380e42111">Tegernsee</rs> gehe. AH will das Anliegen auf jede Weise
                unterstützen.</p>
-            <p corresp="#seg3"><rs ref="index:d14380e23222">Roman Krinner</rs> lässt Grüße bestellen. Er hat sich von der <rs ref="index:d14380e27605">Gicht</rs> so weit erholt, dass er nun die <rs ref="index:d14380e20864">Abschrift</rs> der „<rs ref="index:d14380e42303">Descriptio Terrae sanctae</rs>“ des Johannes von
+            <p corresp="#seg3">
+               <rs ref="index:d14380e23222">Roman Krinner</rs> lässt Grüße bestellen. Er hat sich von der <rs ref="index:d14380e27605">Gicht</rs> so weit erholt, dass er nun die <rs ref="index:d14380e20864">Abschrift</rs> der „<rs ref="index:d14380e42303">Descriptio Terrae sanctae</rs>“ des Johannes von
                Würzburg für BP begonnen hat. Diese Handschrift konnte AH, bevor ihm der Zugang zum „<rs ref="index:d14380e42422">Tempel</rs>“ verboten wurde, von dort heimlich für Krinner besorgen. Dieser
                wird die Abschrift BP anstelle eines Ostereis darbringen. AH bittet BP, diese Umstände in seiner Antwort
                nicht zu erwähnen, da AH alle Briefe BPs Abt Guetrather zeigt, damit dieser aus ihnen die berechtigten
@@ -136,7 +151,7 @@
             <p corresp="#seg5">AHs asketische Schrift („<rs ref="index:d14380e18971">Wegzehrung der reisenden</rs>“) ist gedruckt
                worden, der erste Teil in <rs ref="index:d14380e3233">Augsburg</rs>, die beiden anderen in <rs ref="index:d14380e21803">Kempten</rs>, und bereits an den Verleger <rs ref="index:d14380e44885">Daniel
                   Walder</rs> geliefert worden. Auch davon will AH später schreiben. Er schließt mit Grüßen an HP.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -149,7 +164,8 @@
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned> patri Caietano</mentioned>
-            <p><rs type="bibl" ref="bibl:18024">Lindner, Familia S.
+            <p>
+               <rs type="bibl" ref="bibl:18024">Lindner, Familia S.
                      Quirini</rs> Ergh. 135f.; vgl. <rs type="bibl" ref="bibl:16512">Glassner,
                      Handschriften</rs> 103.</p>
          </note>
@@ -161,11 +177,14 @@
                   melior, quaeque reverendissimo Quirino Millonio abbati eruditissimo, Petri
                   antecessori, in deliciis fuerat, in conclavi abbatialibus aedibus proximo, quod
                   Templum dicunt, custodiebantur“. In früheren Jahren hatte AH zumindest
-                  ausnahmsweise Zugang zu diesem Raum erlangen können: vgl. <ref type="letter" target="letter:630">630</ref> <ref target="letter:630#seg5">5</ref>, <ref type="letter" target="letter:655">655</ref> <ref target="letter:655#seg2">2</ref>.</p>
+                  ausnahmsweise Zugang zu diesem Raum erlangen können: vgl. <ref type="letter" target="letter:630">630</ref>
+               <ref target="letter:630#seg5">5</ref>, <ref type="letter" target="letter:655">655</ref>
+               <ref target="letter:655#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
             <mentioned> Bonaventuram et Adalbertum</mentioned>
-            <p><rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> Ergh. 136–138. Beide sind ebenso wie Krinner
+            <p>
+               <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> Ergh. 136–138. Beide sind ebenso wie Krinner
                   und Schellkopf als Bearbeiter von Beiträgen für die Editionswerke BPs
                   nachweisbar.</p>
          </note>
@@ -186,7 +205,8 @@
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
             <mentioned>loco ovi Paschalis</mentioned>
             <p> Der Ostersonntag fiel 1718 auf den 17. April.
-                  Zur Formulierung vgl. <ref type="letter" target="letter:235">235</ref> <ref target="letter:235#seg1">1</ref>.</p>
+                  Zur Formulierung vgl. <ref type="letter" target="letter:235">235</ref>
+               <ref target="letter:235#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
             <mentioned>Chronicae ... continuandae</mentioned>
@@ -206,7 +226,8 @@
                   bis 1493, danach der handschriftlichen „Historia sancti Quirini“ des Johann
                   Fabricius von ungefähr 1586: vgl. <rs type="bibl" ref="bibl:19384">Schmeidler,
                      Studien</rs> 64f. Die Arbeiten AHs an einer derartigen Chronik dürften
-                  mindestens bis 1716 zurückreichen: vgl. <ref type="letter" target="letter:660">660</ref> <ref target="letter:660#seg4">4</ref>.
+                  mindestens bis 1716 zurückreichen: vgl. <ref type="letter" target="letter:660">660</ref>
+               <ref target="letter:660#seg4">4</ref>.
                   Ein ähnlicher Text mit dem Titel „Chronica Tegurino-Benedictina“ war schon 1717
                   als Reinschrift abgeschlossen: HStA München, KL Tegernsee 247 1/2.</p>
          </note>
@@ -239,11 +260,20 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Tegernsee 21. Februarii.</opener>
+         <opener>
+            <pb n="1r"/> Tegernsee 21. Februarii.</opener>
          <opener>Plurimum reverendo religiosissimo ac clarissimo domino Bernardo Pezio, amico suo integerrimo, sui devotissimam recommendationem in pristinos affectus Alphonsus.</opener>
          <ab resp="#editor" xml:id="seg1">Datas ad me 26. Decembris et 13. Januarii rite accepi, et ultimas quidem, cum essem <anchor xml:id="n1"/>Monachii in nundinis<anchor xml:id="n1e"/> 16. eiusdem. Sed cur non citius respondi? Obtuli has ultimas tuas iustissimis precibus ac instantiis repletas reverendissimo nostro piissimaque tua desideria pluribus explicavi, auxilium petii ac, ferventissimis votis tuis ut quamprimum satisfiat, etiam atque etiam rogavi. Annuebat etiam omnibus et singulis ac promisit, er wölle<anchor xml:id="n2"/> patri Caietano<anchor xml:id="n2e"/> gleich befelchen, alle begehrte biecher in<anchor xml:id="n3"/> den tempel<anchor xml:id="n3e"/> zu suchen (mihi enim adeundi hunc locum omnes fores occlusae et, quod mireris, licentia nullatenus data est). Rogavi interim sodales meos, ut mecum laborent pro bono communi, sacri ordinis et monasterii honore etc. Eorum etiam iam tres habeo, nempe reverendos patres Romanum,<anchor xml:id="n4"/> Bonaventuram et Adalbertum<anchor xml:id="n4e"/>. Accessi bina vice patrem Caietanum et enixissime labores hos commendavi, quarta insuper iam vice interim etiam reverendissimum <pb n="1v"/> admonui et mei amandissimi Bernardi iustissima desideria, vota ac suspiria erga patres in limbo templi nostri detentos pluribus explicavi; pro responso tamen nihil aliud retuli nisi: es wirdt schon geschehen, ich erkhene des patris Bernardi sein billiches begehren und löbliche intention, satisfaciam omnino, es wird schon geschehen, nur ein wenige gedult. Ego interim, suavissime Bernarde, morositati huic in extradendis his libris adeo sancte irascor, ut calamo exprimere nequeam. Irascuntur etiam mecum et alii dilectissimi confratres mei. </ab>
          <ab resp="#editor" xml:id="seg2">Quid ergo faciendum? Cum patientia exspectandum est tempus, quo placuerit reverendissimo patri stare suis certissimis promissis; interim omnino suaderem tibi, dilectissime frater, <pb n="2r"/> ut rem hanc propria epistola ad reverendissimum nostrum perscribenda urgeres, vel si huic scribere non placeret, saltem patri Caietano commendares, qui templi curam gerit et <anchor xml:id="n5"/>claves cum Petro habet<anchor xml:id="n5e"/>. In his mentio fieri posset, das sie aus mein brief iustissima vota et desideria werden vernommen haben, aus welchen und mit welchen nichts mehrers <add place="above">abzunemmen</add>, als sacri ordinis honor et bibliothecae nostrae immortalis gloria ac reverendissimi nostri etc. Was die bemühung des abschreiben anbelangt, hoffe er, man werdte mit freuden solche annemmen, dero bewegursach in epistola ad me data mit mehreren zuersehen. Ego, amandissime Bernarde, diu noctuque collaborabo, ut, quae iustissime a nobis petis, certissime obtineas. Patientia interim, patientia! </ab>
-         <ab resp="#editor" xml:id="seg3">Pater Romanus (qui vobis suavissimam salutem <sic>suique</sic><note place="foot" xml:id="d3e53066">Es scheint ein Wort ausgelassen zu sein, wohl <hi rend="italic">commendationem</hi>.</note> certissimumque auxilium) heri e lectulo podagrico rursus surrexit, actualiter <anchor xml:id="n6"/>Joannis Wirzburgensis Itinerarium<anchor xml:id="n6e"/> tibi describit, <pb n="2v"/> quod (antequam <choice><sic>fol</sic><corr>fores</corr></choice> templi essent clausae) clam ei surripui, <anchor xml:id="n7"/>loco ovi Paschalis<anchor xml:id="n7e"/> tibi descriptum offeret. Interim <choice><sic>etiam</sic><corr>vero</corr></choice> de hoc pio furto et accepto Itinerario ne mentionem facias, rogo. Omnes enim epistolas tuas reverendissimo sincerissime <sic>exhbeo</sic>, ut in iis videat et legat iustissima tua studia ac desideria, <add place="left-margin"><witDetail wit="#A">mit Verweiszeichen am linken Blattrand</witDetail>laudes et encomia sua propria</add>, eaque quamprimum compleat. Praevideo etiam tecum, Bernarde melliflue, hic daemonis actum, qui, ut vere scribis, his studiis nostris multiplici fraude resistit. </ab>
+         <ab resp="#editor" xml:id="seg3">Pater Romanus (qui vobis suavissimam salutem <sic>suique</sic>
+            <note place="foot" xml:id="d3e53066">Es scheint ein Wort ausgelassen zu sein, wohl <hi rend="italic">commendationem</hi>.</note> certissimumque auxilium) heri e lectulo podagrico rursus surrexit, actualiter <anchor xml:id="n6"/>Joannis Wirzburgensis Itinerarium<anchor xml:id="n6e"/> tibi describit, <pb n="2v"/> quod (antequam <choice>
+               <sic>fol</sic>
+               <corr>fores</corr>
+            </choice> templi essent clausae) clam ei surripui, <anchor xml:id="n7"/>loco ovi Paschalis<anchor xml:id="n7e"/> tibi descriptum offeret. Interim <choice>
+               <sic>etiam</sic>
+               <corr>vero</corr>
+            </choice> de hoc pio furto et accepto Itinerario ne mentionem facias, rogo. Omnes enim epistolas tuas reverendissimo sincerissime <sic>exhbeo</sic>, ut in iis videat et legat iustissima tua studia ac desideria, <add place="left-margin">
+               <witDetail wit="#A">mit Verweiszeichen am linken Blattrand</witDetail>laudes et encomia sua propria</add>, eaque quamprimum compleat. Praevideo etiam tecum, Bernarde melliflue, hic daemonis actum, qui, ut vere scribis, his studiis nostris multiplici fraude resistit. </ab>
          <ab resp="#editor" xml:id="seg4">Sed cum patientia sit necessaria in omnibus, viriliter nobis hic etiam laborandum nec cessandum a studiis et laboribus his piissimis ac<del ana="#after">ss</del> sanctissimis; ego, quantum oeconomici labores continui admittunt temporis, illud <add place="left-margin">in silentio</add> impendo Chronicae nostrae describendae et <add place="above">a</add> tempore nobilissimi Caspari abbatis <add place="above">nostri</add> continuandae<del ana="#before">temporis</del> ad nostra usque tempora, de qua suo tempore tibi plura. </ab>
          <ab resp="#editor" xml:id="seg5">Opus<del ana="#after">meus</del> meum asceticum, eiusque pars prima typis Augustanis et reliquae duae partes Campodunensibus<del ana="#after">ty</del>, <add place="above">iam</add> datae<del ana="#after">sub</del> sunt domino Waltero hoc mense. Etiam de his suo tempore tibi plura. Vale cum dilectissimo germano tuo, centies millies valete.</ab>
       </body>

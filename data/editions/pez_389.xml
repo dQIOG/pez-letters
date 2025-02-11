@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="389" xml:id="pez-0389">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Benedikt Gentilotti an Bernhard Pez. 1715-02-23. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">389</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -82,10 +95,11 @@
          </correspDesc>
          <abstract>
             <p corresp="#seg1">BGs Vorhaben, BP zu schreiben, ist durch einen Brief, den BG von <rs ref="index:d14380e29435">Montfaucon</rs> erhalten hat, weiter angeregt worden. BG sendet diesen Brief und seine eigene Antwort abschriftlich an BP, damit dieser daraus die Probleme ersehen kann, die seinem erhofften <rs ref="index:d14380e12712">Frankreich</rs>-Aufenthalt entgegenstehen, und beurteilen kann, ob BG das <rs ref="index:d10854e33533">Anliegen</rs> richtig unterstützt. BP soll nach Rücksprache mit Abt <rs ref="index:d14380e9628">Dietmayr</rs> und anderen <rs ref="index:d10854e21970">österreichischen</rs> Prälaten seine Meinung mitteilen. Nach dem Tod <rs ref="index:d10854e28623">Johann Friedrich von Seilerns</rs> fragt sich BG, ob sein Engagement noch sinnvoll ist.</p>
-            <p corresp="#seg2">Beigeschlossen ist weiters ein Brief <rs ref="index:d14380e4006">Bartensteins</rs> an BP <ref type="letter" target="letter:386">386</ref>. An BG hat <rs ref="index:d14380e4006">Bartenstein</rs> aus <rs ref="index:d10854e7974">Erfurt</rs> höchst ausführlich über die gelehrten Begegnungen seiner Reise geschrieben. <rs ref="index:d14380e4006">Bartenstein</rs>, ein vielversprechender junger Mann, hat noch nicht ganz den Gedanken einer Rückkehr nach <rs ref="index:d14380e45571">Wien</rs> aufgegeben. Er würde gerade wegen seines <rs ref="index:d14380e11852">protestantischen</rs> Glaubens <rs ref="index:d14380e9395">Deutschland</rs> <rs ref="index:d14380e12712">Frankreich</rs> vorziehen, wenn er dort dieselben Angebote bekäme wie in <rs ref="index:d14380e12712">Frankreich</rs>.</p>
+            <p corresp="#seg2">Beigeschlossen ist weiters ein Brief <rs ref="index:d14380e4006">Bartensteins</rs> an BP <ref type="letter" target="letter:386">386</ref>. An BG hat <rs ref="index:d14380e4006">Bartenstein</rs> aus <rs ref="index:d10854e7974">Erfurt</rs> höchst ausführlich über die gelehrten Begegnungen seiner Reise geschrieben. <rs ref="index:d14380e4006">Bartenstein</rs>, ein vielversprechender junger Mann, hat noch nicht ganz den Gedanken einer Rückkehr nach <rs ref="index:d14380e45571">Wien</rs> aufgegeben. Er würde gerade wegen seines <rs ref="index:d14380e11852">protestantischen</rs> Glaubens <rs ref="index:d14380e9395">Deutschland</rs>
+               <rs ref="index:d14380e12712">Frankreich</rs> vorziehen, wenn er dort dieselben Angebote bekäme wie in <rs ref="index:d14380e12712">Frankreich</rs>.</p>
             <p corresp="#seg3">BG grüßt <rs ref="index:d14380e34537">HP</rs> und bittet um Mitteilung ihrer Vorhaben oder weiterer Funde aus <rs ref="index:d10854e21970">österreichischen</rs> Bibliotheken.</p>
             <p corresp="#seg4">BG möchte gerne BPs „<rs ref="index:d14380e10982">Triumphus castitatis</rs>“ sehen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -130,7 +144,9 @@
                   nimmt sich nicht heraus, nach den Gründen der Ablehnung zu fragen, nimmt aber an,
                   dass sie schwerwiegend sein müssen, wenn den Österreichern verwehrt wird, was
                   deutsche (vielleicht Anspielung auf Bestrebungen in Ottobeuren 1694; vgl. <rs type="bibl" ref="bibl:20188">Wallnig, Gasthaus und Gelehrsamkeit</rs> 89) wie
-                  auch italienische Mönche schon genossen haben (etwa Banduri und Querini; vgl. <ref type="letter" target="letter:205">205</ref> <ref target="letter:205#seg7">7</ref>, <ref type="letter" target="letter:359">359</ref> <ref target="letter:359#seg4">4</ref>).
+                  auch italienische Mönche schon genossen haben (etwa Banduri und Querini; vgl. <ref type="letter" target="letter:205">205</ref>
+               <ref target="letter:205#seg7">7</ref>, <ref type="letter" target="letter:359">359</ref>
+               <ref target="letter:359#seg4">4</ref>).
                   Montfaucon möge sich für die Sache einsetzen, um die Studien in Österreich
                   heimisch werden zu lassen („velut in coloniam bonae artes deductae“). Umgekehrt
                   soll man sich in Paris besser nicht fragen, wie die Österreicher einen negativen
@@ -158,17 +174,22 @@
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
             <mentioned>difficultatem</mentioned>
             <p>Zu den Vorbehalten der Maurinersuperioren gegen weitere Gastaufenthalte
-                  ausländischer Benediktiner vgl. <ref type="letter" target="letter:384">384</ref> <ref target="letter:384#seg9">9</ref>; zu den
+                  ausländischer Benediktiner vgl. <ref type="letter" target="letter:384">384</ref>
+               <ref target="letter:384#seg9">9</ref>; zu den
                   Reiseplänen BPs und der Rolle des Grafen Seilern vgl. <ref type="letter" target="letter:364">364</ref>
-                  <ref target="letter:364#seg3">3</ref>, <ref type="letter" target="letter:365">365</ref> <ref target="letter:365#seg14">14</ref>, <ref type="letter" target="letter:379">379</ref>
-                  <ref target="letter:379#seg3">3</ref>; sowie Einleitung, Abschnitt I.3. Zum Tod Seilerns vgl. <ref type="letter" target="letter:386">386</ref> <ref target="letter:386#seg3">3</ref>.</p>
+               <ref target="letter:364#seg3">3</ref>, <ref type="letter" target="letter:365">365</ref>
+               <ref target="letter:365#seg14">14</ref>, <ref type="letter" target="letter:379">379</ref>
+               <ref target="letter:379#seg3">3</ref>; sowie Einleitung, Abschnitt I.3. Zum Tod Seilerns vgl. <ref type="letter" target="letter:386">386</ref>
+               <ref target="letter:386#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned>in Galliam invitatur</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:371">371</ref> <ref target="letter:371#seg5">5</ref>. Das dort erwähnte Angebot des
+            <p>Vgl. <ref type="letter" target="letter:371">371</ref>
+               <ref target="letter:371#seg5">5</ref>. Das dort erwähnte Angebot des
                   elsässischen Adelsdirektoriums scheint Bartenstein jedoch nicht weiter verfolgt zu
                   haben; bei seiner Rückkehr nach Straßburg im Sommer 1715 ist davon nicht mehr die
-                  Rede (vgl. <ref type="letter" target="letter:429">429</ref> <ref target="letter:429#seg2">2</ref>).</p>
+                  Rede (vgl. <ref type="letter" target="letter:429">429</ref>
+               <ref target="letter:429#seg2">2</ref>).</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -178,8 +199,10 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Clarissimo viro domno Bernardo Pez bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilott ab Engelsbrun.</opener>
-         <ab resp="#editor" xml:id="seg1">Cum ad te, vir doctissime, scribendi impetum cepissem, <anchor xml:id="n1"/>allatae a celeberrimo Montfauconio litterae<anchor xml:id="n1e"/> me vehementius incitarunt. Quarum argumentum cum ad te maxime pertinere existimaverim, earum mearumque, <anchor xml:id="n2"/>quibus illis respondeo<anchor xml:id="n2e"/>, exemplum ad te mitto; ut non solum inde cognoscas, quantam <anchor xml:id="n3"/>difficultatem<anchor xml:id="n3e"/> illi afferant laudabili tuo aliorumque in Galliam peregrinandi consilio, sed et, an bene suasoris et hortatoris partes sustinuerim, iudices. Tu, vir clarissime, re cum amplissimo tuo aliisque, si placet, Austriae coenobiarchis communicata, quid vobis videatur, rescribes; simulque praecipies, quemadmodum me geram: porro instem, an secus. Nam si post fata summi illius viri, quem sine lacrymis nominare non possum, ardor ille refrixit ac deferbuit, quid est <sic>caussae</sic> , cur ego in persuadendo defatiger? <pb n="1v"/> </ab>
+         <opener>
+            <pb n="1r"/> Clarissimo viro domno Bernardo Pez bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilott ab Engelsbrun.</opener>
+         <ab resp="#editor" xml:id="seg1">Cum ad te, vir doctissime, scribendi impetum cepissem, <anchor xml:id="n1"/>allatae a celeberrimo Montfauconio litterae<anchor xml:id="n1e"/> me vehementius incitarunt. Quarum argumentum cum ad te maxime pertinere existimaverim, earum mearumque, <anchor xml:id="n2"/>quibus illis respondeo<anchor xml:id="n2e"/>, exemplum ad te mitto; ut non solum inde cognoscas, quantam <anchor xml:id="n3"/>difficultatem<anchor xml:id="n3e"/> illi afferant laudabili tuo aliorumque in Galliam peregrinandi consilio, sed et, an bene suasoris et hortatoris partes sustinuerim, iudices. Tu, vir clarissime, re cum amplissimo tuo aliisque, si placet, Austriae coenobiarchis communicata, quid vobis videatur, rescribes; simulque praecipies, quemadmodum me geram: porro instem, an secus. Nam si post fata summi illius viri, quem sine lacrymis nominare non possum, ardor ille refrixit ac deferbuit, quid est <sic>caussae</sic> , cur ego in persuadendo defatiger? <pb n="1v"/>
+         </ab>
          <ab resp="#editor" xml:id="seg2">Praeterea in hanc epistolam coniectae sunt litterae, quas amicissimus noster Bartensteinius ad te curari voluit. Longissimas is ad me dedit Erffordia, in quibus omnium doctorum hominum, quos in itinere convenit, vitam, mores et studia eleganter admodum descripsit. Doctissimus iste et maximae spei iuvenis non videtur omnem cogitationem abiecisse in hanc regionem et regiam redeundi: multis quidem de <sic>caussis</sic> , maxime autem religionis, ut prae se fert, facile Germaniam Galliae antelaturus, si quando, quod vix sperandum, aeque amplae conditiones atque illae, quibus <anchor xml:id="n4"/>in Galliam invitatur<anchor xml:id="n4e"/>, hic ei fuerint oblatae. </ab>
          <ab resp="#editor" xml:id="seg3">Tu, amice magne, quid agas, quid cum suavissimo fratre tuo, cui plurimam salutem adscribo, commenteris, et num aliquid interea ex bibliothecis seu bibliotaphiis Austriae erueris, quaeso, fac me <pb n="2r"/> certiorem. Vale. </ab>
          <ab resp="#editor" xml:id="seg4">Incredibili desiderio teneor videndi Wilburgem tuam: eo me diutius affici ne sustineas. Iterum vale.</ab>

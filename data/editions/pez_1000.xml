@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="1000" xml:id="pez-1000">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Gerhard Cornelius van den Driesch an Bernhard Pez. 1718-10-08. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">1000</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -73,18 +85,20 @@
                <ptr type="prev" target="letter:988"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e6918">Buchels, Johann</term>
-            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
-            <term ref="index:d14380e11773">Eugen von Savoyen-Carignan</term>
-            <term ref="index:d14380e11781">Eugen von Savoyen-Carignan ; *Regiment, das 1718 in die Niederlande marschieren
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e6918">Buchels, Johann</term>
+               <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+               <term ref="index:d14380e11773">Eugen von Savoyen-Carignan</term>
+               <term ref="index:d14380e11781">Eugen von Savoyen-Carignan ; *Regiment, das 1718 in die Niederlande marschieren
          soll</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e20126">Jesuiten</term>
-            <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
-            <term ref="index:d14380e30604">Niederlande ; Spanisch-österreichische Niederlande</term>
-            <term ref="index:d14380e45060">Weigand, NN</term></keywords></textClass>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e20126">Jesuiten</term>
+               <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
+               <term ref="index:d14380e30604">Niederlande ; Spanisch-österreichische Niederlande</term>
+               <term ref="index:d14380e45060">Weigand, NN</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">GD übermittelt BP zwei Briefe von <rs ref="index:d14380e6918">Johann Buchels</rs>, damit BP selbst
                ersehen kann, welche Bände dieser wünscht. Bei GD sind davon bisher nur fünf angekommen, die er zusammen
@@ -98,7 +112,7 @@
                durch die schwarze Heerschar (<rs ref="index:d14380e20126">Jesuiten</rs>; nigrum agmen) für gefährdet
                hält. GD bittet BP daher nochmals inständig, ihn den <rs ref="index:d14380e22462">Maurinern</rs> zu
                empfehlen. Außerdem ersucht er darum, die Briefe Buchels’ nach der Lektüre zurückzusenden.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -107,7 +121,8 @@
             <mentioned>utramque ... epistolam</mentioned>
             <p> aufgrund der bitte um rückgabe am ende des
                   briefes ist anzunehmen, dass es sich um briefe von buchels an gd handelte, in
-                  denen er seine erstmals in <ref type="letter" target="letter:950">950</ref> <ref target="letter:950#seg3">3</ref> mitgeteilte
+                  denen er seine erstmals in <ref type="letter" target="letter:950">950</ref>
+               <ref target="letter:950#seg3">3</ref> mitgeteilte
                   auswahl aus den von bp angebotenen melker bibliotheksbeständen gd mitteilte,
                   möglicherweise auch präzisierte oder ergänzte. unter „codices“ sind somit hier
                   frühdrucke zu verstehen. </p>

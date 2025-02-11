@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="875" xml:id="pez-0875">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Karl Meichelbeck an Bernhard Pez. 1718-01-05. Benediktbeuern.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">875</idno>
          </publicationStmt>
          <seriesStmt>
@@ -34,7 +46,6 @@
             <relatedItem type="otherEdition">
                <bibl>Siegmund, Meichelbecks Briefe 80/1–2 179–181.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Auf 2v neben der Adresse von einer Hand des 18. Jh. Vermerk: <orig>1718</orig>. – KM vermerkt in seinem Diarium zum 5. Januar 1718: <orig>Scribo patri Pezio cum nostro Gregorio</orig> (BStB München, Meichelbeckiana 18b, 309v).
             </note>
@@ -56,10 +67,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -84,40 +96,42 @@
                <ptr type="sentWith" target="letter:876"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e690">Albert I</term>
-            <term ref="index:d14380e698">Albert I ; Briefe betreffend sein Exil und seine Wiedereinsetzung. Ms</term>
-            <term ref="index:d14380e1370">Anastasia, hl</term>
-            <term ref="index:d14380e1378">Anastasia, hl ; Anastasiahäubchen</term>
-            <term ref="index:d14380e2250">Anonyme Werke ; De fundatione huius ecclesiae. Ms. Benediktbeuern</term>
-            <term ref="index:d14380e4706">Benediktbeuern</term>
-            <term ref="index:d14380e4754">Benediktbeuern ; Archiv</term>
-            <term ref="index:d14380e4833">Benediktbeuern ; Bibliothek ; De fundatione huius ecclesiae. Ms</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e690">Albert I</term>
+               <term ref="index:d14380e698">Albert I ; Briefe betreffend sein Exil und seine Wiedereinsetzung. Ms</term>
+               <term ref="index:d14380e1370">Anastasia, hl</term>
+               <term ref="index:d14380e1378">Anastasia, hl ; Anastasiahäubchen</term>
+               <term ref="index:d14380e2250">Anonyme Werke ; De fundatione huius ecclesiae. Ms. Benediktbeuern</term>
+               <term ref="index:d14380e4706">Benediktbeuern</term>
+               <term ref="index:d14380e4754">Benediktbeuern ; Archiv</term>
+               <term ref="index:d14380e4833">Benediktbeuern ; Bibliothek ; De fundatione huius ecclesiae. Ms</term>
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
          Epistola ad virum clarissimum Joannem Burchardum Menkenium Lipsiensem de Conspectu insignis
          codicis diplomatico-historico-epistolaris ex ἀυτογράφῳ, ut quidem videtur, dato ad Actorum
          eruditorum Lipsiensium collectores a reverendo patre Bernardo Pez Benedictino et
          bibliothecario Mellicensi in Austria. Verona [Wien] 1717</term>
-            <term ref="index:d14380e16543">Gross, Bernhard</term>
-            <term ref="index:d14380e19249">Hund von Sulzenmoos, Wiguleus ; Metropolis Salisburgensis continens primordia
+               <term ref="index:d14380e16543">Gross, Bernhard</term>
+               <term ref="index:d14380e19249">Hund von Sulzenmoos, Wiguleus ; Metropolis Salisburgensis continens primordia
          Christianae religionis per Boiariam et loca vicina, catalogum videlicet et ordinariam
          successionem archiepiscoporum Salisburgensium et coepiscoporum Frisingensium,
          Ratisponensium, Pataviensium ac Brixinensium, simulque fundationes et erectiones
          monasteriorum et ecclesiarum collegiatarum. Ingolstadt 1582 ; Ausgabe in 3 Bden. Erweitert
          und hg. von Christoph Gewold. München 1620</term>
-            <term ref="index:d14380e27961">Meichelbeck, Karl ; Exercitationes menstruae. Regensburg–München 1702–1709 ;
+               <term ref="index:d14380e27961">Meichelbeck, Karl ; Exercitationes menstruae. Regensburg–München 1702–1709 ;
          Exercitatio tertia menstrua theologico-historica sive Positiones ex Tractatu de iure et
          iustitia, quae magni Frisingensium patris et pontificis Corbiniani virtutibus et meritis
          interpolatas in communi exemptae congregationis Benedictino-Bavaricae studio Benedictoburi
          instituto. Regensburg 1707</term>
-            <term ref="index:d14380e28279">Melk ; Bibliothek</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
-            <term ref="index:d14380e45964">Wien ; Kaiserhof ; Hofbibliothek ; Gentilotti als Präfekt</term>
-            <term ref="index:d14380e46266">Wilhelm von Diepolzkirchen</term>
-            <term ref="index:d10854e35200">Zödl, Gregor</term></keywords></textClass>
+               <term ref="index:d14380e28279">Melk ; Bibliothek</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
+               <term ref="index:d14380e45964">Wien ; Kaiserhof ; Hofbibliothek ; Gentilotti als Präfekt</term>
+               <term ref="index:d14380e46266">Wilhelm von Diepolzkirchen</term>
+               <term ref="index:d10854e35200">Zödl, Gregor</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Die Herausforderung an BP durch keinen Geringeren als den Präfekten der <rs ref="index:d14380e45820">kaiserlichen Hofbibliothek</rs> eröffnet eine Gelegenheit, die Welt sehen zu lassen, dass Mönche
                keineswegs träge sind, sondern auch gegen die Großen der Fürstenhöfe den literarischen Streit nicht
@@ -140,13 +154,14 @@
                15. Jahrhunderts für Abt <rs ref="index:d14380e46266">Wilhelm von Diepolzkirchen</rs> angelegt wurde. Die
                Fabeln, die sie enthält, hat KM in seiner „<rs ref="index:d14380e27961">Exercitatio tertia
                   theologico-historica</rs>“ wiedergegeben und anschließend sofort widerlegt. Er verweist BP darauf und
-               beschließt seine Ausführungen, um BP Muße zur Beschäftigung mit dem Brief und der Sendung von <rs ref="index:d10854e35200">Gregor Zödl</rs> <ref type="letter" target="letter:876">876</ref> zu
+               beschließt seine Ausführungen, um BP Muße zur Beschäftigung mit dem Brief und der Sendung von <rs ref="index:d10854e35200">Gregor Zödl</rs>
+               <ref type="letter" target="letter:876">876</ref> zu
                geben.</p>
             <p corresp="#seg5">Der Benediktbeurer Prior <rs ref="index:d14380e16543">Bernhard Gross</rs> hätte selbst geschrieben, doch
                wollte man nicht mit so vielen Briefen lästig fallen. Stattdessen schickt Gross ein <rs ref="index:d14380e1378">Anastasiahäubchen</rs> für BP und HP, durch das die Patronin <rs ref="index:d14380e4706">Benediktbeuerns</rs> ihre beiden Häupter zur Ehre des ganzen
                Benediktinerordens beschützen soll. KM schließt mit Neujahrswünschen und Empfehlungen des gesamten
                Benediktbeurer Konvents.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -159,7 +174,8 @@
             <mentioned> principumque bibliothecae</mentioned>
             <p>Diese Anspielung bezieht sich wohl auf
                   BPs und HPs Quisquilien mit dem kurfürstlichen Bibliothekar Philipp Alois Ferb:
-                  vgl. <ref type="letter" target="letter:835">835</ref> <ref target="letter:835#seg5">5</ref>. Unter Umständen könnte KM auch an ihm
+                  vgl. <ref type="letter" target="letter:835">835</ref>
+               <ref target="letter:835#seg5">5</ref>. Unter Umständen könnte KM auch an ihm
                   persönlich bekannte Zustände in Freising oder in Kempten gedacht haben.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
@@ -178,11 +194,13 @@
                   unbekannt; sie finden sich nicht unter den von Alphons Hueber in der Beilage zu
                   688 übermittelten Kopien aus diesem Codex. Zu einer möglichen, bis zum Zeitpunkt
                   dieses Briefes aber anscheinend nicht erfolgten Übermittlung an KM durch Hueber
-                  vgl. <ref type="letter" target="letter:688">688</ref> <ref target="letter:688#seg5">5</ref>; zur vermutlichen späteren Sendung
+                  vgl. <ref type="letter" target="letter:688">688</ref>
+               <ref target="letter:688#seg5">5</ref>; zur vermutlichen späteren Sendung
                   durch BP finden sich Hinweise in einem Brief KMs vom 7. Mai 1719: II, 708r–709v.
                   Zur Weitergabe anderer Teile derselben Briefsammlung an Johann Georg Eckhart durch
                   BP sowie zu ihrer späteren Veröffentlichung vgl. <ref type="letter" target="letter:862">862</ref>
-                  <ref target="letter:862#seg1">1</ref>, <ref type="letter" target="letter:886">886</ref> <ref target="letter:886#seg1">1</ref>. </p>
+               <ref target="letter:862#seg1">1</ref>, <ref type="letter" target="letter:886">886</ref>
+               <ref target="letter:886#seg1">1</ref>. </p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
             <mentioned>Antiquum Chronicon</mentioned>
@@ -199,7 +217,7 @@
             <mentioned> in mea Exercitatione</mentioned>
             <p>An der angeführten Stelle geht es um die
                   Herkunft der Gründer von Benediktbeuern: vgl. <ref type="letter" target="letter:486">486</ref>
-                  <ref target="letter:486#seg2">2</ref>. KM zitiert dort die Chronik des 15. Jh. als Quelle für eine Version,
+               <ref target="letter:486#seg2">2</ref>. KM zitiert dort die Chronik des 15. Jh. als Quelle für eine Version,
                   nach welcher der Vater von Landfrid, Waldram und Eliland ein „Graf Walter von
                   Blyanz“ aus Gallien gewesen sei, was er dann aus chronologischen Gründen als
                   unplausibel verwirft. Die Handschrift beschreibt er mit den Worten „Hanc
@@ -225,9 +243,12 @@
                      Chronicon Benedictoburanum</rs> 1 285; 2 250f. Die Sendung kann daher als
                   bewusste Bezugnahme auf die Beschwerden zu verstehen sein, die BP während und nach
                   der bayerisch-schwäbischen Bibliotheksreise im Sommer und Herbst 1717 durchlitten
-                  hatte: vgl. <ref type="letter" target="letter:817">817</ref> <ref target="letter:817#seg7">7</ref>, <ref type="letter" target="letter:828">828</ref>
-                  <ref target="letter:828#seg1">1</ref>, <ref type="letter" target="letter:839">839</ref> <ref target="letter:839#seg1">1</ref>, <ref type="letter" target="letter:845">845</ref>
-                  <ref target="letter:845#seg1">1</ref>, <ref type="letter" target="letter:890">890 </ref><ref target="letter:890 #seg1">1</ref>.</p>
+                  hatte: vgl. <ref type="letter" target="letter:817">817</ref>
+               <ref target="letter:817#seg7">7</ref>, <ref type="letter" target="letter:828">828</ref>
+               <ref target="letter:828#seg1">1</ref>, <ref type="letter" target="letter:839">839</ref>
+               <ref target="letter:839#seg1">1</ref>, <ref type="letter" target="letter:845">845</ref>
+               <ref target="letter:845#seg1">1</ref>, <ref type="letter" target="letter:890">890 </ref>
+               <ref target="letter:890 #seg1">1</ref>.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -248,14 +269,18 @@
    </standOff>
    <text>
       <front>
-         <p>Plurimum reverendo religiosissimo et clarissimo domino patri Bernardo Pezio, celeberrimi, amplissimi et exempti monasterii Mellicensis bibliothecario eruditissimo etc., domino et amico colendissimo. Closster Mölkh in Undter Österreich.<note type="annotation">Siegel.</note></p>
+         <p>Plurimum reverendo religiosissimo et clarissimo domino patri Bernardo Pezio, celeberrimi, amplissimi et exempti monasterii Mellicensis bibliothecario eruditissimo etc., domino et amico colendissimo. Closster Mölkh in Undter Österreich.<note type="annotation">Siegel.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende et clarissime domine pater Bernarde, domine et amice colendissime.</opener>
-         <ab resp="#editor" xml:id="seg1">Debebat non ab obscuri nominis homine, sed a viro regiis caesareisque codicibus praeposito provocari Bernardi Mellicensis eruditio, ut sciret orbis monachos non torpere inerti otio, sed cum iis etiam, qui inter eruditiores aulicos primum sibi locum tribuunt, conflictum literarium neutiquam detrectare. Gratulor itaque tibi, mi eruditissime Bernarde, quod <anchor xml:id="n1"/>Angelum Fonteium<anchor xml:id="n1e"/> (alio veriori nomine mihi non ignotum) nactus sis aemulum; qui si scripsit, quae mihi perscribis, nescio, an sit tantus, quantus fortassis sibi aut aliis ob officii splendorem videri queat. Sed amabo, quid memoras? Etiamne alii cum Fonteio adversus te intumescunt, imo triumphum canunt, dum vix classicum ad pugnam insonuit? Lepidi sane homines: quibus ego bona utique tua venia imprecor, ut a te in triumphum tuum quantocyus ac postea in scholam tuam ducantur et discant non iudicare ante tempus. Utinam regum, N.B.<anchor xml:id="n2"/> principumque bibliothecae<anchor xml:id="n2e"/> haberent praesides, qualem Mellicensis habet! Quam melius consuleretur literario orbi? <pb n="1v"/> </ab>
+         <opener>
+            <pb n="1r"/> Plurimum reverende et clarissime domine pater Bernarde, domine et amice colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Debebat non ab obscuri nominis homine, sed a viro regiis caesareisque codicibus praeposito provocari Bernardi Mellicensis eruditio, ut sciret orbis monachos non torpere inerti otio, sed cum iis etiam, qui inter eruditiores aulicos primum sibi locum tribuunt, conflictum literarium neutiquam detrectare. Gratulor itaque tibi, mi eruditissime Bernarde, quod <anchor xml:id="n1"/>Angelum Fonteium<anchor xml:id="n1e"/> (alio veriori nomine mihi non ignotum) nactus sis aemulum; qui si scripsit, quae mihi perscribis, nescio, an sit tantus, quantus fortassis sibi aut aliis ob officii splendorem videri queat. Sed amabo, quid memoras? Etiamne alii cum Fonteio adversus te intumescunt, imo triumphum canunt, dum vix classicum ad pugnam insonuit? Lepidi sane homines: quibus ego bona utique tua venia imprecor, ut a te in triumphum tuum quantocyus ac postea in scholam tuam ducantur et discant non iudicare ante tempus. Utinam regum, N.B.<anchor xml:id="n2"/> principumque bibliothecae<anchor xml:id="n2e"/> haberent praesides, qualem Mellicensis habet! Quam melius consuleretur literario orbi? <pb n="1v"/>
+         </ab>
          <ab resp="#editor" xml:id="seg2">De Metropoli Hundii atque Gewoldi nuper scripsi nec aliud scribere in praesens possum, non sine acerbo animi dolore. Patientia usque ad tempus! </ab>
          <ab resp="#editor" xml:id="seg3">Tuum illud A. indicat <anchor xml:id="n3"/>abbatem nostrum Albertum<anchor xml:id="n3e"/>, eo nomine primum, qui monasterio nostro praefuit ab anno 1183 usque 1203. Facile credo res illius viri fuisse turbidas. Nam sub nullo abbate nostro legimus tantas strages fuisse illatas tabulario nostro ac sub hoc Alberto. Quid tuae illae Alberti epistolae contineant, audiemus cum tempore non sine voluptate. </ab>
-         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n4"/>Antiquum Chronicon<anchor xml:id="n4e"/> monasterii nostri exstat manu recenti descriptum, si Hundio fides. Verum Hundius hoc per errorem credidit et in errorem ipse ductus alios quoque praecipitavit.<anchor xml:id="n5"/> Schediasma<anchor xml:id="n5e"/> est Wilhelmo abbati circa medium saeculum 15. dedicatum, quod fabulas illas continet, quas retuli<anchor xml:id="n6"/> in mea Exercitatione<anchor xml:id="n6e"/> III. theologica folio 10 et sequenti folio confutavi; quo te, mi Bernarde, remitto, imo otium <pb n="2r"/> tibi indulgeo, ut Gregorio quoque nostro vacare possis. </ab>
+         <ab resp="#editor" xml:id="seg4">
+            <anchor xml:id="n4"/>Antiquum Chronicon<anchor xml:id="n4e"/> monasterii nostri exstat manu recenti descriptum, si Hundio fides. Verum Hundius hoc per errorem credidit et in errorem ipse ductus alios quoque praecipitavit.<anchor xml:id="n5"/> Schediasma<anchor xml:id="n5e"/> est Wilhelmo abbati circa medium saeculum 15. dedicatum, quod fabulas illas continet, quas retuli<anchor xml:id="n6"/> in mea Exercitatione<anchor xml:id="n6e"/> III. theologica folio 10 et sequenti folio confutavi; quo te, mi Bernarde, remitto, imo otium <pb n="2r"/> tibi indulgeo, ut Gregorio quoque nostro vacare possis. </ab>
          <ab resp="#editor" xml:id="seg5">Scripsisset etiam venerabilis pater prior noster, sed noluit abuti patientia vestra, ne nimium simus importuni. Interea mittit tibi tuoque Hieronymo <anchor xml:id="n7"/>galeam Anastasianam<anchor xml:id="n7e"/>, qua capita vestra pro totius ordinis nostri honore muniat patrona nostra tribuatque virtutem ex alto, quam vobis exorant Benedictoburani omnes in strenam et se mecum impensissime commendant. Ego maneo</ab>
          <closer>Paternitatis vestrae clarissimae servus devotissimus obligatissimus pater Carolus Meichelbeck.</closer>
          <closer>In monasterio Benedictoburano 5. Januarii 1718.</closer>

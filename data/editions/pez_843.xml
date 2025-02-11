@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="843" xml:id="pez-0843">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Joachim Edlinger an Hieronymus Pez. 1717-10-29. Seitenstetten.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">843</idno>
          </publicationStmt>
          <seriesStmt>
@@ -34,10 +46,10 @@
             <relatedItem type="otherEdition">
                <bibl>Spevak, Edlinger 31–36.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
-            <listWit><witness ana="cmif:manuscript">
+            <listWit>
+               <witness ana="cmif:manuscript">
                   <msDesc>
                      <msIdentifier>
                         <institution>Stift Melk</institution>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -79,34 +92,36 @@
                <ptr type="mentionedIn" target="letter:868"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e10715">Edlinger, Joachim ; *Medizinisches Werk</term>
-            <term ref="index:d14380e10723">Edlinger, Joachim ; *Medizinisches Werk ; *Potentieller Verleger</term>
-            <term ref="index:d14380e11821">Europäische fama, welche den gegenwärtigen zustand der vornehmsten höfe entdecket.
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e10715">Edlinger, Joachim ; *Medizinisches Werk</term>
+               <term ref="index:d14380e10723">Edlinger, Joachim ; *Medizinisches Werk ; *Potentieller Verleger</term>
+               <term ref="index:d14380e11821">Europäische fama, welche den gegenwärtigen zustand der vornehmsten höfe entdecket.
          Leipzig 1702–1735</term>
-            <term ref="index:d14380e14516">Garsten</term>
-            <term ref="index:d14380e14549">Garsten ; Direktorium 1717</term>
-            <term ref="index:d14380e16127">Götz, Veit Daniel</term>
-            <term ref="index:d14380e16825">Haag</term>
-            <term ref="index:d14380e16880">Hagen, Johann Martin</term>
-            <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
-            <term ref="index:d14380e24970">Linz</term>
-            <term ref="index:d14380e24983">Linz ; Buchmärkte</term>
-            <term ref="index:d14380e26892">Maße, Gewichte, Währung ; Gulden</term>
-            <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
-            <term ref="index:d14380e33148">Pez, Bernhard</term>
-            <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum
+               <term ref="index:d14380e14516">Garsten</term>
+               <term ref="index:d14380e14549">Garsten ; Direktorium 1717</term>
+               <term ref="index:d14380e16127">Götz, Veit Daniel</term>
+               <term ref="index:d14380e16825">Haag</term>
+               <term ref="index:d14380e16880">Hagen, Johann Martin</term>
+               <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
+               <term ref="index:d14380e24970">Linz</term>
+               <term ref="index:d14380e24983">Linz ; Buchmärkte</term>
+               <term ref="index:d14380e26892">Maße, Gewichte, Währung ; Gulden</term>
+               <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
+               <term ref="index:d14380e33148">Pez, Bernhard</term>
+               <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum
          Benedictinorum e celeberrima congregatione S. Mauri in Francia. Augsburg–Graz 1716</term>
-            <term ref="index:d14380e34725">Pez, Hieronymus ; Acta sancti Colomanni regis et martyris divi tutelaris Austriae
+               <term ref="index:d14380e34725">Pez, Hieronymus ; Acta sancti Colomanni regis et martyris divi tutelaris Austriae
          dissertationibus et notis historico-criticis illustrata praeside Adriano Pliemel. Krems
          1713</term>
-            <term ref="index:d14380e34933">Pez, Hieronymus ; Selbstwahrnehmung als Mönch</term>
-            <term ref="index:d14380e36631">Regensburg</term>
-            <term ref="index:d14380e40502">Seitenstetten ; *Direktorium für 1718</term>
-            <term ref="index:d14380e40519">Seitenstetten ; *Proprium 1717/18</term>
-            <term ref="index:d14380e40525">Seitenstetten ; *Proprium 1717/18 ; *Drucker</term>
-            <term ref="index:d14380e44204">Veith ; Bote/Bedienstete 1717 und 1718</term></keywords></textClass>
+               <term ref="index:d14380e34933">Pez, Hieronymus ; Selbstwahrnehmung als Mönch</term>
+               <term ref="index:d14380e36631">Regensburg</term>
+               <term ref="index:d14380e40502">Seitenstetten ; *Direktorium für 1718</term>
+               <term ref="index:d14380e40519">Seitenstetten ; *Proprium 1717/18</term>
+               <term ref="index:d14380e40525">Seitenstetten ; *Proprium 1717/18 ; *Drucker</term>
+               <term ref="index:d14380e44204">Veith ; Bote/Bedienstete 1717 und 1718</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">JE bedankt sich überschwänglich bei HP für dessen Brief <ref type="letter" target="letter:842">842</ref>,
                mit dem er ihn wie Ariadne den Theseus aus dem Labyrinth seiner Ungewissheit herausgeführt hat. Da JE das
@@ -158,7 +173,7 @@
                abgewöhnt haben sollte. Er selbst jedenfalls sucht nicht ehrgeizig nach anderen Freundschaften, wenn die
                mit HP und BP aufrecht ist. Er beendet den Brief, den er zwei Tage zuvor begonnen, dann jedoch
                unterbrochen hat.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -177,7 +192,8 @@
                   tum Benedictina ad usum monasterii Cremifanensis“. Dessen Drucker, Joseph
                   Grünenwald, kommt eventuell auch als Hersteller des von JE beschriebenen
                   Seitenstettener Propriums in Frage; zu ihm vgl. <rs type="bibl" ref="bibl:14994">Bachleitner–Eybl–Fischer, Buchhandel</rs> 63. Zu sonstigen in Seitenstetten
-                  verwendeten Proprien vgl. <ref type="letter" target="letter:1010">1010</ref> <ref target="letter:1010#seg1">1</ref>.</p>
+                  verwendeten Proprien vgl. <ref type="letter" target="letter:1010">1010</ref>
+               <ref target="letter:1010#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
             <mentioned> directorium</mentioned>
@@ -192,9 +208,14 @@
                      Buchhandel</rs> 40, 82; <rs type="bibl" ref="bibl:19248">Sandgruber, Ökonomie
                      und Politik</rs> 97f. – Die Identität des Verlegers konnte nicht bestimmt
                   werden. Zu den Verbindungen JEs zu diversen Buchhandels- und Verlagshäusern vgl.
-                     <ref type="letter" target="letter:513">513</ref> <ref target="letter:513#seg4">4</ref>, <ref type="letter" target="letter:841">841</ref> <ref target="letter:841#seg4">4</ref>,
-                     <ref type="letter" target="letter:900">900</ref> <ref target="letter:900#seg9">9</ref>, <ref type="letter" target="letter:974">974</ref> <ref target="letter:974#seg1">1</ref>,
-                     <ref type="letter" target="letter:1010">1010</ref> <ref target="letter:1010#seg1">1</ref>.</p>
+                     <ref type="letter" target="letter:513">513</ref>
+               <ref target="letter:513#seg4">4</ref>, <ref type="letter" target="letter:841">841</ref>
+               <ref target="letter:841#seg4">4</ref>,
+                     <ref type="letter" target="letter:900">900</ref>
+               <ref target="letter:900#seg9">9</ref>, <ref type="letter" target="letter:974">974</ref>
+               <ref target="letter:974#seg1">1</ref>,
+                     <ref type="letter" target="letter:1010">1010</ref>
+               <ref target="letter:1010#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned> mei opusculi medici</mentioned>
@@ -213,14 +234,16 @@
             <mentioned> Bernardino</mentioned>
             <p>Es kann kaum ein anderes Werk BPs gemeint sein als die
                   „Bibliotheca Benedictino-Mauriana“, die in den erhaltenen Briefen JEs um diese
-                  Zeit erstmals erwähnt wird: vgl. <ref type="letter" target="letter:841">841</ref> <ref target="letter:841#seg3">3</ref>. Auf sie
+                  Zeit erstmals erwähnt wird: vgl. <ref type="letter" target="letter:841">841</ref>
+               <ref target="letter:841#seg3">3</ref>. Auf sie
                   passt auch JEs Angabe zum Umfang. </p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
             <mentioned>in Haag coenavi</mentioned>
             <p> Zu JEs Kontakt zum Pfarrer von Haag, Veit Daniel
-                  Götz, vgl. <ref type="letter" target="letter:513">513</ref> <ref target="letter:513#seg4">4</ref>, <ref type="letter" target="letter:841">841</ref>
-                  <ref target="letter:841#seg1">1</ref>.</p>
+                  Götz, vgl. <ref type="letter" target="letter:513">513</ref>
+               <ref target="letter:513#seg4">4</ref>, <ref type="letter" target="letter:841">841</ref>
+               <ref target="letter:841#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
             <mentioned>Hagenio Ratisbonensi</mentioned>
@@ -237,13 +260,28 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Viro clarissimo eruditissimo admodum reverendo domino patri Hieronymo Pezio Benedictino Mellicensi amicorum suorum principi salutem plurimam dicit pater<hi rend="Fußnotenzeichen1" xml:space="preserve"> </hi>Joachimus Edlinger Benedictinus Seitenstettensis.</opener>
-         <ab resp="#editor" xml:id="seg1">Est omnino, cur ambigam, suavissime Pezi, veriusne suo filo Theseum Ariadne an tu epistola tua me e labyrintho quodam, qui me mirum quantum hactenus exercuerit, eduxeris. Per sat longum etenim tempus, quam in partem silentium tuum solito diuturnius interpretari deberem, assequi non potui. Fuisse, qui viperae ritu niveo denticulo atrum venenum inspiravit, pronum erat suspicari, si occurrisset, in quem vel umbram eiuscemodi suspicionis conicere potuissem: hinc metuere cepi, ne forte ultimas meas exaranti mihimet verbulum exciderit sequius a te acceptum. Eapropter haud simplici vice repetitis te compellare constituebam, sed iam temporis angustiis, iam hac stolida ratiocinatione <choice><sic>absterrere</sic><corr>absterreri</corr></choice> me passus fui: quod si revera tua amicitia excidi, nimis grave mihi futurum sit id ex responsoriis tuis discere; si non, idem fore, ac si exprobrare tibi tuum silentium vellem; satius ergo fore, si<del ana="#after">ad</del> spe et patientia me interea consoler. Non poterant istiusmodi nebulae ullis rationibus dissipari felicius<del ana="#after">dissipari</del> quam tuarum conspectu, quas et eo nomine vel centies adhuc clausas osculatus fui. Quid iam dulcedinis exinde hauserim, cum merissimum illud mel, quod singula pene verba stillant, <pb n="1v"/> et legendo degustare datum, frustra sim, si explicare velim: non potuisset sane quid gratius mihi obtingere. Veniam, quam petis, ea iam ipse opus habeo ob admissum tam inanem et amicitiae tuae constantiae, quam luculenter adeo testatam dedisti, tam iniurium metum. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n1"/>Sat cito, amice optime, scripsisti, cum adeo bene<anchor xml:id="n1e"/>: nam et ipsemet tunc, cum maxime vellem ac deberem scribere, raro tempus nanciscor scribendi, quemadmodum et superioribus diebus impeditus fui, quominus has citius exararem. Norunt Superi, quanta parsimonia aut verius avaritia tempus omne pensi habeam; in eo solum infelix, quod in ea, quae vellem, collocare illud non aeque mihi ac tibi liceat! Devorari saltem id taedii posset, si parochialia aliave mea cura digna negotia hunc mihi thesaurum eriperent; sed quod in res nihili eum prodigere cogar, id demum dolet, ut quod maxime. Quidquid enim in toto monasterio paulo concinniori charactere scribendum, quidquid laceri in ullo sive chorali sive missali libro reficiendum, id omne his manibus fiat, oportet; aliis interea iocantibus, ludentibus, stertentibus. Horum causam dudum iam detestatam olim ipse dedi, cum deploranda quadam praecipitantia me ultro his laboribus ingessi, quo brevi factum, ut is labor tamquam debitus a me exigeretur, quem antea non subiisse, declinasse fuisset: nunc ita mecum est comparatum, ut non typographi duntaxat, sed et bibliopegi praeclara mihi munera incumbant. </ab>
-         <ab resp="#editor" xml:id="seg3">Minus causor, quod et <anchor xml:id="n2"/>proprium quoddam novissimorum festorum<anchor xml:id="n2e"/> pro nostro <pb n="2r"/> monasterio concinnare debuerim, quod primum triduo abhinc typographo consignavi; minus item, quod et<anchor xml:id="n3"/> directorium<anchor xml:id="n3e"/> sequentis anni, quamvis hoc plus laboris quam illud exigat, et hoc incommodi mihi inde emergat, quod, cum bibliopolae meo<anchor xml:id="n4"/> elapsis nundinis<anchor xml:id="n4e"/> spem certam fecerim fore, ut manuscriptum<anchor xml:id="n5"/> mei opusculi medici<anchor xml:id="n5e"/> futuris nundinis Paschalibus indubitanter habeat, eam nunc dubiam reddere cogar. Quanquam etenim ipsa eius versio iam in Quadragesimae finem sortita sit, ad eius limationem <choice><sic>tantum</sic><corr>tamen</corr></choice> notarumque admodum necessariarum adiectionem me conferre hactenus per mera allotria nondum licuit nec ante mensem <add place="above">licebit</add>, qui adhuc cum directorio, si valde festinem (primum enim est, quod facio, cum hactenus Garstensi usi fuerimus, ob nimios errores nunc<del ana="#after">repr</del> displicente), comburendus. Ita nimirum infeliciter mecum agitur, vir clarissime, ut, quod tam solerter parturio, eniti nequeam, non mea, sed aliena culpa; felicius longe per caeli gratiam tecum, anime mi, cui et eo adfectu eapropter adgratulor, quem Pyladeus erga te amor suggerit. </ab>
-         <ab resp="#editor" xml:id="seg4">Non credis, mi Hieronyme, quantum gaudii vel soli Pezianorum operum tituli in <anchor xml:id="n6"/>catalogo Famae adnexo<anchor xml:id="n6e"/> primo loco<del ana="#after">obv</del> conspicui mihi attulerint. De<anchor xml:id="n7"/> Bernardino<anchor xml:id="n7e"/> quidem iam ante mihi per quendam Veithiorum, quocum <anchor xml:id="n8"/>in Haag coenavi<anchor xml:id="n8e"/>, constitit, qui et opus ipsum se propediem mihi missurum recepit; sed nildum eius hactenus videre datum, fortean quia pretium 22 florenorum, quod ille operi statuebat, pro 38 alphabetis (totidem quippe illud constare aiebat) paulo nimium more emtoribus solemni dixerim. Octodecim eorum dandi mox in animum induxi; hinc his demum verbis hominem dimisi: <pb n="2v"/> Mittat tantum; iam conventurum mihi cum ipso de pretio a domino parocho sibi in primo reditu numerando. Iam <choice><sic>ab</sic><corr>a</corr></choice> quovis alio potius quam ab ipso futuris nundinis Lincii emam, cum male me habeat, quod non miserit. </ab>
+         <opener>
+            <pb n="1r"/> Viro clarissimo eruditissimo admodum reverendo domino patri Hieronymo Pezio Benedictino Mellicensi amicorum suorum principi salutem plurimam dicit pater<hi rend="Fußnotenzeichen1" xml:space="preserve"> </hi>Joachimus Edlinger Benedictinus Seitenstettensis.</opener>
+         <ab resp="#editor" xml:id="seg1">Est omnino, cur ambigam, suavissime Pezi, veriusne suo filo Theseum Ariadne an tu epistola tua me e labyrintho quodam, qui me mirum quantum hactenus exercuerit, eduxeris. Per sat longum etenim tempus, quam in partem silentium tuum solito diuturnius interpretari deberem, assequi non potui. Fuisse, qui viperae ritu niveo denticulo atrum venenum inspiravit, pronum erat suspicari, si occurrisset, in quem vel umbram eiuscemodi suspicionis conicere potuissem: hinc metuere cepi, ne forte ultimas meas exaranti mihimet verbulum exciderit sequius a te acceptum. Eapropter haud simplici vice repetitis te compellare constituebam, sed iam temporis angustiis, iam hac stolida ratiocinatione <choice>
+               <sic>absterrere</sic>
+               <corr>absterreri</corr>
+            </choice> me passus fui: quod si revera tua amicitia excidi, nimis grave mihi futurum sit id ex responsoriis tuis discere; si non, idem fore, ac si exprobrare tibi tuum silentium vellem; satius ergo fore, si<del ana="#after">ad</del> spe et patientia me interea consoler. Non poterant istiusmodi nebulae ullis rationibus dissipari felicius<del ana="#after">dissipari</del> quam tuarum conspectu, quas et eo nomine vel centies adhuc clausas osculatus fui. Quid iam dulcedinis exinde hauserim, cum merissimum illud mel, quod singula pene verba stillant, <pb n="1v"/> et legendo degustare datum, frustra sim, si explicare velim: non potuisset sane quid gratius mihi obtingere. Veniam, quam petis, ea iam ipse opus habeo ob admissum tam inanem et amicitiae tuae constantiae, quam luculenter adeo testatam dedisti, tam iniurium metum. </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n1"/>Sat cito, amice optime, scripsisti, cum adeo bene<anchor xml:id="n1e"/>: nam et ipsemet tunc, cum maxime vellem ac deberem scribere, raro tempus nanciscor scribendi, quemadmodum et superioribus diebus impeditus fui, quominus has citius exararem. Norunt Superi, quanta parsimonia aut verius avaritia tempus omne pensi habeam; in eo solum infelix, quod in ea, quae vellem, collocare illud non aeque mihi ac tibi liceat! Devorari saltem id taedii posset, si parochialia aliave mea cura digna negotia hunc mihi thesaurum eriperent; sed quod in res nihili eum prodigere cogar, id demum dolet, ut quod maxime. Quidquid enim in toto monasterio paulo concinniori charactere scribendum, quidquid laceri in ullo sive chorali sive missali libro reficiendum, id omne his manibus fiat, oportet; aliis interea iocantibus, ludentibus, stertentibus. Horum causam dudum iam detestatam olim ipse dedi, cum deploranda quadam praecipitantia me ultro his laboribus ingessi, quo brevi factum, ut is labor tamquam debitus a me exigeretur, quem antea non subiisse, declinasse fuisset: nunc ita mecum est comparatum, ut non typographi duntaxat, sed et bibliopegi praeclara mihi munera incumbant. </ab>
+         <ab resp="#editor" xml:id="seg3">Minus causor, quod et <anchor xml:id="n2"/>proprium quoddam novissimorum festorum<anchor xml:id="n2e"/> pro nostro <pb n="2r"/> monasterio concinnare debuerim, quod primum triduo abhinc typographo consignavi; minus item, quod et<anchor xml:id="n3"/> directorium<anchor xml:id="n3e"/> sequentis anni, quamvis hoc plus laboris quam illud exigat, et hoc incommodi mihi inde emergat, quod, cum bibliopolae meo<anchor xml:id="n4"/> elapsis nundinis<anchor xml:id="n4e"/> spem certam fecerim fore, ut manuscriptum<anchor xml:id="n5"/> mei opusculi medici<anchor xml:id="n5e"/> futuris nundinis Paschalibus indubitanter habeat, eam nunc dubiam reddere cogar. Quanquam etenim ipsa eius versio iam in Quadragesimae finem sortita sit, ad eius limationem <choice>
+               <sic>tantum</sic>
+               <corr>tamen</corr>
+            </choice> notarumque admodum necessariarum adiectionem me conferre hactenus per mera allotria nondum licuit nec ante mensem <add place="above">licebit</add>, qui adhuc cum directorio, si valde festinem (primum enim est, quod facio, cum hactenus Garstensi usi fuerimus, ob nimios errores nunc<del ana="#after">repr</del> displicente), comburendus. Ita nimirum infeliciter mecum agitur, vir clarissime, ut, quod tam solerter parturio, eniti nequeam, non mea, sed aliena culpa; felicius longe per caeli gratiam tecum, anime mi, cui et eo adfectu eapropter adgratulor, quem Pyladeus erga te amor suggerit. </ab>
+         <ab resp="#editor" xml:id="seg4">Non credis, mi Hieronyme, quantum gaudii vel soli Pezianorum operum tituli in <anchor xml:id="n6"/>catalogo Famae adnexo<anchor xml:id="n6e"/> primo loco<del ana="#after">obv</del> conspicui mihi attulerint. De<anchor xml:id="n7"/> Bernardino<anchor xml:id="n7e"/> quidem iam ante mihi per quendam Veithiorum, quocum <anchor xml:id="n8"/>in Haag coenavi<anchor xml:id="n8e"/>, constitit, qui et opus ipsum se propediem mihi missurum recepit; sed nildum eius hactenus videre datum, fortean quia pretium 22 florenorum, quod ille operi statuebat, pro 38 alphabetis (totidem quippe illud constare aiebat) paulo nimium more emtoribus solemni dixerim. Octodecim eorum dandi mox in animum induxi; hinc his demum verbis hominem dimisi: <pb n="2v"/> Mittat tantum; iam conventurum mihi cum ipso de pretio a domino parocho sibi in primo reditu numerando. Iam <choice>
+               <sic>ab</sic>
+               <corr>a</corr>
+            </choice> quovis alio potius quam ab ipso futuris nundinis Lincii emam, cum male me habeat, quod non miserit. </ab>
          <ab resp="#editor" xml:id="seg5">Tuimet operis (Bernardini enim vix aeque facile poteris) si ipse copiam mihi feceris, haud dubita, quin maximopere me obstricturus sis: eius pretium actutum habebis. Tametsi enim intra vertentem annum necdum elapsum 180 ipsos florenos<del ana="#after">ex</del> in libros expenderim, Deo tamen, cui infinitae grates, reculis meis largiter benedicente iam alios prope 40 ad depositum dedi, potiorem quidem partem iam <anchor xml:id="n9"/>Hagenio Ratisbonensi<anchor xml:id="n9e"/> debitos. </ab>
-         <ab resp="#editor" xml:id="seg6">Labores vestros omnem approbationem ab eruditis <sic>reportaturum</sic> certo confide. Quid enim laudabilius, quam<del ana="#after">praecl</del> viros de ecclesia, patria et republica literaria<del ana="#after">clare</del> <choice><sic>prael</sic><corr>praeclare</corr></choice> meritos, perpetuo ceteroquin oblivionis silentio sepeliendos, luci publicae restituere eorumque doctas lucubrationes in communem omnium usum convertere? Tantum pergite, viri consummatissimi, quo cepistis, pede in sacri ordinis patriaeque tutamine, eorumque decora revocare perpes sit lucubrationum vestrarum studiorumque meta. Deus ex alto vires vobis sufficiat, quibus hoc pelagus utrinque sane maximum feliciter emetiri et gloria inde parta in seros frui queatis. Nec est, mi Hieronyme, quod (ceteris paribus) e sedulitate tua valetudini valde metuas; mihi crede, vir optime, uberius olim Deo volente de hac re acturo, non tam infensa illi sunt studia, ac nonnulli autumant, qui nescio quem leonem cum pigro in hac ardua quidem, sed laureis foecunda via sibi fingunt. Est omnino, non diffiteor, et studiis ponendus modus, cum et ipsa habeant suum <pb n="3r"/> sibi notum; ex incuria tamen vel quavis alia causa potius id factum arbitrari malim quam ex ingenito sibi ab ephebis fastu, quem haud dubie religiosus dedidicit. Utut res habeat, non ambitiose venor aliorum amicitias, dum Peziana non excidam. Favete itaque, chara lumina, et valete.</ab>
+         <ab resp="#editor" xml:id="seg6">Labores vestros omnem approbationem ab eruditis <sic>reportaturum</sic> certo confide. Quid enim laudabilius, quam<del ana="#after">praecl</del> viros de ecclesia, patria et republica literaria<del ana="#after">clare</del>
+            <choice>
+               <sic>prael</sic>
+               <corr>praeclare</corr>
+            </choice> meritos, perpetuo ceteroquin oblivionis silentio sepeliendos, luci publicae restituere eorumque doctas lucubrationes in communem omnium usum convertere? Tantum pergite, viri consummatissimi, quo cepistis, pede in sacri ordinis patriaeque tutamine, eorumque decora revocare perpes sit lucubrationum vestrarum studiorumque meta. Deus ex alto vires vobis sufficiat, quibus hoc pelagus utrinque sane maximum feliciter emetiri et gloria inde parta in seros frui queatis. Nec est, mi Hieronyme, quod (ceteris paribus) e sedulitate tua valetudini valde metuas; mihi crede, vir optime, uberius olim Deo volente de hac re acturo, non tam infensa illi sunt studia, ac nonnulli autumant, qui nescio quem leonem cum pigro in hac ardua quidem, sed laureis foecunda via sibi fingunt. Est omnino, non diffiteor, et studiis ponendus modus, cum et ipsa habeant suum <pb n="3r"/> sibi notum; ex incuria tamen vel quavis alia causa potius id factum arbitrari malim quam ex ingenito sibi ab ephebis fastu, quem haud dubie religiosus dedidicit. Utut res habeat, non ambitiose venor aliorum amicitias, dum Peziana non excidam. Favete itaque, chara lumina, et valete.</ab>
          <closer>Finiebam, quam nudiustertius inchoatam abrumpere cogebar, IV. Kalendas Novembris MDCCXVII.</closer>
       </body>
    </text>

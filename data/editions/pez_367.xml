@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="367" xml:id="pez-0367">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Moritz Müller an Bernhard Pez. 1714-10-10. Rheinau.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">367</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -76,13 +88,16 @@
             </correspContext>
          </correspDesc>
          <abstract>
-            <p corresp="#seg1">MM hat auf BPs letztes Schreiben vom 28. Juni <ref type="letter" target="letter:346">346</ref> prompt geantwortet <ref type="letter" target="letter:366">366</ref>, doch ist der Brief nicht angekommen. Gleiches ist schon früher mit MMs „<rs ref="index:d10854e20715">Elogium</rs>“ auf <rs ref="index:d14380e40803">Kardinal Sfondrati</rs> und mit dem von BP geschickten Gold geschehen. Glücklicherweise hat MM mit der Rückübermittlung der Blätter aus der <rs ref="index:d10854e33723">Wiener Handschrift</rs> von <rs ref="index:d14380e28843">Jodok Metzlers „De viris illustribus S. Galli“</rs> auf eine sicherere Gelegenheit gewartet. MM ist verärgert, dass die <rs ref="index:d14380e35665">Post</rs> derart unzuverlässig ist, wo doch sogar der Briefverkehr mit der <rs ref="index:d14380e31371">Türkei</rs> und den <rs type="cit" ref="citIndex:ix2_d763e263">barbarischen Ländern</rs> funktioniert. MM vermutet, dass die <rs ref="index:d14380e40241">Schweizer</rs> <rs ref="index:d10854e8472">Reformierten</rs>, die gegen <rs ref="index:d14380e39290">St. Gallen</rs> arbeiten, seine Briefe abfangen.</p>
-            <p corresp="#seg2"><rs ref="index:d14380e26993">René Massuet</rs> geht es gut, MM steht mit ihm in regelmäßigem Briefverkehr. Dass BP einen solchen noch nicht herstellen konnte, bedauert MM.</p>
+            <p corresp="#seg1">MM hat auf BPs letztes Schreiben vom 28. Juni <ref type="letter" target="letter:346">346</ref> prompt geantwortet <ref type="letter" target="letter:366">366</ref>, doch ist der Brief nicht angekommen. Gleiches ist schon früher mit MMs „<rs ref="index:d10854e20715">Elogium</rs>“ auf <rs ref="index:d14380e40803">Kardinal Sfondrati</rs> und mit dem von BP geschickten Gold geschehen. Glücklicherweise hat MM mit der Rückübermittlung der Blätter aus der <rs ref="index:d10854e33723">Wiener Handschrift</rs> von <rs ref="index:d14380e28843">Jodok Metzlers „De viris illustribus S. Galli“</rs> auf eine sicherere Gelegenheit gewartet. MM ist verärgert, dass die <rs ref="index:d14380e35665">Post</rs> derart unzuverlässig ist, wo doch sogar der Briefverkehr mit der <rs ref="index:d14380e31371">Türkei</rs> und den <rs type="cit" ref="citIndex:ix2_d763e263">barbarischen Ländern</rs> funktioniert. MM vermutet, dass die <rs ref="index:d14380e40241">Schweizer</rs>
+               <rs ref="index:d10854e8472">Reformierten</rs>, die gegen <rs ref="index:d14380e39290">St. Gallen</rs> arbeiten, seine Briefe abfangen.</p>
+            <p corresp="#seg2">
+               <rs ref="index:d14380e26993">René Massuet</rs> geht es gut, MM steht mit ihm in regelmäßigem Briefverkehr. Dass BP einen solchen noch nicht herstellen konnte, bedauert MM.</p>
             <p corresp="#seg3">Die Blätter der <rs ref="index:d14380e28843">Metzler-Handschrift</rs> will MM erst bei einer sicheren Gelegenheit schicken. Seine eigenen Arbeiten („<rs ref="index:d10854e20696">De viris illustribus S. Galli</rs>“) hofft er bis dahin abzuschließen, seine Geschäfte lassen ihm aber wenig Zeit dafür.</p>
             <p corresp="#seg4">Mit einer Drucklegung von <rs ref="index:d14380e28843">Metzlers Schrift</rs> soll BP warten, bis er MMs Überarbeitung erhalten hat. MM würde gerne dieses und anderes persönlich mit BP besprechen und fordert ihn deshalb neuerlich zu einer Reise in die <rs ref="index:d14380e40241">Schweiz</rs> auf.</p>
             <p corresp="#seg5">MM lässt sich und <rs ref="index:d14380e39290">St. Galler</rs> Interessen <rs ref="index:d14380e39962">Anselm Schramb</rs> empfehlen. Alle Hoffnung ruht nun auf Kaiser <rs ref="index:d14380e21188">Karl VI.</rs> Eine ungünstige Wendung, von der MM gehört hat, hat <rs ref="index:d10854e2757">Blasius Bender</rs> in seinem Brief nicht bestätigt. Auch das Handschreiben des Kaisers an Fürstabt <rs ref="index:d14380e7141">Leodegar Bürgisser</rs> verspricht Hilfe. Doch hält MM Bestechungen und Ränke der Feinde am Hof für möglich und fordert die Melker auf, sich als Freunde St. Gallens zu erweisen.</p>
-            <p corresp="#seg6">In einem Postskriptum bittet MM um Nachrichten aus <rs ref="index:d14380e45571">Wien</rs> und berichtet, dass er mit <rs ref="index:d14380e11773">Prinz Eugen</rs> und dem Grafen <rs ref="index:d10854e10696">Goëss</rs> zusammengetroffen ist; dieser besuchte auf der Rückreise vom <rs ref="index:d10854e1848">Badener</rs> <rs ref="index:d10854e1859">Friedenskongress</rs> Abt <rs ref="index:d10854e4641">Bürgisser</rs>. Beide haben Hilfe zugesichert.</p>
-            </abstract>
+            <p corresp="#seg6">In einem Postskriptum bittet MM um Nachrichten aus <rs ref="index:d14380e45571">Wien</rs> und berichtet, dass er mit <rs ref="index:d14380e11773">Prinz Eugen</rs> und dem Grafen <rs ref="index:d10854e10696">Goëss</rs> zusammengetroffen ist; dieser besuchte auf der Rückreise vom <rs ref="index:d10854e1848">Badener</rs>
+               <rs ref="index:d10854e1859">Friedenskongress</rs> Abt <rs ref="index:d10854e4641">Bürgisser</rs>. Beide haben Hilfe zugesichert.</p>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -119,7 +134,8 @@
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg5">
             <mentioned>litteras ... caesaris</mentioned>
             <p>Der Brief („Consolatorium“) Karls VI. an Bürgisser, dessen Abfassung in der
-                  Geheimen Konferenz vom 5. Juni 1714 (vgl. <ref type="letter" target="letter:345">345</ref> <ref target="letter:345#seg8">8</ref>)
+                  Geheimen Konferenz vom 5. Juni 1714 (vgl. <ref type="letter" target="letter:345">345</ref>
+               <ref target="letter:345#seg8">8</ref>)
                   beschlossen worden war, datiert vom 11. Juni und ist in Abschrift überliefert in
                   StiA St. Gallen, Bd. 1614, 424–425.</p>
          </note>
@@ -132,7 +148,8 @@
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
-         <note anchored="false">Nummerierung: <orig>XVIII.</orig></note>
+         <note anchored="false">Nummerierung: <orig>XVIII.</orig>
+         </note>
       </listAnnotation>
       <listBibl>
          <head>Literatur</head>
@@ -156,11 +173,14 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater in Christo ac amice colendissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater in Christo ac amice colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">Ultimas, quas a chara ac veneranda manu tua (amice optime) accepi, illae fuerunt, quae sub 28. Junii in vigilia sanctorum Petri et Pauli ad me datae sunt; ad quas etiam mox respondi (prout nunquam negligens fui) et, quae petisti, folia Mezleriana iisdem accludenda mittere volui. Bono tamen meo ac tuo omisi, ut securiori occasioni reservarem. Periissent ergo et illae cum litteris, si misissem, sicut iam olim nobis accidit cum Elogio meo Sfondratiano et auro tuo. Sed quae haec postarum fatalitas et infidelitas est? ut litterarum commercia inter nos tuta non sint, quae etiam <anchor xml:id="n1"/>apud barbaros et Turcas et in omnem terram inviolata fide eunt et redeunt mihi<anchor xml:id="n1e"/>? Sed facit hoc, ut opinor, reformatorum Helvetiorum adversariorum nostrorum pessima curiositas mala conscientia semper suspicax et in omnes apices a S. Gallensibus exaratos et cum Austriacis correspondentes semper intenta. Proinde de securiori via et modo scribendi deinceps curabo, et mihi ac tibi providebo. </ab>
          <ab resp="#editor" xml:id="seg2">Pater Massuetus noster vivit, et optime vivit, mihique singulis 20 diebus rescribit. Quod et ad illum tuae litterae secure non eant, sane condoleo infelicitati tuae. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n2"/>Mezleriana folia nisi cum occasione secura non mittam<anchor xml:id="n2e"/>. Utinam et cum illis lucubratiunculas meas (tibi certe, ut spero, haud displicituras) absolvere et mittere possim. Sed prae negotiorum aliorum mole, quae me vix non mactant, vix pauculas in toto mense horulas furari possum, ut illis manum impendere queam. Non tamen desistam, donec perficiam, quandoquando tandem. </ab>
-         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n3"/>De nova editione Mezleriana<anchor xml:id="n3e"/> (salvo meliori et tuo iudicio) putarem adhuc tantisper cunctandum, dum meos labores ad manus acceperis: Videbis magnum tibi incrementum et utilitatem ex iis <sic>tibi</sic>  accumulandam. Et utinam, ut de his et aliis pluribus loqui potius possemus, fata vel paucas horulas nobis concederent! <pb n="1v"/> Et quid, obsecro, obstat, quominus hoc authumni tempore brevem excursionem facias et Helvetiam nostram invisas, et vota mea ac tua implere <sic>sattagas</sic> ? Spondeo, ducam te per omnia Helvetiae coenobia et introducam in intima, quae mihi pandentur, scrinia, ut inde possis haurire intentioni tuae necessaria. Beatum me reputabo, si te (amice optime) vel semel amplecti potuero. </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n2"/>Mezleriana folia nisi cum occasione secura non mittam<anchor xml:id="n2e"/>. Utinam et cum illis lucubratiunculas meas (tibi certe, ut spero, haud displicituras) absolvere et mittere possim. Sed prae negotiorum aliorum mole, quae me vix non mactant, vix pauculas in toto mense horulas furari possum, ut illis manum impendere queam. Non tamen desistam, donec perficiam, quandoquando tandem. </ab>
+         <ab resp="#editor" xml:id="seg4">
+            <anchor xml:id="n3"/>De nova editione Mezleriana<anchor xml:id="n3e"/> (salvo meliori et tuo iudicio) putarem adhuc tantisper cunctandum, dum meos labores ad manus acceperis: Videbis magnum tibi incrementum et utilitatem ex iis <sic>tibi</sic>  accumulandam. Et utinam, ut de his et aliis pluribus loqui potius possemus, fata vel paucas horulas nobis concederent! <pb n="1v"/> Et quid, obsecro, obstat, quominus hoc authumni tempore brevem excursionem facias et Helvetiam nostram invisas, et vota mea ac tua implere <sic>sattagas</sic> ? Spondeo, ducam te per omnia Helvetiae coenobia et introducam in intima, quae mihi pandentur, scrinia, ut inde possis haurire intentioni tuae necessaria. Beatum me reputabo, si te (amice optime) vel semel amplecti potuero. </ab>
          <ab resp="#editor" xml:id="seg5">Plurimum reverendo domino patri Anselmo, viro et amico meo optimo, me nostramque causam impensius recommendari rogo. <anchor xml:id="n4"/>Terreret me<anchor xml:id="n4e"/>, si verum foret, quod scriptum est. Sed pater Blasius ad me nihil horum meminit. Tota spes nostra post Deum in augustissimo nostro caesare est, quae utique non confundet. Vidi <anchor xml:id="n5"/>litteras recenter propria et clementissima manu caesaris<anchor xml:id="n5e"/> ad principem nostrum datas, in quibus nova et certa auxilia promittuntur. Et quomodo aula in contrarium potest esse informata? Pauci in aula sunt, qui in hoc negotio agunt, et ii certe optime instructi sunt. Interim verum est nec dolos nec peccunias deesse adversariis nostris, quibus animos aliquorum corrumpere satagant. Scio tamen et certus sum principales huius negotii cardines fore incorruptos. Non nocebit tamen, si amici nostri amicos nobis faciant et causam nostram commendatam habeant; quod de Mellicensibus nostris imprimis speramus. Multa haberem, quae adhuc perscriberem, sed posta hoc momento abitura urget, ut finiam; tametsi sine fine sim et maneam ut semper</ab>
          <closer>Totus tuus pater Mauriz manu propria.</closer>
          <closer>Rheinauw 1714 die 10. Octobris.</closer>

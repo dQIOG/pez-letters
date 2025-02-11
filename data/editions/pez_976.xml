@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="976" xml:id="pez-0976">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an Johann Georg Eckhart. 1718-08-07. Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">976</idno>
          </publicationStmt>
          <seriesStmt>
@@ -44,10 +56,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -71,51 +84,53 @@
                <ptr type="mentions" target="letter:975"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e106">Abgesonderte bibliothec oder Zulängliche nachrichten und unpartheyische gutachten von
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e106">Abgesonderte bibliothec oder Zulängliche nachrichten und unpartheyische gutachten von
          einigen mehrenteils neuen Büchern. Hg. von Johann Christoph Frank, Johann Jakob Schmauß,
          Johann Heinrich Schulz, Gottfried Heinrich Zincke. Halle an der Saale 1718–1719</term>
-            <term ref="index:d14380e498">Agius ; Vita sanctae Hathumodae</term>
-            <term ref="index:d14380e3233">Augsburg</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e6557">Braunschweig</term>
-            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
-            <term ref="index:d14380e9536">Deutschland, Deutsche , deutsch ; Althochdeutsch, mittelhochdeutsch</term>
-            <term ref="index:d14380e10559">Eckhart, Johann Georg ; -Welfengeschichte Begonnen von Gottfried Wilhelm
+               <term ref="index:d14380e498">Agius ; Vita sanctae Hathumodae</term>
+               <term ref="index:d14380e3233">Augsburg</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e6557">Braunschweig</term>
+               <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+               <term ref="index:d14380e9536">Deutschland, Deutsche , deutsch ; Althochdeutsch, mittelhochdeutsch</term>
+               <term ref="index:d14380e10559">Eckhart, Johann Georg ; -Welfengeschichte Begonnen von Gottfried Wilhelm
          Leibniz</term>
-            <term ref="index:d14380e10613">Eckhart, Johann Georg ; Plan einer Reise nach Süddeutschland, Österreich und Italien
+               <term ref="index:d14380e10613">Eckhart, Johann Georg ; Plan einer Reise nach Süddeutschland, Österreich und Italien
          gemeinsam mit BP und HP</term>
-            <term ref="index:d14380e10654">Eckhart, Rosina Elisabeth</term>
-            <term ref="index:d14380e11461">Erasmi von Huldenberg, Daniel, Freiherr</term>
-            <term ref="index:d14380e11852">Evangelische allgemein</term>
-            <term ref="index:d14380e12962">Frauen</term>
-            <term ref="index:d14380e14971">Georg I</term>
-            <term ref="index:d14380e15623">Gleditsch, Johann Gottlieb</term>
-            <term ref="index:d14380e15655">Glossarien und altdeutsche Sprachdenkmäer ; *Glossariolum Latino-Theotiscum. Ms</term>
-            <term ref="index:d14380e16951">Halle an der Saale</term>
-            <term ref="index:d14380e17877">Helmstedt ; St. Ludgeri</term>
-            <term ref="index:d14380e21347">Karlsteen, Arvid ; *Medaille auf Ernst August von Hannover</term>
-            <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
-            <term ref="index:d14380e24317">Leipzig</term>
-            <term ref="index:d14380e29198">Monath, Peter Konrad</term>
-            <term ref="index:d14380e30963">Nürnberg</term>
-            <term ref="index:d14380e32535">Paschasius Radbertus, hl ; De fide, spe et charitate ; Ms. Corvey ; Abschrift für
+               <term ref="index:d14380e10654">Eckhart, Rosina Elisabeth</term>
+               <term ref="index:d14380e11461">Erasmi von Huldenberg, Daniel, Freiherr</term>
+               <term ref="index:d14380e11852">Evangelische allgemein</term>
+               <term ref="index:d14380e12962">Frauen</term>
+               <term ref="index:d14380e14971">Georg I</term>
+               <term ref="index:d14380e15623">Gleditsch, Johann Gottlieb</term>
+               <term ref="index:d14380e15655">Glossarien und altdeutsche Sprachdenkmäer ; *Glossariolum Latino-Theotiscum. Ms</term>
+               <term ref="index:d14380e16951">Halle an der Saale</term>
+               <term ref="index:d14380e17877">Helmstedt ; St. Ludgeri</term>
+               <term ref="index:d14380e21347">Karlsteen, Arvid ; *Medaille auf Ernst August von Hannover</term>
+               <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
+               <term ref="index:d14380e24317">Leipzig</term>
+               <term ref="index:d14380e29198">Monath, Peter Konrad</term>
+               <term ref="index:d14380e30963">Nürnberg</term>
+               <term ref="index:d14380e32535">Paschasius Radbertus, hl ; De fide, spe et charitate ; Ms. Corvey ; Abschrift für
          Johann Wilhelm Göbel. Ms</term>
-            <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
-            <term ref="index:d14380e33611">Pez, Bernhard ; Enzyklik 1715/16</term>
-            <term ref="index:d14380e34524">Pez, Bernhard ; Selbstwahrnehmung als Mönch</term>
-            <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
+               <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
+               <term ref="index:d14380e33611">Pez, Bernhard ; Enzyklik 1715/16</term>
+               <term ref="index:d14380e34524">Pez, Bernhard ; Selbstwahrnehmung als Mönch</term>
+               <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
          1721–1729</term>
-            <term ref="index:d14380e33812">Pez, Bernhard ; Bd. 1</term>
-            <term ref="index:d14380e33826">Pez, Bernhard ; Bd. 1 ; Darin: Agius, Vita sanctae Hathumodae</term>
-            <term ref="index:d14380e33988">Pez, Bernhard ; Bd. 1 ; Darin: Paschasius Radbertus, De fide, spe et charitate</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e34804">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
+               <term ref="index:d14380e33812">Pez, Bernhard ; Bd. 1</term>
+               <term ref="index:d14380e33826">Pez, Bernhard ; Bd. 1 ; Darin: Agius, Vita sanctae Hathumodae</term>
+               <term ref="index:d14380e33988">Pez, Bernhard ; Bd. 1 ; Darin: Paschasius Radbertus, De fide, spe et charitate</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e34804">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
          Leipzig–Regensburg 1721–1745 ; Bd. 1</term>
-            <term ref="index:d14380e34904">Pez, Hieronymus ; „Conspectus“. Ms</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
-            <term ref="index:d14380e45213">Welfen</term></keywords></textClass>
+               <term ref="index:d14380e34904">Pez, Hieronymus ; „Conspectus“. Ms</term>
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+               <term ref="index:d14380e45213">Welfen</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">BP hat sich über GEs Ankündigung einer <rs ref="index:d14380e10613">möglichen Reise</rs> zu HP und BP
                <ref type="letter" target="letter:959">959</ref> sehr gefreut und hofft, dass diesen Plänen bald Erfolg
@@ -132,7 +147,8 @@
                mit dem BP in Verbindung steht. BP bittet GE um eine Einschätzung zu seinen Vorschlägen.</p>
             <p corresp="#seg4">GEs unvorteilhafte Ausführungen über die <rs ref="index:d14380e4919">Benediktiner</rs> von <rs ref="index:d14380e17877">St. Ludgeri zu Helmstedt</rs> haben BP zutiefst betrübt. Vom Grund dieses
                Übels will er ein andermal schreiben. Selbst hat er auf wiederholte Anfragen <ref type="letter" target="letter:975">975</ref> wegen eines Schriftstellerkatalogs für seine „<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“ keine Antwort erhalten. Überall bei den
-               <rs ref="index:d14380e9395">deutschen</rs> <rs ref="index:d14380e21679">Katholiken</rs> regieren die
+               <rs ref="index:d14380e9395">deutschen</rs>
+               <rs ref="index:d14380e21679">Katholiken</rs> regieren die
                scholastische Philosophie und Theologie, andere Studien, besonders die „Historia literaria“, werden zum
                großen Schaden der Kirche vernachlässigt. Freilich soll GE nicht glauben, dass Mönche so untätig sind,
                wie mancher <rs ref="index:d14380e11852">Protestant</rs> denkt. Die vielfältigen und ständigen
@@ -161,20 +177,22 @@
                <rs ref="index:d14380e9536">Sprachaltertümern</rs> erfahren (siehe Kommentar) und will sich um deren
                Anschaffung bemühen. BP schließt mit Grüßen an GEs Ehefrau (<rs ref="index:d14380e10654">Rosina
                   Elisabeth Eckhart</rs>).</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
             <mentioned>Gledischium</mentioned>
-            <p>Zur Identifizierung dieser Person vgl. <ref type="letter" target="letter:981">981</ref> <ref target="letter:981#seg3">3</ref>, <ref type="letter" target="letter:1003">1003</ref> <ref target="letter:1003#seg1">1</ref>.
+            <p>Zur Identifizierung dieser Person vgl. <ref type="letter" target="letter:981">981</ref>
+               <ref target="letter:981#seg3">3</ref>, <ref type="letter" target="letter:1003">1003</ref>
+               <ref target="letter:1003#seg1">1</ref>.
                </p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg3">
             <mentioned>Conrado Monath</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:18698">Paisey, Buchdrucker</rs> 178.</p>
+               <rs type="bibl" ref="bibl:18698">Paisey, Buchdrucker</rs> 178.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg4">
             <mentioned>Monachus ... intus</mentioned>
@@ -182,14 +200,16 @@
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg5">
             <mentioned>Glossariolum</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:956">956</ref> <ref target="letter:956#seg1">1</ref>. Die
+            <p>Vgl. <ref type="letter" target="letter:956">956</ref>
+               <ref target="letter:956#seg1">1</ref>. Die
                   Beilage scheint nicht erhalten zu sein.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg6">
             <mentioned>Bibliotheca Hallensi</mentioned>
             <p> Die Bezeichnung wäre am ehesten auf die
                   „Abgesonderte bibliothec“ zu beziehen, von der BP anscheinend kurz vorher durch
-                  Gerhard Cornelius van den Driesch ein Exemplar erhalten hatte: vgl. <ref type="letter" target="letter:943">943</ref> <ref target="letter:943#seg1">1</ref>. In deren VI. Stück fand sich, unmittelbar
+                  Gerhard Cornelius van den Driesch ein Exemplar erhalten hatte: vgl. <ref type="letter" target="letter:943">943</ref>
+               <ref target="letter:943#seg1">1</ref>. In deren VI. Stück fand sich, unmittelbar
                   vor der Besprechung von Van den Drieschs Tragödie „Absalon“, eine ausführliche,
                   überwiegend ablehnende Rezension zu GEs „Diploma Caroli Magni“: Abgesonderte
                   bibliothec (1718) 472–528. Wie BP allerdings aus diesem Text einen Hinweis auf
@@ -202,19 +222,20 @@
                   deutscher Sprache, nicht eines über Fragen der altdeutschen Philologie meinen.
                   Wohl in Reaktion auf diese Worte BPs hielt GE im Folgebrief fest, selbst nichts
                   zur Etymologie veröffentlicht zu haben: vgl. <ref type="letter" target="letter:981">981</ref>
-                  <ref target="letter:981#seg9">9</ref>. In der weiters zu Halle erschienenen „Vermischten bibliothec“ finden
+               <ref target="letter:981#seg9">9</ref>. In der weiters zu Halle erschienenen „Vermischten bibliothec“ finden
                   sich im Jahr 1718 keine Hinweise auf eine Nennung von GE.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg6">
             <mentioned> coniuge</mentioned>
             <p>BP wusste von einer Ehefrau GEs wohl nur durch die
-                  beiläufige Erwähnung in <ref type="letter" target="letter:959">959</ref> <ref target="letter:959#seg2">2</ref>. Bald nach seiner
+                  beiläufige Erwähnung in <ref type="letter" target="letter:959">959</ref>
+               <ref target="letter:959#seg2">2</ref>. Bald nach seiner
                   Berufung als Professor an die Universität Helmstedt hatte GE 1707 Rosina Elisabeth
                   Gerthum geheiratet. Zu ihrer Herkunft liegen widersprüchliche Angaben vor;
                   insbesondere wurde behauptet, sie sei die uneheliche Tochter eines Grafen von der
                   Lippe mit der Ehefrau eines Bäckers zu Holzminden gewesen: <rs type="bibl" ref="bibl:14716">Harenberg, Anecdota</rs> 152. Dieselbe Quelle erwähnt hingegen
                   keine Verwandtschaft, wie sie aus den Worten GEs in <ref type="letter" target="letter:959">959</ref>
-                  <ref target="letter:959#seg2">2</ref> hervorzugehen scheint, mit der Ehefrau des Herzogs Rudolf August, Rosine
+               <ref target="letter:959#seg2">2</ref> hervorzugehen scheint, mit der Ehefrau des Herzogs Rudolf August, Rosine
                   Elisabeth Menthe, die jedenfalls als Taufpatin anzunehmen ist; die Nennung von
                   Holzminden mag auf einer Verwechslung mit Minden, der Heimat der Familie Menthe,
                   beruhen. Rosina Elisabeth scheint eine beträchtliche Mitgift in die Ehe
@@ -229,12 +250,18 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Clarissimo et eruditissimo domino Joanni Georgio Eckardo amico maximo pater Bernardus Pez salutem dicit.</opener>
+         <opener>
+            <pb n="1r"/> Clarissimo et eruditissimo domino Joanni Georgio Eckardo amico maximo pater Bernardus Pez salutem dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Immenso me nuper gaudio complevisti, dum spem quandam te in his oris videndi complectendique fecisti. O auream horam, quae nostris te complexibus inseret! Ita tibi Superi omnes pulcherrimum hunc erga nos animum servent faxintque quamprimum ambos votorum compotes. Nos certe te sic amamus et colimus, ut magis nequeamus. </ab>
          <ab resp="#editor" xml:id="seg2">De Radberti libro De fide, spe et charitate, quem Brunswici meis curis destinasti, maximas tibi ago habeoque gratias, habiturus longe ampliores, dum etiam obtinuero, quod utinam brevi fiat! Forte enim adhuc primo volumini poterit inseri non sine perenni testimonio grati erga te animi mei. Via et modus fasciculum inde Augustam perferendi haud satis mihi probatur multas ob causas. Omnium fors certissimus modus fuerit, si Lipsiam ad dominum <anchor xml:id="n1"/>Gledischium<anchor xml:id="n1e"/>  miseris optimumque et mihi amicum virum monueris, ut rem ad me curet. Plura is mihi quotannis mittit via adeo brevi et expedita, ut petita intra 14 dies consequar. </ab>
          <ab resp="#editor" xml:id="seg3">Quod si tamen se occasio offerret fasciculum Norimbergam mittendi, eum cum eodem mandato inscribes celebri hic bibliopolae <anchor xml:id="n2"/>Conrado Monath<anchor xml:id="n2e"/>, quocum multa mihi negotia litteraria esse consueverunt. Obsecro, scribe, cuiusmodi apud te sint isthaec consilia mea. </ab>
-         <ab resp="#editor" xml:id="seg4">De Helmstadiensibus nostris eheu! quae narras? Vix non lacrimis tuam <pb n="1v"/> epistolam infudi, tantum dolui et ingemui. Sed de huius mali origine alias ad te scribam. Ego indidem nullum adhuc responsum extundere potui ad iteratas epistolas meas, quibus rogavi, ut scriptorum suorum catalogum Bibliothecae meae inserendum mecum communicarent. Nempe utramque apud catholicos Germanos paginam facit theologia et philosophia scholastica, caetera pleraque studia negliguntur, historia praesertim litteraria etc., non sine incredibili ecclesiae damno. Caeterum noli credere monachos nostros adeo otiosos esse, uti quidam vestratium putant. Nimirum monasticae vitae munia tam multiplicia continuaque sunt, ut vix restent vires corporis gravioribus litteris vehementius instandi. Si aliquot diebus hanc vitam nobiscum viveres, longe aliter de delitiis nostris sentires. <anchor xml:id="n3"/>Monachus, etiam omnibus commodis circumfusus, cruci tamen affixus est semper; quod etsi captu difficili sit homini uxorem habenti et arbitrio suo cuncta moderanti, vero tamen verius est. Splendent exterius nostri muri; sed alia omnia intus<anchor xml:id="n3e"/>. Sed quorsum ista, in huius praesertim horulae angustia? Nempe ut non nihil tuum, mi amicissime Ekarde, stomachum, quem nostrorum vel vera vel putata tantum incuria concitavit, componerem. <pb n="2r"/> </ab>
-         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n4"/>Glossariolum<anchor xml:id="n4e"/> Latino-Theodiscum ex diversis codicibus a me tui amore corrasum et illustrissimo domino de Huldenberg commendatum utique iam acceperis. Id subsecutum nuperrime est patris Hieronymi commentariolus, quo non solum voluminis sui <choice><sic>primo</sic><corr>primi</corr></choice> De rerum Austriacarum scriptoribus contenta percenset accurate, sed etiam ea ex veteribus his et ineditis monumentis omnia diligentissime complectitur, quae<del ana="#after">illus</del> serenissimae domus vestrae historiam illustrent. Haec, eruditissime domine, benevolo animo a fratre ut accipias, rogo. Est is vir iuvenis adhuc, 34. annum agens, et in egregiis his studiis indefessus, sed prope omni eheu aliorum ope destitutus; immo, quod deplorare satis nemo potest, ne ea quidem ei suppetunt, quibus necessarios ad haec studia libros coemat. Me unum respicit, munificentia potentissimi regis vestri iam opulentum et Croeso ditiorem. Itaque res nobis communes sunt et amore mutuo studiorumque<del ana="#after">p</del> similitudine beate vivimus. Porro fratris fasciculum supra dicto domino de Huldenberg itidem commisi. Acta <sic>Hatmuodae</sic> certissime in primo meo tomo habebis, qui ad diem sancto Michaeli sacrum sub prelo sudare occipiet. </ab>
+         <ab resp="#editor" xml:id="seg4">De Helmstadiensibus nostris eheu! quae narras? Vix non lacrimis tuam <pb n="1v"/> epistolam infudi, tantum dolui et ingemui. Sed de huius mali origine alias ad te scribam. Ego indidem nullum adhuc responsum extundere potui ad iteratas epistolas meas, quibus rogavi, ut scriptorum suorum catalogum Bibliothecae meae inserendum mecum communicarent. Nempe utramque apud catholicos Germanos paginam facit theologia et philosophia scholastica, caetera pleraque studia negliguntur, historia praesertim litteraria etc., non sine incredibili ecclesiae damno. Caeterum noli credere monachos nostros adeo otiosos esse, uti quidam vestratium putant. Nimirum monasticae vitae munia tam multiplicia continuaque sunt, ut vix restent vires corporis gravioribus litteris vehementius instandi. Si aliquot diebus hanc vitam nobiscum viveres, longe aliter de delitiis nostris sentires. <anchor xml:id="n3"/>Monachus, etiam omnibus commodis circumfusus, cruci tamen affixus est semper; quod etsi captu difficili sit homini uxorem habenti et arbitrio suo cuncta moderanti, vero tamen verius est. Splendent exterius nostri muri; sed alia omnia intus<anchor xml:id="n3e"/>. Sed quorsum ista, in huius praesertim horulae angustia? Nempe ut non nihil tuum, mi amicissime Ekarde, stomachum, quem nostrorum vel vera vel putata tantum incuria concitavit, componerem. <pb n="2r"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg5">
+            <anchor xml:id="n4"/>Glossariolum<anchor xml:id="n4e"/> Latino-Theodiscum ex diversis codicibus a me tui amore corrasum et illustrissimo domino de Huldenberg commendatum utique iam acceperis. Id subsecutum nuperrime est patris Hieronymi commentariolus, quo non solum voluminis sui <choice>
+               <sic>primo</sic>
+               <corr>primi</corr>
+            </choice> De rerum Austriacarum scriptoribus contenta percenset accurate, sed etiam ea ex veteribus his et ineditis monumentis omnia diligentissime complectitur, quae<del ana="#after">illus</del> serenissimae domus vestrae historiam illustrent. Haec, eruditissime domine, benevolo animo a fratre ut accipias, rogo. Est is vir iuvenis adhuc, 34. annum agens, et in egregiis his studiis indefessus, sed prope omni eheu aliorum ope destitutus; immo, quod deplorare satis nemo potest, ne ea quidem ei suppetunt, quibus necessarios ad haec studia libros coemat. Me unum respicit, munificentia potentissimi regis vestri iam opulentum et Croeso ditiorem. Itaque res nobis communes sunt et amore mutuo studiorumque<del ana="#after">p</del> similitudine beate vivimus. Porro fratris fasciculum supra dicto domino de Huldenberg itidem commisi. Acta <sic>Hatmuodae</sic> certissime in primo meo tomo habebis, qui ad diem sancto Michaeli sacrum sub prelo sudare occipiet. </ab>
          <ab resp="#editor" xml:id="seg6">Te nescio quae Theodisca nuper edidisse ex <anchor xml:id="n5"/>Bibliotheca Hallensi<anchor xml:id="n5e"/> didici. Ea ut habeam, nullam non operam dabo. Vale, vir summe, cum praenobili<anchor xml:id="n6"/> coniuge<anchor xml:id="n6e"/> tua, quam ut Deus tuo solatio servet, de caelo precor.</ab>
          <closer>Mellicii 7. Augusti 1718.</closer>
       </body>

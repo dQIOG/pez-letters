@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="339" xml:id="pez-0339">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Albert Reichart an Bernhard Pez. 1714-04-14. St. Paul im Lavanttal.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">339</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -78,7 +91,7 @@
             <p corresp="#seg1">ARe zeigt sich über BPs gelehrten (Palladis merces) Brief <ref type="letter" target="letter:338">338</ref> höchst erfreut, ebenso über die schwere Arbeit („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“), die BP für den Orden leistet. ARe will BPs Wunsch entsprechend die <rs ref="index:d10854e27480">Bücher</rs> von <rs ref="index:d10854e27460">St. Paul</rs> durchsehen lassen und das darin Gefundene notieren und übersenden.</p>
             <p corresp="#seg2">Das von BP geschickte Verzeichnis der Bücher aus den Kongregationen von <rs ref="index:d10854e15615">St.-Maur</rs> und <rs ref="index:d14380e22654">St.-Vanne</rs> hat ARe mit Freude gelesen; über einige wenige dieser Werke verfügt er bereits. Nach dem <rs ref="index:d10854e29410">deutsch-französischen Friedensschluss</rs> (pax Germanico-Gallica) wird es leichter möglich sein, diese Bücher zu erwerben.</p>
             <p corresp="#seg3">ARe fragt BP, ob ihm in irgendeiner Bibliothek das Buch <rs ref="index:d10854e4873">„Sanctus Benedictus christiformis“ von Juan Caramuel</rs> begegnet ist, das 1647 zu <rs ref="index:d14380e35789">Prag</rs> erschienen sein soll (recte: 1652). ARe hat es nirgendwo aufspüren können.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -93,12 +106,15 @@
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>catalogum ... sancti Mauri et Vitoni</mentioned>
-            <p>BP erfüllte damit ARes Bitte aus <ref type="letter" target="letter:326">326</ref>; vgl. <ref type="letter" target="letter:65">65</ref> <ref target="letter:65#seg3">3</ref>, <ref type="letter" target="letter:292">292</ref> <ref target="letter:292#seg2">2</ref>.</p>
+            <p>BP erfüllte damit ARes Bitte aus <ref type="letter" target="letter:326">326</ref>; vgl. <ref type="letter" target="letter:65">65</ref>
+               <ref target="letter:65#seg3">3</ref>, <ref type="letter" target="letter:292">292</ref>
+               <ref target="letter:292#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned>Redeunte pace</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:337">337</ref> <ref target="letter:337#seg3">3</ref>, <ref type="letter" target="letter:345">345</ref>
-                  <ref target="letter:345#seg1">1</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:337">337</ref>
+               <ref target="letter:337#seg3">3</ref>, <ref type="letter" target="letter:345">345</ref>
+               <ref target="letter:345#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>Benedictus christiformis</mentioned>
@@ -112,11 +128,15 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Pax Christi.</opener>
+         <opener>
+            <pb n="1r"/> Pax Christi.</opener>
          <opener>Plurimum reverende religiosissime et clarissime domine, domine plurimum colende.</opener>
          <ab resp="#editor" xml:id="seg1">Insigniter me plurimum reverendae dominationis humanissimae iuxta et ob Palladis merces charissimae litterae exhilararunt. Gaudeo de <anchor xml:id="n1"/>improbo labore<anchor xml:id="n1e"/>, quo pro gloria nostri ordinis ita intense desudat. Ego non fraudabo zelosum desiderium, sed <anchor xml:id="n2"/>curabo lustrari nostros libros et in iis inventa iuxta specificationem notabo et transmittam<anchor xml:id="n2e"/>. </ab>
          <ab resp="#editor" xml:id="seg2">Non sine gaudio legi <anchor xml:id="n3"/>catalogum librorum nostrorum patrum sancti Mauri et Vitoni<anchor xml:id="n3e"/>, quorum partem, sed exiguam, habeo. <anchor xml:id="n4"/>Redeunte pace<anchor xml:id="n4e"/> Germanico-Gallica felices erimus, copiam nacti horum operum comparandorum. </ab>
-         <ab resp="#editor" xml:id="seg3">Et siquidem plurimum reverenda dominatio plurimas bibliothecas lustrata fuerit, forte in manus venit nostri Caramuelis <anchor xml:id="n5"/>Benedictus christiformis<anchor xml:id="n5e"/> in folio regali, imaginibus cupro expressis suos conceptus explicantis. Qui liber ab authore dicitur editus Pragae anno <choice><sic>1747</sic><corr>1647</corr></choice>; quem tamen nullibi indagare <add place="above">potui</add>. Quibus me pristino affectui et sacris precibus enixe commendo</ab>
+         <ab resp="#editor" xml:id="seg3">Et siquidem plurimum reverenda dominatio plurimas bibliothecas lustrata fuerit, forte in manus venit nostri Caramuelis <anchor xml:id="n5"/>Benedictus christiformis<anchor xml:id="n5e"/> in folio regali, imaginibus cupro expressis suos conceptus explicantis. Qui liber ab authore dicitur editus Pragae anno <choice>
+               <sic>1747</sic>
+               <corr>1647</corr>
+            </choice>; quem tamen nullibi indagare <add place="above">potui</add>. Quibus me pristino affectui et sacris precibus enixe commendo</ab>
          <closer>Plurimum reverendae et clarissimae dominationis servus obligatissimus Albertus abbas manu propria.</closer>
          <closer>Sancti Pauli in Carinthia 14. Aprilis 1714.</closer>
       </body>

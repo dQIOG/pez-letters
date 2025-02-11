@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="886" xml:id="pez-0886">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an Johann Georg Eckhart. 1718-01-20. Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">886</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Amtliches Regest am oberen Blattrand von 1r: <orig>Petitio patris Petzii pro communicando Bennone nec non quibusdam aliis de scriptoribus Benedictinis.</orig> Unterstreichungen (bis auf <orig>manuscripta</orig> in Abschnitt &lt;3&gt;) wohl von der Hand des hannoverschen Beamten, der die 1723 konfiszierte Korrespondenz GEs auf Belege für Handschriftenversendungen durchsah.
             </note>
@@ -45,10 +56,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -70,65 +82,67 @@
                <ptr type="mentions" target="letter:870"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e228">Acta eruditorum. Leipzig 1682–1732</term>
-            <term ref="index:d14380e2665">Anonyme Werke ; Weißenburger Katechismus ; Incerti monachi Weissenburgensis Catechesis
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e228">Acta eruditorum. Leipzig 1682–1732</term>
+               <term ref="index:d14380e2665">Anonyme Werke ; Weißenburger Katechismus ; Incerti monachi Weissenburgensis Catechesis
          Theotisca seculo IX. conscripta, nunc vero primum edita, ut et monumenta catechetica varia
          Theotisca. Hg. von Johann Georg Eckhart. Hannover 1713</term>
-            <term ref="index:d14380e4170">Bayern, Bayern</term>
-            <term ref="index:d14380e5144">Benno, hl ; [Pseudo-Benno] Expositiones breves super Evangelia dominicalia. Ms</term>
-            <term ref="index:d14380e6597">Braunschweig-Lüneburg</term>
-            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
-            <term ref="index:d14380e9536">Deutschland, Deutsche , deutsch ; Althochdeutsch, mittelhochdeutsch</term>
-            <term ref="index:d14380e9895">Donau</term>
-            <term ref="index:d14380e10481">Eckhart, Johann Georg ; [Pseudonym A.I.] Diploma Caroli Magni imperatoris de scholis
+               <term ref="index:d14380e4170">Bayern, Bayern</term>
+               <term ref="index:d14380e5144">Benno, hl ; [Pseudo-Benno] Expositiones breves super Evangelia dominicalia. Ms</term>
+               <term ref="index:d14380e6597">Braunschweig-Lüneburg</term>
+               <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+               <term ref="index:d14380e9536">Deutschland, Deutsche , deutsch ; Althochdeutsch, mittelhochdeutsch</term>
+               <term ref="index:d14380e9895">Donau</term>
+               <term ref="index:d14380e10481">Eckhart, Johann Georg ; [Pseudonym A.I.] Diploma Caroli Magni imperatoris de scholis
          Osnabrugensis ecclesiae Graecis et Latinis critice expensum. S. l. 1717</term>
-            <term ref="index:d14380e10559">Eckhart, Johann Georg ; -Welfengeschichte Begonnen von Gottfried Wilhelm
+               <term ref="index:d14380e10559">Eckhart, Johann Georg ; -Welfengeschichte Begonnen von Gottfried Wilhelm
          Leibniz</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
          Epistola ad virum clarissimum Joannem Burchardum Menkenium Lipsiensem de Conspectu insignis
          codicis diplomatico-historico-epistolaris ex ἀυτογράφῳ, ut quidem videtur, dato ad Actorum
          eruditorum Lipsiensium collectores a reverendo patre Bernardo Pez Benedictino et
          bibliothecario Mellicensi in Austria. Verona [Wien] 1717</term>
-            <term ref="index:d14380e14971">Georg I</term>
-            <term ref="index:d14380e16419">Gretser, Jakob ; Divi Bambergenses. Sanctus Henricus imperator, sancta Kunegundis
+               <term ref="index:d14380e14971">Georg I</term>
+               <term ref="index:d14380e16419">Gretser, Jakob ; Divi Bambergenses. Sanctus Henricus imperator, sancta Kunegundis
          imperatrix, sanctus Otho episcopus. Ingolstadt 1611</term>
-            <term ref="index:d14380e17113">Hannover ; Kurfürstliche Bibliothek ; Ratram von Corbie, Liber de anima. Abschrift
+               <term ref="index:d14380e17113">Hannover ; Kurfürstliche Bibliothek ; Ratram von Corbie, Liber de anima. Abschrift
          durch einen Mauriner. Ms</term>
-            <term ref="index:d14380e19089">Hugo von Bologna ; Rationes dictandi. Ms. Wolfenbüttel</term>
-            <term ref="index:d14380e21150">Karl III., „der Dicke“ ; Urkunden</term>
-            <term ref="index:d14380e23973">Latein</term>
-            <term ref="index:d14380e24317">Leipzig</term>
-            <term ref="index:d14380e32535">Paschasius Radbertus, hl ; De fide, spe et charitate ; Ms. Corvey ; Abschrift für
+               <term ref="index:d14380e19089">Hugo von Bologna ; Rationes dictandi. Ms. Wolfenbüttel</term>
+               <term ref="index:d14380e21150">Karl III., „der Dicke“ ; Urkunden</term>
+               <term ref="index:d14380e23973">Latein</term>
+               <term ref="index:d14380e24317">Leipzig</term>
+               <term ref="index:d14380e32535">Paschasius Radbertus, hl ; De fide, spe et charitate ; Ms. Corvey ; Abschrift für
          Johann Wilhelm Göbel. Ms</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e33485">Pez, Bernhard ; Conspectus insignis Codicis diplomatico-historico-epistularis Udalrici
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e33485">Pez, Bernhard ; Conspectus insignis Codicis diplomatico-historico-epistularis Udalrici
          Babenbergensis. In: Acta eruditorum</term>
-            <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
+               <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
          dominum dominum Joannem Benedictum Gentilottum ab Engelsbrunn pro editione integri
          syntagmatis diplomatico-historico-epistolaris Udalrici Babenbergensis ex codice Zwetlensi,
          impugnata a viro clarissimo Angelo Fonteio Veronensi. Augsburg 1717</term>
-            <term ref="index:d14380e34524">Pez, Bernhard ; Selbstwahrnehmung als Mönch</term>
-            <term ref="index:d14380e33988">Pez, Bernhard ; Bd. 1 ; Darin: Paschasius Radbertus, De fide, spe et charitate</term>
-            <term ref="index:d14380e34102">Pez, Bernhard ; Bezeichnung als „ Spicilegium“</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e34754">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
+               <term ref="index:d14380e34524">Pez, Bernhard ; Selbstwahrnehmung als Mönch</term>
+               <term ref="index:d14380e33988">Pez, Bernhard ; Bd. 1 ; Darin: Paschasius Radbertus, De fide, spe et charitate</term>
+               <term ref="index:d14380e34102">Pez, Bernhard ; Bezeichnung als „ Spicilegium“</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e34754">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
          Leipzig–Regensburg 1721–1745</term>
-            <term ref="index:d14380e36533">Ratram von Corbie ; Liber de anima</term>
-            <term ref="index:d14380e36547">Ratram von Corbie ; Liber de anima ; Abschrift durch einen Mauriner. Ms</term>
-            <term ref="index:d14380e39952">Schrader, Kilian</term>
-            <term ref="index:d14380e42380">Tegernsee ; Bibliothek ; Tegernseer Briefsammlung des 12. Jhs</term>
-            <term ref="index:d14380e43552">Udalrich von Bamberg ; Codex Udalrici</term>
-            <term ref="index:d14380e45166">Welf VI</term>
-            <term ref="index:d14380e45182">Welf VI ; Briefe von und an ihn. Ms. Tegernsee</term>
-            <term ref="index:d14380e45198">Welf VI ; Briefe von und an ihn. Ms. Tegernsee ; Abschrift von Bernhard Pez. Ms</term>
-            <term ref="index:d14380e45213">Welfen</term>
-            <term ref="index:d14380e46479">Wolfenbüttel ; Herzog-August-Bibliothek ; [Pseudo-Benno von Meißen,] Expositiones
+               <term ref="index:d14380e36533">Ratram von Corbie ; Liber de anima</term>
+               <term ref="index:d14380e36547">Ratram von Corbie ; Liber de anima ; Abschrift durch einen Mauriner. Ms</term>
+               <term ref="index:d14380e39952">Schrader, Kilian</term>
+               <term ref="index:d14380e42380">Tegernsee ; Bibliothek ; Tegernseer Briefsammlung des 12. Jhs</term>
+               <term ref="index:d14380e43552">Udalrich von Bamberg ; Codex Udalrici</term>
+               <term ref="index:d14380e45166">Welf VI</term>
+               <term ref="index:d14380e45182">Welf VI ; Briefe von und an ihn. Ms. Tegernsee</term>
+               <term ref="index:d14380e45198">Welf VI ; Briefe von und an ihn. Ms. Tegernsee ; Abschrift von Bernhard Pez. Ms</term>
+               <term ref="index:d14380e45213">Welfen</term>
+               <term ref="index:d14380e46479">Wolfenbüttel ; Herzog-August-Bibliothek ; [Pseudo-Benno von Meißen,] Expositiones
          breves super Evangelia dominicalia. Ms</term>
-            <term ref="index:d14380e46494">Wolfenbüttel ; Herzog-August-Bibliothek ; Hugo von Bologna, Rationes dictandi prosaice.
-         Ms</term></keywords></textClass>
+               <term ref="index:d14380e46494">Wolfenbüttel ; Herzog-August-Bibliothek ; Hugo von Bologna, Rationes dictandi prosaice.
+         Ms</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">BP hat sich über die Maßen über GEs Brief <ref type="letter" target="letter:870">870</ref> gefreut, in
                dem dieser Interesse an BPs Angebot bekundet hat. So übermittelt BP die Briefe <rs ref="index:d14380e45166">Herzog Welfs VI.</rs> (aus der <rs ref="index:d14380e42380">Tegernseer
@@ -167,7 +181,7 @@
                   Theotisca</rs>“ lieben.</p>
             <p corresp="#seg5">In einem Postskriptum beteuert BP, die Handschrift mit den (angeblichen) Werken Bennos sorgsam hüten und
                alsbald zurücksenden zu wollen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -175,7 +189,8 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>tesseram ... offero</mentioned>
             <p>Bei dem genannten Codex handelt es sich um die
-                  Handschrift BStB München, clm 19411; vgl. <ref type="letter" target="letter:862">862</ref> <ref target="letter:862#seg2">2</ref>.
+                  Handschrift BStB München, clm 19411; vgl. <ref type="letter" target="letter:862">862</ref>
+               <ref target="letter:862#seg2">2</ref>.
                   In BPs früherer Ankündigung ist von dreizehn Briefen die Rede. In dem auf den
                   Sammlungen von Gottfried Wilhelm Leibniz und GE zur Welfengeschichte fußenden, von
                   Christian Ludwig Scheidt zum Druck gebrachten Werk „Origines Guelficae“ erschienen
@@ -202,7 +217,8 @@
                   enthalten gewesen wäre, ist kaum anzunehmen, zumal er keinen nachweisbaren Kontakt
                   mit diesem Kloster hatte und auch auf seiner bayerischen Bibliotheksreise nicht
                   dort gewesen war. Für Leibniz hatte dagegen Kilian Schrader schon 1709 in
-                  Steingaden geforscht: vgl. <ref type="letter" target="letter:1024">1024</ref> <ref target="letter:1024#seg2">2</ref>. Da heute weder
+                  Steingaden geforscht: vgl. <ref type="letter" target="letter:1024">1024</ref>
+               <ref target="letter:1024#seg2">2</ref>. Da heute weder
                   in Melk noch in Hannover die betreffenden Abschriften erhalten zu sein scheinen,
                   lassen sich die Vorgänge jedoch nicht mit letzter Sicherheit aufklären. –
                   Sicherlich beabsichtigte BP bei der Übermittlung der Briefabschriften an GE,
@@ -218,16 +234,19 @@
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned>Schraderus</mentioned>
             <p> Zur Forschungsreise Kilian Schraders von 1709, die ihn
-                  nach München, Freising und Regensburg führte, vgl. <rs type="bibl" ref="bibl:16024">Eckert, Scriptores</rs> 34f.; <rs type="bibl" ref="bibl:19042">Reese, Historie</rs> 182–185; sowie <ref type="letter" target="letter:12">12</ref> <ref target="letter:12#seg3">3</ref>. Die
+                  nach München, Freising und Regensburg führte, vgl. <rs type="bibl" ref="bibl:16024">Eckert, Scriptores</rs> 34f.; <rs type="bibl" ref="bibl:19042">Reese, Historie</rs> 182–185; sowie <ref type="letter" target="letter:12">12</ref>
+               <ref target="letter:12#seg3">3</ref>. Die
                   Bemerkung BPs, eine von diesem vergebene Belohnung selbst gesehen zu haben, könnte
                   sich auf die an Karl Meichelbeck ergangene Medaille beziehen, welche dieser
-                  vermutlich bei BPs Aufenthalt in Benediktbeuern gezeigt hatte: vgl. <ref type="letter" target="letter:1024">1024</ref> <ref target="letter:1024#seg2">2</ref>.</p>
+                  vermutlich bei BPs Aufenthalt in Benediktbeuern gezeigt hatte: vgl. <ref type="letter" target="letter:1024">1024</ref>
+               <ref target="letter:1024#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>subsecivarum horarum</mentioned>
             <p> Aufgrund des unmittelbar folgenden Hinweises
                   auf alt- und mittelhochdeutsche Sprachdenkmäler ist hier an GEs germanistische
-                  Studien zu denken, die er im Vorbrief erwähnt hatte: vgl. <ref type="letter" target="letter:870">870</ref> <ref target="letter:870#seg6">6</ref>. Die Ähnlichkeit des verwendeten Ausdrucks zum Titel von
+                  Studien zu denken, die er im Vorbrief erwähnt hatte: vgl. <ref type="letter" target="letter:870">870</ref>
+               <ref target="letter:870#seg6">6</ref>. Die Ähnlichkeit des verwendeten Ausdrucks zum Titel von
                   GEs erst 1721 zu Braunschweig erschienener Gedichtsammlung „Poetische
                   nebenstunden“ dürfte zufällig sein. Allerdings scheint bereits Leibniz eine
                   Vorliebe für diesen Topos gehabt zu haben: vgl. <rs type="bibl" ref="bibl:18146">Marri–Lieber–Weyers, Muratori und Deutschland</rs> 57.</p>
@@ -248,7 +267,8 @@
                   36f. Nr. I/19–21, 103f. Nr. I/115. Seine Vorlage war eine für Leibniz angefertigte
                   Abschrift nach dem Exemplar der Wiener Hofbibliothek: heute ÖNB, Cod. 398. Zur
                   Entstehung dieser Kopie, die heute nicht erhalten zu sein scheint, vgl. <rs type="bibl" ref="bibl:15152">Benz, Zwischen Tradition und Kritik</rs> 99. Von
-                  ihrer Existenz war BP unterrichtet: vgl. <ref type="letter" target="letter:719">719</ref> <ref target="letter:719#seg3">3</ref>.
+                  ihrer Existenz war BP unterrichtet: vgl. <ref type="letter" target="letter:719">719</ref>
+               <ref target="letter:719#seg3">3</ref>.
                   Für Nachforschungen zum möglichen Verbleib der Abschrift sei Nora Gädeke
                   (Hannover) und Klaus Naß (München) gedankt. – In der Tat war die fragliche Form
                   des Kaisertitels erst seit Ludwig dem Frommen üblich: <rs type="bibl" ref="bibl:20422">Wolfram, Herrschertitel</rs> 81. Zur Intitulatio in den
@@ -274,7 +294,8 @@
                   oder „Proradbertus“, die auf einen Abschreibfehler in der Corveyer Überlieferung
                   zurückgeht. Die Nennung dieses Namens war unter anderen von Mabillon beibehalten
                   worden: Mabillon, Annales OSB 3 54. Die Frage war von BP bereits an Ansgar Grass
-                  aus Corvey gerichtet worden: vgl. <ref type="letter" target="letter:134">134</ref> <ref target="letter:134#seg5">5</ref>. In der
+                  aus Corvey gerichtet worden: vgl. <ref type="letter" target="letter:134">134</ref>
+               <ref target="letter:134#seg5">5</ref>. In der
                   Vorrede seiner Edition berichtete BP, er habe in diesem Punkt bis zum Erhalt der
                   vollständigen Abschrift gezögert, die ihn von der Verfasserschaft des Paschasius
                   Radbertus überzeugte, und bot paläographische Konjekturen zur Aufklärung des
@@ -303,8 +324,13 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Celeberrimo ac eruditissimo viro domino Joanni Georgio Eccardo pater Bernardus Pez salutem dicit.</opener>
-         <ab resp="#editor" xml:id="seg1">Dici non potest, quantae mihi <choice><sic>voluptatique</sic><corr>voluptati</corr></choice> fuerint tuae litterae, quibus significasti optimam meam erga te voluntatem non tantum tibi pergratam, sed magnorum etiam lucrorum (litterariorum puto) mihi conciliatricem fore. Itaque en ecce! <anchor xml:id="n1"/>tesseram et argumentum sincerissimi erga te immortaliaque studia tua animi mei, epistolas Guelfonis VI., omnium, ut equidem existimo, eius nominis principum maximi, quas ex coaevo codice mea manu accurate transcriptas tibi Brunswicensique gloriae offero<anchor xml:id="n1e"/>. Mercedem aliam non peto quam constantem mei amorem. Etsi enim non ignorem, immo hisce oculis meis nuper in Boiaria viderim, quam largo praemio clarissimus dominus <anchor xml:id="n2"/>Schraderus<anchor xml:id="n2e"/> vel solam nominis Guelfici antiquis litteris exarati lectionem redemerit; ego tamen monachus nempe, nec hoc nomine dignus, isthaec tanti non facio, quanti tui unius erga me benevolentiam. Caeterum ne id in serenissimi et re vera maximi principis tui iniuriam accipias, rogo. Omnia apud me summo loco sunt, quaecunque a tantae prudentiae ac munificentiae monarcha proficiscuntur. Quae scripsi, id duntaxat volunt, ne me <pb n="1v"/> magis spe regii mnemosyni quam divinae gentis illius cultu ad suscipiendam hanc opellam crederes incitatum. Caeterum si quid gratiarum regiarum in sinum meum fortuna attulerit, id crede sodalibus meis praeclarorum ausuum causam ipsisque meis superioribus egregia isthaec studia uberius fovendi occasionem praebiturum. <add place="left-margin"><witDetail wit="#A">mit Verweiszeichen am linken Blattrand senkrecht</witDetail>Iterum moneo te, vir eruditissime, ne me putes isthaec scribere alio animo, quam ut cultum meum erga summum regem contester. Caeterum monachus sum, nullius nisi librorum indigeo</add>. </ab>
+         <opener>
+            <pb n="1r"/> Celeberrimo ac eruditissimo viro domino Joanni Georgio Eccardo pater Bernardus Pez salutem dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Dici non potest, quantae mihi <choice>
+               <sic>voluptatique</sic>
+               <corr>voluptati</corr>
+            </choice> fuerint tuae litterae, quibus significasti optimam meam erga te voluntatem non tantum tibi pergratam, sed magnorum etiam lucrorum (litterariorum puto) mihi conciliatricem fore. Itaque en ecce! <anchor xml:id="n1"/>tesseram et argumentum sincerissimi erga te immortaliaque studia tua animi mei, epistolas Guelfonis VI., omnium, ut equidem existimo, eius nominis principum maximi, quas ex coaevo codice mea manu accurate transcriptas tibi Brunswicensique gloriae offero<anchor xml:id="n1e"/>. Mercedem aliam non peto quam constantem mei amorem. Etsi enim non ignorem, immo hisce oculis meis nuper in Boiaria viderim, quam largo praemio clarissimus dominus <anchor xml:id="n2"/>Schraderus<anchor xml:id="n2e"/> vel solam nominis Guelfici antiquis litteris exarati lectionem redemerit; ego tamen monachus nempe, nec hoc nomine dignus, isthaec tanti non facio, quanti tui unius erga me benevolentiam. Caeterum ne id in serenissimi et re vera maximi principis tui iniuriam accipias, rogo. Omnia apud me summo loco sunt, quaecunque a tantae prudentiae ac munificentiae monarcha proficiscuntur. Quae scripsi, id duntaxat volunt, ne me <pb n="1v"/> magis spe regii mnemosyni quam divinae gentis illius cultu ad suscipiendam hanc opellam crederes incitatum. Caeterum si quid gratiarum regiarum in sinum meum fortuna attulerit, id crede sodalibus meis praeclarorum ausuum causam ipsisque meis superioribus egregia isthaec studia uberius fovendi occasionem praebiturum. <add place="left-margin">
+               <witDetail wit="#A">mit Verweiszeichen am linken Blattrand senkrecht</witDetail>Iterum moneo te, vir eruditissime, ne me putes isthaec scribere alio animo, quam ut cultum meum erga summum regem contester. Caeterum monachus sum, nullius nisi librorum indigeo</add>. </ab>
          <ab resp="#editor" xml:id="seg2">Porro omnia satis superque compensabunt opuscula Benonis, quae avidissime exspecto. Quod si etiam quaedam de scriptoribus Benedictinis, quorum opuscula manuscripta in opulentissimis vestratibus bibliothecis extant, notatis annis, quibus singuli floruerunt etc., mecum communicaveris, tunc demum totus triumphabo. Non ero segnis in redhibendis hisce favoribus. Omnia, quaecunque aut amplissimae historiae tuae aut <anchor xml:id="n3"/>subsecivarum horarum<anchor xml:id="n3e"/> studiis, quae non sine maxima patriae gloria excolis, accommodata novero, in tua potestate habebis. Habeo quaedam rara in lingua, ut aiunt, Theodisca, de quibus proxime plura. </ab>
          <ab resp="#editor" xml:id="seg3">Crisis diplomatis <sic>Osnaburgensis</sic> exquisita est. Sed heus tu, vir summe! Quid mihi <anchor xml:id="n4"/>Udalrici Babenbergensis Codicem et quidem Carolina ex illo diplomata tanquam manuscripta citas<anchor xml:id="n4e"/>? Ignorasti una mecum ea iam dudum<anchor xml:id="n5"/> a Gretsero in Appendice ad Divos Babenbergenses edita<anchor xml:id="n5e"/> fuisse? Ergo non solus ego nuper vapulavi <anchor xml:id="n6"/>Angelo Fonteio<anchor xml:id="n6e"/>, qui contra huius Codicis Conspectum mensi Januario 1717 Actis Latinis eruditorum Lipsiensibus insertum<note place="foot" xml:id="d3e49758">Mit Verweiszeichen am unteren Blattrand eingefügt.</note> singularem Epistolam edidit. Huic iam opposui responsum ad <pb n="2r"/> te proxime perferendum.<anchor xml:id="n7"/> Lipsiae hac aestate praelo submittam priores tomos Novi spicilegii<anchor xml:id="n7e"/>, cui innumera hactenus inedita monumenta in nostris ad Danubium bibliothecis reperta inseram. O si tua opera<note type="annotation" xml:id="d3e49763">Mit Verweiszeichen am unteren Blattrand von der Hand des hannoverschen Beamten erläutert: <orig>Dieses manuscriptum hat pater Petz den 20. October 1718 erhalten, wie sein eigenhändiger brief, worin besonders vorgenannten Radberto beschreibet, ausweist</orig>.</note> Ratramni libellum De anima et Ratbertum (dubium illum) De fide, spe et charitate nanciscar! Quam egregie illa hoc opus instruent! Sed non sum ego tam inhumanus, ut tanta in ipso amicitiae adytu abs te contendam. </ab>
          <ab resp="#editor" xml:id="seg4">Reverendus dominus pater Hieronymus Pez, germanus et contubernalis meus, qui in adornandis Rerum Austriacarum scriptoribus <pb n="2v"/> perdius ac pernox est, te humanissima salute impertit obnixeque rogat, ut, si quae in hoc suum argumentum apta tuae curae commendata habeas, ea sibi indicare ne dedigneris. Vale, decus Germaniae nostrae, ac nos tui cupidissimos et vel ob unam editam <anchor xml:id="n8"/>Catechesin Theodiscam<anchor xml:id="n8e"/> tui amantissimos amare perge.</ab>

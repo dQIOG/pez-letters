@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="922" xml:id="pez-0922">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Leopold Wydemann an Bernhard Pez. 1718-03-18. Gaming.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">922</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -73,76 +86,78 @@
                <ptr type="next" target="letter:928"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e458">Aggsbach</term>
-            <term ref="index:d14380e480">Aggsbach ; *Priorenkatalog</term>
-            <term ref="index:d14380e585">Ägypten</term>
-            <term ref="index:d14380e854">Albrecht II ; Urkunde für die Kartause Gaming 1352</term>
-            <term ref="index:d14380e1968">Anonyme Werke ; Annales Mellicenses. Ms. Melk</term>
-            <term ref="index:d14380e8225">Cilli</term>
-            <term ref="index:d14380e10233">Dupuy, François</term>
-            <term ref="index:d14380e11945">Fabri, Johann</term>
-            <term ref="index:d14380e11953">Fabri, Johann ; *Brief an Georg von Gaming 1529</term>
-            <term ref="index:d14380e12097">Ferdinand I</term>
-            <term ref="index:d14380e13185">Freising</term>
-            <term ref="index:d14380e13255">Freudenthal</term>
-            <term ref="index:d14380e13271">Freydank, Ulrich</term>
-            <term ref="index:d14380e13390">Friedrich II</term>
-            <term ref="index:d14380e13828">Gaming</term>
-            <term ref="index:d14380e14038">Gaming ; Bibliothek ; Georg von Gaming, Peregrinatio in Aegyptum. Ms</term>
-            <term ref="index:d14380e14080">Gaming ; Bibliothek ; Heinrich von Langenstein, Contra Telesphorum. Ms</term>
-            <term ref="index:d14380e14246">Gaming ; Bibliothek ; Katalog von 1565</term>
-            <term ref="index:d14380e14382">Gaming ; Bibliothek ; Telesphorus von Cosenza, De causis, statu, cognitione ac fine
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e458">Aggsbach</term>
+               <term ref="index:d14380e480">Aggsbach ; *Priorenkatalog</term>
+               <term ref="index:d14380e585">Ägypten</term>
+               <term ref="index:d14380e854">Albrecht II ; Urkunde für die Kartause Gaming 1352</term>
+               <term ref="index:d14380e1968">Anonyme Werke ; Annales Mellicenses. Ms. Melk</term>
+               <term ref="index:d14380e8225">Cilli</term>
+               <term ref="index:d14380e10233">Dupuy, François</term>
+               <term ref="index:d14380e11945">Fabri, Johann</term>
+               <term ref="index:d14380e11953">Fabri, Johann ; *Brief an Georg von Gaming 1529</term>
+               <term ref="index:d14380e12097">Ferdinand I</term>
+               <term ref="index:d14380e13185">Freising</term>
+               <term ref="index:d14380e13255">Freudenthal</term>
+               <term ref="index:d14380e13271">Freydank, Ulrich</term>
+               <term ref="index:d14380e13390">Friedrich II</term>
+               <term ref="index:d14380e13828">Gaming</term>
+               <term ref="index:d14380e14038">Gaming ; Bibliothek ; Georg von Gaming, Peregrinatio in Aegyptum. Ms</term>
+               <term ref="index:d14380e14080">Gaming ; Bibliothek ; Heinrich von Langenstein, Contra Telesphorum. Ms</term>
+               <term ref="index:d14380e14246">Gaming ; Bibliothek ; Katalog von 1565</term>
+               <term ref="index:d14380e14382">Gaming ; Bibliothek ; Telesphorus von Cosenza, De causis, statu, cognitione ac fine
          praesentis schismatis. Ms</term>
-            <term ref="index:d14380e14435">Gaming ; Brief des Gaminger Konvents an Generalkapitel und Generalsuperior Dupuy
+               <term ref="index:d14380e14435">Gaming ; Brief des Gaminger Konvents an Generalkapitel und Generalsuperior Dupuy
          1508</term>
-            <term ref="index:d14380e14461">Gaming ; *Urkunden von1514, in denen Georg von Gaming als Vikar aufscheint</term>
-            <term ref="index:d14380e15020">Georg von Gaming</term>
-            <term ref="index:d14380e15034">Georg von Gaming ; Peregrinatio in Aegyptum Martini Baumgarten ; Ms. Gaming</term>
-            <term ref="index:d14380e15056">Georg von Gaming ; Peregrinatio in Aegyptum Martini Baumgarten ; Ms. Gaming ; Abschrift
+               <term ref="index:d14380e14461">Gaming ; *Urkunden von1514, in denen Georg von Gaming als Vikar aufscheint</term>
+               <term ref="index:d14380e15020">Georg von Gaming</term>
+               <term ref="index:d14380e15034">Georg von Gaming ; Peregrinatio in Aegyptum Martini Baumgarten ; Ms. Gaming</term>
+               <term ref="index:d14380e15056">Georg von Gaming ; Peregrinatio in Aegyptum Martini Baumgarten ; Ms. Gaming ; Abschrift
          von Leopold Wydemann</term>
-            <term ref="index:d14380e16218">Graz</term>
-            <term ref="index:d14380e17525">Heiliges Land</term>
-            <term ref="index:d14380e17784">Heinrich von Langenstein ; Contra Telesphorum</term>
-            <term ref="index:d14380e17796">Heinrich von Langenstein ; Contra Telesphorum ; Ms. Gaming</term>
-            <term ref="index:d14380e17808">Heinrich von Langenstein ; Contra Telesphorum ; Ms. Gaming ; Abschrift von Sebastian
+               <term ref="index:d14380e16218">Graz</term>
+               <term ref="index:d14380e17525">Heiliges Land</term>
+               <term ref="index:d14380e17784">Heinrich von Langenstein ; Contra Telesphorum</term>
+               <term ref="index:d14380e17796">Heinrich von Langenstein ; Contra Telesphorum ; Ms. Gaming</term>
+               <term ref="index:d14380e17808">Heinrich von Langenstein ; Contra Telesphorum ; Ms. Gaming ; Abschrift von Sebastian
          Treger. Ms</term>
-            <term ref="index:d14380e18106">Hermann</term>
-            <term ref="index:d14380e20106">Jerusalem</term>
-            <term ref="index:d14380e21396">Kartäuser</term>
-            <term ref="index:d14380e21460">Kartäuser ; Generalkapitel</term>
-            <term ref="index:d14380e21625">Katharina, hl ; Reliquien</term>
-            <term ref="index:d14380e23305">Kufstein</term>
-            <term ref="index:d14380e25258">Ludolf von Sachsen</term>
-            <term ref="index:d14380e26341">Maring, Bartholomäus Paulinus</term>
-            <term ref="index:d14380e27168">Matthias</term>
-            <term ref="index:d14380e28052">Meinrad</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e28344">Melk ; Bibliothek ; Annales Mellicenses Ms</term>
-            <term ref="index:d14380e31371">Osmanisches Reich</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
+               <term ref="index:d14380e18106">Hermann</term>
+               <term ref="index:d14380e20106">Jerusalem</term>
+               <term ref="index:d14380e21396">Kartäuser</term>
+               <term ref="index:d14380e21460">Kartäuser ; Generalkapitel</term>
+               <term ref="index:d14380e21625">Katharina, hl ; Reliquien</term>
+               <term ref="index:d14380e23305">Kufstein</term>
+               <term ref="index:d14380e25258">Ludolf von Sachsen</term>
+               <term ref="index:d14380e26341">Maring, Bartholomäus Paulinus</term>
+               <term ref="index:d14380e27168">Matthias</term>
+               <term ref="index:d14380e28052">Meinrad</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e28344">Melk ; Bibliothek ; Annales Mellicenses Ms</term>
+               <term ref="index:d14380e31371">Osmanisches Reich</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
          1721–1729</term>
-            <term ref="index:d14380e34063">Pez, Bernhard ; Bd. 2 ; Darin: Georg von Gaming, Peregrinatio in Aegyptum</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e35400">Podolien</term>
-            <term ref="index:d14380e35438">Polen</term>
-            <term ref="index:d14380e36204">Quaresmio, Francesco ; Historica, theologica et moralis Terrae Sanctae elucidatio. 2
+               <term ref="index:d14380e34063">Pez, Bernhard ; Bd. 2 ; Darin: Georg von Gaming, Peregrinatio in Aegyptum</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e35400">Podolien</term>
+               <term ref="index:d14380e35438">Polen</term>
+               <term ref="index:d14380e36204">Quaresmio, Francesco ; Historica, theologica et moralis Terrae Sanctae elucidatio. 2
          Bde. Antwerpen 1639</term>
-            <term ref="index:d14380e38463">Russland</term>
-            <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
-            <term ref="index:d14380e40855">Sigismund ; Urkunde zur Erhebung von Friedrich II. und Ulrich II. von Cilli in den
+               <term ref="index:d14380e38463">Russland</term>
+               <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
+               <term ref="index:d14380e40855">Sigismund ; Urkunde zur Erhebung von Friedrich II. und Ulrich II. von Cilli in den
          Fürstenstand 1436</term>
-            <term ref="index:d14380e41041">Sinai ; Katharinenkloster</term>
-            <term ref="index:d14380e41404">Steiermark, Steirer</term>
-            <term ref="index:d14380e41556">Steyerer, Anton</term>
-            <term ref="index:d14380e42473">Telesphorus von Cosenza ; De causis, statu, cognitione ac fine praesentis schismatis ;
+               <term ref="index:d14380e41041">Sinai ; Katharinenkloster</term>
+               <term ref="index:d14380e41404">Steiermark, Steirer</term>
+               <term ref="index:d14380e41556">Steyerer, Anton</term>
+               <term ref="index:d14380e42473">Telesphorus von Cosenza ; De causis, statu, cognitione ac fine praesentis schismatis ;
          Ms. Gaming</term>
-            <term ref="index:d14380e43274">Treger, Sebastian</term>
-            <term ref="index:d14380e43483">Türken</term>
-            <term ref="index:d14380e43687">Ulrich II</term>
-            <term ref="index:d14380e45571">Wien</term></keywords></textClass>
+               <term ref="index:d14380e43274">Treger, Sebastian</term>
+               <term ref="index:d14380e43483">Türken</term>
+               <term ref="index:d14380e43687">Ulrich II</term>
+               <term ref="index:d14380e45571">Wien</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Endlich kann LW nun die <rs ref="index:d14380e15056">Abschrift der „Peregrinatio in Aegyptum“</rs> des
                <rs ref="index:d14380e15020">Georg von Gaming</rs> an BP schicken. Dieser soll sie durchsehen und, falls
@@ -234,14 +249,15 @@
             <p corresp="#seg7">BP soll Grüße an HP weitergeben und ihm mitteilen, dass von der bekannten Person (<rs ref="index:d14380e41556">Anton Steyerer</rs>) über hundert Urkunden der Grafen von <rs ref="index:d14380e8225">Cilli</rs> aufgefunden worden sind, darunter jenes <rs ref="index:d14380e40855">Diplom Kaiser Sigismunds</rs>, mit dem dieser Graf <rs ref="index:d14380e13390">Friedrich (II.) von Cilli</rs> und dessen Sohn – nicht Bruder – <rs ref="index:d14380e43687">Ulrich (II.)</rs> zu Fürsten erhob. Über die Gräfinnen von Cilli und über
                Bischof <rs ref="index:d14380e18106">Hermann</rs> von <rs ref="index:d14380e13185">Freising</rs>
                verbleiben hingegen Zweifel, die sich hoffentlich auch noch lösen lassen werden.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>Georgii ... Diarium</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:849">849</ref> <ref target="letter:849#seg2">2</ref> bis
+            <p>Vgl. <ref type="letter" target="letter:849">849</ref>
+               <ref target="letter:849#seg2">2</ref> bis
                   <ref target="letter:849#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
@@ -260,19 +276,21 @@
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
             <mentioned>in limine libri</mentioned>
-            <p><rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs>
+            <p>
+               <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs>
                   2/3 col. 457. </p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
             <mentioned>pagina 89</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 2/3 col. 549. </p>
+               <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 2/3 col. 549. </p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg2">
             <mentioned>pagina 103</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 2/3 col. 564. Dieselbe Stelle
-                  hatte LW schon früher angeführt: vgl. <ref type="letter" target="letter:855">855</ref> <ref target="letter:855#seg4">4</ref>.
+               <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 2/3 col. 564. Dieselbe Stelle
+                  hatte LW schon früher angeführt: vgl. <ref type="letter" target="letter:855">855</ref>
+               <ref target="letter:855#seg4">4</ref>.
                </p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
@@ -282,7 +300,7 @@
                   der von LW zuvor erwähnten „tabula catalogum exhibens“ aus demselben Jahr zu
                   identifizieren ist oder ob es sich dabei um separate Objekte handelte, auf denen
                   aber dieselben Informationen festgehalten waren: vgl. <ref type="letter" target="letter:849">849</ref>
-                  <ref target="letter:849#seg2">2</ref>.</p>
+               <ref target="letter:849#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg3">
             <mentioned> pater Matthias</mentioned>
@@ -294,7 +312,8 @@
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg3">
             <mentioned> Udalricum Freydanck</mentioned>
-            <p><rs type="bibl" ref="bibl:19172">Roßmann,
+            <p>
+               <rs type="bibl" ref="bibl:19172">Roßmann,
                      Aggsbach</rs> 2 231, 371; vgl. <rs type="bibl" ref="bibl:15640">Clark,
                      Villeneuve Necrology</rs> 2 219; <rs type="bibl" ref="bibl:17128">Hogg, The
                      Cross Stands</rs> 90; <rs type="bibl" ref="bibl:17804">Lampel, Aggsbach</rs>
@@ -302,13 +321,15 @@
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg3">
             <mentioned> Meinradi</mentioned>
-            <p><rs type="bibl" ref="bibl:19172">Roßmann, Aggsbach</rs> 2
+            <p>
+               <rs type="bibl" ref="bibl:19172">Roßmann, Aggsbach</rs> 2
                   231, 371; vgl. <rs type="bibl" ref="bibl:15640">Clark, Villeneuve Necrology</rs>
                   219; <rs type="bibl" ref="bibl:17804">Lampel, Aggsbach</rs> 357.</p>
          </note>
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg3">
             <mentioned> Maringii</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:849">849</ref> <ref target="letter:849#seg3">3</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:849">849</ref>
+               <ref target="letter:849#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg4">
             <mentioned>epistola originali</mentioned>
@@ -322,7 +343,7 @@
          <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg4">
             <mentioned>uti refert pagina 93</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 2/3 col. 554. Die Stelle, in
+               <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 2/3 col. 554. Die Stelle, in
                   der Georg von Ereignissen in Polen und Russland spricht, ist allerdings nicht
                   eindeutig so zu verstehen, dass er selbst dort gewesen sei.</p>
          </note>
@@ -377,7 +398,8 @@
             <mentioned> vi privilegiorum</mentioned>
             <p> LW meint wohl in erster Linie das Privileg Herzog
                   Albrechts II., in welchem der Kartause Gaming ihre Besitzungen und Freiheiten
-                  gesichert werden: HHStA Wien, Allgemeine Urkundenreihe, 1352 II 2; vgl. <ref type="letter" target="letter:898">898</ref> <ref target="letter:898#seg5">5</ref>. Diese Urkunde wurde von späteren Herrschern
+                  gesichert werden: HHStA Wien, Allgemeine Urkundenreihe, 1352 II 2; vgl. <ref type="letter" target="letter:898">898</ref>
+               <ref target="letter:898#seg5">5</ref>. Diese Urkunde wurde von späteren Herrschern
                   mehrmals bestätigt. </p>
          </note>
          <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg5">
@@ -393,7 +415,8 @@
          <note target="#range(right('n24'), left('n24e'))" n="24" anchored="false" corresp="#seg6">
             <mentioned>tractatum Contra Theolophorum</mentioned>
             <p>Vgl. <ref type="letter" target="letter:845">845</ref>
-                  <ref target="letter:845#seg10">10</ref>; zur Identifizierung Sebastian Tregers als Kopist vgl. <ref type="letter" target="letter:929">929</ref> <ref target="letter:929#seg2">2</ref>. </p>
+               <ref target="letter:845#seg10">10</ref>; zur Identifizierung Sebastian Tregers als Kopist vgl. <ref type="letter" target="letter:929">929</ref>
+               <ref target="letter:929#seg2">2</ref>. </p>
          </note>
          <note target="#range(right('n25'), left('n25e'))" n="25" anchored="false" corresp="#seg6">
             <mentioned>capitula vero ... addita</mentioned>
@@ -421,32 +444,59 @@
          <note target="#range(right('n28'), left('n28e'))" n="28" anchored="false" corresp="#seg7">
             <mentioned>literas ... repertas</mentioned>
             <p> Gemeint ist das Resultat der von Steyerer
-                  veranlassten Nachforschungen im Grazer Schatzarchiv: vgl. <ref type="letter" target="letter:898">898</ref> <ref target="letter:898#seg4">4</ref>. Die erhaltene Korrespondenz LWs mit Steyerer bietet
+                  veranlassten Nachforschungen im Grazer Schatzarchiv: vgl. <ref type="letter" target="letter:898">898</ref>
+               <ref target="letter:898#seg4">4</ref>. Die erhaltene Korrespondenz LWs mit Steyerer bietet
                   hierzu keine weiteren Nachrichten, da kein Brief LWs zwischen dem 19. Januar und
                   dem 13. August 1718 vorhanden ist.</p>
          </note>
          <note target="#range(right('n29'), left('n29e'))" n="29" anchored="false" corresp="#seg7">
             <mentioned> Sigismundi ... diploma</mentioned>
             <p>HHStA Wien, Allgemeine Urkundenreihe, 1436
-                  XI 30; vgl. <ref type="letter" target="letter:898">898</ref> <ref target="letter:898#seg4">4</ref>.</p>
+                  XI 30; vgl. <ref type="letter" target="letter:898">898</ref>
+               <ref target="letter:898#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n30'), left('n30e'))" n="30" anchored="false" corresp="#seg7">
             <mentioned> non fratrem</mentioned>
             <p> LW revidiert hier im Lichte der neu aufgetauchten
-                  Quelle die irrige Anschauung, die er in <ref type="letter" target="letter:880">880</ref> <ref target="letter:880#seg11">11</ref>
+                  Quelle die irrige Anschauung, die er in <ref type="letter" target="letter:880">880</ref>
+               <ref target="letter:880#seg11">11</ref>
                   ausführlich zu begründen versucht hatte.</p>
          </note>
       </listAnnotation>
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo et clarissimo in Christo patri Bernardo Pezio Mellicensi frater Leopoldus Wydeman Gemnicensis salutem plurimam dicit.</opener>
-         <ab resp="#editor" xml:id="seg1">Tandem <anchor xml:id="n1"/>Georgii Cartusiani Diarium<anchor xml:id="n1e"/> (sive <sic>Ephemeridas</sic>) nuper descriptum et revisum ad te, vir amicissime, occasione hac dirigo. Revidebis illud et, si editione iudicaveris dignum, luci publicae per opus tuum minime invidebis. Si aliter senseris, ad me ut remittas, peto. Mihi illud videtur stylo satis erudito et a quolibet facile intelligibili esse conscriptum, nec in eo esse, quod lectorem pium possit offendere, nisi forsitan, quod in libro tertio poetarum fabulas in quibusdam locis describendis adhibuerit. Hae etenim et mihi, qui in talibus me non exercui, inter describendum molestiam causarunt non parvam. Ast excusandus author, qui, dum sacratiora in locis istis non invenit, aut omnino tacere debuisset in lectoris taedium aut in eius gratiam addere, quae apud alios addita repererat. In reliquo attendendus erit lectori benevolo annus, quo author sacra loca revisit cum caeteris circumstantiis eiusdem temporis, cum author propria ductus experientia describat fere singula, prout ipse oculis suis vidit vel nonnulla a fide dignis audivit. Loco exempli poterunt esse, quae author de monasterio, sacris reliquiis et corpore beatae Catharinae<anchor xml:id="n2"/> pagina 44<anchor xml:id="n2e"/> et sequentibus refert, at<anchor xml:id="n3"/> a Quaresmio in Elucidatione Terrae Sanctae narrantur<anchor xml:id="n3e"/> aliter. Ab utroque tamen narrabuntur absque dubio vera, dum unus post alterum integro saeculo, et quod excurrit, loca eadem visitavit, mutatis intra hoc tempus plurimis circumstantiis, et quod caput est, mutato locorum domino, dum Aegyptiorum soldano oppresso <choice><sic>sus.</sic><corr>successit</corr></choice><anchor xml:id="n4"/> Turcarum tyrannus<anchor xml:id="n4e"/>. </ab>
-         <ab resp="#editor" xml:id="seg2">Author operis quod fuerit ludimagister vel iuventuti instituendae in oppido Kopfstein praefectus, ipse <anchor xml:id="n5"/>in limine libri<anchor xml:id="n5e"/> primi attestatur; sed id intelligendum de anno 1507, quo iter inchoavit<del ana="#after">et confecit.</del>, non de anno, quo Diarium perfecit. Hoc tardius fuisse completum colligitur ex verbis authoris <anchor xml:id="n6"/>pagina 89<anchor xml:id="n6e"/>, ubi inter caetera ait: et sane eo anno, quo ego ibi fui etc. Imo ab eo iam Cartusiano esse completum insinuant illa verba <anchor xml:id="n7"/>pagina 103<anchor xml:id="n7e"/>: Hanc domum venerabilis pater noster Ludolphus Cartusiensis etc., ubi et titulum in ordine consuetum, imo mandatum, venerabilis, Ludolpho tribuit et eum signanter patrem nostrum appellat. <pb n="1v"/> </ab>
-         <ab resp="#editor" xml:id="seg3">Accedit et <anchor xml:id="n8"/>catalogus librorum bibliothecae nostrae Gemnicensis anno 1565<anchor xml:id="n8e"/> factus, in quo inter caeteros libros etiam invenitur haec Ephemeris cuiusdam Cartusiensis sub litera E; et cum catalogus velut iunior praesupponat librum se antiquiorem, adest et ille, in cuius externo latere legitur tituli loco Ephemeris sive Diarium peregrinationis Terrae Sanctae cuiusdam Cartusiensis. Quo anno liber sit scriptus, etsi praecise non constet, id tamen certum est primo, quod scriptus sit ante annum 1532. Nam hoc anno obiit<anchor xml:id="n9"/> pater Matthias<anchor xml:id="n9e"/> et vicarius et sacrista Cartusiae nostrae, qui tertiam huius operis partem manu sua ad sublevandum authorem descripsit. Certum est secundo scriptum fuisse ante annum 1521, quia constat patrem<anchor xml:id="n10"/> Udalricum Freydanck<anchor xml:id="n10e"/> <choice><sic>Graeco.</sic><corr>Graecio</corr></choice>-Styrensem, qui et ipse unam partem operis descripsit, anno 1521 post mortem<anchor xml:id="n11"/> Meinradi<anchor xml:id="n11e"/> prioris Agsbacensis (qui die 15. Augusti anno 1521 obiit) factum esse priorem in Agsbach et post brevissimum regimen ibidem eodem anno die 25. Novembris mortuum<note type="annotation" xml:id="d3e55278"><orig>Certum est secundo ... mortuum</orig> mit Verweiszeichen am Briefende korrigiert aus <orig>Certum est [</orig>danach durchgestrichen ein Wort, vielleicht <orig>ferme] secundo scriptum fuisse ante annum [</orig>danach durchgestrichen <orig>153] 1522, quia constat patrem Udalricum, qui et ipse unam partem operis descripsit [</orig>danach unleserliche Streichung im Ausmaß von einer Zeile<orig>]</orig>. LW schreibt neben das Verweiszeichen am linken Blattrand von 1v <orig>Vide in fine epistolae sub eo signo.</orig> Er beginnt den korrigierten Absatz am Briefende mit den Worten <orig>Deleta superius ita legi oportebit</orig> und schließt mit <orig>Iterum vale.</orig></note>. Tertio certum est librum Gemnici et a Gemnicensibus esse descriptum, uti triplex vel quadruplex describentium (quorum duorum mihi character innotuit) manus satis indicat, et quidem in authoris praesentia, cui <choice><sic>scriptor.</sic><corr>descriptor</corr></choice> unus, quae male cum sociis descripserat, corrigenda commisit his non satis limatis versibus, quos parti a se descriptae subiunxit.</ab>
-         <ab resp="#editor" xml:id="seg4">Tandem nulli alteri quam Georgio Gemnicensi opus adiudicandum censeo. De quo haec certa: primo, quod anno 1508 nullus apud nos fuerit Georgius, uti patet ex <anchor xml:id="n12"/>epistola originali<anchor xml:id="n12e"/> ad reverendissimum patrem generalem eo anno scripta et a singulis subscripta, inter quos nullus Georgius. Secundo ex<anchor xml:id="n13"/> duplici instrumento<anchor xml:id="n13e"/>, quo constat Georgium anno 1514 fuisse Gemnici vicarium. Potuit ergo anno 1508 in fine anni aut sequenti fieri novitius et anno 1514 vicarius, maxime cum ipse maturioris fuisse aetatis non solum ex officio ludimagistri et itinere Ierosolymitano, sed etiam ex eo, <anchor xml:id="n14"/>uti refert pagina 93<anchor xml:id="n14e"/>, quod iam ante in Polonia, Russia et Polodonia fuerit, satis probetur. Sed neque inter annos tam paucos, id est annum 1508 et 1514, ad vicariatum venisset, nisi et praeter annorum maturitatem accessisset eruditio singularis, qualis in Diario utcunque relucet. Caeteroquin Georgius et vicarius et procurator Gemnici extitit successive, usque dum anno 1526 fieret prior in Agsbach et post triennium, id est anno 1529, etiam in Gemnico, tempore, uti<anchor xml:id="n15"/> Agsbacensis priorum series<anchor xml:id="n15e"/> loquitur, tribulationis. Anno 1534 a capitulo generali <anchor xml:id="n16"/>prior in Fränitz<anchor xml:id="n16e"/> designatur, ubi prioratum vel non acceptavit vel acceptatum intra annum deposuit. Anno 1542 in <anchor xml:id="n17"/>catalogo mortuorum<anchor xml:id="n17e"/> more sacri ordinis per provincias obitus eius tanquam professi et olim prioris in Gemnico mittitur, unde patet eum anno 1541 obiisse. <anchor xml:id="n18"/>Legi literas ad eum datas anno 1529 a Joanne Fabri<anchor xml:id="n18e"/> tunc Ferdinandi I. confessario, postea episcopo Viennensi, quibus <choice><sic>Georgius.</sic><corr>Georgium</corr></choice> et ad patientiam hortatur et simul admonet, ut mature contribuat partem eo anno, uti nosti<anchor xml:id="n19"/> ex Mellicensi Chronico<anchor xml:id="n19e"/>, rigide petitam, quin et indicat eidem Ferdinandi contra eum indignationem. Iustam contradicendi causam et non solvendi petita habuit Georgius noster<anchor xml:id="n20"/> vi privilegiorum<anchor xml:id="n20e"/>, quae Cartusiam nostram ab omni onere etiam in casu, quo reliqua per Austriam obligarentur, eximunt. Sed haec adveniente ex Hispania novo duce tunc neglecta, Cartusia ingens damnum passa, etiam supra caetera coenobia, etiam Mellicense, ut non mirum, quod Georgius prioratui Gemnicensi intra paucos menses cesserit. Sed haec per accidens, ut aliquam saltem, reverende pater, de Georgio haberes notitiam. </ab>
-         <ab resp="#editor" xml:id="seg5"> <add place="left-margin">In</add> epitaphiis regum <anchor xml:id="n21"/>pagina 72<anchor xml:id="n21e"/> videntur quaedam ex descriptoris incuria esse neglecta, quae <anchor xml:id="n22"/>ex Quaresmio in Elucidatione Terrae Sanctae pagina 482 suppleri<anchor xml:id="n22e"/> poterunt. <pb n="2v"/> </ab>
-         <ab resp="#editor" xml:id="seg6">Henrici de Hassia <anchor xml:id="n23"/>tractatum Contra Theolophorum<anchor xml:id="n23e"/> etiam mitto. Videtur author tractatum scripsisse uno ordine et contextu sine ulla capitulorum distinctione, capitula vero a descriptore operis <sic>videnter</sic> addita maioris claritatis causa. Opus enim sine capitulis, imo et sine novis lineis a capite inchoandis pergit, et capitula operi praemittuntur simul et coniunctim, quae ego, ut locis debitis (nam et loca haec per numeros in margine notantur) separatim scriberentur, suasi descriptori. Quae capite XVI. <anchor xml:id="n24"/>obscura referuntur verba<anchor xml:id="n24e"/>, et ego non intelligo, etiam habentur apud Theoloforum in opere suo, nisi quod loco stabit legendum videatur scabit, et migma vel migima<note place="foot" xml:id="d3e55348">LW versucht offensichtlich, das Schriftbild der Vorlage zu imitieren.</note> <choice><sic>interpretur.</sic><corr>interpretetur</corr></choice> mixtura. Ipsum vero<anchor xml:id="n25"/> opus Theolophori<anchor xml:id="n25e"/> mallem ad te, vir doctissime, mittere quam describere ob falsitates tunc forte occultas, nunc manifestas in eo contentas. Et hinc omnia eius libri folia cultro aut alio instrumento in parte superiori sunt per medium divisa, in signum vel prohibitionis vel falsitatum, quas continet. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverendo et clarissimo in Christo patri Bernardo Pezio Mellicensi frater Leopoldus Wydeman Gemnicensis salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Tandem <anchor xml:id="n1"/>Georgii Cartusiani Diarium<anchor xml:id="n1e"/> (sive <sic>Ephemeridas</sic>) nuper descriptum et revisum ad te, vir amicissime, occasione hac dirigo. Revidebis illud et, si editione iudicaveris dignum, luci publicae per opus tuum minime invidebis. Si aliter senseris, ad me ut remittas, peto. Mihi illud videtur stylo satis erudito et a quolibet facile intelligibili esse conscriptum, nec in eo esse, quod lectorem pium possit offendere, nisi forsitan, quod in libro tertio poetarum fabulas in quibusdam locis describendis adhibuerit. Hae etenim et mihi, qui in talibus me non exercui, inter describendum molestiam causarunt non parvam. Ast excusandus author, qui, dum sacratiora in locis istis non invenit, aut omnino tacere debuisset in lectoris taedium aut in eius gratiam addere, quae apud alios addita repererat. In reliquo attendendus erit lectori benevolo annus, quo author sacra loca revisit cum caeteris circumstantiis eiusdem temporis, cum author propria ductus experientia describat fere singula, prout ipse oculis suis vidit vel nonnulla a fide dignis audivit. Loco exempli poterunt esse, quae author de monasterio, sacris reliquiis et corpore beatae Catharinae<anchor xml:id="n2"/> pagina 44<anchor xml:id="n2e"/> et sequentibus refert, at<anchor xml:id="n3"/> a Quaresmio in Elucidatione Terrae Sanctae narrantur<anchor xml:id="n3e"/> aliter. Ab utroque tamen narrabuntur absque dubio vera, dum unus post alterum integro saeculo, et quod excurrit, loca eadem visitavit, mutatis intra hoc tempus plurimis circumstantiis, et quod caput est, mutato locorum domino, dum Aegyptiorum soldano oppresso <choice>
+               <sic>sus.</sic>
+               <corr>successit</corr>
+            </choice>
+            <anchor xml:id="n4"/> Turcarum tyrannus<anchor xml:id="n4e"/>. </ab>
+         <ab resp="#editor" xml:id="seg2">Author operis quod fuerit ludimagister vel iuventuti instituendae in oppido Kopfstein praefectus, ipse <anchor xml:id="n5"/>in limine libri<anchor xml:id="n5e"/> primi attestatur; sed id intelligendum de anno 1507, quo iter inchoavit<del ana="#after">et confecit.</del>, non de anno, quo Diarium perfecit. Hoc tardius fuisse completum colligitur ex verbis authoris <anchor xml:id="n6"/>pagina 89<anchor xml:id="n6e"/>, ubi inter caetera ait: et sane eo anno, quo ego ibi fui etc. Imo ab eo iam Cartusiano esse completum insinuant illa verba <anchor xml:id="n7"/>pagina 103<anchor xml:id="n7e"/>: Hanc domum venerabilis pater noster Ludolphus Cartusiensis etc., ubi et titulum in ordine consuetum, imo mandatum, venerabilis, Ludolpho tribuit et eum signanter patrem nostrum appellat. <pb n="1v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg3">Accedit et <anchor xml:id="n8"/>catalogus librorum bibliothecae nostrae Gemnicensis anno 1565<anchor xml:id="n8e"/> factus, in quo inter caeteros libros etiam invenitur haec Ephemeris cuiusdam Cartusiensis sub litera E; et cum catalogus velut iunior praesupponat librum se antiquiorem, adest et ille, in cuius externo latere legitur tituli loco Ephemeris sive Diarium peregrinationis Terrae Sanctae cuiusdam Cartusiensis. Quo anno liber sit scriptus, etsi praecise non constet, id tamen certum est primo, quod scriptus sit ante annum 1532. Nam hoc anno obiit<anchor xml:id="n9"/> pater Matthias<anchor xml:id="n9e"/> et vicarius et sacrista Cartusiae nostrae, qui tertiam huius operis partem manu sua ad sublevandum authorem descripsit. Certum est secundo scriptum fuisse ante annum 1521, quia constat patrem<anchor xml:id="n10"/> Udalricum Freydanck<anchor xml:id="n10e"/>
+            <choice>
+               <sic>Graeco.</sic>
+               <corr>Graecio</corr>
+            </choice>-Styrensem, qui et ipse unam partem operis descripsit, anno 1521 post mortem<anchor xml:id="n11"/> Meinradi<anchor xml:id="n11e"/> prioris Agsbacensis (qui die 15. Augusti anno 1521 obiit) factum esse priorem in Agsbach et post brevissimum regimen ibidem eodem anno die 25. Novembris mortuum<note type="annotation" xml:id="d3e55278">
+               <orig>Certum est secundo ... mortuum</orig> mit Verweiszeichen am Briefende korrigiert aus <orig>Certum est [</orig>danach durchgestrichen ein Wort, vielleicht <orig>ferme] secundo scriptum fuisse ante annum [</orig>danach durchgestrichen <orig>153] 1522, quia constat patrem Udalricum, qui et ipse unam partem operis descripsit [</orig>danach unleserliche Streichung im Ausmaß von einer Zeile<orig>]</orig>. LW schreibt neben das Verweiszeichen am linken Blattrand von 1v <orig>Vide in fine epistolae sub eo signo.</orig> Er beginnt den korrigierten Absatz am Briefende mit den Worten <orig>Deleta superius ita legi oportebit</orig> und schließt mit <orig>Iterum vale.</orig>
+            </note>. Tertio certum est librum Gemnici et a Gemnicensibus esse descriptum, uti triplex vel quadruplex describentium (quorum duorum mihi character innotuit) manus satis indicat, et quidem in authoris praesentia, cui <choice>
+               <sic>scriptor.</sic>
+               <corr>descriptor</corr>
+            </choice> unus, quae male cum sociis descripserat, corrigenda commisit his non satis limatis versibus, quos parti a se descriptae subiunxit.</ab>
+         <ab resp="#editor" xml:id="seg4">Tandem nulli alteri quam Georgio Gemnicensi opus adiudicandum censeo. De quo haec certa: primo, quod anno 1508 nullus apud nos fuerit Georgius, uti patet ex <anchor xml:id="n12"/>epistola originali<anchor xml:id="n12e"/> ad reverendissimum patrem generalem eo anno scripta et a singulis subscripta, inter quos nullus Georgius. Secundo ex<anchor xml:id="n13"/> duplici instrumento<anchor xml:id="n13e"/>, quo constat Georgium anno 1514 fuisse Gemnici vicarium. Potuit ergo anno 1508 in fine anni aut sequenti fieri novitius et anno 1514 vicarius, maxime cum ipse maturioris fuisse aetatis non solum ex officio ludimagistri et itinere Ierosolymitano, sed etiam ex eo, <anchor xml:id="n14"/>uti refert pagina 93<anchor xml:id="n14e"/>, quod iam ante in Polonia, Russia et Polodonia fuerit, satis probetur. Sed neque inter annos tam paucos, id est annum 1508 et 1514, ad vicariatum venisset, nisi et praeter annorum maturitatem accessisset eruditio singularis, qualis in Diario utcunque relucet. Caeteroquin Georgius et vicarius et procurator Gemnici extitit successive, usque dum anno 1526 fieret prior in Agsbach et post triennium, id est anno 1529, etiam in Gemnico, tempore, uti<anchor xml:id="n15"/> Agsbacensis priorum series<anchor xml:id="n15e"/> loquitur, tribulationis. Anno 1534 a capitulo generali <anchor xml:id="n16"/>prior in Fränitz<anchor xml:id="n16e"/> designatur, ubi prioratum vel non acceptavit vel acceptatum intra annum deposuit. Anno 1542 in <anchor xml:id="n17"/>catalogo mortuorum<anchor xml:id="n17e"/> more sacri ordinis per provincias obitus eius tanquam professi et olim prioris in Gemnico mittitur, unde patet eum anno 1541 obiisse. <anchor xml:id="n18"/>Legi literas ad eum datas anno 1529 a Joanne Fabri<anchor xml:id="n18e"/> tunc Ferdinandi I. confessario, postea episcopo Viennensi, quibus <choice>
+               <sic>Georgius.</sic>
+               <corr>Georgium</corr>
+            </choice> et ad patientiam hortatur et simul admonet, ut mature contribuat partem eo anno, uti nosti<anchor xml:id="n19"/> ex Mellicensi Chronico<anchor xml:id="n19e"/>, rigide petitam, quin et indicat eidem Ferdinandi contra eum indignationem. Iustam contradicendi causam et non solvendi petita habuit Georgius noster<anchor xml:id="n20"/> vi privilegiorum<anchor xml:id="n20e"/>, quae Cartusiam nostram ab omni onere etiam in casu, quo reliqua per Austriam obligarentur, eximunt. Sed haec adveniente ex Hispania novo duce tunc neglecta, Cartusia ingens damnum passa, etiam supra caetera coenobia, etiam Mellicense, ut non mirum, quod Georgius prioratui Gemnicensi intra paucos menses cesserit. Sed haec per accidens, ut aliquam saltem, reverende pater, de Georgio haberes notitiam. </ab>
+         <ab resp="#editor" xml:id="seg5">
+            <add place="left-margin">In</add> epitaphiis regum <anchor xml:id="n21"/>pagina 72<anchor xml:id="n21e"/> videntur quaedam ex descriptoris incuria esse neglecta, quae <anchor xml:id="n22"/>ex Quaresmio in Elucidatione Terrae Sanctae pagina 482 suppleri<anchor xml:id="n22e"/> poterunt. <pb n="2v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg6">Henrici de Hassia <anchor xml:id="n23"/>tractatum Contra Theolophorum<anchor xml:id="n23e"/> etiam mitto. Videtur author tractatum scripsisse uno ordine et contextu sine ulla capitulorum distinctione, capitula vero a descriptore operis <sic>videnter</sic> addita maioris claritatis causa. Opus enim sine capitulis, imo et sine novis lineis a capite inchoandis pergit, et capitula operi praemittuntur simul et coniunctim, quae ego, ut locis debitis (nam et loca haec per numeros in margine notantur) separatim scriberentur, suasi descriptori. Quae capite XVI. <anchor xml:id="n24"/>obscura referuntur verba<anchor xml:id="n24e"/>, et ego non intelligo, etiam habentur apud Theoloforum in opere suo, nisi quod loco stabit legendum videatur scabit, et migma vel migima<note place="foot" xml:id="d3e55348">LW versucht offensichtlich, das Schriftbild der Vorlage zu imitieren.</note>
+            <choice>
+               <sic>interpretur.</sic>
+               <corr>interpretetur</corr>
+            </choice> mixtura. Ipsum vero<anchor xml:id="n25"/> opus Theolophori<anchor xml:id="n25e"/> mallem ad te, vir doctissime, mittere quam describere ob falsitates tunc forte occultas, nunc manifestas in eo contentas. Et hinc omnia eius libri folia cultro aut alio instrumento in parte superiori sunt per medium divisa, in signum vel prohibitionis vel falsitatum, quas continet. </ab>
          <ab resp="#editor" xml:id="seg7">Fratri tuo suavissimo ex me salutem dabis eique intimabis plusquam centum <anchor xml:id="n26"/>literas comitum Ciliensium a quodam, quem nosti, repertas<anchor xml:id="n26e"/>, et inter has etiam<anchor xml:id="n27"/> Sigismundi caesaris diploma<anchor xml:id="n27e"/>, quo Fridericum comitem Ciliensem et eius filium,<anchor xml:id="n28"/> non fratrem<anchor xml:id="n28e"/>, Ulricum creavit principes. De comitissis tamen Ciliensibus et Hermanno Frisingensi episcopo adhuc remanere dubia, ut spero, etiam decidenda. Vale et cum fratre tuo mei memor esto in precibus.</ab>
          <closer>Gemnici 18. Martii 1718.</closer>
       </body>

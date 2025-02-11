@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="974" xml:id="pez-0974">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Joachim Edlinger an Hieronymus Pez. 1718-08-05. Seitenstetten.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">974</idno>
          </publicationStmt>
          <seriesStmt>
@@ -34,13 +46,13 @@
             <relatedItem type="otherEdition">
                <bibl>Spevak, Edlinger 51–57.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                In der Mitte des rechten Blattrandes des zweiten Blattes befindet sich ein großer Einriss, wohl verursacht durch das Ausreißen eines Siegels, mit erheblichem Textverlust. Bei der Wiedergabe im Regest ergeben sich dadurch Unsicherheiten. – Eine vorangegangene Sendung HPs mit der „Epistola vindicata“ wird nicht angesetzt, da die Identität mit 958 vermutet werden kann.
             </note>
          </notesStmt>
          <sourceDesc>
-            <listWit><witness ana="cmif:manuscript">
+            <listWit>
+               <witness ana="cmif:manuscript">
                   <msDesc>
                      <msIdentifier>
                         <institution>Stift Melk</institution>
@@ -55,10 +67,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -81,44 +94,46 @@
                <ptr type="mentions" target="letter:960"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e150">Achery, Jean-Luc d’ ; Veterum aliquot scriptorum, qui in Galliae bibliothecis, maxime
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e150">Achery, Jean-Luc d’ ; Veterum aliquot scriptorum, qui in Galliae bibliothecis, maxime
          Benedictinorum, latuerunt, spicilegium. 13 Bde. Paris 1655–1677</term>
-            <term ref="index:d14380e1169">Altötting</term>
-            <term ref="index:d14380e1181">Altötting ; Schwarze Madonna von Altötting</term>
-            <term ref="index:d14380e4170">Bayern, Bayern</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e5623">Bibel ; Buch der Sprichwörter</term>
-            <term ref="index:d14380e10784">Edlinger, Martin</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
+               <term ref="index:d14380e1169">Altötting</term>
+               <term ref="index:d14380e1181">Altötting ; Schwarze Madonna von Altötting</term>
+               <term ref="index:d14380e4170">Bayern, Bayern</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e5623">Bibel ; Buch der Sprichwörter</term>
+               <term ref="index:d14380e10784">Edlinger, Martin</term>
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
          Epistola ad virum clarissimum Joannem Burchardum Menkenium Lipsiensem de Conspectu insignis
          codicis diplomatico-historico-epistolaris ex ἀυτογράφῳ, ut quidem videtur, dato ad Actorum
          eruditorum Lipsiensium collectores a reverendo patre Bernardo Pez Benedictino et
          bibliothecario Mellicensi in Austria. Verona [Wien] 1717</term>
-            <term ref="index:d14380e14884">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
+               <term ref="index:d14380e14884">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
          Epistola de Udalriciani Codicis Conspectu ad clarissimum virum Joannem Burchardum Menkenium
          Kalendas Maii MDCCXVII scripta a Dissertatione apologetica reverendi patris Bernardi Pezii
          Benedictini et bibliothecarii Mellicensis vindicata. S. l. 1718</term>
-            <term ref="index:d14380e15623">Gleditsch, Johann Gottlieb</term>
-            <term ref="index:d14380e20126">Jesuiten</term>
-            <term ref="index:d14380e24970">Linz</term>
-            <term ref="index:d14380e24983">Linz ; Buchmärkte</term>
-            <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
-            <term ref="index:d14380e30298">Nemeitz, Joachim Christoph ; Séjour de Paris oder Getreue anleitung, welchergestalt
+               <term ref="index:d14380e15623">Gleditsch, Johann Gottlieb</term>
+               <term ref="index:d14380e20126">Jesuiten</term>
+               <term ref="index:d14380e24970">Linz</term>
+               <term ref="index:d14380e24983">Linz ; Buchmärkte</term>
+               <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
+               <term ref="index:d14380e30298">Nemeitz, Joachim Christoph ; Séjour de Paris oder Getreue anleitung, welchergestalt
          reisende von condition sich zu verhalten haben, wenn sie ihre zeit und geld nützlich und
          wohl zu Paris anwenden wollen. Frankfurt 1718</term>
-            <term ref="index:d14380e30388">Neue zeitungen von gelehrten sachen. Leipzig 1715–1784</term>
-            <term ref="index:d14380e31630">Österreich, Österreicher ; Oberösterreich</term>
-            <term ref="index:d14380e32292">Paris</term>
-            <term ref="index:d14380e33148">Pez, Bernhard</term>
-            <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
+               <term ref="index:d14380e30388">Neue zeitungen von gelehrten sachen. Leipzig 1715–1784</term>
+               <term ref="index:d14380e31630">Österreich, Österreicher ; Oberösterreich</term>
+               <term ref="index:d14380e32292">Paris</term>
+               <term ref="index:d14380e33148">Pez, Bernhard</term>
+               <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
          dominum dominum Joannem Benedictum Gentilottum ab Engelsbrunn pro editione integri
          syntagmatis diplomatico-historico-epistolaris Udalrici Babenbergensis ex codice Zwetlensi,
          impugnata a viro clarissimo Angelo Fonteio Veronensi. Augsburg 1717</term>
-            <term ref="index:d14380e36032">Prevenhuber, Ambros</term>
-            <term ref="index:d14380e44204">Veith ; Bote/Bedienstete 1717 und 1718</term></keywords></textClass>
+               <term ref="index:d14380e36032">Prevenhuber, Ambros</term>
+               <term ref="index:d14380e44204">Veith ; Bote/Bedienstete 1717 und 1718</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">JE zweifelt nicht daran, dass HP das Schreiben des „Angelus Fonteius“ (<rs ref="index:d14380e14738">Johann Benedikt Gentilotti</rs>, „<rs ref="index:d14380e14825">Epistola ad Menkenium</rs>“?) durch den
                <rs ref="index:d14380e44204">Bediensteten der Verleger Veith</rs> erhalten hat. Nun schickt er auch
@@ -173,14 +188,15 @@
                erhalten wird. Sollte HP etwas haben, das in irgendein Kloster <rs ref="index:d14380e31630">Oberösterreichs</rs> oder <rs ref="index:d14380e4170">Bayerns</rs> zu überbringen wäre, so kann er
                JE als Boten einsetzen, sofern er es rechtzeitig übermittelt: Die Abreise ist für Mariä Himmelfahrt (15.
                August) geplant. JE schließt mit Grüßen an BP und Wünschen für die Gesundheit beider Brüder.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>parochialia</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:841">841</ref> <ref target="letter:841#seg1">1</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:841">841</ref>
+               <ref target="letter:841#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>oleum ... perdat</mentioned>
@@ -208,7 +224,8 @@
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
             <mentioned>cane ... catulos</mentioned>
-            <p>gl. <ref type="letter" target="letter:444">444</ref> <ref target="letter:444#seg1">1</ref>.
+            <p>gl. <ref type="letter" target="letter:444">444</ref>
+               <ref target="letter:444#seg1">1</ref>.
                </p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg4">
@@ -224,9 +241,11 @@
                   Quellen sei: Pez, Dissertatio apologetico-litteraria 50f. Eine Verbindung mit der
                   Abfassung der „Dissertatio“, wie sie Gentilotti herstellte, ist schon deshalb
                   nicht gegeben, weil die erstmalige Entlehnung bereits 1710 und die endgültige
-                  Rücksendung 1716 geschehen waren: vgl. <ref type="letter" target="letter:107">107</ref> <ref target="letter:107#seg2">2</ref>,
-                     <ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg16">16</ref>, <ref type="letter" target="letter:654">654</ref>
-                  <ref target="letter:654#seg1">1</ref>.</p>
+                  Rücksendung 1716 geschehen waren: vgl. <ref type="letter" target="letter:107">107</ref>
+               <ref target="letter:107#seg2">2</ref>,
+                     <ref type="letter" target="letter:143">143</ref>
+               <ref target="letter:143#seg16">16</ref>, <ref type="letter" target="letter:654">654</ref>
+               <ref target="letter:654#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg4">
             <mentioned> nostrorum laudes urant</mentioned>
@@ -238,7 +257,8 @@
          </note>
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg6">
             <mentioned>Gleditschianam epistolam ... anonymi iudicio</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:987">987</ref> <ref target="letter:987#seg5">5</ref>. Auch dort werden beide Schriftstücke zusammen erwähnt,
+            <p>Vgl. <ref type="letter" target="letter:987">987</ref>
+               <ref target="letter:987#seg5">5</ref>. Auch dort werden beide Schriftstücke zusammen erwähnt,
                   und es wird ersichtlich, dass das „iudicium“ ein Gutachten zu einem Vorhaben JEs
                   war. Ob beides miteinander zusammenhing, etwa im Rahmen von Verhandlungen über die
                   Veröffentlichung eines Werkes JEs bei Gleditsch, bleibt freilich
@@ -254,7 +274,8 @@
             <p>Im Lichte der früheren Briefe JEs ist dies wohl
                   ungeachtet des abweichenden Titels weiter auf die „Neuen zeitungen von gelehrten
                   sachen“ zu beziehen, welche JE wegen verspäteter Lieferung bei Gleditsch
-                  anscheinend bereits abbestellen und von Endter beziehen wollte: vgl. <ref type="letter" target="letter:900">900</ref> <ref target="letter:900#seg9">9</ref>. In Frage käme aber eventuell auch eine
+                  anscheinend bereits abbestellen und von Endter beziehen wollte: vgl. <ref type="letter" target="letter:900">900</ref>
+               <ref target="letter:900#seg9">9</ref>. In Frage käme aber eventuell auch eine
                   Identifikation mit den in Seitenstetten vorhandenen „Acta eruditorum“: StiB
                   Seitenstetten e 5, e 6; f 6 1–2. Möglich wären weiters die für 1718 ebenfalls
                   vorhandenen „Nova literaria eruditorum“: StiB Seitenstetten F 4 1–5, f 5 2–5.
@@ -279,14 +300,26 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo religiosissimo ac clarissimo viro domino patri Hieronymo Pez Benedictino Mellicensi etc. amicissimo suo pater Joachimus Edlinger Benedictinus Seitenstettensis salutem plurimam dicit.</opener>
-         <ab resp="#editor" xml:id="seg1">Fonteianum responsum per Veithianum famulum remissum quin acceperis, vir clarissime, nullus dubito. Iam et Epistolam illius scriptam, cuius adiciendae tunc ob nimiam festinationem oblitus eram, actis pro utriusque mihi facta copia amplissimis gratiis remitto; id quod dudum, ut par erat, praestitissem, si per plurima maximam partem <anchor xml:id="n1"/>parochialia<del ana="#after">negotia</del><anchor xml:id="n1e"/>, quae elapsam hebdomadem pene integram mihi eripuerunt, negotia licuisset, quae causa et morae, ut spero, veniam apud te mihi conciliabit. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverendo religiosissimo ac clarissimo viro domino patri Hieronymo Pez Benedictino Mellicensi etc. amicissimo suo pater Joachimus Edlinger Benedictinus Seitenstettensis salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Fonteianum responsum per Veithianum famulum remissum quin acceperis, vir clarissime, nullus dubito. Iam et Epistolam illius scriptam, cuius adiciendae tunc ob nimiam festinationem oblitus eram, actis pro utriusque mihi facta copia amplissimis gratiis remitto; id quod dudum, ut par erat, praestitissem, si per plurima maximam partem <anchor xml:id="n1"/>parochialia<del ana="#after">negotia</del>
+            <anchor xml:id="n1e"/>, quae elapsam hebdomadem pene integram mihi eripuerunt, negotia licuisset, quae causa et morae, ut spero, veniam apud te mihi conciliabit. </ab>
          <ab resp="#editor" xml:id="seg2">Collationis cum Peziana Dissertatione, ut contraria iuxta se posita magis elucescerent, gratia Fonteianas calumnias quantovis pretio compararem, si nancisci eas daretur, tametsi ceteroquin ne nauci quidem faciam; et quis faciat eiusmodi scriptum, cuius nulla non pagina livorem prodit manifestum adeo, ut <anchor xml:id="n2"/>oleum operamque Gentillotus perdat<anchor xml:id="n2e"/>, dum eidem ab hac turpitudine purgando insudat? Faciamus enim (nam iure dubito) gloriatum parumper esse Bernardum <anchor xml:id="n3"/>se magistro profecisse<anchor xml:id="n3e"/> Fonteium etc. Quid inde? An <anchor xml:id="n4"/>Pelion Ossae<anchor xml:id="n4e"/> imponere virique de re publica literaria tam praeclare meriti nomen scabiosissimis scriptis traducere hinc impune Fonteio liceat? An par pari, ut Gentillotus putat, id sit referre, vel <anchor xml:id="n5"/>Midas iudicet<anchor xml:id="n5e"/>, eo promtius, quo minus negare Fonteius potest esse, quae Pezio hoc in genere debeat. </ab>
-         <ab resp="#editor" xml:id="seg3">Multam hactenus de hoc viro spem nutrivi fore, ut rem publicam literariam mirum quantum sit <choice><sic>illustratus t</sic><corr>illustraturus</corr></choice>; sed igni fatuo quam sideri similiorem se probabit, ni illustrioribus argumentis eruditionem suam testatum ierit. Quid enim, quod aperte sibimetipsi contradicat, dum in eodem scripto Bernardi modo <anchor xml:id="n6"/>promtitudinem<anchor xml:id="n6e"/> culpabilis praecipitantiae arguit, modo <pb n="1v"/><anchor xml:id="n7"/> tarditatem, si quidem Diis placet, ineptissimis sannis traducit, ubi nimirum non solum Spicilegio D’Acheriano, sed et tanto pro conficienda sua Apologia tempore Pezium opus habuisse mundo persuasum cupit, ut imponere lectoribus anni superioris nota<anchor xml:id="n7e"/> coactus fuerit. Possem facili negotio hanc homini, ni frontem omnem exuerit, opinionem eripere sola tuarum ipso huius anni initio ad me datarum exhibitione, si congredi cum eodem iuvaret; nuntiaras siquidem iam tum exspectare vos indies Apologiam. </ab>
+         <ab resp="#editor" xml:id="seg3">Multam hactenus de hoc viro spem nutrivi fore, ut rem publicam literariam mirum quantum sit <choice>
+               <sic>illustratus t</sic>
+               <corr>illustraturus</corr>
+            </choice>; sed igni fatuo quam sideri similiorem se probabit, ni illustrioribus argumentis eruditionem suam testatum ierit. Quid enim, quod aperte sibimetipsi contradicat, dum in eodem scripto Bernardi modo <anchor xml:id="n6"/>promtitudinem<anchor xml:id="n6e"/> culpabilis praecipitantiae arguit, modo <pb n="1v"/>
+            <anchor xml:id="n7"/> tarditatem, si quidem Diis placet, ineptissimis sannis traducit, ubi nimirum non solum Spicilegio D’Acheriano, sed et tanto pro conficienda sua Apologia tempore Pezium opus habuisse mundo persuasum cupit, ut imponere lectoribus anni superioris nota<anchor xml:id="n7e"/> coactus fuerit. Possem facili negotio hanc homini, ni frontem omnem exuerit, opinionem eripere sola tuarum ipso huius anni initio ad me datarum exhibitione, si congredi cum eodem iuvaret; nuntiaras siquidem iam tum exspectare vos indies Apologiam. </ab>
          <ab resp="#editor" xml:id="seg4">Nec est porro, cur admodum glorietur Fonteius de sui partus celeritate; fungus certe sub una nocte protuberat, sed fungus est nec pretium sibi, sed contemtum celeritate nundinatur. Praestitisset profecto Angelum paulo lentius agere, ne cum <anchor xml:id="n8"/>cane nimium festinante tam caecos pareret catulos<anchor xml:id="n8e"/>; quidni enim caecum dicam Fonteianum partum, qui <anchor xml:id="n9"/>necessarium Pezio pro conficienda Apologia Spicilegium<anchor xml:id="n9e"/> asserendo tam turpiter impegit, ut qui turpissime; aut enim, quid inde suum fecerit Pezius, ostendat aut, quod id utut lynceis ad calumniandum oculis nequeat, temerarium se Pezianae famae praedonem fateatur, oportet. Sed dum canis hic mentionem facio, opportune in mentem venit et<del ana="#after">istud venit</del> alia animalis huius proprietas, nimirum invidia; quid enim nisi invidiam dixerim, quod tantopere Fonteium<anchor xml:id="n10"/> nostrorum laudes urant<anchor xml:id="n10e"/>, quibus mediis super aethera pene vehi Bernardus ipsi videtur? Laudatur utique vir clarissimus, et utinam satis, ubique pro tantis in sacrum ordinem aeque ac rem publicam literariam meritis! Sed quid ad Fonteium istud? Nimio sane erga aemulos nostros, quidquid dissimulet, adfectu excaecatum se probat, dum Peziana sidera huic sacro ordini, cuius tamen amorem ipsum, quo gaudet, nomen homini instillare deberet, tam operose invidet. </ab>
-         <ab resp="#editor" xml:id="seg5">Sed manum de tabula; librum enim, nedum epistolam, occuparet ineptiarum Fonteianarum enumeratio, si quidem operae pretium foret; mihi certe nequaquam esse videtur, tum quod eius illae sint tenoris, ut imponere emunctioris naris hominibus haud queant, tum quod <pb n="2r"/> indignas iudicem, quibus honoris quaedam species refutatione concilietur. Quare Bernardi mei consilium utilioribus nuncupandi tempus per omnia probo. <anchor xml:id="n11"/>Hortatur, dehortatur sanctus Paroemiographus<anchor xml:id="n11e"/> pro diversitate circumstantiarum, ut respondeamus, ne <choice><sic>respondemus</sic><corr>respondeamus</corr></choice> stulto<del ana="#after">iuxta stulto</del> iuxta stultitiam suam: putarim ego<del ana="#after">satisfa</del> a Bernardo satisfactum hortanti solidissima iuxta ac modestissima sua Dissertatione apologetica, abunde suffectura, ne Fonteius sibi solus esse sapiens videatur; iam et dehortanti obtemperandum (sed parce, quaeso, libertati meae amicitiae iure fultae) reor, quod vulgari absque aliquantula religiosae modestiae succussi[one ea]<note type="annotation" xml:id="d3e62999">Textverlust im Ausmaß von ca. 5–6 Buchstaben durch Einriss.</note> vix queant, quae tot calumniarum dolore expressa veritas [...]<note type="annotation" xml:id="d3e63003">Textverlust im Ausmaß von ca. 10–15 Buchstaben durch Einriss.</note>. </ab>
+         <ab resp="#editor" xml:id="seg5">Sed manum de tabula; librum enim, nedum epistolam, occuparet ineptiarum Fonteianarum enumeratio, si quidem operae pretium foret; mihi certe nequaquam esse videtur, tum quod eius illae sint tenoris, ut imponere emunctioris naris hominibus haud queant, tum quod <pb n="2r"/> indignas iudicem, quibus honoris quaedam species refutatione concilietur. Quare Bernardi mei consilium utilioribus nuncupandi tempus per omnia probo. <anchor xml:id="n11"/>Hortatur, dehortatur sanctus Paroemiographus<anchor xml:id="n11e"/> pro diversitate circumstantiarum, ut respondeamus, ne <choice>
+               <sic>respondemus</sic>
+               <corr>respondeamus</corr>
+            </choice> stulto<del ana="#after">iuxta stulto</del> iuxta stultitiam suam: putarim ego<del ana="#after">satisfa</del> a Bernardo satisfactum hortanti solidissima iuxta ac modestissima sua Dissertatione apologetica, abunde suffectura, ne Fonteius sibi solus esse sapiens videatur; iam et dehortanti obtemperandum (sed parce, quaeso, libertati meae amicitiae iure fultae) reor, quod vulgari absque aliquantula religiosae modestiae succussi[one ea]<note type="annotation" xml:id="d3e62999">Textverlust im Ausmaß von ca. 5–6 Buchstaben durch Einriss.</note> vix queant, quae tot calumniarum dolore expressa veritas [...]<note type="annotation" xml:id="d3e63003">Textverlust im Ausmaß von ca. 10–15 Buchstaben durch Einriss.</note>. </ab>
          <ab resp="#editor" xml:id="seg6">Ceterum si Gleditschianam epistolam adhuc penes te h[...]<note type="annotation" xml:id="d3e63008">Textverlust im Ausmaß von ca. 10–15 Buchstaben durch Einriss.</note> una cum anonymi iudicio pro commodo tuo (nam quad[...]<note type="annotation" xml:id="d3e63011">Textverlust im Ausmaß von ca. 15–20 Buchstaben durch Einriss.</note> usus, iis penitus haud aegre caream), aliquando remitt[...]<note type="annotation" xml:id="d3e63014">Textverlust im Ausmaß von ca. 15–20 Buchstaben durch Einriss.</note> plures fortassis posthac epistolas a Gleditschio habe[...]<note type="annotation" xml:id="d3e63017">Textverlust im Ausmaß von ca. 15–20 Buchstaben durch Einriss.</note> quandam obtinui, qua certiorem me de transmiss[...]<note type="annotation" xml:id="d3e63020">Textverlust im Ausmaß von ca. 15–20 Buchstaben durch Einriss.</note> libris; ante nundinas tamen Lincenses ad me non perven[...]<note type="annotation" xml:id="d3e63024">Textverlust im Ausmaß von ca. 15–20 Buchstaben durch Einriss.</note>. Eos inter praeter<anchor xml:id="n12"/> Nova eruditorum<anchor xml:id="n12e"/> alia quoque litera[...]<note type="annotation" xml:id="d3e63027">Textverlust im Ausmaß von ca. 15–20 Buchstaben durch Einriss.</note>, e quibus utinam tibi aut Bernardo quidpiam usui esse p[...]<note type="annotation" xml:id="d3e63030">Textverlust im Ausmaß von ca. 15–20 Buchstaben durch Einriss.</note> an ex multis, quos brevi tempore successive comparavi, [...]<note type="annotation" xml:id="d3e63033">Textverlust im Ausmaß von ca. 15–20 Buchstaben durch Einriss.</note> rebus literariis accenseam, cuius titulus: <anchor xml:id="n13"/>Sejour<anchor xml:id="n13e"/> de [...]<note type="annotation" xml:id="d3e63036">Textverlust im Ausmaß von ca. 15–20 Buchstaben durch Einriss.</note> vulgarem certe de bibliothecis earumque praefectis ne[... eru]ditis<note type="annotation" xml:id="d3e63039">Textverlust im Ausmaß von ca. 10–15 Buchstaben durch Einriss.</note> Parisiensibus notitiam subministrat; habebis, mo[...]<note type="annotation" xml:id="d3e63043">Textverlust im Ausmaß von ca. 10–15 Buchstaben durch Einriss.</note>. </ab>
-         <ab resp="#editor" xml:id="seg7">Sicque finitas praesentes heri iam cursoribus commisissem, ni exspectare demum <choice><sic>consulta</sic><corr>consultius</corr></choice> visum esset, donec de mente <anchor xml:id="n14"/>parentis mei<anchor xml:id="n14e"/> ad iconem Oetinganam excurrendi uberius constaret, qui cum septuagenario paucis mensibus minor in proposito persistat, eum comitari lubet. Quin facultatem ad id daturus sit reverendissimus, nullus dubito: quare si quid habeas in monasterium quoddam Superioris Austriae aut Bavariae transmittendum, me latore uti liberrime poteris, modo submittere non tarderis. Discedemus autem ipso festo Assumtae beatae Virginis. In precibus meis ac sacrificiis Peziorum meorum more consueto praeprimis rationem habebo. Vos interea, chara lumina, basilice valete ac Joachimum vestrum ut hactenus amate.</ab>
+         <ab resp="#editor" xml:id="seg7">Sicque finitas praesentes heri iam cursoribus commisissem, ni exspectare demum <choice>
+               <sic>consulta</sic>
+               <corr>consultius</corr>
+            </choice> visum esset, donec de mente <anchor xml:id="n14"/>parentis mei<anchor xml:id="n14e"/> ad iconem Oetinganam excurrendi uberius constaret, qui cum septuagenario paucis mensibus minor in proposito persistat, eum comitari lubet. Quin facultatem ad id daturus sit reverendissimus, nullus dubito: quare si quid habeas in monasterium quoddam Superioris Austriae aut Bavariae transmittendum, me latore uti liberrime poteris, modo submittere non tarderis. Discedemus autem ipso festo Assumtae beatae Virginis. In precibus meis ac sacrificiis Peziorum meorum more consueto praeprimis rationem habebo. Vos interea, chara lumina, basilice valete ac Joachimum vestrum ut hactenus amate.</ab>
          <closer>Dabam Seitenstadii ipsis Nonis Augusti MDCCXVIII.</closer>
       </body>
    </text>

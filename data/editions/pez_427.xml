@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="427" xml:id="pez-0427">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Benedikt Gentilotti an Bernhard Pez. 1715-07-27. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">427</idno>
          </publicationStmt>
          <seriesStmt>
@@ -34,7 +46,6 @@
             <relatedItem type="otherEdition">
                <bibl>Staufer, Litterae 12f.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Bei Glassner, Verzeichnis 214, irrig zum 8.
                   August 1715, weil das Blatt III, 246r–v zu diesem Brief gerechnet ist. Tatsächlich
@@ -60,10 +71,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -87,20 +99,32 @@
             </correspContext>
          </correspDesc>
          <abstract>
-            <p corresp="#seg1">BG dankt für BPs Brief mit der Fortsetzung des <rs ref="index:d10854e24029">Katalogs von Handschriften aus <rs ref="index:d10854e22102">oberösterreichischen</rs> Klöstern</rs> <ref type="letter" target="letter:426">426</ref> und entschuldigt sich für seine späte Antwort. Er rät BP dringend, den Katalog zusammen mit jenem von <rs ref="index:d14380e46093">St. Dorothea</rs> zu <rs ref="index:d14380e45571">Wien</rs> in seiner „<rs ref="index:d14380e33468">Bibliotheca Mellicensis</rs>“ oder an einem anderen ihm angemessen erscheinenden Ort zu publizieren.</p>
-            <p corresp="#seg2"><rs ref="index:d10854e35168">Giacomo Zocchi</rs> war im 15. Jahrhundert Kirchenrechtslehrer an der <rs ref="index:d10854e22524">Universität</rs> <rs ref="index:d14380e32084">Padua</rs>. Seine <rs ref="index:d10854e35176">Dekretalenkommentare</rs> und andere Werke liegen gedruckt vor, die <rs ref="index:d14380e45820">Hofbibliothek</rs> und die bischöfliche <rs ref="index:d10854e31082">Bibliothek</rs> in <rs ref="index:d14380e43324">Trient</rs> besitzen <rs ref="index:d10854e35188"><rs ref="index:d10854e35195"><rs ref="index:d10854e31088"><rs ref="index:d10854e33479">Handschriften</rs></rs></rs></rs> von ihm. Ein <rs ref="index:d10854e35183">Kommentar</rs> zur <rs ref="index:d10854e3442">Apokalypse</rs> ist BG jedoch unbekannt.</p>
-            <p corresp="#seg3"><rs ref="index:d14380e39962">Anselm Schramb</rs> hat BG jüngst aufgesucht. Als dieser ihm mitteilte, dass es sich bei dem Präfekten der <rs ref="index:d14380e37822">Indexkongregation</rs> um den <rs ref="index:d14380e9873">Dominikaner</rs> <rs ref="index:d10854e8753">Tommaso Kardinal Ferrari</rs> handelt, missfiel <rs ref="index:d14380e39962">Schramb</rs> die Gemeinsamkeit der Regel und Lebensweise zwischen diesem Orden und den <rs ref="index:d14380e3377">Augustiner-Chorherren</rs>, weshalb er beschloss, seine bereits im Druck befindliche Schrift „<rs ref="index:d14380e39987">Antilogia</rs>“ einem anderen (<rs ref="index:d10854e26857">Giuseppe Kardinal Sacripante</rs>) zu widmen.</p>
+            <p corresp="#seg1">BG dankt für BPs Brief mit der Fortsetzung des <rs ref="index:d10854e24029">Katalogs von Handschriften aus <rs ref="index:d10854e22102">oberösterreichischen</rs> Klöstern</rs>
+               <ref type="letter" target="letter:426">426</ref> und entschuldigt sich für seine späte Antwort. Er rät BP dringend, den Katalog zusammen mit jenem von <rs ref="index:d14380e46093">St. Dorothea</rs> zu <rs ref="index:d14380e45571">Wien</rs> in seiner „<rs ref="index:d14380e33468">Bibliotheca Mellicensis</rs>“ oder an einem anderen ihm angemessen erscheinenden Ort zu publizieren.</p>
+            <p corresp="#seg2">
+               <rs ref="index:d10854e35168">Giacomo Zocchi</rs> war im 15. Jahrhundert Kirchenrechtslehrer an der <rs ref="index:d10854e22524">Universität</rs>
+               <rs ref="index:d14380e32084">Padua</rs>. Seine <rs ref="index:d10854e35176">Dekretalenkommentare</rs> und andere Werke liegen gedruckt vor, die <rs ref="index:d14380e45820">Hofbibliothek</rs> und die bischöfliche <rs ref="index:d10854e31082">Bibliothek</rs> in <rs ref="index:d14380e43324">Trient</rs> besitzen <rs ref="index:d10854e35188">
+                  <rs ref="index:d10854e35195">
+                     <rs ref="index:d10854e31088">
+                        <rs ref="index:d10854e33479">Handschriften</rs>
+                     </rs>
+                  </rs>
+               </rs> von ihm. Ein <rs ref="index:d10854e35183">Kommentar</rs> zur <rs ref="index:d10854e3442">Apokalypse</rs> ist BG jedoch unbekannt.</p>
+            <p corresp="#seg3">
+               <rs ref="index:d14380e39962">Anselm Schramb</rs> hat BG jüngst aufgesucht. Als dieser ihm mitteilte, dass es sich bei dem Präfekten der <rs ref="index:d14380e37822">Indexkongregation</rs> um den <rs ref="index:d14380e9873">Dominikaner</rs>
+               <rs ref="index:d10854e8753">Tommaso Kardinal Ferrari</rs> handelt, missfiel <rs ref="index:d14380e39962">Schramb</rs> die Gemeinsamkeit der Regel und Lebensweise zwischen diesem Orden und den <rs ref="index:d14380e3377">Augustiner-Chorherren</rs>, weshalb er beschloss, seine bereits im Druck befindliche Schrift „<rs ref="index:d14380e39987">Antilogia</rs>“ einem anderen (<rs ref="index:d10854e26857">Giuseppe Kardinal Sacripante</rs>) zu widmen.</p>
             <p corresp="#seg4">In seinem jüngsten Brief aus <rs ref="index:d14380e16986">Hamburg</rs> hat sich <rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs> bei BG für die vorangegangenen Vorhaltungen, von welchen BG ja auch BP berichtet hat <ref type="letter" target="letter:406">406</ref>, entschuldigt. BG ist nicht erzürnt gegen <rs ref="index:d14380e4006">Bartenstein</rs>, sondern hatte nur dessen Jähzorn und Unbedachtheit getadelt. Die Hoffnung auf eine Rückkehr <rs ref="index:d14380e4006">Bartensteins</rs> nach Wien ist noch nicht verflogen.</p>
             <p corresp="#seg5">BG hat für seine <rs ref="index:d14380e14924">Bibliothek</rs> folgende Ankäufe getätigt: die (von <rs ref="index:d10854e13194">John Hudson</rs>) 1205 (recte: 1704) zu <rs ref="index:d14380e31938">Oxford</rs> herausgegebenen <rs ref="index:d10854e6545">„Opera omnia“ des Dionysius von Halikarnass</rs>; die von <rs ref="index:d10854e9978">Thomas Gale</rs> 1588 (recte: 1688) zu <rs ref="index:d14380e1316">Amsterdam</rs> herausgebrachten „<rs ref="index:d10854e9984">Opuscula mythologica</rs>“; die „<rs ref="index:d14380e24513">Histoire du Concile de Constance</rs>“ in <rs ref="index:d14380e12712">französischer</rs> Sprache von <rs ref="index:d14380e24505">Jacques Lenfant</rs>, dem Prediger von <rs ref="index:d14380e13502">Friedrich Wilhelm</rs>, König in <rs ref="index:d14380e36005">Preußen</rs>; die „<rs ref="index:d10854e16608">Histoire des sept sages</rs>“ von <rs ref="index:d10854e16602">Larrey</rs>; den „<rs ref="index:d10854e17044">Traité du secret de la confession</rs>“ von <rs ref="index:d14380e24523">Lenglet Dufresnoy</rs> sowie <rs ref="index:d10854e20581">Morhofs „Unterricht von der teutschen Sprache“</rs>. Aus <rs ref="index:d14380e19828">Italien</rs> erwartet BG eine Büchersendung, darin <rs ref="index:d10854e20367">die bisher erschienenen Teile – bis zum Buchstaben J</rs> – von <rs ref="index:d10854e20359">Mongitores „Biblioteca Sicula“</rs>. Da BG in <rs ref="index:d10854e31813">Venedig</rs> das letzte dort vorhandene Exemplar gekauft hat, will er die Suche nach einem weiteren für BP andernorts fortsetzen und bietet für den Moment sein eigenes Exemplar zum Gebrauch an, sobald es bei ihm angekommen sein wird.</p>
             <p corresp="#seg6">BG wartet mit Spannung auf ein Exemplar von BPs „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“. In einem Gespräch mit BG hat jüngst der Abt von <rs ref="index:d14380e23178">Kremsmünster</rs>, <rs ref="index:d14380e41705">Alexander Strasser</rs>, sein Missfallen über das Werk zum Ausdruck gebracht, da der Autor der von BP bekämpften Schrift (<rs ref="index:d14380e18286">Hevenesi, „Cura salutis“</rs>) die für die <rs ref="index:d14380e4919">Benediktiner</rs> und für andere nachteiligen Ansichten nur als wiedergegebene Meinung anderer vorbringt und am Schluss seines Werks auch Gegenargumente dazu bietet. BG schließt mit Grüßen an <rs ref="index:d14380e34537">HP</rs>.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>Bibliothecae tuae Mellicensis</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:379">379</ref> <ref target="letter:379#seg8">8</ref>, <ref type="letter" target="letter:399">399</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:379">379</ref>
+               <ref target="letter:379#seg8">8</ref>, <ref type="letter" target="letter:399">399</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>Jacob de Zochis</mentioned>
@@ -131,7 +155,8 @@
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
             <mentioned>in alterius nomine</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:406">406</ref> <ref target="letter:406#seg3">3</ref>, wonach Schramb BG nach dem Präfekten
+            <p>Vgl. <ref type="letter" target="letter:406">406</ref>
+               <ref target="letter:406#seg3">3</ref>, wonach Schramb BG nach dem Präfekten
                   der Indexkongregation gefragt hatte, weil er hoffte, durch eine Widmung an diesen
                   ein Verbot von Augustin Eraths „Commentarius in Regulam sancti Augustini“
                   begünstigen zu können. Offenbar hatte BG die Identität des Präfekten selbst erst
@@ -148,7 +173,8 @@
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg5">
             <mentioned>bibliothecam meam</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:406">406</ref> <ref target="letter:406#seg5">5</ref>. Lenfants „Histoire“ in der Ausgabe
+            <p>Vgl. <ref type="letter" target="letter:406">406</ref>
+               <ref target="letter:406#seg5">5</ref>. Lenfants „Histoire“ in der Ausgabe
                   von 1714 und Lenglet Dufresnoys „Traité“ sind an der ÖNB vorhanden; in BGs
                   privater Bibliothek hingegen sind alle angeführten Werke nachweisbar: Biblioteca
                   Comunale di Trento, Ms. 5647 (Borzatti, Catalogus bibliothecae Gentilottae), 84
@@ -159,22 +185,25 @@
             <mentioned>usque ad litteram J</mentioned>
             <p>Der erste Band der „Bibliotheca Sicula“, die nach Vornamen alphabetisch angeordnet
                   ist, reicht bis zum Buchstaben J; der zweite Band (bis zum Ende des Alphabets) war
-                  schon 1714 erschienen, was BG offenbar nicht wusste. Vgl. <ref type="letter" target="letter:308">308</ref> <ref target="letter:308#seg8">8</ref>.</p>
+                  schon 1714 erschienen, was BG offenbar nicht wusste. Vgl. <ref type="letter" target="letter:308">308</ref>
+               <ref target="letter:308#seg8">8</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg6">
             <mentioned>Coenobiarcha Cremifanensis</mentioned>
             <p>Kremsmünster und sein Abt Strasser scheinen auch sonst den Vorhaben BPs und HPs
                   nicht allzu günstig gesinnt gewesen zu sein. HP klagt einige Jahre später darüber,
                   dass sein Ansinnen, den bei dem Bibliotheksbesuch im Mai 1715 nur auszugsweise
-                  transkribierten Codex mit den Historien des „Bernardus Noricus“ (vgl. <ref type="letter" target="letter:406">406</ref><ref target="letter:406#seg2">2</ref>) zu entlehnen, keiner Antwort gewürdigt worden
+                  transkribierten Codex mit den Historien des „Bernardus Noricus“ (vgl. <ref type="letter" target="letter:406">406</ref>
+               <ref target="letter:406#seg2">2</ref>) zu entlehnen, keiner Antwort gewürdigt worden
                   war: Pez,
                   Scriptores rerum Austriacarum 1 col. 688. Strasser, welcher
                   anscheinend Kontakt mit BG pflegte, könnte vielleicht auch jener in der
                   Hofbibliothek angetroffene „pinguis abbas“ gewesen sein, von dessen Vorbehalten
-                  gegen die Herausgabe von Quellen in <ref type="letter" target="letter:384">384</ref> <ref target="letter:384#seg3">3</ref> die
+                  gegen die Herausgabe von Quellen in <ref type="letter" target="letter:384">384</ref>
+               <ref target="letter:384#seg3">3</ref> die
                   Rede ist; dies würde dazu passen, dass sein reiches Stift bei BPs Sammlungen für
                   Massuet bis dahin keine Rolle gespielt hatte (vgl. <ref type="letter" target="letter:143">143</ref>
-                  <ref target="letter:143#seg3">3</ref>).</p>
+               <ref target="letter:143#seg3">3</ref>).</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -187,12 +216,23 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Venerando et eruditissimo viro domno Bernardo Pezio Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilottus ab Engelsbrun.</opener>
+         <opener>
+            <pb n="1r"/> Venerando et eruditissimo viro domno Bernardo Pezio Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilottus ab Engelsbrun.</opener>
          <ab resp="#editor" xml:id="seg1">Scio te, virorum optime, pro mansuetudine tua et singulari in me caritate non indignari, si quando tardior sum ad respondendum, et cunctationem meam non negligentiae aut oblivioni, sed occupationibus meis assignare. Quocirca minime necesse habeo me tibi hoc nomine purgare, praesertim cum indulgentiae tuae culpam, si qua admissa est, attribuere oporteat. Confestim itaque me ad amplissimas gratias tibi agendas convertam de humanissimis iisdemque eruditissimis litteris tuis, in quas ingentem thesaurum coniecisti, continuationem scilicet catalogi manuscriptorum codicum, quos in Superioris Austriae coenobiis detexisti. Eum ut adiectis Dorotheanis aliis ad calcem <anchor xml:id="n1"/>Bibliothecae tuae Mellicensis<anchor xml:id="n1e"/>, aut quocunque loco opportunius iudicaveris, evulges, tibi vehementer sum auctor et spondeo magnam te ab eruditis <pb n="1v"/> omnibus gratiam initurum. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n2"/>Jacob de Zochis<anchor xml:id="n2e"/> (non Zacchis) fuit antecessor iuris pontificii in academia Patavina et floruit medio seculo decimoquincto. Eius <anchor xml:id="n3"/>Commentarii in epistolas decretales<anchor xml:id="n3e"/> et alia opuscula typis descripta exstant, nonnulla etiam chirographa in bibliotheca caesarea et Tridentina; Commentarius vero in Apocalypsin nec fando auditus est. </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n2"/>Jacob de Zochis<anchor xml:id="n2e"/> (non Zacchis) fuit antecessor iuris pontificii in academia Patavina et floruit medio seculo decimoquincto. Eius <anchor xml:id="n3"/>Commentarii in epistolas decretales<anchor xml:id="n3e"/> et alia opuscula typis descripta exstant, nonnulla etiam chirographa in bibliotheca caesarea et Tridentina; Commentarius vero in Apocalypsin nec fando auditus est. </ab>
          <ab resp="#editor" xml:id="seg3">Domnus Anselmus vester idemque noster ad me nuper admodum invisit, cui cum significassem purpuratum congregationis indicis, ut vocant, praefectum esse cardinalem Ferrarium Dominicanum, displicuit illi vitae institutum et communio legum, quae illi familiae cum Augustiniana intercedit; quare <anchor xml:id="n4"/>in alterius nomine<anchor xml:id="n4e"/> opus suum iamiam e prelo emergens edere constituit. </ab>
          <ab resp="#editor" xml:id="seg4">A Bartensteino <anchor xml:id="n5"/>litteras Hamburgi scriptas<anchor xml:id="n5e"/> hodie accepi. In iis iniuriam mihi superioribus acerbis suis litteris, de quibus ad te scribere memini, <add place="below">factam</add> accuratissime deprecatur et <pb n="2r"/> me lenire et placare studet. Ego vero nec ei sum iratus nec quicquam de meo in eum amore propterea detraxi; iracundiam et inconsiderantiam eius verbis dumtaxat ulcisci volui. Ceterum de eo horsum evocando nondum spes omnis decollavit. </ab>
-         <ab resp="#editor" xml:id="seg5">Ad <anchor xml:id="n6"/>bibliothecam meam<anchor xml:id="n6e"/> nova accessio facta est, Dionysii videlicet Halicarnassensis Operum omnium Oxoniensis editionis anni MCCV tomis duobus folio; Opusculorum mythologicorum Graeco-Latine, quae Thomas Gale Amstelaedami anno MDLXXXVIII in octavo edidit; Historiae Constantiensis concilii sermone Gallico a domino Lenfant regis Borussiae ecclesiaste contextae et abhinc biennium editae; <choice><sic>Historiarum</sic><corr>Historiae</corr></choice> septem sapientum per Larreie Gallice; <choice><sic>Historiarum</sic><corr>Historiae</corr></choice> secreti seu sigilli confessionis a Lengleto Du Fresnoy <choice><sic>publicatarum</sic><corr>publicatae</corr></choice>; ac tandem Morhoffii elegantis opusculi De veteri lingua et poesi Germanorum. Alios propediem ex Italia <pb n="2v"/> exspecto, atque inter <add place="above">illos</add> Mongitoris Bibliothecam Siculam ea parte, qua hucusque prodiit, nempe <anchor xml:id="n7"/>usque ad litteram J<anchor xml:id="n7e"/>. Ultimum, quod adhuc Venetiis prostabat exemplum, mihi emtum est, quare aliud, quod tu postulas, aliunde petendum; quod mihi curae futurum est. Quod si tu interim eo libro necessario indigeas mihique significaveris, exemplum meum, statim ac illud nactus fuero, ad te mittam, quo arbitratu tuo uti poteris. </ab>
+         <ab resp="#editor" xml:id="seg5">Ad <anchor xml:id="n6"/>bibliothecam meam<anchor xml:id="n6e"/> nova accessio facta est, Dionysii videlicet Halicarnassensis Operum omnium Oxoniensis editionis anni MCCV tomis duobus folio; Opusculorum mythologicorum Graeco-Latine, quae Thomas Gale Amstelaedami anno MDLXXXVIII in octavo edidit; Historiae Constantiensis concilii sermone Gallico a domino Lenfant regis Borussiae ecclesiaste contextae et abhinc biennium editae; <choice>
+               <sic>Historiarum</sic>
+               <corr>Historiae</corr>
+            </choice> septem sapientum per Larreie Gallice; <choice>
+               <sic>Historiarum</sic>
+               <corr>Historiae</corr>
+            </choice> secreti seu sigilli confessionis a Lengleto Du Fresnoy <choice>
+               <sic>publicatarum</sic>
+               <corr>publicatae</corr>
+            </choice>; ac tandem Morhoffii elegantis opusculi De veteri lingua et poesi Germanorum. Alios propediem ex Italia <pb n="2v"/> exspecto, atque inter <add place="above">illos</add> Mongitoris Bibliothecam Siculam ea parte, qua hucusque prodiit, nempe <anchor xml:id="n7"/>usque ad litteram J<anchor xml:id="n7e"/>. Ultimum, quod adhuc Venetiis prostabat exemplum, mihi emtum est, quare aliud, quod tu postulas, aliunde petendum; quod mihi curae futurum est. Quod si tu interim eo libro necessario indigeas mihique significaveris, exemplum meum, statim ac illud nactus fuero, ad te mittam, quo arbitratu tuo uti poteris. </ab>
          <ab resp="#editor" xml:id="seg6">Apologiae tuae exemplum avidissime exspecto. <anchor xml:id="n8"/>Coenobiarcha Cremifanensis<anchor xml:id="n8e"/>, cum aliquando in sermonem de ea delapsi fuissemus, non videbatur institutum tuum probare, quod auctor libelli, quem confutandum tibi sumsisti, omnia <add place="above">illa</add>, quae vos atque alios mordent, tanquam ab aliis obiecta proponat et in opusculi fine diluat. Vale, mi amicissime et doctissime Bernarde, et suavissimum fratrem tuum multa salute imperti.</ab>
          <closer>Scribebam festinanter Vindobonae VI. Kalendas Sextiles MDCCXV.</closer>
       </body>

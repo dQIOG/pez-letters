@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="685" xml:id="pez-0685">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Benedikt Gentilotti von Engelsbrunn an Bernhard Pez. 1716-11-14. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">685</idno>
          </publicationStmt>
          <seriesStmt>
@@ -34,7 +46,6 @@
             <relatedItem type="otherEdition">
                <bibl>Staufer, Litterae 20.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -81,33 +93,37 @@
                <ptr type="sentWith" target="letter:684"/>
             </correspContext>
          </correspDesc>
-         <textClass><keywords>
-            <term ref="index:d14380e1139">Altlechner, Kaspar</term>
-            <term ref="index:d14380e4006">Bartenstein, Johann Christoph</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e19828">Italien, Italiener, Italienisch</term>
-            <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
-            <term ref="index:d14380e23130">Krause, Johann Gottlieb</term>
-            <term ref="index:d14380e24818">Le Texier, François</term>
-            <term ref="index:d14380e25664">Mabillon, Jean ; Acta sanctorum ordinis sancti Benedicti, in saeculorum classes distributa, ab anno Christi D ad annum MC. 9 Bde. Paris 1668–1701</term>
-            <term ref="index:d14380e25705">Mabillon, Jean ; Annales ordinis sancti Benedicti, occidentalium monachorum patriarchae, in quibus non modo res monasticae, sed etiam ecclesiasticae historiae non minima pars continetur. 6 Bde. Paris 1703–1739</term>
-            <term ref="index:d14380e26828">Mascov, Johann Jakob</term>
-            <term ref="index:d14380e26892">Maße, Gewichte, Währung ; Gulden</term>
-            <term ref="index:d14380e33760">Pez, Bernhard ; Nachricht von den vornehmsten codicibus manuscriptis einiger klöster in Ober-Österreich. In: Umständliche bücher-historie 2</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e43652">Ulm</term>
-            <term ref="index:d14380e43662">Ulm ; *Buchhändler zu Ulm</term>
-            <term ref="index:d14380e43730">Umständliche bücher-historie. Hg. von Johann Gottlieb Krause. Leipzig 1715–1716</term>
-            <term ref="index:d14380e45747">Wien ; Büchermarkt zu Katharina</term>
-            <term ref="index:d14380e45756">Wien ; Buchhandelskataloge</term>
-            <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
-            <term ref="index:d14380e45964">Wien ; Kaiserhof ; Hofbibliothek ; Gentilotti als Präfekt</term></keywords></textClass>
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e1139">Altlechner, Kaspar</term>
+               <term ref="index:d14380e4006">Bartenstein, Johann Christoph</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e19828">Italien, Italiener, Italienisch</term>
+               <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
+               <term ref="index:d14380e23130">Krause, Johann Gottlieb</term>
+               <term ref="index:d14380e24818">Le Texier, François</term>
+               <term ref="index:d14380e25664">Mabillon, Jean ; Acta sanctorum ordinis sancti Benedicti, in saeculorum classes distributa, ab anno Christi D ad annum MC. 9 Bde. Paris 1668–1701</term>
+               <term ref="index:d14380e25705">Mabillon, Jean ; Annales ordinis sancti Benedicti, occidentalium monachorum patriarchae, in quibus non modo res monasticae, sed etiam ecclesiasticae historiae non minima pars continetur. 6 Bde. Paris 1703–1739</term>
+               <term ref="index:d14380e26828">Mascov, Johann Jakob</term>
+               <term ref="index:d14380e26892">Maße, Gewichte, Währung ; Gulden</term>
+               <term ref="index:d14380e33760">Pez, Bernhard ; Nachricht von den vornehmsten codicibus manuscriptis einiger klöster in Ober-Österreich. In: Umständliche bücher-historie 2</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e43652">Ulm</term>
+               <term ref="index:d14380e43662">Ulm ; *Buchhändler zu Ulm</term>
+               <term ref="index:d14380e43730">Umständliche bücher-historie. Hg. von Johann Gottlieb Krause. Leipzig 1715–1716</term>
+               <term ref="index:d14380e45747">Wien ; Büchermarkt zu Katharina</term>
+               <term ref="index:d14380e45756">Wien ; Buchhandelskataloge</term>
+               <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
+               <term ref="index:d14380e45964">Wien ; Kaiserhof ; Hofbibliothek ; Gentilotti als Präfekt</term>
+            </keywords>
+         </textClass>
          <abstract>
-            <p corresp="#seg1">Beiliegend schickt BG die Schreiben eines <rs ref="index:d14380e43662">Ulmer Buchhändlers</rs> <ref type="letter" target="letter:684">684</ref> sowie der <rs ref="index:d14380e22462">Mauriner</rs> (Gallorum tuorum; <ref type="letter" target="letter:671">671</ref>) wieder zurück an BP, der sie ihm durch <rs ref="index:d14380e1139">Kaspar Altlechner</rs> übermittelt hat. Bezüglich des ersteren würde BG gerne wissen, ob in dem für die <rs ref="index:d14380e25664">„Acta sanctorum OSB“</rs> genannten Preis von 14 <rs ref="index:d14380e26892">Gulden</rs> pro Band bereits die Spesen für Transport und Zoll enthalten sind, um entscheiden zu können, ob die hohe Ausgabe für dieses Werk gerechtfertigt ist, zumal in der <rs ref="index:d14380e45820">Hofbibliothek</rs> andere Bücher dringender benötigt werden. BG überlässt jedoch die ganze Angelegenheit der Umsicht BPs und will annehmen, was immer dieser für ihn aushandelt.</p>
+            <p corresp="#seg1">Beiliegend schickt BG die Schreiben eines <rs ref="index:d14380e43662">Ulmer Buchhändlers</rs>
+               <ref type="letter" target="letter:684">684</ref> sowie der <rs ref="index:d14380e22462">Mauriner</rs> (Gallorum tuorum; <ref type="letter" target="letter:671">671</ref>) wieder zurück an BP, der sie ihm durch <rs ref="index:d14380e1139">Kaspar Altlechner</rs> übermittelt hat. Bezüglich des ersteren würde BG gerne wissen, ob in dem für die <rs ref="index:d14380e25664">„Acta sanctorum OSB“</rs> genannten Preis von 14 <rs ref="index:d14380e26892">Gulden</rs> pro Band bereits die Spesen für Transport und Zoll enthalten sind, um entscheiden zu können, ob die hohe Ausgabe für dieses Werk gerechtfertigt ist, zumal in der <rs ref="index:d14380e45820">Hofbibliothek</rs> andere Bücher dringender benötigt werden. BG überlässt jedoch die ganze Angelegenheit der Umsicht BPs und will annehmen, was immer dieser für ihn aushandelt.</p>
             <p corresp="#seg2">Der letztere Brief ist an Eleganz nicht zu übertreffen. Man kann aus ihm schließen, dass der Schreiber (<rs ref="index:d14380e24818">François Le Texier</rs>) bei der Weiterführung der <rs ref="index:d14380e25705">„Annales OSB“</rs> seinen Vorgängern an Ruhm gleichkommen wird.</p>
             <p corresp="#seg3">BG erwartete das ihm versprochene Exemplar von BPs <rs ref="index:d14380e33760">„Nachricht“</rs>, die von <rs ref="index:d14380e23130">Johann Gottlieb Krause</rs> (in der <rs ref="index:d14380e43730">„Umständlichen bücher-historie“</rs>) herausgegeben worden ist, aber Altlechner ist mit leeren Händen zu ihm gekommen. Da BG nach Durchsicht der <rs ref="index:d14380e45756">Kataloge</rs> die Hoffnung, auf dem derzeit stattfindenden <rs ref="index:d14380e45747">(Wiener) Büchermarkt</rs> ein Exemplar zu finden, wohl aufgeben muss, wird es an BP liegen, die Neugier, die er geweckt hat, zu stillen.</p>
             <p corresp="#seg4">Am vorangegangenen Tag hat <rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs> seinen Freund (necessarius) <rs ref="index:d14380e26828">Johann Jakob Mascov</rs>, der eine Bildungsreise nach <rs ref="index:d14380e19828">Italien</rs> beabsichtigt, in die <rs ref="index:d14380e45820">Hofbibliothek</rs> geführt. Mascov ist ein junger Mann von regem Geist und hervorragender Bildung. BG nimmt an, dass er auf seiner Reise auch BP besuchen wird. BG schließt mit Grüßen an <rs ref="index:d14380e34537">HP</rs>.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -116,15 +132,21 @@
             <mentioned>bibliopolae Ulmensis</mentioned>
             <p> Als Geschäftspartner BPs in Ulm kommt
                   eventuell Johann Wolfgang Beuerlein in Frage, über den einige Jahre zuvor eine
-                  Bücherlieferung aus Frankreich abgewickelt worden war: vgl. <ref type="letter" target="letter:57">57</ref> <ref target="letter:57#seg5">5</ref>, <ref type="letter" target="letter:204">204</ref> <ref target="letter:204#seg3">3</ref>, <ref type="letter" target="letter:316">316</ref> <ref target="letter:316#seg2">2</ref>, <ref type="letter" target="letter:452">452 </ref><ref target="letter:452 #seg1">1</ref>. Eine sichere
-                  Identifizierung erscheint allerdings nicht möglich. Weiters vgl. <ref type="letter" target="letter:927">927</ref> <ref target="letter:927#seg4">4</ref>. </p>
+                  Bücherlieferung aus Frankreich abgewickelt worden war: vgl. <ref type="letter" target="letter:57">57</ref>
+               <ref target="letter:57#seg5">5</ref>, <ref type="letter" target="letter:204">204</ref>
+               <ref target="letter:204#seg3">3</ref>, <ref type="letter" target="letter:316">316</ref>
+               <ref target="letter:316#seg2">2</ref>, <ref type="letter" target="letter:452">452 </ref>
+               <ref target="letter:452 #seg1">1</ref>. Eine sichere
+                  Identifizierung erscheint allerdings nicht möglich. Weiters vgl. <ref type="letter" target="letter:927">927</ref>
+               <ref target="letter:927#seg4">4</ref>. </p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned>Gallorum tuorum</mentioned>
             <p> Die Erwähnung der Fortsetzung der „Annales OSB“ in
                   <ref target="#seg2">2</ref> lässt darauf schließen, dass BP einen Brief von François Le Texier
                   vorgelegt hatte, wohl 671, welchen er als einzigen sicher vor diesem Zeitpunkt
-                  erhalten und offenbar bereits gegenüber BG erwähnt hatte: vgl. <ref type="letter" target="letter:682">682</ref> <ref target="letter:682#seg2">2</ref>. Ob aus der Nennung der „Galli tui“ im Plural zu entnehmen
+                  erhalten und offenbar bereits gegenüber BG erwähnt hatte: vgl. <ref type="letter" target="letter:682">682</ref>
+               <ref target="letter:682#seg2">2</ref>. Ob aus der Nennung der „Galli tui“ im Plural zu entnehmen
                   ist, dass noch weitere Schreiben anderer Mauriner ebenfalls an BG übermittelt
                   worden waren, bleibt dagegen unklar; in Frage käme der wohl in der ersten Hälfte
                   des Oktober 1716 bei BP eingetroffene erste Brief von Edmond Martène (677),
@@ -136,21 +158,23 @@
             <mentioned>texendo ... opere</mentioned>
             <p>Von der Übertragung dieser Aufgabe an Le Texier
                   wusste BP spätestens im Juni 1716 durch Bartenstein: <ref type="letter" target="letter:581">581</ref>
-                  <ref target="letter:581#seg4">4</ref>; vgl. <ref type="letter" target="letter:646">646</ref> <ref target="letter:646#seg1">1</ref>. In <ref type="letter" target="letter:671">671</ref> hatte sie Le Texier selbst hingegen nicht erwähnt, sondern nur
+               <ref target="letter:581#seg4">4</ref>; vgl. <ref type="letter" target="letter:646">646</ref>
+               <ref target="letter:646#seg1">1</ref>. In <ref type="letter" target="letter:671">671</ref> hatte sie Le Texier selbst hingegen nicht erwähnt, sondern nur
                   angedeutet.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
             <mentioned>nundinis</mentioned>
             <p>Der Katharinenmarkt wurde üblicherweise von zwei Wochen vor
                   bis zwei Wochen nach dem 25. November gehalten: vgl. <ref type="letter" target="letter:682">682</ref>
-                  <ref target="letter:682#seg4">4</ref>. Er müsste folglich zum Zeitpunkt dieses Briefes vor kurzem angefangen
+               <ref target="letter:682#seg4">4</ref>. Er müsste folglich zum Zeitpunkt dieses Briefes vor kurzem angefangen
                   haben. Mit den von BG erwähnten Katalogen sind vermutlich Sortimentskataloge dort
                   vertretener Buchhändler gemeint.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
             <mentioned>Mascovium</mentioned>
             <p> Zu Mascovs Reise nach Wien, welche der biographischen
-                  Literatur zu ihm unbekannt ist, vgl. <ref type="letter" target="letter:690">690 </ref><ref target="letter:690 #seg1">1</ref>. Als
+                  Literatur zu ihm unbekannt ist, vgl. <ref type="letter" target="letter:690">690 </ref>
+               <ref target="letter:690 #seg1">1</ref>. Als
                   „Angelus Fonteius“ schreibend, erwähnt BG die Überbringung eines Briefes von
                   Johann Burkhard Mencke an ihn durch „Mascovius Dantiscanus“: Gentilotti, Epistola
                   ad Menkenium 3. Von einer Italienreise Mascovs ist ebenso die Rede in zwei Briefen
@@ -159,7 +183,8 @@
                   letztem Brief an Mascov vom 1. November 1716, in welchem Leibniz Bekannte in
                   Italien aufzählt, die Mascov besuchen soll: <rs type="bibl" ref="bibl:14726">Kortholt, Epistolae ad diversos</rs> 1 455f. (dort irrig auf den 1. November
                   1708 datiert). Letztgenannter Brief wurde gemeinsam mit Schreiben an Bartenstein
-                  (vgl. <ref type="letter" target="letter:690">690</ref> <ref target="letter:690#seg4">4</ref>) und an weitere Empfänger am 1.
+                  (vgl. <ref type="letter" target="letter:690">690</ref>
+               <ref target="letter:690#seg4">4</ref>) und an weitere Empfänger am 1.
                   November als Beilage zu einem Brief Leibniz’ an Theobald Schöttel nach Wien
                   versendet. Dieser ist heute erhalten in ÖNB, Cod. S. N. 11992, Nr. 67. Für
                   Auskünfte zu diesen Korrespondenzen sei Nora Gädeke und Malte-Ludolf Babin
@@ -179,7 +204,8 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Clarissimo viro domno Bernardo Pez Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilotus ab Engelsbrun.</opener>
+         <opener>
+            <pb n="1r"/> Clarissimo viro domno Bernardo Pez Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilotus ab Engelsbrun.</opener>
          <ab resp="#editor" xml:id="seg1">Remitto tibi cum his coniunctas litteras tum <anchor xml:id="n1"/>bibliopolae Ulmensis<anchor xml:id="n1e"/>, tum <anchor xml:id="n2"/>Gallorum tuorum<anchor xml:id="n2e"/>, quas humanissimus sodalis tuus domnus Gasparus a te iussus mihi nuper tradidit. Ad priores atque adeo ad pretium Sanctorum ordinis sancti Benedicti quod attinet, scire velim an sumtus vecturae et portorii quatuordecim iis florenis, quibus singuli tomi indicantur, comprehendantur necne, ut statuere possim, num expediat in tanta aliorum librorum, quorum magis indigemus, penuria tantam pecuniam in eos insumere. Ego <add place="above">tamen</add> totam rem prudentiae tuae committo et recipio me, quidquid aequum existimaveris et pactus fueris, ratum habiturum. </ab>
          <ab resp="#editor" xml:id="seg2">Posteriores litterae adeo elegantes, adeo nitidae sunt, ut nihil supra. Licet ex iis coniecturam capere virum illum in texendo Annalium <pb n="1v"/> Benedictinorum opere illorum, quibus suffectus est, famam aequaturum. </ab>
          <ab resp="#editor" xml:id="seg3">Expectabam, ut pollicitus fueras, exemplum speciminis tui a Krausio evulgati, sed domnus Gasparus vacuus ad nos rediit. Tuum erit, mi suavissime, cupiditatem, quam eius videndi in me excitasti, quam primum <add place="above">explere</add>; vereor <add place="above">enim</add>, ne spes, quam conceperam eius hisce <anchor xml:id="n3"/>nundinis<anchor xml:id="n3e"/> nanciscendi, quantum ex catalogis perspicere potui, me fallat. </ab>

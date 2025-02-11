@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="644" xml:id="pez-0644">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Karl Meichelbeck an Bernhard Pez. 1716-08-30. Benediktbeuern.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">644</idno>
          </publicationStmt>
          <seriesStmt>
@@ -55,10 +67,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -81,40 +94,44 @@
                <ptr type="mentionedIn" target="letter:663"/>
             </correspContext>
          </correspDesc>
-         <textClass><keywords>
-            <term ref="index:d14380e4156">„Bayerischer Rummel“</term>
-            <term ref="index:d14380e4170">Bayern, Bayern</term>
-            <term ref="index:d14380e4706">Benediktbeuern</term>
-            <term ref="index:d14380e4885">Benediktbeuern ; Refektorium</term>
-            <term ref="index:d14380e4890">Benediktbeuern ; Schule</term>
-            <term ref="index:d14380e10864">Egger, Felix ; Prodromus Ideae ordinis hierarchico-Benedictini exhibens brevi compendio principatum sacrum et profanum, clericatum, scientiam et actionem eiusdem ordinis, in tribus tabulis. Einsiedeln 1715</term>
-            <term ref="index:d14380e12134">Feuerwerk</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e12962">Frauen</term>
-            <term ref="index:d14380e19828">Italien, Italiener, Italienisch</term>
-            <term ref="index:d14380e21248">Karl VII. Albrecht</term>
-            <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
-            <term ref="index:d14380e27763">Medizin, medizinische Begriffe, gesundheitliche Belange ; Sommerfrische</term>
-            <term ref="index:d14380e27978">Meichelbeck, Karl ; Leben, leyden, todt, erhebung und gnaden-reiche guetthätigkeit der grossen heiligen martyrin Anastasiae, dero hoch-schätzbariste reliquien in dem jahre Christi 1053 in das uhr-alte stifft und exempte closter Benedictbeyrn versetzet worden und noch allzeit mit scheinbaren wunderzeichen alldorten leichten. München 1710</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e28587">Melk ; *Rotelbote 1716, 1718</term>
-            <term ref="index:d14380e28700">Mensallektüre</term>
-            <term ref="index:d14380e29936">München</term>
-            <term ref="index:d14380e31969">Pachinger, Magnus</term>
-            <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum Benedictinorum e celeberrima congregatione S. Mauri in Francia. Augsburg–Graz 1716</term>
-            <term ref="index:d14380e34213">Pez, Bernhard ; Bibliotheksreise 1716</term>
-            <term ref="index:d14380e33515">Pez, Bernhard ; [Pseudonym Bernardus Isipontanus] De irruptione Bavarica et Gallica a Maximiliano Emanuele Bavaro et Ludovico Vendomio Gallorum ad Padum duce in Tirolim facta anno post Christum natum 1703. Wien 1709</term>
-            <term ref="index:d14380e39479">Sartori, Maurus</term>
-            <term ref="index:d14380e42666">Therese Kunigunde Sobieska</term>
-            <term ref="index:d14380e42884">Tirol</term>
-            <term ref="index:d10854e35200">Zödl, Gregor</term></keywords></textClass>
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e4156">„Bayerischer Rummel“</term>
+               <term ref="index:d14380e4170">Bayern, Bayern</term>
+               <term ref="index:d14380e4706">Benediktbeuern</term>
+               <term ref="index:d14380e4885">Benediktbeuern ; Refektorium</term>
+               <term ref="index:d14380e4890">Benediktbeuern ; Schule</term>
+               <term ref="index:d14380e10864">Egger, Felix ; Prodromus Ideae ordinis hierarchico-Benedictini exhibens brevi compendio principatum sacrum et profanum, clericatum, scientiam et actionem eiusdem ordinis, in tribus tabulis. Einsiedeln 1715</term>
+               <term ref="index:d14380e12134">Feuerwerk</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e12962">Frauen</term>
+               <term ref="index:d14380e19828">Italien, Italiener, Italienisch</term>
+               <term ref="index:d14380e21248">Karl VII. Albrecht</term>
+               <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
+               <term ref="index:d14380e27763">Medizin, medizinische Begriffe, gesundheitliche Belange ; Sommerfrische</term>
+               <term ref="index:d14380e27978">Meichelbeck, Karl ; Leben, leyden, todt, erhebung und gnaden-reiche guetthätigkeit der grossen heiligen martyrin Anastasiae, dero hoch-schätzbariste reliquien in dem jahre Christi 1053 in das uhr-alte stifft und exempte closter Benedictbeyrn versetzet worden und noch allzeit mit scheinbaren wunderzeichen alldorten leichten. München 1710</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e28587">Melk ; *Rotelbote 1716, 1718</term>
+               <term ref="index:d14380e28700">Mensallektüre</term>
+               <term ref="index:d14380e29936">München</term>
+               <term ref="index:d14380e31969">Pachinger, Magnus</term>
+               <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum Benedictinorum e celeberrima congregatione S. Mauri in Francia. Augsburg–Graz 1716</term>
+               <term ref="index:d14380e34213">Pez, Bernhard ; Bibliotheksreise 1716</term>
+               <term ref="index:d14380e33515">Pez, Bernhard ; [Pseudonym Bernardus Isipontanus] De irruptione Bavarica et Gallica a Maximiliano Emanuele Bavaro et Ludovico Vendomio Gallorum ad Padum duce in Tirolim facta anno post Christum natum 1703. Wien 1709</term>
+               <term ref="index:d14380e39479">Sartori, Maurus</term>
+               <term ref="index:d14380e42666">Therese Kunigunde Sobieska</term>
+               <term ref="index:d14380e42884">Tirol</term>
+               <term ref="index:d10854e35200">Zödl, Gregor</term>
+            </keywords>
+         </textClass>
          <abstract>
-            <p corresp="#seg1">KM wollte auf den Brief BPs <ref type="letter" target="letter:629">629</ref>, den ihm der <rs ref="index:d14380e28587">Melker Bote</rs> (tabellarius) vor einiger Zeit zusammen mit BPs <rs ref="index:d14380e33384">„Bibliotheca Benedictino-Mauriana“</rs> überbracht hat, nicht sofort antworten, weil er wusste, dass BP wieder auf <rs ref="index:d14380e34213">Bibliotheksreise</rs> war. Nun aber, da er annimmt, dass dieser als eifrige <rs ref="index:d14380e28088">Melker</rs> Biene reich mit honigsüßen Früchten der Gelehrsamkeit beladen in seinen Bienenstock zurückgekehrt ist, bedankt sich KM für das kostbare Geschenk. Er hat es bereits zweimal durchgelesen und nun seinem Abt <rs ref="index:d14380e31969">Magnus Pachinger</rs> gegeben, der sowohl die Leistungen der <rs ref="index:d14380e22462">Mauriner</rs> als auch jene ihres Beschreibers BP gelobt hat. Demnächst soll die „Bibliotheca Benedictino-Mauriana“ im <rs ref="index:d14380e4885">Benediktbeurer Refektorium</rs> <rs ref="index:d14380e28700">bei Tisch vorgelesen</rs> werden, um so alle Mitbrüder zur Nachahmung anzuspornen; auch sollen zwei Exemplare dieses Jahr unter den Preisen sein, die bei Ende des Schuljahres unter den <rs ref="index:d14380e4890">Schülern</rs> verteilt werden. Dies berichtet KM, damit BP erkennt, wie sehr den Benediktbeurern die Verbreitung seiner Werke am Herzen liegt.</p>
+            <p corresp="#seg1">KM wollte auf den Brief BPs <ref type="letter" target="letter:629">629</ref>, den ihm der <rs ref="index:d14380e28587">Melker Bote</rs> (tabellarius) vor einiger Zeit zusammen mit BPs <rs ref="index:d14380e33384">„Bibliotheca Benedictino-Mauriana“</rs> überbracht hat, nicht sofort antworten, weil er wusste, dass BP wieder auf <rs ref="index:d14380e34213">Bibliotheksreise</rs> war. Nun aber, da er annimmt, dass dieser als eifrige <rs ref="index:d14380e28088">Melker</rs> Biene reich mit honigsüßen Früchten der Gelehrsamkeit beladen in seinen Bienenstock zurückgekehrt ist, bedankt sich KM für das kostbare Geschenk. Er hat es bereits zweimal durchgelesen und nun seinem Abt <rs ref="index:d14380e31969">Magnus Pachinger</rs> gegeben, der sowohl die Leistungen der <rs ref="index:d14380e22462">Mauriner</rs> als auch jene ihres Beschreibers BP gelobt hat. Demnächst soll die „Bibliotheca Benedictino-Mauriana“ im <rs ref="index:d14380e4885">Benediktbeurer Refektorium</rs>
+               <rs ref="index:d14380e28700">bei Tisch vorgelesen</rs> werden, um so alle Mitbrüder zur Nachahmung anzuspornen; auch sollen zwei Exemplare dieses Jahr unter den Preisen sein, die bei Ende des Schuljahres unter den <rs ref="index:d14380e4890">Schülern</rs> verteilt werden. Dies berichtet KM, damit BP erkennt, wie sehr den Benediktbeurern die Verbreitung seiner Werke am Herzen liegt.</p>
             <p corresp="#seg2">Aus Felix Eggers Tafelwerk <rs ref="index:d14380e10864">„Prodromus Ideae ordinis hierarchico-Benedictini“</rs> entnimmt KM, dass BP vor einigen Jahren ein Werk über den bayerischen Einfall in <rs ref="index:d14380e42884">Tirol</rs> (<rs ref="index:d14380e33515">„De irruptione Bavarica“</rs>) veröffentlicht hat. Er wäre sehr interessiert, es zu lesen, und bittet um Nachricht, wo man es kaufen kann. KM lebt selbst an der Grenze zwischen <rs ref="index:d14380e4170">Bayern</rs> und <rs ref="index:d14380e42884">Tirol</rs> und hat viele der <rs ref="index:d14380e4156">Kriegsereignisse</rs> selbst gesehen, wie BP aus seinem <rs ref="index:d14380e27978">„Leben der heiligen martyrin Anastasiae“</rs> entnehmen kann.</p>
             <p corresp="#seg3">KM schreibt außerhalb seines angestammten Arbeitsbereichs (officina), weil die bayerische Kurfürstin <rs ref="index:d14380e42666">Therese Kunigunde</rs> bereits die dritte Woche mit ihrem Hofstaat in <rs ref="index:d14380e4706">Benediktbeuern</rs> auf <rs ref="index:d14380e27763">Sommerfrische</rs> weilt. Vor kurzem wurde sie von ihrem Sohn <rs ref="index:d14380e21248">Karl Albrecht</rs> auf seiner Rückreise aus <rs ref="index:d14380e19828">Italien</rs> besucht. Bei diesem Anlass wurde ein von KMs Mitbruder <rs ref="index:d14380e39479">Maurus Sartori</rs> geplantes <rs ref="index:d14380e12134">Feuerwerk</rs> geboten. Eine Komödie von <rs ref="index:d10854e35200">Gregor Zödl</rs> wird hingegen noch mehrere Wochen auf sich warten lassen. Die Kurfürstin lässt die Versorgung für sich und ihre Leute aus <rs ref="index:d14380e29936">München</rs> kommen; wenn doch etwas zusätzlich gebraucht wird, lässt sie es sofort in bar bezahlen, sodass dem Kloster kaum Unkosten entstehen. Allerdings sind durch ihren Hofstaat alle Gästequartiere besetzt, und KM muss deutlich weiter weg vom Archiv arbeiten als sonst.</p>
             <p corresp="#seg4">KM berichtet dies, damit BP versteht, warum KM sein letztes Schreiben nicht zur Hand hat; ansonsten würde er auf dessen Inhalt eingehender antworten.</p>
             <p corresp="#seg5">In einem Postskriptum äußert sich KM über Eggers „Prodromus“, der seiner Meinung nach zwar mit lobenswertem Fleiß, aber mit ungenügender Kenntnis der benediktinischen Verhältnisse erstellt wurde.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -182,7 +199,7 @@
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
             <mentioned>Mauro Sartorio</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:16970">Hemmerle, Benediktbeuern</rs> 625f.; <rs type="bibl" ref="bibl:17518">Klemm, Barocktheater</rs> 404f.; <rs type="bibl" ref="bibl:18030">Lindner, Professbuch Benediktbeuern</rs> 53–55.</p>
+               <rs type="bibl" ref="bibl:16970">Hemmerle, Benediktbeuern</rs> 625f.; <rs type="bibl" ref="bibl:17518">Klemm, Barocktheater</rs> 404f.; <rs type="bibl" ref="bibl:18030">Lindner, Professbuch Benediktbeuern</rs> 53–55.</p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg3">
             <mentioned> Opus comicum</mentioned>
@@ -204,7 +221,9 @@
             <p> Zweifellos der „Prodromus Ideae ordinis
                   hierarchico-Benedictini“, der aus mehreren Tafeln zur Geschichte des Ordens
                   besteht. Egger hatte für diese Arbeit auch einige ihm von BP gelieferte
-                  Informationen verwertet: vgl. <ref type="letter" target="letter:281">281</ref> <ref target="letter:281#seg3">3</ref>, <ref type="letter" target="letter:457">457</ref> <ref target="letter:457#seg2">2</ref>. Zur Gattung der historischen Tabellenwerke
+                  Informationen verwertet: vgl. <ref type="letter" target="letter:281">281</ref>
+               <ref target="letter:281#seg3">3</ref>, <ref type="letter" target="letter:457">457</ref>
+               <ref target="letter:457#seg2">2</ref>. Zur Gattung der historischen Tabellenwerke
                   vgl. <rs type="bibl" ref="bibl:15422">Brendecke, Tabellenwerke</rs>; <rs type="bibl" ref="bibl:16488">Gierl, Geschichte</rs> 217–226; <rs type="bibl" ref="bibl:19702">Steiner, Ordnung der Geschichte</rs>.</p>
          </note>
       </listAnnotation>
@@ -214,11 +233,18 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiosissime et clarissime domine pater Bernarde, domine et patrone colendissime.</opener>
-         <ab resp="#editor" xml:id="seg1">Nolui respondere citius ad vestras iucundissimas literas ab optimo viro <anchor xml:id="n1"/>tabellario vestro<anchor xml:id="n1e"/> mihi una cum libro pretiosissimo dudum consignatas, eo quod intellexerim paternitatem vestram admodum reverendam iterum fecisse<anchor xml:id="n2"/> excursionem<anchor xml:id="n2e"/> ad alienas bibliothecas lustrandas. Nunc vero dum apiculam Mellicensem cum opimis melleae eruditionis spoliis ad suum alveare reversam esse confido, silere iam non licet ulterius, sed gratias humanissimas aeque ac iustissimas congemino pro exhibito munere, mihi <anchor xml:id="n3"/>supra aurum et topazion<anchor xml:id="n3e"/> gratissimo. Volvi illud iterum hisce diebus ac postea reverendissimo domino abbati volvendum obtuli, qui et Gallorum nostrorum labores et mellei encomiastae gloriosam scriptionem mecum summe depraedicavit cogitatque Bibliothecam illam vestram proxime dare legendam ad mensam in religioso nostro triclinio, ut pro suo quisque modulo ad imitationem tantorum exemplorum excitemur. Duo etiam exemplaria eiusdem Bibliothecae vestrae ad praesentem anni scholastici finem distribuentur in theatro hic loci inter praemia<anchor xml:id="n4"/> iuventuti studiosae<anchor xml:id="n4e"/> ex more distribui solita; quod addo, ne nesciat Bernardus, quantopere nobis cordi curaeque sit praeclara illius opera orbi propalare. <pb n="1v"/> </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiosissime et clarissime domine pater Bernarde, domine et patrone colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Nolui respondere citius ad vestras iucundissimas literas ab optimo viro <anchor xml:id="n1"/>tabellario vestro<anchor xml:id="n1e"/> mihi una cum libro pretiosissimo dudum consignatas, eo quod intellexerim paternitatem vestram admodum reverendam iterum fecisse<anchor xml:id="n2"/> excursionem<anchor xml:id="n2e"/> ad alienas bibliothecas lustrandas. Nunc vero dum apiculam Mellicensem cum opimis melleae eruditionis spoliis ad suum alveare reversam esse confido, silere iam non licet ulterius, sed gratias humanissimas aeque ac iustissimas congemino pro exhibito munere, mihi <anchor xml:id="n3"/>supra aurum et topazion<anchor xml:id="n3e"/> gratissimo. Volvi illud iterum hisce diebus ac postea reverendissimo domino abbati volvendum obtuli, qui et Gallorum nostrorum labores et mellei encomiastae gloriosam scriptionem mecum summe depraedicavit cogitatque Bibliothecam illam vestram proxime dare legendam ad mensam in religioso nostro triclinio, ut pro suo quisque modulo ad imitationem tantorum exemplorum excitemur. Duo etiam exemplaria eiusdem Bibliothecae vestrae ad praesentem anni scholastici finem distribuentur in theatro hic loci inter praemia<anchor xml:id="n4"/> iuventuti studiosae<anchor xml:id="n4e"/> ex more distribui solita; quod addo, ne nesciat Bernardus, quantopere nobis cordi curaeque sit praeclara illius opera orbi propalare. <pb n="1v"/>
+         </ab>
          <ab resp="#editor" xml:id="seg2">Clarissime Bernarde! In tabulis patris Felicis Egger lego sequentia: Bernardus Pez Mellicensis, qui ante quinquennium tres libros De bello Bavarico et Tyrolensi edidit etc. Mirum itaque me tenet desiderium videndi hunc partum vestrum hactenus mihi penitus ignotum. Obsecro igitur, quibus in oris prostat venalis, ut eum comparem et voluptate innocua cito perfruar? Cum enim sim constitutus in ea ipsa orbis parte, ubi Bavaria Tyrolisque iunguntur, facile persuadebit sibi clarissimus Bernardus, quantopere cupiam legere ex libro <add place="above">ea</add>, quorum partem maximam hisce oculis egomet vidi, prout facile intelliget paternitas vestra ex iis, quae <anchor xml:id="n5"/>in libello sanctae Anastasiae<anchor xml:id="n5e"/> ante sexennium scripsi. Exspecto hanc a vobis gratiam certe in paucis desiderabilem; curaboque semper, ne ingratum me sentiatis. </ab>
-         <ab resp="#editor" xml:id="seg3">Scribo ista constitutus extra musaeum meum ordinarium, quod deserendum est ad tempus, dum serenissima <anchor xml:id="n6"/>electrix nostra<anchor xml:id="n6e"/> iam in tertiam septimanam in aedificio illo cum suo famulitio aulico commoratur auraque sibi (uti constanter affirmat) saluberrima non sine ingenti voluptate fruitur. <pb n="2r"/> Fuit illa nuper hic salutata a serenissimo suo<anchor xml:id="n7"/> Carolo Alberto<anchor xml:id="n7e"/> ex Italia reduce, quo tempore opus pyrotechnicum (a nostro patre <anchor xml:id="n8"/>Mauro Sartorio<anchor xml:id="n8e"/> praeclaro artificio elaboratum) ab omnibus non sine admiratione fuit spectatum et collaudatum.<anchor xml:id="n9"/> Opus comicum<anchor xml:id="n9e"/> patris Gregorii nostri differtur ad aliquot septimanas, uti hactenus audio. Illud memoria dignum est, quod serenissima ista princeps omnem annonam pro se suisque iubeat afferri Monachio, aut si qua re nostra tandem indigent, praesenti pretio usque ad obolum etiam recusantibus solvat, etiam ova, ligna ac minima quaeque; ut plane eapropter nemo suspicari debeat multos a nobis fieri debere sumptus. Interea tamen (quod fieri aliter non potest) loca omnia pro hospitibus destinata a comitatu aulico, qui quidem adeo magnus non est, occupantur, et ego tantisper absum<app><rdg wit="#"><add place="after">absum</add></rdg></app> ex officina mea ordinaria, remotior nonnihil a documentis nostris; dum interim non potest non recreare praesentia principis, foeminae prudentissimae, tam iucunde hic degentis et de suo ad suos reditu hactenus nihil memorantis. </ab>
-         <ab resp="#editor" xml:id="seg4">Scribo ista, ne nesciat vestra paternitas me nuperas vestras modo non <pb n="2v"/> <sic>non</sic> habere hoc in loco ad manus, quippe ad quas alias respondissem accuratius et forte fusius. Commendo me humillime et maneo</ab>
+         <ab resp="#editor" xml:id="seg3">Scribo ista constitutus extra musaeum meum ordinarium, quod deserendum est ad tempus, dum serenissima <anchor xml:id="n6"/>electrix nostra<anchor xml:id="n6e"/> iam in tertiam septimanam in aedificio illo cum suo famulitio aulico commoratur auraque sibi (uti constanter affirmat) saluberrima non sine ingenti voluptate fruitur. <pb n="2r"/> Fuit illa nuper hic salutata a serenissimo suo<anchor xml:id="n7"/> Carolo Alberto<anchor xml:id="n7e"/> ex Italia reduce, quo tempore opus pyrotechnicum (a nostro patre <anchor xml:id="n8"/>Mauro Sartorio<anchor xml:id="n8e"/> praeclaro artificio elaboratum) ab omnibus non sine admiratione fuit spectatum et collaudatum.<anchor xml:id="n9"/> Opus comicum<anchor xml:id="n9e"/> patris Gregorii nostri differtur ad aliquot septimanas, uti hactenus audio. Illud memoria dignum est, quod serenissima ista princeps omnem annonam pro se suisque iubeat afferri Monachio, aut si qua re nostra tandem indigent, praesenti pretio usque ad obolum etiam recusantibus solvat, etiam ova, ligna ac minima quaeque; ut plane eapropter nemo suspicari debeat multos a nobis fieri debere sumptus. Interea tamen (quod fieri aliter non potest) loca omnia pro hospitibus destinata a comitatu aulico, qui quidem adeo magnus non est, occupantur, et ego tantisper absum<app>
+               <rdg wit="#">
+                  <add place="after">absum</add>
+               </rdg>
+            </app> ex officina mea ordinaria, remotior nonnihil a documentis nostris; dum interim non potest non recreare praesentia principis, foeminae prudentissimae, tam iucunde hic degentis et de suo ad suos reditu hactenus nihil memorantis. </ab>
+         <ab resp="#editor" xml:id="seg4">Scribo ista, ne nesciat vestra paternitas me nuperas vestras modo non <pb n="2v"/>
+            <sic>non</sic> habere hoc in loco ad manus, quippe ad quas alias respondissem accuratius et forte fusius. Commendo me humillime et maneo</ab>
          <closer>Paternitatis vestrae admodum reverendae servus obligatissimus semperque paratissimus pater Carolus.</closer>
          <closer>In monasterio Benedictoburano hac die 30. Augusti sanctis angelis custodibus sacra 1716.</closer>
          <closer xml:id="seg5">P.S. <anchor xml:id="n10"/>Tabulae patris Felicis Egger<anchor xml:id="n10e"/> laudabili sane industria sunt compositae. Utinam industriae respondisset notitia <add place="right-margin">maior</add> rerum ordinis nostri! Quam multa potuissent omitti! Quam multa gloriosius scribi!</closer>

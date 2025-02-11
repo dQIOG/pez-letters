@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="70" xml:id="pez-0070">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Leonardo Lana an Bernhard Pez. 1710-05-25. Brescia.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">70</idno>
          </publicationStmt>
          <seriesStmt>
@@ -55,10 +67,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -84,7 +97,7 @@
             <p corresp="#seg1">LL bedauert, dass er nicht mehr als das bereits Übermittelte <ref type="letter" target="letter:60">60</ref> über die Leben und Werke der Schriftsteller aus seinem Kloster <rs ref="index:d10854e4250">S. Faustino</rs> berichten konnte, da das Andenken an sie untergegangen und nur eine schmale Zusammenfassung übrig geblieben ist.</p>
             <p corresp="#seg2">Dennoch fügt LL <rs ref="index:d10854e6875">Gregorio Ducchi</rs> an, von dem er aber lediglich weiß, dass er adelig war und sich als Dichter betätigte.</p>
             <p corresp="#seg3">LL hat BPs Brief <ref type="letter" target="letter:59">59</ref> auch dem Abt von <rs ref="index:d10854e4243">S. Eufemia</rs> (<rs ref="index:d10854e5043">Alvise Cazzago</rs>?) gezeigt; dieser hat jedoch gleichfalls nichts beitragen können, zumal ihm über die verstorbenen Mönche seines Klosters nichts bekannt ist. So entschuldigt sich LL und erbittet für BP himmlischen Segen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -99,7 +112,8 @@
                   einer einzigen Quelle geschöpft, wohl einer handschriftlichen Hausgeschichte von
                   S. Faustino, einem Professenkatalog o. Ä. Der Informationsstand dieser Quelle
                   reichte anscheinend etwa bis zu einem Zeitraum um die Mitte des 17. Jh. Zu einer
-                  möglichen späteren Benutzung vgl. <ref type="letter" target="letter:60">60 </ref><ref target="letter:60 #seg2">2</ref>.</p>
+                  möglichen späteren Benutzung vgl. <ref type="letter" target="letter:60">60 </ref>
+               <ref target="letter:60 #seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>Gregorium Ducum</mentioned>
@@ -120,11 +134,13 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende pater virtuosissime.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverende pater virtuosissime.</opener>
          <ab resp="#editor" xml:id="seg1">Utinam vota tua adimplere potuissem, eruditissime vir, transmittendo videlicet tibi gesta et opera typis mandata in <sic>seculis</sic>  decursis a monachis huius monasterii ad divi patris Benedicti religionem illustrandam: sed heu me dolens, quod hoc <sic>eficere</sic>  nequeo; nam <anchor xml:id="n1"/>periit memoria eorum cum sonitu<anchor xml:id="n1e"/>, et vix strictum <anchor xml:id="n2"/>compendium remansit, cuius totam notitiam iam tibi transmisi<anchor xml:id="n2e"/>, et ultra per virtutum gesta procedere nequeo. </ab>
          <ab resp="#editor" xml:id="seg2">Verum fateor paternitati vestrae admodum <sic>reverende</sic>  vixisse inter viros eruditos huius monasterii domnum <anchor xml:id="n3"/>Gregorium Ducum<anchor xml:id="n3e"/>, sed eius fama nullo alio titulo decoratur, nisi quod fuerit vir nobilis <sic>caeleberque</sic>  poeta. </ab>
          <ab resp="#editor" xml:id="seg3">Illustrissimo ac reverendissimo <anchor xml:id="n4"/>S. Euphemiae praesuli<anchor xml:id="n4e"/> seu abbati humanissimas paternitatis vestrae litteras ostendi, qui, paenitus ignorans monachorum inter mortuos existentium gesta, silentio respondet, nam quid ore proferat, nescit; illum ergo excusatum habeat, sicut et ego benigne sum excusandus, si ulteriora mihi ignota in lucem edere nequeo. Interim <sic>praecor</sic>  caelestem Regem, ut semper tuum nomen <sic>illustriorem</sic>  reddat <sic>ateque</sic>  benedictionibus repleat, et tota cordis devotione me subscribo</ab>
-         <closer>Paternitatis vestrae admodum <sic>reverende</sic>  <sic>aditissimus</sic>  atque obligatissimus servus domnus Leonardus Lana abbas S. Faustini.</closer>
+         <closer>Paternitatis vestrae admodum <sic>reverende</sic>
+            <sic>aditissimus</sic>  atque obligatissimus servus domnus Leonardus Lana abbas S. Faustini.</closer>
          <closer>Brixiae die 25. Maii 1710.</closer>
       </body>
    </text>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="302" xml:id="pez-0302">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Moritz Müller an Bernhard Pez. 1713-03-22. Rheinau.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">302</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -83,14 +95,15 @@
             <p corresp="#seg4">In einem Postskriptum erkundigt sich MM nach dem Verbleib seiner Schreiben an <rs ref="index:d14380e39962">Anselm Schramb</rs> und <rs ref="index:d10854e27943">Beat Anton von Schnorf</rs>, den<rs ref="index:d14380e39290"> St. Galler</rs> Gesandten in <rs ref="index:d14380e45571">Wien</rs>, und bittet BP, eine Antwort zu urgieren.</p>
             <p corresp="#seg5">In einem Notabene-Vermerk ersucht MM, an ihn gerichtete Briefe zur Tarnung über <rs ref="index:d14380e43652">Ulm</rs> und <rs ref="index:d14380e39541">Schaffhausen</rs> an den <rs ref="index:d14380e37324">Rheinauer</rs> Prior <rs ref="index:d10854e17132">Joachim Letter</rs> zu adressieren. MM selbst will aus Angst vor <rs ref="index:d14380e39321">feindlicher Interzeption</rs> nicht als <rs ref="index:d14380e39290">St. Galler</rs> Kapitular tituliert werden.</p>
             <p corresp="#seg6">In einem zweiten Postskriptum berichtet MM, dass seine letzten Schreiben an den kaiserlichen Oberkellermeister adressiert waren.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>libellos illos</mentioned>
-            <p>Nach den Worten BPs in <ref type="letter" target="letter:304">304</ref> <ref target="letter:304#seg1">1</ref> dürfte es sich bei
+            <p>Nach den Worten BPs in <ref type="letter" target="letter:304">304</ref>
+               <ref target="letter:304#seg1">1</ref> dürfte es sich bei
                   dieser Sendung um einen Versuch gehandelt haben, MM Exemplare von BPs Abhandlung
                   „De irruptione Bavarica“ zukommen zu lassen, wie BP bereits in <ref type="letter" target="letter:209">209</ref> versprochen, vor der Besetzung St. Gallens aber anscheinend nicht
                   mehr ausgeführt hatte. Ob die Sendung MM schließlich erreichte, geht aus der
@@ -100,7 +113,8 @@
             <mentioned>ullas alteras</mentioned>
             <p>Die ausdrückliche Mitteilung MMs, keinen weiteren Brief erhalten zu haben, lässt
                   darauf schließen, dass der von ihm beantwortete Brief BPs vom 25. Februar der
-                  spätere der zwei von BP in <ref type="letter" target="letter:304">304</ref> <ref target="letter:304#seg1">1</ref> erwähnten Briefe
+                  spätere der zwei von BP in <ref type="letter" target="letter:304">304</ref>
+               <ref target="letter:304#seg1">1</ref> erwähnten Briefe
                      (<ref type="letter" target="letter:296">296</ref>, <ref type="letter" target="letter:297">297</ref>) war, und dass
                   darin wohl bereits nach dem früheren gefragt wurde. Beide dieser Briefe waren
                   vermutlich nach Zwiefalten adressiert, da BP von MMs Übersiedlung nach Rheinau
@@ -122,7 +136,9 @@
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
             <mentioned>Parisios ad ... Anissonios</mentioned>
-            <p>Zu den Buchhändlern Anisson vgl. <ref type="letter" target="letter:32">32</ref> <ref target="letter:32#seg4">4</ref>, <ref type="letter" target="letter:71">71</ref><ref target="letter:71#seg9">9</ref>. Erhalten ist ein Brief MMs an René Massuet vom
+            <p>Zu den Buchhändlern Anisson vgl. <ref type="letter" target="letter:32">32</ref>
+               <ref target="letter:32#seg4">4</ref>, <ref type="letter" target="letter:71">71</ref>
+               <ref target="letter:71#seg9">9</ref>. Erhalten ist ein Brief MMs an René Massuet vom
                   22. März 1713 (BN FF 19664, 226r–228v), in welchem MM um die Veranlassung der
                   Anschaffung der „Acta sanctorum OSB“ und weiterer Bücher ersucht. Vgl. <ref type="letter" target="letter:305">305</ref>; <rs type="bibl" ref="bibl:19778">Stockinger,
                      Fidelis</rs> 359.</p>
@@ -138,7 +154,8 @@
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
             <mentioned>Joachimo Letter</mentioned>
-            <p><rs type="bibl" ref="bibl:16986">Henggeler, Profeßbuch Pfäfers Rheinau Fischingen
+            <p>
+               <rs type="bibl" ref="bibl:16986">Henggeler, Profeßbuch Pfäfers Rheinau Fischingen
                   </rs>302f.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg6">
@@ -154,7 +171,7 @@
                   Bezeichnung auch auf Blasius Bender angespielt werden, dem der Titel eines
                   „Großkellers“ eignete – freilich nicht am kaiserlichen Hof, sondern im Kloster St.
                   Blasien. Zu ihm vgl. <ref type="letter" target="letter:194">194</ref>, <ref type="letter" target="letter:327">327</ref>
-                  <ref target="letter:327#seg7">7</ref>.</p>
+               <ref target="letter:327#seg7">7</ref>.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -170,11 +187,13 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine in Christo pater ac domine amice et confrater colendissime in paucis charissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine in Christo pater ac domine amice et confrater colendissime in paucis charissime.</opener>
          <ab resp="#editor" xml:id="seg1">Ultimas de 25. Februarii ad me datas hodie, dum haec scribo, Wiblinga mihi transmissas accipio; pariterque (dum cumulata me hodie negotia obruunt) his paucis significo me nec <anchor xml:id="n1"/>libellos illos<anchor xml:id="n1e"/> nec <anchor xml:id="n2"/>ullas alteras<anchor xml:id="n2e"/>, <anchor xml:id="n3"/>dum hic loci dego<anchor xml:id="n3e"/>, ad me datas unquam vidisse. Illud tamen hac ipsa die, qua tuae advenerunt, Wiblinga mihi nuntiatum, <anchor xml:id="n4"/>libellos illos<anchor xml:id="n4e"/> ad manus confratris mei domini patris <anchor xml:id="n5"/>Columbani<anchor xml:id="n5e"/> Wiblingae nunc in exilio degentis devenisse et interim abs eodem, dum commoda et securior occasio se prodat eos mittendi, reservatos fuisse. </ab>
          <ab resp="#editor" xml:id="seg2">Caeterum pro Actis sanctorum Mabillonii mihi mittendis hodie iterum <anchor xml:id="n6"/>Parisios ad dominos Anissonios<anchor xml:id="n6e"/> regios librarios scripsi, speroque illa brevi ad manus habere, ut possim desideria ac vota vestra explere. Ego, mox ut responsum accepero, communicabo. Proinde tantillam adhuc suadeo patientiam, quia longe mitiori pretio a prima manu erunt comparanda, quam si a bibliopola Viennensi forent emenda. </ab>
          <ab resp="#editor" xml:id="seg3">Caeterum pro tam synceris votis in effectum nostrae postliminiae restitutionis nimium quantum obligamur, reciproco voto coelis facto, ut florentissimum Melicium nostrum nulla unquam talis novercantis fortunae procella feriat, sed semper magis magisque conservetur et floreat. Quo in voto <pb n="1v"/> finio, sed sine fine, dum vixero, ero, ut fui semper, vero ac syncero corde et ex toto animo</ab>
-         <closer>Totus vester pater Mauritius Müller Sanct-Gallensis capitularis manu propria raptissime<note place="foot" xml:id="d4618e38472"><hi rend="italic">Sanct-Gallensis capitularis manu propria raptissime</hi> mit anderer Feder, möglicherweise später, hinzugefügt.</note>.</closer>
+         <closer>Totus vester pater Mauritius Müller Sanct-Gallensis capitularis manu propria raptissime<note place="foot" xml:id="d4618e38472">
+               <hi rend="italic">Sanct-Gallensis capitularis manu propria raptissime</hi> mit anderer Feder, möglicherweise später, hinzugefügt.</note>.</closer>
          <closer>Dabam in monasterio Rhenoviensi 1713 die 22. Martii.</closer>
          <closer xml:id="seg4">P.S. Scripsi nuper Viennam admodum reverendo domino patri vestro Anselmo Schrammb et perillustri <anchor xml:id="n7"/>domino Schnorppff<anchor xml:id="n7e"/> agenti nostro Viennensi, sed quia hactenus responsum accepi nullum, dubito, an litterae fuerint receptae. Omnino tamen scire debeo, quia res magni momenti continebant et responsum exigebant. Rogo, dignetur id patri Anselmo significare et monere, ut una cum praedicto <anchor xml:id="n8"/>domino Schnorppff<anchor xml:id="n8e"/> dignentur me certiorare.</closer>
          <closer xml:id="seg5">N.B. Ut litterae secure ad me huc veniant, mittantur Ulmam vel Wiblingam cum hac cautela et <sic>attressa</sic> , ut scilicet cooperto blande inscribantur: Plurimum reverendo domino patri <anchor xml:id="n9"/>Joachimo Letter<anchor xml:id="n9e"/> celeberrimi et exempti monasterii Rhenoviensis priori dignissimo, per <sic>Ulim</sic>  – Schaffhousen, a Rheinauw. In meis vero inclusis abstrahatur a nomine capitularis S. Galli, quia hoc nomen hostibus haereticis invisum.</closer>

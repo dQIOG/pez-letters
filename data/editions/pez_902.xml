@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="902" xml:id="pez-0902">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an Wolfgang Dullinger. 1718-02-08. Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">902</idno>
          </publicationStmt>
          <seriesStmt>
@@ -56,10 +68,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -80,31 +93,35 @@
                <ptr type="mentions" target="letter:874"/>
             </correspContext>
          </correspDesc>
-         <textClass><keywords>
-            <term ref="index:d14380e1772">Anianus, hl</term>
-            <term ref="index:d14380e6075">Bollandisten</term>
-            <term ref="index:d14380e10128">Dullinger, Wolfgang ; Arbeiten zu den hl. Marinus und Anianus</term>
-            <term ref="index:d14380e10335">Du Saussay, André ; Insignis libri De scriptoribus ecclesiasticis eminentissimi
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e1772">Anianus, hl</term>
+               <term ref="index:d14380e6075">Bollandisten</term>
+               <term ref="index:d14380e10128">Dullinger, Wolfgang ; Arbeiten zu den hl. Marinus und Anianus</term>
+               <term ref="index:d14380e10335">Du Saussay, André ; Insignis libri De scriptoribus ecclesiasticis eminentissimi
          cardinalis Bellarmini continuatio ab anno 1500, in quo desinit, ad annum 1600, quo incipit
          sequentis saeculi exordium. Toul 1665; Köln 1684</term>
-            <term ref="index:d14380e15263">Gerhoch von Reichersberg ; Dialogus inter clericum saecularem et regularem. Ms. Rott am
+               <term ref="index:d14380e15263">Gerhoch von Reichersberg ; Dialogus inter clericum saecularem et regularem. Ms. Rott am
          Inn</term>
-            <term ref="index:d14380e15277">Gerhoch von Reichersberg ; Dialogus inter clericum saecularem et regularem. Ms. Rott am
+               <term ref="index:d14380e15277">Gerhoch von Reichersberg ; Dialogus inter clericum saecularem et regularem. Ms. Rott am
          Inn ; Abschrift von Bernhard Pez. Ms</term>
-            <term ref="index:d14380e26350">Marinus, hl</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
+               <term ref="index:d14380e26350">Marinus, hl</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
          1721–1729</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e37985">Rott am Inn</term>
-            <term ref="index:d14380e38037">Rott am Inn ; Bibliothek ; Gerhoch von Reichersberg, Dialogus inter clericum saecularem
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e37985">Rott am Inn</term>
+               <term ref="index:d14380e38037">Rott am Inn ; Bibliothek ; Gerhoch von Reichersberg, Dialogus inter clericum saecularem
          et regularem. Ms</term>
-            <term ref="index:d14380e38050">Rott am Inn ; *Rotelbote 1718</term>
-            <term ref="index:d14380e45571">Wien</term></keywords></textClass>
+               <term ref="index:d14380e38050">Rott am Inn ; *Rotelbote 1718</term>
+               <term ref="index:d14380e45571">Wien</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">BP dankt für die Exzerpte aus André Du Saussays „<rs ref="index:d14380e10335">Continuatio</rs>“ ebenso
                wie für die Zusendung <ref type="letter" target="letter:874">874</ref> der Handschrift mit dem „<rs ref="index:d14380e15263">Dialogus inter clericum saecularem et regularem</rs>“ des Gerhoch von
-               Reichersberg. Den letzteren Text hat BP innerhalb jener vier Tage <rs ref="index:d14380e15277">abgeschrieben</rs>, in denen der <rs ref="index:d14380e37985">Rotter</rs> <rs ref="index:d14380e38050">Rotelbote</rs> von <rs ref="index:d14380e28088">Melk</rs> nach <rs ref="index:d14380e45571">Wien</rs> und zurück unterwegs war. Er sendet nun durch diesen den Codex mit
+               Reichersberg. Den letzteren Text hat BP innerhalb jener vier Tage <rs ref="index:d14380e15277">abgeschrieben</rs>, in denen der <rs ref="index:d14380e37985">Rotter</rs>
+               <rs ref="index:d14380e38050">Rotelbote</rs> von <rs ref="index:d14380e28088">Melk</rs> nach <rs ref="index:d14380e45571">Wien</rs> und zurück unterwegs war. Er sendet nun durch diesen den Codex mit
                seinem Dank und mit dem Versprechen gebührender Erwähnung von Rott am Inn (im „<rs ref="index:d10854e22483">Thesaurus anecdotorum novissimus</rs>“) zurück.</p>
             <p corresp="#seg2">BP ist erfreut, dass die „<rs ref="index:d14380e10128">Acta</rs>“ der Rotter Heiligen <rs ref="index:d14380e26350">Marinus</rs> und <rs ref="index:d14380e1772">Anianus</rs>
                druckfertig sind. Er bittet um Zusendung, da er im folgenden Sommer zwei bis drei Bände mit derartigen
@@ -113,7 +130,7 @@
                ohnehin alles erhalten; überhaupt werden sie auf sein Werk nicht verzichten können. Wenn WD diesem Wunsch
                nachkommen kann, bittet BP um eine Zusendung um Ostern, zu welcher Zeit seine Bände in den Druck gebracht
                werden sollen. BP empfiehlt sich und HP den Gebeten WDs und der Mönche von <rs ref="index:d14380e37985">Rott am Inn</rs>.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -139,14 +156,18 @@
             <mentioned>patres Bollandiani</mentioned>
             <p>An persönlichen Kontakten BPs mit Bollandisten
                   ist nur jener mit Jean-Baptiste Du Sollier nachzuweisen, der mittelbar über Anton
-                  Steyerer abgewickelt wurde und denkbar kurz verlief: vgl. <ref type="letter" target="letter:489">489</ref>, <ref type="letter" target="letter:490">490</ref> <ref target="letter:490#seg3">3</ref>, <ref type="letter" target="letter:530">530</ref> <ref target="letter:530#seg2">2</ref>, <ref type="letter" target="letter:539">539</ref> <ref target="letter:539#seg4">4</ref>. Die von BP hier
+                  Steyerer abgewickelt wurde und denkbar kurz verlief: vgl. <ref type="letter" target="letter:489">489</ref>, <ref type="letter" target="letter:490">490</ref>
+               <ref target="letter:490#seg3">3</ref>, <ref type="letter" target="letter:530">530</ref>
+               <ref target="letter:530#seg2">2</ref>, <ref type="letter" target="letter:539">539</ref>
+               <ref target="letter:539#seg4">4</ref>. Die von BP hier
                   erbetene Zusendung von Material scheint nicht stattgefunden zu haben.</p>
          </note>
       </listAnnotation>
    </standOff>
    <text>
       <body>
-         <opener><pb n="1v"/> Patrone ac amice singularis!</opener>
+         <opener>
+            <pb n="1v"/> Patrone ac amice singularis!</opener>
          <ab resp="#editor" xml:id="seg1">Tum pro excerptis Saussaeianis<del ana="#after">pr</del>, tum pro ipso codice manuscripto, quo beati Gerhochi praepositi Reichersbergensis insigne opusculum De differentia inter clericum secularem et regularem continetur, humanissimas gratias rependo. Opusculum Gerhochi integrum <anchor xml:id="n1"/>mea manu descripsi<anchor xml:id="n1e"/> quatriduo, nempe interea temporis, dum<anchor xml:id="n2"/> rotularius Rotensis<anchor xml:id="n2e"/> Mellicio Viennam <sic>perexit</sic> et<anchor xml:id="n3"/> inde ad me rediit: quare per eundem codicem cum maxima grati animi contestatione remitto securamque clarissimam vestram dominationem reddo me candide et multa cum Rotensi gloria in opusculi praefatione<anchor xml:id="n3e"/> commemoraturum, cui tam nobile antiquitatis monumentum debeat eruditus orbis. </ab>
          <ab resp="#editor" xml:id="seg2">De actis sanctorum Marini et Aniani vehementer gaudeo ea praelo matura iam esse. <pb n="2r"/> Si consilia mea non displicent, rogo ea mecum communicari, ut qui hac aestate duos tresve tomos huiusmodi veterum opusculorum, actorum, vitarum etc. editurus sum. Mutabo nihil in clarissimae vestrae paternitatis illustrationibus, sed eas, ut sunt, excudendas curabo. Inde <anchor xml:id="n4"/>patres Bollandiani<anchor xml:id="n4e"/>, amici mei, omnia habebunt, quae volent, cum aliunde hoc meo opere carere non possunt. Quod si itaque dignus visus fuero, qui exaudiar, clarissima vestra paternitas saltem circa Pascha suum opus ad me mittat, quo circiter tempore, ut nuper scripsi, mei tomi ad praelum proficiscentur. Exspecto desuper avide responsum, meque ac fratrem germanum clarissimorum dominorum Rotensium favoribus enixe commendo.</ab>
          <closer>Pater Bernardus Pez bibliothecarius Mellicensis.</closer>

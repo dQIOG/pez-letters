@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="145" xml:id="pez-0145">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Hyazinth Baumbach an Bernhard Pez. 1711-02-21. Würzburg (St. Stephan).</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">145</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Der Brief ist unter der Korrespondenz René Massuets überliefert; eine Adresse ist
                   nicht erhalten. Aus ähnlichen Gründen wie bei 144 (vgl.
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -78,8 +90,9 @@
          <abstract>
             <p corresp="#seg1">HB hat einen weiteren Brief aus <rs ref="index:d10854e9767">Fulda</rs> (von <rs ref="index:d14380e40921">Konrad Sigler</rs>) erhalten, den er BP weitersendet. Wenn auch die Informationen darin BP vielleicht nicht zufrieden stellen, kann er doch daraus den Eifer des Verfassers ersehen.</p>
             <p corresp="#seg2">Für die <rs ref="index:d10854e15615">Mauriner</rs> in Paris wird HB aus <rs ref="index:d10854e2054">Banz</rs> demnächst die <rs ref="index:d10854e2083">Denkwürdigkeiten dieses Klosters</rs> erhalten.</p>
-            <p corresp="#seg3">Er selbst will Informationen über zwei Benediktinerklöster beisteuern, die unrechtmäßig von der <rs ref="index:d10854e34226">Würzburger</rs> <rs ref="index:d10854e34306">bischöflichen Hofkammer</rs> konfisziert wurden: das Männerkloster <rs ref="index:d10854e1728">Aura an der Saale</rs> nahe der Burg <rs ref="index:d10854e31117">Trimberg</rs>, wo nun ein fürstbischöflicher Amtskeller (cellarius) seinen Sitz hat, sowie das einst berühmte Frauenkloster zu<rs ref="index:d10854e14939"> Kitzingen</rs> am <rs ref="index:d10854e18358">Main</rs>, dessen erste Äbtissin <rs ref="index:d10854e11617">Hadeloga</rs> im Ruf der Heiligkeit steht. An dessen Stelle ist ein Kloster der <rs ref="index:d10854e31627">Ursulinen</rs> errichtet worden, doch können diese nicht über ihre eigenen Einkünfte verfügen, sondern erhalten lediglich einen Teil davon seitens der <rs ref="index:d10854e34306">bischöflichen Hofkammer</rs> ausgezahlt. Diese Informationen hält HB für wert, in die „<rs ref="index:d14380e25705">Annales OSB</rs>“ aufgenommen zu werden, und wünscht, mehr zu diesem Unternehmen beitragen zu können.</p>
-            </abstract>
+            <p corresp="#seg3">Er selbst will Informationen über zwei Benediktinerklöster beisteuern, die unrechtmäßig von der <rs ref="index:d10854e34226">Würzburger</rs>
+               <rs ref="index:d10854e34306">bischöflichen Hofkammer</rs> konfisziert wurden: das Männerkloster <rs ref="index:d10854e1728">Aura an der Saale</rs> nahe der Burg <rs ref="index:d10854e31117">Trimberg</rs>, wo nun ein fürstbischöflicher Amtskeller (cellarius) seinen Sitz hat, sowie das einst berühmte Frauenkloster zu<rs ref="index:d10854e14939"> Kitzingen</rs> am <rs ref="index:d10854e18358">Main</rs>, dessen erste Äbtissin <rs ref="index:d10854e11617">Hadeloga</rs> im Ruf der Heiligkeit steht. An dessen Stelle ist ein Kloster der <rs ref="index:d10854e31627">Ursulinen</rs> errichtet worden, doch können diese nicht über ihre eigenen Einkünfte verfügen, sondern erhalten lediglich einen Teil davon seitens der <rs ref="index:d10854e34306">bischöflichen Hofkammer</rs> ausgezahlt. Diese Informationen hält HB für wert, in die „<rs ref="index:d14380e25705">Annales OSB</rs>“ aufgenommen zu werden, und wünscht, mehr zu diesem Unternehmen beitragen zu können.</p>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -88,7 +101,7 @@
             <mentioned>Litteras, quas ... Fulda accepi</mentioned>
             <p>Der Brief Siglers vom 14. Februar 1711 ist erhalten in I, 211r–212v (mit dem
                   Ordnungsvermerk „40“). Ähnlich wie der erste (vgl. <ref type="letter" target="letter:144">144</ref>
-                  <ref target="letter:144#seg1">1</ref>) ist er in der bisherigen Literatur als Brief an BP gewertet worden (<rs type="bibl" ref="bibl:16524">Glassner, Verzeichnis</rs> 236; <rs type="bibl" ref="bibl:17432">Katschthaler, Briefnachlass</rs> 17, 106), richtigerweise aber
+               <ref target="letter:144#seg1">1</ref>) ist er in der bisherigen Literatur als Brief an BP gewertet worden (<rs type="bibl" ref="bibl:16524">Glassner, Verzeichnis</rs> 236; <rs type="bibl" ref="bibl:17432">Katschthaler, Briefnachlass</rs> 17, 106), richtigerweise aber
                   als Brief an HB anzusehen. Über BP wird darin durchgehend in der dritten Person
                   geschrieben. Sigler berichtet, dass sich keine Handschriften Lamperts von Hersfeld
                   mehr in Hersfeld befinden können, weil die Bibliothek nach Kassel überführt worden
@@ -104,7 +117,7 @@
                   nach Jerusalem bietet Mabillon, Annales OSB 4 597. Weitere Autoren, die Lampert
                   nennen, sind Trithemius, Cave, Voss, Hallervord und Bellarmin. Sigler bietet an,
                   von seinen Korrespondenten, besonders Leibniz (vgl. <ref type="letter" target="letter:317">317</ref>
-                  <ref target="letter:317#seg2">2</ref>), weitere Informationen einzuholen. Er würdigt BPs Vorhaben einer
+               <ref target="letter:317#seg2">2</ref>), weitere Informationen einzuholen. Er würdigt BPs Vorhaben einer
                   „Bibliotheca Benedictina“, äußert jedoch Bedenken wegen der großen Zahl der
                   benediktinischen Autoren im Mittelalter („zu denen mittleren zeiten“) und des
                   Verlusts vieler ihrer Schriften. Er nennt ein Werk des Bonifatius „De historia et
@@ -123,7 +136,8 @@
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>ex monasterio Banthensi</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:171">171</ref>, <ref type="letter" target="letter:177">177</ref> <ref target="letter:177#seg18">18</ref>, <ref type="letter" target="letter:267">267</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:171">171</ref>, <ref type="letter" target="letter:177">177</ref>
+               <ref target="letter:177#seg18">18</ref>, <ref type="letter" target="letter:267">267</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
             <mentioned>Aura</mentioned>
@@ -162,8 +176,10 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiose eximie ac doctissime pater, domine colende.</opener>
-         <ab resp="#editor" xml:id="seg1"><anchor xml:id="n1"/>Litteras, quas interim distinctis iterum vicibus Fulda accepi<anchor xml:id="n1e"/>, non potui aliter, quin ipsissimas originales transmitterem. Ex quibus praeter alia ad desiderium quidem forte non sufficientia etiam scriptoris desiderium videre aut legere licebit, quod recommendo. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiose eximie ac doctissime pater, domine colende.</opener>
+         <ab resp="#editor" xml:id="seg1">
+            <anchor xml:id="n1"/>Litteras, quas interim distinctis iterum vicibus Fulda accepi<anchor xml:id="n1e"/>, non potui aliter, quin ipsissimas originales transmitterem. Ex quibus praeter alia ad desiderium quidem forte non sufficientia etiam scriptoris desiderium videre aut legere licebit, quod recommendo. </ab>
          <ab resp="#editor" xml:id="seg2">Pro Parisiensibus nostris etiam <anchor xml:id="n2"/>ex monasterio Banthensi<anchor xml:id="n2e"/> accepturus sum memoratu digniora. </ab>
          <ab resp="#editor" xml:id="seg3">Et ego interim quaedam <add place="left-margin">colligam</add> de duobus monasteriis nostris a principali camera Herbipolensi nescio quo iure occupatis: unum virorum, monasterium <anchor xml:id="n3"/>Aura<anchor xml:id="n3e"/> dictum ad Saalam fluvium prope Drimperg <sic>arccem</sic>  et satrapiam Herbipolensem situm, ubi officialis principis, cellarius dictus, constitutus est. Alterum sanctimonialium in civitate <anchor xml:id="n4"/>Kitzingensi ad Moenum, et antehac celebre, cuius prima abbatissa Hadaloga<anchor xml:id="n4e"/> sancta habetur. Eius loco aedificatum est ibi novum monasterium <anchor xml:id="n5"/>Ursulinarum<anchor xml:id="n5e"/>, sed redditus non habent, et tantum certa portio de iis a camera Herbipolensi traditur. Quae Annalibus nostris non incongrue inserenda censeo. Utinam collaborare possem, ut opto! Hisce permaneo sub protectione Altissimi</ab>
          <closer>Admodum reverendae et eximiae paternitatis vestrae paratissimus Hyacinth abbas manu propria.</closer>

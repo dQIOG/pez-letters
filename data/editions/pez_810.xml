@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="810" xml:id="pez-0810">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Attilio Vignola an Bernhard Pez. &lt; 1717-08-13.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">810</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Der Brief liegt in Melk in zwei Überlieferungen vor: neben der angegebenen ist noch eine Abschrift vorhanden in I, 322r–323v, gefolgt von einer Abschrift der „Epitome chronicorum Casinensium“ ebd. 323v–339v. Diese Überlieferung wird als Original und jene in StiB Melk, Cod. 35, als Abschrift geführt bei Glassner, Verzeichnis 238. Diese Auffassung wird revidiert bei Glassner, Handschriften 39. Für diese Revision spricht an erster Stelle der paläographische Befund, der im Fall von StiB Melk, Cod. 35, 1r–2v, auf einen italienischen, im Fall von I, 322r–323v, hingegen auf einen österreichischen oder süddeutschen Schreiber hinweist. Weiters finden sich in I, 322r–323v, verschiedene Abschreibfehler, etwa in &lt;1&gt; die fälschliche Auflösung der üblichen Kürzung „p. d.“ für „pater domnus“ als „pater noster“ oder in &lt;2&gt; die sinnlose Verschreibung „Palici“ statt „Pagii“. – Das Schreiben ist nicht datiert; die Datumsansetzung ergibt sich aus dem Bezug zu 811. Als Absendeort ist Padua anzunehmen.
             </note>
@@ -45,10 +56,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -70,81 +82,84 @@
                <ptr type="sentWith" target="letter:811"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e150">Achery, Jean-Luc d’ ; Veterum aliquot scriptorum, qui in Galliae bibliothecis, maxime
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e150">Achery, Jean-Luc d’ ; Veterum aliquot scriptorum, qui in Galliae bibliothecis, maxime
          Benedictinorum, latuerunt, spicilegium. 13 Bde. Paris 1655–1677</term>
-            <term ref="index:d14380e605">Aigulfus, hl</term>
-            <term ref="index:d14380e1389">Anastasius Bibliothecarius</term>
-            <term ref="index:d14380e2181">Anonyme Werke ; Codex Carolinus</term>
-            <term ref="index:d14380e3931">Baronio, Cesare</term>
-            <term ref="index:d14380e3941">Baronio, Cesare ; Annales ecclesiastici. 12 Bde. Rom 1588–1607</term>
-            <term ref="index:d14380e3948">Baronio, Cesare ; Martyrologium Romanum ad novam kalendarii rationem et ecclesiasticae
+               <term ref="index:d14380e605">Aigulfus, hl</term>
+               <term ref="index:d14380e1389">Anastasius Bibliothecarius</term>
+               <term ref="index:d14380e2181">Anonyme Werke ; Codex Carolinus</term>
+               <term ref="index:d14380e3931">Baronio, Cesare</term>
+               <term ref="index:d14380e3941">Baronio, Cesare ; Annales ecclesiastici. 12 Bde. Rom 1588–1607</term>
+               <term ref="index:d14380e3948">Baronio, Cesare ; Martyrologium Romanum ad novam kalendarii rationem et ecclesiasticae
          historiae veritatem restitutum. Rom 1586</term>
-            <term ref="index:d14380e7715">Cave, William ; Scriptorum ecclesiasticorum historia literaria a Christo nato usque ad
+               <term ref="index:d14380e7715">Cave, William ; Scriptorum ecclesiasticorum historia literaria a Christo nato usque ad
          saeculum XIV. facili methodo digesta. Accedit appendix ab ineunte saeculo XIV. ad annum
          usque MDXVII. 2 Bde. London 1688–1698; Genf 1705</term>
-            <term ref="index:d14380e8010">Childebert III</term>
-            <term ref="index:d14380e8018">Chilperich II</term>
-            <term ref="index:d14380e8025">Chlodwig III</term>
-            <term ref="index:d14380e8048">Christentum</term>
-            <term ref="index:d14380e8117">Chronologie, chronologische Begriffe</term>
-            <term ref="index:d14380e10008">Du Bois-Olivier, Jean ; Floriacensis vetus bibliotheca Benedictina, sancta, apostolica,
+               <term ref="index:d14380e8010">Childebert III</term>
+               <term ref="index:d14380e8018">Chilperich II</term>
+               <term ref="index:d14380e8025">Chlodwig III</term>
+               <term ref="index:d14380e8048">Christentum</term>
+               <term ref="index:d14380e8117">Chronologie, chronologische Begriffe</term>
+               <term ref="index:d14380e10008">Du Bois-Olivier, Jean ; Floriacensis vetus bibliotheca Benedictina, sancta, apostolica,
          pontificia, caesarea, regia, Franco-Gallica. 3 Bde. Lyon 1605</term>
-            <term ref="index:d14380e18496">Hofmann, Johann Jakob ; Lexicon universale
+               <term ref="index:d14380e18496">Hofmann, Johann Jakob ; Lexicon universale
          historico-geographico-chronologico-poetico-philologicum. 2 Bde. Basel 1677</term>
-            <term ref="index:d14380e20252">Jesus Christus</term>
-            <term ref="index:d14380e20373">Johannes III</term>
-            <term ref="index:d14380e21018">Justin II</term>
-            <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
-            <term ref="index:d14380e22969">Konstantin I</term>
-            <term ref="index:d14380e22977">Konstantin I ; Brief an Chilperich II</term>
-            <term ref="index:d14380e22984">Konstantinopel</term>
-            <term ref="index:d14380e23408">Labbe, Philippe ; Conciliorum generalium historica synopsis. Paris 1661</term>
-            <term ref="index:d14380e24572">Leo I</term>
-            <term ref="index:d14380e24579">Leo II</term>
-            <term ref="index:d14380e24587">Leo II ; Brief an einen König Childebert</term>
-            <term ref="index:d14380e25581">Mabillon, Jean</term>
-            <term ref="index:d14380e25664">Mabillon, Jean ; Acta sanctorum ordinis sancti Benedicti, in saeculorum classes
+               <term ref="index:d14380e20252">Jesus Christus</term>
+               <term ref="index:d14380e20373">Johannes III</term>
+               <term ref="index:d14380e21018">Justin II</term>
+               <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
+               <term ref="index:d14380e22969">Konstantin I</term>
+               <term ref="index:d14380e22977">Konstantin I ; Brief an Chilperich II</term>
+               <term ref="index:d14380e22984">Konstantinopel</term>
+               <term ref="index:d14380e23408">Labbe, Philippe ; Conciliorum generalium historica synopsis. Paris 1661</term>
+               <term ref="index:d14380e24572">Leo I</term>
+               <term ref="index:d14380e24579">Leo II</term>
+               <term ref="index:d14380e24587">Leo II ; Brief an einen König Childebert</term>
+               <term ref="index:d14380e25581">Mabillon, Jean</term>
+               <term ref="index:d14380e25664">Mabillon, Jean ; Acta sanctorum ordinis sancti Benedicti, in saeculorum classes
          distributa, ab anno Christi D ad annum MC. 9 Bde. Paris 1668–1701</term>
-            <term ref="index:d14380e25705">Mabillon, Jean ; Annales ordinis sancti Benedicti, occidentalium monachorum
+               <term ref="index:d14380e25705">Mabillon, Jean ; Annales ordinis sancti Benedicti, occidentalium monachorum
          patriarchae, in quibus non modo res monasticae, sed etiam ecclesiasticae historiae non
          minima pars continetur. 6 Bde. Paris 1703–1739</term>
-            <term ref="index:d14380e25780">Mabillon, Jean ; De re diplomatica libri sex, , in quibus quidquid ad veterum
+               <term ref="index:d14380e25780">Mabillon, Jean ; De re diplomatica libri sex, , in quibus quidquid ad veterum
          instrumentorum antiquitatem, materiam, scripturam, et stilum; quidquid ad sigilla,
          monogrammata, subscriptiones ac notas chronologicas; quidquid inde ad antiquariam,
          historicam, forensemque disciplinam pertinet, explicatur et illustratur. Paris 1681</term>
-            <term ref="index:d14380e27200">Mauricius</term>
-            <term ref="index:d14380e29411">Monte Cassino</term>
-            <term ref="index:d14380e29929">Mummolus, hl</term>
-            <term ref="index:d14380e32104">Padua ; S. Giustina</term>
-            <term ref="index:d14380e32121">Padua ; S. Giustina ; Bibliothek</term>
-            <term ref="index:d14380e32152">Padua ; S. Giustina ; Bibliothek ; Petrus Diaconus, Epitome chronicorum Casinensium.
+               <term ref="index:d14380e27200">Mauricius</term>
+               <term ref="index:d14380e29411">Monte Cassino</term>
+               <term ref="index:d14380e29929">Mummolus, hl</term>
+               <term ref="index:d14380e32104">Padua ; S. Giustina</term>
+               <term ref="index:d14380e32121">Padua ; S. Giustina ; Bibliothek</term>
+               <term ref="index:d14380e32152">Padua ; S. Giustina ; Bibliothek ; Petrus Diaconus, Epitome chronicorum Casinensium.
          Ms</term>
-            <term ref="index:d14380e32199">Pagi, Antoine ; Critica historico-chronologica in Annales ecclesiasticos eminentissimi
+               <term ref="index:d14380e32199">Pagi, Antoine ; Critica historico-chronologica in Annales ecclesiasticos eminentissimi
          et reverendissimi Caesaris cardinalis Baronii. Paris 1689; zweite Ausgabe in 4 Bden.
          Antwerpen 1705</term>
-            <term ref="index:d14380e32637">Paul I., hl</term>
-            <term ref="index:d14380e32738">Pelagius II</term>
-            <term ref="index:d14380e33092">Petrus Diaconus ; Epitome chronicorum Casinensium. Ms. Padua, S. Giustina</term>
-            <term ref="index:d14380e33101">Petrus Diaconus ; Liber illustrium virorum archisterii Casinensis. Ms. Padua, S.
+               <term ref="index:d14380e32637">Paul I., hl</term>
+               <term ref="index:d14380e32738">Pelagius II</term>
+               <term ref="index:d14380e33092">Petrus Diaconus ; Epitome chronicorum Casinensium. Ms. Padua, S. Giustina</term>
+               <term ref="index:d14380e33101">Petrus Diaconus ; Liber illustrium virorum archisterii Casinensis. Ms. Padua, S.
          Giustina</term>
-            <term ref="index:d14380e35198">Pippin III</term>
-            <term ref="index:d14380e37680">Rom, Römer</term>
-            <term ref="index:d14380e37728">Rom, Römer ; Päpstliche Kurie, Papsttum</term>
-            <term ref="index:d14380e39246">Sandi, Giuseppe Maria</term>
-            <term ref="index:d14380e41461">Stephan II</term>
-            <term ref="index:d14380e41907">Surius, Laurentius ; Tomus quintus De probatis sanctorum historiis. Köln 1574</term>
-            <term ref="index:d14380e44656">Vitalian</term>
-            <term ref="index:d14380e44664">Vitalian ; Brief an Chlodwig III</term>
-            <term ref="index:d14380e46413">Wion, Arnold</term>
-            <term ref="index:d14380e46421">Wion, Arnold ; Lignum vitae, ornamentum et decus ecclesiae, in quinque libros divisum,
+               <term ref="index:d14380e35198">Pippin III</term>
+               <term ref="index:d14380e37680">Rom, Römer</term>
+               <term ref="index:d14380e37728">Rom, Römer ; Päpstliche Kurie, Papsttum</term>
+               <term ref="index:d14380e39246">Sandi, Giuseppe Maria</term>
+               <term ref="index:d14380e41461">Stephan II</term>
+               <term ref="index:d14380e41907">Surius, Laurentius ; Tomus quintus De probatis sanctorum historiis. Köln 1574</term>
+               <term ref="index:d14380e44656">Vitalian</term>
+               <term ref="index:d14380e44664">Vitalian ; Brief an Chlodwig III</term>
+               <term ref="index:d14380e46413">Wion, Arnold</term>
+               <term ref="index:d14380e46421">Wion, Arnold ; Lignum vitae, ornamentum et decus ecclesiae, in quinque libros divisum,
          in quibus totius sanctissimae religionis divi Benedicti initia, viri dignitate, doctrina,
          sanctitate ac principatu clari, describuntur et fructus, qui per eos sacrae Romanae
-         ecclesiae accesserunt, fusissime explicantur. 2 Bde. Venedig 1595</term></keywords></textClass>
+         ecclesiae accesserunt, fusissime explicantur. 2 Bde. Venedig 1595</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">AV sendet BP (in Abschrift) die Handschrift, die <rs ref="index:d14380e1389">Anastasius, dem
-                  Bibliothekar</rs> <rs ref="index:d14380e41461">Papst Stephans II.</rs>, zugeschrieben wird (recte:
+                  Bibliothekar</rs>
+               <rs ref="index:d14380e41461">Papst Stephans II.</rs>, zugeschrieben wird (recte:
                Petrus Diaconus, <rs ref="index:d14380e33092">„Epitome chronicorum Casinensium“</rs>). AV hält den
                Text für nicht vertrauenswürdig, entspricht aber durch die Zusendung dem dringenden Wunsch, den BP
                gegenüber <rs ref="index:d14380e39246">Giuseppe Maria Sandi</rs>, dem <rs ref="index:d14380e32121">Bibliothekar</rs> von <rs ref="index:d14380e32104">S. Giustina</rs>, geäußert hat <ref type="letter" target="letter:809">809</ref>. Der verfälschte (apocryphus) und blasphemische Text
@@ -198,7 +213,7 @@
                vermag. AV beteuert, dass er all dieses nicht aus Parteilichkeit (partium studium), sondern nur aus
                Wahrheitsliebe ausgeführt hat, und unterwirft die Frage dem gelehrten Urteil BPs; diesem will er gerne
                stattgeben, sollte BP befinden, dass er von einer richtigen Einschätzung abgekommen ist.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -327,13 +342,28 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Attilius Vignola Bernardo Petz salutem dicit.</opener>
-         <ab resp="#editor" xml:id="seg1"><anchor xml:id="n1"/>Codicem<anchor xml:id="n1e"/><anchor xml:id="n2"/> Anastasio Stephani II. summi pontificis bibliothecario<anchor xml:id="n2e"/> <sic>ascriptum</sic> ad te mitto, non quod eum fide dignum censeam, sed ut tibi satisfaciam, qui, ut nuper in humanissima tua ad patrem domnum Josephum Mariam Sandium huiusce nostri monasterii bibliothecarium epistola significasti, eius pervidendi desiderio flagras. Nisi enim humanitati tuae parere summopere studuissem, operis <sic>praetium</sic> non erat tot fabulas in unum congestas describere totque commenta scriptis saepius tradere, quae potius curandum erat, ut e manuscripto isto apocrypho et sacrilego atque adeo e memoria hominum delerentur. Quamquam sunt aliqua (ut constat) a veritate non abhorrentia, ut suspicari quis non immerito possit vera falsis fuisse permixta, non veritatis amore, sed decipiendi libidine, ut, quemadmodum zizania (<anchor xml:id="n3"/>Baronii verbis<anchor xml:id="n3e"/> uti placet)<note type="annotation" xml:id="d3e39104">Am rechten Blattrand ausgewiesen <orig>Baronius tomo 10 pagina 100</orig>.</note> inter triticum seminata sicut triticum aequa falce metuntur, ita et commentitia abolito nomine falsitatis transeant in historiam sibique veritatis fidem concilient. </ab>
+         <opener>
+            <pb n="1r"/> Attilius Vignola Bernardo Petz salutem dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">
+            <anchor xml:id="n1"/>Codicem<anchor xml:id="n1e"/>
+            <anchor xml:id="n2"/> Anastasio Stephani II. summi pontificis bibliothecario<anchor xml:id="n2e"/>
+            <sic>ascriptum</sic> ad te mitto, non quod eum fide dignum censeam, sed ut tibi satisfaciam, qui, ut nuper in humanissima tua ad patrem domnum Josephum Mariam Sandium huiusce nostri monasterii bibliothecarium epistola significasti, eius pervidendi desiderio flagras. Nisi enim humanitati tuae parere summopere studuissem, operis <sic>praetium</sic> non erat tot fabulas in unum congestas describere totque commenta scriptis saepius tradere, quae potius curandum erat, ut e manuscripto isto apocrypho et sacrilego atque adeo e memoria hominum delerentur. Quamquam sunt aliqua (ut constat) a veritate non abhorrentia, ut suspicari quis non immerito possit vera falsis fuisse permixta, non veritatis amore, sed decipiendi libidine, ut, quemadmodum zizania (<anchor xml:id="n3"/>Baronii verbis<anchor xml:id="n3e"/> uti placet)<note type="annotation" xml:id="d3e39104">Am rechten Blattrand ausgewiesen <orig>Baronius tomo 10 pagina 100</orig>.</note> inter triticum seminata sicut triticum aequa falce metuntur, ita et commentitia abolito nomine falsitatis transeant in historiam sibique veritatis fidem concilient. </ab>
          <ab resp="#editor" xml:id="seg2">Ab <anchor xml:id="n4"/>anacronismo itaque aggreditur<anchor xml:id="n4e"/> scriptor ad fabulam suam hunc in modum: Imperante Mauritio in utraque Roma orbis monocratore, anno videlicet ab incarnatione quingentesimo sexagesimo octavo, et paullo inferius: ac ex concessione sancti Pelagii papae secundi et Tiberii Mauritii imperatoris. Annus quippe DLXVIII concurrebat cum anno quarto imperii Justini Iunioris et cum anno nono pontificatus Joannis <pb n="1v"/> III.; annus autem primus imperii Mauritii concurrebat cum anno DLXXXII et cum anno quinto pontificatus Pelagii II., ut in<anchor xml:id="n5"/> Pagii Criticis<anchor xml:id="n5e"/> videre est<note type="annotation" xml:id="d3e39118">Am linken Blattrand ausgewiesen <orig>Pagius in Critica ad Annales Baronii tomo 2 paginis 641 et 668</orig>.</note>. </ab>
-         <ab resp="#editor" xml:id="seg3">Refert deinde <anchor xml:id="n6"/>Vitaliani, Leonis et Constantini summorum pontificum quasdam epistolas<anchor xml:id="n6e"/>, quas tamen fictitias esse colligitur, tum quia de eis nec in collectione Labbeana nec in Spicilegio Dacheryano fit mentio, tum quia in eis praeponuntur nomina eorumdem pontificum nominibus Clodovei, <sic>Chidelberti</sic> et Chilperici regum Francorum, ad quos sunt epistolae, quod tamen in usu fuisse illis temporibus visum non est<anchor xml:id="n7"/> Mabillonio<anchor xml:id="n7e"/>. Inquit enim<note type="annotation" xml:id="d3e39129">Am linken Blattrand ausgewiesen <orig>Mabillonius De re diplomatica libro 2 capite 2 numero 3</orig>.</note>: At nemo pontificum Romanorum post Leonem Magnum regibus nomen suum praeposuisse mihi videtur ante ipsummet Paulum, qui Pippino Francorum regi litteras direxit cum hac inscriptione: Paulus episcopus servus servorum Dei praecellentissimo filio Pippino regi Francorum<note place="foot" xml:id="d3e39135"><hi rend="italic">Paulus ... Francorum</hi> in der Vorlage zusätzlich durch Unterstreichung hervorgehoben.</note>, ut legitur in epistola XII. codicis Carolini. </ab>
-         <ab resp="#editor" xml:id="seg4">Eas demum falsas omnino esse existimo ex contumeliis maledictisve in Aygulphum et Mummulum, quos sanctos esse ac Martyrologio Romano <sic>ascriptos</sic> <anchor xml:id="n8"/>Surius<note type="annotation" xml:id="d3e39146">Mit dem Verweisbuchstaben <orig>a</orig> am linken Blattrand ausgewiesen <orig>Surius in Vita sancti Aygulphi ad diem 3. Septembris tomo 5</orig>.</note><anchor xml:id="n8e"/>, <anchor xml:id="n9"/>Baronius<note type="annotation" xml:id="d3e39160">Mit dem Verweisbuchstaben <orig>b</orig> am linken Blattrand ausgewiesen <orig>Baronius tomo 8 pagina 492</orig>.</note><anchor xml:id="n9e"/>, <anchor xml:id="n10"/>Mabillonius<anchor xml:id="n10e"/> in Actis sanctorum nostri ordinis ac in suis Annalibus<note type="annotation" xml:id="d3e39172">Mit dem Verweisbuchstaben <orig>c</orig> am linken Blattrand ausgewiesen <orig>Mabillonius in Actis sanctorum sancti Benedicti saeculo 2 paginis 656 et 674; tomo primo Annalium paginis 530 et 546.</orig></note> aliique constantissime asserunt. <anchor xml:id="n11"/>Ipseque Arnoldus Wion<note type="annotation" xml:id="d3e39192">Am linken Blattrand ausgewiesen <orig>Arnoldus Wion in Ligno vitae parte 2 libro 3 paginis 264 et 289</orig>.</note><anchor xml:id="n11e"/> huiusce codicis propugnator Vitaliani epistolas fictitias esse fatetur ac propterea indignas, quae in publicum prodeant, ob convicia, quibus referta sunt in sanctos Aygulphum et Mummulum. Quomodo enim sancti pontifices damnassent atque anathemati <pb n="2r"/> devovissent tamquam haereticos, latrones, radices perversitatis, refugas legis filiosque Sathanae viros, quos inter beatos sancta mater ecclesia veneratur et colit? Qua fronte quave impudentia nugax, impius ac male feriatus scriptor sanctum martyrem Aygulphum a viro <sic>quoddam</sic> nobili propter furta et latrocinia minutatim concisum fuisse illumque infernum ebibisse blasphemare ausus est, <anchor xml:id="n12"/>quem propter Jesu Christi amorem martyrium fortiter subiisse constat<note type="annotation" xml:id="d3e39204">Am rechten Blattrand ausgewiesen <orig>Martyrologium Romanum ad diem 3. Septembris</orig>.</note><anchor xml:id="n12e"/>? </ab>
-         <ab resp="#editor" xml:id="seg5">Quare de isto Anastasio, qui perperam huiusce codicis creditur auctor, optime ait Joannes de Bosco<note type="annotation" xml:id="d3e39212">Am rechten Blattrand ausgewiesen <orig>Joannes de Bosco in Floriacensi vetere bibliotheca Benedictina etc. pagina 384</orig>.</note>: Certe nullius ponderis, quisquis tandem fuerit, esse debet omnibus bonis ac Romanam ecclesiam suspicientibus Christianis is Anastasius, qui maledicta, probra et blasphemias congerit in sanctos Martyrologio Romano adscriptos, unde nec in eo refutando, quem detestor ut blasphemum maledicumve, operam ponere institui, nec enim fidem ipse meretur. Quamobrem Arnoldus Wion<note type="annotation" xml:id="d3e39218">Am rechten Blattrand ausgewiesen <orig>Arnoldus Wion in Ligno vitae parte 2 paginis 289 et 385.</orig></note> invitus etiam fassus est verba huiusce Anastasii historiam ex se multum suspectam reddere eaque vel non esse Anastasii vel ex animi passione dicta ideoque in eo reperiri multa castigatione digna. At a quibus castigari debeat, admonet Joannes de Bosco, dum ait<note type="annotation" xml:id="d3e39223">Am rechten Blattrand ausgewiesen <orig>Joannes de Bosco pagina 385</orig>.</note> Anastasium<anchor xml:id="n13"/> castigari debere a Romanae ecclesiae ministris, et tunc a talibus castigatus admittetur, qui verbis sensuque discolus a suis ipsis respuitur<anchor xml:id="n13e"/>. </ab>
-         <ab resp="#editor" xml:id="seg6">Quae cum ita sint, neminem sibi persuadere posse existimo codicis istius auctorem <pb n="2v"/> fuisse Anastasium Stephani II. pontificis maximi bibliothecarium, propterea quia Hofmannus in suo <sic>Lexicon</sic> eum recensens ne unum quidem apicem scripsisse refert<note type="annotation" xml:id="d3e39236">Am linken Blattrand ausgewiesen <orig>Hofmannus in <sic>Lexicon</sic> tomo primo</orig>.</note><anchor xml:id="n14"/> Petrusque Diaconus<note type="annotation" xml:id="d3e39245">Am linken Blattrand ausgewiesen <orig>Petrus Diaconus Cassinensis Libro de viris illustribus Cassinensibus</orig>.</note><anchor xml:id="n14e"/> Cassinensis monachus, qui saeculo XII. floruit, virorum illustrium Cassinensis coenobii texens catalogum nullam de illo mentionem facit. Quare Gulielmi<anchor xml:id="n15"/> Cave<note type="annotation" xml:id="d3e39251">Am linken Blattrand ausgewiesen <orig>Gulielmus Cave saeculo eiconoclastico pagina 415</orig>.</note><anchor xml:id="n15e"/> auctoritatem tanti faciendam esse non arbitror. Quidquid enim contra nos asserere videatur, solo Arnoldi Wion testimonio innititur, cui quanta in hac re fides praestanda sit, ipse videris. Interim haec omnia, quae mihi potissimum pro ingenii mei tenuitate hucusque animadvertenda duxi, non partium, sed uno veritatis studio dixisse me profiteor eaque tibi pro eruditione doctrinaque tua singulari cognoscenda subicio, ut, si me a proposita ratione longe abesse compereris, iudicium sententiamque tuam amplectar ac prosequar libentissime. Vale.</ab>
+         <ab resp="#editor" xml:id="seg3">Refert deinde <anchor xml:id="n6"/>Vitaliani, Leonis et Constantini summorum pontificum quasdam epistolas<anchor xml:id="n6e"/>, quas tamen fictitias esse colligitur, tum quia de eis nec in collectione Labbeana nec in Spicilegio Dacheryano fit mentio, tum quia in eis praeponuntur nomina eorumdem pontificum nominibus Clodovei, <sic>Chidelberti</sic> et Chilperici regum Francorum, ad quos sunt epistolae, quod tamen in usu fuisse illis temporibus visum non est<anchor xml:id="n7"/> Mabillonio<anchor xml:id="n7e"/>. Inquit enim<note type="annotation" xml:id="d3e39129">Am linken Blattrand ausgewiesen <orig>Mabillonius De re diplomatica libro 2 capite 2 numero 3</orig>.</note>: At nemo pontificum Romanorum post Leonem Magnum regibus nomen suum praeposuisse mihi videtur ante ipsummet Paulum, qui Pippino Francorum regi litteras direxit cum hac inscriptione: Paulus episcopus servus servorum Dei praecellentissimo filio Pippino regi Francorum<note place="foot" xml:id="d3e39135">
+               <hi rend="italic">Paulus ... Francorum</hi> in der Vorlage zusätzlich durch Unterstreichung hervorgehoben.</note>, ut legitur in epistola XII. codicis Carolini. </ab>
+         <ab resp="#editor" xml:id="seg4">Eas demum falsas omnino esse existimo ex contumeliis maledictisve in Aygulphum et Mummulum, quos sanctos esse ac Martyrologio Romano <sic>ascriptos</sic>
+            <anchor xml:id="n8"/>Surius<note type="annotation" xml:id="d3e39146">Mit dem Verweisbuchstaben <orig>a</orig> am linken Blattrand ausgewiesen <orig>Surius in Vita sancti Aygulphi ad diem 3. Septembris tomo 5</orig>.</note>
+            <anchor xml:id="n8e"/>, <anchor xml:id="n9"/>Baronius<note type="annotation" xml:id="d3e39160">Mit dem Verweisbuchstaben <orig>b</orig> am linken Blattrand ausgewiesen <orig>Baronius tomo 8 pagina 492</orig>.</note>
+            <anchor xml:id="n9e"/>, <anchor xml:id="n10"/>Mabillonius<anchor xml:id="n10e"/> in Actis sanctorum nostri ordinis ac in suis Annalibus<note type="annotation" xml:id="d3e39172">Mit dem Verweisbuchstaben <orig>c</orig> am linken Blattrand ausgewiesen <orig>Mabillonius in Actis sanctorum sancti Benedicti saeculo 2 paginis 656 et 674; tomo primo Annalium paginis 530 et 546.</orig>
+            </note> aliique constantissime asserunt. <anchor xml:id="n11"/>Ipseque Arnoldus Wion<note type="annotation" xml:id="d3e39192">Am linken Blattrand ausgewiesen <orig>Arnoldus Wion in Ligno vitae parte 2 libro 3 paginis 264 et 289</orig>.</note>
+            <anchor xml:id="n11e"/> huiusce codicis propugnator Vitaliani epistolas fictitias esse fatetur ac propterea indignas, quae in publicum prodeant, ob convicia, quibus referta sunt in sanctos Aygulphum et Mummulum. Quomodo enim sancti pontifices damnassent atque anathemati <pb n="2r"/> devovissent tamquam haereticos, latrones, radices perversitatis, refugas legis filiosque Sathanae viros, quos inter beatos sancta mater ecclesia veneratur et colit? Qua fronte quave impudentia nugax, impius ac male feriatus scriptor sanctum martyrem Aygulphum a viro <sic>quoddam</sic> nobili propter furta et latrocinia minutatim concisum fuisse illumque infernum ebibisse blasphemare ausus est, <anchor xml:id="n12"/>quem propter Jesu Christi amorem martyrium fortiter subiisse constat<note type="annotation" xml:id="d3e39204">Am rechten Blattrand ausgewiesen <orig>Martyrologium Romanum ad diem 3. Septembris</orig>.</note>
+            <anchor xml:id="n12e"/>? </ab>
+         <ab resp="#editor" xml:id="seg5">Quare de isto Anastasio, qui perperam huiusce codicis creditur auctor, optime ait Joannes de Bosco<note type="annotation" xml:id="d3e39212">Am rechten Blattrand ausgewiesen <orig>Joannes de Bosco in Floriacensi vetere bibliotheca Benedictina etc. pagina 384</orig>.</note>: Certe nullius ponderis, quisquis tandem fuerit, esse debet omnibus bonis ac Romanam ecclesiam suspicientibus Christianis is Anastasius, qui maledicta, probra et blasphemias congerit in sanctos Martyrologio Romano adscriptos, unde nec in eo refutando, quem detestor ut blasphemum maledicumve, operam ponere institui, nec enim fidem ipse meretur. Quamobrem Arnoldus Wion<note type="annotation" xml:id="d3e39218">Am rechten Blattrand ausgewiesen <orig>Arnoldus Wion in Ligno vitae parte 2 paginis 289 et 385.</orig>
+            </note> invitus etiam fassus est verba huiusce Anastasii historiam ex se multum suspectam reddere eaque vel non esse Anastasii vel ex animi passione dicta ideoque in eo reperiri multa castigatione digna. At a quibus castigari debeat, admonet Joannes de Bosco, dum ait<note type="annotation" xml:id="d3e39223">Am rechten Blattrand ausgewiesen <orig>Joannes de Bosco pagina 385</orig>.</note> Anastasium<anchor xml:id="n13"/> castigari debere a Romanae ecclesiae ministris, et tunc a talibus castigatus admittetur, qui verbis sensuque discolus a suis ipsis respuitur<anchor xml:id="n13e"/>. </ab>
+         <ab resp="#editor" xml:id="seg6">Quae cum ita sint, neminem sibi persuadere posse existimo codicis istius auctorem <pb n="2v"/> fuisse Anastasium Stephani II. pontificis maximi bibliothecarium, propterea quia Hofmannus in suo <sic>Lexicon</sic> eum recensens ne unum quidem apicem scripsisse refert<note type="annotation" xml:id="d3e39236">Am linken Blattrand ausgewiesen <orig>Hofmannus in <sic>Lexicon</sic> tomo primo</orig>.</note>
+            <anchor xml:id="n14"/> Petrusque Diaconus<note type="annotation" xml:id="d3e39245">Am linken Blattrand ausgewiesen <orig>Petrus Diaconus Cassinensis Libro de viris illustribus Cassinensibus</orig>.</note>
+            <anchor xml:id="n14e"/> Cassinensis monachus, qui saeculo XII. floruit, virorum illustrium Cassinensis coenobii texens catalogum nullam de illo mentionem facit. Quare Gulielmi<anchor xml:id="n15"/> Cave<note type="annotation" xml:id="d3e39251">Am linken Blattrand ausgewiesen <orig>Gulielmus Cave saeculo eiconoclastico pagina 415</orig>.</note>
+            <anchor xml:id="n15e"/> auctoritatem tanti faciendam esse non arbitror. Quidquid enim contra nos asserere videatur, solo Arnoldi Wion testimonio innititur, cui quanta in hac re fides praestanda sit, ipse videris. Interim haec omnia, quae mihi potissimum pro ingenii mei tenuitate hucusque animadvertenda duxi, non partium, sed uno veritatis studio dixisse me profiteor eaque tibi pro eruditione doctrinaque tua singulari cognoscenda subicio, ut, si me a proposita ratione longe abesse compereris, iudicium sententiamque tuam amplectar ac prosequar libentissime. Vale.</ab>
       </body>
    </text>
 </TEI>

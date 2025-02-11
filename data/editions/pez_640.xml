@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="640" xml:id="pez-0640">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Joachim Edlinger an Bernhard Pez. 1716-08-22. Seitenstetten.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">640</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -76,26 +88,29 @@
                <ptr type="mentions" target="letter:639"/>
             </correspContext>
          </correspDesc>
-         <textClass><keywords>
-            <term ref="index:d14380e10391">Ebberth, Johann Baptist</term>
-            <term ref="index:d14380e10728">Edlinger, Joachim ; *Verzeichnis Salzburger Thesendrucke. Ms</term>
-            <term ref="index:d14380e22316">Kongregationen des Benediktinerordens ; Bayerische Kongregation</term>
-            <term ref="index:d10854e15928">König, Robert</term>
-            <term ref="index:d14380e33682">Pez, Bernhard ; Epistolae apologeticae pro ordine sancti Benedicti. Kempten 1715</term>
-            <term ref="index:d14380e35133">Pieringer, Adam</term>
-            <term ref="index:d14380e35141">Pieringer, Adam ; [Anonym] Beschreibung der wunderbahrlichen geschichten und gnaden, so von anno 1664 biß auff das 1672. durch die allmögende barmhertzigkeit der allerheiligsten Dreyfaltigkeit an dem Sonntag-Berg in Under-Oesterreich, so von dem Closter Seittenstötten deß heiligen Benedictiner ordens versehen wird, gnadiglich geschehen. Salzburg 1672</term>
-            <term ref="index:d14380e39054">Salzburg</term>
-            <term ref="index:d14380e39203">Salzburg ; Universität</term>
-            <term ref="index:d14380e39223">Salzburg ; Universität ; Bibliothek</term>
-            <term ref="index:d14380e39871">Schmier, Franz</term>
-            <term ref="index:d14380e40290">Sedlmayr, Roman</term>
-            <term ref="index:d14380e40512">Seitenstetten ; *Johann</term>
-            <term ref="index:d14380e41193">Sonntagberg</term></keywords></textClass>
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e10391">Ebberth, Johann Baptist</term>
+               <term ref="index:d14380e10728">Edlinger, Joachim ; *Verzeichnis Salzburger Thesendrucke. Ms</term>
+               <term ref="index:d14380e22316">Kongregationen des Benediktinerordens ; Bayerische Kongregation</term>
+               <term ref="index:d10854e15928">König, Robert</term>
+               <term ref="index:d14380e33682">Pez, Bernhard ; Epistolae apologeticae pro ordine sancti Benedicti. Kempten 1715</term>
+               <term ref="index:d14380e35133">Pieringer, Adam</term>
+               <term ref="index:d14380e35141">Pieringer, Adam ; [Anonym] Beschreibung der wunderbahrlichen geschichten und gnaden, so von anno 1664 biß auff das 1672. durch die allmögende barmhertzigkeit der allerheiligsten Dreyfaltigkeit an dem Sonntag-Berg in Under-Oesterreich, so von dem Closter Seittenstötten deß heiligen Benedictiner ordens versehen wird, gnadiglich geschehen. Salzburg 1672</term>
+               <term ref="index:d14380e39054">Salzburg</term>
+               <term ref="index:d14380e39203">Salzburg ; Universität</term>
+               <term ref="index:d14380e39223">Salzburg ; Universität ; Bibliothek</term>
+               <term ref="index:d14380e39871">Schmier, Franz</term>
+               <term ref="index:d14380e40290">Sedlmayr, Roman</term>
+               <term ref="index:d14380e40512">Seitenstetten ; *Johann</term>
+               <term ref="index:d14380e41193">Sonntagberg</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">JE wiederholt die jüngst geäußerten Glückwünsche <ref type="letter" target="letter:639">639</ref> und sendet das damals angekündigte Bildchen als Zeichen seiner Dienstbereitschaft und Dankbarkeit. Etwas Würdigeres war nicht bei der Hand, doch wollte JE den auch in Seitenstetten von vielen in Gedanken an BP begangenen Festtag (des hl. Bernhard am 20. August) nicht ohne Gabe vorübergehen lassen.</p>
             <p corresp="#seg2">JE kommt auch seinem Versprechen nach und lässt BP die von ihm gewünschten <ref type="letter" target="letter:638">638</ref> Titel der <rs ref="index:d14380e39054">Salzburger</rs> Thesenschriften zukommen. Er hat die einiger Autoren ausgelassen, entweder weil er aus den <rs ref="index:d14380e33682">„Epistolae apologeticae“</rs> weiß, dass sie BP bekannt sind, oder weil ihm insbesondere von Juristen wie <rs ref="index:d10854e15928">Robert König</rs>, <rs ref="index:d14380e10391">Johann Baptist Ebberth</rs> und <rs ref="index:d14380e39871">Franz Schmier</rs> einige Titel fehlen, die jedoch anderweitig ohne jeden Aufwand ergänzt werden können. Dasselbe gilt für die Thesendrucke aus der <rs ref="index:d14380e22316">Bayerischen Kongregation</rs>. In der Seitenstettener Bibliothek sind insgesamt viele der <rs ref="index:d14380e39223">Salzburger Thesen</rs> nicht vorhanden. Die Lücken in den Angaben können gewiss leicht durch <rs ref="index:d14380e40290">Roman Sedlmayr</rs>, den <rs ref="index:d14380e39223">Salzburger Universitätsbibliothekar</rs>, aufgefüllt werden, Wenn BP es wünscht, wird JE Sedlmayr selbst darum bitten und den nun an BP übermittelten Thesenkatalog mitsenden, damit Sedlmayr leicht das Fehlende ergänzen kann.</p>
             <p corresp="#seg3">Auch einiges Weitere hat JE aus Pflichtgefühl gegenüber BP angeführt, darunter die Kompilatoren der <rs ref="index:d14380e41193">Sonntagberger</rs> Mirakelbücher (<rs ref="index:d14380e35141">„Beschreibung der wunderbarlichen geschichten und gnaden“</rs>) <rs ref="index:d14380e35133">Adam (Pieringer)</rs> und <rs ref="index:d14380e40512">Johann</rs>, obwohl JE diese nicht für Schriftsteller hält. BP soll über diese Angaben nach Belieben verfügen. JE bekräftigt seine Dienstfertigkeit und schließt mit einem Gruß an BP als Zierde des Ordens.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -117,13 +132,16 @@
                   Schreibern ist mit jenem identisch, der das erste Verzeichnis fortgeführt hat. An
                   einer Stelle des ersten Verzeichnisses vermerkt JE den Ankauf eines Buches in der
                   ersten Person: ebd., Nr. 15, 7r. Es wäre denkbar, dass eines oder beide dieser
-                  Stücke mit dem in <ref type="letter" target="letter:442">442</ref> <ref target="letter:442#seg1">1</ref> angesprochenen „indiculus
+                  Stücke mit dem in <ref type="letter" target="letter:442">442</ref>
+               <ref target="letter:442#seg1">1</ref> angesprochenen „indiculus
                   librorum“ zu identifizieren sein könnte; der Kommentar dort ist entsprechend zu
                   ergänzen. Zu einer weiteren, jedoch wenig wahrscheinlichen Möglichkeit der
-                  Zuordnung dieser Stücke vgl. <ref type="letter" target="letter:694">694</ref> <ref target="letter:694#seg5">5</ref>, <ref type="letter" target="letter:825">825</ref> <ref target="letter:825#seg2">2</ref>. Reine Listen von Thesendrucken haben sich im
+                  Zuordnung dieser Stücke vgl. <ref type="letter" target="letter:694">694</ref>
+               <ref target="letter:694#seg5">5</ref>, <ref type="letter" target="letter:825">825</ref>
+               <ref target="letter:825#seg2">2</ref>. Reine Listen von Thesendrucken haben sich im
                   Pez-Nachlass überhaupt nicht erhalten. – Zu der Frage, ob Thesen in die
                   „Bibliotheca Benedictina“ aufzunehmen seien, vgl. <ref type="letter" target="letter:231">231</ref>
-                  <ref target="letter:231#seg2">2</ref>.</p>
+               <ref target="letter:231#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned> Epistolae ... doceant</mentioned>
@@ -140,7 +158,8 @@
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
             <mentioned> Ebberth</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:22">22 </ref><ref target="letter:22 #seg1">1</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:22">22 </ref>
+               <ref target="letter:22 #seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
             <mentioned> Sedlmayr</mentioned>
@@ -193,9 +212,16 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo clarissimo ac <choice><sic>erudiss</sic><corr>eruditissimo</corr></choice> viro domino patri Bernardo Pez Benedictino ac bibliothecario Mellicensi etc., fautori ac amico suo colendissimo etc., salutem plurimam dicit pater<hi rend="Fußnotenzeichen1" xml:space="preserve"> </hi>Joachimus Edlinger Benedictinus Seittenstettensis.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo clarissimo ac <choice>
+               <sic>erudiss</sic>
+               <corr>eruditissimo</corr>
+            </choice> viro domino patri Bernardo Pez Benedictino ac bibliothecario Mellicensi etc., fautori ac amico suo colendissimo etc., salutem plurimam dicit pater<hi rend="Fußnotenzeichen1" xml:space="preserve"> </hi>Joachimus Edlinger Benedictinus Seittenstettensis.</opener>
          <ab resp="#editor" xml:id="seg1">Quae strictim vota nuperrime feci, vir clarissime, ea hodie repeto et <anchor xml:id="n1"/>icunculam<anchor xml:id="n1e"/> tunc mittendam in aliquale saltem, utut exiguum, observantiae<del ana="#after">meae</del> et <sic>gratitutidinis</sic> erga te meae argumentum nunc demum, tametsi ea ipsa die iam scripseram, appono. Tam leve? inquies; sed veniam dabis facienti, quod potui, cum non licuerit, quod debui: Crede mihi, pretiosior et scilicet te digna imago ad manum modo non fuit. Nolui tamen diem mihi tam festivum, qualis et nostrum pluribus inter pocula de salute tua sollicitis fuit, sine huiusmodi grati animi tessera elabi. </ab>
-         <ab resp="#editor" xml:id="seg2">Caeterum promissis tandem, cum nequeam debitis, me exsolvo, dum <anchor xml:id="n2"/>thesium Salisburgensium, quos desiderabas, titulos<anchor xml:id="n2e"/> seu rubricas transmitto. Omisi aliquorum, et consulto id quidem, tum quod eas a te haud ignorari<anchor xml:id="n3"/> Epistolae apologeticae doceant<anchor xml:id="n3e"/>, tum quod quorundam authorum e iuridicis, praesertim patrum<anchor xml:id="n4"/> König<anchor xml:id="n4e"/>,<anchor xml:id="n5"/> Ebberth<anchor xml:id="n5e"/> et Francisci Schmier, nonnullae mihi desint, quarum series tamen <add place="above">plena</add> aliunde nullo negotio obtineri potest. Idem circa theses etc. congregationis Bavaricae ob rationem non disparem factum. Porro haud paucae Salisburgensium quoque thesium apud nos non exstant, quorum tamen defectum per patrem Romanum<anchor xml:id="n6"/> Sedlmayr<anchor xml:id="n6e"/>, quem universitatis<anchor xml:id="n7"/> bibliothecarium<anchor xml:id="n7e"/> esse reor, resarciri posse confido; ibi enim collectas teneri omnes non est, cur dubitem. Si iubes, <pb n="1v"/> operam ipse dabo, ut hunc qualemqualem laborem pater Romanus ipse non detrectet; et ne longior eruditis viri <choice><sic>l</sic><corr>occupationibus</corr></choice> mora iniciatur, earum, quarum copiam tibi feci, thesium catalogum ei mittam, cui facili negotio residuas inseret. </ab>
+         <ab resp="#editor" xml:id="seg2">Caeterum promissis tandem, cum nequeam debitis, me exsolvo, dum <anchor xml:id="n2"/>thesium Salisburgensium, quos desiderabas, titulos<anchor xml:id="n2e"/> seu rubricas transmitto. Omisi aliquorum, et consulto id quidem, tum quod eas a te haud ignorari<anchor xml:id="n3"/> Epistolae apologeticae doceant<anchor xml:id="n3e"/>, tum quod quorundam authorum e iuridicis, praesertim patrum<anchor xml:id="n4"/> König<anchor xml:id="n4e"/>,<anchor xml:id="n5"/> Ebberth<anchor xml:id="n5e"/> et Francisci Schmier, nonnullae mihi desint, quarum series tamen <add place="above">plena</add> aliunde nullo negotio obtineri potest. Idem circa theses etc. congregationis Bavaricae ob rationem non disparem factum. Porro haud paucae Salisburgensium quoque thesium apud nos non exstant, quorum tamen defectum per patrem Romanum<anchor xml:id="n6"/> Sedlmayr<anchor xml:id="n6e"/>, quem universitatis<anchor xml:id="n7"/> bibliothecarium<anchor xml:id="n7e"/> esse reor, resarciri posse confido; ibi enim collectas teneri omnes non est, cur dubitem. Si iubes, <pb n="1v"/> operam ipse dabo, ut hunc qualemqualem laborem pater Romanus ipse non detrectet; et ne longior eruditis viri <choice>
+               <sic>l</sic>
+               <corr>occupationibus</corr>
+            </choice> mora iniciatur, earum, quarum copiam tibi feci, thesium catalogum ei mittam, cui facili negotio residuas inseret. </ab>
          <ab resp="#editor" xml:id="seg3">Adieci et alia quaedam meae potius ad obsequia tibi quaevis praestanda debitae promtitudinis testandae causa, quam quod credam earum te notitia destitui. <anchor xml:id="n8"/>Gratiarum Sontagbergensium compilatores Adamum et Joannem<anchor xml:id="n8e"/>, quanquam ipse indignos censeam, qui in classem scriptorum veniant, adstruxi tamen; tu, prout visum tibi fuerit, de iisdem dispones. Si quid aliud est, quo redhostire beneficiorum a te in me collatorum nonnihil potero, ne, quaeso, me iucunditate defrauda, qua grati erga fautores meos animi signa promo nec tempori<del ana="#after">t</del> nec labori unquam parsurus. Vale, Benedictinorum decus, et mihi fave.</ab>
          <closer>Seittenstadii XI. Kalendas Septembris <sic>MDXVI</sic>.</closer>
       </body>

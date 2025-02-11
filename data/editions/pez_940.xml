@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="940" xml:id="pez-0940">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an Burkhard Gotthelf Struve. 1718-05-22. Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">940</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Von der kleinformatigen Notiz ist der obere Rand mit der Anrede abgeschnitten; von einer Hand des 18. Jh. (jedoch kaum jener BSts) ist oberhalb des Textes vermerkt: <orig>Struvio pater Bernardus Pez Benedictinus Mellicensis</orig>. Darüber sind die unteren Teile der Buchstaben <orig>S. D.</orig> (für <orig>salutem dicit</orig>) aus der ursprünglichen Anrede noch erkennbar.
             </note>
@@ -45,10 +56,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -68,17 +80,19 @@
                <ptr type="prev" target="letter:937"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e14884">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e14884">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
          Epistola de Udalriciani Codicis Conspectu ad clarissimum virum Joannem Burchardum Menkenium
          Kalendas Maii MDCCXVII scripta a Dissertatione apologetica reverendi patris Bernardi Pezii
          Benedictini et bibliothecarii Mellicensis vindicata. S. l. 1718</term>
-            <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
+               <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
          dominum dominum Joannem Benedictum Gentilottum ab Engelsbrunn pro editione integri
          syntagmatis diplomatico-historico-epistolaris Udalrici Babenbergensis ex codice Zwetlensi,
-         impugnata a viro clarissimo Angelo Fonteio Veronensi. Augsburg 1717</term></keywords></textClass>
+         impugnata a viro clarissimo Angelo Fonteio Veronensi. Augsburg 1717</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">BP schickt BSt seine „<rs ref="index:d14380e33532">Dissertatio apologetico-litteraria</rs>“, die bereits
                seit langem für ihn bestimmt war. BSt wird darin manches lesen, was ihm gefallen wird. Was BP an Lob über
@@ -86,7 +100,7 @@
                Ort. BP bittet um ein Urteil zu diesem Schriftchen. Dass „Angelus Fonteius“ kein anderer als <rs ref="index:d14380e14738">Johann Benedikt Gentilotti</rs> ist, wird BSt schon aus anderer Quelle
                bekannt sein. Gentilotti hat kürzlich auf BPs „Dissertatio“ geantwortet („<rs ref="index:d14380e14884">Epistola vindicata</rs>“), allerdings so, dass er sich eigentlich schämen müsste, der Autor solcher
                Dummheiten zu sein.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -95,7 +109,8 @@
             <mentioned>Quae ... adscripsi</mentioned>
             <p>BP zitierte in der „Dissertatio
                   apologetico-litteraria“ ausführlich aus BSts „De magno pacis foederumque theatro
-                  epistola“: vgl. <ref type="letter" target="letter:836">836</ref> <ref target="letter:836#seg1">1</ref>. In dem Satz, mit welchem
+                  epistola“: vgl. <ref type="letter" target="letter:836">836</ref>
+               <ref target="letter:836#seg1">1</ref>. In dem Satz, mit welchem
                   das Zitat eingeleitet wird, bezeichnete er BSt als „tota Europa celeberrimus“:
                   Pez, Dissertatio apologetico-litteraria 11.</p>
          </note>

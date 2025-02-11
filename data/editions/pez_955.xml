@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="955" xml:id="pez-0955">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Georg Eckhart an Bernhard Pez. 1718-06-26. Hannover.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">955</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Irrig als an HP adressiert geführt bei Glassner, Verzeichnis 207. Obwohl der Adressat nicht explizit genannt wird, geht aus dem gesamten Inhalt hervor, dass es sich um BP gehandelt haben muss. Eindeutig sind in dieser Hinsicht schon die Bezugnahmen auf dessen Krankheit und auf den „Syllabus“ zum „Thesaurus anecdotorum“.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -82,121 +94,123 @@
                <ptr type="mentionedIn" target="letter:1003"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e351">Adalbold</term>
-            <term ref="index:d14380e366">Adalbold ; Vita Heinrici II</term>
-            <term ref="index:d14380e498">Agius ; Vita sanctae Hathumodae</term>
-            <term ref="index:d14380e1577">Andreas Capellanus ; De amore ; Ms. Bremen, Bibliothek Mastricht</term>
-            <term ref="index:d14380e1647">Andreas von Regensburg ; Chronica pontificum et imperatorum ; Ms. Hamburg</term>
-            <term ref="index:d14380e1891">Anonyme Werke ; Acta concilii Constantiensis contra Johannem Hus. Ms</term>
-            <term ref="index:d14380e2181">Anonyme Werke ; Codex Carolinus</term>
-            <term ref="index:d14380e2189">Anonyme Werke ; Codex Carolinus ; Ms. Hannover</term>
-            <term ref="index:d14380e2198">Anonyme Werke ; Codex Carolinus ; Ms. Wien, Hofbibliothek</term>
-            <term ref="index:d14380e2205">Anonyme Werke ; Codex Carolinus ; Volumen epistolarum, quas Romani pontifices Gregorius
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e351">Adalbold</term>
+               <term ref="index:d14380e366">Adalbold ; Vita Heinrici II</term>
+               <term ref="index:d14380e498">Agius ; Vita sanctae Hathumodae</term>
+               <term ref="index:d14380e1577">Andreas Capellanus ; De amore ; Ms. Bremen, Bibliothek Mastricht</term>
+               <term ref="index:d14380e1647">Andreas von Regensburg ; Chronica pontificum et imperatorum ; Ms. Hamburg</term>
+               <term ref="index:d14380e1891">Anonyme Werke ; Acta concilii Constantiensis contra Johannem Hus. Ms</term>
+               <term ref="index:d14380e2181">Anonyme Werke ; Codex Carolinus</term>
+               <term ref="index:d14380e2189">Anonyme Werke ; Codex Carolinus ; Ms. Hannover</term>
+               <term ref="index:d14380e2198">Anonyme Werke ; Codex Carolinus ; Ms. Wien, Hofbibliothek</term>
+               <term ref="index:d14380e2205">Anonyme Werke ; Codex Carolinus ; Volumen epistolarum, quas Romani pontifices Gregorius
          III., Stephanus III., Zacharias I., Paulus I., Stephanus IV., Adrianus I. et pseudopapa
          Constantinus miserunt ad principes et reges Francorum Carolum Martellum, Pipinum et Carolum
          Magnum. Hg. von Jakob Gretser. Ingolstadt 1613</term>
-            <term ref="index:d14380e2346">Anonyme Werke ; Heliand. Ms. Bamberg</term>
-            <term ref="index:d14380e2409">Anonyme Werke ; Melker Marienlied. Ms</term>
-            <term ref="index:d14380e2534">Anonyme Werke ; Rheinisches Marienlob. Ms</term>
-            <term ref="index:d14380e3633">Bachmann, Andreas</term>
-            <term ref="index:d14380e3709">Baluze, Étienne ; Capitularia regum Francorum. 2 Bde. Paris 1677</term>
-            <term ref="index:d14380e3715">Baluze, Étienne ; Capitularia regum Francorum. 2 Bde. Paris 1677 ; Darin: Karl I.,
+               <term ref="index:d14380e2346">Anonyme Werke ; Heliand. Ms. Bamberg</term>
+               <term ref="index:d14380e2409">Anonyme Werke ; Melker Marienlied. Ms</term>
+               <term ref="index:d14380e2534">Anonyme Werke ; Rheinisches Marienlob. Ms</term>
+               <term ref="index:d14380e3633">Bachmann, Andreas</term>
+               <term ref="index:d14380e3709">Baluze, Étienne ; Capitularia regum Francorum. 2 Bde. Paris 1677</term>
+               <term ref="index:d14380e3715">Baluze, Étienne ; Capitularia regum Francorum. 2 Bde. Paris 1677 ; Darin: Karl I.,
          Rundschreiben an die Erzbischöfe 812</term>
-            <term ref="index:d14380e3769">Bamberg ; Domkapitel ; Bibliothek ; Heliand. Ms</term>
-            <term ref="index:d14380e5208">Berengar von Tours ; Epistolae. Ms. Hannover</term>
-            <term ref="index:d14380e6664">Bremen</term>
-            <term ref="index:d14380e6678">Bremen ; Bibliothek des Gerhard von Mastricht</term>
-            <term ref="index:d14380e8371">Coch, Otto Christian</term>
-            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
-            <term ref="index:d14380e9536">Deutschland, Deutsche , deutsch ; Althochdeutsch, mittelhochdeutsch</term>
-            <term ref="index:d14380e10509">Eckhart, Johann Georg ; -Etymologisches Wörterbuch</term>
-            <term ref="index:d14380e10624">Eckhart, Johann Georg ; Privatbibliothek</term>
-            <term ref="index:d14380e10630">Eckhart, Johann Georg ; Privatbibliothek ; *Beauftragter für Aussortierung von Werken
+               <term ref="index:d14380e3769">Bamberg ; Domkapitel ; Bibliothek ; Heliand. Ms</term>
+               <term ref="index:d14380e5208">Berengar von Tours ; Epistolae. Ms. Hannover</term>
+               <term ref="index:d14380e6664">Bremen</term>
+               <term ref="index:d14380e6678">Bremen ; Bibliothek des Gerhard von Mastricht</term>
+               <term ref="index:d14380e8371">Coch, Otto Christian</term>
+               <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+               <term ref="index:d14380e9536">Deutschland, Deutsche , deutsch ; Althochdeutsch, mittelhochdeutsch</term>
+               <term ref="index:d14380e10509">Eckhart, Johann Georg ; -Etymologisches Wörterbuch</term>
+               <term ref="index:d14380e10624">Eckhart, Johann Georg ; Privatbibliothek</term>
+               <term ref="index:d14380e10630">Eckhart, Johann Georg ; Privatbibliothek ; *Beauftragter für Aussortierung von Werken
          zum Verkauf</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e14971">Georg I</term>
-            <term ref="index:d14380e15679">Glossarien und altdeutsche Sprachdenkmäer ; Glossarium in Vitas patrum. Ms.
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e14971">Georg I</term>
+               <term ref="index:d14380e15679">Glossarien und altdeutsche Sprachdenkmäer ; Glossarium in Vitas patrum. Ms.
          Mondsee</term>
-            <term ref="index:d14380e15701">Glossarien und altdeutsche Sprachdenkmäer ; Zwei Blätter aus den „Mondseer Fragmenten“.
+               <term ref="index:d14380e15701">Glossarien und altdeutsche Sprachdenkmäer ; Zwei Blätter aus den „Mondseer Fragmenten“.
          Ms. Mondsee</term>
-            <term ref="index:d14380e17000">Hamburg ; Ratsbibliothek ; Acta concilii Constantiensis contra Johannem Hus. Ms</term>
-            <term ref="index:d14380e17007">Hamburg ; Ratsbibliothek ; Andreas von Regensburg, Chronica pontificum et imperatorum.
+               <term ref="index:d14380e17000">Hamburg ; Ratsbibliothek ; Acta concilii Constantiensis contra Johannem Hus. Ms</term>
+               <term ref="index:d14380e17007">Hamburg ; Ratsbibliothek ; Andreas von Regensburg, Chronica pontificum et imperatorum.
          Ms</term>
-            <term ref="index:d14380e17054">Hannover ; Kurfürstliche Bibliothek</term>
-            <term ref="index:d14380e17068">Hannover ; Kurfürstliche Bibliothek ; Codex Carolinus. Abschrift für Matthias Flacius.
+               <term ref="index:d14380e17054">Hannover ; Kurfürstliche Bibliothek</term>
+               <term ref="index:d14380e17068">Hannover ; Kurfürstliche Bibliothek ; Codex Carolinus. Abschrift für Matthias Flacius.
          Ms</term>
-            <term ref="index:d14380e17077">Hannover ; Kurfürstliche Bibliothek ; Hannoversche Briefsammlung. Ms</term>
-            <term ref="index:d14380e17085">Hannover ; Kurfürstliche Bibliothek ; Hannoversche Briefsammlung. Ms ; Darin: Berengar
+               <term ref="index:d14380e17077">Hannover ; Kurfürstliche Bibliothek ; Hannoversche Briefsammlung. Ms</term>
+               <term ref="index:d14380e17085">Hannover ; Kurfürstliche Bibliothek ; Hannoversche Briefsammlung. Ms ; Darin: Berengar
          von Tours, Epistolae</term>
-            <term ref="index:d14380e17092">Hannover ; Kurfürstliche Bibliothek ; Hinkmar von Reims, Epistolae. Abschrift für
+               <term ref="index:d14380e17092">Hannover ; Kurfürstliche Bibliothek ; Hinkmar von Reims, Epistolae. Abschrift für
          Matthias Flacius. Ms</term>
-            <term ref="index:d14380e17126">Hannover ; Kurfürstliche Bibliothek ; Rheinisches Marienlob. Ms</term>
-            <term ref="index:d14380e18429">Hinkmar von Reims ; Epistolae ; Abschrift für Matthias Flacius. Ms</term>
-            <term ref="index:d14380e18458">Hodann, Johann Friedrich</term>
-            <term ref="index:d14380e18567">Holstein</term>
-            <term ref="index:d14380e18833">Hrabanus Maurus ; Coena Cypriani</term>
-            <term ref="index:d14380e18839">Hrabanus Maurus ; Coena Cypriani ; Coena Cypriani dubia per Maturum quendam, Lotharii
+               <term ref="index:d14380e17126">Hannover ; Kurfürstliche Bibliothek ; Rheinisches Marienlob. Ms</term>
+               <term ref="index:d14380e18429">Hinkmar von Reims ; Epistolae ; Abschrift für Matthias Flacius. Ms</term>
+               <term ref="index:d14380e18458">Hodann, Johann Friedrich</term>
+               <term ref="index:d14380e18567">Holstein</term>
+               <term ref="index:d14380e18833">Hrabanus Maurus ; Coena Cypriani</term>
+               <term ref="index:d14380e18839">Hrabanus Maurus ; Coena Cypriani ; Coena Cypriani dubia per Maturum quendam, Lotharii
          caesaris Romanorum ministrum, e Biblicis saltem historiis ante D annos melius compacta et
          digesta. Hg. von Andreas Bachmann. Leipzig 1644</term>
-            <term ref="index:d14380e18844">Hrabanus Maurus ; Coena Cypriani ; Coena Cypriani Mauri episcopi ad Lotharium regem
+               <term ref="index:d14380e18844">Hrabanus Maurus ; Coena Cypriani ; Coena Cypriani Mauri episcopi ad Lotharium regem
          Franciae. Übersetzt von Johann Letzner. Hildesheim 1601</term>
-            <term ref="index:d14380e20570">Johannes Hus</term>
-            <term ref="index:d14380e21094">Karl I. „der Große“</term>
-            <term ref="index:d14380e21108">Karl I. „der Große“ ; Rundschreiben zum Taufritus 812</term>
-            <term ref="index:d14380e21305">Karl Friedrich</term>
-            <term ref="index:d14380e21347">Karlsteen, Arvid ; *Medaille auf Ernst August von Hannover</term>
-            <term ref="index:d14380e23017">Konstanz ; Konzil 1414–1418</term>
-            <term ref="index:d14380e23031">Konstanz ; Konzil 1414–1418 ; Acta concilii Constantiensis contra Johannem Hus.
+               <term ref="index:d14380e20570">Johannes Hus</term>
+               <term ref="index:d14380e21094">Karl I. „der Große“</term>
+               <term ref="index:d14380e21108">Karl I. „der Große“ ; Rundschreiben zum Taufritus 812</term>
+               <term ref="index:d14380e21305">Karl Friedrich</term>
+               <term ref="index:d14380e21347">Karlsteen, Arvid ; *Medaille auf Ernst August von Hannover</term>
+               <term ref="index:d14380e23017">Konstanz ; Konzil 1414–1418</term>
+               <term ref="index:d14380e23031">Konstanz ; Konzil 1414–1418 ; Acta concilii Constantiensis contra Johannem Hus.
          Ms</term>
-            <term ref="index:d14380e24248">Leibniz, Gottfried Wilhelm</term>
-            <term ref="index:d14380e24841">Letzner, Johann</term>
-            <term ref="index:d14380e27093">Mastricht, Gerhard von</term>
-            <term ref="index:d14380e27105">Mastricht, Gerhard von ; Bibliothek ; Andreas Capellanus, De amore. Ms</term>
-            <term ref="index:d14380e27285">Maxentius von Aquileia ; Epistola de ritibus baptismi ad Carolum Magnum. Ms.
+               <term ref="index:d14380e24248">Leibniz, Gottfried Wilhelm</term>
+               <term ref="index:d14380e24841">Letzner, Johann</term>
+               <term ref="index:d14380e27093">Mastricht, Gerhard von</term>
+               <term ref="index:d14380e27105">Mastricht, Gerhard von ; Bibliothek ; Andreas Capellanus, De amore. Ms</term>
+               <term ref="index:d14380e27285">Maxentius von Aquileia ; Epistola de ritibus baptismi ad Carolum Magnum. Ms.
          Regensburg, St. Emmeram</term>
-            <term ref="index:d14380e28453">Melk ; Bibliothek ; Melker Marienlied. Ms</term>
-            <term ref="index:d14380e29295">Mondsee ; Bibliothek ; Glossarium in Vitas patrum. Ms</term>
-            <term ref="index:d14380e29321">Mondsee ; „Mondseer Fragmente“. Ms</term>
-            <term ref="index:d14380e32535">Paschasius Radbertus, hl ; De fide, spe et charitate ; Ms. Corvey ; Abschrift für
+               <term ref="index:d14380e28453">Melk ; Bibliothek ; Melker Marienlied. Ms</term>
+               <term ref="index:d14380e29295">Mondsee ; Bibliothek ; Glossarium in Vitas patrum. Ms</term>
+               <term ref="index:d14380e29321">Mondsee ; „Mondseer Fragmente“. Ms</term>
+               <term ref="index:d14380e32535">Paschasius Radbertus, hl ; De fide, spe et charitate ; Ms. Corvey ; Abschrift für
          Johann Wilhelm Göbel. Ms</term>
-            <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
+               <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
          dominum dominum Joannem Benedictum Gentilottum ab Engelsbrunn pro editione integri
          syntagmatis diplomatico-historico-epistolaris Udalrici Babenbergensis ex codice Zwetlensi,
          impugnata a viro clarissimo Angelo Fonteio Veronensi. Augsburg 1717</term>
-            <term ref="index:d14380e34481">Pez, Bernhard ; Krankheit im Frühjahr 1718</term>
-            <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
+               <term ref="index:d14380e34481">Pez, Bernhard ; Krankheit im Frühjahr 1718</term>
+               <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
          1721–1729</term>
-            <term ref="index:d14380e33812">Pez, Bernhard ; Bd. 1</term>
-            <term ref="index:d14380e33826">Pez, Bernhard ; Bd. 1 ; Darin: Agius, Vita sanctae Hathumodae</term>
-            <term ref="index:d14380e33844">Pez, Bernhard ; Bd. 1 ; Darin: Andreas von Regensburg, Chronica pontificum et
+               <term ref="index:d14380e33812">Pez, Bernhard ; Bd. 1</term>
+               <term ref="index:d14380e33826">Pez, Bernhard ; Bd. 1 ; Darin: Agius, Vita sanctae Hathumodae</term>
+               <term ref="index:d14380e33844">Pez, Bernhard ; Bd. 1 ; Darin: Andreas von Regensburg, Chronica pontificum et
          imperatorum</term>
-            <term ref="index:d14380e33851">Pez, Bernhard ; Bd. 1 ; -Darin: Andreas von Regensburg, Concilium Constantiense</term>
-            <term ref="index:d14380e33887">Pez, Bernhard ; Bd. 1 ; -Darin: „Codex epistolarum et diplomatum“</term>
-            <term ref="index:d14380e33950">Pez, Bernhard ; Bd. 1 ; Darin: Heriger von Lobbes, De corpore et sanguine
+               <term ref="index:d14380e33851">Pez, Bernhard ; Bd. 1 ; -Darin: Andreas von Regensburg, Concilium Constantiense</term>
+               <term ref="index:d14380e33887">Pez, Bernhard ; Bd. 1 ; -Darin: „Codex epistolarum et diplomatum“</term>
+               <term ref="index:d14380e33950">Pez, Bernhard ; Bd. 1 ; Darin: Heriger von Lobbes, De corpore et sanguine
          Domini</term>
-            <term ref="index:d14380e34006">Pez, Bernhard ; Bd. 1 ; Darin: Silvester II., De rationali et ratione uti</term>
-            <term ref="index:d14380e34015">Pez, Bernhard ; Bd. 1 ; -Darin: Silvester II., Oratio in concilio Mosomensi
+               <term ref="index:d14380e34006">Pez, Bernhard ; Bd. 1 ; Darin: Silvester II., De rationali et ratione uti</term>
+               <term ref="index:d14380e34015">Pez, Bernhard ; Bd. 1 ; -Darin: Silvester II., Oratio in concilio Mosomensi
          habita</term>
-            <term ref="index:d14380e34025">Pez, Bernhard ; Bd. 1 ; -Darin: Silvester II., Praefatio in Geometriam</term>
-            <term ref="index:d14380e34102">Pez, Bernhard ; Bezeichnung als „ Spicilegium“</term>
-            <term ref="index:d14380e34132">Pez, Bernhard ; Syllabus. Ms</term>
-            <term ref="index:d14380e36795">Regensburg ; St. Emmeram ; Bibliothek ; Maxentius von Aquileia, Epistola de ritibus
+               <term ref="index:d14380e34025">Pez, Bernhard ; Bd. 1 ; -Darin: Silvester II., Praefatio in Geometriam</term>
+               <term ref="index:d14380e34102">Pez, Bernhard ; Bezeichnung als „ Spicilegium“</term>
+               <term ref="index:d14380e34132">Pez, Bernhard ; Syllabus. Ms</term>
+               <term ref="index:d14380e36795">Regensburg ; St. Emmeram ; Bibliothek ; Maxentius von Aquileia, Epistola de ritibus
          baptismi ad Carolum Magnum</term>
-            <term ref="index:d14380e40832">Sigismund</term>
-            <term ref="index:d14380e40921">Sigler, Konrad</term>
-            <term ref="index:d14380e40968">Silvester II</term>
-            <term ref="index:d14380e43552">Udalrich von Bamberg ; Codex Udalrici</term>
-            <term ref="index:d14380e43598">Udalrich von Bamberg ; Codex Udalrici ; Ms. Zwettl</term>
-            <term ref="index:d14380e44144">Van der Hardt, Hermann ; Magnum oecumenicum Constantiense concilium. 7 Bde. Frankfurt
+               <term ref="index:d14380e40832">Sigismund</term>
+               <term ref="index:d14380e40921">Sigler, Konrad</term>
+               <term ref="index:d14380e40968">Silvester II</term>
+               <term ref="index:d14380e43552">Udalrich von Bamberg ; Codex Udalrici</term>
+               <term ref="index:d14380e43598">Udalrich von Bamberg ; Codex Udalrici ; Ms. Zwettl</term>
+               <term ref="index:d14380e44144">Van der Hardt, Hermann ; Magnum oecumenicum Constantiense concilium. 7 Bde. Frankfurt
          am Main 1697–1742</term>
-            <term ref="index:d14380e44972">Walter von Châtillon ; Alexandreis</term>
-            <term ref="index:d14380e44978">Walter von Mortagne</term>
-            <term ref="index:d14380e45883">Wien ; Kaiserhof ; Hofbibliothek ; Codex Carolinus. Ms</term>
-            <term ref="index:d10854e34226">Würzburg</term>
-            <term ref="index:d14380e46658">Würzburg ; Dombibliothek ; *Codex Theodiscus. Ms</term>
-            <term ref="index:d14380e47124">Zwettl ; Bibliothek ; Udalrich von Bamberg, Codex Udalrici. Ms</term></keywords></textClass>
+               <term ref="index:d14380e44972">Walter von Châtillon ; Alexandreis</term>
+               <term ref="index:d14380e44978">Walter von Mortagne</term>
+               <term ref="index:d14380e45883">Wien ; Kaiserhof ; Hofbibliothek ; Codex Carolinus. Ms</term>
+               <term ref="index:d10854e34226">Würzburg</term>
+               <term ref="index:d14380e46658">Würzburg ; Dombibliothek ; *Codex Theodiscus. Ms</term>
+               <term ref="index:d14380e47124">Zwettl ; Bibliothek ; Udalrich von Bamberg, Codex Udalrici. Ms</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">GE ist erfreut, dass BP seine Briefe (<ref type="letter" target="letter:933">933</ref>, <ref type="letter" target="letter:934">934</ref>) und die mitgesendete <rs ref="index:d14380e21347">Medaille</rs> (auf den Kurfürsten Ernst August von Hannover) erhalten hat, und beglückwünscht ihn zu
                seiner <rs ref="index:d14380e34481">Genesung</rs>.</p>
@@ -256,7 +270,7 @@
                Handschriften zu geben, welche er verwahrt. GE wird ihm wohl dankbarer sein als ein anderer Freund (<rs ref="index:d14380e8371">Otto Christian Coch</rs>?), der zur Zeit nicht mehr dem König (<rs ref="index:d14380e14971">Georg I. von Großbritannien</rs>), sondern dem Herzog von <rs ref="index:d14380e18567">Holstein</rs> (<rs ref="index:d14380e21305">Karl Friedrich</rs>) dient und
                der sich der Mitteilungen Siglers zum eigenen Fortkommen bedient. GE bittet BP, Sigler dies bei sich
                bietender Gelegenheit zu unterbreiten.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -268,18 +282,22 @@
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned> codicis Zwetlensis editionem</mentioned>
             <p>Die Zwettler Überlieferung des „Codex
-                  Udalrici“ war jene, die BP zur Verfügung stand: StiB Zwettl, Cod. 283; vgl. <ref type="letter" target="letter:719">719</ref> <ref target="letter:719#seg3">3</ref>. Die Edition, die er in den „Acta eruditorum“
+                  Udalrici“ war jene, die BP zur Verfügung stand: StiB Zwettl, Cod. 283; vgl. <ref type="letter" target="letter:719">719</ref>
+               <ref target="letter:719#seg3">3</ref>. Die Edition, die er in den „Acta eruditorum“
                   angekündigt hatte, hätte darauf beruhen sollen. Es fällt auf, dass GE hier die ihm
                   in Hannover vorliegende Abschrift nach dem Exemplar der Wiener Hofbibliothek nicht
-                  erwähnt: vgl. <ref type="letter" target="letter:886">886</ref> <ref target="letter:886#seg3">3</ref>.</p>
+                  erwähnt: vgl. <ref type="letter" target="letter:886">886</ref>
+               <ref target="letter:886#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
             <mentioned>quarum specimen</mentioned>
             <p> Sofern die mit 956 erfolgte Versendung eines
-                  Glossars tatsächlich die in <ref type="letter" target="letter:946">946</ref> <ref target="letter:946#seg4">4</ref> angekündigte
+                  Glossars tatsächlich die in <ref type="letter" target="letter:946">946</ref>
+               <ref target="letter:946#seg4">4</ref> angekündigte
                   war – und GE somit zur Zeit dieses Briefes noch nicht vorlag –, ist die Erwähnung
                   hier auf das schon im Februar von BP gesendete Blatt der „Mondseer Fragmente“ zu
-                  beziehen: vgl. <ref type="letter" target="letter:912">912</ref> <ref target="letter:912#seg10">10</ref>.</p>
+                  beziehen: vgl. <ref type="letter" target="letter:912">912</ref>
+               <ref target="letter:912#seg10">10</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
             <mentioned> observo ... interesse</mentioned>
@@ -289,13 +307,15 @@
                   eindeutig zu bestimmen, doch scheint die Annahme plausibel, dass er sich entweder
                   auf die später von ihm gedruckte Mondseer Glossenkompilation oder auf seinen
                   gesamten Bestand altdeutscher „Miscellanea“ aus verschiedenen Vorlagen bezog: vgl.
-                     <ref type="letter" target="letter:1003">1003</ref> <ref target="letter:1003#seg2">2</ref>.</p>
+                     <ref type="letter" target="letter:1003">1003</ref>
+               <ref target="letter:1003#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4">
             <mentioned>amicum ... remittat</mentioned>
             <p> Zu den hier von GE recht selektiv
                   wiedergegebenen näheren Umständen um die Abschrift von „De fide, spe et charitate“
-                  vgl. <ref type="letter" target="letter:959">959</ref> <ref target="letter:959#seg2">2</ref>.</p>
+                  vgl. <ref type="letter" target="letter:959">959</ref>
+               <ref target="letter:959#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg5">
             <mentioned>Gerberti opuscula</mentioned>
@@ -304,9 +324,12 @@
                   fälschlich zugeschriebene Schrift „De corpore et sanguine Domini“ Herigers von
                   Lobbes, Gerberts „De rationali et ratione uti“, seine Rede auf der Synode von
                   Mouzon und die Vorrede seiner „Geometria“: HStA Hannover, Hann. 93 175, 7r. Zu „De
-                  corpore et sanguine“ vgl. <ref type="letter" target="letter:961">961</ref> <ref target="letter:961#seg4">4</ref>; zu „De rationali
-                  et ratione uti“ vgl. <ref type="letter" target="letter:655">655</ref> <ref target="letter:655#seg2">2</ref>; zu den beiden anderen
-                  Texten sowie zur Verwertung im „Thesaurus anecdotorum“ vgl. <ref type="letter" target="letter:1020">1020</ref> <ref target="letter:1020#seg3">3</ref>. </p>
+                  corpore et sanguine“ vgl. <ref type="letter" target="letter:961">961</ref>
+               <ref target="letter:961#seg4">4</ref>; zu „De rationali
+                  et ratione uti“ vgl. <ref type="letter" target="letter:655">655</ref>
+               <ref target="letter:655#seg2">2</ref>; zu den beiden anderen
+                  Texten sowie zur Verwertung im „Thesaurus anecdotorum“ vgl. <ref type="letter" target="letter:1020">1020</ref>
+               <ref target="letter:1020#seg3">3</ref>. </p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg6">
             <mentioned>Maxentii epistola</mentioned>
@@ -338,7 +361,8 @@
                   imperatorum, regum, episcoporum aliorumque illustrium virorum ab Alcuino usque ad
                   saeculum XV. Est magna optimarum rerum farrago“ (HStA Hannover, Hann. 93 175, 7r).
                   Dabei ist gewiss an eine von BP veranstaltete Zusammenstellung zu denken: vgl.
-                     <ref type="letter" target="letter:912">912</ref> <ref target="letter:912#seg7">7</ref>.</p>
+                     <ref type="letter" target="letter:912">912</ref>
+               <ref target="letter:912#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg7">
             <mentioned> Codex epistolarum Carolinus</mentioned>
@@ -471,7 +495,8 @@
                   ex actis Pilati“ sowie die Schrift eines „Gualterius, nescio quis, De remedio
                   amoris“. Mastricht erwähnte weiters, dass GE diesen Codex bei ihm im Auftrag
                   Leibniz’ eingesehen hatte und vielleicht für eine Edition der Martinschronik
-                  heranziehen werde: vgl. <ref type="letter" target="letter:870">870</ref> <ref target="letter:870#seg3">3</ref>. Im Katalog zur
+                  heranziehen werde: vgl. <ref type="letter" target="letter:870">870</ref>
+               <ref target="letter:870#seg3">3</ref>. Im Katalog zur
                   Auktion von Mastrichts Bibliothek 1719 ist die Sammelhandschrift unter den
                   Pergamentcodices in Quarto als Nr. 34 verzeichnet: <rs type="bibl" ref="bibl:14692">Catalogus bibliothecae Mastricht</rs> 953. Für diese Auskunft
                   sei Nora Gädeke (Hannover) gedankt. Anhand der enthaltenen Texte ist diese
@@ -551,7 +576,7 @@
                   scholasticus ad Sylvestrum II. pontificem maximum De crassitudine sphaerae“. Diese
                   Schrift kannte BP zum einen aus jenem Tegernseer Codex, der auch den
                   vermeintlichen Musiktraktat Adalbolds enthält: vgl. <ref type="letter" target="letter:688">688</ref>
-                  <ref target="letter:688#seg3">3</ref>. Zum anderen hatte er sie auch in einer Handschrift in der Bibliothek
+               <ref target="letter:688#seg3">3</ref>. Zum anderen hatte er sie auch in einer Handschrift in der Bibliothek
                   von St. Peter zu Salzburg feststellen können: StiB St. Peter, Cod. A V 7; vgl. <rs type="bibl" ref="bibl:15466">Bubnov, Gerberti Opera Mathematica</rs> XLVIII f.,
                   LXXXVI f., 300f.; <rs type="bibl" ref="bibl:18130">Manitius, Literatur</rs> 2
                   746f. Die Edition erfolgte nach der ersteren Vorlage: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 3 viii f., 3/2 col. 85–92. </p>
@@ -573,7 +598,7 @@
             <p> HStA Hannover, Hann. 93
                   175, 9r: „Carmen Theodiscum in laudem sanctae Mariae virginis“. Gemeint ist
                   sicherlich das „Melker Marienlied“: vgl. <ref type="letter" target="letter:961">961</ref>
-                  <ref target="letter:961#seg8">8</ref>.</p>
+               <ref target="letter:961#seg8">8</ref>.</p>
          </note>
          <note target="#range(right('n29'), left('n29e'))" n="29" anchored="false" corresp="#seg13">
             <mentioned> Ich bon de lof</mentioned>
@@ -591,20 +616,23 @@
                      Herford</rs> 89; <rs type="bibl" ref="bibl:19848">Stüwer, Corvey</rs> 242; <rs type="bibl" ref="bibl:20286">Wells, Politics</rs> 118, 121–126. Sie sind nur
                   als Insert im „Catalogus sanctorum ordinis sancti Benedicti“ des Andreas Lang
                   überliefert. Von BP wurde die Ochsenhausener Abschrift dieser Sammlung benutzt:
-                  vgl. <ref type="letter" target="letter:654">654</ref> <ref target="letter:654#seg4">4</ref>, <ref type="letter" target="letter:961">961</ref>
-                  <ref target="letter:961#seg9">9</ref>.</p>
+                  vgl. <ref type="letter" target="letter:654">654</ref>
+               <ref target="letter:654#seg4">4</ref>, <ref type="letter" target="letter:961">961</ref>
+               <ref target="letter:961#seg9">9</ref>.</p>
          </note>
          <note target="#range(right('n31'), left('n31e'))" n="31" anchored="false" corresp="#seg15">
             <mentioned>de Theotiscis</mentioned>
             <p> Ob sich GE hier auf die wenigen einschlägigen
                   Nennungen im „Syllabus“ – vgl. oben <ref target="#seg3">3</ref> und <ref target="#seg14">14</ref> – oder auf BPs
-                  Äußerungen in <ref type="letter" target="letter:946">946</ref> <ref target="letter:946#seg3">3</ref> und <ref target="letter:946#seg4">4</ref> bezieht, ist
+                  Äußerungen in <ref type="letter" target="letter:946">946</ref>
+               <ref target="letter:946#seg3">3</ref> und <ref target="letter:946#seg4">4</ref> bezieht, ist
                   nicht klar. </p>
          </note>
          <note target="#range(right('n32'), left('n32e'))" n="32" anchored="false" corresp="#seg16">
             <mentioned>Codicem Theotiscum</mentioned>
             <p> Die Bemerkung bezieht sich wohl auf BPs irrige
-                  Vermutung in <ref type="letter" target="letter:946">946</ref> <ref target="letter:946#seg3">3</ref>, die von ihm in 915
+                  Vermutung in <ref type="letter" target="letter:946">946</ref>
+               <ref target="letter:946#seg3">3</ref>, die von ihm in 915
                   übermittelte „Heliand“-Textprobe stamme aus den kurz zuvor wiederaufgefundenen
                   Beständen der Würzburger Dombibliothek. Noch 1721 ließ BP durch Johann Friedrich
                   Schannat in Würzburg nach einem „Codex Theotiscus“ suchen, dessen Vorhandensein
@@ -648,25 +676,49 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Vir maxime reverende.</opener>
-         <ab resp="#editor" xml:id="seg1">Meas omnes una cum nummo recte ad te venisse laetor. In illo non tam pretium quam animum, quo clementissime datus est, spectare debes. Valetudinem restitutam tibi etiam atque etiam gratulor atque, ut constans sit, ex animo precor. Viribus enim opus est ad <choice><sic>exantlad</sic><corr>exantlandos</corr></choice> labores, <choice><sic>quod</sic><corr>quos</corr></choice> in te suscepisti. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n1"/>Dissertationem<anchor xml:id="n1e"/> adversus Gentilottum studiose evolvi et expendi. Quicquid in ea profers, solidum est et erudito honestoque viro dignum. Age vero, et nobis brevi ipsam<anchor xml:id="n2"/> codicis Zwetlensis editionem<anchor xml:id="n2e"/> profer. Gratias certe, si non a Gentilotto, tamen a nobis maximas expecta ob praestitum hoc beneficium. </ab>
-         <ab resp="#editor" xml:id="seg3">Proxime quaedam annotabo ad Spicilegium tuum <pb n="1v"/> fortassis augendum. Iam remitto syllabum communicatum. Perplacet tua collectio. Sed non animadverto inter ea <add place="above">monumenta</add> glossas Theotiscas, <anchor xml:id="n3"/>quarum specimen<anchor xml:id="n3e"/> mihi communicasti? An indignas, quae in eo compareant, putas? Si hoc est, mihi impertire, ne pereant. Sed tandem<anchor xml:id="n4"/> observo has glossas Spicilegio tuo interesse<anchor xml:id="n4e"/>. Itaque bene habet<note place="foot" xml:id="d3e60662"><hi rend="italic">Sed tandem ... habet</hi> mit Verweiszeichen am linken Blattrand eingefügt.</note>. </ab>
+         <opener>
+            <pb n="1r"/> Vir maxime reverende.</opener>
+         <ab resp="#editor" xml:id="seg1">Meas omnes una cum nummo recte ad te venisse laetor. In illo non tam pretium quam animum, quo clementissime datus est, spectare debes. Valetudinem restitutam tibi etiam atque etiam gratulor atque, ut constans sit, ex animo precor. Viribus enim opus est ad <choice>
+               <sic>exantlad</sic>
+               <corr>exantlandos</corr>
+            </choice> labores, <choice>
+               <sic>quod</sic>
+               <corr>quos</corr>
+            </choice> in te suscepisti. </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n1"/>Dissertationem<anchor xml:id="n1e"/> adversus Gentilottum studiose evolvi et expendi. Quicquid in ea profers, solidum est et erudito honestoque viro dignum. Age vero, et nobis brevi ipsam<anchor xml:id="n2"/> codicis Zwetlensis editionem<anchor xml:id="n2e"/> profer. Gratias certe, si non a Gentilotto, tamen a nobis maximas expecta ob praestitum hoc beneficium. </ab>
+         <ab resp="#editor" xml:id="seg3">Proxime quaedam annotabo ad Spicilegium tuum <pb n="1v"/> fortassis augendum. Iam remitto syllabum communicatum. Perplacet tua collectio. Sed non animadverto inter ea <add place="above">monumenta</add> glossas Theotiscas, <anchor xml:id="n3"/>quarum specimen<anchor xml:id="n3e"/> mihi communicasti? An indignas, quae in eo compareant, putas? Si hoc est, mihi impertire, ne pereant. Sed tandem<anchor xml:id="n4"/> observo has glossas Spicilegio tuo interesse<anchor xml:id="n4e"/>. Itaque bene habet<note place="foot" xml:id="d3e60662">
+               <hi rend="italic">Sed tandem ... habet</hi> mit Verweiszeichen am linken Blattrand eingefügt.</note>. </ab>
          <ab resp="#editor" xml:id="seg4">Ratbertum proxime a me habebis. Scribo iam ad <anchor xml:id="n5"/>amicum, cui mutuo a Leibnitio datus est, ut remittat<anchor xml:id="n5e"/>. </ab>
-         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n6"/>Gerberti opuscula<anchor xml:id="n6e"/> salivam movent. </ab>
-         <ab resp="#editor" xml:id="seg6"><anchor xml:id="n7"/>Maxentii epistola<anchor xml:id="n7e"/> ad Carolum Magnum De ceremoniis baptismi erit responsoria ad epistolam Caroli Magni,<anchor xml:id="n8"/> quae Capitularibus Baluzi tomo primo pagina 483 extat<anchor xml:id="n8e"/>. </ab>
-         <ab resp="#editor" xml:id="seg7"><anchor xml:id="n9"/>Epistolae paparum<anchor xml:id="n9e"/>, imperatorum etc. an omnes anecdotae sunt? Mereretur iterum edi et cum manuscriptis conferri<anchor xml:id="n10"/> Codex epistolarum Carolinus<anchor xml:id="n10e"/>. <anchor xml:id="n11"/>Regia mea bibliotheca habet exemplar<anchor xml:id="n11e"/> Flacii manu ex vetustissimo codice <sic>transscritum</sic>. Ab eodem et Hincmari epistolas <pb n="2r"/> descriptas habeo. Ordo alius est<anchor xml:id="n12"/> ab edito exemplari<anchor xml:id="n12e"/>, nec dubito<anchor xml:id="n13"/> inedita quaedam interesse<anchor xml:id="n13e"/>. Si otium nactus fuero, collationem instituam. </ab>
-         <ab resp="#editor" xml:id="seg8"><anchor xml:id="n14"/>Habemus etiam spissum volumen epistolarum Berengarii<anchor xml:id="n14e"/> haeretici. </ab>
+         <ab resp="#editor" xml:id="seg5">
+            <anchor xml:id="n6"/>Gerberti opuscula<anchor xml:id="n6e"/> salivam movent. </ab>
+         <ab resp="#editor" xml:id="seg6">
+            <anchor xml:id="n7"/>Maxentii epistola<anchor xml:id="n7e"/> ad Carolum Magnum De ceremoniis baptismi erit responsoria ad epistolam Caroli Magni,<anchor xml:id="n8"/> quae Capitularibus Baluzi tomo primo pagina 483 extat<anchor xml:id="n8e"/>. </ab>
+         <ab resp="#editor" xml:id="seg7">
+            <anchor xml:id="n9"/>Epistolae paparum<anchor xml:id="n9e"/>, imperatorum etc. an omnes anecdotae sunt? Mereretur iterum edi et cum manuscriptis conferri<anchor xml:id="n10"/> Codex epistolarum Carolinus<anchor xml:id="n10e"/>. <anchor xml:id="n11"/>Regia mea bibliotheca habet exemplar<anchor xml:id="n11e"/> Flacii manu ex vetustissimo codice <sic>transscritum</sic>. Ab eodem et Hincmari epistolas <pb n="2r"/> descriptas habeo. Ordo alius est<anchor xml:id="n12"/> ab edito exemplari<anchor xml:id="n12e"/>, nec dubito<anchor xml:id="n13"/> inedita quaedam interesse<anchor xml:id="n13e"/>. Si otium nactus fuero, collationem instituam. </ab>
+         <ab resp="#editor" xml:id="seg8">
+            <anchor xml:id="n14"/>Habemus etiam spissum volumen epistolarum Berengarii<anchor xml:id="n14e"/> haeretici. </ab>
          <ab resp="#editor" xml:id="seg9">Magister <anchor xml:id="n15"/>Galterus<anchor xml:id="n15e"/> an is est, qui<anchor xml:id="n16"/> Alexandreida<anchor xml:id="n16e"/> scripsit? Eiusdem ineditum<anchor xml:id="n17"/> De amore libellum<anchor xml:id="n17e"/> Bremae amplissimus<anchor xml:id="n18"/> Mastrichtius servat<anchor xml:id="n18e"/>. </ab>
-         <ab resp="#editor" xml:id="seg10"><anchor xml:id="n19"/>Coena Cypriani<anchor xml:id="n19e"/> edita est vicibus duabus: primum a <anchor xml:id="n20"/>Letznero<anchor xml:id="n20e"/> nostro cum versione Germanica et deinde a<anchor xml:id="n21"/> Rivino<anchor xml:id="n21e"/>; utramque editionem possedi, antequam bibliothecae partem divendi feci. Ibi vero ex oscitantia<anchor xml:id="n22"/> hominis, cui separationis curam dederam<anchor xml:id="n22e"/>, multa periere, quae servata vellem. <add>Interim Coena haec recudi meretur</add>. </ab>
-         <ab resp="#editor" xml:id="seg11"><anchor xml:id="n23"/>Inveni in manuscripto bibliothecae Hamburgensis acta concilii Constantiensis Andreae presbyteri Chronico adiecta<anchor xml:id="n23e"/>, sed ea succincta admodum erant. Interim quaedam exinde annotavi, ex quibus apparet<anchor xml:id="n24"/> Sigismundum non adeo innocentem fuisse de morte Hussi<anchor xml:id="n24e"/>. Haec vero in monumentis concilii ab Hardtio nostro editis non offendi. <pb n="2v"/> </ab>
-         <ab resp="#editor" xml:id="seg12"><anchor xml:id="n25"/>Adelboldus<anchor xml:id="n25e"/> is erit, qui <anchor xml:id="n26"/>Vitam Henrici Sancti conscripsit<anchor xml:id="n26e"/>. Utinam hoc opus integrum haberi posset. Finem enim et maiorem eius partem hactenus invenire non licuit. </ab>
-         <ab resp="#editor" xml:id="seg13"><anchor xml:id="n27"/>Carmen Theotiscum in laudem sanctae Mariae virginis<anchor xml:id="n27e"/> quomodo incipit? Ego eiusdem materiae spissum in octavo librum in membrana seculo XII. aut XIII. incipiente scriptum habeo, qui incipit:</ab>
-         <ab resp="#editor" xml:id="seg14"><anchor xml:id="n28"/>Acta sanctae Hathumodae<anchor xml:id="n28e"/> nondum impressa sunt, et valde ea videre desidero. Si nondum typis subditur opus tuum, illa mihi ad inspiciendum, quaeso, transmitte; statim enim remittam. </ab>
+         <ab resp="#editor" xml:id="seg10">
+            <anchor xml:id="n19"/>Coena Cypriani<anchor xml:id="n19e"/> edita est vicibus duabus: primum a <anchor xml:id="n20"/>Letznero<anchor xml:id="n20e"/> nostro cum versione Germanica et deinde a<anchor xml:id="n21"/> Rivino<anchor xml:id="n21e"/>; utramque editionem possedi, antequam bibliothecae partem divendi feci. Ibi vero ex oscitantia<anchor xml:id="n22"/> hominis, cui separationis curam dederam<anchor xml:id="n22e"/>, multa periere, quae servata vellem. <add>Interim Coena haec recudi meretur</add>. </ab>
+         <ab resp="#editor" xml:id="seg11">
+            <anchor xml:id="n23"/>Inveni in manuscripto bibliothecae Hamburgensis acta concilii Constantiensis Andreae presbyteri Chronico adiecta<anchor xml:id="n23e"/>, sed ea succincta admodum erant. Interim quaedam exinde annotavi, ex quibus apparet<anchor xml:id="n24"/> Sigismundum non adeo innocentem fuisse de morte Hussi<anchor xml:id="n24e"/>. Haec vero in monumentis concilii ab Hardtio nostro editis non offendi. <pb n="2v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg12">
+            <anchor xml:id="n25"/>Adelboldus<anchor xml:id="n25e"/> is erit, qui <anchor xml:id="n26"/>Vitam Henrici Sancti conscripsit<anchor xml:id="n26e"/>. Utinam hoc opus integrum haberi posset. Finem enim et maiorem eius partem hactenus invenire non licuit. </ab>
+         <ab resp="#editor" xml:id="seg13">
+            <anchor xml:id="n27"/>Carmen Theotiscum in laudem sanctae Mariae virginis<anchor xml:id="n27e"/> quomodo incipit? Ego eiusdem materiae spissum in octavo librum in membrana seculo XII. aut XIII. incipiente scriptum habeo, qui incipit:</ab>
+         <ab resp="#editor" xml:id="seg14">
+            <anchor xml:id="n28"/>Acta sanctae Hathumodae<anchor xml:id="n28e"/> nondum impressa sunt, et valde ea videre desidero. Si nondum typis subditur opus tuum, illa mihi ad inspiciendum, quaeso, transmitte; statim enim remittam. </ab>
          <ab resp="#editor" xml:id="seg15">Quae <anchor xml:id="n29"/>de Theotiscis<anchor xml:id="n29e"/> commemoras, grata fuere ut omnia huius generis, mihi in etymologico meo Germanico usui futura. </ab>
-         <ab resp="#editor" xml:id="seg16"><anchor xml:id="n30"/>Codicem Theotiscum<anchor xml:id="n30e"/> Herbipolensem tam solicite custodiri, ut communicari <add place="above">non</add> possit, doleo. Interim forte amplissimus Siglerus, cuius notitiam ab annis habeo, non male faceret, si me beare vellet isto beneficio et simul etiam notitiam dare manuscriptorum, quae nobis profutura eum servare <choice><sic>me scire</sic><corr>scio</corr></choice>. Gratior enim fortasse erga eum esse possem quam<anchor xml:id="n31"/> alius amicus<anchor xml:id="n31e"/>, qui iam non amplius regi nostro, sed<anchor xml:id="n32"/> duci Holsatiae<anchor xml:id="n32e"/> inservit, et qui ad propria commoda obtinenda communicatis Siglerianis utitur. Si occasio est, hoc ipsi, quaeso, suggere. Vale, decus ordinis tui, et fave</ab>
+         <ab resp="#editor" xml:id="seg16">
+            <anchor xml:id="n30"/>Codicem Theotiscum<anchor xml:id="n30e"/> Herbipolensem tam solicite custodiri, ut communicari <add place="above">non</add> possit, doleo. Interim forte amplissimus Siglerus, cuius notitiam ab annis habeo, non male faceret, si me beare vellet isto beneficio et simul etiam notitiam dare manuscriptorum, quae nobis profutura eum servare <choice>
+               <sic>me scire</sic>
+               <corr>scio</corr>
+            </choice>. Gratior enim fortasse erga eum esse possem quam<anchor xml:id="n31"/> alius amicus<anchor xml:id="n31e"/>, qui iam non amplius regi nostro, sed<anchor xml:id="n32"/> duci Holsatiae<anchor xml:id="n32e"/> inservit, et qui ad propria commoda obtinenda communicatis Siglerianis utitur. Si occasio est, hoc ipsi, quaeso, suggere. Vale, decus ordinis tui, et fave</ab>
          <closer>Maxime reverendi nominis tui cultori devoto Eccardo.</closer>
-         <closer>Hanoverae die 26. Junii 1718<note place="foot" xml:id="d3e60746"><hi rend="italic">Gratior ... 1718</hi> am linken Blattrand senkrecht eingefügt.</note>.</closer>
+         <closer>Hanoverae die 26. Junii 1718<note place="foot" xml:id="d3e60746">
+               <hi rend="italic">Gratior ... 1718</hi> am linken Blattrand senkrecht eingefügt.</note>.</closer>
       </body>
    </text>
 </TEI>

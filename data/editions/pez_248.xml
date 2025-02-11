@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="248" xml:id="pez-0248">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Petrus Friderici an Bernhard Pez. 1712-05-19. Erfurt.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">248</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -76,15 +88,21 @@
             </correspContext>
          </correspDesc>
          <abstract>
-            <p corresp="#seg1"><rs type="person">PF</rs> schließt aus BPs Brief <ref type="letter" target="letter:247">247</ref>, dass dieser über das <rs ref="index:d10854e5840">Erfurter Gründungsdiplom</rs> <rs ref="index:d10854e5824">Dagoberts III.</rs> ähnlich ungünstig denkt wie <rs ref="index:d14380e43380">Trithemius</rs> in seinem „<rs ref="index:d10854e31214">Compendium sive Breviarium</rs>“ und in seinem „<rs ref="index:d10854e31196">Chronicon monasterii Hirsaugiensis</rs>“, <rs ref="index:d10854e31247">das</rs> von <rs ref="index:d14380e13009">Freher</rs> (in den „<rs ref="index:d10854e31243">Trithemii Opera historica</rs>“) herausgegeben wurde.</p>
-            <p corresp="#seg2"><rs type="person">PF</rs> nennt vier Argumente des Trithemius: Erstens will dieser in den <rs ref="index:d10854e12928">Hirsauer</rs> handschriftlichen Quellen zum Leben des seligen Abtes <rs ref="index:d14380e46284">Wilhelm</rs> gefunden haben, dass dieser sieben Klöster, darunter das <rs ref="index:d10854e8069">Peterskloster</rs> zu <rs ref="index:d10854e7974">Erfurt</rs>, gegründet habe. Aus der Anschauung der Urkunde fügt <rs ref="index:d14380e43380">Trithemius</rs> drei weitere Argumente hinzu: Zweitens regierte zur Zeit der Urkundenausstellung kein Frankenkönig Dagobert; drittens fehlt an der Urkunde das Siegel; viertens stimmt die angegebene Indiktion nicht mit dem Inkarnationsjahr 706 überein.</p>
+            <p corresp="#seg1">
+               <rs type="person">PF</rs> schließt aus BPs Brief <ref type="letter" target="letter:247">247</ref>, dass dieser über das <rs ref="index:d10854e5840">Erfurter Gründungsdiplom</rs>
+               <rs ref="index:d10854e5824">Dagoberts III.</rs> ähnlich ungünstig denkt wie <rs ref="index:d14380e43380">Trithemius</rs> in seinem „<rs ref="index:d10854e31214">Compendium sive Breviarium</rs>“ und in seinem „<rs ref="index:d10854e31196">Chronicon monasterii Hirsaugiensis</rs>“, <rs ref="index:d10854e31247">das</rs> von <rs ref="index:d14380e13009">Freher</rs> (in den „<rs ref="index:d10854e31243">Trithemii Opera historica</rs>“) herausgegeben wurde.</p>
+            <p corresp="#seg2">
+               <rs type="person">PF</rs> nennt vier Argumente des Trithemius: Erstens will dieser in den <rs ref="index:d10854e12928">Hirsauer</rs> handschriftlichen Quellen zum Leben des seligen Abtes <rs ref="index:d14380e46284">Wilhelm</rs> gefunden haben, dass dieser sieben Klöster, darunter das <rs ref="index:d10854e8069">Peterskloster</rs> zu <rs ref="index:d10854e7974">Erfurt</rs>, gegründet habe. Aus der Anschauung der Urkunde fügt <rs ref="index:d14380e43380">Trithemius</rs> drei weitere Argumente hinzu: Zweitens regierte zur Zeit der Urkundenausstellung kein Frankenkönig Dagobert; drittens fehlt an der Urkunde das Siegel; viertens stimmt die angegebene Indiktion nicht mit dem Inkarnationsjahr 706 überein.</p>
             <p corresp="#seg3">Auf diese Einwände hat <rs type="person">PF</rs> reagiert und seine Ansichten jüngst über <rs ref="index:d14380e10826">Felix Egger</rs> an <rs ref="index:d14380e26993">René Massuet</rs> mitgeteilt, dessen Antwort er nun erwartet. <rs type="person">PF</rs> hat gezeigt, dass das <rs ref="index:d10854e8069">Peterskloster</rs> bereits vor der Zeit <rs ref="index:d14380e46284">Wilhelms von Hirsau</rs> bestand: durch Urkunden der <rs ref="index:d14380e25988">Mainzer</rs> Erzbischöfe; durch den Nachweis einer Reihe von Äbten und Mönchen, die schon lange vor der Zeit <rs ref="index:d14380e46284">Wilhelms</rs>, welcher 1070 (recte: 1069) zum Abt von <rs ref="index:d10854e12928">Hirsau</rs> gewählt wurde, im Peterskloster gelebt haben, wobei sich der von BP dargelegte „Ludolf von Erfurt“ (recte: <rs ref="index:d10854e17346">Liutolf von Mainz</rs>) als nützlich erwiesen hat; durch Autoren aus der Zeit <rs ref="index:d14380e46284">Wilhelms</rs>, welche die Klostergründung dem König Dagobert zuschrieben, besonders <rs ref="index:d10854e16452">Lampert von Hersfeld</rs>, der selbst Hirsauer (recte: <rs ref="index:d14380e18181">Hersfelder</rs>) war, sowie seine Fortsetzung; <rs type="person">PF</rs> zeigt weiters, dass das <rs ref="index:d10854e8069">Peterskloster</rs> bereits zu Zeiten des <rs ref="index:d10854e3976">Hl. Bonifatius</rs> existierte, weil nämlich dieser aus den Besitzungen des Klosters das <rs ref="index:d10854e8032">Bistum Erfurt</rs>, welches später im <rs ref="index:d14380e25988">Mainzer</rs> Erzbistum aufging, begründete. In der <rs ref="index:d10854e8190">Kirche</rs> des Petersklosters selbst existiert eine steinerne <rs ref="index:d10854e5855">Statue Dagoberts</rs> in altfränkischem Gewand, die 1103 bei der Errichtung der neuen Kirche aufgestellt wurde. <rs type="person">PF</rs> erklärt den Irrtum der <rs ref="index:d10854e12928">Hirsauer</rs> Quellen betreffs der Gründung durch <rs ref="index:d14380e46284">Wilhelm</rs> mit schlechter Information aufgrund der Distanz von über 30 Meilen; so konnten die <rs ref="index:d10854e12928">Hirsauer</rs> wenig darüber wissen, was <rs ref="index:d14380e46284">Wilhelm</rs> in <rs ref="index:d14380e42842">Thüringen</rs> tat. Wahr ist jedoch, dass <rs ref="index:d14380e46284">Wilhelm</rs> auf Bitte des Landgrafen (recte: Grafen) <rs ref="index:d10854e17562">Ludwigs des Springers</rs> zwölf Mönche mit dem Abt <rs ref="index:d10854e10559">Giselbert</rs> aus <rs ref="index:d10854e12928">Hirsau</rs> in das von <rs ref="index:d10854e17562">Ludwig</rs> neugegründete Kloster <rs ref="index:d10854e25808">Reinhardsbrunn </rs>entsendete; als der Erfurter Abt <rs ref="index:d10854e26717">Ruthard</rs> zum Erzbischof von <rs ref="index:d14380e25988">Mainz</rs> gekürt wurde, folgte ihm <rs ref="index:d10854e10559">Giselbert</rs> im <rs ref="index:d10854e8069">Peterskloster</rs> nach. Hieraus kann man nicht ableiten, dass <rs ref="index:d14380e46284">Wilhelm</rs> das <rs ref="index:d10854e8069">Peterskloster</rs> gegründet habe, doch kann davon die Verwirrung der <rs ref="index:d10854e12928">Hirsauer</rs> rühren. <rs ref="index:d10854e25808">Reinhardsbrunn</rs> liegt drei Meilen von <rs ref="index:d10854e7974">Erfurt</rs>; es fiel 1525 im <rs ref="index:d10854e2480">Bauernkrieg</rs> an die <rs ref="index:d14380e11916">Lutheraner</rs>.</p>
-            <p corresp="#seg4">Des Weiteren lebte 706 sehr wohl ein <rs ref="index:d10854e5824">Dagobert</rs> II. (recte: III.), Sohn des <rs ref="index:d14380e12643">Frankenkönigs</rs> <rs ref="index:d14380e8010">Childebert</rs> (III.). Dies bestätigen <rs ref="index:d10854e18574">Marianus Scottus</rs>, <rs ref="index:d10854e12479">Hermann von Reichenau</rs>, <rs ref="index:d10854e12425">Henskens</rs> (in den „<rs ref="index:d10854e3914">Acta sanctorum</rs>“) und viele andere. Die Meinungen der Historiker zu Namen und Reihenfolge der Frankenkönige gehen auseinander.</p>
-            <p corresp="#seg5"><rs ref="index:d10854e21395">Nikolaus von Siegen</rs> schreibt in seinem „<rs ref="index:d10854e21401">Chronicon</rs>“, dass <rs ref="index:d10854e5824">Dagobert</rs> 711 aus <rs ref="index:d14380e42842">Thüringen</rs> nach <rs ref="index:d14380e12712">Frankreich</rs> (Gallia) zurückkehrte, um seinem Vater <rs ref="index:d14380e8010">Childebert</rs> im ganzen Reich nachzufolgen, nachdem er zuvor unter diesem über <rs ref="index:d10854e1761">Austrasien</rs> und <rs ref="index:d14380e42842">Thüringen</rs> geherrscht hatte. Darüber hat der <rs ref="index:d10854e8213">Erfurter Rat</rs> 1648 eine Verteidigungsschrift („<rs ref="index:d10854e21758">Ohnvermeidliche vorantwort</rs>“) gegen die <rs ref="index:d14380e25988">Mainzer</rs> Rechtsansprüche herausgegeben und bei den <rs ref="index:d10854e21932">Osnabrücker Friedensverhandlungen</rs> vorgelegt. Darin wird die Gründung des <rs ref="index:d10854e8069">Petersklosters</rs> mit vielen Belegen <rs ref="index:d10854e5824">Dagobert</rs> zugeschrieben.</p>
+            <p corresp="#seg4">Des Weiteren lebte 706 sehr wohl ein <rs ref="index:d10854e5824">Dagobert</rs> II. (recte: III.), Sohn des <rs ref="index:d14380e12643">Frankenkönigs</rs>
+               <rs ref="index:d14380e8010">Childebert</rs> (III.). Dies bestätigen <rs ref="index:d10854e18574">Marianus Scottus</rs>, <rs ref="index:d10854e12479">Hermann von Reichenau</rs>, <rs ref="index:d10854e12425">Henskens</rs> (in den „<rs ref="index:d10854e3914">Acta sanctorum</rs>“) und viele andere. Die Meinungen der Historiker zu Namen und Reihenfolge der Frankenkönige gehen auseinander.</p>
+            <p corresp="#seg5">
+               <rs ref="index:d10854e21395">Nikolaus von Siegen</rs> schreibt in seinem „<rs ref="index:d10854e21401">Chronicon</rs>“, dass <rs ref="index:d10854e5824">Dagobert</rs> 711 aus <rs ref="index:d14380e42842">Thüringen</rs> nach <rs ref="index:d14380e12712">Frankreich</rs> (Gallia) zurückkehrte, um seinem Vater <rs ref="index:d14380e8010">Childebert</rs> im ganzen Reich nachzufolgen, nachdem er zuvor unter diesem über <rs ref="index:d10854e1761">Austrasien</rs> und <rs ref="index:d14380e42842">Thüringen</rs> geherrscht hatte. Darüber hat der <rs ref="index:d10854e8213">Erfurter Rat</rs> 1648 eine Verteidigungsschrift („<rs ref="index:d10854e21758">Ohnvermeidliche vorantwort</rs>“) gegen die <rs ref="index:d14380e25988">Mainzer</rs> Rechtsansprüche herausgegeben und bei den <rs ref="index:d10854e21932">Osnabrücker Friedensverhandlungen</rs> vorgelegt. Darin wird die Gründung des <rs ref="index:d10854e8069">Petersklosters</rs> mit vielen Belegen <rs ref="index:d10854e5824">Dagobert</rs> zugeschrieben.</p>
             <p corresp="#seg6">Dass das Siegel herausgefallen ist, kann aus unglücklichen Zeitläuften erklärt werden. Es reicht aus, dass sichtlich einstmals eines vorhanden war und dass authentische Kopien in alten Handschriften vorliegen. Bei der Indiktion dagegen kommen häufig Abweichungen vor. <rs type="person">PF</rs> bittet auch BP um eine Stellungnahme.</p>
             <p corresp="#seg7">Von den Vorhaben BPs („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) und <rs ref="index:d14380e10826">Felix Eggers</rs> („<rs ref="index:d10854e7334">Idea ordinis hierarchico-Benedictini</rs>“) wissen wohl die meisten Klöster, doch findet sich kaum jemand, der die Sache richtig betreiben könnte oder wollte. <rs type="person">PF</rs> hat bereits <rs ref="index:d14380e44243">Florentius von dem Velde</rs>, den Abt von <rs ref="index:d14380e8750">Corvey</rs> und Präses der<rs ref="index:d14380e22351"> Bursfelder Kongregation</rs>, zur aktiven Mitarbeit angeregt, doch nur ein wohlwollendes Antwortschreiben erhalten, obwohl dieser ihm herzlich zugetan ist, zumal <rs type="person">PF</rs> unter ihm zwölf Jahre lang in <rs ref="index:d14380e8750">Corvey</rs> die jungen Adeligen unterrichtet hat. <rs type="person">PFs</rs> Fürsprecher ist sein ehemaliger Schüler <rs ref="index:d10854e10956">Ansgar Grass</rs>, der in <rs ref="index:d14380e8750">Corvey</rs> derzeit Subprior und BP ja bekannt ist.</p>
-            <p corresp="#seg8"><rs type="person">PF</rs> fragt BP, aus welcher Zeit die <rs ref="index:d10854e16487">Fortsetzung</rs> zu <rs ref="index:d10854e16452">Lampert von Hersfeld</rs> durch einen <rs ref="index:d10854e8069">Erfurter</rs> Anonymus stammen könnte. <rs type="person">PF</rs> bemüht sich, das Werk anzukaufen, da der Autor ein Petrenser war. Ob <rs ref="index:d10854e16452">Lampert</rs> selbst <rs ref="index:d10854e12928">Hirsauer</rs> oder <rs ref="index:d14380e18181">Hersfelder</rs> war, ist <rs type="person">PF</rs> unklar, da <rs ref="index:d10854e21395">Nikolaus von Siegen</rs> ihn als <rs ref="index:d14380e18181">Hersfelder</rs> bezeichnet, der sich in <rs ref="index:d10854e7974">Erfurt</rs> aufhielt.</p>
-            </abstract>
+            <p corresp="#seg8">
+               <rs type="person">PF</rs> fragt BP, aus welcher Zeit die <rs ref="index:d10854e16487">Fortsetzung</rs> zu <rs ref="index:d10854e16452">Lampert von Hersfeld</rs> durch einen <rs ref="index:d10854e8069">Erfurter</rs> Anonymus stammen könnte. <rs type="person">PF</rs> bemüht sich, das Werk anzukaufen, da der Autor ein Petrenser war. Ob <rs ref="index:d10854e16452">Lampert</rs> selbst <rs ref="index:d10854e12928">Hirsauer</rs> oder <rs ref="index:d14380e18181">Hersfelder</rs> war, ist <rs type="person">PF</rs> unklar, da <rs ref="index:d10854e21395">Nikolaus von Siegen</rs> ihn als <rs ref="index:d14380e18181">Hersfelder</rs> bezeichnet, der sich in <rs ref="index:d10854e7974">Erfurt</rs> aufhielt.</p>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -103,7 +121,8 @@
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned>Chronica ... editore Frehero pagina 65</mentioned>
-            <p>Die Seitenangabe entspricht der genannten Ausgabe.</p><p>Die Vierzahl erinnert an die vier nummerierten Argumente, welche Trithemius,
+            <p>Die Seitenangabe entspricht der genannten Ausgabe.</p>
+            <p>Die Vierzahl erinnert an die vier nummerierten Argumente, welche Trithemius,
                   Annales Hirsaugienses 1 226, gegen die dagobertinische Gründung von St. Peter
                   anführt: erstens die noch nicht stattgehabte Christianisierung Thüringens;
                   zweitens die Tatsache, dass Bonifatius, der das Christentum nach Thüringen
@@ -125,7 +144,8 @@
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
             <mentioned>Inspecto ... diplomate</mentioned>
-            <p>Zur Diplomatik des angeblichen Dagobertinums vgl. die zu <ref type="letter" target="letter:150">150</ref> angeführte Literatur.</p><p/>
+            <p>Zur Diplomatik des angeblichen Dagobertinums vgl. die zu <ref type="letter" target="letter:150">150</ref> angeführte Literatur.</p>
+            <p/>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg1">
             <mentioned>Egger</mentioned>
@@ -151,13 +171,16 @@
             <mentioned>ex serie abbatum ... ac religiosorum</mentioned>
             <p>Egger berichtet im genannten Brief an Massuet, dass PF zu 861 einen „lector“
                   Ulrich aus Corvey, zu 880 den dortigen Prior „Herbod“ (vgl. <ref type="letter" target="letter:166">166
-                  </ref><ref target="letter:166&#10;                  #seg7">7</ref>, <ref type="letter" target="letter:172">172</ref> <ref target="letter:172#seg2">2</ref>) als Abt ins Peterskloster
+                  </ref>
+               <ref target="letter:166&#xA;                  #seg7">7</ref>, <ref type="letter" target="letter:172">172</ref>
+               <ref target="letter:172#seg2">2</ref>) als Abt ins Peterskloster
                   kommen lässt und sich dafür auf Petrenser und Corveyer handschriftliche Quellen
                   beruft.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg1">
             <mentioned>Ludulphus Erffordiensis</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:224">224</ref> <ref target="letter:224#seg1">1</ref>, <ref type="letter" target="letter:237">237</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:224">224</ref>
+               <ref target="letter:224#seg1">1</ref>, <ref type="letter" target="letter:237">237</ref>.</p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg1">
             <mentioned>Lambertus Schafnaburgensis</mentioned>
@@ -225,7 +248,8 @@
          </note>
          <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg4">
             <mentioned>Hermannus Contractus</mentioned>
-            <p><rs type="bibl" ref="bibl:35736">Herimanni Augiensis Chronicon</rs> 97, ad annum
+            <p>
+               <rs type="bibl" ref="bibl:35736">Herimanni Augiensis Chronicon</rs> 97, ad annum
                   710: „Hildebertus rex Francorum, filius Theoderici moritur anno regni 17. Pro quo
                   Dagobertus filius annis 5“. Eine Mitregierung Dagoberts zu Lebzeiten seines Vaters
                   Childebert ist nicht angedeutet.</p>
@@ -241,7 +265,8 @@
          </note>
          <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg5">
             <mentioned>Nicolaus de Siegen ... annalibus</mentioned>
-            <p><rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs>
+            <p>
+               <rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs>
                   137f., wo allerdings von einer Herrschaft Dagoberts über Thüringen, Franken und
                   Hessen die Rede ist.</p>
          </note>
@@ -254,12 +279,16 @@
          </note>
          <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg6">
             <mentioned>Quod sigillum ... exciderit</mentioned>
-            <p><rs type="bibl" ref="bibl:35742">MGH DD.Merov.</rs> 1 178: „Das Spurium war nie
+            <p>
+               <rs type="bibl" ref="bibl:35742">MGH DD.Merov.</rs> 1 178: „Das Spurium war nie
                   besiegelt, obwohl rechts unten ein Loch vorbereitet war“.</p>
          </note>
          <note target="#range(right('n21'), left('n21e'))" n="21" anchored="false" corresp="#seg7">
             <mentioned>patris Egger</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:63">63</ref>, <ref type="letter" target="letter:231">231</ref> <ref target="letter:231#seg1">1</ref>, <ref type="letter" target="letter:237">237</ref> <ref target="letter:237#seg2">2</ref>, <ref type="letter" target="letter:281">281</ref> <ref target="letter:281#seg6">6</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:63">63</ref>, <ref type="letter" target="letter:231">231</ref>
+               <ref target="letter:231#seg1">1</ref>, <ref type="letter" target="letter:237">237</ref>
+               <ref target="letter:237#seg2">2</ref>, <ref type="letter" target="letter:281">281</ref>
+               <ref target="letter:281#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg7">
             <mentioned>principem Corbeiensem</mentioned>
@@ -268,15 +297,18 @@
          </note>
          <note target="#range(right('n23'), left('n23e'))" n="23" anchored="false" corresp="#seg7">
             <mentioned>ad annos duodecim ... Corbeiae egerim</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:166">166</ref> <ref target="letter:166#seg7">7</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:166">166</ref>
+               <ref target="letter:166#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n24'), left('n24e'))" n="24" anchored="false" corresp="#seg8">
             <mentioned>additiones ad Lambertum</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:180">180</ref>, <ref type="letter" target="letter:268">268</ref> <ref target="letter:268#seg4">4</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:180">180</ref>, <ref type="letter" target="letter:268">268</ref>
+               <ref target="letter:268#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n25'), left('n25e'))" n="25" anchored="false" corresp="#seg8">
             <mentioned>dubium ... annales</mentioned>
-            <p><rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs>
+            <p>
+               <rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs>
                   231: „Lampertus [...] sanctum habitum sacre religionis in Hirsfeldia suscepit“. Im
                   Folgenden wird Lampert nochmals als „Hirsfeldensis“ bezeichnet und sein Aufenthalt
                   im Kloster Saalfeld erwähnt (ebd. 234), welch letzteres Faktum PF wohl mit „in
@@ -297,14 +329,16 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Erffort 19. Maii 1712.</opener>
+         <opener>
+            <pb n="1r"/> Erffort 19. Maii 1712.</opener>
          <opener>Plurimum reverende atque colende domine confrater.</opener>
          <ab resp="#editor" xml:id="seg1">Ut video, reverentia vestra de diplomate nostro Dagobertino aeque sinistre ac Trithemius sentit. Legi id poterit <anchor xml:id="n1"/>in Trithemii Breviario<anchor xml:id="n1e"/> voluminis primi Historiae de origine regum et gentis Francorum, ubi severe contra agit. In <anchor xml:id="n2"/>Chronica autem Hirsaugiensi editore Frehero pagina 65<anchor xml:id="n2e"/> initium subvertendae fundationis nostrae sumpsit. </ab>
          <ab resp="#editor" xml:id="seg2">Quattuor Trithemii adversum nos argumenta brevibus adducam, ne opus sit reverentiam vestram in perquirendo laborare. Primo dicit se in manuscriptis Hirsaugiensibus ad vitam beati Wilhelmi abbatis ibidem duodecimi invenisse, quod ipse septem monasteria ordinis nostri fundasset, quae inter Erffurtense S. Petri recenseatur. Inspecto postea occasionaliter nostro diplomate tria insuper argumenta inde eruit: primum, quod tempore diplomatis consignati Dagobertus nullus rex Francorum fuerit. Secundum, quod diploma sigillo careat. Tertium, quod inserta indictio anno 706 conscripto non conveniat. </ab>
          <ab resp="#editor" xml:id="seg3">Ecce validissima Trithemiana tela; alia adversum expedivi iamque ad limam eximii patris Massuet per reverendum patrem Egger destinavi, responsum desuper indies praestolans. Demonstravi monasterium nostrum ante<del ana="#after">cet</del> memorati beati Wilhelmi aevum extitisse: ex authenticis litteris privilegiorum nobis ab archiepiscopis Moguntinis communicatis; ex serie abbatum quorundam ac religiosorum, qui integris saeculis ante Wilhelmum, prius anno 1070 Hirsaugiae abbatem creatum, in monasterio nostro vixerint, ubi mihi usui fuit Ludulphus Erffordiensis a reverentia sua<del ana="#after">mihi communicatus</del> manifestatus; <pb n="1v"/> ex<note place="foot" xml:id="d4618e30700">Am linken Blattrand durchgestrichen <hi rend="italic">Insuper</hi>.</note> authoribus, qui temporibus beati Wilhelmi vixerunt et nihilominus fundationem nostram Dagoberto Francorum regi transcripserunt, quorum plurimum probat Lambertus Schafnaburgensis et ipsemet monachus Hirsaugiensis<note type="annotation" xml:id="d4618e30706">Hierzu am linken Blattrand mit Verweiszeichen eingefügt und später durchgestrichen ein unleserliches Wort im Ausmaß von ca. 6–8 Buchstaben.</note>, item author additionum ad Lambertum. Commonstro item tempore sancti Bonifacii monasterium nostrum floruisse, cum ille sanctus ex bonis ac possessionibus eiusdem episcopatum Erffordiensem postea Moguntino unitum fundaverit; quod diversis allegatis authoritatibus confirmo. Exstat insuper hodiedum in ecclesia nostra manifesta proba, statua lapidea videlicet Dagoberti regis in paludamento vetusto Francico, illic collocata anno 1103, quo moderna basilica nostra ex meris quadris lapidibus exsurrexit. Pluribus aliis Trithemius erroris in assignando beato Wilhelmo pro fundatore Erffurtensi convinci potest. Quod in manuscripta Hirsaugiensia hic error irrepserit, ignorantiae scribentis attribuendum est; cum enim Hirsaugia Erffurto plus 30 milliaribus distet, monachi Hirsaugienses parum scire poterant de his, quae in Thuringia per suum Wilhelmum gesta fuissent. Verum autem est, quod saepefatus beatus Wilhelmus ad petitionem Ludovici cognomine Saltatoris landtgravii Turingiae duodecim religiosos cum Giselberto abbate ex suis ad monasterium Reinhartzbornense, tunc noviter a Ludovico nominato excitatum, in hasce partes transmiserit, quodque Giselbertus ille<del ana="#after">an</del> anno 1084, quando noster abbas Ruthardus in archiepiscopum Moguntinum postulabatur, ei in praelatura Erffurtensi relicta Reinhartzborna iussu beati Wilhelmi et rogatu Ruthardi nostri successerit; ast <pb n="2r"/> inde neutiquam Wilhelmus probari fundator noster, bene autem confusio ista apud Hirsaugienses oriri potuit, eo quod negotium aut ignorarint aut affectu in Wilhelmum suum praevalente plura consignarint, quam rite cognoscere ex loco dissito potuerint. Nota: Mox detectum monasterium Reinhartzborn tribus milliaribus Erffurto elongatum anno 1525 Lutheranis cessit rusticorum rebellione. </ab>
          <ab resp="#editor" xml:id="seg4">Caeterum Dagobertum secundum, filium Chil- seu Hildeberti Francorum regis, quem fundatorem appellamus, anno 706 vixisse nominatissimorum historicorum authoritatibus sustineo; huius namque sententiae est <anchor xml:id="n3"/>Marianus Scotus<anchor xml:id="n3e"/>, <anchor xml:id="n4"/>Hermannus Contractus<anchor xml:id="n4e"/>, <anchor xml:id="n5"/>Godefridus Hensenii<anchor xml:id="n5e"/> aliique complures, cum historici in serie<del ana="#after">re</del> et nominibus regum Francorum diversificent. </ab>
          <ab resp="#editor" xml:id="seg5">Noster pater <anchor xml:id="n6"/>Nicolaus de Siegen in suis annalibus<anchor xml:id="n6e"/> scripsit Dagobertum ex Thuringia in Galliam discessisse anno 711, ut Hildeberti patris sui tunc defuncti regimen totius Franciae adiret, cum prius parentis permissu solam Austrasiam atque Thuringiam gubernasset, qua super re <anchor xml:id="n7"/>senatus Erffordiensis defensorium contra praetensa iura Moguntinensium anno 1648 edidit<anchor xml:id="n7e"/> ac Osnaburgi in pacis tractatibus praesentavit ad antiqua iura sua, a Franciae regibus olim dominis suis accepta, manutenenda; inibi fundatio nostra Dagoberto multis attribuitur etc. </ab>
-         <ab resp="#editor" xml:id="seg6"><anchor xml:id="n8"/>Quod sigillum diplomati in pergameno affixum exciderit<anchor xml:id="n8e"/>, id ex variis eius iactationibus casibusque infortunatis evenit; sufficit, quod adfuisse clare appareat, et authentice vidimatas copias in antiquis membranis exhibeamus. Quantum ad inconvenientem appositam indictionem, id perpauci aestimant dicentes in his <pb n="2v"/> non raro evenisse mutationes, nec defectum esse invalidantem. <sic>Iuditio</sic>  reverentiae vestrae cuncta submittens occasionaliter responsi aliquid desuper exspecto. </ab>
+         <ab resp="#editor" xml:id="seg6">
+            <anchor xml:id="n8"/>Quod sigillum diplomati in pergameno affixum exciderit<anchor xml:id="n8e"/>, id ex variis eius iactationibus casibusque infortunatis evenit; sufficit, quod adfuisse clare appareat, et authentice vidimatas copias in antiquis membranis exhibeamus. Quantum ad inconvenientem appositam indictionem, id perpauci aestimant dicentes in his <pb n="2v"/> non raro evenisse mutationes, nec defectum esse invalidantem. <sic>Iuditio</sic>  reverentiae vestrae cuncta submittens occasionaliter responsi aliquid desuper exspecto. </ab>
          <ab resp="#editor" xml:id="seg7">De operibus tam reverentiae vestrae quam reverendi <anchor xml:id="n9"/>patris Egger<anchor xml:id="n9e"/> pleraque monasteria nostra sufficientem habent notitiam, quod autem desideratis usquequaque non respondeant, alia obsunt; quotusquisque hodiedum aut abbatum aut monachorum huiusmodi pro suo valore aestimat curatve? Reperias loca, ubi nihil horum norunt, nec ad horam iis pervestigandis immorari volent. Laboravi iam aliquamdiu scriptis apud celsissimum <anchor xml:id="n10"/>principem Corbeiensem<anchor xml:id="n10e"/> congregationis nostrae Bursfeldinae praesidem mihi alias bene affectum (ex eo, quod sub ipso <anchor xml:id="n11"/>ad annos duodecim instructorem nobilium iuniorum dominorum Corbeiae egerim<anchor xml:id="n11e"/>), ut mediis congruis monasteria sibi subdita istuc adigeret, quo piae intentioni utriusque scriptoris satisfieret; indeque<del ana="#before">ideq</del> hactenus benevolens responsum retuli, adeoque continuaturus, donec effectus sequatur. Cooperatorem ea in re habeo praenobilem dominum Anscharium de Grass, quondam meum <sic>disciplum</sic> , pro tempore Corbeiae suppriorem, virum egregium nec reverentiae vestrae ignotum. </ab>
          <ab resp="#editor" xml:id="seg8">Quonam tempore putat reverentia vestra illas <anchor xml:id="n12"/>additiones ad Lambertum<anchor xml:id="n12e"/> Schafnaburgensem per monachum Erffordiensem factas fuisse? In eo enim emendo etiamnum laboro, cum ex nostris fuerit. De ipso Lamberto Schafnaburgensi <anchor xml:id="n13"/>dubium mihi moverunt nostri annales<anchor xml:id="n13e"/>, an Hirsaugiensis an potius Hirsfeldensis monachus dicendus sit, cum<del ana="#after">in</del> quodam loco ipsum Hirsfeldensem et in nostris partibus moratum<note type="annotation" xml:id="d4618e30754">Korrigiert aus einem unleserlich durchgestrichenen Wort im Ausmaß von ca. 12–15 Buchstaben.</note> dicant.</ab>
          <closer>Servus ex ungue notus manu propria.</closer>

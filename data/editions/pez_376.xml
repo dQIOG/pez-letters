@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="376" xml:id="pez-0376">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Konrad Widow an Bernhard Pez. 1714-11-24 &lt; 1714-12-20. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">376</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Es fehlt jegliche Datierung. Da allerdings KW in diesem Billett BP bereits zum
                   wiederholten Mal zu einem Treffen (gemeinsam mit Bartenstein und Gentilotti) in
@@ -61,10 +72,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -86,7 +98,7 @@
          </correspDesc>
          <abstract>
             <p corresp="#seg1">KW ermuntert BP nochmals unter Anrufung <rs ref="index:d14380e29435">Montfaucons</rs>, <rs ref="index:d14380e26993">Massuets</rs> und ihrer Mitbrüder, am Folgetag an einem gemeinsamen Abendessen (coena philosophica, coena Gallica) teilzunehmen, bei dem auch Hofbibliothekspräfekt <rs ref="index:d14380e14738">Johann Benedikt Gentilotti</rs> anwesend sein wird, und bei dem auf die <rs ref="index:d10854e15615">Mauriner</rs> angestoßen werden soll. BP würde damit KW, <rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs>, <rs ref="index:d14380e14738">Gentilotti</rs> und der ganzen <rs type="cit" ref="citIndex:ix2_d763e2202">Gelehrtenrepublik</rs> eine große Gunst erweisen, denn zwischen ihm und <rs ref="index:d14380e14738">Gentilotti</rs> würde zweifellos über die Förderung der Gelehrsamkeit gesprochen. KW und <rs ref="index:d14380e4006">Bartenstein</rs> würden sich gratulieren, solch ein Treffen zustande gebracht zu haben. Vor zehn Uhr, so verspricht KW, kann BP die Runde verlassen, wenn dies gewünscht wird. In einem Nachsatz kündigt KW an, eine Absage nicht akzeptieren zu wollen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -94,7 +106,8 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>crastina die</mentioned>
             <p>Wenn es sich tatsächlich um die von Bartenstein gegenüber HP angekündigte
-                  Einladung (<ref type="letter" target="letter:375">375</ref> <ref target="letter:375#seg4">4</ref>) handelt, wäre dies der 26.
+                  Einladung (<ref type="letter" target="letter:375">375</ref>
+               <ref target="letter:375#seg4">4</ref>) handelt, wäre dies der 26.
                   November und der vorliegende Brief somit auf den 25. November zu datieren. Dies
                   kann jedoch nicht als sicher angenommen werden.</p>
          </note>
@@ -117,7 +130,8 @@
    </standOff>
    <text>
       <front>
-         <p>Au trés reverend le reverend pere Petz. Chez lui.<note type="annotation">Siegel.</note></p>
+         <p>Au trés reverend le reverend pere Petz. Chez lui.<note type="annotation">Siegel.</note>
+         </p>
       </front>
       <body>
          <ab resp="#editor" xml:id="seg1">Iterum es compellendus, vir summe reverende, ad coenam philosophicam. Intererit illi illustris Gentilotius. Nonne huius commercium te incitat, ut nobis tui sane studiosissimis per aliquot horas te impertiri velis? Nonne suave illud poculum existimas, quod in salutem Parisiensium nostrorum nobis invicem propinabimus? Nihil amplius addo, sed te, vir amicissime, per Montefalconium, Massuetum omnesque horum sodales rogo, oro atque obtestor, ut <anchor xml:id="n1"/>crastina die<anchor xml:id="n1e"/> coena quadam Gallica apud nos frui velis. Rem facies <pb n="1v"/> gratissimam Gentilotio nobisque, quin et universae reipublicae literariae, de huius enim commodis promovendis certus sum deliberatum iri te inter et bibliothecae caesareae praefectum dignissimum; cui rei si aliquid conferre poterimus, impense nobis gratulabimur. Sancte pollicemur te <anchor xml:id="n2"/>ante horam decimam<anchor xml:id="n2e"/> societatem hanc iucundissimam relicturum, si ita placebit. Hisce conditionibus te affirmative nobis responsurum non dubitamus ideoque tuam adhuc benevolentiam, amicitiam studiumque in optimos Parisienses et nos tibi deditissimos rogamus <pb n="2r"/> atque imploramus.</ab>

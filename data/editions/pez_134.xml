@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="134" xml:id="pez-0134">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an Ansgar Grass. 1710-12-17. Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">134</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,14 +43,15 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Auf Original angeblich Vermerk AGs: <orig>Has accepi die 30. Decembris anno 1710</orig>.
             </note>
          </notesStmt>
          <sourceDesc>
             <listWit>
-               <witness ana="cmif:manuscript"><note>vormals StA Münster, Cod. Misc. VII-5212.</note></witness>
+               <witness ana="cmif:manuscript">
+                  <note>vormals StA Münster, Cod. Misc. VII-5212.</note>
+               </witness>
                <witness ana="cmif:copy">
                   <msDesc>
                      <msIdentifier>
@@ -54,10 +67,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -85,13 +99,18 @@
          </correspDesc>
          <abstract>
             <p corresp="#seg1">BP hat AGs Schreiben vom 1. Dezember <ref type="letter" target="letter:127">127</ref> erhalten und dankt für dessen Bereitschaft zur Mitarbeit. Nichts anderes war von <rs ref="index:d14380e8750">Corvey</rs> zu erwarten, dessen Autoren zu ihrer Zeit ganz <rs ref="index:d14380e11804">Europa</rs> erleuchteten.</p>
-            <p corresp="#seg2">BP ist überrascht über die Langsamkeit seines Briefs nach <rs ref="index:d14380e8750">Corvey</rs> <ref type="letter" target="letter:133">133</ref>, die wohl der großen Entfernung zuzuschreiben ist. Er erwartete täglich Antwort aus <rs ref="index:d14380e8750">Corvey</rs> und konnte sich nicht erklären, dass ein in ganz <rs ref="index:d14380e9395">Deutschland</rs> berühmtes Kloster nichts zum Ruhm seiner Vergangenheit beitragen wolle.</p>
+            <p corresp="#seg2">BP ist überrascht über die Langsamkeit seines Briefs nach <rs ref="index:d14380e8750">Corvey</rs>
+               <ref type="letter" target="letter:133">133</ref>, die wohl der großen Entfernung zuzuschreiben ist. Er erwartete täglich Antwort aus <rs ref="index:d14380e8750">Corvey</rs> und konnte sich nicht erklären, dass ein in ganz <rs ref="index:d14380e9395">Deutschland</rs> berühmtes Kloster nichts zum Ruhm seiner Vergangenheit beitragen wolle.</p>
             <p corresp="#seg3">Da sich die Arbeit an BPs Werk („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) länger hinzieht, als er erwartet hatte, muss AG nicht befürchten, dass das eingesendete Material zu den <rs ref="index:d14380e8750">Corveyer</rs> Schriftstellern zu spät kommt.</p>
-            <p corresp="#seg4">Die Autoren, die bei <rs ref="index:d14380e43380">Trithemius</rs>, <rs ref="index:d14380e6885">Bucelin</rs>, <rs ref="index:d10854e3908">Bolland</rs> („<rs ref="index:d14380e6100"><rs ref="index:d10854e3914">Acta sanctorum</rs></rs>“), in der „<rs ref="index:d10854e6077">Maxima bibliotheca patrum</rs>“ (von <rs ref="index:d10854e6071">Despont</rs>) und bei <rs ref="index:d14380e16869">Haeften</rs> („<rs ref="index:d14380e16875">Benedictus illustratus</rs>“) verzeichnet sind, kennt BP, hofft aber auf bisher unbekannte Ergänzungen. Er bittet darum, zu den Schriftstellern auch die Initien ihrer Werke mitzuteilen.</p>
-            <p corresp="#seg5">BP wünscht sehnlich, den Traktat „<rs ref="index:d14380e32519">De fide, spe et charitate</rs>“ von <rs ref="index:d14380e32511">Paschasius Radbertus</rs> zu sehen. Er zitiert einen Abschnitt aus <rs ref="index:d10854e23064">Paullinis</rs> „<rs ref="index:d10854e23070">Theatrum virum illustrium Corbeiae Saxonicae</rs>“, in dem berichtet wird, dass ein „<rs ref="index:d10854e23129">Peradbertus</rs>“ unter <rs ref="index:d10854e32356">Warin</rs>, dem ersten Abt von <rs ref="index:d14380e8750">Corvey</rs>, den Traktat schrieb und ihn dem Abt, einem Neffen <rs ref="index:d14380e21094">Karls des Großen</rs>, widmete. Nicht erwähnt wird, dass „<rs ref="index:d10854e23129">Peradbertus</rs>“ später Abt von <rs ref="index:d14380e8579">Corbie</rs> gewesen wäre. BP fürchtet deshalb, dass dieser „<rs ref="index:d10854e23129">Peradbertus</rs>“ – oder, wie er im dritten Band von <rs ref="index:d14380e25581">Mabillons</rs> „<rs ref="index:d14380e25705">Annales OSB</rs>“ genannt wird, „<rs ref="index:d10854e23129">Proradbertus</rs>“ – mit <rs ref="index:d14380e32511">Paschasius Radbertus</rs> verwechselt wird. BP will sich jedoch begründeten gegenteiligen Meinungen gerne beugen. Er würde den Traktat auch gerne herausgeben. Wenn dies in Deutschland nicht möglich ist, so will er ihn an den <rs ref="index:d14380e22462">Mauriner</rs> <rs ref="index:d14380e26993">René Massuet</rs>, <rs ref="index:d14380e25581">Mabillons</rs> Nachfolger, nach <rs ref="index:d14380e32292">Paris</rs> senden.</p>
-            <p corresp="#seg6"><rs ref="index:d14380e26993">Massuet</rs> hat BP gebeten, die <rs ref="index:d14380e9395">deutschen</rs> Klöster in seinem Namen um Material für die „<rs ref="index:d14380e25749">Annales OSB</rs>“ zu bitten. Da seine <rs ref="index:d10854e18873">Enzyklik</rs> aber recht lang ist, bereitet sie BP beim Abschreiben viel Mühe. So sendet er stattdessen <rs ref="index:d10854e26618">die kürzere</rs> von <rs ref="index:d14380e38364">Thierry Ruinart</rs>. AG soll sie in den Klöstern <rs ref="index:d10854e21335">Niedersachsens</rs> verteilen; alle Einsendungen für die gelehrten Ordensbrüder in <rs ref="index:d14380e12712">Frankreich</rs> können nach <rs ref="index:d14380e45571">Wien</rs> gerichtet werden, von wo sie BP nach Paris schicken wird. BP schließt mit Weihnachtsgrüßen.</p>
+            <p corresp="#seg4">Die Autoren, die bei <rs ref="index:d14380e43380">Trithemius</rs>, <rs ref="index:d14380e6885">Bucelin</rs>, <rs ref="index:d10854e3908">Bolland</rs> („<rs ref="index:d14380e6100">
+                  <rs ref="index:d10854e3914">Acta sanctorum</rs>
+               </rs>“), in der „<rs ref="index:d10854e6077">Maxima bibliotheca patrum</rs>“ (von <rs ref="index:d10854e6071">Despont</rs>) und bei <rs ref="index:d14380e16869">Haeften</rs> („<rs ref="index:d14380e16875">Benedictus illustratus</rs>“) verzeichnet sind, kennt BP, hofft aber auf bisher unbekannte Ergänzungen. Er bittet darum, zu den Schriftstellern auch die Initien ihrer Werke mitzuteilen.</p>
+            <p corresp="#seg5">BP wünscht sehnlich, den Traktat „<rs ref="index:d14380e32519">De fide, spe et charitate</rs>“ von <rs ref="index:d14380e32511">Paschasius Radbertus</rs> zu sehen. Er zitiert einen Abschnitt aus <rs ref="index:d10854e23064">Paullinis</rs> „<rs ref="index:d10854e23070">Theatrum virum illustrium Corbeiae Saxonicae</rs>“, in dem berichtet wird, dass ein „<rs ref="index:d10854e23129">Peradbertus</rs>“ unter <rs ref="index:d10854e32356">Warin</rs>, dem ersten Abt von <rs ref="index:d14380e8750">Corvey</rs>, den Traktat schrieb und ihn dem Abt, einem Neffen <rs ref="index:d14380e21094">Karls des Großen</rs>, widmete. Nicht erwähnt wird, dass „<rs ref="index:d10854e23129">Peradbertus</rs>“ später Abt von <rs ref="index:d14380e8579">Corbie</rs> gewesen wäre. BP fürchtet deshalb, dass dieser „<rs ref="index:d10854e23129">Peradbertus</rs>“ – oder, wie er im dritten Band von <rs ref="index:d14380e25581">Mabillons</rs> „<rs ref="index:d14380e25705">Annales OSB</rs>“ genannt wird, „<rs ref="index:d10854e23129">Proradbertus</rs>“ – mit <rs ref="index:d14380e32511">Paschasius Radbertus</rs> verwechselt wird. BP will sich jedoch begründeten gegenteiligen Meinungen gerne beugen. Er würde den Traktat auch gerne herausgeben. Wenn dies in Deutschland nicht möglich ist, so will er ihn an den <rs ref="index:d14380e22462">Mauriner</rs>
+               <rs ref="index:d14380e26993">René Massuet</rs>, <rs ref="index:d14380e25581">Mabillons</rs> Nachfolger, nach <rs ref="index:d14380e32292">Paris</rs> senden.</p>
+            <p corresp="#seg6">
+               <rs ref="index:d14380e26993">Massuet</rs> hat BP gebeten, die <rs ref="index:d14380e9395">deutschen</rs> Klöster in seinem Namen um Material für die „<rs ref="index:d14380e25749">Annales OSB</rs>“ zu bitten. Da seine <rs ref="index:d10854e18873">Enzyklik</rs> aber recht lang ist, bereitet sie BP beim Abschreiben viel Mühe. So sendet er stattdessen <rs ref="index:d10854e26618">die kürzere</rs> von <rs ref="index:d14380e38364">Thierry Ruinart</rs>. AG soll sie in den Klöstern <rs ref="index:d10854e21335">Niedersachsens</rs> verteilen; alle Einsendungen für die gelehrten Ordensbrüder in <rs ref="index:d14380e12712">Frankreich</rs> können nach <rs ref="index:d14380e45571">Wien</rs> gerichtet werden, von wo sie BP nach Paris schicken wird. BP schließt mit Weihnachtsgrüßen.</p>
             <p corresp="#seg7">In einem Postskriptum versichert BP, dass das „<rs ref="index:d10854e5464">Collectarium Benedictinum</rs>“ zwar auf Interesse stößt, doch zögern die Klöster, weil sie den weiten Transportweg fürchten.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -126,14 +145,16 @@
             <mentioned>negotium in transscribendo</mentioned>
             <p>Massuet hatte für BP und Anselm Schramb zunächst nur zwei Enzykliken gesendet,
                   vgl. <ref type="letter" target="letter:113">113</ref> sowie <ref type="letter" target="letter:143">143</ref>
-                  <ref target="letter:143#seg9">9</ref>.</p>
+               <ref target="letter:143#seg9">9</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg6">
             <mentioned>a Theodorico Ruinarto ... ad me datas</mentioned>
             <p>BP hatte die Enzyklik Ruinarts nicht von diesem, sondern von Anselm Fischer in
-                  Ochsenhausen erhalten (<ref type="letter" target="letter:43">43</ref> <ref target="letter:43#seg7">7</ref>). Auch hier zeigt
+                  Ochsenhausen erhalten (<ref type="letter" target="letter:43">43</ref>
+               <ref target="letter:43#seg7">7</ref>). Auch hier zeigt
                   sich eine Neigung, die Kontakte mit den Maurinern etwas enger erscheinen zu
-                  lassen, als sie eigentlich waren; vgl. <ref type="letter" target="letter:113">113</ref> <ref target="letter:113#seg1">1</ref>.</p>
+                  lassen, als sie eigentlich waren; vgl. <ref type="letter" target="letter:113">113</ref>
+               <ref target="letter:113#seg1">1</ref>.</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -146,13 +167,16 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende perillustris ac religiosissime domine et patrone plurimum colende.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende perillustris ac religiosissime domine et patrone plurimum colende.</opener>
          <ab resp="#editor" xml:id="seg1">Duo sunt gratiosarum a plurimum reverenda ac perillustri dominatione vestra datarum ad me 1. Decembris litterarum capita, quae me non modicam in admirationem traduxere. Primum est insignis illa ac nullis non laudibus efferenda plurimum reverendae ac perillustris dominationis vestrae humanitas et profluens exinde sincerissimus promptissimusque mei iuvandi animus ac studium. Fecit nimirum plurimum reverenda ac perillustris dominatio vestra id, quod ab illustrissimo florentissimoque capitulo Corbeiensi expectare poteram. Quocirca nihil aeque exopto, quam ut me olim gratissimum impensique beneficii ac benevolentiae quam maxime memorem possim exhibere, id quod eo lubentiori animo praestare conabor, quo maior est illorum Corbeiensium scriptorum <add place="above">multitudo</add>, qui doctissimarum elucubrationum radiis totam <pb n="1v"/> propemodum Europam suis temporibus illustravere. </ab>
          <ab resp="#editor" xml:id="seg2">Alterum admirationis meae caput est enormis illa <anchor xml:id="n1"/>literarum a me Corbeiam scriptarum<anchor xml:id="n1e"/> mora et lentitudo, quam non potuit res alia quam itinerum illuc perducentium difficultas et viae oppido magnae intervallum causare. Exspectabam ego sane Corbeia quotidie responsum, nec poteram prudenter suspicari eos maiorum suorum gloriae defuturos, quorum nunc qua pietatis qua sapientiae fama Germaniam implet. Sed haec omnia repente suavissimis plurimum reverendae ac perillustris dominationis vestrae litteris discussa et complanata sunt. </ab>
          <ab resp="#editor" xml:id="seg3">Caeterum optarem ego profecto, opus meum ut eo iam pervenisset, ut in lucem publicam evolare posset; verum longe maior est illius difficultas, quam quae paucorum, imo, ut prius scripsi, multorum annorum studio superetur. Tredecim saeculorum historia, eaque vehementer implicata et cum totius fere ecclesiae rebus permixta, evolvenda mihi enarrandaque est. Quare nihil est, quod plurimum reverenda ac perillustris dominatio vestra timeat, ne praeclara quaedam de doctissimis capitularibus dominis Corbeiensibus mihi perscribendo nimis sero et post tempus venisse videatur. Nihil itaque mihi gratius fuerit, quam talia quaepiam ex eruditissimis plurimum reverendi ac <pb n="2r"/> perillustris domini literis intelligere, quibus magis magisque tantorum et virorum et doctorum fama commendetur. </ab>
          <ab resp="#editor" xml:id="seg4">Quae Trithemius, Bucellinus, Bollandus, Bibliotheca patrum Heftenusque in medium attulerunt, abunde mihi cognita sunt; quibus si singularia et praecipua monumenta, quae citatos authores fors latuere, addita fuerint, nihil fere supererit, quod admodum desiderem. Gratissimum mihi plurimum reverendus ac perillustris dominus fecerit, si singulorum operum a doctissimis dominis Corbeiensibus conscriptorum initia expresserit. </ab>
-         <ab resp="#editor" xml:id="seg5">Ad tractatum De fide, spe<del ana="#before">de</del> et charitate sancto Radberto Paschasio adscriptum quod attinet, mirum est, quam aveam illud opus videre. <anchor xml:id="n2"/>Meminit illius Christianus Paulinus<anchor xml:id="n2e"/> in Theatro virorum illustrium Corbeiae Saxoniae capite 45 paragrapho 1 his verbis: Peradbertus, <sic>sanctae</sic> <note place="foot" xml:id="d4618e16246">Wohl irrige Auflösung einer Kürzung durch den Kopisten; zu erwarten wäre <hi rend="italic">sacrae</hi>.</note> theologiae lector, vixit sub Warino primo regulariter electo abbate. Reliquit manuscriptum adhuc in bibliotheca Corbeiensi superstes De fide, spe et charitate, laudato antistiti suo Karoli Magni ex sorore nepoti humiliter inscriptum, quod certe lampada olet praemorsosque sapit ungues. Haec ille, nihil addens, quod eundem postea Corbeiae Gallicae fuisse abbatem ostendat. Quare mirifice vereor, ne hic Peradbertus, seu ut <anchor xml:id="n3"/>Mabilio tomo tertio Annalium<anchor xml:id="n3e"/> Benedictinorum pagina 54 vocat, <pb n="2v"/> Proradbertus, <anchor xml:id="n4"/>cum sancto illo Paschasio Radberto confundatur<anchor xml:id="n4e"/>. Quidquid tamen de hoc sit, libenter in hoc, quoad per eruditos licuerit, aliorum sententiae acquiescam, modo graves ad dirimendam controversiam rationes afferantur. Interim ut praefatus tractatus ad me mittatur, demississime rogo. Si ego in Germania eum edere nequivero, mittam Parisios ad eruditissimum virum Renatum Masuet congregationis sancti Mauri monachum, Mabilionis continuatorem et summum meum amicum. Is sine dubio faciet, ut quam splendidissime aliquando vulgetur. </ab>
-         <ab resp="#editor" xml:id="seg6">Scripsit mihi saepius hoc etiam anno doctissimus iste vir plurimumque me hortatur, ut nobilissima quaequae Germaniae monasteria ad submittenda celebriora sua monumenta, quibus Annales Benedictini uberius instruantur, invitarem. Sed quia hae Masueti literae longiusculae sunt, incredibile mihi <anchor xml:id="n5"/>negotium in transscribendo<anchor xml:id="n5e"/> faciunt. Igitur earum loco breviores <anchor xml:id="n6"/>a Theodorico Ruinarto, Mabilionis socio, ad me datas<anchor xml:id="n6e"/> plurimum reverendae ac perillustri dominationi vestrae repraesento enixissime rogans, ut vicinioribus quoque <sic>sancti</sic> <note place="foot" xml:id="d4618e16259">Wohl irrige Auflösung einer Kürzung durch den Kopisten; zu erwarten wäre <hi rend="italic">sacri</hi>.</note> ordinis nostri <pb n="3r"/> monasteriis communicentur. Scriberem ipse ad singula, sed quia mihi illa utpote in Inferiore Saxonia constituta non admodum cognita sunt, cogor amicis meis quo-demum-cunque modo consulere. Quod si plurimum reverenda ac perillustris dominatio vestra, uti et reliqua florentissima Saxoniae monasteria doctissimorum nostrorum in Gallia virorum votis gratificari cupiunt, omnia ad me mittantur Viennam. Ego deinceps curabo, ut cuncta quam securissima Parisios via deferantur. Atque hisce me plurimum commendatum cupio Deumque rogo, ut hoc sacro neonati Domini tempore plurimum reverendam ac perillustrem dominationem vestram copiosissimo coelestium suorum favorum imbre de coelo fortunet, id quod ex animo precans persevero</ab>
+         <ab resp="#editor" xml:id="seg5">Ad tractatum De fide, spe<del ana="#before">de</del> et charitate sancto Radberto Paschasio adscriptum quod attinet, mirum est, quam aveam illud opus videre. <anchor xml:id="n2"/>Meminit illius Christianus Paulinus<anchor xml:id="n2e"/> in Theatro virorum illustrium Corbeiae Saxoniae capite 45 paragrapho 1 his verbis: Peradbertus, <sic>sanctae</sic>
+            <note place="foot" xml:id="d4618e16246">Wohl irrige Auflösung einer Kürzung durch den Kopisten; zu erwarten wäre <hi rend="italic">sacrae</hi>.</note> theologiae lector, vixit sub Warino primo regulariter electo abbate. Reliquit manuscriptum adhuc in bibliotheca Corbeiensi superstes De fide, spe et charitate, laudato antistiti suo Karoli Magni ex sorore nepoti humiliter inscriptum, quod certe lampada olet praemorsosque sapit ungues. Haec ille, nihil addens, quod eundem postea Corbeiae Gallicae fuisse abbatem ostendat. Quare mirifice vereor, ne hic Peradbertus, seu ut <anchor xml:id="n3"/>Mabilio tomo tertio Annalium<anchor xml:id="n3e"/> Benedictinorum pagina 54 vocat, <pb n="2v"/> Proradbertus, <anchor xml:id="n4"/>cum sancto illo Paschasio Radberto confundatur<anchor xml:id="n4e"/>. Quidquid tamen de hoc sit, libenter in hoc, quoad per eruditos licuerit, aliorum sententiae acquiescam, modo graves ad dirimendam controversiam rationes afferantur. Interim ut praefatus tractatus ad me mittatur, demississime rogo. Si ego in Germania eum edere nequivero, mittam Parisios ad eruditissimum virum Renatum Masuet congregationis sancti Mauri monachum, Mabilionis continuatorem et summum meum amicum. Is sine dubio faciet, ut quam splendidissime aliquando vulgetur. </ab>
+         <ab resp="#editor" xml:id="seg6">Scripsit mihi saepius hoc etiam anno doctissimus iste vir plurimumque me hortatur, ut nobilissima quaequae Germaniae monasteria ad submittenda celebriora sua monumenta, quibus Annales Benedictini uberius instruantur, invitarem. Sed quia hae Masueti literae longiusculae sunt, incredibile mihi <anchor xml:id="n5"/>negotium in transscribendo<anchor xml:id="n5e"/> faciunt. Igitur earum loco breviores <anchor xml:id="n6"/>a Theodorico Ruinarto, Mabilionis socio, ad me datas<anchor xml:id="n6e"/> plurimum reverendae ac perillustri dominationi vestrae repraesento enixissime rogans, ut vicinioribus quoque <sic>sancti</sic>
+            <note place="foot" xml:id="d4618e16259">Wohl irrige Auflösung einer Kürzung durch den Kopisten; zu erwarten wäre <hi rend="italic">sacri</hi>.</note> ordinis nostri <pb n="3r"/> monasteriis communicentur. Scriberem ipse ad singula, sed quia mihi illa utpote in Inferiore Saxonia constituta non admodum cognita sunt, cogor amicis meis quo-demum-cunque modo consulere. Quod si plurimum reverenda ac perillustris dominatio vestra, uti et reliqua florentissima Saxoniae monasteria doctissimorum nostrorum in Gallia virorum votis gratificari cupiunt, omnia ad me mittantur Viennam. Ego deinceps curabo, ut cuncta quam securissima Parisios via deferantur. Atque hisce me plurimum commendatum cupio Deumque rogo, ut hoc sacro neonati Domini tempore plurimum reverendam ac perillustrem dominationem vestram copiosissimo coelestium suorum favorum imbre de coelo fortunet, id quod ex animo precans persevero</ab>
          <closer>Plurimum reverendae perillustri ac religiosissimae dominationi vestrae obligatissimus pater Bernardus Pez professus et bibliothecarius Mellicensis.</closer>
          <closer>Mellicii 17. Decembris 1710.</closer>
          <closer xml:id="seg7">P.S. Collectarium Benedictinum pro hebdomadario <pb n="3v"/> concinnatum pluribus quidem placet, sed quia nullum in his partibus exemplar adhuc conspexerunt, ad emendum tardiores sunt, maxime cum huius operis comparationem non levibus viarum incommodis subiectam animadvertant.</closer>

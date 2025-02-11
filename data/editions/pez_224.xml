@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="224" xml:id="pez-0224">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Petrus Friderici an Bernhard Pez. 1712-03-12. Erfurt.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">224</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -76,28 +89,46 @@
             </correspContext>
          </correspDesc>
          <abstract>
-            <p corresp="#seg1"><rs type="person">PF</rs> hat in dem Schriftstellerkatalog zu BPs <rs ref="index:d10854e23782">Enzyklik</rs> <ref type="letter" target="letter:222">222</ref> zum Jahr 840 einen Eintrag über Ludolf von <rs ref="index:d10854e7974">Erfurt</rs> (recte: <rs ref="index:d10854e17346">Liutolf von Mainz</rs>) gefunden und möchte dessen Quelle erfahren, da er in der <rs ref="index:d10854e8069">Petrenser</rs> Hausgeschichte (<rs ref="index:d10854e21401">Nikolaus von Siegen, „Chronicon ecclesiasticum“</rs>) nichts über diese Zeit gefunden hat. Die <rs ref="index:d10854e23782">Enzyklik</rs> hat <rs type="person">PF</rs> an andere Klöster weitergesendet.</p>
+            <p corresp="#seg1">
+               <rs type="person">PF</rs> hat in dem Schriftstellerkatalog zu BPs <rs ref="index:d10854e23782">Enzyklik</rs>
+               <ref type="letter" target="letter:222">222</ref> zum Jahr 840 einen Eintrag über Ludolf von <rs ref="index:d10854e7974">Erfurt</rs> (recte: <rs ref="index:d10854e17346">Liutolf von Mainz</rs>) gefunden und möchte dessen Quelle erfahren, da er in der <rs ref="index:d10854e8069">Petrenser</rs> Hausgeschichte (<rs ref="index:d10854e21401">Nikolaus von Siegen, „Chronicon ecclesiasticum“</rs>) nichts über diese Zeit gefunden hat. Die <rs ref="index:d10854e23782">Enzyklik</rs> hat <rs type="person">PF</rs> an andere Klöster weitergesendet.</p>
             <p corresp="#seg2">Aus den Handschriften seines Klosters (<rs ref="index:d10854e21395">Nikolaus von Siegen</rs>) berichtet <rs type="person">PF</rs> über folgende Schriftsteller und ihre Werke: <rs ref="index:d10854e32173">Walahfrid Strabo</rs>, Abt von <rs ref="index:d14380e39290">St. Gallen</rs> (recte: <rs ref="index:d14380e37019">Reichenau</rs>), Verfasser einer „<rs ref="index:d10854e32183">Vita S. Galli</rs>“, um 700 (recte: † 849);</p>
-            <p corresp="#seg3"><rs ref="index:d10854e32310">Wandalbert</rs> von <rs ref="index:d14380e36140">Prüm</rs> in der Erzdiözese <rs ref="index:d14380e43343">Trier</rs>, „<rs ref="index:d10854e32318">Martyrologium</rs>“ sowie die im Auftrag des Abtes <rs ref="index:d10854e18611">Markward</rs> von <rs ref="index:d10854e27413">St. Goar</rs> (recte: <rs ref="index:d14380e36140">Prüm</rs>) entstandene „<rs ref="index:d10854e32323">Vita S. Goaris</rs>“, um 825 (recte: † um 850);</p>
-            <p corresp="#seg4"><rs ref="index:d14380e32511">Paschasius Radbertus</rs> von <rs ref="index:d14380e8579">Corbie</rs>, „<rs ref="index:d10854e22943">De corpore et sanguine domini</rs>“ an Abt <rs ref="index:d10854e32356">Placidus (Warin)</rs>, „<rs ref="index:d10854e22962">Vita sancti Adalhardi</rs>“ und „<rs ref="index:d10854e22957">Expositio in Lamentationes Jeremiae</rs>“ sowie Übersetzung von Heiligenviten aus dem <rs ref="index:d14380e16473">Griechischen</rs> ins Lateinische, um 880;</p>
-            <p corresp="#seg5"><rs ref="index:d10854e25648">Regino</rs>, Abt von <rs ref="index:d14380e36140">Prüm</rs>, „<rs ref="index:d10854e25669">De synodalibus causis</rs>“, verfasst auf Anweisung des Erzbischofs Radbert (recte: <rs ref="index:d14380e36422">Ratbod</rs>) von <rs ref="index:d14380e43343">Trier</rs>, sowie „<rs ref="index:d10854e25658">Chronica</rs>“, verfasst für Bischof <rs ref="index:d10854e142">Adalbero</rs> von <rs ref="index:d14380e28790">Metz</rs> (recte: <rs ref="index:d14380e3233">Augsburg</rs>), um 900;</p>
-            <p corresp="#seg6"><rs ref="index:d10854e12400">Helperich</rs> von <rs ref="index:d14380e39290">St. Gallen</rs>, „<rs ref="index:d10854e12413">Liber de computo</rs>“ sowie „<rs ref="index:d10854e12408">De musica</rs>“, um 1020 (recte: siehe Kommentar);</p>
-            <p corresp="#seg7"><rs ref="index:d10854e30615">Theoderich von Fleury</rs>, „<rs ref="index:d10854e30625">Illatio sancti Benedicti</rs>“ für Abt <rs ref="index:d10854e26045">Richard</rs> von <rs ref="index:d10854e9767">Fulda</rs> über die Translation der Reliquien des <rs ref="index:d10854e2786">Hl. Benedikt</rs> von <rs ref="index:d14380e29411">Monte Cassino</rs> nach <rs ref="index:d14380e12258">Fleury</rs>, um 1030;</p>
-            <p corresp="#seg8"><rs ref="index:d10854e30630">Theoderich</rs>, Abt von <rs ref="index:d14380e38950">St.-Trond</rs> in der Diözese <rs ref="index:d14380e25464">Lüttich</rs>, „<rs ref="index:d10854e30648">Vita S. Trudonis</rs>“, „<rs ref="index:d10854e30638">Vita S. Bavonis</rs>“, „<rs ref="index:d10854e30643">Vita S. Rumoldi</rs>“ und weitere Heiligenviten, um 1100;</p>
-            <p corresp="#seg9"><rs ref="index:d10854e17585">Lukas</rs>, Abt von <rs ref="index:d10854e20380">Mont-Cornillon</rs>, der dem Bischof von <rs ref="index:d10854e31032">Tournai</rs> (recte: <rs ref="index:d10854e20135">Milo</rs> von <rs ref="index:d10854e30703">Thérouanne</rs>) zahlreiche Schriften widmete, insbesondere einen Hoheliedkommentar („<rs ref="index:d10854e17593">Summariola in Aponii Commentaria in Cantica canticorum</rs>“), um 1100;</p>
-            <p corresp="#seg10"><rs ref="index:d10854e1081">Anselm von Canterbury</rs>, von Geburt <rs ref="index:d14380e7157">Burgunder</rs>, wirkte unter Abt (recte: Prior) <rs ref="index:d14380e23762">Lanfranc</rs> im Kloster <rs ref="index:d14380e24100">Le Bec</rs> und verfasste zahlreiche Schriften, darunter: „<rs ref="index:d10854e1089">Cur Deus homo?</rs>“, „<rs ref="index:d10854e1109">De fide Trinitatis et de incarnatione Verbi</rs>“, „<rs ref="index:d10854e1099">De conceptu virginali</rs>“, „<rs ref="index:d10854e1119">De processione Spiritus Sancti contra Graecos</rs>“, „<rs ref="index:d10854e1129">Dialogus de casu diaboli</rs>“, „<rs ref="index:d10854e1094">De azymo et fermentato</rs>“, „<rs ref="index:d10854e1124">De sacramentorum diversitate</rs>“, „<rs ref="index:d10854e1150">Monologion</rs>“, „<rs ref="index:d10854e1155">Proslogion</rs>“, „<rs ref="index:d10854e1134">Dialogus de veritate</rs>“, „<rs ref="index:d10854e1104">De concordia gratiae Dei cum libero arbitrio</rs>“, „<rs ref="index:d10854e1169">Sermo de passione Domini</rs>“, „<rs ref="index:d10854e1114">De pace et concordia</rs>“, Mariengebete, Predigten und Briefe, um 1100;</p>
+            <p corresp="#seg3">
+               <rs ref="index:d10854e32310">Wandalbert</rs> von <rs ref="index:d14380e36140">Prüm</rs> in der Erzdiözese <rs ref="index:d14380e43343">Trier</rs>, „<rs ref="index:d10854e32318">Martyrologium</rs>“ sowie die im Auftrag des Abtes <rs ref="index:d10854e18611">Markward</rs> von <rs ref="index:d10854e27413">St. Goar</rs> (recte: <rs ref="index:d14380e36140">Prüm</rs>) entstandene „<rs ref="index:d10854e32323">Vita S. Goaris</rs>“, um 825 (recte: † um 850);</p>
+            <p corresp="#seg4">
+               <rs ref="index:d14380e32511">Paschasius Radbertus</rs> von <rs ref="index:d14380e8579">Corbie</rs>, „<rs ref="index:d10854e22943">De corpore et sanguine domini</rs>“ an Abt <rs ref="index:d10854e32356">Placidus (Warin)</rs>, „<rs ref="index:d10854e22962">Vita sancti Adalhardi</rs>“ und „<rs ref="index:d10854e22957">Expositio in Lamentationes Jeremiae</rs>“ sowie Übersetzung von Heiligenviten aus dem <rs ref="index:d14380e16473">Griechischen</rs> ins Lateinische, um 880;</p>
+            <p corresp="#seg5">
+               <rs ref="index:d10854e25648">Regino</rs>, Abt von <rs ref="index:d14380e36140">Prüm</rs>, „<rs ref="index:d10854e25669">De synodalibus causis</rs>“, verfasst auf Anweisung des Erzbischofs Radbert (recte: <rs ref="index:d14380e36422">Ratbod</rs>) von <rs ref="index:d14380e43343">Trier</rs>, sowie „<rs ref="index:d10854e25658">Chronica</rs>“, verfasst für Bischof <rs ref="index:d10854e142">Adalbero</rs> von <rs ref="index:d14380e28790">Metz</rs> (recte: <rs ref="index:d14380e3233">Augsburg</rs>), um 900;</p>
+            <p corresp="#seg6">
+               <rs ref="index:d10854e12400">Helperich</rs> von <rs ref="index:d14380e39290">St. Gallen</rs>, „<rs ref="index:d10854e12413">Liber de computo</rs>“ sowie „<rs ref="index:d10854e12408">De musica</rs>“, um 1020 (recte: siehe Kommentar);</p>
+            <p corresp="#seg7">
+               <rs ref="index:d10854e30615">Theoderich von Fleury</rs>, „<rs ref="index:d10854e30625">Illatio sancti Benedicti</rs>“ für Abt <rs ref="index:d10854e26045">Richard</rs> von <rs ref="index:d10854e9767">Fulda</rs> über die Translation der Reliquien des <rs ref="index:d10854e2786">Hl. Benedikt</rs> von <rs ref="index:d14380e29411">Monte Cassino</rs> nach <rs ref="index:d14380e12258">Fleury</rs>, um 1030;</p>
+            <p corresp="#seg8">
+               <rs ref="index:d10854e30630">Theoderich</rs>, Abt von <rs ref="index:d14380e38950">St.-Trond</rs> in der Diözese <rs ref="index:d14380e25464">Lüttich</rs>, „<rs ref="index:d10854e30648">Vita S. Trudonis</rs>“, „<rs ref="index:d10854e30638">Vita S. Bavonis</rs>“, „<rs ref="index:d10854e30643">Vita S. Rumoldi</rs>“ und weitere Heiligenviten, um 1100;</p>
+            <p corresp="#seg9">
+               <rs ref="index:d10854e17585">Lukas</rs>, Abt von <rs ref="index:d10854e20380">Mont-Cornillon</rs>, der dem Bischof von <rs ref="index:d10854e31032">Tournai</rs> (recte: <rs ref="index:d10854e20135">Milo</rs> von <rs ref="index:d10854e30703">Thérouanne</rs>) zahlreiche Schriften widmete, insbesondere einen Hoheliedkommentar („<rs ref="index:d10854e17593">Summariola in Aponii Commentaria in Cantica canticorum</rs>“), um 1100;</p>
+            <p corresp="#seg10">
+               <rs ref="index:d10854e1081">Anselm von Canterbury</rs>, von Geburt <rs ref="index:d14380e7157">Burgunder</rs>, wirkte unter Abt (recte: Prior) <rs ref="index:d14380e23762">Lanfranc</rs> im Kloster <rs ref="index:d14380e24100">Le Bec</rs> und verfasste zahlreiche Schriften, darunter: „<rs ref="index:d10854e1089">Cur Deus homo?</rs>“, „<rs ref="index:d10854e1109">De fide Trinitatis et de incarnatione Verbi</rs>“, „<rs ref="index:d10854e1099">De conceptu virginali</rs>“, „<rs ref="index:d10854e1119">De processione Spiritus Sancti contra Graecos</rs>“, „<rs ref="index:d10854e1129">Dialogus de casu diaboli</rs>“, „<rs ref="index:d10854e1094">De azymo et fermentato</rs>“, „<rs ref="index:d10854e1124">De sacramentorum diversitate</rs>“, „<rs ref="index:d10854e1150">Monologion</rs>“, „<rs ref="index:d10854e1155">Proslogion</rs>“, „<rs ref="index:d10854e1134">Dialogus de veritate</rs>“, „<rs ref="index:d10854e1104">De concordia gratiae Dei cum libero arbitrio</rs>“, „<rs ref="index:d10854e1169">Sermo de passione Domini</rs>“, „<rs ref="index:d10854e1114">De pace et concordia</rs>“, Mariengebete, Predigten und Briefe, um 1100;</p>
             <p corresp="#seg11">Peregrinus (<rs ref="index:d14380e22916">Konrad von Hirsau</rs>) war Schüler <rs ref="index:d14380e46284">Wilhelms von Hirsau</rs> und verfasste einen Dialog „<rs ref="index:d14380e22922">Speculum virginum</rs>“, einen Dialog über die Evangelien, einen „De vita spiritus et fructu mortis“ („De fructibus carnis et spiritus“?) sowie eine Benediktsvita in Versen, um 1100 (siehe Kommentar);</p>
-            <p corresp="#seg12"><rs ref="index:d10854e9169">Franko</rs>, Mönch von <rs ref="index:d14380e17290">Hasungen</rs> in <rs ref="index:d14380e18255">Hessen</rs> (recte: von Afflighem), verfasste für Abt <rs ref="index:d10854e9906">Fulgentius</rs> ein Buch „<rs ref="index:d10854e9177">De gratia Dei</rs>“, das er fertig stellte, nachdem er diesem in der Abtswürde gefolgt war, sowie ein weiteres Werk „<rs ref="index:d10854e9182">De statu futurae gloriae</rs>“, um 1109;</p>
-            <p corresp="#seg13"><rs ref="index:d10854e26668">Rupert von Limburg</rs> im Bistum <rs ref="index:d14380e41280">Speyer</rs>, unterrichtete in <rs ref="index:d14380e32292">Paris</rs>, bevor er Mönch im Kloster <rs ref="index:d10854e17223">Limburg</rs> wurde, schrieb: „<rs ref="index:d10854e26676">In Cantica canticorum</rs>“, „<rs ref="index:d10854e26681">De contemptu mundi</rs>“, „<rs ref="index:d10854e26686">De sancto Joanne Baptista</rs>“ sowie Schriften über einen exkommuniziert verstorbenen und in <rs ref="index:d10854e17223">Limburg</rs> begrabenen Bischof (<rs ref="index:d10854e4446">Bruno von Saarbrücken</rs>, Bischof von Speyer) und über die Heiligen, deren Reliquien in <rs ref="index:d10854e17223">Limburg</rs> verwahrt wurden, um 1123;</p>
-            <p corresp="#seg14"><rs ref="index:d10854e10484">Gerung</rs>, Mönch von <rs ref="index:d10854e12928">Hirsau</rs>, stammte aus <rs ref="index:d10854e28377">Schwaben</rs> und war Schüler <rs ref="index:d14380e46284">Wilhelms von Hirsau</rs>, wurde mit sechs Gefährten nach <rs ref="index:d10854e23029">Paulinzella</rs> in <rs ref="index:d14380e42842">Thüringen</rs> geschickt, wo er Abt wurde und viele Bücher schrieb, starb 1120;</p>
-            <p corresp="#seg15"><rs ref="index:d14380e19142">Hugo von Fouilloy</rs>, Mönch von <rs ref="index:d14380e8579">Corbie</rs> (recte: <rs ref="index:d14380e3377">Augustiner-Chorherr</rs> in St.-Laurent-aux-Bois), „<rs ref="index:d14380e19160">De claustro animae</rs>“, um 1120;</p>
-            <p corresp="#seg16"><rs ref="index:d10854e13067">Hrotsvit von Gandersheim</rs> im Bistum Hildesheim, schrieb „<rs ref="index:d10854e13082">De continentia ac castitate servanda</rs>“ (siehe Kommentar), „Historia intactae Dei genitricis“, „Passio sancti Dionysii“ sowie Verse über andere Heilige auf <rs ref="index:d14380e16473">Griechisch</rs> und <rs ref="index:d14380e23973">Latein</rs>, lebte zur Zeit des Papstes „<rs ref="index:d14380e20344">Johannes Anglicus</rs>“ (siehe Kommentar);</p>
+            <p corresp="#seg12">
+               <rs ref="index:d10854e9169">Franko</rs>, Mönch von <rs ref="index:d14380e17290">Hasungen</rs> in <rs ref="index:d14380e18255">Hessen</rs> (recte: von Afflighem), verfasste für Abt <rs ref="index:d10854e9906">Fulgentius</rs> ein Buch „<rs ref="index:d10854e9177">De gratia Dei</rs>“, das er fertig stellte, nachdem er diesem in der Abtswürde gefolgt war, sowie ein weiteres Werk „<rs ref="index:d10854e9182">De statu futurae gloriae</rs>“, um 1109;</p>
+            <p corresp="#seg13">
+               <rs ref="index:d10854e26668">Rupert von Limburg</rs> im Bistum <rs ref="index:d14380e41280">Speyer</rs>, unterrichtete in <rs ref="index:d14380e32292">Paris</rs>, bevor er Mönch im Kloster <rs ref="index:d10854e17223">Limburg</rs> wurde, schrieb: „<rs ref="index:d10854e26676">In Cantica canticorum</rs>“, „<rs ref="index:d10854e26681">De contemptu mundi</rs>“, „<rs ref="index:d10854e26686">De sancto Joanne Baptista</rs>“ sowie Schriften über einen exkommuniziert verstorbenen und in <rs ref="index:d10854e17223">Limburg</rs> begrabenen Bischof (<rs ref="index:d10854e4446">Bruno von Saarbrücken</rs>, Bischof von Speyer) und über die Heiligen, deren Reliquien in <rs ref="index:d10854e17223">Limburg</rs> verwahrt wurden, um 1123;</p>
+            <p corresp="#seg14">
+               <rs ref="index:d10854e10484">Gerung</rs>, Mönch von <rs ref="index:d10854e12928">Hirsau</rs>, stammte aus <rs ref="index:d10854e28377">Schwaben</rs> und war Schüler <rs ref="index:d14380e46284">Wilhelms von Hirsau</rs>, wurde mit sechs Gefährten nach <rs ref="index:d10854e23029">Paulinzella</rs> in <rs ref="index:d14380e42842">Thüringen</rs> geschickt, wo er Abt wurde und viele Bücher schrieb, starb 1120;</p>
+            <p corresp="#seg15">
+               <rs ref="index:d14380e19142">Hugo von Fouilloy</rs>, Mönch von <rs ref="index:d14380e8579">Corbie</rs> (recte: <rs ref="index:d14380e3377">Augustiner-Chorherr</rs> in St.-Laurent-aux-Bois), „<rs ref="index:d14380e19160">De claustro animae</rs>“, um 1120;</p>
+            <p corresp="#seg16">
+               <rs ref="index:d10854e13067">Hrotsvit von Gandersheim</rs> im Bistum Hildesheim, schrieb „<rs ref="index:d10854e13082">De continentia ac castitate servanda</rs>“ (siehe Kommentar), „Historia intactae Dei genitricis“, „Passio sancti Dionysii“ sowie Verse über andere Heilige auf <rs ref="index:d14380e16473">Griechisch</rs> und <rs ref="index:d14380e23973">Latein</rs>, lebte zur Zeit des Papstes „<rs ref="index:d14380e20344">Johannes Anglicus</rs>“ (siehe Kommentar);</p>
             <p corresp="#seg17">Stephan, auch <rs ref="index:d10854e12523">Herrand, von Ilsenburg</rs> war erst Abt dieses Klosters, dann Bischof von <rs ref="index:d10854e11750">Halberstadt</rs>, schrieb eine Verteidigung Papst <rs ref="index:d14380e16285">Gregors VII.</rs> an <rs ref="index:d10854e32290">Walram</rs>, Bischof von <rs ref="index:d10854e21051">Naumburg</rs>, welcher auf der Seite <rs ref="index:d14380e17632">Heinrichs IV.</rs> stand;</p>
-            <p corresp="#seg18"><rs ref="index:d10854e12267">Heinrich</rs>, Mönch von <rs ref="index:d14380e442">Afflighem</rs>, stammte aus <rs ref="index:d14380e6873">Brüssel</rs> und schrieb ein <rs ref="index:d10854e12275">Kalendarium</rs>, um 1283;</p>
-            <p corresp="#seg19"><rs ref="index:d10854e29073">Simon</rs>, Mönch von <rs ref="index:d14380e442">Afflighem</rs>, verfasste eine <rs ref="index:d10854e29096">Kürzung</rs> der <rs ref="index:d10854e11053">„Moralia in Iob“ Gregors des Großen</rs> und <rs ref="index:d10854e29086">exzerpierte</rs> dessen „<rs ref="index:d10854e11069">Sermones in Ezechielem</rs>“, schrieb <rs ref="index:d10854e29091">über das Hohelied</rs> und kompilierte <rs ref="index:d10854e29081">Auszüge der Kirchenväter</rs> (siehe Kommentar);</p>
-            <p corresp="#seg20"><rs ref="index:d10854e33956">Wilhelm</rs>, Prior von <rs ref="index:d14380e442">Afflighem</rs>, schrieb zum <rs ref="index:d10854e33964">Leben</rs> der <rs ref="index:d10854e17337">Hl. Liutgard</rs>, um 1300.</p>
+            <p corresp="#seg18">
+               <rs ref="index:d10854e12267">Heinrich</rs>, Mönch von <rs ref="index:d14380e442">Afflighem</rs>, stammte aus <rs ref="index:d14380e6873">Brüssel</rs> und schrieb ein <rs ref="index:d10854e12275">Kalendarium</rs>, um 1283;</p>
+            <p corresp="#seg19">
+               <rs ref="index:d10854e29073">Simon</rs>, Mönch von <rs ref="index:d14380e442">Afflighem</rs>, verfasste eine <rs ref="index:d10854e29096">Kürzung</rs> der <rs ref="index:d10854e11053">„Moralia in Iob“ Gregors des Großen</rs> und <rs ref="index:d10854e29086">exzerpierte</rs> dessen „<rs ref="index:d10854e11069">Sermones in Ezechielem</rs>“, schrieb <rs ref="index:d10854e29091">über das Hohelied</rs> und kompilierte <rs ref="index:d10854e29081">Auszüge der Kirchenväter</rs> (siehe Kommentar);</p>
+            <p corresp="#seg20">
+               <rs ref="index:d10854e33956">Wilhelm</rs>, Prior von <rs ref="index:d14380e442">Afflighem</rs>, schrieb zum <rs ref="index:d10854e33964">Leben</rs> der <rs ref="index:d10854e17337">Hl. Liutgard</rs>, um 1300.</p>
             <p corresp="#seg21">Dies ist alles, das <rs type="person">PF</rs> aus den alten Handschriften entnehmen konnte, weil er die alte Schrift nicht lesen kann und auch niemand anderer mitarbeitet. Was er jedoch noch finden wird, will er BP für seine „<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“ gerne mitteilen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -106,14 +137,16 @@
             <mentioned>Ludolfus Erfordiensis</mentioned>
             <p>Gemeint ist, wie sich aus <ref type="letter" target="letter:237">237</ref> ergibt, Liutolf, der
                   Verfasser der „Vita et translatio sancti Severi“. Er war Priester, wohl aus Mainz,
-                  und lebte um das Jahr 858. BP folgte mit seinen Angaben Wion (vgl. <ref type="letter" target="letter:237">237</ref> <ref target="letter:237#seg1">1</ref>), der Liutolf wohl bloß deshalb nach Erfurt
+                  und lebte um das Jahr 858. BP folgte mit seinen Angaben Wion (vgl. <ref type="letter" target="letter:237">237</ref>
+               <ref target="letter:237#seg1">1</ref>), der Liutolf wohl bloß deshalb nach Erfurt
                   lokalisiert hatte, weil dorthin die Reliquien des Hl. Severus verbracht worden
                   waren; das Floruit-Jahr 840 dürfte sich von dem Datum der Translation (836)
                   ableiten. Vgl. Vita et translatio S. Severi 289; <rs type="bibl" ref="bibl:36522">Lanzoni, S. Severo</rs> 1 364f.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned>de ... illo saeculo vix aliquid</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:166">166</ref> <ref target="letter:166#seg7">7</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:166">166</ref>
+               <ref target="letter:166#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
             <mentioned>Catalogum</mentioned>
@@ -125,7 +158,8 @@
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
             <mentioned>Walifridus</mentioned>
-            <p><rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs>
+            <p>
+               <rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs>
                   154.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
@@ -137,7 +171,8 @@
             <p>Zu ihm findet sich kein Eintrag im <rs type="bibl" ref="bibl:35728">Chronicon
                      Ecclesiasticum Nicolai de Siegen</rs>; die Notiz weicht auch sprachlich von den
                   aus diesem geschöpften ab. PF dürfte seine Kenntnis von Paschasius aus seiner Zeit
-                  in Corvey (vgl. <ref type="letter" target="letter:166">166</ref> <ref target="letter:166#seg7">7</ref>) bezogen haben, wo sich
+                  in Corvey (vgl. <ref type="letter" target="letter:166">166</ref>
+               <ref target="letter:166#seg7">7</ref>) bezogen haben, wo sich
                   Ansgar Grass sichtlich für Paschasius interessierte (vgl. 127).</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
@@ -239,7 +274,8 @@
             <mentioned>De ... castitate servanda</mentioned>
             <p>Unbekannt; doch kann es sich auch hier um eine falsche Zuschreibung der
                   Überlieferung von Aldhelm von Malmesburys „De virginitate“ im Pommersfeldener
-                  Hrotsvit-Codex handeln; vgl. <ref type="letter" target="letter:299">299</ref> <ref target="letter:299#seg2">2</ref>.</p>
+                  Hrotsvit-Codex handeln; vgl. <ref type="letter" target="letter:299">299</ref>
+               <ref target="letter:299#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n25'), left('n25e'))" n="25" anchored="false" corresp="#seg16">
             <mentioned>Joanni Anglico</mentioned>
@@ -282,27 +318,52 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende ac eximie domine, domine confrater colendissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende ac eximie domine, domine confrater colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">In catalogo submisso saeculo nono haec lego: <anchor xml:id="n1"/>Ludolfus Erfordiensis<anchor xml:id="n1e"/> floruit 840. Vehementer cupio rescire pro mea instructione, un<anchor xml:id="n2"/>de admodum reverenda paternitas vestra haec desumpserit, de toto namque illo saeculo vix aliquid<anchor xml:id="n2e"/> in nostris annalibus reperio. <anchor xml:id="n3"/>Catalogum<anchor xml:id="n3e"/> ad alia ordinis nostri monasteria transmisi. </ab>
          <ab resp="#editor" xml:id="seg2">In <anchor xml:id="n4"/>manuscriptis nostris<anchor xml:id="n4e"/> inveni sequentia. <anchor xml:id="n5"/>Walifridus<anchor xml:id="n5e"/> natione Teuto, abbas monasterii S. Galli, vir in divinis scripturis eruditus et saecularium litterarum disciplinis suo aevo omnium opinione peritissimus, rhetor magnificus et poeta insignis, nec non monasticae observantiae gubernator strenuus, scripsit ad multorum aedificationem Vitam sancti Galli abbatis metro et prosa; claruit anno 700. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n6"/>Wandelbertus<anchor xml:id="n6e"/> diaconus et monachus Prumiensis in episcopatu Trevirensi, natione Teutonicus, vir multum eruditus, clari ac nitidi eloquii, scripsit rogatu Margardi abbatis monasterii S. Guaris Vitam eiusdem sancti Guaris et miracula ab ipso suo tempore patrata, scripsit etiam Martyrologium metrice aliaque plura; floruit anno 825. </ab>
-         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n7"/>Paschasius Radtbertus<anchor xml:id="n7e"/> monachus Corbeiensis, vir undequaque doctissimus, Graeco et Latino eloquio perfecte instructus, philosophus ac theologus celeberrimus, plura edidit opuscula. Primo. De sacramento altaris ad dominum Placidum abbatem. Secundo. Vitam sancti Adelhardi abbatis Corbeiensis. Tertio. In Threnos Jeremiae. Quarto. Vitas plurimorum sanctorum transtulit de Graeco in Latinum etc.; floruit anno 880. </ab>
-         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n8"/>Regino abbas Prumiensis<anchor xml:id="n8e"/> in dioecesi Trevirensi, natione Germanus, doctor insignis et magnus historiographus atque iurista, qui suo tempore inter Alemannos erat famosissimus, scripsit iussu Radtberti episcopi Trevirorum De religione Christiana et ecclesiastica disciplina, item ad Adalberonem episcopum Metensem Chronicon Alemannorum et Francorum; floruit 900. </ab>
-         <ab resp="#editor" xml:id="seg6"><anchor xml:id="n9"/>Helbericus<anchor xml:id="n9e"/> monachus S. Galli, vir in astronomia et musica expertissimus, ex cuius scriptis ingenii eius subtilitas cognoscitur, scripsit De ratione computi, et librum unum De musica; floruit<del ana="#before">sub</del> anno 1020. <pb n="1v"/> </ab>
-         <ab resp="#editor" xml:id="seg7"><anchor xml:id="n10"/>Theodoricus monachus<anchor xml:id="n10e"/> Teutonicus, vir doctissimus, scripsit ad Richardum abbatem Fuldensem De laudibus et vita sancti Benedicti ac translatione corporis eiusdem de Monte Cassino Floriacum; floruit 1030. </ab>
-         <ab resp="#editor" xml:id="seg8"><anchor xml:id="n11"/>Theodoricus abbas<anchor xml:id="n11e"/> ad S. Trudonem in dioecesi Leodiensi, patria Teuto, vir eloquio clarus ac disertus, metro excelluit et prosa, in describendis sanctorum legendis fuit studiosissimus, elucubravit etiam Vitam sancti Trudonis vetusto carmine, Vitas item sancti Bavonis, Rimoaldi aliorumque plurium sanctorum; floruit 1100. </ab>
-         <ab resp="#editor" xml:id="seg9"><anchor xml:id="n12"/>Lucas<anchor xml:id="n12e"/> abbas <add place="above">Montis</add> S. Cornelii, vir excellens, multa scripsit ad episcopum Tornacensem et notabile volumen in Cantica canticorum; floruit circa annum 1100. </ab>
-         <ab resp="#editor" xml:id="seg10"><anchor xml:id="n13"/>Anselmus<anchor xml:id="n13e"/> natione Burgundus, professus et prior monasterii Beccensis sub Lantfranco abbate, cui etiam in praelatura successit, sub titulo: Cur Deus homo, insigne volumen conscripsit contra gentiles, item De incarnatione Verbi, De conceptu virginali, De processione Spiritus Sancti contra Graecos, De casu Luciferi, De <sic>fermento</sic>  et azimo, De diversitate sacramentorum, De domo conscientiae in miseria hominis, De membris, quae Deo attribuuntur, item Monologium, <sic>Prosologium</sic> , <sic>Decalogum</sic>  de veritate, Concordiam gratiae cum libero arbitrio, <anchor xml:id="n14"/>De passione Domini contra insipientem<anchor xml:id="n14e"/>, De sanctissima Trinitate, De divinis officiis, De pace et concordia, De beata sufficientia seu beata vita, De bona occupatione, <anchor xml:id="n15"/>De laudibus beatae Mariae<anchor xml:id="n15e"/> virginis, De antichristo <sic>dealogum</sic>  inter Christianum et gentilem, De beatitudinibus <anchor xml:id="n16"/>ad Landtfrancum, In Cantica canticorum, In Hexameron, sermones item et homilias plures atque epistolas, inter quas una extat, quam exaravit ad sanctum Wilhelmum Hirsaugiensem<anchor xml:id="n16e"/> abbatem, cuius fuit intimus; floruit anno 1100. </ab>
-         <ab resp="#editor" xml:id="seg11"><anchor xml:id="n17"/>Peregrinus<anchor xml:id="n17e"/> monachus Hirsaugiensis, sancti Wilhelmi abbatis discipulus, natione Teutonicus, vir eruditissimus, qui nulli priscorum ingenio inferior videtur, scripsit prosa et metro varia utilia opuscula, imprimis opus grande atque insigne per modum dialogi sub persona sua ac Theodorae virginis Christi, cuius titulus: Speculum virginum; scripsit alium dialogum Evangeliorum, alium item De vita spiritus et fructu mortis, et De sancto patre Benedicto <sic>ryhtmos</sic>  conscripsit; floruit anno 1100. <pb n="2r"/> </ab>
-         <ab resp="#editor" xml:id="seg12"><anchor xml:id="n18"/>Franco<anchor xml:id="n18e"/> monachus et abbas monasterii Hassungensis in Hassia, vir ingenii aperti, edidit plura laudabilia opuscula, antequam abbas fieret, ad instantiam domini abbatis sui Fulgentii inchoavit librum egregium, quem De gratia Dei praenotavit, eundemque post Fulgentium abbas factus consummavit; scripsit praeterea stilo metrico pereleganter De statu futurae gloriae; floruit 1109. </ab>
-         <ab resp="#editor" xml:id="seg13"><anchor xml:id="n19"/>Rupertus abbas Limburgensis in dioecesi Spirensi, natione Teuto. Hic disciplinae regularis fuit zelator maximus et in scripturis studiosissimus, primo Parisiis publice docuit, postea saeculi taedio tactus in patriam remigrans Limburgensis<anchor xml:id="n19e"/> coenobii monachus factus est, <choice><sic>postea</sic><corr>ubi</corr></choice> abbas electus disciplinam monasticam adauxit et ex revelationibus divinitus sibi factis scripsit quattuor Libros in Cantica Canticorum, item De contemptu mundi et amore Dei, De sancto Joanne Baptista, De quodam episcopo excommunicato et in suo monasterio sepulto, De sanctis, quorum reliquiae ibidem asservabantur; floruit 1124 cum opinione sanctitatis. </ab>
-         <ab resp="#editor" xml:id="seg14"><anchor xml:id="n20"/>Gerungus<anchor xml:id="n20e"/> prius monachus Hirsaugiensis et discipulus sancti Wilhelmi, ex Suevia oriundus, hic fuit scriptor eximius, et missus de Hirsaugia in Thuringiam ad monasterium, quod Cella Paulina nuncupatur<del ana="#after">ibidemque</del>, cum sex adiunctis religiosis, abbas ibidem constitutus in conficiendis libris toto vitae suae tempore fuit studiosissimus et nulli <add place="above">in</add> observantia disciplinae secundus; obiit<del ana="#before">fl</del> 1120. </ab>
-         <ab resp="#editor" xml:id="seg15"><anchor xml:id="n21"/>Hugo<anchor xml:id="n21e"/> monachus Corbeiensis dictus de Folieto, vir totus spiritualis et singulari rerum experientia instructus, scripsit utilem atque iucundum librum, quem Claustrum animae intitulavit, praeter alia multa; floruit 1120. </ab>
-         <ab resp="#editor" xml:id="seg16"><anchor xml:id="n22"/>Roswida<anchor xml:id="n22e"/> monialis in coenobio Gandersheimensi dioecesis Hildesiensis, genere ingenioque nobilis, in conscribendis libris fuit admirabilis, scripsit De <sic>continenta</sic>  ac castitate servanda, De laudibus beatae Virginis, De passione sancti Dionisii et aliis sanctis carminice, multaque alia Graeca et Latina lingua exaravit, coaetanea fuit <anchor xml:id="n23"/>Joanni Anglico<anchor xml:id="n23e"/>, qui doctrina sua papatum promeruit. <pb n="2v"/> </ab>
-         <ab resp="#editor" xml:id="seg17"><anchor xml:id="n24"/>Stephanus<anchor xml:id="n24e"/>, qui et Herrandus appellatur, ex abbate Ilsenburgensi<note place="foot" xml:id="d4618e27724">Mit Verweiszeichen am oberen Blattrand nochmals eingefügt <hi rend="italic">Ilsenburgensi</hi>.</note> factus episcopus Halberstadiensis 14., scripsit ad Waltramum episcopum Numburgensem tenentem partes Henrici imperatoris excommunicati, ubi defensionem papae adiunxit. </ab>
-         <ab resp="#editor" xml:id="seg18"><anchor xml:id="n25"/>Henricus<anchor xml:id="n25e"/> monachus Affligemiensis, patria Bruxcellensis, scripsit per modum calendarii librum notabilem; floruit 1283. </ab>
-         <ab resp="#editor" xml:id="seg19"><anchor xml:id="n26"/>Simon<anchor xml:id="n26e"/> monachus Affligemiensis, vir litteratissimus, abbreviavit Moralia sancti Gregorii papae, scripsit insuper in Cantica canticorum, collegit excerpta de Sermonibus sancti Gregorii papae in Ezechielem prophetam, et collectarium fecit ex collationibus sanctorum patrum etc. </ab>
-         <ab resp="#editor" xml:id="seg20"><anchor xml:id="n27"/>Wilhelmus<anchor xml:id="n27e"/> prior Affligemiensis carmine et prosa plura conscripsit, cuius Sermones extant de revelationibus sanctae Ludtgardi factis; floruit 1300. </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n6"/>Wandelbertus<anchor xml:id="n6e"/> diaconus et monachus Prumiensis in episcopatu Trevirensi, natione Teutonicus, vir multum eruditus, clari ac nitidi eloquii, scripsit rogatu Margardi abbatis monasterii S. Guaris Vitam eiusdem sancti Guaris et miracula ab ipso suo tempore patrata, scripsit etiam Martyrologium metrice aliaque plura; floruit anno 825. </ab>
+         <ab resp="#editor" xml:id="seg4">
+            <anchor xml:id="n7"/>Paschasius Radtbertus<anchor xml:id="n7e"/> monachus Corbeiensis, vir undequaque doctissimus, Graeco et Latino eloquio perfecte instructus, philosophus ac theologus celeberrimus, plura edidit opuscula. Primo. De sacramento altaris ad dominum Placidum abbatem. Secundo. Vitam sancti Adelhardi abbatis Corbeiensis. Tertio. In Threnos Jeremiae. Quarto. Vitas plurimorum sanctorum transtulit de Graeco in Latinum etc.; floruit anno 880. </ab>
+         <ab resp="#editor" xml:id="seg5">
+            <anchor xml:id="n8"/>Regino abbas Prumiensis<anchor xml:id="n8e"/> in dioecesi Trevirensi, natione Germanus, doctor insignis et magnus historiographus atque iurista, qui suo tempore inter Alemannos erat famosissimus, scripsit iussu Radtberti episcopi Trevirorum De religione Christiana et ecclesiastica disciplina, item ad Adalberonem episcopum Metensem Chronicon Alemannorum et Francorum; floruit 900. </ab>
+         <ab resp="#editor" xml:id="seg6">
+            <anchor xml:id="n9"/>Helbericus<anchor xml:id="n9e"/> monachus S. Galli, vir in astronomia et musica expertissimus, ex cuius scriptis ingenii eius subtilitas cognoscitur, scripsit De ratione computi, et librum unum De musica; floruit<del ana="#before">sub</del> anno 1020. <pb n="1v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg7">
+            <anchor xml:id="n10"/>Theodoricus monachus<anchor xml:id="n10e"/> Teutonicus, vir doctissimus, scripsit ad Richardum abbatem Fuldensem De laudibus et vita sancti Benedicti ac translatione corporis eiusdem de Monte Cassino Floriacum; floruit 1030. </ab>
+         <ab resp="#editor" xml:id="seg8">
+            <anchor xml:id="n11"/>Theodoricus abbas<anchor xml:id="n11e"/> ad S. Trudonem in dioecesi Leodiensi, patria Teuto, vir eloquio clarus ac disertus, metro excelluit et prosa, in describendis sanctorum legendis fuit studiosissimus, elucubravit etiam Vitam sancti Trudonis vetusto carmine, Vitas item sancti Bavonis, Rimoaldi aliorumque plurium sanctorum; floruit 1100. </ab>
+         <ab resp="#editor" xml:id="seg9">
+            <anchor xml:id="n12"/>Lucas<anchor xml:id="n12e"/> abbas <add place="above">Montis</add> S. Cornelii, vir excellens, multa scripsit ad episcopum Tornacensem et notabile volumen in Cantica canticorum; floruit circa annum 1100. </ab>
+         <ab resp="#editor" xml:id="seg10">
+            <anchor xml:id="n13"/>Anselmus<anchor xml:id="n13e"/> natione Burgundus, professus et prior monasterii Beccensis sub Lantfranco abbate, cui etiam in praelatura successit, sub titulo: Cur Deus homo, insigne volumen conscripsit contra gentiles, item De incarnatione Verbi, De conceptu virginali, De processione Spiritus Sancti contra Graecos, De casu Luciferi, De <sic>fermento</sic>  et azimo, De diversitate sacramentorum, De domo conscientiae in miseria hominis, De membris, quae Deo attribuuntur, item Monologium, <sic>Prosologium</sic> , <sic>Decalogum</sic>  de veritate, Concordiam gratiae cum libero arbitrio, <anchor xml:id="n14"/>De passione Domini contra insipientem<anchor xml:id="n14e"/>, De sanctissima Trinitate, De divinis officiis, De pace et concordia, De beata sufficientia seu beata vita, De bona occupatione, <anchor xml:id="n15"/>De laudibus beatae Mariae<anchor xml:id="n15e"/> virginis, De antichristo <sic>dealogum</sic>  inter Christianum et gentilem, De beatitudinibus <anchor xml:id="n16"/>ad Landtfrancum, In Cantica canticorum, In Hexameron, sermones item et homilias plures atque epistolas, inter quas una extat, quam exaravit ad sanctum Wilhelmum Hirsaugiensem<anchor xml:id="n16e"/> abbatem, cuius fuit intimus; floruit anno 1100. </ab>
+         <ab resp="#editor" xml:id="seg11">
+            <anchor xml:id="n17"/>Peregrinus<anchor xml:id="n17e"/> monachus Hirsaugiensis, sancti Wilhelmi abbatis discipulus, natione Teutonicus, vir eruditissimus, qui nulli priscorum ingenio inferior videtur, scripsit prosa et metro varia utilia opuscula, imprimis opus grande atque insigne per modum dialogi sub persona sua ac Theodorae virginis Christi, cuius titulus: Speculum virginum; scripsit alium dialogum Evangeliorum, alium item De vita spiritus et fructu mortis, et De sancto patre Benedicto <sic>ryhtmos</sic>  conscripsit; floruit anno 1100. <pb n="2r"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg12">
+            <anchor xml:id="n18"/>Franco<anchor xml:id="n18e"/> monachus et abbas monasterii Hassungensis in Hassia, vir ingenii aperti, edidit plura laudabilia opuscula, antequam abbas fieret, ad instantiam domini abbatis sui Fulgentii inchoavit librum egregium, quem De gratia Dei praenotavit, eundemque post Fulgentium abbas factus consummavit; scripsit praeterea stilo metrico pereleganter De statu futurae gloriae; floruit 1109. </ab>
+         <ab resp="#editor" xml:id="seg13">
+            <anchor xml:id="n19"/>Rupertus abbas Limburgensis in dioecesi Spirensi, natione Teuto. Hic disciplinae regularis fuit zelator maximus et in scripturis studiosissimus, primo Parisiis publice docuit, postea saeculi taedio tactus in patriam remigrans Limburgensis<anchor xml:id="n19e"/> coenobii monachus factus est, <choice>
+               <sic>postea</sic>
+               <corr>ubi</corr>
+            </choice> abbas electus disciplinam monasticam adauxit et ex revelationibus divinitus sibi factis scripsit quattuor Libros in Cantica Canticorum, item De contemptu mundi et amore Dei, De sancto Joanne Baptista, De quodam episcopo excommunicato et in suo monasterio sepulto, De sanctis, quorum reliquiae ibidem asservabantur; floruit 1124 cum opinione sanctitatis. </ab>
+         <ab resp="#editor" xml:id="seg14">
+            <anchor xml:id="n20"/>Gerungus<anchor xml:id="n20e"/> prius monachus Hirsaugiensis et discipulus sancti Wilhelmi, ex Suevia oriundus, hic fuit scriptor eximius, et missus de Hirsaugia in Thuringiam ad monasterium, quod Cella Paulina nuncupatur<del ana="#after">ibidemque</del>, cum sex adiunctis religiosis, abbas ibidem constitutus in conficiendis libris toto vitae suae tempore fuit studiosissimus et nulli <add place="above">in</add> observantia disciplinae secundus; obiit<del ana="#before">fl</del> 1120. </ab>
+         <ab resp="#editor" xml:id="seg15">
+            <anchor xml:id="n21"/>Hugo<anchor xml:id="n21e"/> monachus Corbeiensis dictus de Folieto, vir totus spiritualis et singulari rerum experientia instructus, scripsit utilem atque iucundum librum, quem Claustrum animae intitulavit, praeter alia multa; floruit 1120. </ab>
+         <ab resp="#editor" xml:id="seg16">
+            <anchor xml:id="n22"/>Roswida<anchor xml:id="n22e"/> monialis in coenobio Gandersheimensi dioecesis Hildesiensis, genere ingenioque nobilis, in conscribendis libris fuit admirabilis, scripsit De <sic>continenta</sic>  ac castitate servanda, De laudibus beatae Virginis, De passione sancti Dionisii et aliis sanctis carminice, multaque alia Graeca et Latina lingua exaravit, coaetanea fuit <anchor xml:id="n23"/>Joanni Anglico<anchor xml:id="n23e"/>, qui doctrina sua papatum promeruit. <pb n="2v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg17">
+            <anchor xml:id="n24"/>Stephanus<anchor xml:id="n24e"/>, qui et Herrandus appellatur, ex abbate Ilsenburgensi<note place="foot" xml:id="d4618e27724">Mit Verweiszeichen am oberen Blattrand nochmals eingefügt <hi rend="italic">Ilsenburgensi</hi>.</note> factus episcopus Halberstadiensis 14., scripsit ad Waltramum episcopum Numburgensem tenentem partes Henrici imperatoris excommunicati, ubi defensionem papae adiunxit. </ab>
+         <ab resp="#editor" xml:id="seg18">
+            <anchor xml:id="n25"/>Henricus<anchor xml:id="n25e"/> monachus Affligemiensis, patria Bruxcellensis, scripsit per modum calendarii librum notabilem; floruit 1283. </ab>
+         <ab resp="#editor" xml:id="seg19">
+            <anchor xml:id="n26"/>Simon<anchor xml:id="n26e"/> monachus Affligemiensis, vir litteratissimus, abbreviavit Moralia sancti Gregorii papae, scripsit insuper in Cantica canticorum, collegit excerpta de Sermonibus sancti Gregorii papae in Ezechielem prophetam, et collectarium fecit ex collationibus sanctorum patrum etc. </ab>
+         <ab resp="#editor" xml:id="seg20">
+            <anchor xml:id="n27"/>Wilhelmus<anchor xml:id="n27e"/> prior Affligemiensis carmine et prosa plura conscripsit, cuius Sermones extant de revelationibus sanctae Ludtgardi factis; floruit 1300. </ab>
          <ab resp="#editor" xml:id="seg21">Hactenus plura notatu digna non inveni; antiquiora manuscripta, quae hic habemus in copia, ob vetustatem characteris atque multiplicatas abbreviationes legere non possum, nec alius adest, qui hisce operam impendat, alioquin non dubito, quin reverentiae vestrae plura ad usum suum communicare valerem. Strenue interim ac indefesse dilectissima dominatio vestra pergat in perficiendo suo opere; quantum in me est, nunquam <sic>santis</sic>  conatibus deero mea exiguitate exoraturus insuper Deum, ut animos addat, fortunet praemietque labores; ad aras me commendans permaneo constanter, qui hactenus fui</ab>
          <closer>Plurimum reverendae dominationis vestrae servus ac confrater fidelissimus pater Petrus Friderici manu propria.</closer>
          <closer>Erffurti 12. Martii 1712.</closer>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="715" xml:id="pez-0715">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Ernst Salomon Cyprian an Hieronymus Pez. 1717-01-02. Gotha.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">715</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Bei Katschthaler, Briefnachlass 75, wie auch bei Glassner, Verzeichnis 205, zum 11. Januar 1717. Eine solche Lesung ist, da EC das römische Zahlzeichen „I“ und die arabische Ziffer „1“ unterschiedslos als senkrechte Striche ausführt, möglich; aufgrund der sonstigen überwiegenden Vorliebe ECs für den Gebrauch römischer Zahlzeichen wird der Ansetzung zum 2. Januar der Vorzug gegeben. Dafür sprechen etwa die Datierungen von ECs Briefen an Leibniz bei Oppel, Cyprian 61–74. – HP druckte einen kurzen Auszug aus diesem Brief in der Vorrede zu seiner Edition der „Österreichischen Chronik von den 95 Herrschaften“: Pez, Scriptores rerum Austriacarum 1 col. 1045.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -79,45 +91,47 @@
                <ptr type="mentionedIn" target="letter:725"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e878">Albrecht IV</term>
-            <term ref="index:d14380e4170">Bayern, Bayern</term>
-            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
-            <term ref="index:d14380e9628">Dietmayr, Berthold</term>
-            <term ref="index:d14380e13365">Friedrich II</term>
-            <term ref="index:d14380e15869">Gotha</term>
-            <term ref="index:d14380e15881">Gotha ; Herzogliche Bibliothek</term>
-            <term ref="index:d14380e15893">Gotha ; Herzogliche Bibliothek ; Georg Tanner, Statuta sapientiae. Ms</term>
-            <term ref="index:d14380e15907">Gotha ; Herzogliche Bibliothek ; Leopold von Wien, Österreichische Chronik von den 95
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e878">Albrecht IV</term>
+               <term ref="index:d14380e4170">Bayern, Bayern</term>
+               <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+               <term ref="index:d14380e9628">Dietmayr, Berthold</term>
+               <term ref="index:d14380e13365">Friedrich II</term>
+               <term ref="index:d14380e15869">Gotha</term>
+               <term ref="index:d14380e15881">Gotha ; Herzogliche Bibliothek</term>
+               <term ref="index:d14380e15893">Gotha ; Herzogliche Bibliothek ; Georg Tanner, Statuta sapientiae. Ms</term>
+               <term ref="index:d14380e15907">Gotha ; Herzogliche Bibliothek ; Leopold von Wien, Österreichische Chronik von den 95
          Herrschaften. Ms</term>
-            <term ref="index:d14380e15916">Gotha ; Herzogliche Bibliothek ; Michael Beheim, Buch von den Wienern. Ms</term>
-            <term ref="index:d14380e15927">Gotha ; Herzogliche Bibliothek ; Thomas Ebendorfer, Chronica Austriae Ms</term>
-            <term ref="index:d14380e15938">Gotha ; Herzogliches Münzkabinett</term>
-            <term ref="index:d14380e15950">Gotter, Gustav Adolf</term>
-            <term ref="index:d14380e16362">Gregor Hagen</term>
-            <term ref="index:d14380e24733">Leopold von Wien ; Österreichische Chronik von den 95 Herrschaften ; Ms. Gotha</term>
-            <term ref="index:d14380e27508">Medizin, medizinische Begriffe, gesundheitliche Belange ; Augenentzündung</term>
-            <term ref="index:d14380e28916">Michael Beheim</term>
-            <term ref="index:d14380e28928">Michael Beheim ; Buch von den Wienern. Ms. Gotha</term>
-            <term ref="index:d14380e30164">Musik, musikalische Begriffe</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e33148">Pez, Bernhard</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e38542">Sachsen-Gotha-Altenburg</term>
-            <term ref="index:d14380e42018">Tanner, Georg</term>
-            <term ref="index:d14380e42026">Tanner, Georg ; Statuta sapientiae domus Friburgensis. Ms. Gotha</term>
-            <term ref="index:d14380e42802">Thomas Ebendorfer von Haselbach ; Chronica Austriae ; Ms. Gotha</term>
-            <term ref="index:d14380e45571">Wien</term>
-            <term ref="index:d14380e45997">Wien ; Kaiserhof ; Münzkabinett</term>
-            <term ref="index:d14380e46224">Wilhelm</term></keywords></textClass>
+               <term ref="index:d14380e15916">Gotha ; Herzogliche Bibliothek ; Michael Beheim, Buch von den Wienern. Ms</term>
+               <term ref="index:d14380e15927">Gotha ; Herzogliche Bibliothek ; Thomas Ebendorfer, Chronica Austriae Ms</term>
+               <term ref="index:d14380e15938">Gotha ; Herzogliches Münzkabinett</term>
+               <term ref="index:d14380e15950">Gotter, Gustav Adolf</term>
+               <term ref="index:d14380e16362">Gregor Hagen</term>
+               <term ref="index:d14380e24733">Leopold von Wien ; Österreichische Chronik von den 95 Herrschaften ; Ms. Gotha</term>
+               <term ref="index:d14380e27508">Medizin, medizinische Begriffe, gesundheitliche Belange ; Augenentzündung</term>
+               <term ref="index:d14380e28916">Michael Beheim</term>
+               <term ref="index:d14380e28928">Michael Beheim ; Buch von den Wienern. Ms. Gotha</term>
+               <term ref="index:d14380e30164">Musik, musikalische Begriffe</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e33148">Pez, Bernhard</term>
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e38542">Sachsen-Gotha-Altenburg</term>
+               <term ref="index:d14380e42018">Tanner, Georg</term>
+               <term ref="index:d14380e42026">Tanner, Georg ; Statuta sapientiae domus Friburgensis. Ms. Gotha</term>
+               <term ref="index:d14380e42802">Thomas Ebendorfer von Haselbach ; Chronica Austriae ; Ms. Gotha</term>
+               <term ref="index:d14380e45571">Wien</term>
+               <term ref="index:d14380e45997">Wien ; Kaiserhof ; Münzkabinett</term>
+               <term ref="index:d14380e46224">Wilhelm</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">EC dankt HP für dessen Brief <ref type="letter" target="letter:713">713</ref> und möchte ihm nur zu gerne alle auf der Welt bekannten Codices, die zur <rs ref="index:d14380e31465">österreichischen</rs> Geschichte Aufschlüsse geben, schicken, da er seit langem HPs Begabung bewundert und erwartet, dass sie die österreichische Geschichtsschreibung voranbringen wird. EC verfügt jedoch nur über wenig Geeignetes; dies will er sofort übermitteln, wenn HP danach verlangt. Er würde noch ausführlicher seine Freude über HPs Freundschaft schildern, wenn ihn nicht eine <rs ref="index:d14380e27508">Augenentzündung</rs> zur Kürze nötigte.</p>
             <p corresp="#seg2">Der Codex mit der Chronik <rs ref="index:d14380e16362">Gregor Hagens</rs> („<rs ref="index:d14380e24733">Österreichische Chronik von den 95 Herrschaften</rs>“) ist um das Jahr 1540 geschrieben und trägt, wohl von jüngerer Hand, einen Titel, den EC wörtlich widergibt; dieser weist das Werk als Chronik der Herrscher von Österreich bis zu den Herzögen <rs ref="index:d14380e46224">Wilhelm</rs> und <rs ref="index:d14380e878">Albrecht IV</rs>. aus, die 1406 von <rs ref="index:d14380e16362">Gregor Hagen</rs> geschrieben wurde. EC übermittelt auch das Explicit mit den Todesdaten der beiden Herzöge.</p>
             <p corresp="#seg3">Der Codex mit dem Werk des <rs ref="index:d14380e28916">Michael Beheim</rs> (<rs ref="index:d14380e15916">„Buch von den Wienern“</rs>) ist alt und hat Noten vorangestellt, falls jemand im Gedenken des <rs ref="index:d14380e9395">deutschen</rs> Altertums (antiquitas Germanica) die Geschichte gesanglich vortragen wollen sollte. EC sendet den Anfang und das Ende des Textes. Der Band zählt 279 Blätter im Großoktavformat.</p>
             <p corresp="#seg4">Die Chronik Thomas Ebendorfers (<rs ref="index:d14380e15927">„Chronica Austriae“</rs>) liegt als Auszug durch <rs ref="index:d14380e42018">Georg Tanner</rs> vor. Von diesem besitzt die Bibliothek zu <rs ref="index:d14380e15869">Gotha</rs> auch ein autographes Werk (<rs ref="index:d14380e15893">„Statuta sapientiae“</rs>) sowie weitere Exzerpte. EC schließt mit Neujahrswünschen an HP, dessen Abt <rs ref="index:d14380e9628">Berthold Dietmayr</rs> sowie BP unter Berufung auf Christus als ihren gemeinsamen Retter. Er würde sich freuen, wenn HP ihm öfter schriebe. Sein Fürst (Herzog <rs ref="index:d14380e13365">Friedrich II.</rs> von <rs ref="index:d14380e38542">Sachsen-Gotha-Altenburg</rs>) hat angeordnet, HP alles zu schicken, was dieser benötigt.</p>
             <p corresp="#seg5">In einem Nachsatz schlägt EC vor, Sendungen für ihn an <rs ref="index:d14380e15950">Gustav Adolf Gotter</rs>, den diplomatischen Vertreter seines Herzogs in <rs ref="index:d14380e45571">Wien</rs>, zur Weiterleitung zu übergeben. Sollten HP und BP nach <rs ref="index:d14380e4170">Bayern</rs> reisen, legt ihnen EC einen Umweg über <rs ref="index:d14380e15869">Gotha</rs> nahe, wo sie mit aller Freundlichkeit empfangen würden. Wenn wegen nichts anderem, sollen sie wegen des <rs ref="index:d14380e15938">Münzkabinetts</rs> kommen, welches bis auf <rs ref="index:d14380e45997">das in Wien</rs> alle deutschen Kabinette dieser Art übertrifft.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -129,7 +143,8 @@
                   ob der Zuschreibung an Gregor Hagen oder dem Zeugnis des Heinrich Gundelfingen zu
                   folgen sei, welcher diese Chronik einem gewissen Matthäus zurechnete: Pez,
                   Scriptores rerum Austriacarum 1 col. 1044–1046. Zur bis heute nicht abschließend
-                  gelösten Frage der Verfasserschaft vgl. <ref type="letter" target="letter:713">713</ref> <ref target="letter:713#seg2">2</ref>.
+                  gelösten Frage der Verfasserschaft vgl. <ref type="letter" target="letter:713">713</ref>
+               <ref target="letter:713#seg2">2</ref>.
                </p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
@@ -139,7 +154,8 @@
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned> herkommenden</mentioned>
-            <p><rs type="bibl" ref="bibl:19550">Seemüller,
+            <p>
+               <rs type="bibl" ref="bibl:19550">Seemüller,
                      Einleitung</rs> XLVIII, liest an dieser Stelle „Herkomen den“ statt des aus
                   grammatikalischen Gründen zu erwartenden „herkomen der“.</p>
          </note>
@@ -217,13 +233,35 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Maxime reverendo clarissimoque viro domino patri Hieronymo Pez, Benedictino Mellicensi, Ernestus Salomon Cyprianus doctor, consiliarius consistorialis et ecclesiasticus in aula Gothana salutem.</opener>
-         <ab resp="#editor" xml:id="seg1">Si, quantum mihi literae tuae voluptatis attulerunt, tantum ego destinationibus tuis adiumenti afferre possem, omnes toto orbe obvios codices, qui de rebus Austriacis exponunt, tibi lubens <choice><sic>admitterem</sic><corr>transmitterem</corr></choice>. Etenim iam pridem ingenii tui dotes admirabiles et amo et suffecturas arbitror scribendae Austriacae historiae, Deumque precor, ut vires corporis <choice><sic>atque.</sic><corr>et</corr></choice> <choice><sic>otiumque.</sic><corr>otium</corr></choice> indulgeat, sine quo tardae sunt in his rebus progressiones et parum iucundae. Sed pauca habeo, de quibus sperare liceat tibi non ingrata <choice><sic>fe</sic><corr>fore</corr></choice>: quae tamen sine mora<del ana="#after">habe</del> mittentur, cum postulaveris. <pb n="1v"/> Nam amicitiam tuam et benevolae de studiis meis opinionis significationem in praecipua felicitatis meae parte repono: quod tibi copiosius confirmarem, nisi molestissima lippitudine iam brevitati studere cogerer. </ab>
+         <opener>
+            <pb n="1r"/> Maxime reverendo clarissimoque viro domino patri Hieronymo Pez, Benedictino Mellicensi, Ernestus Salomon Cyprianus doctor, consiliarius consistorialis et ecclesiasticus in aula Gothana salutem.</opener>
+         <ab resp="#editor" xml:id="seg1">Si, quantum mihi literae tuae voluptatis attulerunt, tantum ego destinationibus tuis adiumenti afferre possem, omnes toto orbe obvios codices, qui de rebus Austriacis exponunt, tibi lubens <choice>
+               <sic>admitterem</sic>
+               <corr>transmitterem</corr>
+            </choice>. Etenim iam pridem ingenii tui dotes admirabiles et amo et suffecturas arbitror scribendae Austriacae historiae, Deumque precor, ut vires corporis <choice>
+               <sic>atque.</sic>
+               <corr>et</corr>
+            </choice>
+            <choice>
+               <sic>otiumque.</sic>
+               <corr>otium</corr>
+            </choice> indulgeat, sine quo tardae sunt in his rebus progressiones et parum iucundae. Sed pauca habeo, de quibus sperare liceat tibi non ingrata <choice>
+               <sic>fe</sic>
+               <corr>fore</corr>
+            </choice>: quae tamen sine mora<del ana="#after">habe</del> mittentur, cum postulaveris. <pb n="1v"/> Nam amicitiam tuam et benevolae de studiis meis opinionis significationem in praecipua felicitatis meae parte repono: quod tibi copiosius confirmarem, nisi molestissima lippitudine iam brevitati studere cogerer. </ab>
          <ab resp="#editor" xml:id="seg2">De <anchor xml:id="n1"/>Hageno<anchor xml:id="n1e"/> sic habe. Codex scriptus est circa <anchor xml:id="n2"/>annum MDXL<anchor xml:id="n2e"/>, hoc titulo, qui tamen a recentiore manu esse videri queat: Diß hochlöblichen landts fürsten und erzherzogthums Osterreich anfang und<anchor xml:id="n3"/> herkommenden<anchor xml:id="n3e"/>  herrn und landsfürsten regirung biß auf herzog Wilhelm und herzog Albrechten. Ist beschrieben durch den erbaren Gregorio Hagen im iahr 1406. Explicit: Anno MCCCCIV in<anchor xml:id="n4"/> die Nicomedis<anchor xml:id="n4e"/> ist derselb durchlauchtig fürst gestorben. Anno MCCCCVI ist herzog Wilhelm gestorben. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n5"/>Behami codex antiquus<anchor xml:id="n5e"/> est et praemissas habet<anchor xml:id="n6"/> notas musicas<anchor xml:id="n6e"/>, si quis forte antiquitatis Germanicae memor historiam decantare vellet. Initium et <pb n="2r"/> finem mitto. Constat foliis CCLXXIX in octavi ordinis maiore forma. </ab>
-         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n7"/>Ebendorfferum in epitomen redegit Tannerus<anchor xml:id="n7e"/>,<anchor xml:id="n8"/> cuius tenemus ἀυτόγραφον et epitomes et aliorum complurium<anchor xml:id="n8e"/>. Vale, vir celeberrime. Deus hunc annum tibi, reverendissimo praesuli tuo nec non fratri doctissimo Bernardo, cui salutem plurimam adscribo, faustum felicemque praestet propter Christum communem sospitatorem nostrum! Quo frequentius ad me scripseris, hoc <choice><sic>erit</sic><corr>eris</corr></choice> mihi carior. Serenissimus herus meus iussit ad te transmittere, quicquid arbitrabere tibi usui esse posse. Iterum vale.</ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n5"/>Behami codex antiquus<anchor xml:id="n5e"/> est et praemissas habet<anchor xml:id="n6"/> notas musicas<anchor xml:id="n6e"/>, si quis forte antiquitatis Germanicae memor historiam decantare vellet. Initium et <pb n="2r"/> finem mitto. Constat foliis CCLXXIX in octavi ordinis maiore forma. </ab>
+         <ab resp="#editor" xml:id="seg4">
+            <anchor xml:id="n7"/>Ebendorfferum in epitomen redegit Tannerus<anchor xml:id="n7e"/>,<anchor xml:id="n8"/> cuius tenemus ἀυτόγραφον et epitomes et aliorum complurium<anchor xml:id="n8e"/>. Vale, vir celeberrime. Deus hunc annum tibi, reverendissimo praesuli tuo nec non fratri doctissimo Bernardo, cui salutem plurimam adscribo, faustum felicemque praestet propter Christum communem sospitatorem nostrum! Quo frequentius ad me scripseris, hoc <choice>
+               <sic>erit</sic>
+               <corr>eris</corr>
+            </choice> mihi carior. Serenissimus herus meus iussit ad te transmittere, quicquid arbitrabere tibi usui esse posse. Iterum vale.</ab>
          <closer>Gothae II. Januarii MDCCXVII e bibliotheca palatina.</closer>
-         <closer xml:id="seg5">Si quid ad me perlatum velis, <anchor xml:id="n9"/>nobilissimo Gottero<anchor xml:id="n9e"/> manda, qui principis mei negotia Vindobonae curat. Relegere hanc epistolam per lippitudinem nequivi. Imposterum diligentius omnia perscribam. Si ad Bavaros excurrere animus est, quaeso, ad nos deflectatis. Certum est omni humanitatis genere vos <choice><sic>receptum</sic><corr>exceptum</corr></choice> iri. Ac vel solum <anchor xml:id="n10"/>numophylacium<anchor xml:id="n10e"/> nostrum non indignum est, quod contemplemini. Cetera<del ana="#after">omnia</del> apud nos mediocria sunt; <anchor xml:id="n11"/>numophylacium<anchor xml:id="n11e"/>, demto Vindobonensi, omnibus Germanorum antecellit.</closer>
+         <closer xml:id="seg5">Si quid ad me perlatum velis, <anchor xml:id="n9"/>nobilissimo Gottero<anchor xml:id="n9e"/> manda, qui principis mei negotia Vindobonae curat. Relegere hanc epistolam per lippitudinem nequivi. Imposterum diligentius omnia perscribam. Si ad Bavaros excurrere animus est, quaeso, ad nos deflectatis. Certum est omni humanitatis genere vos <choice>
+               <sic>receptum</sic>
+               <corr>exceptum</corr>
+            </choice> iri. Ac vel solum <anchor xml:id="n10"/>numophylacium<anchor xml:id="n10e"/> nostrum non indignum est, quod contemplemini. Cetera<del ana="#after">omnia</del> apud nos mediocria sunt; <anchor xml:id="n11"/>numophylacium<anchor xml:id="n11e"/>, demto Vindobonensi, omnibus Germanorum antecellit.</closer>
       </body>
    </text>
 </TEI>

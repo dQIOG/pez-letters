@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="817" xml:id="pez-0817">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard und Hieronymus Pez an Valentin Larson. 1717-09-06. Regensburg.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">817</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Der Brief wurde von BP geschrieben.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -78,110 +90,113 @@
                <ptr type="mentions" target="letter:816"/>
             </correspContext>
          </correspDesc>
-         <textClass><keywords>
-            <term ref="index:d14380e1341">Anaklet</term>
-            <term ref="index:d14380e3233">Augsburg</term>
-            <term ref="index:d14380e3293">Augsburg ; Dombibliothek</term>
-            <term ref="index:d14380e3303">Augsburg ; St. Ulrich und Afra</term>
-            <term ref="index:d14380e3315">Augsburg ; St. Ulrich und Afra ; Bibliothek</term>
-            <term ref="index:d14380e3332">Augsburg ; St. Ulrich und Afra ; *Mönch, der 1717 als Gast nach Melk kommen
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e1341">Anaklet</term>
+               <term ref="index:d14380e3233">Augsburg</term>
+               <term ref="index:d14380e3293">Augsburg ; Dombibliothek</term>
+               <term ref="index:d14380e3303">Augsburg ; St. Ulrich und Afra</term>
+               <term ref="index:d14380e3315">Augsburg ; St. Ulrich und Afra ; Bibliothek</term>
+               <term ref="index:d14380e3332">Augsburg ; St. Ulrich und Afra ; *Mönch, der 1717 als Gast nach Melk kommen
          möchte</term>
-            <term ref="index:d14380e3342">Augsburg ; Stadtbibliothek</term>
-            <term ref="index:d14380e3377">Augustiner-Chorherren</term>
-            <term ref="index:d14380e3931">Baronio, Cesare</term>
-            <term ref="index:d14380e3941">Baronio, Cesare ; Annales ecclesiastici. 12 Bde. Rom 1588–1607</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e5121">Benediktinerinnen</term>
-            <term ref="index:d14380e7947">Cherle, Benedikt</term>
-            <term ref="index:d14380e9628">Dietmayr, Berthold</term>
-            <term ref="index:d14380e9895">Donau</term>
-            <term ref="index:d14380e9931">Donauwörth</term>
-            <term ref="index:d14380e11916">Evangelische allgemein ; Lutheraner</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e12981">Frauenzell</term>
-            <term ref="index:d14380e13185">Freising</term>
-            <term ref="index:d14380e13226">Freising ; Dombibliothek</term>
-            <term ref="index:d14380e13232">Freising ; Dombibliothek ; Rather von Verona, Sammelhandschrift mit Werken</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
+               <term ref="index:d14380e3342">Augsburg ; Stadtbibliothek</term>
+               <term ref="index:d14380e3377">Augustiner-Chorherren</term>
+               <term ref="index:d14380e3931">Baronio, Cesare</term>
+               <term ref="index:d14380e3941">Baronio, Cesare ; Annales ecclesiastici. 12 Bde. Rom 1588–1607</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e5121">Benediktinerinnen</term>
+               <term ref="index:d14380e7947">Cherle, Benedikt</term>
+               <term ref="index:d14380e9628">Dietmayr, Berthold</term>
+               <term ref="index:d14380e9895">Donau</term>
+               <term ref="index:d14380e9931">Donauwörth</term>
+               <term ref="index:d14380e11916">Evangelische allgemein ; Lutheraner</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e12981">Frauenzell</term>
+               <term ref="index:d14380e13185">Freising</term>
+               <term ref="index:d14380e13226">Freising ; Dombibliothek</term>
+               <term ref="index:d14380e13232">Freising ; Dombibliothek ; Rather von Verona, Sammelhandschrift mit Werken</term>
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
          Epistola ad virum clarissimum Joannem Burchardum Menkenium Lipsiensem de Conspectu insignis
          codicis diplomatico-historico-epistolaris ex ἀυτογράφῳ, ut quidem videtur, dato ad Actorum
          eruditorum Lipsiensium collectores a reverendo patre Bernardo Pez Benedictino et
          bibliothecario Mellicensi in Austria. Verona [Wien] 1717</term>
-            <term ref="index:d14380e14931">Gentilotti von Engelsbrunn, Johann Franz</term>
-            <term ref="index:d14380e16285">Gregor VII., hl</term>
-            <term ref="index:d14380e17617">Heinrich II., hl ; Urkunde für Kloster Kühbach 1011</term>
-            <term ref="index:d14380e17632">Heinrich IV</term>
-            <term ref="index:d14380e18508">Hohenwaldeck und Maxlrain, Johann Heinrich Franz, Graf</term>
-            <term ref="index:d14380e18576">Holzen</term>
-            <term ref="index:d14380e18586">Holzen ; Bibliothek</term>
-            <term ref="index:d14380e19682">Indersdorf</term>
-            <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
-            <term ref="index:d14380e21985">Klemens XI</term>
-            <term ref="index:d14380e22927">Konrad von Lichtenau</term>
-            <term ref="index:d14380e22949">Konrad von Scheyern</term>
-            <term ref="index:d14380e22957">Konrad von Scheyern ; Handschriften in der Bibliothek von Scheyern. Mehrere Mss</term>
-            <term ref="index:d14380e23319">Kühbach</term>
-            <term ref="index:d14380e24786">Lerchenfeld, Helena von</term>
-            <term ref="index:d14380e25073">Lobbes</term>
-            <term ref="index:d14380e25581">Mabillon, Jean</term>
-            <term ref="index:d14380e27355">Mayrhauser, Placidus</term>
-            <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e28279">Melk ; Bibliothek</term>
-            <term ref="index:d14380e28655">Mencke, Johann Burkhard</term>
-            <term ref="index:d14380e28852">Meyding, Benedikt</term>
-            <term ref="index:d14380e28870">Meyding, Benedikt ; *Werk gegen gallikanische Positionen 1717</term>
-            <term ref="index:d14380e28946">Michel, Augustin Liebhart</term>
-            <term ref="index:d14380e28954">Michel, Augustin Liebhart ; Confutatio infamis libri, cui temerarius titulus est:
+               <term ref="index:d14380e14931">Gentilotti von Engelsbrunn, Johann Franz</term>
+               <term ref="index:d14380e16285">Gregor VII., hl</term>
+               <term ref="index:d14380e17617">Heinrich II., hl ; Urkunde für Kloster Kühbach 1011</term>
+               <term ref="index:d14380e17632">Heinrich IV</term>
+               <term ref="index:d14380e18508">Hohenwaldeck und Maxlrain, Johann Heinrich Franz, Graf</term>
+               <term ref="index:d14380e18576">Holzen</term>
+               <term ref="index:d14380e18586">Holzen ; Bibliothek</term>
+               <term ref="index:d14380e19682">Indersdorf</term>
+               <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
+               <term ref="index:d14380e21985">Klemens XI</term>
+               <term ref="index:d14380e22927">Konrad von Lichtenau</term>
+               <term ref="index:d14380e22949">Konrad von Scheyern</term>
+               <term ref="index:d14380e22957">Konrad von Scheyern ; Handschriften in der Bibliothek von Scheyern. Mehrere Mss</term>
+               <term ref="index:d14380e23319">Kühbach</term>
+               <term ref="index:d14380e24786">Lerchenfeld, Helena von</term>
+               <term ref="index:d14380e25073">Lobbes</term>
+               <term ref="index:d14380e25581">Mabillon, Jean</term>
+               <term ref="index:d14380e27355">Mayrhauser, Placidus</term>
+               <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e28279">Melk ; Bibliothek</term>
+               <term ref="index:d14380e28655">Mencke, Johann Burkhard</term>
+               <term ref="index:d14380e28852">Meyding, Benedikt</term>
+               <term ref="index:d14380e28870">Meyding, Benedikt ; *Werk gegen gallikanische Positionen 1717</term>
+               <term ref="index:d14380e28946">Michel, Augustin Liebhart</term>
+               <term ref="index:d14380e28954">Michel, Augustin Liebhart ; Confutatio infamis libri, cui temerarius titulus est:
          Expostulatio et protestatio, qua reclamat adversus decretum pontificium, quo centum et una
          propositiones damnatae sunt, Paschasius Quesnel. Landshut 1719</term>
-            <term ref="index:d14380e29411">Monte Cassino</term>
-            <term ref="index:d14380e29425">Monte Cassino ; Registerfragment des Gegenpapstes Anaklet II. Ms</term>
-            <term ref="index:d14380e29936">München</term>
-            <term ref="index:d14380e30520">Neustift</term>
-            <term ref="index:d14380e30532">Neustift ; Bibliothek</term>
-            <term ref="index:d10854e21230">Niederaltaich</term>
-            <term ref="index:d14380e31025">Oberaltaich</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e31852">Otto von Freising</term>
-            <term ref="index:d14380e32600">Passau ; St. Nikola</term>
-            <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
+               <term ref="index:d14380e29411">Monte Cassino</term>
+               <term ref="index:d14380e29425">Monte Cassino ; Registerfragment des Gegenpapstes Anaklet II. Ms</term>
+               <term ref="index:d14380e29936">München</term>
+               <term ref="index:d14380e30520">Neustift</term>
+               <term ref="index:d14380e30532">Neustift ; Bibliothek</term>
+               <term ref="index:d10854e21230">Niederaltaich</term>
+               <term ref="index:d14380e31025">Oberaltaich</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e31852">Otto von Freising</term>
+               <term ref="index:d14380e32600">Passau ; St. Nikola</term>
+               <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
          dominum dominum Joannem Benedictum Gentilottum ab Engelsbrunn pro editione integri
          syntagmatis diplomatico-historico-epistolaris Udalrici Babenbergensis ex codice Zwetlensi,
          impugnata a viro clarissimo Angelo Fonteio Veronensi. Augsburg 1717</term>
-            <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
+               <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
          1721–1729</term>
-            <term ref="index:d14380e34754">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
+               <term ref="index:d14380e34754">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
          Leipzig–Regensburg 1721–1745</term>
-            <term ref="index:d14380e35619">Popp, Willibald</term>
-            <term ref="index:d14380e36227">Quesnel, Pasquier</term>
-            <term ref="index:d14380e36429">Rather von Verona</term>
-            <term ref="index:d14380e36437">Rather von Verona ; Sammelhandschrift mit Werken. Ms. Dombibliothek Freising</term>
-            <term ref="index:d14380e36631">Regensburg</term>
-            <term ref="index:d14380e36741">Regensburg ; St. Emmeram ; Bibliothek</term>
-            <term ref="index:d14380e37160">Reiser, Anton</term>
-            <term ref="index:d14380e37168">Reiser, Anton ; Index manuscriptorum Bibliothecae Augustanae. Augsburg 1675</term>
-            <term ref="index:d14380e37232">Rest, Maximilian</term>
-            <term ref="index:d14380e37728">Rom, Römer ; Päpstliche Kurie, Papsttum</term>
-            <term ref="index:d14380e37795">Rom, Römer ; Päpstliche Kurie, Papsttum ; Corpus iuris canonici, Kanonistik</term>
-            <term ref="index:d14380e39054">Salzburg</term>
-            <term ref="index:d14380e39115">Salzburg ; St. Peter</term>
-            <term ref="index:d14380e39711">Scheyern</term>
-            <term ref="index:d14380e39734">Scheyern ; Bibliothek</term>
-            <term ref="index:d14380e39740">Scheyern ; Bibliothek ; Handschriften des „Konrad von Scheyern“</term>
-            <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
-            <term ref="index:d10854e28377">Schwaben</term>
-            <term ref="index:d10854e30724">Thierhaupten</term>
-            <term ref="index:d10854e30746">Thierhaupten ; Bibliothek</term>
-            <term ref="index:d14380e44452">Verona</term>
-            <term ref="index:d14380e44714">Vornbach</term>
-            <term ref="index:d14380e45067">Weihenstephan</term>
-            <term ref="index:d14380e45085">Weihenstephan ; Bibliothek</term>
-            <term ref="index:d14380e45528">Widmann, Mathias</term>
-            <term ref="index:d14380e46577">Wolkenstein-Trostburg, Franz Friedrich von</term></keywords></textClass>
+               <term ref="index:d14380e35619">Popp, Willibald</term>
+               <term ref="index:d14380e36227">Quesnel, Pasquier</term>
+               <term ref="index:d14380e36429">Rather von Verona</term>
+               <term ref="index:d14380e36437">Rather von Verona ; Sammelhandschrift mit Werken. Ms. Dombibliothek Freising</term>
+               <term ref="index:d14380e36631">Regensburg</term>
+               <term ref="index:d14380e36741">Regensburg ; St. Emmeram ; Bibliothek</term>
+               <term ref="index:d14380e37160">Reiser, Anton</term>
+               <term ref="index:d14380e37168">Reiser, Anton ; Index manuscriptorum Bibliothecae Augustanae. Augsburg 1675</term>
+               <term ref="index:d14380e37232">Rest, Maximilian</term>
+               <term ref="index:d14380e37728">Rom, Römer ; Päpstliche Kurie, Papsttum</term>
+               <term ref="index:d14380e37795">Rom, Römer ; Päpstliche Kurie, Papsttum ; Corpus iuris canonici, Kanonistik</term>
+               <term ref="index:d14380e39054">Salzburg</term>
+               <term ref="index:d14380e39115">Salzburg ; St. Peter</term>
+               <term ref="index:d14380e39711">Scheyern</term>
+               <term ref="index:d14380e39734">Scheyern ; Bibliothek</term>
+               <term ref="index:d14380e39740">Scheyern ; Bibliothek ; Handschriften des „Konrad von Scheyern“</term>
+               <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
+               <term ref="index:d10854e28377">Schwaben</term>
+               <term ref="index:d10854e30724">Thierhaupten</term>
+               <term ref="index:d10854e30746">Thierhaupten ; Bibliothek</term>
+               <term ref="index:d14380e44452">Verona</term>
+               <term ref="index:d14380e44714">Vornbach</term>
+               <term ref="index:d14380e45067">Weihenstephan</term>
+               <term ref="index:d14380e45085">Weihenstephan ; Bibliothek</term>
+               <term ref="index:d14380e45528">Widmann, Mathias</term>
+               <term ref="index:d14380e46577">Wolkenstein-Trostburg, Franz Friedrich von</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Die Reise von <rs ref="index:d14380e29936">München</rs> nach <rs ref="index:d14380e13185">Freising</rs>
                hat ein erfreuliches Ergebnis erbracht. Der Zugang zur dortigen <rs ref="index:d14380e13226">Dombibliothek</rs> musste erstritten werden <ref type="letter" target="letter:803">803</ref>, doch
@@ -237,7 +252,8 @@
                   Mabillon</rs> und zahllose andere dasselbe getan, um den Argumenten gegen die eigene Sache besser
                begegnen zu können? „Fonteius“ will BP verbieten, Briefe des Gegenpapstes <rs ref="index:d14380e1341">Anaklet (II.)</rs> zu edieren, obwohl Baronio in den „<rs ref="index:d14380e3941">Annales
                   ecclesiastici</rs>“ deren Auffindung in <rs ref="index:d14380e29411">Monte Cassino</rs> gefeiert und
-               sie auch gedruckt hat? Was soll zudem die Klage des Katholiken „Fonteius“ gegenüber dem <rs ref="index:d14380e11916">Lutheraner</rs> <rs ref="index:d14380e28655">Johann Burkhard Mencke</rs>
+               sie auch gedruckt hat? Was soll zudem die Klage des Katholiken „Fonteius“ gegenüber dem <rs ref="index:d14380e11916">Lutheraner</rs>
+               <rs ref="index:d14380e28655">Johann Burkhard Mencke</rs>
                hinsichtlich dieses Editionsvorhabens? Weiß er denn nicht, dass die Lutheraner höchst interessiert an
                solchen Quellen sind, und dass gewaltige Kontroversen ausbrechen würden, wenn er, BP, solch einem Rat
                folgte und die Stücke unterdrückte? Schließlich geht es hier nicht um Glaubenssachen, sondern um Fragen
@@ -250,7 +266,8 @@
                durchforsten, zogen dann aber wegen Mangels an Kräften und an Geld, das schneller als erwartet ausgegeben
                worden war, eine Rückkehr nach <rs ref="index:d14380e31465">Österreich</rs> vor, zumal auch noch einige
                interessante Klöster auf dem Rückweg lagen. Auf der Reise von <rs ref="index:d14380e3233">Augsburg</rs>
-               nach <rs ref="index:d14380e36631">Regensburg</rs> besuchten sie so <rs ref="index:d14380e9931">Donauwörth</rs> und das <rs ref="index:d14380e5121">Benediktinerinnenkloster</rs> <rs ref="index:d14380e18576">Holzen</rs>, reisten aber, da sie keine alten Schriften vorfanden,
+               nach <rs ref="index:d14380e36631">Regensburg</rs> besuchten sie so <rs ref="index:d14380e9931">Donauwörth</rs> und das <rs ref="index:d14380e5121">Benediktinerinnenkloster</rs>
+               <rs ref="index:d14380e18576">Holzen</rs>, reisten aber, da sie keine alten Schriften vorfanden,
                unverzüglich weiter. Das letzte Teilstück nach <rs ref="index:d14380e36631">Regensburg</rs> legten sie
                mit einem Schiff auf der <rs ref="index:d14380e9895">Donau</rs> zurück. Dass die Entscheidung eine gute
                war, lehrten sogleich die Schätze der <rs ref="index:d14380e36741">Bibliothek von St. Emmeram</rs>. Nach
@@ -263,7 +280,7 @@
                Rechenschaft ablegen wollen. Ihm bitten sie von VL empfohlen zu werden.</p>
             <p corresp="#seg9">In einem Postskriptum gibt BP an, dass allfällige Briefe nach <rs ref="index:d14380e44714">Vornbach</rs>
                oder <rs ref="index:d14380e32600">St. Nikola zu Passau</rs> gerichtet werden können.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -297,7 +314,8 @@
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
             <mentioned> Schiram ... bibliothecam</mentioned>
-            <p>Zu Abt Benedikt Meyding vgl. <ref type="letter" target="letter:486">486</ref> <ref target="letter:486#seg1">1</ref>. Zu den Besuchen in Weihenstephan und
+            <p>Zu Abt Benedikt Meyding vgl. <ref type="letter" target="letter:486">486</ref>
+               <ref target="letter:486#seg1">1</ref>. Zu den Besuchen in Weihenstephan und
                   Scheyern vgl. <rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 225; <rs type="bibl" ref="bibl:16794">Hammermayer, Maurinismus</rs> 402.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
@@ -316,7 +334,8 @@
             <p> Benedikt Friepeis hatte einige Monate zuvor
                   berichtet, dass Meyding an einer Widerlegung der „Historia controversiarum de
                   divinae gratiae auxiliis“ des Jesuiten Liévin de Meyer arbeitete, was freilich
-                  nicht genau der hier getätigten Aussage entspricht: vgl. <ref type="letter" target="letter:741">741</ref> <ref target="letter:741#seg6">6</ref>. Von einem „opus de Romani pontificis auctoritate“, dessen
+                  nicht genau der hier getätigten Aussage entspricht: vgl. <ref type="letter" target="letter:741">741</ref>
+               <ref target="letter:741#seg6">6</ref>. Von einem „opus de Romani pontificis auctoritate“, dessen
                   Vorarbeiten BP und HP in Scheyern einsehen konnten, ist die Rede in <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 1 xxxi. Unter den
                   nachgelassenen Manuskripten Abt Meydings befanden sich angeblich ein „Opus de
                   auctoritate pontificis“ sowie „Dogmatica et polemica quaedam adversus Quesnellum“:
@@ -419,9 +438,12 @@
             <p> Zur Bibliothek von St. Emmeram vgl. <rs type="bibl" ref="bibl:17260">Ineichen-Eder, Bibliothekskataloge 4/1</rs>
                   99–138; <rs type="bibl" ref="bibl:17672">Kraus, Bibliothek</rs>; <rs type="bibl" ref="bibl:18840">Piendl, Bibliotheken</rs> 9–49; <rs type="bibl" ref="bibl:19186">Rottler, Bibliothek</rs>. Zum Besuch BPs und HPs vgl. <rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 225; <rs type="bibl" ref="bibl:16794">Hammermayer, Maurinismus</rs> 402. BP erwähnte in späteren
                   Briefen zahlreiche Texte aus St. Emmeram, von denen er etliche auch edierte: vgl.
-                     <ref type="letter" target="letter:912">912</ref> <ref target="letter:912#seg7">7</ref>, <ref type="letter" target="letter:955">955</ref> <ref target="letter:955#seg6">6</ref>,
-                     <ref type="letter" target="letter:1003">1003</ref> <ref target="letter:1003#seg3">3</ref>, <ref type="letter" target="letter:1020">1020</ref>
-                  <ref target="letter:1020#seg4">4</ref>.</p>
+                     <ref type="letter" target="letter:912">912</ref>
+               <ref target="letter:912#seg7">7</ref>, <ref type="letter" target="letter:955">955</ref>
+               <ref target="letter:955#seg6">6</ref>,
+                     <ref type="letter" target="letter:1003">1003</ref>
+               <ref target="letter:1003#seg3">3</ref>, <ref type="letter" target="letter:1020">1020</ref>
+               <ref target="letter:1020#seg4">4</ref>.</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -434,18 +456,42 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater prior.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater prior.</opener>
          <ab resp="#editor" xml:id="seg1">Iter nostrum, quod Monachio Frisingam suscepimus, sat laetum eventum habuit. Nam etsi ad cathedralis ecclesiae bibliothecam non sine praevio certamine admissi fuerimus, ea tamen tandem nobis patuit iubente illustrissimo comite de <anchor xml:id="n1"/>Maxelrein decano, qui nos admodum humaniter suscepit. Bibliotheca haec continet codices fere ducentos<anchor xml:id="n1e"/> antiquissimos et omnes optimae notae; tametsi pauci complectantur<anchor xml:id="n2"/> opera nondum edita. Rarissimus inter illos est, quo continentur opera nostri Ratherii<anchor xml:id="n2e"/> ex monacho Laubiensi episcopi Veronensis saeculo circiter nono. Ea certe typis commendabo, si mihi codicis copia, ut promissa fuit, fiet. </ab>
-         <ab resp="#editor" xml:id="seg2">Frisingae dum nos detineremus, bibliothecam quoque monasterii Weihenstephenensis, Frisingensibus muris adsiti, uti et monasterii <anchor xml:id="n3"/>Neocellensis<anchor xml:id="n3e"/> (Neustifft) lustravimus. In hac nihil veterum codicum, sed insignem<anchor xml:id="n4"/> reverendissimi abbatis humanitatem<anchor xml:id="n4e"/>, in illa et humanitatem et non parvam veterum librorum supellectilem deprehendimus. Ex Weihenstephenensi coenobio<del ana="#after">Sch.</del><anchor xml:id="n5"/> Schiram contendimus, ubi instructissimam novis libris bibliothecam<anchor xml:id="n5e"/> invenimus. Veteres codices pauci erant et plerique a<anchor xml:id="n6"/> Conrado philosopho<anchor xml:id="n6e"/> eiusdem loci monacho saeculo decimo tertio exarati. Ex his tamen et pater Hieronymus in rebus Austriacis et ego pro Benedictinis egregie profecimus. Abbas loci doctissimus vir est, qui in subtili quodam<anchor xml:id="n7"/> opere pro papa<anchor xml:id="n7e"/> adversus Gallos elaborando versatur. Idem humanissimus abbas nobis praesentibus ad se invitavit <anchor xml:id="n8"/>dominum Michaelem<anchor xml:id="n8e"/>, celebrem illum canonum doctorem, canonicum Inderstorfensem, qui in Quenelio refutando hortante pontifice totus est. Verum is vir plura promittere posse mihi visus est quam praestare, et quidquid tandem contra Quesnelium scribet, evincere profecto non poterit, ut Gallis dignus videatur, cui respondeant. Sed de his obiter. Ad <pb n="1v"/> iter nostrum referendum redeo. </ab>
+         <ab resp="#editor" xml:id="seg2">Frisingae dum nos detineremus, bibliothecam quoque monasterii Weihenstephenensis, Frisingensibus muris adsiti, uti et monasterii <anchor xml:id="n3"/>Neocellensis<anchor xml:id="n3e"/> (Neustifft) lustravimus. In hac nihil veterum codicum, sed insignem<anchor xml:id="n4"/> reverendissimi abbatis humanitatem<anchor xml:id="n4e"/>, in illa et humanitatem et non parvam veterum librorum supellectilem deprehendimus. Ex Weihenstephenensi coenobio<del ana="#after">Sch.</del>
+            <anchor xml:id="n5"/> Schiram contendimus, ubi instructissimam novis libris bibliothecam<anchor xml:id="n5e"/> invenimus. Veteres codices pauci erant et plerique a<anchor xml:id="n6"/> Conrado philosopho<anchor xml:id="n6e"/> eiusdem loci monacho saeculo decimo tertio exarati. Ex his tamen et pater Hieronymus in rebus Austriacis et ego pro Benedictinis egregie profecimus. Abbas loci doctissimus vir est, qui in subtili quodam<anchor xml:id="n7"/> opere pro papa<anchor xml:id="n7e"/> adversus Gallos elaborando versatur. Idem humanissimus abbas nobis praesentibus ad se invitavit <anchor xml:id="n8"/>dominum Michaelem<anchor xml:id="n8e"/>, celebrem illum canonum doctorem, canonicum Inderstorfensem, qui in Quenelio refutando hortante pontifice totus est. Verum is vir plura promittere posse mihi visus est quam praestare, et quidquid tandem contra Quesnelium scribet, evincere profecto non poterit, ut Gallis dignus videatur, cui respondeant. Sed de his obiter. Ad <pb n="1v"/> iter nostrum referendum redeo. </ab>
          <ab resp="#editor" xml:id="seg3">Cum Schira Thierhaupto, quod proxime invisere statueramus, longius distaret, <anchor xml:id="n9"/>parthenonem Chiepacensem<anchor xml:id="n9e"/> media via positum accedere decrevimus. Ibi qua charitate a religiosissima domina abbatissa eiusque piissimis filiabus excepti fuerimus, edicere nequaquam valeo. Postea cum itineris nostri causam intellexissent,<anchor xml:id="n10"/> litteras suae fundationis<anchor xml:id="n10e"/> a sancto Heinrico imperatore datas, quas earum nulla hactenus legere sciverat, nobis explicandas exhibuerunt. Legimus exposuimusque omnia expedite ac candide, gratulantibus sibi sororibus nostris latentis hucusque mysterii revelationem. </ab>
-         <ab resp="#editor" xml:id="seg4">Post prandium ad crates cum abbatissa <choice><sic>hilat.</sic><corr>hilariter</corr></choice> sumptum ad currum reditum est comitante nos reverendo patre <anchor xml:id="n11"/>Maximiliano Schirensi<anchor xml:id="n11e"/> monacho, qui nos usque<anchor xml:id="n12"/> Thierhauptum humanitatis causa deduxit. Hic ceu domi agere licuit, reverendissimo domino abbate, veteri amico ac patrono meo, in nostrum amplexum ruente. Biduum ibi egimus, diligenter excussa bibliotheca pro loci ratione satis ampla et instructa<anchor xml:id="n12e"/>. At enim ex centum, quos reperimus, codicibus, plerisque recentioris aevi, vix quidquam notatu dignum excerpere licuit. </ab>
-         <ab resp="#editor" xml:id="seg5">Igitur actis habitisque patrono nostro singulari maximis gratiis Augustam Vindelicorum abivimus, vix quatuor horarum spatio a Thierhaupto disparatam. Urbs haec perelegans et amplissima est, sive aedium numerum et splendorem, sive civium humanitatem spectemus. Nos ad D. Udalricum divertimus a reverendissimo et sancto loci abbate nullo non humanitatis genere honorati. Bibliotheca exquisitis libris qua editis qua manu exaratis refertissima est, in qua usque ad valetudinis discrimen laboravimus, etsi non sine maximo nostrarum rerum incremento. Id auctum etiam fuit ex cathedralis ecclesiae bibliotheca, ad quam favore illustrissimi baronis de Wolkenstein canonici et scholastici admissi sumus. Hanc posteriorem bibliothecam veterrimis codicibus praeditam vix <choice><sic>quisque.</sic><corr>quisquam</corr></choice> adhuc <pb n="2r"/> eruditorum scivit, nedum lustravit. Publicam urbis bibliothecam adire operae pretium visum non fuit, utpote cuius codicum catalogum a Reisero editum Mellicii habeo. Augusta Vindelicorum litteras ad nostrum reverendissimum<del ana="#after">D.</del> dedi in causa cuiusdam religiosi Sanct-Udalriciani Mellicii hospitium quaerentis, quod denegandum suasi. </ab>
-         <ab resp="#editor" xml:id="seg6">Caeterum praeterire non possum me in ipso Augustae aditu accepisse a Sanct-Petrensi abbate illius <anchor xml:id="n13"/>Angeli Fontei Epistolam<anchor xml:id="n13e"/>, quam ille se a domino Gentilloto Salisburgensi cancellario caesarei bibliothecarii <choice><sic>frate.</sic><corr>fratre</corr></choice> accepisse scribit additque sibi videri hanc Epistolam processisse ex zelo, quem nominare nollet. Ego vero rei avidus mox totum opusculum epistolare percurri animadvertique vix ullum iudicium ei inesse. Sane effari non possum, quantum bonae de se opinionis apud me amiserit noster Gentilotus. Quam enim omni iudicio vacat illud, quod existimet hominem catholicum non decere illa vetera monumenta in lucem proferre, quae causae sancti Gregorii VII. contra Heinricum IV. imperatorem non favent? Nonne<del ana="#after">id.</del> catholicissimi viri Otto episcopus Frisingensis, Conradus Urspergensis, Baronius, Mabillonius et alii innumeri idem fecere, ut contraria iuxta se posita magis elucescerent? Non vult Angelus<del ana="#after">a me.</del> epistolas aliquas <anchor xml:id="n14"/>Anacleti pseudopapae<anchor xml:id="n14e"/> a me edi,<anchor xml:id="n15"/> quas sibi tamen in monasterio Casinensi repertas summe Baronius in Annalibus gratulatus est et edidit<anchor xml:id="n15e"/>? Deinde quid sibi vult illud, quod Angelus catholicus apud Menkenium <sic>Lutheranium</sic> conqueratur<del ana="#after">a me.</del> de meo harum edendarum epistolarum consilio? An ignorat Lutheranos eas avidissime cupere? An dubitare potest maximas apud eosdem exorituras querelas, si iudicium Angeli sequens haec vetera monumenta suppressero? Denique non agitur hic de re fidei, sed facti et disciplinae, quam nunquam recte noverimus, nisi, quae <add place="above">in</add> utramque partem olim scripta sunt, habuerimus. Omitto alia, quae, si in responsione <pb n="2v"/> mea licebit proferre, huic Angelo, id est certissime et apertissime domino Gentilloto caesareo bibliothecario magnae confusioni erunt, <choice><sic>cuiusque.</sic><corr>cuius</corr></choice> quidem ego autor non ero, sed nescio quis pruritus scribendi et iudicii intemperies. </ab>
-         <ab resp="#editor" xml:id="seg7">Iam vero in eo eramus, ut Sueviae quoque monasteria lustraremus. Verum quia et nimius labor vires <choice><sic>nostram.</sic><corr>nostras</corr></choice> sic attrivit, ut tanto itineri amplius sufficere non <choice><sic>videb.</sic><corr>viderentur</corr></choice>, et pecuniae quoque<del ana="#after">spe.</del> opinione<note place="foot" xml:id="d3e40846">Mit Verweiszeichen am linken Blattrand eingefügt.</note> citius diffluxissent nostrae, consultius fore iudicavimus reditum in Austriam maturare, praesertim cum ampla essent in reditu monasteria, quorum bibliothecas praeterire nulla ratione possemus. Igitur relicta Augusta Donawerdam et medium inter utramque parthenonem sanctissimis nostri ordinis virginibus clarum, <anchor xml:id="n16"/>Holzensem<anchor xml:id="n16e"/> inquam, accessimus; ubi tamen, quia nihil veterum monumentorum aderat, nullam moram fecimus, sed reperta navi Ratisbonam secundo Danubio redivimus. Et sane recte nos fecisse conspecta vel primo intuitu bibliotheca <anchor xml:id="n17"/>S. Emmerammensis<anchor xml:id="n17e"/> docuit, quippe quae prope immensa nobis unice in voto posita continebat. Ergo resumptis viribus et animis accurate lustravimus omnia<del ana="#after">exs.</del> excussimusque tanta diligentia et contentione, ut intra octiduum fine lustrationi imposito incredibilem messem collegerimus. Ex sola hac bibliotheca quatuor volumina in folio aut ego<del ana="#after">et.</del> aut alius nostrorum confratrum aliquando edere <choice><sic>potu.</sic><corr>poterimus</corr></choice>. </ab>
+         <ab resp="#editor" xml:id="seg4">Post prandium ad crates cum abbatissa <choice>
+               <sic>hilat.</sic>
+               <corr>hilariter</corr>
+            </choice> sumptum ad currum reditum est comitante nos reverendo patre <anchor xml:id="n11"/>Maximiliano Schirensi<anchor xml:id="n11e"/> monacho, qui nos usque<anchor xml:id="n12"/> Thierhauptum humanitatis causa deduxit. Hic ceu domi agere licuit, reverendissimo domino abbate, veteri amico ac patrono meo, in nostrum amplexum ruente. Biduum ibi egimus, diligenter excussa bibliotheca pro loci ratione satis ampla et instructa<anchor xml:id="n12e"/>. At enim ex centum, quos reperimus, codicibus, plerisque recentioris aevi, vix quidquam notatu dignum excerpere licuit. </ab>
+         <ab resp="#editor" xml:id="seg5">Igitur actis habitisque patrono nostro singulari maximis gratiis Augustam Vindelicorum abivimus, vix quatuor horarum spatio a Thierhaupto disparatam. Urbs haec perelegans et amplissima est, sive aedium numerum et splendorem, sive civium humanitatem spectemus. Nos ad D. Udalricum divertimus a reverendissimo et sancto loci abbate nullo non humanitatis genere honorati. Bibliotheca exquisitis libris qua editis qua manu exaratis refertissima est, in qua usque ad valetudinis discrimen laboravimus, etsi non sine maximo nostrarum rerum incremento. Id auctum etiam fuit ex cathedralis ecclesiae bibliotheca, ad quam favore illustrissimi baronis de Wolkenstein canonici et scholastici admissi sumus. Hanc posteriorem bibliothecam veterrimis codicibus praeditam vix <choice>
+               <sic>quisque.</sic>
+               <corr>quisquam</corr>
+            </choice> adhuc <pb n="2r"/> eruditorum scivit, nedum lustravit. Publicam urbis bibliothecam adire operae pretium visum non fuit, utpote cuius codicum catalogum a Reisero editum Mellicii habeo. Augusta Vindelicorum litteras ad nostrum reverendissimum<del ana="#after">D.</del> dedi in causa cuiusdam religiosi Sanct-Udalriciani Mellicii hospitium quaerentis, quod denegandum suasi. </ab>
+         <ab resp="#editor" xml:id="seg6">Caeterum praeterire non possum me in ipso Augustae aditu accepisse a Sanct-Petrensi abbate illius <anchor xml:id="n13"/>Angeli Fontei Epistolam<anchor xml:id="n13e"/>, quam ille se a domino Gentilloto Salisburgensi cancellario caesarei bibliothecarii <choice>
+               <sic>frate.</sic>
+               <corr>fratre</corr>
+            </choice> accepisse scribit additque sibi videri hanc Epistolam processisse ex zelo, quem nominare nollet. Ego vero rei avidus mox totum opusculum epistolare percurri animadvertique vix ullum iudicium ei inesse. Sane effari non possum, quantum bonae de se opinionis apud me amiserit noster Gentilotus. Quam enim omni iudicio vacat illud, quod existimet hominem catholicum non decere illa vetera monumenta in lucem proferre, quae causae sancti Gregorii VII. contra Heinricum IV. imperatorem non favent? Nonne<del ana="#after">id.</del> catholicissimi viri Otto episcopus Frisingensis, Conradus Urspergensis, Baronius, Mabillonius et alii innumeri idem fecere, ut contraria iuxta se posita magis elucescerent? Non vult Angelus<del ana="#after">a me.</del> epistolas aliquas <anchor xml:id="n14"/>Anacleti pseudopapae<anchor xml:id="n14e"/> a me edi,<anchor xml:id="n15"/> quas sibi tamen in monasterio Casinensi repertas summe Baronius in Annalibus gratulatus est et edidit<anchor xml:id="n15e"/>? Deinde quid sibi vult illud, quod Angelus catholicus apud Menkenium <sic>Lutheranium</sic> conqueratur<del ana="#after">a me.</del> de meo harum edendarum epistolarum consilio? An ignorat Lutheranos eas avidissime cupere? An dubitare potest maximas apud eosdem exorituras querelas, si iudicium Angeli sequens haec vetera monumenta suppressero? Denique non agitur hic de re fidei, sed facti et disciplinae, quam nunquam recte noverimus, nisi, quae <add place="above">in</add> utramque partem olim scripta sunt, habuerimus. Omitto alia, quae, si in responsione <pb n="2v"/> mea licebit proferre, huic Angelo, id est certissime et apertissime domino Gentilloto caesareo bibliothecario magnae confusioni erunt, <choice>
+               <sic>cuiusque.</sic>
+               <corr>cuius</corr>
+            </choice> quidem ego autor non ero, sed nescio quis pruritus scribendi et iudicii intemperies. </ab>
+         <ab resp="#editor" xml:id="seg7">Iam vero in eo eramus, ut Sueviae quoque monasteria lustraremus. Verum quia et nimius labor vires <choice>
+               <sic>nostram.</sic>
+               <corr>nostras</corr>
+            </choice> sic attrivit, ut tanto itineri amplius sufficere non <choice>
+               <sic>videb.</sic>
+               <corr>viderentur</corr>
+            </choice>, et pecuniae quoque<del ana="#after">spe.</del> opinione<note place="foot" xml:id="d3e40846">Mit Verweiszeichen am linken Blattrand eingefügt.</note> citius diffluxissent nostrae, consultius fore iudicavimus reditum in Austriam maturare, praesertim cum ampla essent in reditu monasteria, quorum bibliothecas praeterire nulla ratione possemus. Igitur relicta Augusta Donawerdam et medium inter utramque parthenonem sanctissimis nostri ordinis virginibus clarum, <anchor xml:id="n16"/>Holzensem<anchor xml:id="n16e"/> inquam, accessimus; ubi tamen, quia nihil veterum monumentorum aderat, nullam moram fecimus, sed reperta navi Ratisbonam secundo Danubio redivimus. Et sane recte nos fecisse conspecta vel primo intuitu bibliotheca <anchor xml:id="n17"/>S. Emmerammensis<anchor xml:id="n17e"/> docuit, quippe quae prope immensa nobis unice in voto posita continebat. Ergo resumptis viribus et animis accurate lustravimus omnia<del ana="#after">exs.</del> excussimusque tanta diligentia et contentione, ut intra octiduum fine lustrationi imposito incredibilem messem collegerimus. Ex sola hac bibliotheca quatuor volumina in folio aut ego<del ana="#after">et.</del> aut alius nostrorum confratrum aliquando edere <choice>
+               <sic>potu.</sic>
+               <corr>poterimus</corr>
+            </choice>. </ab>
          <ab resp="#editor" xml:id="seg8">Hodie inde abibimus ad monasteria Fraucellense, Ober- et Nideraltahense ac denique Vormbacense, quae, si cum gratia Dei lustrare dabitur, modum nostris laboribus profecto gravissimis statuent. Interim iter nostrum sic accelerabimus, ut saltem ad finem Septembris Mellicii futuri simus, ubi longe ampliorem de omni nostro negotio rationem reddemus reverendissimo domino abbati, cui nos pluribus commendari demississime petimus.</ab>
          <closer>Plurimum reverendae religiosissimae ac clarissimae dominationis paternitatis vestrae infimi servi patres Bernardus et Hieronymus Pez.</closer>
          <closer>Ratisbonae 6. Septembris 1717.</closer>
-         <closer>&lt;9&gt; <add place="left-margin"><witDetail wit="#A">senkrecht am linken Blattrand</witDetail>P.S. Si quid nobis mandandum foret, litterae scribi poterunt vel Vormbacum vel ad S. Nicolaum Passavium</add>.</closer>
+         <closer>&lt;9&gt; <add place="left-margin">
+               <witDetail wit="#A">senkrecht am linken Blattrand</witDetail>P.S. Si quid nobis mandandum foret, litterae scribi poterunt vel Vormbacum vel ad S. Nicolaum Passavium</add>.</closer>
       </body>
    </text>
 </TEI>

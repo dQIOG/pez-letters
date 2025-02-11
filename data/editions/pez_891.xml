@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="891" xml:id="pez-0891">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Georg Eckhart an Bernhard Pez. 1718-01-27. Hannover.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">891</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -42,10 +53,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -68,70 +80,72 @@
                <ptr type="mentionedIn" target="letter:915"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e2379">Anonyme Werke ; Kreuzfahrt des Landgrafen Ludwigs des Frommen von Thüringen. Ms. Wien,
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e2379">Anonyme Werke ; Kreuzfahrt des Landgrafen Ludwigs des Frommen von Thüringen. Ms. Wien,
          Hofbibliothek</term>
-            <term ref="index:d14380e2855">Antwerpen</term>
-            <term ref="index:d14380e5144">Benno, hl ; [Pseudo-Benno] Expositiones breves super Evangelia dominicalia. Ms</term>
-            <term ref="index:d14380e5160">Benno, hl ; [Pseudo-Benno] Expositiones breves super Evangelia dominicalia. Ms ;
+               <term ref="index:d14380e2855">Antwerpen</term>
+               <term ref="index:d14380e5144">Benno, hl ; [Pseudo-Benno] Expositiones breves super Evangelia dominicalia. Ms</term>
+               <term ref="index:d14380e5160">Benno, hl ; [Pseudo-Benno] Expositiones breves super Evangelia dominicalia. Ms ;
          Abschrift von Heinrich Flachbert. Ms</term>
-            <term ref="index:d14380e5738">Bibliotheca historico-philologico-theologica. Bremen–Frankfurt am Main–Leipzig
+               <term ref="index:d14380e5738">Bibliotheca historico-philologico-theologica. Bremen–Frankfurt am Main–Leipzig
          1718–1727</term>
-            <term ref="index:d14380e6075">Bollandisten</term>
-            <term ref="index:d14380e6218">Bongars, Jacques</term>
-            <term ref="index:d14380e6226">Bongars, Jacques ; Gesta Dei per Francos. 2 Bde. Hanau 1611</term>
-            <term ref="index:d14380e6664">Bremen</term>
-            <term ref="index:d14380e8985">Damietta</term>
-            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
-            <term ref="index:d14380e9536">Deutschland, Deutsche , deutsch ; Althochdeutsch, mittelhochdeutsch</term>
-            <term ref="index:d14380e10481">Eckhart, Johann Georg ; [Pseudonym A.I.] Diploma Caroli Magni imperatoris de scholis
+               <term ref="index:d14380e6075">Bollandisten</term>
+               <term ref="index:d14380e6218">Bongars, Jacques</term>
+               <term ref="index:d14380e6226">Bongars, Jacques ; Gesta Dei per Francos. 2 Bde. Hanau 1611</term>
+               <term ref="index:d14380e6664">Bremen</term>
+               <term ref="index:d14380e8985">Damietta</term>
+               <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+               <term ref="index:d14380e9536">Deutschland, Deutsche , deutsch ; Althochdeutsch, mittelhochdeutsch</term>
+               <term ref="index:d14380e10481">Eckhart, Johann Georg ; [Pseudonym A.I.] Diploma Caroli Magni imperatoris de scholis
          Osnabrugensis ecclesiae Graecis et Latinis critice expensum. S. l. 1717</term>
-            <term ref="index:d14380e10525">Eckhart, Johann Georg ; -Gesta Dei per Germanos</term>
-            <term ref="index:d14380e10635">Eckhart, Johann Georg ; Reise nach Lüneburg 1718</term>
-            <term ref="index:d14380e11461">Erasmi von Huldenberg, Daniel, Freiherr</term>
-            <term ref="index:d14380e12219">Flachbert, Heinrich</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e15969">Gottfried von Bouillon</term>
-            <term ref="index:d14380e16473">Griechisch</term>
-            <term ref="index:d14380e17099">Hannover ; Kurfürstliche Bibliothek ; Oliver von Paderborn, Historia Damiatina.
+               <term ref="index:d14380e10525">Eckhart, Johann Georg ; -Gesta Dei per Germanos</term>
+               <term ref="index:d14380e10635">Eckhart, Johann Georg ; Reise nach Lüneburg 1718</term>
+               <term ref="index:d14380e11461">Erasmi von Huldenberg, Daniel, Freiherr</term>
+               <term ref="index:d14380e12219">Flachbert, Heinrich</term>
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e15969">Gottfried von Bouillon</term>
+               <term ref="index:d14380e16473">Griechisch</term>
+               <term ref="index:d14380e17099">Hannover ; Kurfürstliche Bibliothek ; Oliver von Paderborn, Historia Damiatina.
          Ms</term>
-            <term ref="index:d14380e17106">Hannover ; Kurfürstliche Bibliothek ; Oliver von Paderborn, Historia regum Terrae
+               <term ref="index:d14380e17106">Hannover ; Kurfürstliche Bibliothek ; Oliver von Paderborn, Historia regum Terrae
          Sanctae. Ms</term>
-            <term ref="index:d14380e17277">Hase, Theodor</term>
-            <term ref="index:d14380e17525">Heiliges Land</term>
-            <term ref="index:d14380e19089">Hugo von Bologna ; Rationes dictandi. Ms. Wolfenbüttel</term>
-            <term ref="index:d14380e19107">Hugo von Bologna ; Rationes dictandi. Ms. Wolfenbüttel ; Abschrift von Heinrich
+               <term ref="index:d14380e17277">Hase, Theodor</term>
+               <term ref="index:d14380e17525">Heiliges Land</term>
+               <term ref="index:d14380e19089">Hugo von Bologna ; Rationes dictandi. Ms. Wolfenbüttel</term>
+               <term ref="index:d14380e19107">Hugo von Bologna ; Rationes dictandi. Ms. Wolfenbüttel ; Abschrift von Heinrich
          Flachbert. Ms</term>
-            <term ref="index:d14380e20126">Jesuiten</term>
-            <term ref="index:d14380e21117">Karl I. „der Große“ ; Urkunde für die Kirche von Osnabrück 803</term>
-            <term ref="index:d14380e23213">Kreuzzüge</term>
-            <term ref="index:d14380e23626">Lambeck, Peter ; Commentariorum de augustissima bibliotheca caesarea Vindobonensi libri
+               <term ref="index:d14380e20126">Jesuiten</term>
+               <term ref="index:d14380e21117">Karl I. „der Große“ ; Urkunde für die Kirche von Osnabrück 803</term>
+               <term ref="index:d14380e23213">Kreuzzüge</term>
+               <term ref="index:d14380e23626">Lambeck, Peter ; Commentariorum de augustissima bibliotheca caesarea Vindobonensi libri
          VIII. 8 Bde. Wien 1665–1679</term>
-            <term ref="index:d14380e23973">Latein</term>
-            <term ref="index:d14380e25424">Lüneburg</term>
-            <term ref="index:d14380e31245">Oliver von Paderborn ; Historia Damiatina. Ms. Hannover</term>
-            <term ref="index:d14380e31252">Oliver von Paderborn ; Historia regum Terrae Sanctae. Ms. Hannover</term>
-            <term ref="index:d14380e31876">Ottokar von Steiermark ; Steirische Reimchronik ; Auszug über den Fall von Akkon. Ms.
+               <term ref="index:d14380e23973">Latein</term>
+               <term ref="index:d14380e25424">Lüneburg</term>
+               <term ref="index:d14380e31245">Oliver von Paderborn ; Historia Damiatina. Ms. Hannover</term>
+               <term ref="index:d14380e31252">Oliver von Paderborn ; Historia regum Terrae Sanctae. Ms. Hannover</term>
+               <term ref="index:d14380e31876">Ottokar von Steiermark ; Steirische Reimchronik ; Auszug über den Fall von Akkon. Ms.
          Wolfenbüttel</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
-            <term ref="index:d14380e42380">Tegernsee ; Bibliothek ; Tegernseer Briefsammlung des 12. Jhs</term>
-            <term ref="index:d14380e45166">Welf VI</term>
-            <term ref="index:d14380e45182">Welf VI ; Briefe von und an ihn. Ms. Tegernsee</term>
-            <term ref="index:d14380e45198">Welf VI ; Briefe von und an ihn. Ms. Tegernsee ; Abschrift von Bernhard Pez. Ms</term>
-            <term ref="index:d14380e45571">Wien</term>
-            <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
-            <term ref="index:d14380e45904">Wien ; Kaiserhof ; Hofbibliothek ; Kreuzfahrt des Landgrafen Ludwigs des Frommen von
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+               <term ref="index:d14380e42380">Tegernsee ; Bibliothek ; Tegernseer Briefsammlung des 12. Jhs</term>
+               <term ref="index:d14380e45166">Welf VI</term>
+               <term ref="index:d14380e45182">Welf VI ; Briefe von und an ihn. Ms. Tegernsee</term>
+               <term ref="index:d14380e45198">Welf VI ; Briefe von und an ihn. Ms. Tegernsee ; Abschrift von Bernhard Pez. Ms</term>
+               <term ref="index:d14380e45571">Wien</term>
+               <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
+               <term ref="index:d14380e45904">Wien ; Kaiserhof ; Hofbibliothek ; Kreuzfahrt des Landgrafen Ludwigs des Frommen von
          Thüringen. Ms</term>
-            <term ref="index:d14380e45964">Wien ; Kaiserhof ; Hofbibliothek ; Gentilotti als Präfekt</term>
-            <term ref="index:d14380e46467">Wolfenbüttel ; Herzog-August-Bibliothek</term>
-            <term ref="index:d14380e46479">Wolfenbüttel ; Herzog-August-Bibliothek ; [Pseudo-Benno von Meißen,] Expositiones
+               <term ref="index:d14380e45964">Wien ; Kaiserhof ; Hofbibliothek ; Gentilotti als Präfekt</term>
+               <term ref="index:d14380e46467">Wolfenbüttel ; Herzog-August-Bibliothek</term>
+               <term ref="index:d14380e46479">Wolfenbüttel ; Herzog-August-Bibliothek ; [Pseudo-Benno von Meißen,] Expositiones
          breves super Evangelia dominicalia. Ms</term>
-            <term ref="index:d14380e46494">Wolfenbüttel ; Herzog-August-Bibliothek ; Hugo von Bologna, Rationes dictandi prosaice.
+               <term ref="index:d14380e46494">Wolfenbüttel ; Herzog-August-Bibliothek ; Hugo von Bologna, Rationes dictandi prosaice.
          Ms</term>
-            <term ref="index:d14380e46509">Wolfenbüttel ; Herzog-August-Bibliothek ; Ottokar von Steiermark, Steirische
+               <term ref="index:d14380e46509">Wolfenbüttel ; Herzog-August-Bibliothek ; Ottokar von Steiermark, Steirische
          Reimchronik, Auszug über den Fall von Akkon. Ms</term>
-            <term ref="index:d14380e46555">Wolfram von Eschenbach</term></keywords></textClass>
+               <term ref="index:d14380e46555">Wolfram von Eschenbach</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Nach seiner Rückkehr aus <rs ref="index:d14380e25424">Lüneburg</rs> hat GE die <rs ref="index:d14380e46467">Wolfenbütteler</rs> Handschrift mit zwei Texten Bennos von Meißen (recte:
                Hugo von Bologna, „<rs ref="index:d14380e46494">Rationes dictandi</rs>“; Pseudo-Benno von Meißen, „<rs ref="index:d14380e46479">Expositiones in Evangelia</rs>“) erhalten; da man in Wolfenbüttel aber nicht
@@ -155,13 +169,14 @@
             <p corresp="#seg5">Der Briefverkehr BPs mit GE soll über den hannoverschen Gesandten <rs ref="index:d14380e11461">Daniel
                   Erasmi Freiherrn von Huldenberg</rs> abgewickelt werden.</p>
             <p corresp="#seg6">Die von GE jüngst veröffentlichte Streitschrift „<rs ref="index:d14380e10481">Diploma Caroli Magni</rs>“
-               hat bei den <rs ref="index:d14380e2855">Antwerpener</rs> <rs ref="index:d14380e20126">Jesuiten</rs> (<rs ref="index:d14380e6075">Bollandisten</rs>) Beifall gefunden. GE wünscht sich auch ein Urteil BPs und
+               hat bei den <rs ref="index:d14380e2855">Antwerpener</rs>
+               <rs ref="index:d14380e20126">Jesuiten</rs> (<rs ref="index:d14380e6075">Bollandisten</rs>) Beifall gefunden. GE wünscht sich auch ein Urteil BPs und
                wartet auf eine günstige Gelegenheit zur Sendung.</p>
             <p corresp="#seg7">Soeben hat GE eine Einladung von dem gebildeten und wohlhabenden <rs ref="index:d14380e17277">Theodor
                   Hase</rs> aus <rs ref="index:d14380e6664">Bremen</rs> (zur Mitarbeit an der „<rs ref="index:d14380e5738">Bibliotheca historico-philologico-theologica</rs>“?) erhalten, welche er an BP
                weiterreicht. Er schließt mit einer Entschuldigung für seine Eile.</p>
             <p corresp="#seg8">In einem Nachsatz ersucht GE darum, ihm die Bekanntschaft des kaiserlichen Hofbibliothekspräfekten <rs ref="index:d14380e14738">Johann Benedikt Gentilotti</rs> zu vermitteln.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -172,7 +187,8 @@
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned> scribae</mentioned>
-            <p>Aufgrund der namentlichen Nennung in <ref type="letter" target="letter:912">912</ref> <ref target="letter:912#seg12">12</ref> ist dieser Kopist als Heinrich Flachbert zu
+            <p>Aufgrund der namentlichen Nennung in <ref type="letter" target="letter:912">912</ref>
+               <ref target="letter:912#seg12">12</ref> ist dieser Kopist als Heinrich Flachbert zu
                   identifizieren. Er lässt sich 1710 als Schreiber bei der Vorbereitung der
                   „Scriptores rerum Brunsvicensium“ und 1717 als Katalogist der königlichen
                   Bibliothek nachweisen, schied jedoch 1718 oder 1719 hier aus und war in der Zeit
@@ -218,7 +234,8 @@
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
             <mentioned> Lambecius ... meminit</mentioned>
-            <p><rs type="bibl" ref="bibl:36516">Lambeck,
+            <p>
+               <rs type="bibl" ref="bibl:36516">Lambeck,
                      Commentarii 2</rs> 980.</p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
@@ -246,7 +263,8 @@
                   des Paderborner Bischofs Ferdinand von Fürstenberg an das Kloster St. Ludgeri zu
                   Helmstedt gelangt war und GE von Propst Robert Verbockhorst zur Verfügung gestellt
                   wurde: <rs type="bibl" ref="bibl:14696">Eckhart, Corpus historicum</rs> 2 col.
-                  1355–1396. Zu Verbockhorst vgl. <ref type="letter" target="letter:959">959</ref> <ref target="letter:959#seg4">4</ref>. Dieser
+                  1355–1396. Zu Verbockhorst vgl. <ref type="letter" target="letter:959">959</ref>
+               <ref target="letter:959#seg4">4</ref>. Dieser
                   Codex befindet sich heute in Hannover: GWLB Hannover, Ms XXXVII 1807; vgl. <rs type="bibl" ref="bibl:16830">Härtel–Ekowski, Handschriften 2</rs> 277f.; <rs type="bibl" ref="bibl:17174">Hoogeweg, Schriften</rs> LXX–LXXII. Nicht
                   nachvollziehbar ist Hermann Hoogewegs Angabe, GE habe stattdessen eine Abschrift
                   Rottendorfs benutzt, zumal GEs Vorbemerkung, auf die sich Hoogeweg beruft,
@@ -282,7 +300,8 @@
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg6">
             <mentioned>approbarunt ... Antwerpienses</mentioned>
             <p> Zum Osnabrücker Urkundenstreit vgl.
-                     <ref type="letter" target="letter:870">870</ref> <ref target="letter:870#seg7">7</ref>. Die Bollandisten waren schon im 17. Jh.
+                     <ref type="letter" target="letter:870">870</ref>
+               <ref target="letter:870#seg7">7</ref>. Die Bollandisten waren schon im 17. Jh.
                   in diese Affäre verwickelt worden; nachdem er sich zunächst öffentlich gegen die
                   Echtheit der umstrittenen Urkunden ausgesprochen hatte, war Daniel Papebroch durch
                   Bischof Ferdinand von Fürstenberg bewogen worden, seine Meinung zu ändern und
@@ -313,7 +332,8 @@
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg6">
             <mentioned>transmittendi occasio</mentioned>
             <p>GE hatte mit 870 bereits einen Teil des Textes
-                  versendet: vgl. <ref type="letter" target="letter:870">870 </ref><ref target="letter:870 #seg7">7</ref>.</p>
+                  versendet: vgl. <ref type="letter" target="letter:870">870 </ref>
+               <ref target="letter:870 #seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg7">
             <mentioned>Hasaeus</mentioned>
@@ -346,13 +366,22 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Vir maxime reverende atque celeberrime.</opener>
-         <ab resp="#editor" xml:id="seg1">Luneburgo reversus Guelfenbyti recepi codicem, cui inserta Bennonis episcopi opuscula gemina. Codice hoc <anchor xml:id="n1"/>Guelfenbytani non adeo diu carere possunt<anchor xml:id="n1e"/>; unde coactus de transmittendo illo consilium muto. Tradidi autem iam<anchor xml:id="n2"/> scribae<anchor xml:id="n2e"/> in his exercitato, qui descriptionem intra octiduum mihi promittit. Ipse eam conferam cum autographo, ut <choice><sic>d</sic><corr>accurate</corr></choice> factam certus esse possis. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n3"/>Guelfi illas epistolas<anchor xml:id="n3e"/> etiam atque etiam videre cupio. </ab>
+         <opener>
+            <pb n="1r"/> Vir maxime reverende atque celeberrime.</opener>
+         <ab resp="#editor" xml:id="seg1">Luneburgo reversus Guelfenbyti recepi codicem, cui inserta Bennonis episcopi opuscula gemina. Codice hoc <anchor xml:id="n1"/>Guelfenbytani non adeo diu carere possunt<anchor xml:id="n1e"/>; unde coactus de transmittendo illo consilium muto. Tradidi autem iam<anchor xml:id="n2"/> scribae<anchor xml:id="n2e"/> in his exercitato, qui descriptionem intra octiduum mihi promittit. Ipse eam conferam cum autographo, ut <choice>
+               <sic>d</sic>
+               <corr>accurate</corr>
+            </choice> factam certus esse possis. </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n3"/>Guelfi illas epistolas<anchor xml:id="n3e"/> etiam atque etiam videre cupio. </ab>
          <ab resp="#editor" xml:id="seg3">Tibi, vir <anchor xml:id="n4"/>maxime reverende<anchor xml:id="n4e"/>, amici sine dubio erunt Viennae. Est in bibliotheca augusta codex, qui continet<anchor xml:id="n5"/> Eschenbachi poetae Germanici Germanicum opus De occupatione Terrae Sanctae per Godefridum Bullionensem. Lambecius eius libro secundo Bibliothecae meminit. Si non adeo diffusum opus<anchor xml:id="n5e"/> esset, vellem apographum eius habere et <pb n="1v"/> sumptus descriptionis accuratae lubentissime multis cum gratiis refunderem. Si quid potes, quaeso, mihi non desis. </ab>
          <ab resp="#editor" xml:id="seg4">Paro enim, ut hoc sub rosa dicam, <anchor xml:id="n6"/>Gesta Dei per Germanos<anchor xml:id="n6e"/> sive Scriptores, qui de expeditionibus cruciatis Germanorum scripserunt. Et nactus sum inedita huius generis plura, quae Bongarsius non vidit. Praecipuum opus est <anchor xml:id="n7"/>Oliverii Coloniensis De regibus<anchor xml:id="n7e"/> Terrae Sanctae et aliud eiusdem <anchor xml:id="n8"/>De obsidione et captione Damiatae<anchor xml:id="n8e"/>, utrumque hactenus anecdotum.<anchor xml:id="n9"/> De amissione<anchor xml:id="n9e"/> Terrae Sanctae habeo poetae Germanici anonymi opus; cui quidem illud Eschenbachii poema praemittere vellem. </ab>
          <ab resp="#editor" xml:id="seg5">Litteras ad me si legato nostro domino de Huldenberg tradi curabis, recte ad me venient. </ab>
-         <ab resp="#editor" xml:id="seg6">Crisin, quam nuper edidi, diplomatis Osnabrugensis de scholis Graecis et Latinis <choice><sic>apud</sic><corr>approbarunt</corr></choice> Socii Jesu Antwerpienses. Vellem et tuum de ea iudicium audire, si quidem illam <anchor xml:id="n10"/>transmittendi occasio<anchor xml:id="n10e"/> esset. <pb n="2r"/> </ab>
+         <ab resp="#editor" xml:id="seg6">Crisin, quam nuper edidi, diplomatis Osnabrugensis de scholis Graecis et Latinis <choice>
+               <sic>apud</sic>
+               <corr>approbarunt</corr>
+            </choice> Socii Jesu Antwerpienses. Vellem et tuum de ea iudicium audire, si quidem illam <anchor xml:id="n10"/>transmittendi occasio<anchor xml:id="n10e"/> esset. <pb n="2r"/>
+         </ab>
          <ab resp="#editor" xml:id="seg7">Hoc ipso momento Brema mihi mittitur inclusa invitatio. Reverendissimus <anchor xml:id="n11"/>Hasaeus<anchor xml:id="n11e"/> non parum eruditionis et multum pecuniae habet, poterit utilia quaedam praestare. Sed festinationi meae veniam hac vice dabis et favebis</ab>
          <closer>Maxime reverendi nominis tui cultori devoto Joanni Georgio Eccardo.</closer>
          <closer>Hanoverae die 27. Januarii 1718.</closer>

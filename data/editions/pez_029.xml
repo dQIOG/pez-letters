@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="29" xml:id="pez-0029">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Weinckens an Bernhard Pez. 1710-01-14. Seligenstadt.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">29</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -74,7 +86,7 @@
             <p corresp="#seg1">JW übermittelt Neujahrswünsche und teilt mit, dass er auf besonderen Auftrag seines Abtes <rs ref="index:d10854e3704">Franz Blöchinger</rs> das beiliegende Material sendet. Er hatte gehofft, auch die benachbarten Klöster würden ihren Beitrag leisten, doch presst man leichter Wasser aus einem Stein, als man ihnen ihre Mitarbeit entlockt. JW wünscht, dass die „<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“ zur größeren Ehre Gottes, des Ordens und BPs gelingen und bald erscheinen möge.</p>
             <p corresp="#seg2">Sein bei der letzten Frankfurter Buchmesse der Öffentlichkeit präsentiertes jüngstes Werk „<rs ref="index:d10854e32450">Iubilus eucharisticus coelestis Sion</rs>“ hätte er gerne geschickt, doch weil es über 20 (recte: 200) Seiten zählt, kann es nicht mit der Briefpost befördert werden. Er ist erfreut, dass sein Verleger (<rs ref="index:d10854e17372">Lochner</rs>), obwohl die erste Auflage mehr als 2000 Stück betrug, ihn bereits wegen einer zweiten angesprochen hat.</p>
             <p corresp="#seg3">JW weist BP darauf hin, dass <rs ref="index:d14380e10826">Felix Egger</rs>, Konventuale von <rs ref="index:d10854e23168">Petershausen</rs> und Propst zu <rs ref="index:d10854e1255">Appenzell</rs> (recte: <rs ref="index:d10854e15095">Klingenzell</rs>), neben anderen Büchern ebenfalls eine „<rs ref="index:d10854e7349">Bibliotheca Benedictina</rs>“ plant, wie JW aus einem Schreiben Eggers weiß. Er teilt dies mit, damit nicht einer von beiden bereits getane Arbeit nochmals tut, und hofft, dass BP und <rs ref="index:d14380e10826">Egger</rs> miteinander bereits in Verbindung stehen. JW freut sich über die Anknüpfung der Freundschaft mit BP und bietet, auch im Namen seines <rs ref="index:d10854e3704">Abtes</rs>, weitere Hilfe an.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -84,12 +96,14 @@
             <p>Die Beilage scheint nicht erhalten zu sein; es dürfte sich aber vermutlich um
                   Materialien zu den Schriftstellern von Seligenstadt gehandelt haben. Die
                   Information, dass JW an einer Hausgeschichte von Seligenstadt arbeitete (der
-                  „Navarchia Seligenstadiana“), wie BP im Januar 1711 René Massuet mitteilte (<ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg14">14</ref>), geht aus dem Text dieses Briefs nicht
+                  „Navarchia Seligenstadiana“), wie BP im Januar 1711 René Massuet mitteilte (<ref type="letter" target="letter:143">143</ref>
+               <ref target="letter:143#seg14">14</ref>), geht aus dem Text dieses Briefs nicht
                   hervor und dürfte deshalb aus der Beilage stammen.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned>vicinae ... abbatiae</mentioned>
-            <p><rs type="bibl" ref="bibl:15152">Benz, Zwischen Tradition und Kritik </rs>567,
+            <p>
+               <rs type="bibl" ref="bibl:15152">Benz, Zwischen Tradition und Kritik </rs>567,
                   denkt an St. Jakob zu Mainz. Darüber hinaus könnte Seligenstadt von BP auch als
                   Relais in die Bursfelder Kongregation gedacht worden sein, zu deren führenden
                   Klöstern es zählte (vgl. <rs type="bibl" ref="bibl:20542">Ziegler, Bursfelder
@@ -106,10 +120,16 @@
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
             <mentioned>bibliopola</mentioned>
             <p>Zu Johann Christoph Lochner vgl. <rs type="bibl" ref="bibl:18698">Paisey,
-                     Buchdrucker </rs>158; <rs type="bibl" ref="bibl:19656">Sporhan-Krempel–Wohnhaas, Nürnberger Buchhandel</rs> col. 1057.</p><p>Tatsächlich war Egger Propst zu Klingenzell. Moritz Müller stellte diese
+                     Buchdrucker </rs>158; <rs type="bibl" ref="bibl:19656">Sporhan-Krempel–Wohnhaas, Nürnberger Buchhandel</rs> col. 1057.</p>
+            <p>Tatsächlich war Egger Propst zu Klingenzell. Moritz Müller stellte diese
                   Fehlinformation in 57 richtig, nachdem ihn BP anscheinend (wohl in 54) nach Egger
-                  gefragt hatte.</p><p>Zu Eggers Vorhaben einer Literaturgeschichte des Benediktinerordens vgl. <ref type="letter" target="letter:231">231</ref> <ref target="letter:231#seg3">3</ref>; zu seinem Gebrauch von Enzykliken zur
-                  Materialsammlung vgl. <ref type="letter" target="letter:63">63</ref> <ref target="letter:63#seg3">3</ref>, <ref type="letter" target="letter:267">267</ref> <ref target="letter:267#seg4">4</ref>, <ref type="letter" target="letter:303">303</ref> <ref target="letter:303#seg4">4</ref>.</p>
+                  gefragt hatte.</p>
+            <p>Zu Eggers Vorhaben einer Literaturgeschichte des Benediktinerordens vgl. <ref type="letter" target="letter:231">231</ref>
+               <ref target="letter:231#seg3">3</ref>; zu seinem Gebrauch von Enzykliken zur
+                  Materialsammlung vgl. <ref type="letter" target="letter:63">63</ref>
+               <ref target="letter:63#seg3">3</ref>, <ref type="letter" target="letter:267">267</ref>
+               <ref target="letter:267#seg4">4</ref>, <ref type="letter" target="letter:303">303</ref>
+               <ref target="letter:303#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg1">
             <mentioned>EX toto CorDe aC Mente</mentioned>
@@ -134,7 +154,8 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende et eximie pater, domine confrater venerande.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende et eximie pater, domine confrater venerande.</opener>
          <ab resp="#editor" xml:id="seg1">Praeter humanissimam salutem et cordialem novi anni pluriumque subsequentium apprecationem notifico, quod <anchor xml:id="n1"/>praesentia inclusa<anchor xml:id="n1e"/> de mandato speciali mei gratiosi domini abbatis transmittam. Sperabam quidem fore, ut <anchor xml:id="n2"/>vicinae ordinis nostri abbatiae<anchor xml:id="n2e"/> et suam conferrent symbolam, at e pumice prius quis eliciet aquas, quam simile quid extorqueat. Faxit Deus! ut Benedictinae bibliothecae vestrae labor ad maiorem Dei gloriam, ordinis decorem et eximiae dominationis vestrae honorem cedat lucemque brevi aspiciat publicam. </ab>
          <ab resp="#editor" xml:id="seg2">Ultimum opusculum a me ultimis nundinis Francofurtensibus <pb n="1v"/> luci publicae datum libenter communicassem, sed cum plus quam 20 continet paginas, per postam mitti non potuit. Hoc mihi saltem (quod tamen absque iactantia dictum velim) placet, quod bibliopola, qui ultra 2000 exemplaria excudit, secundam iam apud me solicitet editionem. </ab>
          <ab resp="#editor" xml:id="seg3">Unum tamen eximiam paternitatem vestram celare nequeo, quod scilicet eximius pater Felix Egger professus Benedictinus in Petershausen, praepositus in <sic>Appelzell</sic>, praeter alios libros, quos orbi literario communicare intendit, etiam (ut mihi saltem scripsit) parat talem Benedictinam bibliothecam; quod admonere volui, ne quis vestrum unus forsan rem actam agat; licet ea spe lacter, quod inter se habeant correspondentiam. Caeterum mihi congratulor, quod hae litterae sint prima thura, quibus nascenti inter nos amicitiae litare volui; sin alias reverendissimus meus dominus abbas aut ego pro meo modulo eximiae paternitati suae hisce in regionibus obsequia mea offerre potero, exspecto desuper mandatum, hac autem vice mihi hanc veniam exoro, ut me subscribam, quod perennem</ab>

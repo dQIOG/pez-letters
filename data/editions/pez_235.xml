@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="235" xml:id="pez-0235">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Moritz Müller an Bernhard Pez. 1712-04-09. St. Gallen.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">235</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -79,7 +91,7 @@
             <p corresp="#seg1">MM sendet den Brief mit dem nach <rs ref="index:d14380e45571">Wien</rs> abreisenden <rs ref="index:d10854e11792">Franz Jodok Halter</rs> aus <rs ref="index:d14380e25521">Luzern</rs>, der in <rs ref="index:d14380e39290">St. Gallen</rs> Kirchenrecht studiert, mit seinen Ostergrüßen – und gleichsam den Überbringer als Osterei. Er bittet, Halter einen Besuch in <rs ref="index:d14380e28088">Melk</rs> zu gestatten. Dieser hat in <rs ref="index:d14380e45571">Wien</rs> zwei Verwandte, deren einer (<rs ref="index:d10854e4641">Johann Walter Bürgisser</rs>?) Domkanonikus zu <rs ref="index:d10854e33634">St. Stephan</rs>, der andere (<rs ref="index:d10854e11809">Johann Walter Halter</rs>) Pfarrer (in <rs ref="index:d10854e33778">Simmering</rs>) ist. BP soll <rs ref="index:d10854e11792">Halter</rs> bei <rs ref="index:d14380e39962">Anselm Schramb</rs>, dem Präfekten des <rs ref="index:d10854e33557">Melkerhofes</rs> (recte: Studiendirektor), empfehlen. Mit <rs ref="index:d10854e11792">Halter</rs> reist ein <rs ref="index:d10854e11802">Schneidergeselle</rs>, welchen MM als einen treuen <rs ref="index:d14380e39290">St. Galler</rs> Untertanen preist, dessen Dienste bei Bedarf auch von <rs ref="index:d14380e28088">Melk</rs> in Anspruch genommen werden können.</p>
             <p corresp="#seg2">Hätte er früher von der Abreise der beiden erfahren, so hätte MM auch das „<rs ref="index:d10854e20715">Elogium viae et vitae</rs>“ des Kardinals <rs ref="index:d14380e40803">Sfondrati</rs> mitgesendet, das er aus dessen römischem Tagebuch und anderen Quellen kompiliert hat. Weil es aber noch nicht fertig abgeschrieben ist, soll es bei anderer Gelegenheit folgen. MM betont, dass es sich um eine neue Schrift handelt, die noch keinem anderen Kloster mitgeteilt worden ist; die Sendung nach <rs ref="index:d14380e28088">Melk</rs> ist ein Zeichen seiner besonderen Wertschätzung.</p>
             <p corresp="#seg3">Die bestellten „<rs ref="index:d14380e25664">Acta sanctorum OSB</rs>“ sind bereits unterwegs nach <rs ref="index:d14380e39290">St. Gallen</rs>; nach ihrer Ankunft wird sie MM sogleich weitersenden. Selbst erwartet MM ungeduldig die versprochenen Schriften <ref type="letter" target="letter:209">209</ref> und weitere Exemplare von BPs <rs ref="index:d10854e23782">Enzyklik</rs>. Um doch noch eine Gabe mitsenden zu können, schickt MM den letzten Brief von <rs ref="index:d14380e26993">René Massuet</rs> aus Paris an ihn, aus dem BP ersehen kann, wie viel Gunst ihm MMs Intervention eingebracht hat. BP soll den Brief später zurücksenden. MM hat den Brief eilends und zudem nach Art der Müller frühmorgens geschrieben, weil der Überbringer auf seine Abreise drängt.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -87,7 +99,9 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>secura ac opportuna occasione</mentioned>
             <p>Wenige Tage nach Absendung dieses Schreibens, am 13. April, kam es zum Ausbruch
-                  des „Toggenburgerkriegs“ (vgl. <ref type="letter" target="letter:15">15</ref> <ref target="letter:15#seg2">2</ref>, <ref type="letter" target="letter:230">230</ref> <ref target="letter:230#seg6">6</ref>, <ref type="letter" target="letter:259">259</ref>). Ob die
+                  des „Toggenburgerkriegs“ (vgl. <ref type="letter" target="letter:15">15</ref>
+               <ref target="letter:15#seg2">2</ref>, <ref type="letter" target="letter:230">230</ref>
+               <ref target="letter:230#seg6">6</ref>, <ref type="letter" target="letter:259">259</ref>). Ob die
                   Abreise eines Studenten des St. Galler Hausstudiums eventuell damit in
                   Zusammenhang steht, ist nicht zu belegen, aber denkbar.</p>
          </note>
@@ -141,13 +155,16 @@
                   des Kardinals Sfondrati von Hermann Schenk überliefert: StiA St. Gallen, Bd. 360,
                   391–470; vgl. <rs type="bibl" ref="bibl:20258">Weidmann, Bibliothek</rs> 85. Ein
                   etwa 100 Seiten starkes „Elogium“ auf Sfondrati, das sich im Archiv von Rheinau
-                  befunden haben soll (vgl. <rs type="bibl" ref="bibl:16898">Heer, Pez</rs> 412; <rs type="bibl" ref="bibl:16988"><rs type="bibl" ref="bibl:16988">Henggeler,
-                        Profeßbuch St. Gallen</rs></rs> 180, 340), könnte die Arbeit von MM gewesen
+                  befunden haben soll (vgl. <rs type="bibl" ref="bibl:16898">Heer, Pez</rs> 412; <rs type="bibl" ref="bibl:16988">
+                  <rs type="bibl" ref="bibl:16988">Henggeler,
+                        Profeßbuch St. Gallen</rs>
+               </rs> 180, 340), könnte die Arbeit von MM gewesen
                   sein; es ist allerdings heute nicht mehr auffindbar. Wenige Jahre später, 1718,
                   entstand unter Verwendung der Schrift Schenks eine Deicola von Ligerz
                   zugeschriebene „Relatio brevis vitae ac gestorum [...] Coelestini Sfondrati“: StiA
                   St. Gallen, Bd. 240; vgl. <rs type="bibl" ref="bibl:36248">Gustapane, Fonti
-                     archivistiche</rs> 23f. Vgl. <ref type="letter" target="letter:272">272</ref> <ref target="letter:272#seg4">4</ref> sowie <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 391–393.</p>
+                     archivistiche</rs> 23f. Vgl. <ref type="letter" target="letter:272">272</ref>
+               <ref target="letter:272#seg4">4</ref> sowie <rs type="bibl" ref="bibl:19778">Stockinger, Fidelis</rs> 391–393.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg2">
             <mentioned>ex diario Romano</mentioned>
@@ -162,7 +179,8 @@
             <p>Dies steht im Widerspruch dazu, dass MMs Lyoner Buchhändler am 12. April, einige
                   Tage nach Absendung dieses Briefs, an MM schrieben, sie würden die „Acta sanctorum
                   OSB“ für ihn in Paris zu beschaffen versuchen (StiA St. Gallen, Bd. 322, 481–482;
-                  vgl. <ref type="letter" target="letter:204">204</ref> <ref target="letter:204#seg2">2</ref>). Entweder spricht MM hier von einer
+                  vgl. <ref type="letter" target="letter:204">204</ref>
+               <ref target="letter:204#seg2">2</ref>). Entweder spricht MM hier von einer
                   Lieferung aus anderer Quelle, oder seine Ankündigung ist unbegründet
                   optimistisch.</p>
          </note>
@@ -189,13 +207,17 @@
    </standOff>
    <text>
       <front>
-         <p>Plurimum reverendo religiosissimo ac clarissimo domino in Christo patri Bernardo Pez florentissimi ac exempti monasterii Mellicensis ordinis sancti patris Benedicti capitulari et bibliothecario ac novitiorum magistro dignissimo, amico meo et confratri colendissimo. Per Ulm. Mölckh in Österreich.<note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex, 90r.</note></p>
+         <p>Plurimum reverendo religiosissimo ac clarissimo domino in Christo patri Bernardo Pez florentissimi ac exempti monasterii Mellicensis ordinis sancti patris Benedicti capitulari et bibliothecario ac novitiorum magistro dignissimo, amico meo et confratri colendissimo. Per Ulm. Mölckh in Österreich.<note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex, 90r.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Ex S. Gallo 1712 die 9. Aprilis.</opener>
+         <opener>
+            <pb n="1r"/> Ex S. Gallo 1712 die 9. Aprilis.</opener>
          <opener>Admodum reverende religiosissime ac clarissime domine in Christo pater ac domine amice colendissime.</opener>
-         <ab resp="#editor" xml:id="seg1">Hac tam <anchor xml:id="n1"/>secura ac opportuna occasione<anchor xml:id="n1e"/> abeuntem a nobis Viennam nobilem ac ingenuum doctissimumque dominum <anchor xml:id="n2"/>Franciscum Jodocum Halter<anchor xml:id="n2e"/> Lucernatem apud nos sacrorum canonum studiosum comitor, et iucundissimum <anchor xml:id="n3"/>denuo Pascha adgratulor<anchor xml:id="n3e"/>. Pro <anchor xml:id="n4"/>ovo interim Paschali hunc domini Galli pullum<anchor xml:id="n4e"/> offero eumdemque, ut Melicium videre mereatur, impensius recommendo. Habet is Viennae <anchor xml:id="n5"/>duos cognatos<anchor xml:id="n5e"/>, unum canonicum ad S. Stephanum, alterum vero alicubi parochum. Plurimum is una mecum obligabitur, si per admodum reverendam dominationem suam domino Anselmo Schramb, <sic>Vienensis</sic>  aulae vestrae praefecto, recommendaretur. <sic>Famulum</sic><note place="foot" xml:id="d4618e29293">Das Wort müsste im Nominativ stehen.</note>, quem secum ducit, in monasterio nostro sutoris opificium exercuit, qui more opificum peregrinatur, ut quid experiatur. Est is e subditis nostris, homo simplex et rectus, et a fidelitate sua commendatissimus. Eo, si placuerit, uti poterit Melicium pro arbitrio, si forsan tali indigeret. Sed nihil ego obtrudo, qui commendandus ipse prior alios recommendo. </ab>
-         <ab resp="#editor" xml:id="seg2">Addidissem hac ipsa occasione aliquid in rem vestram facturum et gestui vestro, ut spero, apprime placiturum, si modo maturius mihi abitum hi suum intimassent, scilicet <anchor xml:id="n6"/>Elogium viae et vitae eminentissimi cardinalis nostri Sfondrati<anchor xml:id="n6e"/> a me tum <anchor xml:id="n7"/>ex diario Romano<anchor xml:id="n7e"/>, tum aliis actis compilatum. At quia totum nondum descriptum fuit nec tam brevi mora absolvi potuit, illud proxime sequetur alia occasione. Placebit utique et Melicio tanti viri gloriosa memoria, si minus mea industria et obsequia. Scriptum tamen illud novum rarumque est, nec ulli hactenus etiamnum monasterio communicatum. Ex quo videre potest, quo loco in animo meo Melitium vestrum pono, cui prima et optima primum communico. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg1">Hac tam <anchor xml:id="n1"/>secura ac opportuna occasione<anchor xml:id="n1e"/> abeuntem a nobis Viennam nobilem ac ingenuum doctissimumque dominum <anchor xml:id="n2"/>Franciscum Jodocum Halter<anchor xml:id="n2e"/> Lucernatem apud nos sacrorum canonum studiosum comitor, et iucundissimum <anchor xml:id="n3"/>denuo Pascha adgratulor<anchor xml:id="n3e"/>. Pro <anchor xml:id="n4"/>ovo interim Paschali hunc domini Galli pullum<anchor xml:id="n4e"/> offero eumdemque, ut Melicium videre mereatur, impensius recommendo. Habet is Viennae <anchor xml:id="n5"/>duos cognatos<anchor xml:id="n5e"/>, unum canonicum ad S. Stephanum, alterum vero alicubi parochum. Plurimum is una mecum obligabitur, si per admodum reverendam dominationem suam domino Anselmo Schramb, <sic>Vienensis</sic>  aulae vestrae praefecto, recommendaretur. <sic>Famulum</sic>
+            <note place="foot" xml:id="d4618e29293">Das Wort müsste im Nominativ stehen.</note>, quem secum ducit, in monasterio nostro sutoris opificium exercuit, qui more opificum peregrinatur, ut quid experiatur. Est is e subditis nostris, homo simplex et rectus, et a fidelitate sua commendatissimus. Eo, si placuerit, uti poterit Melicium pro arbitrio, si forsan tali indigeret. Sed nihil ego obtrudo, qui commendandus ipse prior alios recommendo. </ab>
+         <ab resp="#editor" xml:id="seg2">Addidissem hac ipsa occasione aliquid in rem vestram facturum et gestui vestro, ut spero, apprime placiturum, si modo maturius mihi abitum hi suum intimassent, scilicet <anchor xml:id="n6"/>Elogium viae et vitae eminentissimi cardinalis nostri Sfondrati<anchor xml:id="n6e"/> a me tum <anchor xml:id="n7"/>ex diario Romano<anchor xml:id="n7e"/>, tum aliis actis compilatum. At quia totum nondum descriptum fuit nec tam brevi mora absolvi potuit, illud proxime sequetur alia occasione. Placebit utique et Melicio tanti viri gloriosa memoria, si minus mea industria et obsequia. Scriptum tamen illud novum rarumque est, nec ulli hactenus etiamnum monasterio communicatum. Ex quo videre potest, quo loco in animo meo Melitium vestrum pono, cui prima et optima primum communico. <pb n="1v"/>
+         </ab>
          <ab resp="#editor" xml:id="seg3">Caeterum petita nuper sanctorum <anchor xml:id="n8"/>Acta, ut audivi, iam viae commissa<anchor xml:id="n8e"/> propediem exspecto, et ea transmittam, mox ut accepero. Vicissim et ego nuper mihi condicta una cum pluribus illis encyclicis vestris avidus exspectabo. Et ne vacuus aut otiosus hac vice compaream, en! <anchor xml:id="n9"/>ultimas a domino patre Massuet Parisino ad me datas communico, ut videat, quam non inefficax ultima mea in gratiam vestri fuerit eidem perscripta recommendatio. Spondet omnia et optima in rem vestram factura. Rogo tamen, ut litterae postliminio secure ad me redeant<anchor xml:id="n9e"/>. Haec raptissime et vix non <anchor xml:id="n10"/>Molitorum more<anchor xml:id="n10e"/>, latore ad abitum summo mane festinante. Qui me interim solitis amoribus et sacris favoribus commendo et cum omni veneratione ac reciproco amore immorior</ab>
          <closer>Totus vester pater Mauritius manu propria.</closer>
       </body>

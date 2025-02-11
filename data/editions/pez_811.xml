@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="811" xml:id="pez-0811">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Giuseppe Maria Sandi an Bernhard Pez. 1717-08-13. Padua (S. Giustina).</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">811</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Wie GSa in <ref target="#seg4">&lt;4&gt;</ref> schreibt, versendete er den Brief in zweifacher Ausfertigung: einmal als Begleitschreiben zu dem übermittelten Bücherpaket (A) und ein weiteres Mal separat als Ankündigung desselben (B). Es ist nicht letztgültig zu bestimmen, welche der beiden Versionen die frühere ist; dem Editionstext wird die ausführlichere Textfassung (B) zugrunde gelegt. Als zwei unterschiedliche Briefe geführt werden A und B bei Glassner, Verzeichnis 232. – In B auf 1v Bleistiftkreuz neben dem Text zu Roman Hays „Astrum inextinctum“. – BP erwähnt die Sendung in der Vorrede zu seiner Edition von Barbos „De initio et progressu“: Pez, Thesaurus 2 lix.
             </note>
@@ -55,10 +66,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -84,103 +96,105 @@
                <ptr type="sentWith" target="letter:810"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e2974">Armellini, Mariano</term>
-            <term ref="index:d14380e2982">Armellini, Mariano ; Bibliotheca Benedictino-Casinensis sive Scriptorum Casinensis
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e2974">Armellini, Mariano</term>
+               <term ref="index:d14380e2982">Armellini, Mariano ; Bibliotheca Benedictino-Casinensis sive Scriptorum Casinensis
          congregationis alias S. Justinae Patavinae, qui in ea ad haec usque tempora floruerunt,
          operum ac gestorum notitiae. 2 Bde. Assisi 1731–1736</term>
-            <term ref="index:d14380e3857">Barbo, Ludovico</term>
-            <term ref="index:d14380e3867">Barbo, Ludovico ; De initio et progressu congregationis Benedictinae sanctae Justinae
+               <term ref="index:d14380e3857">Barbo, Ludovico</term>
+               <term ref="index:d14380e3867">Barbo, Ludovico ; De initio et progressu congregationis Benedictinae sanctae Justinae
          de Padua</term>
-            <term ref="index:d14380e3875">Barbo, Ludovico ; De initio et progressu congregationis Benedictinae sanctae Justinae
+               <term ref="index:d14380e3875">Barbo, Ludovico ; De initio et progressu congregationis Benedictinae sanctae Justinae
          de Padua ; Ms. Padua, S. Giustina</term>
-            <term ref="index:d14380e3883">Barbo, Ludovico ; De initio et progressu congregationis Benedictinae sanctae Justinae
+               <term ref="index:d14380e3883">Barbo, Ludovico ; De initio et progressu congregationis Benedictinae sanctae Justinae
          de Padua ; Ms. Padua, S. Giustina ; Abschrift</term>
-            <term ref="index:d14380e3890">Barbo, Ludovico ; Formula orationis et meditationis</term>
-            <term ref="index:d14380e4170">Bayern, Bayern</term>
-            <term ref="index:d14380e4669">Benedikt von Nursia, hl ; Briefe von und an ihn Ms. Padua, S. Giustina</term>
-            <term ref="index:d14380e4679">Benedikt von Nursia, hl ; Briefe von und an ihn Ms. Padua, S. Giustina ;
+               <term ref="index:d14380e3890">Barbo, Ludovico ; Formula orationis et meditationis</term>
+               <term ref="index:d14380e4170">Bayern, Bayern</term>
+               <term ref="index:d14380e4669">Benedikt von Nursia, hl ; Briefe von und an ihn Ms. Padua, S. Giustina</term>
+               <term ref="index:d14380e4679">Benedikt von Nursia, hl ; Briefe von und an ihn Ms. Padua, S. Giustina ;
          *Drucke</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e5264">Bernardo, Luca</term>
-            <term ref="index:d14380e6458">Bozen</term>
-            <term ref="index:d14380e6475">Bozen ; Egidimarkt</term>
-            <term ref="index:d14380e6642">Brebbia, Gabriele</term>
-            <term ref="index:d14380e7150">Burgos, Alessandro</term>
-            <term ref="index:d14380e7546">Carrara, Flaminio</term>
-            <term ref="index:d14380e7686">Cavacci, Giacomo</term>
-            <term ref="index:d14380e7696">Cavacci, Giacomo ; Historiarum coenobii D. Justinae Patavinae libri sex. Venedig
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e5264">Bernardo, Luca</term>
+               <term ref="index:d14380e6458">Bozen</term>
+               <term ref="index:d14380e6475">Bozen ; Egidimarkt</term>
+               <term ref="index:d14380e6642">Brebbia, Gabriele</term>
+               <term ref="index:d14380e7150">Burgos, Alessandro</term>
+               <term ref="index:d14380e7546">Carrara, Flaminio</term>
+               <term ref="index:d14380e7686">Cavacci, Giacomo</term>
+               <term ref="index:d14380e7696">Cavacci, Giacomo ; Historiarum coenobii D. Justinae Patavinae libri sex. Venedig
          1606</term>
-            <term ref="index:d14380e8660">Cordes, Eutychius de</term>
-            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
-            <term ref="index:d14380e15500">Giordani, Gasparo</term>
-            <term ref="index:d14380e15512">Giordani, Gasparo ; Formula ad instituendos novitios. Ms. Padua, S. Giustina</term>
-            <term ref="index:d14380e15528">Girolamo da Milano</term>
-            <term ref="index:d14380e15537">Girolamo da Potenza</term>
-            <term ref="index:d14380e16373">Gregorio da Padova</term>
-            <term ref="index:d14380e16765">Guglielmi, Luca</term>
-            <term ref="index:d14380e17379">Hay, Roman ; Astrum inextinctum sive Ius agendi antiquorum religiosorum ordinum pro
+               <term ref="index:d14380e8660">Cordes, Eutychius de</term>
+               <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+               <term ref="index:d14380e15500">Giordani, Gasparo</term>
+               <term ref="index:d14380e15512">Giordani, Gasparo ; Formula ad instituendos novitios. Ms. Padua, S. Giustina</term>
+               <term ref="index:d14380e15528">Girolamo da Milano</term>
+               <term ref="index:d14380e15537">Girolamo da Potenza</term>
+               <term ref="index:d14380e16373">Gregorio da Padova</term>
+               <term ref="index:d14380e16765">Guglielmi, Luca</term>
+               <term ref="index:d14380e17379">Hay, Roman ; Astrum inextinctum sive Ius agendi antiquorum religiosorum ordinum pro
          recipiendis suis monasteriis et bonis ecclesiasticis per sacrae caesareae maiestatis
          edictum generale vel ius belli etc. restituendis. Köln 1636</term>
-            <term ref="index:d14380e19828">Italien, Italiener, Italienisch</term>
-            <term ref="index:d14380e20126">Jesuiten</term>
-            <term ref="index:d14380e22371">Kongregationen des Benediktinerordens ; Cassinenserkongregation</term>
-            <term ref="index:d14380e22405">Kongregationen des Benediktinerordens ; Cassinenserkongregation ; Provinzen</term>
-            <term ref="index:d14380e23892">Lanteri, Ilarione</term>
-            <term ref="index:d14380e23973">Latein</term>
-            <term ref="index:d14380e25002">Lippi, Girolamo</term>
-            <term ref="index:d14380e26027">Malassis, Paul</term>
-            <term ref="index:d14380e26813">Martinoni, Licinio</term>
-            <term ref="index:d14380e26948">Massimo da Sicilia</term>
-            <term ref="index:d14380e27152">Matina, Leone</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e29748">Mosconi, Lazzaro</term>
-            <term ref="index:d14380e30252">Neapel</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e32084">Padua</term>
-            <term ref="index:d14380e32104">Padua ; S. Giustina</term>
-            <term ref="index:d14380e32129">Padua ; S. Giustina ; Bibliothek ; Barbo, De initio et progressu congregationis
+               <term ref="index:d14380e19828">Italien, Italiener, Italienisch</term>
+               <term ref="index:d14380e20126">Jesuiten</term>
+               <term ref="index:d14380e22371">Kongregationen des Benediktinerordens ; Cassinenserkongregation</term>
+               <term ref="index:d14380e22405">Kongregationen des Benediktinerordens ; Cassinenserkongregation ; Provinzen</term>
+               <term ref="index:d14380e23892">Lanteri, Ilarione</term>
+               <term ref="index:d14380e23973">Latein</term>
+               <term ref="index:d14380e25002">Lippi, Girolamo</term>
+               <term ref="index:d14380e26027">Malassis, Paul</term>
+               <term ref="index:d14380e26813">Martinoni, Licinio</term>
+               <term ref="index:d14380e26948">Massimo da Sicilia</term>
+               <term ref="index:d14380e27152">Matina, Leone</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e29748">Mosconi, Lazzaro</term>
+               <term ref="index:d14380e30252">Neapel</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e32084">Padua</term>
+               <term ref="index:d14380e32104">Padua ; S. Giustina</term>
+               <term ref="index:d14380e32129">Padua ; S. Giustina ; Bibliothek ; Barbo, De initio et progressu congregationis
          Benedictinae sanctae Justinae de Padua. Ms</term>
-            <term ref="index:d14380e32136">Padua ; S. Giustina ; Bibliothek ; Briefe des hl. Benedikt und seiner Schüler
+               <term ref="index:d14380e32136">Padua ; S. Giustina ; Bibliothek ; Briefe des hl. Benedikt und seiner Schüler
          Ms</term>
-            <term ref="index:d14380e32145">Padua ; S. Giustina ; Bibliothek ; Giordani, Formula ad instituendos novitios.
+               <term ref="index:d14380e32145">Padua ; S. Giustina ; Bibliothek ; Giordani, Formula ad instituendos novitios.
          Ms</term>
-            <term ref="index:d14380e32152">Padua ; S. Giustina ; Bibliothek ; Petrus Diaconus, Epitome chronicorum Casinensium.
+               <term ref="index:d14380e32152">Padua ; S. Giustina ; Bibliothek ; Petrus Diaconus, Epitome chronicorum Casinensium.
          Ms</term>
-            <term ref="index:d14380e32161">Padua ; S. Giustina ; Bibliothek ; Vernazza, Vita beati Nicolai de Prussia. Ms</term>
-            <term ref="index:d14380e32168">Padua ; S. Giustina ; Schriftstellerkataloge. Ms</term>
-            <term ref="index:d14380e32186">Padua ; S. Urbano</term>
-            <term ref="index:d14380e33092">Petrus Diaconus ; Epitome chronicorum Casinensium. Ms. Padua, S. Giustina</term>
-            <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
-            <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum
+               <term ref="index:d14380e32161">Padua ; S. Giustina ; Bibliothek ; Vernazza, Vita beati Nicolai de Prussia. Ms</term>
+               <term ref="index:d14380e32168">Padua ; S. Giustina ; Schriftstellerkataloge. Ms</term>
+               <term ref="index:d14380e32186">Padua ; S. Urbano</term>
+               <term ref="index:d14380e33092">Petrus Diaconus ; Epitome chronicorum Casinensium. Ms. Padua, S. Giustina</term>
+               <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
+               <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum
          Benedictinorum e celeberrima congregatione S. Mauri in Francia. Augsburg–Graz 1716</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e35167">Pignolato, Prosdocimo</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
-            <term ref="index:d14380e35888">Praglia</term>
-            <term ref="index:d14380e35902">Praglia ; Archiv</term>
-            <term ref="index:d14380e35909">Praglia ; Bibliothek</term>
-            <term ref="index:d14380e36578">Ravenna ; S. Vitale</term>
-            <term ref="index:d14380e36586">Ravenna ; S. Vitale ; Bibliothek</term>
-            <term ref="index:d14380e37680">Rom, Römer</term>
-            <term ref="index:d10854e26309">Rom, Römer ; S. Paolo fuori le Mura</term>
-            <term ref="index:d14380e39934">Schoppe, Kaspar</term>
-            <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
-            <term ref="index:d10854e28377">Schwaben</term>
-            <term ref="index:d14380e41073">Sizilien</term>
-            <term ref="index:d14380e41204">Sonzogni, Teodoro</term>
-            <term ref="index:d14380e41819">Suarez, Agostino</term>
-            <term ref="index:d14380e42556">Terrarossa, Vitale</term>
-            <term ref="index:d14380e44187">Vecchia, Pietro</term>
-            <term ref="index:d14380e44301">Venedig, Venezianer ; S. Giorgio Maggiore</term>
-            <term ref="index:d14380e44311">Venedig, Venezianer ; S. Giorgio Maggiore ; Bibliothek</term>
-            <term ref="index:d14380e44436">Vernazza, Giuliano ; Vita beati Nicolai de Prussia. Ms. Padua, S. Giustina</term>
-            <term ref="index:d14380e44444">Vernazza, Giuliano ; Vita beati Nicolai de Prussia. Ms. Padua, S. Giustina ;
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e35167">Pignolato, Prosdocimo</term>
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+               <term ref="index:d14380e35888">Praglia</term>
+               <term ref="index:d14380e35902">Praglia ; Archiv</term>
+               <term ref="index:d14380e35909">Praglia ; Bibliothek</term>
+               <term ref="index:d14380e36578">Ravenna ; S. Vitale</term>
+               <term ref="index:d14380e36586">Ravenna ; S. Vitale ; Bibliothek</term>
+               <term ref="index:d14380e37680">Rom, Römer</term>
+               <term ref="index:d10854e26309">Rom, Römer ; S. Paolo fuori le Mura</term>
+               <term ref="index:d14380e39934">Schoppe, Kaspar</term>
+               <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
+               <term ref="index:d10854e28377">Schwaben</term>
+               <term ref="index:d14380e41073">Sizilien</term>
+               <term ref="index:d14380e41204">Sonzogni, Teodoro</term>
+               <term ref="index:d14380e41819">Suarez, Agostino</term>
+               <term ref="index:d14380e42556">Terrarossa, Vitale</term>
+               <term ref="index:d14380e44187">Vecchia, Pietro</term>
+               <term ref="index:d14380e44301">Venedig, Venezianer ; S. Giorgio Maggiore</term>
+               <term ref="index:d14380e44311">Venedig, Venezianer ; S. Giorgio Maggiore ; Bibliothek</term>
+               <term ref="index:d14380e44436">Vernazza, Giuliano ; Vita beati Nicolai de Prussia. Ms. Padua, S. Giustina</term>
+               <term ref="index:d14380e44444">Vernazza, Giuliano ; Vita beati Nicolai de Prussia. Ms. Padua, S. Giustina ;
          Abschrift</term>
-            <term ref="index:d14380e44452">Verona</term>
-            <term ref="index:d14380e44537">Vignola, Attilio</term>
-            <term ref="index:d14380e44850">Waibel, Wunibald</term></keywords></textClass>
+               <term ref="index:d14380e44452">Verona</term>
+               <term ref="index:d14380e44537">Vignola, Attilio</term>
+               <term ref="index:d14380e44850">Waibel, Wunibald</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">BPs <rs ref="index:d14380e34236">Bibliotheksreise</rs> in verschiedene Klöster <rs ref="index:d14380e4170">Bayerns</rs> und <rs ref="index:d10854e28377">Schwaben</rs>s hat GSa davon
                abgehalten, vor den Iden des August an BP zu schreiben. Er gratuliert zur Rückkehr (siehe Kommentar)
@@ -189,7 +203,8 @@
                sollte, nicht wie er wirklich ist; unter seinen Mitbrüdern, zu denen einige bedeutende Gelehrte
                gehören, nimmt er den letzten Rang ein.</p>
             <p corresp="#seg2">GSa kommt nun zum eigentlichen Gegenstand, nämlich seinem an den Kalenden des April übermittelten <rs ref="index:d14380e32168">Katalog der Schriftsteller</rs> von <rs ref="index:d14380e32104">S.
-                  Giustina</rs> <ref type="letter" target="letter:763">763</ref> und BPs freundlicher Antwort darauf.
+                  Giustina</rs>
+               <ref type="letter" target="letter:763">763</ref> und BPs freundlicher Antwort darauf.
                GSa fügt dem Schreiben ein Blatt mit Addenda und Corrigenda bei, in denen besonders die von BP
                beanstandeten Punkte richtiggestellt und aufgeklärt werden. Zusammen mit dieser Ergänzung sendet GSa für
                BP <rs ref="index:d14380e7686">Giacomo Cavaccis</rs> „<rs ref="index:d14380e7696">Historiae coenobii D.
@@ -216,7 +231,8 @@
                GSa in der Folge näher beschreiben will (siehe Kommentar).</p>
             <p corresp="#seg3">Neben dem bisher Genannten sendet GSa auch Material aus S. Maria zu <rs ref="index:d14380e35888">Praglia</rs>, das BP dem dortigen Bibliothekar <rs ref="index:d14380e41819">Agostino Suarez</rs> und
                dem <rs ref="index:d14380e35902">Archivar</rs> sowie Prorektor von <rs ref="index:d14380e32186">S.
-                  Urbano</rs> <rs ref="index:d14380e7546">Flaminio Carrara</rs> zu verdanken hat <ref type="letter" target="letter:801">801</ref>. GSa wünscht, dass er in den übrigen Klöstern seiner <rs ref="index:d14380e22371">Kongregation</rs> Ähnliches erwirken könnte. Er hat dies zwar mit Bitten,
+                  Urbano</rs>
+               <rs ref="index:d14380e7546">Flaminio Carrara</rs> zu verdanken hat <ref type="letter" target="letter:801">801</ref>. GSa wünscht, dass er in den übrigen Klöstern seiner <rs ref="index:d14380e22371">Kongregation</rs> Ähnliches erwirken könnte. Er hat dies zwar mit Bitten,
                Empfehlungsbriefen und Ermahnungen versucht, doch aus der <rs ref="index:d14380e37680">römischen</rs>,
                <rs ref="index:d14380e30252">neapolitanischen</rs> und <rs ref="index:d14380e41073">sizilianischen</rs>
                <rs ref="index:d14380e22405">Provinz</rs> ist kaum etwas zu erhoffen. Der Grund dafür liegt in der Arbeit
@@ -233,7 +249,7 @@
                stellen soll, dass BP es auch erhält.</p>
             <p corresp="#seg5">GSa hat mit Freude BPs „<rs ref="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“ mit deren
                Einleitung gelesen. Er schließt mit der Bitte, nach Erhalt des Päckchens benachrichtigt zu werden.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -251,7 +267,8 @@
                   Verbesserungen und Ergänzungen angebracht. Zusätzlich genannt werden Gabriele
                   Brebbia, Massimo da Sicilia sowie der anonyme Autor des „Paradisus deliciosus“,
                   bei dem es sich um Ilarione Lanteri handelt. Zu diesen vgl. <rs type="bibl" ref="bibl:15352">Bossi, Matricula 1</rs> 65, 260f., 270; <rs type="bibl" ref="bibl:15528">Cantoni Alzati, Biblioteca</rs> 172f.; <rs type="bibl" ref="bibl:15662">Collett, Benedictine Scholars</rs> 10, 44, 55–57; <rs type="bibl" ref="bibl:20490">Zaggia, Tra Mantova e Sicilia </rs>3 1048. Zu
-                  Brebbia vgl. <ref type="letter" target="letter:67">67</ref> <ref target="letter:67#seg1">1</ref>.</p>
+                  Brebbia vgl. <ref type="letter" target="letter:67">67</ref>
+               <ref target="letter:67#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned> Cavaccii Historiam</mentioned>
@@ -351,7 +368,8 @@
          <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg3">
             <mentioned> Romana ... provinciis</mentioned>
             <p>Zur Einteilung der Cassinenserkongregation in
-                  Provinzen vgl. <ref type="letter" target="letter:81">81</ref> <ref target="letter:81#seg4">4</ref>.</p>
+                  Provinzen vgl. <ref type="letter" target="letter:81">81</ref>
+               <ref target="letter:81#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg3">
             <mentioned> Pater ... Marianus</mentioned>
@@ -399,16 +417,181 @@
    </standOff>
    <text>
       <front>
-         <p>Plurimum reverendo ac clarissimo viro domno patri Bernardo Pez Benedictino in inclyto Mellicensi monasterio bibliothecario eruditissimo, patrono praeprimis venerando. Cum sarcinula eodem nomine subsignata. Verona. Bolzano. Mellicium vulgo Mölt [] in Oesterreich<note type="annotation">A.</note></p>
+         <p>Plurimum reverendo ac clarissimo viro domno patri Bernardo Pez Benedictino in inclyto Mellicensi monasterio bibliothecario eruditissimo, patrono praeprimis venerando. Cum sarcinula eodem nomine subsignata. Verona. Bolzano. Mellicium vulgo Mölt [] in Oesterreich<note type="annotation">A.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Plurimum reverendo ac clarissimo domno patri Bernardo Pez patrono et amico optimo domnus Josephus Maria Sandi Benedictinus Justinianus salutem plurimam dicit.</opener>
-         <ab resp="#editor" xml:id="seg1">Iter, praeclarissime domine, quod in Bavariam et Sueviam pro <app><lem>variis</lem><rdg wit="#A"/></app> Benedictinorum lustrandis bibliothecis <app><lem/><rdg wit="#A"><add place="above">suscepisti</add></rdg></app>, vetuit, ne<app><rdg wit="#A"><add place="after">ipse</add></rdg></app> ad te scriberem ante Idus Augusti. Gratulor modo de reditu in patriam deque pretiosa codicum et ampla authorum supellectili, unde tot gemmis ditior valeat Bibliotheca tua<note place="foot" xml:id="d3e39473"><hi rend="italic">gemmis ... tua</hi>: <hi rend="italic">gemmis Bibliotheca tua ditior valeat</hi> A.</note> in eruditorum conspectum gloriosa prodire. Gratias etiam ago maximas tum pro humanitate illa, qua labores meos etsi nullius ponderis pergratos habuisti, cum pro summis laudibus, quibus me prorsus indignum liberiori animo genioque prosequeris. <app><lem>Quamquam</lem><rdg wit="#A">Etsi</rdg></app> enim mihi molestiae plus quam voluptatis attulerint, <app><lem>nihilo</lem><rdg wit="#A"/></app> tamen <app><lem>minus</lem><rdg wit="#A"/></app> laudanti plurimum debeo, quia talem commendat, quem optat,<hi rend="Rimando_nota_a_piè_di_pagina"><seg rend="baseline" xml:space="preserve" xml:id="d3e39496"> et sibi similem opta</seg><seg rend="baseline" xml:id="d3e39498">t</seg></hi><note place="foot" xml:id="d3e39500"><hi rend="italic">et ... optat</hi> fehlt A.</note>. Non plane is sum, in quem tot artis et naturae bona conferantur. Nullum inter eruditos locum <app><lem>habeo</lem><rdg wit="#A">teneo</rdg></app> et vix infimum teneo meos inter confratres ipsos<note place="foot" xml:id="d3e39512"><hi rend="italic">teneo ... ipsos</hi>: <hi rend="italic">habeo inter meos confratres</hi> A.</note>, quorum plerique <app><lem>Dei gratia</lem><rdg wit="#A"/></app> vario studiorum genere delectantur et <app><lem>aliqui</lem><rdg wit="#A">non pauci</rdg></app> etiam <app><lem>omnium</lem><rdg wit="#A">omni</rdg></app> scientiarum notitia praestant. </ab>
-         <ab resp="#editor" xml:id="seg2">Sed iam ad ea, quae scopum finemque nostrum attingunt, <app><lem>respiciamus</lem><rdg wit="#A">sermonem converto</rdg></app>. Haec autem vel attinent<note place="foot" xml:id="d3e39548"><hi rend="italic">Haec ... ad</hi>: <hi rend="italic">Et horum alia</hi> A.</note> ad priorem catalogum virorum illustrium nostrae familiae S. Justinae <app><lem>iam</lem><rdg wit="#A"/></app> ad te missum <app><lem>Kalendis Aprilibus</lem><rdg wit="#A"/></app>, vel ad plenum et germanum humanissimae epistolae tuae ad me datae responsum<note place="foot" xml:id="d3e39566"><hi rend="italic">vel ... responsum</hi>: <hi rend="italic" xml:space="preserve">alia ad plenum germanumque responsum humanissimae eplistolae tuae unice ordinantur </hi>A.</note>. Catalogus ex<app><rdg wit="#A"><add place="after">subiecta</add></rdg></app> appendice addendorum et corrigendorum etc. vel novis accessionibus augetur vel ab erroribus vindicatur vel locis in dubiis <app><lem>et</lem><rdg wit="#A">aut</rdg></app> per te controversis elucidatur. Quod autem reliquum est, una cum eadem appendice tui iuris libentissime facio tum <app><lem>Justinianam</lem><rdg wit="#A"/></app> Cavaccii<app><rdg wit="#A"><add place="after">nostri</add></rdg></app> Historiam, quam <anchor xml:id="n1"/>notis satis eruditis ac criticis modo in tui gratiam pater Attilius noster illustrare conatur<note place="foot" xml:id="d3e39597"><hi rend="italic">quam ... conatur</hi> fehlt A.</note><anchor xml:id="n1e"/>, tum manuscriptos codices, nimirum: Primo. Opusculum Ludovici<anchor xml:id="n2"/> Barbi De initio<anchor xml:id="n2e"/> et progressu nostrae congregationis Justiniano-Cassinensis<note place="foot" xml:id="d3e39603"><hi rend="italic">De ... Cassinensis</hi> fehlt A.</note>, cuius opusculum alterum nondum mihi innotuit<anchor xml:id="n3"/> De orandi methodo<anchor xml:id="n3e"/><hi rend="Rimando_nota_a_piè_di_pagina"><seg rend="baseline" xml:id="d3e39611">, esto aliqua sedulitate conquisieri</seg><seg rend="baseline" xml:id="d3e39613">m</seg></hi><note place="foot" xml:id="d3e39615"><hi rend="italic">cuius ... conquisierim</hi>: <hi rend="italic">cuius alterum De methodo orationis nunquam mihi innotuit</hi> A.</note><hi rend="Rimando_nota_a_piè_di_pagina"><seg rend="baseline" xml:space="preserve" xml:id="d3e39624">. </seg></hi>Secundo. Patris<note place="foot" xml:id="d3e39627">Fehlt A. Nachträglich eingefügt B.</note> Juliani Vitam beati<note place="foot" xml:id="d3e39630">Fehlt A. Nachträglich eingefügt B.</note> Nicolai Pruteni. Tertio.<anchor xml:id="n4"/> Epithoma Historiae Cassinensis Theodorici regis tempore, quod per eundem laudatum patrem Attilium<anchor xml:id="n4e"/> ad veram crisim revocatum inventum est in statera minus habens, subinde <pb n="1v"/> flammis vel aeterna oblivione dignum<note place="foot" xml:id="d3e39635"><hi rend="italic">quod ... dignum</hi>: <hi rend="italic">quod Attilio nostro iudice non luce, sed vel flammis vel eterna oblivione dignum sentio</hi> A.</note>. Quarto. Gasparis<anchor xml:id="n5"/> Scioppii epistolam<anchor xml:id="n5e"/> ad praesulem quemdam nostri ordinis in Germania de Jesuitarum in nos <anchor xml:id="n6"/>pillosa charitate<anchor xml:id="n6e"/>, quam mihi vir clarissimus pater <anchor xml:id="n7"/>Alexander Burgos<anchor xml:id="n7e"/>, verum Italiae nostrae decus<note place="foot" xml:id="d3e39645"><hi rend="italic">Gasparis ... decus</hi>: <hi rend="italic">Gasparis Scioppii epistola de rebus nostris cum patribus Societatis ad praesulem quemdam nostri ordinis in Germania, quam mihi reverendissimus pater Alexander Burgos, verum nostrae Italiae decus</hi> A.</note>, nuperrime communicavit eo potissimum fine, ut <app><lem>et</lem><rdg wit="#A"/></app> in tui notitiam perveniret. Quo factum est, ut patris Romani Hay Astrum inextinctum<note place="foot" xml:id="d3e39657">Hervorhebung fehlt A.</note>, quod <sic>rarrissimum</sic> in nostra Italia<note place="foot" xml:id="d3e39663"><hi rend="italic">rarissimum ... Italia</hi>: <hi rend="italic">apud nos </hi><sic>rarrissimum</sic> A.</note> cernitur, habendi desiderio inardescam. Superest opusculum <anchor xml:id="n8"/>De regimine<anchor xml:id="n8e"/> novitiorum domni Caspari a Papia, quod serio expensum tenebris suis relinquendum <app><lem>censeo</lem><rdg wit="#A">censui</rdg></app>. Argumentum est utile. Ordo ac rerum optima dispositio, sed stylus est incomptus, simplex ac effusus nimium, et liber in iis, de quibus vel parcius et castigatius, vel nihil potius dicendum erat. <app><lem>Excusandus tamen est piissimus author, quia amicum et familiarem in nostris tyronibus educandis familiariter instruit</lem><rdg wit="#A"/></app>. <app><lem>Propterea</lem><rdg wit="#B"><choice><sic>D</sic><corr>Propterea</corr></choice></rdg></app> mittere distuli, ultro <app><lem>tamen</lem><rdg wit="#A"/></app> missurus, si id tibi gratum noverim. Epistolae sancti patris Benedicti sunt<note place="foot" xml:id="d3e39697"><hi rend="italic">Epistolae ... sunt</hi>: <hi rend="italic">Epistolae vero sancti patris Benedicti et monachorum Cassinensium sunt</hi> A.</note> illae ipsae, quas <app><lem wit="#B"><add place="above">commemoras et</add></lem></app> variis <app><lem>caracteribus</lem><rdg wit="#A"/></app> impressas nostris in bibliothecis<note place="foot" xml:id="d3e39722"><hi rend="italic">nostris ... bibliothecis</hi>: <hi rend="italic">in nostris bibliothecis</hi> A.</note> habemus. <app><lem>Nec magni faciendae sunt epistolae monachorum Cassinensium; quas infra recenseo</lem><rdg wit="#A"/></app>. </ab>
-         <ab resp="#editor" xml:id="seg3"><hi rend="Fußnotenzeichen1"><seg rend="baseline" xml:id="d3e39740">Ulterius praeter</seg></hi> Justinianae Historiae duplicatum exemplar et alia mitto<note place="foot" xml:id="d3e39743"><hi rend="italic">Ulterius ... mitto</hi>: <hi rend="italic">Ulterius cum Cavaccio et aliis mitto</hi> A.</note> etiam, quae ad nostrum Prataleae monasterium <app><lem>pertinent</lem><rdg wit="#A">attinent</rdg></app>. Nec enim hac in re tibi defuerunt pater Augustinus Suarez praefectus bibliothecae nec pater Flaminius Carraria <app><lem>prorrector</lem><rdg wit="#A">prorector</rdg></app>  <anchor xml:id="n9"/>S. Urbani<anchor xml:id="n9e"/> et archivista. Ille totam illustravit bibliothecam et authorum catalogum contexit; iste, quae ex archivis petenda erant, suppeditavit. Utinam in reliquis nostrae congregationis Cassinensis<note place="foot" xml:id="d3e39768"><hi rend="italic">nostrae ... Cassinensis</hi>: <hi rend="italic">Italiae</hi> A.</note> monasteriis <app><lem>ididem</lem><rdg wit="#A">id</rdg></app> mihi licuisset. Non peperci sane vel precibus vel litteris. Ursi etiam plures ex nostris consodalibus<note place="foot" xml:id="d3e39783"><hi rend="italic">ex ... consodalibus</hi>: <hi rend="italic">in Italia sodales</hi> A.</note>. Verum ex<anchor xml:id="n10"/> Romana, Neapolitana et Sicula provinciis<anchor xml:id="n10e"/> parum nihilve sperare iuvat. Cur? <app><lem>Pater</lem><rdg wit="#A"/></app> domnus Marianus monachus S. Pauli de Urbe meditatur et ipse Bibliothecam authorum congregationis Cassinensis<note place="foot" xml:id="d3e39795"><hi rend="italic">congregationis Cassinensis</hi>: <hi rend="italic">Cassinensium (et solum Cassinensium)</hi> A.</note> et notitias non exiguo labore partas nimio zelo custodit, ne alieni iuris fiant. Conatum longe feliciorem expertus sum apud patrem domnum Theodorum<anchor xml:id="n11"/> Sonzonium<anchor xml:id="n11e"/> S. Vitalis <app><lem>Ravennae</lem><rdg wit="#A">Ravennatensis</rdg></app> bibliothecarium et patrem domnum<anchor xml:id="n12"/> Licinium Martinonum<anchor xml:id="n12e"/> S. Georgii Maioris <pb n="2r"/> Venetiarum amplissimae illius bibliothecae moderatorem. An promissis facta responderint? Pro eis fideiubeo libenter<note place="foot" xml:id="d3e39813"><hi rend="italic">bibliothecae ... libenter</hi>: <hi rend="italic">bibliothecae praefectum, dummodo promissis facta respondeant. Ipse tamen pro eis libentissime fideiubeo</hi> A.</note>. </ab>
-         <ab resp="#editor" xml:id="seg4">Ad te itaque praefata mittuntur opera<note place="foot" xml:id="d3e39824"><hi rend="italic">Ad ... opera</hi>: <hi rend="italic">Ad te demum praefata opera diriguntur</hi> A.</note> oblata <anchor xml:id="n13"/>nundinarum<anchor xml:id="n13e"/> Bolzanensium occasione, et Padua, Verona Bolzanum diriguntur<note place="foot" xml:id="d3e39833"><hi rend="italic">et ... diriguntur</hi>: <hi rend="italic">Diriguntur Bolzanum</hi> A.</note> Ad <app><lem>dominum</lem><rdg wit="#A"/></app><anchor xml:id="n14"/> Lazarum Mosconium<anchor xml:id="n14e"/> et socios, Italice: Alli signori Lazaro Mosconi e compagni. Ab his igitur mercatorum ope Mellicensium<note place="foot" xml:id="d3e39845"><hi rend="italic">mercatorum ... Mellicensium</hi>: <hi rend="italic">mercatorum Mellicensium ope</hi> A.</note>, qui Bolzanum ad nundinas<note place="foot" xml:id="d3e39854"><hi rend="italic">Ad nundinas</hi>: <hi rend="italic">nundinarum causa</hi> A.</note> se contulerint, rem tuam, sarcinula quadam tuo nomine subsignata bene recteque compacta adversus itineris aut temporis iniurias, repete ac eodem, quo tibi et meo et monasterii nomine offertur, animo accipe<note place="foot" xml:id="d3e39864"><hi rend="italic">rem tuam ... accipe</hi>: <hi rend="italic">rem tuam, hac eadem epistola et nomine tuo obsignatam sarcinulam repete ac eo animo accipe, quo reliquos meos conatus, qui nonnisi quam bonae voluntatis imaginem quamdam prae se ferent, accepisti</hi> A.</note>. Sarcinulae inscriptio: Patri Bernardo Pez monacho Benedictino et bibliothecario Mellicensi. Verona, Bolzano, Mellicium, vulgo Mölch in <sic>Westerreich</sic>. Sarcinulam ipsam comitatur haec eadem epistola; quod sano consilio factum est, ut, si unum exemplar perierit, ad te alterum perveniat<note place="foot" xml:id="d3e39876"><hi rend="italic">Sarcinulae ... perveniat</hi> fehlt A.</note>. </ab>
-         <ab resp="#editor" xml:id="seg5">Demum summa voluptate vidi voravique Bibliothecam tuam Mauro-Benedictinam cum praevia illa ac eruditissima dissertatione, quae gloriosum merito tibi nomen conciliat spemque facit uberioris messis, quam de te orbis litterarius expectat<note place="foot" xml:id="d3e39884"><hi rend="italic">Demum ... expectat</hi>: <hi rend="italic">Summa voluptate vidi voravique Bibliothecam tuam Mauro-Benedictinam, quae tibi gloriosum merito nomen conciliat ac spem facit messis longe uberioris, quam ex te orbis litterarius expectat</hi> A.</note>. Gratulor summopere et quidem ex corde. Iam nosti<note place="foot" xml:id="d3e39893"><hi rend="italic">corde ... nosti</hi>: <hi rend="italic">corde, et nunquam deficiet mei erga te amoris ac venerationis obsequium</hi> A.</note>. Vale diu feliciter. Rogo, ut me certiorem facias, <app><lem>postquam</lem><rdg wit="#B"><choice><sic>an</sic><corr>postquam</corr></choice></rdg></app> in manus tuas praefata sarcinula pervenerit?<note place="foot" xml:id="d3e39908"><hi rend="italic">Rogo ... pervenerit</hi> fehlt A.</note></ab>
-         <closer>Patavii<app><rdg wit="#A"><add place="before">Dedi</add></rdg></app> in monasterio S. Justinae Idibus Augusti 1717.</closer>
+         <opener>
+            <pb n="1r"/> Plurimum reverendo ac clarissimo domno patri Bernardo Pez patrono et amico optimo domnus Josephus Maria Sandi Benedictinus Justinianus salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Iter, praeclarissime domine, quod in Bavariam et Sueviam pro <app>
+               <lem>variis</lem>
+               <rdg wit="#A"/>
+            </app> Benedictinorum lustrandis bibliothecis <app>
+               <lem/>
+               <rdg wit="#A">
+                  <add place="above">suscepisti</add>
+               </rdg>
+            </app>, vetuit, ne<app>
+               <rdg wit="#A">
+                  <add place="after">ipse</add>
+               </rdg>
+            </app> ad te scriberem ante Idus Augusti. Gratulor modo de reditu in patriam deque pretiosa codicum et ampla authorum supellectili, unde tot gemmis ditior valeat Bibliotheca tua<note place="foot" xml:id="d3e39473">
+               <hi rend="italic">gemmis ... tua</hi>: <hi rend="italic">gemmis Bibliotheca tua ditior valeat</hi> A.</note> in eruditorum conspectum gloriosa prodire. Gratias etiam ago maximas tum pro humanitate illa, qua labores meos etsi nullius ponderis pergratos habuisti, cum pro summis laudibus, quibus me prorsus indignum liberiori animo genioque prosequeris. <app>
+               <lem>Quamquam</lem>
+               <rdg wit="#A">Etsi</rdg>
+            </app> enim mihi molestiae plus quam voluptatis attulerint, <app>
+               <lem>nihilo</lem>
+               <rdg wit="#A"/>
+            </app> tamen <app>
+               <lem>minus</lem>
+               <rdg wit="#A"/>
+            </app> laudanti plurimum debeo, quia talem commendat, quem optat,<hi rend="Rimando_nota_a_piè_di_pagina">
+               <seg rend="baseline" xml:space="preserve" xml:id="d3e39496"> et sibi similem opta</seg>
+               <seg rend="baseline" xml:id="d3e39498">t</seg>
+            </hi>
+            <note place="foot" xml:id="d3e39500">
+               <hi rend="italic">et ... optat</hi> fehlt A.</note>. Non plane is sum, in quem tot artis et naturae bona conferantur. Nullum inter eruditos locum <app>
+               <lem>habeo</lem>
+               <rdg wit="#A">teneo</rdg>
+            </app> et vix infimum teneo meos inter confratres ipsos<note place="foot" xml:id="d3e39512">
+               <hi rend="italic">teneo ... ipsos</hi>: <hi rend="italic">habeo inter meos confratres</hi> A.</note>, quorum plerique <app>
+               <lem>Dei gratia</lem>
+               <rdg wit="#A"/>
+            </app> vario studiorum genere delectantur et <app>
+               <lem>aliqui</lem>
+               <rdg wit="#A">non pauci</rdg>
+            </app> etiam <app>
+               <lem>omnium</lem>
+               <rdg wit="#A">omni</rdg>
+            </app> scientiarum notitia praestant. </ab>
+         <ab resp="#editor" xml:id="seg2">Sed iam ad ea, quae scopum finemque nostrum attingunt, <app>
+               <lem>respiciamus</lem>
+               <rdg wit="#A">sermonem converto</rdg>
+            </app>. Haec autem vel attinent<note place="foot" xml:id="d3e39548">
+               <hi rend="italic">Haec ... ad</hi>: <hi rend="italic">Et horum alia</hi> A.</note> ad priorem catalogum virorum illustrium nostrae familiae S. Justinae <app>
+               <lem>iam</lem>
+               <rdg wit="#A"/>
+            </app> ad te missum <app>
+               <lem>Kalendis Aprilibus</lem>
+               <rdg wit="#A"/>
+            </app>, vel ad plenum et germanum humanissimae epistolae tuae ad me datae responsum<note place="foot" xml:id="d3e39566">
+               <hi rend="italic">vel ... responsum</hi>: <hi rend="italic" xml:space="preserve">alia ad plenum germanumque responsum humanissimae eplistolae tuae unice ordinantur </hi>A.</note>. Catalogus ex<app>
+               <rdg wit="#A">
+                  <add place="after">subiecta</add>
+               </rdg>
+            </app> appendice addendorum et corrigendorum etc. vel novis accessionibus augetur vel ab erroribus vindicatur vel locis in dubiis <app>
+               <lem>et</lem>
+               <rdg wit="#A">aut</rdg>
+            </app> per te controversis elucidatur. Quod autem reliquum est, una cum eadem appendice tui iuris libentissime facio tum <app>
+               <lem>Justinianam</lem>
+               <rdg wit="#A"/>
+            </app> Cavaccii<app>
+               <rdg wit="#A">
+                  <add place="after">nostri</add>
+               </rdg>
+            </app> Historiam, quam <anchor xml:id="n1"/>notis satis eruditis ac criticis modo in tui gratiam pater Attilius noster illustrare conatur<note place="foot" xml:id="d3e39597">
+               <hi rend="italic">quam ... conatur</hi> fehlt A.</note>
+            <anchor xml:id="n1e"/>, tum manuscriptos codices, nimirum: Primo. Opusculum Ludovici<anchor xml:id="n2"/> Barbi De initio<anchor xml:id="n2e"/> et progressu nostrae congregationis Justiniano-Cassinensis<note place="foot" xml:id="d3e39603">
+               <hi rend="italic">De ... Cassinensis</hi> fehlt A.</note>, cuius opusculum alterum nondum mihi innotuit<anchor xml:id="n3"/> De orandi methodo<anchor xml:id="n3e"/>
+            <hi rend="Rimando_nota_a_piè_di_pagina">
+               <seg rend="baseline" xml:id="d3e39611">, esto aliqua sedulitate conquisieri</seg>
+               <seg rend="baseline" xml:id="d3e39613">m</seg>
+            </hi>
+            <note place="foot" xml:id="d3e39615">
+               <hi rend="italic">cuius ... conquisierim</hi>: <hi rend="italic">cuius alterum De methodo orationis nunquam mihi innotuit</hi> A.</note>
+            <hi rend="Rimando_nota_a_piè_di_pagina">
+               <seg rend="baseline" xml:space="preserve" xml:id="d3e39624">. </seg>
+            </hi>Secundo. Patris<note place="foot" xml:id="d3e39627">Fehlt A. Nachträglich eingefügt B.</note> Juliani Vitam beati<note place="foot" xml:id="d3e39630">Fehlt A. Nachträglich eingefügt B.</note> Nicolai Pruteni. Tertio.<anchor xml:id="n4"/> Epithoma Historiae Cassinensis Theodorici regis tempore, quod per eundem laudatum patrem Attilium<anchor xml:id="n4e"/> ad veram crisim revocatum inventum est in statera minus habens, subinde <pb n="1v"/> flammis vel aeterna oblivione dignum<note place="foot" xml:id="d3e39635">
+               <hi rend="italic">quod ... dignum</hi>: <hi rend="italic">quod Attilio nostro iudice non luce, sed vel flammis vel eterna oblivione dignum sentio</hi> A.</note>. Quarto. Gasparis<anchor xml:id="n5"/> Scioppii epistolam<anchor xml:id="n5e"/> ad praesulem quemdam nostri ordinis in Germania de Jesuitarum in nos <anchor xml:id="n6"/>pillosa charitate<anchor xml:id="n6e"/>, quam mihi vir clarissimus pater <anchor xml:id="n7"/>Alexander Burgos<anchor xml:id="n7e"/>, verum Italiae nostrae decus<note place="foot" xml:id="d3e39645">
+               <hi rend="italic">Gasparis ... decus</hi>: <hi rend="italic">Gasparis Scioppii epistola de rebus nostris cum patribus Societatis ad praesulem quemdam nostri ordinis in Germania, quam mihi reverendissimus pater Alexander Burgos, verum nostrae Italiae decus</hi> A.</note>, nuperrime communicavit eo potissimum fine, ut <app>
+               <lem>et</lem>
+               <rdg wit="#A"/>
+            </app> in tui notitiam perveniret. Quo factum est, ut patris Romani Hay Astrum inextinctum<note place="foot" xml:id="d3e39657">Hervorhebung fehlt A.</note>, quod <sic>rarrissimum</sic> in nostra Italia<note place="foot" xml:id="d3e39663">
+               <hi rend="italic">rarissimum ... Italia</hi>: <hi rend="italic">apud nos </hi>
+               <sic>rarrissimum</sic> A.</note> cernitur, habendi desiderio inardescam. Superest opusculum <anchor xml:id="n8"/>De regimine<anchor xml:id="n8e"/> novitiorum domni Caspari a Papia, quod serio expensum tenebris suis relinquendum <app>
+               <lem>censeo</lem>
+               <rdg wit="#A">censui</rdg>
+            </app>. Argumentum est utile. Ordo ac rerum optima dispositio, sed stylus est incomptus, simplex ac effusus nimium, et liber in iis, de quibus vel parcius et castigatius, vel nihil potius dicendum erat. <app>
+               <lem>Excusandus tamen est piissimus author, quia amicum et familiarem in nostris tyronibus educandis familiariter instruit</lem>
+               <rdg wit="#A"/>
+            </app>. <app>
+               <lem>Propterea</lem>
+               <rdg wit="#B">
+                  <choice>
+                     <sic>D</sic>
+                     <corr>Propterea</corr>
+                  </choice>
+               </rdg>
+            </app> mittere distuli, ultro <app>
+               <lem>tamen</lem>
+               <rdg wit="#A"/>
+            </app> missurus, si id tibi gratum noverim. Epistolae sancti patris Benedicti sunt<note place="foot" xml:id="d3e39697">
+               <hi rend="italic">Epistolae ... sunt</hi>: <hi rend="italic">Epistolae vero sancti patris Benedicti et monachorum Cassinensium sunt</hi> A.</note> illae ipsae, quas <app>
+               <lem wit="#B">
+                  <add place="above">commemoras et</add>
+               </lem>
+            </app> variis <app>
+               <lem>caracteribus</lem>
+               <rdg wit="#A"/>
+            </app> impressas nostris in bibliothecis<note place="foot" xml:id="d3e39722">
+               <hi rend="italic">nostris ... bibliothecis</hi>: <hi rend="italic">in nostris bibliothecis</hi> A.</note> habemus. <app>
+               <lem>Nec magni faciendae sunt epistolae monachorum Cassinensium; quas infra recenseo</lem>
+               <rdg wit="#A"/>
+            </app>. </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <hi rend="Fußnotenzeichen1">
+               <seg rend="baseline" xml:id="d3e39740">Ulterius praeter</seg>
+            </hi> Justinianae Historiae duplicatum exemplar et alia mitto<note place="foot" xml:id="d3e39743">
+               <hi rend="italic">Ulterius ... mitto</hi>: <hi rend="italic">Ulterius cum Cavaccio et aliis mitto</hi> A.</note> etiam, quae ad nostrum Prataleae monasterium <app>
+               <lem>pertinent</lem>
+               <rdg wit="#A">attinent</rdg>
+            </app>. Nec enim hac in re tibi defuerunt pater Augustinus Suarez praefectus bibliothecae nec pater Flaminius Carraria <app>
+               <lem>prorrector</lem>
+               <rdg wit="#A">prorector</rdg>
+            </app>
+            <anchor xml:id="n9"/>S. Urbani<anchor xml:id="n9e"/> et archivista. Ille totam illustravit bibliothecam et authorum catalogum contexit; iste, quae ex archivis petenda erant, suppeditavit. Utinam in reliquis nostrae congregationis Cassinensis<note place="foot" xml:id="d3e39768">
+               <hi rend="italic">nostrae ... Cassinensis</hi>: <hi rend="italic">Italiae</hi> A.</note> monasteriis <app>
+               <lem>ididem</lem>
+               <rdg wit="#A">id</rdg>
+            </app> mihi licuisset. Non peperci sane vel precibus vel litteris. Ursi etiam plures ex nostris consodalibus<note place="foot" xml:id="d3e39783">
+               <hi rend="italic">ex ... consodalibus</hi>: <hi rend="italic">in Italia sodales</hi> A.</note>. Verum ex<anchor xml:id="n10"/> Romana, Neapolitana et Sicula provinciis<anchor xml:id="n10e"/> parum nihilve sperare iuvat. Cur? <app>
+               <lem>Pater</lem>
+               <rdg wit="#A"/>
+            </app> domnus Marianus monachus S. Pauli de Urbe meditatur et ipse Bibliothecam authorum congregationis Cassinensis<note place="foot" xml:id="d3e39795">
+               <hi rend="italic">congregationis Cassinensis</hi>: <hi rend="italic">Cassinensium (et solum Cassinensium)</hi> A.</note> et notitias non exiguo labore partas nimio zelo custodit, ne alieni iuris fiant. Conatum longe feliciorem expertus sum apud patrem domnum Theodorum<anchor xml:id="n11"/> Sonzonium<anchor xml:id="n11e"/> S. Vitalis <app>
+               <lem>Ravennae</lem>
+               <rdg wit="#A">Ravennatensis</rdg>
+            </app> bibliothecarium et patrem domnum<anchor xml:id="n12"/> Licinium Martinonum<anchor xml:id="n12e"/> S. Georgii Maioris <pb n="2r"/> Venetiarum amplissimae illius bibliothecae moderatorem. An promissis facta responderint? Pro eis fideiubeo libenter<note place="foot" xml:id="d3e39813">
+               <hi rend="italic">bibliothecae ... libenter</hi>: <hi rend="italic">bibliothecae praefectum, dummodo promissis facta respondeant. Ipse tamen pro eis libentissime fideiubeo</hi> A.</note>. </ab>
+         <ab resp="#editor" xml:id="seg4">Ad te itaque praefata mittuntur opera<note place="foot" xml:id="d3e39824">
+               <hi rend="italic">Ad ... opera</hi>: <hi rend="italic">Ad te demum praefata opera diriguntur</hi> A.</note> oblata <anchor xml:id="n13"/>nundinarum<anchor xml:id="n13e"/> Bolzanensium occasione, et Padua, Verona Bolzanum diriguntur<note place="foot" xml:id="d3e39833">
+               <hi rend="italic">et ... diriguntur</hi>: <hi rend="italic">Diriguntur Bolzanum</hi> A.</note> Ad <app>
+               <lem>dominum</lem>
+               <rdg wit="#A"/>
+            </app>
+            <anchor xml:id="n14"/> Lazarum Mosconium<anchor xml:id="n14e"/> et socios, Italice: Alli signori Lazaro Mosconi e compagni. Ab his igitur mercatorum ope Mellicensium<note place="foot" xml:id="d3e39845">
+               <hi rend="italic">mercatorum ... Mellicensium</hi>: <hi rend="italic">mercatorum Mellicensium ope</hi> A.</note>, qui Bolzanum ad nundinas<note place="foot" xml:id="d3e39854">
+               <hi rend="italic">Ad nundinas</hi>: <hi rend="italic">nundinarum causa</hi> A.</note> se contulerint, rem tuam, sarcinula quadam tuo nomine subsignata bene recteque compacta adversus itineris aut temporis iniurias, repete ac eodem, quo tibi et meo et monasterii nomine offertur, animo accipe<note place="foot" xml:id="d3e39864">
+               <hi rend="italic">rem tuam ... accipe</hi>: <hi rend="italic">rem tuam, hac eadem epistola et nomine tuo obsignatam sarcinulam repete ac eo animo accipe, quo reliquos meos conatus, qui nonnisi quam bonae voluntatis imaginem quamdam prae se ferent, accepisti</hi> A.</note>. Sarcinulae inscriptio: Patri Bernardo Pez monacho Benedictino et bibliothecario Mellicensi. Verona, Bolzano, Mellicium, vulgo Mölch in <sic>Westerreich</sic>. Sarcinulam ipsam comitatur haec eadem epistola; quod sano consilio factum est, ut, si unum exemplar perierit, ad te alterum perveniat<note place="foot" xml:id="d3e39876">
+               <hi rend="italic">Sarcinulae ... perveniat</hi> fehlt A.</note>. </ab>
+         <ab resp="#editor" xml:id="seg5">Demum summa voluptate vidi voravique Bibliothecam tuam Mauro-Benedictinam cum praevia illa ac eruditissima dissertatione, quae gloriosum merito tibi nomen conciliat spemque facit uberioris messis, quam de te orbis litterarius expectat<note place="foot" xml:id="d3e39884">
+               <hi rend="italic">Demum ... expectat</hi>: <hi rend="italic">Summa voluptate vidi voravique Bibliothecam tuam Mauro-Benedictinam, quae tibi gloriosum merito nomen conciliat ac spem facit messis longe uberioris, quam ex te orbis litterarius expectat</hi> A.</note>. Gratulor summopere et quidem ex corde. Iam nosti<note place="foot" xml:id="d3e39893">
+               <hi rend="italic">corde ... nosti</hi>: <hi rend="italic">corde, et nunquam deficiet mei erga te amoris ac venerationis obsequium</hi> A.</note>. Vale diu feliciter. Rogo, ut me certiorem facias, <app>
+               <lem>postquam</lem>
+               <rdg wit="#B">
+                  <choice>
+                     <sic>an</sic>
+                     <corr>postquam</corr>
+                  </choice>
+               </rdg>
+            </app> in manus tuas praefata sarcinula pervenerit?<note place="foot" xml:id="d3e39908">
+               <hi rend="italic">Rogo ... pervenerit</hi> fehlt A.</note>
+         </ab>
+         <closer>Patavii<app>
+               <rdg wit="#A">
+                  <add place="before">Dedi</add>
+               </rdg>
+            </app> in monasterio S. Justinae Idibus Augusti 1717.</closer>
       </body>
    </text>
 </TEI>

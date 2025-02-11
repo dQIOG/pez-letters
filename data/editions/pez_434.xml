@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="434" xml:id="pez-0434">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Benedikt Gentilotti an Bernhard Pez. 1715-08-17. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">434</idno>
          </publicationStmt>
          <seriesStmt>
@@ -34,7 +46,6 @@
             <relatedItem type="otherEdition">
                <bibl>Staufer, Litterae 13f.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Die beiden Bögen dieses Briefs (246r–247v, 248r–249v) wurden beim Binden verreiht;
                   der Text beginnt auf 248r. Glassner,
@@ -59,10 +70,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -89,14 +101,17 @@
          </correspDesc>
          <abstract>
             <p corresp="#seg1">BG dankt mit einem <rs type="cit" ref="citIndex:ix2_d653e186">Plautus-Zitat</rs> für BPs neue Wohltaten und entschuldigt sich zugleich für die repetitive Banalität seiner Dankesworte.</p>
-            <p corresp="#seg2">BG sendet den Brief <rs ref="index:d14380e26993">René Massuets</rs> <ref type="letter" target="letter:413">413</ref> zurück. Das <rs ref="index:d10854e24029">Verzeichnis der Handschriften von <rs ref="index:d14380e23577">Lambach</rs></rs> enthält viel Interessantes und Seltenes. Ob das <rs ref="index:d10854e33995">Epitaph Willirams von Merseburg (recte: Ebersberg)</rs> gedruckt ist, kann BG nicht sagen, da er zu Hause schreibt und Willirams Werke („<rs ref="index:d10854e34002">In Canticum canticorum paraphrasis gemina</rs>“) sowie die <rs ref="index:d10854e14366">„Observationes“ des Junius</rs> nicht konsultieren kann.</p>
+            <p corresp="#seg2">BG sendet den Brief <rs ref="index:d14380e26993">René Massuets</rs>
+               <ref type="letter" target="letter:413">413</ref> zurück. Das <rs ref="index:d10854e24029">Verzeichnis der Handschriften von <rs ref="index:d14380e23577">Lambach</rs>
+               </rs> enthält viel Interessantes und Seltenes. Ob das <rs ref="index:d10854e33995">Epitaph Willirams von Merseburg (recte: Ebersberg)</rs> gedruckt ist, kann BG nicht sagen, da er zu Hause schreibt und Willirams Werke („<rs ref="index:d10854e34002">In Canticum canticorum paraphrasis gemina</rs>“) sowie die <rs ref="index:d10854e14366">„Observationes“ des Junius</rs> nicht konsultieren kann.</p>
             <p corresp="#seg3">Von den Schwierigkeiten <rs ref="index:d14380e26993">René Massuets</rs> ist BG erschüttert, meint jedoch, dass es für andere Weltgegenden von Vorteil sein könnte, wenn die besten Köpfe<rs ref="index:d14380e12712"> Frankreichs</rs> ins Exil gehen. Als idealen Zufluchtsort für <rs ref="index:d14380e26993">Massuet</rs> betrachtet BG die <rs ref="index:d14380e39203">Universität Salzburg</rs>.</p>
-            <p corresp="#seg4"><rs ref="index:d14380e39962">Anselm Schramb</rs> hat seine nun gedruckte „<rs ref="index:d14380e39987">Antilogia</rs>“ BG geschenkt, dieser hat das Exemplar jedoch sogleich beiseite gelegt, weil er seine Zeit nicht mit scholastischen Texten vergeuden will. <rs ref="index:d14380e39962">Schramb</rs> hingegen ist stolz auf das Werk, hofft besonders auf Anerkennung bei der <rs ref="index:d10854e15502">Cassinenser Kongregation</rs> und hat sich von einem vorgeblichen päpstlichen Briefboten drei Goldmünzen abluchsen lassen, damit dieser das Werk zusammen mit <rs ref="index:d14380e11508">Eraths „Commentarius“</rs> nach Rom befördert; er hat sich freilich abgesetzt und das Paket zurückgelassen.</p>
+            <p corresp="#seg4">
+               <rs ref="index:d14380e39962">Anselm Schramb</rs> hat seine nun gedruckte „<rs ref="index:d14380e39987">Antilogia</rs>“ BG geschenkt, dieser hat das Exemplar jedoch sogleich beiseite gelegt, weil er seine Zeit nicht mit scholastischen Texten vergeuden will. <rs ref="index:d14380e39962">Schramb</rs> hingegen ist stolz auf das Werk, hofft besonders auf Anerkennung bei der <rs ref="index:d10854e15502">Cassinenser Kongregation</rs> und hat sich von einem vorgeblichen päpstlichen Briefboten drei Goldmünzen abluchsen lassen, damit dieser das Werk zusammen mit <rs ref="index:d14380e11508">Eraths „Commentarius“</rs> nach Rom befördert; er hat sich freilich abgesetzt und das Paket zurückgelassen.</p>
             <p corresp="#seg5">BG gratuliert zu den neuen Erwerbungen der <rs ref="index:d14380e28279">Melker Bibliothek</rs>. Er selbst hat sechs Bände von <rs ref="index:d14380e3720">Baluzes „Miscellanea“</rs> sowie die vier Bände der von Teissier aus Le Thous „Historiae“ zusammengestellten, ins Französische übersetzten und 1715 in <rs ref="index:d10854e16860">Leiden</rs> herausgebrachten „Éloges“ gekauft. Zu diesen günstigen Käufen werden das <rs ref="index:d14380e150">„Spicilegium“ von d’Achery</rs> und dessen Fortsetzung, die <rs ref="index:d14380e26647">„Collectio nova“ von Martène</rs>, auf die BP so viel hält, hinzukommen. Alle diese Bücher stehen BP auf Wunsch leihweise zur Verfügung.</p>
             <p corresp="#seg6">Während der Abfassung dieses Briefs hat BG einen weiteren Brief BPs vom 15. August erhalten <ref type="letter" target="letter:433">433</ref>, wenig später hat <rs ref="index:d14380e1139">Kaspar Altlechner</rs> die darin angekündigte Büchersendung überbracht. BG, der befürchtete, von BP wegen seiner säumigen Antwort auf den vorigen Brief <ref type="letter" target="letter:432">432</ref> gescholten zu werden, freut sich nun über dessen freundliche Worte und die empfangenen Bücher. <rs ref="index:d10854e5705">Coustants „Vindiciae“</rs>, die BP so zugesagt haben, hätte dieser bei sich behalten sollen; BG fordert ihn auf, es sich von BG auszuleihen. Bei dem großzügigen Sender des Buchgeschenkes (<rs ref="index:d14380e26993">Massuet</rs>) wird sich BG bei Gelegenheit bedanken.</p>
             <p corresp="#seg7">Gleich jetzt dankt BG für die zugesendeten Exemplare von BPs „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“, welche jedoch in <rs ref="index:d14380e45571">Wien</rs> nicht sehr bekannt zu sein scheinen: BG hat selbst von den <rs ref="index:d14380e20126">Jesuiten</rs>, mit denen er den vorangegangenen Tag in <rs ref="index:d10854e33643">Schönbrunn</rs> verbracht hat, nichts gehört. BG will sein Urteil und die der anderen BP offen mitteilen. Die Transportkosten der Bücher will er übernehmen und einem von BP zu nennenden Überbringer auszahlen, damit er, wie die Juristen sagen, ein schuldenfreies Haus (<rs type="cit" ref="citIndex:ix2_d653e1162">liberae aedes</rs>) hat.</p>
             <p corresp="#seg8">Sowohl von <rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs> als auch von Konrad Widow hat BG je einen Brief erhalten. <rs ref="index:d14380e4006">Bartenstein</rs> hielt sich, als er schrieb, noch in <rs ref="index:d14380e16986">Hamburg</rs> auf und wollte in seine Heimat (<rs ref="index:d14380e41684">Straßburg</rs>) abreisen. Die Hoffnung, nach <rs ref="index:d14380e45571">Wien</rs> zurückzukehren, hat er aufgegeben, was BG wegen seiner Zuneigung zu dem gebildeten jungen Mann ungern vernommen hat. BG schließt mit dem Hinweis, seine Säumigkeit nun durch die Länge des Briefs wettgemacht zu haben, und grüßt <rs ref="index:d14380e34537">HP</rs>.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -109,7 +124,8 @@
             <mentioned>codicum ... catalogo</mentioned>
             <p>Vgl. die bei <rs type="bibl" ref="bibl:36780">Pez, Nachricht</rs> 188–192,
                   gedruckte Liste von Lambacher Handschriften; zur Bibliotheksreise im Mai 1715, zu
-                  deren Ergebnissen diese zählte, vgl. <ref type="letter" target="letter:406">406</ref> <ref target="letter:406#seg1">1</ref>.</p>
+                  deren Ergebnissen diese zählte, vgl. <ref type="letter" target="letter:406">406</ref>
+               <ref target="letter:406#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>Willerami Merseburgensis</mentioned>
@@ -148,7 +164,8 @@
             <mentioned>Salisburgensi academia</mentioned>
             <p>BGs Kontakte nach Salzburg reichten bis in seine Studienzeit (vgl. 265); er selbst
                   war 1703–1705 in erzbischöflichen Diensten gestanden (<rs type="bibl" ref="bibl:19818">Strnad, Gentilotti</rs> 564), sein Bruder Johann Franz tat
-                  dies zur Zeit dieses Briefs (vgl. <ref type="letter" target="letter:393">393</ref> <ref target="letter:393#seg7">7</ref>). Mit ihm
+                  dies zur Zeit dieses Briefs (vgl. <ref type="letter" target="letter:393">393</ref>
+               <ref target="letter:393#seg7">7</ref>). Mit ihm
                   stand BG ebenso in brieflichem Kontakt wie mit Erzbischof Franz Anton von Harrach:
                   Rovereto, Biblioteca Rosminiana, Fondo Gentilotti, 3.5 und 4.4.10.</p>
          </note>
@@ -158,17 +175,22 @@
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg4">
             <mentioned>Cassinensi coetu</mentioned>
-            <p>Zu Schrambs Interesse an der Cassinenser Kongregation vgl. <rs type="bibl" ref="bibl:20188">Wallnig, Gasthaus und Gelehrsamkeit</rs> 90f., 121; sowie <ref type="letter" target="letter:401">401</ref> <ref target="letter:401#seg7">7</ref>.</p>
+            <p>Zu Schrambs Interesse an der Cassinenser Kongregation vgl. <rs type="bibl" ref="bibl:20188">Wallnig, Gasthaus und Gelehrsamkeit</rs> 90f., 121; sowie <ref type="letter" target="letter:401">401</ref>
+               <ref target="letter:401#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg4">
             <mentioned>Romam perferatur</mentioned>
             <p>Schramb maß der Zueignung der „Antilogia“ an einen Kardinal größte Bedeutung bei
-                  und wollte hier sichtlich ein Widmungsexemplar verschicken; vgl. <ref type="letter" target="letter:401">401</ref> <ref target="letter:401#seg1">1</ref>, <ref type="letter" target="letter:406">406</ref> <ref target="letter:406#seg3">3</ref>, <ref type="letter" target="letter:427">427</ref> <ref target="letter:427#seg3">3</ref>.</p>
+                  und wollte hier sichtlich ein Widmungsexemplar verschicken; vgl. <ref type="letter" target="letter:401">401</ref>
+               <ref target="letter:401#seg1">1</ref>, <ref type="letter" target="letter:406">406</ref>
+               <ref target="letter:406#seg3">3</ref>, <ref type="letter" target="letter:427">427</ref>
+               <ref target="letter:427#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg6">
             <mentioned>Clarissimis viris</mentioned>
             <p>In erster Linie Massuet als Sender, außerdem Coustant und Montfaucon, die ihre
-                  Werke beigesteuert hatten; vgl. <ref type="letter" target="letter:413">413</ref> <ref target="letter:413#seg3">3</ref>.</p>
+                  Werke beigesteuert hatten; vgl. <ref type="letter" target="letter:413">413</ref>
+               <ref target="letter:413#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg6">
             <mentioned>gratias agam</mentioned>
@@ -195,10 +217,13 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Venerando et eruditissimo viro domno Bernardo Pezio monacho et bibliothecario Mellicensi Joannes Benedictus Gentilottus ad Engelsbrun salutem plurimam dicit.</opener>
+         <opener>
+            <pb n="1r"/> Venerando et eruditissimo viro domno Bernardo Pezio monacho et bibliothecario Mellicensi Joannes Benedictus Gentilottus ad Engelsbrun salutem plurimam dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Nullum ego tibi, virorum optime, gratias agendi finem facio, cum tu nullis humanitatem tuam terminis circumscribas, sed <anchor xml:id="n1"/>calliditate Plautina utens vetera beneficia recentibus pertegas, ne perpluant<anchor xml:id="n1e"/>. Verum quando tibi decretum est mores illos tuos beneficos et ad omnem elegantiam factos usque persequi, me quoque imparem ad referendam gratiam patienter feras oportet, si velut citharoedus, qui chorda oberrat eadem, identidem tibi proletariam illam formulam ingero: maximas tibi gratias habeo atque ago. </ab>
          <ab resp="#editor" xml:id="seg2">Idque cum de <anchor xml:id="n2"/>codicum Lambacensium catalogo<anchor xml:id="n2e"/>, tum de epistola domni Massueti, quam his inclusam ad te remitto. In illo insunt nonnulla quantivis pretii, nec passim obvia; num autem <anchor xml:id="n3"/>Willerami Merseburgensis<anchor xml:id="n3e"/> abbatis epitaphium <anchor xml:id="n4"/>vulgatum sit<anchor xml:id="n4e"/>, compertum non habeo; nam haec domi scribens <anchor xml:id="n5"/>eius opera cum Iuniana paraphrasi<anchor xml:id="n5e"/> et notis consulere non possum, quod faciam alias. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n6"/>Querulis Massueti litteris<anchor xml:id="n6e"/> <pb n="1v"/> vehementer sum commotus, doluique eruditissimi viri et de re litteraria optime meriti, immo totius Galliae vicem, quae felicitatem suam parum intelligere aut pati posse videtur, cum tempestatem, qua iactatur, sedare se posse putat celeberrimorum hominum eiectione. Nobis vix non optandum est, ut Superi illi hanc mentem dent, quo doctiores illius regni patriis sedibus extorres litterarum gloriam, quam Gallia sibi hucusque praecipuam habuit, cum aliis aut communicent aut ad exteras nationes prorsus transferant. Massueto ipsi si quando migrandum foret, magis aptum et ordini vestro honorificum domicilium <anchor xml:id="n7"/>Salisburgensi academia<anchor xml:id="n7e"/> haud scirem. Ille plane locus est, in quo, ut is optat, <anchor xml:id="n8"/>nulli gravis omnibus commodus vivere posset<anchor xml:id="n8e"/>. </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n6"/>Querulis Massueti litteris<anchor xml:id="n6e"/>
+            <pb n="1v"/> vehementer sum commotus, doluique eruditissimi viri et de re litteraria optime meriti, immo totius Galliae vicem, quae felicitatem suam parum intelligere aut pati posse videtur, cum tempestatem, qua iactatur, sedare se posse putat celeberrimorum hominum eiectione. Nobis vix non optandum est, ut Superi illi hanc mentem dent, quo doctiores illius regni patriis sedibus extorres litterarum gloriam, quam Gallia sibi hucusque praecipuam habuit, cum aliis aut communicent aut ad exteras nationes prorsus transferant. Massueto ipsi si quando migrandum foret, magis aptum et ordini vestro honorificum domicilium <anchor xml:id="n7"/>Salisburgensi academia<anchor xml:id="n7e"/> haud scirem. Ille plane locus est, in quo, ut is optat, <anchor xml:id="n8"/>nulli gravis omnibus commodus vivere posset<anchor xml:id="n8e"/>. </ab>
          <ab resp="#editor" xml:id="seg4">Pater Anselmus noster publicae tandem luci commisit Antilogiam suam eiusque exemplo me donavit. Exosculatus sum viri amicissimi in me animum; utinam sic opus ipsum probare possem. Sed ut oculos in illud conieci et scholasticam, quam abominor, scribendi rationem animadverti, illico librum <pb n="2r"/> de manibus deposui nolens bonas horas eius lectione conterere. Interim optimus ille vir nescio quomodo eius editione sibi placet et plaudit magnamque ab universo ordine, praesertim <anchor xml:id="n9"/>Cassinensi coetu<anchor xml:id="n9e"/>, se gratiam inivisse putat, quod adversarium eidem infensissimum penitus profligaverit. Nunc totus in eo <add place="above">est</add>, ut rationem ineat, quo pacto suum cum antagonistae spisso volumine <anchor xml:id="n10"/>Romam perferatur<anchor xml:id="n10e"/>. Dumque certum hominem quaerit et invenisse se putat, tribus nummis aureis emunctus est a quodam terrae filio, qui tabellarii pontificii nomen mentitus est, et superioribus diebus sarcina hic relicta discessit. Tu ad haec rideas licet; ille vero cum verba sibi data intelliget, totus excandescet eritque in fermento. </ab>
          <ab resp="#editor" xml:id="seg5">De nova ad bibliothecam vestram accessione tibi gratulor; idem tamen iure posse me petere videor ob sex Baluzii Miscellaneorum et quatuor Elogiorum volumina, quae a Thuano Historiae suae interspersa in unum collegit, Gallice vertit copiosisque notis illustravit Teisserius et hoc anno mirum quantum aucta Lugduni Batavorum recudi fecit. His, quae nuper admodum aequo pretio nactus sum, propediem adcrescet Spicilegium Dacherianum et Martenaea Continuatio, <pb n="2v"/> de qua tu tantopere triumphas, cum aliis compluribus, quos, ne tibi salivam moveam, iam non enumero; sed ad aliud tempus reservo. Ea omnia, si non κτῄσει, saltem κρήσει tua sunt, aut utroque etiam, si placet, modo iuxta illud τὰ τῶν φίλῶν. </ab>
          <ab resp="#editor" xml:id="seg6">Hucusque scripseram, cum recentissimae tuae litterae ad diem XV. Augusti scriptae, paucisque horis interiectis fasciculus ille librorum, cuius in litteris mentionem facis, ab humanissimo domno Gasparo redditus est. Ad litteras, antequam eas resignarem, exhorrui timuique, ne in iis aurem mihi velleres, ut ad superiores tuas responderem. Sed iis lectis maiorem in modum gavisus sum, acceptis autem libris omnibus incessi laetitus. Unum me pupugit: quod tu Coutantii librum, quo te magnopere delectatum scribis, non retinueris et sane quam insignitam necessitudini nostrae iniuriam feceris; pro qua tum demum satis esse factum arbitrabor, si tu eum librum a me petes et <add place="above">eo</add>, quoad placuerit, uteris. <anchor xml:id="n11"/>Clarissimis viris<anchor xml:id="n11e"/>, qui praestantissima haec munera et quovis auro contra non cara ad me miserunt, quamprimum <anchor xml:id="n12"/>gratias agam<anchor xml:id="n12e"/>. </ab>

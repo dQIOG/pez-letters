@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="835" xml:id="pez-0835">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Karl Meichelbeck an Bernhard Pez. 1717-10-20. Benediktbeuern.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">835</idno>
          </publicationStmt>
          <seriesStmt>
@@ -34,7 +46,6 @@
             <relatedItem type="otherEdition">
                <bibl>Siegmund, Meichelbecks Briefe 80/1–2 173–177.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Das letzte Blatt ist im Briefcodex falsch eingebunden, sodass das Postskriptum auf 3r, das Ende des Brieftextes auf 3v zu stehen kommt. – KM vermerkt in seinem Diarium zum 19. Oktober 1717: <orig>Scribo patri Pezio responsum [...] approbantibus superioribus</orig> (BStB München, Meichelbeckiana 18b, 307r).
             </note>
@@ -56,10 +67,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -82,47 +94,49 @@
                <ptr type="mentionedIn" target="letter:875"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e2490">Anonyme Werke ; Notiz zur Gründung von Wessobrunn. Ms. Regensburg, St. Emmeram</term>
-            <term ref="index:d14380e4170">Bayern, Bayern</term>
-            <term ref="index:d14380e4706">Benediktbeuern</term>
-            <term ref="index:d14380e4754">Benediktbeuern ; Archiv</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e6170">Bölzl, Tassilo</term>
-            <term ref="index:d14380e9628">Dietmayr, Berthold</term>
-            <term ref="index:d14380e11563">Erhardt, Thomas Aquin</term>
-            <term ref="index:d14380e11585">Erhardt, Thomas Aquin ; Gloria sanctissimi protoparentis Benedicti in terris adornata
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e2490">Anonyme Werke ; Notiz zur Gründung von Wessobrunn. Ms. Regensburg, St. Emmeram</term>
+               <term ref="index:d14380e4170">Bayern, Bayern</term>
+               <term ref="index:d14380e4706">Benediktbeuern</term>
+               <term ref="index:d14380e4754">Benediktbeuern ; Archiv</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e6170">Bölzl, Tassilo</term>
+               <term ref="index:d14380e9628">Dietmayr, Berthold</term>
+               <term ref="index:d14380e11563">Erhardt, Thomas Aquin</term>
+               <term ref="index:d14380e11585">Erhardt, Thomas Aquin ; Gloria sanctissimi protoparentis Benedicti in terris adornata
          seu Vita, virtutes et prodigiose gesta et cultus sanctissimi patriarchae. 6 Bde. Augsburg
          1719–1722</term>
-            <term ref="index:d14380e12078">Ferb, Philipp Alois</term>
-            <term ref="index:d14380e12172">Fischhaber, Lorenz</term>
-            <term ref="index:d14380e16543">Gross, Bernhard</term>
-            <term ref="index:d14380e18451">Hochenauer, Leonhard</term>
-            <term ref="index:d14380e18863">Huber, Ildephons</term>
-            <term ref="index:d14380e19249">Hund von Sulzenmoos, Wiguleus ; Metropolis Salisburgensis continens primordia
+               <term ref="index:d14380e12078">Ferb, Philipp Alois</term>
+               <term ref="index:d14380e12172">Fischhaber, Lorenz</term>
+               <term ref="index:d14380e16543">Gross, Bernhard</term>
+               <term ref="index:d14380e18451">Hochenauer, Leonhard</term>
+               <term ref="index:d14380e18863">Huber, Ildephons</term>
+               <term ref="index:d14380e19249">Hund von Sulzenmoos, Wiguleus ; Metropolis Salisburgensis continens primordia
          Christianae religionis per Boiariam et loca vicina, catalogum videlicet et ordinariam
          successionem archiepiscoporum Salisburgensium et coepiscoporum Frisingensium,
          Ratisponensium, Pataviensium ac Brixinensium, simulque fundationes et erectiones
          monasteriorum et ecclesiarum collegiatarum. Ingolstadt 1582 ; Ausgabe in 3 Bden. Erweitert
          und hg. von Christoph Gewold. München 1620</term>
-            <term ref="index:d14380e20985">Junghans, Korbinian</term>
-            <term ref="index:d14380e22316">Kongregationen des Benediktinerordens ; Bayerische Kongregation</term>
-            <term ref="index:d14380e27316">Maximilian II. Emmanuel</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e30013">München ; Kurfürstlicher Hof ; Hofbibliothek</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e31969">Pachinger, Magnus</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e36802">Regensburg ; St. Emmeram ; Bibliothek ; Notiz zur Gründung von Wessobrunn. Ms</term>
-            <term ref="index:d14380e37985">Rott am Inn</term>
-            <term ref="index:d14380e43242">Trautsch, Jakob</term>
-            <term ref="index:d14380e43759">Unertl, Franz Xaver Joseph von</term>
-            <term ref="index:d14380e45389">Wessobrunn</term>
-            <term ref="index:d14380e46908">Zallinger, Joseph</term>
-            <term ref="index:d14380e46931">Zechetmayer, Franz Xaver</term>
-            <term ref="index:d10854e35200">Zödl, Gregor</term></keywords></textClass>
+               <term ref="index:d14380e20985">Junghans, Korbinian</term>
+               <term ref="index:d14380e22316">Kongregationen des Benediktinerordens ; Bayerische Kongregation</term>
+               <term ref="index:d14380e27316">Maximilian II. Emmanuel</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e30013">München ; Kurfürstlicher Hof ; Hofbibliothek</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e31969">Pachinger, Magnus</term>
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e36802">Regensburg ; St. Emmeram ; Bibliothek ; Notiz zur Gründung von Wessobrunn. Ms</term>
+               <term ref="index:d14380e37985">Rott am Inn</term>
+               <term ref="index:d14380e43242">Trautsch, Jakob</term>
+               <term ref="index:d14380e43759">Unertl, Franz Xaver Joseph von</term>
+               <term ref="index:d14380e45389">Wessobrunn</term>
+               <term ref="index:d14380e46908">Zallinger, Joseph</term>
+               <term ref="index:d14380e46931">Zechetmayer, Franz Xaver</term>
+               <term ref="index:d10854e35200">Zödl, Gregor</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">KM und die übrigen <rs ref="index:d14380e4706">Benediktbeurer</rs> haben mit Freude erfahren <ref type="letter" target="letter:829">829</ref>, dass BP und HP von ihrer <rs ref="index:d14380e34236">Bibliotheksreise</rs> wohlbehalten und mit reicher literarischer Ernte nach <rs ref="index:d14380e28088">Melk</rs> zurückgekommen sind. Dafür danken Gott und den Schutzengeln KMs Abt
                <rs ref="index:d14380e31969">Magnus Pachinger</rs>, der Prior <rs ref="index:d14380e16543">Bernhard
@@ -157,7 +171,8 @@
             <p corresp="#seg6">Über die von den <rs ref="index:d14380e45389">Wessobrunnern</rs> gegen ihn vorgebrachten Klagen hat KM
                beinahe lachen müssen. Sie glaubten, die an der Arbeit („<rs ref="index:d14380e11585">Gloria sanctissimi
                   protoparentis Benedicti</rs>“) von <rs ref="index:d14380e11563">Thomas Aquin Erhardt</rs> angebrachten
-               Korrekturen stammten von ihm, und erhoben deswegen Vorwürfe. Der Präses der <rs ref="index:d14380e22316">Bayerischen Benediktinerkongregation</rs> <rs ref="index:d14380e18863">Ildephons Huber</rs> hat sie
+               Korrekturen stammten von ihm, und erhoben deswegen Vorwürfe. Der Präses der <rs ref="index:d14380e22316">Bayerischen Benediktinerkongregation</rs>
+               <rs ref="index:d14380e18863">Ildephons Huber</rs> hat sie
                jedoch bei einer Visitation wissen lassen, dass die Änderungen auf seine Anordnung durch den
                Kongregationssekretär (<rs ref="index:d14380e20985">Korbinian Junghans</rs>) vorgenommen worden waren; im
                Übrigen aber seien die Monita von KM zu beachten. KM will die Wessobrunner bitten, in Hinkunft
@@ -175,7 +190,8 @@
                über die Gründung von <rs ref="index:d14380e45389">Wessobrunn</rs> mitteilen wird. KM selbst hat kürzlich
                von anderer Seite ihm bislang nicht bekanntes Quellenmaterial, welches die aus den Benediktbeurer
                Handschriften zu entnehmende Version stützt.</p>
-            <p corresp="#seg8"><rs ref="index:d10854e35200">Gregor Zödl</rs> verehrt BP und HP als Lehrmeister, wie dies auch KM selbst
+            <p corresp="#seg8">
+               <rs ref="index:d10854e35200">Gregor Zödl</rs> verehrt BP und HP als Lehrmeister, wie dies auch KM selbst
                tut. Der Prior <rs ref="index:d14380e16543">Bernhard Gross</rs> wird sich in einem beigelegten Brief
                selbst an BP und HP wenden. KM schließt mit einem Gruß an BP und HP als hellste Lichter <rs ref="index:d14380e31465">Österreichs</rs>.</p>
             <p corresp="#seg9">In einem Postskriptum übermittelt KM Empfehlungen von Abt Pachinger, dem er seinen Brief zu lesen gegeben
@@ -183,7 +199,7 @@
                Geschäfte sein Schreiben an diesem Tag nicht fertig stellen kann und ein anderes Mal senden wird. Ebenso
                wird <rs ref="index:d10854e35200">Gregor Zödl</rs> bald seinem Versprechen hinsichtlich der Verzeichnung
                von Schriftstellern nachkommen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -194,7 +210,8 @@
                   Abschnitt I.2. In Benediktbeuern waren sie am 12. Juli 1717 eingetroffen und
                   hatten sich dort eine Woche aufgehalten: <rs type="bibl" ref="bibl:36782">Pez,
                      Thesaurus</rs> 1 xvi f.; vgl. <rs type="bibl" ref="bibl:16214">Fink,
-                     Beiträge</rs> 224f.; sowie <ref type="letter" target="letter:804">804</ref> <ref target="letter:804#seg2">2</ref>. Im Diarium
+                     Beiträge</rs> 224f.; sowie <ref type="letter" target="letter:804">804</ref>
+               <ref target="letter:804#seg2">2</ref>. Im Diarium
                   KMs finden sich dazu mehrere Einträge, in denen er über seine Besucher unter
                   anderem vermerkt: „Probant se viros plane eruditos et prudentes“; zudem seien sie
                   „diligentissimi in exscribendis rebus nostris, quas mirantur ob antiquitatem,
@@ -208,13 +225,13 @@
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned> ac custodibus ... angelis</mentioned>
             <p> Vgl. <ref type="letter" target="letter:644">644</ref>
-                  <ref target="letter:644#seg4">4</ref>. </p>
+               <ref target="letter:644#seg4">4</ref>. </p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>Hundium a Gewoldo auctum</mentioned>
             <p> Das dreibändige Werk ist heute in Melk
                   vorhanden: StiB Melk 8479. Zur Versendung vgl. <ref type="letter" target="letter:924">924</ref>
-                  <ref target="letter:924#seg2">2</ref>.</p>
+               <ref target="letter:924#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned> mysterium ... absconditum</mentioned>
@@ -256,14 +273,18 @@
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
             <mentioned>Bibliothecario Monacensi</mentioned>
-            <p> Zu seiner Person vgl. <ref type="letter" target="letter:747">747</ref> <ref target="letter:747#seg4">4</ref>. Über die hier angesprochenen Folgen der Ereignisse beim
-                  Besuch BPs und HPs ist weiter nichts bekannt. Zum Geschehenen vgl. <ref type="letter" target="letter:804">804</ref> <ref target="letter:804#seg7">7</ref>, <ref type="letter" target="letter:812">812</ref>
+            <p> Zu seiner Person vgl. <ref type="letter" target="letter:747">747</ref>
+               <ref target="letter:747#seg4">4</ref>. Über die hier angesprochenen Folgen der Ereignisse beim
+                  Besuch BPs und HPs ist weiter nichts bekannt. Zum Geschehenen vgl. <ref type="letter" target="letter:804">804</ref>
+               <ref target="letter:804#seg7">7</ref>, <ref type="letter" target="letter:812">812</ref>
                <ref target="letter:812#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
             <mentioned> male acceperit ... de Unertl</mentioned>
-            <p>Zur Beteiligung Unertls vgl. <ref type="letter" target="letter:486">486</ref> <ref target="letter:486#seg4">4</ref>, <ref type="letter" target="letter:663">663
-               </ref><ref target="letter:663&#10;               #seg4">4</ref>.</p>
+            <p>Zur Beteiligung Unertls vgl. <ref type="letter" target="letter:486">486</ref>
+               <ref target="letter:486#seg4">4</ref>, <ref type="letter" target="letter:663">663
+               </ref>
+               <ref target="letter:663&#xA;               #seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
             <mentioned> quae ... poteratis excerpere</mentioned>
@@ -280,7 +301,7 @@
                   diesem Brief nachgesendeten Material identisch oder mindestens Teile davon sind,
                   ist nicht sicher festzustellen, aber wahrscheinlich. Zur weiteren Befassung BPs
                   und HPs mit Arnpecks österreichischer Chronik vgl. <ref type="letter" target="letter:947">947</ref>
-                  <ref target="letter:947#seg2">2</ref>. – Der angebliche Stiftbrief ist ein wenige Jahre nach dem Tod Leopolds
+               <ref target="letter:947#seg2">2</ref>. – Der angebliche Stiftbrief ist ein wenige Jahre nach dem Tod Leopolds
                   III. in Klosterneuburg erzeugtes Falsifikat: <rs type="bibl" ref="bibl:16200">Fichtenau–Zöllner, Urkundenbuch Babenberger 1</rs> 13f. Nr. 10; vgl. <rs type="bibl" ref="bibl:15880">Dienst, Regionalgeschichte</rs> 116f.; <rs type="bibl" ref="bibl:18388">Mitis, Studien</rs> 253–259; <rs type="bibl" ref="bibl:20396">Wintermayr, Urkundenwesen</rs> 133f.</p>
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
@@ -298,7 +319,9 @@
                   weiterhin ungünstigen Beziehungen zwischen Wittelsbachern und Habsburgern könnte
                   die Veröffentlichung von Materialien, die auf das Rechtsverhältnis Österreichs zu
                   Bayern im Mittelalter Bezug hatten, leicht als inopportun erschienen sein: vgl.
-                     <ref type="letter" target="letter:632">632</ref> <ref target="letter:632#seg4">4</ref>, <ref type="letter" target="letter:707">707 </ref><ref target="letter:707 #seg2">2</ref>.
+                     <ref type="letter" target="letter:632">632</ref>
+               <ref target="letter:632#seg4">4</ref>, <ref type="letter" target="letter:707">707 </ref>
+               <ref target="letter:707 #seg2">2</ref>.
                   Eigene historiographische Bestrebungen am wittelsbachischen Hof unter Maximilian
                   II. Emmanuel betrafen nahezu ausschließlich die Darstellung von dessen Feldzügen:
                      <rs type="bibl" ref="bibl:15152">Benz, Zwischen Tradition und Kritik</rs>
@@ -312,13 +335,17 @@
                   bezog, ist nicht sicher zu bestimmen. In den Notizen (vgl. <ref target="#seg1">1</ref>) findet sich
                   keine Stelle, wo eine derartige Bitte festgehalten worden wäre. Denkbar wäre
                   allerdings, dass es auch an dieser Stelle um Gerhochs von Reichersberg Abhandlung
-                  „De aedificio Dei“ geht: vgl. <ref type="letter" target="letter:663">663</ref> <ref target="letter:663#seg1">1</ref>, <ref type="letter" target="letter:924">924</ref> <ref target="letter:924#seg3">3</ref> und <ref target="letter:924#seg4">4</ref>.</p>
+                  „De aedificio Dei“ geht: vgl. <ref type="letter" target="letter:663">663</ref>
+               <ref target="letter:663#seg1">1</ref>, <ref type="letter" target="letter:924">924</ref>
+               <ref target="letter:924#seg3">3</ref> und <ref target="letter:924#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg6">
             <mentioned>Wessofontanorum ... querelas</mentioned>
             <p>Anzunehmen ist, dass diese bei BPs
                   Besuch in Wessobrunn ihm gegenüber vorgebracht worden waren und er darüber in 829
-                  berichtet hatte. Zu den Unstimmigkeiten KMs mit Wessobrunn vgl. <ref type="letter" target="letter:663">663</ref> <ref target="letter:663#seg5">5</ref>, <ref type="letter" target="letter:734">734</ref> <ref target="letter:734#seg6">6</ref>.</p>
+                  berichtet hatte. Zu den Unstimmigkeiten KMs mit Wessobrunn vgl. <ref type="letter" target="letter:663">663</ref>
+               <ref target="letter:663#seg5">5</ref>, <ref type="letter" target="letter:734">734</ref>
+               <ref target="letter:734#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg6">
             <mentioned> visitationem instituisset</mentioned>
@@ -342,7 +369,7 @@
             <mentioned> dudum praedixi</mentioned>
             <p> KM bezieht sich möglicherweise auf seine Briefe an
                   Bölzl und Erhardt vom 4. August 1716: vgl. <ref type="letter" target="letter:663">663</ref>
-                  <ref target="letter:663#seg5">5</ref>.</p>
+               <ref target="letter:663#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg6">
             <mentioned> literis fuit testatus</mentioned>
@@ -362,7 +389,8 @@
             <mentioned> aliunde accepi</mentioned>
             <p>Die Quelle und Übermittlungsweise dieser Nachricht
                   sind aus dem Diarium KMs nicht zu entnehmen. In Frage kämen aber vielleicht der
-                  Benediktbeurer Aufenthalt von Benedikt Friepeis am 28. September 1717 (vgl. <ref type="letter" target="letter:947">947</ref> <ref target="letter:947#seg4">4</ref>) oder eventuell auch jener von Ildephons
+                  Benediktbeurer Aufenthalt von Benedikt Friepeis am 28. September 1717 (vgl. <ref type="letter" target="letter:947">947</ref>
+               <ref target="letter:947#seg4">4</ref>) oder eventuell auch jener von Ildephons
                   Seidl aus Weihenstephan, Korbinian Gräz aus Rott sowie Leonhard Klotz aus
                   Wessobrunn vom 11. bis 13. Oktober: BStB München, Meichelbeckiana 18b, 306v.
                   Briefe, bei denen ein einschlägiger Inhalt zu vermuten wäre, sind im selben
@@ -371,7 +399,8 @@
          <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg9">
             <mentioned>epistolam ... mittet</mentioned>
             <p>Dies scheint Gross letztlich nicht getan zu
-                  haben: vgl. <ref type="letter" target="letter:875">875</ref> <ref target="letter:875#seg5">5</ref>.</p>
+                  haben: vgl. <ref type="letter" target="letter:875">875</ref>
+               <ref target="letter:875#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n21'), left('n21e'))" n="21" anchored="false" corresp="#seg9">
             <mentioned> Gregorius ... satisfaciet</mentioned>
@@ -401,18 +430,22 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime et clarissime domine pater Bernarde, domine colendissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime et clarissime domine pater Bernarde, domine colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">Incolumes vos et felices <anchor xml:id="n1"/>rediisse Mellicium<anchor xml:id="n1e"/> et messem praepinguem intulisse horreis vestris literariis cum ingenti cordis solatio accepimus Benedictoburani omnes, et Deo<anchor xml:id="n2"/> ac custodibus itineris vestri angelis<anchor xml:id="n2e"/> gratias agimus, maxime reverendissimus meus dominus abbas, pater prior et cum Carolo Gregorius. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n3"/>Hundium a Gewoldo auctum<anchor xml:id="n3e"/> impetrato iam dudum eiusdem reverendissimi domini abbatis mei assensu adiciam proxima, quae evenerit, occasione, ut, quod minus apud nos apparebat in chartariis, tabulariis et pluteis nostris, liber ille suppleat; qui quidem, licet alicubi sit admodum foecundus, circa quasdam tamen ecclesias valde est ieiunus, praesertim circa monasterium nostrum, de quo non nisi paucissima documenta refert; cuius rei<anchor xml:id="n4"/> mysterium mihi non est absconditum<anchor xml:id="n4e"/>. Interim gaudebimus, si quid commodi afferre poterit usibus vestris hoc qualecunque donum. </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n3"/>Hundium a Gewoldo auctum<anchor xml:id="n3e"/> impetrato iam dudum eiusdem reverendissimi domini abbatis mei assensu adiciam proxima, quae evenerit, occasione, ut, quod minus apud nos apparebat in chartariis, tabulariis et pluteis nostris, liber ille suppleat; qui quidem, licet alicubi sit admodum foecundus, circa quasdam tamen ecclesias valde est ieiunus, praesertim circa monasterium nostrum, de quo non nisi paucissima documenta refert; cuius rei<anchor xml:id="n4"/> mysterium mihi non est absconditum<anchor xml:id="n4e"/>. Interim gaudebimus, si quid commodi afferre poterit usibus vestris hoc qualecunque donum. </ab>
          <ab resp="#editor" xml:id="seg3">De <anchor xml:id="n5"/>iuvene antehac a me commendato non simus soliciti, mi suavissime Bernarde. Is iam est mortuus, mundo scilicet, non vero sacrae religioni nostrae, quippe atra veste nuperrime donatus in monasterio Rottensi<anchor xml:id="n5e"/>. </ab>
          <ab resp="#editor" xml:id="seg4">O quanto <pb n="1v"/> nos sumus solicitiores de clarissimo patre Bernardo Pezio, qui pro gloria ordinis nostri tam arduos labores suscipit, et quidem <anchor xml:id="n6"/>absque amanuensium opera<anchor xml:id="n6e"/>! Certe candidissime fateor mihi futurum impossibile prosequi labores meos, nisi ad manum haberem, qui compositiones meas exscriberent: quales habeo tres saeculares homines, quibus forte brevi quartus accedet ex regularibus nostris. Et esto: sit haec aliqua novitas in monasterio. Certe etiam extraordinarius eiusmodi labor est quaedam singularis novitas, cum antehac eius generis negotium nemini fuerit impositum, a nemine susceptum. Profecto si contingeret, ut Mellicium ego venirem, provolverer ad genua reverendissimi perillustris et amplissimi domini domini praesulis vestri, ut Bernardo suo pro gloria Benedictinae familiae vix non fatiscenti adiutores quosdam adiungeret virumque ad ordinis nostri vindicias gloriamque natum ab aliis monasticis functionibus eximeret, imo imposito praecepto arceret. Quod quidem omnino eventum spero, ubi sapientissimi superiores vestri plenius perspexerint, quantum laboraveritis quemve fructum reportaveritis vel e sola Boiaria pro solatio totius eruditi orbis, pro ordinis nostri incremento gloriaque monasterii vestri immortali. </ab>
-         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n7"/>Bibliothecario Monacensi<anchor xml:id="n7e"/> caro stetit ineptia sua, quippe qui abunde sensit, quam<anchor xml:id="n8"/> male acceperit rusticitatem illam in viros tam praeclaros exercitam excellentissimus de Unertl. Audio etiam serenissimum electorem homini fuisse indignatum, cum dictam eius stoliditatem intellexisset. Sane excellentissimus de Unertl<anchor xml:id="n8e"/> ea,<anchor xml:id="n9"/> quae in bibliotheca electorali poteratis excerpere<anchor xml:id="n9e"/> intra tantas temporis angustias, mihi per patrem<anchor xml:id="n10"/> Josephum nostrum<anchor xml:id="n10e"/> misit, vobis propediem remittenda; quod quidem hisce exequor, et addo optare dictum excellentissimum, ne, quae exscripsistis de marchionibus etc.,<anchor xml:id="n11"/> scribatis desumpta esse ex bibliotheca electorali. Caeterum non prohibet, ne rem ipsam propaletis, dummodo locus, unde notitia hausta fuerit, sileatur<anchor xml:id="n11e"/>. Id ipsum ego<anchor xml:id="n12"/> in quadam materia nota vos obtestatus<anchor xml:id="n12e"/> sum, et obtestor etiamnum. Sed de his satis. </ab>
+         <ab resp="#editor" xml:id="seg5">
+            <anchor xml:id="n7"/>Bibliothecario Monacensi<anchor xml:id="n7e"/> caro stetit ineptia sua, quippe qui abunde sensit, quam<anchor xml:id="n8"/> male acceperit rusticitatem illam in viros tam praeclaros exercitam excellentissimus de Unertl. Audio etiam serenissimum electorem homini fuisse indignatum, cum dictam eius stoliditatem intellexisset. Sane excellentissimus de Unertl<anchor xml:id="n8e"/> ea,<anchor xml:id="n9"/> quae in bibliotheca electorali poteratis excerpere<anchor xml:id="n9e"/> intra tantas temporis angustias, mihi per patrem<anchor xml:id="n10"/> Josephum nostrum<anchor xml:id="n10e"/> misit, vobis propediem remittenda; quod quidem hisce exequor, et addo optare dictum excellentissimum, ne, quae exscripsistis de marchionibus etc.,<anchor xml:id="n11"/> scribatis desumpta esse ex bibliotheca electorali. Caeterum non prohibet, ne rem ipsam propaletis, dummodo locus, unde notitia hausta fuerit, sileatur<anchor xml:id="n11e"/>. Id ipsum ego<anchor xml:id="n12"/> in quadam materia nota vos obtestatus<anchor xml:id="n12e"/> sum, et obtestor etiamnum. Sed de his satis. </ab>
          <ab resp="#editor" xml:id="seg6">Vix sine cachinno legi motas <anchor xml:id="n13"/>Wessofontanorum de me iudicioque meo querelas<anchor xml:id="n13e"/> sane inofficiosas. Credebant viri illi boni lituras, quas in lucubratione reverendi patris Thomae conspexerant, fuisse illatas a Carolo Benedictoburano; et ideo vapulabam ego nescio quam acerbis censuris ab ignorantibus. Sed errorem fideliter eos dedocuit ipse reverendissimus dominus praeses congregationis, cum nuper<anchor xml:id="n14"/> visitationem instituisset<anchor xml:id="n14e"/> et motam contra me lepidam querelam illam audisset. Indicavit enim patri Thomae et eius abbati lituras illas fuisse factas <pb n="2v"/> iussu suo et quidem a<anchor xml:id="n15"/> secretario congregationis<anchor xml:id="n15e"/>, non a patre Carolo; cuius annotationibus et monitis quoad caetera omnino standum esset. Ita aliter sentire debuerunt Wessofontani, quos ego post obsequia vere fraterna ipsis exhibita suo tempore rogabo, ut deinceps cautius agant, maxime apud rei gestae ignaros, nisi me velint adigere ad famam propriam sartam tectamque servandam literis ipsorum, quas ad me in hoc ipso negotio a biennio plures dederunt, exhibitis, quibus edocere possum, quam parum hactenus responderint obsequiis a me fidelissime praestitis. Certe reverendissimus meus dominus abbas, totius rei scientissimus, aliud exspectasset a vicinis illis nostris. Verum dum haec scribo, iterum vix contineo risum. Vatem enim me fuisse intelligo, dum mente candida<anchor xml:id="n16"/> dudum praedixi<anchor xml:id="n16e"/> scriptori illi et scriptoris abbati brevi fore, ut patrem Thomam lucubrationis adeo deproperatae poeniteat. Cur censoris nomen innotuerit viro illi, alia, mi eruditissime Bernarde, ratio non est, quam quia ipse exoptabat censuram meam, uti datis ad me<anchor xml:id="n17"/> literis fuit testatus<anchor xml:id="n17e"/>. Itaque votis ipsius factum est satis; imo meis, qui vehementer optabam, ne in publicum prodiret, unde eruditi homines ordini nostro insultarent. Dicam paucis: ambo potiti sumus votis nostris, sed nempe diversa ratione. Erit tamen, cum et ipse pater Thomas sibi gratulabitur, <pb n="3v"/> quando scilicet suo tempore intelliget opus tanti momenti indiguisse maiori iudicio, lima, experientia, meditatione, imo (si de ipso patre Thoma loquamur) etiam aetate. </ab>
          <ab resp="#editor" xml:id="seg7">Interim cum ingenti aviditate exspecto, quid mecum communicatura sit paternitas vestra clarissima de <anchor xml:id="n18"/>fundatione monasterii Wessofontani<anchor xml:id="n18e"/> ex codice ad S. Emmeramum, ut audio, reperto. Ego his ipsis diebus quaedam mihi hactenus incognita<anchor xml:id="n19"/> aliunde accepi<anchor xml:id="n19e"/>, sed quae firmant nostrorum codicum narrationes. Verum quidquid mihi aperuerit clarissimus pater Pezius, legam cum ingenti voluptate et animo ad veritatem amplexandam comparatissimo. </ab>
          <ab resp="#editor" xml:id="seg8">Gregorius noster Bernardum Hieronymumque eminus veneratur corde, quo solet, germano et optimo, et quidem veluti magistros suos, e quorum allocutione plurimum profecerit. Cum quo nisi et ego faterer ingentem obligationem mihi impositam ex eruditissimis vestris discursibus, hominem ignavum et ingratissimum me fateri necessum esset. Reverendus pater prior noster suos ipse sensus vobis explicat adiuncta epistola. Valete clarissima Austriae lumina et Carolum Benedictoburanum habete vobis semper commendatum. Ita vos obtestor et maneo</ab>
          <closer>Clarissimae paternitatis vestrae clarissimique domini patris Hieronymi devotissimus et humillimus servus pater Carolus manu propria.</closer>
          <closer>In monasterio Benedictoburano 20. Octobris 1717.</closer>
-         <closer xml:id="seg9">P.S. Contigit, ut, priusquam hasce clauderem, eas legeret reverendissimus meus dominus abbas, qui iussit, ut annecterem commendationem sui plurimam utrique clarissimo domino patri Pezio faciendam. Admodum reverendus pater prior subito negotio interpellatus non potest hodie absolvere <anchor xml:id="n20"/>epistolam suam, quam idcirco mittet<anchor xml:id="n20e"/> alio commodiori tempore, una<del ana="#before">s</del> cum aliis imaginibus sanctae Anastasiae etc. Reverendus pater<anchor xml:id="n21"/> Gregorius itidem brevi satisfaciet<anchor xml:id="n21e"/> suae promissioni in describendis scriptoribus etc.<pb n="3r"/> </closer>
+         <closer xml:id="seg9">P.S. Contigit, ut, priusquam hasce clauderem, eas legeret reverendissimus meus dominus abbas, qui iussit, ut annecterem commendationem sui plurimam utrique clarissimo domino patri Pezio faciendam. Admodum reverendus pater prior subito negotio interpellatus non potest hodie absolvere <anchor xml:id="n20"/>epistolam suam, quam idcirco mittet<anchor xml:id="n20e"/> alio commodiori tempore, una<del ana="#before">s</del> cum aliis imaginibus sanctae Anastasiae etc. Reverendus pater<anchor xml:id="n21"/> Gregorius itidem brevi satisfaciet<anchor xml:id="n21e"/> suae promissioni in describendis scriptoribus etc.<pb n="3r"/>
+         </closer>
       </body>
    </text>
 </TEI>

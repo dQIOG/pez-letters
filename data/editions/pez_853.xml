@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="853" xml:id="pez-0853">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Gerhard Cornelius van den Driesch an Bernhard Pez. 1717-11-17. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">853</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -75,20 +87,22 @@
                <ptr type="mentions" target="letter:846"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e6918">Buchels, Johann</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e6918">Buchels, Johann</term>
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
          Epistola ad virum clarissimum Joannem Burchardum Menkenium Lipsiensem de Conspectu insignis
          codicis diplomatico-historico-epistolaris ex ἀυτογράφῳ, ut quidem videtur, dato ad Actorum
          eruditorum Lipsiensium collectores a reverendo patre Bernardo Pez Benedictino et
          bibliothecario Mellicensi in Austria. Verona [Wien] 1717</term>
-            <term ref="index:d14380e31962">Paar, Karl Josef, Graf</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
-            <term ref="index:d14380e41556">Steyerer, Anton</term>
-            <term ref="index:d14380e41597">Steyerer, Anton ; -Plan einer österreichischen Geschichte</term>
-            <term ref="index:d14380e46008">Wien ; Mannagetta-Stiftung ; Bibliothek</term></keywords></textClass>
+               <term ref="index:d14380e31962">Paar, Karl Josef, Graf</term>
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+               <term ref="index:d14380e41556">Steyerer, Anton</term>
+               <term ref="index:d14380e41597">Steyerer, Anton ; -Plan einer österreichischen Geschichte</term>
+               <term ref="index:d14380e46008">Wien ; Mannagetta-Stiftung ; Bibliothek</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">GD dankt BP dafür, dass er ihn gegenüber einem gemeinsamen Freund (<rs ref="index:d14380e6918">Johann
                   Buchels</rs>) wohlwollend erwähnt hat <ref type="letter" target="letter:846">846</ref>, und wünscht,
@@ -111,14 +125,16 @@
             <p corresp="#seg4">Von den vielen und seltenen Manuskripten in der von ihm betreuten <rs ref="index:d14380e46008">Bibliothek
                   (jener der Mannagetta-Stiftung?)</rs>, die <rs ref="index:d14380e41556">Anton Steyerer</rs> vielfach für
                sein Werk (zur österreichischen Geschichte) herangezogen hat, will GD ein andermal schreiben.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>virum ... amantissimum</mentioned>
-            <p>Gemeint ist Johann Buchels: vgl. <ref type="letter" target="letter:814">814</ref> <ref target="letter:814#seg8">8</ref>, <ref type="letter" target="letter:919">919</ref> <ref target="letter:919#seg11">11</ref>. GD
+            <p>Gemeint ist Johann Buchels: vgl. <ref type="letter" target="letter:814">814</ref>
+               <ref target="letter:814#seg8">8</ref>, <ref type="letter" target="letter:919">919</ref>
+               <ref target="letter:919#seg11">11</ref>. GD
                   half den Briefverkehr zwischen BP und Buchels abzuwickeln; von der vorteilhaften
                   Nennung seiner eigenen Person in dem mit 7. November 1717 datierten Brief 846 muss
                   er, da eine Mitteilung durch Buchels nach dessen Erhalt zeitlich nicht in Frage
@@ -155,11 +171,14 @@
             <p>Es könnte entweder die Bibliothek des Grafen
                   Paar gemeint sein, an deren Katalog GD noch kurz zuvor gearbeitet hatte, oder
                   bereits jene der Mannagetta-Stiftung, bei welcher er spätestens seit dem Sommer
-                  1717 als Hofmeister angestellt war: vgl. <ref type="letter" target="letter:814">814</ref> <ref target="letter:814#seg8">8</ref>,
-                     <ref type="letter" target="letter:839">839</ref> <ref target="letter:839#seg4">4</ref>. Für diese letztere Identifikation
+                  1717 als Hofmeister angestellt war: vgl. <ref type="letter" target="letter:814">814</ref>
+               <ref target="letter:814#seg8">8</ref>,
+                     <ref type="letter" target="letter:839">839</ref>
+               <ref target="letter:839#seg4">4</ref>. Für diese letztere Identifikation
                   spricht der Hinweis auf die Benutzung durch Steyerer, der sich später in
                   unzweideutigem Bezug auf die Bibliothek der Mannagetta-Stiftung wiederholt: vgl.
-                     <ref type="letter" target="letter:877">877</ref> <ref target="letter:877#seg4">4</ref>.</p>
+                     <ref type="letter" target="letter:877">877</ref>
+               <ref target="letter:877#seg4">4</ref>.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -175,10 +194,32 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo patri viro doctissimo Bernardo Pezio Gerardus Cornelius Drieschius salutem plurimam dicit.</opener>
-         <ab resp="#editor" xml:id="seg1">Gratiam tibi multam debeo habeoque, mi pater, quod meminisse mei suaviter apud <anchor xml:id="n1"/>virum utriusque amantissimum<anchor xml:id="n1e"/> volueris, maiorem etiam, quod me tuo non indignum amore porro iudices. Quem utinam meis promereri officiis potuissem, vidisses profecto, tantum a me voluntatis ad te colendum adferri, quantum ad me amandum benevolentiae liberalitatisque ipse primus nunc attulisti. Faciam autem hercule, ut neque poenitere te debeat impensi mihi immerenti amoris neque pudere me possit me in optimi viri familiaritatem fuisse receptum. Sed de his hactenus. <pb n="1v"/> </ab>
-         <ab resp="#editor" xml:id="seg2">Quos tu mihi sumptus repraesentandos praedicas? Odio dignus es, cum ita loqueris; an me credis ex eo hominum genere, qui amicitias <choice><sic>num</sic><corr>commodo</corr></choice> aut lucro metiuntur? Ego cum eas sancte casteque omnes colo, tum, si quid amici causa utiliter <choice><sic>expenditur</sic><corr>expendo</corr></choice>, id optime collocatum reor. Quanquam ut hoc te metu nunc quoque liberem (vereor enim, ne homo amicorum rationibus plus, quam sat est, intentus novas tibi solicitudines conficias), ne sic quidem amicitia tua mihi cara unquam fuit<note place="foot" xml:id="d3e45328">Danach durchgestrichen eine schließende Klammer.</note>; <anchor xml:id="n2"/>beneficio enim Paarii<anchor xml:id="n2e"/> sine sumptu omnia ad me perferuntur nec raro fit, ut integros mihi codices cursores nostri <choice><sic>adv</sic><corr>apportent</corr></choice>. </ab>
-         <ab resp="#editor" xml:id="seg3">Angeli <anchor xml:id="n3"/>Fontei Epistolam<anchor xml:id="n3e"/>, cuius occasionem tu me accuratius docuisti, legi iam ante, quam te novissem; neque <pb n="2r"/> tamen, quo authore scripta esset, satis tum explicatum habebam. Semper mihi visa fuit plena felle et aceto, cuius author acetum gessisse in pectore, cum eandem scriberet, nemini non dicetur. Viderier praeterea, credo, voluit, et digito monstrarier hic est<note place="foot" xml:id="d3e45341"><hi rend="italic">	Semper ... aceto</hi> mit Verweiszeichen am unteren Blattrand von 2r eingefügt, <hi rend="italic" xml:space="preserve">cuius ... hic est </hi>auf 2v fortgesetzt.</note><hi rend="Formatvorlage_Editionstext_+_(Latein)_Georgia_11_pt_Zchn">.</hi> Parum hercule amice egit, qui hac ratione amicum amicus homo ex insidiis <choice><sic>appetiit</sic><corr>circumvenit</corr></choice>. Huius ego medius Fidius amicitiam nec <anchor xml:id="n4"/>cassa nuce<anchor xml:id="n4e"/> nec<anchor xml:id="n5"/> titivilitio emerem<anchor xml:id="n5e"/>. Publicatum si quid esset, te monuisset, quod forte volebas, ne monumenta ipsa, quod fortassis reipublicae literariae bono meditabare, tota deinde adscriberes, quae edita iam aliis in <choice><sic>locis</sic><corr>libris</corr></choice> essent. Nam quis homo hominum tam gnarus est, ut, quid editum ineditumve omnibus in libris sit, scire id omne possit? Certe ad hoc non una homini aetas, non <choice><sic>sufficiunt</sic><corr>sufficient</corr></choice> plures. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverendo patri viro doctissimo Bernardo Pezio Gerardus Cornelius Drieschius salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Gratiam tibi multam debeo habeoque, mi pater, quod meminisse mei suaviter apud <anchor xml:id="n1"/>virum utriusque amantissimum<anchor xml:id="n1e"/> volueris, maiorem etiam, quod me tuo non indignum amore porro iudices. Quem utinam meis promereri officiis potuissem, vidisses profecto, tantum a me voluntatis ad te colendum adferri, quantum ad me amandum benevolentiae liberalitatisque ipse primus nunc attulisti. Faciam autem hercule, ut neque poenitere te debeat impensi mihi immerenti amoris neque pudere me possit me in optimi viri familiaritatem fuisse receptum. Sed de his hactenus. <pb n="1v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg2">Quos tu mihi sumptus repraesentandos praedicas? Odio dignus es, cum ita loqueris; an me credis ex eo hominum genere, qui amicitias <choice>
+               <sic>num</sic>
+               <corr>commodo</corr>
+            </choice> aut lucro metiuntur? Ego cum eas sancte casteque omnes colo, tum, si quid amici causa utiliter <choice>
+               <sic>expenditur</sic>
+               <corr>expendo</corr>
+            </choice>, id optime collocatum reor. Quanquam ut hoc te metu nunc quoque liberem (vereor enim, ne homo amicorum rationibus plus, quam sat est, intentus novas tibi solicitudines conficias), ne sic quidem amicitia tua mihi cara unquam fuit<note place="foot" xml:id="d3e45328">Danach durchgestrichen eine schließende Klammer.</note>; <anchor xml:id="n2"/>beneficio enim Paarii<anchor xml:id="n2e"/> sine sumptu omnia ad me perferuntur nec raro fit, ut integros mihi codices cursores nostri <choice>
+               <sic>adv</sic>
+               <corr>apportent</corr>
+            </choice>. </ab>
+         <ab resp="#editor" xml:id="seg3">Angeli <anchor xml:id="n3"/>Fontei Epistolam<anchor xml:id="n3e"/>, cuius occasionem tu me accuratius docuisti, legi iam ante, quam te novissem; neque <pb n="2r"/> tamen, quo authore scripta esset, satis tum explicatum habebam. Semper mihi visa fuit plena felle et aceto, cuius author acetum gessisse in pectore, cum eandem scriberet, nemini non dicetur. Viderier praeterea, credo, voluit, et digito monstrarier hic est<note place="foot" xml:id="d3e45341">
+               <hi rend="italic">	Semper ... aceto</hi> mit Verweiszeichen am unteren Blattrand von 2r eingefügt, <hi rend="italic" xml:space="preserve">cuius ... hic est </hi>auf 2v fortgesetzt.</note>
+            <hi rend="Formatvorlage_Editionstext_+_(Latein)_Georgia_11_pt_Zchn">.</hi> Parum hercule amice egit, qui hac ratione amicum amicus homo ex insidiis <choice>
+               <sic>appetiit</sic>
+               <corr>circumvenit</corr>
+            </choice>. Huius ego medius Fidius amicitiam nec <anchor xml:id="n4"/>cassa nuce<anchor xml:id="n4e"/> nec<anchor xml:id="n5"/> titivilitio emerem<anchor xml:id="n5e"/>. Publicatum si quid esset, te monuisset, quod forte volebas, ne monumenta ipsa, quod fortassis reipublicae literariae bono meditabare, tota deinde adscriberes, quae edita iam aliis in <choice>
+               <sic>locis</sic>
+               <corr>libris</corr>
+            </choice> essent. Nam quis homo hominum tam gnarus est, ut, quid editum ineditumve omnibus in libris sit, scire id omne possit? Certe ad hoc non una homini aetas, non <choice>
+               <sic>sufficiunt</sic>
+               <corr>sufficient</corr>
+            </choice> plures. </ab>
          <ab resp="#editor" xml:id="seg4">De manuscriptis <anchor xml:id="n6"/>bibliothecae nostrae<anchor xml:id="n6e"/>, quae et rara sunt et multa, quibus Steirius in opere suo perficiundo multum adiuvatur, plura alias. Tu fac valeas et nos vicissim redames.</ab>
          <closer>Dabam Viennae ad Istrum XV. Kalendas Decembreis MDCCXVII.</closer>
       </body>

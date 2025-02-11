@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="172" xml:id="pez-0172">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Petrus Friderici an Bernhard Pez. 1711-06-09. Erfurt.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">172</idno>
          </publicationStmt>
          <seriesStmt>
@@ -57,10 +69,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -84,17 +97,21 @@
             </correspContext>
          </correspDesc>
          <abstract>
-            <p corresp="#seg1">Zwar will BP <ref type="letter" target="letter:170">170</ref> nicht alles bisher Mitgeteilte über <rs ref="index:d10854e2429">Basilius Valentinus</rs> <ref type="letter" target="letter:166">166</ref> drucken, um keinen Anstoß zu erregen, doch bringt <rs type="person">PF</rs> einen gekürzten Vorschlag: Die Benediktiner des <rs ref="index:d10854e8069">Petersklosters</rs> geben an, seit der Plünderung durch die <rs ref="index:d14380e40231">Schweden</rs> im vorangegangenen Jahrhundert keine <rs ref="index:d10854e8136">Handschriften des Basilius</rs> mehr zu besitzen, zählen ihn jedoch zu ihren Konventualen, was der allgemeinen Auffassung wie auch jener der Geschichtsschreiber entspricht. Über eine Lebensbeschreibung des Basilius verfügt <rs type="person">PF</rs> nicht, doch erinnert er sich, früher, als er wegen anderer Aufgaben darauf nicht achtete, bisweilen in Handschriften wie in Druckwerken über jenen gelesen zu haben, dass er zunächst Novizenmeister, dann Prior gewesen sei und alle seine Mitbrüder das Goldmachen gelehrt habe. Nun von BP aufgefordert, hat <rs type="person">PF</rs> wieder nach Belegen gesucht, jedoch nichts gefunden, weil während seiner Abwesenheit in den letzten zwölf Jahren die <rs ref="index:d10854e8106">Bibliothek</rs> schlecht geführt worden und wohl manches in fremde Hände gekommen ist.</p>
-            <p corresp="#seg2"><rs type="person">PF</rs> greift BPs Korrektur seiner Angaben zu Abt <rs ref="index:d10854e12436">Herbord</rs> auf, den er irrig als „von Amelunxen“ bezeichnet und dies auch in seiner <rs ref="index:d10854e9634">Hausgeschichte</rs> so vermerkt hatte. <rs type="person">PF</rs> hatte in einer Handschrift des <rs ref="index:d10854e8069">Petersklosters</rs> gelesen, dass <rs ref="index:d10854e13589">Isibord von Amelunxen</rs> ein Werk „<rs ref="index:d10854e13597">Gesta Saxonica</rs>“ geschrieben habe, und hatte ihn wegen eines Lesefehlers mit Abt <rs ref="index:d10854e12436">Herbord</rs> gleichgesetzt, der ihm als Verfasser <rs ref="index:d10854e12446">eines solchen</rs> bekannt war. <rs type="person">PF</rs> stellt nun die These auf, dass Herbord der Urheber eines Geschichtswerks sei, das später <rs ref="index:d14380e45554">Widukind</rs> im 9. und <rs ref="index:d10854e13589">Isibord</rs> im 11. Jahrhundert fortgesetzt hätten (siehe Kommentar).</p>
-            <p corresp="#seg3"><rs type="person">PF</rs> teilt aus seinen Quellen Angaben zu <rs ref="index:d14380e45554">Widukind</rs> mit: Dieser war von Geburt <rs ref="index:d14380e9395">Deutscher</rs> (Teutonicus), in den Wissenschaften hochgebildet, und verfasste die „<rs ref="index:d10854e33024">Rerum gestarum Saxonicarum libri tres</rs>“, eine „<rs ref="index:d10854e33031">Vita sancti Pauli</rs>“, eine „<rs ref="index:d10854e33017">Passio sanctae Theclae</rs>“ in Versen sowie „<rs ref="index:d10854e33024">Gesta et vita Ottonis I.</rs>“; er lebte zur Zeit <rs ref="index:d14380e31825">Ottos II.</rs> um das Jahr 975.</p>
-            </abstract>
+            <p corresp="#seg1">Zwar will BP <ref type="letter" target="letter:170">170</ref> nicht alles bisher Mitgeteilte über <rs ref="index:d10854e2429">Basilius Valentinus</rs>
+               <ref type="letter" target="letter:166">166</ref> drucken, um keinen Anstoß zu erregen, doch bringt <rs type="person">PF</rs> einen gekürzten Vorschlag: Die Benediktiner des <rs ref="index:d10854e8069">Petersklosters</rs> geben an, seit der Plünderung durch die <rs ref="index:d14380e40231">Schweden</rs> im vorangegangenen Jahrhundert keine <rs ref="index:d10854e8136">Handschriften des Basilius</rs> mehr zu besitzen, zählen ihn jedoch zu ihren Konventualen, was der allgemeinen Auffassung wie auch jener der Geschichtsschreiber entspricht. Über eine Lebensbeschreibung des Basilius verfügt <rs type="person">PF</rs> nicht, doch erinnert er sich, früher, als er wegen anderer Aufgaben darauf nicht achtete, bisweilen in Handschriften wie in Druckwerken über jenen gelesen zu haben, dass er zunächst Novizenmeister, dann Prior gewesen sei und alle seine Mitbrüder das Goldmachen gelehrt habe. Nun von BP aufgefordert, hat <rs type="person">PF</rs> wieder nach Belegen gesucht, jedoch nichts gefunden, weil während seiner Abwesenheit in den letzten zwölf Jahren die <rs ref="index:d10854e8106">Bibliothek</rs> schlecht geführt worden und wohl manches in fremde Hände gekommen ist.</p>
+            <p corresp="#seg2">
+               <rs type="person">PF</rs> greift BPs Korrektur seiner Angaben zu Abt <rs ref="index:d10854e12436">Herbord</rs> auf, den er irrig als „von Amelunxen“ bezeichnet und dies auch in seiner <rs ref="index:d10854e9634">Hausgeschichte</rs> so vermerkt hatte. <rs type="person">PF</rs> hatte in einer Handschrift des <rs ref="index:d10854e8069">Petersklosters</rs> gelesen, dass <rs ref="index:d10854e13589">Isibord von Amelunxen</rs> ein Werk „<rs ref="index:d10854e13597">Gesta Saxonica</rs>“ geschrieben habe, und hatte ihn wegen eines Lesefehlers mit Abt <rs ref="index:d10854e12436">Herbord</rs> gleichgesetzt, der ihm als Verfasser <rs ref="index:d10854e12446">eines solchen</rs> bekannt war. <rs type="person">PF</rs> stellt nun die These auf, dass Herbord der Urheber eines Geschichtswerks sei, das später <rs ref="index:d14380e45554">Widukind</rs> im 9. und <rs ref="index:d10854e13589">Isibord</rs> im 11. Jahrhundert fortgesetzt hätten (siehe Kommentar).</p>
+            <p corresp="#seg3">
+               <rs type="person">PF</rs> teilt aus seinen Quellen Angaben zu <rs ref="index:d14380e45554">Widukind</rs> mit: Dieser war von Geburt <rs ref="index:d14380e9395">Deutscher</rs> (Teutonicus), in den Wissenschaften hochgebildet, und verfasste die „<rs ref="index:d10854e33024">Rerum gestarum Saxonicarum libri tres</rs>“, eine „<rs ref="index:d10854e33031">Vita sancti Pauli</rs>“, eine „<rs ref="index:d10854e33017">Passio sanctae Theclae</rs>“ in Versen sowie „<rs ref="index:d10854e33024">Gesta et vita Ottonis I.</rs>“; er lebte zur Zeit <rs ref="index:d14380e31825">Ottos II.</rs> um das Jahr 975.</p>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>de Basilio nostro</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:166">166</ref> <ref target="letter:166#seg2">2</ref> und <ref target="letter:166#seg3">3</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:166">166</ref>
+               <ref target="letter:166#seg2">2</ref> und <ref target="letter:166#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned>aliis functionibus ... absentiam</mentioned>
@@ -102,7 +119,8 @@
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>Herbordo abbate</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:166">166</ref> <ref target="letter:166#seg7">7</ref>, wonach ein Prior Herbord von Corvey
+            <p>Vgl. <ref type="letter" target="letter:166">166</ref>
+               <ref target="letter:166#seg7">7</ref>, wonach ein Prior Herbord von Corvey
                   879 zum Abt des Petersklosters postuliert wurde. In den erhaltenen Teilen der
                   Corveyer Annalen findet sich keine entsprechende Nachricht: <rs type="bibl" ref="bibl:36828">Prinz, Annalen</rs>; die Konventslisten des 9. Jh. bieten nur
                   unter Abt Warin (826–856) einen Mönch „Heruuardus“, zu dem aber nichts weiter
@@ -115,7 +133,8 @@
                   Paullini,
                   Theatrum 92, übernommen haben, noch die Zuschreibung zur Familie
                   „von Amelunxen“ hinzufügend. Dieses Werk Paullinis lag BP nachweislich vor (vgl.
-                     <ref type="letter" target="letter:134">134</ref> <ref target="letter:134#seg5">5</ref>) und war vermutlich die Grundlage für
+                     <ref type="letter" target="letter:134">134</ref>
+               <ref target="letter:134#seg5">5</ref>) und war vermutlich die Grundlage für
                   seine Bemerkung, auf die PF hier reagiert. Paullini hatte später zusätzliche
                   Belege für „Herbord“ in seinen gefälschten Corveyer Annalen vorgebracht und in
                   seinem Abdruck der Konventsliste interpoliert: <rs type="bibl" ref="bibl:36756">Paullini, Rerum Germanicarum syntagma</rs> 2 28, 374; zum Fälschungscharakter
@@ -129,7 +148,9 @@
                   angesetzten Rückkehr des Abtes Hartbert von Lobbes aus Corvey in sein
                   Heimatkloster. Hartbert war nach <rs type="bibl" ref="bibl:36828">Prinz,
                      Annalen</rs> 27–30, auch der Verfasser des Grundstockes der Corveyer Annalen;
-                  diese scheint Letzner in Corvey eingesehen zu haben (<rs type="bibl" ref="bibl:36828"><rs type="bibl" ref="bibl:36828">Prinz, Annalen</rs></rs> 93;
+                  diese scheint Letzner in Corvey eingesehen zu haben (<rs type="bibl" ref="bibl:36828">
+                  <rs type="bibl" ref="bibl:36828">Prinz, Annalen</rs>
+               </rs> 93;
                   vgl. <rs type="bibl" ref="bibl:35850">Bartels, Geschichtsschreibung</rs> 151),
                   bevor sie 1634 bei der Plünderung Corveys durch kaiserliche Truppen geraubt wurden
                   und etwa ein Drittel ihrer Folien verloren gingen (<rs type="bibl" ref="bibl:36828">Prinz, Annalen </rs>4f.). Es ist somit nicht vollends
@@ -144,7 +165,7 @@
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned>meis Annalibus</mentioned>
             <p>Zu PFs verlorenem „Großen Chronicon Sanpetrense“ vgl. <ref type="letter" target="letter:166">166</ref>
-                  <ref target="letter:166#seg4">4</ref>.</p>
+               <ref target="letter:166#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
             <mentioned>Isibordus de Ameluxen</mentioned>
@@ -164,7 +185,9 @@
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
             <mentioned>de Wittekindo in monumentis nostris</mentioned>
-            <p>Hinsichtlich der Quellen PFs vgl. <ref type="letter" target="letter:150">150 </ref><ref target="letter:150 #seg2">2</ref>, <ref type="letter" target="letter:166">166</ref> <ref target="letter:166#seg4">4</ref>. Die zitierte Stelle entspricht: <rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs>
+            <p>Hinsichtlich der Quellen PFs vgl. <ref type="letter" target="letter:150">150 </ref>
+               <ref target="letter:150 #seg2">2</ref>, <ref type="letter" target="letter:166">166</ref>
+               <ref target="letter:166#seg4">4</ref>. Die zitierte Stelle entspricht: <rs type="bibl" ref="bibl:35728">Chronicon Ecclesiasticum Nicolai de Siegen</rs>
                   205; PF gibt sie freilich mit etlichen Abweichungen wieder.</p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
@@ -179,10 +202,12 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Erffurti 9. Junii 1711.</opener>
+         <opener>
+            <pb n="1r"/> Erffurti 9. Junii 1711.</opener>
          <opener>Plurimum reverende et eximie domine, domine confrater colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">Nolit admodum reverenda dilectio vestra omnia, quae <anchor xml:id="n1"/>de Basilio nostro<anchor xml:id="n1e"/> perscripsi, suis typis intexere, eo quod fortassis quaedam eorum alicubi offensam causarent, sed si placuerit, haec fere inseri possent: Fatentur patres Benedictini Petrenses se manuscripta huius domini Basilii Valentini amplius non possidere, quae sibi cum multis aliis pretiosis per Suecorum irruptionem priori saeculo ablata lugent, ipsum tamen suum claustralem asserunt probantque argumentis atque inditiis haud obscuris, quibus et communis fama et historiographorum opinio ut plurimum adstipulatur. Vitam saepe fati patris Basilii non habeo, alias iam pridem submisissem. Memini me antehac, dum aliis functionibus implicatus earum rerum incurius eram, de Basilio hoc occasionaliter et manuscripta et impressa legisse, quod apud nos fuisset primitus magister novitiorum, deinde prior conventus, et quod omnes confratres suos aurifacturam docuerit; haec tunc neglexi, eo quod <pb n="1v"/> pro certo haberemus ipsum nostrum professum esse; dum autem a reverentia vestra requisitus particularia inquiro, nihil penitus invenio scriptorum; suspicor ea per longam meam absentiam <sic>ulta</sic>  annos duodecim, quibus bibliotheca nostra per diversos administrata fuit, in alienas manus devenisse per incuriam. Et quotusquisque est, qui huiusmodi pro valore aestimat? </ab>
-         <ab resp="#editor" xml:id="seg2">Bene admodum reverendus dominus me monuit de domino <anchor xml:id="n2"/>Herbordo abbate<anchor xml:id="n2e"/> nostro, quem ex errore de Amelunxen cognominaram iamque <anchor xml:id="n3"/>meis Annalibus<anchor xml:id="n3e"/> ita inscripseram ad marginem; in hunc errorem deveni, dum <add place="above">in</add> manuscriptis nostris haec legi: <anchor xml:id="n4"/>Isibordus de <sic>Ameluxen</sic><anchor xml:id="n4e"/>  professus Corbeiae Saxonum scripsit Gesta Saxonica; absque superaddito anno, et quia his Isibordus obscuris et non satis legibilibus characteribus expressum erat, eum Herbordum interpretatus fui, quem iam praesciebam res Saxonum conscripsisse. Nunc autem arbitror ea in re nil superesse difficultatis; potuit enim Herbordus suo aevo incepisse res Saxonicas consignare, quas postea saeculo nono adauxerit Wittekindus, continuaveritque Isibordus <add place="above">de Amelunxen</add> saeculo undecimo, quorum posteriores a prioribus ansam ad id acceperint, <pb n="2r"/> praesertim cum eiusdemmet loci professi sint. </ab>
+         <ab resp="#editor" xml:id="seg2">Bene admodum reverendus dominus me monuit de domino <anchor xml:id="n2"/>Herbordo abbate<anchor xml:id="n2e"/> nostro, quem ex errore de Amelunxen cognominaram iamque <anchor xml:id="n3"/>meis Annalibus<anchor xml:id="n3e"/> ita inscripseram ad marginem; in hunc errorem deveni, dum <add place="above">in</add> manuscriptis nostris haec legi: <anchor xml:id="n4"/>Isibordus de <sic>Ameluxen</sic>
+            <anchor xml:id="n4e"/>  professus Corbeiae Saxonum scripsit Gesta Saxonica; absque superaddito anno, et quia his Isibordus obscuris et non satis legibilibus characteribus expressum erat, eum Herbordum interpretatus fui, quem iam praesciebam res Saxonum conscripsisse. Nunc autem arbitror ea in re nil superesse difficultatis; potuit enim Herbordus suo aevo incepisse res Saxonicas consignare, quas postea saeculo nono adauxerit Wittekindus, continuaveritque Isibordus <add place="above">de Amelunxen</add> saeculo undecimo, quorum posteriores a prioribus ansam ad id acceperint, <pb n="2r"/> praesertim cum eiusdemmet loci professi sint. </ab>
          <ab resp="#editor" xml:id="seg3">Porro <anchor xml:id="n5"/>de Wittekindo in monumentis nostris<anchor xml:id="n5e"/> sequentia ad verbum lego: Windichildus monachus Corbeiensis in Saxonia, natione Teutonicus, vir doctus et eloquens, in saecularibus litteris eruditus valde, suo tempore scriba famosus, <anchor xml:id="n6"/>plura scripsit<anchor xml:id="n6e"/>: scilicet Historiam Saxonicam usque ad mortem Ottonis primi libros 20; item Vitam sancti Pauli primi heremitae; item metrice Passionem sanctae Theclae virginis; item Gesta et vitam Ottonis primi ad filium eius etc. Claruit sub Ottone secundo anno Domini 975. Ad ulteriora servitia maneo semper paratissimus</ab>
          <closer>Plurimum reverendae dominationis suae servus frater Petrus Friderici ordinis sancti Benedicti ad S. Petrum manu propria.</closer>
       </body>

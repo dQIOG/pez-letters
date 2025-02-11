@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="348" xml:id="pez-0348">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Augustin Erath an Bernhard Pez. 1714-07-04. St. Andrä an der Traisen.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">348</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,19 +89,21 @@
          <abstract>
             <p corresp="#seg1">AEr dankt für das zugesendete Buch <rs ref="index:d10854e12599">„Basilica SS. Udalrici et Afrae“ von Bernhard Hertfelder</rs>, für das er über den Baumeister <rs ref="index:d10854e25037">Prandtauer</rs> seine „<rs ref="index:d10854e7960">Conciliatio praedeterminationis seu Unio theologica</rs>“ schickt, wie von BP gewünscht.</p>
             <p corresp="#seg2">Im Hinblick auf BPs Buch „<rs ref="index:d14380e10982">Triumphus castitatis</rs>“ über das Leben der <rs ref="index:d10854e33923">Sel. Wilbirg</rs> empfiehlt AEr, einen vorsichtigen Mittelweg zu gehen, um weder die Partei der <rs ref="index:d14380e4919">Benediktiner</rs> noch jene der <rs ref="index:d14380e36971">Regularkanoniker</rs> zu brüskieren. Seine eigene Meinung zu den Streitfragen will er nicht darlegen. Ließe BP den <rs ref="index:d14380e3377">Augustiner-Chorherrenorden</rs> vor dem 10. Jahrhundert seinen Anfang in Europa nehmen, so widerspräche dies der benediktinischen Position und vor allem jener <rs ref="index:d14380e25581">Mabillons</rs>, der in seiner „<rs ref="index:d10854e18044">Gemina apologia Benedictinorum</rs>“ ausdrücklich festgehalten hat, dass er vor dem 10. Jahrhundert keine Hinweise auf die <rs ref="index:d14380e3377">Augustiner-Chorherren</rs> finden könne. Stritte BP aber ihre Existenz vor dieser Zeit gänzlich ab, so würde er damit die Regularkanoniker insgemein und insbesondere jene von <rs ref="index:d10854e27151">St. Florian</rs> schwer beleidigen. BP sollte daher diese Frage entweder gänzlich unberührt lassen oder nur von Regularkanonikern sprechen, ohne die Bezeichnung nach dem <rs ref="index:d14380e3404">Hl. Augustinus</rs>. AEr selbst schreibt sich und sein Kloster stets so. Er will dieses Thema mit BP mündlich ausführlicher besprechen, da er wegen seiner Gicht nur mühevoll schreiben kann, was <rs ref="index:d10854e25037">Prandtauer</rs> als Augenzeuge bestätigen kann.</p>
-            <p corresp="#seg3">AEr findet es äußerst bedauerlich, dass von der „<rs ref="index:d10854e12599">Basilica SS. Udalrici et Afrae</rs>“ der dritte und vierte Teil fehlen und auch keine Abbildungen der Kirche, des Klosters, der Altäre oder der Kapellen, sondern nur solche der Reliquien beigegeben sind. Es wäre der Mühe wert, wenn BP nach <rs ref="index:d14380e3303">St. Ulrich und Afra zu <rs ref="index:d14380e3233">Augsburg</rs></rs> schriebe, um zu fragen, ob diese Teile inzwischen vielleicht erschienen sind.</p>
+            <p corresp="#seg3">AEr findet es äußerst bedauerlich, dass von der „<rs ref="index:d10854e12599">Basilica SS. Udalrici et Afrae</rs>“ der dritte und vierte Teil fehlen und auch keine Abbildungen der Kirche, des Klosters, der Altäre oder der Kapellen, sondern nur solche der Reliquien beigegeben sind. Es wäre der Mühe wert, wenn BP nach <rs ref="index:d14380e3303">St. Ulrich und Afra zu <rs ref="index:d14380e3233">Augsburg</rs>
+               </rs> schriebe, um zu fragen, ob diese Teile inzwischen vielleicht erschienen sind.</p>
             <p corresp="#seg4">Von den <rs ref="index:d10854e6896">„Historiae Francorum scriptores“ von André Duchesne</rs> verfügt AEr nur über vier Bände. Auch mit sechs Bänden wäre dieses Werk jedoch nicht komplett, zumal der Herausgeber in der Vorrede des ersten Bandes 24 Bände angekündigt hat.</p>
             <p corresp="#seg5">AEr gratuliert BP zu dessen neuesten Bücheranschaffungen. Von diesen interessiert ihn vor allem <rs ref="index:d14380e17248">Christoph Hartmanns</rs> Einsiedler Chronik „<rs ref="index:d14380e17254">Annales Heremi</rs>“, welche er in <rs ref="index:d14380e45458">Wettenhausen</rs> und <rs ref="index:d14380e32575">Passau</rs> zur Verfügung hatte, nun aber in <rs ref="index:d10854e27052">St. Andrä</rs> vermisst. Er bittet BP, dieses Werk auch für ihn zu beschaffen, und will die Kosten nach Erhalt des Buches prompt ersetzen.</p>
             <p corresp="#seg6">Leibniz’ „<rs ref="index:d10854e16820">Accessiones historicae</rs>“ besitzt AEr; er erwartet den Besuch von <rs ref="index:d14380e24248">Leibniz</rs> selbst.</p>
             <p corresp="#seg7">AEr schließt mit einem neuerlichen Hinweis auf seine Gicht und einem Gruß an den Melker Prior <rs ref="index:d10854e16613">Valentin Larson</rs>.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>transmissa Basilica</mentioned>
-            <p>Im St. Andräer Bibliothekskatalog (vgl. <ref type="letter" target="letter:331">331</ref> <ref target="letter:331#seg3">3</ref>)
+            <p>Im St. Andräer Bibliothekskatalog (vgl. <ref type="letter" target="letter:331">331</ref>
+               <ref target="letter:331#seg3">3</ref>)
                   ist dieses Werk verzeichnet: StiA Herzogenburg, A4. B. 1, 30.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
@@ -105,7 +119,8 @@
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned>Apologia Petri-domus Constantiensis</mentioned>
-            <p>Zu dieser Schrift vgl. <ref type="letter" target="letter:154">154 </ref><ref target="letter:154 #seg6">6</ref>. BP zitiert sie zum
+            <p>Zu dieser Schrift vgl. <ref type="letter" target="letter:154">154 </ref>
+               <ref target="letter:154 #seg6">6</ref>. BP zitiert sie zum
                   Aufkommen der Augustinusregel im 11. Jh.: Pez, Triumphus castitatis 19. Auch in
                   St. Andrä war sie laut Bibliothekskatalog (StiA Herzogenburg, A4. B. 1, 226)
                   vorhanden, im Übrigen als einziges Werk Mabillons außer „De re diplomatica“ und
@@ -128,7 +143,8 @@
                   100 imperiales“ (StiA Herzogenburg, A4. B. 1, 73). Die Erwähnung von sechs Bänden
                   beruht wohl auf einer Mitteilung BPs darüber, dass er eben das vollständige Werk
                   samt dem weiteren Band „Historiae Normannorum scriptores“ für Melk erworben hatte
-                     (<ref type="letter" target="letter:346">346</ref> <ref target="letter:346#seg3">3</ref>).</p>
+                     (<ref type="letter" target="letter:346">346</ref>
+               <ref target="letter:346#seg3">3</ref>).</p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
             <mentioned>Hartmanni Chronicon Einsidlense</mentioned>
@@ -166,11 +182,14 @@
    </standOff>
    <text>
       <front>
-         <p>Admodum reverendo religiosissimo et clarissimo patri et domino, patri Bernardo Pez, celeberrimi et exempti monasterii Mellicensis presbytero et bibliothecario, domino plurimum colendo. Chloster Melkh.<note type="annotation">Siegel.</note></p>
+         <p>Admodum reverendo religiosissimo et clarissimo patri et domino, patri Bernardo Pez, celeberrimi et exempti monasterii Mellicensis presbytero et bibliothecario, domino plurimum colendo. Chloster Melkh.<note type="annotation">Siegel.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiosissime et clarissime pater.</opener>
-         <ab resp="#editor" xml:id="seg1">Domine et pater plurimum colende. Pro <anchor xml:id="n1"/>transmissa Basilica<anchor xml:id="n1e"/> sanctorum Udalrici et Afrae maximas refero grates, in cuius vicem domino architecto Prandauer <sic>redidi</sic>  <anchor xml:id="n2"/>Unionem meam theologicam<anchor xml:id="n2e"/>, uti desideravit admodum reverenda paternitas vestra. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiosissime et clarissime pater.</opener>
+         <ab resp="#editor" xml:id="seg1">Domine et pater plurimum colende. Pro <anchor xml:id="n1"/>transmissa Basilica<anchor xml:id="n1e"/> sanctorum Udalrici et Afrae maximas refero grates, in cuius vicem domino architecto Prandauer <sic>redidi</sic>
+            <anchor xml:id="n2"/>Unionem meam theologicam<anchor xml:id="n2e"/>, uti desideravit admodum reverenda paternitas vestra. </ab>
          <ab resp="#editor" xml:id="seg2">In causa <anchor xml:id="n3"/>libelli De venerabili Wilburge<anchor xml:id="n3e"/> omnino prudenter haberet admodum reverenda dominatio vestra, si nec in suarum nec nostratium partium causas velit impingere. Quae sit mea in illa disceptatione sententia, nunc non est opus explicare. Proinde si suas partes Benedictinas nolit offendere, nec etiam nostras canonicorum regularium, omnino suaserim, ut media incedat via. Nam si canonicos regulares sancti Augustini in Europa promoveret supra X. saeculum, lacesseret partes Benedictinas, praesertim patris Mabillonii, qui in <anchor xml:id="n4"/>Apologia Petri-domus Constantiensis<anchor xml:id="n4e"/> disserte testatur se ante saeculum X. nullos reperire canonicos regulares sancti Augustini. Nollem ergo, ut admodum reverenda paternitas vestra esset prima, quae id contra suos confratres assereret. Quod si id absolute negaret, graviter utique in dominos Florianenses et caeteros nostros canonicos impingeret. Cum ergo nostros <add place="above">non</add> offendere, sed potius suo libro honorare velit, neque etiam cupiat hanc causam facere suam, neminisque tela et invidiam in se torquere <sic>nolit</sic> , suaserim ego, ut vel totam illam causam dissimulet et tacitus praetereat, vel voculam illam sancti Augustini <pb n="1v"/> penitus omittat ac solos canonicos regulares nominet. Sic enim neminem offendet et nostrum amorem maxime<del ana="#after">concili</del> sibi conciliabit. Ego certe nec me nec collegium meum umquam aliter subscribo nisi canonicorum regularium, absque additamento sancti Augustini. Plura oretenus, quia manus ita <sic>flaccessit</sic>  prae ingruente chiragra, ut aegerrime hoc exarem, quemadmodum referet dominus Prandauer oculatus testis. </ab>
          <ab resp="#editor" xml:id="seg3">In Basilica sanctorum Udalrici et Afrae plurimum doleo, quod desint non solum pars tertia et quarta, sed etiam iconismi ecclesiae, monasterii, altarium et sacellorum, solisque splendeat sacris reliquiis. <anchor xml:id="n5"/>Forsitan interea in lucem prodierunt<anchor xml:id="n5e"/>, foretque operae pretium, ut admodum reverenda paternitas vestra Augustae ad S. Udalricum per litteras inquireret. </ab>
          <ab resp="#editor" xml:id="seg4">Ex Scriptoribus Francicis <anchor xml:id="n6"/>Du Chesne habeo ego solum tomos quatuor, sed nec sex tomis erit completus, accrescentibus semper aliis tomis, quippe in prooemio primi tomi promittit viginti quatuor tomos<anchor xml:id="n6e"/>. Faciam, ut et reliquos comparem. </ab>

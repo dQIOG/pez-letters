@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="767" xml:id="pez-0767">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Candidus Natzer an Bernhard Pez. 1717-04-11. Geras.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">767</idno>
          </publicationStmt>
          <seriesStmt>
@@ -54,10 +66,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -74,25 +87,27 @@
                <persName>Bernhard Pez</persName>
             </correspAction>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e3372">Augustiner-Chorfrauen</term>
-            <term ref="index:d14380e6032">Böhmen</term>
-            <term ref="index:d14380e15097">Geras</term>
-            <term ref="index:d14380e15105">Geras ; Archiv</term>
-            <term ref="index:d14380e15111">Geras ; Archiv ; Geweih eines Rehbocks</term>
-            <term ref="index:d14380e15118">Geras ; Bibliothek</term>
-            <term ref="index:d14380e15835">Göpfert, Ferdinand</term>
-            <term ref="index:d14380e23431">Lachen, Benedikt</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e32800">Pernegg</term>
-            <term ref="index:d14380e34213">Pez, Bernhard ; Bibliotheksreise 1716</term>
-            <term ref="index:d14380e35871">Prag ; Strahov</term>
-            <term ref="index:d14380e36234">Questenberg, Kaspar von</term>
-            <term ref="index:d14380e36971">Regularkanoniker</term>
-            <term ref="index:d14380e43708">Ulrich</term>
-            <term ref="index:d14380e44938">Wallner, Michael</term>
-            <term ref="index:d14380e45771">Wien ; Himmelpforte</term></keywords></textClass>
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e3372">Augustiner-Chorfrauen</term>
+               <term ref="index:d14380e6032">Böhmen</term>
+               <term ref="index:d14380e15097">Geras</term>
+               <term ref="index:d14380e15105">Geras ; Archiv</term>
+               <term ref="index:d14380e15111">Geras ; Archiv ; Geweih eines Rehbocks</term>
+               <term ref="index:d14380e15118">Geras ; Bibliothek</term>
+               <term ref="index:d14380e15835">Göpfert, Ferdinand</term>
+               <term ref="index:d14380e23431">Lachen, Benedikt</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e32800">Pernegg</term>
+               <term ref="index:d14380e34213">Pez, Bernhard ; Bibliotheksreise 1716</term>
+               <term ref="index:d14380e35871">Prag ; Strahov</term>
+               <term ref="index:d14380e36234">Questenberg, Kaspar von</term>
+               <term ref="index:d14380e36971">Regularkanoniker</term>
+               <term ref="index:d14380e43708">Ulrich</term>
+               <term ref="index:d14380e44938">Wallner, Michael</term>
+               <term ref="index:d14380e45771">Wien ; Himmelpforte</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">CN stellt sich als Unbekannter vor, zumal er im vorangegangenen Jahr nicht die Gelegenheit bekommen hat,
                BP in <rs ref="index:d14380e15097">Geras</rs> kennen zu lernen, was er ebenso wie sein Abt <rs ref="index:d14380e44938">Michael Wallner</rs> bedauert.</p>
@@ -104,12 +119,13 @@
                Haus später an die <rs ref="index:d14380e3372">Augustiner-Chorfrauen</rs> kam, weiß man in Geras nicht,
                da während des böhmischen Einfalls von 1619 (recte: 1620) das Kloster verwüstet wurde und <rs ref="index:d14380e15105">Archiv</rs> und <rs ref="index:d14380e15118">Bibliothek</rs> verbrannten.</p>
             <p corresp="#seg4">Danach setzte der Abt (von <rs ref="index:d14380e35871">Strahov</rs>) <rs ref="index:d14380e36234">Kaspar
-                  von Questenberg</rs> als Abt von <rs ref="index:d14380e15097">Geras</rs> <rs ref="index:d14380e23431">Benedikt Lachen</rs> ein. Dieser wollte bald das nahezu unbewohnbare Kloster aufgeben, als ihm das in
+                  von Questenberg</rs> als Abt von <rs ref="index:d14380e15097">Geras</rs>
+               <rs ref="index:d14380e23431">Benedikt Lachen</rs> ein. Dieser wollte bald das nahezu unbewohnbare Kloster aufgeben, als ihm das in
                der Beilage Geschilderte widerfuhr: Ein Rehbock bot sich dem Abt gleichsam als Nahrung für seine Mönche
                an. Das <rs ref="index:d14380e15111">Geweih dieses Rehbocks</rs> wird im Archiv noch jetzt zusammen mit
                der zugehörigen Inschrift aufbewahrt. CN schließt mit der Bitte um Entschuldigung für sein Herantreten an
                BP mit einem so geringfügigen Gegenstand.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -142,7 +158,9 @@
                   keines der beiden Werke in der von CN formulierten Weise zutreffend beschreiben.
                   Am ehesten kann an jene Sammlung von Klostergeschichten für die maurinischen
                   „Annales OSB“ gedacht werden, die BP zunächst im Interesse von René Massuet
-                  aufgenommen hatte und nun in jenem von François Le Texier fortbetrieb: vgl. <ref type="letter" target="letter:48">48</ref> <ref target="letter:48#seg6">6</ref>, <ref type="letter" target="letter:143">143</ref>, <ref type="letter" target="letter:634">634</ref> <ref target="letter:634#seg3">3</ref>, <ref type="letter" target="letter:700">700</ref>
+                  aufgenommen hatte und nun in jenem von François Le Texier fortbetrieb: vgl. <ref type="letter" target="letter:48">48</ref>
+               <ref target="letter:48#seg6">6</ref>, <ref type="letter" target="letter:143">143</ref>, <ref type="letter" target="letter:634">634</ref>
+               <ref target="letter:634#seg3">3</ref>, <ref type="letter" target="letter:700">700</ref>
                <ref target="letter:700#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
@@ -205,10 +223,14 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime venerabilis et eximie domine honorandissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime venerabilis et eximie domine honorandissime.</opener>
          <ab resp="#editor" xml:id="seg1">Ignotus compareo hoc unum cum <anchor xml:id="n1"/>reverendissimo<anchor xml:id="n1e"/> meo indolens, quod <anchor xml:id="n2"/>anno praeterlapso<anchor xml:id="n2e"/> eximiam dominationem vestram Gerasii revereri et innotescere nequierim. </ab>
          <ab resp="#editor" xml:id="seg2">Inaudivi per reverendum patrem <anchor xml:id="n3"/>priorem Pernecensem<anchor xml:id="n3e"/>, quod eximia dominatio vestra prae manibus habeat<anchor xml:id="n4"/> opus praeclarissimum in conscribendis monasteriorum Austriae fundationibus et memorabilibus<anchor xml:id="n4e"/>, unde ego levidensi quodam memorabili Geracensi comparere praesumpsi. </ab>
-         <ab resp="#editor" xml:id="seg3">De <anchor xml:id="n5"/>fundatione prima monasterii nostri anno 1170<anchor xml:id="n5e"/> per Udalricum comitem de Pernek facta aliunde constabit. Pertinebat etiam ad monasterium nostrum claustrum<anchor xml:id="n6"/> Portae Coeli Viennae<anchor xml:id="n6e"/>; quomodo autem ad canonissas regulares devenerit, defacto ignoramus, cum anno 1619 durante irruptione <choice><sic>Bohemia</sic><corr>Bohemica</corr></choice> monasterium integre dirutum, archivium, bibliotheca in cineres et favillas redactum <sic>sit</sic>. </ab>
+         <ab resp="#editor" xml:id="seg3">De <anchor xml:id="n5"/>fundatione prima monasterii nostri anno 1170<anchor xml:id="n5e"/> per Udalricum comitem de Pernek facta aliunde constabit. Pertinebat etiam ad monasterium nostrum claustrum<anchor xml:id="n6"/> Portae Coeli Viennae<anchor xml:id="n6e"/>; quomodo autem ad canonissas regulares devenerit, defacto ignoramus, cum anno 1619 durante irruptione <choice>
+               <sic>Bohemia</sic>
+               <corr>Bohemica</corr>
+            </choice> monasterium integre dirutum, archivium, bibliotheca in cineres et favillas redactum <sic>sit</sic>. </ab>
          <ab resp="#editor" xml:id="seg4">Donec reverendissimus dominus Casparus a <anchor xml:id="n7"/>Questenberg<anchor xml:id="n7e"/> pro abbate Geracensi installasset reverendissimum dominum Benedictum<anchor xml:id="n8"/> Lachenium<anchor xml:id="n8e"/>, qui dum cogitasset monasterium nostrum inhabitabile et vel ipso visu horribile in defectu<note type="annotation" xml:id="d3e32877">Abkürzung <orig>dcfu</orig>, wohl verschrieben für <orig>dfcu</orig>.</note> alimentorum iterum deserere, hoc memorabile in praesenti charta specificatum cum <anchor xml:id="n9"/>capreolo se sponte quasi pro victu et alimento praedicto domino abbati offerente contigit, cuius cornua<anchor xml:id="n9e"/> defacto una cum adiecta inscriptione in archivio nostro pro memoria asservantur. Hoc leviusculum dum obsequiose communicare praesumo, veniam molesti calami mei humiliter expeto, me vero ulterioribus gratiis commendans maneo</ab>
          <closer>Admodum reverendae religiosae venerabilis et eximiae dominationis paratissimus servus pater Candidus Natzer supprior Geracensis manu propria.</closer>
          <closer>Gerasii 11. Aprilis 1717.</closer>

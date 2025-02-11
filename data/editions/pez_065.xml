@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="65" xml:id="pez-0065">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Albert Reichart an Bernhard Pez. 1710-04-21. St. Paul im Lavanttal.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">65</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,8 +90,10 @@
          <abstract>
             <p corresp="#seg1">ARe beginnt mit Wünschen zur Oster- und Frühlingszeit. Sein Bibliothekar wird versuchen, dem von BP geäußerten Wunsch nachzukommen.</p>
             <p corresp="#seg2">ARe ist erfreut über den Briefkontakt BPs mit den <rs ref="index:d10854e15615">Maurinern</rs>. Er hat diesen selbst einmal geschrieben, jedoch keine Antwort erhalten. Er wünscht sich deren Statuten und die anderer <rs ref="index:d14380e12712">französischer</rs> Benediktiner, etwa jener von <rs ref="index:d14380e3075">St.-Vaast</rs> (zu Arras).</p>
-            <p corresp="#seg3"><rs ref="index:d14380e25581">Mabillon</rs> erwähnt in seinem Bücherverzeichnis (im „<rs ref="index:d14380e25823">Traité des études monastiques</rs>“) das Werk „Le livre des éluz. Jésus-Christ en croix“ des <rs ref="index:d14380e20126">Jesuiten</rs> <rs ref="index:d14380e38825">Jean-Baptiste de Saint-Jure</rs>. ARe hat dieses Buch nirgends finden können; er hofft, es über BP zu erwerben, wofür er alle Kosten ersetzen will.</p>
-            </abstract>
+            <p corresp="#seg3">
+               <rs ref="index:d14380e25581">Mabillon</rs> erwähnt in seinem Bücherverzeichnis (im „<rs ref="index:d14380e25823">Traité des études monastiques</rs>“) das Werk „Le livre des éluz. Jésus-Christ en croix“ des <rs ref="index:d14380e20126">Jesuiten</rs>
+               <rs ref="index:d14380e38825">Jean-Baptiste de Saint-Jure</rs>. ARe hat dieses Buch nirgends finden können; er hofft, es über BP zu erwerben, wofür er alle Kosten ersetzen will.</p>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -94,12 +109,16 @@
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
             <mentioned>desiderio intimato</mentioned>
             <p>Es bleibt unklar, worum BP gebeten hatte. Angesichts der zeitlichen Nähe zum
-                  Ersuchen René Massuets um die Mithilfe BPs (<ref type="letter" target="letter:48">48</ref> <ref target="letter:48#seg6">6</ref>)
-                  sowie zur Übermittlung einer maurinischen Enzyklik durch Anselm Fischer (<ref type="letter" target="letter:43">43</ref> <ref target="letter:43#seg7">7</ref>) kann hier der Aufruf zur Einsendung von
+                  Ersuchen René Massuets um die Mithilfe BPs (<ref type="letter" target="letter:48">48</ref>
+               <ref target="letter:48#seg6">6</ref>)
+                  sowie zur Übermittlung einer maurinischen Enzyklik durch Anselm Fischer (<ref type="letter" target="letter:43">43</ref>
+               <ref target="letter:43#seg7">7</ref>) kann hier der Aufruf zur Einsendung von
                   Material für die „Annales OSB“ gemeint sein; dazu würde auch die unmittelbar
                   anschließende Bezugnahme ARes auf BPs Kontakt mit den Maurinern passen. BP erwähnt
-                  später gegenüber Massuet, dass ARe eine Zusage gegeben habe (<ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg8">8</ref>); doch scheint ARe außer den kurzen Angaben in 151 nur
-                  Material zu Ossiach geliefert zu haben (vgl. <ref type="letter" target="letter:151">151</ref>, <ref type="letter" target="letter:177">177 </ref><ref target="letter:177 #seg10">10</ref>). – Möglich ist auch, dass das von dem
+                  später gegenüber Massuet, dass ARe eine Zusage gegeben habe (<ref type="letter" target="letter:143">143</ref>
+               <ref target="letter:143#seg8">8</ref>); doch scheint ARe außer den kurzen Angaben in 151 nur
+                  Material zu Ossiach geliefert zu haben (vgl. <ref type="letter" target="letter:151">151</ref>, <ref type="letter" target="letter:177">177 </ref>
+               <ref target="letter:177 #seg10">10</ref>). – Möglich ist auch, dass das von dem
                   Bibliothekar zu Liefernde nähere Angaben über die in <ref type="letter" target="letter:50">50</ref>
                   kursorisch aufgezählten Werke von St. Pauler Konventualen und ihre dort nicht
                   namentlich genannten Verfasser waren. 1715 kannte BP (Pez, Epistolae apologeticae
@@ -118,11 +137,14 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Sancti Pauli 21. <sic>Abrilis</sic> 1710.</opener>
+         <opener>
+            <pb n="1r"/> Sancti Pauli 21. <sic>Abrilis</sic> 1710.</opener>
          <opener>Plurimum reverende religiosissime et clarissime domine pater<note place="foot" xml:id="d4618e7936">	Danach unleserliche Streichung im Ausmaß von ca. 4 Buchstaben, beginnend mit <hi rend="italic">B</hi>.</note> bibliothecarie.</opener>
-         <ab resp="#editor" xml:id="seg1"><anchor xml:id="n1"/>Paschale atque vernum gaudiosissimum apprecor tempus<anchor xml:id="n1e"/>, ut renovante se in novam vitam natura plurimum reverenda dominatio reflorescentem virium vigorem induta quam diutissime sana et incolumis perennet. <anchor xml:id="n2"/>Noster bibliothecarius<anchor xml:id="n2e"/> studebit inservire <anchor xml:id="n3"/>desiderio intimato<anchor xml:id="n3e"/>. </ab>
+         <ab resp="#editor" xml:id="seg1">
+            <anchor xml:id="n1"/>Paschale atque vernum gaudiosissimum apprecor tempus<anchor xml:id="n1e"/>, ut renovante se in novam vitam natura plurimum reverenda dominatio reflorescentem virium vigorem induta quam diutissime sana et incolumis perennet. <anchor xml:id="n2"/>Noster bibliothecarius<anchor xml:id="n2e"/> studebit inservire <anchor xml:id="n3"/>desiderio intimato<anchor xml:id="n3e"/>. </ab>
          <ab resp="#editor" xml:id="seg2">Gaudeo praeterea, quod plurimum reverenda dominatio habeat communicationem litterarum cum patribus Gallicis congregationis sancti Mauri. <anchor xml:id="n4"/>Scripsi enim illis semel<anchor xml:id="n4e"/>, sed nihil responsi accepi. Libenter haberem eorum statuta et aliorum in Gallia Benedictinorum, uti sancti Vedasti etc. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n5"/>Mabilonius in suo indiculo<anchor xml:id="n5e"/> memorat librum De Saint-Jure, quem auctor Societatis Jesu nominat: Liber electorum seu Christus crucifixus. Quem librum nullibi possum indagare; forte ero ita felix, ut per plurimum reverendam paternitatem eo potiar, ex quo omnes expensas fideliter solverem. Quibus me sacris precibus et affectui commendo.</ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n5"/>Mabilonius in suo indiculo<anchor xml:id="n5e"/> memorat librum De Saint-Jure, quem auctor Societatis Jesu nominat: Liber electorum seu Christus crucifixus. Quem librum nullibi possum indagare; forte ero ita felix, ut per plurimum reverendam paternitatem eo potiar, ex quo omnes expensas fideliter solverem. Quibus me sacris precibus et affectui commendo.</ab>
          <closer>Plurimum reverendae et clarissimae dominationis servus obligatissimus Albertus abbas manu propria.</closer>
       </body>
    </text>

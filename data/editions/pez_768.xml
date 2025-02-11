@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="768" xml:id="pez-0768">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an Maurus Hummel. 1717-04-11. Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">768</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Der Name des Adressaten ist nicht unmittelbar ersichtlich; als Verantwortlichen für die Übermittlung des Traktats „De viris illustribus Augiae Maioris“ nannte jedoch BP später ausdrücklich MHu: Pez, Thesaurus 1 xc. Dieser ist somit auch als Adressat des vorliegenden Briefes mit Sicherheit anzunehmen.
             </note>
@@ -45,10 +56,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -69,34 +81,38 @@
                <ptr type="mentions" target="letter:724"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e4170">Bayern, Bayern</term>
-            <term ref="index:d14380e10907">Egon, Johann ; De viris illustribus monasterii Augiae Maioris seu Divitis tractatus.
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e4170">Bayern, Bayern</term>
+               <term ref="index:d14380e10907">Egon, Johann ; De viris illustribus monasterii Augiae Maioris seu Divitis tractatus.
          Ms. Reichenau</term>
-            <term ref="index:d14380e18980">Hueber, Apronian</term>
-            <term ref="index:d14380e27838">Mehrerau.</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e37019">Reichenau</term>
-            <term ref="index:d14380e37043">Reichenau ; Bibliothek ; Egon, De viris illustribus monasterii Augiae Maioris seu
+               <term ref="index:d14380e18980">Hueber, Apronian</term>
+               <term ref="index:d14380e27838">Mehrerau.</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e37019">Reichenau</term>
+               <term ref="index:d14380e37043">Reichenau ; Bibliothek ; Egon, De viris illustribus monasterii Augiae Maioris seu
          Divitis tractatus. Ms</term>
-            <term ref="index:d10854e28377">Schwaben</term>
-            <term ref="index:d14380e45488">Wetter, Wolfgang</term></keywords></textClass>
+               <term ref="index:d10854e28377">Schwaben</term>
+               <term ref="index:d14380e45488">Wetter, Wolfgang</term>
+            </keywords>
+         </textClass>
          <abstract>
-            <p corresp="#seg1">BP ist sehr betrübt angesichts der unerwarteten Nachricht vom Tod des <rs ref="index:d14380e45488">Wolfgang Wetter</rs> <ref type="letter" target="letter:724">724</ref>, freut sich jedoch, dass ihm
+            <p corresp="#seg1">BP ist sehr betrübt angesichts der unerwarteten Nachricht vom Tod des <rs ref="index:d14380e45488">Wolfgang Wetter</rs>
+               <ref type="letter" target="letter:724">724</ref>, freut sich jedoch, dass ihm
                nun der <rs ref="index:d14380e27838">Mehrerauer</rs> Prior <rs ref="index:d14380e18980">Apronian
                Hueber</rs> den Kontakt zu MHu vermittelt hat.</p>
             <p corresp="#seg2">Welch große Gnade Gottes dies bedeutet, ist schon allein aus der Übermittlung des höchst wertvollen
                Traktats <rs ref="index:d14380e10907">„De viris illustribus Augiae Maioris seu Divitis“</rs> des Johann
                Egon zu ersehen, für die BP dankt. Sie wird überreiche Frucht für seine <rs ref="index:d14380e33227">„Bibliotheca Benedictina“</rs> abwerfen; im Gegenzug will BP dafür sorgen, die Schriftsteller der <rs ref="index:d14380e37019">Reichenau</rs> so darzustellen, dass diese Übermittlung niemanden reuen muss.
                Die Schrift selbst will er so schnell wie möglich zurückgeben, möglicherweise sogar selbst überbringen.
-               Er bereitet nämlich eine <rs ref="index:d14380e34236">Reise zu den Klöstern</rs> <rs ref="index:d14380e4170">Bayerns</rs> und <rs ref="index:d10854e28377">Schwabens</rs> vor, auf der er
+               Er bereitet nämlich eine <rs ref="index:d14380e34236">Reise zu den Klöstern</rs>
+               <rs ref="index:d14380e4170">Bayerns</rs> und <rs ref="index:d10854e28377">Schwabens</rs> vor, auf der er
                auch die für ihre alten Handschriften berühmte <rs ref="index:d14380e37019">Reichenau</rs> mit seinem
                Bruder und <rs ref="index:d14380e28088">Melker</rs> Mitbruder <rs ref="index:d14380e34537">HP</rs> besuchen möchte.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -104,7 +120,7 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>Wolfgangi Weter</mentioned>
             <p>Zur Todesnachricht vgl. <ref type="letter" target="letter:724">724</ref>
-                  <ref target="letter:724#seg2">2</ref>; zur Person Wetters vgl. <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 814. Seine Nachfolge als Prior konnte
+               <ref target="letter:724#seg2">2</ref>; zur Person Wetters vgl. <rs type="bibl" ref="bibl:20210">Wallnig–Stockinger, Korrespondenz 1</rs> 814. Seine Nachfolge als Prior konnte
                   MHu am 22. Mai auf Ernennung des Konstanzer Bischofs Johann Franz Schenk von
                   Stauffenberg antreten: <rs type="bibl" ref="bibl:15110">Begrich, Reichenau</rs>
                   1098. Als bisheriger Subprior muss er freilich schon zuvor die interimistische
@@ -116,7 +132,8 @@
             <p> Die ehemals Reichenauer Handschrift mit Johann
                   Egons „De viris illustribus Augiae Maioris seu Divitis“ ist heute erhalten im GLA
                   Karlsruhe, 65/1100; vgl. <rs type="bibl" ref="bibl:17510">Klein, Handschriften
-                     Karlsruhe</rs> 320f.; sowie <ref type="letter" target="letter:21">21</ref> <ref target="letter:21#seg1">1</ref>. Auf welchem
+                     Karlsruhe</rs> 320f.; sowie <ref type="letter" target="letter:21">21</ref>
+               <ref target="letter:21#seg1">1</ref>. Auf welchem
                   Weg die Übermittlung an BP geschehen war, ist nicht festzustellen; es wird deshalb
                   weder ein vorangegangener Brief von MHu an BP noch ein verlorener Brief Apronian
                   Huebers an diesen angesetzt, obwohl beides durchaus denkbar wäre. Sicher ist, dass
@@ -128,8 +145,11 @@
             <p>Zur Bibliotheksreise BPs und HPs im Sommer 1717
                   vgl. Einleitung, Abschnitt I.2; zu BPs Absicht, bis in den Bodenseeraum zu
                   gelangen, die aus gesundheitlichen Gründen nicht verwirklicht werden konnte, vgl.
-                     <ref type="letter" target="letter:783">783</ref> <ref target="letter:783#seg1">1</ref>, <ref type="letter" target="letter:847">847</ref> <ref target="letter:847#seg1">1</ref>,
-                     <ref type="letter" target="letter:890">890</ref> <ref target="letter:890#seg1">1</ref>.</p>
+                     <ref type="letter" target="letter:783">783</ref>
+               <ref target="letter:783#seg1">1</ref>, <ref type="letter" target="letter:847">847</ref>
+               <ref target="letter:847#seg1">1</ref>,
+                     <ref type="letter" target="letter:890">890</ref>
+               <ref target="letter:890#seg1">1</ref>.</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -142,9 +162,16 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater etc., patrone summe venerande!</opener>
-         <ab resp="#editor" xml:id="seg1">Etsi incredibilem et acerbissimum tum bonis omnibus, tum praecipue mihi dolorem attulerit inexpectatum de plurimum reverendi ac clarissimi domini <anchor xml:id="n1"/>Wolfgangi Weter<anchor xml:id="n1e"/> obitu nuntium, attamen, ubi vidi <choice><sic>indefessore</sic><corr>indefesso</corr></choice> plurimum reverendi patris Aproniani Mereraugiensis dignissimi prioris favore conciliatam mihi esse plurimum reverendae dominationis vestrae gratiam et amicitiam, totus mihi reddi ac reviviscere visus sum. </ab>
-         <ab resp="#editor" xml:id="seg2">Et certe, quam singulari Dei nutu haec immerita mihi felicitas obtigerit, vel ex uno elegantissimo accuratissimoque admodum reverendi ac eruditissimi domini Joannis <anchor xml:id="n2"/>Egonis Tractatu<anchor xml:id="n2e"/> de viris illustribus inclytae Augiae Divitis colligere licuit. Quare tanto cumulatiores nunc gratias pro summa hac benevolentia rependo, quanto uberiores fructus ex transmisso caelesti (tale profecto est) munere in Bibliothecam Benedictinam <choice><sic>redunt</sic><corr>redundaturi</corr></choice> sunt. Mearum porro partium erit ita omnia mea, ubi de clarissimis Augiensibus agitur, adornare, ut olim tanti favoris in me collati neminem poenitere necesse futurum sit. Caeterum opus ipsum Egonis, quam potero, proxime salvum et incolume restituam, forte non per aliam quam meam ipsius manum. Namque nunc totus in apparando itinere ad Bavariae et Sueviae monasteria sum, quo tempore, nisi fortuna abnuerit, inclytam<anchor xml:id="n3"/> Augiam veteribus codicibus, quorum gratia praecipue hoc iter suscipio, celeberrimam etiam cum patre Hieronymo germano meo itidem Mellicensi adire<anchor xml:id="n3e"/> praesumam. <pb n="1v"/> Interim, dum meam gratitudinem ad illum ter fortunatum temporis articulum differre cogor, me ad omnigena in his locis obsequia vicissim offero maneoque ad omnes plurimum reverendae dominationis vestrae nutus</ab>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater etc., patrone summe venerande!</opener>
+         <ab resp="#editor" xml:id="seg1">Etsi incredibilem et acerbissimum tum bonis omnibus, tum praecipue mihi dolorem attulerit inexpectatum de plurimum reverendi ac clarissimi domini <anchor xml:id="n1"/>Wolfgangi Weter<anchor xml:id="n1e"/> obitu nuntium, attamen, ubi vidi <choice>
+               <sic>indefessore</sic>
+               <corr>indefesso</corr>
+            </choice> plurimum reverendi patris Aproniani Mereraugiensis dignissimi prioris favore conciliatam mihi esse plurimum reverendae dominationis vestrae gratiam et amicitiam, totus mihi reddi ac reviviscere visus sum. </ab>
+         <ab resp="#editor" xml:id="seg2">Et certe, quam singulari Dei nutu haec immerita mihi felicitas obtigerit, vel ex uno elegantissimo accuratissimoque admodum reverendi ac eruditissimi domini Joannis <anchor xml:id="n2"/>Egonis Tractatu<anchor xml:id="n2e"/> de viris illustribus inclytae Augiae Divitis colligere licuit. Quare tanto cumulatiores nunc gratias pro summa hac benevolentia rependo, quanto uberiores fructus ex transmisso caelesti (tale profecto est) munere in Bibliothecam Benedictinam <choice>
+               <sic>redunt</sic>
+               <corr>redundaturi</corr>
+            </choice> sunt. Mearum porro partium erit ita omnia mea, ubi de clarissimis Augiensibus agitur, adornare, ut olim tanti favoris in me collati neminem poenitere necesse futurum sit. Caeterum opus ipsum Egonis, quam potero, proxime salvum et incolume restituam, forte non per aliam quam meam ipsius manum. Namque nunc totus in apparando itinere ad Bavariae et Sueviae monasteria sum, quo tempore, nisi fortuna abnuerit, inclytam<anchor xml:id="n3"/> Augiam veteribus codicibus, quorum gratia praecipue hoc iter suscipio, celeberrimam etiam cum patre Hieronymo germano meo itidem Mellicensi adire<anchor xml:id="n3e"/> praesumam. <pb n="1v"/> Interim, dum meam gratitudinem ad illum ter fortunatum temporis articulum differre cogor, me ad omnigena in his locis obsequia vicissim offero maneoque ad omnes plurimum reverendae dominationis vestrae nutus</ab>
          <closer>Servus paratissimus et obligatissimus pater Bernardus Pez Benedictinus Mellicensis bibliothecarius manu propria.</closer>
          <closer>Mellicii vulgo Mölk in Austria 11. Aprilis 1717.</closer>
       </body>

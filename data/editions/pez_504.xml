@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="504" xml:id="pez-0504">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Joachim Edlinger an Hieronymus Pez. 1716-02-09. Seitenstetten.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">504</idno>
          </publicationStmt>
          <seriesStmt>
@@ -34,13 +46,13 @@
             <relatedItem type="otherEdition">
                <bibl>Spevak, Edlinger 16–22.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Eine von Theodor Mayer angelegte Teilabschrift (StiA Melk, Karton 7 Patres 11, Fasz. 1, Nr. 88), in der freilich ganze Teile des Textes umformuliert wurden, bietet eine Passage, welche in der Vorlage gänzlich fehlt und möglicherweise, sofern sie Mayer nicht frei erfunden hat, auf einem separaten Blatt geschrieben war. Sie setzt in &lt;8&gt; nach der wiedergegebenen Antwort JEs ein und lautet: <orig>Et revera, mi cordatissime Pezi, si quis asserere sustineret plura in ecclesiam mala per Jesuitas invecta esse quam bona, sententiae suae Achillem non alibi haberet quam in dissidiis per hunc pestiferam eorum partem tam dolosis insinuationibus in ea sparsis.</orig> – Im unmittelbaren Anschluss an den Text dieses Briefes gibt Mayer unter der Nr. 2 ohne Datum ein angebliches Brieffragment wieder, das aufgrund des Zusammenhangs und des Inhalts gleichfalls JE zuzuschreiben wäre: ebd. 1v. Es lautet: <orig>De perillustri domino Bernardo libero barone Bernauer domino in Trestelberg etc. non habeo, quod ulterius addam, nisi quod egregie doctus fuit et membrum illius notae Societatis Frugiferae, in qua nomen habebat des Spielenden. A Lutheranismo, cui a teneris innutritus fuerat, nullo suasu comitis de Windischgratz aliorumque praeclarorum virorum abduci potuit, in quo et ambos suos filios atque unicam filiam educavit. Mortuus subito ante tres annos in Biberbach parochia Cremifanensi, unde cum Cremifanum aliis nobilibus comitantibus pergere vellet et circa mediam noctem hilaris ad somnum se composuisset, circa tertiam matutinam inventus est exanimis. Scripsit et aliquid de parochorum in accipienda pecunia pro defunctorum sepultura abusibus. Plura si voles, filium eius in Trestelberg habitantem adibo.</orig> Der Bericht über den plötzlichen Tod in Biberbach legt nahe, die fragliche Person ungeachtet des angeführten Vornamens mit Johann Philipp Ferdinand Pernauer Freiherrn von Perney zu identifizieren, der 1711 dort gestorben ist: Grosses vollständiges universal-lexicon 27 col. 514; vgl. Kneschke, Adels-Lexicon 7 100; Weiß von Starkenfels–Kirnbauer von Erzstätt, Wappenbuch Oberoesterreichischer Adel 245. Er soll allerdings zumindest drei Söhne und zwei Töchter hinterlassen haben. Eine Mitgliedschaft in der Fruchtbringenden Gesellschaft ist nicht zu erhärten: vgl. Bircher, Mitglieder; den Gesellschaftsnamen „der Spielende“ trug der Nürnberger Georg Philipp Harsdörfer: Creizenach, Harsdörfer 645. Biberbach war zudem keine Kremsmünsterer, sondern eine Seitenstettener Stiftspfarre: Überlacker, Biberbach 2f.; vgl. 694 &lt;2&gt;. – Eine Vorlage konnte bisher nicht aufgefunden werden. Es ist denkbar, dass Mayer einen vorgefundenen Text JEs entweder fehlerhaft oder mit willkürlichen Modifikationen wiedergegeben hat.
             </note>
          </notesStmt>
          <sourceDesc>
-            <listWit><witness ana="cmif:manuscript">
+            <listWit>
+               <witness ana="cmif:manuscript">
                   <msDesc>
                      <msIdentifier>
                         <institution>Stift Melk</institution>
@@ -55,10 +67,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -88,12 +101,14 @@
             <p corresp="#seg1">JE bittet HP um Verzeihung für seine Unhöflichkeit in seinem letzten Brief <ref type="letter" target="letter:495">495</ref> sowie für die Verspätung seiner Antwort. Bezüglich der ersteren Verfehlung verspricht er Besserung; die letztere entschuldigt er mit einem Ausflug, welchen er gemeinsam mit einigen seiner Mitbrüder sowie weiteren bedeutenden Männern aus der Umgebung zu einem Weltpriester, dem Pfarrer von <rs ref="index:d14380e41712">Strengberg</rs> (<rs ref="index:d14380e41430">Johann Michael Steinfellner</rs>), wohin die Gesellschaft mit insgesamt sieben Schlitten gefahren ist, unternommen hat.</p>
             <p corresp="#seg2">HP hat am Beginn seines Schreibens <ref type="letter" target="letter:502">502</ref> diejenigen getadelt, die, obwohl sie selbst nichts schreiben wollen, anderen geeignetes Material vorenthalten, auch wenn sie durch dessen Übermittlung zur Ehre des <rs ref="index:d14380e4919">Benediktinerordens</rs> und des Vaterlandes beitragen könnten. JE wundert sich über solches Betragen und beteuert die eigene Dienstfertigkeit.</p>
             <p corresp="#seg3">JE stimmt HP hinsichtlich der schriftlichen Dokumentation von Buchentlehnungen zu. Er ist erfreut, dass HP das Werk des <rs ref="index:d14380e18241">Richard Hesius</rs> („<rs ref="index:d14380e18247">Prosodia</rs>“) aus <rs ref="index:d14380e45571">Wien</rs> zu bekommen hofft, und bittet um Mitteilung, ob und zu welchem Preis es zu kaufen ist. Auch eine zweiwöchige Ausleihe zum Exzerpieren wäre JE recht.</p>
-            <p corresp="#seg4">JE bittet um Zusendung der zwei in <rs ref="index:d14380e28088">Melk</rs> vorhandenen historischen Werke von <rs ref="index:d14380e5840">Johann Bissel</rs> (erstes Septennium der „<rs ref="index:d14380e5840">Medulla historica</rs>“ sowie weiteres Werk?). Obgleich die Reise des <rs ref="index:d14380e40413">Seitenstettener</rs> <rs ref="index:d14380e40491">Boten</rs> nun nicht stattfindet, kann HP diese Bücher über den Kaufmann Georg Loos in <rs ref="index:d14380e5912">Blindenmarkt</rs> senden, zu dem sie Frau <rs ref="index:d14380e43876">(Barbara) Usleber</rs> (aus Melk) befördern lassen kann; oder über den Postmeister (magister veredariorum) <rs ref="index:d14380e42549">Johann Matthias Terpenitz</rs> zu <rs ref="index:d14380e1334">Amstetten</rs>. Die Seitenstettener Handschrift („<rs ref="index:d14380e40458">Codex Gundacheri</rs>“) soll HP noch bei sich behalten.</p>
+            <p corresp="#seg4">JE bittet um Zusendung der zwei in <rs ref="index:d14380e28088">Melk</rs> vorhandenen historischen Werke von <rs ref="index:d14380e5840">Johann Bissel</rs> (erstes Septennium der „<rs ref="index:d14380e5840">Medulla historica</rs>“ sowie weiteres Werk?). Obgleich die Reise des <rs ref="index:d14380e40413">Seitenstettener</rs>
+               <rs ref="index:d14380e40491">Boten</rs> nun nicht stattfindet, kann HP diese Bücher über den Kaufmann Georg Loos in <rs ref="index:d14380e5912">Blindenmarkt</rs> senden, zu dem sie Frau <rs ref="index:d14380e43876">(Barbara) Usleber</rs> (aus Melk) befördern lassen kann; oder über den Postmeister (magister veredariorum) <rs ref="index:d14380e42549">Johann Matthias Terpenitz</rs> zu <rs ref="index:d14380e1334">Amstetten</rs>. Die Seitenstettener Handschrift („<rs ref="index:d14380e40458">Codex Gundacheri</rs>“) soll HP noch bei sich behalten.</p>
             <p corresp="#seg5">Den Grund dafür, dass <rs ref="index:d14380e23354">Ildephons Kypers</rs> in <rs ref="index:d14380e14516">Garsten</rs> gezögert hat, an HP zu schreiben, kann dieser dem Brief desselben an JE entnehmen. Dadurch kann sich HP auch ein Urteil über Kypers bilden, welchen JE selbst nicht persönlich kennt.</p>
             <p corresp="#seg6">JE dankt HP für die Befriedigung seiner Neugier (zur Lage in <rs ref="index:d14380e12712">Frankreich</rs>). Den ihm übermittelten Brief von <rs ref="index:d14380e26993">René Massuet</rs> hat JE geküsst, während jener von (Franz?) <rs ref="index:d14380e44790">Wagner</rs>, wie HP vermutet hat, Gelächter bei den beiden ausgelöst hat, denen JE ihn gezeigt hat.</p>
-            <p corresp="#seg7">JE fragt, ob HP von dem Schreiben eines <rs ref="index:d14380e20126">Jesuiten</rs> (<rs ref="index:d14380e16118">Michael Götz</rs>) aus Frankreich (recte: <rs ref="index:d14380e25988">Mainz</rs>) an dessen Bruder, den Pfarrer von <rs ref="index:d14380e16825">Haag</rs> (<rs ref="index:d14380e16127">Veit Daniel Götz</rs>), weiß, in welchem der Jesuit feststellt, ähnlich wie die Welt sich einst darüber gewundert habe, arianisch geworden zu sein, wundere sich gegenwärtig Frankreich darüber, dass es zur Gänze <rs ref="index:d14380e20029">jansenistisch</rs> geworden sei, bis auf die Gesellschaft Jesu, die Widerstand leistet, doch das Ungetüm bislang nicht besiegen konnte. Bemerkt HP, dass demnach auch <rs ref="index:d14380e26993">Massuet</rs> und andere <rs ref="index:d10854e15615">Mauriner</rs> <rs ref="index:d14380e20029">jansenistische</rs> Häretiker (haeretici Jansenistae) wären, zumal Massuet die Bulle „<rs ref="index:d14380e22021">Unigenitus</rs>“ nicht unterzeichnet hat? Was, wenn <rs ref="index:d14380e33148">BP</rs> sich mit diesem Übel aus <rs ref="index:d14380e12712">Frankreich</rs> ansteckt und es gar in seine Heimat einschleppt? Die Gefahr ist nicht gering, sofern er sich nicht darauf verlegt, lieber mit den noch nicht angekränkelten <rs ref="index:d14380e20126">Jesuiten</rs> als mit anderen Gelehrten aus Frankreich zu verkehren, die ja alle <rs ref="index:d14380e20029">Jansenisten</rs> sind. Auf die Verlesung des genannten Briefes hat JE in Anwesenheit des Haager Pfarrers unter beifälligem Gelächter der Umsitzenden geantwortet, dass er lieber annehmen würde, dass <rs ref="index:d14380e16118">Michael Götz</rs> und mit ihm alle seine <rs ref="index:d14380e20126">jesuitischen</rs> Mitbrüder im Unrecht und verlogen, als dass Kardinal <rs ref="index:d10854e21427">Louis-Antoine de Noailles</rs> (der Erzbischof von Paris) und so viele weitere Bischöfe, große und gelehrte Männer Häretiker seien. Wenn jeder, der die Machinationen der Jesuiten kritisiere, ein Häretiker sei, würden viele nicht nur in Frankreich, sondern auch anderswo so zu nennen sein, auch einige der Anwesenden und nicht zuletzt JE selbst; freilich werde JE mit den Anwürfen der Jesuiten nicht anders umgehen als die Beherzteren unter den Franzosen mit der Bulle „Unigenitus“.</p>
+            <p corresp="#seg7">JE fragt, ob HP von dem Schreiben eines <rs ref="index:d14380e20126">Jesuiten</rs> (<rs ref="index:d14380e16118">Michael Götz</rs>) aus Frankreich (recte: <rs ref="index:d14380e25988">Mainz</rs>) an dessen Bruder, den Pfarrer von <rs ref="index:d14380e16825">Haag</rs> (<rs ref="index:d14380e16127">Veit Daniel Götz</rs>), weiß, in welchem der Jesuit feststellt, ähnlich wie die Welt sich einst darüber gewundert habe, arianisch geworden zu sein, wundere sich gegenwärtig Frankreich darüber, dass es zur Gänze <rs ref="index:d14380e20029">jansenistisch</rs> geworden sei, bis auf die Gesellschaft Jesu, die Widerstand leistet, doch das Ungetüm bislang nicht besiegen konnte. Bemerkt HP, dass demnach auch <rs ref="index:d14380e26993">Massuet</rs> und andere <rs ref="index:d10854e15615">Mauriner</rs>
+               <rs ref="index:d14380e20029">jansenistische</rs> Häretiker (haeretici Jansenistae) wären, zumal Massuet die Bulle „<rs ref="index:d14380e22021">Unigenitus</rs>“ nicht unterzeichnet hat? Was, wenn <rs ref="index:d14380e33148">BP</rs> sich mit diesem Übel aus <rs ref="index:d14380e12712">Frankreich</rs> ansteckt und es gar in seine Heimat einschleppt? Die Gefahr ist nicht gering, sofern er sich nicht darauf verlegt, lieber mit den noch nicht angekränkelten <rs ref="index:d14380e20126">Jesuiten</rs> als mit anderen Gelehrten aus Frankreich zu verkehren, die ja alle <rs ref="index:d14380e20029">Jansenisten</rs> sind. Auf die Verlesung des genannten Briefes hat JE in Anwesenheit des Haager Pfarrers unter beifälligem Gelächter der Umsitzenden geantwortet, dass er lieber annehmen würde, dass <rs ref="index:d14380e16118">Michael Götz</rs> und mit ihm alle seine <rs ref="index:d14380e20126">jesuitischen</rs> Mitbrüder im Unrecht und verlogen, als dass Kardinal <rs ref="index:d10854e21427">Louis-Antoine de Noailles</rs> (der Erzbischof von Paris) und so viele weitere Bischöfe, große und gelehrte Männer Häretiker seien. Wenn jeder, der die Machinationen der Jesuiten kritisiere, ein Häretiker sei, würden viele nicht nur in Frankreich, sondern auch anderswo so zu nennen sein, auch einige der Anwesenden und nicht zuletzt JE selbst; freilich werde JE mit den Anwürfen der Jesuiten nicht anders umgehen als die Beherzteren unter den Franzosen mit der Bulle „Unigenitus“.</p>
             <p corresp="#seg8">Über den „Conspectus“ <ref type="letter" target="letter:503">503</ref> zu <rs ref="index:d14380e33148">BPs</rs> „<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“ hat sich JE nicht weniger gefreut, als ob er das schon lange herbeigesehnte Werk selbst vor sich sähe. Wie von HP gewünscht, wird er ihn an <rs ref="index:d14380e23354">Ildephons Kypers</rs> weitersenden, was in der vergangenen Woche wegen seiner Abwesenheit nicht möglich war. Danach will JE das Exemplar an <rs ref="index:d14380e33148">BP</rs> zurücksenden, sollte dieser zu wenige haben; er beabsichtigt ohnehin, demnächst an BP zu schreiben (639?). Er schließt mit Grüßen an <rs ref="index:d14380e33148">BP</rs> und mit Gebeten für die Gesundheit beider Brüder.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -112,7 +127,8 @@
             <mentioned>duo ... Bisselii opera</mentioned>
             <p>Ein Abgleich der heute in Melk vorhandenen
                   Werke Bissels mit jenen, die laut JE 1716 in Seitenstetten greifbar waren (vgl.
-                     <ref type="letter" target="letter:495">495</ref> <ref target="letter:495#seg2">2</ref>), lässt vermuten, dass es sich bei einem
+                     <ref type="letter" target="letter:495">495</ref>
+               <ref target="letter:495#seg2">2</ref>), lässt vermuten, dass es sich bei einem
                   der zwei hier diskutierten Bücher um das erste Septennium der „Medulla historica“
                   gehandelt haben könnte: vgl. <rs type="bibl" ref="bibl:20570">Spevak,
                      Edlinger</rs> 19. Das zweite Werk ist nicht zu identifizieren. </p>
@@ -124,7 +140,8 @@
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
             <mentioned> Usleberin</mentioned>
             <p>Barbara Usleber war Gattin eines bürgerlichen
-                  Seifensieders zu Melk: vgl. <ref type="letter" target="letter:1010">1010</ref> <ref target="letter:1010#seg4">4</ref>. Sie wurde am
+                  Seifensieders zu Melk: vgl. <ref type="letter" target="letter:1010">1010</ref>
+               <ref target="letter:1010#seg4">4</ref>. Sie wurde am
                   6. September 1723 begraben: DA St. Pölten, Pfarrarchiv Melk, Tauf-, Trauungs- und
                   Sterbebuch 1702–1730, Liber mortuorum 98v.</p>
          </note>
@@ -154,7 +171,8 @@
                   von Michael Götz als dessen Bruder ergibt sich aus dem gemeinsamen Geburtsort
                   Bamberg, der zeitlichen Nähe ihrer Lebensdaten sowie der Anwesenheit von Michael
                   Götz in Mainz, wo 1716 eine von ihm dort gehaltene Predigt in den Druck kam: <rs type="bibl" ref="bibl:19624">Sommervogel, Bibliothèque</rs> 3 col. 1532f. Zu
-                  Mainz als tatsächlichem Absendeort des fraglichen Briefes vgl. <ref type="letter" target="letter:513">513</ref> <ref target="letter:513#seg3">3</ref>. Andere Jesuiten mit Namen Götz sind vor diesem
+                  Mainz als tatsächlichem Absendeort des fraglichen Briefes vgl. <ref type="letter" target="letter:513">513</ref>
+               <ref target="letter:513#seg3">3</ref>. Andere Jesuiten mit Namen Götz sind vor diesem
                   Hintergrund zwar nicht auszuschließen, aber kaum wahrscheinlich, sofern sie
                   überhaupt in chronologischer Hinsicht in Frage kommen können: vgl. <rs type="bibl" ref="bibl:16482">Gerl, Catalogus</rs> 143; <rs type="bibl" ref="bibl:18084">Lukács, Catalogus</rs> 1 443f.; <rs type="bibl" ref="bibl:19624">Sommervogel,
                      Bibliothèque</rs> 3 col. 1532.</p>
@@ -164,14 +182,16 @@
             <p>Das zitierte Schreiben übernimmt eine
                   damals in Frankreich geläufige Anspielung auf Hieronymus, Dialogus contra
                   Luciferum 19: „Ingemuit totus orbis et Arianum se esse miratus est“; diese wurde
-                  zumindest ebenso gerne von den Gegnern der Bulle „Unigenitus“ bemüht: vgl. <ref type="letter" target="letter:359">359</ref> <ref target="letter:359#seg7">7</ref>. <ref type="letter" target="letter:365">365</ref>
+                  zumindest ebenso gerne von den Gegnern der Bulle „Unigenitus“ bemüht: vgl. <ref type="letter" target="letter:359">359</ref>
+               <ref target="letter:359#seg7">7</ref>. <ref type="letter" target="letter:365">365</ref>
                <ref target="letter:365#seg9">9</ref>.</p>
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg8">
             <mentioned>Ildephonso ... his diebus mittam</mentioned>
             <p> Da die Ausführung dieser Absicht
                   durch kein weiteres Zeugnis gesichert ist, wird kein Brief HPs an Kypers
-                  angesetzt; doch vgl. <ref type="letter" target="letter:694">694</ref> <ref target="letter:694#seg7">7</ref>.</p>
+                  angesetzt; doch vgl. <ref type="letter" target="letter:694">694</ref>
+               <ref target="letter:694#seg7">7</ref>.</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -192,9 +212,13 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo religiosissimo ac eximio domino patri Hieronymo Pez Benedictino Mellicensi, amicorum suorum intimo integerrimo, salutem plurimam dicit pater Joachimus Edlinger Benedictinus Seittenstettensis.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo religiosissimo ac eximio domino patri Hieronymo Pez Benedictino Mellicensi, amicorum suorum intimo integerrimo, salutem plurimam dicit pater Joachimus Edlinger Benedictinus Seittenstettensis.</opener>
          <ab resp="#editor" xml:id="seg1">Duo a te, mi Hieronyme, ignosci mihi flagito: rusticitatem nempe, quam in postremis meis nescio quo Marte incensus exercui, et tarditatem, qua ad tuas respondeo. Utrumque spero: primum, quod promittam me non adeo deinceps abusurum sacro amicitiae iure; alterum, quod his ipsis aliquot diebus cum nucleo charorum tum confratrum, tum aliorum e vicinia praestantium virorum apud <anchor xml:id="n1"/>parochum aliquem saecularem<anchor xml:id="n1e"/>, in Stremberg nimirum, quo trahis omnino septem vehebamur, sat iugiter hilaria egerim. Praeclaram scilicet, inquies, rationem! Ignoscendam tamen, si qua temporis ratio habeatur, puto. </ab>
-         <ab resp="#editor" xml:id="seg2">Exoticam nonnullorum, quam in vestibulo tuarum damnas, incivilitatem, qua, cum ipsi scribere nolint, aliis quoque, quae idonea haberent, denegant, haud satis demirari queo; cum utique sine ullo suo detrimento ad nostri sacratissimi ordinis<del ana="#after">gloriam</del> vel saltem patriae gloriam suorum communicatione aliquantulum conferre <choice><sic>posset</sic><corr>possent</corr></choice>; quod ego quidem (utinam huiusmodi rebus instructus essem!) etiam non rogatus facerem. </ab>
+         <ab resp="#editor" xml:id="seg2">Exoticam nonnullorum, quam in vestibulo tuarum damnas, incivilitatem, qua, cum ipsi scribere nolint, aliis quoque, quae idonea haberent, denegant, haud satis demirari queo; cum utique sine ullo suo detrimento ad nostri sacratissimi ordinis<del ana="#after">gloriam</del> vel saltem patriae gloriam suorum communicatione aliquantulum conferre <choice>
+               <sic>posset</sic>
+               <corr>possent</corr>
+            </choice>; quod ego quidem (utinam huiusmodi rebus instructus essem!) etiam non rogatus facerem. </ab>
          <ab resp="#editor" xml:id="seg3">Quod de danda syngrapha censes, lubens amplector, eam deinceps rationem semper <pb n="1v"/> secuturus. Hesium quod Vienna speres, vehementer laetor. Scribe, si venalis est, eius pretium, si enim, quod aeque mihi gratum, commodandus solum, mox, quae idonea videbuntur, in adversaria relatis intra quindecendium illaesum remittam. </ab>
          <ab resp="#editor" xml:id="seg4">Praeter eum vero ut et illa <anchor xml:id="n2"/>duo, quae apud vos exstare innuis, Bisselii opera<anchor xml:id="n2e"/> historica transmittas, amice rogo, nec ipsa quidem diu moraturus. Mittendi occasio, tametsi tabellarii nostri iter suspensum fuerit, quotidie fere tibi suppetit; quidquid enim ad dominum <anchor xml:id="n3"/>Georgium Loos<anchor xml:id="n3e"/> cauponem in Blindenmarck, quod<del ana="#before">vel si</del> commode per dominam<anchor xml:id="n4"/> Usleberin<anchor xml:id="n4e"/> fieri poterit, vel, si mavis, omnino ad dominum Joannem Matthiam<anchor xml:id="n5"/> Terpiniz<anchor xml:id="n5e"/> magistrum veredariorum in Ammstetten diriges, statim ad me perveniet. Codicem tamen nostrum adhuc retine. </ab>
          <ab resp="#editor" xml:id="seg5">Ildephonsus Garstensis cur respondere tibi cunctatus fuerit, <anchor xml:id="n6"/>en ex eius ad me literis<anchor xml:id="n6e"/> (si probas) causam! Ex iis etiam nec enim aliunde hominem novi; de eiusdem charactere, quantum potes, divina: suis in laude est. </ab>

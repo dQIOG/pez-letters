@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="947" xml:id="pez-0947">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Benedikt Friepeis an Hieronymus Pez. 1718-06-10. Andechs.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">947</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Irrig zum 10. Juni 1719 datiert bei Glassner, Verzeichnis 213. – Federproben auf 2v.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -78,126 +90,128 @@
                <ptr type="mentions" target="letter:908"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e338">Adalbert von Bamberg ; Vita sancti Henrici imperatoris et miracula ; Ms.
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e338">Adalbert von Bamberg ; Vita sancti Henrici imperatoris et miracula ; Ms.
          Rebdorf</term>
-            <term ref="index:d14380e1309">Amort, Eusebius</term>
-            <term ref="index:d14380e1411">Andechs</term>
-            <term ref="index:d14380e1443">Andechs ; Archiv</term>
-            <term ref="index:d14380e1451">Andechs ; Archiv ; Chronicon Andecense. Ms</term>
-            <term ref="index:d14380e1491">Andechs ; Bibliothek ; Ökonom 1718</term>
-            <term ref="index:d14380e2067">Anonyme Werke ; Chronicon Andecense ; Mehrere Mss. Andechs</term>
-            <term ref="index:d14380e2076">Anonyme Werke ; Chronicon Andecense ; *Ms. Benediktbeuern</term>
-            <term ref="index:d14380e2083">Anonyme Werke ; Chronicon Andecense ; Ms. Mondsee</term>
-            <term ref="index:d14380e2092">Anonyme Werke ; Chronicon Andecense ; Ms. Polling</term>
-            <term ref="index:d14380e2099">Anonyme Werke ; Chronicon Andecense ; Ms. Tegernsee</term>
-            <term ref="index:d14380e2386">Anonyme Werke ; *Kurze Chronik von Andechs. Ms. Augsburg, St. Ulrich und Afra</term>
-            <term ref="index:d14380e3035">Arnpeck, Veit ; Chronicon Austriacum. Ms. München, Hofbibliothek</term>
-            <term ref="index:d14380e3233">Augsburg</term>
-            <term ref="index:d14380e3303">Augsburg ; St. Ulrich und Afra</term>
-            <term ref="index:d14380e3315">Augsburg ; St. Ulrich und Afra ; Bibliothek</term>
-            <term ref="index:d14380e3325">Augsburg ; St. Ulrich und Afra ; Bibliothek ; *Fragmentarische kurze Chronik zu
+               <term ref="index:d14380e1309">Amort, Eusebius</term>
+               <term ref="index:d14380e1411">Andechs</term>
+               <term ref="index:d14380e1443">Andechs ; Archiv</term>
+               <term ref="index:d14380e1451">Andechs ; Archiv ; Chronicon Andecense. Ms</term>
+               <term ref="index:d14380e1491">Andechs ; Bibliothek ; Ökonom 1718</term>
+               <term ref="index:d14380e2067">Anonyme Werke ; Chronicon Andecense ; Mehrere Mss. Andechs</term>
+               <term ref="index:d14380e2076">Anonyme Werke ; Chronicon Andecense ; *Ms. Benediktbeuern</term>
+               <term ref="index:d14380e2083">Anonyme Werke ; Chronicon Andecense ; Ms. Mondsee</term>
+               <term ref="index:d14380e2092">Anonyme Werke ; Chronicon Andecense ; Ms. Polling</term>
+               <term ref="index:d14380e2099">Anonyme Werke ; Chronicon Andecense ; Ms. Tegernsee</term>
+               <term ref="index:d14380e2386">Anonyme Werke ; *Kurze Chronik von Andechs. Ms. Augsburg, St. Ulrich und Afra</term>
+               <term ref="index:d14380e3035">Arnpeck, Veit ; Chronicon Austriacum. Ms. München, Hofbibliothek</term>
+               <term ref="index:d14380e3233">Augsburg</term>
+               <term ref="index:d14380e3303">Augsburg ; St. Ulrich und Afra</term>
+               <term ref="index:d14380e3315">Augsburg ; St. Ulrich und Afra ; Bibliothek</term>
+               <term ref="index:d14380e3325">Augsburg ; St. Ulrich und Afra ; Bibliothek ; *Fragmentarische kurze Chronik zu
          Andechs. Ms</term>
-            <term ref="index:d14380e3735">Bamberg</term>
-            <term ref="index:d14380e4706">Benediktbeuern</term>
-            <term ref="index:d14380e4826">Benediktbeuern ; Bibliothek ; Chronicon Andecense. Ms</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e6480">Bozenhart, Hieronymus</term>
-            <term ref="index:d14380e6490">Bozenhart, Hieronymus ; Solitudo sacra novitiis religiosorum ordinum sub sanctissimi
+               <term ref="index:d14380e3735">Bamberg</term>
+               <term ref="index:d14380e4706">Benediktbeuern</term>
+               <term ref="index:d14380e4826">Benediktbeuern ; Bibliothek ; Chronicon Andecense. Ms</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e6480">Bozenhart, Hieronymus</term>
+               <term ref="index:d14380e6490">Bozenhart, Hieronymus ; Solitudo sacra novitiis religiosorum ordinum sub sanctissimi
          patris Augustini Regula militantium frequentanda. Ulm 1717</term>
-            <term ref="index:d14380e6531">Braun, Maurus</term>
-            <term ref="index:d14380e6694">Brentano Zanola, Anton</term>
-            <term ref="index:d14380e7499">Canisius, Heinrich ; Antiqua lectio. 6 Bde. Ingolstadt 1601–1604</term>
-            <term ref="index:d14380e7505">Canisius, Heinrich ; Antiqua lectio. 6 Bde. Ingolstadt 1601–1604 ; Darin: Adalbert von
+               <term ref="index:d14380e6531">Braun, Maurus</term>
+               <term ref="index:d14380e6694">Brentano Zanola, Anton</term>
+               <term ref="index:d14380e7499">Canisius, Heinrich ; Antiqua lectio. 6 Bde. Ingolstadt 1601–1604</term>
+               <term ref="index:d14380e7505">Canisius, Heinrich ; Antiqua lectio. 6 Bde. Ingolstadt 1601–1604 ; Darin: Adalbert von
          Bamberg, Vita sancti Henrici imperatoris et miracula</term>
-            <term ref="index:d14380e11474">Erath von Erathsberg, Augustin</term>
-            <term ref="index:d14380e11508">Erath von Erathsberg, Augustin ; Commentarius theologico-juridico-historicus in Regulam
+               <term ref="index:d14380e11474">Erath von Erathsberg, Augustin</term>
+               <term ref="index:d14380e11508">Erath von Erathsberg, Augustin ; Commentarius theologico-juridico-historicus in Regulam
          sanctissimi patris nostri Augustini Hipponensis episcopi et ecclesiae doctoris maximi. Wien
          1689</term>
-            <term ref="index:d14380e12078">Ferb, Philipp Alois</term>
-            <term ref="index:d14380e13519">Friepeis, Benedikt ; -Geschichte von Andechs</term>
-            <term ref="index:d14380e13552">Friepeis, Benedikt ; Amt als Subprior 1718</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
+               <term ref="index:d14380e12078">Ferb, Philipp Alois</term>
+               <term ref="index:d14380e13519">Friepeis, Benedikt ; -Geschichte von Andechs</term>
+               <term ref="index:d14380e13552">Friepeis, Benedikt ; Amt als Subprior 1718</term>
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
          Epistola ad virum clarissimum Joannem Burchardum Menkenium Lipsiensem de Conspectu insignis
          codicis diplomatico-historico-epistolaris ex ἀυτογράφῳ, ut quidem videtur, dato ad Actorum
          eruditorum Lipsiensium collectores a reverendo patre Bernardo Pez Benedictino et
          bibliothecario Mellicensi in Austria. Verona [Wien] 1717</term>
-            <term ref="index:d14380e16285">Gregor VII., hl</term>
-            <term ref="index:d14380e16395">Gretser, Jakob</term>
-            <term ref="index:d14380e16403">Gretser, Jakob ; Commentarius Pauli Bernriedensis antiqui scriptoris de vita Gregorii
+               <term ref="index:d14380e16285">Gregor VII., hl</term>
+               <term ref="index:d14380e16395">Gretser, Jakob</term>
+               <term ref="index:d14380e16403">Gretser, Jakob ; Commentarius Pauli Bernriedensis antiqui scriptoris de vita Gregorii
          VII. pontificis maximi. Ingolstadt 1610</term>
-            <term ref="index:d14380e16409">Gretser, Jakob ; Commentarius Pauli Bernriedensis antiqui scriptoris de vita Gregorii
+               <term ref="index:d14380e16409">Gretser, Jakob ; Commentarius Pauli Bernriedensis antiqui scriptoris de vita Gregorii
          VII. pontificis maximi. Ingolstadt 1610 ; Darin: Paul von Bernried, Vita Gregorii
          VII</term>
-            <term ref="index:d14380e16414">Gretser, Jakob ; Commentarius Pauli Bernriedensis antiqui scriptoris de vita Gregorii
+               <term ref="index:d14380e16414">Gretser, Jakob ; Commentarius Pauli Bernriedensis antiqui scriptoris de vita Gregorii
          VII. pontificis maximi. Ingolstadt 1610 ; Darin: Paul von Bernried, Vita beatae
          Herlucae</term>
-            <term ref="index:d14380e16419">Gretser, Jakob ; Divi Bambergenses. Sanctus Henricus imperator, sancta Kunegundis
+               <term ref="index:d14380e16419">Gretser, Jakob ; Divi Bambergenses. Sanctus Henricus imperator, sancta Kunegundis
          imperatrix, sanctus Otho episcopus. Ingolstadt 1611</term>
-            <term ref="index:d14380e16437">Gretser, Jakob ; Divi Bambergenses. Sanctus Henricus imperator, sancta Kunegundis
+               <term ref="index:d14380e16437">Gretser, Jakob ; Divi Bambergenses. Sanctus Henricus imperator, sancta Kunegundis
          imperatrix, sanctus Otho episcopus. Ingolstadt 1611 ; Darin: Adalbert von Bamberg, Vita
          sancti Henrici imperatoris et miracula</term>
-            <term ref="index:d14380e16651">Guetrather, Petrus von</term>
-            <term ref="index:d14380e16904">Haid, Ildephons</term>
-            <term ref="index:d14380e17609">Heinrich II., hl</term>
-            <term ref="index:d14380e18025">Herluca von Bernried, sel</term>
-            <term ref="index:d14380e21840">Khamm, Korbinian</term>
-            <term ref="index:d14380e21854">Khamm, Korbinian ; Hierarchia Augustana tripartita in partem cathedralem, collegialem
+               <term ref="index:d14380e16651">Guetrather, Petrus von</term>
+               <term ref="index:d14380e16904">Haid, Ildephons</term>
+               <term ref="index:d14380e17609">Heinrich II., hl</term>
+               <term ref="index:d14380e18025">Herluca von Bernried, sel</term>
+               <term ref="index:d14380e21840">Khamm, Korbinian</term>
+               <term ref="index:d14380e21854">Khamm, Korbinian ; Hierarchia Augustana tripartita in partem cathedralem, collegialem
          et regularem, id est: Series et descriptio Augustanorum episcoporum, pro-episcoporum,
          praepositorum. 5 Bde. Augsburg 1709–1719 ; [Bd. 5] Pars tertia regularis. Augsburg
          1719</term>
-            <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e28587">Melk ; *Rotelbote 1716, 1718</term>
-            <term ref="index:d14380e29214">Mondsee</term>
-            <term ref="index:d14380e29268">Mondsee ; Bibliothek ; Chronicon Andecense. Ms</term>
-            <term ref="index:d14380e29936">München</term>
-            <term ref="index:d14380e30013">München ; Kurfürstlicher Hof ; Hofbibliothek</term>
-            <term ref="index:d14380e30045">München ; Kurfürstlicher Hof ; Hofbibliothek ; Arnpeck, Chronicon Austriacum.
+               <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e28587">Melk ; *Rotelbote 1716, 1718</term>
+               <term ref="index:d14380e29214">Mondsee</term>
+               <term ref="index:d14380e29268">Mondsee ; Bibliothek ; Chronicon Andecense. Ms</term>
+               <term ref="index:d14380e29936">München</term>
+               <term ref="index:d14380e30013">München ; Kurfürstlicher Hof ; Hofbibliothek</term>
+               <term ref="index:d14380e30045">München ; Kurfürstlicher Hof ; Hofbibliothek ; Arnpeck, Chronicon Austriacum.
          Ms</term>
-            <term ref="index:d14380e30063">München ; Kurfürstlicher Hof ; Hofbibliothek ; Hartmann Schedel, Chronica
+               <term ref="index:d14380e30063">München ; Kurfürstlicher Hof ; Hofbibliothek ; Hartmann Schedel, Chronica
          Babenbergensis. Ms</term>
-            <term ref="index:d14380e31723">Oswald, Albert</term>
-            <term ref="index:d14380e31818">Otto, hl</term>
-            <term ref="index:d14380e32292">Paris</term>
-            <term ref="index:d14380e32644">Paul von Bernried</term>
-            <term ref="index:d14380e33148">Pez, Bernhard</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e34351">Pez, Bernhard ; Bibliotheksreise 1717 ; Reisebericht; später in: Thesaurus anecdotorum
+               <term ref="index:d14380e31723">Oswald, Albert</term>
+               <term ref="index:d14380e31818">Otto, hl</term>
+               <term ref="index:d14380e32292">Paris</term>
+               <term ref="index:d14380e32644">Paul von Bernried</term>
+               <term ref="index:d14380e33148">Pez, Bernhard</term>
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e34351">Pez, Bernhard ; Bibliotheksreise 1717 ; Reisebericht; später in: Thesaurus anecdotorum
          novissimus, Bd. 1, als Teil der „Dissertatio isagogica“</term>
-            <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
+               <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
          dominum dominum Joannem Benedictum Gentilottum ab Engelsbrunn pro editione integri
          syntagmatis diplomatico-historico-epistolaris Udalrici Babenbergensis ex codice Zwetlensi,
          impugnata a viro clarissimo Angelo Fonteio Veronensi. Augsburg 1717</term>
-            <term ref="index:d14380e34481">Pez, Bernhard ; Krankheit im Frühjahr 1718</term>
-            <term ref="index:d14380e34725">Pez, Hieronymus ; Acta sancti Colomanni regis et martyris divi tutelaris Austriae
+               <term ref="index:d14380e34481">Pez, Bernhard ; Krankheit im Frühjahr 1718</term>
+               <term ref="index:d14380e34725">Pez, Hieronymus ; Acta sancti Colomanni regis et martyris divi tutelaris Austriae
          dissertationibus et notis historico-criticis illustrata praeside Adriano Pliemel. Krems
          1713</term>
-            <term ref="index:d14380e35476">Polling</term>
-            <term ref="index:d14380e35492">Polling ; Bibliothek ; Chronicon Andecense. Ms</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
-            <term ref="index:d14380e35980">Prenninger, Placidus</term>
-            <term ref="index:d14380e36617">Rebdorf ; Bibliothek ; Adalbert von Bamberg, Vita sancti Henrici imperatoris.
+               <term ref="index:d14380e35476">Polling</term>
+               <term ref="index:d14380e35492">Polling ; Bibliothek ; Chronicon Andecense. Ms</term>
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+               <term ref="index:d14380e35980">Prenninger, Placidus</term>
+               <term ref="index:d14380e36617">Rebdorf ; Bibliothek ; Adalbert von Bamberg, Vita sancti Henrici imperatoris.
          Ms</term>
-            <term ref="index:d14380e36971">Regularkanoniker</term>
-            <term ref="index:d14380e37826">Rom, Römer ; Päpstliche Kurie, Papsttum ; Indexkongregation ; Dekret gegen Erath,
+               <term ref="index:d14380e36971">Regularkanoniker</term>
+               <term ref="index:d14380e37826">Rom, Römer ; Päpstliche Kurie, Papsttum ; Indexkongregation ; Dekret gegen Erath,
          Commentarius, und Schramb, Antilogia</term>
-            <term ref="index:d14380e38328">Rudolfis, Joseph von</term>
-            <term ref="index:d14380e39026">Saller, Philipp</term>
-            <term ref="index:d14380e39290">St. Gallen</term>
-            <term ref="index:d14380e39321">St. Gallen ; Toggenburgerkrieg 1712, Exil des Konvents bis 1718</term>
-            <term ref="index:d14380e39567">Schalhamer, Quirin</term>
-            <term ref="index:d14380e39627">Schedel, Hartmann ; Chronica Babenbergensis. Ms. München, Hofbibliothek</term>
-            <term ref="index:d14380e42111">Tegernsee</term>
-            <term ref="index:d14380e42226">Tegernsee ; Bibliothek ; Chronicon Andecense. Ms</term>
-            <term ref="index:d14380e43598">Udalrich von Bamberg ; Codex Udalrici ; Ms. Zwettl</term>
-            <term ref="index:d14380e45099">Wein</term>
-            <term ref="index:d14380e45458">Wettenhausen</term>
-            <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
-            <term ref="index:d14380e45964">Wien ; Kaiserhof ; Hofbibliothek ; Gentilotti als Präfekt</term>
-            <term ref="index:d14380e47124">Zwettl ; Bibliothek ; Udalrich von Bamberg, Codex Udalrici. Ms</term></keywords></textClass>
+               <term ref="index:d14380e38328">Rudolfis, Joseph von</term>
+               <term ref="index:d14380e39026">Saller, Philipp</term>
+               <term ref="index:d14380e39290">St. Gallen</term>
+               <term ref="index:d14380e39321">St. Gallen ; Toggenburgerkrieg 1712, Exil des Konvents bis 1718</term>
+               <term ref="index:d14380e39567">Schalhamer, Quirin</term>
+               <term ref="index:d14380e39627">Schedel, Hartmann ; Chronica Babenbergensis. Ms. München, Hofbibliothek</term>
+               <term ref="index:d14380e42111">Tegernsee</term>
+               <term ref="index:d14380e42226">Tegernsee ; Bibliothek ; Chronicon Andecense. Ms</term>
+               <term ref="index:d14380e43598">Udalrich von Bamberg ; Codex Udalrici ; Ms. Zwettl</term>
+               <term ref="index:d14380e45099">Wein</term>
+               <term ref="index:d14380e45458">Wettenhausen</term>
+               <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
+               <term ref="index:d14380e45964">Wien ; Kaiserhof ; Hofbibliothek ; Gentilotti als Präfekt</term>
+               <term ref="index:d14380e47124">Zwettl ; Bibliothek ; Udalrich von Bamberg, Codex Udalrici. Ms</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">BF schreibt nach längerer Unterbrechung des Briefwechsels an HP, weil er bereits mehrfach Gerüchte über
                den Tod BPs vernommen hat, die ihn zutiefst beunruhigen. Er bittet HP, ihn möglichst rasch über die –
@@ -296,9 +310,10 @@
                   Schalhamer</rs>. Er fragt nach dem Befinden der <rs ref="index:d14380e28088">Melker</rs> Konventualen,
                berichtet von den vielen Gebeten, welche die Andechser bei der Nachricht von der <rs ref="index:d14380e34481">Krankheit BPs</rs> (und HPs?) verrichtet haben, und bittet nochmals um
                Nachrichten über die Kontroverse zwischen BP und Gentilotti.</p>
-            <p corresp="#seg12">BF berichtet weiters, dass allgemein das Gerücht geht, dass der Fürstabt von <rs ref="index:d14380e39290">St. Gallen</rs> <rs ref="index:d14380e38328">Joseph von Rudolfis</rs> zusammen mit einigen seiner
+            <p corresp="#seg12">BF berichtet weiters, dass allgemein das Gerücht geht, dass der Fürstabt von <rs ref="index:d14380e39290">St. Gallen</rs>
+               <rs ref="index:d14380e38328">Joseph von Rudolfis</rs> zusammen mit einigen seiner
                Kapitularen bereits <rs ref="index:d14380e39321">wieder von seinem Kloster Besitz ergriffen</rs> hat.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -306,13 +321,18 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>obitu ... Bernardi</mentioned>
             <p>Im Zusammenhang mit der schweren Erkrankung BPs
-                  im März 1718 gingen anscheinend überzogene Gerüchte um: vgl. <ref type="letter" target="letter:938">938</ref> <ref target="letter:938#seg1">1</ref>, <ref type="letter" target="letter:950">950</ref> <ref target="letter:950#seg1">1</ref>.</p>
+                  im März 1718 gingen anscheinend überzogene Gerüchte um: vgl. <ref type="letter" target="letter:938">938</ref>
+               <ref target="letter:938#seg1">1</ref>, <ref type="letter" target="letter:950">950</ref>
+               <ref target="letter:950#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>Chronicon Arenpekianum</mentioned>
             <p> Gemeint ist Veit Arnpecks „Chronicon
                   Austriacum“ in der Handschrift BStB München, clm 2230; vgl. <rs type="bibl" ref="bibl:17914">Leidinger, Einleitung Arnpeck</rs> CI f.; <rs type="bibl" ref="bibl:17920">Leidinger, Schriften</rs> 86f. Zu ihrer Einsichtnahme durch BP
-                  und HP bei dem kurzen Besuch in der Münchner Hofbibliothek vgl. <ref type="letter" target="letter:804">804</ref> <ref target="letter:804#seg7">7</ref>, <ref type="letter" target="letter:828">828</ref> <ref target="letter:828#seg1">1</ref>, <ref type="letter" target="letter:835">835</ref> <ref target="letter:835#seg5">5</ref>.</p>
+                  und HP bei dem kurzen Besuch in der Münchner Hofbibliothek vgl. <ref type="letter" target="letter:804">804</ref>
+               <ref target="letter:804#seg7">7</ref>, <ref type="letter" target="letter:828">828</ref>
+               <ref target="letter:828#seg1">1</ref>, <ref type="letter" target="letter:835">835</ref>
+               <ref target="letter:835#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned> Chronicon Bambergense</mentioned>
@@ -363,7 +383,8 @@
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
             <mentioned> Lunaelacensi</mentioned>
             <p> Die Handschrift ist zu identifizieren mit ÖNB, Cod.
-                  2672; vgl. <ref type="letter" target="letter:920">920</ref> <ref target="letter:920#seg3">3</ref>.</p>
+                  2672; vgl. <ref type="letter" target="letter:920">920</ref>
+               <ref target="letter:920#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg5">
             <mentioned> Benedictoburano</mentioned>
@@ -378,7 +399,8 @@
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg5">
             <mentioned> Rotularius</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:920">920</ref> <ref target="letter:920#seg3">3</ref>.
+            <p> Vgl. <ref type="letter" target="letter:920">920</ref>
+               <ref target="letter:920#seg3">3</ref>.
                </p>
          </note>
          <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg5">
@@ -386,7 +408,8 @@
             <p>Möglicherweise die Chroniküberlieferung
                   in HStA München, KL Andechs 1; vgl. <rs type="bibl" ref="bibl:15376">Brackmann,
                      Andechser Wallfahrt</rs> 36f. Denkbar wäre auch StiA Andechs, Ms. 21, die
-                  jedoch BF schon länger bekannt gewesen zu sein scheint: vgl. <ref type="letter" target="letter:747">747</ref> <ref target="letter:747#seg2">2</ref>.</p>
+                  jedoch BF schon länger bekannt gewesen zu sein scheint: vgl. <ref type="letter" target="letter:747">747</ref>
+               <ref target="letter:747#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg6">
             <mentioned>Gretsherus ... aperte fatetur</mentioned>
@@ -421,9 +444,12 @@
          <note target="#range(right('n21'), left('n21e'))" n="21" anchored="false" corresp="#seg7">
             <mentioned>Itinerario</mentioned>
             <p>Zu BPs Vorhaben der Veröffentlichung eines Reiseberichts
-                  vgl. <ref type="letter" target="letter:804">804</ref> <ref target="letter:804#seg1">1</ref>, <ref type="letter" target="letter:828">828</ref>
-                  <ref target="letter:828#seg1">1</ref>, <ref type="letter" target="letter:836">836</ref> <ref target="letter:836#seg4">4</ref>, <ref type="letter" target="letter:839">839</ref>
-                  <ref target="letter:839#seg2">2</ref>, <ref type="letter" target="letter:867">867</ref> <ref target="letter:867#seg3">3</ref>; sowie Einleitung, Abschnitt
+                  vgl. <ref type="letter" target="letter:804">804</ref>
+               <ref target="letter:804#seg1">1</ref>, <ref type="letter" target="letter:828">828</ref>
+               <ref target="letter:828#seg1">1</ref>, <ref type="letter" target="letter:836">836</ref>
+               <ref target="letter:836#seg4">4</ref>, <ref type="letter" target="letter:839">839</ref>
+               <ref target="letter:839#seg2">2</ref>, <ref type="letter" target="letter:867">867</ref>
+               <ref target="letter:867#seg3">3</ref>; sowie Einleitung, Abschnitt
                   I.4.</p>
          </note>
          <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg8">
@@ -447,7 +473,13 @@
                   behandelten, nämlich im Vorrangstreit zwischen Benediktinern und
                   Augustiner-Chorherren: <rs type="bibl" ref="bibl:18696">Paintner–Wiesneth–Schwedt,
                      Römische Bücherverbote</rs> 55f.; <rs type="bibl" ref="bibl:19080">Reusch,
-                     Index</rs> 2 265f.; vgl. <rs type="bibl" ref="bibl:15002">Badea–Busemann–Dinkels, Repertorium</rs> 841f., 847f.; <rs type="bibl" ref="bibl:16240">Fiska, Schramb</rs> 222–226, 232–235; <rs type="bibl" ref="bibl:19776">Stockinger, Felix mansurus</rs> 189; sowie <ref type="letter" target="letter:406">406</ref> <ref target="letter:406#seg3">3</ref>, <ref type="letter" target="letter:411">411</ref> <ref target="letter:411#seg2">2</ref>, <ref type="letter" target="letter:422">422</ref> <ref target="letter:422#seg3">3</ref>, <ref type="letter" target="letter:427">427</ref> <ref target="letter:427#seg3">3</ref>, <ref type="letter" target="letter:434">434</ref> <ref target="letter:434#seg4">4</ref>, <ref type="letter" target="letter:659">659</ref> <ref target="letter:659#seg5">5</ref>.
+                     Index</rs> 2 265f.; vgl. <rs type="bibl" ref="bibl:15002">Badea–Busemann–Dinkels, Repertorium</rs> 841f., 847f.; <rs type="bibl" ref="bibl:16240">Fiska, Schramb</rs> 222–226, 232–235; <rs type="bibl" ref="bibl:19776">Stockinger, Felix mansurus</rs> 189; sowie <ref type="letter" target="letter:406">406</ref>
+               <ref target="letter:406#seg3">3</ref>, <ref type="letter" target="letter:411">411</ref>
+               <ref target="letter:411#seg2">2</ref>, <ref type="letter" target="letter:422">422</ref>
+               <ref target="letter:422#seg3">3</ref>, <ref type="letter" target="letter:427">427</ref>
+               <ref target="letter:427#seg3">3</ref>, <ref type="letter" target="letter:434">434</ref>
+               <ref target="letter:434#seg4">4</ref>, <ref type="letter" target="letter:659">659</ref>
+               <ref target="letter:659#seg5">5</ref>.
                </p>
          </note>
          <note target="#range(right('n24'), left('n24e'))" n="24" anchored="false" corresp="#seg9">
@@ -467,7 +499,7 @@
          <note target="#range(right('n27'), left('n27e'))" n="27" anchored="false" corresp="#seg10">
             <mentioned> Antonius</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:18028">Lindner, Memoriale San-Ulricanum</rs> 8
+               <rs type="bibl" ref="bibl:18028">Lindner, Memoriale San-Ulricanum</rs> 8
                42.</p>
          </note>
          <note target="#range(right('n28'), left('n28e'))" n="28" anchored="false" corresp="#seg11">
@@ -478,13 +510,15 @@
          </note>
          <note target="#range(right('n29'), left('n29e'))" n="29" anchored="false" corresp="#seg11">
             <mentioned>Quirinus</mentioned>
-            <p><rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs>
+            <p>
+               <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs>
                   827.</p>
          </note>
          <note target="#range(right('n30'), left('n30e'))" n="30" anchored="false" corresp="#seg11">
             <mentioned> principem Sanct-Gallensem</mentioned>
             <p>Zur Rückkehr der St. Galler Mönche in ihr
-                  Kloster vgl. <ref type="letter" target="letter:1006">1006</ref> <ref target="letter:1006#seg5">5</ref>. </p>
+                  Kloster vgl. <ref type="letter" target="letter:1006">1006</ref>
+               <ref target="letter:1006#seg5">5</ref>. </p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -499,17 +533,24 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverendo religiosissimo ac clarissimo domino patri Hieronymo Pez Benedictino Mellicensi, amico suo e millibus electo, pater Benedictus Friepeis monachus Andecensis salutem plurimam dicit.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverendo religiosissimo ac clarissimo domino patri Hieronymo Pez Benedictino Mellicensi, amico suo e millibus electo, pater Benedictus Friepeis monachus Andecensis salutem plurimam dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Rumpit denique calamum eiusque iusto longiores hactenus prohibet moras tristis eaque iterata de <anchor xml:id="n1"/>obitu tui an mei etiam potius Bernardi fama; quantum ea res me virosque omnes rei litterariae, Benedictinae inprimis, studiosos afflixerit, nemo facilius ac tu ipsus assequi poterit. Quaeso igitur obtestorque, ne vel ad diem meam, quamvis id faceres merito, castiges reciproce moram, sed quantocyus moerentem et pene tabescentem bono de integra clarissimi ac summe venerandi mei patris Bernardi<anchor xml:id="n1e"/> valetudine laetum me facias nuntio. </ab>
          <ab resp="#editor" xml:id="seg2">At, inquies, quam altum hucusque litterarum silentium! Rem ipsam dixisti; verum morosae adeo dilationis causam accipe: tuum inprimis id fecit negotium, quod magna usque in praesens agebam sollicitudine, dum repetito itinere, frequentibus epistolis, iteratis accessibus desideratum a te <anchor xml:id="n2"/>Chronicon Arenpekianum<anchor xml:id="n2e"/> obtinere conabar; obtinere tamen non potui, etsi nunquam promissis vacuum dimiserit bibliothecarius spemque fecerit continuam codicem illum, quandocunque demum peterem, communicandi. Fidem auxit liberalitas, qua insigne<anchor xml:id="n3"/> Chronicon Bambergense<anchor xml:id="n3e"/> manuscriptum, dum elapsa die 17. Februarii Monachio domum remearem, ultronee contulit et plura successive dare promisit; ab illa tamen die, qua praefatum restitui Chronicon, codicem amplius vidi nullum, quanquam muneribus etiam expugnare tentaverim. Accessit gravissima eiusdem bibliothecarii infirmitas et novissima demum severissimaque prohibitio, qua librum, praesertim si manuscriptus is sit, nemini extra civitatem commoranti deinceps concedi liceat, praesentibus tamen et excerpere volentibus nullus non usui esse possit. Tuam ergo exspecto mentem, imo imperium, an me velis tui causa (praesertim si ratio studiorum tuorum ulteriorem excludat moram) Monachium petere et Austriae Chronicon ex Arenpekio in tuos seligere usus. Facilem habebis in vota reverendissimum meum dominum dominum abbatem, me autem obsequiosissimum. </ab>
          <ab resp="#editor" xml:id="seg3">Altera, cur respondere hucusque distulerim, causa, eaque praecipua, erat sacra obedientia; haec quippe silentium imposuit et calamo ferias indixit. De maiorum nempe <pb n="1v"/> arbitrio domesticum suscipere iussus <anchor xml:id="n4"/>officium<anchor xml:id="n4e"/>, illud in praesentem usque horam adeo studiis omne subtraxit tempus, ut nec legere quidem, ne dicam scribere otium fuerit necessariam futurae meae deinceps villicationis notitiam comparare volenti: tardiori ergo indulge calamo sua certe non culpa, sed necessitate scriptionis <anchor xml:id="n5"/>officium<anchor xml:id="n5e"/> intermittenti aut prolonganti. </ab>
          <ab resp="#editor" xml:id="seg4">Quando autem vacare iam nonnihil licet, moras ulteriores trahere nefas duxi; responsorias igitur ad illas, quas die divo Mathiae sacro dabas, accipe. Mirabaris <anchor xml:id="n6"/>Tegernseenses<anchor xml:id="n6e"/> adeo tergiversatos in commodando<anchor xml:id="n7"/> illo codice<anchor xml:id="n7e"/>, qui de sacris nostris exponit reliquiis, et quo aegerrime carere me posse credis, reverendissimum dominum dominum abbatem nihilominus adeo difficilem fuisse. Verum nec soli mihi, sed nostro insuper reverendissimo, qui ad initium anni litteris urgebat codicem, difficilis erat abbas Tegernseensis asserens plura monasterii sui documenta manuscripto illo inesse, quae proin absque grandi praeiudicio mitti non possent; paratissimum se tamen esse illa intra coenobii sui exhibere parietes cum plena quaevis excerpendi et seligendi facultate. Ad finem ergo autumnalium illuc rursus abire decretum habeo. </ab>
          <ab resp="#editor" xml:id="seg5">Quae reverendissimo domino praeposito Pollingano insinuari volebas, insinuavi; <anchor xml:id="n8"/>ipsumque chronicon<anchor xml:id="n8e"/> dominus<anchor xml:id="n9"/> Philippus<anchor xml:id="n9e"/>, qui vos Monachii convenerat, elapsis<anchor xml:id="n10"/> Rogationum<anchor xml:id="n10e"/> diebus secum attulerat ad Montes nostros, quod cum<anchor xml:id="n11"/> Lunaelacensi<anchor xml:id="n11e"/>,<anchor xml:id="n12"/> Benedictoburano<anchor xml:id="n12e"/> et<anchor xml:id="n13"/> Tegernseensi<anchor xml:id="n13e"/> per omnia convenire deprehendi.<anchor xml:id="n14"/> Rotularius<anchor xml:id="n14e"/> vester codicem secum Lunaelacensem, in quo Chronicon erat nostri monasterii, fideliter attulit; magnas ego gratias fero amicae tuae sollicitudini studioque praefatum librum usibus meis adicienti. Quanquam autem eundem <anchor xml:id="n15"/>ipsissimum inter archivii nostri deprehenderim<anchor xml:id="n15e"/> scrinia, copiosiorem tamen nonnihil, proin ad stabiliendum, imo etiam augendum nostrum mire utilem inveni. </ab>
-         <ab resp="#editor" xml:id="seg6">Pari gratitudine tuam veneror beneficentiam, qua Acta Colomanni et Fonteianam communicabas Epistolam. De utroque iudicium, quod petebas, ferre non audeo; Actis enim illis aliud adicere idem foret ac vinum bonum hedera, qua tamen haud eget, coronare. Alteri vero censuram dare vel ipsa absterret viri authoritas, bibliothecarii nimirum caesarei, quem nihilominus calamum strinxisse in Bernardum mirari satis haud valeo, minus capere, quod adeo liberaliter edita per Gretsherum eidem obiciat diplomata, quae utique Bernardo ignota esse non potuerunt. Et numquid non idem <anchor xml:id="n16"/>Gretsherus in suis ad Vitam sancti Henrici notationibus aperte fatetur<anchor xml:id="n16e"/> exscripsisse se Vitam illam ex<anchor xml:id="n17"/> codice Rebdorffensi<anchor xml:id="n17e"/>, etsi non ignoraret <pb n="2r"/> <anchor xml:id="n18"/>Henricum Canisium prius iam tomo sexto Antiquae lectionis evulgasse<anchor xml:id="n18e"/>, amplius utique consultum iri litterario existimans bono, si<anchor xml:id="n19"/> eundem quidem offerat<anchor xml:id="n19e"/> codicem, pleniorem tamen, qualem et Zwethalensem esse ipsus non diffitetur adversarius. At<anchor xml:id="n20"/> detrahi malim, ait, id quod redundat<anchor xml:id="n20e"/> etc. Amabo! Quae codici detruncato fides? Quis nitor? Ut nihil dicam edita saepius, etiam eadem, documenta mutuum accipere robur, cum nihil dissimile afferant. Et quae demum implicantia codicem huius manus contractiora habere documenta, codicem alterius ampliora, quantum non ergo ad utriusque perfectionem subsidium! Ipsi certe <sic>Grestherianae</sic> Divorum Bambergensium editioni plura addi possent ex <sic>Chronicon</sic> Bambergensi Hartmani Schedl (de quo supra), quanquam caeteroquin eadem ferme omnia numeret diplomata; neminem tamen eius fore opinionis existimo, qua sibi persuadeat eo solo ex capite editionem Hartmani aut impediendam aut improbandam esse. Ego sane, dum in contextu historiae Andecensis vitam divi Ottonis episcopi Bambergensis collegero, chronico eiusdem Hartmanni liberaliter utar, nihil operae perditurum me credens, si iterata editione anteriora vel stabiliam vel augeam. Sed poeniteret ad istius similisve operis emtionem <sic>vindemioolas</sic> meas reservasse etc. O botrum huius vindemiolae amarissimum, qui suavissimo Musarum liquori, quem libri propinant largiter, Bachi pampinos anteferre non erubescit. Bibat ergo propitio Libero et epotet vindemiolam suam, haud enim defuturi sunt alii, quorum palatis vina vetera (diplomata puto) eiusdem licet vineae sint arrisura. Ita ad huius vindemiam iocari placuit. Mitte, quaeso, responsum clarissimi patris Bernardi, ut deinceps non iocari, sed sapere atque ulterius erudiri valeam. </ab>
+         <ab resp="#editor" xml:id="seg6">Pari gratitudine tuam veneror beneficentiam, qua Acta Colomanni et Fonteianam communicabas Epistolam. De utroque iudicium, quod petebas, ferre non audeo; Actis enim illis aliud adicere idem foret ac vinum bonum hedera, qua tamen haud eget, coronare. Alteri vero censuram dare vel ipsa absterret viri authoritas, bibliothecarii nimirum caesarei, quem nihilominus calamum strinxisse in Bernardum mirari satis haud valeo, minus capere, quod adeo liberaliter edita per Gretsherum eidem obiciat diplomata, quae utique Bernardo ignota esse non potuerunt. Et numquid non idem <anchor xml:id="n16"/>Gretsherus in suis ad Vitam sancti Henrici notationibus aperte fatetur<anchor xml:id="n16e"/> exscripsisse se Vitam illam ex<anchor xml:id="n17"/> codice Rebdorffensi<anchor xml:id="n17e"/>, etsi non ignoraret <pb n="2r"/>
+            <anchor xml:id="n18"/>Henricum Canisium prius iam tomo sexto Antiquae lectionis evulgasse<anchor xml:id="n18e"/>, amplius utique consultum iri litterario existimans bono, si<anchor xml:id="n19"/> eundem quidem offerat<anchor xml:id="n19e"/> codicem, pleniorem tamen, qualem et Zwethalensem esse ipsus non diffitetur adversarius. At<anchor xml:id="n20"/> detrahi malim, ait, id quod redundat<anchor xml:id="n20e"/> etc. Amabo! Quae codici detruncato fides? Quis nitor? Ut nihil dicam edita saepius, etiam eadem, documenta mutuum accipere robur, cum nihil dissimile afferant. Et quae demum implicantia codicem huius manus contractiora habere documenta, codicem alterius ampliora, quantum non ergo ad utriusque perfectionem subsidium! Ipsi certe <sic>Grestherianae</sic> Divorum Bambergensium editioni plura addi possent ex <sic>Chronicon</sic> Bambergensi Hartmani Schedl (de quo supra), quanquam caeteroquin eadem ferme omnia numeret diplomata; neminem tamen eius fore opinionis existimo, qua sibi persuadeat eo solo ex capite editionem Hartmani aut impediendam aut improbandam esse. Ego sane, dum in contextu historiae Andecensis vitam divi Ottonis episcopi Bambergensis collegero, chronico eiusdem Hartmanni liberaliter utar, nihil operae perditurum me credens, si iterata editione anteriora vel stabiliam vel augeam. Sed poeniteret ad istius similisve operis emtionem <sic>vindemioolas</sic> meas reservasse etc. O botrum huius vindemiolae amarissimum, qui suavissimo Musarum liquori, quem libri propinant largiter, Bachi pampinos anteferre non erubescit. Bibat ergo propitio Libero et epotet vindemiolam suam, haud enim defuturi sunt alii, quorum palatis vina vetera (diplomata puto) eiusdem licet vineae sint arrisura. Ita ad huius vindemiam iocari placuit. Mitte, quaeso, responsum clarissimi patris Bernardi, ut deinceps non iocari, sed sapere atque ulterius erudiri valeam. </ab>
          <ab resp="#editor" xml:id="seg7">Quid de <anchor xml:id="n21"/>Itinerario<anchor xml:id="n21e"/>? An spes illud in brevi videndi? </ab>
          <ab resp="#editor" xml:id="seg8">Bibliothecarius Pollinganus praeter humanissimam sui commendationem (qualem et ego praeprimis peto, primas quippe in amore et veneratione erga suavissimum patrem Bernardum cessurus nemini) pauca haec eidem per me insinuari voluit: Obtinui ante paucos dies alium tomum Gretscheri collectoris. In hoc continetur Vita Gregorii VII. et Vita Herlucae Bernriedensis, utraque scripta per Paulum Bernriedensem familiarem Herlucae. Admodum reverendus pater Pez desideravit hunc tomum, maxime Vitam Gregorii VII., propter quod, nisi illum invenisset iam in aliis bibliothecis, posset hoc illi cum mei commendatione indicari. Edoceri ergo cupio, an servire et prodesse ambo valeamus. <anchor xml:id="n22"/>Petit insuper<anchor xml:id="n22e"/> praefatus dominus ex vobis scire, qua demum occasione litterae vestrae Parisios ad nostros patres Benedictinos deferantur? Quae formula inscriptionis, quis ex illis potissimus, qui exterorum litteris respondeat? </ab>
-         <ab resp="#editor" xml:id="seg9"><anchor xml:id="n23"/>Decretum curiae Romanae<anchor xml:id="n23e"/>, quod praesentibus adieci litteris, communicabat clarissimus dominus <anchor xml:id="n24"/>Corbinianus Kham<anchor xml:id="n24e"/> Augustanus, quo neque vos, nisi forte iam dudum acceperitis, carere volebam. <pb n="2v"/> Plurimum suae illud obesse intentioni conqueritur pater Corbinianus, cum enim elapso primum anno dominus<anchor xml:id="n25"/> Hieronymus Bozenhart<anchor xml:id="n25e"/> decanus et magister novitiorum Wettenhusanus, domini Erath concanonicus, librum edidisset sub titulo Solitudo sacra, illum autem bilosis ex Commentario praefati domini Erath excerptis vanitatemque redolentibus passionatae mentis scommatibus conspergere non esset veritus. Illa velut zizania ex horto Erathiano noviter succrescentia extirpare et vel in cunis suffocare parabat in <choice><sic>partes</sic><corr>parte</corr></choice> tertia Hierarchiae suae Augustanae, propediem luci publicae <sic>committendae</sic>. At ecce, dum operi manus admovet, decretum hoc mittitur et silentium vel invito extorquetur. </ab>
-         <ab resp="#editor" xml:id="seg10"><anchor xml:id="n26"/>Parvum monasterii nostri Chronicon<anchor xml:id="n26e"/> in bibliotheca Augustana a te, mi Hieronyme, deprehensum pater<anchor xml:id="n27"/> Antonius<anchor xml:id="n27e"/> ad primas meas submisit preces, novo ergo me rursum titulo sibi devinctum accipe. Satis denique. Prolixior esse debui, quia tardior hucusque eram; veniam proinde concede et prolixitati et prolongationi, meque ulteriori, si merear, favore et amore prosequere. Vale.</ab>
+         <ab resp="#editor" xml:id="seg9">
+            <anchor xml:id="n23"/>Decretum curiae Romanae<anchor xml:id="n23e"/>, quod praesentibus adieci litteris, communicabat clarissimus dominus <anchor xml:id="n24"/>Corbinianus Kham<anchor xml:id="n24e"/> Augustanus, quo neque vos, nisi forte iam dudum acceperitis, carere volebam. <pb n="2v"/> Plurimum suae illud obesse intentioni conqueritur pater Corbinianus, cum enim elapso primum anno dominus<anchor xml:id="n25"/> Hieronymus Bozenhart<anchor xml:id="n25e"/> decanus et magister novitiorum Wettenhusanus, domini Erath concanonicus, librum edidisset sub titulo Solitudo sacra, illum autem bilosis ex Commentario praefati domini Erath excerptis vanitatemque redolentibus passionatae mentis scommatibus conspergere non esset veritus. Illa velut zizania ex horto Erathiano noviter succrescentia extirpare et vel in cunis suffocare parabat in <choice>
+               <sic>partes</sic>
+               <corr>parte</corr>
+            </choice> tertia Hierarchiae suae Augustanae, propediem luci publicae <sic>committendae</sic>. At ecce, dum operi manus admovet, decretum hoc mittitur et silentium vel invito extorquetur. </ab>
+         <ab resp="#editor" xml:id="seg10">
+            <anchor xml:id="n26"/>Parvum monasterii nostri Chronicon<anchor xml:id="n26e"/> in bibliotheca Augustana a te, mi Hieronyme, deprehensum pater<anchor xml:id="n27"/> Antonius<anchor xml:id="n27e"/> ad primas meas submisit preces, novo ergo me rursum titulo sibi devinctum accipe. Satis denique. Prolixior esse debui, quia tardior hucusque eram; veniam proinde concede et prolixitati et prolongationi, meque ulteriori, si merear, favore et amore prosequere. Vale.</ab>
          <closer>Dabam in Monte Sancto Andechs die 10. Junii 1718.</closer>
          <closer xml:id="seg12">Reverendissimus meus dominus dominus abbas et omnes de gremio nostro humanissime vobis commendari petiere, praesertim patres <anchor xml:id="n28"/>oeconomus<anchor xml:id="n28e"/>, Ildephonsus, Placidus, <anchor xml:id="n29"/>Quirinus<anchor xml:id="n29e"/>. Utique bene habebunt omnes de florentissimo vestro Mellicio? Aegre nos habuit malum vestrum nec modicas ad Deum extorsit preces, utinam in commodum vestrum efficaces! Scribe, obsecro, qualiter agatur inter Bernardum et Fonteianam Epistolam. Reverendissimum principem Sanct-Gallensem cum nonnullis ex eorundem capitulo iteratam monasterii sui possessionem adiisse communis iam fama habet.</closer>
       </body>

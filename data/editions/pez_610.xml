@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="610" xml:id="pez-0610">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Benedikt Gentilotti von Engelsbrunn an Bernhard Pez. 1716-07-04. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">610</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,37 +90,40 @@
                <ptr type="mentions" target="letter:608"/>
             </correspContext>
          </correspDesc>
-         <textClass><keywords>
-            <term ref="index:d14380e656">Alberici, Giacomo ; Catalogo breve de gl’illustri et famosi scrittori Venetiani. Bologna                        1605</term>
-            <term ref="index:d14380e1139">Altlechner, Kaspar</term>
-            <term ref="index:d14380e12302">Florenz</term>
-            <term ref="index:d14380e14924">Gentilotti von Engelsbrunn, Johann Benedikt ; Privatbibliothek</term>
-            <term ref="index:d14380e17201">Hardouin, Jean ; Acta conciliorum et epistolae decretales ac constitutiones summorum pontificum. 12 Bde. Paris 1714–1715</term>
-            <term ref="index:d14380e21188">Karl VI</term>
-            <term ref="index:d14380e21903">Kircher, Athanasius ; Arca Noe in tres libros digesta. Amsterdam 1675</term>
-            <term ref="index:d14380e21985">Klemens XI</term>
-            <term ref="index:d14380e22021">Klemens XI ; Bulle „Unigenitus“ 1713</term>
-            <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
-            <term ref="index:d14380e25664">Mabillon, Jean ; Acta sanctorum ordinis sancti Benedicti, in saeculorum classes distributa, ab anno Christi D ad annum MC. 9 Bde. Paris 1668–1701</term>
-            <term ref="index:d14380e25693">Mabillon, Jean ; Acta sanctorum ordinis sancti Benedicti, in saeculorum classes distributa, ab anno Christi D ad annum MC. 9 Bde. Paris 1668–1701 ; Bd. 1</term>
-            <term ref="index:d14380e26892">Maße, Gewichte, Währung ; Gulden</term>
-            <term ref="index:d14380e28279">Melk ; Bibliothek</term>
-            <term ref="index:d14380e28518">Melk ; Bibliothek ; Dublettentausch</term>
-            <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
-            <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum Benedictinorum e celeberrima congregatione S. Mauri in Francia. Augsburg–Graz 1716</term>
-            <term ref="index:d14380e34213">Pez, Bernhard ; Bibliotheksreise 1716</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e35391">Poccianti, Michele ; Catalogus scriptorum Florentinorum. Florenz 1589</term>
-            <term ref="index:d14380e44267">Venedig, Venezianer</term>
-            <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
-            <term ref="index:d14380e45964">Wien ; Kaiserhof ; Hofbibliothek ; Gentilotti als Präfekt</term></keywords></textClass>
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e656">Alberici, Giacomo ; Catalogo breve de gl’illustri et famosi scrittori Venetiani. Bologna                        1605</term>
+               <term ref="index:d14380e1139">Altlechner, Kaspar</term>
+               <term ref="index:d14380e12302">Florenz</term>
+               <term ref="index:d14380e14924">Gentilotti von Engelsbrunn, Johann Benedikt ; Privatbibliothek</term>
+               <term ref="index:d14380e17201">Hardouin, Jean ; Acta conciliorum et epistolae decretales ac constitutiones summorum pontificum. 12 Bde. Paris 1714–1715</term>
+               <term ref="index:d14380e21188">Karl VI</term>
+               <term ref="index:d14380e21903">Kircher, Athanasius ; Arca Noe in tres libros digesta. Amsterdam 1675</term>
+               <term ref="index:d14380e21985">Klemens XI</term>
+               <term ref="index:d14380e22021">Klemens XI ; Bulle „Unigenitus“ 1713</term>
+               <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
+               <term ref="index:d14380e25664">Mabillon, Jean ; Acta sanctorum ordinis sancti Benedicti, in saeculorum classes distributa, ab anno Christi D ad annum MC. 9 Bde. Paris 1668–1701</term>
+               <term ref="index:d14380e25693">Mabillon, Jean ; Acta sanctorum ordinis sancti Benedicti, in saeculorum classes distributa, ab anno Christi D ad annum MC. 9 Bde. Paris 1668–1701 ; Bd. 1</term>
+               <term ref="index:d14380e26892">Maße, Gewichte, Währung ; Gulden</term>
+               <term ref="index:d14380e28279">Melk ; Bibliothek</term>
+               <term ref="index:d14380e28518">Melk ; Bibliothek ; Dublettentausch</term>
+               <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
+               <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum Benedictinorum e celeberrima congregatione S. Mauri in Francia. Augsburg–Graz 1716</term>
+               <term ref="index:d14380e34213">Pez, Bernhard ; Bibliotheksreise 1716</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e35391">Poccianti, Michele ; Catalogus scriptorum Florentinorum. Florenz 1589</term>
+               <term ref="index:d14380e44267">Venedig, Venezianer</term>
+               <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
+               <term ref="index:d14380e45964">Wien ; Kaiserhof ; Hofbibliothek ; Gentilotti als Präfekt</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">BG hat durch <rs ref="index:d14380e1139">Kaspar Altlechner</rs> die bereits ungeduldig erwartete Abhandlung BPs über die <rs ref="index:d14380e22462">Mauriner</rs>schriftsteller in zwei Exemplaren zusammen mit dem <rs ref="index:d14380e25693">ersten Band der „Acta sanctorum OSB“</rs> und einem Brief BPs <ref type="letter" target="letter:608">608</ref> erhalten. Das Werk BPs hat BG ebenso wie dessen bisherige Schriften mit unglaublicher Freude aufgenommen. Er hat zwar in der kurzen Zeit noch nicht das ganze Buch lesen können, wohl aber bereits so viel davon, dass er glaubt, ein Urteil abgeben zu können. Er hält es für noch besser als BPs frühere Publikationen, sowohl im Hinblick auf den Aufbau als auch auf die Eleganz des Stils und die Vorgehensweise BPs beim Lob seiner Ordensbrüder, welches diese freilich mehr als verdient haben. BG zweifelt nicht daran, dass die <rs ref="index:d14380e33384">„Bibliotheca Benedictino-Mauriana“</rs> als eine Art Prodromus zur <rs ref="index:d14380e33227">„Bibliotheca Benedictina generalis“</rs> allgemeine Zustimmung finden wird. BG hat sich sehr gefreut, seinen Namen zwischen jenen der Heroen (principes Achivi) erwähnt zu finden; allerdings hält er das Lob, das BP ihm spendet, nicht für berechtigt. Er ist sich im Gegenteil sehr bewusst, dass er BP bislang nicht im Entferntesten jene Wohltaten erweisen konnte, die er umgekehrt von ihm empfangen hat. Er begrüßt dennoch, dass BP ihrer beider Freundschaft ein Denkmal gesetzt hat; diese will BG mit dem Ausdruck seiner Dankbarkeit stets weiter vertiefen.</p>
             <p corresp="#seg2">Der erste Band der „Acta sanctorum OSB“ ist BG sehr willkommen; noch erfreulicher wird es für ihn sein, wenn BP ihm zu einem guten Preis das gesamte Werk für die <rs ref="index:d14380e45820">Hofbibliothek</rs> verschafft. Zu deren Vergrößerung hat Kaiser <rs ref="index:d14380e21188">Karl VI.</rs> ein festes jährliches Budget bewilligt.</p>
             <p corresp="#seg3">BG bedauert, die <rs ref="index:d14380e21903">„Arca Noe“ von Athanasius Kircher</rs> BP doch nicht wie versprochen im Tauschwege überlassen zu können, da er sie aus Unachtsamkeit bereits jemand anders gegeben hat. Doch gibt es zahlreiche andere Dubletten, unter denen nach Meinung BGs einige sind, die für BP wertvoller als jenes Werk sein werden; BG will demnächst eine Liste schicken, aus der BP auswählen kann. Den <rs ref="index:d14380e656">„Catalogo breve de gl’illustri scrittori Venetiani“ von Giacomo Alberici</rs> hat BG nur einmal vorgefunden, dagegen sind von dem <rs ref="index:d14380e35391">„Catalogus scriptorum Florentinorum“ von Michele Poccianti</rs> zwei Exemplare vorhanden, deren eines er BP schenkt.</p>
             <p corresp="#seg4">BG hat von <rs ref="index:d14380e1139">Altlechner</rs> erfahren, dass BP auf <rs ref="index:d14380e34213">Bibliotheksreise</rs> (litteraria peregrinatio) ist, wo ihn dieses Schreiben erreichen wird. Er hofft, dass BP mit einer reichen Ausbeute nach Hause kommen wird, und bittet im Namen ihrer Freundschaft darum, dass BP ihm nach seiner Rückkehr seine Funde mitteilt.</p>
             <p corresp="#seg5">An den Schluss würde BG nach seiner sonstigen Gewohnheit eine Liste der Bücher stellen, die er in der letzten Zeit für seine <rs ref="index:d14380e14924">Privatbibliothek</rs> erworben hat, aus Platzmangel unterlässt er dies jedoch. Nur eines will er dennoch erwähnen: Die <rs ref="index:d14380e17201">Konziliensammlung von Jean Hardouin</rs>, die BP zuvor für 155 <rs ref="index:d14380e26892">Gulden</rs> erworben hat, haben BG und andere nun für nur 130 <rs ref="index:d14380e26892">Gulden</rs> gekauft. BG verabschiedet sich mit Grüßen an <rs ref="index:d14380e34537">HP</rs>, der BP auf seiner Reise begleitet.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -122,8 +138,10 @@
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>integra ... inferenda</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:685">685</ref> <ref target="letter:685#seg1">1</ref>,
-                     <ref type="letter" target="letter:719">719</ref> <ref target="letter:719#seg1">1</ref>. </p>
+            <p> Vgl. <ref type="letter" target="letter:685">685</ref>
+               <ref target="letter:685#seg1">1</ref>,
+                     <ref type="letter" target="letter:719">719</ref>
+               <ref target="letter:719#seg1">1</ref>. </p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned>pecuniam annuam</mentioned>
@@ -136,7 +154,8 @@
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>Pocciantii</mentioned>
-            <p>In Melk ist heute kein Exemplar nachzuweisen: vgl. <ref type="letter" target="letter:919">919</ref> <ref target="letter:919#seg7">7</ref>. </p>
+            <p>In Melk ist heute kein Exemplar nachzuweisen: vgl. <ref type="letter" target="letter:919">919</ref>
+               <ref target="letter:919#seg7">7</ref>. </p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
             <mentioned>litteraria peregrinatione</mentioned>
@@ -145,8 +164,10 @@
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
             <mentioned>Collectionem ... Harduini</mentioned>
             <p> StiB Melk 1458–1469. Zur Anschaffung für
-                  Melk durch BP vgl. <ref type="letter" target="letter:530">530</ref> <ref target="letter:530#seg6">6</ref>; zu jener durch BG für
-                  seine eigene Bibliothek vgl. <ref type="letter" target="letter:559">559</ref> <ref target="letter:559#seg5">5</ref>.</p>
+                  Melk durch BP vgl. <ref type="letter" target="letter:530">530</ref>
+               <ref target="letter:530#seg6">6</ref>; zu jener durch BG für
+                  seine eigene Bibliothek vgl. <ref type="letter" target="letter:559">559</ref>
+               <ref target="letter:559#seg5">5</ref>.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -155,13 +176,19 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Summe venerando doctissimoque viro domno Bernardo Pez Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilottus ab Engelsbrun.</opener>
-         <ab resp="#editor" xml:id="seg1">Cum in eo essem, ut a te non iam amplius petere neque etiam flagitare, sed vel convicio tuam de Sanmaurianis scriptoribus commentationem extorquere vellem, adest mihi humanissimus sodalis tuus domnus Gasparus eamque bino exemplo cum tomo primo Actorum ordinis sancti Benediciti suavissimisque litteris tuis tradit. Non puto te exspectare, ut tibi dicam, qua vel voluptate illam acceperim aut aviditate legere coeperim; ea nimirum, qua omnia tua et accipere et legere soleo, id est incredibili. Tametsi autem tam brevi intervallo, idque inter alias occupationes, librum integrum evolvere non potuerim, nihilominus magnam adeo illius partem degustavi, ut minime intempestivum de eo iudicium ferre mihi posse videar. Id est huiusmodi, ut non iam, quod pro modestia tua haud dissimulanter prae te fers, te illius debeat poenitere; sed ceteris tuis scriptis hucusque <pb n="1v"/> editis putem <sic>anteferendam</sic>, sive rerum ordo aptaque dispositio attendatur sive sermonis elegantia sive etiam in laudandis sociis modus, quamquam ii non omnem solum laudem sint meriti, sed etiam supergressi. Quin igitur id opus velut prodromus generalis Bibliothecae Benedictinae ab omnibus cum approbatione et plausu sit <sic>excipiendus</sic>, minime ambigo. Mentiar autem, si negem me vehementer laetari, cum me <anchor xml:id="n1"/>principibus Achivis permistum<anchor xml:id="n1e"/><anchor xml:id="n2"/> nomenque meum tuis scriptis celebrari<anchor xml:id="n2e"/> video, quamquam <add place="above">id</add> ea praedicatione a te factum sit, quam ego quidem sustinere nequeo, eius vero te debeat suppudere. Quae enim tu mihi beneficia narras? qui ne minimam quidem tuorum in me meritorum partem me esse assecutum probe mihi sum conscius? Aut igitur voluntatem pro re ipsa interpretaris, aut eo sermonis genere uteris, ut, cum beneficium das, te dicas accepisse. <pb n="2r"/> Utut sit, interest forte utriusque nostrum summam, quae inter nos est, animorum coniunctionem ad omnem aetatem insigni hoc monumento testatam relinqui, quam ego pro mea parte in immensum propagare cum grati erga te animi significatione non praetermittam. </ab>
+         <opener>
+            <pb n="1r"/> Summe venerando doctissimoque viro domno Bernardo Pez Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilottus ab Engelsbrun.</opener>
+         <ab resp="#editor" xml:id="seg1">Cum in eo essem, ut a te non iam amplius petere neque etiam flagitare, sed vel convicio tuam de Sanmaurianis scriptoribus commentationem extorquere vellem, adest mihi humanissimus sodalis tuus domnus Gasparus eamque bino exemplo cum tomo primo Actorum ordinis sancti Benediciti suavissimisque litteris tuis tradit. Non puto te exspectare, ut tibi dicam, qua vel voluptate illam acceperim aut aviditate legere coeperim; ea nimirum, qua omnia tua et accipere et legere soleo, id est incredibili. Tametsi autem tam brevi intervallo, idque inter alias occupationes, librum integrum evolvere non potuerim, nihilominus magnam adeo illius partem degustavi, ut minime intempestivum de eo iudicium ferre mihi posse videar. Id est huiusmodi, ut non iam, quod pro modestia tua haud dissimulanter prae te fers, te illius debeat poenitere; sed ceteris tuis scriptis hucusque <pb n="1v"/> editis putem <sic>anteferendam</sic>, sive rerum ordo aptaque dispositio attendatur sive sermonis elegantia sive etiam in laudandis sociis modus, quamquam ii non omnem solum laudem sint meriti, sed etiam supergressi. Quin igitur id opus velut prodromus generalis Bibliothecae Benedictinae ab omnibus cum approbatione et plausu sit <sic>excipiendus</sic>, minime ambigo. Mentiar autem, si negem me vehementer laetari, cum me <anchor xml:id="n1"/>principibus Achivis permistum<anchor xml:id="n1e"/>
+            <anchor xml:id="n2"/> nomenque meum tuis scriptis celebrari<anchor xml:id="n2e"/> video, quamquam <add place="above">id</add> ea praedicatione a te factum sit, quam ego quidem sustinere nequeo, eius vero te debeat suppudere. Quae enim tu mihi beneficia narras? qui ne minimam quidem tuorum in me meritorum partem me esse assecutum probe mihi sum conscius? Aut igitur voluntatem pro re ipsa interpretaris, aut eo sermonis genere uteris, ut, cum beneficium das, te dicas accepisse. <pb n="2r"/> Utut sit, interest forte utriusque nostrum summam, quae inter nos est, animorum coniunctionem ad omnem aetatem insigni hoc monumento testatam relinqui, quam ego pro mea parte in immensum propagare cum grati erga te animi significatione non praetermittam. </ab>
          <ab resp="#editor" xml:id="seg2">Acta ordinis sancti Benedicti mihi admodum grata sunt; gratissima futura, si <anchor xml:id="n3"/>integra aequo pretio mihi conciliaveris caesareae bibliothecae inferenda<anchor xml:id="n3e"/>, ad cuius incrementum augusti nostri benignitas et mirificus in litteras amor certam <anchor xml:id="n4"/>pecuniam annuam<anchor xml:id="n4e"/> constituit. </ab>
-         <ab resp="#editor" xml:id="seg3">Vereor autem, ut mihi amplius sit integrum Arcam Noe Kircherianam in permutationis partem tibi tradere: ea enim nescio quo fato me imprudente et nequicquam de sponsione tibi facta cogitante cum aliis libris commutata fuit. Verum exstant alii superflui magno numero, quos inter nonnullos ea tibi cariores futuros esse putem. Eorum <pb n="2v"/> indicem primo quoque tempore ad te mittam; tu inde, quae in rem tuam sunt, seliges. Albericum de Venetis scriptoribus unicum novi; <anchor xml:id="n5"/>Pocciantii<anchor xml:id="n5e"/> de Florentinis binum reperitur exemplar, quorum alterum iure optimo maximo <choice><sic>ti</sic><corr>tibi</corr></choice> do, trado atque addico. </ab>
+         <ab resp="#editor" xml:id="seg3">Vereor autem, ut mihi amplius sit integrum Arcam Noe Kircherianam in permutationis partem tibi tradere: ea enim nescio quo fato me imprudente et nequicquam de sponsione tibi facta cogitante cum aliis libris commutata fuit. Verum exstant alii superflui magno numero, quos inter nonnullos ea tibi cariores futuros esse putem. Eorum <pb n="2v"/> indicem primo quoque tempore ad te mittam; tu inde, quae in rem tuam sunt, seliges. Albericum de Venetis scriptoribus unicum novi; <anchor xml:id="n5"/>Pocciantii<anchor xml:id="n5e"/> de Florentinis binum reperitur exemplar, quorum alterum iure optimo maximo <choice>
+               <sic>ti</sic>
+               <corr>tibi</corr>
+            </choice> do, trado atque addico. </ab>
          <ab resp="#editor" xml:id="seg4">Haec epistola<del ana="#after">te</del> in <anchor xml:id="n6"/>litteraria peregrinatione<anchor xml:id="n6e"/>, quemadmodum ex domno Gasparo intellexi, te offendet. Ea ut tibi bene atque feliciter eveniat, utque libraria praeda manubiisque onustus domum redeas, vehementer opto. Quidquid autem evolveris, ut mecum communicare velis, pro iure amicitiae nostrae a te peto. </ab>
          <ab resp="#editor" xml:id="seg5">In extremo ponerem, ut soleo, catalogum librorum, quorum ad bibliothecam meam recens accessio facta est, nisi spatiis iniquis excluderer. Unum tamen minime praetermittam: <anchor xml:id="n7"/>Collectionem scilicet conciliorum Harduini<anchor xml:id="n7e"/>, quam tu CLV, ego atque alii CXXX florenorum pretio comparavimus atque adeo te solertius mercati fuimus. Vale, amicissime Bernarde, cum germano fratre tuo instituti, studiorum et peregrinationis socio, meque, ut facitis, amare pergite.</ab>
-         <closer>Vindobona ante diem IIII. Nonas Julii MDCCXVI<note place="foot" xml:id="d3e13742"><hi rend="italic">	fratre ... MDCCXVI</hi> am oberen Blattrand verkehrt eingefügt.</note>.</closer>
+         <closer>Vindobona ante diem IIII. Nonas Julii MDCCXVI<note place="foot" xml:id="d3e13742">
+               <hi rend="italic">	fratre ... MDCCXVI</hi> am oberen Blattrand verkehrt eingefügt.</note>.</closer>
       </body>
    </text>
 </TEI>

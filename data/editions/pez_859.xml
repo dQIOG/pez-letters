@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="859" xml:id="pez-0859">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Hermann Sarstainer an Bernhard Pez. 1717-12-10. Mondsee.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">859</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -76,58 +89,60 @@
                <ptr type="mentionedIn" target="letter:885"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e99">Aberseeforst</term>
-            <term ref="index:d14380e612">Ajaccio</term>
-            <term ref="index:d14380e3233">Augsburg</term>
-            <term ref="index:d14380e11032">Eleonore von Portugal</term>
-            <term ref="index:d14380e13302">Friedrich III</term>
-            <term ref="index:d14380e15744">Goebl, Amand</term>
-            <term ref="index:d14380e16979">Hallstatt</term>
-            <term ref="index:d14380e17324">Hauser, Johannes</term>
-            <term ref="index:d14380e17332">Hauser, Johannes ; Werke in Mondsee</term>
-            <term ref="index:d14380e17537">Heiliges Römisches Reich</term>
-            <term ref="index:d14380e18344">Hieronymus de Werdea</term>
-            <term ref="index:d14380e18352">Hieronymus de Werdea ; Werke in Mondsee</term>
-            <term ref="index:d14380e18436">Hippo Regius</term>
-            <term ref="index:d14380e19942">Jakob Keser</term>
-            <term ref="index:d14380e19950">Jakob Keser ; Werke in Mondsee</term>
-            <term ref="index:d14380e21164">Karl III., „der Dicke“ ; Urkunde für Bischof Ambricho von Regensburg 883</term>
-            <term ref="index:d14380e21327">Karlmann ; Urkunde für Bischof Ambricho von Regensburg 879</term>
-            <term ref="index:d10854e16613">Larson, Valentin</term>
-            <term ref="index:d14380e23973">Latein</term>
-            <term ref="index:d14380e27299">Maximilian I</term>
-            <term ref="index:d14380e29214">Mondsee</term>
-            <term ref="index:d14380e29242">Mondsee ; Bibliothek</term>
-            <term ref="index:d14380e29306">Mondsee ; Bibliothek ; Hauser, Johannes, Werke. Ms</term>
-            <term ref="index:d14380e29311">Mondsee ; Bibliothek ; Hieronymus de Werdea, Werke. Ms</term>
-            <term ref="index:d14380e29316">Mondsee ; Bibliothek ; Jakob Keser, Werke. Ms</term>
-            <term ref="index:d14380e29340">Mondsee ; „Mondseer Fragmente“. Ms ; Schilling, Leonhard, Brief an Erasmus Schnapp
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e99">Aberseeforst</term>
+               <term ref="index:d14380e612">Ajaccio</term>
+               <term ref="index:d14380e3233">Augsburg</term>
+               <term ref="index:d14380e11032">Eleonore von Portugal</term>
+               <term ref="index:d14380e13302">Friedrich III</term>
+               <term ref="index:d14380e15744">Goebl, Amand</term>
+               <term ref="index:d14380e16979">Hallstatt</term>
+               <term ref="index:d14380e17324">Hauser, Johannes</term>
+               <term ref="index:d14380e17332">Hauser, Johannes ; Werke in Mondsee</term>
+               <term ref="index:d14380e17537">Heiliges Römisches Reich</term>
+               <term ref="index:d14380e18344">Hieronymus de Werdea</term>
+               <term ref="index:d14380e18352">Hieronymus de Werdea ; Werke in Mondsee</term>
+               <term ref="index:d14380e18436">Hippo Regius</term>
+               <term ref="index:d14380e19942">Jakob Keser</term>
+               <term ref="index:d14380e19950">Jakob Keser ; Werke in Mondsee</term>
+               <term ref="index:d14380e21164">Karl III., „der Dicke“ ; Urkunde für Bischof Ambricho von Regensburg 883</term>
+               <term ref="index:d14380e21327">Karlmann ; Urkunde für Bischof Ambricho von Regensburg 879</term>
+               <term ref="index:d10854e16613">Larson, Valentin</term>
+               <term ref="index:d14380e23973">Latein</term>
+               <term ref="index:d14380e27299">Maximilian I</term>
+               <term ref="index:d14380e29214">Mondsee</term>
+               <term ref="index:d14380e29242">Mondsee ; Bibliothek</term>
+               <term ref="index:d14380e29306">Mondsee ; Bibliothek ; Hauser, Johannes, Werke. Ms</term>
+               <term ref="index:d14380e29311">Mondsee ; Bibliothek ; Hieronymus de Werdea, Werke. Ms</term>
+               <term ref="index:d14380e29316">Mondsee ; Bibliothek ; Jakob Keser, Werke. Ms</term>
+               <term ref="index:d14380e29340">Mondsee ; „Mondseer Fragmente“. Ms ; Schilling, Leonhard, Brief an Erasmus Schnapp
          1524. Ms</term>
-            <term ref="index:d14380e29347">Mondsee ; „Mondseer Fragmente“. Ms ; Schilling, Leonhard, Kollektaneen einschließlich
+               <term ref="index:d14380e29347">Mondsee ; „Mondseer Fragmente“. Ms ; Schilling, Leonhard, Kollektaneen einschließlich
          Verzeichnis der eigenen Werke. Ms</term>
-            <term ref="index:d14380e29354">Mondsee ; „Mondseer Fragmente“. Ms ; Schilling, Leonhard, Werke. Ms</term>
-            <term ref="index:d14380e29364">Mondsee ; Rechtsstreit um den Aberseeforst</term>
-            <term ref="index:d14380e30783">Nikolaus Lanckmann von Falkenstein</term>
-            <term ref="index:d14380e30806">Nikolaus Lanckmann von Falkenstein ; Desponsatio et coronatio serenissimi domini
+               <term ref="index:d14380e29354">Mondsee ; „Mondseer Fragmente“. Ms ; Schilling, Leonhard, Werke. Ms</term>
+               <term ref="index:d14380e29364">Mondsee ; Rechtsstreit um den Aberseeforst</term>
+               <term ref="index:d14380e30783">Nikolaus Lanckmann von Falkenstein</term>
+               <term ref="index:d14380e30806">Nikolaus Lanckmann von Falkenstein ; Desponsatio et coronatio serenissimi domini
          imperatoris Friderici tertii et eius augustae dominae Leonorae ; Sacratissimi et
          invictissimi Romanorum imperatoris Friderici tercii ac conthoralis ipsius Leonore
          desponsatio ac ipsorum coronatio. Hg. von Nikolaus Kaps. Augsburg 1503</term>
-            <term ref="index:d14380e32575">Passau</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e35642">Portugal</term>
-            <term ref="index:d14380e36631">Regensburg</term>
-            <term ref="index:d14380e36835">Regensburg ; St. Emmeram ; Bibliothek ; Traditions- und Urkundensammlungen</term>
-            <term ref="index:d14380e39054">Salzburg</term>
-            <term ref="index:d14380e39346">St. Georgen im Attergau</term>
-            <term ref="index:d14380e39457">Sarstainer, Hermann ; Schriftstellerkatalog von Mondsee. Ms</term>
-            <term ref="index:d14380e39757">Schilling, Leonhard</term>
-            <term ref="index:d14380e39765">Schilling, Leonhard ; Brief an Erasmus Schnapp 1524. Ms</term>
-            <term ref="index:d14380e39772">Schilling, Leonhard ; Werke in Mondsee</term>
-            <term ref="index:d14380e39904">Schnapp, Erasmus</term>
-            <term ref="index:d14380e44781">Wacker, Jakob</term></keywords></textClass>
+               <term ref="index:d14380e32575">Passau</term>
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e35642">Portugal</term>
+               <term ref="index:d14380e36631">Regensburg</term>
+               <term ref="index:d14380e36835">Regensburg ; St. Emmeram ; Bibliothek ; Traditions- und Urkundensammlungen</term>
+               <term ref="index:d14380e39054">Salzburg</term>
+               <term ref="index:d14380e39346">St. Georgen im Attergau</term>
+               <term ref="index:d14380e39457">Sarstainer, Hermann ; Schriftstellerkatalog von Mondsee. Ms</term>
+               <term ref="index:d14380e39757">Schilling, Leonhard</term>
+               <term ref="index:d14380e39765">Schilling, Leonhard ; Brief an Erasmus Schnapp 1524. Ms</term>
+               <term ref="index:d14380e39772">Schilling, Leonhard ; Werke in Mondsee</term>
+               <term ref="index:d14380e39904">Schnapp, Erasmus</term>
+               <term ref="index:d14380e44781">Wacker, Jakob</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">HSa hat BPs Schreiben vom 5. Dezember <ref type="letter" target="letter:858">858</ref> am 9. desselben
                Monats erhalten und teilt mit, dass es sich bei dem ihm von BP bezeichneten Werk um einen zur Gänze
@@ -156,7 +171,7 @@
                entschuldigen.</p>
             <p corresp="#seg6">Abt <rs ref="index:d14380e15744">Amand Goebl</rs> lässt BP und <rs ref="index:d14380e34537">HP</rs>
                grüßen. HSa bittet, dass Prior <rs ref="index:d10854e16613">Valentin Larson</rs> seine Weihnachtswünsche überbracht werden.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -166,7 +181,8 @@
             <p> Wohl Anspielung auf eine Beschreibung des Werkes in
                   858. Tatsächlich hatte HP den Frühdruck in Mondsee im Zuge des dortigen
                   Aufenthaltes in seinen Aufzeichnungen vermerkt: StiB Melk, Cod. 1850, 475r. Zu dem
-                  Besuch in Mondsee vgl. <ref type="letter" target="letter:796">796</ref> <ref target="letter:796#seg3">3</ref>.</p>
+                  Besuch in Mondsee vgl. <ref type="letter" target="letter:796">796</ref>
+               <ref target="letter:796#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned> nova nostra bibliotheca</mentioned>
@@ -174,8 +190,10 @@
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
             <mentioned>Nicolao Lanckman</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:836">836</ref> <ref target="letter:836#seg3">3</ref> und
-                  <ref target="letter:836#seg6">6</ref>, <ref type="letter" target="letter:885">885</ref> <ref target="letter:885#seg6">6</ref>. HSa vermengt Nikolaus Lanckmann
+            <p>Vgl. <ref type="letter" target="letter:836">836</ref>
+               <ref target="letter:836#seg3">3</ref> und
+                  <ref target="letter:836#seg6">6</ref>, <ref type="letter" target="letter:885">885</ref>
+               <ref target="letter:885#seg6">6</ref>. HSa vermengt Nikolaus Lanckmann
                   mit dem im Explicit erwähnten Nikolaus Kaps, der Titularbischof von Hippo war.
                   Kaps hatte die Schrift Lanckmanns nach dessen Tod für den Druck vorbereitet.
                </p>
@@ -187,17 +205,19 @@
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>Jacobi Keser</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:18032">Lindner, Profeßbuch Mondsee</rs> 147; <rs type="bibl" ref="bibl:19684">Staufer, Mondseer Gelehrte</rs> 14 14f.</p>
+               <rs type="bibl" ref="bibl:18032">Lindner, Profeßbuch Mondsee</rs> 147; <rs type="bibl" ref="bibl:19684">Staufer, Mondseer Gelehrte</rs> 14 14f.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
             <mentioned> Joannis Hauser</mentioned>
-            <p><rs type="bibl" ref="bibl:18032">Lindner, Profeßbuch
+            <p>
+               <rs type="bibl" ref="bibl:18032">Lindner, Profeßbuch
                      Mondsee</rs> 150; <rs type="bibl" ref="bibl:19684">Staufer, Mondseer
                      Gelehrte</rs> 15 7f.</p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
             <mentioned> Leonardi Schiling</mentioned>
-            <p><rs type="bibl" ref="bibl:16914">Heilingsetzer,
+            <p>
+               <rs type="bibl" ref="bibl:16914">Heilingsetzer,
                      Mondsee</rs> 889f.; <rs type="bibl" ref="bibl:17184">Horawitz, Leonhard
                      Schilling</rs>; <rs type="bibl" ref="bibl:18032">Lindner, Profeßbuch
                      Mondsee</rs> 152f.; <rs type="bibl" ref="bibl:19684">Staufer, Mondseer
@@ -240,7 +260,8 @@
                   hier von den jahrhundertelangen Streitigkeiten mit Salzburg und Regensburg um den
                   Aberseeforst, die auch Besitz- und Patronatsrechte in St. Wolfgang und am
                   Wolfgangsee betrafen: vgl. <rs type="bibl" ref="bibl:20536">Zibermayr, St.
-                     Wolfgang</rs> 22–32; sowie <ref type="letter" target="letter:796">796</ref> <ref target="letter:796#seg4">4</ref>. Nicht
+                     Wolfgang</rs> 22–32; sowie <ref type="letter" target="letter:796">796</ref>
+               <ref target="letter:796#seg4">4</ref>. Nicht
                   auszuschließen ist jedoch, dass HSa auf die Streitigkeiten mit dem Erzbistum
                   Salzburg um die Herrschaft Wildenegg anspielt, auch wenn sie 1679 im Wesentlichen
                   geregelt worden waren: <rs type="bibl" ref="bibl:16914">Heilingsetzer,
@@ -256,14 +277,19 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime et clarissime domine pater Bernarde, domine et patrone observandissime etc.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime et clarissime domine pater Bernarde, domine et patrone observandissime etc.</opener>
          <ab resp="#editor" xml:id="seg1">Festiva festorum Natalitiorum et renascentis anni aggratulatione praemissa notifico, qualiter 5. Decembris ad me datas nona eiusdem rite acceptaverim et illico aequissimis clarissimae paternitatis vestrae petitis morem gerens depraehenderim editionem libelli <anchor xml:id="n1"/>mihi descripti<anchor xml:id="n1e"/> et in<anchor xml:id="n2"/> nova nostra bibliotheca<anchor xml:id="n2e"/> sub littera S numero 77 signati per totum decursum Latinam esse, authore <anchor xml:id="n3"/>Nicolao Lanckman<anchor xml:id="n3e"/> de Valckenstain episcopo Ypponensi. Frontispicium huius libelli ita habet: Sacratissimi et invictissimi Romanorum imperatoris Friderici tertii ac conthoralis ipsius Leonorae desponsatio ac ipsorum coronatio. Simulque serenissimi et invictissimi domini domini Maximiliani Romanorum regis semper augusti ac suae germanae Kunigundis gloriosissima generatio. In fine vero illius hunc in modum legitur: De nuptiis invictissimi Friderici imperatoris 3. ac Leonorae uxoris <pb n="1v"/> deque eorundem coronatione ac prolum propagatione a reverendissimo domino Nicolao episcopo Ypponensi compilatus libellus feliciter finit. Impensis providi<del ana="#after">domini.</del> viri Jacobi Wacker de Salzburga Augustae impressus anno Domini 1503 sexto Idus Decembris. Absolvi ego hac nocte magna cum voluptate legendo hoc opusculum et adverti itinerarium seu potius diarium esse legationis in Portugalliam missae. </ab>
          <ab resp="#editor" xml:id="seg2">Caeterum celare non possum, quod, ex quo tempore cum clarissima paternitate vestra et clarissimo suo germano domino patre Hieronymo conversandi gratiam habui, tantus in me exarserit amor et desiderium perscrutandorum veterum codicum, ut perdiu et pernox illis vacare peroptem; sed infelicem me, aliis semper cum maxima mea impatientia distentor negotiis. </ab>
          <ab resp="#editor" xml:id="seg3">Nihilominus reperi iterum quaedam non spernenda opuscula fratris <anchor xml:id="n4"/>Hieronymi de Werdea<anchor xml:id="n4e"/> et aliorum quorundam Monseensium, scilicet fratris <anchor xml:id="n5"/>Jacobi Keser<anchor xml:id="n5e"/>, fratris<anchor xml:id="n6"/> Joannis Hauser<anchor xml:id="n6e"/> de S. Georgio et fratris<anchor xml:id="n7"/> Leonardi Schiling<anchor xml:id="n7e"/> de Hallstadt, qui ultra 80 libros se scripsisse<anchor xml:id="n8"/> asserit in quodam suo opere<anchor xml:id="n8e"/>; huic etiam<anchor xml:id="n9"/> episcopatus Aiacensis<anchor xml:id="n9e"/> a Maximiliano tunc rege <pb n="2r"/> Romanorum oblatus est, ut in quadam sua epistola ad N. Schnap notarium Pataviensem data ipsemet testatur. Si haec et alia clarissimae paternitati vestrae fuerint utilia, proxime in ordinem redigam et transcribam. </ab>
          <ab resp="#editor" xml:id="seg4">Interea impense supplico, ut clarissima sua <add place="above">paternitas</add> non retardet mihi communicare <anchor xml:id="n10"/>duo diplomata<anchor xml:id="n10e"/> Monseensia ex antiquissimis codicibus S. Emmerammi excerpta; possent enim nobis forte esse utilia ad<anchor xml:id="n11"/> vindicandas sylvas, quas nobis quidam malevoli<anchor xml:id="n11e"/> praeripere allaborant. Refundam grates et obsequia mea paratissima. Atque his modo finio et una me perhumaniter humillimeque commendo perennans</ab>
          <closer>Clarissimae paternitatis vestrae observantissimus pater Hermannus prior manu propria.</closer>
          <closer>Monsee die 10. Decembris 1717.</closer>
-         <closer xml:id="seg6">P.S. Volebam quoque hodie clarissimo domino germano patri Hieronymo tandem aliquando respondere, sed rursus impedior, quare clarissimam paternitatem vestram <choice><sic>submissi.</sic><corr>submisse</corr></choice> oro, me apud eundem excusare non gravetur veniamque dilatae tam diu responsionis impetrare; interim me ipsi enixissime commendatum haberi cupio. <anchor xml:id="n12"/>Reverendissimus<anchor xml:id="n12e"/> meus clarissimas paternitates vestras perhumaniter resalutat et earundem humanitatem gratissimam habet. Obsecro demum, ut clarissimo ac venerabili domino patri priori patrono et benefactori meo omni observantia spectatissimo cum ter auspicata et festiva festorum Natalitiorum aggratulatione submississime commender.<pb n="2v"/> </closer>
+         <closer xml:id="seg6">P.S. Volebam quoque hodie clarissimo domino germano patri Hieronymo tandem aliquando respondere, sed rursus impedior, quare clarissimam paternitatem vestram <choice>
+               <sic>submissi.</sic>
+               <corr>submisse</corr>
+            </choice> oro, me apud eundem excusare non gravetur veniamque dilatae tam diu responsionis impetrare; interim me ipsi enixissime commendatum haberi cupio. <anchor xml:id="n12"/>Reverendissimus<anchor xml:id="n12e"/> meus clarissimas paternitates vestras perhumaniter resalutat et earundem humanitatem gratissimam habet. Obsecro demum, ut clarissimo ac venerabili domino patri priori patrono et benefactori meo omni observantia spectatissimo cum ter auspicata et festiva festorum Natalitiorum aggratulatione submississime commender.<pb n="2v"/>
+         </closer>
       </body>
    </text>
 </TEI>

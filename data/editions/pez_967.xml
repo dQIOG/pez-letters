@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="967" xml:id="pez-0967">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Christoph Bartenstein an Bernhard Pez. 1718-07-23.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">967</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Eine Angabe des Absendeortes in Verbindung mit dem Datum fehlt; als solcher kann jedoch Wien vermutet werden.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -78,14 +90,16 @@
                <ptr type="mentions" target="letter:966"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e34157">Pez, Bernhard ; Akademie- bzw. Kongregationspläne 1717/18</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e41366">Starhemberg, Gundacker Thomas, Graf</term>
-            <term ref="index:d14380e41917">Surland, Johann Julius</term>
-            <term ref="index:d14380e44085">Van den Driesch, Gerhard Cornelius</term></keywords></textClass>
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e34157">Pez, Bernhard ; Akademie- bzw. Kongregationspläne 1717/18</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e41366">Starhemberg, Gundacker Thomas, Graf</term>
+               <term ref="index:d14380e41917">Surland, Johann Julius</term>
+               <term ref="index:d14380e44085">Van den Driesch, Gerhard Cornelius</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">CB hat durch <rs ref="index:d14380e44085">Gerhard Cornelius van den Driesch</rs> nicht nur zwei Briefe
                von BP (<ref type="letter" target="letter:965">965</ref>, <ref type="letter" target="letter_966">966</ref>) erhalten, sondern auch den <rs ref="index:d14380e34157">Entwurf einer österreichischen
@@ -98,7 +112,7 @@
                nehmen wird. Dies teilt CB in knappen Worten mit, damit BP sich nicht unnötig sorgt; eine ausführlichere
                Antwort auf BPs Briefe will CB bald folgen lassen. Er bittet, die Verzögerung einem so stark
                beschäftigten Mann wie ihm nicht zu verübeln, und schließt mit Grüßen von <rs ref="index:d14380e41917">Johann Julius Surland</rs> an BP sowie mit eigenen an HP.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -106,7 +120,7 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>Drieschio internuntio</mentioned>
             <p>Vgl. <ref type="letter" target="letter:943">943</ref>
-                  <ref target="letter:943#seg3">3</ref>.</p>
+               <ref target="letter:943#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned> instituendae aliquando congregationis Austriacae</mentioned>
@@ -117,7 +131,8 @@
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
             <mentioned> Stahremberg</mentioned>
-            <p>Zur Verbindung CBs zu ihm vgl. <ref type="letter" target="letter:555">555</ref> <ref target="letter:555#seg8">8</ref>; zu seiner Person sowie seiner Rolle für die Akademiepläne
+            <p>Zur Verbindung CBs zu ihm vgl. <ref type="letter" target="letter:555">555</ref>
+               <ref target="letter:555#seg8">8</ref>; zu seiner Person sowie seiner Rolle für die Akademiepläne
                   vgl. <rs type="bibl" ref="bibl:16508">Glassner, Académie</rs> 493. </p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
@@ -164,8 +179,12 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo in Christo patri domno Bernhardo Petzio bibliothecario Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</opener>
-         <ab resp="#editor" xml:id="seg1">Non binas modo literas, quas Drieschio internuntio ad me exarasti, sed et instituendae aliquando congregationis Austriacae schema rite accepi. Cur autem hactenus nihil ad ista omnia reposuerim, facile ipse conicies. Erat enim schema istud excellentissimo domino comiti de Stahremberg <choice><sic>pr</sic><corr>ante</corr></choice> omnia communicandum, inde responsum ab eodem tum demum petendum, ubi lectione ipsum defunctum credi poterat. Arrisit et ipsum institutum et tuus inprimis, vir admodum reverende, labor excellentissimo maecenati, qui tamen nonnihil in eo mutandum censuit, id intendens, ut tecta via ad eum, <pb n="1v"/> quem nobis propositum habemus, scopum collimemus, tum etiam subveritus, ne cognito ex scriptionis modo <add place="above">stilove</add> authore ipsi res<del ana="#after">vit</del> in publicum emanans vitio verti possit. Mihi ergo id negotii dedit, ut novum schema adornarem, cui labori propediem manum admovebo. Haec raptim eum tandem in finem ad te scibo, ut ne inanibus curis discrucieris. Plura addere prorsus iam non vacat, sed mox singula literarum tuarum capita et prolixe et accurate expediam. Tu moram homini occupato non in deteriorem partem ut interpreteris, rogo, ac me, ut facis, amare perge. Surlandus te et ego eruditissimum fratrem tuum ex intimo cordis affectu multum salvere iubeo.</ab>
+         <opener>
+            <pb n="1r"/> Admodum reverendo in Christo patri domno Bernhardo Petzio bibliothecario Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</opener>
+         <ab resp="#editor" xml:id="seg1">Non binas modo literas, quas Drieschio internuntio ad me exarasti, sed et instituendae aliquando congregationis Austriacae schema rite accepi. Cur autem hactenus nihil ad ista omnia reposuerim, facile ipse conicies. Erat enim schema istud excellentissimo domino comiti de Stahremberg <choice>
+               <sic>pr</sic>
+               <corr>ante</corr>
+            </choice> omnia communicandum, inde responsum ab eodem tum demum petendum, ubi lectione ipsum defunctum credi poterat. Arrisit et ipsum institutum et tuus inprimis, vir admodum reverende, labor excellentissimo maecenati, qui tamen nonnihil in eo mutandum censuit, id intendens, ut tecta via ad eum, <pb n="1v"/> quem nobis propositum habemus, scopum collimemus, tum etiam subveritus, ne cognito ex scriptionis modo <add place="above">stilove</add> authore ipsi res<del ana="#after">vit</del> in publicum emanans vitio verti possit. Mihi ergo id negotii dedit, ut novum schema adornarem, cui labori propediem manum admovebo. Haec raptim eum tandem in finem ad te scibo, ut ne inanibus curis discrucieris. Plura addere prorsus iam non vacat, sed mox singula literarum tuarum capita et prolixe et accurate expediam. Tu moram homini occupato non in deteriorem partem ut interpreteris, rogo, ac me, ut facis, amare perge. Surlandus te et ego eruditissimum fratrem tuum ex intimo cordis affectu multum salvere iubeo.</ab>
          <closer>Scribebam die 23. Julii 1718.</closer>
       </body>
    </text>

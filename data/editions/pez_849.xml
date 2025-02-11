@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="849" xml:id="pez-0849">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Leopold Wydemann an Bernhard Pez. 1717-11-13. Gaming.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">849</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -78,37 +90,39 @@
                <ptr type="mentionedIn" target="letter:865"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e228">Acta eruditorum. Leipzig 1682–1732</term>
-            <term ref="index:d14380e458">Aggsbach</term>
-            <term ref="index:d14380e8146">Churchill, Awnsham ; [Awnsham Churchill, John Churchill] A collection of voyages and
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e228">Acta eruditorum. Leipzig 1682–1732</term>
+               <term ref="index:d14380e458">Aggsbach</term>
+               <term ref="index:d14380e8146">Churchill, Awnsham ; [Awnsham Churchill, John Churchill] A collection of voyages and
          travels. 4 Bde. London 1704</term>
-            <term ref="index:d14380e8152">Churchill, Awnsham ; [Awnsham Churchill, John Churchill] A collection of voyages and
+               <term ref="index:d14380e8152">Churchill, Awnsham ; [Awnsham Churchill, John Churchill] A collection of voyages and
          travels. 4 Bde. London 1704 ; Darin: The travels of Martin Baumgarten, a nobleman of
          Germany, through Egypt, Arabia, Palestine, and Syria</term>
-            <term ref="index:d14380e10233">Dupuy, François</term>
-            <term ref="index:d14380e13828">Gaming</term>
-            <term ref="index:d14380e14038">Gaming ; Bibliothek ; Georg von Gaming, Peregrinatio in Aegyptum. Ms</term>
-            <term ref="index:d14380e14246">Gaming ; Bibliothek ; Katalog von 1565</term>
-            <term ref="index:d14380e14321">Gaming ; Bibliothek ; *Nikolaus von Lyra, Werke. Ms</term>
-            <term ref="index:d14380e14435">Gaming ; Brief des Gaminger Konvents an Generalkapitel und Generalsuperior Dupuy
+               <term ref="index:d14380e10233">Dupuy, François</term>
+               <term ref="index:d14380e13828">Gaming</term>
+               <term ref="index:d14380e14038">Gaming ; Bibliothek ; Georg von Gaming, Peregrinatio in Aegyptum. Ms</term>
+               <term ref="index:d14380e14246">Gaming ; Bibliothek ; Katalog von 1565</term>
+               <term ref="index:d14380e14321">Gaming ; Bibliothek ; *Nikolaus von Lyra, Werke. Ms</term>
+               <term ref="index:d14380e14435">Gaming ; Brief des Gaminger Konvents an Generalkapitel und Generalsuperior Dupuy
          1508</term>
-            <term ref="index:d14380e15020">Georg von Gaming</term>
-            <term ref="index:d14380e15034">Georg von Gaming ; Peregrinatio in Aegyptum Martini Baumgarten ; Ms. Gaming</term>
-            <term ref="index:d14380e18623">Honorius Augustodunensis</term>
-            <term ref="index:d14380e21396">Kartäuser</term>
-            <term ref="index:d14380e22042">Klimböck, Blasius</term>
-            <term ref="index:d14380e23305">Kufstein</term>
-            <term ref="index:d14380e23626">Lambeck, Peter ; Commentariorum de augustissima bibliotheca caesarea Vindobonensi libri
+               <term ref="index:d14380e15020">Georg von Gaming</term>
+               <term ref="index:d14380e15034">Georg von Gaming ; Peregrinatio in Aegyptum Martini Baumgarten ; Ms. Gaming</term>
+               <term ref="index:d14380e18623">Honorius Augustodunensis</term>
+               <term ref="index:d14380e21396">Kartäuser</term>
+               <term ref="index:d14380e22042">Klimböck, Blasius</term>
+               <term ref="index:d14380e23305">Kufstein</term>
+               <term ref="index:d14380e23626">Lambeck, Peter ; Commentariorum de augustissima bibliotheca caesarea Vindobonensi libri
          VIII. 8 Bde. Wien 1665–1679</term>
-            <term ref="index:d14380e24317">Leipzig</term>
-            <term ref="index:d14380e26341">Maring, Bartholomäus Paulinus</term>
-            <term ref="index:d14380e26720">Martin von Baumgarten</term>
-            <term ref="index:d14380e30820">Nikolaus von Lyra</term>
-            <term ref="index:d14380e31270">Olmütz ; Kloster OCart</term>
-            <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
-            <term ref="index:d14380e46743">Wydemann, Leopold ; Handschriftenkatalog von Gaming. Ms</term></keywords></textClass>
+               <term ref="index:d14380e24317">Leipzig</term>
+               <term ref="index:d14380e26341">Maring, Bartholomäus Paulinus</term>
+               <term ref="index:d14380e26720">Martin von Baumgarten</term>
+               <term ref="index:d14380e30820">Nikolaus von Lyra</term>
+               <term ref="index:d14380e31270">Olmütz ; Kloster OCart</term>
+               <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
+               <term ref="index:d14380e46743">Wydemann, Leopold ; Handschriftenkatalog von Gaming. Ms</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">LW geht aus Zeitknappheit nur wenig auf den am Abend zuvor erhaltenen Brief BPs <ref type="letter" target="letter:848">848</ref> ein, freut sich aber, dass er nun sein Versprechen <ref type="letter" target="letter:845">845</ref> einhalten kann, den <rs ref="index:d14380e46743">Katalog der Gaminger
                   Handschriften</rs> binnen 14 Tagen an BP zu senden. BP soll das Verzeichnis lesen, daraus auswählen,
@@ -128,7 +142,8 @@
                Unklarheit, etwa die Ausgabe von April 1705, wo unter der Bezeichnung „Sylloge itinerariorum“ (Churchill
                und Churchill, „<rs ref="index:d14380e8146">Collection of Voyages</rs>“) unter anderem eine englische
                Übersetzung der „<rs ref="index:d14380e8152">Peregrinatio in Aegyptum</rs>“ des <rs ref="index:d14380e26720">Martin von Baumgarten</rs> von 1507 angeführt wird. Als Autor dieses
-               gelehrten und frommen, in drei Bücher geteilten Werkes vermutet LW nicht ohne Grund einen <rs ref="index:d14380e13828">Gaminger</rs> <rs ref="index:d14380e21396">Kartäuser</rs>. Denn aus dem Werk
+               gelehrten und frommen, in drei Bücher geteilten Werkes vermutet LW nicht ohne Grund einen <rs ref="index:d14380e13828">Gaminger</rs>
+               <rs ref="index:d14380e21396">Kartäuser</rs>. Denn aus dem Werk
                selbst geht deutlich hervor, dass Martin von Baumgarten zwar der Initiator und Geldgeber der Reise war,
                jedoch nicht der Autor des Berichts. Als solcher nennt sich ein Lehrer aus der Stadt <rs ref="index:d14380e23305">Kufstein</rs>, der die Stellung eines Dieners und Reisegefährten bei Martin
                von Baumgarten angenommen hatte. Über den Namen des Autors und seinen weiteren Lebensweg herrscht keine
@@ -155,7 +170,7 @@
             <p corresp="#seg4">In einem Postskriptum gestattet er BP, die Werke des <rs ref="index:d14380e18623">Honorius
                   Augustodunensis</rs> zu behalten, wünscht aber die Rücksendung des Handschriftenkatalogs spätestens
                nach sechs Monaten.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -165,7 +180,7 @@
             <p>Gemeint zu sein scheint eine Veröffentlichung in Form
                   einer Handschriftenübersicht ähnlich BPs „Nachricht von den vornehmsten
                   codicibus“, deren Fortsetzung vorgesehen war: vgl. <ref type="letter" target="letter:710">710</ref>
-                  <ref target="letter:710#seg4">4</ref>.</p>
+               <ref target="letter:710#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned> operibus Nicolai Lyrani</mentioned>
@@ -227,7 +242,8 @@
                      <rs type="bibl" ref="bibl:16236">Fiska, Geschichtsforschung</rs> 223–229. Nicht
                   identifiziert werden kann das hier genannte, zu diesem Zeitpunkt bereits bei BP
                   befindliche Material mit dem erst etwas später übermittelten Werk „De neocosmo“:
-                  vgl. <ref type="letter" target="letter:855">855</ref> <ref target="letter:855#seg3">3</ref>.</p>
+                  vgl. <ref type="letter" target="letter:855">855</ref>
+               <ref target="letter:855#seg3">3</ref>.</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -252,11 +268,16 @@
    </standOff>
    <text>
       <front>
-         <p>Admodum reverendo ac clarissimo patri domino Bernardo Pez exempti monasterii Mellicensis professo et bibliothecae ibidem praefecto, amico optimo. Kemmelbach. Mëlck. <note type="annotation">Siegel.</note></p>
+         <p>Admodum reverendo ac clarissimo patri domino Bernardo Pez exempti monasterii Mellicensis professo et bibliothecae ibidem praefecto, amico optimo. Kemmelbach. Mëlck. <note type="annotation">Siegel.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo ac clarissimo patri domino Bernardo Pez frater Leopoldus Wydeman salutem plurimam dicit.</opener>
-         <ab resp="#editor" xml:id="seg1">Scribo quidem, sed ad tuas mihi heri ad noctem redditas ob temporis angustias parum aut nihil hac vice respondeo; contentus ex parte satisfacere nuper a me factae promissioni, qua intra dies quatuordecim me missurum bibliothecae nostrae codicum manuscriptorum catalogum fueram pollicitus. Accipe igitur, vir clarissime, hunc et lege et ex eo, quae volueris, selige; et quae selegeris, in lucem profer <anchor xml:id="n1"/>illa methodo<anchor xml:id="n1e"/>, qua proferes aliorum coenobiorum manuscriptos codices a te in lucem proferendos. Ut enim meum in forma, qua mitto, proferas, plurimae non permittunt circumstantiae, quas ipse, ubi eum pervolveris, me tacente agnosces. Dubia in eo sine dubio occurrent non pauca, licet nomen <choice><sic>unicuiusque.</sic><corr>uniuscuiusque</corr></choice> authoris, sicut in codice reperi, semper addiderim; ubi vero illud reperi omissum, aut opus anonymo tribui aut illi assignavi, quem coniectura, saepe erronea, suggessit. Verum de hoc alias. In quibusdam, uti in<anchor xml:id="n2"/> operibus Nicolai Lyrani<anchor xml:id="n2e"/> etc., neglexi addere signum, quo notata sunt opera; nec tempus sinit nunc, ut defectum suppleam, qui semper suppleri poterit, cum codices sint in folio adeoque facile reperibiles. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverendo ac clarissimo patri domino Bernardo Pez frater Leopoldus Wydeman salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Scribo quidem, sed ad tuas mihi heri ad noctem redditas ob temporis angustias parum aut nihil hac vice respondeo; contentus ex parte satisfacere nuper a me factae promissioni, qua intra dies quatuordecim me missurum bibliothecae nostrae codicum manuscriptorum catalogum fueram pollicitus. Accipe igitur, vir clarissime, hunc et lege et ex eo, quae volueris, selige; et quae selegeris, in lucem profer <anchor xml:id="n1"/>illa methodo<anchor xml:id="n1e"/>, qua proferes aliorum coenobiorum manuscriptos codices a te in lucem proferendos. Ut enim meum in forma, qua mitto, proferas, plurimae non permittunt circumstantiae, quas ipse, ubi eum pervolveris, me tacente agnosces. Dubia in eo sine dubio occurrent non pauca, licet nomen <choice>
+               <sic>unicuiusque.</sic>
+               <corr>uniuscuiusque</corr>
+            </choice> authoris, sicut in codice reperi, semper addiderim; ubi vero illud reperi omissum, aut opus anonymo tribui aut illi assignavi, quem coniectura, saepe erronea, suggessit. Verum de hoc alias. In quibusdam, uti in<anchor xml:id="n2"/> operibus Nicolai Lyrani<anchor xml:id="n2e"/> etc., neglexi addere signum, quo notata sunt opera; nec tempus sinit nunc, ut defectum suppleam, qui semper suppleri poterit, cum codices sint in folio adeoque facile reperibiles. </ab>
          <ab resp="#editor" xml:id="seg2">Scrupulum mihi non modicum suppeditant Acta eruditorum Lipsiaca, in quibus lego bibliothecas variorum locorum iam publicatas, etsi mihi hucusque nec unica sit visa, ne <sic>quidam</sic> illa Lambecii Viennensis sive Vindoboniensis diu a me frustra expetita. Praestitissent illae aliquod mihi utique lumen, si has habuissem; nunc tenebras causant Acta, quae nominavi, eruditorum. Unum statuo, vir clarissime, exemplum ex Actis ad annum MDCCV mensis Aprilis, pagina 153, sub titulo <anchor xml:id="n3"/>Sylloge itinerariorum<anchor xml:id="n3e"/>; unde excerpo sequentia formalia: <pb n="1v"/> Martini Baumgarten<anchor xml:id="n4"/> Iter in Aegyptum<anchor xml:id="n4e"/>, Arabiam, Palaestinam et Syriam anno 1507 institutum e Latino exemplari, quod manu Josephi Scaligeri emendatum erat, Anglice, praemissa authoris vita, translatum etc. Operis huius satis eruditi necnon et devoti, in tres libros divisi authorem libenter facerem Cartusianum Gemnicensem, nec sine fundamento, ut paulo post dicam. Nam ex opere ipso abunde liquet Martinum Baumgarten itineris quidem per suam praesentiam et expensas extitisse authorem, sed non operis, quod se conscripsisse attestatur quidam in oppido Kueffstein (Kopffstein) iuventuti instituendae praefectus et famulatus suscepta conditione a Martino Baumgarten itineris socius. Quod huic ludimagistro nomen et quae vitae ulterioris post reditum series fuerit, non adeo liquet, quamvis Cartusianum in Gemnico factum probabile sit. Adest enim primo tabula catalogum librorum Cartusiae nostrae exhibens, anno 1565 consummata et domino<anchor xml:id="n5"/> Blasio tunc priori<anchor xml:id="n5e"/> dedicata, in qua ipsum opus sub titulo Ephemeris cuiusdam Cartusiensis legitur. Adest secundo<anchor xml:id="n6"/> ipse liber<anchor xml:id="n6e"/> a tabula citatus et consequenter tabula prior, in cuius assere legitur sequens titulus: Ephemeris sive Diarium peregrinationis Terrae Sanctae cuiusdam Cartusiani. Ecce duplex testimonium annis ab hinc saltem centum et quinquaginta duobus stans pro Cartusiano huius operis authore. </ab>
          <ab resp="#editor" xml:id="seg3">Sed audi, pater clarissime, unde probem hunc fuisse Gemnicensem, vel ad minus colligam. In ipso namque codice eiusque assere post titulum a me relatum adiunxit manus recentior, saeculi tamen XVI. et, nisi fallor, <anchor xml:id="n7"/>Bartholomaei prioris<anchor xml:id="n7e"/>, qui obiit in Februario anni 1604, infra cuiusdam: Gregorii nostri professi in Gemnico. Nullus, fateor, toto illo saeculo XVI. apud nos fuit Gregorius, bene tamen Georgius, olim scribi solitus Georius: homo egregius, de quo certum habeo testimonium,<anchor xml:id="n8"/> literas videlicet ad reverendissimum patrem generalem anno 1508<anchor xml:id="n8e"/> conventualiter directas <pb n="2r"/> et omnium nominibus sigillatim subscriptas, in quibus nec Gregorii nec Georgii nomen reperitur, utpote qui nondum erat apud nos anno memorato. <anchor xml:id="n9"/>Circa annum tamen 1516 invenio Georgium vicarium et anno 1524 procuratorem in Gemnico et eundem anno 1527 priorem in Agspaco, mox 1529 priorem in Gemnico et tandem anno 1541 mortuum priorem in Ollmutz<anchor xml:id="n9e"/>. Ut proinde visa eius qualitate hunc authorem itinerarii memorati extitisse non sine ratione iudicem et eum, qui Gregorium nominavit, ex nominis affinitate deceptum fuisse credam. An aliquid de hoc itinerario tibi, suavissime Bernarde, constet, et quid de authore sentias, mihi rescribe, qui tuus et fratris tui persevero in Christo servus. Valete ambo mei memores in orationibus vestris.</ab>
          <closer>Raptim die 13. Novembris 1717.</closer>

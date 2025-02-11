@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="423" xml:id="pez-0423">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann a Sancto Felice an Bernhard Pez. 1715-07-24. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">423</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -76,20 +88,25 @@
          </correspDesc>
          <abstract>
             <p corresp="#seg1">JF hat das von <rs ref="index:d14380e1139">Kaspar Altlechner</rs> überbrachte Exemplar von BPs „<rs ref="index:d14380e10982">Triumphus castitatis</rs>“ mit Freude empfangen und sofort vollständig gelesen. Dreierlei hat ihn dabei besonders beeindruckt.</p>
-            <p corresp="#seg2">Zunächst ist da das über vierhundert Jahre alte <rs ref="index:d10854e19600">Werk</rs> des <rs ref="index:d14380e10976">Einwik</rs>, das nach so langer Vergessenheit aus der <rs ref="index:d14380e28088">Melker</rs> <rs ref="index:d14380e28279">Bibliothek</rs> ans Licht kommt und das erste zeitgenössische Zeugnis zum Schlachtentod <rs ref="index:d10854e22418">Ottokars II. Přemysl</rs> bietet.</p>
-            <p corresp="#seg3">Zweitens die hochgelehrten Kommentare BPs, in denen er etwa hinsichtlich des Lebens des <rs ref="index:d10854e9028">Hl. Florian</rs> selbst die <rs ref="index:d14380e6075"><rs ref="index:d10854e3914">Bollandisten</rs></rs> korrigiert. Es ist ein Geschenk Gottes, dass viele von BPs <rs ref="index:d14380e4919">Ordensbrüdern</rs> gegenwärtig die Denkmäler der Vergangenheit, die seit Jahrhunderten in ihrem Besitz stehen, so neidlos allen Gelehrten zugänglich machen.</p>
+            <p corresp="#seg2">Zunächst ist da das über vierhundert Jahre alte <rs ref="index:d10854e19600">Werk</rs> des <rs ref="index:d14380e10976">Einwik</rs>, das nach so langer Vergessenheit aus der <rs ref="index:d14380e28088">Melker</rs>
+               <rs ref="index:d14380e28279">Bibliothek</rs> ans Licht kommt und das erste zeitgenössische Zeugnis zum Schlachtentod <rs ref="index:d10854e22418">Ottokars II. Přemysl</rs> bietet.</p>
+            <p corresp="#seg3">Zweitens die hochgelehrten Kommentare BPs, in denen er etwa hinsichtlich des Lebens des <rs ref="index:d10854e9028">Hl. Florian</rs> selbst die <rs ref="index:d14380e6075">
+                  <rs ref="index:d10854e3914">Bollandisten</rs>
+               </rs> korrigiert. Es ist ein Geschenk Gottes, dass viele von BPs <rs ref="index:d14380e4919">Ordensbrüdern</rs> gegenwärtig die Denkmäler der Vergangenheit, die seit Jahrhunderten in ihrem Besitz stehen, so neidlos allen Gelehrten zugänglich machen.</p>
             <p corresp="#seg4">Drittens ist JF begeistert von der Verehrung BPs für die heiligmäßige Jungfrau <rs ref="index:d10854e33923">Wilbirg</rs>. Er wünscht, <rs ref="index:d10854e33923">Wilbirg</rs> gemeinsam mit den anderen österreichischen Heiligen ehren zu können. Gerne würde er ihr Leben, wie ihn BP aufgefordert hat, in den <rs ref="index:d10854e26031">dritten Band</rs> von <rs ref="index:d10854e26025">Ribadeneiras „Die triumphirende tugend“</rs> aufnehmen; seine Arbeiten daran hat er zum größeren Teil bereits erledigt, doch ist es ihm gegenwärtig wegen vielfacher Verpflichtungen nicht möglich, sie abzuschließen.</p>
-            <p corresp="#seg5">Als JF den „<rs ref="index:d14380e10982">Triumphus castitatis</rs>“ <rs ref="index:d14380e41211">spanischen</rs> <rs ref="index:d14380e43366">Trinitariern</rs> gezeigt hat, haben sich diese an einer Stelle gestoßen, wo von einem Kloster zu <rs ref="index:d10854e27590">Santiago de Compostela</rs> die Rede ist; ein solches hat es dort nach ihrem Wissen nie gegeben. JF hat entgegnet, der Ausdruck „monasterium“ stehe bei älteren Autoren manchmal für den Chorraum der <rs ref="index:d10854e27594">Kirche</rs> oder überhaupt für diese selbst, so wie im Deutschen früher das Wort „münster“ gebraucht worden und an einigen Orten noch immer üblich sei; oder aber für ein an die <rs ref="index:d10854e27594">Kirche</rs> angeschlossenes Hospiz für Pilger. In diesem Sinne glaubt es JF mehrfach gelesen zu haben. In dieser Interpretation wird er dadurch bestärkt, dass zu solchen Hospizen im Gegensatz zu Klöstern im gegenwärtigen Sinn Männer ebenso wie Frauen Zutritt hatten. JF will BPs Meinung dazu erfahren.</p>
+            <p corresp="#seg5">Als JF den „<rs ref="index:d14380e10982">Triumphus castitatis</rs>“ <rs ref="index:d14380e41211">spanischen</rs>
+               <rs ref="index:d14380e43366">Trinitariern</rs> gezeigt hat, haben sich diese an einer Stelle gestoßen, wo von einem Kloster zu <rs ref="index:d10854e27590">Santiago de Compostela</rs> die Rede ist; ein solches hat es dort nach ihrem Wissen nie gegeben. JF hat entgegnet, der Ausdruck „monasterium“ stehe bei älteren Autoren manchmal für den Chorraum der <rs ref="index:d10854e27594">Kirche</rs> oder überhaupt für diese selbst, so wie im Deutschen früher das Wort „münster“ gebraucht worden und an einigen Orten noch immer üblich sei; oder aber für ein an die <rs ref="index:d10854e27594">Kirche</rs> angeschlossenes Hospiz für Pilger. In diesem Sinne glaubt es JF mehrfach gelesen zu haben. In dieser Interpretation wird er dadurch bestärkt, dass zu solchen Hospizen im Gegensatz zu Klöstern im gegenwärtigen Sinn Männer ebenso wie Frauen Zutritt hatten. JF will BPs Meinung dazu erfahren.</p>
             <p corresp="#seg6">JF lobt BPs Bemühen, der Schrift „<rs ref="index:d14380e18286">Cura salutis</rs>“ entgegenzutreten; deren Autor (<rs ref="index:d14380e18274">Gábor Hevenesi</rs>) wird seine wohlverdiente Strafe erhalten, wenn BP seine irrgläubigen Behauptungen widerlegt. JF befürchtet allerdings, dass die Unterstützer des Gegners, die überall ihre Augen haben, die meisten Exemplare von BPs „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“ aufkaufen werden, um sie zu vernichten. Wenn er nicht von BP selbst eines erhält, hat er kaum Hoffnung, selbst eines erwerben zu können.</p>
             <p corresp="#seg7">JF leidet seit einer Woche an einer Erkrankung in seiner rechten Seite. Er wollte BP früher schreiben, wurde jedoch durch die Krankheit daran gehindert. Auf Anraten eines Arztes nimmt er Medikamente, die aber bitter und wenig bekömmlich sind und, was schlimmer ist, in diesen Tagen des aufsteigenden Hundssterns auch wenig nützen. Er fordert BP nachdrücklich auf, gut auf seine Gesundheit zu achten.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
             <mentioned>caede ... regis</mentioned>
-            <p><rs type="bibl" ref="bibl:36912">Sainitzer, Vita Wilbirgis</rs> 55–59, 184f.</p>
+            <p>
+               <rs type="bibl" ref="bibl:36912">Sainitzer, Vita Wilbirgis</rs> 55–59, 184f.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg3">
             <mentioned>Bollandos docere</mentioned>
@@ -115,7 +132,8 @@
                   Kommentare. Natürlich gab es in der Stadt Compostela etliche Klöster verschiedener
                   Orden; gemeint ist mit dem Einwand der Spanier wohl, dass die Kirche des Hl.
                   Jakobus selbst nie eines gewesen sei. Von den beiden Interpretationsvorschlägen
-                  JFs ist wohl der erstere richtig. Vgl. <ref type="letter" target="letter:473">473</ref> <ref target="letter:473#seg4">4</ref>.</p>
+                  JFs ist wohl der erstere richtig. Vgl. <ref type="letter" target="letter:473">473</ref>
+               <ref target="letter:473#seg4">4</ref>.</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -128,18 +146,23 @@
    </standOff>
    <text>
       <front>
-         <p>Admodum reverendo religiosissimo ac clarissimo domino Bernardo Pez sacrae theologiae baccalaureo celeberrimi et antiquissimi Mellicensis monasterii ordinis sancti patris Benedicti professo ac ibidem bibliothecario eruditissimo, amico meo singulari. Mellicium.<note type="annotation">Siegel.</note></p>
+         <p>Admodum reverendo religiosissimo ac clarissimo domino Bernardo Pez sacrae theologiae baccalaureo celeberrimi et antiquissimi Mellicensis monasterii ordinis sancti patris Benedicti professo ac ibidem bibliothecario eruditissimo, amico meo singulari. Mellicium.<note type="annotation">Siegel.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo eximio ac doctissimo domino Bernardo Pez Mellicensi, amico suo singulari, humilis Trinitarius frater Joannes a Sancto Felice salutem plurimam dicit.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo eximio ac doctissimo domino Bernardo Pez Mellicensi, amico suo singulari, humilis Trinitarius frater Joannes a Sancto Felice salutem plurimam dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Nitidam tuam atque elegantem Wilburgim, mi Bernarde amice ornatissime, quam per reverendum dominum Casparum Altlechner consodalem tuum Mellicensem, virum singulari eruditione ornatum, ad me transmisisti, summa recepi cum iucunditate, et quemadmodum rerum omnium tuarum sum cupidissimus, omnibus aliis amotis curis librum tuum a principio ad finem usque lectione absolvi; ubi (ut verum fatear) tria potissimum me in summa tum affectione tum admiratione tenebant. </ab>
          <ab resp="#editor" xml:id="seg2">Primum tam venerandae antiquitatis monumentum, Eynwicus nimirum scriptor ante quatuor et quod excedit saecula, nunc ex instructissima vestra bibliotheca tam nitide prodiens ac tam candide ea, quae quidem tot saeculis tum domesticos cum extraneos latebant historiographos, exponens, de <anchor xml:id="n1"/>caede namque tam memorabili Otokari regis<anchor xml:id="n1e"/>, quam fide omnino mihi indubitata ipse nunc primus scriptor σύγχρονος optimus veritatis et temporis testis in medium producit oculisque exponit. </ab>
          <ab resp="#editor" xml:id="seg3">Alterum sunt tuae, mi Bernarde, considerationes et notae in eundem Eynwicum omnis antiquitatis eruditione uberes et refertissimae, ubi etiam in actis praesertim sancti martyris Floriani doctissimos <anchor xml:id="n2"/>Bollandos docere<anchor xml:id="n2e"/> audes (et potes). Habent hoc ex divino plane munere hac nostra aetate tot celeberrimi tui ordinis sodales, ut reconditissimos antiquitatis thesauros, quorum etiam tot saeculis sunt eruntque possessores, sine invidia nunc eruditis immortali tamen sua suorumque gloria reserent. </ab>
          <ab resp="#editor" xml:id="seg4">Tertio demum hac in lectione singularis me affecit devotio erga virginem sanctissimam; eam, optarem, inter caeteros Austriae nostrae sanctos venerari ad aras liceret. Hanc eo libentius <pb n="1v"/> te monitore <anchor xml:id="n3"/>tertio tomo patris Ribadeneirae<anchor xml:id="n3e"/> suo tempore, dum per otium licebit, insererem; maiorem partem in hoc quidem iam absolveram, verum nunc, quia incontinenter diversis officii mei occupationibus sum distractus, de eo perficiendo cogitare vix possum. </ab>
-         <ab resp="#editor" xml:id="seg5"><sic>Walburgim</sic>  aliis etiam lustrandam nostris hominibus tradidi; gente sunt Iberi; hi, ut patriae suae gnari, impegerunt in paginam 75, ubi de <anchor xml:id="n4"/>monasterio<anchor xml:id="n4e"/> ad S. Jacobum Compostellanum fit mentio; illi autem <sic>inficientes</sic> <note place="foot" xml:id="d4618e53832">Für <hi rend="italic">inficias</hi>.</note> eunt nullum ibi extare aut extitisse unquam monasterium. Quibus ego pro mea parte reposui pro <anchor xml:id="n5"/>monasterio<anchor xml:id="n5e"/> apud veteres scriptores aliquando intelligi aut partem aliquam ecclesiae, quam antiquitus nostri Germani vocabant münster, et quibusdam in locis adhuc haec vox in usu est sumendo partem pro toto, in qua parte nimirum ecclesiae ministri <add place="above">sive canonici</add> morabantur; aut, si mavis, hospitale <sic>quodam</sic>  contiguum ecclesiae recipiendis advenis accommodum; et, si mea me non fallit opinio, memini me legisse quodam in authore non semel monasterium pro hospitali; quod opinionem meam in hoc amplius confirmat, cum utrique sexui ad hoc monasterium sive hospitale patuerit accessus, quod revera hospitalibus potius quam nostrorum monasteriis est conveniens. Quid tu circa idem sentias, vir doctissime, aveo scire. </ab>
+         <ab resp="#editor" xml:id="seg5">
+            <sic>Walburgim</sic>  aliis etiam lustrandam nostris hominibus tradidi; gente sunt Iberi; hi, ut patriae suae gnari, impegerunt in paginam 75, ubi de <anchor xml:id="n4"/>monasterio<anchor xml:id="n4e"/> ad S. Jacobum Compostellanum fit mentio; illi autem <sic>inficientes</sic>
+            <note place="foot" xml:id="d4618e53832">Für <hi rend="italic">inficias</hi>.</note> eunt nullum ibi extare aut extitisse unquam monasterium. Quibus ego pro mea parte reposui pro <anchor xml:id="n5"/>monasterio<anchor xml:id="n5e"/> apud veteres scriptores aliquando intelligi aut partem aliquam ecclesiae, quam antiquitus nostri Germani vocabant münster, et quibusdam in locis adhuc haec vox in usu est sumendo partem pro toto, in qua parte nimirum ecclesiae ministri <add place="above">sive canonici</add> morabantur; aut, si mavis, hospitale <sic>quodam</sic>  contiguum ecclesiae recipiendis advenis accommodum; et, si mea me non fallit opinio, memini me legisse quodam in authore non semel monasterium pro hospitali; quod opinionem meam in hoc amplius confirmat, cum utrique sexui ad hoc monasterium sive hospitale patuerit accessus, quod revera hospitalibus potius quam nostrorum monasteriis est conveniens. Quid tu circa idem sentias, vir doctissime, aveo scire. </ab>
          <ab resp="#editor" xml:id="seg6">Etiam atque etiam summe commendanda est industria tua, quod responderis ad fraudes illius libelli, cuius quidem satis est ineptus titulus Cura salutis seu Methodus prudenter de vitae statu <sic>deliberando</sic> . Sed meritas dabit ille poenas, cum haereses illius tuis validis constrinxeris rationibus. Vereor autem, ne pauca ad nos huc veniant exemplaria, cum illi, quorum interest, plus quam centum oculos gerant, ut, quantum possint, exemplaria coemant supprimantque; unde nisi per te, mi suavissime Bernarde, unicum consequar, aliud assequi fere diffido. </ab>
          <ab resp="#editor" xml:id="seg7">Interim, imo et semper, vale, amice optime; ego <pb n="2r"/> quidem iam per octiduum cum adversa confligo valetudine, dexterum latus per totum bilis corripuit sic, ut aegerrime nunc me habeam. Ex eademque nube processit, ut nuper ad te exarare literas inciperem, verum vi morbi oppressus a coepto destiterim; unde accidit, ut tardius ad te literas darem. Utor nunc quidem ex consilio medici pharmacis, sed insuetis, sed amaris, sed molestis; sed, quod peius, ascendente Canicula modicum profuturis. Tu vero, mi ornatissime Bernarde, iterum atque iterum vale, ut vivas, vive, ut valeas.</ab>
-         <closer><sic>Vindebonae</sic>  IX. Kalendas Sextilis 1715.</closer>
+         <closer>
+            <sic>Vindebonae</sic>  IX. Kalendas Sextilis 1715.</closer>
       </body>
    </text>
 </TEI>

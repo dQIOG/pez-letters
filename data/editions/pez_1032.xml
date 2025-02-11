@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="1032" xml:id="pez-1032">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Georg Eckhart an Bernhard Pez. 1718-12-25. Hannover.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">1032</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Am oberen Blattrand von 1r von der Hand GEs der Vermerk: <orig>Reverendo patri Bernardo Pezio</orig>.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -79,80 +91,82 @@
                <ptr type="mentions" target="letter:1031"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e2550">Anonyme Werke ; Translatio sancti Viti</term>
-            <term ref="index:d14380e2556">Anonyme Werke ; Translatio sancti Viti ; *Ms. Helmstedt</term>
-            <term ref="index:d14380e2589">Anonyme Werke ; Vita sancti Auctoris. Ms</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e6118">Bollandisten ; Acta sanctorum ; Bd. Juni II ; Darin: Translatio sancti Viti</term>
-            <term ref="index:d14380e8992">Dänemark, Dänen</term>
-            <term ref="index:d14380e9536">Deutschland, Deutsche , deutsch ; Althochdeutsch, mittelhochdeutsch</term>
-            <term ref="index:d14380e10536">Eckhart, Johann Georg ; Leges Francorum Salicae et Ripuariorum, cum additionibus regum
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e2550">Anonyme Werke ; Translatio sancti Viti</term>
+               <term ref="index:d14380e2556">Anonyme Werke ; Translatio sancti Viti ; *Ms. Helmstedt</term>
+               <term ref="index:d14380e2589">Anonyme Werke ; Vita sancti Auctoris. Ms</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e6118">Bollandisten ; Acta sanctorum ; Bd. Juni II ; Darin: Translatio sancti Viti</term>
+               <term ref="index:d14380e8992">Dänemark, Dänen</term>
+               <term ref="index:d14380e9536">Deutschland, Deutsche , deutsch ; Althochdeutsch, mittelhochdeutsch</term>
+               <term ref="index:d14380e10536">Eckhart, Johann Georg ; Leges Francorum Salicae et Ripuariorum, cum additionibus regum
          et imperatorum variis, ex manuscriptis codicibus emendatae, auctae et notis illustratae.
          Frankfurt am Main–Leipzig 1720 ; Darin: Rostgaard, Emendationes in Otfridi Theotiscam et
          metricam paraphrasin Evangeliorum</term>
-            <term ref="index:d14380e11399">England, Engländer , englisch</term>
-            <term ref="index:d14380e11852">Evangelische allgemein</term>
-            <term ref="index:d14380e13461">Friedrich August I</term>
-            <term ref="index:d14380e13751">Fürstenberg, Anton Egon, Fürst</term>
-            <term ref="index:d14380e14971">Georg I</term>
-            <term ref="index:d14380e15694">Glossarien und altdeutsche Sprachdenkmäer ; Glossenhandschriften aus dem Besitz von
+               <term ref="index:d14380e11399">England, Engländer , englisch</term>
+               <term ref="index:d14380e11852">Evangelische allgemein</term>
+               <term ref="index:d14380e13461">Friedrich August I</term>
+               <term ref="index:d14380e13751">Fürstenberg, Anton Egon, Fürst</term>
+               <term ref="index:d14380e14971">Georg I</term>
+               <term ref="index:d14380e15694">Glossarien und altdeutsche Sprachdenkmäer ; Glossenhandschriften aus dem Besitz von
          Franciscus Junius. Mss. Oxford</term>
-            <term ref="index:d14380e17030">Hannover</term>
-            <term ref="index:d14380e17113">Hannover ; Kurfürstliche Bibliothek ; Ratram von Corbie, Liber de anima. Abschrift
+               <term ref="index:d14380e17030">Hannover</term>
+               <term ref="index:d14380e17113">Hannover ; Kurfürstliche Bibliothek ; Ratram von Corbie, Liber de anima. Abschrift
          durch einen Mauriner. Ms</term>
-            <term ref="index:d14380e18136">Hermann Soest</term>
-            <term ref="index:d14380e18146">Hermann Soest ; Calendarium Hebraicum novum. Ms</term>
-            <term ref="index:d14380e18153">Hermann Soest ; Tractatus de potestate ecclesiae ac papali. Ms</term>
-            <term ref="index:d14380e18160">Hermann Soest ; Tractatus de vocibus diffinitivis in conciliis generalibus. Ms</term>
-            <term ref="index:d14380e21000">Junius, Franciscus der Jüngere</term>
-            <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
-            <term ref="index:d14380e23068">Kortholt, Sebastian</term>
-            <term ref="index:d14380e23973">Latein</term>
-            <term ref="index:d14380e26318">Marienfeld</term>
-            <term ref="index:d14380e27703">Medizin, medizinische Begriffe, gesundheitliche Belange ; Pocken</term>
-            <term ref="index:d14380e27891">Meibom, Heinrich der Ältere</term>
-            <term ref="index:d14380e27902">Meibom, Heinrich der Jüngere</term>
-            <term ref="index:d14380e27914">Meibom, Heinrich der Jüngere ; Rerum Germanicarum tomi tres. 3 Bde. Helmstedt 1688 ;
+               <term ref="index:d14380e18136">Hermann Soest</term>
+               <term ref="index:d14380e18146">Hermann Soest ; Calendarium Hebraicum novum. Ms</term>
+               <term ref="index:d14380e18153">Hermann Soest ; Tractatus de potestate ecclesiae ac papali. Ms</term>
+               <term ref="index:d14380e18160">Hermann Soest ; Tractatus de vocibus diffinitivis in conciliis generalibus. Ms</term>
+               <term ref="index:d14380e21000">Junius, Franciscus der Jüngere</term>
+               <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
+               <term ref="index:d14380e23068">Kortholt, Sebastian</term>
+               <term ref="index:d14380e23973">Latein</term>
+               <term ref="index:d14380e26318">Marienfeld</term>
+               <term ref="index:d14380e27703">Medizin, medizinische Begriffe, gesundheitliche Belange ; Pocken</term>
+               <term ref="index:d14380e27891">Meibom, Heinrich der Ältere</term>
+               <term ref="index:d14380e27902">Meibom, Heinrich der Jüngere</term>
+               <term ref="index:d14380e27914">Meibom, Heinrich der Jüngere ; Rerum Germanicarum tomi tres. 3 Bde. Helmstedt 1688 ;
          Darin: Translatio sancti Viti</term>
-            <term ref="index:d14380e29726">Moritz Wilhelm</term>
-            <term ref="index:d14380e30120">Münster in Westfalen</term>
-            <term ref="index:d14380e30238">Naumburg-Zeitz</term>
-            <term ref="index:d14380e31742">Otfrid von Weißenburg ; Evangelienbuch ; Ms. Rom, Bibliotheca Vaticana</term>
-            <term ref="index:d14380e31749">Otfrid von Weißenburg ; Evangelienbuch ; Ms. Wien, Hofbibliothek</term>
-            <term ref="index:d14380e31946">Oxford ; Bodleian Library ; Glossenhandschriften aus dem Besitz von Franciscus Junius.
+               <term ref="index:d14380e29726">Moritz Wilhelm</term>
+               <term ref="index:d14380e30120">Münster in Westfalen</term>
+               <term ref="index:d14380e30238">Naumburg-Zeitz</term>
+               <term ref="index:d14380e31742">Otfrid von Weißenburg ; Evangelienbuch ; Ms. Rom, Bibliotheca Vaticana</term>
+               <term ref="index:d14380e31749">Otfrid von Weißenburg ; Evangelienbuch ; Ms. Wien, Hofbibliothek</term>
+               <term ref="index:d14380e31946">Oxford ; Bodleian Library ; Glossenhandschriften aus dem Besitz von Franciscus Junius.
          Mss</term>
-            <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
+               <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
          1721–1729</term>
-            <term ref="index:d14380e33812">Pez, Bernhard ; Bd. 1</term>
-            <term ref="index:d14380e33937">Pez, Bernhard ; Bd. 1 ; Darin: Glossarium in Biblia</term>
-            <term ref="index:d14380e33969">Pez, Bernhard ; Bd. 1 ; Darin: Miscellanea Theodisca</term>
-            <term ref="index:d14380e34051">Pez, Bernhard ; Bd. 2</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e35438">Polen</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
-            <term ref="index:d14380e36533">Ratram von Corbie ; Liber de anima</term>
-            <term ref="index:d14380e36547">Ratram von Corbie ; Liber de anima ; Abschrift durch einen Mauriner. Ms</term>
-            <term ref="index:d14380e36624">Reck, Georg Eberhard von der</term>
-            <term ref="index:d14380e37780">Rom, Römer ; Päpstliche Kurie, Papsttum ; Bibliotheca Vaticana</term>
-            <term ref="index:d14380e37788">Rom, Römer ; Päpstliche Kurie, Papsttum ; Bibliotheca Vaticana ; Otfrid von Weißenburg,
+               <term ref="index:d14380e33812">Pez, Bernhard ; Bd. 1</term>
+               <term ref="index:d14380e33937">Pez, Bernhard ; Bd. 1 ; Darin: Glossarium in Biblia</term>
+               <term ref="index:d14380e33969">Pez, Bernhard ; Bd. 1 ; Darin: Miscellanea Theodisca</term>
+               <term ref="index:d14380e34051">Pez, Bernhard ; Bd. 2</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e35438">Polen</term>
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+               <term ref="index:d14380e36533">Ratram von Corbie ; Liber de anima</term>
+               <term ref="index:d14380e36547">Ratram von Corbie ; Liber de anima ; Abschrift durch einen Mauriner. Ms</term>
+               <term ref="index:d14380e36624">Reck, Georg Eberhard von der</term>
+               <term ref="index:d14380e37780">Rom, Römer ; Päpstliche Kurie, Papsttum ; Bibliotheca Vaticana</term>
+               <term ref="index:d14380e37788">Rom, Römer ; Päpstliche Kurie, Papsttum ; Bibliotheca Vaticana ; Otfrid von Weißenburg,
          Evangelienbuch. Ms</term>
-            <term ref="index:d14380e37958">Rostgaard, Frederik</term>
-            <term ref="index:d14380e38504">Sachsen</term>
-            <term ref="index:d14380e38551">Sachsen-Zeitz</term>
-            <term ref="index:d14380e39819">Schmeltzer, Franz</term>
-            <term ref="index:d14380e41313">Stade, Dietrich von</term>
-            <term ref="index:d14380e41321">Stade, Dietrich von ; Lectiones correctae voluminis evangeliorum Otfridi. Ms</term>
-            <term ref="index:d14380e44756">Vossius, Isaac</term>
-            <term ref="index:d14380e45028">Wanley, Humphrey</term>
-            <term ref="index:d14380e45566">Widukind von Corvey ; Primi et antiquissimi historiae Saxonicae scriptoris Witichindi
+               <term ref="index:d14380e37958">Rostgaard, Frederik</term>
+               <term ref="index:d14380e38504">Sachsen</term>
+               <term ref="index:d14380e38551">Sachsen-Zeitz</term>
+               <term ref="index:d14380e39819">Schmeltzer, Franz</term>
+               <term ref="index:d14380e41313">Stade, Dietrich von</term>
+               <term ref="index:d14380e41321">Stade, Dietrich von ; Lectiones correctae voluminis evangeliorum Otfridi. Ms</term>
+               <term ref="index:d14380e44756">Vossius, Isaac</term>
+               <term ref="index:d14380e45028">Wanley, Humphrey</term>
+               <term ref="index:d14380e45566">Widukind von Corvey ; Primi et antiquissimi historiae Saxonicae scriptoris Witichindi
          monachi Corbeiensis, familiae Benedictinae, Annalium libri tres. Hg. von Heinrich Meibom d.
          Ä. Frankfurt am Main 1621 ; Darin: Translatio sancti Viti</term>
-            <term ref="index:d14380e45571">Wien</term>
-            <term ref="index:d14380e45794">Wien ; Kaiserhof</term>
-            <term ref="index:d14380e45925">Wien ; Kaiserhof ; Hofbibliothek ; Otfrid von Weißenburg, Evangelienbuch. Ms</term>
-            <term ref="index:d14380e46977">Zisterzienser</term></keywords></textClass>
+               <term ref="index:d14380e45571">Wien</term>
+               <term ref="index:d14380e45794">Wien ; Kaiserhof</term>
+               <term ref="index:d14380e45925">Wien ; Kaiserhof ; Hofbibliothek ; Otfrid von Weißenburg, Evangelienbuch. Ms</term>
+               <term ref="index:d14380e46977">Zisterzienser</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">GE entschuldigt sich wie bei HP (<ref type="Letter" target="letter:1031">1031</ref>) auch bei BP für sein
                langes Schweigen nach dem Erhalt von dessen zwei Briefen (<ref type="Letter" target="letter:1003">1003</ref>, <ref type="Letter" target="letter:1031">1020</ref>). Er freut sich, dass der Druck von
@@ -161,7 +175,8 @@
                der Resident von GEs König (<rs ref="index:d14380e14971">Georg I. von Großbritannien</rs>) am <rs ref="index:d14380e45794">Kaiserhof</rs>, sein. Das Erscheinen des vollständigen Werkes kann GE nicht
                abwarten, besonders die <rs ref="index:d14380e9536">altdeutschen</rs> Sprachdenkmäler benötigt er
                dringend.</p>
-            <p corresp="#seg2">GE hat eine Kollation des Evangelienbuches des Otfrid (von Weißenburg), die der <rs ref="index:d14380e8992">Däne</rs> <rs ref="index:d14380e37958">Frederik Rostgaard</rs> anhand der <rs ref="index:d14380e37788">Handschrift der Bibliotheca Palatina im Vatikan</rs> angefertigt hat,
+            <p corresp="#seg2">GE hat eine Kollation des Evangelienbuches des Otfrid (von Weißenburg), die der <rs ref="index:d14380e8992">Däne</rs>
+               <rs ref="index:d14380e37958">Frederik Rostgaard</rs> anhand der <rs ref="index:d14380e37788">Handschrift der Bibliotheca Palatina im Vatikan</rs> angefertigt hat,
                erhalten. Bald wird er zudem die Abschrift desselben Werkes aus der <rs ref="index:d14380e45925">Wiener
                   Handschrift</rs> mit <rs ref="index:d14380e41321">lateinischer Übersetzung</rs> des jüngst
                verstorbenen <rs ref="index:d14380e41313">Dietrich von Stade</rs> sowie den Kommentar desselben bekommen.
@@ -188,7 +203,7 @@
                <rs ref="index:d14380e11852">Protestantismus</rs> zurückgekehrt. Ein Grund dafür mag neben
                Gewissensbissen auch der unfähige Beichtvater (<rs ref="index:d14380e39819">Franz Schmeltzer</rs>)
                sein.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -233,7 +248,7 @@
                   zwischen 1719 und 1721 erhalten zu haben scheint: vgl. Eckhart, Leges Francorum,
                   Benevolo lectori (unpag.); <rs type="bibl" ref="bibl:14694">Eckhart,
                      Commentarii</rs> 2 543. Zu Hase vgl. <ref type="letter" target="letter:891">891</ref>
-                  <ref target="letter:891#seg7">7</ref>.</p>
+               <ref target="letter:891#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
             <mentioned>promisere amici</mentioned>
@@ -337,14 +352,31 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Hanoverae raptim die 25. Decembris 1718.</opener>
+         <opener>
+            <pb n="1r"/> Hanoverae raptim die 25. Decembris 1718.</opener>
          <opener>Vir maxime reverende, amice plurimum colende.</opener>
          <ab resp="#editor" xml:id="seg1">Suscipies et tu excusationem silentii fratri tuo carissimo factam. Recepi utrasque tuas et gaudeo sub praelo esse egregium opus tuum. Si quid typis absolutum est, id, quaeso, una cum tuis scriptis hactenus editis Viennam mitte ad <anchor xml:id="n1"/>dominum de Reck<anchor xml:id="n1e"/> consiliarium et residentem regis nostri in aula imperatoria, qui pro sua in me amicitia omnia recte curabit. Vix enim integram editionem expectare queo. Theotisca avide desidero. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n2"/>Recepi nuper accuratissimam collationem<anchor xml:id="n2e"/> Otfridi Paraphraseos Evangeliorum, quam olim cum<anchor xml:id="n3"/> Vaticano bibliothecae Palatinae codice<anchor xml:id="n3e"/> instituit Fridericus Rostgardus Danus. Veniet etiam brevi ad me Codex Otfridinus<anchor xml:id="n4"/> ex Viennensi<anchor xml:id="n4e"/> descriptus cum<anchor xml:id="n5"/> versione Latina Dieterici Stadenii<anchor xml:id="n5e"/> τοῦ νῦν ἐν ἁγίοις et amplissimo eiusdem commentario. Iustum ergo erit, ut de opere egregio publicando sollicitus sim. </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n2"/>Recepi nuper accuratissimam collationem<anchor xml:id="n2e"/> Otfridi Paraphraseos Evangeliorum, quam olim cum<anchor xml:id="n3"/> Vaticano bibliothecae Palatinae codice<anchor xml:id="n3e"/> instituit Fridericus Rostgardus Danus. Veniet etiam brevi ad me Codex Otfridinus<anchor xml:id="n4"/> ex Viennensi<anchor xml:id="n4e"/> descriptus cum<anchor xml:id="n5"/> versione Latina Dieterici Stadenii<anchor xml:id="n5e"/> τοῦ νῦν ἐν ἁγίοις et amplissimo eiusdem commentario. Iustum ergo erit, ut de opere egregio publicando sollicitus sim. </ab>
          <ab resp="#editor" xml:id="seg3">Ex Anglia pariter <anchor xml:id="n6"/>promisere amici<anchor xml:id="n6e"/> apographa omnium<anchor xml:id="n7"/> glossariorum Theotiscorum, quae Franciscus Junius ex bibliotheca Isaaci Vossii olim nactus erat<anchor xml:id="n7e"/>. Ita ego egregium <pb n="1v"/> veteris linguae Theotiscae thesaurum possidebo. </ab>
-         <ab resp="#editor" xml:id="seg4">Ad alterum tomum tuum, quicquid te dignum occurret, lubenter communicabo. Nuper <anchor xml:id="n8"/>amicus misit<anchor xml:id="n8e"/> codicem membranaceum, qui continet <anchor xml:id="n9"/>Hermanni Zoest de Monasterio, professi in monasterio de Campo S. Mariae Cisterciensis ordinis dioeceseos Monasteriensis, opuscula<anchor xml:id="n9e"/> De ecclesiastica potestate et papali ac De vocibus diffinitivis in conciliis generalibus; additum est Calendarium Hebraicum novum. Habeo<anchor xml:id="n10"/> Vitam ineditam sancti Authoris<anchor xml:id="n10e"/> a Benedictino scriptam, quam, si desideras, mittam. Potero et integram<anchor xml:id="n11"/> Translationem sancti Viti<anchor xml:id="n11e"/> communicare; a<anchor xml:id="n12"/> Meibomiis<anchor xml:id="n12e"/> <choice><sic>et</sic><corr>enim</corr></choice> pars solummodo eius edita et a collectoribus Actorum sanctorum<anchor xml:id="n13"/> recusa<anchor xml:id="n13e"/> est. De Ratramno etiam memor ero, ubi eum liberare potero. Sed de his alias. </ab>
-         <ab resp="#editor" xml:id="seg5">Serenissimum <anchor xml:id="n14"/>ducem Saxo-Cizensem<anchor xml:id="n14e"/> ex variolis obisse scies. Erat princeps eruditissimus, pius probusque, sed rei familiaris negligentior. Unde debita non parva contraxerat, quae ipsum premebant. Ab his ut se liberaret atque ut administrationem electoratus Saxonici Furstenbergio defuncto a rege Poloniae nancisceretur, ad vos transiisse mihi videtur. Candide haec tibi patefacio. Hac tamen sua spe frustratus et a suis saepe monitus nec conscientiae <choice><sic>morsus</sic><corr>remorsus</corr></choice> amplius ferens solenniter ad nos rediit. Rex Poloniae primum ipsum ad mutationem religionis<del ana="#after">coegit</del> <choice><sic>hortatus</sic><corr>adhortatus</corr></choice> est, post eam nullam ipsius curam habuit et omnia egit, ut<anchor xml:id="n15"/> episcopatus<anchor xml:id="n15e"/> ditionibus ipsum exueret easque sibi acquireret. Poterit et hoc animum principis exacerbasse. Dicunt <anchor xml:id="n16"/>confessionarium etiam officii sui ignorantiorem et fabellis potius quam solidis rationibus instructum nauseam movisse<anchor xml:id="n16e"/>. Sed haec obiter.</ab>
-         <closer> <choice><sic>tui</sic><corr>Tuus</corr></choice> totus Eccardus.</closer>
+         <ab resp="#editor" xml:id="seg4">Ad alterum tomum tuum, quicquid te dignum occurret, lubenter communicabo. Nuper <anchor xml:id="n8"/>amicus misit<anchor xml:id="n8e"/> codicem membranaceum, qui continet <anchor xml:id="n9"/>Hermanni Zoest de Monasterio, professi in monasterio de Campo S. Mariae Cisterciensis ordinis dioeceseos Monasteriensis, opuscula<anchor xml:id="n9e"/> De ecclesiastica potestate et papali ac De vocibus diffinitivis in conciliis generalibus; additum est Calendarium Hebraicum novum. Habeo<anchor xml:id="n10"/> Vitam ineditam sancti Authoris<anchor xml:id="n10e"/> a Benedictino scriptam, quam, si desideras, mittam. Potero et integram<anchor xml:id="n11"/> Translationem sancti Viti<anchor xml:id="n11e"/> communicare; a<anchor xml:id="n12"/> Meibomiis<anchor xml:id="n12e"/>
+            <choice>
+               <sic>et</sic>
+               <corr>enim</corr>
+            </choice> pars solummodo eius edita et a collectoribus Actorum sanctorum<anchor xml:id="n13"/> recusa<anchor xml:id="n13e"/> est. De Ratramno etiam memor ero, ubi eum liberare potero. Sed de his alias. </ab>
+         <ab resp="#editor" xml:id="seg5">Serenissimum <anchor xml:id="n14"/>ducem Saxo-Cizensem<anchor xml:id="n14e"/> ex variolis obisse scies. Erat princeps eruditissimus, pius probusque, sed rei familiaris negligentior. Unde debita non parva contraxerat, quae ipsum premebant. Ab his ut se liberaret atque ut administrationem electoratus Saxonici Furstenbergio defuncto a rege Poloniae nancisceretur, ad vos transiisse mihi videtur. Candide haec tibi patefacio. Hac tamen sua spe frustratus et a suis saepe monitus nec conscientiae <choice>
+               <sic>morsus</sic>
+               <corr>remorsus</corr>
+            </choice> amplius ferens solenniter ad nos rediit. Rex Poloniae primum ipsum ad mutationem religionis<del ana="#after">coegit</del>
+            <choice>
+               <sic>hortatus</sic>
+               <corr>adhortatus</corr>
+            </choice> est, post eam nullam ipsius curam habuit et omnia egit, ut<anchor xml:id="n15"/> episcopatus<anchor xml:id="n15e"/> ditionibus ipsum exueret easque sibi acquireret. Poterit et hoc animum principis exacerbasse. Dicunt <anchor xml:id="n16"/>confessionarium etiam officii sui ignorantiorem et fabellis potius quam solidis rationibus instructum nauseam movisse<anchor xml:id="n16e"/>. Sed haec obiter.</ab>
+         <closer>
+            <choice>
+               <sic>tui</sic>
+               <corr>Tuus</corr>
+            </choice> totus Eccardus.</closer>
       </body>
    </text>
 </TEI>

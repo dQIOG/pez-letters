@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="1016" xml:id="pez-1016">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Leopold Wydemann an Bernhard Pez. 1718-11-16. Gaming.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">1016</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -74,90 +86,92 @@
                <ptr type="next" target="letter:1022"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e866">Albrecht III</term>
-            <term ref="index:d14380e2020">Anonyme Werke ; Breve chronicon monasterii Stamsensis. Ms. Gaming</term>
-            <term ref="index:d14380e2030">Anonyme Werke ; Breve chronicon monasterii Stamsensis. Ms. Gaming ; Abschrift von
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e866">Albrecht III</term>
+               <term ref="index:d14380e2020">Anonyme Werke ; Breve chronicon monasterii Stamsensis. Ms. Gaming</term>
+               <term ref="index:d14380e2030">Anonyme Werke ; Breve chronicon monasterii Stamsensis. Ms. Gaming ; Abschrift von
          Leopold Wydemann. Ms</term>
-            <term ref="index:d14380e2268">Anonyme Werke ; Epistola historica de eventibus et rebus per Europam gestis. Ms.
+               <term ref="index:d14380e2268">Anonyme Werke ; Epistola historica de eventibus et rebus per Europam gestis. Ms.
          Gaming</term>
-            <term ref="index:d14380e5312">Bernhard von Clairvaux, hl</term>
-            <term ref="index:d14380e6032">Böhmen</term>
-            <term ref="index:d14380e8225">Cilli</term>
-            <term ref="index:d14380e13828">Gaming</term>
-            <term ref="index:d14380e13897">Gaming ; Archiv ; Johannes III. Span von Mauerbach, Urkunde zur Bestellung des Johannes
+               <term ref="index:d14380e5312">Bernhard von Clairvaux, hl</term>
+               <term ref="index:d14380e6032">Böhmen</term>
+               <term ref="index:d14380e8225">Cilli</term>
+               <term ref="index:d14380e13828">Gaming</term>
+               <term ref="index:d14380e13897">Gaming ; Archiv ; Johannes III. Span von Mauerbach, Urkunde zur Bestellung des Johannes
          von Spanberg zum Prior in Olmütz 1446</term>
-            <term ref="index:d14380e14021">Gaming ; Bibliothek ; Epistola historica de eventibus et rebus per Europam gestis.
+               <term ref="index:d14380e14021">Gaming ; Bibliothek ; Epistola historica de eventibus et rebus per Europam gestis.
          Ms</term>
-            <term ref="index:d14380e14134">Gaming ; Bibliothek ; Honorius Augustodunensis, Libellus octo quaestionum. Ms</term>
-            <term ref="index:d14380e14141">Gaming ; Bibliothek ; Honorius Augustodunensis, Liber duodecim quaestionum. Ms</term>
-            <term ref="index:d14380e14149">Gaming ; Bibliothek ; Honorius Augustodunensis, Sacramentarium. Ms</term>
-            <term ref="index:d14380e14232">Gaming ; Bibliothek ; Johannes von Spanberg, Brief an Johannes Rormayr von Landshut.
+               <term ref="index:d14380e14134">Gaming ; Bibliothek ; Honorius Augustodunensis, Libellus octo quaestionum. Ms</term>
+               <term ref="index:d14380e14141">Gaming ; Bibliothek ; Honorius Augustodunensis, Liber duodecim quaestionum. Ms</term>
+               <term ref="index:d14380e14149">Gaming ; Bibliothek ; Honorius Augustodunensis, Sacramentarium. Ms</term>
+               <term ref="index:d14380e14232">Gaming ; Bibliothek ; Johannes von Spanberg, Brief an Johannes Rormayr von Landshut.
          Ms</term>
-            <term ref="index:d14380e14239">Gaming ; Bibliothek ; Johannes von Spanberg, *Predigten über den hl. Bernhard und über
+               <term ref="index:d14380e14239">Gaming ; Bibliothek ; Johannes von Spanberg, *Predigten über den hl. Bernhard und über
          die Prälatenwahl. Ms</term>
-            <term ref="index:d14380e14424">Gaming ; *Bote 1718</term>
-            <term ref="index:d14380e17493">Heiligenkreuz</term>
-            <term ref="index:d14380e18483">Höffner, Alberich</term>
-            <term ref="index:d14380e18623">Honorius Augustodunensis</term>
-            <term ref="index:d14380e18718">Honorius Augustodunensis ; Eucharistion. Ms. Melk</term>
-            <term ref="index:d14380e18726">Honorius Augustodunensis ; Eucharistion. Ms. Melk ; Abschrift von Sebastian Treger.
+               <term ref="index:d14380e14424">Gaming ; *Bote 1718</term>
+               <term ref="index:d14380e17493">Heiligenkreuz</term>
+               <term ref="index:d14380e18483">Höffner, Alberich</term>
+               <term ref="index:d14380e18623">Honorius Augustodunensis</term>
+               <term ref="index:d14380e18718">Honorius Augustodunensis ; Eucharistion. Ms. Melk</term>
+               <term ref="index:d14380e18726">Honorius Augustodunensis ; Eucharistion. Ms. Melk ; Abschrift von Sebastian Treger.
          Ms</term>
-            <term ref="index:d14380e18731">Honorius Augustodunensis ; Expositio in Psalmos</term>
-            <term ref="index:d14380e18753">Honorius Augustodunensis ; Libellus octo quaestionum. Ms. Gaming</term>
-            <term ref="index:d14380e18761">Honorius Augustodunensis ; Libellus octo quaestionum. Ms. Gaming ; Abschrift von
+               <term ref="index:d14380e18731">Honorius Augustodunensis ; Expositio in Psalmos</term>
+               <term ref="index:d14380e18753">Honorius Augustodunensis ; Libellus octo quaestionum. Ms. Gaming</term>
+               <term ref="index:d14380e18761">Honorius Augustodunensis ; Libellus octo quaestionum. Ms. Gaming ; Abschrift von
          Leopold Wydemann. Ms</term>
-            <term ref="index:d14380e18766">Honorius Augustodunensis ; Liber duodecim quaestionum. Ms. Gaming</term>
-            <term ref="index:d14380e18774">Honorius Augustodunensis ; Liber duodecim quaestionum. Ms. Gaming ; Abschrift von
+               <term ref="index:d14380e18766">Honorius Augustodunensis ; Liber duodecim quaestionum. Ms. Gaming</term>
+               <term ref="index:d14380e18774">Honorius Augustodunensis ; Liber duodecim quaestionum. Ms. Gaming ; Abschrift von
          Leopold Wydemann. Ms</term>
-            <term ref="index:d14380e18779">Honorius Augustodunensis ; Sacramentarium. Ms. Gaming</term>
-            <term ref="index:d14380e18787">Honorius Augustodunensis ; Sacramentarium. Ms. Gaming ; Abschrift von Leopold Wydemann.
+               <term ref="index:d14380e18779">Honorius Augustodunensis ; Sacramentarium. Ms. Gaming</term>
+               <term ref="index:d14380e18787">Honorius Augustodunensis ; Sacramentarium. Ms. Gaming ; Abschrift von Leopold Wydemann.
          Ms</term>
-            <term ref="index:d14380e20685">Johannes Rormayr von Landshut</term>
-            <term ref="index:d14380e20716">Johannes III. Span ; Urkunde zur Bestellung des Johannes von Spanberg zum Prior in
+               <term ref="index:d14380e20685">Johannes Rormayr von Landshut</term>
+               <term ref="index:d14380e20716">Johannes III. Span ; Urkunde zur Bestellung des Johannes von Spanberg zum Prior in
          Olmütz 1446</term>
-            <term ref="index:d14380e20724">Johannes III. Span ; Urkunde zur Bestellung des Johannes von Spanberg zum Prior in
+               <term ref="index:d14380e20724">Johannes III. Span ; Urkunde zur Bestellung des Johannes von Spanberg zum Prior in
          Olmütz 1446 ; Abschrift. Ms</term>
-            <term ref="index:d14380e20731">Johannes von Spanberg</term>
-            <term ref="index:d14380e20739">Johannes von Spanberg ; Brief an Johannes Rormayr von Landshut 1441. Ms. Gaming</term>
-            <term ref="index:d14380e20747">Johannes von Spanberg ; Brief an Johannes Rormayr von Landshut 1441. Ms. Gaming ;
+               <term ref="index:d14380e20731">Johannes von Spanberg</term>
+               <term ref="index:d14380e20739">Johannes von Spanberg ; Brief an Johannes Rormayr von Landshut 1441. Ms. Gaming</term>
+               <term ref="index:d14380e20747">Johannes von Spanberg ; Brief an Johannes Rormayr von Landshut 1441. Ms. Gaming ;
          Abschrift. Ms</term>
-            <term ref="index:d14380e20754">Johannes von Spanberg ; *Predigten über den hl. Bernhard und über die Prälatenwahl. Ms.
+               <term ref="index:d14380e20754">Johannes von Spanberg ; *Predigten über den hl. Bernhard und über die Prälatenwahl. Ms.
          Gaming</term>
-            <term ref="index:d14380e21539">Kartäuser ; spatiamentum.</term>
-            <term ref="index:d14380e21792">Kemmelbach</term>
-            <term ref="index:d14380e23472">Ladislaus „Postumus“</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e31270">Olmütz ; Kloster OCart</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e31781">Otloh von St. Emmeram ; Dialogus de tribus quaestionibus</term>
-            <term ref="index:d14380e31786">Otloh von St. Emmeram ; [Pseudo-Otloh] Epistola ad Reginwardum abbatem de translatione
+               <term ref="index:d14380e21539">Kartäuser ; spatiamentum.</term>
+               <term ref="index:d14380e21792">Kemmelbach</term>
+               <term ref="index:d14380e23472">Ladislaus „Postumus“</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e31270">Olmütz ; Kloster OCart</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e31781">Otloh von St. Emmeram ; Dialogus de tribus quaestionibus</term>
+               <term ref="index:d14380e31786">Otloh von St. Emmeram ; [Pseudo-Otloh] Epistola ad Reginwardum abbatem de translatione
          sancti Dionysii. Ms. Regensburg, St. Emmeram</term>
-            <term ref="index:d14380e31794">Otloh von St. Emmeram ; [Pseudo-Otloh] Epistola ad Reginwardum abbatem de translatione
+               <term ref="index:d14380e31794">Otloh von St. Emmeram ; [Pseudo-Otloh] Epistola ad Reginwardum abbatem de translatione
          sancti Dionysii. Ms. Regensburg, St. Emmeram ; Abschrift von Leopold Wydemann. Ms</term>
-            <term ref="index:d14380e32950">Petrus, hl</term>
-            <term ref="index:d14380e34429">Pez, Bernhard ; Konflikt mit dem Abt im Sommer 1718</term>
-            <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
+               <term ref="index:d14380e32950">Petrus, hl</term>
+               <term ref="index:d14380e34429">Pez, Bernhard ; Konflikt mit dem Abt im Sommer 1718</term>
+               <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
          1721–1729</term>
-            <term ref="index:d14380e34123">Pez, Bernhard ; *„Conspectus“</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
-            <term ref="index:d14380e36827">Regensburg ; St. Emmeram ; Bibliothek ; Pseudo-Otloh, Epistola ad Reginwardum.
+               <term ref="index:d14380e34123">Pez, Bernhard ; *„Conspectus“</term>
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+               <term ref="index:d14380e36827">Regensburg ; St. Emmeram ; Bibliothek ; Pseudo-Otloh, Epistola ad Reginwardum.
          Ms</term>
-            <term ref="index:d14380e41556">Steyerer, Anton</term>
-            <term ref="index:d14380e41587">Steyerer, Anton ; Commentarii pro historia Alberti II. ducis Austriae cognomento
+               <term ref="index:d14380e41556">Steyerer, Anton</term>
+               <term ref="index:d14380e41587">Steyerer, Anton ; Commentarii pro historia Alberti II. ducis Austriae cognomento
          Sapientis. Leipzig 1725</term>
-            <term ref="index:d14380e41618">Steyerer, Anton ; *Schreiber, der 1718 die Reinschrift der „Commentarii“
+               <term ref="index:d14380e41618">Steyerer, Anton ; *Schreiber, der 1718 die Reinschrift der „Commentarii“
          besorgt</term>
-            <term ref="index:d14380e43687">Ulrich II</term>
-            <term ref="index:d14380e43779">Ungarn, Ungarn</term>
-            <term ref="index:d14380e44215">Veith, Johann</term>
-            <term ref="index:d14380e44226">Veith, Martin</term>
-            <term ref="index:d14380e46291">Wilhelm Hofer</term>
-            <term ref="index:d14380e46310">Wilhelm Hofer ; Nekrolog von Gaming. Ms</term>
-            <term ref="index:d14380e46319">Wilhelm Hofer ; Professenkatalog von Gaming. Ms</term>
-            <term ref="index:d14380e46353">Wilhelm Raynaldi</term>
-            <term ref="index:d14380e46361">Wilhelm Raynaldi ; Brief an Herzog Albrecht III. von Österreich 1392</term></keywords></textClass>
+               <term ref="index:d14380e43687">Ulrich II</term>
+               <term ref="index:d14380e43779">Ungarn, Ungarn</term>
+               <term ref="index:d14380e44215">Veith, Johann</term>
+               <term ref="index:d14380e44226">Veith, Martin</term>
+               <term ref="index:d14380e46291">Wilhelm Hofer</term>
+               <term ref="index:d14380e46310">Wilhelm Hofer ; Nekrolog von Gaming. Ms</term>
+               <term ref="index:d14380e46319">Wilhelm Hofer ; Professenkatalog von Gaming. Ms</term>
+               <term ref="index:d14380e46353">Wilhelm Raynaldi</term>
+               <term ref="index:d14380e46361">Wilhelm Raynaldi ; Brief an Herzog Albrecht III. von Österreich 1392</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">LW erklärt, weshalb er einen ganzen Monat lang nicht an BP geschrieben hat: Er beabsichtigte, das Werk
                des Otloh von St. Emmeram („<rs ref="index:d14380e31786">Epistola ad Reginwardum</rs>“? „<rs ref="index:d14380e31781">Dialogus de tribus quaestionibus</rs>“?) bis zum Festtag des hl. Martin (11.
@@ -226,7 +240,7 @@
                hervorgehen soll, sofern er frei von Schuld ist; oder aber, dass BP sich in heilsamer Weise bessern
                soll, falls er Schuld trägt. LW schließt mit Grüßen an HP.</p>
             <p corresp="#seg10">In einem Postskriptum ersucht LW darum, das mitgesendete Schreiben von <rs ref="index:d14380e18483">Alberich Höffner</rs> bei passender Gelegenheit zurückzusenden.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -242,14 +256,17 @@
                   88v–92r. Diese Handschrift dürfte in den Monaten vor diesem Brief LW vorgelegen
                   haben, der aus ihr mehrere andere Texte abschrieb; ihre letzte vorangegangene
                   Erwähnung lässt vermuten, dass sie sich zum Zeitpunkt dieses Briefes noch in
-                  Gaming befand: vgl. <ref type="letter" target="letter:944">944</ref> <ref target="letter:944#seg4">4</ref>, <ref type="letter" target="letter:973">973</ref> <ref target="letter:973#seg4">4</ref>. Es wäre somit plausibel, dass hier ein weiterer Text aus
+                  Gaming befand: vgl. <ref type="letter" target="letter:944">944</ref>
+               <ref target="letter:944#seg4">4</ref>, <ref type="letter" target="letter:973">973</ref>
+               <ref target="letter:973#seg4">4</ref>. Es wäre somit plausibel, dass hier ein weiterer Text aus
                   derselben Handschrift gemeint ist. Zu der „Epistola“ vgl. <rs type="bibl" ref="bibl:15246">Bischoff, Literarisches und künstlerisches Leben</rs> 133f.;
                      <rs type="bibl" ref="bibl:17676">Kraus, Translatio S. Dionysii</rs> 21–33. –
                   Die einzige von BP edierte Schrift Otlohs, für die LW als Bearbeiter aufscheint,
                   ist hingegen der „Dialogus de tribus quaestionibus“: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 3/2 col. 141–250. Als Vorlagen genannt
                   werden dafür zwei Handschriften aus Lambach respektive aus Heiligenkreuz. Letztere
                   ist heute StiB Heiligenkreuz, Cod. 148; vgl. <rs type="bibl" ref="bibl:16688">Gsell, Verzeichniss</rs> 158; <rs type="bibl" ref="bibl:20140">Vollmann,
-                     Otloh</rs> col. 1119. Zur Lambacher Handschrift vgl. <ref type="letter" target="letter:411">411</ref> <ref target="letter:411#seg8">8</ref>. Der Zeitpunkt der Bearbeitung durch LW ist nicht näher
+                     Otloh</rs> col. 1119. Zur Lambacher Handschrift vgl. <ref type="letter" target="letter:411">411</ref>
+               <ref target="letter:411#seg8">8</ref>. Der Zeitpunkt der Bearbeitung durch LW ist nicht näher
                   bekannt, auch seine Briefe der folgenden Jahre bieten keinen Hinweis; es kann
                   deshalb nicht ausgeschlossen werden, dass hier davon die Rede ist.</p>
          </note>
@@ -262,7 +279,8 @@
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
             <mentioned> Stamsensi Chronico</mentioned>
             <p> Zu der Stamser Chronik und ihrer Gaminger
-                  Überlieferung vgl. <ref type="letter" target="letter:898">898</ref> <ref target="letter:898#seg6">6</ref>.</p>
+                  Überlieferung vgl. <ref type="letter" target="letter:898">898</ref>
+               <ref target="letter:898#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
             <mentioned> Commentarios suos pro typo</mentioned>
@@ -271,13 +289,15 @@
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg1">
             <mentioned>Vadit ... Kemmelbachium</mentioned>
             <p> Vgl. <ref type="letter" target="letter:888">888</ref>
-                  <ref target="letter:888#seg10">10</ref>.</p>
+               <ref target="letter:888#seg10">10</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
             <mentioned>specimen</mentioned>
             <p>Wohl eine Aufstellung der beabsichtigten Inhalte des
-                  „Thesaurus“ ähnlich jener in <ref type="letter" target="letter:1020">1020</ref> <ref target="letter:1020#seg3">3</ref> und
-                  <ref target="letter:1020#seg4">4</ref>. Später sprach LW von einem „Conspectus“: vgl. <ref type="letter" target="letter:1023">1023</ref> <ref target="letter:1023#seg1">1</ref>.</p>
+                  „Thesaurus“ ähnlich jener in <ref type="letter" target="letter:1020">1020</ref>
+               <ref target="letter:1020#seg3">3</ref> und
+                  <ref target="letter:1020#seg4">4</ref>. Später sprach LW von einem „Conspectus“: vgl. <ref type="letter" target="letter:1023">1023</ref>
+               <ref target="letter:1023#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
             <mentioned>Quaestio illa ... Petrum</mentioned>
@@ -324,7 +344,8 @@
                   BP bei mehreren Gelegenheiten Auszüge des umfangreichen Werkes, die insgesamt nur
                   etwa ein Viertel des Textes umfassen: <rs type="bibl" ref="bibl:36782">Pez,
                      Thesaurus</rs> 2/1 col. 95–154; 5 col. 675–732, 917–964, 1621–1876. Zur Vorlage
-                  vgl. <ref type="letter" target="letter:1026">1026</ref> <ref target="letter:1026#seg2">2</ref>. Zu dem Werk vgl. <rs type="bibl" ref="bibl:16260">Flint, Honorius Augustodunensis</rs> 146f., 163; <rs type="bibl" ref="bibl:16320">Freytag, Honorius</rs> col. 127; <rs type="bibl" ref="bibl:16434">Garrigues, Œuvre</rs> 38 54–61.</p>
+                  vgl. <ref type="letter" target="letter:1026">1026</ref>
+               <ref target="letter:1026#seg2">2</ref>. Zu dem Werk vgl. <rs type="bibl" ref="bibl:16260">Flint, Honorius Augustodunensis</rs> 146f., 163; <rs type="bibl" ref="bibl:16320">Freytag, Honorius</rs> col. 127; <rs type="bibl" ref="bibl:16434">Garrigues, Œuvre</rs> 38 54–61.</p>
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg6">
             <mentioned>In epistola ... nostri generalis</mentioned>
@@ -346,7 +367,8 @@
                   ermittelnden, wohl verlorenen Gaminger Handschrift gedruckt: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 2/3 col. 341–352; vgl. <rs type="bibl" ref="bibl:16522">Glassner, Thesaurus</rs> 370. Es handelt sich vorgeblich um
                   den Bericht von einem Teilnehmer am Kreuzzug nach Belgrad 1456 an einen Ordensmann
                   namens „Heinrich“, welchen LW in der Folge mit dem Gaminger Kartäuser und späteren
-                  Prior Heinrich von Eckenfeld zu identifizieren versuchte: vgl. <ref type="letter" target="letter:1023">1023</ref> <ref target="letter:1023#seg9">9</ref>. Zu dem Brief selbst ist kaum etwas bekannt. Als Fiktion
+                  Prior Heinrich von Eckenfeld zu identifizieren versuchte: vgl. <ref type="letter" target="letter:1023">1023</ref>
+               <ref target="letter:1023#seg9">9</ref>. Zu dem Brief selbst ist kaum etwas bekannt. Als Fiktion
                   eingestuft wird er von <rs type="bibl" ref="bibl:17092">Hofer, Sieger von
                      Belgrad</rs> 211.</p>
          </note>
@@ -403,13 +425,15 @@
          </note>
          <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg8">
             <mentioned>Gemnico indutus</mentioned>
-            <p><rs type="bibl" ref="bibl:20524">Zeißberg,
+            <p>
+               <rs type="bibl" ref="bibl:20524">Zeißberg,
                      Gaming</rs> 587; vgl. <rs type="bibl" ref="bibl:17806">Lampel, Gaming</rs> 275.
                </p>
          </note>
          <note target="#range(right('n21'), left('n21e'))" n="21" anchored="false" corresp="#seg8">
             <mentioned>catalogo ... kalendario</mentioned>
-            <p><rs type="bibl" ref="bibl:20524">Zeißberg,
+            <p>
+               <rs type="bibl" ref="bibl:20524">Zeißberg,
                      Gaming</rs> 574, 586.</p>
          </note>
          <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg9">
@@ -424,9 +448,11 @@
          <note target="#range(right('n24'), left('n24e'))" n="24" anchored="false" corresp="#seg9">
             <mentioned> in controversia</mentioned>
             <p> Dies kann sich auf den Streit mit Gentilotti
-                  beziehen: vgl. <ref type="letter" target="letter:997">997</ref> <ref target="letter:997#seg1">1</ref> bis <ref target="letter:997#seg4">4</ref>. Inwieweit LW
+                  beziehen: vgl. <ref type="letter" target="letter:997">997</ref>
+               <ref target="letter:997#seg1">1</ref> bis <ref target="letter:997#seg4">4</ref>. Inwieweit LW
                   auch über BPs konventsinterne Schwierigkeiten unterrichtet war, ist unklar; zu
-                  diesen vgl. Einleitung, Abschnitt I.1; sowie <ref type="letter" target="letter:977">977</ref>, <ref type="letter" target="letter:992">992</ref> <ref target="letter:992#seg3">3</ref>.</p>
+                  diesen vgl. Einleitung, Abschnitt I.1; sowie <ref type="letter" target="letter:977">977</ref>, <ref type="letter" target="letter:992">992</ref>
+               <ref target="letter:992#seg3">3</ref>.</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -439,15 +465,20 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo religiosissimo ac charissimo in Christo patri Bernardo Pezio frater Leopoldus Wydeman salutem plurimam dicit.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo religiosissimo ac charissimo in Christo patri Bernardo Pezio frater Leopoldus Wydeman salutem plurimam dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Breviter reddo rationem, cur toto mensis spatio tibi nihil scripserim, Bernarde optime. Erat intentio mea egregium <anchor xml:id="n1"/>illud Othloni opus<anchor xml:id="n1e"/> ad festum sancti Martini perficere perfectumque una cum<anchor xml:id="n2"/> Honorii Eucharistico<anchor xml:id="n2e"/> et<anchor xml:id="n3"/> Stamsensi Chronico<anchor xml:id="n3e"/> ad te mittere. Fecissem utrumque, si non obicem ex improviso iniecisset pater Steyerus Societatis Jesu. Urget enim ille dubiorum quorundam a me olim sibi positorum solutionem, maxime dum iam amanuensi, ut scribit,<anchor xml:id="n4"/> Commentarios suos pro typo<anchor xml:id="n4e"/> dederit transcribendos. Ut ergo illi ex parte satisfacerem, Othlonus tantisper seponendus fuit; quem tamen intra biduum perficiam, revidebo et, si occasio commoda adfuerit, ad te cum reliquis dirigam, sic ut ante festum sanctae Catharinae sis habiturus. Quod si occasio non daretur ex parte mea, tuum erit mihi de ea post praedictum festum providere. <anchor xml:id="n5"/>Vadit tabellarius quidem noster bis in hebdomada Kemmelbachium<anchor xml:id="n5e"/> et tenetur ea, quae sibi committuntur, illuc deferre. Sed qualiter Kemmelbachio Mellicium sint similia transportanda et per quem, ut secure veniant, ignoro. </ab>
          <ab resp="#editor" xml:id="seg2">De tuo Anecdotorum thesauro iam ad typographum ex parte una destinato tibi summe congaudeo et, ut eundem continues, adhortor. Quod etiam tibi placuerit Thesauri huius <anchor xml:id="n6"/>specimen<anchor xml:id="n6e"/> mihi communicare, perquam mihi gratum fuit et acceptum. </ab>
          <ab resp="#editor" xml:id="seg3">De Honorii opusculis a me pridem descriptis et ferme oblivioni traditis pauca habeo, de quibus te certiorem reddere possim. <anchor xml:id="n7"/>Quaestio illa de praecedentia inter Michaelem et Petrum<anchor xml:id="n7e"/> forte curiosior erit quam solidior; et <anchor xml:id="n8"/>in aliis quaestionibus<anchor xml:id="n8e"/> de angelis dubito, an omnia moderno scribendi stylo conveniant. </ab>
-         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n9"/>Sacramentarium<anchor xml:id="n9e"/> ita descripsi, uti in manuscripto codice inveni; in quo inter describendum displicuit, quod de eadem materia, verbi gratia<anchor xml:id="n10"/> Septuagesima<anchor xml:id="n10e"/>, in diversis locis agat. <pb n="1v"/> Videtur etiam hoc <anchor xml:id="n11"/>Sacramentarium<anchor xml:id="n11e"/>, licet satis prolixum sit, esse in meo manuscripto incompletum. Absque puncto enim finali et absque explicit operi finis imponitur. </ab>
+         <ab resp="#editor" xml:id="seg4">
+            <anchor xml:id="n9"/>Sacramentarium<anchor xml:id="n9e"/> ita descripsi, uti in manuscripto codice inveni; in quo inter describendum displicuit, quod de eadem materia, verbi gratia<anchor xml:id="n10"/> Septuagesima<anchor xml:id="n10e"/>, in diversis locis agat. <pb n="1v"/> Videtur etiam hoc <anchor xml:id="n11"/>Sacramentarium<anchor xml:id="n11e"/>, licet satis prolixum sit, esse in meo manuscripto incompletum. Absque puncto enim finali et absque explicit operi finis imponitur. </ab>
          <ab resp="#editor" xml:id="seg5">De <anchor xml:id="n12"/>Commentario eius in Psalmos<anchor xml:id="n12e"/>, cum opus hoc fusissimum vix ab ullo unquam describetur, forsitan non inanis foret labor, si aliqua saltem eius pars eruditis communicaretur. Vix enim erit, qui vel levem saltem eius habeat notitiam. Saltem non memini me in ullo commentatore legisse citationem ex Honorio desumptam. </ab>
-         <ab resp="#editor" xml:id="seg6"><anchor xml:id="n13"/>In epistola reverendissimi patris nostri generalis<anchor xml:id="n13e"/> Albertus III. dux Austriae vocatur fundator Cartusiae nostrae eo iure, quo et fundatorum filii, quin et nepotes quandoque appellantur fundatores. </ab>
-         <ab resp="#editor" xml:id="seg7"><anchor xml:id="n14"/>Epistolam utcunque prolixam post caedem Ulrici Ciliensis et ante mortem Ladislai regis Hungariae et Bohemiae scriptam a quodam arcis alicuius praefecto ad Henricum<anchor xml:id="n14e"/> religiosum proxime describam. Plures huiuscemodi epistolas vel non habeo vel, si habeo, tales non sunt, ut sine infamiae nota publicari possint. </ab>
-         <ab resp="#editor" xml:id="seg8"><anchor xml:id="n15"/>Addo hic unam<anchor xml:id="n15e"/> satis brevem <anchor xml:id="n16"/>a Joanne, olim abbate ad Sanctam Crucem in Austria, novitio tunc Gemnicensi<anchor xml:id="n16e"/>, scriptam <anchor xml:id="n17"/>alteri, qui etiam abbas fuisse creditur<anchor xml:id="n17e"/>. Si haec tibi placuerit, utere illa. Qua ut melius utaris, ecce <anchor xml:id="n18"/>adest epistola reverendi patris Alberici<anchor xml:id="n18e"/> ad me scripta, qua, quis Joannes ille fuerit, innotescet. Scribit quidem ille, quo Joannes ille post abbatiam devenerit, non constare. Verum illud optime novit noster pater Wilhelmus Höffer anno 1446 die 18. Aprilis (id est semitertio mense, antequam Joannes in priorem Cartusiae Vallis Josaphat <add place="left-margin">in Ollmutz</add> iuxta <anchor xml:id="n19"/>patentes hic appositas<anchor xml:id="n19e"/> institueretur) in <anchor xml:id="n20"/>Gemnico indutus<anchor xml:id="n20e"/>. Ipse ergo de Joanne in <anchor xml:id="n21"/>catalogo professorum sui temporis haec habet: Joannes de Sancta Cruce indutus anno 1441 Martii 21. Et clarius in kalendario<anchor xml:id="n21e"/> mortuorum idem Wilhelmus ita scribit: Obiit die 27. Junii Joannes de Sancta Cruce abbas, prior in Ollmutz 1449. </ab>
+         <ab resp="#editor" xml:id="seg6">
+            <anchor xml:id="n13"/>In epistola reverendissimi patris nostri generalis<anchor xml:id="n13e"/> Albertus III. dux Austriae vocatur fundator Cartusiae nostrae eo iure, quo et fundatorum filii, quin et nepotes quandoque appellantur fundatores. </ab>
+         <ab resp="#editor" xml:id="seg7">
+            <anchor xml:id="n14"/>Epistolam utcunque prolixam post caedem Ulrici Ciliensis et ante mortem Ladislai regis Hungariae et Bohemiae scriptam a quodam arcis alicuius praefecto ad Henricum<anchor xml:id="n14e"/> religiosum proxime describam. Plures huiuscemodi epistolas vel non habeo vel, si habeo, tales non sunt, ut sine infamiae nota publicari possint. </ab>
+         <ab resp="#editor" xml:id="seg8">
+            <anchor xml:id="n15"/>Addo hic unam<anchor xml:id="n15e"/> satis brevem <anchor xml:id="n16"/>a Joanne, olim abbate ad Sanctam Crucem in Austria, novitio tunc Gemnicensi<anchor xml:id="n16e"/>, scriptam <anchor xml:id="n17"/>alteri, qui etiam abbas fuisse creditur<anchor xml:id="n17e"/>. Si haec tibi placuerit, utere illa. Qua ut melius utaris, ecce <anchor xml:id="n18"/>adest epistola reverendi patris Alberici<anchor xml:id="n18e"/> ad me scripta, qua, quis Joannes ille fuerit, innotescet. Scribit quidem ille, quo Joannes ille post abbatiam devenerit, non constare. Verum illud optime novit noster pater Wilhelmus Höffer anno 1446 die 18. Aprilis (id est semitertio mense, antequam Joannes in priorem Cartusiae Vallis Josaphat <add place="left-margin">in Ollmutz</add> iuxta <anchor xml:id="n19"/>patentes hic appositas<anchor xml:id="n19e"/> institueretur) in <anchor xml:id="n20"/>Gemnico indutus<anchor xml:id="n20e"/>. Ipse ergo de Joanne in <anchor xml:id="n21"/>catalogo professorum sui temporis haec habet: Joannes de Sancta Cruce indutus anno 1441 Martii 21. Et clarius in kalendario<anchor xml:id="n21e"/> mortuorum idem Wilhelmus ita scribit: Obiit die 27. Junii Joannes de Sancta Cruce abbas, prior in Ollmutz 1449. </ab>
          <ab resp="#editor" xml:id="seg9">Habentur apud nos <anchor xml:id="n22"/>varii de sancto Bernardo, de electione praelati sermones<anchor xml:id="n22e"/> prolixi ab hoc Joanne habiti, de quibus tempus non sinit, ut plura pro hac vice scribam, praesertim cum hodie<anchor xml:id="n23"/> spatiamentum<anchor xml:id="n23e"/> fuerit, a quo mihi abesse <pb n="2r"/> non licuit. Eadem ex causa, et quia iam tenebrescit, dum haec raptim scribo, epistolam cogor finire. Sacrum pro te in festo sancti Lucae celebravi ea intentione, ut<anchor xml:id="n24"/> in controversia<anchor xml:id="n24e"/>, quam habes, victor evadas, si tamen culpa vacas; aut resipiscas salubriter, si culpam habes. Vale in Domino semper cum fratre tuo.</ab>
          <closer>Gemnici 16. Novembris 1718.</closer>
          <closer xml:id="seg10">P.S. Epistolam reverendi patris Alberici opportuno tempore mihi remitte et iterum vale.</closer>

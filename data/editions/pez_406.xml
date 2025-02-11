@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="406" xml:id="pez-0406">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Benedikt Gentilotti an Bernhard Pez. 1715-06-22. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">406</idno>
          </publicationStmt>
          <seriesStmt>
@@ -56,10 +68,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -89,7 +102,7 @@
             <p corresp="#seg3">BG übermittelt einen Brief <rs ref="index:d14380e26993">René Massuets</rs> (<ref type="letter" target="letter:410">410</ref>?), in dem dieser über <rs ref="index:d14380e39962">Anselm Schramb</rs> spöttelt (<rs type="cit" ref="citIndex:ix2_d653e1791">Plautino sale perfricat</rs>). <rs ref="index:d14380e39962">Schramb</rs> scheint an seiner Absicht festzuhalten, eine Verteidigungsschrift für den Benediktinerorden zu publizieren („<rs ref="index:d14380e39987">Antilogia</rs>“). Er ist kürzlich in der <rs ref="index:d14380e45820">Hofbibliothek</rs> erschienen und hat BG nach dem Präfekten der <rs ref="index:d14380e37822">Indexkongregation</rs> (<rs ref="index:d10854e8753">Tommaso Ferrari</rs>) gefragt, weil er diesem offenbar seine Schrift widmen will, um auf diesem Wege das Werk seines Gegners (<rs ref="index:d14380e11508">Erath, „Commentarius in Regulam sancti Augustini“</rs>) verbieten zu lassen. <rs ref="index:d14380e39962">Schramb</rs> hat dabei versucht zu verbergen, dass er selbst der Verfasser der Verteidigungsschrift ist. BPs <ref type="letter" target="letter:405">405</ref> und <rs ref="index:d14380e26993">Massuets</rs> Briefe hatte BG noch nicht erhalten, so konnte er sie gegenüber <rs ref="index:d14380e39962">Schramb</rs> auch nicht erwähnen.</p>
             <p corresp="#seg4">In demselben Brief spricht <rs ref="index:d14380e26993">Massuet</rs> auch von <rs ref="index:d14380e29435">Bernard de Montfaucons</rs> „<rs ref="index:d10854e20511">Bibliotheca Coisliniana</rs>“, die dieser BG als Geschenk senden will; dies erwähnt auch <rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs> in einem Brief aus <rs ref="index:d14380e16986">Hamburg</rs>, den BG am Vortag erhalten hat. Darin beklagt sich <rs ref="index:d14380e4006">Bartenstein</rs> über die grundlosen Hoffnungen, welche ihm in <rs ref="index:d14380e45571">Wien</rs> gemacht werden. BG fühlt sich dabei zu Unrecht angesprochen; er schätzt <rs ref="index:d14380e4006">Bartenstein</rs> zwar, doch lässt dieser in manchem ein reifes Urteil vermissen.</p>
             <p corresp="#seg5">Auf dem vergangenen (<rs ref="index:d14380e45571">Wiener</rs>) <rs ref="index:d10854e33233">Büchermarkt</rs> hat BG die folgenden Werke für seine <rs ref="index:d14380e14924">Bibliothek</rs> erworben: die „<rs ref="index:d10854e11859">Opera genealogico-historica de Westphalia et Saxonia Inferiori“</rs> von <rs ref="index:d10854e11853">Hamelmann</rs>, die <rs ref="index:d10854e8590">Bände 6 und 7</rs> der <rs ref="index:d10854e8586">„Bibliotheca Graeca“ von Fabricius</rs>, <rs ref="index:d10854e34121">Wolfs „Bibliotheca Hebraea“</rs>, <rs ref="index:d10854e19227">Meiers „Origines et antiquitates Plessenses“</rs> sowie andere minder bedeutende Bücher. BG bittet um Mitteilung von Neuigkeiten und grüßt <rs ref="index:d14380e34537">HP</rs>.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -129,20 +142,25 @@
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
             <mentioned>Litteras ... Massueti</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:396">396</ref> <ref target="letter:396#seg2">2</ref>. Die Formulierung BGs lässt in diesem
+            <p>Vgl. <ref type="letter" target="letter:396">396</ref>
+               <ref target="letter:396#seg2">2</ref>. Die Formulierung BGs lässt in diesem
                   Fall nicht eindeutig erkennen, ob er selbst einen Brief Massuets erhalten hatte
                   und an BP weitergab, oder ob auch hier von einem von BP weitergereichten Brief
                   Massuets an diesen die Rede ist, den BG nach der Lektüre retournierte. Es müsste
                   sich diesfalls wohl um den verlorenen Brief <ref type="letter" target="letter:410">410</ref> handeln,
-                  der scharfe Kritik an Schramb enthalten zu haben scheint (vgl. <ref type="letter" target="letter:411">411</ref> <ref target="letter:411#seg1">1</ref>).</p>
+                  der scharfe Kritik an Schramb enthalten zu haben scheint (vgl. <ref type="letter" target="letter:411">411</ref>
+               <ref target="letter:411#seg1">1</ref>).</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>Anselmum ... perfricat</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:384">384</ref> <ref target="letter:384#seg11">11</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:384">384</ref>
+               <ref target="letter:384#seg11">11</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
             <mentioned>in cuius nomine</mentioned>
-            <p>Zu den Plänen Schrambs für die Widmung der „Antilogia“ vgl. <ref type="letter" target="letter:401">401</ref> <ref target="letter:401#seg1">1</ref> und <ref target="letter:401#seg6">6</ref>, <ref type="letter" target="letter:427">427</ref> <ref target="letter:427#seg3">3</ref>; zu
+            <p>Zu den Plänen Schrambs für die Widmung der „Antilogia“ vgl. <ref type="letter" target="letter:401">401</ref>
+               <ref target="letter:401#seg1">1</ref> und <ref target="letter:401#seg6">6</ref>, <ref type="letter" target="letter:427">427</ref>
+               <ref target="letter:427#seg3">3</ref>; zu
                   den weiteren Aspekten dieser Angelegenheit vgl. Einleitung, Abschnitte I.1 und
                   I.5.</p>
          </note>
@@ -153,7 +171,7 @@
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
             <mentioned>nundinis</mentioned>
             <p>Gemeint ist wohl der Wiener „Ascensionis-Markt“; vgl. <ref type="letter" target="letter:156">156</ref>
-                  <ref target="letter:156#seg7">7</ref>. Das Fest Christi Himmelfahrt war 1715 auf den 30. Mai gefallen.</p>
+               <ref target="letter:156#seg7">7</ref>. Das Fest Christi Himmelfahrt war 1715 auf den 30. Mai gefallen.</p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
             <mentioned>mihi comparavi</mentioned>
@@ -166,11 +184,14 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Summe venerando et eruditissimo viro domno Bernardo Pez monacho et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilottus ab Engelsbrun.</opener>
+         <opener>
+            <pb n="1r"/> Summe venerando et eruditissimo viro domno Bernardo Pez monacho et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilottus ab Engelsbrun.</opener>
          <ab resp="#editor" xml:id="seg1">Tibi gratulor, mihi gaudeo te cum suavissimo fratre tuo <anchor xml:id="n1"/>ex nobili illa peregrinatione<anchor xml:id="n1e"/> ad coenobium tuum non modo salvum ac incolumem, sed et praeclaris spoliis onustum revertisse. Eas ego membranas cum fabuloso Phryxi vellere non contenderim ob emolumentum, quod ad rempublicam inde redibit, cui tum demum peregrinationis tuae fructus constabit, cum auctores illos e bibliothecarum tumulis ac fasciis excitatos in lucem protrahes; qua in re nolim σπεύδοντα ὀξύνειν. Quod vero mihi id praecipuum esse vis, ut, priusquam in vulgus exeant, mihi innotescant, magno me tibi beneficio adstringis facisque rem dignam comitate tua et summo meo in te amore et observantia. </ab>
          <ab resp="#editor" xml:id="seg2">Prae ceteris <anchor xml:id="n2"/>Bernardi Norici<anchor xml:id="n2e"/> accurata descriptio, quam nomine fratris tui polliceris, mihi erit gratissima. Sed heus tu virorum optime! num codices Sanflorianenses sunt splendide exornati et aureos umbilicos <pb n="1v"/> habent? Nullus dubito, quin caput unctius inde retuleris, et opulentissimus illius loci coenobiarcha te <anchor xml:id="n3"/>bene nummatum dimiserit<anchor xml:id="n3e"/>. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n4"/>Litteras clarissimi Massueti<anchor xml:id="n4e"/>, quae me vehementer delectarunt, ad has adiungam. Iocatur docte et eleganter, et amicum nostrum patrem <anchor xml:id="n5"/>Anselmum Plautino sale perfricat<anchor xml:id="n5e"/>. Is tamen non videtur edendae Apologiae suae consilium abiecisse. Convenit enim is me nuper in bibliotheca caesarea et petiit sibi significari nomen praefecti illius purpuratorum collegii, cui expendendorum et proscribendorum librorum cura incumbit, vulgo congregationem indicis vocant; <anchor xml:id="n6"/>in cuius nomine<anchor xml:id="n6e"/>, ut ex sermone eius conicere potui, ordinis sui vindicias proferre velle videtur eoque pacto, ut adversarii liber patrum illorum decreto e manibus hominum excutiatur, efficere. Ille tamen se illius Apologiae auctorem esse dissimulavit; ceterum <pb n="2r"/> de tuis et Massueti litteris ad eum ne verbum quidem; necdum enim eas acceperam. </ab>
-         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n7"/>De catalogo manuscriptorum Graecorum bibliothecae Coislinianae<anchor xml:id="n7e"/>, quem celeberrimus Montefalconius mihi dono mittit, eadem atque Massuetus nuntiat Bartensteinius noster in litteris Hamburgi scriptis, quae heri perlatae sunt. Rabiosulae illae et stomachi plenae sunt ob longam et, ut ego ominor, inanem spem, qua producitur ab iis, qui luculentas hinc ei conditiones ostenderunt. Eorum in numero cum ego minime sim, inique facit, quod mihi etiam non dissimulanter irascatur. Eum iuvenem plurimi merito suo facio et in oculis fero; iudicium tamen, quod nondum adolevit, in nonnullis requiro. </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n4"/>Litteras clarissimi Massueti<anchor xml:id="n4e"/>, quae me vehementer delectarunt, ad has adiungam. Iocatur docte et eleganter, et amicum nostrum patrem <anchor xml:id="n5"/>Anselmum Plautino sale perfricat<anchor xml:id="n5e"/>. Is tamen non videtur edendae Apologiae suae consilium abiecisse. Convenit enim is me nuper in bibliotheca caesarea et petiit sibi significari nomen praefecti illius purpuratorum collegii, cui expendendorum et proscribendorum librorum cura incumbit, vulgo congregationem indicis vocant; <anchor xml:id="n6"/>in cuius nomine<anchor xml:id="n6e"/>, ut ex sermone eius conicere potui, ordinis sui vindicias proferre velle videtur eoque pacto, ut adversarii liber patrum illorum decreto e manibus hominum excutiatur, efficere. Ille tamen se illius Apologiae auctorem esse dissimulavit; ceterum <pb n="2r"/> de tuis et Massueti litteris ad eum ne verbum quidem; necdum enim eas acceperam. </ab>
+         <ab resp="#editor" xml:id="seg4">
+            <anchor xml:id="n7"/>De catalogo manuscriptorum Graecorum bibliothecae Coislinianae<anchor xml:id="n7e"/>, quem celeberrimus Montefalconius mihi dono mittit, eadem atque Massuetus nuntiat Bartensteinius noster in litteris Hamburgi scriptis, quae heri perlatae sunt. Rabiosulae illae et stomachi plenae sunt ob longam et, ut ego ominor, inanem spem, qua producitur ab iis, qui luculentas hinc ei conditiones ostenderunt. Eorum in numero cum ego minime sim, inique facit, quod mihi etiam non dissimulanter irascatur. Eum iuvenem plurimi merito suo facio et in oculis fero; iudicium tamen, quod nondum adolevit, in nonnullis requiro. </ab>
          <ab resp="#editor" xml:id="seg5">His <anchor xml:id="n8"/>nundinis<anchor xml:id="n8e"/> Hamelmanni Westphalica, Fabricii Bibliothecae Graecae libros sextum et septimum, Wolfii Bibliothecam Hebraeam, Antiquitates Plessenses et alios levioris momenti libros <add place="above">mihi</add> comparavi. Tu si quid novi <pb n="2v"/> nactus es, fac me certiorem. Vale et domnum Hieronymum fratrem tuum ex me plurimum saluta.</ab>
          <closer>Vindobona X. Kalendas Julias MDCCXV.</closer>
       </body>

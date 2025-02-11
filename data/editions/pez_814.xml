@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="814" xml:id="pez-0814">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Buchels an Bernhard Pez. 1717-08-26. Düsseldorf.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">814</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Auf 1v gibt JB abschriftlich Text aus der Neusser Handschrift von Andreas Langs „Catalogus“ wieder, wobei er auch Textverlust ausweist. Dieser wird hier, in Analogie zu JBs Schreibweise, mit — wiedergegeben. Zu den bei Glassner, Verzeichnis 203, wiedergegebenen Verweisen vgl. 699.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -78,159 +90,161 @@
                <ptr type="mentions" target="letter:805"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e820">Albrecht V</term>
-            <term ref="index:d14380e940">Aldhelm von Malmesbury, hl</term>
-            <term ref="index:d14380e968">Alexander de Villa Dei</term>
-            <term ref="index:d14380e1014">Alkuin</term>
-            <term ref="index:d14380e1119">Alphanus von Salerno</term>
-            <term ref="index:d14380e1617">*Andreas von Hamerhusen</term>
-            <term ref="index:d14380e1694">Angelomus von Luxeuil</term>
-            <term ref="index:d14380e2227">Anonyme Werke ; Cronica praesulum et archiepiscoporum Coloniensis ecclesiae. *Ms.
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e820">Albrecht V</term>
+               <term ref="index:d14380e940">Aldhelm von Malmesbury, hl</term>
+               <term ref="index:d14380e968">Alexander de Villa Dei</term>
+               <term ref="index:d14380e1014">Alkuin</term>
+               <term ref="index:d14380e1119">Alphanus von Salerno</term>
+               <term ref="index:d14380e1617">*Andreas von Hamerhusen</term>
+               <term ref="index:d14380e1694">Angelomus von Luxeuil</term>
+               <term ref="index:d14380e2227">Anonyme Werke ; Cronica praesulum et archiepiscoporum Coloniensis ecclesiae. *Ms.
          Bibliothek Buchels</term>
-            <term ref="index:d14380e2725">Ansbert, Hl</term>
-            <term ref="index:d14380e2909">Arabien, arabische Sprache und Schrift</term>
-            <term ref="index:d14380e3416">Augustinus, hl ; De civitate Dei. Ms</term>
-            <term ref="index:d14380e3528">Aversa</term>
-            <term ref="index:d14380e3780">Bamberg ; Michelsberg</term>
-            <term ref="index:d14380e4142">Baudri von Bourgueil</term>
-            <term ref="index:d14380e5228">Bergamo</term>
-            <term ref="index:d14380e5273">Bernardus Cassinensis</term>
-            <term ref="index:d14380e5460">Berno</term>
-            <term ref="index:d14380e5494">Bertharius</term>
-            <term ref="index:d14380e6161">Bolsward</term>
-            <term ref="index:d14380e6394">Bourgueil</term>
-            <term ref="index:d14380e6616">Brauweiler</term>
-            <term ref="index:d14380e6630">Brauweiler ; *Bibliothekar 1716</term>
-            <term ref="index:d14380e6980">Buchels, Johann ; Bibliothek</term>
-            <term ref="index:d14380e6990">Buchels, Johann ; Bibliothek ; Caesarius von Heisterbach, Vita, passio et miracula
+               <term ref="index:d14380e2725">Ansbert, Hl</term>
+               <term ref="index:d14380e2909">Arabien, arabische Sprache und Schrift</term>
+               <term ref="index:d14380e3416">Augustinus, hl ; De civitate Dei. Ms</term>
+               <term ref="index:d14380e3528">Aversa</term>
+               <term ref="index:d14380e3780">Bamberg ; Michelsberg</term>
+               <term ref="index:d14380e4142">Baudri von Bourgueil</term>
+               <term ref="index:d14380e5228">Bergamo</term>
+               <term ref="index:d14380e5273">Bernardus Cassinensis</term>
+               <term ref="index:d14380e5460">Berno</term>
+               <term ref="index:d14380e5494">Bertharius</term>
+               <term ref="index:d14380e6161">Bolsward</term>
+               <term ref="index:d14380e6394">Bourgueil</term>
+               <term ref="index:d14380e6616">Brauweiler</term>
+               <term ref="index:d14380e6630">Brauweiler ; *Bibliothekar 1716</term>
+               <term ref="index:d14380e6980">Buchels, Johann ; Bibliothek</term>
+               <term ref="index:d14380e6990">Buchels, Johann ; Bibliothek ; Caesarius von Heisterbach, Vita, passio et miracula
          beati Engelberti. Ms</term>
-            <term ref="index:d14380e6997">Buchels, Johann ; Bibliothek ; Caesarius von Heisterbach, Vita sanctae Elyzabeth
+               <term ref="index:d14380e6997">Buchels, Johann ; Bibliothek ; Caesarius von Heisterbach, Vita sanctae Elyzabeth
          lantgraviae. Ms</term>
-            <term ref="index:d14380e7004">Buchels, Johann ; Bibliothek ; *Chronik der Bischöfe von Lüttich. Ms</term>
-            <term ref="index:d14380e7009">Buchels, Johann ; Bibliothek ; *Cronica praesulum et archiepiscoporum Coloniensis
+               <term ref="index:d14380e7004">Buchels, Johann ; Bibliothek ; *Chronik der Bischöfe von Lüttich. Ms</term>
+               <term ref="index:d14380e7009">Buchels, Johann ; Bibliothek ; *Cronica praesulum et archiepiscoporum Coloniensis
          ecclesiae. Ms</term>
-            <term ref="index:d14380e7014">Buchels, Johann ; Bibliothek ; *Decreta et Acta concilii Basileensis</term>
-            <term ref="index:d14380e7021">Buchels, Johann ; Bibliothek ; *Evangeliar Ms</term>
-            <term ref="index:d14380e7028">Buchels, Johann ; Bibliothek ; *Evangeliar</term>
-            <term ref="index:d14380e7035">Buchels, Johann ; Bibliothek ; *Florus, Epitoma de Tito Livio Ms</term>
-            <term ref="index:d14380e7042">Buchels, Johann ; Bibliothek ; *Gebetbuch Sultan Süleymans I. Ms</term>
-            <term ref="index:d14380e7047">Buchels, Johann ; Bibliothek ; *Koran</term>
-            <term ref="index:d14380e7054">Buchels, Johann ; Bibliothek ; *Psalter Ms</term>
-            <term ref="index:d14380e7235">Caesarius von Heisterbach ; Vita, passio et miracula beati Engelberti Coloniensis
+               <term ref="index:d14380e7014">Buchels, Johann ; Bibliothek ; *Decreta et Acta concilii Basileensis</term>
+               <term ref="index:d14380e7021">Buchels, Johann ; Bibliothek ; *Evangeliar Ms</term>
+               <term ref="index:d14380e7028">Buchels, Johann ; Bibliothek ; *Evangeliar</term>
+               <term ref="index:d14380e7035">Buchels, Johann ; Bibliothek ; *Florus, Epitoma de Tito Livio Ms</term>
+               <term ref="index:d14380e7042">Buchels, Johann ; Bibliothek ; *Gebetbuch Sultan Süleymans I. Ms</term>
+               <term ref="index:d14380e7047">Buchels, Johann ; Bibliothek ; *Koran</term>
+               <term ref="index:d14380e7054">Buchels, Johann ; Bibliothek ; *Psalter Ms</term>
+               <term ref="index:d14380e7235">Caesarius von Heisterbach ; Vita, passio et miracula beati Engelberti Coloniensis
          archiepiscopi ; Ms. Bibliothek Buchels</term>
-            <term ref="index:d14380e7246">Caesarius von Heisterbach ; Vita sanctae Elyzabeth lantgraviae ; Ms. Bibliothek
+               <term ref="index:d14380e7246">Caesarius von Heisterbach ; Vita sanctae Elyzabeth lantgraviae ; Ms. Bibliothek
          Buchels</term>
-            <term ref="index:d14380e8296">Claudius</term>
-            <term ref="index:d14380e8558">Constantinus Africanus</term>
-            <term ref="index:d14380e8579">Corbie</term>
-            <term ref="index:d14380e8750">Corvey</term>
-            <term ref="index:d14380e9844">Ditmar</term>
-            <term ref="index:d14380e9948">Dony d’Attichy, Louis ; Flores historiae sacri collegii sacrae Romanae ecclesiae
+               <term ref="index:d14380e8296">Claudius</term>
+               <term ref="index:d14380e8558">Constantinus Africanus</term>
+               <term ref="index:d14380e8579">Corbie</term>
+               <term ref="index:d14380e8750">Corvey</term>
+               <term ref="index:d14380e9844">Ditmar</term>
+               <term ref="index:d14380e9948">Dony d’Attichy, Louis ; Flores historiae sacri collegii sacrae Romanae ecclesiae
          cardinalium. 3 Bde. Paris 1660</term>
-            <term ref="index:d14380e11001">Ekbert von Schönau</term>
-            <term ref="index:d14380e12258">Fleury</term>
-            <term ref="index:d14380e12358">Florus ; Epitome de Tito Livio ; *Ms. Bibliothek Buchels</term>
-            <term ref="index:d14380e12437">Foresti, Giacomo Filippo</term>
-            <term ref="index:d14380e12666">Franken, Matthias</term>
-            <term ref="index:d14380e13563">Friesland ; Westfriesland</term>
-            <term ref="index:d10854e9767">Fulda</term>
-            <term ref="index:d14380e14602">*Gehardus</term>
-            <term ref="index:d14380e15553">*Giselbertus</term>
-            <term ref="index:d14380e15593">Gladbach</term>
-            <term ref="index:d14380e15605">Gladbach ; Reliquienverzeichnis der Klosterkirche. Ms</term>
-            <term ref="index:d14380e15826">Gonzaga, Aloysius, hl</term>
-            <term ref="index:d14380e16692">Guido von Arezzo</term>
-            <term ref="index:d14380e16750">Guitmund</term>
-            <term ref="index:d14380e16790">Gustav II. Adolf</term>
-            <term ref="index:d14380e16804">*Guzbertus</term>
-            <term ref="index:d14380e17443">Hegenmüller von Dubenweiler, Johann Franz Freiherr</term>
-            <term ref="index:d14380e17458">Hegenmüller von Dubenweiler, Johann Rupert Freiherr</term>
-            <term ref="index:d10854e12289">Heinrich von Gulpen</term>
-            <term ref="index:d14380e17980">*Henricus</term>
-            <term ref="index:d14380e18181">Hersfeld</term>
-            <term ref="index:d14380e18255">Hessen</term>
-            <term ref="index:d14380e18321">Hieronymus, hl</term>
-            <term ref="index:d14380e18891">Hucbald von St.-Amand</term>
-            <term ref="index:d14380e19118">Hugo von Die</term>
-            <term ref="index:d14380e19125">Hugo von Fleury</term>
-            <term ref="index:d14380e19142">Hugo von Fouilloy</term>
-            <term ref="index:d14380e19210">Hülsen, Dietrich</term>
-            <term ref="index:d14380e19218">Hülsen, Dietrich ; Lebensbeschreibung. Ms</term>
-            <term ref="index:d14380e20269">Joachim von Fiore</term>
-            <term ref="index:d14380e20480">Johannes Duns Scotus</term>
-            <term ref="index:d14380e20526">Johannes Gersen</term>
-            <term ref="index:d14380e20590">Johannes von Kastl</term>
-            <term ref="index:d14380e20612">Johannes von Monte Cassino</term>
-            <term ref="index:d14380e21594">Kastl</term>
-            <term ref="index:d14380e22125">Knor, Petrus</term>
-            <term ref="index:d14380e22233">Köln ; Chronicon praesulum et archiepiscoporum Coloniensis ecclesiae. Ms. Bibliothek
+               <term ref="index:d14380e11001">Ekbert von Schönau</term>
+               <term ref="index:d14380e12258">Fleury</term>
+               <term ref="index:d14380e12358">Florus ; Epitome de Tito Livio ; *Ms. Bibliothek Buchels</term>
+               <term ref="index:d14380e12437">Foresti, Giacomo Filippo</term>
+               <term ref="index:d14380e12666">Franken, Matthias</term>
+               <term ref="index:d14380e13563">Friesland ; Westfriesland</term>
+               <term ref="index:d10854e9767">Fulda</term>
+               <term ref="index:d14380e14602">*Gehardus</term>
+               <term ref="index:d14380e15553">*Giselbertus</term>
+               <term ref="index:d14380e15593">Gladbach</term>
+               <term ref="index:d14380e15605">Gladbach ; Reliquienverzeichnis der Klosterkirche. Ms</term>
+               <term ref="index:d14380e15826">Gonzaga, Aloysius, hl</term>
+               <term ref="index:d14380e16692">Guido von Arezzo</term>
+               <term ref="index:d14380e16750">Guitmund</term>
+               <term ref="index:d14380e16790">Gustav II. Adolf</term>
+               <term ref="index:d14380e16804">*Guzbertus</term>
+               <term ref="index:d14380e17443">Hegenmüller von Dubenweiler, Johann Franz Freiherr</term>
+               <term ref="index:d14380e17458">Hegenmüller von Dubenweiler, Johann Rupert Freiherr</term>
+               <term ref="index:d10854e12289">Heinrich von Gulpen</term>
+               <term ref="index:d14380e17980">*Henricus</term>
+               <term ref="index:d14380e18181">Hersfeld</term>
+               <term ref="index:d14380e18255">Hessen</term>
+               <term ref="index:d14380e18321">Hieronymus, hl</term>
+               <term ref="index:d14380e18891">Hucbald von St.-Amand</term>
+               <term ref="index:d14380e19118">Hugo von Die</term>
+               <term ref="index:d14380e19125">Hugo von Fleury</term>
+               <term ref="index:d14380e19142">Hugo von Fouilloy</term>
+               <term ref="index:d14380e19210">Hülsen, Dietrich</term>
+               <term ref="index:d14380e19218">Hülsen, Dietrich ; Lebensbeschreibung. Ms</term>
+               <term ref="index:d14380e20269">Joachim von Fiore</term>
+               <term ref="index:d14380e20480">Johannes Duns Scotus</term>
+               <term ref="index:d14380e20526">Johannes Gersen</term>
+               <term ref="index:d14380e20590">Johannes von Kastl</term>
+               <term ref="index:d14380e20612">Johannes von Monte Cassino</term>
+               <term ref="index:d14380e21594">Kastl</term>
+               <term ref="index:d14380e22125">Knor, Petrus</term>
+               <term ref="index:d14380e22233">Köln ; Chronicon praesulum et archiepiscoporum Coloniensis ecclesiae. Ms. Bibliothek
          Buchels</term>
-            <term ref="index:d14380e22238">Köln ; Deutz</term>
-            <term ref="index:d14380e22259">Köln ; Deutz ; *Prior 1717</term>
-            <term ref="index:d14380e22282">Köln ; St. Pantaleon</term>
-            <term ref="index:d14380e23054">Koran ; *Ms. Bibliothek Buchels</term>
-            <term ref="index:d10854e16452">Lampert von Hersfeld</term>
-            <term ref="index:d14380e23780">Lang, Andreas</term>
-            <term ref="index:d14380e23794">Lang, Andreas ; Catalogus sanctorum ordinis sancti Benedicti ; Ms. Neuss,
+               <term ref="index:d14380e22238">Köln ; Deutz</term>
+               <term ref="index:d14380e22259">Köln ; Deutz ; *Prior 1717</term>
+               <term ref="index:d14380e22282">Köln ; St. Pantaleon</term>
+               <term ref="index:d14380e23054">Koran ; *Ms. Bibliothek Buchels</term>
+               <term ref="index:d10854e16452">Lampert von Hersfeld</term>
+               <term ref="index:d14380e23780">Lang, Andreas</term>
+               <term ref="index:d14380e23794">Lang, Andreas ; Catalogus sanctorum ordinis sancti Benedicti ; Ms. Neuss,
          Oberkloster</term>
-            <term ref="index:d14380e24410">Leipzig ; Universität</term>
-            <term ref="index:d14380e25480">Lüttich ; *Chronik der Bischöfe von Lüttich. Ms. Bibliothek Buchels</term>
-            <term ref="index:d14380e25491">Luxeuil</term>
-            <term ref="index:d14380e25537">Lyon</term>
-            <term ref="index:d14380e25897">Magie, Schwarze Magie, Zauberei</term>
-            <term ref="index:d14380e28279">Melk ; Bibliothek</term>
-            <term ref="index:d14380e28939">Michael Galteri</term>
-            <term ref="index:d14380e29028">Milo von St.-Amand</term>
-            <term ref="index:d14380e29411">Monte Cassino</term>
-            <term ref="index:d14380e30013">München ; Kurfürstlicher Hof ; Hofbibliothek</term>
-            <term ref="index:d14380e30513">Neuss ; Oberkloster   814 ; Bibliothek ; *Lang, Genealogia sanctissimi patris
+               <term ref="index:d14380e24410">Leipzig ; Universität</term>
+               <term ref="index:d14380e25480">Lüttich ; *Chronik der Bischöfe von Lüttich. Ms. Bibliothek Buchels</term>
+               <term ref="index:d14380e25491">Luxeuil</term>
+               <term ref="index:d14380e25537">Lyon</term>
+               <term ref="index:d14380e25897">Magie, Schwarze Magie, Zauberei</term>
+               <term ref="index:d14380e28279">Melk ; Bibliothek</term>
+               <term ref="index:d14380e28939">Michael Galteri</term>
+               <term ref="index:d14380e29028">Milo von St.-Amand</term>
+               <term ref="index:d14380e29411">Monte Cassino</term>
+               <term ref="index:d14380e30013">München ; Kurfürstlicher Hof ; Hofbibliothek</term>
+               <term ref="index:d14380e30513">Neuss ; Oberkloster   814 ; Bibliothek ; *Lang, Genealogia sanctissimi patris
          Benedicti. Ms</term>
-            <term ref="index:d14380e30886">Northungus</term>
-            <term ref="index:d14380e31004">Nürnberg ; St. Ägid</term>
-            <term ref="index:d14380e31163">Odo von Deuil</term>
-            <term ref="index:d14380e31371">Osmanisches Reich</term>
-            <term ref="index:d14380e31390">Osmanisches Reich ; Belagerung von Wien 1529</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e32177">Padua ; S. Maria in Vanzo</term>
-            <term ref="index:d14380e32292">Paris</term>
-            <term ref="index:d14380e33033">Petrus Boeri</term>
-            <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
-            <term ref="index:d14380e33611">Pez, Bernhard ; Enzyklik 1715/16</term>
-            <term ref="index:d14380e35058">Philipp von der Pfalz</term>
-            <term ref="index:d14380e35418">Poitiers ; Montierneuf</term>
-            <term ref="index:d14380e37019">Reichenau</term>
-            <term ref="index:d14380e38475">Rüttgers, Michael</term>
-            <term ref="index:d14380e38580">St.-Amand</term>
-            <term ref="index:d14380e38634">St.-Chinian</term>
-            <term ref="index:d14380e38678">St.-Denis-en-France</term>
-            <term ref="index:d14380e39263">S. Giovanni in Fiore</term>
-            <term ref="index:d14380e39918">Schönau</term>
-            <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
-            <term ref="index:d14380e40231">Schweden</term>
-            <term ref="index:d14380e40818">Siegburg</term>
-            <term ref="index:d14380e41863">Süleyman I</term>
-            <term ref="index:d14380e42004">Tamayo de Salazar, Juan ; Anamnesis sive Commemoratio omnium sanctorum Hispanorum,
+               <term ref="index:d14380e30886">Northungus</term>
+               <term ref="index:d14380e31004">Nürnberg ; St. Ägid</term>
+               <term ref="index:d14380e31163">Odo von Deuil</term>
+               <term ref="index:d14380e31371">Osmanisches Reich</term>
+               <term ref="index:d14380e31390">Osmanisches Reich ; Belagerung von Wien 1529</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e32177">Padua ; S. Maria in Vanzo</term>
+               <term ref="index:d14380e32292">Paris</term>
+               <term ref="index:d14380e33033">Petrus Boeri</term>
+               <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
+               <term ref="index:d14380e33611">Pez, Bernhard ; Enzyklik 1715/16</term>
+               <term ref="index:d14380e35058">Philipp von der Pfalz</term>
+               <term ref="index:d14380e35418">Poitiers ; Montierneuf</term>
+               <term ref="index:d14380e37019">Reichenau</term>
+               <term ref="index:d14380e38475">Rüttgers, Michael</term>
+               <term ref="index:d14380e38580">St.-Amand</term>
+               <term ref="index:d14380e38634">St.-Chinian</term>
+               <term ref="index:d14380e38678">St.-Denis-en-France</term>
+               <term ref="index:d14380e39263">S. Giovanni in Fiore</term>
+               <term ref="index:d14380e39918">Schönau</term>
+               <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
+               <term ref="index:d14380e40231">Schweden</term>
+               <term ref="index:d14380e40818">Siegburg</term>
+               <term ref="index:d14380e41863">Süleyman I</term>
+               <term ref="index:d14380e42004">Tamayo de Salazar, Juan ; Anamnesis sive Commemoratio omnium sanctorum Hispanorum,
          pontificum, martyrum, confessorum, virginum, viduarum ac sanctarum mulierum. 6 Bde. Lyon
          1651–1659</term>
-            <term ref="index:d14380e42652">*Theodoricus</term>
-            <term ref="index:d14380e43380">Trithemius, Johannes</term>
-            <term ref="index:d14380e43390">Trithemius, Johannes ; De scriptoribus ecclesiasticis. Basel 1494</term>
-            <term ref="index:d14380e43413">Trithemius, Johannes ; De viris illustribus ordinis sancti Benedicti libri quatuor.
+               <term ref="index:d14380e42652">*Theodoricus</term>
+               <term ref="index:d14380e43380">Trithemius, Johannes</term>
+               <term ref="index:d14380e43390">Trithemius, Johannes ; De scriptoribus ecclesiasticis. Basel 1494</term>
+               <term ref="index:d14380e43413">Trithemius, Johannes ; De viris illustribus ordinis sancti Benedicti libri quatuor.
          [Druck in: Regula sancti Benedicti. Köln 1575]</term>
-            <term ref="index:d14380e43483">Türken</term>
-            <term ref="index:d14380e44085">Van den Driesch, Gerhard Cornelius</term>
-            <term ref="index:d14380e44344">Vercelli ; S. Stefano</term>
-            <term ref="index:d14380e45554">Widukind von Corvey</term>
-            <term ref="index:d14380e45571">Wien</term>
-            <term ref="index:d14380e46002">Wien ; Mannagetta-Stiftung</term>
-            <term ref="index:d14380e46078">Wien ; Osmanische Belagerung 1529</term>
-            <term ref="index:d14380e46210">Wijbrand Friso ; De nova terra circa Bodelswardiam. Ms</term>
-            <term ref="index:d14380e46328">Wilhelm von Montlauzun</term>
-            <term ref="index:d14380e46335">Wilhelm von Nangis</term>
-            <term ref="index:d14380e46383">Williram von Ebersberg</term>
-            <term ref="index:d14380e46444">Wolbero</term></keywords></textClass>
+               <term ref="index:d14380e43483">Türken</term>
+               <term ref="index:d14380e44085">Van den Driesch, Gerhard Cornelius</term>
+               <term ref="index:d14380e44344">Vercelli ; S. Stefano</term>
+               <term ref="index:d14380e45554">Widukind von Corvey</term>
+               <term ref="index:d14380e45571">Wien</term>
+               <term ref="index:d14380e46002">Wien ; Mannagetta-Stiftung</term>
+               <term ref="index:d14380e46078">Wien ; Osmanische Belagerung 1529</term>
+               <term ref="index:d14380e46210">Wijbrand Friso ; De nova terra circa Bodelswardiam. Ms</term>
+               <term ref="index:d14380e46328">Wilhelm von Montlauzun</term>
+               <term ref="index:d14380e46335">Wilhelm von Nangis</term>
+               <term ref="index:d14380e46383">Williram von Ebersberg</term>
+               <term ref="index:d14380e46444">Wolbero</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">JB schreibt BP nach längerer Unterbrechung. Er hat im vergangenen Juli <rs ref="index:d14380e15593">Gladbach</rs> besucht, dessen Abt <rs ref="index:d14380e22125">Petrus Knor</rs> BP grüßen und ihm
                eine <rs ref="index:d14380e19218">Beilage</rs> zusenden lässt, nach welcher das Leben von Abt <rs ref="index:d14380e19210">Dietrich Hülsen</rs> anstatt nach der ersten Mitteilung gedruckt werden kann.
@@ -273,7 +287,7 @@
             <p corresp="#seg8">JB hat in <rs ref="index:d14380e45571">Wien</rs> einen Freund namens <rs ref="index:d14380e44085">Gerhard
                   Cornelius van den Driesch</rs>, den Hofmeister der <rs ref="index:d14380e46002">Mannagetta-Stiftung</rs>, der diesen Brief übermittelt und über den in Hinkunft der Briefverkehr
                abgewickelt werden kann. Van den Driesch, BP und JB werden dann zusammen wie die drei Grazien sein.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -312,7 +326,7 @@
             <mentioned>abbatiae ichnographiam</mentioned>
             <p> Dieses Ersuchen BPs könnte im Zusammenhang
                   mit den Arbeiten von Felix Egger stehen: vgl. <ref type="letter" target="letter:659">659</ref>
-                  <ref target="letter:659#seg3">3</ref>. </p>
+               <ref target="letter:659#seg3">3</ref>. </p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
             <mentioned>bibliothecarium</mentioned>
@@ -336,7 +350,7 @@
             <p> Aufgrund der von JB gebotenen Beschreibung
                   handelt es sich entweder um Andreas Langs „Catalogus sanctorum“ unter anderem
                   Titel oder um eine Überarbeitung davon. Zu diesem Werk vgl. <rs type="bibl" ref="bibl:16154">Fassbinder, Catalogus</rs>; sowie <ref type="letter" target="letter:654">654</ref>
-                  <ref target="letter:654#seg4">4</ref>. Den hier angeführten Titel soll auch eine Handschrift der Fürstlich
+               <ref target="letter:654#seg4">4</ref>. Den hier angeführten Titel soll auch eine Handschrift der Fürstlich
                   Arenberg’schen Bibliothek getragen haben: <rs type="bibl" ref="bibl:17414">Kapsner, Bibliography</rs> 1 19; 2 299. Vermutlich ist diese identisch mit
                   einer zu Anfang des 19. Jh. in der Schlossbibliothek Nordkirchen vorhandenen
                   „Historia virorum illustrium ordinis sancti Benedicti“, zu deren Beschaffenheit
@@ -404,7 +418,8 @@
                   234–240, 257–260, 270–273. Ein Abt desselben Klosters namens „Guzbert“ ist nicht
                   ausfindig zu machen; denkbar wäre eine Verwechslung mit Gozbert von Tegernsee oder
                   eventuell auch mit Gozbert von St. Gallen. Zu Ersterem vgl. <rs type="bibl" ref="bibl:16834">Hartig, Tegernsee</rs> 10f.; <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> 28. Zu Letzterem vgl. <rs type="bibl" ref="bibl:15998">Duft–Gössi–Vogler, St. Gallen</rs> 1181, 1192f. Zu Milo und
-                  Hucbald sowie zu Hugo von Fouilloy vgl. <ref type="letter" target="letter:552">552</ref> <ref target="letter:552#seg6">6</ref> und
+                  Hucbald sowie zu Hugo von Fouilloy vgl. <ref type="letter" target="letter:552">552</ref>
+               <ref target="letter:552#seg6">6</ref> und
                   <ref target="letter:552#seg11">11</ref>. </p>
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg5">
@@ -526,7 +541,9 @@
          <note target="#range(right('n25'), left('n25e'))" n="25" anchored="false" corresp="#seg8">
             <mentioned>Amicum habeo ... Drieschium</mentioned>
             <p>Durch die Übermittlung dieses Briefes
-                  stellte JB wohl den Kontakt zwischen Van den Driesch und BP her: vgl. <ref type="letter" target="letter:839">839</ref> <ref target="letter:839#seg5">5</ref>, <ref type="letter" target="letter:853">853</ref> <ref target="letter:853#seg1">1</ref>. Am
+                  stellte JB wohl den Kontakt zwischen Van den Driesch und BP her: vgl. <ref type="letter" target="letter:839">839</ref>
+               <ref target="letter:839#seg5">5</ref>, <ref type="letter" target="letter:853">853</ref>
+               <ref target="letter:853#seg1">1</ref>. Am
                   26. November 1715 hatte Ersterer in Form einer Anfrage bezüglich der geplanten
                   Versteigerung der Bibliothek des 1664 verstorbenen Münsteraner Domdekans Bernhard
                   von Mallinckrodt erstmals mit JB Verbindung aufgenommen; der Briefwechsel bis zum
@@ -536,13 +553,15 @@
                      Zwischen Tradition und Kritik</rs> 260f. Aus den Jahren 1720 und 1721 sind
                   einige zwischen Van den Driesch und JB gewechselte Briefe teils im Original, teils
                   in Abschrift erhalten: Budapest, Országos Széchényi Könyvtár, Oct. Lat 681/1,
-                  42v–48r. Zu Van den Drieschs Stellung bei der Mannagetta-Stiftung vgl. <rs type="bibl" ref="bibl:20266">Weinberger, Driesch</rs> 217; sowie <ref type="letter" target="letter:839">839</ref> <ref target="letter:839#seg4">4</ref>, <ref type="letter" target="letter:853">853</ref>
+                  42v–48r. Zu Van den Drieschs Stellung bei der Mannagetta-Stiftung vgl. <rs type="bibl" ref="bibl:20266">Weinberger, Driesch</rs> 217; sowie <ref type="letter" target="letter:839">839</ref>
+               <ref target="letter:839#seg4">4</ref>, <ref type="letter" target="letter:853">853</ref>
                <ref target="letter:853#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n26'), left('n26e'))" n="26" anchored="false" corresp="#seg8">
             <mentioned> Gratiarum numerum</mentioned>
             <p>Vgl. <ref type="letter" target="letter:919">919
-               </ref><ref target="letter:919&#10;               #seg11">11</ref>.</p>
+               </ref>
+               <ref target="letter:919&#xA;               #seg11">11</ref>.</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -561,15 +580,31 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende domine pater, vir eruditissime.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverende domine pater, vir eruditissime.</opener>
          <ab resp="#editor" xml:id="seg1">Quamvis iam diu nullas ad te dederim litteras, fui tamen semper tui memor; sacra tua studia non ausus sum interpellare, donec haberem, quo possem ea promovere. Fui Gladbaci mense praeterito, et postquam tui iucunda memoria esset proposita, praesul me rogavit, quatenus obsequia sua salutemque suam humanissimam tibi offerrem additamque hic schedulam transmitterem, iuxta quam <anchor xml:id="n1"/>abbatis Theodori vita<anchor xml:id="n1e"/> posset imprimi, non autem secundum<anchor xml:id="n2"/> primam relationem<anchor xml:id="n2e"/>. Adiunxit sacrarum<anchor xml:id="n3"/> reliquiarum, quae ibidem in ecclesia asservantur, designationem<anchor xml:id="n3e"/>. </ab>
          <ab resp="#editor" xml:id="seg2">Fui sexta huius Tuitii, ut abbatem ad domesticorum scriptorum communicationem sollicitarem. Eius loci <anchor xml:id="n4"/>prior<anchor xml:id="n4e"/> litteras tuas ostendit, quibus te ipsius diligentia contentum esse testaris Sigeburgensisque et Tuitiensis <anchor xml:id="n5"/>abbatiae ichnographiam<anchor xml:id="n5e"/> petis. </ab>
          <ab resp="#editor" xml:id="seg3">Septima Brunvillariensem praesulem visi eidemque encyclicam tuam obtuli. Se petitioni tuae iustissimae satisfacturum appromisit, sed praevideo ipsi calcaria esse addenda. Monui interim patrem <anchor xml:id="n6"/>bibliothecarium<anchor xml:id="n6e"/>, virum eruditum et humanum, ut hunc laborem in se suscipiat. </ab>
-         <ab resp="#editor" xml:id="seg4">Cuperem rescire, <anchor xml:id="n7"/>utrum in instructissima bibliotheca Mellicensi reperiatur<anchor xml:id="n7e"/> Anamnesis sive Commemoratio omnium sanctorum Hispanorum a Joanne Tamayo de Salazar compilata; multa inde in rem tuam elici possent, velut etiam ex Ludovici Donii d’Attichy Floribus <choice><sic>historiaru.</sic><corr>historiae</corr></choice> sacri collegii sacrae Romanae ecclesiae cardinalium, impressis Lutetiae anno 1660. </ab>
-         <ab resp="#editor" xml:id="seg5">Inveni octo abhinc diebus <anchor xml:id="n8"/>Novesii in canonicorum regularium monasterio<anchor xml:id="n8e"/> manuscriptum in charta hoc titulo: <anchor xml:id="n9"/>Genealogia sanctissimi patris Benedicti tum secundum carnalem, tum secundum spiritualem tradita progeniem, in qua insignium duntaxat utriusque sexus alumnorum, non tamen omnium, nomina recitantur et de pluribus pauca, quae ad nostram ex scripturis pervenire potuerunt notitiam, hic annotavimus, quae et indice rubrica suis in locis quaerentibus seriatim se obiciunt, et plerisque in locis alphabeto in margine annotato clarescunt ad laudem et gloriam Dei suique famuli sancti Benedicti<anchor xml:id="n9e"/>. Ecclesiastici primo. <anchor xml:id="n10"/>Religiositas custodiet et iustificabit cor, iucunditatem et gaudium dabit<anchor xml:id="n10e"/>. <pb n="1v"/> Scripsit manus posterioris saeculi sequentia prope libelli titulum, quae ferme visum fugiunt, et quorum pars evulsa est: Huius egregii operis autor est venerandus domnus Andreas Staphielstein doctr— imperialis monasterii Montis Monachorum Divi Michaelis extra muros Bambergenses —. Floruit anno Domini 1483. Hic fuit eximie doctus, <anchor xml:id="n11"/>philosophiae magister<anchor xml:id="n11e"/> Lypsensi— gravis, morum elegantia et omnium virtutum ornamentis ac religionis summo studio co—. Librum intitulavit Opus canonisatorum ex ordine divi Benedicti pontificum, episcoporum, abbatum et abbatissarum. Vitae pontificum ordinis sancti Benedicti continent octo folia in quarto. Cardinalium quatuor. Metropolitanorum archiepiscoporum sex. Episcoporum octo. Abbatum et abbatissarum inter sanctos relatarum quinque. Imperatorum<del ana="#after">ex.</del>, qui ordinem sunt ingressi, tria. Virorum illustrium, qui scriptis libris inclaruerunt, sex. <anchor xml:id="n12"/>Noto hic<anchor xml:id="n12e"/> quosdam ex illis ignotiores: Claudius monachus socius sancti Alcuini; Angelomus monachus Luxoviensis; Willeramus monachus Fuldensis; Giselbertus; <sic>Gehardus</sic>; Ansbertus; Joachim abbas Floriacensis; Athelmus abbas; Joannes Scotus; Berno abbas Augiensis – <anchor xml:id="n13"/>reperitur in Trithemio<anchor xml:id="n13e"/>; Hugo de Foyleto monachus Corbeiensis; Milo monachus Elnonensis; Erkenbertus monachus Sconalbegiensis; Hucbaldus; Guido Aretinus; Albimundus monachus et postea <choice><sic>Avesanus.</sic><corr>Aversanus</corr></choice> episcopus; Northungus monachus Fuldensis; Joannes abbas Versellensis; <sic>Aphanus</sic> Cassinensis monachus; Philippus de <choice><sic>Bergano.</sic><corr>Pergano</corr></choice> prior Sanctae Mariae de Avantio; Guzbertus, Bertharius, Bernardus abbates Cassinenses; Constantinus medicus monachus Cassinensis; Petrus Boerii abbas Sancti Aniani; Dithmarus abbas Corbeiensis; <pb n="2r"/> Alexander de Villa Dei; Henricus de Gulpen abbas Sancti Aegidii Noribergae – hunc etiam reperi in Trithemio; Wilhelmus de Lauduno abbas Monasterii Novi Pictaviensis; Odo monachus Sancti Dionysii; Andreas de Hamerhusen abbas; Hugo de Lugduno abbas in civitate Lugdunensi; Wolbero abbas Sancti Panthaleonis; Joannes monachus Castellensis; Hugo monachus Floriacensis; Wittikinus Albiensis; Wilhelmus monachus Sancti Dionysii; Joannes abbas Cassinensis; Lantfrancus monachus Hersfeldensis; Henricus; Baldericus abbas Burdegalensis; Theodoricus. </ab>
-         <ab resp="#editor" xml:id="seg6">Perlustravi hac aestate triginta circiter bibliothecas et semper sedulus inquisivi, si quid in rem tuam possem offendere, sed frustra. Sequentia manuscripta a multis saeculis ad catenas damnata redemi a captivitate et <anchor xml:id="n14"/>in musaeo nostrate<anchor xml:id="n14e"/> libertate donavi:<anchor xml:id="n15"/> Decreta et gesta sacri concilii Basileensis<anchor xml:id="n15e"/> a Michaele Galteri ipsiusmet concilii notario correcta et subscripta in membrana anno 1448, folio; quatuor sacra Evangelia auro et minio scripta in membrana ante novem saecula, folio; eadem eodem propemodum tempore scripta et divi Hieronymi quatuorque evangelistarum iconibus exornata in membrana, folio; sanctum Augustinum <anchor xml:id="n16"/>De civitate Dei in membrana scripta a Vibrando Frisone, De nova terra circa Bodelswardiam partium Westfrisiae, volumina duo in folio <add place="below">anno 1423</add><anchor xml:id="n16e"/>; Psalterium auro et minio decoratum in membrana anno MCXL<del ana="#before">1140.</del>, quarto; <anchor xml:id="n17"/>Caesarium Heisterbacensem<anchor xml:id="n17e"/> De vita, gestis et martyrio sancti Engelberti archiepiscopi Coloniensis in membrana, quarto; eundem De vita Elisabethae landgraviae Hassiae in membrana, quarto; <pb n="2v"/><anchor xml:id="n18"/> Chronicon episcoporum Leodiensium<anchor xml:id="n18e"/> in charta anno 1481, quarto;<anchor xml:id="n19"/> Chronicon praesulum et archiepiscoporum Coloniensis ecclesiae<anchor xml:id="n19e"/> in charta 1408, quarto;<anchor xml:id="n20"/> Lucii Flori Periochen<anchor xml:id="n20e"/> omnium librorum Titi Livii Patavini in membrana ante septem saecula scriptam, octavo; imperatoris Turcarum<anchor xml:id="n21"/> Solymanni manuale precum<anchor xml:id="n21e"/> lingua Arabica characteribus aureis potissimum eleganter scriptum, continens varias preces ex Alcorano desumptas ut et figuras quasdam et schemata, quae magiam Turcicam olent; repertus est hic liber inter impedimenta Solymanni, cum anno 1529 obsidionem Viennae Austriae solveret impellente Philippo comite Palatino, cui acceptum tulit dux Bavariae, ex cuius pinacotheca saeculi sequentis anno 32. <anchor xml:id="n22"/>in manus Gustavi Adolphi regis Sueciae<anchor xml:id="n22e"/> transivit et tandem feliciter in meas, octavo. Alcoranus elegantissime scriptus ante trecentos annos in duodecimo. </ab>
+         <ab resp="#editor" xml:id="seg4">Cuperem rescire, <anchor xml:id="n7"/>utrum in instructissima bibliotheca Mellicensi reperiatur<anchor xml:id="n7e"/> Anamnesis sive Commemoratio omnium sanctorum Hispanorum a Joanne Tamayo de Salazar compilata; multa inde in rem tuam elici possent, velut etiam ex Ludovici Donii d’Attichy Floribus <choice>
+               <sic>historiaru.</sic>
+               <corr>historiae</corr>
+            </choice> sacri collegii sacrae Romanae ecclesiae cardinalium, impressis Lutetiae anno 1660. </ab>
+         <ab resp="#editor" xml:id="seg5">Inveni octo abhinc diebus <anchor xml:id="n8"/>Novesii in canonicorum regularium monasterio<anchor xml:id="n8e"/> manuscriptum in charta hoc titulo: <anchor xml:id="n9"/>Genealogia sanctissimi patris Benedicti tum secundum carnalem, tum secundum spiritualem tradita progeniem, in qua insignium duntaxat utriusque sexus alumnorum, non tamen omnium, nomina recitantur et de pluribus pauca, quae ad nostram ex scripturis pervenire potuerunt notitiam, hic annotavimus, quae et indice rubrica suis in locis quaerentibus seriatim se obiciunt, et plerisque in locis alphabeto in margine annotato clarescunt ad laudem et gloriam Dei suique famuli sancti Benedicti<anchor xml:id="n9e"/>. Ecclesiastici primo. <anchor xml:id="n10"/>Religiositas custodiet et iustificabit cor, iucunditatem et gaudium dabit<anchor xml:id="n10e"/>. <pb n="1v"/> Scripsit manus posterioris saeculi sequentia prope libelli titulum, quae ferme visum fugiunt, et quorum pars evulsa est: Huius egregii operis autor est venerandus domnus Andreas Staphielstein doctr— imperialis monasterii Montis Monachorum Divi Michaelis extra muros Bambergenses —. Floruit anno Domini 1483. Hic fuit eximie doctus, <anchor xml:id="n11"/>philosophiae magister<anchor xml:id="n11e"/> Lypsensi— gravis, morum elegantia et omnium virtutum ornamentis ac religionis summo studio co—. Librum intitulavit Opus canonisatorum ex ordine divi Benedicti pontificum, episcoporum, abbatum et abbatissarum. Vitae pontificum ordinis sancti Benedicti continent octo folia in quarto. Cardinalium quatuor. Metropolitanorum archiepiscoporum sex. Episcoporum octo. Abbatum et abbatissarum inter sanctos relatarum quinque. Imperatorum<del ana="#after">ex.</del>, qui ordinem sunt ingressi, tria. Virorum illustrium, qui scriptis libris inclaruerunt, sex. <anchor xml:id="n12"/>Noto hic<anchor xml:id="n12e"/> quosdam ex illis ignotiores: Claudius monachus socius sancti Alcuini; Angelomus monachus Luxoviensis; Willeramus monachus Fuldensis; Giselbertus; <sic>Gehardus</sic>; Ansbertus; Joachim abbas Floriacensis; Athelmus abbas; Joannes Scotus; Berno abbas Augiensis – <anchor xml:id="n13"/>reperitur in Trithemio<anchor xml:id="n13e"/>; Hugo de Foyleto monachus Corbeiensis; Milo monachus Elnonensis; Erkenbertus monachus Sconalbegiensis; Hucbaldus; Guido Aretinus; Albimundus monachus et postea <choice>
+               <sic>Avesanus.</sic>
+               <corr>Aversanus</corr>
+            </choice> episcopus; Northungus monachus Fuldensis; Joannes abbas Versellensis; <sic>Aphanus</sic> Cassinensis monachus; Philippus de <choice>
+               <sic>Bergano.</sic>
+               <corr>Pergano</corr>
+            </choice> prior Sanctae Mariae de Avantio; Guzbertus, Bertharius, Bernardus abbates Cassinenses; Constantinus medicus monachus Cassinensis; Petrus Boerii abbas Sancti Aniani; Dithmarus abbas Corbeiensis; <pb n="2r"/> Alexander de Villa Dei; Henricus de Gulpen abbas Sancti Aegidii Noribergae – hunc etiam reperi in Trithemio; Wilhelmus de Lauduno abbas Monasterii Novi Pictaviensis; Odo monachus Sancti Dionysii; Andreas de Hamerhusen abbas; Hugo de Lugduno abbas in civitate Lugdunensi; Wolbero abbas Sancti Panthaleonis; Joannes monachus Castellensis; Hugo monachus Floriacensis; Wittikinus Albiensis; Wilhelmus monachus Sancti Dionysii; Joannes abbas Cassinensis; Lantfrancus monachus Hersfeldensis; Henricus; Baldericus abbas Burdegalensis; Theodoricus. </ab>
+         <ab resp="#editor" xml:id="seg6">Perlustravi hac aestate triginta circiter bibliothecas et semper sedulus inquisivi, si quid in rem tuam possem offendere, sed frustra. Sequentia manuscripta a multis saeculis ad catenas damnata redemi a captivitate et <anchor xml:id="n14"/>in musaeo nostrate<anchor xml:id="n14e"/> libertate donavi:<anchor xml:id="n15"/> Decreta et gesta sacri concilii Basileensis<anchor xml:id="n15e"/> a Michaele Galteri ipsiusmet concilii notario correcta et subscripta in membrana anno 1448, folio; quatuor sacra Evangelia auro et minio scripta in membrana ante novem saecula, folio; eadem eodem propemodum tempore scripta et divi Hieronymi quatuorque evangelistarum iconibus exornata in membrana, folio; sanctum Augustinum <anchor xml:id="n16"/>De civitate Dei in membrana scripta a Vibrando Frisone, De nova terra circa Bodelswardiam partium Westfrisiae, volumina duo in folio <add place="below">anno 1423</add>
+            <anchor xml:id="n16e"/>; Psalterium auro et minio decoratum in membrana anno MCXL<del ana="#before">1140.</del>, quarto; <anchor xml:id="n17"/>Caesarium Heisterbacensem<anchor xml:id="n17e"/> De vita, gestis et martyrio sancti Engelberti archiepiscopi Coloniensis in membrana, quarto; eundem De vita Elisabethae landgraviae Hassiae in membrana, quarto; <pb n="2v"/>
+            <anchor xml:id="n18"/> Chronicon episcoporum Leodiensium<anchor xml:id="n18e"/> in charta anno 1481, quarto;<anchor xml:id="n19"/> Chronicon praesulum et archiepiscoporum Coloniensis ecclesiae<anchor xml:id="n19e"/> in charta 1408, quarto;<anchor xml:id="n20"/> Lucii Flori Periochen<anchor xml:id="n20e"/> omnium librorum Titi Livii Patavini in membrana ante septem saecula scriptam, octavo; imperatoris Turcarum<anchor xml:id="n21"/> Solymanni manuale precum<anchor xml:id="n21e"/> lingua Arabica characteribus aureis potissimum eleganter scriptum, continens varias preces ex Alcorano desumptas ut et figuras quasdam et schemata, quae magiam Turcicam olent; repertus est hic liber inter impedimenta Solymanni, cum anno 1529 obsidionem Viennae Austriae solveret impellente Philippo comite Palatino, cui acceptum tulit dux Bavariae, ex cuius pinacotheca saeculi sequentis anno 32. <anchor xml:id="n22"/>in manus Gustavi Adolphi regis Sueciae<anchor xml:id="n22e"/> transivit et tandem feliciter in meas, octavo. Alcoranus elegantissime scriptus ante trecentos annos in duodecimo. </ab>
          <ab resp="#editor" xml:id="seg7">Plurimum me devincies, si baronem illustrissimum Hegemullerum nomine meo salutare eique, quidquid a me dependet, offerre dignaris. <anchor xml:id="n23"/>Mirum quidem est, quod de illustrissimo eius parente<anchor xml:id="n23e"/> scribis; ego non miror, cum virtutes eius pietasque mihi satis perspectae fuerint. Iunior tam probus et candidus in iuventute fuit, ut eum semper<anchor xml:id="n24"/> Aloysium nominaverim<anchor xml:id="n24e"/>. Utinam tam dilecti amici et tuo mihi frui liceret alloquio; beatum me dicerem. </ab>
-         <ab resp="#editor" xml:id="seg8"><anchor xml:id="n25"/>Amicum habeo Viennae singularem, virum eruditissimum, fundationis Mannegettanae praefectum Gerhardum Cornelium Drieschium<anchor xml:id="n25e"/>. Per illum hasce litteras accipies; illas, quas mihi deinceps scripturus es, eidem poteris committere. Ita litterarum nostrarum commercium erit tutum, et ille velut tertius <choice><sic>symmistes.</sic><corr>symmystes</corr></choice> ad explendum<anchor xml:id="n26"/> Gratiarum numerum<anchor xml:id="n26e"/> in amicitiae communionem poterit venire. Vale, vir optime et litteratorum decus, et eum ama, qui semper tuus erit ex asse</ab>
+         <ab resp="#editor" xml:id="seg8">
+            <anchor xml:id="n25"/>Amicum habeo Viennae singularem, virum eruditissimum, fundationis Mannegettanae praefectum Gerhardum Cornelium Drieschium<anchor xml:id="n25e"/>. Per illum hasce litteras accipies; illas, quas mihi deinceps scripturus es, eidem poteris committere. Ita litterarum nostrarum commercium erit tutum, et ille velut tertius <choice>
+               <sic>symmistes.</sic>
+               <corr>symmystes</corr>
+            </choice> ad explendum<anchor xml:id="n26"/> Gratiarum numerum<anchor xml:id="n26e"/> in amicitiae communionem poterit venire. Vale, vir optime et litteratorum decus, et eum ama, qui semper tuus erit ex asse</ab>
          <closer>Joannes Buchels.</closer>
          <closer>Dusseldorpii 26. Augusti 1717.</closer>
       </body>

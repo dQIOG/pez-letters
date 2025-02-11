@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="855" xml:id="pez-0855">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Leopold Wydemann an Bernhard Pez. 1717-11-24. Gaming.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">855</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -80,36 +92,38 @@
                <ptr type="mentionedIn" target="letter:873"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e807">Albrecht II</term>
-            <term ref="index:d14380e1903">Anonyme Werke ; Alphabetum divini amoris</term>
-            <term ref="index:d14380e2400">Anonyme Werke ; Lobgedicht auf Nikolaus Kempf von Strassburg. Ms. Gaming</term>
-            <term ref="index:d14380e3821">Barbara von Cilli</term>
-            <term ref="index:d14380e11107">Elisabeth von Luxemburg</term>
-            <term ref="index:d14380e13828">Gaming</term>
-            <term ref="index:d14380e13921">Gaming ; Bibliothek</term>
-            <term ref="index:d14380e14038">Gaming ; Bibliothek ; Georg von Gaming, Peregrinatio in Aegyptum. Ms</term>
-            <term ref="index:d14380e14120">Gaming ; Bibliothek ; Honorius Augustodunensis, De neocosmo. Ms</term>
-            <term ref="index:d14380e15034">Georg von Gaming ; Peregrinatio in Aegyptum Martini Baumgarten ; Ms. Gaming</term>
-            <term ref="index:d14380e18711">Honorius Augustodunensis ; De neocosmo. Ms. Gaming</term>
-            <term ref="index:d14380e20101">Jericho ; Haus der biblischen „Hure Rahab“</term>
-            <term ref="index:d14380e21396">Kartäuser</term>
-            <term ref="index:d14380e23254">Kristelli, Joseph</term>
-            <term ref="index:d14380e25258">Ludolf von Sachsen</term>
-            <term ref="index:d14380e25270">Ludolf von Sachsen ; Vita Jesu Christi</term>
-            <term ref="index:d14380e26594">Martène, Edmond ; [Edmond Martène, Ursin Durand] Thesaurus novus anecdotorum. 5 Bde.
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e807">Albrecht II</term>
+               <term ref="index:d14380e1903">Anonyme Werke ; Alphabetum divini amoris</term>
+               <term ref="index:d14380e2400">Anonyme Werke ; Lobgedicht auf Nikolaus Kempf von Strassburg. Ms. Gaming</term>
+               <term ref="index:d14380e3821">Barbara von Cilli</term>
+               <term ref="index:d14380e11107">Elisabeth von Luxemburg</term>
+               <term ref="index:d14380e13828">Gaming</term>
+               <term ref="index:d14380e13921">Gaming ; Bibliothek</term>
+               <term ref="index:d14380e14038">Gaming ; Bibliothek ; Georg von Gaming, Peregrinatio in Aegyptum. Ms</term>
+               <term ref="index:d14380e14120">Gaming ; Bibliothek ; Honorius Augustodunensis, De neocosmo. Ms</term>
+               <term ref="index:d14380e15034">Georg von Gaming ; Peregrinatio in Aegyptum Martini Baumgarten ; Ms. Gaming</term>
+               <term ref="index:d14380e18711">Honorius Augustodunensis ; De neocosmo. Ms. Gaming</term>
+               <term ref="index:d14380e20101">Jericho ; Haus der biblischen „Hure Rahab“</term>
+               <term ref="index:d14380e21396">Kartäuser</term>
+               <term ref="index:d14380e23254">Kristelli, Joseph</term>
+               <term ref="index:d14380e25258">Ludolf von Sachsen</term>
+               <term ref="index:d14380e25270">Ludolf von Sachsen ; Vita Jesu Christi</term>
+               <term ref="index:d14380e26594">Martène, Edmond ; [Edmond Martène, Ursin Durand] Thesaurus novus anecdotorum. 5 Bde.
          Paris 1717</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e30721">Nikolaus Kempf von Strassburg</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e39634">Scheibbs</term>
-            <term ref="index:d14380e39655">Schencker, Anton</term>
-            <term ref="index:d14380e40832">Sigismund</term>
-            <term ref="index:d14380e46743">Wydemann, Leopold ; Handschriftenkatalog von Gaming. Ms</term>
-            <term ref="index:d14380e46776">Wydemann, Leopold ; Selbstwahrnehmung als Mönch</term></keywords></textClass>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e30721">Nikolaus Kempf von Strassburg</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e39634">Scheibbs</term>
+               <term ref="index:d14380e39655">Schencker, Anton</term>
+               <term ref="index:d14380e40832">Sigismund</term>
+               <term ref="index:d14380e46743">Wydemann, Leopold ; Handschriftenkatalog von Gaming. Ms</term>
+               <term ref="index:d14380e46776">Wydemann, Leopold ; Selbstwahrnehmung als Mönch</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Wegen der Begräbnisfeierlichkeiten für seinen aus <rs ref="index:d14380e39634">Scheibbs</rs> gebürtigen
                <rs ref="index:d14380e13828">Gaminger</rs> Mitbruder <rs ref="index:d14380e39655">Anton Schencker</rs>,
@@ -124,7 +138,8 @@
                   Bibliothek</rs> benötigt. LW hat BP nahegelegt, daraus eine Auswahl zu treffen, damit <rs ref="index:d14380e13828">Gaming</rs> wie alle anderen Klöster behandelt und die Einheitlichkeit der
                Editionstätigkeit gewahrt wird. Wenn, wie BP geschrieben hat <ref type="letter" target="letter:854">854</ref>, ihm etwas anderes sinnvoll scheint und er den Katalog sofort retourniert, wird LW ihn
                überarbeiten; er kann ihn dann allerdings nicht in weniger als einem halben Jahr wieder vorlegen. Die von
-               BP versprochenen Anmerkungen werden LW ebenso willkommen sein wie die Erkenntnisse über den <rs ref="index:d14380e21396">Kartäuser</rs> <rs ref="index:d14380e30721">Nikolaus Kempf</rs>, welche BP
+               BP versprochenen Anmerkungen werden LW ebenso willkommen sein wie die Erkenntnisse über den <rs ref="index:d14380e21396">Kartäuser</rs>
+               <rs ref="index:d14380e30721">Nikolaus Kempf</rs>, welche BP
                auf seiner <rs ref="index:d14380e34236">Bibliotheksreise</rs> gewonnen hat. Die Gründe, warum Nikolaus
                Kempf das „<rs ref="index:d14380e1903">Alphabetum divini amoris</rs>“ zuzuschreiben ist, will LW bei
                anderer Gelegenheit auseinandersetzen <ref type="letter" target="letter:888">888</ref> und gleichzeitig
@@ -154,7 +169,7 @@
                <rs ref="index:d14380e11107">Elisabeth</rs>, die Tochter Sigismunds und Barbaras, im Jahr 1422 mit
                <rs ref="index:d14380e807">Albrecht V.</rs>, dem Herzog von Österreich und späteren deutschen König,
                nicht nur verlobt, sondern tatsächlich verehelicht wurde.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -171,7 +186,8 @@
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>Nicolao Kempff</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:888">888</ref> <ref target="letter:888#seg5">5</ref>,
+            <p>Vgl. <ref type="letter" target="letter:888">888</ref>
+               <ref target="letter:888#seg5">5</ref>,
                   <ref target="letter:888#seg6">6</ref> und <ref target="letter:888#seg7">7</ref>. Mehrere Schriften des Nikolaus Kempf sind in den
                   Aufzeichnungen BPs und HPs über ihren Aufenthalt in Tegernsee notiert: StiB Melk,
                   Cod. 1850, 155r.</p>
@@ -179,7 +195,8 @@
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned> eius encomium</mentioned>
             <p>Wohl das mit 888 übermittelte Gedicht aus dem 15.
-                  Jh.: vgl. <ref type="letter" target="letter:888">888</ref> <ref target="letter:888#seg6">6</ref>.</p>
+                  Jh.: vgl. <ref type="letter" target="letter:888">888</ref>
+               <ref target="letter:888#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>Neocosmum</mentioned>
@@ -195,7 +212,8 @@
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
             <mentioned>sequens textus</mentioned>
-            <p><rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs>
+            <p>
+               <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs>
                   2/3 col. 564. Georg von Gaming bezieht sich auf jene Stelle bei Ludolf von
                   Sachsen, in der dieser von der Zerstörung Jerichos spricht, bei welcher nur das
                   Haus der Rahab verschont geblieben sei: <rs type="bibl" ref="bibl:14836">Vita Jesu
@@ -213,7 +231,8 @@
             <mentioned>duplicem ... quaestionem</mentioned>
             <p> Zur Frage nach dem Zeitpunkt der Hochzeit
                   zwischen Barbara von Cilli und Sigismund sowie nach dem Alter von deren Tochter
-                  Elisabeth vgl. <ref type="letter" target="letter:857">857</ref> <ref target="letter:857#seg4">4</ref>.</p>
+                  Elisabeth vgl. <ref type="letter" target="letter:857">857</ref>
+               <ref target="letter:857#seg4">4</ref>.</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -230,10 +249,12 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo ac clarissimo patri domino Bernardo Pez frater Leopoldus Wydeman salutem plurimam dicit.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo ac clarissimo patri domino Bernardo Pez frater Leopoldus Wydeman salutem plurimam dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Prolixius scribere mihi non permittit sepulturae officium, quod hodie impendimus heri mortuo venerabili patri <anchor xml:id="n1"/>Antonio Schencker<anchor xml:id="n1e"/> patria Scheibsensi; cuius anima, ut in pace requiescere valeat citius, commendatur enixius patribus et <anchor xml:id="n2"/>fratribus Scheibsio-Mellicensibus<anchor xml:id="n2e"/>. </ab>
          <ab resp="#editor" xml:id="seg2">Te vero, vir clarissime, sollicito, ut a nimiis abstineas laudibus, quibus catalogum obiter confectum nec satis bene reductum in ordinem, quin et dubiis minime carentem extollis. Talibus enim me oneras magis quam ornas, qui sine illis libenter communicabo, quae possum. Catalogum remitti mihi saltem post medium annum petii, quia copiam eius non habeo, utique necessariam tum pro mea directione tum pro aliorum satisfactione, si quid ex eo peteretur. Unde et tibi opus erit formam et signum codicis semper addere, ubi aliquo codice ex nostris indigueris. Quod tibi ex illo seligenda, quaecunque volueris, commiserim, ideo factum a me, ut ad aliorum monasteriorum exemplar reduceres nostrum et in omnibus a te edendis servaretur uniformitas. Si<del ana="#before">Sed.</del>, uti scribis, tibi aliter visum fuerit mihique illum <add place="above">nunc</add> remiseris, reducam quidem in aliquanto meliorem formam addendo et corrigendo, quae addenda et corrigenda occurrunt. Sed vix ante medium annum restituere potero. Fac igitur, vir humanissime, de eo, quod libet, audita iam mea ratione. Notae, quas polliceris, mihi erunt gratissimae, quas proinde cum desiderio expecto una cum iis, quae in itinere tuo de nostro <anchor xml:id="n3"/>Nicolao Kempff<anchor xml:id="n3e"/> reperisti, cui Alphabetarium, quod nosti, adiudicandum esse ob rationes scribam vice alia, additurus<anchor xml:id="n4"/> eius encomium<anchor xml:id="n4e"/>. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n5"/>Neocosmum<anchor xml:id="n5e"/> Honorii, opus satis bonum, nunc eruditioni tuae transmitto, ut aliis, si libet, addatur. </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n5"/>Neocosmum<anchor xml:id="n5e"/> Honorii, opus satis bonum, nunc eruditioni tuae transmitto, ut aliis, si libet, addatur. </ab>
          <ab resp="#editor" xml:id="seg4">Cartusiani Ephemerides sive Diarium in Terram Sanctam triginta circiter implebunt phyliras; esse autem Diarium istud Cartusiani opus praeter rationes nuper insinuatas <anchor xml:id="n6"/>sequens textus<anchor xml:id="n6e"/> heri a me in ipso opere casualiter inventus testatur: Hanc domum (in Jericho) venerabilis pater noster <pb n="1v"/> Ludolphus Cartusiensis in libro Vitae Christi dicit esse domum meretricis Rahab. Ubi adverte titulum venerabilis olim et nunc fuisse et esse Cartusianis monachis ordinarium; quo si usus fueris in literis ad me dirigendis omissis aliis, qui solitariis minime congruunt, recte facies. Sed haec per parenthesin. Ad Diarium revertor. Est illud claro et simul docto stylo scriptum et meretur editionem, si editum non est; modo adesset aut descriptor aut tempus describendi. Invenietur forsitan ille, si sciretur descriptionem non fore superfluam; unde tuae curae, clarissime pater, relinquo investigandum, quid facto opus sit. </ab>
          <ab resp="#editor" xml:id="seg5">De <anchor xml:id="n7"/>Anecdotorum thesauro<anchor xml:id="n7e"/>, quem offers, nihil habeo, quod scribam, cum mihi nec obulus adsit, quo emam, et absit <anchor xml:id="n8"/>reverendissimus<anchor xml:id="n8e"/>, quem consulam. Ubi ille redierit, proponam et, quid senserit, informabo. </ab>
          <ab resp="#editor" xml:id="seg6">Charissimum et natura et sacra professione et studio fratrem tuum salutabis ex me eique <anchor xml:id="n9"/>duplicem nomine meo praesentabis quaestionem<anchor xml:id="n9e"/> non ex authoribus recentioribus typo datis, sed ex coaevis et manuscriptis ante annum 1450 (quorum copiam habet) aut ex authentico instrumento resolvendam. Multum mihi proderit vel unius ex his resolutio, si haec pro me et intentione mea staret. Quod si nihil certi habeatur, id ipsum mihi significari rogo. Quaestiones sunt: prima, an authentice constet Barbaram Ciliae comitis filiam ante annum Christi 1412 fuisse uxorem Sigismundi caesaris? Secunda, an authentice constet Elisabetham praedictorum Sigismundi et Barbarae filiam fuisse non per sponsalia, sed per actuale matrimonium Alberto duci Austriae et post Sigismundum caesari anno 1422 traditam in uxorem? Vive et vale una cum fratre tuo suavissime et diutissime in hoc saeculo, at in altero perenniter.</ab>

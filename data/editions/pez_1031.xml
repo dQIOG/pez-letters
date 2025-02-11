@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="1031" xml:id="pez-1031">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Georg Eckhart an Hieronymus Pez. 1718-12-25. Hannover.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">1031</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Am unteren Blattrand von 1r von der Hand GEs der Vermerk: <orig>Patri Hieronymo Pezio</orig>. – Die ersten beiden Folien werden unrichtig als am Ende unvollständiger, undatierter Brief an HP, das letzte als Brief an BP geführt bei Glassner, Verzeichnis 207.
             </note>
@@ -45,10 +56,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -72,94 +84,96 @@
                <ptr type="mentionedIn" target="letter:1032"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e947">Aleksej Petrowitsch</term>
-            <term ref="index:d14380e1898">Anonyme Werke ; Acta Murensia</term>
-            <term ref="index:d14380e2425">Anonyme Werke ; Narratio de electione Lotharii</term>
-            <term ref="index:d14380e2483">Anonyme Werke ; Necrologium Sancrucense modernum. Ms. Heiligenkreuz</term>
-            <term ref="index:d14380e2643">Anonyme Werke ; Vita sanctae Odiliae</term>
-            <term ref="index:d14380e31674">„Alt-österreichisches“ Wappen ; Römerzeitliche Denkmäler</term>
-            <term ref="index:d14380e3572">Babenberger</term>
-            <term ref="index:d14380e6548">Braunau am Inn</term>
-            <term ref="index:d14380e6557">Braunschweig</term>
-            <term ref="index:d14380e6597">Braunschweig-Lüneburg</term>
-            <term ref="index:d14380e8967">Czerwenka von Weznow, Wenzel Adalbert ; Annales et acta pietatis augustissimae ac
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e947">Aleksej Petrowitsch</term>
+               <term ref="index:d14380e1898">Anonyme Werke ; Acta Murensia</term>
+               <term ref="index:d14380e2425">Anonyme Werke ; Narratio de electione Lotharii</term>
+               <term ref="index:d14380e2483">Anonyme Werke ; Necrologium Sancrucense modernum. Ms. Heiligenkreuz</term>
+               <term ref="index:d14380e2643">Anonyme Werke ; Vita sanctae Odiliae</term>
+               <term ref="index:d14380e31674">„Alt-österreichisches“ Wappen ; Römerzeitliche Denkmäler</term>
+               <term ref="index:d14380e3572">Babenberger</term>
+               <term ref="index:d14380e6548">Braunau am Inn</term>
+               <term ref="index:d14380e6557">Braunschweig</term>
+               <term ref="index:d14380e6597">Braunschweig-Lüneburg</term>
+               <term ref="index:d14380e8967">Czerwenka von Weznow, Wenzel Adalbert ; Annales et acta pietatis augustissimae ac
          serenissimae domus Habspurgo-Austriacae. Prag 1691</term>
-            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
-            <term ref="index:d14380e9895">Donau</term>
-            <term ref="index:d14380e10518">Eckhart, Johann Georg ; Exzerpte aus Walter von der Vogelweide. Ms</term>
-            <term ref="index:d14380e10599">Eckhart, Johann Georg ; Widerlegung der gemeinen meynung, daß Friedrich, der letzte
+               <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+               <term ref="index:d14380e9895">Donau</term>
+               <term ref="index:d14380e10518">Eckhart, Johann Georg ; Exzerpte aus Walter von der Vogelweide. Ms</term>
+               <term ref="index:d14380e10599">Eckhart, Johann Georg ; Widerlegung der gemeinen meynung, daß Friedrich, der letzte
          hertzog des alten oesterreichischen hauses, eine braunschweigische printzessin zur
          gemahlinn gehabt habe. S. l. 1716</term>
-            <term ref="index:d14380e11399">England, Engländer , englisch</term>
-            <term ref="index:d14380e11792">Eugippius ; Vita sancti Severini. Ms. Melk</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e13319">Friedrich IV. von Rotenburg</term>
-            <term ref="index:d14380e13328">Friedrich II. „der Streitbare“</term>
-            <term ref="index:d14380e15397">Gertrud von Braunschweig</term>
-            <term ref="index:d14380e15406">Gertrud von Süpplingenburg</term>
-            <term ref="index:d14380e17493">Heiligenkreuz</term>
-            <term ref="index:d14380e17518">Heiligenkreuz ; Bibliothek ; Necrologium Sancrucense modernum. Ms</term>
-            <term ref="index:d14380e19274">Hunulf</term>
-            <term ref="index:d14380e21188">Karl VI</term>
-            <term ref="index:d14380e23599">Lambeck, Peter</term>
-            <term ref="index:d14380e23617">Lambeck, Peter ; Catalogus librorum, quos Petrus Lambecius Hamburgensis, iuris
+               <term ref="index:d14380e11399">England, Engländer , englisch</term>
+               <term ref="index:d14380e11792">Eugippius ; Vita sancti Severini. Ms. Melk</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e13319">Friedrich IV. von Rotenburg</term>
+               <term ref="index:d14380e13328">Friedrich II. „der Streitbare“</term>
+               <term ref="index:d14380e15397">Gertrud von Braunschweig</term>
+               <term ref="index:d14380e15406">Gertrud von Süpplingenburg</term>
+               <term ref="index:d14380e17493">Heiligenkreuz</term>
+               <term ref="index:d14380e17518">Heiligenkreuz ; Bibliothek ; Necrologium Sancrucense modernum. Ms</term>
+               <term ref="index:d14380e19274">Hunulf</term>
+               <term ref="index:d14380e21188">Karl VI</term>
+               <term ref="index:d14380e23599">Lambeck, Peter</term>
+               <term ref="index:d14380e23617">Lambeck, Peter ; Catalogus librorum, quos Petrus Lambecius Hamburgensis, iuris
          utriusque doctor, sacrae caesareae maiestatis consiliarius, historiographus ac
          bibliothecarius, composuit et in lucem edidit ab anno aetatis decimo nono usque ad
          quadragesimum quintum. Wien 1673</term>
-            <term ref="index:d14380e23626">Lambeck, Peter ; Commentariorum de augustissima bibliotheca caesarea Vindobonensi libri
+               <term ref="index:d14380e23626">Lambeck, Peter ; Commentariorum de augustissima bibliotheca caesarea Vindobonensi libri
          VIII. 8 Bde. Wien 1665–1679</term>
-            <term ref="index:d14380e24277">Leibniz, Gottfried Wilhelm ; Codex iuris gentium diplomaticus. Hannover 1693</term>
-            <term ref="index:d14380e25171">Lothar III</term>
-            <term ref="index:d14380e27493">Medizin, medizinische Begriffe, gesundheitliche Belange ; Appetitlosigkeit</term>
-            <term ref="index:d14380e27539">Medizin, medizinische Begriffe, gesundheitliche Belange ; Fieber</term>
-            <term ref="index:d14380e27638">Medizin, medizinische Begriffe, gesundheitliche Belange ; Kopfschmerz</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e28397">Melk ; Bibliothek ; Eugippius, Vita sancti Severini</term>
-            <term ref="index:d14380e28471">Melk ; Bibliothek ; Necrologium Mellicense vetustius</term>
-            <term ref="index:d14380e29778">Moskau, Moskowien</term>
-            <term ref="index:d14380e31145">Odilia, hl</term>
-            <term ref="index:d14380e31183">Odoaker</term>
-            <term ref="index:d14380e31298">Oratorianer</term>
-            <term ref="index:d14380e31704">Österreich, Haus ; Genealogie</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e32698">Paulus Diaconus ; Historia Langobardorum</term>
-            <term ref="index:d14380e33148">Pez, Bernhard</term>
-            <term ref="index:d14380e34736">Pez, Hieronymus ; *Exzerpte zur braunschweigischen Geschichte. Ms</term>
-            <term ref="index:d14380e34745">Pez, Hieronymus ; *Exzerpte zur Hochzeit und Ehe Herzog Friedrichs II. von Österreich.
+               <term ref="index:d14380e24277">Leibniz, Gottfried Wilhelm ; Codex iuris gentium diplomaticus. Hannover 1693</term>
+               <term ref="index:d14380e25171">Lothar III</term>
+               <term ref="index:d14380e27493">Medizin, medizinische Begriffe, gesundheitliche Belange ; Appetitlosigkeit</term>
+               <term ref="index:d14380e27539">Medizin, medizinische Begriffe, gesundheitliche Belange ; Fieber</term>
+               <term ref="index:d14380e27638">Medizin, medizinische Begriffe, gesundheitliche Belange ; Kopfschmerz</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e28397">Melk ; Bibliothek ; Eugippius, Vita sancti Severini</term>
+               <term ref="index:d14380e28471">Melk ; Bibliothek ; Necrologium Mellicense vetustius</term>
+               <term ref="index:d14380e29778">Moskau, Moskowien</term>
+               <term ref="index:d14380e31145">Odilia, hl</term>
+               <term ref="index:d14380e31183">Odoaker</term>
+               <term ref="index:d14380e31298">Oratorianer</term>
+               <term ref="index:d14380e31704">Österreich, Haus ; Genealogie</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e32698">Paulus Diaconus ; Historia Langobardorum</term>
+               <term ref="index:d14380e33148">Pez, Bernhard</term>
+               <term ref="index:d14380e34736">Pez, Hieronymus ; *Exzerpte zur braunschweigischen Geschichte. Ms</term>
+               <term ref="index:d14380e34745">Pez, Hieronymus ; *Exzerpte zur Hochzeit und Ehe Herzog Friedrichs II. von Österreich.
          Ms</term>
-            <term ref="index:d14380e34754">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
+               <term ref="index:d14380e34754">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
          Leipzig–Regensburg 1721–1745</term>
-            <term ref="index:d14380e34828">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
+               <term ref="index:d14380e34828">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
          Leipzig–Regensburg 1721–1745 ; Bd. 1 ; Darin: Eugippius, Vita sancti Severini</term>
-            <term ref="index:d14380e34838">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
+               <term ref="index:d14380e34838">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
          Leipzig–Regensburg 1721–1745 ; Bd. 1 ; Darin: Narratio de electione Lotharii</term>
-            <term ref="index:d14380e34843">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
+               <term ref="index:d14380e34843">Pez, Hieronymus ; Scriptores rerum Austriacarum veteres ac genuini. 3 Bde.
          Leipzig–Regensburg 1721–1745 ; Bd. 1 ; Darin: Necrologium Mellicense vetustius</term>
-            <term ref="index:d14380e34904">Pez, Hieronymus ; „Conspectus“. Ms</term>
-            <term ref="index:d14380e35010">Philipp von Schwaben</term>
-            <term ref="index:d14380e36459">Rätien</term>
-            <term ref="index:d14380e37225">Reodarii</term>
-            <term ref="index:d14380e37899">Rom, Römer ; Römische Antike</term>
-            <term ref="index:d14380e38251">Rudolf I</term>
-            <term ref="index:d14380e38340">Rugier, Rugiland</term>
-            <term ref="index:d14380e38350">Rugier, Rugiland ; *Urkunden des 12. Jh., in denen sie angeblich erwähnt werden</term>
-            <term ref="index:d14380e38490">Rymer, Thomas ; Foedera, conventiones, literae et cuiusque generis acta publica inter
+               <term ref="index:d14380e34904">Pez, Hieronymus ; „Conspectus“. Ms</term>
+               <term ref="index:d14380e35010">Philipp von Schwaben</term>
+               <term ref="index:d14380e36459">Rätien</term>
+               <term ref="index:d14380e37225">Reodarii</term>
+               <term ref="index:d14380e37899">Rom, Römer ; Römische Antike</term>
+               <term ref="index:d14380e38251">Rudolf I</term>
+               <term ref="index:d14380e38340">Rugier, Rugiland</term>
+               <term ref="index:d14380e38350">Rugier, Rugiland ; *Urkunden des 12. Jh., in denen sie angeblich erwähnt werden</term>
+               <term ref="index:d14380e38490">Rymer, Thomas ; Foedera, conventiones, literae et cuiusque generis acta publica inter
          reges Angliae et alios quosvis imperatores, reges, pontifices, principes vel communitates.
          22 Bde. London 1704–1735</term>
-            <term ref="index:d14380e39054">Salzburg</term>
-            <term ref="index:d14380e39389">St. Petersburg</term>
-            <term ref="index:d10854e28377">Schwaben</term>
-            <term ref="index:d14380e41886">Sunthaym, Ladislaus ; Tabulae Claustroneoburgenses. Ms ; Der löblichen fürsten und des
+               <term ref="index:d14380e39054">Salzburg</term>
+               <term ref="index:d14380e39389">St. Petersburg</term>
+               <term ref="index:d10854e28377">Schwaben</term>
+               <term ref="index:d14380e41886">Sunthaym, Ladislaus ; Tabulae Claustroneoburgenses. Ms ; Der löblichen fürsten und des
          lands Österrich altharkomen und regierung. Basel 1491</term>
-            <term ref="index:d14380e44532">Vignier, Jérôme ; La veritable origine des tres-illustres maisons d’Alsace, de
+               <term ref="index:d14380e44532">Vignier, Jérôme ; La veritable origine des tres-illustres maisons d’Alsace, de
          Lorraine, d’Austriche, de Bade, et de quantité d’autres. Paris 1649</term>
-            <term ref="index:d14380e45017">Walter von der Vogelweide</term>
-            <term ref="index:d14380e45046">Weber, Friedrich Christian</term>
-            <term ref="index:d14380e45213">Welfen</term>
-            <term ref="index:d14380e45571">Wien</term>
-            <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term></keywords></textClass>
+               <term ref="index:d14380e45017">Walter von der Vogelweide</term>
+               <term ref="index:d14380e45046">Weber, Friedrich Christian</term>
+               <term ref="index:d14380e45213">Welfen</term>
+               <term ref="index:d14380e45571">Wien</term>
+               <term ref="index:d14380e45820">Wien ; Kaiserhof ; Hofbibliothek</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">GE entschuldigt sich bei HP für seine lange verzögerte Antwort auf dessen Brief <ref type="letter" target="letter:972">972</ref>, besonders, da GE von BP als eifrig gegenüber Freunden beschrieben
                worden war. Als Rechtfertigung berichtet GE von <rs ref="index:d14380e27638">Kopfschmerzen</rs>, <rs ref="index:d14380e27493">Appetitlosigkeit</rs> und <rs ref="index:d14380e27539">Fieber</rs>, die ihn
@@ -205,7 +219,9 @@
                <rs ref="index:d14380e15397">„Gertrud“, Tochter eines Herzogs von Braunschweig</rs>, die Rede ist. Dass
                dies unrichtig ist, hat GE bewiesen, und die von HP übermittelten Quellenstellen erhärten es weiter. Der
                Irrtum liegt wohl begründet in einer Verwechslung zwischen <rs ref="index:d14380e13319">Friedrich
-                  (IV.), Herzog von <rs ref="index:d10854e28377">Schwaben</rs></rs>, und <rs ref="index:d14380e13328">Friedrich (II.), dem Markgrafen (recte: Herzog) von <rs ref="index:d14380e31465">Österreich</rs></rs>. Davon ausgehend mag eine Angabe über „Brunovia“ als Ort der Hochzeit
+                  (IV.), Herzog von <rs ref="index:d10854e28377">Schwaben</rs>
+               </rs>, und <rs ref="index:d14380e13328">Friedrich (II.), dem Markgrafen (recte: Herzog) von <rs ref="index:d14380e31465">Österreich</rs>
+               </rs>. Davon ausgehend mag eine Angabe über „Brunovia“ als Ort der Hochzeit
                fälschlich als „Brunovicum“ gelesen und daher mit „Prunswich“ wiedergegeben worden sein. GE fragt, ob der
                Name der ersten Gattin Friedrichs von Österreich nicht im <rs ref="index:d14380e17518">Nekrolog von
                   Heiligenkreuz</rs> zu finden ist, <rs ref="index:d14380e17493">wo sie</rs> (recte: <rs ref="index:d14380e15406">Gertrud von
@@ -221,7 +237,7 @@
                Zeit in <rs ref="index:d14380e39389">St. Petersburg</rs> lebte (<rs ref="index:d14380e45046">Friedrich
                   Christian Weber</rs>?), hat GE davon berichtet. Die offiziell verbreitete Version, wonach Aleksej an
                einem Schlaganfall verstorben sei, ist eine Fabel.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -242,7 +258,8 @@
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg3">
             <mentioned>Germanos ... memorat</mentioned>
-            <p><rs type="bibl" ref="bibl:14794">Eugippe Vie de
+            <p>
+               <rs type="bibl" ref="bibl:14794">Eugippe Vie de
                      Saint Séverin</rs> 288. GE stellte Hunulf und dessen Vater Edeco – den er mit
                   dem welfischen Leitnamen „Eticho“ in Verbindung setzte – später als Spitzenahnen
                   des Welfenhauses dar: <rs type="bibl" ref="bibl:14738">Leibniz et al., Origines
@@ -343,7 +360,8 @@
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
             <mentioned>praeter Mellicense</mentioned>
-            <p>Zum älteren Melker Nekrolog vgl. <ref type="letter" target="letter:490">490</ref> <ref target="letter:490#seg1">1</ref>. Der Druck erfolgte bei Pez, Scriptores rerum
+            <p>Zum älteren Melker Nekrolog vgl. <ref type="letter" target="letter:490">490</ref>
+               <ref target="letter:490#seg1">1</ref>. Der Druck erfolgte bei Pez, Scriptores rerum
                   Austriacarum 1 col. 302–312.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
@@ -360,7 +378,7 @@
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg6">
             <mentioned>quos Lambecius promisit</mentioned>
             <p>Vgl. <ref type="letter" target="letter:1003">1003</ref>
-                  <ref target="letter:1003#seg3">3</ref>.</p>
+               <ref target="letter:1003#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg6">
             <mentioned> Codex ... Czerwenka</mentioned>
@@ -387,7 +405,8 @@
                   zu Ursprung und Genealogie der frühen Habsburger, um dessen Echtheit und
                   Vertrauenswürdigkeit im 17. und 18. Jh. heftige Kontroversen ausgetragen wurden:
                   vgl. <rs type="bibl" ref="bibl:15430">Bretscher-Gisiger–Sieber, Acta Murensia</rs>
-                  XLI–LXI; <rs type="bibl" ref="bibl:15682">Coreth, Geschichtschreibung</rs> 43; <rs type="bibl" ref="bibl:17066">Hirsch, Acta Murensia</rs> 452f.; <rs type="bibl" ref="bibl:17984">Lhotsky, Apis Colonna</rs> 228f.; <rs type="bibl" ref="bibl:19584">Siegrist, Acta Murensia</rs> 6, 15, 17; sowie <ref type="letter" target="letter:154">154</ref> <ref target="letter:154#seg6">6</ref>. Erstmals waren die „Acta“ 1618 durch
+                  XLI–LXI; <rs type="bibl" ref="bibl:15682">Coreth, Geschichtschreibung</rs> 43; <rs type="bibl" ref="bibl:17066">Hirsch, Acta Murensia</rs> 452f.; <rs type="bibl" ref="bibl:17984">Lhotsky, Apis Colonna</rs> 228f.; <rs type="bibl" ref="bibl:19584">Siegrist, Acta Murensia</rs> 6, 15, 17; sowie <ref type="letter" target="letter:154">154</ref>
+               <ref target="letter:154#seg6">6</ref>. Erstmals waren die „Acta“ 1618 durch
                   Nicolas-Claude Fabri de Peiresc ediert worden; zum Zeitpunkt dieses Briefes war
                   soeben eine neue Ausgabe durch Johann Peter Ludewig erschienen: Ludewig, Novum
                   volumen 2 col. 396–450.</p>
@@ -431,12 +450,14 @@
          <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg8">
             <mentioned> Fridericum ducem Sueviae</mentioned>
             <p> HP hatte eine solche Lösung noch für
-                  unwahrscheinlich gehalten: vgl. <ref type="letter" target="letter:972">972</ref> <ref target="letter:972#seg4">4</ref>.</p>
+                  unwahrscheinlich gehalten: vgl. <ref type="letter" target="letter:972">972</ref>
+               <ref target="letter:972#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg8">
             <mentioned> Brunoviae ... Brunovicum</mentioned>
             <p>GE scheint auf die von HP als Anlass des
-                  Traditionsfehlers vorgeschlagene Annalenstelle einzugehen: vgl. <ref type="letter" target="letter:972">972</ref> <ref target="letter:972#seg3">3</ref>. Die Deutung GEs ist freilich insofern Konjektur, als in
+                  Traditionsfehlers vorgeschlagene Annalenstelle einzugehen: vgl. <ref type="letter" target="letter:972">972</ref>
+               <ref target="letter:972#seg3">3</ref>. Die Deutung GEs ist freilich insofern Konjektur, als in
                   keiner der Quellen von „Brunovia“, was auf Braunau am Inn zu beziehen wäre, die
                   Rede ist. Außerdem kehrt sie die von HP vorgebrachte Überlegung um, zumal dieser
                   vom Ort der Hochzeit fälschlich auf die Herkunft der Braut schließen ließ, GE
@@ -454,10 +475,12 @@
                   das Tagesdatum entspricht dem anderweitig gesicherten Todestag Gertruds von
                   Süpplingenburg, von deren Grabstein in Heiligenkreuz die irrigen Annahmen über
                   eine mit Herzog Friedrich II. verheiratete „Gertrud von Braunschweig“
-                  wahrscheinlich ihren Anfang nahmen: vgl. <ref type="letter" target="letter:972">972</ref> <ref target="letter:972#seg4">4</ref>;
+                  wahrscheinlich ihren Anfang nahmen: vgl. <ref type="letter" target="letter:972">972</ref>
+               <ref target="letter:972#seg4">4</ref>;
                   sowie <rs type="bibl" ref="bibl:15874">Dienst, Babenberger-Studien</rs> 101f.; <rs type="bibl" ref="bibl:16354">Fuchs, Totenbücher</rs> 744. Der Eintrag stammt
                   anscheinend von der Hand des 1717 verstorbenen Alberich Höffner: <rs type="bibl" ref="bibl:17820">Lanz, Necrologium</rs> 278. Er ist somit ohne selbstständigen
-                  Wert für die von GE und HP diskutierte Frage. Zu Höffner vgl. <ref type="letter" target="letter:1016">1016</ref> <ref target="letter:1016#seg8">8</ref>.</p>
+                  Wert für die von GE und HP diskutierte Frage. Zu Höffner vgl. <ref type="letter" target="letter:1016">1016</ref>
+               <ref target="letter:1016#seg8">8</ref>.</p>
          </note>
          <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg12">
             <mentioned>fata principis Alexii</mentioned>
@@ -502,20 +525,46 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Vir maxime reverende.</opener>
-         <ab resp="#editor" xml:id="seg1">Quid putas de Eccardo, quem officiosum in amicos frater praedicavit, nec tamen ad humanissimas et eruditissimas literas tuas a longo satis tempore respondit? Subrusticus tibi videbitur certe. Sed, quaeso, silentium <choice><sic>excusat</sic><corr>excusantem</corr></choice> audi. Miserrime me habui. Immensi capitis dolores, appetitus prostratus et internus calor me ferme hactenus confecerunt. Nec de meis nec de amicorum rebus vel cogitare toto illo tempore licuit. </ab>
-         <ab resp="#editor" xml:id="seg2">Sed iam revivisco et gratias tibi ingentes ago pro communicato consilio Austriacos scriptores edendi. Placet institutum, perplacent, quae indicasti, chronica et caeterae schedae. Nos ab Austria vestra remoti vix habemus, quod vestra augere posset. Sed, quae communicasti, paulisper percurram. <pb n="1v"/> </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n1"/>Vita sancti Severini<anchor xml:id="n1e"/> magni est momenti, quae nobis ruinam coloniae Romanae dilucide enarrat et Germanos a fratre Odoacri Unulfo, quod <add place="above">nomen</add> Wulfus legendum est, regioni inductos memorat. Hunc Welfum ego progenitorem veterum Welforum statuo, quorum praecipua<anchor xml:id="n2"/> bona allodialia in Rhaetia<anchor xml:id="n2e"/>. Utinam ulterius quid de illo principe reperiri posset! An<anchor xml:id="n3"/> variae etiam lectiones<anchor xml:id="n3e"/> tuae aliquid in rebus <choice><sic>Odocrum</sic><corr>Odoacrum</corr></choice> et Unulfum concernentibus<note place="foot" xml:id="d3e69484">Der erste Teil des Wortes steht auf Rasur.</note> emendent, scire aveo. Ita enim et nobis usui essent.<anchor xml:id="n4"/> Rugilandia<anchor xml:id="n4e"/>, quae ibi et in Paulo Diacono memoratur, apud vos <choice><sic>ex</sic><corr>et</corr></choice> vobis etiam ex adverso in altero Danubii litore fuit.<anchor xml:id="n5"/> Habeo diploma<anchor xml:id="n5e"/> Salisburgensis ecclesiae bona concernens, in quo et seculo XII. adhuc ibi Rugi et Reodarii commemorantur. </ab>
-         <ab resp="#editor" xml:id="seg4">Mellicensia multum lucis historiae dabunt, quanquam in antiquissimis <add place="above">ea</add> fabulis permista sciam. Tu vero, vir maxime reverende, <anchor xml:id="n6"/>praeter Mellicense<anchor xml:id="n6e"/> etiam aliorum necrologiorum excerpta insigniora dare deberes. <pb n="2r"/><anchor xml:id="n7"/> Utilissime enim in historia adhiberi possunt, quae non emortuales saltem dies, sed subinde et alia notabilia suggerunt<anchor xml:id="n7e"/>. </ab>
-         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n8"/>Narratio<anchor xml:id="n8e"/> de Lotharii imperatoris electione mihi gratissima et forte usui erit, si edetur. </ab>
-         <ab resp="#editor" xml:id="seg6">Sed video te nondum Viennae nactum esse, <anchor xml:id="n9"/>quos Lambecius promisit<anchor xml:id="n9e"/> in Commentario de bibliotheca caesarea scriptores rerum Austriacarum. Hi tuis addendi essent. Aderunt tibi etiam sine dubio plura diplomata, in quibus mentio Austriae marchionum.<anchor xml:id="n10"/> Codex etiam epistolarum Rudolphi I. imperatoris, quem Czerwenka<anchor xml:id="n10e"/> habuit et pene integrum edidit, huc pertinet. Multa etiam acta publica Austriaca insunt Rymeri Actis Anglicanis, rarissimo libro, quae tibi lubenter excerpi curabo. Aliqua Leibnitius in Codice diplomatico profert. De origine Habspurgicae familiae, cui Austria iam subest, curam habere deberes. Ita vero<anchor xml:id="n11"/> Murensis monasterii fundatio<anchor xml:id="n11e"/>,<anchor xml:id="n12"/> Vita sanctae Odiliae<anchor xml:id="n12e"/> et, quaecunque <pb n="2v"/><anchor xml:id="n13"/> Vignierius<anchor xml:id="n13e"/> Oratorii presbyter in Gallico Des familles d’Alsace libro inter probationes evulgavit, ad te pertinent. Habeo ego <anchor xml:id="n14"/>veteris poetae Germanici, qui Philippi imperatoris aetate claruit et von der Vogelweide dicitur, excerpta<anchor xml:id="n14e"/>, in quibus notabilia quaedam ad Austriaca, quae lubenter communicabo. Age modo, vir eruditissime, preme fratris doctissimi vestigia et in tuam ordinisque Benedictini laudem fac, ut brevi opus scriptorum Austriacorum impressum videamus. </ab>
+         <opener>
+            <pb n="1r"/> Vir maxime reverende.</opener>
+         <ab resp="#editor" xml:id="seg1">Quid putas de Eccardo, quem officiosum in amicos frater praedicavit, nec tamen ad humanissimas et eruditissimas literas tuas a longo satis tempore respondit? Subrusticus tibi videbitur certe. Sed, quaeso, silentium <choice>
+               <sic>excusat</sic>
+               <corr>excusantem</corr>
+            </choice> audi. Miserrime me habui. Immensi capitis dolores, appetitus prostratus et internus calor me ferme hactenus confecerunt. Nec de meis nec de amicorum rebus vel cogitare toto illo tempore licuit. </ab>
+         <ab resp="#editor" xml:id="seg2">Sed iam revivisco et gratias tibi ingentes ago pro communicato consilio Austriacos scriptores edendi. Placet institutum, perplacent, quae indicasti, chronica et caeterae schedae. Nos ab Austria vestra remoti vix habemus, quod vestra augere posset. Sed, quae communicasti, paulisper percurram. <pb n="1v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n1"/>Vita sancti Severini<anchor xml:id="n1e"/> magni est momenti, quae nobis ruinam coloniae Romanae dilucide enarrat et Germanos a fratre Odoacri Unulfo, quod <add place="above">nomen</add> Wulfus legendum est, regioni inductos memorat. Hunc Welfum ego progenitorem veterum Welforum statuo, quorum praecipua<anchor xml:id="n2"/> bona allodialia in Rhaetia<anchor xml:id="n2e"/>. Utinam ulterius quid de illo principe reperiri posset! An<anchor xml:id="n3"/> variae etiam lectiones<anchor xml:id="n3e"/> tuae aliquid in rebus <choice>
+               <sic>Odocrum</sic>
+               <corr>Odoacrum</corr>
+            </choice> et Unulfum concernentibus<note place="foot" xml:id="d3e69484">Der erste Teil des Wortes steht auf Rasur.</note> emendent, scire aveo. Ita enim et nobis usui essent.<anchor xml:id="n4"/> Rugilandia<anchor xml:id="n4e"/>, quae ibi et in Paulo Diacono memoratur, apud vos <choice>
+               <sic>ex</sic>
+               <corr>et</corr>
+            </choice> vobis etiam ex adverso in altero Danubii litore fuit.<anchor xml:id="n5"/> Habeo diploma<anchor xml:id="n5e"/> Salisburgensis ecclesiae bona concernens, in quo et seculo XII. adhuc ibi Rugi et Reodarii commemorantur. </ab>
+         <ab resp="#editor" xml:id="seg4">Mellicensia multum lucis historiae dabunt, quanquam in antiquissimis <add place="above">ea</add> fabulis permista sciam. Tu vero, vir maxime reverende, <anchor xml:id="n6"/>praeter Mellicense<anchor xml:id="n6e"/> etiam aliorum necrologiorum excerpta insigniora dare deberes. <pb n="2r"/>
+            <anchor xml:id="n7"/> Utilissime enim in historia adhiberi possunt, quae non emortuales saltem dies, sed subinde et alia notabilia suggerunt<anchor xml:id="n7e"/>. </ab>
+         <ab resp="#editor" xml:id="seg5">
+            <anchor xml:id="n8"/>Narratio<anchor xml:id="n8e"/> de Lotharii imperatoris electione mihi gratissima et forte usui erit, si edetur. </ab>
+         <ab resp="#editor" xml:id="seg6">Sed video te nondum Viennae nactum esse, <anchor xml:id="n9"/>quos Lambecius promisit<anchor xml:id="n9e"/> in Commentario de bibliotheca caesarea scriptores rerum Austriacarum. Hi tuis addendi essent. Aderunt tibi etiam sine dubio plura diplomata, in quibus mentio Austriae marchionum.<anchor xml:id="n10"/> Codex etiam epistolarum Rudolphi I. imperatoris, quem Czerwenka<anchor xml:id="n10e"/> habuit et pene integrum edidit, huc pertinet. Multa etiam acta publica Austriaca insunt Rymeri Actis Anglicanis, rarissimo libro, quae tibi lubenter excerpi curabo. Aliqua Leibnitius in Codice diplomatico profert. De origine Habspurgicae familiae, cui Austria iam subest, curam habere deberes. Ita vero<anchor xml:id="n11"/> Murensis monasterii fundatio<anchor xml:id="n11e"/>,<anchor xml:id="n12"/> Vita sanctae Odiliae<anchor xml:id="n12e"/> et, quaecunque <pb n="2v"/>
+            <anchor xml:id="n13"/> Vignierius<anchor xml:id="n13e"/> Oratorii presbyter in Gallico Des familles d’Alsace libro inter probationes evulgavit, ad te pertinent. Habeo ego <anchor xml:id="n14"/>veteris poetae Germanici, qui Philippi imperatoris aetate claruit et von der Vogelweide dicitur, excerpta<anchor xml:id="n14e"/>, in quibus notabilia quaedam ad Austriaca, quae lubenter communicabo. Age modo, vir eruditissime, preme fratris doctissimi vestigia et in tuam ordinisque Benedictini laudem fac, ut brevi opus scriptorum Austriacorum impressum videamus. </ab>
          <ab resp="#editor" xml:id="seg7">Pro excerptis ad historiam Brunsvicensem gratias immensas ago, relaturus suo tempore. </ab>
          <ab resp="#editor" xml:id="seg8">Gaudeo etiam disquisitionem meam de Friderici II. uxoribus tibi se approbasse. Miror tamen in recentioribus quibusdam <add place="above">vestris</add> monumentis <anchor xml:id="n15"/>Gertrudem eam et filiam ducis de Brunsvic dici<anchor xml:id="n15e"/>. Res ipsa falsa est, ut clare satis probavi, et tuae etiam <pb n="3r"/> ad me missae schedae idem evincunt. Sed unde is error? Confudere sine dubio recentiores<anchor xml:id="n16"/> Fridericum ducem Sueviae<anchor xml:id="n16e"/> cum Friderico Austriae marchione. Legere deinde fortassis nuptias<anchor xml:id="n17"/> Brunoviae celebratas et inde, cum semel Fridericos hos commiscuissent, Brunovicum<anchor xml:id="n17e"/> sive Prunswich fecerunt. Aliter se res obscura habere nequit. Annon nomen primae Friderici II. uxoris in<anchor xml:id="n18"/> necrologio<anchor xml:id="n18e"/> monasterii S. Crucis, ubi sepulta dicitur? </ab>
-         <ab resp="#editor" xml:id="seg9">Haec de his. Ego interim mihi gratulor de notitia <choice><sic>tua</sic><corr>tui</corr></choice> a fratre amicissimo mihi procurata et precor te, ut me etiam in posterum literis tuis eruditis dignare velis. <sic>Nom</sic> amplius responsum ad eas differam, et si quid in me est, laudabiles conatus tuos iuvabo. Vale, vir maxime reverende, et ama</ab>
+         <ab resp="#editor" xml:id="seg9">Haec de his. Ego interim mihi gratulor de notitia <choice>
+               <sic>tua</sic>
+               <corr>tui</corr>
+            </choice> a fratre amicissimo mihi procurata et precor te, ut me etiam in posterum literis tuis eruditis dignare velis. <sic>Nom</sic> amplius responsum ad eas differam, et si quid in me est, laudabiles conatus tuos iuvabo. Vale, vir maxime reverende, et ama</ab>
          <closer>Tuum omni studio Joannem Georgium Eccardum.</closer>
          <closer>Hanoverae die 25. Decembris 1718.</closer>
          <closer>Instantem tibi novum annum prosperum fortunatumque apprecor.</closer>
-         <closer xml:id="seg12"> <add place="left-margin"><witDetail wit="#A">am linken Blattrand senkrecht</witDetail>P.S. Non male etiam faceres, si monumenta Romanorum in Austria superantium, inscriptiones et caetera conquireres et antiquitatum studiosis in opere tuo offerres</add>. <pb n="3v"/> Ab amicis fratribus Peziis saltem singulis mensibus unum responsum expetit sibi Eccardus et rogat, ut ipsi in posterum et nova quaedam literaria <sic>ipsi</sic> <choice><sic>communicet</sic><corr>communicent</corr></choice>. Hodie non sine horrore <anchor xml:id="n19"/>fata principis Alexii<anchor xml:id="n19e"/> Mosci<anchor xml:id="n20"/> ab homine, qui eo tempore Petersburgi vixit, audivi<anchor xml:id="n20e"/>. Bone Deus! Misera morte obiit<anchor xml:id="n21"/> caesari affinis princeps<anchor xml:id="n21e"/> et Guelfo sanguini coniunctus. Fabulae enim sunt, quae vulgatae sunt, quasi <add place="above">ex</add><anchor xml:id="n22"/> apoplexia<anchor xml:id="n22e"/> obierit<note place="foot" xml:id="d3e69560"><hi rend="italic">Ab amicis ... obierit</hi> am Blattrand senkrecht eingefügt.</note>.</closer>
+         <closer xml:id="seg12">
+            <add place="left-margin">
+               <witDetail wit="#A">am linken Blattrand senkrecht</witDetail>P.S. Non male etiam faceres, si monumenta Romanorum in Austria superantium, inscriptiones et caetera conquireres et antiquitatum studiosis in opere tuo offerres</add>. <pb n="3v"/> Ab amicis fratribus Peziis saltem singulis mensibus unum responsum expetit sibi Eccardus et rogat, ut ipsi in posterum et nova quaedam literaria <sic>ipsi</sic>
+            <choice>
+               <sic>communicet</sic>
+               <corr>communicent</corr>
+            </choice>. Hodie non sine horrore <anchor xml:id="n19"/>fata principis Alexii<anchor xml:id="n19e"/> Mosci<anchor xml:id="n20"/> ab homine, qui eo tempore Petersburgi vixit, audivi<anchor xml:id="n20e"/>. Bone Deus! Misera morte obiit<anchor xml:id="n21"/> caesari affinis princeps<anchor xml:id="n21e"/> et Guelfo sanguini coniunctus. Fabulae enim sunt, quae vulgatae sunt, quasi <add place="above">ex</add>
+            <anchor xml:id="n22"/> apoplexia<anchor xml:id="n22e"/> obierit<note place="foot" xml:id="d3e69560">
+               <hi rend="italic">Ab amicis ... obierit</hi> am Blattrand senkrecht eingefügt.</note>.</closer>
       </body>
    </text>
 </TEI>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="699" xml:id="pez-0699">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Buchels an Bernhard Pez. 1716-12-06. Düsseldorf.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">699</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -75,52 +87,54 @@
                <ptr type="mentions" target="letter:696"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e929">Albrechtsberg</term>
-            <term ref="index:d14380e3233">Augsburg</term>
-            <term ref="index:d14380e3974">Barrali, Vincenzo ; Chronologia sanctorum et aliorum virorum illustrium ac abbatum
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e929">Albrechtsberg</term>
+               <term ref="index:d14380e3233">Augsburg</term>
+               <term ref="index:d14380e3974">Barrali, Vincenzo ; Chronologia sanctorum et aliorum virorum illustrium ac abbatum
          sacrae insulae Lerinensis. Lyon 1613</term>
-            <term ref="index:d14380e3988">Barrali, Vincenzo ; Chronologia sanctorum et aliorum virorum illustrium ac abbatum
+               <term ref="index:d14380e3988">Barrali, Vincenzo ; Chronologia sanctorum et aliorum virorum illustrium ac abbatum
          sacrae insulae Lerinensis. Lyon 1613 ; Auszüge von Johann Buchels. Ms</term>
-            <term ref="index:d14380e4170">Bayern, Bayern</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e6616">Brauweiler</term>
-            <term ref="index:d14380e6980">Buchels, Johann ; Bibliothek</term>
-            <term ref="index:d14380e10372">Düsseldorf ; Kurfürstliche Bibliothek</term>
-            <term ref="index:d14380e10378">Düsseldorf ; Kurfürstliche Bibliothek ; Lutherbibel aus der Bibliotheca
+               <term ref="index:d14380e4170">Bayern, Bayern</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e6616">Brauweiler</term>
+               <term ref="index:d14380e6980">Buchels, Johann ; Bibliothek</term>
+               <term ref="index:d14380e10372">Düsseldorf ; Kurfürstliche Bibliothek</term>
+               <term ref="index:d14380e10378">Düsseldorf ; Kurfürstliche Bibliothek ; Lutherbibel aus der Bibliotheca
          Palatina</term>
-            <term ref="index:d14380e11852">Evangelische allgemein</term>
-            <term ref="index:d14380e12666">Franken, Matthias</term>
-            <term ref="index:d14380e13593">Frizon, Pierre ; Gallia purpurata, qua cum summorum pontificum, tum omnium Galliae
+               <term ref="index:d14380e11852">Evangelische allgemein</term>
+               <term ref="index:d14380e12666">Franken, Matthias</term>
+               <term ref="index:d14380e13593">Frizon, Pierre ; Gallia purpurata, qua cum summorum pontificum, tum omnium Galliae
          cardinalium, qui hactenus vixere, res praeclare gestae continentur. Paris 1638</term>
-            <term ref="index:d14380e13599">Frizon, Pierre ; Gallia purpurata, qua cum summorum pontificum, tum omnium Galliae
+               <term ref="index:d14380e13599">Frizon, Pierre ; Gallia purpurata, qua cum summorum pontificum, tum omnium Galliae
          cardinalium, qui hactenus vixere, res praeclare gestae continentur. Paris 1638 ; Auszüge
          von Johann Buchels. Ms</term>
-            <term ref="index:d14380e15593">Gladbach</term>
-            <term ref="index:d14380e17443">Hegenmüller von Dubenweiler, Johann Franz Freiherr</term>
-            <term ref="index:d14380e17458">Hegenmüller von Dubenweiler, Johann Rupert Freiherr</term>
-            <term ref="index:d14380e17473">Heidelberg ; Bibliotheca Palatina</term>
-            <term ref="index:d14380e19926">Jacob, Louis ; Bibliotheca pontificia duobus libris distincta. Lyon 1643</term>
-            <term ref="index:d14380e22125">Knor, Petrus</term>
-            <term ref="index:d14380e22169">Kochem, Konrad</term>
-            <term ref="index:d14380e22194">Köln</term>
-            <term ref="index:d14380e22238">Köln ; Deutz</term>
-            <term ref="index:d14380e22264">Köln ; Groß St. Martin</term>
-            <term ref="index:d14380e22282">Köln ; St. Pantaleon</term>
-            <term ref="index:d14380e24643">Leopold I</term>
-            <term ref="index:d14380e25451">Luther, Martin</term>
-            <term ref="index:d14380e25537">Lyon</term>
-            <term ref="index:d14380e27309">Maximilian I</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e28279">Melk ; Bibliothek</term>
-            <term ref="index:d14380e28783">Metternich, NN</term>
-            <term ref="index:d14380e31051">Obladen, Heinrich</term>
-            <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
-            <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum
+               <term ref="index:d14380e15593">Gladbach</term>
+               <term ref="index:d14380e17443">Hegenmüller von Dubenweiler, Johann Franz Freiherr</term>
+               <term ref="index:d14380e17458">Hegenmüller von Dubenweiler, Johann Rupert Freiherr</term>
+               <term ref="index:d14380e17473">Heidelberg ; Bibliotheca Palatina</term>
+               <term ref="index:d14380e19926">Jacob, Louis ; Bibliotheca pontificia duobus libris distincta. Lyon 1643</term>
+               <term ref="index:d14380e22125">Knor, Petrus</term>
+               <term ref="index:d14380e22169">Kochem, Konrad</term>
+               <term ref="index:d14380e22194">Köln</term>
+               <term ref="index:d14380e22238">Köln ; Deutz</term>
+               <term ref="index:d14380e22264">Köln ; Groß St. Martin</term>
+               <term ref="index:d14380e22282">Köln ; St. Pantaleon</term>
+               <term ref="index:d14380e24643">Leopold I</term>
+               <term ref="index:d14380e25451">Luther, Martin</term>
+               <term ref="index:d14380e25537">Lyon</term>
+               <term ref="index:d14380e27309">Maximilian I</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e28279">Melk ; Bibliothek</term>
+               <term ref="index:d14380e28783">Metternich, NN</term>
+               <term ref="index:d14380e31051">Obladen, Heinrich</term>
+               <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
+               <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum
          Benedictinorum e celeberrima congregatione S. Mauri in Francia. Augsburg–Graz 1716</term>
-            <term ref="index:d14380e37780">Rom, Römer ; Päpstliche Kurie, Papsttum ; Bibliotheca Vaticana</term>
-            <term ref="index:d14380e38475">Rüttgers, Michael</term></keywords></textClass>
+               <term ref="index:d14380e37780">Rom, Römer ; Päpstliche Kurie, Papsttum ; Bibliotheca Vaticana</term>
+               <term ref="index:d14380e38475">Rüttgers, Michael</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">JBs längere Abwesenheit hat eine frühere Antwort auf BPs Brief <ref type="letter" target="letter:696">696</ref> verhindert. JB fühlt sich von BP über Gebühr gelobt und fürchtet, BPs Erwartungen nicht gerecht werden zu können; er lobt BPs Urteil sowie dessen Verdienste um den <rs ref="index:d14380e4919">Benediktinerorden</rs> und die Gelehrtenwelt.</p>
             <p corresp="#seg2">Die bisher mitgeteilten Informationen stammen aus <rs ref="index:d14380e6980">JBs Privatbibliothek</rs>, da die kurfürstlich pfälzische zu Kriegszeiten eingerichtet wurde und daher dürftig bestückt ist. JB hat alle <rs ref="index:d14380e11852">nicht katholischen</rs> und nicht vertrauenswürdigen Autoren daraus entfernt. Seine eigene Bibliothek hingegen umfasst 9000 Bände und wächst monatlich.</p>
@@ -130,15 +144,17 @@
             <p corresp="#seg6">JB fragt, ob BP über Louis Jacobs 1643 zu <rs ref="index:d14380e25537">Lyon</rs> erschienene <rs ref="index:d14380e19926">„Bibliotheca pontificia“</rs> verfügt, da darin etliche <rs ref="index:d14380e4919">Benediktiner</rs>schriftsteller besprochen werden. Sobald er etwas Zeit findet, will JB nach weiteren Autoren suchen. Er ermuntert BP, in seinem Werk fortzufahren, durch das die Heiligen und Gelehrten gemeinsam mit BP verewigt werden.</p>
             <p corresp="#seg7">Bei seinem Besuch in <rs ref="index:d14380e22194">Köln</rs> will sich JB von dem <rs ref="index:d14380e28783">Buchhändler Metternich</rs> BPs <rs ref="index:d14380e33384">„Bibliotheca Benedictino-Mauriana“</rs> besorgen.</p>
             <p corresp="#seg8">In einem Postskriptum berichtet JB von zwei Aufenthalten in <rs ref="index:d14380e28088">Melk</rs>: einmal im Gefolge von <rs ref="index:d14380e24643">Kaiser Leopold I.</rs> auf dessen Reise nach <rs ref="index:d14380e3233">Augsburg</rs>, einmal mit seinem Bekannten <rs ref="index:d14380e17458">Johann Ruprecht Freiherrn Hegenmüller von Dubenweiler</rs>, der unweit <rs ref="index:d14380e28088">Melk</rs> auf Schloss Adels- oder Adlersberg (recte: <rs ref="index:d14380e929">Albrechtsberg</rs>) wohnte. JB möchte wissen, ob dessen Sohn (<rs ref="index:d14380e17443">Johann Franz Freiherr Hegenmüller von Dubenweiler</rs>), der nun über 30 Jahre alt sein müsste, am Leben ist.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
             <mentioned>communicavi hactenus</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:603">603 </ref><ref target="letter:603 #seg1">1</ref>,
-                     <ref type="letter" target="letter:667">667</ref> <ref target="letter:667#seg2">2</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:603">603 </ref>
+               <ref target="letter:603 #seg1">1</ref>,
+                     <ref type="letter" target="letter:667">667</ref>
+               <ref target="letter:667#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned> belli tempore instructa</mentioned>
@@ -188,14 +204,16 @@
             <p> Gemeint ist die Reise Kaiser Leopolds
                   I. zum Kurfürstentag in Augsburg 1689: vgl. <rs type="bibl" ref="bibl:16576">Goloubeva, Emperor Leopold I</rs> 150; <rs type="bibl" ref="bibl:19646">Spielman, Leopold I</rs> 148. Der Besuch in Melk dauerte vom 31. Juli bis zum
                   1. August: PE 3 47f. JB stand zu dieser Zeit im Dienste von Johann Ferdinand
-                  Grafen Enckevoirt: vgl. <ref type="letter" target="letter:950">950</ref> <ref target="letter:950#seg5">5</ref>.</p>
+                  Grafen Enckevoirt: vgl. <ref type="letter" target="letter:950">950</ref>
+               <ref target="letter:950#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg8">
             <mentioned> barone de Hegenmuller</mentioned>
             <p>Zur Familie Hegenmüller vgl. <rs type="bibl" ref="bibl:17496">Kirnbauer von Erzstätt, Wappenbuch Niederoesterreichischer
                      Adel 1</rs> 178f.; <rs type="bibl" ref="bibl:19338">Schierer, Barone
                      Hegenmüller</rs>. Bei dem Bekannten JBs muss es sich um den Freiherrn Johann
-                  Ruprecht Hegenmüller gehandelt haben: vgl. <ref type="letter" target="letter:814">814</ref> <ref target="letter:814#seg7">7</ref>.
+                  Ruprecht Hegenmüller gehandelt haben: vgl. <ref type="letter" target="letter:814">814</ref>
+               <ref target="letter:814#seg7">7</ref>.
                   Zu den Verbindungen der Familie mit dem Stift Melk vgl. <rs type="bibl" ref="bibl:16240">Fiska, Schramb</rs> 221; <rs type="bibl" ref="bibl:19786">Stockinger, Stabilitas loci</rs> 260–262. Zum Schloss Albrechtsberg vgl. <rs type="bibl" ref="bibl:15512">Büttner, Burgen 5</rs> 139–143.</p>
          </note>
       </listAnnotation>
@@ -214,12 +232,14 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Eruditissimo plurimumque reverendo ac colendo viro et domino patri Bernardo Pez bibliothecario Mellicensi Joannes Buchels salutem plurimam dicit.</opener>
+         <opener>
+            <pb n="1r"/> Eruditissimo plurimumque reverendo ac colendo viro et domino patri Bernardo Pez bibliothecario Mellicensi Joannes Buchels salutem plurimam dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Absentia mea diuturna responsum retardavit, quod amantissimis litteris tuis iam pridem debui; video, quantopere sim obstrictus animo tuo non minus humano quam erudito, et utinam adsit mihi tanta librorum copia, ut aliqua saltem ex parte tanti viri queam exspectationi respondere. Interim pro tuo de me iudicio vel, ut melius dicam, pro isto tam amico de me errore gratias habeo maximas; si quod est, in quo requiras officium meum, fac periculum et occasionem suppedita; si non possim omnia praestare, quae desideras, certe nitar, ut intelligas mihi praeter vires nihil defuisse. Et quis non amet et veneretur virum reipublicae litterariae natum et gloriae Benedictinae studiosissimum, qui perspicaci sanoque iudicio et laboribus indefessis tot monumenta veterum evolvit, ut ordinis sui sanctissimi honorem nunquam moriturum illustret? </ab>
          <ab resp="#editor" xml:id="seg2">Ea, quae <anchor xml:id="n1"/>communicavi hactenus<anchor xml:id="n1e"/>, desumpsi ex meis libris; electoralis bibliotheca<anchor xml:id="n2"/> belli tempore instructa<anchor xml:id="n2e"/> non satis ampla est, cum ex ea libros heterodoxos et malae fidei autores proscripserim. Habeo musaeum ego, quod nulli bibliothecae cedit; numerantur in eo prope novem millia voluminum, accrescit illud singulis mensibus, si non iuxta desiderium, saltem pro modulo meo. </ab>
          <ab resp="#editor" xml:id="seg3">Feci, <anchor xml:id="n3"/>quod postulasti<anchor xml:id="n3e"/>. Habes ipsissima Barralii verba sicut et Frizonis. </ab>
          <ab resp="#editor" xml:id="seg4">Scis, vir eruditissime, quod olim elector Bavarus <anchor xml:id="n4"/>bibliothecam Palatinam transtulerit ad Vaticanam<anchor xml:id="n4e"/>. Nullus ex instructissima illa bibliotheca liber in electoralem devenit,<anchor xml:id="n5"/> Lutheri Biblia<anchor xml:id="n5e"/> si excipiam, quae pretiosissime sunt compacta. Sunt in ea complures manuscripti codices, sed a scopo nostro deviantes. </ab>
-         <ab resp="#editor" xml:id="seg5">Quam primum Coloniam venero, conveniam <anchor xml:id="n6"/>abbates ad S. Pantaleonem, ad S. Martinum et Tuitiensem, adibo etiam abbatem Brauweilerensem et Gladbacensem<anchor xml:id="n6e"/> eosque monebo et precabor impensissime, ut tuo desiderio et iustae petitioni prompte respondeant. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg5">Quam primum Coloniam venero, conveniam <anchor xml:id="n6"/>abbates ad S. Pantaleonem, ad S. Martinum et Tuitiensem, adibo etiam abbatem Brauweilerensem et Gladbacensem<anchor xml:id="n6e"/> eosque monebo et precabor impensissime, ut tuo desiderio et iustae petitioni prompte respondeant. <pb n="1v"/>
+         </ab>
          <ab resp="#editor" xml:id="seg6">Vellem mihi significari, utrum Ludovici Jacob a sancto Carolo <anchor xml:id="n7"/>Bibliotheca pontificia<anchor xml:id="n7e"/> Lugduni anno 1643 impressa sit ad manus. Habet ille plurimos autores ex ordine sancti Benedicti recensetque libros illorum. Quam primum plus otii nactus fuero, videbo, num plures possim reperire. Perge interim spartam tuam exornare, id nomine non meo solum, sed ordinis sacri totiusque reipublicae litterariae peto. Tibi persuadeas, velim, scripta tua temporum omnium iniuriam esse superatura, cum spirent pietatem, sanctorum gloriam illustrent, eruditorum opera consacrent aeternitati; vivent sancti, vivent eruditi, vivent per te, sed et tecum vivent, vivent in eximii viri litterarum monumentis. Vale et sic me in amicorum tuorum numerum recipias, ut tibi habeas persuasum me nihil amicitiae tuae praeferendum putare. </ab>
          <ab resp="#editor" xml:id="seg7">Adibo Coloniae <anchor xml:id="n8"/>bibliopolam Metternichium<anchor xml:id="n8e"/> et ab ipso Bibliothecam tuam Sanct-Maurianam mihi comparabo, quam avide legam. Vale iterum et me amare perge.</ab>
          <closer>Dusseldorpii octavo Idus Decembris MDCCXVI.</closer>

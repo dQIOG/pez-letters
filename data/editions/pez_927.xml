@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="927" xml:id="pez-0927">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Apronian Hueber an Bernhard Pez. 1718-03-26. Mehrerau.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">927</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -76,32 +88,35 @@
                <ptr type="sentWith" target="letter:926"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e113">Ab Yberg, Heinrich</term>
-            <term ref="index:d14380e776">Albini, Joachim</term>
-            <term ref="index:d14380e1104">*Allwicus de Morr</term>
-            <term ref="index:d14380e1609">Andreas von Göringen</term>
-            <term ref="index:d14380e10940">Einsiedeln</term>
-            <term ref="index:d14380e11252">Engelberg</term>
-            <term ref="index:d14380e11279">Engelberg ; Bibliothek ; Frowin von Engelberg, De laude liberi arbitrii. Ms</term>
-            <term ref="index:d14380e13646">Frowin von Engelberg ; De laude liberi arbitrii ; Ms. Engelberg</term>
-            <term ref="index:d14380e17485">Heider, Johann</term>
-            <term ref="index:d14380e18810">Höslin, Jodok</term>
-            <term ref="index:d14380e22856">Konrad von Fabaria</term>
-            <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e113">Ab Yberg, Heinrich</term>
+               <term ref="index:d14380e776">Albini, Joachim</term>
+               <term ref="index:d14380e1104">*Allwicus de Morr</term>
+               <term ref="index:d14380e1609">Andreas von Göringen</term>
+               <term ref="index:d14380e10940">Einsiedeln</term>
+               <term ref="index:d14380e11252">Engelberg</term>
+               <term ref="index:d14380e11279">Engelberg ; Bibliothek ; Frowin von Engelberg, De laude liberi arbitrii. Ms</term>
+               <term ref="index:d14380e13646">Frowin von Engelberg ; De laude liberi arbitrii ; Ms. Engelberg</term>
+               <term ref="index:d14380e17485">Heider, Johann</term>
+               <term ref="index:d14380e18810">Höslin, Jodok</term>
+               <term ref="index:d14380e22856">Konrad von Fabaria</term>
+               <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
          dominum dominum Joannem Benedictum Gentilottum ab Engelsbrunn pro editione integri
          syntagmatis diplomatico-historico-epistolaris Udalrici Babenbergensis ex codice Zwetlensi,
          impugnata a viro clarissimo Angelo Fonteio Veronensi. Augsburg 1717</term>
-            <term ref="index:d14380e34947">Pfäfers</term>
-            <term ref="index:d14380e40266">Schwitter, Gerold</term>
-            <term ref="index:d14380e40276">Schwitter, Gerold ; Schriftstellerkatalog von Pfäfers. Ms</term>
-            <term ref="index:d14380e43652">Ulm</term>
-            <term ref="index:d14380e43662">Ulm ; *Buchhändler zu Ulm</term></keywords></textClass>
+               <term ref="index:d14380e34947">Pfäfers</term>
+               <term ref="index:d14380e40266">Schwitter, Gerold</term>
+               <term ref="index:d14380e40276">Schwitter, Gerold ; Schriftstellerkatalog von Pfäfers. Ms</term>
+               <term ref="index:d14380e43652">Ulm</term>
+               <term ref="index:d14380e43662">Ulm ; *Buchhändler zu Ulm</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Gerade zu dem Zeitpunkt, als AHu sein Ersuchen um die Abschrift des Traktats „<rs ref="index:d14380e11279">De laude liberi arbitrii</rs>“ (von Frowin von Engelberg) durch einen
             neuerlichen Brief nach <rs ref="index:d14380e11252">Engelberg</rs> wiederholen wollte, hat er den
-            beigeschlossenen Brief von Abt <rs ref="index:d14380e776">Joachim Albini</rs> <ref type="letter" target="letter:926">926</ref> erhalten. Er geht davon aus, dass dieser für BP Erfreuliches enthält, und
+            beigeschlossenen Brief von Abt <rs ref="index:d14380e776">Joachim Albini</rs>
+               <ref type="letter" target="letter:926">926</ref> erhalten. Er geht davon aus, dass dieser für BP Erfreuliches enthält, und
                hat daher von seiner Absicht vorerst Abstand genommen. Falls es nötig wird, kann er sie später
                wiederaufnehmen.</p>
             <p corresp="#seg2">Von <rs ref="index:d14380e113">Heinrich Ab Yberg</rs> in <rs ref="index:d14380e10940">Einsiedeln</rs>
@@ -113,7 +128,7 @@
             <p corresp="#seg4">In einem Postskriptum berichtet AHu, dass er BPs „<rs ref="index:d14380e33532">Dissertatio
                   apologetica</rs>“ zwar bislang nicht erhalten hat, sie aber von den <rs ref="index:d14380e43662">Ulmer Buchhändlern</rs> zusammen mit anderen Büchern sehr bald erwartet. Er dankt für dieses Geschenk
                BPs.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -131,7 +146,8 @@
                   arbitrio“ für ihn angefertigt wurde; der früheste Beleg für diesen Vorgang stammt
                   aus einem Brief von AHu an BP vom 24. Juni 1719: II, 277r–278v. Vor Ende 1718
                   scheint man sich in Engelberg diesbezüglich noch nicht festgelegt zu haben: vgl.
-                     <ref type="letter" target="letter:1006">1006</ref> <ref target="letter:1006#seg3">3</ref>. Der hier von AHu gebrauchte Wortlaut
+                     <ref type="letter" target="letter:1006">1006</ref>
+               <ref target="letter:1006#seg3">3</ref>. Der hier von AHu gebrauchte Wortlaut
                   deutet auch nicht zwingend auf eine beigelegte Sendung hin.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg3">
@@ -167,9 +183,9 @@
                   Zusammenhänge der beiden Stücke mit den Briefen AHus sind nicht mit letzter
                   Sicherheit zu bestimmen; die einfachste Erklärung würde freilich lauten, dass II,
                   120r–123v, jener „Catalogus“ ist, welchen AHu in <ref type="letter" target="letter:890">890</ref>
-                  <ref target="letter:890#seg4">4</ref> erwähnt, und als Beilage zu diesem Brief anzusehen ist, während II,
+               <ref target="letter:890#seg4">4</ref> erwähnt, und als Beilage zu diesem Brief anzusehen ist, während II,
                   116r–119v, ein Ergebnis von AHus ebenfalls in <ref type="letter" target="letter:890">890</ref>
-                  <ref target="letter:890#seg4">4</ref> erwähnter Bitte um Ergänzung ist, von ihm jedoch erst nach der
+               <ref target="letter:890#seg4">4</ref> erwähnter Bitte um Ergänzung ist, von ihm jedoch erst nach der
                   Versendung dieses Briefes erhalten und mit einem heute verlorenen Schreiben (1004)
                   an BP weitergeleitet wurde.</p>
          </note>
@@ -180,12 +196,15 @@
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
             <mentioned>bibliopolis Ulmensibus</mentioned>
             <p>Hier kann mit einiger Wahrscheinlichkeit
-                  derselbe Geschäftspartner BPs in Ulm gemeint sein, welcher auch in <ref type="letter" target="letter:685">685</ref> <ref target="letter:685#seg1">1</ref> und <ref type="letter" target="letter:719">719</ref> <ref target="letter:719#seg1">1</ref>,
+                  derselbe Geschäftspartner BPs in Ulm gemeint sein, welcher auch in <ref type="letter" target="letter:685">685</ref>
+               <ref target="letter:685#seg1">1</ref> und <ref type="letter" target="letter:719">719</ref>
+               <ref target="letter:719#seg1">1</ref>,
                   gleichfalls jeweils ohne Nennung eines Namens oder sonstige zur Identifizierung
                   weiterhelfende Angaben, erwähnt wird. Vielleicht handelte es sich um Johann
                   Wolfgang Beuerlein, mit dem BP seit mehreren Jahren in zumindest gelegentlicher
                   Verbindung gestanden war und der nachweislich auch Kontakte mit der Mehrerau
-                  hatte: vgl. <ref type="letter" target="letter:452">452</ref> <ref target="letter:452#seg1">1</ref>.</p>
+                  hatte: vgl. <ref type="letter" target="letter:452">452</ref>
+               <ref target="letter:452#seg1">1</ref>.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -201,13 +220,16 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiosissime ac clarissime domine pater bibliothecarie, patrone colendissime.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiosissime ac clarissime domine pater bibliothecarie, patrone colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">En! eo ipso tempore, quo iteratas pro comparanda copia apographi De libero arbitrio ad monasterium Engelbergense exarare cogitabam, <anchor xml:id="n1"/>acclusas abs eius loci reverendissimo domino domino abbate accipio<anchor xml:id="n1e"/>, nil dubius, quin eae in favorem clarissimae paternitatis vestrae grata quaedam contineant. Suspendi proinde interea calamum, eundem, cum opus fuerit, denuo reassumpturus. </ab>
          <ab resp="#editor" xml:id="seg2">A reverendo patre Henrico Einsidlensi ad meas ultimas crastina si non ipsos catalogos, saltem favorabile responsum exspecto. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n2"/>Quae vero ex monasterio Fabariensi accepi<anchor xml:id="n2e"/>, ea omnia praesentibus accludo. Si quid ultra mea opera in favorem clarissimae paternitatis vestrae praestare possim, fiam certior, qui interim ter meritoriam praesentis<anchor xml:id="n3"/> ieiunii<anchor xml:id="n3e"/> continuationem ex animo precor atque penes officiosam mei recommendationem esse pergo</ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n2"/>Quae vero ex monasterio Fabariensi accepi<anchor xml:id="n2e"/>, ea omnia praesentibus accludo. Si quid ultra mea opera in favorem clarissimae paternitatis vestrae praestare possim, fiam certior, qui interim ter meritoriam praesentis<anchor xml:id="n3"/> ieiunii<anchor xml:id="n3e"/> continuationem ex animo precor atque penes officiosam mei recommendationem esse pergo</ab>
          <closer>Admodum reverendae religiosissimae ac clarissimae paternitatis vestrae paratissimus servus pater Apronianus prior manu propria.</closer>
          <closer>Ex Augia Maiori Brigantina 26. Martii 1718.</closer>
-         <closer xml:id="seg4">P.S. Dissertationem vestram apologeticam necdum accepi, indies tamen una cum aliis libris eandem a <anchor xml:id="n4"/>bibliopolis Ulmensibus<anchor xml:id="n4e"/> mihi transmittendam exspecto. Ago proinde humanissimas pro eiusdem oblatione gratias.<pb n="1v"/> </closer>
+         <closer xml:id="seg4">P.S. Dissertationem vestram apologeticam necdum accepi, indies tamen una cum aliis libris eandem a <anchor xml:id="n4"/>bibliopolis Ulmensibus<anchor xml:id="n4e"/> mihi transmittendam exspecto. Ago proinde humanissimas pro eiusdem oblatione gratias.<pb n="1v"/>
+         </closer>
       </body>
    </text>
 </TEI>

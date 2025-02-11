@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="452" xml:id="pez-0452">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Cölestin Teschler an Bernhard Pez. 1715-10-12. Mehrerau.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">452</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -81,7 +93,7 @@
             <p corresp="#seg4">In Umlauf ist auch eine kurze Geschichte St. Gallens, kaum mehr als eine Äbteliste; diese könnte BP unter dem Namen <rs ref="index:d14380e28835">Metzlers</rs> vorliegen. Sie ist nicht der Edition wert, zumal BP dadurch von anderen, für den Orden nützlicheren Vorhaben abgehalten würde.</p>
             <p corresp="#seg5">Einen etwaigen Antwortbrief soll BP an CT in der <rs ref="index:d14380e27838">Mehrerau</rs> bei <rs ref="index:d10854e4192">Bregenz</rs> richten, wo er bereits über drei Jahre im Exil durch die Gastfreundschaft des Abtes <rs ref="index:d14380e31122">Magnus Öderlin</rs> erhalten wird. BP kann den Brief wie CT über <rs ref="index:d10854e3388">Beuerlein</rs> in <rs ref="index:d14380e43652">Ulm</rs> oder aber per <rs ref="index:d14380e35665">Ordinaripost</rs> senden; bei richtiger Adressierung an das <rs ref="index:d14380e27838">Kloster Mehrerau</rs>, über <rs ref="index:d10854e17237">Lindau</rs> und <rs ref="index:d10854e4192">Bregenz</rs> am <rs ref="index:d10854e3742">Bodensee</rs>, sollte auch diese ihn sicher zustellen können.</p>
             <p corresp="#seg6">CT erklärt sich zu weiteren Hilfestellungen bereit und betet für ein langes Leben BPs.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -111,8 +123,9 @@
                   Galli coenobii rerum ab annis nongentis nonaginta gestarum libri octo“, meist als
                   „Chronicon“ bezeichnet. CT dürfte sich in seiner Würdigung eher auf diese denn auf
                   das „De viris illustribus“ beziehen; vgl. 475. Zum „De viris illustribus S. Galli“
-                  vgl. <ref type="letter" target="letter:204">204</ref> <ref target="letter:204#seg4">4</ref>, <ref type="letter" target="letter:230">230</ref>
-                  <ref target="letter:230#seg3">3</ref>.</p>
+                  vgl. <ref type="letter" target="letter:204">204</ref>
+               <ref target="letter:204#seg4">4</ref>, <ref type="letter" target="letter:230">230</ref>
+               <ref target="letter:230#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>recentiores deinceps historici nostri</mentioned>
@@ -177,11 +190,13 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, domine patrone colendissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, domine patrone colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">Convenit me his diebus Ulmensis bibliopola dominus Beürlin, qui pro ea, qua mecum utitur, amicitia mihi aperuit plurimum reverendam ac clarissimam dominationem vestram <anchor xml:id="n1"/>typis parare opus De viris illustribus<anchor xml:id="n1e"/> et abbatibus monasterii S. Galli; ut vero ampliori apparatu lucem aspiciat, desiderari notitiam maiorem plenamque historiam singulorum principum et abbatum nostrorum; optare subinde clarissimam dominationem vestram, ut a quopiam exulum Sanct-Gallensium amplior aliqua notitia subministretur. Quibus ego permotus, obscurus licet ignotusque, dominationi vestrae clarissimae hasce inscribere praesumpsi, ut propenso plurimum reverendi ac clarissimi domini in Sanct-Gallenses studio ac benevolentiae gratias redderem, quod rebus nostris illustrandis orbique litterario publicandis <pb n="1v"/> animum adiecerit, primus fere, qui historiam nostram typis subicere tentaret; nec enim, quod sciam, hactenus aliquid in hoc genere lucem vidit, praeter ea, quae pater <anchor xml:id="n2"/>Mauritius Müller confrater meus<anchor xml:id="n2e"/> in sua Idea congregationis Helveticae de rebus nostris perstrinxit et olim Goldastus ex bibliotheca et tabulariis nostris furto subducta vulgavit. </ab>
          <ab resp="#editor" xml:id="seg2">Edidere quidem Sanct-Gallenses oppidi sui Chronicon patrio idiomate, et nuper Schererus quidam, praedicans eiusdem oppidi, brevem Chronologiam, quibus res etiam monasterii nostri necessario tanguntur, sed partium studio praeoccupatis non ubique tuto fides adhiberi potest. </ab>
          <ab resp="#editor" xml:id="seg3">Caeterum quod attinet historiam ipsam rerum nostrarum, quam clarissima dominatio sua manuscriptam habet, si ea est reverendi patris Jodoci Mezleri nostri, de ea dominatio vestra monenda videtur patrem Jodocum Mezlerum circa annum 1600 primum <anchor xml:id="n3"/>historiae nostrae seriem<anchor xml:id="n3e"/> ex monumentis nostris texere<del ana="#after">texere</del> tentasse; sed quia primus omnium vadum tentavit, plurimis insuper <pb n="2r"/> aliis distentus, non ubique scopum attigisse visus est, ut <anchor xml:id="n4"/>recentiores deinceps historici nostri<anchor xml:id="n4e"/> multa invenerint corrigenda, quod e nostris subinde praestitere complures. Quapropter plurimum reverendae ac clarissimae dominationis vestrae eruditissimo iudicio considerandum relinquo, an non rebus nostris <anchor xml:id="n5"/>utilius videatur Historiam patris Mezleri inter privata scrinia recondi<anchor xml:id="n5e"/>, donec Deo favente, pace tandem reddita, ex monumentis nostris, quae praesenti devastationi subduci potuere, iusta suisque numeris absoluta historia conficiatur? </ab>
-         <ab resp="#editor" xml:id="seg4"><anchor xml:id="n6"/>Circumferebatur etiam inter nos breve quoddam compendium<anchor xml:id="n6e"/> rerum nostrarum, vix tamen aliquid praeter seriem abbatum numerumque annorum complectens; id si fortassis plurimum reverendae ac clarissimae dominationi vestrae sub nomine patris Mezleri oblatum sit, vix operae pretium faceret, si per eius editionem utiliores ordinique nostro longe magis honorificos suos labores interrumperet. </ab>
+         <ab resp="#editor" xml:id="seg4">
+            <anchor xml:id="n6"/>Circumferebatur etiam inter nos breve quoddam compendium<anchor xml:id="n6e"/> rerum nostrarum, vix tamen aliquid praeter seriem abbatum numerumque annorum complectens; id si fortassis plurimum reverendae ac clarissimae dominationi vestrae sub nomine patris Mezleri oblatum sit, vix operae pretium faceret, si per eius editionem utiliores ordinique nostro longe magis honorificos suos labores interrumperet. </ab>
          <ab resp="#editor" xml:id="seg5">Quod si porro clarissima dominatio vestra aliquot me apicibus <pb n="2v"/> dignari voluerit, eos in monasterium Augiae Maioris vulgo Mehrerau bey Bregentz dirigat, ubi iam quartum in annum benignitate reverendissimi et amplissimi domini <anchor xml:id="n7"/>abbatis<anchor xml:id="n7e"/> eiusdem coenobii <anchor xml:id="n8"/>exul sustentor<anchor xml:id="n8e"/>. Hasce ego bibliopolae Ulmensi domino Beürlin commisi, cui suas etiam clarissima dominatio vestra, aut si magis libuerit, postae ordinariae committere potest; nam et hanc securam credo, si litterae a tergo inscribantur: per Lindau, Bregentz am Bodensee, Mehrerau. </ab>
          <ab resp="#editor" xml:id="seg6">Etsi porro satis mihi conscius sim virium mearum facultatem longissime excedere, ut vel in minimo gloriosos clarissimae dominationis vestrae pro ordine nostro conatus promoveam, si qua tamen in re servitiis suis idoneum me iudicet, inter primas felicitatis partes reponam eiusdem mandatis honorari. Precor interea, ut Deus ter optimus maximus clarissimam dominationem vestram pro ordinis nostri decore diutissime incolumem conservet.</ab>
          <closer>Plurimum reverendae religiosissimae ac clarissimae dominationis vestrae infimus servus pater Coelestinus Teschler professus monasterii S. Galli.</closer>

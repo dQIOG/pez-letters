@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="178" xml:id="pez-0178">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Hyazinth Baumbach an Bernhard Pez. 1711-07-12. Würzburg (St. Stephan).</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">178</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -78,12 +91,16 @@
          </correspDesc>
          <abstract>
             <p corresp="#seg1">HB hat BPs Schreiben vom 2. Juli <ref type="letter" target="letter:176">176</ref> am 9. Juli erhalten, ist jedoch wieder beschämt über das ungebührliche Lob, zumal er an St. Peter und Paul (29. Juni) nun auch von <rs ref="index:d14380e26993">René Massuet</rs> einen von BP angeregten wohlwollenden Brief empfangen hat. HB ist beschämt, dass er nur ungeordnete Informationen zu <rs ref="index:d10854e34414">St. Stephan</rs> geschickt hat <ref type="letter" target="letter:120">120</ref>, da er inzwischen von anderen Klöstern ordentliche Sammlungen gesehen hat.</p>
-            <p corresp="#seg2"><rs ref="index:d14380e26993">Massuet</rs> berichtet, dass der <rs ref="index:d14380e25749">fünfte Band der „Annales OSB“</rs> nun im Druck ist, und erwartet weitere Einsendungen. HB will ihm antworten, sobald er weiß, ob er die <rs ref="index:d10854e23022">päpstliche Bulle</rs> zur Restitution von <rs ref="index:d10854e1728">Aura</rs> bekommen kann, wovon er bereits berichtet hat <ref type="letter" target="letter:171">171</ref>.</p>
+            <p corresp="#seg2">
+               <rs ref="index:d14380e26993">Massuet</rs> berichtet, dass der <rs ref="index:d14380e25749">fünfte Band der „Annales OSB“</rs> nun im Druck ist, und erwartet weitere Einsendungen. HB will ihm antworten, sobald er weiß, ob er die <rs ref="index:d10854e23022">päpstliche Bulle</rs> zur Restitution von <rs ref="index:d10854e1728">Aura</rs> bekommen kann, wovon er bereits berichtet hat <ref type="letter" target="letter:171">171</ref>.</p>
             <p corresp="#seg3">Zu<rs ref="index:d10854e20856"> Münsterschwarzach</rs> empfiehlt HB <rs ref="index:d10854e4454">Kaspar Bruschs</rs> „<rs ref="index:d10854e4478">Chronologia</rs>“, <rs ref="index:d10854e30102">Sulzbach</rs> 1682, inzwischen vermutlich neu aufgelegt. Die Angaben darin entsprechen jenen der in <rs ref="index:d10854e34414">St. Stephan</rs> befindlichen <rs ref="index:d10854e20876">Handschrift</rs> bis zum Jahr 1551, dem Zeitpunkt der Entstehung von <rs ref="index:d10854e4454">Bruschs</rs> Werk. <rs ref="index:d10854e4454">Brusch</rs> wird BP, wenn nicht auch Massuet, sicher bekannt sein; die Angaben seiner Handschrift für die spätere Zeit will HB bei Bedarf schicken.</p>
-            <p corresp="#seg4">Weiters bietet das <rs ref="index:d10854e4478">Werk</rs> <rs ref="index:d10854e4454">Bruschs</rs> die Gründungsgeschichte des <rs ref="index:d14380e5121">Benediktinerinnenklosters</rs> <rs ref="index:d10854e14939">Kitzingen</rs> und die Reihe seiner Äbtissinnen. Das Kloster ist erloschen, an seiner Stelle besteht nun ein Kloster der <rs ref="index:d10854e31627">Ursulinen</rs>. HB wartet ab, ob er einen Auszug ab dem Ende von Bruschs Bericht anfertigen soll.</p>
+            <p corresp="#seg4">Weiters bietet das <rs ref="index:d10854e4478">Werk</rs>
+               <rs ref="index:d10854e4454">Bruschs</rs> die Gründungsgeschichte des <rs ref="index:d14380e5121">Benediktinerinnenklosters</rs>
+               <rs ref="index:d10854e14939">Kitzingen</rs> und die Reihe seiner Äbtissinnen. Das Kloster ist erloschen, an seiner Stelle besteht nun ein Kloster der <rs ref="index:d10854e31627">Ursulinen</rs>. HB wartet ab, ob er einen Auszug ab dem Ende von Bruschs Bericht anfertigen soll.</p>
             <p corresp="#seg5">Einen Tag, nachdem HB den letzten Brief an BP abgeschickt hatte, erreichte ihn ein Brief von <rs ref="index:d14380e40921">Konrad Sigler</rs>, in dem dieser die <rs ref="index:d10854e30682">Urkundenabschriften</rs> aus <rs ref="index:d10854e30653">Theres</rs> einmahnte und sich dafür entschuldigte, seine „<rs ref="index:d10854e29006">Semicenturia scriptorum“</rs> noch nicht gesendet zu haben. HB hat das Gewünschte rasch geschickt und in seiner Antwort an <rs ref="index:d14380e40921">Sigler</rs> bemerkt, dass er mit der Übersendung auf den Empfang der „<rs ref="index:d10854e29006">Semicenturia</rs>“ gewartet hatte, welche er dann nach <rs ref="index:d14380e28088">Melk</rs> weitersenden wollte. HB wartet weiter auf diese.</p>
-            <p corresp="#seg6">In einem Postskriptum bekräftigt HB, dass er im Ausland zu Unrecht zu Ehren gekommen ist, und dankt BP für die Bestellung von Grüßen an den <rs ref="index:d14380e16018">Göttweiger</rs> <rs ref="index:d10854e7254">Urban Egerer</rs>, woran sich das Blut eines Landsmannes (patriottalis sanguis) erfreut.</p>
-            </abstract>
+            <p corresp="#seg6">In einem Postskriptum bekräftigt HB, dass er im Ausland zu Unrecht zu Ehren gekommen ist, und dankt BP für die Bestellung von Grüßen an den <rs ref="index:d14380e16018">Göttweiger</rs>
+               <rs ref="index:d10854e7254">Urban Egerer</rs>, woran sich das Blut eines Landsmannes (patriottalis sanguis) erfreut.</p>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -91,17 +108,20 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>ab ... patre Masuet ... litteras</mentioned>
             <p>Dieses Schreiben Massuets ist als undatiertes Konzept erhalten: BN FF 19664,
-                  22r–v; vgl. <ref type="letter" target="letter:154">154</ref> <ref target="letter:154#seg5">5</ref>. Die Antwort HBs vom 21. Juli
+                  22r–v; vgl. <ref type="letter" target="letter:154">154</ref>
+               <ref target="letter:154#seg5">5</ref>. Die Antwort HBs vom 21. Juli
                   1711 ist ebenfalls erhalten: BN FF 19664, 158r–159v.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned>quaedam ... de nostro monasterio</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:120">120</ref> <ref target="letter:120#seg1">1</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:120">120</ref>
+               <ref target="letter:120#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>bullam pontificiam</mentioned>
             <p>Laut dem eben angeführten Brief an Massuet gelang es HB nicht, die Bulle zu
-                  bekommen. Vgl. <ref type="letter" target="letter:171">171</ref> <ref target="letter:171#seg5">5</ref>.</p>
+                  bekommen. Vgl. <ref type="letter" target="letter:171">171</ref>
+               <ref target="letter:171#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
             <mentioned>Bruschius in sua Chronologia</mentioned>
@@ -110,7 +130,8 @@
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>in libro meo</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:171">171</ref> <ref target="letter:171#seg6">6</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:171">171</ref>
+               <ref target="letter:171#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
             <mentioned>habet fundationem ... Kitzingensis</mentioned>
@@ -119,7 +140,8 @@
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
             <mentioned>Therensia documenta</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:161">161</ref> <ref target="letter:161#seg4">4</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:161">161</ref>
+               <ref target="letter:161#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg6">
             <mentioned>Urbanum Gottwicensem</mentioned>
@@ -129,15 +151,21 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiose eximie ac doctissime pater ac domine colende.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiose eximie ac doctissime pater ac domine colende.</opener>
          <ab resp="#editor" xml:id="seg1">Ultimas admodum reverendae paternitatis vestrae sub 2. Julii datas 9. eiusdem accepi. Sed quid denuo nimiae humanitati vestrae in me respondebo? Maxime cum inductione et suasione vestra interea <anchor xml:id="n1"/>ab admodum reverendo domino patre Masuet festo sanctorum apostolorum Petri et Pauli litteras<anchor xml:id="n1e"/> pari humanitate et civilitate supereffluentes acceperim; certe nonnisi alienae in me plumae extolluntur. Pudore suffundor potius per fragmenta solummodo sine ordine <anchor xml:id="n2"/>quaedam praecipitanter congessisse de nostro monasterio<anchor xml:id="n2e"/> S. Stephani, dum alios nunc video in decentem ordinem sua laboriose redegisse. </ab>
          <ab resp="#editor" xml:id="seg2">Reverendo patri Masuet, qui quintum tomum Annalium praelo submisisse scribit et vel ideo avide exspectat sarcinam fragmentorum nostrorum, respondebo proxime, ubi nimirum scivero, an habere potero <anchor xml:id="n3"/>bullam pontificiam<anchor xml:id="n3e"/> de restituendo monasterio Aura dicto, de quo nuper. </ab>
          <ab resp="#editor" xml:id="seg3">Circa monasterium Schwartzacense habeo suggerendum id, quod Casparus <anchor xml:id="n4"/>Bruschius in sua Chronologia<anchor xml:id="n4e"/>, Sulzbaci anno 1682 edita in quarto (sine dubio noviter praelo data), habeat omnia, quae <anchor xml:id="n5"/>in libro meo<anchor xml:id="n5e"/> scripta sunt, paulo succinctius tantum, idque usque ad annum 1551, quo hic author vixit et scripsit; libri quidem pagina 524. Sine dubio notus erit hic author, si non reverendo domino patri Masuet, saltem admodum reverendae paternitati vestrae; et si haec habeantur, caetera itidem, quae sequuntur, colligam et mittam. </ab>
-         <ab resp="#editor" xml:id="seg4">Porro pagina 278 <pb n="1v"/> <anchor xml:id="n6"/>habet fundationem monasterii Kitzingensis<anchor xml:id="n6e"/> monialium ordinis nostri et seriem abbatissarum. Quod nunc desiit, et eius loco novum monasterium aedificatum, quod possident Ursulinae sive congregationis sanctae Ursulae. Super hoc igitur responsum expectabo, ut sciam, utrum incipiam solum, ubi Bruschius cessavit. </ab>
-         <ab resp="#editor" xml:id="seg5">Postridie, dum ultimas nuper darem admodum reverendae paternitati vestrae, accepi litteras a domino Sieglero <anchor xml:id="n7"/>Therensia documenta<anchor xml:id="n7e"/> <add place="above"> sollicitantes, oblivioni data, ut credebat et scribebat ille. Sed et in- et excusavit</add> se, quod Semi-centuriam non scripserit aut miserit, ac propterea excusandum se apud admodum reverendam paternitatem vestram me rogavit cum assecuratione, promissa se proxime mittere velle. Quae desideravit, mox misi cum responso, iam dudum parata fuisse, exspectasse solummodo litteras et Semi-centuriam Mellicium mittendas, quarum loco remisissem desiderata. Mittenda igitur sperabo. Qui interim sum et maneo sub protectione Altissimi</ab>
+         <ab resp="#editor" xml:id="seg4">Porro pagina 278 <pb n="1v"/>
+            <anchor xml:id="n6"/>habet fundationem monasterii Kitzingensis<anchor xml:id="n6e"/> monialium ordinis nostri et seriem abbatissarum. Quod nunc desiit, et eius loco novum monasterium aedificatum, quod possident Ursulinae sive congregationis sanctae Ursulae. Super hoc igitur responsum expectabo, ut sciam, utrum incipiam solum, ubi Bruschius cessavit. </ab>
+         <ab resp="#editor" xml:id="seg5">Postridie, dum ultimas nuper darem admodum reverendae paternitati vestrae, accepi litteras a domino Sieglero <anchor xml:id="n7"/>Therensia documenta<anchor xml:id="n7e"/>
+            <add place="above"> sollicitantes, oblivioni data, ut credebat et scribebat ille. Sed et in- et excusavit</add> se, quod Semi-centuriam non scripserit aut miserit, ac propterea excusandum se apud admodum reverendam paternitatem vestram me rogavit cum assecuratione, promissa se proxime mittere velle. Quae desideravit, mox misi cum responso, iam dudum parata fuisse, exspectasse solummodo litteras et Semi-centuriam Mellicium mittendas, quarum loco remisissem desiderata. Mittenda igitur sperabo. Qui interim sum et maneo sub protectione Altissimi</ab>
          <closer>Admodum reverendae paternitatis vestrae addictissimus Hyacinth abbas manu propria.</closer>
          <closer>Herbipoli ex monasterio S. Stephani 12. Julii 1711.</closer>
-         <closer xml:id="seg6">P.S. Innocenter celebratur in alienis terris nomen aut memoria mei, dum plus creditur, quam opere firmari possit. Interim tamen gratias ago devotas, quod memores fuerint mei apud reverendum dominum <anchor xml:id="n8"/>Urbanum Gottwicensem<anchor xml:id="n8e"/>: in quo patriottalis <choice><sic>ebullit</sic><corr>ebulliens</corr></choice> sanguis gaudium excitat.</closer>
+         <closer xml:id="seg6">P.S. Innocenter celebratur in alienis terris nomen aut memoria mei, dum plus creditur, quam opere firmari possit. Interim tamen gratias ago devotas, quod memores fuerint mei apud reverendum dominum <anchor xml:id="n8"/>Urbanum Gottwicensem<anchor xml:id="n8e"/>: in quo patriottalis <choice>
+               <sic>ebullit</sic>
+               <corr>ebulliens</corr>
+            </choice> sanguis gaudium excitat.</closer>
       </body>
    </text>
 </TEI>

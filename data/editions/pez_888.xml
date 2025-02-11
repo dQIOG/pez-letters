@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="888" xml:id="pez-0888">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Leopold Wydemann an Bernhard Pez. 1718-01-22. Gaming.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">888</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Am linken Blattrand von 2r von der Hand BPs (?) Vermerk <orig>N.B.</orig>, durch eine Klammer bezogen auf Abschnitt &lt;6&gt;.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -81,176 +93,178 @@
                <ptr type="mentionedIn" target="letter:904"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e1869">Anna von Schaunberg</term>
-            <term ref="index:d14380e1903">Anonyme Werke ; Alphabetum divini amoris</term>
-            <term ref="index:d14380e1913">Anonyme Werke ; Alphabetum divini amoris ; Mehrere Mss. Gaming</term>
-            <term ref="index:d14380e1920">Anonyme Werke ; Alphabetum divini amoris ; Ms. Melk, datiert 1442</term>
-            <term ref="index:d14380e1934">Anonyme Werke ; Alphabetum divini amoris ; Ms. Tegernsee</term>
-            <term ref="index:d14380e1943">Anonyme Werke ; Alphabetum divini amoris ; *Kurzfassungen in Prosa und Versen. Ms.
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e1869">Anna von Schaunberg</term>
+               <term ref="index:d14380e1903">Anonyme Werke ; Alphabetum divini amoris</term>
+               <term ref="index:d14380e1913">Anonyme Werke ; Alphabetum divini amoris ; Mehrere Mss. Gaming</term>
+               <term ref="index:d14380e1920">Anonyme Werke ; Alphabetum divini amoris ; Ms. Melk, datiert 1442</term>
+               <term ref="index:d14380e1934">Anonyme Werke ; Alphabetum divini amoris ; Ms. Tegernsee</term>
+               <term ref="index:d14380e1943">Anonyme Werke ; Alphabetum divini amoris ; *Kurzfassungen in Prosa und Versen. Ms.
          Gaming</term>
-            <term ref="index:d14380e1950">Anonyme Werke ; Alphabetum divini amoris ; Das A B C der götlichen liebi von der
+               <term ref="index:d14380e1950">Anonyme Werke ; Alphabetum divini amoris ; Das A B C der götlichen liebi von der
          erhäbung menschliches gemütz. Übersetzt von Hans Mickell. Memmingen 1493</term>
-            <term ref="index:d14380e2035">Anonyme Werke ; Catalogus brevis regni Ungariae. Ms. Melk</term>
-            <term ref="index:d14380e2400">Anonyme Werke ; Lobgedicht auf Nikolaus Kempf von Strassburg. Ms. Gaming</term>
-            <term ref="index:d14380e2511">Anonyme Werke ; Passio sancti Colomanni. Ms. Gaming</term>
-            <term ref="index:d14380e2527">Anonyme Werke ; Praefatio in Sermonem sancti Bernardi in concilio Remensi. Ms.
+               <term ref="index:d14380e2035">Anonyme Werke ; Catalogus brevis regni Ungariae. Ms. Melk</term>
+               <term ref="index:d14380e2400">Anonyme Werke ; Lobgedicht auf Nikolaus Kempf von Strassburg. Ms. Gaming</term>
+               <term ref="index:d14380e2511">Anonyme Werke ; Passio sancti Colomanni. Ms. Gaming</term>
+               <term ref="index:d14380e2527">Anonyme Werke ; Praefatio in Sermonem sancti Bernardi in concilio Remensi. Ms.
          Gaming</term>
-            <term ref="index:d14380e2633">Anonyme Werke ; *Vita beatae Mariae virginis. Ms. Gaming</term>
-            <term ref="index:d14380e2732">Anselm</term>
-            <term ref="index:d14380e2795">Anton Lang</term>
-            <term ref="index:d14380e3821">Barbara von Cilli</term>
-            <term ref="index:d14380e4170">Bayern, Bayern</term>
-            <term ref="index:d14380e4584">Benedikt von Nursia, hl</term>
-            <term ref="index:d14380e4621">Benedikt von Nursia, hl ; Benediktsregel</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e5312">Bernhard von Clairvaux, hl</term>
-            <term ref="index:d14380e5343">Bernhard von Clairvaux, hl ; Sancti Bernardi abbatis primi Clarae-Vallensis Opera
+               <term ref="index:d14380e2633">Anonyme Werke ; *Vita beatae Mariae virginis. Ms. Gaming</term>
+               <term ref="index:d14380e2732">Anselm</term>
+               <term ref="index:d14380e2795">Anton Lang</term>
+               <term ref="index:d14380e3821">Barbara von Cilli</term>
+               <term ref="index:d14380e4170">Bayern, Bayern</term>
+               <term ref="index:d14380e4584">Benedikt von Nursia, hl</term>
+               <term ref="index:d14380e4621">Benedikt von Nursia, hl ; Benediktsregel</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e5312">Bernhard von Clairvaux, hl</term>
+               <term ref="index:d14380e5343">Bernhard von Clairvaux, hl ; Sancti Bernardi abbatis primi Clarae-Vallensis Opera
          omnia, post Horstium denuo recognita, aucta et in meliorem digesta ordinem. Hg. von Jean
          Mabillon. 6 Bde. Paris 1667–1669</term>
-            <term ref="index:d14380e5370">Bernhard von Clairvaux, hl ; Sermo in concilio Remensi habitus</term>
-            <term ref="index:d14380e5395">Bernhard Lang</term>
-            <term ref="index:d14380e5403">Bernhard von Waging</term>
-            <term ref="index:d14380e5432">Bernhard von Waging ; Laudatorium doctae ignorantiae ; Ms. Gaming</term>
-            <term ref="index:d14380e5446">Bernhard von Waging ; Tractatus de morte necnon de praeparatione ad mortem. Ms.
+               <term ref="index:d14380e5370">Bernhard von Clairvaux, hl ; Sermo in concilio Remensi habitus</term>
+               <term ref="index:d14380e5395">Bernhard Lang</term>
+               <term ref="index:d14380e5403">Bernhard von Waging</term>
+               <term ref="index:d14380e5432">Bernhard von Waging ; Laudatorium doctae ignorantiae ; Ms. Gaming</term>
+               <term ref="index:d14380e5446">Bernhard von Waging ; Tractatus de morte necnon de praeparatione ad mortem. Ms.
          Gaming</term>
-            <term ref="index:d14380e5628">Bibel ; Daniel</term>
-            <term ref="index:d14380e5635">Bibel ; Ezechiel</term>
-            <term ref="index:d14380e6898">Bucelin, Gabriel ; Germania topo-chrono-stemmatographica sacra et profana, in qua brevi
+               <term ref="index:d14380e5628">Bibel ; Daniel</term>
+               <term ref="index:d14380e5635">Bibel ; Ezechiel</term>
+               <term ref="index:d14380e6898">Bucelin, Gabriel ; Germania topo-chrono-stemmatographica sacra et profana, in qua brevi
          compendio regnorum et provonciarum eiusdem amplitudo, situs et qualitas designatur. 3 Bde.
          Augsburg–Frankfurt am Main–Ulm 1662</term>
-            <term ref="index:d14380e6907">Bucelin, Gabriel ; Ἡμερ-ενιαυτο-γενεα-χορογραφίας Nucleus insigni lectionis variae
+               <term ref="index:d14380e6907">Bucelin, Gabriel ; Ἡμερ-ενιαυτο-γενεα-χορογραφίας Nucleus insigni lectionis variae
          fructu locuples historiae cum sacrae tum profanae cognitione compendiosissima atque
          utilissima praegnans. Ulm 1650 ; Darin: Notitia sacri Romani imperii principum genealogica
          et stemmatographica</term>
-            <term ref="index:d14380e6912">Buchdruck, Erfindung des Buchdrucks</term>
-            <term ref="index:d14380e7187">Buxheim</term>
-            <term ref="index:d14380e8100">Christoph Stöckel</term>
-            <term ref="index:d14380e8247">Cilli ; Stammbaum aus der Kartause Seitz</term>
-            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
-            <term ref="index:d14380e11342">Engelbert von Admont ; Tractatus de gratiis et virtutibus beatae Mariae virginis ;
+               <term ref="index:d14380e6912">Buchdruck, Erfindung des Buchdrucks</term>
+               <term ref="index:d14380e7187">Buxheim</term>
+               <term ref="index:d14380e8100">Christoph Stöckel</term>
+               <term ref="index:d14380e8247">Cilli ; Stammbaum aus der Kartause Seitz</term>
+               <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+               <term ref="index:d14380e11342">Engelbert von Admont ; Tractatus de gratiis et virtutibus beatae Mariae virginis ;
          Prolog</term>
-            <term ref="index:d14380e12652">Franken</term>
-            <term ref="index:d14380e13374">Friedrich I</term>
-            <term ref="index:d14380e13390">Friedrich II</term>
-            <term ref="index:d14380e13812">Gairach</term>
-            <term ref="index:d14380e13828">Gaming</term>
-            <term ref="index:d14380e13921">Gaming ; Bibliothek</term>
-            <term ref="index:d14380e13946">Gaming ; Bibliothek ; Alphabetum divini amoris. Vier Mss</term>
-            <term ref="index:d14380e13954">Gaming ; Bibliothek ; Alphabetum divini amoris. Vier Mss ; *Kurzfassungen in Prosa und
+               <term ref="index:d14380e12652">Franken</term>
+               <term ref="index:d14380e13374">Friedrich I</term>
+               <term ref="index:d14380e13390">Friedrich II</term>
+               <term ref="index:d14380e13812">Gairach</term>
+               <term ref="index:d14380e13828">Gaming</term>
+               <term ref="index:d14380e13921">Gaming ; Bibliothek</term>
+               <term ref="index:d14380e13946">Gaming ; Bibliothek ; Alphabetum divini amoris. Vier Mss</term>
+               <term ref="index:d14380e13954">Gaming ; Bibliothek ; Alphabetum divini amoris. Vier Mss ; *Kurzfassungen in Prosa und
          Versen. Ms</term>
-            <term ref="index:d14380e13970">Gaming ; Bibliothek ; Bernhard von Waging, Laudatorium doctae ignorantiae. Ms</term>
-            <term ref="index:d14380e13977">Gaming ; Bibliothek ; Bernhard von Waging, Tractatus de morte necnon de praeparatione
+               <term ref="index:d14380e13970">Gaming ; Bibliothek ; Bernhard von Waging, Laudatorium doctae ignorantiae. Ms</term>
+               <term ref="index:d14380e13977">Gaming ; Bibliothek ; Bernhard von Waging, Tractatus de morte necnon de praeparatione
          ad mortem. Ms</term>
-            <term ref="index:d14380e14038">Gaming ; Bibliothek ; Georg von Gaming, Peregrinatio in Aegyptum. Ms</term>
-            <term ref="index:d14380e14080">Gaming ; Bibliothek ; Heinrich von Langenstein, Contra Telesphorum. Ms</term>
-            <term ref="index:d14380e14271">Gaming ; Bibliothek ; Lobgedicht auf Nikolaus Kempf von Strassburg. Ms</term>
-            <term ref="index:d14380e14293">Gaming ; Bibliothek ; Necrologium modernum. Ms</term>
-            <term ref="index:d14380e14307">Gaming ; Bibliothek ; Nikolaus Kempf von Strassburg, De capitulo religiosorum. Deutsche
+               <term ref="index:d14380e14038">Gaming ; Bibliothek ; Georg von Gaming, Peregrinatio in Aegyptum. Ms</term>
+               <term ref="index:d14380e14080">Gaming ; Bibliothek ; Heinrich von Langenstein, Contra Telesphorum. Ms</term>
+               <term ref="index:d14380e14271">Gaming ; Bibliothek ; Lobgedicht auf Nikolaus Kempf von Strassburg. Ms</term>
+               <term ref="index:d14380e14293">Gaming ; Bibliothek ; Necrologium modernum. Ms</term>
+               <term ref="index:d14380e14307">Gaming ; Bibliothek ; Nikolaus Kempf von Strassburg, De capitulo religiosorum. Deutsche
          Fassung. Ms</term>
-            <term ref="index:d14380e14314">Gaming ; Bibliothek ; Nikolaus Kempf von Strassburg, De proponentibus religionis
+               <term ref="index:d14380e14314">Gaming ; Bibliothek ; Nikolaus Kempf von Strassburg, De proponentibus religionis
          ingressum. Ms</term>
-            <term ref="index:d14380e14326">Gaming ; Bibliothek ; Passio sancti Colomanni. Ms</term>
-            <term ref="index:d14380e14333">Gaming ; Bibliothek ; Praefatio in Sermonem sancti Bernardi abbatis Clarevallensis in
+               <term ref="index:d14380e14326">Gaming ; Bibliothek ; Passio sancti Colomanni. Ms</term>
+               <term ref="index:d14380e14333">Gaming ; Bibliothek ; Praefatio in Sermonem sancti Bernardi abbatis Clarevallensis in
          concilio Remensi habitum. Ms</term>
-            <term ref="index:d14380e14356">Gaming ; Bibliothek ; Richard von St. Viktor, De eruditione hominis interioris, drittes
+               <term ref="index:d14380e14356">Gaming ; Bibliothek ; Richard von St. Viktor, De eruditione hominis interioris, drittes
          Buch. Ms</term>
-            <term ref="index:d14380e14391">Gaming ; Bibliothek ; *Vita beatae Mariae virginis. Ms</term>
-            <term ref="index:d14380e14396">Gaming ; Bibliothek ; Wilhelm Hofer, Nekrolog, Professenkatalog und
+               <term ref="index:d14380e14391">Gaming ; Bibliothek ; *Vita beatae Mariae virginis. Ms</term>
+               <term ref="index:d14380e14396">Gaming ; Bibliothek ; Wilhelm Hofer, Nekrolog, Professenkatalog und
          Anniversarienverzeichnis von Gaming. Ms</term>
-            <term ref="index:d14380e14424">Gaming ; *Bote 1718</term>
-            <term ref="index:d14380e14442">Gaming ; Friedhof</term>
-            <term ref="index:d14380e15034">Georg von Gaming ; Peregrinatio in Aegyptum Martini Baumgarten ; Ms. Gaming</term>
-            <term ref="index:d14380e15056">Georg von Gaming ; Peregrinatio in Aegyptum Martini Baumgarten ; Ms. Gaming ; Abschrift
+               <term ref="index:d14380e14424">Gaming ; *Bote 1718</term>
+               <term ref="index:d14380e14442">Gaming ; Friedhof</term>
+               <term ref="index:d14380e15034">Georg von Gaming ; Peregrinatio in Aegyptum Martini Baumgarten ; Ms. Gaming</term>
+               <term ref="index:d14380e15056">Georg von Gaming ; Peregrinatio in Aegyptum Martini Baumgarten ; Ms. Gaming ; Abschrift
          von Leopold Wydemann</term>
-            <term ref="index:d14380e16586">Grünau</term>
-            <term ref="index:d14380e17176">Hans Mickell</term>
-            <term ref="index:d14380e17395">Hebenkrieg, Chrysogonus</term>
-            <term ref="index:d14380e17784">Heinrich von Langenstein ; Contra Telesphorum</term>
-            <term ref="index:d14380e17796">Heinrich von Langenstein ; Contra Telesphorum ; Ms. Gaming</term>
-            <term ref="index:d14380e17808">Heinrich von Langenstein ; Contra Telesphorum ; Ms. Gaming ; Abschrift von Sebastian
+               <term ref="index:d14380e16586">Grünau</term>
+               <term ref="index:d14380e17176">Hans Mickell</term>
+               <term ref="index:d14380e17395">Hebenkrieg, Chrysogonus</term>
+               <term ref="index:d14380e17784">Heinrich von Langenstein ; Contra Telesphorum</term>
+               <term ref="index:d14380e17796">Heinrich von Langenstein ; Contra Telesphorum ; Ms. Gaming</term>
+               <term ref="index:d14380e17808">Heinrich von Langenstein ; Contra Telesphorum ; Ms. Gaming ; Abschrift von Sebastian
          Treger. Ms</term>
-            <term ref="index:d14380e18050">Hermann II</term>
-            <term ref="index:d14380e19485">Hymnen, Sequenzen, liturgische und andere religiöse Dichtungen ; Jesu dulcis
+               <term ref="index:d14380e18050">Hermann II</term>
+               <term ref="index:d14380e19485">Hymnen, Sequenzen, liturgische und andere religiöse Dichtungen ; Jesu dulcis
          memoria</term>
-            <term ref="index:d14380e19578">Hymnen, Sequenzen, liturgische und andere religiöse Dichtungen ; Salve mundi
+               <term ref="index:d14380e19578">Hymnen, Sequenzen, liturgische und andere religiöse Dichtungen ; Salve mundi
          salutare</term>
-            <term ref="index:d14380e20294">Jodok</term>
-            <term ref="index:d14380e20541">Johannes Gerson</term>
-            <term ref="index:d14380e20557">Johannes Gerson ; Darin: Alphabetum divini amoris</term>
-            <term ref="index:d14380e21396">Kartäuser</term>
-            <term ref="index:d14380e21452">Kartäuser ; Domus Sclavoniae</term>
-            <term ref="index:d14380e21519">Kartäuser ; Provinz Niederdeutschland</term>
-            <term ref="index:d14380e21534">Kartäuser ; Redditen</term>
-            <term ref="index:d14380e21792">Kemmelbach</term>
-            <term ref="index:d14380e23156">Krems</term>
-            <term ref="index:d14380e23481">Ladislaus Garai</term>
-            <term ref="index:d14380e23494">Ladislaus Hunyadi</term>
-            <term ref="index:d14380e25312">Ludwig IV. „der Bayer“</term>
-            <term ref="index:d14380e25581">Mabillon, Jean</term>
-            <term ref="index:d14380e26746">Martin von Leibitz</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e28337">Melk ; Bibliothek ; Alphabetum divini amoris. Ms., datiert 1442</term>
-            <term ref="index:d14380e28388">Melk ; Bibliothek ; Catalogus brevis regni Ungariae. Ms</term>
-            <term ref="index:d14380e28486">Melk ; Bibliothek ; Nikolaus Kempf von Strassburg, De proponentibus religionis
+               <term ref="index:d14380e20294">Jodok</term>
+               <term ref="index:d14380e20541">Johannes Gerson</term>
+               <term ref="index:d14380e20557">Johannes Gerson ; Darin: Alphabetum divini amoris</term>
+               <term ref="index:d14380e21396">Kartäuser</term>
+               <term ref="index:d14380e21452">Kartäuser ; Domus Sclavoniae</term>
+               <term ref="index:d14380e21519">Kartäuser ; Provinz Niederdeutschland</term>
+               <term ref="index:d14380e21534">Kartäuser ; Redditen</term>
+               <term ref="index:d14380e21792">Kemmelbach</term>
+               <term ref="index:d14380e23156">Krems</term>
+               <term ref="index:d14380e23481">Ladislaus Garai</term>
+               <term ref="index:d14380e23494">Ladislaus Hunyadi</term>
+               <term ref="index:d14380e25312">Ludwig IV. „der Bayer“</term>
+               <term ref="index:d14380e25581">Mabillon, Jean</term>
+               <term ref="index:d14380e26746">Martin von Leibitz</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e28337">Melk ; Bibliothek ; Alphabetum divini amoris. Ms., datiert 1442</term>
+               <term ref="index:d14380e28388">Melk ; Bibliothek ; Catalogus brevis regni Ungariae. Ms</term>
+               <term ref="index:d14380e28486">Melk ; Bibliothek ; Nikolaus Kempf von Strassburg, De proponentibus religionis
          ingressum. Mehrere Mss</term>
-            <term ref="index:d14380e28538">Melk ; Erste Melker Reform</term>
-            <term ref="index:d14380e30520">Neustift</term>
-            <term ref="index:d14380e30721">Nikolaus Kempf von Strassburg</term>
-            <term ref="index:d14380e30731">Nikolaus Kempf von Strassburg ; De capitulo religiosorum. Deutsche Fassung. Ms.
+               <term ref="index:d14380e28538">Melk ; Erste Melker Reform</term>
+               <term ref="index:d14380e30520">Neustift</term>
+               <term ref="index:d14380e30721">Nikolaus Kempf von Strassburg</term>
+               <term ref="index:d14380e30731">Nikolaus Kempf von Strassburg ; De capitulo religiosorum. Deutsche Fassung. Ms.
          Gaming</term>
-            <term ref="index:d14380e30738">Nikolaus Kempf von Strassburg ; De discretione</term>
-            <term ref="index:d14380e30747">Nikolaus Kempf von Strassburg ; De proponentibus religionis ingressum ; Ms.
+               <term ref="index:d14380e30738">Nikolaus Kempf von Strassburg ; De discretione</term>
+               <term ref="index:d14380e30747">Nikolaus Kempf von Strassburg ; De proponentibus religionis ingressum ; Ms.
          Gaming</term>
-            <term ref="index:d14380e30754">Nikolaus Kempf von Strassburg ; De proponentibus religionis ingressum ; Mehrere Mss.
+               <term ref="index:d14380e30754">Nikolaus Kempf von Strassburg ; De proponentibus religionis ingressum ; Mehrere Mss.
          Melk</term>
-            <term ref="index:d14380e30761">Nikolaus Kempf von Strassburg ; De proponentibus religionis ingressum ; Mehrere Mss.
+               <term ref="index:d14380e30761">Nikolaus Kempf von Strassburg ; De proponentibus religionis ingressum ; Mehrere Mss.
          Tegernsee</term>
-            <term ref="index:d14380e30768">Nikolaus Kempf von Strassburg ; Expositiones mysticae in Cantica Canticorum</term>
-            <term ref="index:d14380e30773">Nikolaus Kempf von Strassburg ; Memoriale primorum principiorum in scholis virtutum.
+               <term ref="index:d14380e30768">Nikolaus Kempf von Strassburg ; Expositiones mysticae in Cantica Canticorum</term>
+               <term ref="index:d14380e30773">Nikolaus Kempf von Strassburg ; Memoriale primorum principiorum in scholis virtutum.
          Ms. Gaming</term>
-            <term ref="index:d14380e30995">Nürnberg ; Marienzelle</term>
-            <term ref="index:d14380e31270">Olmütz ; Kloster OCart</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e34351">Pez, Bernhard ; Bibliotheksreise 1717 ; Reisebericht; später in: Thesaurus anecdotorum
+               <term ref="index:d14380e30995">Nürnberg ; Marienzelle</term>
+               <term ref="index:d14380e31270">Olmütz ; Kloster OCart</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e34351">Pez, Bernhard ; Bibliotheksreise 1717 ; Reisebericht; später in: Thesaurus anecdotorum
          novissimus, Bd. 1, als Teil der „Dissertatio isagogica“</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
-            <term ref="index:d14380e35937">Prämonstratenser</term>
-            <term ref="index:d14380e37154">Reims ; Synode 1148</term>
-            <term ref="index:d14380e37450">Richard von St. Viktor ; De eruditione hominis interioris ; Drittes Buch. Ms.
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+               <term ref="index:d14380e35937">Prämonstratenser</term>
+               <term ref="index:d14380e37154">Reims ; Synode 1148</term>
+               <term ref="index:d14380e37450">Richard von St. Viktor ; De eruditione hominis interioris ; Drittes Buch. Ms.
          Gaming</term>
-            <term ref="index:d14380e37461">Richard von St. Viktor ; Expositio in visionem Ezechielis</term>
-            <term ref="index:d14380e37466">Richard von St. Viktor ; Expositio super Apocalypsim</term>
-            <term ref="index:d10854e27511">St. Pölten</term>
-            <term ref="index:d14380e39609">Schaunberger</term>
-            <term ref="index:d14380e39895">Schnals</term>
-            <term ref="index:d14380e40413">Seitenstetten</term>
-            <term ref="index:d14380e40535">Seitz</term>
-            <term ref="index:d14380e40896">Sigismund Welczsperger</term>
-            <term ref="index:d14380e41529">Stephan Lang</term>
-            <term ref="index:d14380e42111">Tegernsee</term>
-            <term ref="index:d14380e42335">Tegernsee ; Bibliothek ; Nikolaus Kempf von Strassburg, De proponentibus religionis
+               <term ref="index:d14380e37461">Richard von St. Viktor ; Expositio in visionem Ezechielis</term>
+               <term ref="index:d14380e37466">Richard von St. Viktor ; Expositio super Apocalypsim</term>
+               <term ref="index:d10854e27511">St. Pölten</term>
+               <term ref="index:d14380e39609">Schaunberger</term>
+               <term ref="index:d14380e39895">Schnals</term>
+               <term ref="index:d14380e40413">Seitenstetten</term>
+               <term ref="index:d14380e40535">Seitz</term>
+               <term ref="index:d14380e40896">Sigismund Welczsperger</term>
+               <term ref="index:d14380e41529">Stephan Lang</term>
+               <term ref="index:d14380e42111">Tegernsee</term>
+               <term ref="index:d14380e42335">Tegernsee ; Bibliothek ; Nikolaus Kempf von Strassburg, De proponentibus religionis
          ingressum. Mehrere Mss</term>
-            <term ref="index:d14380e43274">Treger, Sebastian</term>
-            <term ref="index:d14380e43400">Trithemius, Johannes ; De scriptoribus ecclesiasticis. Basel 1494 ; [Ausgabe unter dem
+               <term ref="index:d14380e43274">Treger, Sebastian</term>
+               <term ref="index:d14380e43400">Trithemius, Johannes ; De scriptoribus ecclesiasticis. Basel 1494 ; [Ausgabe unter dem
          Titel:] Catalogus scriptorum ecclesiasticorum sive illustrium virorum cum appendice eorum,
          qui nostro etiam seculo claruere. Köln 1531</term>
-            <term ref="index:d14380e43464">Tückelhausen</term>
-            <term ref="index:d14380e43687">Ulrich II</term>
-            <term ref="index:d14380e43779">Ungarn, Ungarn</term>
-            <term ref="index:d14380e45297">Wenzel Lang</term>
-            <term ref="index:d14380e45571">Wien</term>
-            <term ref="index:d10854e33651">Wien ; Schottenkloster</term>
-            <term ref="index:d14380e46157">Wien ; Universität</term>
-            <term ref="index:d14380e46291">Wilhelm Hofer</term>
-            <term ref="index:d14380e46303">Wilhelm Hofer ; Anniversarienverzeichnis von Gaming. Ms</term>
-            <term ref="index:d14380e46310">Wilhelm Hofer ; Nekrolog von Gaming. Ms</term>
-            <term ref="index:d14380e46319">Wilhelm Hofer ; Professenkatalog von Gaming. Ms</term>
-            <term ref="index:d14380e46519">Wolfgang von Melk</term>
-            <term ref="index:d14380e46679">Würzburg ; Kloster OCart</term>
-            <term ref="index:d14380e46743">Wydemann, Leopold ; Handschriftenkatalog von Gaming. Ms</term></keywords></textClass>
+               <term ref="index:d14380e43464">Tückelhausen</term>
+               <term ref="index:d14380e43687">Ulrich II</term>
+               <term ref="index:d14380e43779">Ungarn, Ungarn</term>
+               <term ref="index:d14380e45297">Wenzel Lang</term>
+               <term ref="index:d14380e45571">Wien</term>
+               <term ref="index:d10854e33651">Wien ; Schottenkloster</term>
+               <term ref="index:d14380e46157">Wien ; Universität</term>
+               <term ref="index:d14380e46291">Wilhelm Hofer</term>
+               <term ref="index:d14380e46303">Wilhelm Hofer ; Anniversarienverzeichnis von Gaming. Ms</term>
+               <term ref="index:d14380e46310">Wilhelm Hofer ; Nekrolog von Gaming. Ms</term>
+               <term ref="index:d14380e46319">Wilhelm Hofer ; Professenkatalog von Gaming. Ms</term>
+               <term ref="index:d14380e46519">Wolfgang von Melk</term>
+               <term ref="index:d14380e46679">Würzburg ; Kloster OCart</term>
+               <term ref="index:d14380e46743">Wydemann, Leopold ; Handschriftenkatalog von Gaming. Ms</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">LW bedauert, dass BP und er sich über die Schrift „<rs ref="index:d14380e37450">De quatuor bestiis
                   marinis</rs>“ (drittes Buch von „De eruditione hominis interioris“) des Richard von St.-Victor noch
@@ -274,8 +288,10 @@
                schon lange, ebenso wie jene des Hymnus „<rs ref="index:d14380e19578">Salve mundi salutare</rs>“. Seine
                Beweggründe hierfür will er mitteilen, sobald er erfahren hat, was Mabillon in seiner <rs ref="index:d14380e5343">Bernhard-Ausgabe</rs>, über die LW nicht verfügt, zu den beiden Hymnen
                schreibt.</p>
-            <p corresp="#seg4"><rs ref="index:d14380e13828">Gaming</rs> besitzt viele Handschriften des 14. und 15. Jahrhunderts, die in
-               „Nova Cella“ geschrieben wurden; LW bezweifelt jedoch, dass darunter das <rs ref="index:d14380e35937">Prämonstratenserkloster</rs> <rs ref="index:d14380e30520">Neustift</rs> bei Freising zu verstehen
+            <p corresp="#seg4">
+               <rs ref="index:d14380e13828">Gaming</rs> besitzt viele Handschriften des 14. und 15. Jahrhunderts, die in
+               „Nova Cella“ geschrieben wurden; LW bezweifelt jedoch, dass darunter das <rs ref="index:d14380e35937">Prämonstratenserkloster</rs>
+               <rs ref="index:d14380e30520">Neustift</rs> bei Freising zu verstehen
                ist. Er weist darauf hin, dass die <rs ref="index:d14380e21396">Kartäuser</rs> seit rund 400 Jahren ein
                Kloster in <rs ref="index:d14380e12652">Franken</rs> besitzen, das <rs ref="index:d14380e16586">„Nova
                   Cella“ zu Grünau</rs> heißt. Es ist die älteste Kartause der <rs ref="index:d14380e21519">Provinz
@@ -284,7 +300,8 @@
                wahrscheinlich, dass die Bücher von Grünau nach Gaming kamen, selbst wenn ihre Verfasser anderen Orden
                oder einem anderen Stand angehörten.</p>
             <p corresp="#seg5">LW hat sich auch darüber gefreut, dass das Werk „<rs ref="index:d14380e30747">De proponentibus religionis
-                  ingressum</rs>“ des <rs ref="index:d14380e21396">Kartäusers</rs> <rs ref="index:d14380e30721">Nikolaus
+                  ingressum</rs>“ des <rs ref="index:d14380e21396">Kartäusers</rs>
+               <rs ref="index:d14380e30721">Nikolaus
                   Kempf von Strassburg</rs> nicht nur vollständig erhalten ist, sondern auch, dass es gerade in <rs ref="index:d14380e30754">Melk</rs> und <rs ref="index:d14380e30761">Tegernsee</rs> vorhanden ist.
                Bernhards von Waging „<rs ref="index:d14380e5446">Tractatus de morte necnon de praeparatione ad
                   mortem</rs>“ ist wiederum in <rs ref="index:d14380e13828">Gaming</rs> vorhanden, ebenso wie desselben
@@ -328,7 +345,8 @@
                dort – vorhanden sind. Als fünften Grund führt LW an, dass ein Kartäuser (<rs ref="index:d14380e17176">Hans Mickell</rs>) das Werk 1493 ins Deutsche übertrug und drucken ließ („<rs ref="index:d14380e1950">Das A B C der götlichen liebi</rs>“), woraus geschlossen werden kann, dass es schnell in andere
                Kartausen, insbesondere nach <rs ref="index:d14380e46679">Würzburg</rs> und <rs ref="index:d14380e7187">Buxheim</rs>, gelangt war.</p>
             <p corresp="#seg8">Wenngleich diese Gründe nicht vollends zum Beweis von LWs These genügen, so reichen sie doch aus, um die
-               Argumente zugunsten des Abtes des <rs ref="index:d10854e33651">(Wiener) Schottenklosters</rs> <rs ref="index:d14380e26746">Martin (von Leibitz)</rs> zu entkräften. Wenn in diesem Werk vier- oder
+               Argumente zugunsten des Abtes des <rs ref="index:d10854e33651">(Wiener) Schottenklosters</rs>
+               <rs ref="index:d14380e26746">Martin (von Leibitz)</rs> zu entkräften. Wenn in diesem Werk vier- oder
                fünfmal vom <rs ref="index:d14380e4584">hl. Benedikt</rs> die Rede ist, wird er von dem Verfasser nie als
                „sanctus pater Benedictus“ und seine Regel nie als „unsere“ bezeichnet. Zu den in <rs ref="index:d14380e4170">Bayern</rs> gefundenen Codices, die das „Alphabetum“ unter dem Namen Martins
                enthalten, schlägt LW vor, dass Martin, als er um 1450 Klöster in Bayern visitierte, das Werk dort
@@ -370,7 +388,7 @@
                als Rache für den Mord an Ulrich von Cilli öffentlich getötet wurde. Der LW mitgeteilte Text zu <rs ref="index:d14380e13374">Friedrich, dem ersten Grafen von Cilli,</rs> stimmt mit dem aus <rs ref="index:d14380e40535">Seitz</rs> eingelangten <rs ref="index:d14380e8247">Stammbaum</rs> überein,
                in dem – jedoch ohne Jahresangabe – steht, dass Friedrich von <rs ref="index:d14380e25312">Kaiser Ludwig
                   „dem Bayern“</rs> zum Grafen erhoben wurde.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -407,7 +425,8 @@
             <p>Gemeint ist mit hoher Wahrscheinlich der
                   „Prologus“ zu Engelberts „Tractatus de gratiis et virtutibus beatae Mariae
                   virginis“, den LW später für BP abschrieb: vgl. <ref type="letter" target="letter:904">904</ref>
-                  <ref target="letter:904#seg4">4</ref>, <ref type="letter" target="letter:929">929</ref> <ref target="letter:929#seg3">3</ref>. BP druckte den Traktat unter
+               <ref target="letter:904#seg4">4</ref>, <ref type="letter" target="letter:929">929</ref>
+               <ref target="letter:929#seg3">3</ref>. BP druckte den Traktat unter
                   Heranziehung dieser Gaminger Vorlage sowie von Handschriften aus Admont und dem
                   Wiener Schottenkloster, wobei er LW als Bearbeiter nannte: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 1/1 col. 503–762; vgl. <rs type="bibl" ref="bibl:16522">Glassner, Thesaurus</rs> 365. Die von LW geschriebene
                   Druckvorlage ist erhalten: StiB Melk, Cod. 28, Nr. 4; vgl. <rs type="bibl" ref="bibl:16512">Glassner, Handschriften</rs> 37. Ob das mit diesem Brief
@@ -423,13 +442,17 @@
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
             <mentioned>opus ... bibliothecas</mentioned>
             <p>Zu BPs Plan der Veröffentlichung eines
-                  Reiseberichts vgl. <ref type="letter" target="letter:804">804</ref> <ref target="letter:804#seg1">1</ref>, <ref type="letter" target="letter:828">828</ref> <ref target="letter:828#seg1">1</ref>, <ref type="letter" target="letter:839">839</ref> <ref target="letter:839#seg2">2</ref>, <ref type="letter" target="letter:867">867</ref> <ref target="letter:867#seg3">3</ref>; sowie Einleitung, Abschnitt I.4. Vermutlich
+                  Reiseberichts vgl. <ref type="letter" target="letter:804">804</ref>
+               <ref target="letter:804#seg1">1</ref>, <ref type="letter" target="letter:828">828</ref>
+               <ref target="letter:828#seg1">1</ref>, <ref type="letter" target="letter:839">839</ref>
+               <ref target="letter:839#seg2">2</ref>, <ref type="letter" target="letter:867">867</ref>
+               <ref target="letter:867#seg3">3</ref>; sowie Einleitung, Abschnitt I.4. Vermutlich
                   um eine Einbeziehung der von LW gelieferten Angaben zu Gaminger Handschriften,
-                  insbesondere seines Katalogs, in dieses Werk geht es in <ref type="letter" target="letter:855">855</ref> <ref target="letter:855#seg2">2</ref>.</p>
+                  insbesondere seines Katalogs, in dieses Werk geht es in <ref type="letter" target="letter:855">855</ref>
+               <ref target="letter:855#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
             <mentioned> epistola ... dubium Mabillonii</mentioned>
-            
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg3">
             <mentioned>quod supplementum Iubili</mentioned>
@@ -439,7 +462,8 @@
                   Druck gelangt war: Bernardi Opera omnia (1690) 2 col. 897–899; vgl. <rs type="bibl" ref="bibl:15622">Chevalier, Repertorium</rs> 1 574f. Nr. 9541. Das
                   hier erwähnte „supplementum“ bestand nach späterer Aussage LWs in acht
                   zusätzlichen Verszeilen zu diesem Gedicht, die er für unpubliziert hielt: vgl.
-                     <ref type="letter" target="letter:948">948</ref> <ref target="letter:948#seg17">17</ref>. Der Hymnus hat in seiner
+                     <ref type="letter" target="letter:948">948</ref>
+               <ref target="letter:948#seg17">17</ref>. Der Hymnus hat in seiner
                   ursprünglichen Fassung 42 vierzeilige Strophen, es existieren aber auch erweiterte
                   Versionen mit bis zu 55 Strophen, die während der Neuzeit geläufiger waren als die
                   ursprüngliche Textgestalt: <rs type="bibl" ref="bibl:20370">Wilmart, Jubilus</rs>
@@ -459,7 +483,7 @@
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg3">
             <mentioned> Salve mundi salutare</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:15622">Chevalier, Repertorium</rs> 2 515 Nr. 18073; <rs type="bibl" ref="bibl:15968">Dreves–Blume, Hymnendichtung</rs> 1 323–327; <rs type="bibl" ref="bibl:18424">Mone, Hymnen</rs> 1 162–167. Als Verfasser des
+               <rs type="bibl" ref="bibl:15622">Chevalier, Repertorium</rs> 2 515 Nr. 18073; <rs type="bibl" ref="bibl:15968">Dreves–Blume, Hymnendichtung</rs> 1 323–327; <rs type="bibl" ref="bibl:18424">Mone, Hymnen</rs> 1 162–167. Als Verfasser des
                   Hymnus ist Arnulf von Löwen gesichert: <rs type="bibl" ref="bibl:18620">Ochsenbein, Bernhard von Clairvaux</rs> 224f.; <rs type="bibl" ref="bibl:20432">Worstbrock, Arnulf</rs>. </p>
          </note>
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg3">
@@ -473,8 +497,10 @@
                   omnia (1690) 2 col. 891–904. Er stellte ihnen jedoch eine Vorbemerkung voran, in
                   der er starke Zweifel an ihrer Echtheit und daran, dass Bernhard überhaupt Verse
                   verfasst habe, äußerte: ebd. col. 891f. Diese Bemerkungen teilte BP offenbar in
-                  903 mit: vgl. <ref type="letter" target="letter:904">904</ref> <ref target="letter:904#seg5">5</ref>. Seine Überlegungen zu diesem
-                  Gedicht erklärte LW in <ref type="letter" target="letter:948">948</ref> <ref target="letter:948#seg17">17</ref>.</p>
+                  903 mit: vgl. <ref type="letter" target="letter:904">904</ref>
+               <ref target="letter:904#seg5">5</ref>. Seine Überlegungen zu diesem
+                  Gedicht erklärte LW in <ref type="letter" target="letter:948">948</ref>
+               <ref target="letter:948#seg17">17</ref>.</p>
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg4">
             <mentioned>Newstifft</mentioned>
@@ -483,7 +509,7 @@
          <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg4">
             <mentioned> Grunaw</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:15282">Blüm, Lexikale Übersicht</rs> 306; <rs type="bibl" ref="bibl:19218">Rüthing, Heinrich Egher</rs> 22, 45; <rs type="bibl" ref="bibl:19610">Soder von Güldenstubbe, Grünau</rs>. </p>
+               <rs type="bibl" ref="bibl:15282">Blüm, Lexikale Übersicht</rs> 306; <rs type="bibl" ref="bibl:19218">Rüthing, Heinrich Egher</rs> 22, 45; <rs type="bibl" ref="bibl:19610">Soder von Güldenstubbe, Grünau</rs>. </p>
          </note>
          <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg4">
             <mentioned>Alemaniae Inferioris</mentioned>
@@ -492,14 +518,15 @@
          </note>
          <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg4">
             <mentioned>Tuckelhausen</mentioned>
-            <p><rs type="bibl" ref="bibl:15282">Blüm, Lexikale
+            <p>
+               <rs type="bibl" ref="bibl:15282">Blüm, Lexikale
                      Übersicht</rs> 329f.; <rs type="bibl" ref="bibl:19218">Rüthing, Heinrich
                      Egher</rs> 23, 45; Soder von Güldenstubbe, Notate; <rs type="bibl" ref="bibl:19616">Soder von Güldenstubbe, Tückelhausen</rs>.</p>
          </note>
          <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg4">
             <mentioned> prope Norinbergam</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:15282">Blüm, Lexikale Übersicht</rs> 318–320; <rs type="bibl" ref="bibl:17838">Laubinger, Marienzelle</rs>; Rüthing, Heinrich
+               <rs type="bibl" ref="bibl:15282">Blüm, Lexikale Übersicht</rs> 318–320; <rs type="bibl" ref="bibl:17838">Laubinger, Marienzelle</rs>; Rüthing, Heinrich
                   Egher 32, 43, 45; <rs type="bibl" ref="bibl:19614">Soder von Güldenstubbe,
                      Nürnberg</rs>. Das Kloster war 1525 mit Einverständnis des größten Teils seiner
                   Mönche, die sich der Reformation zugewendet hatten, durch den Rat der Stadt
@@ -561,7 +588,8 @@
          </note>
          <note target="#range(right('n24'), left('n24e'))" n="24" anchored="false" corresp="#seg5">
             <mentioned>Jodocus</mentioned>
-            <p><rs type="bibl" ref="bibl:18462">Müller, Personalien</rs>
+            <p>
+               <rs type="bibl" ref="bibl:18462">Müller, Personalien</rs>
                   167; <rs type="bibl" ref="bibl:20524">Zeißberg, Gaming</rs> 575, 586.</p>
          </note>
          <note target="#range(right('n25'), left('n25e'))" n="25" anchored="false" corresp="#seg5">
@@ -570,7 +598,8 @@
          </note>
          <note target="#range(right('n26'), left('n26e'))" n="26" anchored="false" corresp="#seg5">
             <mentioned> Wolfgangus</mentioned>
-            <p><rs type="bibl" ref="bibl:17456">Keiblinger, Melk</rs> 1
+            <p>
+               <rs type="bibl" ref="bibl:17456">Keiblinger, Melk</rs> 1
                   500; <rs type="bibl" ref="bibl:18574">Niederkorn-Bruck, Profeßbuch</rs> 83, 107;
                      <rs type="bibl" ref="bibl:20524">Zeißberg, Gaming</rs> 575, 586; vgl. <rs type="bibl" ref="bibl:16382">Fülöpp Romhányi–Sarbak–Csengel, Lövöld</rs> 106f.
                   Die Melker Quellen nennen ihn Wolfgang von „Volkesdorf“.</p>
@@ -595,18 +624,20 @@
          </note>
          <note target="#range(right('n29'), left('n29e'))" n="29" anchored="false" corresp="#seg5">
             <mentioned>Anselmus</mentioned>
-            <p><rs type="bibl" ref="bibl:20524">Zeißberg, Gaming</rs> 587.
+            <p>
+               <rs type="bibl" ref="bibl:20524">Zeißberg, Gaming</rs> 587.
                   Eine Profess in Tegernsee vor 1443 ist nicht nachgewiesen bei <rs type="bibl" ref="bibl:18024">Lindner, Familia S. Quirini</rs> 58–76. </p>
          </note>
          <note target="#range(right('n30'), left('n30e'))" n="30" anchored="false" corresp="#seg5">
             <mentioned>prior in Schnaltz</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:15212">Bertel, Prioren</rs> 77. Zur Kartause Schnals
+               <rs type="bibl" ref="bibl:15212">Bertel, Prioren</rs> 77. Zur Kartause Schnals
                   vgl. <rs type="bibl" ref="bibl:15282">Blüm, Lexikale Übersicht</rs> 324f.; <rs type="bibl" ref="bibl:19668">Stampfer, Schnals</rs>. </p>
          </note>
          <note target="#range(right('n31'), left('n31e'))" n="31" anchored="false" corresp="#seg5">
             <mentioned>Christofferus Stöckel</mentioned>
-            <p><rs type="bibl" ref="bibl:20524">Zeißberg,
+            <p>
+               <rs type="bibl" ref="bibl:20524">Zeißberg,
                      Gaming</rs> 574, 588. Die Bezeichnung „von Tegernsee“ ist auf familiäre
                   Herkunft zu beziehen: <rs type="bibl" ref="bibl:18160">Martin, Carthusian
                      Reform</rs> 334f.</p>
@@ -732,14 +763,16 @@
             <mentioned> clausula satis nervosa</mentioned>
             <p>Gemeint sind Schlussvermerke ähnlich
                   demjenigen, den Placidus Böckhn aus einer Salzburger Handschrift übermittelt
-                  hatte: vgl. <ref type="letter" target="letter:649">649</ref> <ref target="letter:649#seg4">4</ref>.</p>
+                  hatte: vgl. <ref type="letter" target="letter:649">649</ref>
+               <ref target="letter:649#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n44'), left('n44e'))" n="44" anchored="false" corresp="#seg7">
             <mentioned> nuper ad te missa</mentioned>
             <p>Es bleibt unklar, worauf sich LW hier bezieht.
                   Von seinen erhaltenen Briefen enthält nur einer eine kurze Erwähnung dieser Frage,
                   in der allerdings keine Beilage angekündigt, sondern lediglich auf ein späteres
-                  Eingehen verwiesen wird: vgl. <ref type="letter" target="letter:855">855</ref> <ref target="letter:855#seg2">2</ref>. Da es sich
+                  Eingehen verwiesen wird: vgl. <ref type="letter" target="letter:855">855</ref>
+               <ref target="letter:855#seg2">2</ref>. Da es sich
                   bei 845 sichtlich nicht um LWs ersten Brief an BP handelt, wäre denkbar, dass hier
                   auf ein früheres, verlorenes Schreiben Bezug genommen wird. </p>
          </note>
@@ -751,7 +784,8 @@
             <mentioned> editione Gersoniana</mentioned>
             <p> Zu den Sammelausgaben der Schriften des
                   Johannes Gerson seit der Inkunabelzeit vgl. <rs type="bibl" ref="bibl:15668">Connolly, Gerson</rs> 210–213; <rs type="bibl" ref="bibl:16540">Glorieux,
-                     Introduction générale</rs> 71–73. Aufgrund der Erwähnung in <ref type="letter" target="letter:845">845</ref> <ref target="letter:845#seg10">10</ref> ist es zwar nicht sicher, aber doch wahrscheinlich, dass
+                     Introduction générale</rs> 71–73. Aufgrund der Erwähnung in <ref type="letter" target="letter:845">845</ref>
+               <ref target="letter:845#seg10">10</ref> ist es zwar nicht sicher, aber doch wahrscheinlich, dass
                   LW die neueste Edition aus dem Jahr 1706 von Louis Ellies Du Pin benutzte. In
                   Anlehnung an die früheren Sammlungen war auch in diese das „Alphabetum divini
                   amoris“ aufgenommen, allerdings mit einer Vorbemerkung, in der es als nicht von
@@ -768,13 +802,15 @@
          </note>
          <note target="#range(right('n49'), left('n49e'))" n="49" anchored="false" corresp="#seg7">
             <mentioned>Herbipolitanam</mentioned>
-            <p><rs type="bibl" ref="bibl:15282">Blüm, Lexikale
+            <p>
+               <rs type="bibl" ref="bibl:15282">Blüm, Lexikale
                      Übersicht</rs> 333f.; <rs type="bibl" ref="bibl:19618">Soder von Güldenstubbe,
                      Würzburg</rs>.</p>
          </note>
          <note target="#range(right('n50'), left('n50e'))" n="50" anchored="false" corresp="#seg7">
             <mentioned> Buxianam</mentioned>
-            <p><rs type="bibl" ref="bibl:15282">Blüm, Lexikale
+            <p>
+               <rs type="bibl" ref="bibl:15282">Blüm, Lexikale
                      Übersicht</rs> 293–296; <rs type="bibl" ref="bibl:16156">Faust, Buxheim</rs>.
                </p>
          </note>
@@ -782,7 +818,8 @@
             <mentioned>Ad codices ... repertos</mentioned>
             <p>Überlieferungen mit Zuschreibung an Martin
                   von Leibitz waren BP aus Tegernsee und aus St. Peter zu Salzburg bekannt: vgl.
-                     <ref type="letter" target="letter:649">649</ref> <ref target="letter:649#seg4">4</ref>. In seinen späteren Publikationen
+                     <ref type="letter" target="letter:649">649</ref>
+               <ref target="letter:649#seg4">4</ref>. In seinen späteren Publikationen
                   behandelte BP die Frage nur knapp, schloss sich aber dabei der Ansicht LWs an, für
                   die er unter anderem einen Codex aus Weihenstephan ins Treffen führte, in dem der
                   kartäusische Ursprung des „Alphabetum“ vermerkt war: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 1 vi f.; vgl. <rs type="bibl" ref="bibl:14758">Pez, Bibliotheca ascetica</rs> 4, Praefatio (unpag.) ad Nr. V.
@@ -830,13 +867,15 @@
          </note>
          <note target="#range(right('n58'), left('n58e'))" n="58" anchored="false" corresp="#seg10">
             <mentioned>Henrici de Hassia</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:845">845</ref> <ref target="letter:845#seg10">10</ref>.
+            <p> Vgl. <ref type="letter" target="letter:845">845</ref>
+               <ref target="letter:845#seg10">10</ref>.
                </p>
          </note>
          <note target="#range(right('n59'), left('n59e'))" n="59" anchored="false" corresp="#seg10">
             <mentioned>Nuntius ... Kemmelbachium</mentioned>
             <p>Vgl. <ref type="letter" target="letter:1016">1016
-                  </ref><ref target="letter:1016&#10;                  #seg1">1</ref>.</p>
+                  </ref>
+               <ref target="letter:1016&#xA;                  #seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n60'), left('n60e'))" n="60" anchored="false" corresp="#seg11">
             <mentioned>Bucelini vestri Stemmatographiam</mentioned>
@@ -849,12 +888,13 @@
          <note target="#range(right('n61'), left('n61e'))" n="61" anchored="false" corresp="#seg11">
             <mentioned>chronicum Hungaricum</mentioned>
             <p>Möglicherweise meint LW den Melker „Catalogus
-                  brevis regni Ungariae“: vgl. <ref type="letter" target="letter:865">865</ref> <ref target="letter:865#seg2">2</ref>.</p>
+                  brevis regni Ungariae“: vgl. <ref type="letter" target="letter:865">865</ref>
+               <ref target="letter:865#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n62'), left('n62e'))" n="62" anchored="false" corresp="#seg11">
             <mentioned> schemate ... ex Seitz</mentioned>
             <p> Vgl. <ref type="letter" target="letter:880">880</ref>
-                  <ref target="letter:880#seg6">6</ref>.</p>
+               <ref target="letter:880#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n63'), left('n63e'))" n="63" anchored="false" corresp="#seg11">
             <mentioned> comes ... perhibetur</mentioned>
@@ -873,17 +913,31 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo ac religiosissimo in Christo patri Bernardo Pez frater Leopoldus Wydeman salutem plurimam dicit.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo ac religiosissimo in Christo patri Bernardo Pez frater Leopoldus Wydeman salutem plurimam dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Nondum, quod doleo, convenimus in opere Richardi <anchor xml:id="n1"/>De quatuor bestiis<anchor xml:id="n1e"/> marinis. Credebam ego me suasisse, ut opus illius in Danielem a Trithemio citatum relegeres; at mihi, vir clarissime, rescribis eum nihil<anchor xml:id="n2"/> in Ezechielem<anchor xml:id="n2e"/> edidisse; addis tamen initium a me nuper positum esse caput primum <anchor xml:id="n3"/>in Apocalypsim<anchor xml:id="n3e"/>. Si id de solo Sacrae Scripturae textu ex Daniele, capite septimo, Videbam in visione etc. intelligas, parum intererit; si autem de reliquis textui adiectis, erit forsitan totum opus meum ex Apocalypsi decerptum. Ut illud cognoscas et deinde, quid faciendum sit, iudices,<anchor xml:id="n4"/> ecce titulum<anchor xml:id="n4e"/> authoris, indicem capitulorum et mediam capituli primi partem. Lege ergo haec, revide et rescribe, ut aut describam aut omittam. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n5"/>Engelberti Admontensis prologum<anchor xml:id="n5e"/>, sicut postulasti, mitto, cum <anchor xml:id="n6"/>declaratione quadam<anchor xml:id="n6e"/> in eius opera, quae Gemnici habentur. </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n5"/>Engelberti Admontensis prologum<anchor xml:id="n5e"/>, sicut postulasti, mitto, cum <anchor xml:id="n6"/>declaratione quadam<anchor xml:id="n6e"/> in eius opera, quae Gemnici habentur. </ab>
          <ab resp="#editor" xml:id="seg3">Ex annotationibus tuis non pauca didici prius ignorata; utique in pluribus instruendus, ubi aliquando datum fuerit <anchor xml:id="n7"/>opus tuum in bibliothecas<anchor xml:id="n7e"/> perlustrare aut plures ante editionem obtinere annotationes. Ex quibus, ut iuxta ordinem procedam, placuit, quod<anchor xml:id="n8"/> epistola illa sermoni in concilio Rhemensi a sancto Bernardo, uti putatur, habito praemissa dubium Mabillonii<anchor xml:id="n8e"/> dissolvere putetur. Placuit et illud, <anchor xml:id="n9"/>quod supplementum Iubili<anchor xml:id="n9e"/> sancto Bernardo tributi dignum aestimes editione, utpote nondum editum a Mabillonio. Sed videris mihi, reverende pater,<anchor xml:id="n10"/> dubitare, an Iubilus ille sancti Bernardi sit<anchor xml:id="n10e"/>, dum non scribis supplementum Iubili sancti Bernardi, sed sancto Bernardo tributi. Ego, ut fatear, a multis annis credidi sanctum Bernardum nec huius Iubili nec alterius etiam sancto Bernardo tributi, qui incipit:<anchor xml:id="n11"/> Salve mundi salutare<anchor xml:id="n11e"/>, esse authorem. Rationes, quae me moverunt et movent, adducam, ubi unum a te obtinuero, videlicet, quid Mabillonius in suo Bernardo sive nova eius operum editione de utroque hymno praememorato sentiat. Mihi enim <anchor xml:id="n12"/>editio Mabilloniana deest<anchor xml:id="n12e"/>. </ab>
          <ab resp="#editor" xml:id="seg4">Tertio multi sunt nobis manuscripti codices scripti in Nova Cella, et quidem annis diversis saeculorum XIV. et XV. An in illis per illud in Nova Cella intelligendum <pb n="1v"/> das <anchor xml:id="n13"/>Newstifft<anchor xml:id="n13e"/> ordinis Praemonstratensis prope Frisingam, et inde ad nos libri hi devenerint, incertum habeo. Unum scio, Cartusianis esse et fuisse a quatuor prope saeculis Cartusiam in Franconia, quae nomen obtentum olim adhuc retinet et vocatur Nova Cella in<anchor xml:id="n14"/> Grunaw<anchor xml:id="n14e"/>; estque omnium Cartusiarum in provincia <anchor xml:id="n15"/>Alemaniae Inferioris<anchor xml:id="n15e"/> antiquissima, a qua etiam Cartusia in <anchor xml:id="n16"/>Tuckelhausen<anchor xml:id="n16e"/> nomen suum Cella Salutis et altera<anchor xml:id="n17"/> prope Norinbergam<anchor xml:id="n17e"/> (quae tamen periit) Cella B. Mariae Virginis derivarunt. Verosimile est ex hac Cartusia codices illos ad nos venisse, licet author alterius fuisset vel religionis vel conditionis. </ab>
-         <ab resp="#editor" xml:id="seg5">Quarto placuit mihi, quod opus illud nostri Nicolai Kempff de Argentina <anchor xml:id="n18"/>De proponentibus religionis ingressum<anchor xml:id="n18e"/> non solum integrum habeatur, sed etiam, quod habeatur (N.B.) in Mellicio et in Tegernsee; et vice versa apud nos habeatur<anchor xml:id="n19"/> Bernardi de Bahing Tegernseensis tractatus De morte<anchor xml:id="n19e"/> itemque<anchor xml:id="n20"/> Laudatorium doctae ignorantiae<anchor xml:id="n20e"/>, tacito licet nomine authoris. Cur istud placeat, audi. A Benedictinis ad Gemnicenses saeculo XV. transierunt: Primo. Sigismundus <anchor xml:id="n21"/>Pheltzberger<anchor xml:id="n21e"/>, de quo noster pater Wilhelmus<anchor xml:id="n22"/> Höffer anno 1483 mortuus ita inquit in necrologio<anchor xml:id="n22e"/>: Obiit Sigismundus <anchor xml:id="n23"/>Pheltzberger<anchor xml:id="n23e"/> de S. Hippolito, qui fuit in Mellico ante reformationem. Idem de eodem<anchor xml:id="n24"/> in catalogo professorum<anchor xml:id="n24e"/> addit: Monachus in Mellico fuit antea. Obiit anno 1452 die 16. Aprilis. Secundo. <anchor xml:id="n25"/>Jodocus<anchor xml:id="n25e"/>, de quo Wilhelmus: <anchor xml:id="n26"/>Jodocus<anchor xml:id="n26e"/> prius monachus in Seyttenstetten, postea prior in<anchor xml:id="n27"/> Olmutz<anchor xml:id="n27e"/>. Professus in Gemnico anno 1440, obiit anno 1450 vel 1451 die 22. Julii. Tertio.<anchor xml:id="n28"/> Wolfgangus<anchor xml:id="n28e"/> de Mellico monachus, ita idem Wilhelmus, quo etiam teste anno 1440 una cum Nicolao de Kempf fuit novitius et professus. Laudatur in<anchor xml:id="n29"/> moderno necrologio<anchor xml:id="n29e"/>, quod fuerit assiduus in passione Domini. <anchor xml:id="n30"/>Obiit 1474 die 23. Augusti<anchor xml:id="n30e"/>. Quarto. <anchor xml:id="n31"/>Anselmus<anchor xml:id="n31e"/>, qui prius Conradus vocabatur, prius fuit in ordine sancti Benedicti (in Tegernsee, uti alibi reperi) indutus 7. Novembris 1443 in Gemnico. Ita Wilhelmus. Iste anno 1461 factus <anchor xml:id="n32"/>prior in Schnaltz<anchor xml:id="n32e"/> resignavit post quinquennium et tandem obiit in Schnaltz anno 1488 die 20. Junii. <pb n="2r"/> Quinto. <anchor xml:id="n33"/>Christofferus Stöckel<anchor xml:id="n33e"/> nobilis de Tegernsee, indutus in Adventu 1447, primo<anchor xml:id="n34"/> redditus<anchor xml:id="n34e"/>, diu post hoc monachus, prior in Seitz 1474. Ita Wilhelmus. Obiit actu prior in Seitz anno 1477 die 23. Februarii. An iste fuerit monachus professus in Tegernsee, uti arbitror, an vero ex stemmate tulerit titulum de Tegernsee, ignoro. Certum est, quod anno 1448, <add place="left-margin"><witDetail wit="#A">mit Verweiszeichen am linken Blattrand</witDetail>dum apud nos esset</add>, dispensatio fuerit petita, ut in statu redditi fieret sacerdos. Sexto.<anchor xml:id="n35"/> Chrysogonus<anchor xml:id="n35e"/> (qui prius Paulus) de Krembs baccalaureus Viennensis ibidem scholasticus, fuit monachus in Tegernsee, indutus (in Gemnico) 29. Julii 1473, hic viceprocurator, sacrista et cantor. Haec Wilhelmus, post cuius mortem<anchor xml:id="n36"/> Chrysogonus<anchor xml:id="n36e"/> factus est primo prior in Ollmutz et deinde anno 1502 prior in Gemnico usque ad annum 1510, quo anno ob senium resignavit, et obiit anno 1513 die 24. Julii. </ab>
+         <ab resp="#editor" xml:id="seg5">Quarto placuit mihi, quod opus illud nostri Nicolai Kempff de Argentina <anchor xml:id="n18"/>De proponentibus religionis ingressum<anchor xml:id="n18e"/> non solum integrum habeatur, sed etiam, quod habeatur (N.B.) in Mellicio et in Tegernsee; et vice versa apud nos habeatur<anchor xml:id="n19"/> Bernardi de Bahing Tegernseensis tractatus De morte<anchor xml:id="n19e"/> itemque<anchor xml:id="n20"/> Laudatorium doctae ignorantiae<anchor xml:id="n20e"/>, tacito licet nomine authoris. Cur istud placeat, audi. A Benedictinis ad Gemnicenses saeculo XV. transierunt: Primo. Sigismundus <anchor xml:id="n21"/>Pheltzberger<anchor xml:id="n21e"/>, de quo noster pater Wilhelmus<anchor xml:id="n22"/> Höffer anno 1483 mortuus ita inquit in necrologio<anchor xml:id="n22e"/>: Obiit Sigismundus <anchor xml:id="n23"/>Pheltzberger<anchor xml:id="n23e"/> de S. Hippolito, qui fuit in Mellico ante reformationem. Idem de eodem<anchor xml:id="n24"/> in catalogo professorum<anchor xml:id="n24e"/> addit: Monachus in Mellico fuit antea. Obiit anno 1452 die 16. Aprilis. Secundo. <anchor xml:id="n25"/>Jodocus<anchor xml:id="n25e"/>, de quo Wilhelmus: <anchor xml:id="n26"/>Jodocus<anchor xml:id="n26e"/> prius monachus in Seyttenstetten, postea prior in<anchor xml:id="n27"/> Olmutz<anchor xml:id="n27e"/>. Professus in Gemnico anno 1440, obiit anno 1450 vel 1451 die 22. Julii. Tertio.<anchor xml:id="n28"/> Wolfgangus<anchor xml:id="n28e"/> de Mellico monachus, ita idem Wilhelmus, quo etiam teste anno 1440 una cum Nicolao de Kempf fuit novitius et professus. Laudatur in<anchor xml:id="n29"/> moderno necrologio<anchor xml:id="n29e"/>, quod fuerit assiduus in passione Domini. <anchor xml:id="n30"/>Obiit 1474 die 23. Augusti<anchor xml:id="n30e"/>. Quarto. <anchor xml:id="n31"/>Anselmus<anchor xml:id="n31e"/>, qui prius Conradus vocabatur, prius fuit in ordine sancti Benedicti (in Tegernsee, uti alibi reperi) indutus 7. Novembris 1443 in Gemnico. Ita Wilhelmus. Iste anno 1461 factus <anchor xml:id="n32"/>prior in Schnaltz<anchor xml:id="n32e"/> resignavit post quinquennium et tandem obiit in Schnaltz anno 1488 die 20. Junii. <pb n="2r"/> Quinto. <anchor xml:id="n33"/>Christofferus Stöckel<anchor xml:id="n33e"/> nobilis de Tegernsee, indutus in Adventu 1447, primo<anchor xml:id="n34"/> redditus<anchor xml:id="n34e"/>, diu post hoc monachus, prior in Seitz 1474. Ita Wilhelmus. Obiit actu prior in Seitz anno 1477 die 23. Februarii. An iste fuerit monachus professus in Tegernsee, uti arbitror, an vero ex stemmate tulerit titulum de Tegernsee, ignoro. Certum est, quod anno 1448, <add place="left-margin">
+               <witDetail wit="#A">mit Verweiszeichen am linken Blattrand</witDetail>dum apud nos esset</add>, dispensatio fuerit petita, ut in statu redditi fieret sacerdos. Sexto.<anchor xml:id="n35"/> Chrysogonus<anchor xml:id="n35e"/> (qui prius Paulus) de Krembs baccalaureus Viennensis ibidem scholasticus, fuit monachus in Tegernsee, indutus (in Gemnico) 29. Julii 1473, hic viceprocurator, sacrista et cantor. Haec Wilhelmus, post cuius mortem<anchor xml:id="n36"/> Chrysogonus<anchor xml:id="n36e"/> factus est primo prior in Ollmutz et deinde anno 1502 prior in Gemnico usque ad annum 1510, quo anno ob senium resignavit, et obiit anno 1513 die 24. Julii. </ab>
          <ab resp="#editor" xml:id="seg6">Sed forsitan quaeres, cur ista referam? Respondeo, ut coniectura saltem aliqua colligam opus nostri Nicolai De proponentibus religionis ingressum mediantibus his aut uno eorum et Mellicium et in Tegernsee venire potuisse, et econtra per hos aut unum horum ad nos venisse opus Bernardi de Bahing. Alioquin quod praedicti tractatus author sit noster Nicolaus, ex <anchor xml:id="n37"/>carminibus operi praefixis cernere licebit in adiuncto<anchor xml:id="n37e"/>. Adiunctum alterum probat et hunc esse authorem alterius tractatus<anchor xml:id="n38"/> De praesuppositis<anchor xml:id="n38e"/> in schola virtutum. Opus <anchor xml:id="n39"/>De capitulo religiosorum<anchor xml:id="n39e"/> simpliciter scribitur a quodam Cartusiano editum, ast asser addit nomen Nicolai Kempf. Tractatum<anchor xml:id="n40"/> De discretione<anchor xml:id="n40e"/>, cuius initium est: <anchor xml:id="n41"/>Bonum est sal<anchor xml:id="n41e"/>, esse Nicolai nostri pridem reperi in quodam codice, uti et ipsum scripsisse <anchor xml:id="n42"/>in Cantica Canticorum<anchor xml:id="n42e"/>, quod opus tamen non reperitur. Omitto reliqua eius opera a me in catalogo recensita, licet multo plura scripsisse <add place="above">eum</add> non dubitem, cum <anchor xml:id="n43"/>centenarius obierit<anchor xml:id="n43e"/> et adhuc in saeculari statu opera ediderit et spiritualia et literaria. Quorum pars sine dubio cum Cartusia <anchor xml:id="n44"/>Gyriacensi in Sclavonia (cui per annos fere triginta praefuit) periit<anchor xml:id="n44e"/> aut alicubi delitescet sine authoris nomine. </ab>
-         <ab resp="#editor" xml:id="seg7">Restat, ut pace tua, vir doctissime, rationes addam, <anchor xml:id="n45"/>cur Alphabetarium divini amoris credam esse Cartusiani et in specie nostri Nicolai<anchor xml:id="n45e"/>. Prima ratio oritur ex<anchor xml:id="n46"/> clausula satis nervosa<anchor xml:id="n46e"/> et<anchor xml:id="n47"/> nuper ad te missa<anchor xml:id="n47e"/>, ubi opus hoc et ex fonte Cartusianorum dicitur procedere et pro ordine Cartusiensi in specie orari petitur. <pb n="2v"/> Secunda ratio, quod cum hac clausula <anchor xml:id="n48"/>quaternis habeatur vicibus<anchor xml:id="n48e"/> in nostra Cartusia, semel quidem ad annum 1449 et semel ad 1455 et bis anno non expresso; itemque, quod in his quatuor codicibus adsit ex tertia parte fusius, quam habetur in<anchor xml:id="n49"/> editione Gersoniana<anchor xml:id="n49e"/>. Tertia ratio, quod in codice anni 1449 additiones vel ad marginem quoad breviores vel per specialem chartulam quoad prolixiores sint appositae, quae appositio vix ab aut ex alio fieri poterat quam a Gemnicensi. <choice><sic>Quinta</sic><corr>Quarta</corr></choice> ratio, quod <anchor xml:id="n50"/>operis huius duplex compendium<anchor xml:id="n50e"/>, unum per prosam et alterum per carmen, in Gemnico et vix alibi habeatur. <choice><sic>Quarta</sic><corr>Quinta</corr></choice> ratio,<anchor xml:id="n51"/> quod Cartusianus illud anno 1493 verterit<anchor xml:id="n51e"/> in<del ana="#after">Latinum</del> vulgare et sic edi curaverit, unde colligitur et in alias Cartusias, <anchor xml:id="n52"/>Herbipolitanam<anchor xml:id="n52e"/> praesertim et<anchor xml:id="n53"/> Buxianam<anchor xml:id="n53e"/>, satis mature illud pervenisse. </ab>
+         <ab resp="#editor" xml:id="seg7">Restat, ut pace tua, vir doctissime, rationes addam, <anchor xml:id="n45"/>cur Alphabetarium divini amoris credam esse Cartusiani et in specie nostri Nicolai<anchor xml:id="n45e"/>. Prima ratio oritur ex<anchor xml:id="n46"/> clausula satis nervosa<anchor xml:id="n46e"/> et<anchor xml:id="n47"/> nuper ad te missa<anchor xml:id="n47e"/>, ubi opus hoc et ex fonte Cartusianorum dicitur procedere et pro ordine Cartusiensi in specie orari petitur. <pb n="2v"/> Secunda ratio, quod cum hac clausula <anchor xml:id="n48"/>quaternis habeatur vicibus<anchor xml:id="n48e"/> in nostra Cartusia, semel quidem ad annum 1449 et semel ad 1455 et bis anno non expresso; itemque, quod in his quatuor codicibus adsit ex tertia parte fusius, quam habetur in<anchor xml:id="n49"/> editione Gersoniana<anchor xml:id="n49e"/>. Tertia ratio, quod in codice anni 1449 additiones vel ad marginem quoad breviores vel per specialem chartulam quoad prolixiores sint appositae, quae appositio vix ab aut ex alio fieri poterat quam a Gemnicensi. <choice>
+               <sic>Quinta</sic>
+               <corr>Quarta</corr>
+            </choice> ratio, quod <anchor xml:id="n50"/>operis huius duplex compendium<anchor xml:id="n50e"/>, unum per prosam et alterum per carmen, in Gemnico et vix alibi habeatur. <choice>
+               <sic>Quarta</sic>
+               <corr>Quinta</corr>
+            </choice> ratio,<anchor xml:id="n51"/> quod Cartusianus illud anno 1493 verterit<anchor xml:id="n51e"/> in<del ana="#after">Latinum</del> vulgare et sic edi curaverit, unde colligitur et in alias Cartusias, <anchor xml:id="n52"/>Herbipolitanam<anchor xml:id="n52e"/> praesertim et<anchor xml:id="n53"/> Buxianam<anchor xml:id="n53e"/>, satis mature illud pervenisse. </ab>
          <ab resp="#editor" xml:id="seg8">Et licet istae rationes non plene probent intentum, tamen utcunque debilitare sufficiunt rationes pro Martino abbate Scotorum. Quem authorem vix esse ex eo videtur colligi, quod, dum in opere isto quatuor aut quinque vicibus de sancto Benedicto fit mentio, nunquam ab authore sanctus pater Benedictus, aut in Regula nostra, sed sua, citetur qua pater. <anchor xml:id="n54"/>Ad codices in Bavaria repertos<anchor xml:id="n54e"/> sub Martini nomine dici posset <anchor xml:id="n55"/>Martinum, dum circa annum 1450 visitaret<anchor xml:id="n55e"/> Bavariam, aliis tradidisse hoc opus, ut describerent; descriptores vero ignorantes, quis author esset, addidisse nomen eius, a quo acceperant. Unde fortius argumentum pro Martino foret, si eius nomine et ante annum 1449 in Austria, ubi author floruit, inveniretur. De <anchor xml:id="n56"/>codice Mellicensi<anchor xml:id="n56e"/> ad annum 1442 (in quo, uti suppono, authoris nomen et clausula omittitur) dicendum reor potuisse opus illud facile ex Gemnico per Wolfgangum aut alium e nostris venire Mellicium eo tempore, quo ob typum nondum inventum manuscripti codices ad alia coenobia, maxime viciniora, mittebantur vel ad corrigendum vel ad describendum; uti et nos Gemnicenses a Mellicensibus quosdam describendos, ut <anchor xml:id="n57"/>Vitam beatae Mariae<anchor xml:id="n57e"/> virginis et<anchor xml:id="n58"/> Vitam sancti Colomanni<anchor xml:id="n58e"/>, accepimus. Posset tamen dici forsitan opus illud esse a Martino abbate ab initio compositum et a Nicolao Gemnicensi auctum (vix enim in Bavaria eius augmentum habebitur); at illud vix credibile, imo nec sine iniuria Martini fieri potuisset ipso adhuc vivente et, quod magis est, existente singulari ordinis Cartusiensis in Austria patrono et amico, ut talis clausulae appositione ei derogaretur. <pb n="3r"/> Paulo fusius, quam putaveram, scripsi de qualicunque Alphabetarii authore. Tuum erit, vir colendissime, sequi, quod placuerit, et pro Martino rationibus uti, quas habes. Quas et ego libenter probabo, si tantae fuerint efficaciae, ut persuadeant. </ab>
-         <ab resp="#editor" xml:id="seg9"><anchor xml:id="n59"/>Stephanus Lang Gemnici pro se et sibi adiunctis olim, teste nostro patre Wilhelmo Höffer, gaudebat anniversario<anchor xml:id="n59e"/>; et duos habuit filios, <anchor xml:id="n60"/>Antonium et Bernardum, utrumque magistrum Viennensem, uno eodemque anno 1454 Gemnici professos, e quorum mediis ecclesia minor in caemiterio cum tribus aris e fundamento erecta fuit. Quos et tertius frater Wenceslaus<anchor xml:id="n60e"/> in professione sub statu redditi et sacerdotis secutus fuit. </ab>
-         <ab resp="#editor" xml:id="seg10">Opus <anchor xml:id="n61"/>Henrici de Hassia<anchor xml:id="n61e"/> contra Theoloforum pridem<note place="foot" xml:id="d3e50028"><hi rend="italic">contra Theoloforum pridem:</hi> Wortfolge durch über der Zeile eingefügte Ziffern hergestellt.</note> est descriptum, uti et pars media illius iam noti Itinerarii. Quae cum litterariis novis mihi olim communicatis <choice><sic>mitterem</sic><corr>remitterem</corr></choice> omni momento, si occasio adesset certa. <anchor xml:id="n62"/>Nuntius quidem noster Gemnico vadit Kemmelbachium<anchor xml:id="n62e"/> bis in hebdomada et tenetur ea, quae sibi traduntur, illuc <add place="above">et huc</add> deferre. Sed an ille, qui Kemmelbachio vadit Mellicium, ad idem obligetur eique sit in omnibus fidendum, dubito. Dicitur enim mihi tabellarios nonnumquam fasciculos maiores vel recusare vel acceptos non suo loco extradere. Unde quam certa sit tibi occasio recipiendi ea, quae Kemmelbachium mittuntur, insinua. </ab>
+         <ab resp="#editor" xml:id="seg9">
+            <anchor xml:id="n59"/>Stephanus Lang Gemnici pro se et sibi adiunctis olim, teste nostro patre Wilhelmo Höffer, gaudebat anniversario<anchor xml:id="n59e"/>; et duos habuit filios, <anchor xml:id="n60"/>Antonium et Bernardum, utrumque magistrum Viennensem, uno eodemque anno 1454 Gemnici professos, e quorum mediis ecclesia minor in caemiterio cum tribus aris e fundamento erecta fuit. Quos et tertius frater Wenceslaus<anchor xml:id="n60e"/> in professione sub statu redditi et sacerdotis secutus fuit. </ab>
+         <ab resp="#editor" xml:id="seg10">Opus <anchor xml:id="n61"/>Henrici de Hassia<anchor xml:id="n61e"/> contra Theoloforum pridem<note place="foot" xml:id="d3e50028">
+               <hi rend="italic">contra Theoloforum pridem:</hi> Wortfolge durch über der Zeile eingefügte Ziffern hergestellt.</note> est descriptum, uti et pars media illius iam noti Itinerarii. Quae cum litterariis novis mihi olim communicatis <choice>
+               <sic>mitterem</sic>
+               <corr>remitterem</corr>
+            </choice> omni momento, si occasio adesset certa. <anchor xml:id="n62"/>Nuntius quidem noster Gemnico vadit Kemmelbachium<anchor xml:id="n62e"/> bis in hebdomada et tenetur ea, quae sibi traduntur, illuc <add place="above">et huc</add> deferre. Sed an ille, qui Kemmelbachio vadit Mellicium, ad idem obligetur eique sit in omnibus fidendum, dubito. Dicitur enim mihi tabellarios nonnumquam fasciculos maiores vel recusare vel acceptos non suo loco extradere. Unde quam certa sit tibi occasio recipiendi ea, quae Kemmelbachium mittuntur, insinua. </ab>
          <ab resp="#editor" xml:id="seg11">Fratri tuo ex me salutem dicito humanissimam et adde mihi deesse <anchor xml:id="n63"/>Bucelini vestri Stemmatographiam<anchor xml:id="n63e"/>, in qua inter Schauenburgicos utique erit mater Barbarae augustae, si tamen Barbara ex Schaunburgica sit nata. Dubium hucusque apud me magnum, Hermanni an Friderici fuerit filius Ulricus comes Ciliae anno 1456 ab Hungaris occisus; forte resolvet <anchor xml:id="n64"/>chronicum Hungaricum<anchor xml:id="n64e"/> ad annum 1457 vel ubicunque fuerit mentio facta de Ladislao Gara Hungariae palatino, cuius instinctu ad ulciscendam Ulrici caedem publice caesus fuit Ladislaus Corvinus. Textus mihi citatus de Friderico Ciliae primo comite convenit cum<anchor xml:id="n65"/> schemate comitum Ciliae mihi misso ex Seitz<anchor xml:id="n65e"/>, in quo a Ludovico Bavaro<anchor xml:id="n66"/> comes, sine anni tamen editione, factus esse perhibetur<anchor xml:id="n66e"/>. Plura tempus non<del ana="#after">sit</del> sinit. Bene valete uterque in Domino mihi amandissimi patres.</ab>
          <closer>Gemnici 1718 die 22. Januarii.</closer>
       </body>

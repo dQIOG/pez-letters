@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="724" xml:id="pez-0724">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Apronian Hueber an Bernhard Pez. 1717-01-20. Mehrerau.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">724</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -78,43 +90,48 @@
                <ptr type="mentionedIn" target="letter:768"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e1036">Allgäu</term>
-            <term ref="index:d14380e1624">Andreas Keller</term>
-            <term ref="index:d14380e10940">Einsiedeln</term>
-            <term ref="index:d14380e12179">Fischingen</term>
-            <term ref="index:d14380e13453">Friedrich von Wartenberg-Wildenstein</term>
-            <term ref="index:d14380e17768">Heinrich Hentz von Bach</term>
-            <term ref="index:d14380e19817">Isny</term>
-            <term ref="index:d14380e20301">Jodok Keller</term>
-            <term ref="index:d14380e21065">Kälin, Seraphin</term>
-            <term ref="index:d14380e22176">Kolb, Benedikt</term>
-            <term ref="index:d14380e23001">Konstanz</term>
-            <term ref="index:d14380e26271">Mariastein</term>
-            <term ref="index:d14380e26282">Marienberg</term>
-            <term ref="index:d14380e27838">Mehrerau.</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e30140">Muri</term>
-            <term ref="index:d14380e31122">Öderlin, Magnus</term>
-            <term ref="index:d14380e33611">Pez, Bernhard ; Enzyklik 1715/16</term>
-            <term ref="index:d14380e35219">Pirmin, hl</term>
-            <term ref="index:d14380e37019">Reichenau</term>
-            <term ref="index:d14380e37324">Rheinau</term>
-            <term ref="index:d10854e27100">St. Blasien</term>
-            <term ref="index:d14380e39290">St. Gallen</term>
-            <term ref="index:d14380e39679">Schenk von Stauffenberg, Johann Franz</term>
-            <term ref="index:d14380e40160">Schuttern</term>
-            <term ref="index:d14380e40566">Seitz, Bernhard</term>
-            <term ref="index:d14380e42565">Teschler, Cölestin</term>
-            <term ref="index:d14380e45488">Wetter, Wolfgang</term></keywords></textClass>
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e1036">Allgäu</term>
+               <term ref="index:d14380e1624">Andreas Keller</term>
+               <term ref="index:d14380e10940">Einsiedeln</term>
+               <term ref="index:d14380e12179">Fischingen</term>
+               <term ref="index:d14380e13453">Friedrich von Wartenberg-Wildenstein</term>
+               <term ref="index:d14380e17768">Heinrich Hentz von Bach</term>
+               <term ref="index:d14380e19817">Isny</term>
+               <term ref="index:d14380e20301">Jodok Keller</term>
+               <term ref="index:d14380e21065">Kälin, Seraphin</term>
+               <term ref="index:d14380e22176">Kolb, Benedikt</term>
+               <term ref="index:d14380e23001">Konstanz</term>
+               <term ref="index:d14380e26271">Mariastein</term>
+               <term ref="index:d14380e26282">Marienberg</term>
+               <term ref="index:d14380e27838">Mehrerau.</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e30140">Muri</term>
+               <term ref="index:d14380e31122">Öderlin, Magnus</term>
+               <term ref="index:d14380e33611">Pez, Bernhard ; Enzyklik 1715/16</term>
+               <term ref="index:d14380e35219">Pirmin, hl</term>
+               <term ref="index:d14380e37019">Reichenau</term>
+               <term ref="index:d14380e37324">Rheinau</term>
+               <term ref="index:d10854e27100">St. Blasien</term>
+               <term ref="index:d14380e39290">St. Gallen</term>
+               <term ref="index:d14380e39679">Schenk von Stauffenberg, Johann Franz</term>
+               <term ref="index:d14380e40160">Schuttern</term>
+               <term ref="index:d14380e40566">Seitz, Bernhard</term>
+               <term ref="index:d14380e42565">Teschler, Cölestin</term>
+               <term ref="index:d14380e45488">Wetter, Wolfgang</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">In der <rs ref="index:d14380e27838">Mehrerau</rs> gibt es keinerlei Überlieferung über einen Abt oder einen Prior Friedrich, der aus <rs ref="index:d14380e28088">Melk</rs> dorthin gekommen wäre. Die Äbte um 1430 und in den Jahren danach waren <rs ref="index:d14380e20301">Jodok Keller</rs>, nach ihm <rs ref="index:d14380e1624">Andreas Keller</rs>, dann <rs ref="index:d14380e17768">Heinrich Hentz von Bach</rs>. AHu vermutet, dass jener Abt Friedrich nicht der Mehrerau, sondern der <rs ref="index:d14380e37019">Reichenau</rs> vorstand. Der 54. Abt jenes Klosters nämlich war <rs ref="index:d14380e13453">Friedrich Freiherr von Wartenberg, Herr von Wildenstein</rs>, der aus <rs ref="index:d10854e27100">St. Blasien</rs> in die <rs ref="index:d14380e37019">Reichenau</rs> postuliert wurde und dort um 1430 strenge Reformen durchführte. Daher wird er als zweiter <rs ref="index:d14380e35219">Pirmin</rs> und neuer Gründer des Klosters bezeichnet.</p>
             <p corresp="#seg2">Weitere Angaben kann BP von den Bewohnern der <rs ref="index:d14380e37019">Reichenau</rs> erhalten. Briefe dorthin sind jedoch nicht mehr an den Prior <rs ref="index:d14380e45488">Wolfgang Wetter</rs> zu richten, welcher vor etwa 14 Tagen gestorben ist. Einen Nachfolger hat der Bischof von <rs ref="index:d14380e23001">Konstanz</rs> (<rs ref="index:d14380e39679">Johann Franz Schenk von Stauffenberg</rs>) noch nicht ernannt, soweit AHu weiß. BP kann indessen an die Reichenauer <rs ref="index:d14380e22176">Benedikt Kolb</rs> oder <rs ref="index:d14380e40566">Bernhard (Seitz)</rs>, dessen Familiennamen AHu nicht kennt, schreiben; oder er kann einen Brief an AHu senden, der diesen zusammen mit einem Empfehlungsschreiben weiterleiten will.</p>
-            <p corresp="#seg3">An die Klöster <rs ref="index:d14380e12179">Fischingen</rs>, <rs ref="index:d14380e30140">Muri</rs>, <rs ref="index:d14380e37324">Rheinau</rs> und <rs ref="index:d14380e26282">Marienberg</rs> hat AHu noch einmal geschrieben und ihnen das Anliegen BPs wärmstens empfohlen. In <rs ref="index:d14380e10940">Einsiedeln</rs> wird der <rs ref="index:d14380e39290">St. Galler</rs> <rs ref="index:d14380e21065">Seraphin Kälin</rs>, der kürzlich dorthin abgereist ist, auf Bitte AHus urgieren, der ihm auch schriftliche Anweisungen mitgegeben hat. Aus <rs ref="index:d14380e19817">Isny</rs> hofft AHu ein Verzeichnis für BP durch seinen Abt <rs ref="index:d14380e31122">Magnus Öderlin</rs> zu erhalten, welcher sich zur Zeit im <rs ref="index:d14380e1036">Allgäu</rs> aufhält; er hat diesen bei seiner Abreise darum gebeten. Die von BP an ihn gesendeten <ref type="letter" target="letter:721">721</ref> zwei <rs ref="index:d14380e33611">Enzykliken</rs> hat er nach <rs ref="index:d14380e40160">Schuttern</rs> <ref type="letter" target="letter:723">723</ref> und nach Beinwil-<rs ref="index:d14380e26271">Mariastein</rs> <ref type="letter" target="letter:722">722</ref> weitergeleitet und Empfehlungsschreiben beigegeben.</p>
+            <p corresp="#seg3">An die Klöster <rs ref="index:d14380e12179">Fischingen</rs>, <rs ref="index:d14380e30140">Muri</rs>, <rs ref="index:d14380e37324">Rheinau</rs> und <rs ref="index:d14380e26282">Marienberg</rs> hat AHu noch einmal geschrieben und ihnen das Anliegen BPs wärmstens empfohlen. In <rs ref="index:d14380e10940">Einsiedeln</rs> wird der <rs ref="index:d14380e39290">St. Galler</rs>
+               <rs ref="index:d14380e21065">Seraphin Kälin</rs>, der kürzlich dorthin abgereist ist, auf Bitte AHus urgieren, der ihm auch schriftliche Anweisungen mitgegeben hat. Aus <rs ref="index:d14380e19817">Isny</rs> hofft AHu ein Verzeichnis für BP durch seinen Abt <rs ref="index:d14380e31122">Magnus Öderlin</rs> zu erhalten, welcher sich zur Zeit im <rs ref="index:d14380e1036">Allgäu</rs> aufhält; er hat diesen bei seiner Abreise darum gebeten. Die von BP an ihn gesendeten <ref type="letter" target="letter:721">721</ref> zwei <rs ref="index:d14380e33611">Enzykliken</rs> hat er nach <rs ref="index:d14380e40160">Schuttern</rs>
+               <ref type="letter" target="letter:723">723</ref> und nach Beinwil-<rs ref="index:d14380e26271">Mariastein</rs>
+               <ref type="letter" target="letter:722">722</ref> weitergeleitet und Empfehlungsschreiben beigegeben.</p>
             <p corresp="#seg4">In einem Postskriptum bemerkt AHu noch, dass der Grund für die zögerliche Haltung mancher Mitbrüder bei der Einsendung von Beiträgen seiner Vermutung nach darin liegt, dass sie BPs Anliegen nicht richtig verstanden haben und dahinter böse Absichten vermuten.</p>
             <p corresp="#seg5">AHu hat auch <rs ref="index:d14380e42565">Cölestin Teschler</rs> die Sache BPs nochmals ans Herz gelegt und von diesem das Versprechen erhalten, dessen Wünschen nachzukommen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -122,7 +139,7 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>Abbates circa annum 1430</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:18582">Niederstätter, Mehrerau</rs> 514; <rs type="bibl" ref="bibl:19632">Spahr, Äbteliste</rs> 1, 7f. Heinrich Hentz von Bach war nach
+               <rs type="bibl" ref="bibl:18582">Niederstätter, Mehrerau</rs> 514; <rs type="bibl" ref="bibl:19632">Spahr, Äbteliste</rs> 1, 7f. Heinrich Hentz von Bach war nach
                   heutigem Wissensstand nicht der fünfte, sondern der dritte nachweisbare Abt dieses
                   Namens.</p>
          </note>
@@ -204,13 +221,17 @@
    </standOff>
    <text>
       <front>
-         <p>Admodum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez Benedictino Mellicensi et bibliothecario etc., domino patri et patrono suo colendissimo. Per Augspurg. Mellicii vulgo Mölk in Österreich.1/2 franco<note type="annotation">. Siegel.</note></p>
+         <p>Admodum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez Benedictino Mellicensi et bibliothecario etc., domino patri et patrono suo colendissimo. Per Augspurg. Mellicii vulgo Mölk in Österreich.1/2 franco<note type="annotation">. Siegel.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiosissime ac clarissime domine, pater et patrone colendissime.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiosissime ac clarissime domine, pater et patrone colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">Nulla abbatis cuiusdam Friderici nomine vel prioris alicuius e florentissimo asceterio vestro assumpti in Augia Maiori Brigantina memoria est. <anchor xml:id="n1"/>Abbates circa annum 1430<anchor xml:id="n1e"/> et subsequentes fuere Jodocus Keller et Andreas Keller, quibus successit Henricus V. nobilis Henzius<del ana="#after">ab</del> Abach etc. Credo illum Fridericum abbatem Augiae Divitis, non vero Augiae Maioris clavum tenuisse; nam 54. illius olim illustrissimi monasterii <add place="above">abbas</add> erat Fridericus baro <add place="above">de</add> Warttenberg, dominus de Wildenstein, ex monasterio S. Blasii postulatus etc., qui circa annum 1430 monasterium illud strenue reformavit,<anchor xml:id="n2"/> secundus Pirminius et alter coenobii fundator appellatus<anchor xml:id="n2e"/> etc. </ab>
          <ab resp="#editor" xml:id="seg2">Posset uberior notitia ab ipsis monasterii Augiensis incolis haberi, litterae tamen ad plurimum reverendum patrem Wolfgangum <anchor xml:id="n3"/>Wetter dirigi ultro non debent, utpote ante 14 circiter dies in Domino pie defunctum<anchor xml:id="n3e"/>. Necdum (saltem ut scio) eidem alius <pb n="1v"/> in prioratu a celsissimo domino domino principe et<anchor xml:id="n4"/> episcopo Constantiensi<anchor xml:id="n4e"/> substitutus est. Possent vero dirigi vel ad reverendum patrem<anchor xml:id="n5"/> Benedictum Kolb vel reverendum patrem Bernardum<anchor xml:id="n5e"/> (cognomen ignoro) aut, si placet ad me dirigere, eas cum recommendatitiis illuc transmittam. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n6"/>Scripsi interea denuo ad monasteria Fischingense, Murense, Rhenoviense, Mariae-Montanum etc., causamque admodum reverendae dominationis vestrae omni meliori, quo potui, modo recommendavi<anchor xml:id="n6e"/>. Ad monasterium Einsidlense nuper profectus reverendus pater<anchor xml:id="n7"/> Seraphin Kälin<anchor xml:id="n7e"/> San-Gallensis ad meas instantissimas easque iteratas preces et informationem, quam scriptam dedi, pro communicatione toties petiti catalogi etc. urgentissime supplicabit. Ab Isnensibus eundem (ut spero) procurabit meus reverendissimus dominus dominus abbas de facto in Algoya commorans, quem propterea in discessu humillime rogavi. Epistolas <pb n="2r"/><anchor xml:id="n8"/> encyclicas ad monasteria Schutterense et Bajnwilense cum recommendatitiis transmisi<anchor xml:id="n8e"/>, qui interim penes fraternam mei in omnia sancta recommendationem esse pergo</ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n6"/>Scripsi interea denuo ad monasteria Fischingense, Murense, Rhenoviense, Mariae-Montanum etc., causamque admodum reverendae dominationis vestrae omni meliori, quo potui, modo recommendavi<anchor xml:id="n6e"/>. Ad monasterium Einsidlense nuper profectus reverendus pater<anchor xml:id="n7"/> Seraphin Kälin<anchor xml:id="n7e"/> San-Gallensis ad meas instantissimas easque iteratas preces et informationem, quam scriptam dedi, pro communicatione toties petiti catalogi etc. urgentissime supplicabit. Ab Isnensibus eundem (ut spero) procurabit meus reverendissimus dominus dominus abbas de facto in Algoya commorans, quem propterea in discessu humillime rogavi. Epistolas <pb n="2r"/>
+            <anchor xml:id="n8"/> encyclicas ad monasteria Schutterense et Bajnwilense cum recommendatitiis transmisi<anchor xml:id="n8e"/>, qui interim penes fraternam mei in omnia sancta recommendationem esse pergo</ab>
          <closer>Admodum reverendae religiosissimae ac [clarissimae]<note type="annotation" xml:id="d3e26656">Textverlust durch Ausriss.</note> dominationis vestrae etc. fidelissimus servus pater Apronianus Hueber [prior manu propria]<note type="annotation" xml:id="d3e26659">Textverlust durch Ausriss.</note>.</closer>
          <closer>Ex Augia Maiori Brigantina 20. Januarii 1717.</closer>
          <closer xml:id="seg5">P.S. Quod aliqui sodalium nostrorum suos catalogos communicare eousque differant, inde (ni fallor) provenit, quod, quid sua clarissima paternitas velit, non satis capiant, et nescio quid sinistri etc. metuant, veluti ex nonnullis advertere potui. Reverendo patri Coelestino Teschler causam clarissimae paternitatis de melio[ri]<note type="annotation" xml:id="d3e26670">Textverlust durch Ausriss.</note> recommendavi, qui petitis meis se morem habiturum promisit.</closer>

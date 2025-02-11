@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="710" xml:id="pez-0710">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Gottlieb Krause an Bernhard Pez. 1716-12-19. Leipzig.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">710</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Irrig zum 19. Dezember 1715 datiert bei Glassner, Verzeichnis 221.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,40 +89,43 @@
                <ptr type="mentions" target="letter:709"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e4075">Basel ; Konzil 1431–1449</term>
-            <term ref="index:d14380e14516">Garsten</term>
-            <term ref="index:d14380e14542">Garsten ; Bibliothek ; Lindner, Annalen von Steyr. Ms</term>
-            <term ref="index:d14380e18236">Herzogenburg ; Bibliothek</term>
-            <term ref="index:d14380e23017">Konstanz ; Konzil 1414–1418</term>
-            <term ref="index:d14380e24505">Lenfant, Jacques</term>
-            <term ref="index:d14380e24513">Lenfant, Jacques ; Histoire du concile de Constance. Amsterdam 1714</term>
-            <term ref="index:d14380e24518">Lenfant, Jacques ; Histoire de la guerre des Hussites et du concile de Basle. 2 Bde.
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e4075">Basel ; Konzil 1431–1449</term>
+               <term ref="index:d14380e14516">Garsten</term>
+               <term ref="index:d14380e14542">Garsten ; Bibliothek ; Lindner, Annalen von Steyr. Ms</term>
+               <term ref="index:d14380e18236">Herzogenburg ; Bibliothek</term>
+               <term ref="index:d14380e23017">Konstanz ; Konzil 1414–1418</term>
+               <term ref="index:d14380e24505">Lenfant, Jacques</term>
+               <term ref="index:d14380e24513">Lenfant, Jacques ; Histoire du concile de Constance. Amsterdam 1714</term>
+               <term ref="index:d14380e24518">Lenfant, Jacques ; Histoire de la guerre des Hussites et du concile de Basle. 2 Bde.
          Amsterdam–Utrecht 1731</term>
-            <term ref="index:d14380e24955">Lindner, Wolfgang</term>
-            <term ref="index:d14380e24963">Lindner, Wolfgang ; Annalen von Steyr 1590–1622. Ms. Garsten</term>
-            <term ref="index:d14380e28279">Melk ; Bibliothek</term>
-            <term ref="index:d14380e29765">Mosheim, Johann Lorenz</term>
-            <term ref="index:d14380e29773">Mosheim, Johann Lorenz ; *Plan einer Kirchengeschichte Österreichs</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e34213">Pez, Bernhard ; Bibliotheksreise 1716</term>
-            <term ref="index:d14380e33737">Pez, Bernhard ; Katalog der Bibliothek von St. Dorothea in Wien</term>
-            <term ref="index:d14380e33760">Pez, Bernhard ; Nachricht von den vornehmsten codicibus manuscriptis einiger klöster in
+               <term ref="index:d14380e24955">Lindner, Wolfgang</term>
+               <term ref="index:d14380e24963">Lindner, Wolfgang ; Annalen von Steyr 1590–1622. Ms. Garsten</term>
+               <term ref="index:d14380e28279">Melk ; Bibliothek</term>
+               <term ref="index:d14380e29765">Mosheim, Johann Lorenz</term>
+               <term ref="index:d14380e29773">Mosheim, Johann Lorenz ; *Plan einer Kirchengeschichte Österreichs</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e34213">Pez, Bernhard ; Bibliotheksreise 1716</term>
+               <term ref="index:d14380e33737">Pez, Bernhard ; Katalog der Bibliothek von St. Dorothea in Wien</term>
+               <term ref="index:d14380e33760">Pez, Bernhard ; Nachricht von den vornehmsten codicibus manuscriptis einiger klöster in
          Ober-Österreich. In: Umständliche bücher-historie 2</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d10854e27178">St. Florian ; Bibliothek</term>
-            <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
-            <term ref="index:d14380e43730">Umständliche bücher-historie. Hg. von Johann Gottlieb Krause. Leipzig 1715–1716</term>
-            <term ref="index:d14380e43744">Umständliche bücher-historie. Hg. von Johann Gottlieb Krause. Leipzig 1715–1716 ; -Band
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d10854e27178">St. Florian ; Bibliothek</term>
+               <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
+               <term ref="index:d14380e43730">Umständliche bücher-historie. Hg. von Johann Gottlieb Krause. Leipzig 1715–1716</term>
+               <term ref="index:d14380e43744">Umständliche bücher-historie. Hg. von Johann Gottlieb Krause. Leipzig 1715–1716 ; -Band
          III</term>
-            <term ref="index:d14380e46099">Wien ; St. Dorothea ; Bibliothek</term></keywords></textClass>
+               <term ref="index:d14380e46099">Wien ; St. Dorothea ; Bibliothek</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">GK hat BPs Schreiben <ref type="letter" target="letter:709">709</ref> sowie den Handschriftenkatalog der Bibliothek des Stifts <rs ref="index:d14380e46099">St. Dorothea zu Wien</rs> erhalten und weiß sich für BPs Wohlwollen und Bemühen um die Gelehrtenwelt nicht genug zu bedanken. GK fürchtet, dass die Veröffentlichung der von BP auf seinen Reisen angelegten Verzeichnisse diesem allzu zahlreiche Anfragen verursachen wird. Die Gelehrten um GK sind begierig nach Neuigkeiten über Schätze dieser Art und wollen diese, wenn sie von ihnen erfahren haben, sofort auch benutzen. GK selbst ist jedenfalls, seitdem er BPs <rs ref="index:d14380e33760">„Nachricht von den vornehmsten codicibus“</rs> in seiner <rs ref="index:d14380e43730">„Umständlichen bücher-historie“</rs> abgedruckt hat, von einigen Lesern brieflich um Fürsprache bei BP gebeten worden.</p>
             <p corresp="#seg2">So ersucht <rs ref="index:d14380e24505">Jacques Lenfant</rs>, der Verfasser der berühmten <rs ref="index:d14380e24513">„Histoire du concile de Constance“</rs>, der sich nun mit einer unparteiischen (absque partium studio) <rs ref="index:d14380e24518">Geschichte des Konstanzer und des Basler Konzils</rs> beschäftigt, um die Mitteilung von handgeschriebenem oder gedrucktem Material zu den beiden Konzilien sowie zur Kirchengeschichte des 15. Jahrhunderts im Allgemeinen.</p>
-            <p corresp="#seg3">Ein weiteres Ansuchen stammt von <rs ref="index:d14380e29765">Johann Lorenz Mosheim</rs>, der seit einigen Jahren an einer <rs ref="index:d14380e29773">Kirchengeschichte Österreichs</rs> arbeitet (siehe Kommentar). Er bittet um eine Abschrift oder zumindest eine Beschreibung und eine Probe der in <rs ref="index:d14380e14516">Garsten</rs> gefundenen <rs ref="index:d14380e29773">Annalen</rs> <rs ref="index:d14380e24955">Wolfgang Lindner</rs>s über die Religionsunruhen in <rs ref="index:d14380e31465">Österreich</rs>, sofern auch HP mit einer Übermittlung einverstanden ist. GK möchte jedoch von BP nichts Lästiges verlangen.</p>
+            <p corresp="#seg3">Ein weiteres Ansuchen stammt von <rs ref="index:d14380e29765">Johann Lorenz Mosheim</rs>, der seit einigen Jahren an einer <rs ref="index:d14380e29773">Kirchengeschichte Österreichs</rs> arbeitet (siehe Kommentar). Er bittet um eine Abschrift oder zumindest eine Beschreibung und eine Probe der in <rs ref="index:d14380e14516">Garsten</rs> gefundenen <rs ref="index:d14380e29773">Annalen</rs>
+               <rs ref="index:d14380e24955">Wolfgang Lindner</rs>s über die Religionsunruhen in <rs ref="index:d14380e31465">Österreich</rs>, sofern auch HP mit einer Übermittlung einverstanden ist. GK möchte jedoch von BP nichts Lästiges verlangen.</p>
             <p corresp="#seg4">Der <rs ref="index:d14380e33737">Katalog der Bibliothek von St. Dorothea</rs> wird ganz nach den Wünschen BPs gedruckt und soll im <rs ref="index:d14380e43744">dritten Band der „Umständlichen bücher-historie“</rs> erscheinen. BP hat weiters versprochen, Handschriftenkataloge der auf seiner <rs ref="index:d14380e34213">jüngsten Reise</rs> besuchten Bibliotheken zu senden. GK bittet jedoch darum, auch jene nicht zu vergessen, die im zweiten Band angekündigt wurden: <rs ref="index:d14380e18236">Herzogenburg</rs>, <rs ref="index:d10854e27178">St. Florian</rs> und <rs ref="index:d14380e28279">Melk</rs>. BP soll sich gegen GK der gleichen Freiheiten bedienen wie dieser ihm gegenüber.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -121,7 +136,9 @@
                   Bibliothek des Wiener Augustiner-Chorherrenstiftes St. Dorothea ausführlich
                   benutzt. Umfangreiche Notizen zu ihren Handschriftenbeständen finden sich heute in
                   StiB Melk, Cod. 910, 1r–92v; vgl. <rs type="bibl" ref="bibl:16512">Glassner,
-                     Handschriften</rs> 108; sowie <ref type="letter" target="letter:379">379</ref> <ref target="letter:379#seg1">1</ref>, <ref type="letter" target="letter:383">383</ref>, <ref type="letter" target="letter:427">427 </ref><ref target="letter:427 #seg1">1</ref>. </p>
+                     Handschriften</rs> 108; sowie <ref type="letter" target="letter:379">379</ref>
+               <ref target="letter:379#seg1">1</ref>, <ref type="letter" target="letter:383">383</ref>, <ref type="letter" target="letter:427">427 </ref>
+               <ref target="letter:427 #seg1">1</ref>. </p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>Lenfant ... conatibus</mentioned>
@@ -179,11 +196,11 @@
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg4 650">
             <mentioned>pars tertia</mentioned>
-            
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
-         <note anchored="false">Nummerierung: <orig>II.</orig></note>
+         <note anchored="false">Nummerierung: <orig>II.</orig>
+         </note>
       </listAnnotation>
       <listBibl>
          <head>Literatur</head>
@@ -209,10 +226,15 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo et religiosissimo viro patri Bernardo Pezio bibliothecario apud Mellicenses eruditissimo salutem plurimam dicit Joannes Gottlieb Krause.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo et religiosissimo viro patri Bernardo Pezio bibliothecario apud Mellicenses eruditissimo salutem plurimam dicit Joannes Gottlieb Krause.</opener>
          <ab resp="#editor" xml:id="seg1">Humanissimas litteras tuas integrumque <anchor xml:id="n1"/>Dorotheanorum codicum catalogum<anchor xml:id="n1e"/>, vir praestantissime, recte accepi, quibusque verbis prolixissimam in me voluntatem tuam reique litterariae ornandae studium extollere pro dignitate debeam, haud invenio. Vereor autem, ne nimium negotii tibi facessat catalogorum, quos in itineribus tuis confecisti, publicatio; avidissimi enim cimeliorum huius generis sunt nostri homines, et ubi eiusmodi thesauri recluduntur, uti illis protinus ac perfrui cupiunt. Me sane, ex quo codicum istorum notitiam Historiae meae librariae tuo beneficio inserui, unus alterve litteris adiit, sanctissime obtestati, ut caussam suam apud te agerem. </ab>
-         <ab resp="#editor" xml:id="seg2">In his nomen suum profitetur vir clarissimus Jacobus Lenfant, cuius omnium ore celebratur Historia Constantiensis concilii, qui summopere rogat, velis eius <choice><sic>cona</sic><corr>in</corr></choice> praedicti Basileensisque concilii historia absque partium studio ornanda conatibus favere rarioraque eo sicuti et ad rem ecclesiasticam saeculi XV. universam spectantia, quae forte in arbitrio tuo fuerint posita, sive typis illa iam sint expressa sive manu tantum exarata, cum ipso communicare. </ab>
-         <ab resp="#editor" xml:id="seg3">Alter est <anchor xml:id="n2"/>Mosheimius meus<anchor xml:id="n2e"/>, qui ab aliquot annis historiam Austriae ecclesiasticam parat pluraque haud contemnenda eam in rem collegit. Is cum<anchor xml:id="n3"/> inter codices Garstenses memorari abs te videret Lindnerianos de motibus religionis caussa per Austriam agitatis commentarios<anchor xml:id="n3e"/>, optavit suis sibi sumtibus apographum operis, si quidem id pace eruditissimi fratris tui fieri liceat, comparare aut, si minus id ex re vestra videatur, uberiorem saltem libri notitiam aut sciagraphiam addito specimine operis ab humanitate expectat. Haec ego ad te iussu amicorum; de quibus tu, uti voles, statues. Nihil enim a te exigo, quod molestum tibi esse possit. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg2">In his nomen suum profitetur vir clarissimus Jacobus Lenfant, cuius omnium ore celebratur Historia Constantiensis concilii, qui summopere rogat, velis eius <choice>
+               <sic>cona</sic>
+               <corr>in</corr>
+            </choice> praedicti Basileensisque concilii historia absque partium studio ornanda conatibus favere rarioraque eo sicuti et ad rem ecclesiasticam saeculi XV. universam spectantia, quae forte in arbitrio tuo fuerint posita, sive typis illa iam sint expressa sive manu tantum exarata, cum ipso communicare. </ab>
+         <ab resp="#editor" xml:id="seg3">Alter est <anchor xml:id="n2"/>Mosheimius meus<anchor xml:id="n2e"/>, qui ab aliquot annis historiam Austriae ecclesiasticam parat pluraque haud contemnenda eam in rem collegit. Is cum<anchor xml:id="n3"/> inter codices Garstenses memorari abs te videret Lindnerianos de motibus religionis caussa per Austriam agitatis commentarios<anchor xml:id="n3e"/>, optavit suis sibi sumtibus apographum operis, si quidem id pace eruditissimi fratris tui fieri liceat, comparare aut, si minus id ex re vestra videatur, uberiorem saltem libri notitiam aut sciagraphiam addito specimine operis ab humanitate expectat. Haec ego ad te iussu amicorum; de quibus tu, uti voles, statues. Nihil enim a te exigo, quod molestum tibi esse possit. <pb n="1v"/>
+         </ab>
          <ab resp="#editor" xml:id="seg4">Codicum Dorotheanorum catalogus excudetur prorsus ita, ut voluisti; cuius exemplum habebis, quamprimum in lucem prodierit Historiae librariae meae <anchor xml:id="n4"/>pars tertia<anchor xml:id="n4e"/>, quod quidem futurum proxime spero. Praeterea iubes me expectare singularum bibliothecarum catalogos, quas in <add place="above">novissimo</add> itinere tuo perlustrare tibi contigit; quo quidem nihil mihi accidere poterit gratius acceptiusve; velim tamen, ne eorum quoque obliviscaris penitus, quorum spem lectoribus meis parte secunda feci. Ex iis enim huc usque a me desiderantur codices Hertzogburgenses, Florianenses et Mellicenses. Vides, quantum humanitate tua abutar: sed eadem te libertate erga me uti velim; nihil enim tam arduum a me exigere poteris, quod tui caussa non sim pro viribus et alacriter praestiturus. Vale, vir eruditissime, remque tuam ex sententia gere.</ab>
          <closer>Dabam Lipsiae anno salutis MDCCXVI ante diem XIV. Kalendas Januarias.</closer>
       </body>

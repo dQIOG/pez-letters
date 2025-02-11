@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="944" xml:id="pez-0944">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Leopold Wydemann an Bernhard Pez. 1718-06-01. Gaming.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">944</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                In den Zitaten in <ref target="#seg2">2</ref> versucht LW das Schriftbild der Vorlage zu imitieren.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -80,87 +92,89 @@
                <ptr type="mentionedIn" target="letter:936"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e2141">Anonyme Werke ; Chronicon Ratisbonense. Ms. Regensburg, St. Emmeram</term>
-            <term ref="index:d14380e2151">Anonyme Werke ; Chronicon Ratisbonense. Ms. Regensburg, St. Emmeram ; Abschrift von
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e2141">Anonyme Werke ; Chronicon Ratisbonense. Ms. Regensburg, St. Emmeram</term>
+               <term ref="index:d14380e2151">Anonyme Werke ; Chronicon Ratisbonense. Ms. Regensburg, St. Emmeram ; Abschrift von
          Leopold Wydemann</term>
-            <term ref="index:d14380e2307">Anonyme Werke ; Fundatio monasterii in Walderbach. Ms. Regensburg, St. Emmeram</term>
-            <term ref="index:d14380e2315">Anonyme Werke ; Fundatio monasterii in Walderbach. Ms. Regensburg, St. Emmeram ;
+               <term ref="index:d14380e2307">Anonyme Werke ; Fundatio monasterii in Walderbach. Ms. Regensburg, St. Emmeram</term>
+               <term ref="index:d14380e2315">Anonyme Werke ; Fundatio monasterii in Walderbach. Ms. Regensburg, St. Emmeram ;
          Abschrift von Leopold Wydemann</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e5602">Bibel</term>
-            <term ref="index:d14380e11630">Ernst von Pardubitz</term>
-            <term ref="index:d14380e11640">Ernst von Pardubitz ; Ablassbrief für die Benutzer von Konrad von Haimburg, Laus
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e5602">Bibel</term>
+               <term ref="index:d14380e11630">Ernst von Pardubitz</term>
+               <term ref="index:d14380e11640">Ernst von Pardubitz ; Ablassbrief für die Benutzer von Konrad von Haimburg, Laus
          Mariae, 1356</term>
-            <term ref="index:d14380e12691">Franko von Meschede</term>
-            <term ref="index:d14380e13828">Gaming</term>
-            <term ref="index:d14380e14091">Gaming ; Bibliothek ; Honorius Augustodunensis, De esu volatilium. Ms</term>
-            <term ref="index:d14380e14111">Gaming ; Bibliothek ; Honorius Augustodunensis, De esu volatilium. Ms ; *Georg</term>
-            <term ref="index:d14380e14178">Gaming ; Bibliothek ; Hymnologische Handschriften, u.a. mit Dichtungen des Konrad von
+               <term ref="index:d14380e12691">Franko von Meschede</term>
+               <term ref="index:d14380e13828">Gaming</term>
+               <term ref="index:d14380e14091">Gaming ; Bibliothek ; Honorius Augustodunensis, De esu volatilium. Ms</term>
+               <term ref="index:d14380e14111">Gaming ; Bibliothek ; Honorius Augustodunensis, De esu volatilium. Ms ; *Georg</term>
+               <term ref="index:d14380e14178">Gaming ; Bibliothek ; Hymnologische Handschriften, u.a. mit Dichtungen des Konrad von
          Haimburg ; *Ms., in dem Konrad als „incomparabilis“ bezeichnet wird</term>
-            <term ref="index:d14380e14183">Gaming ; Bibliothek ; Hymnologische Handschriften, u.a. mit Dichtungen des Konrad von
+               <term ref="index:d14380e14183">Gaming ; Bibliothek ; Hymnologische Handschriften, u.a. mit Dichtungen des Konrad von
          Haimburg ; *Ms. mit Bericht über Vision zur Zeit Johannes’ XXII</term>
-            <term ref="index:d14380e14215">Gaming ; Bibliothek ; Hymnologische Handschriften, u.a. mit Dichtungen des Konrad von
+               <term ref="index:d14380e14215">Gaming ; Bibliothek ; Hymnologische Handschriften, u.a. mit Dichtungen des Konrad von
          Haimburg ; Signatur Nr. 88</term>
-            <term ref="index:d14380e14255">Gaming ; Bibliothek ; Konrad von Haimburg, Laus Mariae. Ms</term>
-            <term ref="index:d14380e14264">Gaming ; Bibliothek ; Konrad von Haimburg, Super quinque Alleluia. Ms</term>
-            <term ref="index:d14380e14716">Gent ; St.-Bavon</term>
-            <term ref="index:d14380e15228">Gerhoch von Reichersberg ; De gloria et honore Filii hominis ; Ms. Salzburg, St.
+               <term ref="index:d14380e14255">Gaming ; Bibliothek ; Konrad von Haimburg, Laus Mariae. Ms</term>
+               <term ref="index:d14380e14264">Gaming ; Bibliothek ; Konrad von Haimburg, Super quinque Alleluia. Ms</term>
+               <term ref="index:d14380e14716">Gent ; St.-Bavon</term>
+               <term ref="index:d14380e15228">Gerhoch von Reichersberg ; De gloria et honore Filii hominis ; Ms. Salzburg, St.
          Peter</term>
-            <term ref="index:d14380e15240">Gerhoch von Reichersberg ; De gloria et honore Filii hominis ; Ms. Salzburg, St. Peter
+               <term ref="index:d14380e15240">Gerhoch von Reichersberg ; De gloria et honore Filii hominis ; Ms. Salzburg, St. Peter
          ; Abschrift von Leopold Wydemann. Ms</term>
-            <term ref="index:d14380e15976">Gottfried von Weißeneck</term>
-            <term ref="index:d14380e15984">Gottfried von Weißeneck ; Ablassbrief für die Benutzer von Konrad von Haimburg, Laus
+               <term ref="index:d14380e15976">Gottfried von Weißeneck</term>
+               <term ref="index:d14380e15984">Gottfried von Weißeneck ; Ablassbrief für die Benutzer von Konrad von Haimburg, Laus
          Mariae, 1358</term>
-            <term ref="index:d14380e16940">Hainburg</term>
-            <term ref="index:d14380e18639">Honorius Augustodunensis ; De esu volatilium</term>
-            <term ref="index:d14380e18655">Honorius Augustodunensis ; De esu volatilium ; Ms. Gaming</term>
-            <term ref="index:d14380e19328">Hymnen, Sequenzen, liturgische und andere religiöse Dichtungen</term>
-            <term ref="index:d14380e19505">Hymnen, Sequenzen, liturgische und andere religiöse Dichtungen ; Margaritam
+               <term ref="index:d14380e16940">Hainburg</term>
+               <term ref="index:d14380e18639">Honorius Augustodunensis ; De esu volatilium</term>
+               <term ref="index:d14380e18655">Honorius Augustodunensis ; De esu volatilium ; Ms. Gaming</term>
+               <term ref="index:d14380e19328">Hymnen, Sequenzen, liturgische und andere religiöse Dichtungen</term>
+               <term ref="index:d14380e19505">Hymnen, Sequenzen, liturgische und andere religiöse Dichtungen ; Margaritam
          pretiosam</term>
-            <term ref="index:d14380e20252">Jesus Christus</term>
-            <term ref="index:d14380e20380">Johannes XXII</term>
-            <term ref="index:d14380e20425">Johannes Bernier de Fayt ; De esu carnium</term>
-            <term ref="index:d14380e20893">Jongelincx, Gaspar ; Notitia abbatiarum ordinis Cistertiensis per universum orbem. 10
+               <term ref="index:d14380e20252">Jesus Christus</term>
+               <term ref="index:d14380e20380">Johannes XXII</term>
+               <term ref="index:d14380e20425">Johannes Bernier de Fayt ; De esu carnium</term>
+               <term ref="index:d14380e20893">Jongelincx, Gaspar ; Notitia abbatiarum ordinis Cistertiensis per universum orbem. 10
          Bde. Köln 1640</term>
-            <term ref="index:d14380e21171">Karl IV</term>
-            <term ref="index:d14380e21396">Kartäuser</term>
-            <term ref="index:d14380e22870">Konrad von Haimburg</term>
-            <term ref="index:d14380e22889">Konrad von Haimburg ; Laus Mariae. Ms. Gaming</term>
-            <term ref="index:d14380e22898">Konrad von Haimburg ; Lectionarium Mariale</term>
-            <term ref="index:d14380e22903">Konrad von Haimburg ; Super quinque Alleluia. Ms. Gaming</term>
-            <term ref="index:d14380e24565">Leo ; Leoninische Verse</term>
-            <term ref="index:d14380e26169">Maria, hl</term>
-            <term ref="index:d14380e27175">Mauerbach</term>
-            <term ref="index:d14380e28279">Melk ; Bibliothek</term>
-            <term ref="index:d14380e30366">Neuberg an der Mürz</term>
-            <term ref="index:d14380e30376">Neuberg an der Mürz ; Kartäuser, aufgrund von dessen Vision Herzog Ottos Leichnam nach
+               <term ref="index:d14380e21171">Karl IV</term>
+               <term ref="index:d14380e21396">Kartäuser</term>
+               <term ref="index:d14380e22870">Konrad von Haimburg</term>
+               <term ref="index:d14380e22889">Konrad von Haimburg ; Laus Mariae. Ms. Gaming</term>
+               <term ref="index:d14380e22898">Konrad von Haimburg ; Lectionarium Mariale</term>
+               <term ref="index:d14380e22903">Konrad von Haimburg ; Super quinque Alleluia. Ms. Gaming</term>
+               <term ref="index:d14380e24565">Leo ; Leoninische Verse</term>
+               <term ref="index:d14380e26169">Maria, hl</term>
+               <term ref="index:d14380e27175">Mauerbach</term>
+               <term ref="index:d14380e28279">Melk ; Bibliothek</term>
+               <term ref="index:d14380e30366">Neuberg an der Mürz</term>
+               <term ref="index:d14380e30376">Neuberg an der Mürz ; Kartäuser, aufgrund von dessen Vision Herzog Ottos Leichnam nach
          Neuberg überführt wurde</term>
-            <term ref="index:d14380e30905">Notker Balbulus ; Liber hymnorum ; Ms. Regensburg, St. Emmeram</term>
-            <term ref="index:d14380e31832">Otto „der Fröhliche“</term>
-            <term ref="index:d14380e32575">Passau</term>
-            <term ref="index:d14380e32607">Passau ; Missalien der Inkunabel- und Frühdruckzeit</term>
-            <term ref="index:d14380e32614">Passau ; Missalien des 14. Jhs</term>
-            <term ref="index:d14380e33468">Pez, Bernhard ; -Bibliotheca Mellicensis</term>
-            <term ref="index:d14380e34400">Pez, Bernhard ; Bibliotheks- und Verhandlungsreise nach Wien 1718</term>
-            <term ref="index:d14380e33745">Pez, Bernhard ; Katalog der Melker Handschriften</term>
-            <term ref="index:d14380e34481">Pez, Bernhard ; Krankheit im Frühjahr 1718</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e35789">Prag</term>
-            <term ref="index:d14380e36772">Regensburg ; St. Emmeram ; Bibliothek ; Chronicon Ratisbonense. Ms</term>
-            <term ref="index:d14380e36781">Regensburg ; St. Emmeram ; Bibliothek ; Fundatio monasterii in Walderbach. Ms</term>
-            <term ref="index:d14380e36809">Regensburg ; St. Emmeram ; Bibliothek ; Notker Balbulus, Liber hymnorum. Ms</term>
-            <term ref="index:d14380e39172">Salzburg ; St. Peter ; Bibliothek ; Gerhoch von Reichersberg, De gloria et honore Filii
+               <term ref="index:d14380e30905">Notker Balbulus ; Liber hymnorum ; Ms. Regensburg, St. Emmeram</term>
+               <term ref="index:d14380e31832">Otto „der Fröhliche“</term>
+               <term ref="index:d14380e32575">Passau</term>
+               <term ref="index:d14380e32607">Passau ; Missalien der Inkunabel- und Frühdruckzeit</term>
+               <term ref="index:d14380e32614">Passau ; Missalien des 14. Jhs</term>
+               <term ref="index:d14380e33468">Pez, Bernhard ; -Bibliotheca Mellicensis</term>
+               <term ref="index:d14380e34400">Pez, Bernhard ; Bibliotheks- und Verhandlungsreise nach Wien 1718</term>
+               <term ref="index:d14380e33745">Pez, Bernhard ; Katalog der Melker Handschriften</term>
+               <term ref="index:d14380e34481">Pez, Bernhard ; Krankheit im Frühjahr 1718</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e35789">Prag</term>
+               <term ref="index:d14380e36772">Regensburg ; St. Emmeram ; Bibliothek ; Chronicon Ratisbonense. Ms</term>
+               <term ref="index:d14380e36781">Regensburg ; St. Emmeram ; Bibliothek ; Fundatio monasterii in Walderbach. Ms</term>
+               <term ref="index:d14380e36809">Regensburg ; St. Emmeram ; Bibliothek ; Notker Balbulus, Liber hymnorum. Ms</term>
+               <term ref="index:d14380e39172">Salzburg ; St. Peter ; Bibliothek ; Gerhoch von Reichersberg, De gloria et honore Filii
          hominis. Ms</term>
-            <term ref="index:d14380e40535">Seitz</term>
-            <term ref="index:d14380e43400">Trithemius, Johannes ; De scriptoribus ecclesiasticis. Basel 1494 ; [Ausgabe unter dem
+               <term ref="index:d14380e40535">Seitz</term>
+               <term ref="index:d14380e43400">Trithemius, Johannes ; De scriptoribus ecclesiasticis. Basel 1494 ; [Ausgabe unter dem
          Titel:] Catalogus scriptorum ecclesiasticorum sive illustrium virorum cum appendice eorum,
          qui nostro etiam seculo claruere. Köln 1531</term>
-            <term ref="index:d14380e44591">Vinzenz von Aggsbach</term>
-            <term ref="index:d14380e44617">Vinzenz von Aggsbach ; Briefe. Ms. Melk ; Abschrift von Leopold Wydemann. Ms</term>
-            <term ref="index:d14380e45571">Wien</term>
-            <term ref="index:d14380e46776">Wydemann, Leopold ; Selbstwahrnehmung als Mönch</term></keywords></textClass>
+               <term ref="index:d14380e44591">Vinzenz von Aggsbach</term>
+               <term ref="index:d14380e44617">Vinzenz von Aggsbach ; Briefe. Ms. Melk ; Abschrift von Leopold Wydemann. Ms</term>
+               <term ref="index:d14380e45571">Wien</term>
+               <term ref="index:d14380e46776">Wydemann, Leopold ; Selbstwahrnehmung als Mönch</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">LW freut sich, dass BP genesen ist, warnt ihn jedoch vor zu viel Arbeit und erinnert ihn an das
                Sprichwort, wonach, wer großen Hunger hat, wenig essen soll. Ebenso wird BP zur Ehre des <rs ref="index:d14380e4919">Benediktinerordens</rs> lange und viel schreiben können, wenn er jeweils
@@ -206,7 +220,8 @@
                Anordnung <rs ref="index:d14380e21171">Kaiser Karls IV.</rs> ein umfangreiches Werk mit marianischen
                Lesungen für alle Tage des Jahres („<rs ref="index:d14380e22898">Lectionarium Mariale</rs>“)
                zusammengestellt hat, das ihm jedoch nicht vorliegt. Vorhanden ist hingegen ein Auszug daraus („<rs ref="index:d14380e22889">Laus Mariae</rs>“). Für dessen Benutzer gewährten der <rs ref="index:d14380e35789">Prager</rs> Erzbischof <rs ref="index:d14380e11630">Ernst (von
-                  Pardubitz)</rs> und der <rs ref="index:d14380e32575">Passauer</rs> Bischof <rs ref="index:d14380e15976">Gottfried (von Weißeneck)</rs> <rs ref="index:d14380e11640 index:d14380e15984">Ablässe</rs>. Beide Sammlungen wurden für den Gebrauch der
+                  Pardubitz)</rs> und der <rs ref="index:d14380e32575">Passauer</rs> Bischof <rs ref="index:d14380e15976">Gottfried (von Weißeneck)</rs>
+               <rs ref="index:d14380e11640 index:d14380e15984">Ablässe</rs>. Beide Sammlungen wurden für den Gebrauch der
                Kleriker erstellt und approbiert; LW zweifelt aber nicht daran, dass Konrad auch für Laien in ähnlicher
                Weise Sorge trug. In einem <rs ref="index:d14380e14215">Pergamentcodex</rs> liegen zahlreiche
                Heiligenlieder Konrads vor, in richtiger Reihenfolge nach dem Rang: von den Aposteln über die Märtyrer
@@ -243,7 +258,7 @@
                Das Wirken Gottes lässt Glück und Unglück aufeinander folgen; in das Himmelreich führt es den, der sich
                im Glück nicht erhebt und im Unglück nicht entmutigen lässt. Dies möge Gott auch BP, HP und LW
                gewähren.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -253,7 +268,8 @@
             <p>Die Nennung eines „Johannes abbas
                   monasterii sancti Bavonis“ als Verfasser eines Traktats „De esu carnium“ findet
                   sich bei Trithemius, Catalogus scriptorum (Köln 1531) 124v. Zur Verwendung dieser
-                  Ausgabe durch LW vgl. <ref type="letter" target="letter:1026">1026</ref> <ref target="letter:1026#seg4">4</ref>. Es handelt sich um
+                  Ausgabe durch LW vgl. <ref type="letter" target="letter:1026">1026</ref>
+               <ref target="letter:1026#seg4">4</ref>. Es handelt sich um
                   Johannes Bernier de Fayt; zu diesem vgl. <rs type="bibl" ref="bibl:17252">Huyghebaert, Fayt</rs>; <rs type="bibl" ref="bibl:19858">Sullivan, Benedictine
                      Monks</rs> 50–52; <rs type="bibl" ref="bibl:20264">Weijers, Travail
                      intellectuel</rs> 4 121–123. </p>
@@ -294,20 +310,26 @@
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
             <mentioned>occasione</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:948">948</ref> <ref target="letter:948#seg23">23</ref>. </p>
+            <p>Vgl. <ref type="letter" target="letter:948">948</ref>
+               <ref target="letter:948#seg23">23</ref>. </p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg4">
             <mentioned>Notkeri</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:954">954</ref> <ref target="letter:954#seg12">12</ref>, <ref type="letter" target="letter:973">973</ref> <ref target="letter:973#seg2">2</ref>, <ref type="letter" target="letter:1003">1003</ref>
+            <p> Vgl. <ref type="letter" target="letter:954">954</ref>
+               <ref target="letter:954#seg12">12</ref>, <ref type="letter" target="letter:973">973</ref>
+               <ref target="letter:973#seg2">2</ref>, <ref type="letter" target="letter:1003">1003</ref>
                <ref target="letter:1003#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg4">
             <mentioned> beati Gerhohi</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:954">954</ref> <ref target="letter:954#seg12">12</ref>, <ref type="letter" target="letter:973">973</ref> <ref target="letter:973#seg1">1</ref>.</p>
+            <p> Vgl. <ref type="letter" target="letter:954">954</ref>
+               <ref target="letter:954#seg12">12</ref>, <ref type="letter" target="letter:973">973</ref>
+               <ref target="letter:973#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg4">
             <mentioned> chronicis Ratisbonensi et Walderbachensi</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:973">973</ref> <ref target="letter:973#seg4">4</ref>. Eine von LW angefertigte Abschrift der „Fundatio
+            <p> Vgl. <ref type="letter" target="letter:973">973</ref>
+               <ref target="letter:973#seg4">4</ref>. Eine von LW angefertigte Abschrift der „Fundatio
                   monasterii in Walderbach“ ist heute erhalten in StiB Melk, Cod. 767, 223r–225v;
                   vgl. <rs type="bibl" ref="bibl:16512">Glassner, Handschriften</rs> 106. Sie wurde
                   von BP nicht zum Druck gebracht, aber im 19. Jh. von Theodor Mayer seiner Edition
@@ -332,13 +354,20 @@
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg4">
             <mentioned> Catalogum manuscriptorum codicum</mentioned>
             <p> Zu dem von BP erstellten Katalog
-                  der Melker Handschriften vgl. <ref type="letter" target="letter:559">559</ref> <ref target="letter:559#seg3">3</ref>, <ref type="letter" target="letter:719">719</ref> <ref target="letter:719#seg6">6</ref>. Er wurde offenbar in den folgenden Wochen an
-                  LW übermittelt und Anfang Oktober von diesem zurückerstattet: vgl. <ref type="letter" target="letter:973">973</ref> <ref target="letter:973#seg4">4</ref>, <ref type="letter" target="letter:997">997</ref> <ref target="letter:997#seg5">5</ref>. Die
+                  der Melker Handschriften vgl. <ref type="letter" target="letter:559">559</ref>
+               <ref target="letter:559#seg3">3</ref>, <ref type="letter" target="letter:719">719</ref>
+               <ref target="letter:719#seg6">6</ref>. Er wurde offenbar in den folgenden Wochen an
+                  LW übermittelt und Anfang Oktober von diesem zurückerstattet: vgl. <ref type="letter" target="letter:973">973</ref>
+               <ref target="letter:973#seg4">4</ref>, <ref type="letter" target="letter:997">997</ref>
+               <ref target="letter:997#seg5">5</ref>. Die
                   hier angesprochene, auf unbestimmte Zeit aufgeschobene Publikationsabsicht dürfte
                   mit jenem Vorhaben in Verbindung zu bringen sein, das zeitweise unter der
-                  Bezeichnung „Bibliotheca Mellicensis“ diskutiert worden war: vgl. <ref type="letter" target="letter:509">509</ref> <ref target="letter:509#seg4">4</ref>, <ref type="letter" target="letter:530">530</ref> <ref target="letter:530#seg4">4</ref>. Im
+                  Bezeichnung „Bibliotheca Mellicensis“ diskutiert worden war: vgl. <ref type="letter" target="letter:509">509</ref>
+               <ref target="letter:509#seg4">4</ref>, <ref type="letter" target="letter:530">530</ref>
+               <ref target="letter:530#seg4">4</ref>. Im
                   Jahr 1718 scheint BP diesen Titel dann allerdings vorübergehend für sein
-                  Editionswerk, den späteren „Thesaurus anecdotorum“, vorgesehen zu haben: vgl. <ref type="letter" target="letter:946">946</ref> <ref target="letter:946#seg1">1</ref>, <ref type="letter" target="letter:961">961</ref>
+                  Editionswerk, den späteren „Thesaurus anecdotorum“, vorgesehen zu haben: vgl. <ref type="letter" target="letter:946">946</ref>
+               <ref target="letter:946#seg1">1</ref>, <ref type="letter" target="letter:961">961</ref>
                <ref target="letter:961#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg5">
@@ -368,7 +397,7 @@
                      Schriften Johanns von Neumarkt 4</rs> XXXIX. Die Urkunde des Passauer Bischofs
                   Gottfried von Weißeneck stammte demnach vom 20. Juni 1358. Zu ihm vgl. <rs type="bibl" ref="bibl:19400">Schmid, Gottfried von Weißeneck</rs>. Zum
                   Ablassbrief des Ernst von Pardubitz vgl. <ref type="letter" target="letter:948">948</ref>
-                  <ref target="letter:948#seg9">9</ref>.</p>
+               <ref target="letter:948#seg9">9</ref>.</p>
          </note>
          <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg5">
             <mentioned> Habeo rhythmos</mentioned>
@@ -393,13 +422,14 @@
          </note>
          <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg6">
             <mentioned>Margaritam pretiosam</mentioned>
-            <p><rs type="bibl" ref="bibl:15622">Chevalier,
+            <p>
+               <rs type="bibl" ref="bibl:15622">Chevalier,
                      Repertorium</rs> 2 77 Nr. 11091; <rs type="bibl" ref="bibl:17454">Kehrein,
                      Sequenzen</rs> 563 Nr. 841. Die Sequenz stammt allerdings nicht von Konrad von
                   Haimburg, sondern ist als Einschaltung in die Gaminger Handschrift eingetragen:
                   vgl. <rs type="bibl" ref="bibl:15960">Dreves, Conradus Gemnicensis</rs> 13. Diese
                   Möglichkeit räumte LW bald auch selbst ein: vgl. <ref type="letter" target="letter:948">948</ref>
-                  <ref target="letter:948#seg8">8</ref>. Nach dem heutigen Forschungsstand schuf Konrad gar keine eigenen
+               <ref target="letter:948#seg8">8</ref>. Nach dem heutigen Forschungsstand schuf Konrad gar keine eigenen
                   Dichtungen für den liturgischen Gebrauch, sondern nur für Zwecke der privaten
                   Andacht: vgl. <rs type="bibl" ref="bibl:19872">Szövérffy, Annalen</rs> 2 325; <rs type="bibl" ref="bibl:20446">Worstbrock, Konrad von Haimburg</rs> col.
                182.</p>
@@ -426,10 +456,12 @@
                   nicht zu bestimmen. Hinzuweisen ist jedoch auf dessen spätere Angabe, dass in der
                   Gaminger Handschrift mit Konrads von Haimburg „Laus Mariae“ neben weiteren Texten
                   auch ein „psalterium rhythmicum“ enthalten war: vgl. <ref type="letter" target="letter:948">948</ref>
-                  <ref target="letter:948#seg15">15</ref>. Nicht gemeint sein kann wohl die „Aurea fabrica“ des Franko von
+               <ref target="letter:948#seg15">15</ref>. Nicht gemeint sein kann wohl die „Aurea fabrica“ des Franko von
                   Meschede, obwohl LW auch dieses Werk als „psalterium rhythmicum“ bezeichnete und
                   eine Verbindung zu Johannes XXII. besteht; LW hatte nämlich schon vor diesem Brief
-                  Franko als Verfasser bestimmt: vgl. <ref type="letter" target="letter:936">936</ref> <ref target="letter:936#seg7">7</ref>, <ref type="letter" target="letter:948">948</ref> <ref target="letter:948#seg13">13</ref>. </p>
+                  Franko als Verfasser bestimmt: vgl. <ref type="letter" target="letter:936">936</ref>
+               <ref target="letter:936#seg7">7</ref>, <ref type="letter" target="letter:948">948</ref>
+               <ref target="letter:948#seg13">13</ref>. </p>
          </note>
          <note target="#range(right('n21'), left('n21e'))" n="21" anchored="false" corresp="#seg7">
             <mentioned>Lego quidem</mentioned>
@@ -438,12 +470,15 @@
          <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg8">
             <mentioned>mitto opuscula</mentioned>
             <p>Gemeint sind wohl weitere Briefe oder Brieftraktate
-                  aus dem nach Gaming gesendeten Codex StiB Melk, Cod. 1767: vgl. <ref type="letter" target="letter:929">929</ref> <ref target="letter:929#seg4">4</ref>, <ref type="letter" target="letter:936">936</ref> <ref target="letter:936#seg4">4</ref>. Diese Abschriften
+                  aus dem nach Gaming gesendeten Codex StiB Melk, Cod. 1767: vgl. <ref type="letter" target="letter:929">929</ref>
+               <ref target="letter:929#seg4">4</ref>, <ref type="letter" target="letter:936">936</ref>
+               <ref target="letter:936#seg4">4</ref>. Diese Abschriften
                   haben sich nicht erhalten.</p>
          </note>
          <note target="#range(right('n23'), left('n23e'))" n="23" anchored="false" corresp="#seg8">
             <mentioned> ludit ... rebus</mentioned>
-            <p><rs type="bibl" ref="bibl:20224">Walther,
+            <p>
+               <rs type="bibl" ref="bibl:20224">Walther,
                      Proverbia</rs> 2 771 Nr. 14052.</p>
          </note>
       </listAnnotation>
@@ -457,14 +492,32 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo etc. patri Bernardo Petz frater Leopoldus Wydeman salutem plurimam dicit.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo etc. patri Bernardo Petz frater Leopoldus Wydeman salutem plurimam dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Si sanitate praevia tibi, mihi, posteris et studiis plene es restitutus, pater optime, habeo, de quo gaudeam, nec deest, de quo admoneam. Memor esto illius: qui multum vult comedere, parum comedat. Ita et tu parum scribas per intervalla, ut diu et multum scribere valeas ordinis tui ad honorem, tibi ad commodum animae. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n1"/>Joannem abbatem S. Bavonis edidisse opus De esu carnium monachis sanis interdicto testatur Trithemius<anchor xml:id="n1e"/> in Catalogo scriptorum, ast idem Joannis aetatem, operis initium et scribendi stylum tacet. Mihi opus hoc de esu carnium aliud esse videtur a magistri dialogo. Non enim hic de esu carnium in genere (imo praesupponit esum quadrupedum suo tempore sine haesitatione sanis fuisse illicitum), sed in specie de esu volatilium et usu saginae tractat. Hoc ita praemisso et praemissis etiam nuper ad fratrem tuum a me scriptis meas de authore aperio coniecturas. Coniectura prima. Qui dialogum descripsit, addidit in fine eiusdem haec: <anchor xml:id="n2"/>Explicit dyalogus<note type="annotation" xml:id="d3e58094">Abgekürzt <orig>dyalog</orig> mit hakenförmiger us-Kürzung.</note><anchor xml:id="n2e"/> bonus<note type="annotation" xml:id="d3e58100">Abgekürzt <orig>bo</orig> mit Überstrich und hakenförmiger us-Kürzung.</note> per<note type="annotation" xml:id="d3e58106">Abgekürzt <orig>p</orig> mit Querstrich durch die Unterlänge.</note> manus<note type="annotation" xml:id="d3e58112">Abgekürzt <orig>ma</orig> mit Überstrich und hakenförmiger us-Kürzung.</note> ham Georgii etc. Ubi nota particulam ham esse scriptam sine puncto, quod si addatur, legetur hain; si omittatur, ham. Legi <choice><sic>erp</sic><corr>ergo</corr></choice> poterit et subintelligi Hainrici vel Hainburg vel quid simile, vel erit cognomen descriptoris. Sed iterum nota hanc ipsam particulam ham esse duplici virgula deletam, uti<app><rdg wit="#mit #zwei #waagrechten #Linien #durchgestrichen"><add place="after">ham</add></rdg></app> cernis a me deletam. Deletio sive expunctio dubium movet, cur fuerit deleta; et mihi occasionem praebet suspicandi, quod Georgius, qui descripsit, in exemplari, ex quo descripsit, verum repererit authoris nomen et illud per ham exprimere inceperit, non tamen ob additionem per manus plene expresserit. Coniectura altera primam adiuvans. Idem Georgius etiam manu sua in fine codicis addidit indicem contentorum in ipso codice; et quoad praesentem quidem tractatum his verbis: Item<note type="annotation" xml:id="d3e58131">Abgekürzt <orig>It</orig> mit Querstrich durch die Oberlänge des <orig>t</orig>.</note> dyalogus<note type="annotation" xml:id="d3e58140">Abgekürzt <orig>dyalog</orig> mit hakenförmiger us-Kürzung.</note> cuiusdam<note type="annotation" xml:id="d3e58146">Abgekürzt <orig>cda</orig> mit hakenförmiger us-Kürzung nach <orig>c</orig> und Überstrich über <orig>a</orig>.</note> magistri<note type="annotation" xml:id="d3e58158">Abgekürzt <orig>mgri</orig> mit Überstrich.</note> De esu volatilium editus<note type="annotation" xml:id="d3e58164">Abgekürzt <orig>ed</orig>, zwischen den beiden Buchstaben ein überschriebenes Zeichen, das an <orig>n</orig> oder <orig>u</orig> erinnert.</note> per<note type="annotation" xml:id="d3e58177">Abgekürzt <orig>p</orig> mit Querstrich durch die Unterlänge.</note> dominum<note type="annotation" xml:id="d3e58183">Abgekürzt <orig>d</orig> mit hakenförmigem Abstrich.</note> patrem<note type="annotation" xml:id="d3e58189">Abgekürzt <orig>p</orig> mit Punkt rechts der Unterlänge.</note> Cunradus<note type="annotation" xml:id="d3e58195">Abgekürzt <orig>Cund</orig> mit Überstrich über <orig>nd</orig> und hakenförmiger us-Kürzung.</note> . Ultima huius tituli verba ita lego: editus per domnum patrem (vel priorem) Conradum. Cui si addo ex<del ana="#after">part</del> coniectura prima expunctam particulam ham, credo me habere <anchor xml:id="n3"/>Conradum de Hain- vel Hamburg<anchor xml:id="n3e"/> Cartusianum priorem; <pb n="1v"/> aut saltem, quod author dialogi fuerit Conradus quidam et non Joannes abbas. Unum tamen est, quod parit difficultatem, et reticere non debui; est autem istud: particula ed<note place="foot" xml:id="d3e58216">Zwischen den beiden Buchstaben ein überschriebenes Zeichen, das an <hi rend="italic">n</hi> oder <hi rend="italic">u</hi> erinnert.</note>, id est editus, scripta est manu et charactere maiori Georgii, sicut et praecedentia scripta sunt. Reliqua vero, per<note type="annotation" xml:id="d3e58225">Abgekürzt <orig>p</orig> mit Querstrich durch die Unterlänge.</note> dominum<note type="annotation" xml:id="d3e58231">Abgekürzt <orig>d</orig> mit hakenförmigem Abstrich.</note> patrem<note type="annotation" xml:id="d3e58237">Abgekürzt <orig>p</orig> mit Punkt rechts der Unterlänge.</note> Cunradus<note type="annotation" xml:id="d3e58243">Abgekürzt <orig>Cund</orig> mit Überstrich über <orig>nd</orig> und hakenförmiger us-Kürzung.</note> , charactere minori et currente. An currens hic character sit etiam Georgii raptim scribentis, me latet; sed sive huius sive alterius sit, character est antiquus et verosimiliter docet operis authorem esse Conradum sive nostrum sive alium. </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n1"/>Joannem abbatem S. Bavonis edidisse opus De esu carnium monachis sanis interdicto testatur Trithemius<anchor xml:id="n1e"/> in Catalogo scriptorum, ast idem Joannis aetatem, operis initium et scribendi stylum tacet. Mihi opus hoc de esu carnium aliud esse videtur a magistri dialogo. Non enim hic de esu carnium in genere (imo praesupponit esum quadrupedum suo tempore sine haesitatione sanis fuisse illicitum), sed in specie de esu volatilium et usu saginae tractat. Hoc ita praemisso et praemissis etiam nuper ad fratrem tuum a me scriptis meas de authore aperio coniecturas. Coniectura prima. Qui dialogum descripsit, addidit in fine eiusdem haec: <anchor xml:id="n2"/>Explicit dyalogus<note type="annotation" xml:id="d3e58094">Abgekürzt <orig>dyalog</orig> mit hakenförmiger us-Kürzung.</note>
+            <anchor xml:id="n2e"/> bonus<note type="annotation" xml:id="d3e58100">Abgekürzt <orig>bo</orig> mit Überstrich und hakenförmiger us-Kürzung.</note> per<note type="annotation" xml:id="d3e58106">Abgekürzt <orig>p</orig> mit Querstrich durch die Unterlänge.</note> manus<note type="annotation" xml:id="d3e58112">Abgekürzt <orig>ma</orig> mit Überstrich und hakenförmiger us-Kürzung.</note> ham Georgii etc. Ubi nota particulam ham esse scriptam sine puncto, quod si addatur, legetur hain; si omittatur, ham. Legi <choice>
+               <sic>erp</sic>
+               <corr>ergo</corr>
+            </choice> poterit et subintelligi Hainrici vel Hainburg vel quid simile, vel erit cognomen descriptoris. Sed iterum nota hanc ipsam particulam ham esse duplici virgula deletam, uti<app>
+               <rdg wit="#mit #zwei #waagrechten #Linien #durchgestrichen">
+                  <add place="after">ham</add>
+               </rdg>
+            </app> cernis a me deletam. Deletio sive expunctio dubium movet, cur fuerit deleta; et mihi occasionem praebet suspicandi, quod Georgius, qui descripsit, in exemplari, ex quo descripsit, verum repererit authoris nomen et illud per ham exprimere inceperit, non tamen ob additionem per manus plene expresserit. Coniectura altera primam adiuvans. Idem Georgius etiam manu sua in fine codicis addidit indicem contentorum in ipso codice; et quoad praesentem quidem tractatum his verbis: Item<note type="annotation" xml:id="d3e58131">Abgekürzt <orig>It</orig> mit Querstrich durch die Oberlänge des <orig>t</orig>.</note> dyalogus<note type="annotation" xml:id="d3e58140">Abgekürzt <orig>dyalog</orig> mit hakenförmiger us-Kürzung.</note> cuiusdam<note type="annotation" xml:id="d3e58146">Abgekürzt <orig>cda</orig> mit hakenförmiger us-Kürzung nach <orig>c</orig> und Überstrich über <orig>a</orig>.</note> magistri<note type="annotation" xml:id="d3e58158">Abgekürzt <orig>mgri</orig> mit Überstrich.</note> De esu volatilium editus<note type="annotation" xml:id="d3e58164">Abgekürzt <orig>ed</orig>, zwischen den beiden Buchstaben ein überschriebenes Zeichen, das an <orig>n</orig> oder <orig>u</orig> erinnert.</note> per<note type="annotation" xml:id="d3e58177">Abgekürzt <orig>p</orig> mit Querstrich durch die Unterlänge.</note> dominum<note type="annotation" xml:id="d3e58183">Abgekürzt <orig>d</orig> mit hakenförmigem Abstrich.</note> patrem<note type="annotation" xml:id="d3e58189">Abgekürzt <orig>p</orig> mit Punkt rechts der Unterlänge.</note> Cunradus<note type="annotation" xml:id="d3e58195">Abgekürzt <orig>Cund</orig> mit Überstrich über <orig>nd</orig> und hakenförmiger us-Kürzung.</note> . Ultima huius tituli verba ita lego: editus per domnum patrem (vel priorem) Conradum. Cui si addo ex<del ana="#after">part</del> coniectura prima expunctam particulam ham, credo me habere <anchor xml:id="n3"/>Conradum de Hain- vel Hamburg<anchor xml:id="n3e"/> Cartusianum priorem; <pb n="1v"/> aut saltem, quod author dialogi fuerit Conradus quidam et non Joannes abbas. Unum tamen est, quod parit difficultatem, et reticere non debui; est autem istud: particula ed<note place="foot" xml:id="d3e58216">Zwischen den beiden Buchstaben ein überschriebenes Zeichen, das an <hi rend="italic">n</hi> oder <hi rend="italic">u</hi> erinnert.</note>, id est editus, scripta est manu et charactere maiori Georgii, sicut et praecedentia scripta sunt. Reliqua vero, per<note type="annotation" xml:id="d3e58225">Abgekürzt <orig>p</orig> mit Querstrich durch die Unterlänge.</note> dominum<note type="annotation" xml:id="d3e58231">Abgekürzt <orig>d</orig> mit hakenförmigem Abstrich.</note> patrem<note type="annotation" xml:id="d3e58237">Abgekürzt <orig>p</orig> mit Punkt rechts der Unterlänge.</note> Cunradus<note type="annotation" xml:id="d3e58243">Abgekürzt <orig>Cund</orig> mit Überstrich über <orig>nd</orig> und hakenförmiger us-Kürzung.</note> , charactere minori et currente. An currens hic character sit etiam Georgii raptim scribentis, me latet; sed sive huius sive alterius sit, character est antiquus et verosimiliter docet operis authorem esse Conradum sive nostrum sive alium. </ab>
          <ab resp="#editor" xml:id="seg3">Pro nostro etiam stare videtur stylus frequenter in <anchor xml:id="n4"/>cadentiis Leoninis<anchor xml:id="n4e"/> desinens. Quo in genere scribendi excelluisse nostrum probant tum rhythmi ab eo conscripti, tum tractatus prolixus valde (sed in Gemnico hinc inde defectuosus) <anchor xml:id="n5"/>Super quinque Alleluia<anchor xml:id="n5e"/> et textibus Sacrae Scripturae et sanctorum patrum plenus. Ubi textus allegat, cadentiis abstinet; at illis utitur, ubi propriis uti solet verbis, uti videri poterit ex<anchor xml:id="n6"/> extractu, quem adiungo<anchor xml:id="n6e"/>. </ab>
-         <ab resp="#editor" xml:id="seg4">Pro meliori informatione, Bernarde doctissime, <anchor xml:id="n7"/>occasione<anchor xml:id="n7e"/> illa (qua ad me <add place="left-margin">beati</add> <anchor xml:id="n8"/>Notkeri<anchor xml:id="n8e"/>,<anchor xml:id="n9"/> beati Gerhohi<anchor xml:id="n9e"/> tractatus cum<anchor xml:id="n10"/> chronicis Ratisbonensi et Walderbachensi<anchor xml:id="n10e"/> mittere decrevisti, ut descripta a me aut confratribus meis recipias, sicut et absque dubio recipies) ad te codicem ipsum, qui dialogum continet, cum uno aut altero alio ob rationes tunc plenius insinuandas dirigam.<anchor xml:id="n11"/> Catalogum manuscriptorum codicum<anchor xml:id="n11e"/> sive alterius sive vestrae bibliothecae a te tamen etiamsi obiter collectum cum gustu legam et absque tuo vel minimo damno et cum multiplici gratiarum foenore una cum praedictis a te mihi mittendis remittam. Erit ille mihi gratissimus et ad <sic>quarundum</sic> difficultatum elucidationem apprime utilis. Quem quod publicare ad tempus differas, etiam approbo; forsitan enim cum tempore disces, quae in eo corrigenda, addenda vel omittenda videbuntur. </ab>
+         <ab resp="#editor" xml:id="seg4">Pro meliori informatione, Bernarde doctissime, <anchor xml:id="n7"/>occasione<anchor xml:id="n7e"/> illa (qua ad me <add place="left-margin">beati</add>
+            <anchor xml:id="n8"/>Notkeri<anchor xml:id="n8e"/>,<anchor xml:id="n9"/> beati Gerhohi<anchor xml:id="n9e"/> tractatus cum<anchor xml:id="n10"/> chronicis Ratisbonensi et Walderbachensi<anchor xml:id="n10e"/> mittere decrevisti, ut descripta a me aut confratribus meis recipias, sicut et absque dubio recipies) ad te codicem ipsum, qui dialogum continet, cum uno aut altero alio ob rationes tunc plenius insinuandas dirigam.<anchor xml:id="n11"/> Catalogum manuscriptorum codicum<anchor xml:id="n11e"/> sive alterius sive vestrae bibliothecae a te tamen etiamsi obiter collectum cum gustu legam et absque tuo vel minimo damno et cum multiplici gratiarum foenore una cum praedictis a te mihi mittendis remittam. Erit ille mihi gratissimus et ad <sic>quarundum</sic> difficultatum elucidationem apprime utilis. Quem quod publicare ad tempus differas, etiam approbo; forsitan enim cum tempore disces, quae in eo corrigenda, addenda vel omittenda videbuntur. </ab>
          <ab resp="#editor" xml:id="seg5">Missale Pataviense quod petierim saeculo XV. antiquius, in causa est noster antememoratus Conradus de Hainburga; propter quem et libros devotionales sive rhythmicos exquiro. <anchor xml:id="n12"/>Patrem hunc fuisse incomparabilem manuscriptus codex saeculi XIV. testatur<anchor xml:id="n12e"/>. Opus grande lectiones de beata Maria virgine pro singulis anni diebus continens collegisse, idque ex mandato Caroli IV. <pb n="2r"/> Romanorum imperatoris, scio; et licet illud non habeam,<anchor xml:id="n13"/> habeo tamen aliud ex maiori contractum<anchor xml:id="n13e"/> et satis magnum, quo tunc uti volentibus <anchor xml:id="n14"/>indulgentias concesserunt<anchor xml:id="n14e"/> pro suis dioecesibus Arnestus archiepiscopus Pragensis et Godefridus episcopus Pataviensis. Utrumque opus fuit pro usu ecclesiasticorum collectum et approbatum; nec dubito, quin Conradus sicut pro sacerdotali ita etiam pro saeculari statu, ut utrumque in spiritualibus iuvaret, curam habuerit.<anchor xml:id="n15"/> Habeo rhythmos<anchor xml:id="n15e"/> eius plures de sanctis in uno membraneo codice collectos ordine congruo, de apostolis enim ad martyres, ab his ad confessores et inde ad virgines procedit. Sed plures vel habeo vel quaero. Imaginari enim mihi non possum Conradum, qui tot hymnos de sanctis composuit et qui lectiones de beata Maria virgine quotidianas studiose ex patribus selegit, ne unicum quidem hymnum de Christo sanctorum domino et de beata Maria virgine eorum regina composuisse. Sed de hoc alia vice, nunc ad propositum. </ab>
-         <ab resp="#editor" xml:id="seg6">Inter rhythmos nostri Conradi uno volumine contentas etiam nonnullae inveniuntur sequentiae, quas in <anchor xml:id="n16"/>propriis Pataviensibus<anchor xml:id="n16e"/> typo antiquo datis, licet sine nomine authoris, reperio, uti est illa de sancta Margaretha: <anchor xml:id="n17"/>Margaritam pretiosam<anchor xml:id="n17e"/>, sponsam Christi generosam, veneremur hodie etc. Quae si, uti meus codex profert, nostri est Conradi, credo eiusdem esse et plures alias in <choice><sic>proprio</sic><corr>propriis</corr></choice> Pataviensibus contentas, illas tamen solummodo, quae non curata syllabarum quantitate in praefata aut simili forma ritu Leonino procedunt. Non nomino caeteras, quas habeo, ex ratione alias danda. Interim ut ausu certiore similes sequentias Conrado nostro possim adscribere, ipse vides, mi charissime pater, quam mihi utile foret missale unum habere ante annum 1350 et aliud post annum illum manuscriptum. Viderem ex primo, quae sequentiae ante Conradum, et<del ana="#after">quae</del> ex secundo, quae post aut sub illo missalibus fuissent insertae. Multum pro opinione mea ad favorem Conradi nostri militant tum lectiones ab eo collectae et ab episcopis cum indulgentiis approbatae, tum praedicta sequentia de sancta Margaretha, praesertim si haec nostro Conrado non esset antiquior nec author certior eiusdem compareret. <pb n="2v"/> </ab>
-         <ab resp="#editor" xml:id="seg7">Ottonem Austriae ducem et Neomontani coenobii in Styria fundatorem ad suam fundationem ex revelatione cuidam Cartusiano facta fuisse translatum tradit <anchor xml:id="n18"/>Jongelinus<anchor xml:id="n18e"/> abbas. Quis hic Cartusianus, cui facta revelatio, hucusque nemo, quod sciam, prodidit; pro Conrado stant circumstantiae. Nam praeter ea de ipso iam relata erat ille anno 1339 (quo obiit Otto) vicarius in Maurbach, ex vicario vocatus anno 1342 prior in Seitz et anno 1350 prior in Gemnico, in quarum Cartusiarum una sine dubio vixit Cartusianus, qui revelationem habuit. Est et mihi <anchor xml:id="n19"/>psalterium rhythmicum<anchor xml:id="n19e"/>, in cuius fine authori facta narratur revelatio tempore <choice><sic>Joannes</sic><corr>Joannis</corr></choice> papae XXII.; quod si, uti coniecturor, Conradus edidit, serviet meo intento. Libenter, mi Bernarde, ex revelatione etiam aliquam coniecturam caperem, quod Conradus sit author dialogi De esu volatilium; sed id facio non nisi timide. <anchor xml:id="n20"/>Lego quidem<anchor xml:id="n20e"/> in Dialogo pagina 1 verba magistri idipsum dicentis revelavit nobis Deus, et mox verba discipuli Deo revelante censeas, et rursus pagina 9 si veritatis factam revelationem. At ex his veram revelationem aliquando authori factam elicere non audeo, quae tamen sub hoc humilitatis pallio contegi potuit. </ab>
+         <ab resp="#editor" xml:id="seg6">Inter rhythmos nostri Conradi uno volumine contentas etiam nonnullae inveniuntur sequentiae, quas in <anchor xml:id="n16"/>propriis Pataviensibus<anchor xml:id="n16e"/> typo antiquo datis, licet sine nomine authoris, reperio, uti est illa de sancta Margaretha: <anchor xml:id="n17"/>Margaritam pretiosam<anchor xml:id="n17e"/>, sponsam Christi generosam, veneremur hodie etc. Quae si, uti meus codex profert, nostri est Conradi, credo eiusdem esse et plures alias in <choice>
+               <sic>proprio</sic>
+               <corr>propriis</corr>
+            </choice> Pataviensibus contentas, illas tamen solummodo, quae non curata syllabarum quantitate in praefata aut simili forma ritu Leonino procedunt. Non nomino caeteras, quas habeo, ex ratione alias danda. Interim ut ausu certiore similes sequentias Conrado nostro possim adscribere, ipse vides, mi charissime pater, quam mihi utile foret missale unum habere ante annum 1350 et aliud post annum illum manuscriptum. Viderem ex primo, quae sequentiae ante Conradum, et<del ana="#after">quae</del> ex secundo, quae post aut sub illo missalibus fuissent insertae. Multum pro opinione mea ad favorem Conradi nostri militant tum lectiones ab eo collectae et ab episcopis cum indulgentiis approbatae, tum praedicta sequentia de sancta Margaretha, praesertim si haec nostro Conrado non esset antiquior nec author certior eiusdem compareret. <pb n="2v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg7">Ottonem Austriae ducem et Neomontani coenobii in Styria fundatorem ad suam fundationem ex revelatione cuidam Cartusiano facta fuisse translatum tradit <anchor xml:id="n18"/>Jongelinus<anchor xml:id="n18e"/> abbas. Quis hic Cartusianus, cui facta revelatio, hucusque nemo, quod sciam, prodidit; pro Conrado stant circumstantiae. Nam praeter ea de ipso iam relata erat ille anno 1339 (quo obiit Otto) vicarius in Maurbach, ex vicario vocatus anno 1342 prior in Seitz et anno 1350 prior in Gemnico, in quarum Cartusiarum una sine dubio vixit Cartusianus, qui revelationem habuit. Est et mihi <anchor xml:id="n19"/>psalterium rhythmicum<anchor xml:id="n19e"/>, in cuius fine authori facta narratur revelatio tempore <choice>
+               <sic>Joannes</sic>
+               <corr>Joannis</corr>
+            </choice> papae XXII.; quod si, uti coniecturor, Conradus edidit, serviet meo intento. Libenter, mi Bernarde, ex revelatione etiam aliquam coniecturam caperem, quod Conradus sit author dialogi De esu volatilium; sed id facio non nisi timide. <anchor xml:id="n20"/>Lego quidem<anchor xml:id="n20e"/> in Dialogo pagina 1 verba magistri idipsum dicentis revelavit nobis Deus, et mox verba discipuli Deo revelante censeas, et rursus pagina 9 si veritatis factam revelationem. At ex his veram revelationem aliquando authori factam elicere non audeo, quae tamen sub hoc humilitatis pallio contegi potuit. </ab>
          <ab resp="#editor" xml:id="seg8">De Vincentio Agsbacensi nunc nihil ob temporis et chartae angustias scribo, cuius tamen aliqua <anchor xml:id="n21"/>mitto opuscula<anchor xml:id="n21e"/>. Idem de Meschedensis notitia accipe. Quae honoris causa Vindobonae de me vel sparsisti vel spargi audisti (licet pro eis gratias agam), non adeo curo. Solitarius enim nescio, quae in saeculo spargantur, unde nec laudibus delector nec vituperiis perturbor. Relata et mihi nonnunquam fuerunt de me vituperia sine fundamento iactata et ideo, quia falsa, etiam sine labore contempta. Sic<anchor xml:id="n22"/> ludit in humanis divina potentia rebus<anchor xml:id="n22e"/>, ut prosperis succedant adversa, adversis prospera, et tandem nec in his se extollentem nec in illis se nimium deprimentem ad coelestia perducat; quae tibi, fratri tuo, mihi et omnibus nobis concedat omnipotens Deus. Vive et vale.</ab>
          <closer>Gemnici 1718 die 1. Junii.</closer>
       </body>

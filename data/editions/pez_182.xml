@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="182" xml:id="pez-0182">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Placidus Haiden an Bernhard Pez. 1711-07-18. Niederaltaich.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">182</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -79,11 +92,12 @@
             </correspContext>
          </correspDesc>
          <abstract>
-            <p corresp="#seg1"><rs type="person">PH</rs> hat bei seiner Heimkehr BPs Brief <ref type="letter" target="letter:181">181</ref> vorgefunden und daraufhin wieder an seine Bekannten geschrieben, deren Antworten er nun erwartet.</p>
+            <p corresp="#seg1">
+               <rs type="person">PH</rs> hat bei seiner Heimkehr BPs Brief <ref type="letter" target="letter:181">181</ref> vorgefunden und daraufhin wieder an seine Bekannten geschrieben, deren Antworten er nun erwartet.</p>
             <p corresp="#seg2">Inzwischen sendet <rs type="person">PH</rs> aus der <rs ref="index:d10854e21273">Bibliothek</rs> seines Klosters eine Liste von historischen Schriften. BP soll frei über diese verfügen.</p>
             <p corresp="#seg3">Es handelt sich um: <rs ref="index:d14380e6885">Bucelin</rs>, „<rs ref="index:d10854e4530">Annales Benedictini</rs>“, „<rs ref="index:d14380e6898">Germania topo-chrono-stemmatographica</rs>“, „<rs ref="index:d14380e6893">Benedictus redivivus</rs>“, „<rs ref="index:d10854e4577">Nucleus historiae universalis</rs>“ und noch weitere Werke; <rs ref="index:d14380e46847">Yepes</rs>, „<rs ref="index:d10854e35064">Chronicon generale</rs>“; <rs ref="index:d10854e19128">Meglinger</rs>, „<rs ref="index:d10854e19134">Annus Cisterciensis</rs>“; <rs ref="index:d10854e377">Aimoin</rs>, „<rs ref="index:d10854e383">Historia Francorum</rs>“; <rs ref="index:d10854e25309">Rambeck</rs>, „<rs ref="index:d10854e25315">Calendarium</rs>“; <rs ref="index:d10854e5262">Cherubini</rs>, „<rs ref="index:d10854e5268">Magnum bullarium Romanum</rs>“; <rs ref="index:d10854e25863">Rettenbacher</rs>, „<rs ref="index:d10854e25869">Annales Cremifanenses</rs>“; <rs ref="index:d10854e11383">Grosse</rs>, „<rs ref="index:d10854e11389">Elenchus seu Index generalis</rs>“; <rs ref="index:d10854e6850">Dubravius</rs>, „<rs ref="index:d10854e6856">Rerum Bohemicarum scriptores</rs>“; <rs ref="index:d14380e35233">Pistorius</rs>, „<rs ref="index:d14380e35239">Rerum Germanicarum veteres scriptores sex</rs>“; <rs ref="index:d14380e13009">Freher</rs>, „<rs ref="index:d14380e13015">Germanicarum rerum scriptores</rs>“; <rs ref="index:d14380e15413">Gesner</rs>, „<rs ref="index:d10854e10506">Elenchus</rs>“; <rs ref="index:d14380e43380">Trithemius</rs>, „<rs ref="index:d10854e31172">Annales Hirsaugienses</rs>“; <rs ref="index:d10854e29518">Spitzel</rs>, „<rs ref="index:d10854e29524">Sacra bibliothecarum arcana</rs>“; <rs ref="index:d10854e32596">Welser</rs>, „<rs ref="index:d10854e32609">Opera historica</rs>“ (?) und „<rs ref="index:d10854e32604">Rerum Boicarum libri quinque</rs>“; <rs ref="index:d14380e41448">Stengel</rs>, „<rs ref="index:d10854e29745">Imagines</rs>“; <rs ref="index:d10854e4454">Brusch</rs>, „<rs ref="index:d10854e4470">Monasteriorum Germaniae centuria prima</rs>“ sowie „<rs ref="index:d10854e4483">Supplementum Bruschianum</rs>“; <rs ref="index:d14380e28902">Mezger</rs>, „<rs ref="index:d10854e20009">Historia Salisburgensis</rs>“; <rs ref="index:d14380e25581">Mabillon</rs>, „<rs ref="index:d14380e25664">Acta Sanctorum OSB</rs>“ und „<rs ref="index:d14380e25780">De re diplomatica</rs>“; <rs ref="index:d10854e219">Adlzreiter</rs> (recte: <rs ref="index:d10854e31858">Vervaux</rs>), „<rs ref="index:d10854e31864">Boicae gentis annales</rs>“; <rs ref="index:d10854e1776">Aventin</rs>, „<rs ref="index:d10854e1782">Annales Boiorum</rs>“; <rs ref="index:d14380e590">Aichler</rs>, „<rs ref="index:d10854e372">Chronicon Andecense</rs>“; <rs ref="index:d14380e3931">Baronio</rs>, „<rs ref="index:d14380e3941">Annales ecclesiastici</rs>“; <rs ref="index:d10854e481">Alexandre</rs>, „<rs ref="index:d10854e487">Historia ecclesiastica</rs>“; <rs ref="index:d10854e4693">Cabassut</rs>, „<rs ref="index:d10854e4699">Notitia ecclesiastica</rs>“; sämtliche Werke von <rs ref="index:d14380e19233">Hund</rs>; <rs ref="index:d14380e6811">Brouwer</rs>, „<rs ref="index:d10854e4382">Sidera</rs>“.</p>
             <p corresp="#seg4">In einem Postskriptum berichtet <rs type="person">PH</rs> von einem Gespräch mit dem Propst von <rs ref="index:d10854e26095">Rinchnach</rs> (<rs ref="index:d10854e25771">Cölestin Reichenberger</rs>?), welcher berichtete, ein „<rs ref="index:d10854e20449">Chronicon Cassinense</rs>“ gesehen zu haben, dessen Autor und Druckort <rs type="person">PH</rs> jedoch unbekannt sind. <rs type="person">PH</rs> bittet um eine Stellungnahme BPs dazu.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -100,7 +114,8 @@
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
             <mentioned>Spizellii Designatio</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:203">203</ref> <ref target="letter:203#seg3">3</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:203">203</ref>
+               <ref target="letter:203#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
             <mentioned>Velserus De viris nobilibus</mentioned>
@@ -127,14 +142,18 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater, patrone colendissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater, patrone colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">Primo domi meae adventu reperi amantissimas literas, quibus clarissima sua paternitas me ultro dignari et consilia sua mihi iterato communicare <sic>placuit</sic> . Scripsi illico ad viros mihi notos, quorum responsorias in momenta exspecto; sine quibus, utut vellem perlibenter! praeter solam spem pro clarissimae suae paternitatis solatio pauca significare valeo. </ab>
          <ab resp="#editor" xml:id="seg2">Interim ex bibliotheca nostra syllabum historicorum, quos veluti argumento forte propiores selegi, hic mitto identidem rogans, ut plurimum reverenda sua paternitas confidenter mecum iubeat: experietur cum eo sibi rem intercedere, qui re et nomine esse cupiat</ab>
          <closer>Plurimum reverendae religiosae ac clarissimae suae paternitatis servus ex asse pater Placidus manu propria.</closer>
          <closer>Datum Nidernaltaichii die 18. Julii anno 1711.</closer>
          <closer>Vertatur.</closer>
-         <closer xml:id="seg3">Selectus ex classe historicorum bibliothecae Altahae Inferioris. Buccelini Annales. Germania sacra. Benedictus redivivus. Nucleus historiae universalis et caetera opera. Yepesii Generale chronicon ordinis sancti patris Benedicti. Annus Cisterciensis. <anchor xml:id="n1"/>Aimoini monachi Historiae Francorum<anchor xml:id="n1e"/> <sic>liber</sic>  quinque. Calendarium Benedictinum patris Aegidii Ranbeck. <anchor xml:id="n2"/>Bullarium Romanum magnum<anchor xml:id="n2e"/>. Annales Cremiphanenses patris Simonis Rettenpacher. Elenchus seu Index generalis, in quo continentur omnes libri, qui ultimo saeculi 1500 lustro post annum 1593 usque ad annum 1600 in sacro Romano imperio et vicinis regionibus novi auctive prodierunt. Rerum Bohemicarum antiqui scriptores aliquot insignes. Rerum Germanicarum veteres scriptores sex. Germanicarum rerum scriptores aliquot insignes ex bibliotheca Marquardi Freheri. Elenchus scriptorum omnium, veterum scilicet ac recentiorum, extantium et non extantium, domini Conradi <sic>Gneseri</sic> . Trithemii Annales Hiersaugiensis monasterii. <anchor xml:id="n3"/>Spizellii Designatio<anchor xml:id="n3e"/> summorum Europae theologorum. <anchor xml:id="n4"/>Velserus De viris nobilibus<anchor xml:id="n4e"/> et illustribus. Item De rebus Boicis. Stengelii Imagines ordinis sancti Benedicti. Bruschii Monasteriorum Germaniae centuria prima. Et eius Supplementum. Mezger Historia Salisburgensis. Mabillonii Acta sanctorum ordinis sancti Benedicti et De re diplomatica. Adlzreutter Annales Boiorum tres tomi. <pb n="2v"/> Joannis Aventini Annales Boiorum. Andecense monasterium ordinis sancti Benedicti. Baronii Annales. Alexandri Natalis Historia ecclesiastica. Cabasutii Notitia ecclesiastica. Hundii opera omnia. Browerus De sanctis Germaniae.<pb n="2r"/> </closer>
-         <closer xml:id="seg4">P.S. Dum has claudere festino, memini nuperrimi discursus, quo <anchor xml:id="n5"/>praepositus noster in Rinchna<anchor xml:id="n5e"/> <anchor xml:id="n6"/>Chronicon se vidisse asseruit Cassinense<anchor xml:id="n6e"/>, cuius author et locus editionis mihi plane est incognitus; cuperem proinde a plurimum reverenda sua paternitate desuper paucis instrui.</closer>
+         <closer xml:id="seg3">Selectus ex classe historicorum bibliothecae Altahae Inferioris. Buccelini Annales. Germania sacra. Benedictus redivivus. Nucleus historiae universalis et caetera opera. Yepesii Generale chronicon ordinis sancti patris Benedicti. Annus Cisterciensis. <anchor xml:id="n1"/>Aimoini monachi Historiae Francorum<anchor xml:id="n1e"/>
+            <sic>liber</sic>  quinque. Calendarium Benedictinum patris Aegidii Ranbeck. <anchor xml:id="n2"/>Bullarium Romanum magnum<anchor xml:id="n2e"/>. Annales Cremiphanenses patris Simonis Rettenpacher. Elenchus seu Index generalis, in quo continentur omnes libri, qui ultimo saeculi 1500 lustro post annum 1593 usque ad annum 1600 in sacro Romano imperio et vicinis regionibus novi auctive prodierunt. Rerum Bohemicarum antiqui scriptores aliquot insignes. Rerum Germanicarum veteres scriptores sex. Germanicarum rerum scriptores aliquot insignes ex bibliotheca Marquardi Freheri. Elenchus scriptorum omnium, veterum scilicet ac recentiorum, extantium et non extantium, domini Conradi <sic>Gneseri</sic> . Trithemii Annales Hiersaugiensis monasterii. <anchor xml:id="n3"/>Spizellii Designatio<anchor xml:id="n3e"/> summorum Europae theologorum. <anchor xml:id="n4"/>Velserus De viris nobilibus<anchor xml:id="n4e"/> et illustribus. Item De rebus Boicis. Stengelii Imagines ordinis sancti Benedicti. Bruschii Monasteriorum Germaniae centuria prima. Et eius Supplementum. Mezger Historia Salisburgensis. Mabillonii Acta sanctorum ordinis sancti Benedicti et De re diplomatica. Adlzreutter Annales Boiorum tres tomi. <pb n="2v"/> Joannis Aventini Annales Boiorum. Andecense monasterium ordinis sancti Benedicti. Baronii Annales. Alexandri Natalis Historia ecclesiastica. Cabasutii Notitia ecclesiastica. Hundii opera omnia. Browerus De sanctis Germaniae.<pb n="2r"/>
+         </closer>
+         <closer xml:id="seg4">P.S. Dum has claudere festino, memini nuperrimi discursus, quo <anchor xml:id="n5"/>praepositus noster in Rinchna<anchor xml:id="n5e"/>
+            <anchor xml:id="n6"/>Chronicon se vidisse asseruit Cassinense<anchor xml:id="n6e"/>, cuius author et locus editionis mihi plane est incognitus; cuperem proinde a plurimum reverenda sua paternitate desuper paucis instrui.</closer>
       </body>
    </text>
 </TEI>

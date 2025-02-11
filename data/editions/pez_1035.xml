@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="1035" xml:id="pez-1035">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Buchels an Bernhard Pez. 1718-12-29. Düsseldorf.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">1035</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,26 +90,28 @@
                <ptr type="mentions" target="letter:1034"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e6959">Buchels, Johann ; Gedichte</term>
-            <term ref="index:d14380e9895">Donau</term>
-            <term ref="index:d14380e22194">Köln</term>
-            <term ref="index:d14380e24482">Le Mire, Aubert</term>
-            <term ref="index:d14380e25137">Lombard, Célestin</term>
-            <term ref="index:d14380e25464">Lüttich</term>
-            <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
-            <term ref="index:d14380e27539">Medizin, medizinische Begriffe, gesundheitliche Belange ; Fieber</term>
-            <term ref="index:d14380e27605">Medizin, medizinische Begriffe, gesundheitliche Belange ; Gicht</term>
-            <term ref="index:d14380e27630">Medizin, medizinische Begriffe, gesundheitliche Belange ; Husten</term>
-            <term ref="index:d14380e27658">Medizin, medizinische Begriffe, gesundheitliche Belange ; Kopfschmerz ; Halbseitiger
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e6959">Buchels, Johann ; Gedichte</term>
+               <term ref="index:d14380e9895">Donau</term>
+               <term ref="index:d14380e22194">Köln</term>
+               <term ref="index:d14380e24482">Le Mire, Aubert</term>
+               <term ref="index:d14380e25137">Lombard, Célestin</term>
+               <term ref="index:d14380e25464">Lüttich</term>
+               <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
+               <term ref="index:d14380e27539">Medizin, medizinische Begriffe, gesundheitliche Belange ; Fieber</term>
+               <term ref="index:d14380e27605">Medizin, medizinische Begriffe, gesundheitliche Belange ; Gicht</term>
+               <term ref="index:d14380e27630">Medizin, medizinische Begriffe, gesundheitliche Belange ; Husten</term>
+               <term ref="index:d14380e27658">Medizin, medizinische Begriffe, gesundheitliche Belange ; Kopfschmerz ; Halbseitiger
          Kopfschmerz</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e28279">Melk ; Bibliothek</term>
-            <term ref="index:d14380e29198">Monath, Peter Konrad</term>
-            <term ref="index:d14380e30963">Nürnberg</term>
-            <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term></keywords></textClass>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e28279">Melk ; Bibliothek</term>
+               <term ref="index:d14380e29198">Monath, Peter Konrad</term>
+               <term ref="index:d14380e30963">Nürnberg</term>
+               <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">JB ersucht BP, wie er dies schon einmal getan hat (<ref type="letter" target="letter:1034">1034</ref>),
                die für JB bestimmten Bücher von <rs ref="index:d14380e30963">Nürnberg</rs> nach <rs ref="index:d14380e22194">Köln</rs> zu senden. Er selbst hätte sein zweites Paket mit den Büchern, die
@@ -110,7 +125,7 @@
             <p corresp="#seg3">JB schließt mit guten Wünschen zum Neuen Jahr.</p>
             <p corresp="#seg4">In einem Nachsatz übermittelt JB ein Gedicht, in dem Apoll BP, dem Ruhm der <rs ref="index:d14380e9895">Donau</rs>, im neuen Jahr gute Fortschritte bei der „<rs ref="index:d14380e33227">Bibliotheca
                   Benedictina</rs>“ sowie Freiheit von Streit, <rs ref="index:d14380e27605">Gicht</rs>, <rs ref="index:d14380e27630">Husten</rs> und <rs ref="index:d14380e27539">Fieber</rs> wünscht.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -121,9 +136,11 @@
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg4">
             <mentioned>diraeque sorores</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:938">938</ref> <ref target="letter:938#seg1">1</ref>. Dass
+            <p>Vgl. <ref type="letter" target="letter:938">938</ref>
+               <ref target="letter:938#seg1">1</ref>. Dass
                   BP seine schwere Erkrankung im Frühjahr 1718 in 949 mitgeteilt hatte, geht aus der
-                  Antwort JBs hervor: vgl. <ref type="letter" target="letter:950">950</ref> <ref target="letter:950#seg1">1</ref>. Möglicherweise
+                  Antwort JBs hervor: vgl. <ref type="letter" target="letter:950">950</ref>
+               <ref target="letter:950#seg1">1</ref>. Möglicherweise
                   hatte BP dabei eine ähnliche Anspielung auf die Parzen gebraucht wie gegenüber
                   Johann Georg Eckhart, die dann von JB hier aufgegriffen wurde.</p>
          </note>
@@ -134,7 +151,11 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Eruditissimo clarissimo multumque reverendo domino patri <choice><sic>Bernardi</sic><corr>Bernardo</corr></choice> Pezio Joannes Buchellius salutem plurimam dicit.</opener>
+         <opener>
+            <pb n="1r"/> Eruditissimo clarissimo multumque reverendo domino patri <choice>
+               <sic>Bernardi</sic>
+               <corr>Bernardo</corr>
+            </choice> Pezio Joannes Buchellius salutem plurimam dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Eadem mihi nunc ad te scribendi causa est, quae postrema fuit, hoc est, ut cures libros, quos pro me designasti, quantocius Noriberga Coloniam transmitti. Neque vero est, quod me in eo vel bonitate tua vel facilitate putes abuti, quando id profecto non facio, ut oneris novi aliquid tibi imponam, qui id sine molestia iam facere potes; sed ut bibliothecam Melicensem eo citius bonis et necessariis libris instruas. Fasciculum secundum librorum a te delectorum iam pridem Noribergam ad bibliopolam Monath transmisissem, si de primi adventu certus essem; equidem tuo desiderio meoque vellem officio satisfacere, quod et summa tua humanitas et iam plane confirmata amicitia nostra postulat. In hoc uno fui totus, ut libri secundi fasciculi forent prioribus praestantiores, inter quos quatuor volumina Auberti Miraei reperies. Praeclare mecum actum putabo, si inter tot illustres bibliothecae Melicensis autores locum illis es daturus. </ab>
          <ab resp="#editor" xml:id="seg2">Mense proximo sum futurus Coloniae, ubi importunus instabo, ne laborem meum postulationi tuae defuisse intelligas; ibidem prius fuissem, nisi hemicraniae doloribus acutissimis per aliquot septimanas hucusque excruciarer. Leodio iam dudum exspecto, quod Bibliothecam Benedictinam augeat et ornet. </ab>
          <ab resp="#editor" xml:id="seg3">Auspicatissima hisce novi anni primordia cum felicissima multorum subsequentium serie, integra sanitate, otio commodo et propitiis Superis animitus apprecor sequentibus distichis; tu me, ut instituisti, fac, diligas et valeas.</ab>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="36" xml:id="pez-0036">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Thomas Eixl an Bernhard Pez. 1710-02-09. Andechs.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">36</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -73,22 +86,35 @@
             </correspAction>
          </correspDesc>
          <abstract>
-            <p corresp="#seg1"><rs type="person">TE</rs> will BPs Bitten Genüge tun und sendet daher Angaben zu einigen <rs ref="index:d10854e714">Andechser</rs> Schriftstellern. Der erste Platz gebührt <rs ref="index:d10854e32507">Matthäus Weiß</rs> {dem Bruder von <rs ref="index:d10854e32530">Thomas Weiß</rs>}, der an der <rs ref="index:d14380e39203">Universität Salzburg</rs> Professor der Theologie und Rektor war und dort 1638 starb {siehe Mezgers „<rs ref="index:d10854e20009">Historia Salisburgensis</rs>“}. <rs type="person">TE</rs> nennt an Werken die 1628 (recte: 1629) zu <rs ref="index:d14380e39054">Salzburg</rs> erschienene „<rs ref="index:d10854e32515">Ad Logicam sive Organum Aristotelis introductio</rs>“, die dreimal aufgelegt wurde; das „<rs ref="index:d10854e32520">Lyceum Benedictinum</rs>“, Salzburg 1630, in dem die benediktinische Unterrichtstätigkeit gegen Angriffe verteidigt wird; weiters „<rs ref="index:d10854e5363">Exercitia spiritualia</rs>“ nach<rs ref="index:d10854e5358"> jenen</rs> des Abtes von <rs ref="index:d10854e20387">Montserrat</rs> <rs ref="index:d10854e5352">García de Cisneros</rs>, Salzburg 1629.</p>
-            <p corresp="#seg2"><rs ref="index:d14380e19913">Karl Jacob</rs> lehrte gleichfalls 20 Jahre lang Theologie in <rs ref="index:d14380e39054">Salzburg</rs> und war dort Prokanzler und Vizerektor. Er verfasste einen ungedruckten <rs ref="index:d10854e13746">Kommentar</rs> zur <rs ref="index:d10854e30835">„Summa“ des Hl. Thomas von Aquin</rs> und starb 1661 {siehe Mezgers „<rs ref="index:d10854e20009">Historia Salisburgensis</rs>“}.</p>
-            <p corresp="#seg3"><rs ref="index:d14380e36359">Maurus Rambeck</rs> war Abt von <rs ref="index:d10854e714">Andechs</rs> und beherrschte die <rs ref="index:d14380e19828">italienische</rs>, <rs ref="index:d14380e12712">französische</rs>, <rs ref="index:d14380e16473">griechische</rs> und <rs ref="index:d14380e17409">hebräische</rs> Sprache. Er übersetzte den <rs ref="index:d10854e8816">Traktat „Filiatione spirituale“</rs> des <rs ref="index:d14380e44452">Veroneser</rs> <rs ref="index:d10854e30599">Theatiners</rs> <rs ref="index:d10854e8810">Giovanni Crisostomo Filippini</rs> aus dem <rs ref="index:d14380e19828">Italienischen</rs> ins <rs ref="index:d14380e23973">Lateinische</rs> und brachte ihn 1686 zu <rs ref="index:d10854e31813">Venedig</rs> heraus.</p>
-            <p corresp="#seg4"><rs ref="index:d14380e8032">Nikolaus Christel</rs>, der viele Jahre Prior von <rs ref="index:d10854e714">Andechs</rs> war, verfasste eine <rs ref="index:d10854e5299">Konkordanz zur Benediktsregel</rs>, die jedoch ungedruckt ist. Er starb 1638.</p>
-            <p corresp="#seg5"><rs ref="index:d10854e19788">Placidus Menich</rs> schrieb eine <rs ref="index:d10854e19796">Vita des Hl. Benedikt in Gedichtform</rs> mit besonderer Berücksichtigung der Worte <rs ref="index:d14380e16248">Gregors des Großen</rs>. Sie ist nicht gedruckt.</p>
-            <p corresp="#seg6"><rs ref="index:d14380e41384">Ulrich Staudigl</rs>, Generalprokurator der <rs ref="index:d14380e22316">Bayerischen Kongregation</rs> an der <rs ref="index:d14380e37728">römischen Kurie</rs>, später Prior von <rs ref="index:d10854e714">Andechs</rs>, verfasste eine zu <rs ref="index:d14380e37680">Rom</rs> gedruckte „<rs ref="index:d10854e29674">Logica practica</rs>“; auch übersetzte er <rs ref="index:d14380e25581">Mabillons</rs> „<rs ref="index:d14380e25819">Traité des études monastiques</rs>“ aus dem <rs ref="index:d14380e12712">Französischen</rs> ins <rs ref="index:d14380e23973">Lateinische</rs>,<rs ref="index:d14380e25823"> welcher</rs> zu <rs ref="index:d14380e21803">Kempten</rs> erschien, und des <rs ref="index:d14380e3377">Augustiner-Chorherren</rs> <rs ref="index:d10854e24384">Filippo Picinelli</rs> Lobpredigten auf die Heiligen aus dem <rs ref="index:d14380e19828">Italienischen</rs> ins <rs ref="index:d14380e23973">Lateinische</rs> („<rs ref="index:d10854e24388">Tributa encomiorum</rs>“), welche zu <rs ref="index:d14380e3233">Augsburg</rs> herauskamen.</p>
-            <p corresp="#seg7"><rs ref="index:d14380e21859">Ägidius Kibler</rs> war der erste <rs ref="index:d10854e15384">Novizenmeister</rs> der <rs ref="index:d14380e22316">Bayerischen Benediktinerkongregation</rs>, dann Professor der Philosophie, der Theologie und des Kirchenrechts am <rs ref="index:d10854e15391">Kommunstudium</rs> derselben. Er veröffentlichte: „<rs ref="index:d10854e14806">Collectarium privilegiorum</rs>“ für die Beichtväter dieser <rs ref="index:d14380e22316">Kongregation</rs>, München 1693; „<rs ref="index:d10854e14839">Physica supernaturalis</rs>“, gedruckt zu <rs ref="index:d14380e29936">München</rs>; sowie in <rs ref="index:d14380e9395">deutscher</rs> Sprache die ebenfalls zu <rs ref="index:d14380e29936">München</rs> erschienenen „<rs ref="index:d10854e14834">Geistlichen sendschreiben</rs>“. Weiters schrieb er einen „<rs ref="index:d10854e14855">Tractatus asceticus de mortificatione</rs>“ für die Novizen, einen <rs ref="index:d10854e14813">Kommentar</rs> zur „<rs ref="index:d10854e14883">Manuductio ad perfectionem religiosam</rs>“ des Abtes <rs ref="index:d10854e14872">Gregor Kimpfler</rs> von <rs ref="index:d14380e39711">Scheyern</rs>, gleichfalls für die Novizen, sowie achttägige <rs ref="index:d10854e14829">geistliche Exerzitien</rs>. Diese Werke sind noch ungedruckt.</p>
-            <p corresp="#seg8"><rs ref="index:d14380e16507">Lampert Grienmelt</rs> ist Bibliothekar von <rs ref="index:d10854e714">Andechs</rs> und hat 1708 zu <rs ref="index:d14380e3233">Augsburg</rs> sein „<rs ref="index:d10854e11315">Annus columbinus</rs>“ herausgebracht. Er plant die Herausgabe einer „<rs ref="index:d10854e11320">Reflexio gratiarum et miraculorum</rs>“.</p>
-            </abstract>
+            <p corresp="#seg1">
+               <rs type="person">TE</rs> will BPs Bitten Genüge tun und sendet daher Angaben zu einigen <rs ref="index:d10854e714">Andechser</rs> Schriftstellern. Der erste Platz gebührt <rs ref="index:d10854e32507">Matthäus Weiß</rs> {dem Bruder von <rs ref="index:d10854e32530">Thomas Weiß</rs>}, der an der <rs ref="index:d14380e39203">Universität Salzburg</rs> Professor der Theologie und Rektor war und dort 1638 starb {siehe Mezgers „<rs ref="index:d10854e20009">Historia Salisburgensis</rs>“}. <rs type="person">TE</rs> nennt an Werken die 1628 (recte: 1629) zu <rs ref="index:d14380e39054">Salzburg</rs> erschienene „<rs ref="index:d10854e32515">Ad Logicam sive Organum Aristotelis introductio</rs>“, die dreimal aufgelegt wurde; das „<rs ref="index:d10854e32520">Lyceum Benedictinum</rs>“, Salzburg 1630, in dem die benediktinische Unterrichtstätigkeit gegen Angriffe verteidigt wird; weiters „<rs ref="index:d10854e5363">Exercitia spiritualia</rs>“ nach<rs ref="index:d10854e5358"> jenen</rs> des Abtes von <rs ref="index:d10854e20387">Montserrat</rs>
+               <rs ref="index:d10854e5352">García de Cisneros</rs>, Salzburg 1629.</p>
+            <p corresp="#seg2">
+               <rs ref="index:d14380e19913">Karl Jacob</rs> lehrte gleichfalls 20 Jahre lang Theologie in <rs ref="index:d14380e39054">Salzburg</rs> und war dort Prokanzler und Vizerektor. Er verfasste einen ungedruckten <rs ref="index:d10854e13746">Kommentar</rs> zur <rs ref="index:d10854e30835">„Summa“ des Hl. Thomas von Aquin</rs> und starb 1661 {siehe Mezgers „<rs ref="index:d10854e20009">Historia Salisburgensis</rs>“}.</p>
+            <p corresp="#seg3">
+               <rs ref="index:d14380e36359">Maurus Rambeck</rs> war Abt von <rs ref="index:d10854e714">Andechs</rs> und beherrschte die <rs ref="index:d14380e19828">italienische</rs>, <rs ref="index:d14380e12712">französische</rs>, <rs ref="index:d14380e16473">griechische</rs> und <rs ref="index:d14380e17409">hebräische</rs> Sprache. Er übersetzte den <rs ref="index:d10854e8816">Traktat „Filiatione spirituale“</rs> des <rs ref="index:d14380e44452">Veroneser</rs>
+               <rs ref="index:d10854e30599">Theatiners</rs>
+               <rs ref="index:d10854e8810">Giovanni Crisostomo Filippini</rs> aus dem <rs ref="index:d14380e19828">Italienischen</rs> ins <rs ref="index:d14380e23973">Lateinische</rs> und brachte ihn 1686 zu <rs ref="index:d10854e31813">Venedig</rs> heraus.</p>
+            <p corresp="#seg4">
+               <rs ref="index:d14380e8032">Nikolaus Christel</rs>, der viele Jahre Prior von <rs ref="index:d10854e714">Andechs</rs> war, verfasste eine <rs ref="index:d10854e5299">Konkordanz zur Benediktsregel</rs>, die jedoch ungedruckt ist. Er starb 1638.</p>
+            <p corresp="#seg5">
+               <rs ref="index:d10854e19788">Placidus Menich</rs> schrieb eine <rs ref="index:d10854e19796">Vita des Hl. Benedikt in Gedichtform</rs> mit besonderer Berücksichtigung der Worte <rs ref="index:d14380e16248">Gregors des Großen</rs>. Sie ist nicht gedruckt.</p>
+            <p corresp="#seg6">
+               <rs ref="index:d14380e41384">Ulrich Staudigl</rs>, Generalprokurator der <rs ref="index:d14380e22316">Bayerischen Kongregation</rs> an der <rs ref="index:d14380e37728">römischen Kurie</rs>, später Prior von <rs ref="index:d10854e714">Andechs</rs>, verfasste eine zu <rs ref="index:d14380e37680">Rom</rs> gedruckte „<rs ref="index:d10854e29674">Logica practica</rs>“; auch übersetzte er <rs ref="index:d14380e25581">Mabillons</rs> „<rs ref="index:d14380e25819">Traité des études monastiques</rs>“ aus dem <rs ref="index:d14380e12712">Französischen</rs> ins <rs ref="index:d14380e23973">Lateinische</rs>,<rs ref="index:d14380e25823"> welcher</rs> zu <rs ref="index:d14380e21803">Kempten</rs> erschien, und des <rs ref="index:d14380e3377">Augustiner-Chorherren</rs>
+               <rs ref="index:d10854e24384">Filippo Picinelli</rs> Lobpredigten auf die Heiligen aus dem <rs ref="index:d14380e19828">Italienischen</rs> ins <rs ref="index:d14380e23973">Lateinische</rs> („<rs ref="index:d10854e24388">Tributa encomiorum</rs>“), welche zu <rs ref="index:d14380e3233">Augsburg</rs> herauskamen.</p>
+            <p corresp="#seg7">
+               <rs ref="index:d14380e21859">Ägidius Kibler</rs> war der erste <rs ref="index:d10854e15384">Novizenmeister</rs> der <rs ref="index:d14380e22316">Bayerischen Benediktinerkongregation</rs>, dann Professor der Philosophie, der Theologie und des Kirchenrechts am <rs ref="index:d10854e15391">Kommunstudium</rs> derselben. Er veröffentlichte: „<rs ref="index:d10854e14806">Collectarium privilegiorum</rs>“ für die Beichtväter dieser <rs ref="index:d14380e22316">Kongregation</rs>, München 1693; „<rs ref="index:d10854e14839">Physica supernaturalis</rs>“, gedruckt zu <rs ref="index:d14380e29936">München</rs>; sowie in <rs ref="index:d14380e9395">deutscher</rs> Sprache die ebenfalls zu <rs ref="index:d14380e29936">München</rs> erschienenen „<rs ref="index:d10854e14834">Geistlichen sendschreiben</rs>“. Weiters schrieb er einen „<rs ref="index:d10854e14855">Tractatus asceticus de mortificatione</rs>“ für die Novizen, einen <rs ref="index:d10854e14813">Kommentar</rs> zur „<rs ref="index:d10854e14883">Manuductio ad perfectionem religiosam</rs>“ des Abtes <rs ref="index:d10854e14872">Gregor Kimpfler</rs> von <rs ref="index:d14380e39711">Scheyern</rs>, gleichfalls für die Novizen, sowie achttägige <rs ref="index:d10854e14829">geistliche Exerzitien</rs>. Diese Werke sind noch ungedruckt.</p>
+            <p corresp="#seg8">
+               <rs ref="index:d14380e16507">Lampert Grienmelt</rs> ist Bibliothekar von <rs ref="index:d10854e714">Andechs</rs> und hat 1708 zu <rs ref="index:d14380e3233">Augsburg</rs> sein „<rs ref="index:d10854e11315">Annus columbinus</rs>“ herausgebracht. Er plant die Herausgabe einer „<rs ref="index:d10854e11320">Reflexio gratiarum et miraculorum</rs>“.</p>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>Matthaeus Weiss</mentioned>
-            <p><rs type="bibl" ref="bibl:18394">Mittermüller, Hauptvertreter</rs> 122–124, und
+            <p>
+               <rs type="bibl" ref="bibl:18394">Mittermüller, Hauptvertreter</rs> 122–124, und
                   mit ihm <rs type="bibl" ref="bibl:15058">Bauer, Thomistische Metaphysik</rs> 18,
                   sehen in Weiß und Karl Jacob die Begründer der Salzburger thomistischen Schule.
                   Vgl. <rs type="bibl" ref="bibl:15058">Bauer, Thomistische Metaphysik</rs> 43–56,
@@ -124,7 +150,8 @@
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg2">
             <mentioned>Carolus Jacob</mentioned>
-            <p><rs type="bibl" ref="bibl:15058">Bauer, Thomistische Metaphysik</rs> 18, 501, 737,
+            <p>
+               <rs type="bibl" ref="bibl:15058">Bauer, Thomistische Metaphysik</rs> 18, 501, 737,
                   742, 775f.; <rs type="bibl" ref="bibl:17590">Kolb, Präsidium</rs> 121, 123, 128f.,
                   142; <rs type="bibl" ref="bibl:17644">Kraft, Andechser Studien</rs> 1 187; <rs type="bibl" ref="bibl:17876">Lechner, Benediktiner</rs> 140; <rs type="bibl" ref="bibl:18394">Mittermüller, Hauptvertreter</rs> 125f.; <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs> 356, 359, 366, 395f., 825; <rs type="bibl" ref="bibl:19270">Sattler, Collectaneen-Blätter</rs> 160–162.</p>
          </note>
@@ -139,11 +166,13 @@
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
             <mentioned>Maurus Rambeck</mentioned>
-            <p><rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs> 506–532.</p>
+            <p>
+               <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs> 506–532.</p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg4">
             <mentioned>Nicolaus Christelius</mentioned>
-            <p><rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs> 361, 374f., 825; leider
+            <p>
+               <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs> 361, 374f., 825; leider
                   ohne Näheres zu seinem literarischen Schaffen. Das genannte Werk scheint nicht
                   erhalten zu sein. Überliefert sind hingegen philosophische
                   („Theses
@@ -177,7 +206,8 @@
          </note>
          <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg7">
             <mentioned>Aegidius Kibler</mentioned>
-            <p><rs type="bibl" ref="bibl:37018">Siegmund, Kibler</rs>; vgl. <rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 73, 75, 85, 290; <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs> 531f., 539f., 613f.</p>
+            <p>
+               <rs type="bibl" ref="bibl:37018">Siegmund, Kibler</rs>; vgl. <rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 73, 75, 85, 290; <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs> 531f., 539f., 613f.</p>
          </note>
          <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg7">
             <mentioned>novitiorum magister</mentioned>
@@ -230,11 +260,13 @@
          </note>
          <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg7">
             <mentioned>Gregorii abbatis Schyrensis</mentioned>
-            <p><rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 31, 47, 49, 56, 75, 88; <rs type="bibl" ref="bibl:16972">Hemmerle, Benediktinerklöster</rs> 275; <rs type="bibl" ref="bibl:17590">Kolb, Präsidium</rs> 122, 136; <rs type="bibl" ref="bibl:19114">Rinnerthaler, Kanonisten</rs> 93; <rs type="bibl" ref="bibl:19270">Sattler, Collectaneen-Blätter</rs> 196f.; <rs type="bibl" ref="bibl:19514">Schulte, Quellen</rs> 3/1 146; vgl. <rs type="bibl" ref="bibl:16730">Haering, Bayerische Benediktinerkongregation</rs> 626.</p>
+            <p>
+               <rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 31, 47, 49, 56, 75, 88; <rs type="bibl" ref="bibl:16972">Hemmerle, Benediktinerklöster</rs> 275; <rs type="bibl" ref="bibl:17590">Kolb, Präsidium</rs> 122, 136; <rs type="bibl" ref="bibl:19114">Rinnerthaler, Kanonisten</rs> 93; <rs type="bibl" ref="bibl:19270">Sattler, Collectaneen-Blätter</rs> 196f.; <rs type="bibl" ref="bibl:19514">Schulte, Quellen</rs> 3/1 146; vgl. <rs type="bibl" ref="bibl:16730">Haering, Bayerische Benediktinerkongregation</rs> 626.</p>
          </note>
          <note target="#range(right('n21'), left('n21e'))" n="21" anchored="false" corresp="#seg8">
             <mentioned>Lampertus Grienmeld</mentioned>
-            <p><rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 229; <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs> 826. Das Geburtsjahr im Register
+            <p>
+               <rs type="bibl" ref="bibl:16214">Fink, Beiträge</rs> 229; <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs> 826. Das Geburtsjahr im Register
                   errechnet aus der Angabe der Rotel
                   (nach StiA
                   Melk, Buch 8 Rotuli 1, 18).</p>
@@ -253,18 +285,23 @@
    </standOff>
    <text>
       <front>
-         <p>Admodum reverendo religiosissimo ac eximio domino patri Bernardo Pez ordinis sancti patris Benedicti liberi et exempti monasterii Mellicensis professo, sacerdoti etc. necnon bibliothecario dignissimo, patri suo colendissimo. Viennam.<note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 6v.</note></p>
+         <p>Admodum reverendo religiosissimo ac eximio domino patri Bernardo Pez ordinis sancti patris Benedicti liberi et exempti monasterii Mellicensis professo, sacerdoti etc. necnon bibliothecario dignissimo, patri suo colendissimo. Viennam.<note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 6v.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Ex Monte Sancto 9. Februarii 1710.</opener>
+         <opener>
+            <pb n="1r"/> Ex Monte Sancto 9. Februarii 1710.</opener>
          <opener>Admodum reverende religiosissime ac eximie domine pater bibliothecarie, pater in Christo colendissime.</opener>
-         <ab resp="#editor" xml:id="seg1">Ne desimus petitis, communicamus quosdam religiosorum asceterii nostri a libris in lucem datis et doctrina excellenti commendandos. Primo loco dignus est pater <anchor xml:id="n1"/>Matthaeus Weiss<anchor xml:id="n1e"/> {frater germanus <anchor xml:id="n2"/>Thomae Weiss<anchor xml:id="n2e"/>} sacrae theologiae doctor clarissimus, pluribus annis in universitate nostra Salisburgensi eiusdem theologiae professor actualis ac postea rector magnificus. Ubi et obiit anno 1638. {Nota bene. <anchor xml:id="n3"/>Vide Historiam Salisburgensem<anchor xml:id="n3e"/> pagina 710 initio et pagina 712 medio.} Typis hic edidit <anchor xml:id="n4"/>Introductionem ad logicam<anchor xml:id="n4e"/> sive Aristotelis Organum, tertia vice impressum. Salisburgi anno 1628 in duodecimo. Item Lycaeum Benedictinum, in quo facultas in publicis scholis docendi, quae suo tempore fuit <anchor xml:id="n5"/>ab osoribus ordinis impugnata<anchor xml:id="n5e"/>, nostris asseritur et stabilitur. Salisburgi impressum anno 1630 in duodecimo. Idem pater Weiss 1629 edidit typis Salisburgensibus Exercitia spiritualia collecta ex Libro exercitiorum reverendissimi Garsiae <sic>Gisneros</sic> Monserratensis abbatis in forma duodecimi<note place="foot" xml:id="d4618e4216"><hi rend="italic">Idem pater Weiss ... in forma duodecimi</hi> mit Verweiszeichen zwischen Grußformel und Briefkörper eingefügt.</note>. </ab>
+         <ab resp="#editor" xml:id="seg1">Ne desimus petitis, communicamus quosdam religiosorum asceterii nostri a libris in lucem datis et doctrina excellenti commendandos. Primo loco dignus est pater <anchor xml:id="n1"/>Matthaeus Weiss<anchor xml:id="n1e"/> {frater germanus <anchor xml:id="n2"/>Thomae Weiss<anchor xml:id="n2e"/>} sacrae theologiae doctor clarissimus, pluribus annis in universitate nostra Salisburgensi eiusdem theologiae professor actualis ac postea rector magnificus. Ubi et obiit anno 1638. {Nota bene. <anchor xml:id="n3"/>Vide Historiam Salisburgensem<anchor xml:id="n3e"/> pagina 710 initio et pagina 712 medio.} Typis hic edidit <anchor xml:id="n4"/>Introductionem ad logicam<anchor xml:id="n4e"/> sive Aristotelis Organum, tertia vice impressum. Salisburgi anno 1628 in duodecimo. Item Lycaeum Benedictinum, in quo facultas in publicis scholis docendi, quae suo tempore fuit <anchor xml:id="n5"/>ab osoribus ordinis impugnata<anchor xml:id="n5e"/>, nostris asseritur et stabilitur. Salisburgi impressum anno 1630 in duodecimo. Idem pater Weiss 1629 edidit typis Salisburgensibus Exercitia spiritualia collecta ex Libro exercitiorum reverendissimi Garsiae <sic>Gisneros</sic> Monserratensis abbatis in forma duodecimi<note place="foot" xml:id="d4618e4216">
+               <hi rend="italic">Idem pater Weiss ... in forma duodecimi</hi> mit Verweiszeichen zwischen Grußformel und Briefkörper eingefügt.</note>. </ab>
          <ab resp="#editor" xml:id="seg2">Secundo. Pater <anchor xml:id="n6"/>Carolus Jacob<anchor xml:id="n6e"/> sacrae theologiae doctor eiusque actualis professor in nostra universitate per annos 20, ibidem quoque procancellarius et vice rector, scripsit <anchor xml:id="n7"/>Commentarium in Summam sancti Thomae<anchor xml:id="n7e"/>, nondum tamen typis datum. Obiit anno 1661. {Historia Salisburgensis pagina 711 ad finem.} </ab>
          <ab resp="#editor" xml:id="seg3">Tertio. Reverendissimus dominus dominus <anchor xml:id="n8"/>Maurus Rambeck<anchor xml:id="n8e"/> dignissimus abbas Montis Sancti, versatissimus in lingua Italica, Gallica, Graeca et Hebraica, tractatum doctrinalem Filiatio spiritualis intitulatum, Italice compositum a reverendo patre Chrysostomo Philippini Theatino Veronensi, Latinum reddidit et Venetiis imprimi curavit 1686 in folio. </ab>
-         <ab resp="#editor" xml:id="seg4">Quarto. Venerabilis pater <anchor xml:id="n9"/>Nicolaus Christelius<anchor xml:id="n9e"/> prior Montis Sancti per annos <add place="above">plurimos</add> dignissimus, scripsit Concordantiam <add place="above">verborum</add> in sacram Regulam, opusculum magni laboris et industriae. Nondum typis evulgatum. Obiit plenus meritorum 1638. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg4">Quarto. Venerabilis pater <anchor xml:id="n9"/>Nicolaus Christelius<anchor xml:id="n9e"/> prior Montis Sancti per annos <add place="above">plurimos</add> dignissimus, scripsit Concordantiam <add place="above">verborum</add> in sacram Regulam, opusculum magni laboris et industriae. Nondum typis evulgatum. Obiit plenus meritorum 1638. <pb n="1v"/>
+         </ab>
          <ab resp="#editor" xml:id="seg5">Quinto. Reverendus pater <anchor xml:id="n10"/>Placidus Menich<anchor xml:id="n10e"/> in Monte Sancto professus scripsit Vitam sancti patris Benedicti carminice cum magna observatione verborum sancti Gregorii magni. Non typis excusum opus. </ab>
          <ab resp="#editor" xml:id="seg6">Sexto. Reverendus pater <anchor xml:id="n11"/>Udalricus Staudigl<anchor xml:id="n11e"/> olim in curia Romana <anchor xml:id="n12"/>congregationis nostrae Benedictino-Bavaricae procurator<anchor xml:id="n12e"/> generalis, postea monasterii prior, typis dedit Logicam nobilium practicam ad omnium scibilium penetralia nova penitus methodo compositam, Romae editam in octavo. Item ex Gallico sermone in Latinum <anchor xml:id="n13"/>transtulit patris domini Joannis Mabillonii nostri Tractatum<anchor xml:id="n13e"/> de studiis monasticis, Campoduni impressum in forma octavi. Idem quoque pater Udalricus ex Italico in idioma Latinum reduxit Sermones panegyricos <add place="above">de sanctis</add> patris Philippi Picinelli canonici regularis sancti Augustini. Augustae impressum opus in forma quarti. </ab>
-         <ab resp="#editor" xml:id="seg7">Septimo. Venerabilis pater <anchor xml:id="n14"/>Aegidius Kibler<anchor xml:id="n14e"/> noster primus <anchor xml:id="n15"/>novitiorum magister<anchor xml:id="n15e"/> in congregatione Benedictino-Bavarica, postea <anchor xml:id="n16"/>philosophiae, sacrae theologiae et sacrorum canonum professor<anchor xml:id="n16e"/> emeritus in dictae <anchor xml:id="n17"/>congregationis studio publico<anchor xml:id="n17e"/>. Typis dedit Collectarium privilegiorum forum poenitentiae concernentium pro confessariis congregationis Benedictino-Bavaricae. 1693 Monachii in duodecimo. Item <anchor xml:id="n18"/>Philosophiam supernaturalem<anchor xml:id="n18e"/> asceticis doctrinis illustratam, impressam Monachii in quarto. Item Monachii impressae sunt eiusdem Epistolae spirituales docentes perfectionem Christianam pro quolibet hominum statu, idiomate Germanico, in octavo. Scripsit insuper <anchor xml:id="n19"/>Tractatum asceticum de mortificatione pro fratribus novitiis. Similiter Commentarium in Manuductionem<anchor xml:id="n19e"/> ad caelum reverendissimi domini domini <anchor xml:id="n20"/>Gregorii abbatis Schyrensis<anchor xml:id="n20e"/> pro dictis novitiis nostrae congregationis. Item octiduana exercitia spiritualia. <add><witDetail wit="#A">nachträglich</witDetail>Nota bene: nondum impressa</add>. </ab>
+         <ab resp="#editor" xml:id="seg7">Septimo. Venerabilis pater <anchor xml:id="n14"/>Aegidius Kibler<anchor xml:id="n14e"/> noster primus <anchor xml:id="n15"/>novitiorum magister<anchor xml:id="n15e"/> in congregatione Benedictino-Bavarica, postea <anchor xml:id="n16"/>philosophiae, sacrae theologiae et sacrorum canonum professor<anchor xml:id="n16e"/> emeritus in dictae <anchor xml:id="n17"/>congregationis studio publico<anchor xml:id="n17e"/>. Typis dedit Collectarium privilegiorum forum poenitentiae concernentium pro confessariis congregationis Benedictino-Bavaricae. 1693 Monachii in duodecimo. Item <anchor xml:id="n18"/>Philosophiam supernaturalem<anchor xml:id="n18e"/> asceticis doctrinis illustratam, impressam Monachii in quarto. Item Monachii impressae sunt eiusdem Epistolae spirituales docentes perfectionem Christianam pro quolibet hominum statu, idiomate Germanico, in octavo. Scripsit insuper <anchor xml:id="n19"/>Tractatum asceticum de mortificatione pro fratribus novitiis. Similiter Commentarium in Manuductionem<anchor xml:id="n19e"/> ad caelum reverendissimi domini domini <anchor xml:id="n20"/>Gregorii abbatis Schyrensis<anchor xml:id="n20e"/> pro dictis novitiis nostrae congregationis. Item octiduana exercitia spiritualia. <add>
+               <witDetail wit="#A">nachträglich</witDetail>Nota bene: nondum impressa</add>. </ab>
          <ab resp="#editor" xml:id="seg8">Octavo: Reverendus pater <anchor xml:id="n21"/>Lampertus Grienmeld<anchor xml:id="n21e"/> bibliothecarius noster typis dedit <anchor xml:id="n22"/>Annum columbinum historico-moralem de beneficiis Spiritus Sancti collatis in sanctos totius anni. Augustae 1708<anchor xml:id="n22e"/> in quarto. Idiomate Germanico. Idem proxime imprimi curabit tractatum historicum, cui titulus: <anchor xml:id="n23"/>Reflexio gratiarum<anchor xml:id="n23e"/> et miraculorum Veteris Testamenti relucentium in Novo ex sancto patre Benedicto suorumque per duodecim saecula sanctorum filiorum. Atque his me paternitati suae commendo laboribus suis successus properos augurans</ab>
          <closer>Pater Thomas Eixl pro tempore prior Montis Sancti.</closer>
       </body>

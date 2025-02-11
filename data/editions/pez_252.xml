@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="252" xml:id="pez-0252">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Edmund Grabmann an Bernhard Pez. 1712-06-30. Seeon.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">252</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -78,9 +91,10 @@
             <p corresp="#seg1">Wenn es in seiner Macht stünde, würde EG gerne BP alle Quellen zur Geschichte <rs ref="index:d14380e40312">Seeons</rs> verfügbar machen, besonders die Schrift „<rs ref="index:d10854e6974">Trithemius sui ipsius vindex</rs>“ von Abt <rs ref="index:d10854e6966">Sigmund Dullinger</rs>, die für BP sicherlich nützlich wäre; weil aber von dieser nur noch ein Exemplar vorhanden ist, hält Abt <rs ref="index:d10854e9592">Kolumban Freitlsperger</rs> es nicht für ratsam, dieses den Gefahren des Postwegs auszusetzen.</p>
             <p corresp="#seg2">Um nicht gänzlich mit leeren Händen dazustehen, bietet EG eine <rs ref="index:d10854e10935">kurze Geschichte seines Klosters</rs> an, die BP beizeiten, etwa zur Zeit der Weinlese, zurückschicken soll.</p>
             <p corresp="#seg3">Weiters sendet EG ein Fragment eines von Abt <rs ref="index:d10854e20765">Roman Müller</rs> begonnenen <rs ref="index:d10854e20775">historischen Werks über Salzburg</rs>. Er bedauert, dass dessen Vorhaben unvollendet blieb, und schließt mit Dank im Namen des <rs ref="index:d14380e40312">Seeoner</rs> Konvents für die Bemühungen BPs.</p>
-            <p corresp="#seg4">In einem Postskriptum berichtet EG, dass er BPs neue <rs ref="index:d10854e23782">Enzyklik</rs> <ref type="letter" target="letter:232">232</ref> nach <rs ref="index:d14380e11731">Ettal</rs> weitergeleitet hat.</p>
+            <p corresp="#seg4">In einem Postskriptum berichtet EG, dass er BPs neue <rs ref="index:d10854e23782">Enzyklik</rs>
+               <ref type="letter" target="letter:232">232</ref> nach <rs ref="index:d14380e11731">Ettal</rs> weitergeleitet hat.</p>
             <p corresp="#seg5">EG würde sich freuen, das neue Werk von <rs ref="index:d14380e39962">Anselm Schramb</rs> („<rs ref="index:d10854e28229">Pia desideria Davidiaca</rs>“?) durch BP zu erhalten.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -96,7 +110,8 @@
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>epitomen nostri monasterii</mentioned>
             <p>Vgl. die wenig freundliche Äußerung BPs an René Massuet über dieses Elaborat in
-                     <ref type="letter" target="letter:266">266</ref> <ref target="letter:266#seg12">12</ref>. Zur Weiterversendung an Massuet
+                     <ref type="letter" target="letter:266">266</ref>
+               <ref target="letter:266#seg12">12</ref>. Zur Weiterversendung an Massuet
                   scheint es nicht gekommen zu sein, eher zur von EG erbetenen Rücksendung. Der Text
                   konnte jedenfalls in Melk nicht aufgefunden werden.</p>
          </note>
@@ -116,10 +131,12 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiosissime ac clarissime domine pater Bernarde, domine ac patrone colendissime.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiosissime ac clarissime domine pater Bernarde, domine ac patrone colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">Si in mea potestate foret, omnes fontes secretorum nostrorum ac monumentorum monasticorum sitienti aperirem, praesertim <anchor xml:id="n1"/>Vindiciarum Trithemii<anchor xml:id="n1e"/>, quas vel ad horam iuvaret inspicere; at cum unicum <sic>supetit</sic>  exemplar, reverendissimus dominus dominus noster abbas inconsultum esse censet, ut periculis temporum exponatur. </ab>
          <ab resp="#editor" xml:id="seg2">Ne tamen vacuus omnino appaream, <anchor xml:id="n2"/>epitomen nostri monasterii<anchor xml:id="n2e"/> ad labores paratissimo et avidissimo offero, suo tempore, cum commodum fuerit, ad vindemiam forte, remittendam. </ab>
-         <ab resp="#editor" xml:id="seg3">Addo etiam pro gustu fragmentum ex <anchor xml:id="n3"/>historia nostri domini domini abbatis Romani<anchor xml:id="n3e"/>, quam molitus est pro memoria Salisburgensis gloriae, ut ex ungue totum corpus <sic>perspicere</sic> <note place="foot" xml:id="d4618e31574">Es fehlt ein Verb, etwa <hi rend="italic">possis</hi>, <hi rend="italic">liceat</hi> o. Ä.</note>. Dolendum, quod huius viri ingeniosissimi studium ac intentum fuerit intercisum. Utinam potuissem <pb n="1v"/> esse haeres ex asse huius felicitatis et abundantiae! At talia non cedunt mortui vivis: quisquis suo Marte militare ex sacramenti natura cogitur. Hisce me ex intimo commendo ac gratias defero nomine omnium Seonensium, quos vestra gratia et labor vindicare satagit ab aeternis tenebris ignorantiae.</ab>
+         <ab resp="#editor" xml:id="seg3">Addo etiam pro gustu fragmentum ex <anchor xml:id="n3"/>historia nostri domini domini abbatis Romani<anchor xml:id="n3e"/>, quam molitus est pro memoria Salisburgensis gloriae, ut ex ungue totum corpus <sic>perspicere</sic>
+            <note place="foot" xml:id="d4618e31574">Es fehlt ein Verb, etwa <hi rend="italic">possis</hi>, <hi rend="italic">liceat</hi> o. Ä.</note>. Dolendum, quod huius viri ingeniosissimi studium ac intentum fuerit intercisum. Utinam potuissem <pb n="1v"/> esse haeres ex asse huius felicitatis et abundantiae! At talia non cedunt mortui vivis: quisquis suo Marte militare ex sacramenti natura cogitur. Hisce me ex intimo commendo ac gratias defero nomine omnium Seonensium, quos vestra gratia et labor vindicare satagit ab aeternis tenebris ignorantiae.</ab>
          <closer>Admodum reverendae religiosae ac clarissimae paternitatis vestrae obligatissimus servus pater Edmundus prior manu propria.</closer>
          <closer>Seon 30. Junii 1712.</closer>
          <closer xml:id="seg5">P.S. Ettalensibus, qua primum potui occasione, debite et fideliter novam encyclicam transmisi. Si videro <anchor xml:id="n4"/>vatem novum admodum reverendum patrem Anselmum<anchor xml:id="n4e"/> ex gratia suae admodum reverendae paternitatis, adorabo eum et in thesauris meis reponam.</closer>

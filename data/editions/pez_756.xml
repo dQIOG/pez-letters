@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="756" xml:id="pez-0756">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Christoph Bartenstein an Bernhard Pez. 1717-03-03. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">756</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -76,46 +88,48 @@
                <ptr type="mentionedIn" target="letter:862"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e4036">Bartenstein, Johann Christoph ; Karrierepläne</term>
-            <term ref="index:d14380e6597">Braunschweig-Lüneburg</term>
-            <term ref="index:d14380e8464">Coluccio Salutati ; *Brief. Ms</term>
-            <term ref="index:d14380e10463">Eckhart, Johann Georg</term>
-            <term ref="index:d14380e10559">Eckhart, Johann Georg ; -Welfengeschichte Begonnen von Gottfried Wilhelm
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e4036">Bartenstein, Johann Christoph ; Karrierepläne</term>
+               <term ref="index:d14380e6597">Braunschweig-Lüneburg</term>
+               <term ref="index:d14380e8464">Coluccio Salutati ; *Brief. Ms</term>
+               <term ref="index:d14380e10463">Eckhart, Johann Georg</term>
+               <term ref="index:d14380e10559">Eckhart, Johann Georg ; -Welfengeschichte Begonnen von Gottfried Wilhelm
          Leibniz</term>
-            <term ref="index:d14380e11399">England, Engländer , englisch</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e13461">Friedrich August I</term>
-            <term ref="index:d14380e13478">Friedrich August II</term>
-            <term ref="index:d14380e13502">Friedrich Wilhelm I</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e14971">Georg I</term>
-            <term ref="index:d14380e15842">Görtz von Schlitz, Georg Heinrich, Freiherr</term>
-            <term ref="index:d14380e16818">Gyllenborg, Carl, Greve</term>
-            <term ref="index:d14380e19828">Italien, Italiener, Italienisch</term>
-            <term ref="index:d14380e20903">Joseph I</term>
-            <term ref="index:d14380e21263">Karl XII</term>
-            <term ref="index:d14380e21985">Klemens XI</term>
-            <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
-            <term ref="index:d14380e24248">Leibniz, Gottfried Wilhelm</term>
-            <term ref="index:d14380e24270">Leibniz, Gottfried Wilhelm ; Annales imperii. Ms</term>
-            <term ref="index:d14380e26226">Maria Amalia</term>
-            <term ref="index:d14380e26247">Maria Josepha</term>
-            <term ref="index:d14380e26828">Mascov, Johann Jakob</term>
-            <term ref="index:d14380e29435">Montfaucon, Bernard de</term>
-            <term ref="index:d14380e29473">Montfaucon, Bernard de ; Antiquitas explanatione et schematibus illustrata. L’antiquité
+               <term ref="index:d14380e11399">England, Engländer , englisch</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e13461">Friedrich August I</term>
+               <term ref="index:d14380e13478">Friedrich August II</term>
+               <term ref="index:d14380e13502">Friedrich Wilhelm I</term>
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e14971">Georg I</term>
+               <term ref="index:d14380e15842">Görtz von Schlitz, Georg Heinrich, Freiherr</term>
+               <term ref="index:d14380e16818">Gyllenborg, Carl, Greve</term>
+               <term ref="index:d14380e19828">Italien, Italiener, Italienisch</term>
+               <term ref="index:d14380e20903">Joseph I</term>
+               <term ref="index:d14380e21263">Karl XII</term>
+               <term ref="index:d14380e21985">Klemens XI</term>
+               <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
+               <term ref="index:d14380e24248">Leibniz, Gottfried Wilhelm</term>
+               <term ref="index:d14380e24270">Leibniz, Gottfried Wilhelm ; Annales imperii. Ms</term>
+               <term ref="index:d14380e26226">Maria Amalia</term>
+               <term ref="index:d14380e26247">Maria Josepha</term>
+               <term ref="index:d14380e26828">Mascov, Johann Jakob</term>
+               <term ref="index:d14380e29435">Montfaucon, Bernard de</term>
+               <term ref="index:d14380e29473">Montfaucon, Bernard de ; Antiquitas explanatione et schematibus illustrata. L’antiquité
          expliquée et representée en figures. 15 Bde. Paris 1719–1724</term>
-            <term ref="index:d14380e29778">Moskau, Moskowien</term>
-            <term ref="index:d14380e32819">Peter I</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e35438">Polen</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
-            <term ref="index:d14380e36005">Preußen</term>
-            <term ref="index:d14380e37728">Rom, Römer ; Päpstliche Kurie, Papsttum</term>
-            <term ref="index:d14380e40231">Schweden</term>
-            <term ref="index:d14380e44267">Venedig, Venezianer</term>
-            <term ref="index:d14380e45571">Wien</term></keywords></textClass>
+               <term ref="index:d14380e29778">Moskau, Moskowien</term>
+               <term ref="index:d14380e32819">Peter I</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e35438">Polen</term>
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+               <term ref="index:d14380e36005">Preußen</term>
+               <term ref="index:d14380e37728">Rom, Römer ; Päpstliche Kurie, Papsttum</term>
+               <term ref="index:d14380e40231">Schweden</term>
+               <term ref="index:d14380e44267">Venedig, Venezianer</term>
+               <term ref="index:d14380e45571">Wien</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Als Grund für seine verzögerte Antwort auf BPs letzten Brief <ref type="letter" target="letter:755">755</ref> gibt CB an, dass er auf einen Brief von <rs ref="index:d14380e26828">Johann Jakob
                   Mascov</rs> gewartet hat, aus dem er interessante Nachrichten an BP hätte weitergeben können. Mascov
@@ -136,9 +150,11 @@
                sorgen haben. Der <rs ref="index:d14380e11399">englische</rs> König (und Kurfürst von Hannover) <rs ref="index:d14380e14971">Georg I.</rs> scheint dem Andenken Leibniz’ nicht
                besonders günstig gesinnt zu sein, da er dessen Erbe mit hohen Abgaben belastet.</p>
             <p corresp="#seg5">CB wüsste gern, was BP von <rs ref="index:d14380e29435">Bernard de
-                  Montfaucons</rs> <rs ref="index:d14380e29473">„Antiquité expliquée“</rs> hält. Außerdem ersucht er
+                  Montfaucons</rs>
+               <rs ref="index:d14380e29473">„Antiquité expliquée“</rs> hält. Außerdem ersucht er
                darum, ihm einen sicheren Weg zu nennen, auf dem er Briefe an Montfaucon richten kann.</p>
-            <p corresp="#seg6"><rs ref="index:d14380e4036">CBs Schicksal</rs> ist weiterhin unentschieden. Wenn die Verzögerungen
+            <p corresp="#seg6">
+               <rs ref="index:d14380e4036">CBs Schicksal</rs> ist weiterhin unentschieden. Wenn die Verzögerungen
                weitergehen, fürchtet er, <rs ref="index:d14380e45571">Wien</rs> verlassen zu müssen. Er
                würde mehr darüber schreiben, aber was er BP anvertrauen möchte, kann er ihm nur persönlich sagen. Wenn
                CB wüsste, dass BP Interesse an Früchten seiner jüngsten Arbeiten – soweit diese nicht der Geheimhaltung
@@ -160,7 +176,7 @@
                Heiligen Stuhl als auch den Freiheiten der gallikanischen Kirche gerecht wird. Aber vielleicht wird ein
                Deus ex machina diesen gefährlichen Streit beenden. CB verspricht, BP zu informieren, sobald er einen
                Brief aus Frankreich oder von Mascov erhält, und schließt mit Grüßen an <rs ref="index:d14380e34537">HP</rs>.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -244,12 +260,15 @@
             <mentioned>Saxo unam ex filiabus ... expetit</mentioned>
             <p> Der sächsische Kurprinz Friedrich
                   August heiratete am 8. August 1719 die Erzherzogin Maria Josepha; als ihr
-                  Beichtvater begleitete Anton Steyerer sie nach Dresden: vgl. <ref type="letter" target="letter:462">462</ref> <ref target="letter:462#seg3">3</ref>. Zur Rolle CBs bei der Veröffentlichung der Konversion des
-                  Kurprinzen vgl. <ref type="letter" target="letter:910">910</ref> <ref target="letter:910#seg4">4</ref>.</p>
+                  Beichtvater begleitete Anton Steyerer sie nach Dresden: vgl. <ref type="letter" target="letter:462">462</ref>
+               <ref target="letter:462#seg3">3</ref>. Zur Rolle CBs bei der Veröffentlichung der Konversion des
+                  Kurprinzen vgl. <ref type="letter" target="letter:910">910</ref>
+               <ref target="letter:910#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg9">
             <mentioned>In Gallia</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:772">772</ref> <ref target="letter:772#seg2">2</ref>.</p>
+            <p> Vgl. <ref type="letter" target="letter:772">772</ref>
+               <ref target="letter:772#seg2">2</ref>.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -273,16 +292,31 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo in Christo patri domino Bernhardo Petzio bibliothecario Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</opener>
-         <ab resp="#editor" xml:id="seg1">Causas dilati tamdiu responsi non dabo tibi alias, vir amicissime, quam quod literas a Mascowio quotidie expectabam, quibus ille me de iis redderet certiorem, quae in itinere tua attentione digna observasset. Ne enim steriles omnino literas tibi mitterem, ea tibi transcribere cogitabam, quae a Mascowio mihi communicanda fore putabam. Sed fefellit ille spem et expectationem meam. Praeterquam enim, quod suum in Italiam adventum Venetiis mihi nuntiavit et de tua erga se humanitate multum gloriatus est, nihil quicquam, <choice><sic>quoad</sic><corr>quod</corr></choice> ad rem literariam spectat, ab eodem accepi. Itaque non amplius ob ipsius in scribendo moram committendum censui, ut a te iure negligentiae <sic>accusare</sic> possem; maloque te de literarum mearum<del ana="#after">arg</del> inopi argumento conqueri quam ex diuturniore earundem dilatione ansam arripere de meo in te affectu observantiaque dubitandi. <pb n="1v"/> </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n1"/>Colucii epistolam<anchor xml:id="n1e"/> ipse exscribam, mox ut illa mihi a perillustri domino Gentillotti fuerit communicata: quod propediem futurum spero. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverendo in Christo patri domino Bernhardo Petzio bibliothecario Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</opener>
+         <ab resp="#editor" xml:id="seg1">Causas dilati tamdiu responsi non dabo tibi alias, vir amicissime, quam quod literas a Mascowio quotidie expectabam, quibus ille me de iis redderet certiorem, quae in itinere tua attentione digna observasset. Ne enim steriles omnino literas tibi mitterem, ea tibi transcribere cogitabam, quae a Mascowio mihi communicanda fore putabam. Sed fefellit ille spem et expectationem meam. Praeterquam enim, quod suum in Italiam adventum Venetiis mihi nuntiavit et de tua erga se humanitate multum gloriatus est, nihil quicquam, <choice>
+               <sic>quoad</sic>
+               <corr>quod</corr>
+            </choice> ad rem literariam spectat, ab eodem accepi. Itaque non amplius ob ipsius in scribendo moram committendum censui, ut a te iure negligentiae <sic>accusare</sic> possem; maloque te de literarum mearum<del ana="#after">arg</del> inopi argumento conqueri quam ex diuturniore earundem dilatione ansam arripere de meo in te affectu observantiaque dubitandi. <pb n="1v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n1"/>Colucii epistolam<anchor xml:id="n1e"/> ipse exscribam, mox ut illa mihi a perillustri domino Gentillotti fuerit communicata: quod propediem futurum spero. </ab>
          <ab resp="#editor" xml:id="seg3">Ex Gallia quotidie literas<del ana="#after">accep</del> expecto. <anchor xml:id="n2"/>Scripsit una mecum<anchor xml:id="n2e"/> dominus Gentillotti, qui Gallorum in respondendo moram non minus ac ego miratur. </ab>
          <ab resp="#editor" xml:id="seg4">Eccardum Leibnitio suffectum aliunde tibi iam constabit. Eidem negotium datum perducendi ad finem historiam domus Brunsvicensis. <anchor xml:id="n3"/>Rex Angliae parum Manibus Leibnitianis favere videtur, dum magno censu eiusdem hereditatem onerat<anchor xml:id="n3e"/>. </ab>
-         <ab resp="#editor" xml:id="seg5">De Montefalconii Thesauro antiquitatum quid statueris, scire vellem. Sed et enixe te rogo, ut mihi viam indices, <choice><sic>qua</sic><corr>cui</corr></choice> tuto literas Montefalconio destinatas possim committere. </ab>
+         <ab resp="#editor" xml:id="seg5">De Montefalconii Thesauro antiquitatum quid statueris, scire vellem. Sed et enixe te rogo, ut mihi viam indices, <choice>
+               <sic>qua</sic>
+               <corr>cui</corr>
+            </choice> tuto literas Montefalconio destinatas possim committere. </ab>
          <ab resp="#editor" xml:id="seg6">Mea sors adhuc in ambiguo est. Si moras nectere pergunt, valde metuo, ne Vindobonam tandem invitus cogar deserere. Plura scriberem, sed quae in tuum sinum effundere cuperem, eiusmodi sunt, ut non nisi coram exequi illa liceat. Ceterum si scirem non ingrata tibi futura aliquot meorum laborum spicilegia, quae celanda non sunt, illa tibi lubens transmitterem. Utinam hic esses! Nec enim deesset mihi materia colloquio sat longo. </ab>
-         <ab resp="#editor" xml:id="seg7"><anchor xml:id="n4"/>Anglia nondum quieta<anchor xml:id="n4e"/> est. Omnia ibi turbarum et suspicionum plena. Legatus Suecicus arcte custoditur, et nisi alter, qui in id regnum contendebat, iter immutarit, et ipse custodiae tradetur. Mira sunt, sed incerta, quae <pb n="2r"/> de hoc negotio in vulgus circumferuntur. Magnus Moscowiae dux contra regem Angliae valde irritatus est; nec hic minores de illo querelas movet. <choice><sic>Inter Anglum et Porussum</sic><corr>Anglo cum Porusso</corr></choice> non<del ana="#after">sati</del> melius convenit. Mihi plane persuasum est Suecum, modo rationes suas bene ineat, plura ex amissis recuperaturum. </ab>
-         <ab resp="#editor" xml:id="seg8"><anchor xml:id="n5"/>Saxo unam ex filiabus Josephi pro filio uxorem expetit<anchor xml:id="n5e"/>. Sedata quidem est Polonia, sed quietem haud diu duraturam puto. </ab>
-         <ab resp="#editor" xml:id="seg9"><anchor xml:id="n6"/>In Gallia<anchor xml:id="n6e"/> pontificis auctoritas quotidie decrescit. Difficile erit medium invenire, quo et sedi Romanae et ecclesiae Gallicanae libertatibus satisfiat. Sed forsan Deus ex machina tam periculosa dissidia terminabit. Quamprimum ex Gallia vel a Mascowio literas accepero, earum argumentum ad te perscribam. Tu interim una cum suavissimo fratre tuo pancratice vale meque amare perge, de tenerrimo meo in te affectu quam persuasissimus.</ab>
+         <ab resp="#editor" xml:id="seg7">
+            <anchor xml:id="n4"/>Anglia nondum quieta<anchor xml:id="n4e"/> est. Omnia ibi turbarum et suspicionum plena. Legatus Suecicus arcte custoditur, et nisi alter, qui in id regnum contendebat, iter immutarit, et ipse custodiae tradetur. Mira sunt, sed incerta, quae <pb n="2r"/> de hoc negotio in vulgus circumferuntur. Magnus Moscowiae dux contra regem Angliae valde irritatus est; nec hic minores de illo querelas movet. <choice>
+               <sic>Inter Anglum et Porussum</sic>
+               <corr>Anglo cum Porusso</corr>
+            </choice> non<del ana="#after">sati</del> melius convenit. Mihi plane persuasum est Suecum, modo rationes suas bene ineat, plura ex amissis recuperaturum. </ab>
+         <ab resp="#editor" xml:id="seg8">
+            <anchor xml:id="n5"/>Saxo unam ex filiabus Josephi pro filio uxorem expetit<anchor xml:id="n5e"/>. Sedata quidem est Polonia, sed quietem haud diu duraturam puto. </ab>
+         <ab resp="#editor" xml:id="seg9">
+            <anchor xml:id="n6"/>In Gallia<anchor xml:id="n6e"/> pontificis auctoritas quotidie decrescit. Difficile erit medium invenire, quo et sedi Romanae et ecclesiae Gallicanae libertatibus satisfiat. Sed forsan Deus ex machina tam periculosa dissidia terminabit. Quamprimum ex Gallia vel a Mascowio literas accepero, earum argumentum ad te perscribam. Tu interim una cum suavissimo fratre tuo pancratice vale meque amare perge, de tenerrimo meo in te affectu quam persuasissimus.</ab>
          <closer>Scribebam festinanter Vindobonae die 3. Martii 1717.</closer>
       </body>
    </text>

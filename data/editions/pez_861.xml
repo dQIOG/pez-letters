@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="861" xml:id="pez-0861">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Christoph Bartenstein an Bernhard Pez. 1717-12-11. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">861</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,10 +43,8 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Auf 2v Vermerk von einer Hand des 18. Jh.: <orig>Illustrissimi domini de Partenstein et Conradi Widow epistolae ad patrem Bernardum Petz.</orig>
-               
             </note>
          </notesStmt>
          <sourceDesc>
@@ -54,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -80,27 +91,29 @@
                <ptr type="mentionedIn" target="letter:910"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e4036">Bartenstein, Johann Christoph ; Karrierepläne</term>
-            <term ref="index:d14380e4170">Bayern, Bayern</term>
-            <term ref="index:d14380e5245">Bern</term>
-            <term ref="index:d14380e7141">Bürgisser, Leodegar</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e14904">Gentilotti von Engelsbrunn, Johann Benedikt ; Handschriftenkatalog der
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e4036">Bartenstein, Johann Christoph ; Karrierepläne</term>
+               <term ref="index:d14380e4170">Bayern, Bayern</term>
+               <term ref="index:d14380e5245">Bern</term>
+               <term ref="index:d14380e7141">Bürgisser, Leodegar</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e14904">Gentilotti von Engelsbrunn, Johann Benedikt ; Handschriftenkatalog der
          Hofbibliothek</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
          dominum dominum Joannem Benedictum Gentilottum ab Engelsbrunn pro editione integri
          syntagmatis diplomatico-historico-epistolaris Udalrici Babenbergensis ex codice Zwetlensi,
          impugnata a viro clarissimo Angelo Fonteio Veronensi. Augsburg 1717</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e39290">St. Gallen</term>
-            <term ref="index:d14380e43552">Udalrich von Bamberg ; Codex Udalrici</term>
-            <term ref="index:d14380e45571">Wien</term>
-            <term ref="index:d14380e45794">Wien ; Kaiserhof</term>
-            <term ref="index:d14380e47058">Zürich</term></keywords></textClass>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e39290">St. Gallen</term>
+               <term ref="index:d14380e43552">Udalrich von Bamberg ; Codex Udalrici</term>
+               <term ref="index:d14380e45571">Wien</term>
+               <term ref="index:d14380e45794">Wien ; Kaiserhof</term>
+               <term ref="index:d14380e47058">Zürich</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Dass CB auf den Brief BPs vom 25. September 1717 <ref type="letter" target="letter:828">828</ref> nicht
                geantwortet hat, ist eben jenem Grund zuzuschreiben, den BP selbst erahnt hat: Nicht dass CB deswegen
@@ -115,7 +128,8 @@
             <p corresp="#seg2">Gerne möchte CB Neuigkeiten erfahren, die BP vielleicht aus <rs ref="index:d14380e12712">Frankreich</rs>
                erhalten hat, ebenso nähere Angaben über die wichtigsten unter jenen Handschriften, die BP auf seiner
                <rs ref="index:d14380e34236">Reise in den Bibliotheken Bayerns</rs> entdeckt hat.</p>
-            <p corresp="#seg3"><rs ref="index:d14380e14738">Gentilotti</rs> ist am selben Tag, an dem CB schreibt, von einer Reise
+            <p corresp="#seg3">
+               <rs ref="index:d14380e14738">Gentilotti</rs> ist am selben Tag, an dem CB schreibt, von einer Reise
                zurückgekehrt. An sein großes Werk (den <rs ref="index:d14380e14904">Katalog der lateinischen
                   Handschriften der Hofbibliothek</rs>) wird er im kommenden Jahr die letzte Hand anlegen. Im Übrigen
                weiß BP, wie wenige Gelehrte es in <rs ref="index:d14380e45571">Wien</rs> gibt; Nachrichten vom <rs ref="index:d14380e45794">Kaiserhof</rs> werden ihm sicherlich andere schreiben. Der Tod des Fürstabts
@@ -125,7 +139,7 @@
                Leidwesen nur sehr langsam entwickelt, er hofft jedoch auf einen baldigen guten Ausgang. CB wünscht sich
                einen Besuch BPs in <rs ref="index:d14380e45571">Wien</rs>, da er gerne einiges mit ihm im Vertrauen
                besprechen würde, und schließt mit Grüßen an <rs ref="index:d14380e34537">HP</rs>.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -141,13 +155,16 @@
                      St. Gallen</rs> 154. Die Friedensverhandlungen zwischen St. Gallen und den
                   reformierten Kantonen Zürich und Bern wurden von seinem Nachfolger Joseph von
                   Rudolfis wieder aufgenommen und bereits im Sommer 1718 zum Abschluss gebracht:
-                     vgl. <ref type="letter" target="letter:890">890</ref> <ref target="letter:890#seg6">6</ref>, <ref type="letter" target="letter:1006">1006</ref>
-                  <ref target="letter:1006#seg5">5</ref>. </p>
+                     vgl. <ref type="letter" target="letter:890">890</ref>
+               <ref target="letter:890#seg6">6</ref>, <ref type="letter" target="letter:1006">1006</ref>
+               <ref target="letter:1006#seg5">5</ref>. </p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg4">
             <mentioned>plurima ... peroptarem</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:756">756</ref> <ref target="letter:756#seg5">5</ref>
-                  und <ref target="letter:756#seg6">6</ref>, <ref type="letter" target="letter:910">910</ref> <ref target="letter:910#seg4">4</ref>.</p>
+            <p> Vgl. <ref type="letter" target="letter:756">756</ref>
+               <ref target="letter:756#seg5">5</ref>
+                  und <ref target="letter:756#seg6">6</ref>, <ref type="letter" target="letter:910">910</ref>
+               <ref target="letter:910#seg4">4</ref>.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -175,10 +192,14 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo in Christo patri domino Bernhardo Petzio bibliothecario Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo in Christo patri domino Bernhardo Petzio bibliothecario Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</opener>
          <ab resp="#editor" xml:id="seg1">Quod ad literas 25. Septembris die ad me exaratas nihil quicquam reposuerim, id ipsum, quod tu, vir amicissime, <anchor xml:id="n1"/>ominatus es<anchor xml:id="n1e"/>, in causa fuit: non quod tui aut memoriam aut amorem ob id deposuerim, sed quod in dissidio inter viros mihi inprimis caros sententiam meam expromere grave ac perquam molestum mihi esset. Scis, quam sincera veneratione illustrissimum Gentillotum prosequar, nec ignoras etiam, quam ille de me bene sit meritus; cumque et te, vir eruditissime, ex intimo cordis affectu diligam tuamque eruditionem haud vulgariter suspiciam, facile inde conicies me in isto, quod vos infensos tenet, dissidio non posse velle aut optare aliud, quam ut sincera pax animos utriusque ita invicem <pb n="1v"/> devinciat, ut nec levissimus praeteritae discordiae sensus aut memoria supersit: quod ipsum an sperandum sit? et qua ratione finem istum assequi valeam? tuo iudicio merito relinquo, omnem operam, et quicquid in viribus meis erit, tam honesto scopo lubentissimus impensurus. Dissertationem tuam apologetico-literariam videre percupio, nullus dubitans nihil quicquam in ea fore, quod mentes acrius extimulare possit. Quod si est, ego de concordia neutiquam despero. Sed de hac materia satis! </ab>
          <ab resp="#editor" xml:id="seg2">Quae tu ex Gallia nova acceperis, tum etiam specialem enumerationem praecipuorum codicum manuscriptorum, quos tam laudabili instituto ex bibliothecis Boioaricis eruisti, ex te <sic>conoscere</sic> multum aveo. </ab>
-         <ab resp="#editor" xml:id="seg3">Gentillotus hodie ex itinere ad nos rediit, ultimam manum magno suo operi proximo anno admoturus. Ceterum <choice><sic>sunt</sic><corr>nosti</corr></choice> ipse, quam pauci sint, qui hic studiis vacent, et non dubito, quin alii ad te sint perscripturi, quae in aula nova circumferantur. Mors abbatis Sangallensis novas remoras iniciet <pb n="2r"/> amicabili, quae tentabatur, compositioni. </ab>
+         <ab resp="#editor" xml:id="seg3">Gentillotus hodie ex itinere ad nos rediit, ultimam manum magno suo operi proximo anno admoturus. Ceterum <choice>
+               <sic>sunt</sic>
+               <corr>nosti</corr>
+            </choice> ipse, quam pauci sint, qui hic studiis vacent, et non dubito, quin alii ad te sint perscripturi, quae in aula nova circumferantur. Mors abbatis Sangallensis novas remoras iniciet <pb n="2r"/> amicabili, quae tentabatur, compositioni. </ab>
          <ab resp="#editor" xml:id="seg4">Mearum rerum statum proxime ad te perscribam. Res hactenus lente processit magno meo cum damno, sed spero propediem omnia in salvo fore. Utinam aliquot dies hic excurrere posses. Sunt enim <anchor xml:id="n2"/>plurima, quae in tuum sinum effundere peroptarem<anchor xml:id="n2e"/>. Vale atque doctissimum dominum fratrem tuum ex me plurimum saluta.</ab>
          <closer>Scribebam Vindobonae die 11. Decembris 1717.</closer>
       </body>

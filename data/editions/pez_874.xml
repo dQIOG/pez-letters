@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="874" xml:id="pez-0874">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Wolfgang Dullinger an Bernhard Pez. 1718-01-03. Rott am Inn.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">874</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,26 +90,29 @@
                <ptr type="mentionedIn" target="letter:902"/>
             </correspContext>
          </correspDesc>
-         <textClass><keywords>
-            <term ref="index:d14380e1772">Anianus, hl</term>
-            <term ref="index:d14380e6075">Bollandisten</term>
-            <term ref="index:d14380e8285">Clario, Isidoro</term>
-            <term ref="index:d14380e10128">Dullinger, Wolfgang ; Arbeiten zu den hl. Marinus und Anianus</term>
-            <term ref="index:d14380e10335">Du Saussay, André ; Insignis libri De scriptoribus ecclesiasticis eminentissimi
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e1772">Anianus, hl</term>
+               <term ref="index:d14380e6075">Bollandisten</term>
+               <term ref="index:d14380e8285">Clario, Isidoro</term>
+               <term ref="index:d14380e10128">Dullinger, Wolfgang ; Arbeiten zu den hl. Marinus und Anianus</term>
+               <term ref="index:d14380e10335">Du Saussay, André ; Insignis libri De scriptoribus ecclesiasticis eminentissimi
          cardinalis Bellarmini continuatio ab anno 1500, in quo desinit, ad annum 1600, quo incipit
          sequentis saeculi exordium. Toul 1665; Köln 1684</term>
-            <term ref="index:d14380e14664">Génébrard, Gilbert</term>
-            <term ref="index:d14380e15193">Gerhoch von Reichersberg</term>
-            <term ref="index:d14380e15263">Gerhoch von Reichersberg ; Dialogus inter clericum saecularem et regularem. Ms. Rott am
+               <term ref="index:d14380e14664">Génébrard, Gilbert</term>
+               <term ref="index:d14380e15193">Gerhoch von Reichersberg</term>
+               <term ref="index:d14380e15263">Gerhoch von Reichersberg ; Dialogus inter clericum saecularem et regularem. Ms. Rott am
          Inn</term>
-            <term ref="index:d14380e19737">Innozenz II</term>
-            <term ref="index:d14380e26350">Marinus, hl</term>
-            <term ref="index:d14380e31203">Oetlinger, Aemilian</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e37985">Rott am Inn</term>
-            <term ref="index:d14380e38037">Rott am Inn ; Bibliothek ; Gerhoch von Reichersberg, Dialogus inter clericum saecularem
+               <term ref="index:d14380e19737">Innozenz II</term>
+               <term ref="index:d14380e26350">Marinus, hl</term>
+               <term ref="index:d14380e31203">Oetlinger, Aemilian</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e37985">Rott am Inn</term>
+               <term ref="index:d14380e38037">Rott am Inn ; Bibliothek ; Gerhoch von Reichersberg, Dialogus inter clericum saecularem
          et regularem. Ms</term>
-            <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term></keywords></textClass>
+               <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">WD hatte sich bereits an die Abschrift des Briefes <rs ref="index:d14380e15193">Gerhochs von
                   Reichersberg</rs> an <rs ref="index:d14380e19737">Papst Innozenz II.</rs> („<rs ref="index:d14380e15263">Dialogus inter clericum saecularem et regularem</rs>“) gemacht, als er auf
@@ -109,7 +125,7 @@
                „<rs ref="index:d14380e10335">Continuatio</rs>“ von André du Saussay kopiert hat.</p>
             <p corresp="#seg3">Ebenfalls abgeschrieben hat WD die „<rs ref="index:d14380e10128">Acta</rs>“ der beiden <rs ref="index:d14380e37985">Rotter</rs> Hausheiligen <rs ref="index:d14380e26350">Marinus</rs> und <rs ref="index:d14380e1772">Anianus</rs> mit einigen Bemerkungen, um sie den <rs ref="index:d14380e6075">Bollandisten</rs> mitzuteilen. Da er diesbezüglich seitens seiner Superioren (Abt <rs ref="index:d14380e31203">Aemilian Oetlinger</rs>) noch keine klaren Anweisungen hat, hat er jedoch von
                der Versendung abgesehen. WD schließt mit Neujahrswünschen an BP und HP.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -120,7 +136,7 @@
                   saecularem et regularem“ in der Handschrift BStB München, clm 15512. Zum Text, zu
                   der Überlieferung, die BP auf der bayerischen Reise in Rott gesehen hatte, und zur
                   in der Folge von BP selbst bearbeiteten Edition vgl. <ref type="letter" target="letter:798">798</ref>
-                  <ref target="letter:798#seg3">3</ref>.</p>
+               <ref target="letter:798#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned> zifros</mentioned>
@@ -135,13 +151,15 @@
                   Varia 25, Fasz. 1, Nr. 50. An ihrem Beginn macht WD bibliographische Angaben,
                   denen zufolge ihm die Kölner Ausgabe von 1684 vorlag. Die wiedergegebenen Passagen
                   entsprechen Du Saussay, Continuatio (1684) 34, 58f. Zu Clario vgl. 98; zu
-                  Génébrard vgl. <ref type="letter" target="letter:950">950</ref> <ref target="letter:950#seg11">11</ref>. </p>
+                  Génébrard vgl. <ref type="letter" target="letter:950">950</ref>
+               <ref target="letter:950#seg11">11</ref>. </p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned>ut petitum</mentioned>
             <p>Die Bitte war wie jene um die Gerhoch-Abschrift während
                   des Aufenthalts von BP und HP in Rott Ende Juni 1717 ausgesprochen worden: vgl.
-                     <ref type="letter" target="letter:878">878</ref> <ref target="letter:878#seg1">1</ref>. </p>
+                     <ref type="letter" target="letter:878">878</ref>
+               <ref target="letter:878#seg1">1</ref>. </p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>Marini et Aniani Acta</mentioned>
@@ -162,9 +180,11 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, patrone colendissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine, patrone colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">Iam coeperam describere <anchor xml:id="n1"/>Gerhohi praepositi Reicherspergensis epistolam<anchor xml:id="n1e"/> ad Innocentium papam, cum altera statim pagina haerere coepi ad<anchor xml:id="n2"/> zifros<anchor xml:id="n2e"/>, qui authoris tum resipiscentis aetatem referre debebant, quos eo momento non ita (uti iam) capere poteram, et quia alias diffidebam me posse reliquum epistolae textum ita limatum describere, ut absque inspectione authographi possit tuto praelo committi, consultius esse duxi, si bona superiorum venia ipsum authorem venerandis manibus suae clarissimae dominationis (uti iam facio) commisero, confisus eundem, ubi descriptus fuerit, tuto iterum ad monasterium nostrum esse remittendum. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n3"/>Adiungo duo elogia<anchor xml:id="n3e"/> nostrorum Isidori Clarii et Gilberti Genebrardi ex Andrea<del ana="#after">Du</del> Du Saussay, <anchor xml:id="n4"/>ut petitum<anchor xml:id="n4e"/>, descripta. </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n3"/>Adiungo duo elogia<anchor xml:id="n3e"/> nostrorum Isidori Clarii et Gilberti Genebrardi ex Andrea<del ana="#after">Du</del> Du Saussay, <anchor xml:id="n4"/>ut petitum<anchor xml:id="n4e"/>, descripta. </ab>
          <ab resp="#editor" xml:id="seg3">Sanctorum nostrorum <anchor xml:id="n5"/>Marini et Aniani Acta<anchor xml:id="n5e"/> Bollandianis continuatoribus communicanda cum notis quibusdam descripseram quidem; sed quia superiorum meorum iudicium desuper nondum fui expertus, abstinere volui ab iis iam dimmittendis. Cum felicissimi anni novi auspicio precor, ut suam clarissimam dominationem cum pariter clarissimo domino germano Hyeronimo Superi diutissime servent incolumem.</ab>
          <closer>Servus in Christo pater Wolfgangus Dullinger professus ibidem.</closer>
          <closer>Rothae 3. Januarii 1718.</closer>

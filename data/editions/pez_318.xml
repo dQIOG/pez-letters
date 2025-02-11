@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="318" xml:id="pez-0318">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an Moritz Müller. 1713-07-16. Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">318</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -42,10 +53,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -74,7 +86,7 @@
             <p corresp="#seg2">Das von MM zugesendete Bücherpaket (mit den „<rs ref="index:d14380e25664">Acta sanctorum OSB</rs>“) ist am 10. Juli von <rs ref="index:d14380e43652">Ulm</rs> kommend in <rs ref="index:d14380e28088">Melk</rs> eingetroffen und hat dort Freudentänze (tripudium) ausgelöst. Die Transportkosten von <rs ref="index:d14380e43652">Ulm</rs> bis <rs ref="index:d14380e28088">Melk</rs> auf der <rs ref="index:d14380e9895">Donau</rs> haben die <rs ref="index:d14380e28088">Melker</rs> bereits beglichen. MM soll schreiben, falls noch Weiteres zu regeln ist. Die <rs ref="index:d14380e28088">Melker</rs> sind aus Dankbarkeit für seine Dienste bereit, ihm jeden Wunsch zu erfüllen; wenn die Bauarbeiten in <rs ref="index:d14380e28088">Melk</rs> nicht wären, hätte man MM schon längst dorthin geholt. Abt <rs ref="index:d14380e9628">Dietmayr</rs> wird MM und den <rs ref="index:d14380e39290">St. Gallern</rs> seine Hilfe in allen Dingen nicht vorenthalten.</p>
             <p corresp="#seg3">BP kann MM jedoch noch aus einem weiteren Grund nicht nach <rs ref="index:d14380e28088">Melk</rs> einladen, nämlich weil in <rs ref="index:d10854e21970">Österreich</rs> und besonders in <rs ref="index:d14380e45571">Wien</rs> die <rs ref="index:d10854e23151">Pest</rs> wütet. Ein <rs ref="index:d14380e28088">Melker</rs> Konventuale (<rs ref="index:d10854e30007">Johann Baptist Stubner</rs>), welcher in einer der Stiftspfarren eingesetzt war, ist bereits daran gestorben. Im Stift selbst ist die Krankheit noch nicht aufgetreten, doch könnte dies jederzeit geschehen. BP vergleicht MMs ungerechtes Exil mit seiner eigenen Todesangst, will sich aber dem göttlichen Ratschluss fügen.</p>
             <p corresp="#seg4">Von <rs ref="index:d14380e39962">Anselm Schramb</rs> sollte MM bald gute Neuigkeiten in den<rs ref="index:d14380e39321"> politischen Angelegenheiten</rs> der <rs ref="index:d14380e39290">St. Galler</rs> erhalten. BP hat <rs ref="index:d14380e39962">Schramb</rs> zum Berichten aufgefordert, der ja in der Nähe des <rs ref="index:d14380e21188">Kaisers</rs> lebt. Freilich ist BP berichtet worden, dass auch <rs ref="index:d14380e39962">Schramb</rs> demnächst <rs ref="index:d14380e45571">Wien</rs> verlassen wird.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -85,7 +97,8 @@
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned>tui nominis invidia</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:302">302</ref> <ref target="letter:302#seg5">5</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:302">302</ref>
+               <ref target="letter:302#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>librorum</mentioned>
@@ -131,9 +144,21 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverendo religiosissimo ac clarissimo domino Mauritio Miller pater Bernardus Mellicensis salutem plurimam dicit.</opener>
-         <ab resp="#editor" xml:id="seg1">Si <anchor xml:id="n1"/>ambas meas ultimas epistolas<anchor xml:id="n1e"/> minimo temporis intervallo ad te datas recte accepisti, utique abunde, amice suavissime, intellexisti, quam ego sollicitus sim, ut debitis tibi a nobis pecuniis quam primum potiaris. Verba haec vera fuisse amplius nunc cognosces. Igitur scito nos 12. Julii petitam schedulam numulariam 194 fl. misisse Schaffhusium ad dominos Henricum et Christophorum <choice><sic>Zeigler</sic><corr>Ziegler</corr></choice> fratres germanos, non incelebres ibidem numularios. Hos iussimus praedictam summam enumerare seu solvere admodum reverendo domino patri Joachimo Letter, priori <choice><sic>Rhingo</sic><corr>Rhinaugiensi</corr></choice> meritissimo. Admodum autem reverendum dominum priorem singulari epistola <sic>scripsimus</sic> <note place="foot" xml:id="d4618e40707">Entweder war hier zunächst ein anderes Prädikat vorgesehen, das den Akkusativ regiert (<hi rend="italic">monuimus</hi> o. Ä.), oder am Beginn des Satzes wurde die Präposition <hi rend="italic">Ad</hi>, wohl durch Vermengung mit <hi rend="italic">Admodum</hi>, versehentlich ausgelassen.</note>, ut hanc pecuniam tibi, amice et patrone profecto sincerissime, traderet. Quae omnia ideo ita ordinavimus, ne <anchor xml:id="n2"/>tui nominis invidia<anchor xml:id="n2e"/>, ut sunt haec tempora, ullum his rebus periculum crearet. Quare nullus dubito, quin postulatam iure pecuniam iam rite acceperis aut saltem his diebus accepturus sis. Quod te rogatum velim, est hoc, ut videlicet testimonium persolutae tibi pecuniae a praefatis numulariis petas illudque mihi transmittas. </ab>
-         <ab resp="#editor" xml:id="seg2">Sarcinam interim omnem <anchor xml:id="n3"/>librorum<anchor xml:id="n3e"/> Ulma, non sine summa omnium nostrum admiratione, tripudio, et tui erga nos studii depraedicatione, 10. huius accepimus. Sumptus vectigalium in Danubio Ulma ad nos iam persolvimus. Tu nobis scribes, si quid amplius opus fuerit. Interim quid tibi reddemus pro tanta diligentia, amore, studio, cura et indefessa laboriosissimaque<app><rdg wit="#(?)"><add place="after">s</add></rdg></app> procuratione? <pb n="1v"/> Totum nostrum Mellicium tuum est. Rogo ex sincerissimo corde, amice optime, pete a nobis, quodcunque placuerit, imo iube, omnia actutum in tua potestate erunt. Utinam monasterii nostri <anchor xml:id="n4"/>aedificatio<anchor xml:id="n4e"/> nova nunquam fuisset coepta, iam noster totus esses. De reverendissimo meo certus esto, quod nulla in re tibi aut tuis suavissimis sodalibus unquam defuturus sit. </ab>
+         <opener>
+            <pb n="1r"/> Plurimum reverendo religiosissimo ac clarissimo domino Mauritio Miller pater Bernardus Mellicensis salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">Si <anchor xml:id="n1"/>ambas meas ultimas epistolas<anchor xml:id="n1e"/> minimo temporis intervallo ad te datas recte accepisti, utique abunde, amice suavissime, intellexisti, quam ego sollicitus sim, ut debitis tibi a nobis pecuniis quam primum potiaris. Verba haec vera fuisse amplius nunc cognosces. Igitur scito nos 12. Julii petitam schedulam numulariam 194 fl. misisse Schaffhusium ad dominos Henricum et Christophorum <choice>
+               <sic>Zeigler</sic>
+               <corr>Ziegler</corr>
+            </choice> fratres germanos, non incelebres ibidem numularios. Hos iussimus praedictam summam enumerare seu solvere admodum reverendo domino patri Joachimo Letter, priori <choice>
+               <sic>Rhingo</sic>
+               <corr>Rhinaugiensi</corr>
+            </choice> meritissimo. Admodum autem reverendum dominum priorem singulari epistola <sic>scripsimus</sic>
+            <note place="foot" xml:id="d4618e40707">Entweder war hier zunächst ein anderes Prädikat vorgesehen, das den Akkusativ regiert (<hi rend="italic">monuimus</hi> o. Ä.), oder am Beginn des Satzes wurde die Präposition <hi rend="italic">Ad</hi>, wohl durch Vermengung mit <hi rend="italic">Admodum</hi>, versehentlich ausgelassen.</note>, ut hanc pecuniam tibi, amice et patrone profecto sincerissime, traderet. Quae omnia ideo ita ordinavimus, ne <anchor xml:id="n2"/>tui nominis invidia<anchor xml:id="n2e"/>, ut sunt haec tempora, ullum his rebus periculum crearet. Quare nullus dubito, quin postulatam iure pecuniam iam rite acceperis aut saltem his diebus accepturus sis. Quod te rogatum velim, est hoc, ut videlicet testimonium persolutae tibi pecuniae a praefatis numulariis petas illudque mihi transmittas. </ab>
+         <ab resp="#editor" xml:id="seg2">Sarcinam interim omnem <anchor xml:id="n3"/>librorum<anchor xml:id="n3e"/> Ulma, non sine summa omnium nostrum admiratione, tripudio, et tui erga nos studii depraedicatione, 10. huius accepimus. Sumptus vectigalium in Danubio Ulma ad nos iam persolvimus. Tu nobis scribes, si quid amplius opus fuerit. Interim quid tibi reddemus pro tanta diligentia, amore, studio, cura et indefessa laboriosissimaque<app>
+               <rdg wit="#(?)">
+                  <add place="after">s</add>
+               </rdg>
+            </app> procuratione? <pb n="1v"/> Totum nostrum Mellicium tuum est. Rogo ex sincerissimo corde, amice optime, pete a nobis, quodcunque placuerit, imo iube, omnia actutum in tua potestate erunt. Utinam monasterii nostri <anchor xml:id="n4"/>aedificatio<anchor xml:id="n4e"/> nova nunquam fuisset coepta, iam noster totus esses. De reverendissimo meo certus esto, quod nulla in re tibi aut tuis suavissimis sodalibus unquam defuturus sit. </ab>
          <ab resp="#editor" xml:id="seg3">Heu quam ego nunc libenter te Mellicium invitarem, nisi et nos prope necessitas cogeret Mellicio discedere! Vis causam nosse? <anchor xml:id="n5"/>Pestilentia saeva<anchor xml:id="n5e"/> in Austria, Viennae maxime, grassatur. Monasterium meum, ex quo <anchor xml:id="n6"/>unus in parochia expositus iam mortem oppetiit<anchor xml:id="n6e"/> hac lue infectus, adhuc immune summa Dei gratia est, sed quamdiu? Deus scit, in cuius manu omnia. Sic nempe ambo nos premimur, tu immeritus exul agis (si tamen tantus vir exul esse potest, utpote dignus, qui omnium in oculis et pectoribus habitet), et ego supremum mortis ictum fors hoc anno sentiam. Sed quidquid Deus voluerit, hoc placet. <anchor xml:id="n7"/>Sicut fuerit voluntas in caelo, sic fiat<anchor xml:id="n7e"/>! </ab>
          <ab resp="#editor" xml:id="seg4">A patre Anselmo quin proxime quaedam utique bona nova de vestris rebus sis accepturus, non dubito. Nam monui hominem in conspectu quasi monarchae nostri viventem, tametsi et <anchor xml:id="n8"/>hunc proxime discessurum Vienna<anchor xml:id="n8e"/> nunciatum sit. Iam vale aeternum iterumque vale, amicissime Mauriti, et sine me esse totum tuum vivum et <sic>mortum</sic> .</ab>
          <closer>Mellicii 16. Julii MDCCXIII.</closer>

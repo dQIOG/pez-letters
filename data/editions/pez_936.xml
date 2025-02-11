@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="936" xml:id="pez-0936">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Leopold Wydemann an Hieronymus Pez. 1718-05-11. Gaming.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">936</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -81,81 +94,83 @@
                <ptr type="mentionedIn" target="letter:973"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e46">Aachen ; Synoden 816 und 817</term>
-            <term ref="index:d14380e898">Albrecht „der Beherzte“</term>
-            <term ref="index:d14380e1592">Andreas de Escobar ; Gubernaculum conciliorum</term>
-            <term ref="index:d14380e1600">Andreas de Escobar ; Gubernaculum conciliorum ; Ms. Gaming</term>
-            <term ref="index:d14380e4584">Benedikt von Nursia, hl</term>
-            <term ref="index:d14380e4621">Benedikt von Nursia, hl ; Benediktsregel</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e5403">Bernhard von Waging</term>
-            <term ref="index:d14380e5426">Bernhard von Waging ; Laudatorium doctae ignorantiae</term>
-            <term ref="index:d14380e8349">Cluny</term>
-            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
-            <term ref="index:d14380e12691">Franko von Meschede</term>
-            <term ref="index:d14380e12703">Franko von Meschede ; Aurea fabrica. Ms. Gaming</term>
-            <term ref="index:d14380e13921">Gaming ; Bibliothek</term>
-            <term ref="index:d14380e13961">Gaming ; Bibliothek ; Andreas de Escobar, Gubernaculum conciliorum. Ms</term>
-            <term ref="index:d14380e14029">Gaming ; Bibliothek ; Franko von Meschede, Aurea fabrica. Ms</term>
-            <term ref="index:d14380e14071">Gaming ; Bibliothek ; Hans von Mergenthal, Bericht über die Reise Herzog Albrechts des
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e46">Aachen ; Synoden 816 und 817</term>
+               <term ref="index:d14380e898">Albrecht „der Beherzte“</term>
+               <term ref="index:d14380e1592">Andreas de Escobar ; Gubernaculum conciliorum</term>
+               <term ref="index:d14380e1600">Andreas de Escobar ; Gubernaculum conciliorum ; Ms. Gaming</term>
+               <term ref="index:d14380e4584">Benedikt von Nursia, hl</term>
+               <term ref="index:d14380e4621">Benedikt von Nursia, hl ; Benediktsregel</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e5403">Bernhard von Waging</term>
+               <term ref="index:d14380e5426">Bernhard von Waging ; Laudatorium doctae ignorantiae</term>
+               <term ref="index:d14380e8349">Cluny</term>
+               <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+               <term ref="index:d14380e12691">Franko von Meschede</term>
+               <term ref="index:d14380e12703">Franko von Meschede ; Aurea fabrica. Ms. Gaming</term>
+               <term ref="index:d14380e13921">Gaming ; Bibliothek</term>
+               <term ref="index:d14380e13961">Gaming ; Bibliothek ; Andreas de Escobar, Gubernaculum conciliorum. Ms</term>
+               <term ref="index:d14380e14029">Gaming ; Bibliothek ; Franko von Meschede, Aurea fabrica. Ms</term>
+               <term ref="index:d14380e14071">Gaming ; Bibliothek ; Hans von Mergenthal, Bericht über die Reise Herzog Albrechts des
          Beherzten ins Heilige Land, Kurzfassung. Ms</term>
-            <term ref="index:d14380e14091">Gaming ; Bibliothek ; Honorius Augustodunensis, De esu volatilium. Ms</term>
-            <term ref="index:d14380e14618">Gelasius I., hl</term>
-            <term ref="index:d14380e14627">Gelasius II</term>
-            <term ref="index:d14380e16018">Göttweig</term>
-            <term ref="index:d14380e16072">Göttweig ; Bibliothek ; Honorius Augustodunensis, De esu volatilium. Ms</term>
-            <term ref="index:d14380e17161">Hans von Mergenthal ; Bericht über die Reise Herzog Albrechts des Beherzten ins Heilige
+               <term ref="index:d14380e14091">Gaming ; Bibliothek ; Honorius Augustodunensis, De esu volatilium. Ms</term>
+               <term ref="index:d14380e14618">Gelasius I., hl</term>
+               <term ref="index:d14380e14627">Gelasius II</term>
+               <term ref="index:d14380e16018">Göttweig</term>
+               <term ref="index:d14380e16072">Göttweig ; Bibliothek ; Honorius Augustodunensis, De esu volatilium. Ms</term>
+               <term ref="index:d14380e17161">Hans von Mergenthal ; Bericht über die Reise Herzog Albrechts des Beherzten ins Heilige
          Land ; Kurzfassung eines unbekannten Bearbeiters. Ms. Gaming</term>
-            <term ref="index:d14380e17171">Hans von Mergenthal ; Bericht über die Reise Herzog Albrechts des Beherzten ins Heilige
+               <term ref="index:d14380e17171">Hans von Mergenthal ; Bericht über die Reise Herzog Albrechts des Beherzten ins Heilige
          Land ; Kurzfassung eines unbekannten Bearbeiters. Ms. Gaming ; Abschrift von Leopold
          Wydemann. Ms</term>
-            <term ref="index:d14380e18639">Honorius Augustodunensis ; De esu volatilium</term>
-            <term ref="index:d14380e18655">Honorius Augustodunensis ; De esu volatilium ; Ms. Gaming</term>
-            <term ref="index:d14380e18675">Honorius Augustodunensis ; De esu volatilium ; Ms. Gaming ; Abschrift von Leopold
+               <term ref="index:d14380e18639">Honorius Augustodunensis ; De esu volatilium</term>
+               <term ref="index:d14380e18655">Honorius Augustodunensis ; De esu volatilium ; Ms. Gaming</term>
+               <term ref="index:d14380e18675">Honorius Augustodunensis ; De esu volatilium ; Ms. Gaming ; Abschrift von Leopold
          Wydemann</term>
-            <term ref="index:d14380e18682">Honorius Augustodunensis ; De esu volatilium ; Ms. Göttweig</term>
-            <term ref="index:d14380e18691">Honorius Augustodunensis ; De esu volatilium ; Ms. Melk</term>
-            <term ref="index:d14380e19328">Hymnen, Sequenzen, liturgische und andere religiöse Dichtungen</term>
-            <term ref="index:d14380e20252">Jesus Christus</term>
-            <term ref="index:d14380e20380">Johannes XXII</term>
-            <term ref="index:d14380e21396">Kartäuser</term>
-            <term ref="index:d14380e23178">Kremsmünster</term>
-            <term ref="index:d14380e25292">Ludwig I. „der Fromme“</term>
-            <term ref="index:d14380e26169">Maria, hl</term>
-            <term ref="index:d14380e26425">Marquard Sprenger ; Elucidatorium mysticae theologiae</term>
-            <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e28279">Melk ; Bibliothek</term>
-            <term ref="index:d14380e28420">Melk ; Bibliothek ; Honorius Augustodunensis, De esu volatilium. Ms</term>
-            <term ref="index:d14380e28493">Melk ; Bibliothek ; Vinzenz von Aggsbach, Briefe. Ms</term>
-            <term ref="index:d14380e28760">Meschede</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e32614">Passau ; Missalien des 14. Jhs</term>
-            <term ref="index:d14380e33148">Pez, Bernhard</term>
-            <term ref="index:d14380e34400">Pez, Bernhard ; Bibliotheks- und Verhandlungsreise nach Wien 1718</term>
-            <term ref="index:d14380e34088">Pez, Bernhard ; Bd. 6 ; -Darin: Vinzenz von Aggsbach, Epistolae</term>
-            <term ref="index:d14380e37795">Rom, Römer ; Päpstliche Kurie, Papsttum ; Corpus iuris canonici, Kanonistik</term>
-            <term ref="index:d14380e38504">Sachsen</term>
-            <term ref="index:d14380e39962">Schramb, Anselm</term>
-            <term ref="index:d14380e40004">Schramb, Anselm ; Chronicon Mellicense seu Annales monasterii Mellicensis utrumque
+               <term ref="index:d14380e18682">Honorius Augustodunensis ; De esu volatilium ; Ms. Göttweig</term>
+               <term ref="index:d14380e18691">Honorius Augustodunensis ; De esu volatilium ; Ms. Melk</term>
+               <term ref="index:d14380e19328">Hymnen, Sequenzen, liturgische und andere religiöse Dichtungen</term>
+               <term ref="index:d14380e20252">Jesus Christus</term>
+               <term ref="index:d14380e20380">Johannes XXII</term>
+               <term ref="index:d14380e21396">Kartäuser</term>
+               <term ref="index:d14380e23178">Kremsmünster</term>
+               <term ref="index:d14380e25292">Ludwig I. „der Fromme“</term>
+               <term ref="index:d14380e26169">Maria, hl</term>
+               <term ref="index:d14380e26425">Marquard Sprenger ; Elucidatorium mysticae theologiae</term>
+               <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e28279">Melk ; Bibliothek</term>
+               <term ref="index:d14380e28420">Melk ; Bibliothek ; Honorius Augustodunensis, De esu volatilium. Ms</term>
+               <term ref="index:d14380e28493">Melk ; Bibliothek ; Vinzenz von Aggsbach, Briefe. Ms</term>
+               <term ref="index:d14380e28760">Meschede</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e32614">Passau ; Missalien des 14. Jhs</term>
+               <term ref="index:d14380e33148">Pez, Bernhard</term>
+               <term ref="index:d14380e34400">Pez, Bernhard ; Bibliotheks- und Verhandlungsreise nach Wien 1718</term>
+               <term ref="index:d14380e34088">Pez, Bernhard ; Bd. 6 ; -Darin: Vinzenz von Aggsbach, Epistolae</term>
+               <term ref="index:d14380e37795">Rom, Römer ; Päpstliche Kurie, Papsttum ; Corpus iuris canonici, Kanonistik</term>
+               <term ref="index:d14380e38504">Sachsen</term>
+               <term ref="index:d14380e39962">Schramb, Anselm</term>
+               <term ref="index:d14380e40004">Schramb, Anselm ; Chronicon Mellicense seu Annales monasterii Mellicensis utrumque
          statum, imprimis Austriae cum successione principum, regimine, praerogativis, elogiis et
          rebus memorabilibus a prima mundi aetate usque ad novissimam, anni nimirum saecularis
          septingentesimi supra millesimum, deinde exempti monasterii Mellicensis ordinis sancti
          Benedicti Inferioris Austriae ex vetustissimis monumentis ibidem praecipue manuscriptis
          codicibus bibliothecae complectens. Wien 1702</term>
-            <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
-            <term ref="index:d14380e40095">Schriften, paläographische Betreffe, Drucktypen ; Abkürzungen</term>
-            <term ref="index:d14380e42111">Tegernsee</term>
-            <term ref="index:d14380e44514">Vienne ; Konzil 1119</term>
-            <term ref="index:d14380e44591">Vinzenz von Aggsbach</term>
-            <term ref="index:d14380e44603">Vinzenz von Aggsbach ; Briefe. Ms. Melk</term>
-            <term ref="index:d14380e44617">Vinzenz von Aggsbach ; Briefe. Ms. Melk ; Abschrift von Leopold Wydemann. Ms</term>
-            <term ref="index:d14380e44628">Vinzenz von Aggsbach ; *De mystica theologia</term>
-            <term ref="index:d14380e44633">Vinzenz von Aggsbach ; Impugnatorium Laudatorii doctae ignorantiae</term>
-            <term ref="index:d14380e45571">Wien</term>
-            <term ref="index:d14380e46776">Wydemann, Leopold ; Selbstwahrnehmung als Mönch</term></keywords></textClass>
+               <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
+               <term ref="index:d14380e40095">Schriften, paläographische Betreffe, Drucktypen ; Abkürzungen</term>
+               <term ref="index:d14380e42111">Tegernsee</term>
+               <term ref="index:d14380e44514">Vienne ; Konzil 1119</term>
+               <term ref="index:d14380e44591">Vinzenz von Aggsbach</term>
+               <term ref="index:d14380e44603">Vinzenz von Aggsbach ; Briefe. Ms. Melk</term>
+               <term ref="index:d14380e44617">Vinzenz von Aggsbach ; Briefe. Ms. Melk ; Abschrift von Leopold Wydemann. Ms</term>
+               <term ref="index:d14380e44628">Vinzenz von Aggsbach ; *De mystica theologia</term>
+               <term ref="index:d14380e44633">Vinzenz von Aggsbach ; Impugnatorium Laudatorii doctae ignorantiae</term>
+               <term ref="index:d14380e45571">Wien</term>
+               <term ref="index:d14380e46776">Wydemann, Leopold ; Selbstwahrnehmung als Mönch</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">LW sendet einige Materialien, welche er BP versprochen hat <ref type="letter" target="letter:929">929</ref>, wegen dessen Abwesenheit nun an HP: den Dialog „<rs ref="index:d14380e18639">De esu
                      volatilium</rs>“, den <rs ref="index:d14380e17171">Bericht (nach Hans von Mergenthal)</rs> über die
@@ -234,7 +249,7 @@
                „scolaster“ versteht LW einen Schulleiter oder Lehrer in einem Kollegium von Kanonikern, vielleicht auch
                von Mönchen. Ob jener Ort „<rs ref="index:d14380e28760">Meschede</rs>“ eine Kirche oder ein Kloster ist,
                weiß er nicht und ersucht um Informationen dazu.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -242,53 +257,58 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>eius absentiam</mentioned>
             <p>Am 26. April war BP mit einem Mitbruder nach Wien
-                  aufgebrochen, von wo sie am 17. Mai nach Melk zurückgelangten: vgl. <ref type="letter" target="letter:938">938</ref> <ref target="letter:938#seg4">4</ref>. Zu dieser Reise vgl. Einleitung, Abschnitt
+                  aufgebrochen, von wo sie am 17. Mai nach Melk zurückgelangten: vgl. <ref type="letter" target="letter:938">938</ref>
+               <ref target="letter:938#seg4">4</ref>. Zu dieser Reise vgl. Einleitung, Abschnitt
                   I.1.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned> De esu volatilium</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:873">873</ref> <ref target="letter:873#seg4">4</ref>.
+            <p> Vgl. <ref type="letter" target="letter:873">873</ref>
+               <ref target="letter:873#seg4">4</ref>.
                </p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
             <mentioned>Alberti ducis ... Passagium</mentioned>
             <p>Vgl. <ref type="letter" target="letter:873">873</ref>
-                  <ref target="letter:873#seg3">3</ref>. </p>
+               <ref target="letter:873#seg3">3</ref>. </p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
             <mentioned>nonnullas Vincentii ... epistolas</mentioned>
             <p> Vgl. <ref type="letter" target="letter:904">904</ref>
-                  <ref target="letter:904#seg3">3</ref>. Von den Abschriften der drei hier genannten Texte scheint keine
+               <ref target="letter:904#seg3">3</ref>. Von den Abschriften der drei hier genannten Texte scheint keine
                   erhalten zu sein. </p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg1">
             <mentioned>sequimur ... legislator</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:16432">Garrigues, De esu</rs> 119.</p>
+               <rs type="bibl" ref="bibl:16432">Garrigues, De esu</rs> 119.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg1">
             <mentioned> in nos ipsos</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:16432">Garrigues, De esu</rs> 130. </p>
+               <rs type="bibl" ref="bibl:16432">Garrigues, De esu</rs> 130. </p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg1">
             <mentioned>conventum ... Ludovico</mentioned>
             <p> Vgl. <ref type="letter" target="letter:873">873</ref>
-                  <ref target="letter:873#seg4">4</ref>.</p>
+               <ref target="letter:873#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg1">
             <mentioned> sicut relatione</mentioned>
-            <p><rs type="bibl" ref="bibl:16432">Garrigues, De
+            <p>
+               <rs type="bibl" ref="bibl:16432">Garrigues, De
                      esu</rs> 113.</p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg1">
             <mentioned> nimium ... tempus</mentioned>
-            <p><rs type="bibl" ref="bibl:16432">Garrigues, De
+            <p>
+               <rs type="bibl" ref="bibl:16432">Garrigues, De
                      esu</rs> 126.</p>
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg1">
             <mentioned> Gelasius ... citaretur</mentioned>
-            <p><rs type="bibl" ref="bibl:16432">Garrigues,
+            <p>
+               <rs type="bibl" ref="bibl:16432">Garrigues,
                      De esu</rs> 115.</p>
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg1">
@@ -316,7 +336,8 @@
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg1">
             <mentioned> Gottwicensi</mentioned>
-            <p> Heute StiB Göttweig, Cod. 99; vgl. <ref type="letter" target="letter:873">873</ref> <ref target="letter:873#seg4">4</ref>. Außer den drei hier diskutierten Codices, die den Dialog
+            <p> Heute StiB Göttweig, Cod. 99; vgl. <ref type="letter" target="letter:873">873</ref>
+               <ref target="letter:873#seg4">4</ref>. Außer den drei hier diskutierten Codices, die den Dialog
                   überliefern, wurde bis heute nur ein weiterer, gleichfalls mit österreichischer
                   Provenienz, aufgefunden: ÖNB, Cod. 1659, 11v–24r. </p>
          </note>
@@ -378,14 +399,15 @@
          <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg6">
             <mentioned>extent propria ... Pataviensia</mentioned>
             <p>Vgl. <ref type="letter" target="letter:944">944</ref>
-                  <ref target="letter:944#seg6">6</ref>.</p>
+               <ref target="letter:944#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n23'), left('n23e'))" n="23" anchored="false" corresp="#seg7">
             <mentioned>Franco scolaster</mentioned>
             <p> Wie sich aus späteren Briefen LWs ersehen lässt,
                   lag ihm in einer Gaminger Handschrift eine Überlieferung des heute unter der
                   Bezeichnung „Aurea fabrica“ bekannten Mariengedichts des Franko von Meschede unter
-                  dem Titel „Florum pratum“ vor. LW lieferte Informationen dazu in <ref type="letter" target="letter:948">948</ref> <ref target="letter:948#seg13">13</ref> sowie in einem Brief vom 10. November 1720:
+                  dem Titel „Florum pratum“ vor. LW lieferte Informationen dazu in <ref type="letter" target="letter:948">948</ref>
+               <ref target="letter:948#seg13">13</ref> sowie in einem Brief vom 10. November 1720:
                   III, 88r–v. Mit einem Brief vom 12. Juli 1721 übermittelte er eine vollständige
                   Abschrift, die zur Weitergabe an Johann Buchels gedacht war: III, 98r–v. Sie
                   verblieb jedoch offenbar in Melk und ist heute erhalten in StiB Melk, Cod. 145,
@@ -409,11 +431,13 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo et doctissimo patri Hieronymo Pez frater Leopoldus Wydeman salutem plurimam dicit.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo et doctissimo patri Hieronymo Pez frater Leopoldus Wydeman salutem plurimam dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Pauca, dilecte mi pater, quae fratri tuo promiseram, ob <anchor xml:id="n1"/>eius absentiam<anchor xml:id="n1e"/> ad te dirigo: dialogum videlicet<anchor xml:id="n2"/> De esu volatilium<anchor xml:id="n2e"/>, <anchor xml:id="n3"/>Alberti ducis Saxoniae Passagium<anchor xml:id="n3e"/> ad Terram Sanctam ac <anchor xml:id="n4"/>nonnullas Vincentii Agsbacensis epistolas<anchor xml:id="n4e"/>. Dialogi author absque dubio fuit Benedictinus, uti passim ex illo colligi datur, praesertim ex pagina 14 per illa verba: <anchor xml:id="n5"/>sequimur Benedictum patrem, et ibidem per illa: ait enim noster legislator<anchor xml:id="n5e"/>. Vixisse quoque in coenobio, in quo usus saginae tunc practicabatur, ista in epilogio operis:<anchor xml:id="n6"/> in nos ipsos<anchor xml:id="n6e"/> iudices fuimus etc., subindicant. Difficultas maior remanet de saeculo, quo author vixit et scripsit. In qua illud certum est primo, quod scripserit post <anchor xml:id="n7"/>conventum sub Ludovico<anchor xml:id="n7e"/> Pio imperatore, id est saeculo IX., a quibusdam abbatibus inconsulto pontifice (ut author pagina 11 refert) celebratum. Certum secundo scripsisse annis saltem pluribus, si non aliquot saeculis post praedictum conventum, uti aperte colligitur ex pagina 9 per illa verba:<anchor xml:id="n8"/> sicut relatione<anchor xml:id="n8e"/> multorum didicimus, et adhuc apertius ex pagina 18, ubi ista lego:<anchor xml:id="n9"/> nimium, inquiunt, effluxit tempus<anchor xml:id="n9e"/> etc., quae ibi sequuntur. Scriptum etiam non fuisse dialogum ante saeculum XII., si constaret, quisnam<anchor xml:id="n10"/> Gelasius papa pagina 11 citaretur<anchor xml:id="n10e"/>, certum foret tertio. Duos huius nominis invenimus pontifices. Primus vixit et obiit saeculo V., nondum edita sancti Benedicti Regula; quam proinde confirmare, ut in dialogo narratur, non potuit. Alter vixit et obiit<anchor xml:id="n11"/> Cluniaci saeculo XII. post concilium Viennae habitum<anchor xml:id="n11e"/>, in quo an sancti Benedicti Regulam<anchor xml:id="n12"/> canonizatis scripturis annumeraverit<anchor xml:id="n12e"/>, patres Benedictini non ignorabunt. Etiam ante saeculum XII. dialogus vix edi potuit, si, uti arbitror, author illius Benedictinus fuerit Austriacus. Omnia enim in Austria Benedictinorum monasteria excepto Cremiphanensi saeculo XI. ad finem properante <pb n="1v"/> traduntur erecta. Authorem vero fuisse Benedictinum in Austria, si non plene, saltem semiplene evincere videtur, quod dialogus iste nullibi in extra-Austriacis provinciis reperiatur, ut tuus ad me scripsit germanus frater, in Austria vero tribus saltem vicibus et in<anchor xml:id="n13"/> Gottwicensi<anchor xml:id="n13e"/> quidem eleganter in membrana scriptus. Accedit, quod in collectoribus scriptorum eiusdem aut rara aut nulla fiat mentio. </ab>
          <ab resp="#editor" xml:id="seg2">Ego hac ratione permotus et ob certas quasdam coniecturas in manuscripto codice Gemnicensi etiam eleganter, licet in charta, scripto contentas arbitror hunc dialogum a quodam Gottwicensi circa annum 1320 esse editum, cuius author edito iam opere post annum 1320 sit factus Cartusianus. Coniecturas meas tres aut quatuor me moventes aperiam, postquam fratrem tuum Vienna rediisse cognovero incolumem et sanum. Unum est, quod me angit et quo coniecturae meae ipso facto corruent, videlicet si verum esset codicem Gottwicensem esse exaratum saeculo XIII., quo in Austria nondum erant Cartusiani. Illud tamen etiam hic me consolatur, quod frater tuus non absolute scripserit exaratum esse saeculo XIII., sed addiderit circiter. Nec ego hoc abnuo, dum circa annum 1320 scriptum esse censeo. Nec dubito, quin etiam integro saeculo in manuscriptis codicibus, quibus annus deest, aberrare quis possit a scopo. Unum oblivisci non debui, esse scilicet pauca a me ob abbrevationes obscuriores hinc inde neglecta, quae ex Mellicensi manuscripto codice suppleri poterunt. </ab>
          <ab resp="#editor" xml:id="seg3">Quid, vir optime, cum Alberti Passagio vulgariter et satis simpliciter conscripto agendum sit, vestrae relinquo eruditioni, in quorum gratiam illud descripsi literis, uti cernitis, Latinis. Nec ignorabis Albertum hunc peracto passagio etiam <anchor xml:id="n14"/>Mellicii fuisse<anchor xml:id="n14e"/>, ut in Chronico<anchor xml:id="n15"/> refert vester reverendus pater Anselmus Schramb<anchor xml:id="n15e"/>. </ab>
-         <ab resp="#editor" xml:id="seg4">Quoad Vincentii Agsbacensis epistolas non ambigo, <anchor xml:id="n16"/>quin plurimae in codice mihi mutuato desint<anchor xml:id="n16e"/>. Ante annum enim 1453 nulla habetur et hoc anno non nisi unica, quam descripsi. Anno 1454 iterum nulla adest et pro anno 1455 unica. <anchor xml:id="n17"/>Impugnatorium<anchor xml:id="n17e"/> quoque contra Laudatorium deest et plura alia, quae pro pleniori intellectu scitu forent vel necessaria vel utilia. <pb n="2r"/> Si bonus ille pater plura non scripsit quam ista et magis utilia (uti attento senio et eius capacitate facere potuit), vix inter scriptores merebitur nomen et exiguam apud Cartusianos laudem. Horum etenim neglexit consuetam in scribendo modestiam; et facilius est in aliis reperire, quod quis impugnet, quam sua arte scribere, quod alter impugnare nequeat. Scripsisse dicitur tractatum<anchor xml:id="n18"/> De mystica theologia<anchor xml:id="n18e"/> sub hoc initio: Qui me elucidant etc., sed quia de eadem materia et sub eodem initio<anchor xml:id="n19"/> tractatum edidit Marquardus<anchor xml:id="n19e"/>, Vincentii adversarius, vix erit aliquid in illo praeter ea, quae<anchor xml:id="n20"/> contra Bernardum<anchor xml:id="n20e"/><anchor xml:id="n21"/> in Tegernsee priorem breviter scripsit, suae nimium inhaerens opinioni. Quod vel ex illo patet, cum vix prima Decembris in gratiam cum praedicto domino priore rediisset, iterum in eodem mense calamum contra illum arripuit<anchor xml:id="n21e"/>. Codicem mihi concessum ideo pro nunc non remitto, quia restant quaedam ex eo adhuc describenda. Haec ubi misero, de eis agetis, quod libuerit: ita tamen, ut me illa descripsisse omni modo occultetis. </ab>
+         <ab resp="#editor" xml:id="seg4">Quoad Vincentii Agsbacensis epistolas non ambigo, <anchor xml:id="n16"/>quin plurimae in codice mihi mutuato desint<anchor xml:id="n16e"/>. Ante annum enim 1453 nulla habetur et hoc anno non nisi unica, quam descripsi. Anno 1454 iterum nulla adest et pro anno 1455 unica. <anchor xml:id="n17"/>Impugnatorium<anchor xml:id="n17e"/> quoque contra Laudatorium deest et plura alia, quae pro pleniori intellectu scitu forent vel necessaria vel utilia. <pb n="2r"/> Si bonus ille pater plura non scripsit quam ista et magis utilia (uti attento senio et eius capacitate facere potuit), vix inter scriptores merebitur nomen et exiguam apud Cartusianos laudem. Horum etenim neglexit consuetam in scribendo modestiam; et facilius est in aliis reperire, quod quis impugnet, quam sua arte scribere, quod alter impugnare nequeat. Scripsisse dicitur tractatum<anchor xml:id="n18"/> De mystica theologia<anchor xml:id="n18e"/> sub hoc initio: Qui me elucidant etc., sed quia de eadem materia et sub eodem initio<anchor xml:id="n19"/> tractatum edidit Marquardus<anchor xml:id="n19e"/>, Vincentii adversarius, vix erit aliquid in illo praeter ea, quae<anchor xml:id="n20"/> contra Bernardum<anchor xml:id="n20e"/>
+            <anchor xml:id="n21"/> in Tegernsee priorem breviter scripsit, suae nimium inhaerens opinioni. Quod vel ex illo patet, cum vix prima Decembris in gratiam cum praedicto domino priore rediisset, iterum in eodem mense calamum contra illum arripuit<anchor xml:id="n21e"/>. Codicem mihi concessum ideo pro nunc non remitto, quia restant quaedam ex eo adhuc describenda. Haec ubi misero, de eis agetis, quod libuerit: ita tamen, ut me illa descripsisse omni modo occultetis. </ab>
          <ab resp="#editor" xml:id="seg5">Andreae Maioricensis Gubernaculum conciliorum in gratiam fratris tui describam, sed vix ob alia occurrentia ante finem anni currentis opus prolixum et in eo citationes in iure canonico exquirendas complere potero. Indigerem ego, suavissime pater, in multis quoad manuscriptos codices instructione; sed dubiorum copia me reddit inopem, ut, unde incipiendum sit, ignorem. Nec mirum, cum praeter domesticam nullam lustraverim bibliothecam; quarum tamen vos plurimas vidistis et ex hac facile colligere potuistis, quod in altera defuit. Ignorantiam meam utique suppleret, si vel abiectas quasdam aut indigestas a vobis schedulas revidere liceret. Nolo tamen in his vobis creare molestiam, exspectaturus patienter, donec videre meruero, quod opto. </ab>
          <ab resp="#editor" xml:id="seg6">Illud pro beneficio reputabo, si ad quaestionem facillime resolvendam mihi responderis. Quaero igitur ex certa causa, an in bibliotheca Mellicensi vel etiam alia <anchor xml:id="n22"/>extent propria sive missalia Pataviensia<anchor xml:id="n22e"/>, duo saltem, de quibus certum sit, quod horum unum sit ante annum 1350 et alterum post annum 1350, non tamen ultra annum 1400 conscriptum. Utilis enim mihi foret utriusque revisio. <pb n="2v"/> Optarem etiam informari, an in bibliothecis <add place="above">Austriacis</add> reperiantur manuscripti codices saeculorum XIII. et XIV., qui in se contineant coniunctim devotionales de variis sanctis, verbi gratia de Christo, beata Maria virgine, apostolis etc. rhythmos; itemque, qui, <add place="above">si</add> non coniunctim, saltem sparsim contineant de sanctis rhythmos non breves sed fusiores, verbi gratia in magnitudine unius aut duarum phylirarum aut ad minus semiphylirae. Spero et confido me per haec duo petita molestum non fore nec vos multum in operibus vestris propterea impediendos, utpote qui similia iam pridem collegistis. Tandem, pater charissime, fratrem tuum, ubi Vienna redierit, ex me humanissime saluta et admone, ut ita studiis incumbat, ut non laedat corporis sanitatem. Uterque bene et diu valeat.</ab>
          <closer>Gemnici die 11. Maii 1718.</closer>

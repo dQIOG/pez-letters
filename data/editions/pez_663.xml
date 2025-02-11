@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="663" xml:id="pez-0663">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Karl Meichelbeck an Bernhard Pez. 1716-10-04. Benediktbeuern.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">663</idno>
          </publicationStmt>
          <seriesStmt>
@@ -34,7 +46,6 @@
             <relatedItem type="otherEdition">
                <bibl>Siegmund, Meichelbecks Briefe 80/1–2 162–164.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Der Brief ist im Diarium KMs nicht vermerkt.
             </note>
@@ -56,10 +67,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -85,12 +97,20 @@
          </correspDesc>
          <abstract>
             <p corresp="#seg1">KM hatte fürchten müssen, BP durch seine wiederholten, dabei fast inhaltsleeren Briefe (<ref type="letter" target="letter:565">565</ref>, <ref type="letter" target="letter:644">644</ref>) beleidigt zu haben; doch ist er erleichtert, dass dies nicht so ist. Auch sein gegenwärtiger Brief wird aber wohl enttäuschen, denn obwohl er die verfügbaren Informationen zu den Schriftstellern <rs ref="index:d14380e4706">Benediktbeuerns</rs> zusammengestellt hat, sind diese zweifellos weit spärlicher, als BP erwartet hätte. KM vergleicht sich mit jener armen <rs type="cit" ref="citIndex:ix2_d763e1549">Witwe aus den Evangelien, die zwei Kupfermünzen und damit alles gab</rs>, was sie besaß. Auch gibt es einige Codices von <rs ref="index:d14380e4706">Benediktbeurer</rs> Autoren, über die er aus gewichtigen Gründen nicht berichten darf; schlechte Erfahrungen haben gelehrt, wie gefährlich in <rs ref="index:d14380e4170">Bayern</rs> die Veröffentlichung mancher Quellen sein kann. Allerdings hofft KM, dies BP persönlich auseinandersetzen zu können, wenn dieser eine Bibliotheksreise nach <rs ref="index:d14380e4170">Bayern</rs> unternimmt.</p>
-            <p corresp="#seg2"><rs ref="index:d14380e42580">Christian Tesenbacher</rs> rechnet KM deshalb zu den Benediktbeurern, weil ihn der dortige Professe <rs ref="index:d14380e46197">Sigismund Wiest</rs> als solchen bezeichnete, als er <rs ref="index:d14380e42603">Tesenbachers Regelkommentar</rs> im Jahr 1495 <rs ref="index:d14380e42607">abschrieb</rs>. Eine Professurkunde <rs ref="index:d14380e42580">Tesenbachers</rs> liegt KM allerdings nicht vor.</p>
-            <p corresp="#seg3">KM hat noch einige <rs ref="index:d14380e21611"><rs ref="index:d14380e21611"><rs ref="index:d14380e29569">Gedichte auf <rs ref="index:d14380e43257">Florian Treffler</rs> beigefügt</rs></rs></rs>, die von Münchner Gelehrten verfasst wurden (<rs ref="index:d14380e21607">Jodok Kastner, „Epicedion“</rs>; <rs ref="index:d14380e29552">Wolfgang Montivillanus</rs>, „<rs ref="index:d14380e29558">Epitaphium</rs>“ und „<rs ref="index:d14380e29569">In Trefleri Orationes Carmen</rs>“). Über die Werke anderer benediktinischer Autoren will er später berichten, falls er und <rs ref="index:d10854e35200">Gregor Zödl</rs> unter den <rs ref="index:d14380e4800">Benediktbeurer Büchern</rs> auf etwas stoßen, das den <rs ref="index:d14380e28088">Melkern</rs> unbekannt sein könnte. KM hofft jedoch, BP noch vor Erscheinen der „<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“ in <rs ref="index:d14380e4706">Benediktbeuern</rs> begrüßen zu können.</p>
+            <p corresp="#seg2">
+               <rs ref="index:d14380e42580">Christian Tesenbacher</rs> rechnet KM deshalb zu den Benediktbeurern, weil ihn der dortige Professe <rs ref="index:d14380e46197">Sigismund Wiest</rs> als solchen bezeichnete, als er <rs ref="index:d14380e42603">Tesenbachers Regelkommentar</rs> im Jahr 1495 <rs ref="index:d14380e42607">abschrieb</rs>. Eine Professurkunde <rs ref="index:d14380e42580">Tesenbachers</rs> liegt KM allerdings nicht vor.</p>
+            <p corresp="#seg3">KM hat noch einige <rs ref="index:d14380e21611">
+                  <rs ref="index:d14380e21611">
+                     <rs ref="index:d14380e29569">Gedichte auf <rs ref="index:d14380e43257">Florian Treffler</rs> beigefügt</rs>
+                  </rs>
+               </rs>, die von Münchner Gelehrten verfasst wurden (<rs ref="index:d14380e21607">Jodok Kastner, „Epicedion“</rs>; <rs ref="index:d14380e29552">Wolfgang Montivillanus</rs>, „<rs ref="index:d14380e29558">Epitaphium</rs>“ und „<rs ref="index:d14380e29569">In Trefleri Orationes Carmen</rs>“). Über die Werke anderer benediktinischer Autoren will er später berichten, falls er und <rs ref="index:d10854e35200">Gregor Zödl</rs> unter den <rs ref="index:d14380e4800">Benediktbeurer Büchern</rs> auf etwas stoßen, das den <rs ref="index:d14380e28088">Melkern</rs> unbekannt sein könnte. KM hofft jedoch, BP noch vor Erscheinen der „<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“ in <rs ref="index:d14380e4706">Benediktbeuern</rs> begrüßen zu können.</p>
             <p corresp="#seg4">KM war erstaunt, aus BPs jüngstem Brief <ref type="letter" target="letter:661">661</ref> zu ersehen, wie wenige <rs ref="index:d14380e4170">bayerische</rs> Klöster bislang Handschriftenkataloge eingesendet haben. Von zwei Professoren aus <rs ref="index:d14380e30331">Neresheim</rs> hat er zudem erfahren, dass die <rs ref="index:d14380e33611">Enzyklik</rs> BPs in der <rs ref="index:d10854e15847">Niederschwäbischen Kongregation</rs> noch gänzlich unbekannt ist. Auf die inständigen Bitten der zwei <rs ref="index:d14380e30331">Neresheimer</rs> hat ihnen KM sein letztes Exemplar der <rs ref="index:d14380e33611">Enzyklik</rs> gegeben; sie haben die Mitarbeit nicht nur ihres eigenen Klosters, sondern auch der übrigen ihrer Kongregation versprochen. Stünden KM weitere <rs ref="index:d14380e33611">Enzykliken</rs> zur Verfügung, so gäbe es noch genug Gelegenheit, sie in <rs ref="index:d14380e4170">Bayern</rs> und <rs ref="index:d10854e28377">Schwaben</rs> zu verbreiten. Nach <rs ref="index:d14380e39711">Scheyern</rs> (an Abt <rs ref="index:d14380e28852">Benedikt Meyding</rs> und <rs ref="index:d14380e43772">Georg von Unertl</rs>) hat KM schon dreimal geschrieben, aber nur Versprechungen erhalten; doch hofft er weiterhin auf Beiträge von dort wie auch aus <rs ref="index:d14380e45067">Weihenstephan</rs>. An die übrigen Klöster insbesondere <rs ref="index:d14380e4305">Niederbayerns</rs> hat KM nicht geschrieben, weil er annahm, dass BP sie bereits mit seinen Enzykliken erreicht und von dort das Gewünschte bekommen hätte. Nun kann man nur mehr auf eine Reise BPs und <rs ref="index:d14380e34537">HPs</rs> nach <rs ref="index:d14380e4170">Bayern</rs> hoffen. Hierzu will KM bei anderer Gelegenheit nicht bloß seine eigene Meinung, sondern auch die eines möglichen Förderers darlegen.</p>
             <p corresp="#seg5">Zwischen KM und <rs ref="index:d14380e11563">Thomas Aquin Erhardt</rs> von <rs ref="index:d14380e45389">Wessobrunn</rs>, dem er bereits zweimal brieflich und zweimal mündlich BPs Anliegen vorgebracht hat, ist eine freundschaftlicher Kontroverse ausgebrochen, unter anderem zur Frage der <rs ref="index:d14380e4684">Heiligung des <rs ref="index:d10854e2786">hl. Benedikt</rs> im Mutterleib</rs>. <rs ref="index:d14380e11563">Erhardt</rs> plant ein Werk zum Ruhm des Ordensstifters („<rs ref="index:d14380e11585">Gloria sanctissimi protoparentis Benedicti</rs>“) und will darin auch viele apokryphe Überlieferungen aufnehmen, die schon <rs ref="index:d14380e25581">Jean Mabillon</rs> ins Reich der Träume verwiesen hat. KM ist darüber so unglücklich, dass er sowohl an <rs ref="index:d14380e11563">Erhardt</rs> als auch an den <rs ref="index:d14380e45389">Wessobrunner</rs> Abt <rs ref="index:d14380e6170">Tassilo Bölzl</rs> energische Briefe geschrieben hat, in denen er vorschlug, <rs ref="index:d14380e11563">Erhardt</rs> solle sich in <rs ref="index:d14380e4706">Benediktbeuern</rs> mit ihm treffen und die Angelegenheit besprechen. Jener hat dies auch zugesagt, bisher aber nicht eingehalten. KM ist sehr betrübt, dass es so viele gibt, die über <rs ref="index:d14380e4919">benediktinische</rs> Geschichte schreiben und auch veröffentlichen wollen, dabei aber von <rs type="cit" ref="citIndex:ix2_d763e629">Kritik</rs> wenig oder gar nichts verstehen und so dem Orden eher Peinlichkeiten als Ruhm einbringen; dennoch mangelt es ihnen nicht an Förderern auch unter den Prälaten.</p>
-            <p corresp="#seg6">KM gratuliert BP zu dessen erfolgreicher <rs ref="index:d14380e34213"><rs ref="index:d14380e34236">Bibliotheksreise</rs></rs> und zum Abschluss der Verlegung der Melker Bibliothek. Er selbst konnte kürzlich an seine Arbeitsstätte (<rs type="cit" ref="citIndex:ix2_d763e1583">musaeum</rs>) zurückkehren, nachdem die Kurfürstin <rs ref="index:d14380e42666">Therese Kunigunde</rs> am 12. September abgereist ist. Hier wartet KM nun auf BPs „<rs ref="index:d14380e33515">De irruptione Bavarica</rs>“, das ihm gewiss besser gefallen wird als <rs ref="index:d14380e10864">Felix Eggers „Prodromus Ideae ordinis hierarchico-Benedictinae“</rs>. Für die „<rs ref="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“ schlägt KM einen Hymnenvers über das Aufwachen beim Hahnenschrei (<rs type="cit" ref="citIndex:ix2_d763e918">Gallus iacentes excitat</rs>) als passendes Motto vor. Die Mönche sollen darauf mit einem anderen Hymnenvers (<rs type="cit" ref="citIndex:ix2_d763e2098">Pulsis procul torporibus surgamus</rs>) antworten und sich, durch diese Lektüre angespornt, von den Hirngespinsten der <rs type="cit" ref="citIndex:ix2_d763e2359">Scholastik</rs> abwenden und ernsten Studien unter der Anleitung von BP und <rs ref="index:d14380e34537">HP</rs> widmen, die ähnlich den <rs ref="index:d10854e21970">österreichischen</rs> <rs type="cit" ref="citIndex:ix2_d763e45">Adlern</rs> über die <rs ref="index:d14380e31371">Osmanen</rs> den Triumph über die Trägheit vieler davontragen mögen. KM schließt mit Empfehlungen seines Abtes <rs ref="index:d14380e31969">Magnus Pachinger</rs>.</p>
-            </abstract>
+            <p corresp="#seg6">KM gratuliert BP zu dessen erfolgreicher <rs ref="index:d14380e34213">
+                  <rs ref="index:d14380e34236">Bibliotheksreise</rs>
+               </rs> und zum Abschluss der Verlegung der Melker Bibliothek. Er selbst konnte kürzlich an seine Arbeitsstätte (<rs type="cit" ref="citIndex:ix2_d763e1583">musaeum</rs>) zurückkehren, nachdem die Kurfürstin <rs ref="index:d14380e42666">Therese Kunigunde</rs> am 12. September abgereist ist. Hier wartet KM nun auf BPs „<rs ref="index:d14380e33515">De irruptione Bavarica</rs>“, das ihm gewiss besser gefallen wird als <rs ref="index:d14380e10864">Felix Eggers „Prodromus Ideae ordinis hierarchico-Benedictinae“</rs>. Für die „<rs ref="index:d14380e33384">Bibliotheca Benedictino-Mauriana</rs>“ schlägt KM einen Hymnenvers über das Aufwachen beim Hahnenschrei (<rs type="cit" ref="citIndex:ix2_d763e918">Gallus iacentes excitat</rs>) als passendes Motto vor. Die Mönche sollen darauf mit einem anderen Hymnenvers (<rs type="cit" ref="citIndex:ix2_d763e2098">Pulsis procul torporibus surgamus</rs>) antworten und sich, durch diese Lektüre angespornt, von den Hirngespinsten der <rs type="cit" ref="citIndex:ix2_d763e2359">Scholastik</rs> abwenden und ernsten Studien unter der Anleitung von BP und <rs ref="index:d14380e34537">HP</rs> widmen, die ähnlich den <rs ref="index:d10854e21970">österreichischen</rs>
+               <rs type="cit" ref="citIndex:ix2_d763e45">Adlern</rs> über die <rs ref="index:d14380e31371">Osmanen</rs> den Triumph über die Trägheit vieler davontragen mögen. KM schließt mit Empfehlungen seines Abtes <rs ref="index:d14380e31969">Magnus Pachinger</rs>.</p>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -109,7 +129,8 @@
                   des 12. Jh. handelt es sich um die sogenannte „Chronica Burensis“ in BStB München,
                   clm 4514; zu beiden vgl. <rs type="bibl" ref="bibl:16970">Hemmerle,
                      Benediktbeuern</rs> 1, 4, 94–96, 335f., 438, 446;<rs type="bibl" ref="bibl:17270">Isel, Gründungs- und Frühgeschichte</rs> 134–136; <rs type="bibl" ref="bibl:17292">Jahn, Urkunde und Chronik</rs> 9–17. Abgehandelt
-                  werden außerdem noch die „Historia Fontis Salutis“ (vgl. <ref type="letter" target="letter:876">876</ref> <ref target="letter:876#seg3">3</ref>) sowie das Benediktbeurer Traditionsbuch, heute HStA
+                  werden außerdem noch die „Historia Fontis Salutis“ (vgl. <ref type="letter" target="letter:876">876</ref>
+               <ref target="letter:876#seg3">3</ref>) sowie das Benediktbeurer Traditionsbuch, heute HStA
                   München, KL Benediktbeuern 9, 14v–34r; dazu vgl. <rs type="bibl" ref="bibl:15080">Baumann, Traditionsbuch</rs>. Zu den genannten Autoren vgl. <rs type="bibl" ref="bibl:16970">Hemmerle, Benediktbeuern</rs> 582f., 598–600, 612f.; <rs type="bibl" ref="bibl:18030">Lindner, Professbuch Benediktbeuern</rs> 27,
                   30–32, 39f.</p>
          </note>
@@ -132,12 +153,14 @@
                   vielleicht plausiblere Möglichkeit bestünde darin, dass KM hier an den Traktat „De
                   aedificio Dei“ denken könnte, als dessen Autor Gerhoch von Reichersberg wohl erst
                   beim Besuch BPs und HPs in Benediktbeuern 1717 bestimmt wurde. Dazu und zu
-                  Bedenken KMs gegen eine Drucklegung des „De aedificio Dei“ vgl. <ref type="letter" target="letter:924">924</ref> <ref target="letter:924#seg3">3</ref> und <ref target="letter:924#seg4">4</ref>. – Die nicht weiter spezifizierten
+                  Bedenken KMs gegen eine Drucklegung des „De aedificio Dei“ vgl. <ref type="letter" target="letter:924">924</ref>
+               <ref target="letter:924#seg3">3</ref> und <ref target="letter:924#seg4">4</ref>. – Die nicht weiter spezifizierten
                   „schlechten Erfahrungen“, die KM erwähnt, lassen sich ebenfalls nicht sicher
                   deuten. Zu Vorbehalten des kurfürstlichen Hofes gegen die Publikation bayerischer
-                  Geschichtsquellen vgl. <ref type="letter" target="letter:835">835</ref> <ref target="letter:835#seg5">5</ref>; zu möglichen
+                  Geschichtsquellen vgl. <ref type="letter" target="letter:835">835</ref>
+               <ref target="letter:835#seg5">5</ref>; zu möglichen
                   Ängsten KMs vor der Entziehung von Schriftgut vgl. <ref type="letter" target="letter:506">506</ref>
-                  <ref target="letter:506#seg3">3</ref>.</p>
+               <ref target="letter:506#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned>Cristannum Tesenbacher</mentioned>
@@ -212,11 +235,13 @@
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg4">
             <mentioned> Schyrenses</mentioned>
             <p>Neben KMs erstem Brief an Abt Benedikt Meyding (vgl.
-                     <ref type="letter" target="letter:486">486</ref> <ref target="letter:486#seg1">1</ref>) sind hierunter wohl zwei Schreiben zu
+                     <ref type="letter" target="letter:486">486</ref>
+               <ref target="letter:486#seg1">1</ref>) sind hierunter wohl zwei Schreiben zu
                   verstehen, die er am 15. April und 1. September 1716 an den Bibliothekar Georg von
                   Unertl in Scheyern gesendet hatte: BStB München, Meichelbeckiana 18b, 271v, 282r.
                   Zu diesem, einem Bruder des Franz Xaver Joseph von Unertl, vgl. <rs type="bibl" ref="bibl:17396">Kainz, Visitationsrezesse</rs> 356; <rs type="bibl" ref="bibl:17934">Leitschuh, Matrikeln</rs> 2 37. Eine Antwort mit dem
-                  Versprechen eines Beitrags, abgesehen von dem bereits in <ref type="letter" target="letter:540">540</ref> <ref target="letter:540#seg4">4</ref> erwähnten Brief Meydings, ist aus dem Diarium nicht zu
+                  Versprechen eines Beitrags, abgesehen von dem bereits in <ref type="letter" target="letter:540">540</ref>
+               <ref target="letter:540#seg4">4</ref> erwähnten Brief Meydings, ist aus dem Diarium nicht zu
                   ersehen.</p>
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg4">
@@ -225,14 +250,17 @@
                   sicher zu bestimmen; der Ausdruck „favet“ verweist eher auf einen hochgestellten
                   Förderer als auf einen Gelehrten. Gut möglich wäre, dass KM an Franz Xaver von
                   Unertl dachte, der später im Zusammenhang mit BPs und HPs Besuch in München eine
-                  wichtige Rolle spielte: vgl. <ref type="letter" target="letter:486">486</ref> <ref target="letter:486#seg4">4</ref>, <ref type="letter" target="letter:835">835</ref> <ref target="letter:835#seg5">5</ref>. KMs Abt Magnus Pachinger dürfte hier eher
+                  wichtige Rolle spielte: vgl. <ref type="letter" target="letter:486">486</ref>
+               <ref target="letter:486#seg4">4</ref>, <ref type="letter" target="letter:835">835</ref>
+               <ref target="letter:835#seg5">5</ref>. KMs Abt Magnus Pachinger dürfte hier eher
                   nicht gemeint sein, da kaum ein Grund zur Verbergung seiner Identität an dieser
                   Stelle bestanden hätte.</p>
          </note>
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg5">
             <mentioned>negotium ... commendavi</mentioned>
             <p>Die zwei Briefe KMs dürften mit jenem vom
-                  20. Dezember 1715 (vgl. <ref type="letter" target="letter:540">540</ref> <ref target="letter:540#seg4">4</ref>) und jenem vom 4.
+                  20. Dezember 1715 (vgl. <ref type="letter" target="letter:540">540</ref>
+               <ref target="letter:540#seg4">4</ref>) und jenem vom 4.
                   August 1716 zu identifizieren sein, da weitere im fraglichen Zeitraum anhand des
                   Diariums nicht festzustellen sind. Die zwei persönlichen Gespräche sind anhand
                   derselben Quelle nicht näher zu datieren.</p>
@@ -252,7 +280,8 @@
                   reverendissimo et patri Thomae Wessofontanis pro necessaria cautela ratione libri
                   edendi et papae dedicandi“ (BStB München, Meichelbeckiana 18b, 279r). Zur Zusage
                   eines Treffens durch Erhardt ist aus dem Diarium nichts zu entnehmen. Zum weiteren
-                  Verlauf der Angelegenheit vgl. <ref type="letter" target="letter:734">734</ref> <ref target="letter:734#seg6">6</ref>.</p>
+                  Verlauf der Angelegenheit vgl. <ref type="letter" target="letter:734">734</ref>
+               <ref target="letter:734#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg6">
             <mentioned>itinere tam fortunato</mentioned>
@@ -299,7 +328,9 @@
          <note target="#range(right('n20'), left('n20e'))" n="20" anchored="false" corresp="#seg6">
             <mentioned> aquilae ... de Turcis</mentioned>
             <p> Gemeint sind wohl in erster Linie die
-                  Schlacht bei Peterwardein sowie die Einnahme von Temesvár: vgl. <ref type="letter" target="letter:643">643</ref> <ref target="letter:643#seg2">2</ref>, <ref type="letter" target="letter:655">655</ref> <ref target="letter:655#seg7">7</ref>.</p>
+                  Schlacht bei Peterwardein sowie die Einnahme von Temesvár: vgl. <ref type="letter" target="letter:643">643</ref>
+               <ref target="letter:643#seg2">2</ref>, <ref type="letter" target="letter:655">655</ref>
+               <ref target="letter:655#seg7">7</ref>.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -319,12 +350,20 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime et clarissime domine pater Bernarde, domine colendissime.</opener>
-         <ab resp="#editor" xml:id="seg1">Ego vero urgebar longe potioribus titulis, ut suspicarer offendi a me potuisse Bernardum, cum eum repetitis, sed tamen fere inanibus epistolis interpellassem, rebus longe maioribus utilius gloriosiusque intentum. Sed de tanto amico quid adversi cogitari posset? Utinam vero non et praesentes meae literae sint inanes! Ecce, vir eruditissime, <anchor xml:id="n1"/>conscripsi paucula<anchor xml:id="n1e"/> de iis scriptoribus, qui abs dubio fuere huius nostri monasterii monachi. Sed, ut dixi, pro dolor, paucula sunt, et quibus<del ana="#after">ego</del> longe plura et multo maiora Bernardus exspectasset, et ego cum eodem communicare libentissime voluissem. Meminerit autem amicus meus colendissimus me comparari debere<anchor xml:id="n2"/> pauperculae illi, quae misit duo minuta<anchor xml:id="n2e"/>, missura plus, si penuria admisisset. Deinde non inficior extare apud me<anchor xml:id="n3"/> codices quosdam<anchor xml:id="n3e"/> alios non contemnendos, qui sint opera monachorum Benedictoburanorum. Sed occurrunt rationes valde graves, quae prohibent operum illorum nomina propalare. Funesta quippe experientia nos docuit, quam periculose quorumdam codicum notitia in Bavaria nostra in publicum prodeat. Verum hac de re spero me suo tempore locuturum os ad os, cum paternitas vestra bibliothecas Boiariae lustrare dignata fuerit, quod omnino futurum spero. <pb n="1v"/> </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n4"/>Cristannum Tesenbacher<anchor xml:id="n4e"/> nostrum dixi, quia eundem nostri monasterii monachum facit<anchor xml:id="n5"/> Sigismundus<anchor xml:id="n5e"/> quidam noster, qui<anchor xml:id="n6"/> Expositionem illam<anchor xml:id="n6e"/> anno 1495 magno labore descripsit. Caeterum non diffiteor Cristanni tesseram sacrae professionis apud me non inveniri. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n7"/>Adieci carmina<anchor xml:id="n7e"/> quaedam de Floriano nostro a viris quibusdam doctis Monachii composita. Forte ex iis poterit aliquid inter appendices Bibliothecae generalis recenseri. Haec de pauculis scriptoribus monasterii nostri. De aliis ordinis nostri scriptoribus Deo propitio agam alio tempore, si quid cum nostro patre Gregorio inter codices nostros reperero, quod videatur posse esse Mellicensibus ignotum; imo, ut dicebam, spem mihi facio amplectendi paternitatem vestram clarissimam in hoc nostro monasterio, antequam Bibliotheca generalis in publicam lucem edatur. </ab>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime et clarissime domine pater Bernarde, domine colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Ego vero urgebar longe potioribus titulis, ut suspicarer offendi a me potuisse Bernardum, cum eum repetitis, sed tamen fere inanibus epistolis interpellassem, rebus longe maioribus utilius gloriosiusque intentum. Sed de tanto amico quid adversi cogitari posset? Utinam vero non et praesentes meae literae sint inanes! Ecce, vir eruditissime, <anchor xml:id="n1"/>conscripsi paucula<anchor xml:id="n1e"/> de iis scriptoribus, qui abs dubio fuere huius nostri monasterii monachi. Sed, ut dixi, pro dolor, paucula sunt, et quibus<del ana="#after">ego</del> longe plura et multo maiora Bernardus exspectasset, et ego cum eodem communicare libentissime voluissem. Meminerit autem amicus meus colendissimus me comparari debere<anchor xml:id="n2"/> pauperculae illi, quae misit duo minuta<anchor xml:id="n2e"/>, missura plus, si penuria admisisset. Deinde non inficior extare apud me<anchor xml:id="n3"/> codices quosdam<anchor xml:id="n3e"/> alios non contemnendos, qui sint opera monachorum Benedictoburanorum. Sed occurrunt rationes valde graves, quae prohibent operum illorum nomina propalare. Funesta quippe experientia nos docuit, quam periculose quorumdam codicum notitia in Bavaria nostra in publicum prodeat. Verum hac de re spero me suo tempore locuturum os ad os, cum paternitas vestra bibliothecas Boiariae lustrare dignata fuerit, quod omnino futurum spero. <pb n="1v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n4"/>Cristannum Tesenbacher<anchor xml:id="n4e"/> nostrum dixi, quia eundem nostri monasterii monachum facit<anchor xml:id="n5"/> Sigismundus<anchor xml:id="n5e"/> quidam noster, qui<anchor xml:id="n6"/> Expositionem illam<anchor xml:id="n6e"/> anno 1495 magno labore descripsit. Caeterum non diffiteor Cristanni tesseram sacrae professionis apud me non inveniri. </ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n7"/>Adieci carmina<anchor xml:id="n7e"/> quaedam de Floriano nostro a viris quibusdam doctis Monachii composita. Forte ex iis poterit aliquid inter appendices Bibliothecae generalis recenseri. Haec de pauculis scriptoribus monasterii nostri. De aliis ordinis nostri scriptoribus Deo propitio agam alio tempore, si quid cum nostro patre Gregorio inter codices nostros reperero, quod videatur posse esse Mellicensibus ignotum; imo, ut dicebam, spem mihi facio amplectendi paternitatem vestram clarissimam in hoc nostro monasterio, antequam Bibliotheca generalis in publicam lucem edatur. </ab>
          <ab resp="#editor" xml:id="seg4">Obstupui, cum ex nuperis intellexissem tam pauca Bavariae nostrae monasteria codicum suorum catalogos Mellicium hactenus misisse. Crevit admiratio, cum ex duobus <anchor xml:id="n8"/>Neresheimensibus professoribus<anchor xml:id="n8e"/> percepissem encyclicam vestram in<anchor xml:id="n9"/> congregatione Augustana<anchor xml:id="n9e"/> esse penitus ignotam. His duobus amicissime flagitantibus ego unicum, quod mihi restabat, exemplar dedi eosque ad res suas communicandas etiam atque etiam cohortatus sum; qui optima quaeque non de suo duntaxat monasterio, sed de caeteris quoque suae <pb n="2r"/> congregationis asceteriis sperare iusserunt. Utinam restarent penes me dictae epistolae exemplaria plura! Plane non deforet mihi occasio ea per Boiariam Sueviamque ulterius disseminandi. Ad<anchor xml:id="n10"/> Schyrenses<anchor xml:id="n10e"/> iam misi tres epistolas. Promissiones retuli, sed praeterea nihil. Interea tamen spem nondum abieci, sed ab iisdem Schyrensibus, uti etiam a Weihenstephanensibus etiamnum aliqua promittere posse videor. Ad caetera Inferioris potissimum Bavariae monasteria ego hactenus nihil scripsi, persuasus firmiter paternitatem vestram dudum suas illuc epistolas direxisse et votis abunde damnatam fuisse. Sed haec cum ita sint, quid optare denique aliud possumus, quam ut clarissima paternitas vestra indulgeat nobis quoque Bavaris cum suo suavissimo Hieronymo praesentiam suam. Utique itineris suscepti nunquam poenitebit. Sed hac de re mea consilia forte aperiam alias; nec mea duntaxat, sed<anchor xml:id="n11"/> alterius quoque viri<anchor xml:id="n11e"/>, qui studiis vestris, imo nostris egregie favet. </ab>
-         <ab resp="#editor" xml:id="seg5">Inter me et reverendum patrem Thomam Wessofontanum (cui <anchor xml:id="n12"/>negotium paternitatis vestrae per literas bis et bis coram commendavi<anchor xml:id="n12e"/>) vertuntur hoc tempore quaedam amicae controversiae, inter quas est illa lubrica de sanctificatione sancti patris nostri Benedicti in utero materno. Vir ille optimus non<app><rdg wit="#"><add place="after">esse</add></rdg></app> videtur esse ex eorum numero, qui sunt nimis tardi, sed qui sunt nimis faciles ad credendum scriptoribus etiam apocryphis; hacque imbutus indole cogitat plura volumina edere de gloria sancti patris nostri <pb n="2v"/> iisque inserere talia, quae ab eruditissimo Mabillonio inter somnia merito referuntur. Afflixit ea res animum meum, iustusque dolor me tandem permovit, ut scriberem eo super negotio non solum ad ipsum patrem Thomam, sed etiam ad reverendissimum<anchor xml:id="n13"/> praesulem<anchor xml:id="n13e"/> Wessofontanum<anchor xml:id="n14"/> literas valde energicas<anchor xml:id="n14e"/>, conatus reverendum patrem Thomam ad nostrum hoc monasterium pertrahere, ubi cum ipso coram disserere possem. Spopondit ille quidem suum ad me adventum, sed hactenus non stetit promissis. Ego interim vehementer doleo, quod videam passim e nostris aliquos inveniri, qui historiam etc. ordinis scribere et scripta sua propalare studeant, qui tamen de critica aut prope aut plane nihil sciunt eaque ratione rebus nostris non gloriam, sed confusionem pariunt; et tamen patronis etiam mytratis non destituuntur. </ab>
+         <ab resp="#editor" xml:id="seg5">Inter me et reverendum patrem Thomam Wessofontanum (cui <anchor xml:id="n12"/>negotium paternitatis vestrae per literas bis et bis coram commendavi<anchor xml:id="n12e"/>) vertuntur hoc tempore quaedam amicae controversiae, inter quas est illa lubrica de sanctificatione sancti patris nostri Benedicti in utero materno. Vir ille optimus non<app>
+               <rdg wit="#">
+                  <add place="after">esse</add>
+               </rdg>
+            </app> videtur esse ex eorum numero, qui sunt nimis tardi, sed qui sunt nimis faciles ad credendum scriptoribus etiam apocryphis; hacque imbutus indole cogitat plura volumina edere de gloria sancti patris nostri <pb n="2v"/> iisque inserere talia, quae ab eruditissimo Mabillonio inter somnia merito referuntur. Afflixit ea res animum meum, iustusque dolor me tandem permovit, ut scriberem eo super negotio non solum ad ipsum patrem Thomam, sed etiam ad reverendissimum<anchor xml:id="n13"/> praesulem<anchor xml:id="n13e"/> Wessofontanum<anchor xml:id="n14"/> literas valde energicas<anchor xml:id="n14e"/>, conatus reverendum patrem Thomam ad nostrum hoc monasterium pertrahere, ubi cum ipso coram disserere possem. Spopondit ille quidem suum ad me adventum, sed hactenus non stetit promissis. Ego interim vehementer doleo, quod videam passim e nostris aliquos inveniri, qui historiam etc. ordinis scribere et scripta sua propalare studeant, qui tamen de critica aut prope aut plane nihil sciunt eaque ratione rebus nostris non gloriam, sed confusionem pariunt; et tamen patronis etiam mytratis non destituuntur. </ab>
          <ab resp="#editor" xml:id="seg6">Paternitatem vestram <anchor xml:id="n15"/>itinere tam fortunato<anchor xml:id="n15e"/> et aliis postea in<anchor xml:id="n16"/> transferenda tota bibliotheca<anchor xml:id="n16e"/> molestissimis laboribus feliciter defunctam esse toto corde congratulor. Tantorum vero laborum condignam mercedem quis praeter Deum retribuet? Redii et ego his diebus (sed fere ex otio) ad musaeum meum.<anchor xml:id="n17"/> Serenissima electrix Bavariae ad suos rediit<anchor xml:id="n17e"/> die 12. elapsi mensis Septembris. Ego interim in hoc musaeo meo praestolor opus de bello illo Bavarico-Tyrolensi, quod utique magis arridebit quam tabulae, de quibus nuper. Bibliothecae Maurianae, ut video, inscribi ex mente vestra potest titulus: <anchor xml:id="n18"/>Gallus iacentes excitat et somnolentos increpat etc. Ad quam increpat<anchor xml:id="n18e"/>ionem utinam exclament omnes:<anchor xml:id="n19"/> Pulsis procul torporibus surgamus omnes ocyus<anchor xml:id="n19e"/>, et a superfluis scholarum metaphysicabilitudinationibus convertamur ad seria studia, praeclaris ductoribus doctoribusque Bernardo et Hieronymo, quibus Deus vitam viresque in seros annos proroget, ut, sicut gloriosae<anchor xml:id="n20"/> aquilae Austriacae de Turcis<anchor xml:id="n20e"/>, ita de expugnato multorum veterno triumphum ipsi reportent immortalitate nominis feliciter impetrata. Commendat sese meus reverendissimus dominus abbas, et ego me in omnia sancta <sic>me</sic>  commendo impensissime ac maneo</ab>
          <closer>Plurimum reverendae et clarissimae dominationis vestrae devinctissimus famulus pater Carolus.</closer>
          <closer>In monasterio Benedictoburano 4. Octobris 1716.</closer>

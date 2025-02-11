@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="98" xml:id="pez-0098">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Benedetto Bacchini an Bernhard Pez. 1710-08-15. Parma.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">98</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -42,10 +53,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -70,15 +82,17 @@
          </correspDesc>
          <abstract>
             <p corresp="#seg1">BBa, der sich seit einigen Wochen in <rs ref="index:d14380e32499">Parma</rs> aufhält, hat BPs Brief vom 24. Juli erhalten <ref type="letter" target="letter:91">91</ref>, in dem jener für seine „<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“ um Informationen zu den Schriftstellern aus den <rs ref="index:d10854e15502">cassinensischen</rs> Klöstern, besonders aus <rs ref="index:d14380e29118">S. Pietro zu Modena</rs>, bittet. Dieses Kloster wird derzeit von einem anderen Abt (<rs ref="index:d10854e29052">Onorio Silvestri</rs>) verwaltet, und zwar bis zum <rs ref="index:d10854e15564">Generalkapitel der Kongregation</rs> nach Ostern 1711, durch das BBa selbst auf diesen Posten berufen zu werden erwartet. BBa will trotzdem bereits antworten, fürchtet jedoch, BPs Erwartungen zu enttäuschen.</p>
-            <p corresp="#seg2">Das Kloster <rs ref="index:d14380e29112">S. Pietro zu Modena</rs> wurde zu Beginn des 11. Jahrhunderts (recte: 996) gegründet und um das Jahr 1460 (recte: 1433) der <rs ref="index:d10854e15502">Kongregation von S. Giustina</rs>, nun <rs ref="index:d10854e15502">Cassinenser Kongregation</rs>, angeschlossen. Aus dem Zeitraum dazwischen sind kaum Nachrichten von Schriftstellern erhalten, was BBa damit begründet, dass in den drei Jahrhunderten Kriegswirren in <rs ref="index:d14380e19828">Italien</rs> und besonders in der <rs ref="index:d10854e17383">Lombardei</rs> zwischen <rs ref="index:d10854e11423">Guelfen</rs> und <rs ref="index:d10854e10511">Ghibellinen</rs>, sowie durch die Auswirkungen der <rs ref="index:d10854e27852">Schismen</rs> und die Gier von Kommendataren, die Arbeiten der Mönche zugrunde gegangen sind. Eine Ausnahme bildet das Kloster <rs ref="index:d10854e27020">S. Benedetto Po</rs> bei <rs ref="index:d14380e26075">Mantua</rs>, wo noch Handschriftenbestände vorhanden sind. Handschriften aus <rs ref="index:d10854e3722">Bobbio</rs> sind teils in die <rs ref="index:d10854e26222">Vatikanische Bibliothek</rs>, teils in die <rs ref="index:d10854e18291">Mailänder</rs> <rs ref="index:d10854e18306">Ambrosiana</rs> gelangt. Mithin ist unbekannt, wer die Gelehrten vor der Gründung der Kongregation waren.</p>
+            <p corresp="#seg2">Das Kloster <rs ref="index:d14380e29112">S. Pietro zu Modena</rs> wurde zu Beginn des 11. Jahrhunderts (recte: 996) gegründet und um das Jahr 1460 (recte: 1433) der <rs ref="index:d10854e15502">Kongregation von S. Giustina</rs>, nun <rs ref="index:d10854e15502">Cassinenser Kongregation</rs>, angeschlossen. Aus dem Zeitraum dazwischen sind kaum Nachrichten von Schriftstellern erhalten, was BBa damit begründet, dass in den drei Jahrhunderten Kriegswirren in <rs ref="index:d14380e19828">Italien</rs> und besonders in der <rs ref="index:d10854e17383">Lombardei</rs> zwischen <rs ref="index:d10854e11423">Guelfen</rs> und <rs ref="index:d10854e10511">Ghibellinen</rs>, sowie durch die Auswirkungen der <rs ref="index:d10854e27852">Schismen</rs> und die Gier von Kommendataren, die Arbeiten der Mönche zugrunde gegangen sind. Eine Ausnahme bildet das Kloster <rs ref="index:d10854e27020">S. Benedetto Po</rs> bei <rs ref="index:d14380e26075">Mantua</rs>, wo noch Handschriftenbestände vorhanden sind. Handschriften aus <rs ref="index:d10854e3722">Bobbio</rs> sind teils in die <rs ref="index:d10854e26222">Vatikanische Bibliothek</rs>, teils in die <rs ref="index:d10854e18291">Mailänder</rs>
+               <rs ref="index:d10854e18306">Ambrosiana</rs> gelangt. Mithin ist unbekannt, wer die Gelehrten vor der Gründung der Kongregation waren.</p>
             <p corresp="#seg3">Nachdem durch <rs ref="index:d14380e3857">Ludovico Barbo</rs> zur Zeit des <rs ref="index:d14380e23017">Konstanzer Konzils</rs> die <rs ref="index:d10854e15502">Kongregation von S. Giustina</rs> ins Leben gerufen worden war, wuchs auch wieder der Eifer für die Studien; am Ende des 15. Jahrhunderts blühte die Liebe für die <rs ref="index:d14380e16473">griechische Sprache</rs> so sehr, dass man durch einen Generalkapitelsbeschluss vorsorgen musste, dass die Mönche diese nicht um der Poesie und der profanen Literatur willen pflegten, sondern um der <rs ref="index:d14380e5602">Heiligen Schrift</rs> und der geistlichen Autoren willen.</p>
             <p corresp="#seg4">Trotzdem sind die Autoren gedruckter Werke nicht sehr zahlreich. Mit ihrer Zusammenstellung befasst sich seit vielen Jahren <rs ref="index:d14380e2974">Mariano Armellini</rs>, Prediger und Dekan, in <rs ref="index:d10854e26309">S. Paolo fuori le Mura</rs> zu <rs ref="index:d14380e37680">Rom</rs>. BP soll ihm schreiben, da er für seine „<rs ref="index:d14380e2982">Bibliotheca Benedictino-Casinensis</rs>“ über Kollektaneen verfügt.</p>
-            <p corresp="#seg5">Aus <rs ref="index:d14380e29118">S. Pietro zu Modena</rs> kann BBa nur von einem Mönch berichten, <rs ref="index:d10854e31697">Eusebio Valentini</rs>, der um 1560 lebte (recte: † 1539) und mit Gelehrten jener Zeit, besonders mit <rs ref="index:d14380e8285">Isidoro Clario</rs> und den <rs ref="index:d14380e29112">Modeneser</rs> Kardinälen Jacopo Sadoleto und <rs ref="index:d14380e8743">Gregorio Cortese</rs>, in freundschaftlichem Kontakt stand. Doch ist wenig von ihm erhalten, bloß einige Gedichte geistlichen Inhalts, die zusammen mit <rs ref="index:d10854e18704">Tito Prospero Martinengos</rs> „<rs ref="index:d10854e18710">Pia quaedam poemata</rs>“ fehlerhaft publiziert worden sind. BBa selbst hat einen Brief <rs ref="index:d10854e31697">Valentinis</rs> unter den <rs ref="index:d10854e5383">lateinischen Briefen</rs> <rs ref="index:d14380e8285">Clarios</rs> ediert, die er vor drei Jahren herausgegeben hat.</p>
+            <p corresp="#seg5">Aus <rs ref="index:d14380e29118">S. Pietro zu Modena</rs> kann BBa nur von einem Mönch berichten, <rs ref="index:d10854e31697">Eusebio Valentini</rs>, der um 1560 lebte (recte: † 1539) und mit Gelehrten jener Zeit, besonders mit <rs ref="index:d14380e8285">Isidoro Clario</rs> und den <rs ref="index:d14380e29112">Modeneser</rs> Kardinälen Jacopo Sadoleto und <rs ref="index:d14380e8743">Gregorio Cortese</rs>, in freundschaftlichem Kontakt stand. Doch ist wenig von ihm erhalten, bloß einige Gedichte geistlichen Inhalts, die zusammen mit <rs ref="index:d10854e18704">Tito Prospero Martinengos</rs> „<rs ref="index:d10854e18710">Pia quaedam poemata</rs>“ fehlerhaft publiziert worden sind. BBa selbst hat einen Brief <rs ref="index:d10854e31697">Valentinis</rs> unter den <rs ref="index:d10854e5383">lateinischen Briefen</rs>
+               <rs ref="index:d14380e8285">Clarios</rs> ediert, die er vor drei Jahren herausgegeben hat.</p>
             <p corresp="#seg6">An <rs ref="index:d10854e22532">Anselmo Paioli</rs> aus dem Kloster <rs ref="index:d10854e8731">S. Benedetto zu Ferrara</rs>, der für BP darum gebeten hatte, hat BBa einen Katalog seiner eigenen Schriften gesendet, von dem er hofft, dass er bereits weitergeleitet worden ist.</p>
             <p corresp="#seg7">Vor seiner Abreise aus <rs ref="index:d14380e32499">Parma</rs> will BBa noch den Abt des Klosters <rs ref="index:d10854e22917">S. Giovanni Evangelista</rs>, <rs ref="index:d10854e4072">Cherubino Boscoli</rs>, bitten, einen Konventualen mit der Sammlung der Schriftsteller seines Klosters zu beauftragen.</p>
             <p corresp="#seg8">BBa nennt von diesen: <rs ref="index:d10854e2735">Costantino Bellotti</rs>, der gegen <rs ref="index:d14380e3931">Baronio</rs> für das Benediktinertum <rs ref="index:d14380e16248">Gregors des Großen</rs> eintrat; <rs ref="index:d14380e8285">Isidoro Clario</rs>, dessen Werke im „<rs ref="index:d14380e35653">Apparatus</rs>“ von <rs ref="index:d14380e35647">Possevino</rs> und bei anderen Kompilatoren gewürdigt werden; <rs ref="index:d10854e29116">Vittorio Siri</rs>, der die vielbändigen zeitgeschichtlichen Werke „<rs ref="index:d10854e29129">Mercurio</rs>“ und „<rs ref="index:d10854e29124">Memorie recondite</rs>“ herausbrachte; <rs ref="index:d10854e1269">Angelo Maria Arcioni</rs>, den Autor eines Bandes „<rs ref="index:d10854e1277">Ode</rs>“ in italienischer Sprache; <rs ref="index:d10854e25280">Andrea Rainieri</rs>, der in drei (recte: vier) Quartbänden das <rs ref="index:d10854e25288">Leben</rs> des <rs ref="index:d10854e1081">Hl. Anselm von Canterbury</rs> beschrieb; schließlich <rs ref="index:d10854e35069">Maurizio Zappata</rs>, dessen „<rs ref="index:d10854e35077">Notabilia</rs>“ über die Parmenser Kirche und sein Kloster bald posthum erscheinen sollen.</p>
             <p corresp="#seg9">BBa schließt mit der Bitte, künftige Briefe nach <rs ref="index:d14380e29112">Modena</rs> zu adressieren und ihn nicht über Gebühr zu titulieren.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -107,7 +121,8 @@
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
             <mentioned>generalia comitia</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:81">81</ref><ref target="letter:81#seg6">6</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:81">81</ref>
+               <ref target="letter:81#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
             <mentioned>ego ipse ei curae addicar</mentioned>
@@ -163,7 +178,8 @@
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg3">
             <mentioned>congregatione coacta</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:81">81</ref> <ref target="letter:81#seg4">4</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:81">81</ref>
+               <ref target="letter:81#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg3">
             <mentioned>patrum decreto</mentioned>
@@ -179,7 +195,8 @@
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg4">
             <mentioned>Marianus Armellinus</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:81">81</ref> <ref target="letter:81#seg5">5</ref>, <ref type="letter" target="letter:87">87</ref>, <ref type="letter" target="letter:261">261</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:81">81</ref>
+               <ref target="letter:81#seg5">5</ref>, <ref type="letter" target="letter:87">87</ref>, <ref type="letter" target="letter:261">261</ref>.</p>
          </note>
          <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg4">
             <mentioned>decanus</mentioned>
@@ -208,13 +225,15 @@
                   Bibliotheca 1 50f.; <rs type="bibl" ref="bibl:15352">Bossi,
                      Matricula 1</rs> 432. Sein Herantreten an BBa war wohl parallel zum Schreiben
                   seines Abtes Mauro Aspini an BP (90) erfolgt. Zu den Verbindungen BBas nach S.
-                  Benedetto zu Ferrara vgl. <ref type="letter" target="letter:91">91</ref> <ref target="letter:91#seg2">2</ref>. Das erwähnte
+                  Benedetto zu Ferrara vgl. <ref type="letter" target="letter:91">91</ref>
+               <ref target="letter:91#seg2">2</ref>. Das erwähnte
                   Schriftenverzeichnis ist in Melk nicht feststellbar, auch sonst gibt es keine
                   Hinweise auf eine weitere Sendung aus dem Ferrareser Kloster an BP außer <ref type="letter" target="letter:90">90</ref>.</p>
          </note>
          <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg7">
             <mentioned>Cherubinum Boscolum</mentioned>
-            <p><rs type="bibl" ref="bibl:15352">Bossi, Matricula 1</rs> 423.</p>
+            <p>
+               <rs type="bibl" ref="bibl:15352">Bossi, Matricula 1</rs> 423.</p>
          </note>
          <note target="#range(right('n19'), left('n19e'))" n="19" anchored="false" corresp="#seg8">
             <mentioned>Bellottum ... Gregorii magni</mentioned>
@@ -252,7 +271,8 @@
          </note>
          <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg8">
             <mentioned>Victorinus Sirus</mentioned>
-            <p><rs type="bibl" ref="bibl:35796">Affò, Memorie</rs> 5 205–236;
+            <p>
+               <rs type="bibl" ref="bibl:35796">Affò, Memorie</rs> 5 205–236;
                   Armellini,
                   Bibliotheca 2, littera V, 13–15; <rs type="bibl" ref="bibl:15152">Benz, Zwischen Tradition und Kritik</rs> 400; <rs type="bibl" ref="bibl:15352">Bossi, Matricula 1</rs> 419; <rs type="bibl" ref="bibl:35944">Braun, Siri</rs>; <rs type="bibl" ref="bibl:36142">Fossier, Titre</rs> 413;
                      <rs type="bibl" ref="bibl:18814">Pezzana, Memorie</rs> 6/2 796–815; <rs type="bibl" ref="bibl:37144">Turchi, Attività</rs>; <rs type="bibl" ref="bibl:37146">Turchi, Nascita</rs>.</p>
@@ -275,7 +295,8 @@
          </note>
          <note target="#range(right('n24'), left('n24e'))" n="24" anchored="false" corresp="#seg8">
             <mentioned>Andreas Rainerius</mentioned>
-            <p><rs type="bibl" ref="bibl:35796">Affò, Memorie</rs> 5 308–310;
+            <p>
+               <rs type="bibl" ref="bibl:35796">Affò, Memorie</rs> 5 308–310;
                   Armellini,
                   Bibliotheca 1 17f.; <rs type="bibl" ref="bibl:15352">Bossi,
                      Matricula 1</rs> 421; vgl. <rs type="bibl" ref="bibl:17826">Lasagni,
@@ -283,7 +304,8 @@
          </note>
          <note target="#range(right('n25'), left('n25e'))" n="25" anchored="false" corresp="#seg8">
             <mentioned>Mauritius Zapata</mentioned>
-            <p><rs type="bibl" ref="bibl:35796">Affò, Memorie</rs> 5 299f.;
+            <p>
+               <rs type="bibl" ref="bibl:35796">Affò, Memorie</rs> 5 299f.;
                   Armellini,
                   Bibliotheca 2 97f.; <rs type="bibl" ref="bibl:15352">Bossi,
                      Matricula 1</rs> 422; <rs type="bibl" ref="bibl:17826">Lasagni, Dizionario</rs>
@@ -321,8 +343,10 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Reverendissimo ac doctissimo viro patri domno Bernardo Pez monasterii Mellicensis monacho ac bibliothecario domnus Benedictus Bacchinius SS. Salvi et Cyrini abbas salutem plurimam dicit.</opener>
-         <ab resp="#editor" xml:id="seg1"><anchor xml:id="n1"/>Parmae ab aliquot hebdomadibus degens<anchor xml:id="n1e"/> teneo humanissimam epistolam tuam datam sub die 24. Julii proxime praeteriti. In ea, vir praeclarissime, operam meam petis, qua suggerendum curem, quae Bibliothecae scriptorum ordinis nostri (opus sane argumenti amplissimi), quam paras, ex hisce nostris monasteriis ac praesertim Mutinensi haberi possunt. Nunc porro <anchor xml:id="n2"/>alter congregationis nostrae abbas<anchor xml:id="n2e"/> coenobium illud moderatur, et moderabitur usque ad <anchor xml:id="n3"/>generalia comitia<anchor xml:id="n3e"/> post Pascha futuri anni celebranda, quibus (ut puto) <anchor xml:id="n4"/>ego ipse ei curae addicar<anchor xml:id="n4e"/>. Interim nihilominus petitioni tuae respondendi mihi debitum incumbit, quod dum libenter aggredior praestare, vereor, ne id quidem votis tuis et expectationi respondeat. </ab>
+         <opener>
+            <pb n="1r"/> Reverendissimo ac doctissimo viro patri domno Bernardo Pez monasterii Mellicensis monacho ac bibliothecario domnus Benedictus Bacchinius SS. Salvi et Cyrini abbas salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">
+            <anchor xml:id="n1"/>Parmae ab aliquot hebdomadibus degens<anchor xml:id="n1e"/> teneo humanissimam epistolam tuam datam sub die 24. Julii proxime praeteriti. In ea, vir praeclarissime, operam meam petis, qua suggerendum curem, quae Bibliothecae scriptorum ordinis nostri (opus sane argumenti amplissimi), quam paras, ex hisce nostris monasteriis ac praesertim Mutinensi haberi possunt. Nunc porro <anchor xml:id="n2"/>alter congregationis nostrae abbas<anchor xml:id="n2e"/> coenobium illud moderatur, et moderabitur usque ad <anchor xml:id="n3"/>generalia comitia<anchor xml:id="n3e"/> post Pascha futuri anni celebranda, quibus (ut puto) <anchor xml:id="n4"/>ego ipse ei curae addicar<anchor xml:id="n4e"/>. Interim nihilominus petitioni tuae respondendi mihi debitum incumbit, quod dum libenter aggredior praestare, vereor, ne id quidem votis tuis et expectationi respondeat. </ab>
          <ab resp="#editor" xml:id="seg2">Noveris, vir clarissime, monasterium illud certe venerabile fundatum ad <anchor xml:id="n5"/>initia undecimi saeculi<anchor xml:id="n5e"/> et <anchor xml:id="n6"/>circa annum domini 1460 unitum congregationi<anchor xml:id="n6e"/> sanctae Iustinae, quae postmodum Cassinensis est nuncupata. Quod merito mireris, prolixo adeo temporis spatio neminem novi (praeter unum, quem infra laudabo), qui ad nos usque librorum editorum laude sui memoriam transmiserit. Itaque <anchor xml:id="n7"/>apparent rari nantes in gurgite vasto<anchor xml:id="n7e"/>. Nullus dubito, quin fuerint eius monasterii plures docti viri; at en per tria <sic>secula</sic>  Italiae nostrae et Longobardiae infelix conditio fuit, ut vix licuerit monachis nostris a seditionum fluctibus se tueri, vigentibus Guelforum et Ghibellinorum factionibus et gliscentibus schismatum turbis, ob quos monasteria nostra direpta sunt legatorum, commendatorum et caeterorum huiusmodi avaritia. Codices manuscripti paucissimi relicti sunt, distractis vel consumptis monachorum laboribus, <pb n="1v"/> quos certo novimus in describendis saltem veterum libris occupatos fuisse, cum nihilominus nullum circumpositorum monasteriorum manuscripta habeat, si <anchor xml:id="n8"/>Padolironense Mantuanum<anchor xml:id="n8e"/> excipias. <anchor xml:id="n9"/>Bobiensis celeberrimi codices<anchor xml:id="n9e"/> partim in Vaticanam, partim in Ambrosianam Mediolanensem bibliothecam translati sunt. Ante congregationis initia proinde qui fuerint docti viri, ignoramus. </ab>
          <ab resp="#editor" xml:id="seg3">Ludovici Barbi pietate ac opera <anchor xml:id="n10"/>congregatione coacta<anchor xml:id="n10e"/> circa tempora Constantiensis concilii, paulatim monasticum decus et literarum studium est restitutum. Linguae Graecae amor adeo invaluerat finiente <sic>seculo</sic>  quintodecimo, ut <anchor xml:id="n11"/>patrum decreto<anchor xml:id="n11e"/> cautum fuerit, ne monachi poetarum et profanae literaturae gratia illi vacarent, sed Scripturae et sacrorum scriptorum gratia. </ab>
          <ab resp="#editor" xml:id="seg4">His tamen non obstantibus <anchor xml:id="n12"/>literatos viros<anchor xml:id="n12e"/> ob editos libros celebres haud frequentes novimus; quos tamen in unum congerendos sibi a multis annis assumpsit pater domnus <anchor xml:id="n13"/>Marianus Armellinus<anchor xml:id="n13e"/> Romanus nostrae congregationis <anchor xml:id="n14"/>decanus<anchor xml:id="n14e"/> et concionator, qui ad S. Pauli Romae moratur, quemque ut per literas interroges, auctor sum, habet enim parata pro Bibliotheca scriptorum congregationis condenda adversaria. </ab>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="915" xml:id="pez-0915">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an Johann Georg Eckhart. 1718-03-03. Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">915</idno>
          </publicationStmt>
          <seriesStmt>
@@ -44,10 +56,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -72,19 +85,21 @@
                <ptr type="mentions" target="letter:914"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e2346">Anonyme Werke ; Heliand. Ms. Bamberg</term>
-            <term ref="index:d14380e3769">Bamberg ; Domkapitel ; Bibliothek ; Heliand. Ms</term>
-            <term ref="index:d14380e5160">Benno, hl ; [Pseudo-Benno] Expositiones breves super Evangelia dominicalia. Ms ;
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e2346">Anonyme Werke ; Heliand. Ms. Bamberg</term>
+               <term ref="index:d14380e3769">Bamberg ; Domkapitel ; Bibliothek ; Heliand. Ms</term>
+               <term ref="index:d14380e5160">Benno, hl ; [Pseudo-Benno] Expositiones breves super Evangelia dominicalia. Ms ;
          Abschrift von Heinrich Flachbert. Ms</term>
-            <term ref="index:d14380e9536">Deutschland, Deutsche , deutsch ; Althochdeutsch, mittelhochdeutsch</term>
-            <term ref="index:d14380e19107">Hugo von Bologna ; Rationes dictandi. Ms. Wolfenbüttel ; Abschrift von Heinrich
+               <term ref="index:d14380e9536">Deutschland, Deutsche , deutsch ; Althochdeutsch, mittelhochdeutsch</term>
+               <term ref="index:d14380e19107">Hugo von Bologna ; Rationes dictandi. Ms. Wolfenbüttel ; Abschrift von Heinrich
          Flachbert. Ms</term>
-            <term ref="index:d14380e20106">Jerusalem</term>
-            <term ref="index:d14380e20946">Juden, Hebräer</term>
-            <term ref="index:d14380e23973">Latein</term>
-            <term ref="index:d14380e40921">Sigler, Konrad</term></keywords></textClass>
+               <term ref="index:d14380e20106">Jerusalem</term>
+               <term ref="index:d14380e20946">Juden, Hebräer</term>
+               <term ref="index:d14380e23973">Latein</term>
+               <term ref="index:d14380e40921">Sigler, Konrad</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Ein gelehrter Bekannter BPs (<rs ref="index:d14380e40921">Konrad Sigler</rs>) hat diesem geschrieben <ref type="letter" target="letter:914">914</ref>, dass er <rs ref="index:d14380e3769">eine alte
                   Handschrift</rs> entdeckt hat, die eine
@@ -102,7 +117,7 @@
             <p corresp="#seg4">BP nimmt an, dass GE seinen Brief <ref type="letter" target="letter:912">912</ref>, in dem er sich für
                die Übermittlung der Handschrift mit den Werken Bennos von Meißen (recte: Hugo von Bologna, „<rs ref="index:d14380e19107">Rationes dictandi</rs>“; Pseudo-Benno von Meißen, „<rs ref="index:d14380e5160">Expositiones in Evangelia</rs>“) bedankt hat und auf einige Punkte aus GEs
                Briefen (<ref type="letter" target="letter:891">891</ref>, <ref type="letter" target="letter:911">911</ref>) eingegangen ist, erhalten hat. Er bittet weiterhin um häufigen Briefverkehr.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -110,7 +125,8 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>vir eruditus</mentioned>
             <p>Dieser Korrespondent ist anhand der expliziten Nennung
-                  in <ref type="letter" target="letter:946">946</ref> <ref target="letter:946#seg3">3</ref> als Konrad Sigler zu identifizieren. Zu
+                  in <ref type="letter" target="letter:946">946</ref>
+               <ref target="letter:946#seg3">3</ref> als Konrad Sigler zu identifizieren. Zu
                   den Gründen für die Ansetzung eines verlorenen Briefes Siglers vgl. Bemerkungen zu
                   914.</p>
          </note>
@@ -143,10 +159,14 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Eruditissimo ac celeberrimo viro domino Joanni Georgio Eckardo pater Bernardus Pez salutem dicit.</opener>
+         <opener>
+            <pb n="1r"/> Eruditissimo ac celeberrimo viro domino Joanni Georgio Eckardo pater Bernardus Pez salutem dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Quidam <anchor xml:id="n1"/>vir eruditus<anchor xml:id="n1e"/> ad me scripsit se alicubi in<anchor xml:id="n2"/> codicem antiquum<anchor xml:id="n2e"/> incidisse, quo contineatur paraphrasis Theodisca sacrorum Evangeliorum. Pro specimine perscripsit alterum paragraphum, cum primus in codice desideretur, rogavitque, ut interpretatione Latina id mysterii sibi redderem explicatum. Ast fuit is ignarus ignorantiae meae pluraque ac maiora in me sita esse existimavit, quam reapse sint. Licet enim non omnino in Theodiscis hospes sim, non audeo tamen longius sine temeritatis nota progredi. </ab>
          <ab resp="#editor" xml:id="seg2">Fuit is tamen non omnino infelix, dum me hominem tibi harum rerum gnarissimo coniunctissimum sibi consulendum putavit. Itaque te, mi eruditissime Ekarde, etiam atque etiam rogo, ut mihi hunc paragraphum in linguam Latinam verbum ex verbo aut, si mavis, sententiam reddendo transferas translationemque mecum quam primum communices. Erit id tibi magnae gloriae, ut cuius nomen apud amicum, cuius uberiorem notitiam suo tempore ex me habebis, minime occultum habiturus sim. Nihil enim turpius duco quam <anchor xml:id="n3"/>alienis superbire plumulis<anchor xml:id="n3e"/> et non nisi furtim sublecto ostro superbire. </ab>
-         <ab resp="#editor" xml:id="seg3">Caeterum paragraphus Theodiscus ita, ut ad me missus fuit, habet: <pb n="1v"/> Tho uuard thiudid cuman that thar gituld habdun uuisa man mid uuordun. That scolda thana uuih Godes Zacharias bischan. Thouuard thargisamnod filu thar te Hierusalem Videono liudo uuerodes tethem uuiha tharsie uualdand God suuido theolico thiggean scoldun herron is huldi thar sie heuancuning ledes aleti thealiudi stodun umbi that helagahus endigeng imthegi herodoma anthana undinnan: that uuerodothar bed umbi thana alah utan Ebreo liudi. Huuan er the fredo mangi frumid habdi uualdandes uuilleon etc. <anchor xml:id="n4"/>Adverto hic passim pronomina cum reliquis orationis partibus copulari<anchor xml:id="n4e"/>. Sed ego volebam omnia intacta ad te pervenire. Itaque<anchor xml:id="n5"/> Oedipum nunc agito<anchor xml:id="n5e"/> meque instrue, ut amico <choice><sic>quem</sic><corr>queam</corr></choice> satisfacere. </ab>
+         <ab resp="#editor" xml:id="seg3">Caeterum paragraphus Theodiscus ita, ut ad me missus fuit, habet: <pb n="1v"/> Tho uuard thiudid cuman that thar gituld habdun uuisa man mid uuordun. That scolda thana uuih Godes Zacharias bischan. Thouuard thargisamnod filu thar te Hierusalem Videono liudo uuerodes tethem uuiha tharsie uualdand God suuido theolico thiggean scoldun herron is huldi thar sie heuancuning ledes aleti thealiudi stodun umbi that helagahus endigeng imthegi herodoma anthana undinnan: that uuerodothar bed umbi thana alah utan Ebreo liudi. Huuan er the fredo mangi frumid habdi uualdandes uuilleon etc. <anchor xml:id="n4"/>Adverto hic passim pronomina cum reliquis orationis partibus copulari<anchor xml:id="n4e"/>. Sed ego volebam omnia intacta ad te pervenire. Itaque<anchor xml:id="n5"/> Oedipum nunc agito<anchor xml:id="n5e"/> meque instrue, ut amico <choice>
+               <sic>quem</sic>
+               <corr>queam</corr>
+            </choice> satisfacere. </ab>
          <ab resp="#editor" xml:id="seg4">Epistolam meam, qua pro Benonis opusculis amplissimas gratias egi et ad plura tuarum litterarum capita respondi, utique acceperis. Vale, vir egregie, et me tuis epistolis quam saepissime dignare etc.</ab>
          <closer>Mellicii 3. Martii 1718.</closer>
       </body>

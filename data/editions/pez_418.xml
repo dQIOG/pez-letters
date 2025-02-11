@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="418" xml:id="pez-0418">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Petrus Friderici an Bernhard Pez. 1715-07-15. Erfurt.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">418</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -75,15 +87,21 @@
             </correspContext>
          </correspDesc>
          <abstract>
-            <p corresp="#seg1"><rs type="person">PF</rs> berichtet, dass das Schreiben in der Angelegenheit BPs ohne Zweifel bei dem <rs ref="index:d14380e22194">Kölner</rs> <rs ref="index:d10854e15482">Generalkapitel</rs> der <rs ref="index:d10854e15460">Bursfelder Kongregation</rs> eingelangt ist. Der Abt von <rs ref="index:d10854e8069">St. Peter</rs> zu <rs ref="index:d10854e7974">Erfurt</rs>, <rs ref="index:d10854e4919">Placidus Casselmann</rs>, welcher an der Teilnahme verhindert war, hat seinem Schreiben an das Kapitel den genannten Brief beigefügt. In der Antwort an ihn war von BPs Anliegen nicht die Rede, weshalb er und <rs type="person">PF</rs> annahmen, das Kapitel habe an BP in einem eigenen Brief geantwortet. Da dies nicht der Fall war, schämt sich <rs type="person">PF</rs> für die Untätigkeit der <rs ref="index:d10854e15460">Bursfelder</rs> Prälaten.</p>
+            <p corresp="#seg1">
+               <rs type="person">PF</rs> berichtet, dass das Schreiben in der Angelegenheit BPs ohne Zweifel bei dem <rs ref="index:d14380e22194">Kölner</rs>
+               <rs ref="index:d10854e15482">Generalkapitel</rs> der <rs ref="index:d10854e15460">Bursfelder Kongregation</rs> eingelangt ist. Der Abt von <rs ref="index:d10854e8069">St. Peter</rs> zu <rs ref="index:d10854e7974">Erfurt</rs>, <rs ref="index:d10854e4919">Placidus Casselmann</rs>, welcher an der Teilnahme verhindert war, hat seinem Schreiben an das Kapitel den genannten Brief beigefügt. In der Antwort an ihn war von BPs Anliegen nicht die Rede, weshalb er und <rs type="person">PF</rs> annahmen, das Kapitel habe an BP in einem eigenen Brief geantwortet. Da dies nicht der Fall war, schämt sich <rs type="person">PF</rs> für die Untätigkeit der <rs ref="index:d10854e15460">Bursfelder</rs> Prälaten.</p>
             <p corresp="#seg2">Zum neuen Präses der Kongregation wurde <rs ref="index:d14380e14609">Cölestin von Geismar</rs>, Abt des freien Reichsklosters <rs ref="index:d14380e45356">Werden</rs>, gewählt, an den sich BP vertrauensvoll wenden kann.</p>
             <p corresp="#seg3">1481 wirkte im <rs ref="index:d10854e8069">Peterskloster</rs> als Abt <rs ref="index:d10854e11564">Günther von Nordhausen</rs> aus einem <rs ref="index:d10854e7974">Erfurter</rs> Patriziergeschlecht, der dem Kloster seit 1458 vorstand und 1503 starb. Er wird in <rs ref="index:d14380e6893">Bucelins „Benedictus redivivus“</rs> unter seinem Todesjahr behandelt. In ihm ist der Verfasser der (von BP) genannten Rede (<rs ref="index:d10854e11564">„De historia sermo claustralis“</rs>) zu vermuten.</p>
-            <p corresp="#seg4"><rs ref="index:d10854e1879">Bernard Baillie</rs> war in Geschäften seines <rs ref="index:d10854e8069">Klosters</rs> einige Zeit aus <rs ref="index:d10854e7974">Erfurt</rs> abwesend, wird aber von <rs type="person">PF</rs> nach seiner Rückkehr BPs Schreiben <ref type="letter" target="letter:416">416</ref> erhalten. <rs type="person">PF</rs> wird einmahnen, dass <rs ref="index:d10854e1879">Baillie</rs> seine Versprechen erfüllt.</p>
+            <p corresp="#seg4">
+               <rs ref="index:d10854e1879">Bernard Baillie</rs> war in Geschäften seines <rs ref="index:d10854e8069">Klosters</rs> einige Zeit aus <rs ref="index:d10854e7974">Erfurt</rs> abwesend, wird aber von <rs type="person">PF</rs> nach seiner Rückkehr BPs Schreiben <ref type="letter" target="letter:416">416</ref> erhalten. <rs type="person">PF</rs> wird einmahnen, dass <rs ref="index:d10854e1879">Baillie</rs> seine Versprechen erfüllt.</p>
             <p corresp="#seg5">Die zwei von BP erwähnten jungen Männer (<rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs> und <rs ref="index:d10854e32969">Konrad Widow</rs>) sind noch nicht in <rs ref="index:d10854e7974">Erfurt</rs> angekommen, werden von <rs type="person">PF</rs> jedoch alle Gastfreundschaft erfahren.</p>
-            <p corresp="#seg6"><rs type="person">PF</rs> ist begierig, BPs in <rs ref="index:d14380e21803">Kempten</rs> gedruckte „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“ zu sehen, und bittet, ihm über Abt <rs ref="index:d10854e8976">Placidus Fleming</rs> oder Prior <rs ref="index:d10854e5549">Andrew Cook</rs> im <rs ref="index:d14380e36872">Schottenkloster</rs> zu <rs ref="index:d14380e36631">Regensburg</rs> ein Exemplar zukommen zu lassen.</p>
-            <p corresp="#seg7">Die Annalen des <rs ref="index:d10854e8069">Petersklosters</rs> (<rs ref="index:d10854e9634"><rs ref="index:d10854e8125">„Großes Chronicon Sanpetrense“</rs></rs>), an denen <rs type="person">PF</rs> arbeitet, sind des Druckes nicht wert und sollen in der <rs ref="index:d10854e8106">Hausbibliothek</rs> verbleiben, den künftigen Patres zur Lehre und zum Ansporn. Gemeinsam mit seinem Abt <rs ref="index:d10854e4919">Casselmann</rs> ermutigt <rs type="person">PF</rs> BP in seinem Vorhaben („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) und verspricht beider Fürsprache im Gebet.</p>
+            <p corresp="#seg6">
+               <rs type="person">PF</rs> ist begierig, BPs in <rs ref="index:d14380e21803">Kempten</rs> gedruckte „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“ zu sehen, und bittet, ihm über Abt <rs ref="index:d10854e8976">Placidus Fleming</rs> oder Prior <rs ref="index:d10854e5549">Andrew Cook</rs> im <rs ref="index:d14380e36872">Schottenkloster</rs> zu <rs ref="index:d14380e36631">Regensburg</rs> ein Exemplar zukommen zu lassen.</p>
+            <p corresp="#seg7">Die Annalen des <rs ref="index:d10854e8069">Petersklosters</rs> (<rs ref="index:d10854e9634">
+                  <rs ref="index:d10854e8125">„Großes Chronicon Sanpetrense“</rs>
+               </rs>), an denen <rs type="person">PF</rs> arbeitet, sind des Druckes nicht wert und sollen in der <rs ref="index:d10854e8106">Hausbibliothek</rs> verbleiben, den künftigen Patres zur Lehre und zum Ansporn. Gemeinsam mit seinem Abt <rs ref="index:d10854e4919">Casselmann</rs> ermutigt <rs type="person">PF</rs> BP in seinem Vorhaben („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) und verspricht beider Fürsprache im Gebet.</p>
             <p corresp="#seg8">In einem Postskriptum bietet <rs type="person">PF</rs> an, Briefe an den Kongregationspräses nach <rs ref="index:d14380e45356">Werden</rs>, welches 30 Meilen von <rs ref="index:d10854e7974">Erfurt</rs> entfernt liegt, weiterzuleiten, falls BP selbst keine Möglichkeit hat, sie dorthin zu schicken.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -92,13 +110,15 @@
             <mentioned>Coloniense ... capitulum</mentioned>
             <p>Das Generalkapitel hatte vom 17. bis zum 19. Juni 1714 im Kloster Groß St. Martin
                   zu Köln stattgefunden: <rs type="bibl" ref="bibl:20542">Ziegler, Bursfelder
-                     Kongregation</rs> 372. Die erwähnte „epistola“ könnte eines der mit <ref type="letter" target="letter:222">222</ref> an PF ergangenen mehreren Exemplare der LE 2 (vgl. <ref type="letter" target="letter:268">268</ref> <ref target="letter:268#seg1">1</ref>), ein eigener Brief BPs an das Kapitel oder
+                     Kongregation</rs> 372. Die erwähnte „epistola“ könnte eines der mit <ref type="letter" target="letter:222">222</ref> an PF ergangenen mehreren Exemplare der LE 2 (vgl. <ref type="letter" target="letter:268">268</ref>
+               <ref target="letter:268#seg1">1</ref>), ein eigener Brief BPs an das Kapitel oder
                   auch ein Brief PFs an dieses in der Sache BPs gewesen sein; da sich dies aus den
                   Worten PFs nicht entscheiden lässt, wird kein Brief BPs angesetzt.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>Coelestinus ... electus</mentioned>
-            <p><rs type="bibl" ref="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 3 221; vgl.
+            <p>
+               <rs type="bibl" ref="bibl:20124">Volk, Generalkapitels-Rezesse</rs> 3 221; vgl.
                      <rs type="bibl" ref="bibl:19850">Stüwer, Reichsabtei Werden</rs> 188.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg3">
@@ -121,8 +141,9 @@
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
             <mentioned>Baile ... promissis</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:387">387</ref> <ref target="letter:387#seg2">2</ref>, <ref type="letter" target="letter:393">393</ref>
-                  <ref target="letter:393#seg5">5</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:387">387</ref>
+               <ref target="letter:387#seg2">2</ref>, <ref type="letter" target="letter:393">393</ref>
+               <ref target="letter:393#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
             <mentioned>necdum comparuerunt</mentioned>
@@ -135,7 +156,8 @@
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg7">
             <mentioned>Annales Petrenses</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:166">166</ref> <ref target="letter:166#seg4">4</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:166">166</ref>
+               <ref target="letter:166#seg4">4</ref>.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -159,11 +181,14 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende colendeque domine confrater.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende colendeque domine confrater.</opener>
          <ab resp="#editor" xml:id="seg1">Epistolam ad <anchor xml:id="n1"/>Coloniense annale capitulum<anchor xml:id="n1e"/> destinatam recte eo pervenisse nullum est dubium, quia reverendissimus noster casualiter ab ea dominorum abbatum conventione praepeditus suis illuc transmissis illam inclusit, et responsum sine ulla mentione acclusarum accepit. Unde praesumpsimus reverentiae vestrae specialibus satisfactum fuisse, cuius contrarium cum intelligam, pudet me negligentiae aut inurbanitatis nostrorum praelatorum. </ab>
          <ab resp="#editor" xml:id="seg2">In fato capitulo reverendissimus dominus <anchor xml:id="n2"/>Coelestinus de Geismar, liberi ac imperialis monasterii Werdinensis abbas, vir praeclarus et gloriae sacri ordinis nostri avidus, in novum congregationis Bursfeldinae praesidem electus<anchor xml:id="n2e"/> fuit, cui sese reverentia vestra scriptis insinuare tuto poterit petereque, quidquid collibitum est; de ipsius etenim humanitate atque benevolentia nequaquam diffido. </ab>
          <ab resp="#editor" xml:id="seg3">Anno 1481 monasterio nostro praefuit praelatus aeterna memoria dignus, reverendissimus dominus <anchor xml:id="n3"/>Guntherus<anchor xml:id="n3e"/> de Northausen, <anchor xml:id="n4"/>ex patritiis Erffurtensibus de Northusen<anchor xml:id="n4e"/> dictis oriundus, qui praelaturam adiit anno 1458 die 3. Februarii, obiitque 1503 9. Januarii, <anchor xml:id="n5"/>de quo videatur Bucelinus<anchor xml:id="n5e"/> in suo Benedicto redivivo obitus anno, pagina 20. Pronum est opinari eundem <anchor xml:id="n6"/>citatae orationis<anchor xml:id="n6e"/> esse authorem, quia praeter zelum religiositatis multam habuit rerum scientiam experientiamque. </ab>
-         <ab resp="#editor" xml:id="seg4">Admodum reverendus pater Bernardus Baile <pb n="1v"/> aliquamdiu Erffurto abfuit alibi monasterii sui negotia peragens; reduci mox submissas reverentiae vestrae litteras porrigam adigamque, ut stet promissis. <hi rend="italic">&lt;</hi><hi rend="italic smallcaps">5</hi><hi rend="italic"/> Denominati duo adolescentes necdum comparuerunt, quorum si nactus fuero alloquium, omnem a me humanitatem <sic>officiciaque</sic>  experientur. </ab>
+         <ab resp="#editor" xml:id="seg4">Admodum reverendus pater Bernardus Baile <pb n="1v"/> aliquamdiu Erffurto abfuit alibi monasterii sui negotia peragens; reduci mox submissas reverentiae vestrae litteras porrigam adigamque, ut stet promissis. <hi rend="italic">&lt;</hi>
+            <hi rend="italic smallcaps">5</hi>
+            <hi rend="italic"/> Denominati duo adolescentes necdum comparuerunt, quorum si nactus fuero alloquium, omnem a me humanitatem <sic>officiciaque</sic>  experientur. </ab>
          <ab resp="#editor" xml:id="seg6">Cupidus profecto sum videndi partum illum novum, quem plurimum reverenda dominatio sua typis Campidunensibus recenter edidit. Si exemplar Ratisbonam ad dominum <anchor xml:id="n7"/>abbatem vel priorem<anchor xml:id="n7e"/> Scotorum transmitti posset, haud dubie ab ipsis utpote notis acciperem. </ab>
          <ab resp="#editor" xml:id="seg7">Mei <anchor xml:id="n8"/>Annales Petrenses<anchor xml:id="n8e"/>, quos nunc ordine in codicem redigo, tanti non sunt momenti, ut lucem publicam per typum mereantur; sufficiet illis, quod inter privatos bibliothecae nostrae parietes remorentur ac notitiae posterorum confratrum deserviant eosque ad prosequendum inchoata exstimulent. Salutat quam humanissime reverentiam vestram reverendissimus dominus praelatus hortaturque suaviter mecum, ut fortiter constanterque bene coeptis insistat. Orabimus pariter pro incolumitate paternitatis suae, ut pro gloria Dei sacrique ordinis, quae occepit, feliciter absolvat.</ab>
          <closer>Plurimum reverendae dominationis vestrae servus frater Petrus Friderici Benedictinus Petrensis manu propria.</closer>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="10" xml:id="pez-0010">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Modest Huber an Bernhard Pez. 1709-09-29. Wiblingen.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">10</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Der Brief ist von Roman Doll geschrieben, nur die Unterschrift ab <orig>addictissimus</orig> von MH.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -80,7 +92,7 @@
          </correspDesc>
          <abstract>
             <p corresp="#seg1">MH hat BPs Brief vom 8. September <ref type="letter" target="letter:1">1</ref> erhalten und daraus von BPs Vorhaben erfahren, die Schriftsteller des Benediktinerordens in einem Werk („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) zu sammeln. Da dieses Vorhaben zum Ruhm des Ordens beiträgt, will sich MH der Bitte nicht entziehen. Er hat bereits einen seiner Konventualen (<rs ref="index:d10854e6614">Roman Doll</rs>?) dazu bestimmt, sich um BPs Anliegen zu kümmern. Sollte von anderen <rs ref="index:d10854e28377">schwäbischen</rs> Klöstern etwas nach <rs ref="index:d10854e32902">Wiblingen</rs> eingesendet werden, will MH dafür sorgen, es an BP weiterzuleiten.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -93,13 +105,15 @@
             <mentioned>iam unum constituiSi quid ...
                   Wiblingam dirigatur</mentioned>
             <p>Höchstwahrscheinlich ist hier Roman Doll gemeint, der 1710 als Korrespondent BPs
-                  in Wiblingen begegnet (38, 58).</p><p>Für eine Vermittlerposition bot sich Wiblingen nicht etwa wegen einer
+                  in Wiblingen begegnet (38, 58).</p>
+            <p>Für eine Vermittlerposition bot sich Wiblingen nicht etwa wegen einer
                   Führungsrolle in der Oberschwäbischen Benediktinerkongregation an – eine solche
                   kam in erster Linie Weingarten und Ochsenhausen zu (vgl. <rs type="bibl" ref="bibl:18970">Quarthal, Oberschwäbische Benediktinerkongregation </rs>502,
                   515–518) – sondern aufgrund seiner verkehrsgünstigen Lage bei Ulm, von wo über die
                   Donau eine verhältnismäßig rasche Verbindung nach Österreich und Melk möglich war.
                   Zu Wiblingen als Durchgangsstation der Korrespondenz zwischen St. Gallen und Melk
-                  vgl. <ref type="letter" target="letter:15">15</ref> <ref target="letter:15#seg3">3</ref>.</p>
+                  vgl. <ref type="letter" target="letter:15">15</ref>
+               <ref target="letter:15#seg3">3</ref>.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -115,7 +129,8 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiosissime ac doctissime domine perquam colende.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiosissime ac doctissime domine perquam colende.</opener>
          <ab resp="#editor" xml:id="seg1">Litteras paternitatis vestrae 8. currentis signatas ad me in tempore delatas accepi; intellexi studium et intentionem, qua desiderat florentissimi ordinis nostri scriptores in unam seriem et praeclarum opus includere atque eum in finem de monasterio meo eorum <anchor xml:id="n1"/>nomina, patriam, cognomen et studium exspectat, qui aliquando libris scriptis claruere<anchor xml:id="n1e"/>. Et sicut paternitatis vestrae admodum reverendae conatus in sacri ordinis nostri gloriam cedit, sic petitis non deero, quemadmodum de meis capitularibus <anchor xml:id="n2"/>iam unum constitui<anchor xml:id="n2e"/>, qui intentioni vestrae cum industria inserviet brevi. Si quid forte ab aliis Sueviae nostrae monasteriis Wiblingam dirigatur, curabo, ut opportuna <sic>ocasione</sic> ad manus destinatas perveniat. Utrinque divinae providentiae commendati, permaneo</ab>
          <closer>Admodum reverendae religiosissimae ac doctissimae paternitatis vestrae addictissimus Modestus abbas manu propria.</closer>
          <closer>Wiblingae 29. Septembris 1709.</closer>

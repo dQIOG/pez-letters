@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="231" xml:id="pez-0231">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Felix Egger an Bernhard Pez. 1712-03-23. Petershausen.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">231</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Bei Glassner, Verzeichnis 210, ist irrig
                   Klingenzell als Absendeort genannt.
@@ -54,10 +65,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -85,7 +97,7 @@
             <p corresp="#seg3">Auch FE hat mit einer Sammlung von benediktinischen Schriftstellern aus <rs ref="index:d14380e46413">Wions</rs> „<rs ref="index:d14380e46421">Lignum vitae</rs>“, <rs ref="index:d10854e31389">Ughellis</rs> „<rs ref="index:d10854e31395">Italia sacra</rs>“ und <rs ref="index:d14380e6885">Bucelins</rs> „<rs ref="index:d14380e6893">Benedictus redivivus</rs>“ begonnen; er hat dabei jedoch nach Klassen, nicht nach Jahrhunderten unterteilt, zudem hat er eine Auswahl aufgrund der Nähe und Bedeutung getroffen. Nun jedoch streicht er die Segel, überlässt BP das Feld und bietet ihm jede Art von Mithilfe an. FE schließt mit Wünschen zum Osterfest.</p>
             <p corresp="#seg4">In einem Postskriptum erklärt FE, dass er einen <rs ref="index:d10854e15308">Schriftstellerkatalog</rs> der <rs ref="index:d10854e15295">Anglikanischen Kongregation</rs> sowie <rs ref="index:d10854e20978">einen</rs> von <rs ref="index:d14380e30140">Muri</rs> mitsendet.</p>
             <p corresp="#seg5">Weiters merkt FE an, dass er den besseren Klostergeschichten, zu denen <rs ref="index:d14380e39962">Anselm Schrambs</rs> „<rs ref="index:d14380e40004">Chronicon Mellicense</rs>“ gehört, (bei der Verwendung für seine „<rs ref="index:d10854e7334">Idea ordinis hierarchico-Benedictini</rs>“?) nichts hinzufügt außer einzelnen Anmerkungen, wo es Unstimmigkeiten mit der Literatur gibt oder wo noch etwas ergänzt werden kann.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -102,7 +114,8 @@
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>Romano Steigentesch</mentioned>
-            <p><rs type="bibl" ref="bibl:18034">Lindner, Professbuch Petershausen</rs> 9f., mit
+            <p>
+               <rs type="bibl" ref="bibl:18034">Lindner, Professbuch Petershausen</rs> 9f., mit
                   Angabe von vier gedruckten Werken (Thesen sowie einer Festpredigt).</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
@@ -179,9 +192,13 @@
             <p>Die Bemerkung bezieht sich wohl auf die Darstellungen einzelner Klöster in der
                   „Idea ordinis hierarchico-Benedictini“, an der FE arbeitete. Die erwähnte Melker
                   Geschichte ist zweifellos das „Chronicon Mellicense“, das Schramb als Geschenk
-                  nach Petershausen geschickt hatte (<ref type="letter" target="letter:281">281 </ref><ref target="letter:281 #seg5">5</ref>),
+                  nach Petershausen geschickt hatte (<ref type="letter" target="letter:281">281 </ref>
+               <ref target="letter:281 #seg5">5</ref>),
                   ähnlich wie dies für weitere Korrespondenten BPs geschah, etwa René Massuet oder
-                  Moritz Müller (vgl. <ref type="letter" target="letter:68">68 </ref><ref target="letter:68 #seg6">6</ref>, <ref type="letter" target="letter:92">92</ref> <ref target="letter:92#seg3">3</ref>, <ref type="letter" target="letter:246">246</ref> <ref target="letter:246#seg1">1</ref>).</p>
+                  Moritz Müller (vgl. <ref type="letter" target="letter:68">68 </ref>
+               <ref target="letter:68 #seg6">6</ref>, <ref type="letter" target="letter:92">92</ref>
+               <ref target="letter:92#seg3">3</ref>, <ref type="letter" target="letter:246">246</ref>
+               <ref target="letter:246#seg1">1</ref>).</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -210,13 +227,16 @@
    </standOff>
    <text>
       <front>
-         <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez celeberrimi ac florentissimi monasterii Mellicensis capitulari ac bibliothecario dignissimo ad colendissimas manus. Mölckh öb Wienn.<note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 132v.</note></p>
+         <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez celeberrimi ac florentissimi monasterii Mellicensis capitulari ac bibliothecario dignissimo ad colendissimas manus. Mölckh öb Wienn.<note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 132v.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater, patrone colendissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater, patrone colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">Novissimas vestras 9. Martii datas una cum <anchor xml:id="n1"/>adiuncto catalogo<anchor xml:id="n1e"/> 20. eiusdem magno animi oblectamento tenui. Quem ipsum catalogum hac ipsa posta mitto <anchor xml:id="n2"/>Erfordium ad monasterium Petrense additis precibus, ut intentionem vestram promovere et aliis insuper congregationis Bursfeldensis monasteriis<anchor xml:id="n2e"/> aperire dignentur Petrenses: id quod posthac alibi etiam praestabo. </ab>
          <ab resp="#editor" xml:id="seg2">Inter haec non sine rubore Petrhusianam profiteri sterilitatem compellor, cum nullus omnino a tot retro saeculis impressus libellus reperiatur a nostris compositus, praeter theses quasdam tenues philosophicas a reverendo patre <anchor xml:id="n3"/>Romano Steigentesch<anchor xml:id="n3e"/>, meo olim professore, elucubratas. Extant etiam ultra viginti libri ab uno <anchor xml:id="n4"/>Petro Ower<anchor xml:id="n4e"/>, asceta Petrhusiano vere pio ac docto, conscripti, typo digni, cum doctrinam spirent coelestis odoris. Verum quid dicent patres Societatis, si tot thesistas consarcinemus, quorum ipsis numerus pene infinitus? Censeo (meliori salvo iudicio) secernendos saltem eiusmodi gregarios a ducibus, ne aemulis risum cieamus. <pb n="1v"/> Aut forte peculiares ac graviores rationes vos moveant: quibus meum ego iudicium lubens submitto. Inter thesistas autem non intelligo patres <sic>Pattscacher</sic> , Oberascher etc., etiam a patribus Societatis subinde citatos. </ab>
-         <ab resp="#editor" xml:id="seg3"><anchor xml:id="n5"/>Congessi pariter et ego plurimorum scriptorum nomina<anchor xml:id="n5e"/> in classes, non saecula, digesta, ex Wione, Ughello, Bucelini Benedicto redivivo collecta, et quos vicinia aut illustrior fama commendarat. Sed <anchor xml:id="n6"/>vela nunc contraho<anchor xml:id="n6e"/>, cum luce oriente merito umbra cedat. Gratulor sane vel ex hoc capite gloriosissimae religioni nostrae eximiam, quam ei industria vestra comparat, gloriam. Habet posthac clarissima dominatio vestra, <add place="above">quod imperet</add> tenuitati meae, si quocunque obsequiorum genere auxiliatricem porrigere dextram liceat. Qua sincerissima contestatione dum praesentes obsigno ac multo iucundissimum <anchor xml:id="n7"/>Alleluia<anchor xml:id="n7e"/> cum Paschalibus affluentiis animitus apprecor, me meaque impensissime commendo ac persto</ab>
+         <ab resp="#editor" xml:id="seg3">
+            <anchor xml:id="n5"/>Congessi pariter et ego plurimorum scriptorum nomina<anchor xml:id="n5e"/> in classes, non saecula, digesta, ex Wione, Ughello, Bucelini Benedicto redivivo collecta, et quos vicinia aut illustrior fama commendarat. Sed <anchor xml:id="n6"/>vela nunc contraho<anchor xml:id="n6e"/>, cum luce oriente merito umbra cedat. Gratulor sane vel ex hoc capite gloriosissimae religioni nostrae eximiam, quam ei industria vestra comparat, gloriam. Habet posthac clarissima dominatio vestra, <add place="above">quod imperet</add> tenuitati meae, si quocunque obsequiorum genere auxiliatricem porrigere dextram liceat. Qua sincerissima contestatione dum praesentes obsigno ac multo iucundissimum <anchor xml:id="n7"/>Alleluia<anchor xml:id="n7e"/> cum Paschalibus affluentiis animitus apprecor, me meaque impensissime commendo ac persto</ab>
          <closer>Plurimum reverendae ac clarissimae dominationis vestrae servus pater Felix Egger.</closer>
          <closer>Phetershausen bei Costanz, 23. Martii 1712.</closer>
          <closer xml:id="seg5">P.S. Pro sincera amicitiae tessera adiungo <anchor xml:id="n8"/>catalogum congregationis Anglicanae<anchor xml:id="n8e"/> ac <anchor xml:id="n9"/>monasterii Murensis<anchor xml:id="n9e"/>. N.B. <anchor xml:id="n10"/>Monasteriorum historiis tersiori stylo exornatis (quas inter fulget Mellicensis) prorsus nil addo<anchor xml:id="n10e"/>, nisi annotationes subinde quasdam, si forte cum authoribus non conveniant, aut pro cumulo gloriae aliunde quidpiam occurrat.</closer>

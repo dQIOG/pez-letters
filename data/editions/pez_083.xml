@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="83" xml:id="pez-0083">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Albert Reichart an Bernhard Pez. 1710-07-05. St. Paul im Lavanttal.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">83</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,9 +90,10 @@
          </correspDesc>
          <abstract>
             <p corresp="#seg1">ARe empfindet das ihm von BP erwiesene Wohlwollen als unverdient und übertrieben. Wenn BP irgendeine unter den jüngst <ref type="letter" target="letter:50">50</ref> genannten Schriften von <rs ref="index:d10854e27460">St. Paulern</rs> wünscht, soll er Exemplare erhalten, doch sind diese kein Grund zu unverdientem Lob.</p>
-            <p corresp="#seg2">ARe ist sehr erfreut über BPs Kontakt mit den <rs ref="index:d14380e12712">französischen</rs> <rs ref="index:d10854e15615">Benediktinern</rs>, durch den man aus dieser Weltgegend wenigstens in Form von Druckwerken etwas Nützliches erhalten kann.</p>
+            <p corresp="#seg2">ARe ist sehr erfreut über BPs Kontakt mit den <rs ref="index:d14380e12712">französischen</rs>
+               <rs ref="index:d10854e15615">Benediktinern</rs>, durch den man aus dieser Weltgegend wenigstens in Form von Druckwerken etwas Nützliches erhalten kann.</p>
             <p corresp="#seg3">ARe bittet um einen Hinweis, bei welcher Gelegenheit sein Brief an den päpstlichen Nuntius beim Kaiser (<rs ref="index:d10854e24337">Giulio Piazza</rs>) übergeben werden kann, sowie um dessen Titulatur.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -88,7 +102,9 @@
             <mentioned>exemplaria ... accipiet</mentioned>
             <p>Dieses Angebot könnte die Grundlage für die Übermittlung eines Exemplars von ARes
                   „Breviarium
-                  historiae Carinthiacae“ gewesen sein; vgl. <ref type="letter" target="letter:50">50</ref> <ref target="letter:50#seg2">2</ref>, <ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg8">8</ref>.</p>
+                  historiae Carinthiacae“ gewesen sein; vgl. <ref type="letter" target="letter:50">50</ref>
+               <ref target="letter:50#seg2">2</ref>, <ref type="letter" target="letter:143">143</ref>
+               <ref target="letter:143#seg8">8</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>orbis plaga</mentioned>
@@ -104,7 +120,8 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime et clarissime domine.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime et clarissime domine.</opener>
          <ab resp="#editor" xml:id="seg1">Domine plurimum colende. Magno nimium et quidem non merito in me<del ana="#after">affectu</del> fertur affectu, igitur pro interim intra gratiarum actionem sistitur mea gratitudo. Et si quae ex nominatis nuper opellis <anchor xml:id="n1"/>exemplaria desideraverit plurimum reverenda dominatio, eadem transmissa accipiet<anchor xml:id="n1e"/>, sed non materiam laudum, quam nemo San-Paulensium meretur. </ab>
          <ab resp="#editor" xml:id="seg2">Caeterum efflictim gaudeo plurimum reverendam dominationem cum Gallis Benedictinis habere commercium litterarum, unde ex illa <anchor xml:id="n2"/>orbis plaga<anchor xml:id="n2e"/> saltem quid boni ex libris editis audiemus et hauriemus. </ab>
          <ab resp="#editor" xml:id="seg3">Plurimum reverenda dominatio me instruat, qua occasione meae litterae ad caesareum nuntium apostolicum sint deferendae, pro cuius <anchor xml:id="n3"/>titulo<anchor xml:id="n3e"/> etiam rogo. Et me sacris sacrificiis atque affectui commendo</ab>

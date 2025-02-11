@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="741" xml:id="pez-0741">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Benedikt Friepeis an Bernhard Pez. 1717-02-15. Andechs.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">741</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -79,83 +92,85 @@
                <ptr type="mentions" target="letter:747"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e150">Achery, Jean-Luc d’ ; Veterum aliquot scriptorum, qui in Galliae bibliothecis, maxime
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e150">Achery, Jean-Luc d’ ; Veterum aliquot scriptorum, qui in Galliae bibliothecis, maxime
          Benedictinorum, latuerunt, spicilegium. 13 Bde. Paris 1655–1677</term>
-            <term ref="index:d14380e228">Acta eruditorum. Leipzig 1682–1732</term>
-            <term ref="index:d14380e590">Aichler, David</term>
-            <term ref="index:d14380e1411">Andechs</term>
-            <term ref="index:d14380e1472">Andechs ; Bibliothek</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e6531">Braun, Maurus</term>
-            <term ref="index:d14380e12078">Ferb, Philipp Alois</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e13534">Friepeis, Benedikt ; Nachträge zum Schriftstellerkatalog. Ms</term>
-            <term ref="index:d14380e13543">Friepeis, Benedikt ; Schriftstellerkatalog von Andechs. Ms</term>
-            <term ref="index:d14380e15368">Gerstl, Ildephons</term>
-            <term ref="index:d14380e19263">Hund von Sulzenmoos, Wiguleus ; Metropolis Salisburgensis continens primordia
+               <term ref="index:d14380e228">Acta eruditorum. Leipzig 1682–1732</term>
+               <term ref="index:d14380e590">Aichler, David</term>
+               <term ref="index:d14380e1411">Andechs</term>
+               <term ref="index:d14380e1472">Andechs ; Bibliothek</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e6531">Braun, Maurus</term>
+               <term ref="index:d14380e12078">Ferb, Philipp Alois</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e13534">Friepeis, Benedikt ; Nachträge zum Schriftstellerkatalog. Ms</term>
+               <term ref="index:d14380e13543">Friepeis, Benedikt ; Schriftstellerkatalog von Andechs. Ms</term>
+               <term ref="index:d14380e15368">Gerstl, Ildephons</term>
+               <term ref="index:d14380e19263">Hund von Sulzenmoos, Wiguleus ; Metropolis Salisburgensis continens primordia
          Christianae religionis per Boiariam et loca vicina, catalogum videlicet et ordinariam
          successionem archiepiscoporum Salisburgensium et coepiscoporum Frisingensium,
          Ratisponensium, Pataviensium ac Brixinensium, simulque fundationes et erectiones
          monasteriorum et ecclesiarum collegiatarum. Ingolstadt 1582 ; Ausgabe in 3 Bden. Erweitert
          und hg. von Christoph Gewold. München 1620 ; Nachdruck Regensburg 1719</term>
-            <term ref="index:d14380e19269">Hund von Sulzenmoos, Wiguleus ; Metropolis Salisburgensis continens primordia
+               <term ref="index:d14380e19269">Hund von Sulzenmoos, Wiguleus ; Metropolis Salisburgensis continens primordia
          Christianae religionis per Boiariam et loca vicina, catalogum videlicet et ordinariam
          successionem archiepiscoporum Salisburgensium et coepiscoporum Frisingensium,
          Ratisponensium, Pataviensium ac Brixinensium, simulque fundationes et erectiones
          monasteriorum et ecclesiarum collegiatarum. Ingolstadt 1582 ; Ausgabe in 3 Bden. Erweitert
          und hg. von Christoph Gewold. München 1620 ; Nachdruck Regensburg 1719 ; *Benediktinischer
          Bearbeiter eines geplanten vierten Bandes</term>
-            <term ref="index:d14380e19307">Huttler, Johannes Chrysostomus</term>
-            <term ref="index:d14380e20126">Jesuiten</term>
-            <term ref="index:d14380e20526">Johannes Gersen</term>
-            <term ref="index:d14380e20583">Johannes von Joncels ; Vade mecum</term>
-            <term ref="index:d14380e21859">Kibler, Ägidius</term>
-            <term ref="index:d14380e22316">Kongregationen des Benediktinerordens ; Bayerische Kongregation</term>
-            <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
-            <term ref="index:d14380e24317">Leipzig</term>
-            <term ref="index:d14380e25749">Mabillon, Jean ; Annales ordinis sancti Benedicti, occidentalium monachorum
+               <term ref="index:d14380e19307">Huttler, Johannes Chrysostomus</term>
+               <term ref="index:d14380e20126">Jesuiten</term>
+               <term ref="index:d14380e20526">Johannes Gersen</term>
+               <term ref="index:d14380e20583">Johannes von Joncels ; Vade mecum</term>
+               <term ref="index:d14380e21859">Kibler, Ägidius</term>
+               <term ref="index:d14380e22316">Kongregationen des Benediktinerordens ; Bayerische Kongregation</term>
+               <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
+               <term ref="index:d14380e24317">Leipzig</term>
+               <term ref="index:d14380e25749">Mabillon, Jean ; Annales ordinis sancti Benedicti, occidentalium monachorum
          patriarchae, in quibus non modo res monasticae, sed etiam ecclesiasticae historiae non
          minima pars continetur. 6 Bde. Paris 1703–1739 ; Bd. 5. Paris 1713</term>
-            <term ref="index:d14380e26044">Mallersdorf</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e28610">Memoires pour l’histoire des sciences et des beaux arts. Trévoux 1701–1767</term>
-            <term ref="index:d14380e28852">Meyding, Benedikt</term>
-            <term ref="index:d14380e28875">Meyding, Benedikt ; *Widerlegung von Meyer, Historia controversiarum</term>
-            <term ref="index:d14380e28886">Meyer, Liévin de ; [Pseudonym Theodorus Eleutherius] Historia controversiarum de
+               <term ref="index:d14380e26044">Mallersdorf</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e28610">Memoires pour l’histoire des sciences et des beaux arts. Trévoux 1701–1767</term>
+               <term ref="index:d14380e28852">Meyding, Benedikt</term>
+               <term ref="index:d14380e28875">Meyding, Benedikt ; *Widerlegung von Meyer, Historia controversiarum</term>
+               <term ref="index:d14380e28886">Meyer, Liévin de ; [Pseudonym Theodorus Eleutherius] Historia controversiarum de
          divinae gratiae auxiliis sub summis pontificibus Sixto V., Clemente VIII. et Paulo V.
          Antwerpen 1705</term>
-            <term ref="index:d14380e29936">München</term>
-            <term ref="index:d14380e30013">München ; Kurfürstlicher Hof ; Hofbibliothek</term>
-            <term ref="index:d14380e32575">Passau</term>
-            <term ref="index:d14380e33131">Petrus von Rosenheim</term>
-            <term ref="index:d14380e33143">Petrus von Rosenheim ; Roseum memoriale divinorum eloquiorum ; Ausgabe Leipzig
+               <term ref="index:d14380e29936">München</term>
+               <term ref="index:d14380e30013">München ; Kurfürstlicher Hof ; Hofbibliothek</term>
+               <term ref="index:d14380e32575">Passau</term>
+               <term ref="index:d14380e33131">Petrus von Rosenheim</term>
+               <term ref="index:d14380e33143">Petrus von Rosenheim ; Roseum memoriale divinorum eloquiorum ; Ausgabe Leipzig
          1505</term>
-            <term ref="index:d14380e34157">Pez, Bernhard ; Akademie- bzw. Kongregationspläne 1717/18</term>
-            <term ref="index:d14380e34078">Pez, Bernhard ; Bd. 6</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e36631">Regensburg</term>
-            <term ref="index:d14380e38739">Sainte-Marthe, Denis de ; Gallia Christiana in provincias ecclesiasticas distributa. 13
+               <term ref="index:d14380e34157">Pez, Bernhard ; Akademie- bzw. Kongregationspläne 1717/18</term>
+               <term ref="index:d14380e34078">Pez, Bernhard ; Bd. 6</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e36631">Regensburg</term>
+               <term ref="index:d14380e38739">Sainte-Marthe, Denis de ; Gallia Christiana in provincias ecclesiasticas distributa. 13
          Bde. Paris 1715–1785</term>
-            <term ref="index:d14380e39711">Scheyern</term>
-            <term ref="index:d14380e40358">Seidel, Johann Zacharias</term>
-            <term ref="index:d14380e40762">Serry, Jacques-Hyacinthe</term>
-            <term ref="index:d14380e40770">Serry, Jacques-Hyacinthe ; [Pseudonym Augustin Leblanc] Historia congregationum de
+               <term ref="index:d14380e39711">Scheyern</term>
+               <term ref="index:d14380e40358">Seidel, Johann Zacharias</term>
+               <term ref="index:d14380e40762">Serry, Jacques-Hyacinthe</term>
+               <term ref="index:d14380e40770">Serry, Jacques-Hyacinthe ; [Pseudonym Augustin Leblanc] Historia congregationum de
          auxiliis divinae gratiae sub summis pontificibus Clemente VIII. et Paulo V. Mainz 1699;
          Löwen 1700</term>
-            <term ref="index:d14380e41384">Staudigl, Ulrich</term>
-            <term ref="index:d14380e42033">Tanner, Jakob</term>
-            <term ref="index:d14380e42722">Thiroux, Jean-Évangéliste ; Apologia epistolaris pro recentioris Galliae Christianae
+               <term ref="index:d14380e41384">Staudigl, Ulrich</term>
+               <term ref="index:d14380e42033">Tanner, Jakob</term>
+               <term ref="index:d14380e42722">Thiroux, Jean-Évangéliste ; Apologia epistolaris pro recentioris Galliae Christianae
          autore. In: Acta eruditorum, Supplementband 6</term>
-            <term ref="index:d14380e42817">Thomas von Kempen ; De imitatione Christi</term>
-            <term ref="index:d14380e43306">Trévoux</term>
-            <term ref="index:d14380e44334">Vercelli</term>
-            <term ref="index:d14380e45341">Wenzl, Alphons</term>
-            <term ref="index:d14380e45351">Wenzl, Alphons ; Controversiae selectae ex universa theologica scholastica. 4 Bde.
+               <term ref="index:d14380e42817">Thomas von Kempen ; De imitatione Christi</term>
+               <term ref="index:d14380e43306">Trévoux</term>
+               <term ref="index:d14380e44334">Vercelli</term>
+               <term ref="index:d14380e45341">Wenzl, Alphons</term>
+               <term ref="index:d14380e45351">Wenzl, Alphons ; Controversiae selectae ex universa theologica scholastica. 4 Bde.
          Regensburg 1723–1726</term>
-            <term ref="index:d14380e45794">Wien ; Kaiserhof</term>
-            <term ref="index:d10854e34226">Würzburg</term></keywords></textClass>
+               <term ref="index:d14380e45794">Wien ; Kaiserhof</term>
+               <term ref="index:d10854e34226">Würzburg</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">BF zeigt sich beschämt durch den überschwänglichen Dank, welchen BP in seinem jüngsten Brief <ref type="letter" target="letter:739">739</ref> für das von BF gelieferte spärliche Material (<ref type="letter" target="letter:632">632</ref>, <ref type="letter" target="letter:706">706</ref>) erstattet hat. Geradezu unglücklich ist er über BPs Aussage, darüber hinaus noch mehr zu verlangen, sei unschicklich; er fordert BP vielmehr auf, seine Hilfe weiter in Anspruch zu nehmen.</p>
             <p corresp="#seg2">Den <rs ref="index:d14380e13534">Nachtrag</rs>, den er versprochen hatte (Erläuterungen zum <rs ref="index:d14380e13543">Schriftstellerkatalog von Andechs</rs>?), hat BF seinem Schreiben an HP <ref type="letter" target="letter:707">707</ref> beigelegt. Diesem fügt er nun noch einen Autor hinzu, der seinen Blicken damals entgangen ist, nämlich <rs ref="index:d14380e33131">Petrus von Rosenheim</rs>. Dieser schrieb ein Werk mit dem Titel <rs ref="index:d14380e33143">„Roseum memoriale“</rs>, ein Kompendium von Inhaltsangaben zu allen Kapiteln der Bibel in Versform. Es wurde 1505 zu <rs ref="index:d14380e24317">Leipzig</rs> durch <rs ref="index:d14380e42033">Jakob Tanner</rs> aus <rs ref="index:d10854e34226">Würzburg</rs> gedruckt. Der Autor bezeichnet sich selbst als <rs ref="index:d14380e4919">Benediktiner</rs> des Klosters <rs ref="index:d14380e28088">Melk</rs> in der Diözese <rs ref="index:d14380e32575">Passau</rs>.</p>
@@ -166,7 +181,7 @@
             <p corresp="#seg6">An gelehrten Neuigkeiten über benediktinische Mitbrüder kann BF einiges berichten. Zu <rs ref="index:d14380e36631">Regensburg</rs> ist im Verlag von <rs ref="index:d14380e40358">Zacharias Seidel</rs> ein <rs ref="index:d14380e19269">Nachdruck</rs> der <rs ref="index:d14380e19263">„Metropolis Salisburgensis“</rs> von Wiguleus Hund in Vorbereitung, dem als vierter Band eine Fortsetzung beigegeben werden soll. Deren Bearbeiter ist <rs ref="index:d14380e4919">Benediktiner</rs>, seinen Namen konnte BF aber bislang nicht in Erfahrung bringen. Abt <rs ref="index:d14380e28852">Benedikt Meyding</rs> von <rs ref="index:d14380e39711">Scheyern</rs> aus der <rs ref="index:d14380e22316">Bayerischen Kongregation</rs> hat sich eine <rs ref="index:d14380e28875">Widerlegung</rs> der <rs ref="index:d14380e28886">„Historia controversiarum de divinae gratiae auxiliis“</rs>, welche der Jesuit Theodorus Eleutherius (recte: Liévin de Meyer) <rs ref="index:d14380e40770">gegen „Augustin Le Blanc“</rs>, das ist Marcus Serry (recte: <rs ref="index:d14380e40762">Hyacinthe Serry</rs>), geschrieben hat, vorgenommen; dieses Werk ist aber noch nicht abgeschlossen. Desgleichen bereitet <rs ref="index:d14380e45341">Alphons Wenzl</rs>, <rs ref="index:d14380e4919">Benediktiner</rs> der Bayerischen Kongregation aus dem Kloster <rs ref="index:d14380e26044">Mallersdorf</rs>, eine Publikation gesammelter theologischer Fragen vor (<rs ref="index:d14380e45351">„Controversiae selectae“</rs>). Über die beiden letzteren Vorhaben bittet BF, vorerst strenges Schweigen zu bewahren; wenn sie zu früh bekannt werden, könnten die <rs ref="index:d14380e20126">Jesuiten</rs> sie zu hintertreiben versuchen.</p>
             <p corresp="#seg7">BF ersucht BP, brieflich bei den Maurinern anzufragen, ob deren vor langer Zeit gestellte Bitte um eine Darstellung der <rs ref="index:d14380e1411">Andechser</rs> Hausgeschichte erfüllt wurde. BF fürchtet eine negative Antwort, denn aus der Vorrede des fünften Bandes des <rs ref="index:d14380e25749">„Annales OSB“</rs> entnimmt er, dass <rs ref="index:d14380e1411">Andechs</rs> den Maurinern nicht einmal dem Namen nach bekannt ist.</p>
             <p corresp="#seg8">In einem Postskriptum wünscht BF für das demnächst erscheinende diplomatische Werk („<rs ref="index:d14380e34078">Codex diplomatico-historico-epistolaris</rs>“?) ruhmreichen Erfolg. Auf das Schreiben HPs <ref type="letter" target="letter:740">740</ref> will er mit der nächsten Post antworten <ref type="letter" target="letter:747">747</ref>. Vor kurzem war er mit Erlaubnis seines Abtes <rs ref="index:d14380e6531">Maurus Braun</rs> in <rs ref="index:d14380e29936">München</rs> und hat dort den <rs ref="index:d14380e30013">kurfürstlichen Bibliothekar</rs> (<rs ref="index:d14380e12078">Philipp Alois Ferb</rs>) im Interesse <rs ref="index:d14380e34537">HPs</rs> angesprochen. Davon will er diesem Näheres berichten.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -175,15 +190,17 @@
             <mentioned>Mantissam ... inclusi</mentioned>
             <p>Es dürfte sich um die Ergänzung („Appendix“)
                   zu BFs Andechser Schriftstellerkatalog handeln: StiA Melk, Karton 7 Patres 10,
-                  Fasz. 3, Nr. 30, 5r–v; vgl. <ref type="letter" target="letter:632">632</ref> <ref target="letter:632#seg2">2</ref>. Erwähnt werden
+                  Fasz. 3, Nr. 30, 5r–v; vgl. <ref type="letter" target="letter:632">632</ref>
+               <ref target="letter:632#seg2">2</ref>. Erwähnt werden
                   hier zusätzlich zu Ulrich Staudigl und Ägidius Kibler, zu denen Nachträge geboten
                   werden, Johannes Chrysostomus Huttler, David Aichler und Ildephons Gerstl. Zu
                   Huttler vgl. <rs type="bibl" ref="bibl:17876">Lechner, Benediktiner</rs> 134, 136;
                      <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs> 339–355, 825; <rs type="bibl" ref="bibl:19406">Schmid, Reformationszeit</rs> 66. Zu Gerstl vgl.
                      <rs type="bibl" ref="bibl:18194">Mathäser, Andechser Chronik</rs> 89; <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs> 506, 508, 511, 523, 531–533,
                   826; <rs type="bibl" ref="bibl:19510">Schuller, Jubiläen</rs> 290. Zu Aichler vgl.
-                     <ref type="letter" target="letter:12">12</ref> <ref target="letter:12#seg5">5</ref>, <ref type="letter" target="letter:182">182</ref>
-                  <ref target="letter:182#seg3">3</ref>.</p>
+                     <ref type="letter" target="letter:12">12</ref>
+               <ref target="letter:12#seg5">5</ref>, <ref type="letter" target="letter:182">182</ref>
+               <ref target="letter:182#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned> Impressus ... 1505</mentioned>
@@ -210,12 +227,15 @@
                   dieser Inkunabelausgaben dürfte BF vorgelegen haben. Unter den erhaltenen
                   Inkunabeln von Andechs ist das Werk nach Angabe von Birgitta Klemenz (Andechs)
                   nicht vorhanden. – Zum Streit um die Verfasserschaft des Traktates „De imitatione
-                  Christi“ vgl. <ref type="letter" target="letter:675">675</ref> <ref target="letter:675#seg2">2</ref>.</p>
+                  Christi“ vgl. <ref type="letter" target="letter:675">675</ref>
+               <ref target="letter:675#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
             <mentioned>Trevoltianos ... crabrones</mentioned>
             <p> Zum Streit um die „Gallia Christiana“
-                  vgl. <ref type="letter" target="letter:702">702</ref>, <ref type="letter" target="letter:719">719</ref> <ref target="letter:719#seg4">4</ref>, <ref type="letter" target="letter:772">772</ref> <ref target="letter:772#seg1">1</ref>; sowie Einleitung, Abschnitt I.5.</p>
+                  vgl. <ref type="letter" target="letter:702">702</ref>, <ref type="letter" target="letter:719">719</ref>
+               <ref target="letter:719#seg4">4</ref>, <ref type="letter" target="letter:772">772</ref>
+               <ref target="letter:772#seg1">1</ref>; sowie Einleitung, Abschnitt I.5.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg5">
             <mentioned>coeptum ... nova societate Benedictino-litteraria</mentioned>
@@ -245,7 +265,8 @@
                   vgl. <rs type="bibl" ref="bibl:15694">Coulon–Papillon, Scriptores 3</rs> 617–633;
                      <rs type="bibl" ref="bibl:20518">Zehetner, Leibniz</rs> 651. Die beabsichtigte
                   Widerlegung Meyers durch Meyding ist sonst nicht nachweisbar; zu einem verwandten,
-                  vielleicht sogar damit identischen Vorhaben desselben vgl. <ref type="letter" target="letter:817">817</ref> <ref target="letter:817#seg2">2</ref>. </p>
+                  vielleicht sogar damit identischen Vorhaben desselben vgl. <ref type="letter" target="letter:817">817</ref>
+               <ref target="letter:817#seg2">2</ref>. </p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg6">
             <mentioned>Wenzl ... quaestiones</mentioned>
@@ -259,15 +280,23 @@
                   OSB“ verschickten Enzykliken ebenso beziehen wie auf direkte Korrespondenz oder
                   auch auf den Besuch Jean Mabillons und Michel Germains in Andechs auf ihrer Reise
                   von 1683. In Ermangelung genauerer Angaben wird ein Schreiben nicht angesetzt. Zu
-                  den Enzykliken vgl. <ref type="letter" target="letter:43">43</ref> <ref target="letter:43#seg7">7</ref>, <ref type="letter" target="letter:48">48</ref> <ref target="letter:48#seg4">4</ref>, <ref type="letter" target="letter:68">68</ref> <ref target="letter:68#seg5">5</ref>, <ref type="letter" target="letter:113">113</ref> <ref target="letter:113#seg2">2</ref>, <ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg9">9</ref>, <ref type="letter" target="letter:149">149</ref> <ref target="letter:149#seg2">2</ref>. Von dem Aufenthalt in Andechs wird berichtet
-                  bei Mabillon, Vetera analecta 4 <ref type="letter" target="letter:76">76</ref>; vgl. <ref type="letter" target="letter:632">632</ref> <ref target="letter:632#seg3">3</ref>.</p>
+                  den Enzykliken vgl. <ref type="letter" target="letter:43">43</ref>
+               <ref target="letter:43#seg7">7</ref>, <ref type="letter" target="letter:48">48</ref>
+               <ref target="letter:48#seg4">4</ref>, <ref type="letter" target="letter:68">68</ref>
+               <ref target="letter:68#seg5">5</ref>, <ref type="letter" target="letter:113">113</ref>
+               <ref target="letter:113#seg2">2</ref>, <ref type="letter" target="letter:143">143</ref>
+               <ref target="letter:143#seg9">9</ref>, <ref type="letter" target="letter:149">149</ref>
+               <ref target="letter:149#seg2">2</ref>. Von dem Aufenthalt in Andechs wird berichtet
+                  bei Mabillon, Vetera analecta 4 <ref type="letter" target="letter:76">76</ref>; vgl. <ref type="letter" target="letter:632">632</ref>
+               <ref target="letter:632#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg8">
             <mentioned>operis diplomatici</mentioned>
             <p>Worauf sich der Wunsch richtete, bleibt unklar.
                   BP hatte sichtlich eine Ankündigung gemacht, auf die BF reagierte; diese könnte
                   sich auf ein frühes Konzeptionsstadium einer solchen Sammlung bezogen haben, wie
-                  sie BP später gegenüber Johann Georg Eckhart beschrieb: vgl. <ref type="letter" target="letter:912">912</ref> <ref target="letter:912#seg7">7</ref>. Denkbar ist aber auch ein Bezug auf HPs „Scriptores rerum
+                  sie BP später gegenüber Johann Georg Eckhart beschrieb: vgl. <ref type="letter" target="letter:912">912</ref>
+               <ref target="letter:912#seg7">7</ref>. Denkbar ist aber auch ein Bezug auf HPs „Scriptores rerum
                   Austriacarum“ oder, mit geringer Wahrscheinlichkeit, auf Vorarbeiten zu Philibert
                   Huebers 1722 erschienenem Urkundenwerk „Austria ex archivis Mellicensibus
                   illustrata“. Zu Letzterem vgl. <rs type="bibl" ref="bibl:15682">Coreth,
@@ -280,12 +309,13 @@
             <p>Zu Abt Maurus Braun vgl. <rs type="bibl" ref="bibl:17684">Krausen, Herkunft</rs> 268; <rs type="bibl" ref="bibl:17876">Lechner,
                      Benediktiner</rs> 136; <rs type="bibl" ref="bibl:18194">Mathäser, Andechser
                      Chronik</rs> 102–105; <rs type="bibl" ref="bibl:19268">Sattler, Andechs</rs>
-                  536–538, 564–567; sowie <ref type="letter" target="letter:804">804</ref> <ref target="letter:804#seg6">6</ref>. </p>
+                  536–538, 564–567; sowie <ref type="letter" target="letter:804">804</ref>
+               <ref target="letter:804#seg6">6</ref>. </p>
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg8">
             <mentioned>electoris ... bibliothecarium</mentioned>
             <p> Vgl. <ref type="letter" target="letter:747">747</ref>
-                  <ref target="letter:747#seg4">4</ref>.</p>
+               <ref target="letter:747#seg4">4</ref>.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -294,15 +324,24 @@
    </standOff>
    <text>
       <front>
-         <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez ordinis sanctissimi patris Benedicti, florentissimi ac antiquissimi monasterii Mellicensis capitulari ac bibliothecario dignissimo, domino patri ac amico suo plurimum observando. Closter Mölkh in Oesterreich. <note type="annotation">Siegel.</note></p>
+         <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez ordinis sanctissimi patris Benedicti, florentissimi ac antiquissimi monasterii Mellicensis capitulari ac bibliothecario dignissimo, domino patri ac amico suo plurimum observando. Closter Mölkh in Oesterreich. <note type="annotation">Siegel.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater Bernarde, patrone ac amice observandissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime domine pater Bernarde, patrone ac amice observandissime.</opener>
          <ab resp="#editor" xml:id="seg1">Ruborem calamo aspersisti meo, vir clarissime, dum plena adeo atque officiosa scriptione a meo haud opimo, sed tenui plane fasciculo beatum te in nuperrimis memorabas. Ea nempe est animi tui magnitudo, ut minuta, etiam si hecatombe desit, haud asperneris; pectus tamen commovisti meum, quando supra hactenus mecum communicata flagitare nil amplius licere scripsisti, cuius tamen obsequiis calamum, laborem, vigilias et memetipsum devovi toties atque etiamnum devoveo. Amicissime Bernarde! ni hominem aut amicum exuere malis, ad ulteriora amico utere tua obsequia, nec pacem promitte, nisi litterariam a me arenam deseri velis. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n1"/>Mantissam, quam promisi, clarissimi patris Hieronymi inclusi<anchor xml:id="n1e"/> litteris; huic authorem, qui nuper manus atque oculos effugit meos, hodie iungo, Petrum de Rosenheim, qui Rosetum memoriale divinorum eloquiorum, Novi videlicet ac Veteris Testamenti compendiose contentivum, singulorum totius Bibliae principaliores materias capitulorum copiose per carmina expressans scripsit.<anchor xml:id="n2"/> Impressus est is liber Lipzk per Jacobum Tanner Herbipolensem anno Domini 1505<anchor xml:id="n2e"/> die 15. mensis Februarii. Fatetur se monachum ordinis sancti Benedicti monasterii Medlicensis Pataviensis dioecesis. </ab>
-         <ab resp="#editor" xml:id="seg3">Quae de Joannis abbatis Vercellensis libello <anchor xml:id="n3"/>Vade mecum<anchor xml:id="n3e"/> inscripto scripsi, etsi notatu dignissima forent valerentque plurimum ad disceptandam famosam illam de authore libellorum De imitatione Christi controversiam, nihilominus, ut candide fatear, alieno potius quam meo scripsi iudicio. <choice><sic>cume</sic><corr>Cum</corr></choice> enim pars prima libelli praefati Joannem diceret abbatem U...cellensem<note place="foot" xml:id="d3e28524">Nach dem ersten Buchstaben ein längerer horizontaler Strich, welcher vermutlich unlesbare Buchstaben der Vorlage anzeigen soll.</note>, pars altera Vincellensem, similis autem monasterii vix ulla esset notitia, Vercellensem legendum existimabant. Malui proin sapientissimo <pb n="1v"/> tuo quam meo aut alterius committere iudicio tuamque desuper, quam iam tacitus erudite criticam ominabar, mentem exspectare. Erit ad nutus liber ille, quam primum postulaveris. </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n1"/>Mantissam, quam promisi, clarissimi patris Hieronymi inclusi<anchor xml:id="n1e"/> litteris; huic authorem, qui nuper manus atque oculos effugit meos, hodie iungo, Petrum de Rosenheim, qui Rosetum memoriale divinorum eloquiorum, Novi videlicet ac Veteris Testamenti compendiose contentivum, singulorum totius Bibliae principaliores materias capitulorum copiose per carmina expressans scripsit.<anchor xml:id="n2"/> Impressus est is liber Lipzk per Jacobum Tanner Herbipolensem anno Domini 1505<anchor xml:id="n2e"/> die 15. mensis Februarii. Fatetur se monachum ordinis sancti Benedicti monasterii Medlicensis Pataviensis dioecesis. </ab>
+         <ab resp="#editor" xml:id="seg3">Quae de Joannis abbatis Vercellensis libello <anchor xml:id="n3"/>Vade mecum<anchor xml:id="n3e"/> inscripto scripsi, etsi notatu dignissima forent valerentque plurimum ad disceptandam famosam illam de authore libellorum De imitatione Christi controversiam, nihilominus, ut candide fatear, alieno potius quam meo scripsi iudicio. <choice>
+               <sic>cume</sic>
+               <corr>Cum</corr>
+            </choice> enim pars prima libelli praefati Joannem diceret abbatem U...cellensem<note place="foot" xml:id="d3e28524">Nach dem ersten Buchstaben ein längerer horizontaler Strich, welcher vermutlich unlesbare Buchstaben der Vorlage anzeigen soll.</note>, pars altera Vincellensem, similis autem monasterii vix ulla esset notitia, Vercellensem legendum existimabant. Malui proin sapientissimo <pb n="1v"/> tuo quam meo aut alterius committere iudicio tuamque desuper, quam iam tacitus erudite criticam ominabar, mentem exspectare. Erit ad nutus liber ille, quam primum postulaveris. </ab>
          <ab resp="#editor" xml:id="seg4">Gratias habeo datae pretii d’Ascheriani notitiae; tenet insigne opus praecipuum pro suo merito in bibliotheca locum, qualem ut obtineant et caeteri seu iam editi seu posthac edendi, nihil non allaborabo. Gaudebam mire nigros illos <anchor xml:id="n4"/>Trevoltianos Societatis crabrones<anchor xml:id="n4e"/> ad lucidissimum patrum nostrorum in Gallia partum alas combussisse suas, utpote quibus omnia, nisi quae ipsi excluserint, ova displicent. Exspecto avidus Lipsiensium censuram aut ipsam etiam, si haberi possit, apologiam. </ab>
-         <ab resp="#editor" xml:id="seg5">Deum interim assidue precor, ut <anchor xml:id="n5"/>coeptum in aula caesarea negotium de nova societate Benedictino-litteraria<anchor xml:id="n5e"/> ad optatissimum pertingat finem. Enimvero quantum splendoris et existimationis sacratissimo ordini in nostris praecipue accederet partibus, nemo satis assequi poterit: o utinam tam ampla laudis occasio <choice><sic>vo</sic><corr>viris</corr></choice> doctrina, virtute, bibliothecis atque opibus insuper abundantibus non elabatur! Meliora indies a calamo exspecto tuo. </ab>
+         <ab resp="#editor" xml:id="seg5">Deum interim assidue precor, ut <anchor xml:id="n5"/>coeptum in aula caesarea negotium de nova societate Benedictino-litteraria<anchor xml:id="n5e"/> ad optatissimum pertingat finem. Enimvero quantum splendoris et existimationis sacratissimo ordini in nostris praecipue accederet partibus, nemo satis assequi poterit: o utinam tam ampla laudis occasio <choice>
+               <sic>vo</sic>
+               <corr>viris</corr>
+            </choice> doctrina, virtute, bibliothecis atque opibus insuper abundantibus non elabatur! Meliora indies a calamo exspecto tuo. </ab>
          <ab resp="#editor" xml:id="seg6">Nova, quae feram litteraria de sodalibus nostris, ea ferme haec sunt: Ratisbonae impensis domini Zachariae Seidl bibliopolae <anchor xml:id="n6"/>Metropolis Hundiana Salisburgensis novo donabitur typo, huicque accedet tomus quartus seu continuatio<anchor xml:id="n6e"/> eiusdem libri, cuius author ordinem profitetur nostrum; nomen tamen eius necdum scire licuit. Reverendissimus dominus dominus abbas Benedictus ex monasterio Schyrensi congregationis nostrae illum<anchor xml:id="n7"/> Eleutherii Societatis Jesu<anchor xml:id="n7e"/> De auxiliis divinae gratiae contra Augustinum Le Blanc (seu<anchor xml:id="n8"/> Marcum Serry<anchor xml:id="n8e"/>) editum sibi refutandum assumpsit, opus tamen necdum ad finem perductum est. <pb n="2r"/> Similiter clarissimus pater Alphonsus <anchor xml:id="n9"/>Wenzl ordinis et congregationis nostrae monachus Mallerstorphensis in maiori folio selectiores et difficiliores ex universa theologia quaestiones<anchor xml:id="n9e"/> luci publicae dabit. Malim tamen, vir clarissime, ut de posterioribus altum ubique sileas, ne, si fama publica, quam equidem merentur, eos mature nimium divulgaret, a Jesuitis utrumque impediretur opus. </ab>
          <ab resp="#editor" xml:id="seg7">Caeterum grande meo dares monasterio beneficium, si per litteras apud patres Gallos sodales nostros explorares, num eorum desiderio, quo accuratam monasterii nostri a multis iam annis <anchor xml:id="n10"/>petebant notitiam<anchor xml:id="n10e"/>, satisfactum sit? Sequiora enim conicere vix non adigor, dum in tomo quinto Annalium in praefatione vel ipsum monasterii nomen eos latuisse videtur. Da veniam effusiori, ac sperabam, calamo et brevi me rursum litteris bea, amicumque tuo addictum amo[re ...]<note type="annotation" xml:id="d3e28545">Textverlust durch Ausriss.</note> ama.</ab>
          <closer>Tuis obsequiis devotissimus pater Benedictus Fripeis manu propria.</closer>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="85" xml:id="pez-0085">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Benedikt Cherle an Bernhard Pez. 1710-07-06. Thierhaupten.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">85</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Auf 2v Vermerk BPs: <orig>Respondi 3. Augusti 1710</orig>.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -84,13 +96,16 @@
             <p corresp="#seg3">Zudem hat er eine einst für den Druck bestimmte Handschrift <rs ref="index:d10854e5230">Korbinian Cherles</rs> aufgefunden, das „<rs ref="index:d10854e5238">Compendium</rs>“ zu den sämtlichen Werken des <rs ref="index:d10854e6454">Felipe Diez</rs>.</p>
             <p corresp="#seg4">Von seinem „<rs ref="index:d10854e5201">Struthio problematicus</rs>“ würde BCh gerne ein Exemplar beilegen, wenn nicht die <rs ref="index:d10854e30746">Thierhauptener Bibliothek</rs> selbst nur mehr eines besäße. Es handelt sich um ein philosophisches Thesenwerk, dessen Titel auf das Wappen des <rs ref="index:d10854e9441">Abtes Joseph Frantz</rs> anspielt. BCh hat zwei Kapitel daraus abgeschrieben und sendet <rs ref="index:d10854e5211">diese</rs> zusammen mit seinen theologischen Thesen („<rs ref="index:d10854e5172">Exercitium theologicum</rs>“?). Er bittet, den allzu <rs ref="index:d14380e4170">bayerischen</rs> Tonfall zu entschuldigen.</p>
             <p corresp="#seg5">Um dem jüngsten Wunsch BPs nachzukommen, zählt BCh die gegenwärtigen Professoren am Kommunstudium der <rs ref="index:d14380e22316">Bayerischen Kongregation</rs> auf: zunächst <rs ref="index:d14380e16651">Petrus Guetrather</rs> aus <rs ref="index:d14380e42111">Tegernsee</rs>, Doktor beider Rechte, apostolischer Notar und Lehrer des kanonischen Rechtes. Unter seinen vielen Publikationen ist besonders das „<rs ref="index:d10854e11473">Ius canonicum ad normam institutionum</rs>“ hervorzuheben.</p>
-            <p corresp="#seg6"><rs ref="index:d14380e45341">Alphons Wenzl</rs> aus <rs ref="index:d14380e26044">Mallersdorf</rs>, ein Mann von strenger Disziplin, der auch im <rs ref="index:d10854e31543">ungarischen</rs> <rs ref="index:d10854e22576">Pannonhalma</rs> gewirkt hat. Seine Thesen aus der Philosophie und Theologie machen eine große Menge aus; manche von ihnen sind von so hohem Wert, dass sie sogar von <rs ref="index:d14380e20126">Jesuiten</rs> angekauft werden.</p>
-            <p corresp="#seg7"><rs ref="index:d10854e11907">Heinrich Hardter</rs> aus <rs ref="index:d14380e36714">St. Emmeram zu Regensburg</rs> ist erfahren in den Sprachen und der Theologie und verdient engelsgleiche Bewunderung.</p>
+            <p corresp="#seg6">
+               <rs ref="index:d14380e45341">Alphons Wenzl</rs> aus <rs ref="index:d14380e26044">Mallersdorf</rs>, ein Mann von strenger Disziplin, der auch im <rs ref="index:d10854e31543">ungarischen</rs>
+               <rs ref="index:d10854e22576">Pannonhalma</rs> gewirkt hat. Seine Thesen aus der Philosophie und Theologie machen eine große Menge aus; manche von ihnen sind von so hohem Wert, dass sie sogar von <rs ref="index:d14380e20126">Jesuiten</rs> angekauft werden.</p>
+            <p corresp="#seg7">
+               <rs ref="index:d10854e11907">Heinrich Hardter</rs> aus <rs ref="index:d14380e36714">St. Emmeram zu Regensburg</rs> ist erfahren in den Sprachen und der Theologie und verdient engelsgleiche Bewunderung.</p>
             <p corresp="#seg8">Als vierten nennt BCh <rs ref="index:d14380e27919">Karl Meichelbeck</rs> aus <rs ref="index:d14380e4706">Benediktbeuren</rs>, der ebenso Historiker wie Dichter und Rhetor, Philosoph, Theologe und Kontroversist sowie gleichfalls apostolischer Notar ist. Auch er hat viele Thesen veröffentlicht, die von großem Interesse sind.</p>
             <p corresp="#seg9">BCh würde noch andere nennen, etwa den im Ruf der Heiligkeit verstorbenen <rs ref="index:d14380e21859">Ägidius Kibler</rs>, doch hofft er, dass dies die <rs ref="index:d10854e714">Andechser</rs> übernommen haben; widrigenfalls will er einspringen. Auch würde er gerne von allen Genannten Thesen senden, doch hat er nur wenige bei der Hand, die er schickt. Er will dies künftig jedes Jahr tun, beginnend mit dem folgenden Herbst.</p>
             <p corresp="#seg10">BCh fragt, ob BP Nachricht von dem <rs ref="index:d14380e13219">Lyzeum</rs> zu <rs ref="index:d14380e13185">Freising</rs> hat sowie von der vor kurzem stattgefundenen<rs ref="index:d10854e21508"> Erhebung und Translation</rs> des <rs ref="index:d10854e21502">Hl. Nonnosus</rs>. Wenn nicht, so will BCh auch die Festpredigten mit der Beschreibung der Feierlichkeiten (<rs ref="index:d10854e7178">Eberschwang, „Freysingischer alt- und neuer gnaden-schatz“</rs>) nach <rs ref="index:d14380e28088">Melk</rs> senden. Er schließt mit dem Wunsch, Gott möge BP seinem Orden bewahren.</p>
             <p corresp="#seg11">In einem Postskriptum ersucht BCh, für ihn bestimmte Briefe entweder nach <rs ref="index:d14380e29936">München</rs> an <rs ref="index:d10854e25232">Martin Rabstein</rs> oder nach <rs ref="index:d14380e3233">Augsburg</rs> an den Maler <rs ref="index:d10854e26066">Johann Rieger</rs> zu schicken.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -109,7 +124,8 @@
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg4">
             <mentioned>Problemata descripsi</mentioned>
             <p>Die Beilage ist erhalten: I, 556r–v. Das Thesenwerk „Struthio problematicus“
-                  scheint sonst verloren zu sein. Zu seiner Aufnahme durch BP vgl. <ref type="letter" target="letter:381">381</ref> <ref target="letter:381#seg1">1</ref>.</p>
+                  scheint sonst verloren zu sein. Zu seiner Aufnahme durch BP vgl. <ref type="letter" target="letter:381">381</ref>
+               <ref target="letter:381#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
             <mentioned>theses theologicas</mentioned>
@@ -122,17 +138,20 @@
             <mentioned>calamo ... nimis Bavarico</mentioned>
             <p>Gemeint sind vermutlich antiösterreichische Spitzen; zur Plünderung Thierhauptens
                   durch kaiserliche Truppen im Spätsommer 1704 vgl. <ref type="letter" target="letter:52">52</ref>
-                  <ref target="letter:52#seg1">1</ref>.</p>
+               <ref target="letter:52#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg5">
             <mentioned>qui modo cathedras ... illustrant</mentioned>
             <p>Vgl. <rs type="bibl" ref="bibl:19054">Reichhold, 300 Jahre</rs> 672. Zum
                   Kommunstudium der Bayerischen Kongregation vgl. allgemein <ref type="letter" target="letter:36">36
-                  </ref><ref target="letter:36&#10;                  #seg7">7</ref>, <ref type="letter" target="letter:255">255</ref> <ref target="letter:255#seg3">3</ref>.</p>
+                  </ref>
+               <ref target="letter:36&#xA;                  #seg7">7</ref>, <ref type="letter" target="letter:255">255</ref>
+               <ref target="letter:255#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
             <mentioned>Petrus Guettrather</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:255">255</ref> <ref target="letter:255#seg3">3</ref>, <ref type="letter" target="letter:293">293</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:255">255</ref>
+               <ref target="letter:255#seg3">3</ref>, <ref type="letter" target="letter:293">293</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg6">
             <mentioned>Alphonsus Wenzel</mentioned>
@@ -143,27 +162,32 @@
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg7">
             <mentioned>Henricus Hardter</mentioned>
-            <p><rs type="bibl" ref="bibl:14976">Baader, Das gelehrte Baiern</rs> col. 442f.; <rs type="bibl" ref="bibl:17206">Hubensteiner, Geistliche Stadt</rs> 163, 166f.</p>
+            <p>
+               <rs type="bibl" ref="bibl:14976">Baader, Das gelehrte Baiern</rs> col. 442f.; <rs type="bibl" ref="bibl:17206">Hubensteiner, Geistliche Stadt</rs> 163, 166f.</p>
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg8">
             <mentioned>Quartum adiungo</mentioned>
             <p>Meichelbeck war bereits seit 1708 nicht mehr am Kommunstudium tätig; vgl. <rs type="bibl" ref="bibl:18376">Mindera, Jugend</rs> 101. Zu seinen Thesen vgl.
-                     <ref type="letter" target="letter:464">464</ref> <ref target="letter:464#seg1">1</ref>.</p>
+                     <ref type="letter" target="letter:464">464</ref>
+               <ref target="letter:464#seg1">1</ref>.</p>
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg9">
             <mentioned>Aegidium Kibler</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:36">36</ref> <ref target="letter:36#seg7">7</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:36">36</ref>
+               <ref target="letter:36#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg10">
             <mentioned>collegii ... Frisingani</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:255">255 </ref><ref target="letter:255 #seg3">3</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:255">255 </ref>
+               <ref target="letter:255 #seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg10">
             <mentioned>inventionis sancti Nonnosi</mentioned>
             <p>Die Gebeine des Hl. Nonnosus waren 1708 im Zuge der Bauarbeiten am Freisinger Dom
                   aufgefunden worden. Die Translation in die neugestaltete Krypta am 2. September
                   1709 wurde mit achttägigen Feiern begangen: <rs type="bibl" ref="bibl:16598">Götz,
-                     Kunst in Freising</rs> 48, 94, 101f.; <rs type="bibl" ref="bibl:17206">Hubensteiner, Geistliche Stadt</rs> 156, 199; <rs type="bibl" ref="bibl:14748">Meichelbeck, Historia Frisingensis</rs> 2/1 441–448; vgl. auch <ref type="letter" target="letter:464">464 </ref><ref target="letter:464 #seg11">11</ref>. Die Festschrift zu dieser Gelegenheit
+                     Kunst in Freising</rs> 48, 94, 101f.; <rs type="bibl" ref="bibl:17206">Hubensteiner, Geistliche Stadt</rs> 156, 199; <rs type="bibl" ref="bibl:14748">Meichelbeck, Historia Frisingensis</rs> 2/1 441–448; vgl. auch <ref type="letter" target="letter:464">464 </ref>
+               <ref target="letter:464 #seg11">11</ref>. Die Festschrift zu dieser Gelegenheit
                   einschließlich Wiedergabe der gehaltenen Predigten brachte der „Hofpater“ des
                   Freisinger Fürstbischofs Johann Franz Eckher von Kapfing, der Frauenzeller
                   Benediktiner und spätere Abt Benedikt Eberschwang, heraus; von dieser Schrift
@@ -198,16 +222,27 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime ac clarissime pater, domine patrone colendissime.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime ac clarissime pater, domine patrone colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">Accepi admodum reverendae paternitatis vestrae epistolam omni humanitate plenam, ad quam tamen serius licet sincerius respondeo. Serius quidem, quia diversis in negotiis a monasterio absens tum causas eiusdem Monachii agendo, tum notariatus publici apostolici caracterem suscipiendo, paternitatis vestrae epistolam accepi sero. Sincerius<del ana="#before">Serius</del> vero, quia pro viribus respondere conor. </ab>
          <ab resp="#editor" xml:id="seg2">Itaque quod concernit patrem <anchor xml:id="n1"/>Vitum Spaney<anchor xml:id="n1e"/>, reliquit nobis duos tomos in quarto. Primum indigitat Rhetoricam Thierhauptensem, traditque plenum et perfectum modum adiectis ubique exemplis componendi orationes, epistolas etc. et alia genera eloquentiae propria. Secundus titulum praefert: Volumen Thierhauptanum, continetque diversas orationes, gratulationes et omnis metri versus. </ab>
          <ab resp="#editor" xml:id="seg3">Reperi praeterea adhuc reverendissimi domini Corbiniani manuscripta olim ad<del ana="#after">per</del> prelum destinata, Compendium nempe in opera omnia et conciones clarissimi patris Diez. </ab>
-         <ab resp="#editor" xml:id="seg4">De Struthione meo<del ana="#after">propl</del> problematico exemplar adiungerem, si ultra id, quod est in bibliotheca, haberem unicum; in cuius absentia significo me per theses philosophicas <sic>exsplicasse</sic>  proprietates omnes, struthionis argumentum dantibus <anchor xml:id="n2"/>insigniis reverendissimi domini domini abbatis mei<anchor xml:id="n2e"/>. <anchor xml:id="n3"/>Problemata descripsi<anchor xml:id="n3e"/> duo laboris mei testes, quibus comites adiungo <anchor xml:id="n4"/>theses theologicas<anchor xml:id="n4e"/>; ignoscat tamen paternitas vestra <anchor xml:id="n5"/>calamo illo tempore nimis Bavarico<anchor xml:id="n5e"/>. <pb n="1v"/> </ab>
-         <ab resp="#editor" xml:id="seg5">Petitis ultimis ut morem gererem, reverendorum patrum professorum nostrae congregationis angelicae, praesertim eorum, <anchor xml:id="n6"/>qui modo cathedras in studio communi illustrant<anchor xml:id="n6e"/>, <sic>suggerere</sic><note place="foot" xml:id="d4618e10145">Es fehlt ein Objekt, etwa <hi rend="italic">nomina</hi> o. Ä.</note> placuit. Primus horum est reverendus pater <anchor xml:id="n7"/>Petrus Guettrather<anchor xml:id="n7e"/> Tegernseensis, iuris utriusque doctor, notarius publicus apostolicus, iuris canonici professor. Hunc virum morum et iudicii commendatione celeberrimum nemo non sine admiratione consuluit, quique plurima <choice><sic>publicis</sic><corr>publici</corr></choice> iuris fecit, inter quae tamen eminet liber, cui nomen: Institutionum iuris canonici libri quatuor. </ab>
+         <ab resp="#editor" xml:id="seg4">De Struthione meo<del ana="#after">propl</del> problematico exemplar adiungerem, si ultra id, quod est in bibliotheca, haberem unicum; in cuius absentia significo me per theses philosophicas <sic>exsplicasse</sic>  proprietates omnes, struthionis argumentum dantibus <anchor xml:id="n2"/>insigniis reverendissimi domini domini abbatis mei<anchor xml:id="n2e"/>. <anchor xml:id="n3"/>Problemata descripsi<anchor xml:id="n3e"/> duo laboris mei testes, quibus comites adiungo <anchor xml:id="n4"/>theses theologicas<anchor xml:id="n4e"/>; ignoscat tamen paternitas vestra <anchor xml:id="n5"/>calamo illo tempore nimis Bavarico<anchor xml:id="n5e"/>. <pb n="1v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg5">Petitis ultimis ut morem gererem, reverendorum patrum professorum nostrae congregationis angelicae, praesertim eorum, <anchor xml:id="n6"/>qui modo cathedras in studio communi illustrant<anchor xml:id="n6e"/>, <sic>suggerere</sic>
+            <note place="foot" xml:id="d4618e10145">Es fehlt ein Objekt, etwa <hi rend="italic">nomina</hi> o. Ä.</note> placuit. Primus horum est reverendus pater <anchor xml:id="n7"/>Petrus Guettrather<anchor xml:id="n7e"/> Tegernseensis, iuris utriusque doctor, notarius publicus apostolicus, iuris canonici professor. Hunc virum morum et iudicii commendatione celeberrimum nemo non sine admiratione consuluit, quique plurima <choice>
+               <sic>publicis</sic>
+               <corr>publici</corr>
+            </choice> iuris fecit, inter quae tamen eminet liber, cui nomen: Institutionum iuris canonici libri quatuor. </ab>
          <ab resp="#editor" xml:id="seg6">Hunc sequitur reverendus pater <anchor xml:id="n8"/>Alphonsus Wenzel<anchor xml:id="n8e"/> Mallerstorphensis, vir certe severioribus disciplinis adeo excultus, ut, quem congregatio angelica diu obstupuit et etiamnum suspicit, eum quoque Pannonia in Monte S. Martini adoraverit. Theses eius in philosophiam et theologiam universam complicatae excrescerent in magnum volumen, quarum quaedam tam selectae sunt, ut certatim etiam a Societatis Jesu patribus coemptae inveniantur. </ab>
-         <ab resp="#editor" xml:id="seg7">Huic accensendus pater <anchor xml:id="n9"/>Henricus Hardter<anchor xml:id="n9e"/> Emeramianus Ratisbonensis, cuius animus linguarum peritia et sublimioribus scientiis quasi radiis <choice><sic>impetitus</sic><corr>impeditus</corr></choice> a suis variis lucubrationibus ac singulari mansuetudine condecoratus angelicam meretur venerationem. </ab>
-         <ab resp="#editor" xml:id="seg8"><anchor xml:id="n10"/>Quartum adiungo<anchor xml:id="n10e"/> patrem Carolum Maichelbek Benedicto-Buranum, itidem notarium publicum apostolicum. Hic vir, hic est, qui historicus, poeta, rhetor, philosophus, theologus et controversista. Loquuntur de eo theses plurimae, eaeque curiosae. Et hi modo cathedras tenent. </ab>
-         <ab resp="#editor" xml:id="seg9">Describerem et alios, praesertim patrem <anchor xml:id="n11"/>Aegidium Kibler<anchor xml:id="n11e"/>, <sic>virium</sic>  in spe sanctitatis mortuum, spero tamen id factum a monasterio Andecensi; sin: ad id promptum <add place="left-margin">me</add> offero. Mitterem praeterea de omnibus theses, cum vero ad manum non sint, paucas annecto, facturus id imposterum singulis annis; initium dabit proximus autumnus. <pb n="2r"/> </ab>
+         <ab resp="#editor" xml:id="seg7">Huic accensendus pater <anchor xml:id="n9"/>Henricus Hardter<anchor xml:id="n9e"/> Emeramianus Ratisbonensis, cuius animus linguarum peritia et sublimioribus scientiis quasi radiis <choice>
+               <sic>impetitus</sic>
+               <corr>impeditus</corr>
+            </choice> a suis variis lucubrationibus ac singulari mansuetudine condecoratus angelicam meretur venerationem. </ab>
+         <ab resp="#editor" xml:id="seg8">
+            <anchor xml:id="n10"/>Quartum adiungo<anchor xml:id="n10e"/> patrem Carolum Maichelbek Benedicto-Buranum, itidem notarium publicum apostolicum. Hic vir, hic est, qui historicus, poeta, rhetor, philosophus, theologus et controversista. Loquuntur de eo theses plurimae, eaeque curiosae. Et hi modo cathedras tenent. </ab>
+         <ab resp="#editor" xml:id="seg9">Describerem et alios, praesertim patrem <anchor xml:id="n11"/>Aegidium Kibler<anchor xml:id="n11e"/>, <sic>virium</sic>  in spe sanctitatis mortuum, spero tamen id factum a monasterio Andecensi; sin: ad id promptum <add place="left-margin">me</add> offero. Mitterem praeterea de omnibus theses, cum vero ad manum non sint, paucas annecto, facturus id imposterum singulis annis; initium dabit proximus autumnus. <pb n="2r"/>
+         </ab>
          <ab resp="#editor" xml:id="seg10">Ultimo libenter scirem, num clarissima paternitas vestra notitiam habeat <anchor xml:id="n12"/>collegii nostri Frisingani<anchor xml:id="n12e"/>, <anchor xml:id="n13"/>inventionis sancti Nonnosi<anchor xml:id="n13e"/> ante duos annos et translationis eiusdem ante annum solemnissimae factae? Si non: et conciones ipsiusque solemnitatis splendorem ocyus Mellitium destinabo ad patronum meum maximum. Superi, quorum est gratiarum fluenta dispensare, paternitatem vestram ad totius sacri ordinis nostri incrementum conservent diutissime. Haec raptim cum mei commendatione.</ab>
          <closer>Plurimum reverendae religiosissimae ac clarissimae dominationis vestrae servus devotissimus pater Benedictus Cherle prior notarius publicus apostolicus manu propria.</closer>
          <closer>Thierhaupten 6. Julii 1710.</closer>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="1023" xml:id="pez-1023">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Leopold Wydemann an Bernhard Pez. 1718-12-03. Gaming.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">1023</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,90 +89,92 @@
                <ptr type="mentionedIn" target="letter:1026"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e486">Agius</term>
-            <term ref="index:d14380e1592">Andreas de Escobar ; Gubernaculum conciliorum</term>
-            <term ref="index:d14380e2268">Anonyme Werke ; Epistola historica de eventibus et rebus per Europam gestis. Ms.
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e486">Agius</term>
+               <term ref="index:d14380e1592">Andreas de Escobar ; Gubernaculum conciliorum</term>
+               <term ref="index:d14380e2268">Anonyme Werke ; Epistola historica de eventibus et rebus per Europam gestis. Ms.
          Gaming</term>
-            <term ref="index:d14380e2280">Anonyme Werke ; Epistola historica de eventibus et rebus per Europam gestis. Ms. Gaming
+               <term ref="index:d14380e2280">Anonyme Werke ; Epistola historica de eventibus et rebus per Europam gestis. Ms. Gaming
          ; Abschrift von Leopold Wydemann. Ms</term>
-            <term ref="index:d14380e2289">Anonyme Werke ; Epistola historica de eventibus et rebus per Europam gestis. Ms. Gaming
+               <term ref="index:d14380e2289">Anonyme Werke ; Epistola historica de eventibus et rebus per Europam gestis. Ms. Gaming
          ; *Heinrich</term>
-            <term ref="index:d14380e3112">Astrologie</term>
-            <term ref="index:d14380e3233">Augsburg</term>
-            <term ref="index:d14380e4075">Basel ; Konzil 1431–1449</term>
-            <term ref="index:d14380e4690">Benedikt</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e7464">Candidus Wizo</term>
-            <term ref="index:d14380e9174">De la Cour, Didier</term>
-            <term ref="index:d14380e9269">Des Bosses, Barthélemy ; Epistolae abbatis N. ad episcopum N., quibus demonstratur
+               <term ref="index:d14380e3112">Astrologie</term>
+               <term ref="index:d14380e3233">Augsburg</term>
+               <term ref="index:d14380e4075">Basel ; Konzil 1431–1449</term>
+               <term ref="index:d14380e4690">Benedikt</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e7464">Candidus Wizo</term>
+               <term ref="index:d14380e9174">De la Cour, Didier</term>
+               <term ref="index:d14380e9269">Des Bosses, Barthélemy ; Epistolae abbatis N. ad episcopum N., quibus demonstratur
          aequitas constitutionis Unigenitus. Köln 1715</term>
-            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
-            <term ref="index:d14380e9755">Dionysius der Kartäuser</term>
-            <term ref="index:d14380e9765">Dionysius der Kartäuser ; Epistola ad principes Christianos paraenetica de instituendo
+               <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+               <term ref="index:d14380e9755">Dionysius der Kartäuser</term>
+               <term ref="index:d14380e9765">Dionysius der Kartäuser ; Epistola ad principes Christianos paraenetica de instituendo
          bello adversus Turcam</term>
-            <term ref="index:d14380e11766">Eugen IV</term>
-            <term ref="index:d14380e12060">Felix</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e13828">Gaming</term>
-            <term ref="index:d14380e13921">Gaming ; Bibliothek</term>
-            <term ref="index:d14380e14202">Gaming ; Bibliothek ; Hymnologische Handschriften, u.a. mit Dichtungen des Konrad von
+               <term ref="index:d14380e11766">Eugen IV</term>
+               <term ref="index:d14380e12060">Felix</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e13828">Gaming</term>
+               <term ref="index:d14380e13921">Gaming ; Bibliothek</term>
+               <term ref="index:d14380e14202">Gaming ; Bibliothek ; Hymnologische Handschriften, u.a. mit Dichtungen des Konrad von
          Haimburg ; Signatur Nr. 81</term>
-            <term ref="index:d14380e15193">Gerhoch von Reichersberg</term>
-            <term ref="index:d14380e16229">Graz ; Buchmesse</term>
-            <term ref="index:d14380e16317">Gregor XII</term>
-            <term ref="index:d14380e17537">Heiliges Römisches Reich</term>
-            <term ref="index:d14380e17821">Heinrich Prentl von Eckenfeld</term>
-            <term ref="index:d14380e19828">Italien, Italiener, Italienisch</term>
-            <term ref="index:d14380e19906">Ittingen</term>
-            <term ref="index:d14380e20126">Jesuiten</term>
-            <term ref="index:d14380e20395">Johannes</term>
-            <term ref="index:d14380e21188">Karl VI</term>
-            <term ref="index:d14380e21396">Kartäuser</term>
-            <term ref="index:d14380e21460">Kartäuser ; Generalkapitel</term>
-            <term ref="index:d14380e21493">Kartäuser ; Generalkapitel ; Dekret über das Verhalten im Falle eines Schismas
+               <term ref="index:d14380e15193">Gerhoch von Reichersberg</term>
+               <term ref="index:d14380e16229">Graz ; Buchmesse</term>
+               <term ref="index:d14380e16317">Gregor XII</term>
+               <term ref="index:d14380e17537">Heiliges Römisches Reich</term>
+               <term ref="index:d14380e17821">Heinrich Prentl von Eckenfeld</term>
+               <term ref="index:d14380e19828">Italien, Italiener, Italienisch</term>
+               <term ref="index:d14380e19906">Ittingen</term>
+               <term ref="index:d14380e20126">Jesuiten</term>
+               <term ref="index:d14380e20395">Johannes</term>
+               <term ref="index:d14380e21188">Karl VI</term>
+               <term ref="index:d14380e21396">Kartäuser</term>
+               <term ref="index:d14380e21460">Kartäuser ; Generalkapitel</term>
+               <term ref="index:d14380e21493">Kartäuser ; Generalkapitel ; Dekret über das Verhalten im Falle eines Schismas
          1512</term>
-            <term ref="index:d14380e21527">Kartäuser ; Provinz Oberdeutschland</term>
-            <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
-            <term ref="index:d14380e21746">Katholischer Glaube, katholische Kirche ; Großes Schisma 1378–1417</term>
-            <term ref="index:d14380e22021">Klemens XI ; Bulle „Unigenitus“ 1713</term>
-            <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
-            <term ref="index:d14380e23017">Konstanz ; Konzil 1414–1418</term>
-            <term ref="index:d14380e23973">Latein</term>
-            <term ref="index:d14380e26700">Martin V</term>
-            <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
-            <term ref="index:d14380e28088">Melk</term>
-            <term ref="index:d14380e28538">Melk ; Erste Melker Reform</term>
-            <term ref="index:d14380e29741">Morozzo, Carlo Giuseppe ; Theatrum chronologicum sacri Cartusiensis ordinis. Turin
+               <term ref="index:d14380e21527">Kartäuser ; Provinz Oberdeutschland</term>
+               <term ref="index:d14380e21679">Katholischer Glaube, katholische Kirche</term>
+               <term ref="index:d14380e21746">Katholischer Glaube, katholische Kirche ; Großes Schisma 1378–1417</term>
+               <term ref="index:d14380e22021">Klemens XI ; Bulle „Unigenitus“ 1713</term>
+               <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
+               <term ref="index:d14380e23017">Konstanz ; Konzil 1414–1418</term>
+               <term ref="index:d14380e23973">Latein</term>
+               <term ref="index:d14380e26700">Martin V</term>
+               <term ref="index:d14380e27422">Medizin, medizinische Begriffe, gesundheitliche Belange</term>
+               <term ref="index:d14380e28088">Melk</term>
+               <term ref="index:d14380e28538">Melk ; Erste Melker Reform</term>
+               <term ref="index:d14380e29741">Morozzo, Carlo Giuseppe ; Theatrum chronologicum sacri Cartusiensis ordinis. Turin
          1681</term>
-            <term ref="index:d14380e30604">Niederlande ; Spanisch-österreichische Niederlande</term>
-            <term ref="index:d14380e30690">Nikolaus V</term>
-            <term ref="index:d14380e30963">Nürnberg</term>
-            <term ref="index:d14380e31270">Olmütz ; Kloster OCart</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e31769">Otloh von St. Emmeram</term>
-            <term ref="index:d14380e34157">Pez, Bernhard ; Akademie- bzw. Kongregationspläne 1717/18</term>
-            <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum
+               <term ref="index:d14380e30604">Niederlande ; Spanisch-österreichische Niederlande</term>
+               <term ref="index:d14380e30690">Nikolaus V</term>
+               <term ref="index:d14380e30963">Nürnberg</term>
+               <term ref="index:d14380e31270">Olmütz ; Kloster OCart</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e31769">Otloh von St. Emmeram</term>
+               <term ref="index:d14380e34157">Pez, Bernhard ; Akademie- bzw. Kongregationspläne 1717/18</term>
+               <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum
          Benedictinorum e celeberrima congregatione S. Mauri in Francia. Augsburg–Graz 1716</term>
-            <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
+               <term ref="index:d10854e22483">Pez, Bernhard ; Thesaurus anecdotorum novissimus. 6 Bde. Augsburg–Graz
          1721–1729</term>
-            <term ref="index:d14380e34123">Pez, Bernhard ; *„Conspectus“</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e35017">Philipp V</term>
-            <term ref="index:d14380e35273">Placidus von Nonantola</term>
-            <term ref="index:d14380e35851">Prag ; Kloster OCart</term>
-            <term ref="index:d14380e37546">Ripaille</term>
-            <term ref="index:d14380e37625">Roermond</term>
-            <term ref="index:d14380e37728">Rom, Römer ; Päpstliche Kurie, Papsttum</term>
-            <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
-            <term ref="index:d14380e40535">Seitz</term>
-            <term ref="index:d14380e41211">Spanien, Spanier , spanisch</term>
-            <term ref="index:d14380e44235">Veith, Philipp Jakob</term>
-            <term ref="index:d14380e46157">Wien ; Universität</term>
-            <term ref="index:d14380e46189">Wienerisches diarium Wien 1703 ff</term>
-            <term ref="index:d14380e46291">Wilhelm Hofer</term>
-            <term ref="index:d14380e46776">Wydemann, Leopold ; Selbstwahrnehmung als Mönch</term></keywords></textClass>
+               <term ref="index:d14380e34123">Pez, Bernhard ; *„Conspectus“</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e35017">Philipp V</term>
+               <term ref="index:d14380e35273">Placidus von Nonantola</term>
+               <term ref="index:d14380e35851">Prag ; Kloster OCart</term>
+               <term ref="index:d14380e37546">Ripaille</term>
+               <term ref="index:d14380e37625">Roermond</term>
+               <term ref="index:d14380e37728">Rom, Römer ; Päpstliche Kurie, Papsttum</term>
+               <term ref="index:d14380e40022">Schriften, paläographische Betreffe, Drucktypen</term>
+               <term ref="index:d14380e40535">Seitz</term>
+               <term ref="index:d14380e41211">Spanien, Spanier , spanisch</term>
+               <term ref="index:d14380e44235">Veith, Philipp Jakob</term>
+               <term ref="index:d14380e46157">Wien ; Universität</term>
+               <term ref="index:d14380e46189">Wienerisches diarium Wien 1703 ff</term>
+               <term ref="index:d14380e46291">Wilhelm Hofer</term>
+               <term ref="index:d14380e46776">Wydemann, Leopold ; Selbstwahrnehmung als Mönch</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Was BP jüngst geschrieben hat (<ref type="letter" target="letter:1015">1015</ref>), ist zur Gänze für LW
                neu. Aus dem an ihn übermittelten <rs ref="index:d14380e34123">„Conspectus“</rs> zum „<rs ref="index:d10854e22483">Thesaurus anecdotorum novissimus</rs>“ hat LW die Namen und Werke vieler
@@ -235,7 +249,8 @@
                den Ausspruch, wonach durch Schweigen, Einsamkeit, Visitationen und Kapitel die Kartause Bestand hat.</p>
             <p corresp="#seg9">LW fügt einen historischen Brief bei („<rs ref="index:d14380e2280">Epistola historica de eventibus et
                   rebus per Europam gestis</rs>“), der einiges zu den Jahren 1456 und 1457 enthält. Wer der Adressat
-               namens „<rs ref="index:d14380e2289">Heinrich</rs>“ war, ist LW unbekannt. Vielleicht war es der <rs ref="index:d14380e13828">Gaminger</rs> <rs ref="index:d14380e17821">Heinrich (Prentl) von
+               namens „<rs ref="index:d14380e2289">Heinrich</rs>“ war, ist LW unbekannt. Vielleicht war es der <rs ref="index:d14380e13828">Gaminger</rs>
+               <rs ref="index:d14380e17821">Heinrich (Prentl) von
                   Eckenfeld</rs>, ein in <rs ref="index:d14380e27422">Medizin</rs> und <rs ref="index:d14380e3112">Astrologie</rs> bewanderter Magister der <rs ref="index:d14380e46157">Wiener Universität</rs>. Dieser
                wurde 1442 Mönch in Gaming, war Prior von drei Kartausen (<rs ref="index:d14380e31270">Olmütz</rs>, <rs ref="index:d14380e35851">Prag</rs>, <rs ref="index:d14380e40535">Seitz</rs>) und designierter Prior
                einer vierten (<rs ref="index:d14380e19906">Ittingen</rs>); ein Zeitgenosse (<rs ref="index:d14380e46291">Wilhelm Hofer</rs>) bezeichnet ihn als gelehrt und gutherzig.</p>
@@ -243,7 +258,7 @@
                der <rs ref="index:d14380e40022">Schriftzüge</rs> eine unerwartete Entdeckung gemacht. Er will aber
                vorerst nicht mehr dazu schreiben, weil er noch weitere, jetzt nicht greifbare Handschriften zum
                Vergleich heranziehen will. Er schließt mit Grüßen an <rs ref="index:d14380e34537">HP</rs>.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -251,7 +266,7 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>Anecdotorum ... conspectu</mentioned>
             <p>Vgl. <ref type="letter" target="letter:1016">1016</ref>
-                  <ref target="letter:1016#seg2">2</ref>. Vermutlich ist ein und dieselbe Sendung BPs gemeint wie dort, da LW auf
+               <ref target="letter:1016#seg2">2</ref>. Vermutlich ist ein und dieselbe Sendung BPs gemeint wie dort, da LW auf
                   sie zunächst nicht eingegangen war.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
@@ -260,7 +275,8 @@
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned> Epistolas abbatis</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:525">525</ref> <ref target="letter:525#seg2">2</ref>. Die
+            <p>Vgl. <ref type="letter" target="letter:525">525</ref>
+               <ref target="letter:525#seg2">2</ref>. Die
                   behauptete Übersetzung aus dem Französischen ist eine Mystifikation von Des
                   Bosses, der selbst als Verfasser der Schrift anzusehen ist.</p>
          </note>
@@ -268,12 +284,14 @@
             <mentioned> bibliopola Augustanus</mentioned>
             <p> Zu denken ist an ein Mitglied der in
                   Augsburg beheimateten, aber auch in Graz etablierten Familie Veith, vorrangig an
-                  Philipp Jakob Veith, der deren Grazer Niederlassung leitete: vgl. <rs type="bibl" ref="bibl:18698">Paisey, Buchdrucker</rs> 269; sowie <ref type="letter" target="letter:1003">1003</ref> <ref target="letter:1003#seg2">2</ref>.</p>
+                  Philipp Jakob Veith, der deren Grazer Niederlassung leitete: vgl. <rs type="bibl" ref="bibl:18698">Paisey, Buchdrucker</rs> 269; sowie <ref type="letter" target="letter:1003">1003</ref>
+               <ref target="letter:1003#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>Gubernaculum conciliorum</mentioned>
             <p> Vgl. <ref type="letter" target="letter:929">929</ref>
-                  <ref target="letter:929#seg3">3</ref>, <ref type="letter" target="letter:936">936</ref> <ref target="letter:936#seg5">5</ref>.</p>
+               <ref target="letter:929#seg3">3</ref>, <ref type="letter" target="letter:936">936</ref>
+               <ref target="letter:936#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
             <mentioned> desistendum</mentioned>
@@ -281,12 +299,15 @@
                   ausführlich zu begründen, spricht dafür, dass BP aus einem anderen Motiv von einer
                   Bearbeitung absehen wollte. Wahrscheinlich hatte er bei der Durchsicht von Hermann
                   van der Hardts „Magnum oecumenicum Constantiense concilium“ bemerkt, dass dort das
-                  „Gubernaculum“ schon ediert war: vgl. <ref type="letter" target="letter:929">929</ref> <ref target="letter:929#seg3">3</ref>, <ref type="letter" target="letter:1020">1020</ref> <ref target="letter:1020#seg11">11</ref>. </p>
+                  „Gubernaculum“ schon ediert war: vgl. <ref type="letter" target="letter:929">929</ref>
+               <ref target="letter:929#seg3">3</ref>, <ref type="letter" target="letter:1020">1020</ref>
+               <ref target="letter:1020#seg11">11</ref>. </p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg3">
             <mentioned>In schismate illo diuturno</mentioned>
             <p> Zu den Auswirkungen des Großen Schismas
-                  auf den Kartäuserorden vgl. <ref type="letter" target="letter:865">865</ref> <ref target="letter:865#seg9">9</ref>.</p>
+                  auf den Kartäuserorden vgl. <ref type="letter" target="letter:865">865</ref>
+               <ref target="letter:865#seg9">9</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg3">
             <mentioned> novae erectae provinciae</mentioned>
@@ -317,7 +338,8 @@
                   Formulierungen des Dekrets an, in welchem etwa der Ausdruck „in nostra
                   simplicitate“ vorkommt. Die Charta von 1512 müsste ihm, laut seiner früheren
                   Angabe gegenüber Anton Steyerer, in Gaming handschriftlich vorgelegen sein: vgl.
-                     <ref type="letter" target="letter:845">845</ref> <ref target="letter:845#seg3">3</ref>. Das Dekret war freilich auch gedruckt
+                     <ref type="letter" target="letter:845">845</ref>
+               <ref target="letter:845#seg3">3</ref>. Das Dekret war freilich auch gedruckt
                   worden: <rs type="bibl" ref="bibl:14740">Le Masson, Annales 1</rs>
                237f.</p>
          </note>
@@ -333,7 +355,7 @@
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg6">
             <mentioned>Qui ad illud appellant</mentioned>
             <p>Vgl. <ref type="letter" target="letter:772">772</ref>
-                  <ref target="letter:772#seg2">2</ref>.</p>
+               <ref target="letter:772#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg7">
             <mentioned>iuramento promiserat</mentioned>
@@ -371,7 +393,8 @@
          <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg9">
             <mentioned>Epistolam ... historicam</mentioned>
             <p> Vgl. <ref type="letter" target="letter:1016">1016</ref>
-                  <ref target="letter:1016#seg7">7</ref>, <ref type="letter" target="letter:1026">1026</ref> <ref target="letter:1026#seg3">3</ref>.</p>
+               <ref target="letter:1016#seg7">7</ref>, <ref type="letter" target="letter:1026">1026</ref>
+               <ref target="letter:1026#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n19'), left('n19e'))" n="19" anchored="false" corresp="#seg9">
             <mentioned> Heinricus ... Eckenfeld</mentioned>
@@ -390,8 +413,10 @@
             <p> Welche Handschrift gemeint ist, lässt sich nicht mit
                   Sicherheit sagen. In Frage kommt aber wohl in erster Linie der Gaminger Codex mit
                   der Signatur Nr. 81, den LW einige Monate zuvor übermittelt und bereits einmal
-                  zurückgefordert hatte: vgl. <ref type="letter" target="letter:948">948</ref> <ref target="letter:948#seg1">1</ref> und <ref target="letter:948#seg5">5</ref>,
-                     <ref type="letter" target="letter:973">973</ref> <ref target="letter:973#seg5">5</ref>. In LWs späteren Briefen findet sich
+                  zurückgefordert hatte: vgl. <ref type="letter" target="letter:948">948</ref>
+               <ref target="letter:948#seg1">1</ref> und <ref target="letter:948#seg5">5</ref>,
+                     <ref type="letter" target="letter:973">973</ref>
+               <ref target="letter:973#seg5">5</ref>. In LWs späteren Briefen findet sich
                   keine Stelle, an der dieser Punkt – wie hier angedeutet – neuerlich aufgegriffen
                   würde.</p>
          </note>
@@ -410,17 +435,29 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo in Christo patri Bernardo Pezio frater Leopoldus Wydeman salutem plurimam dicit.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo in Christo patri Bernardo Pezio frater Leopoldus Wydeman salutem plurimam dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Rara sunt omnia et apud me nova, quae nuper, mi Bernarde, scripsisti. Ex <anchor xml:id="n1"/>Anecdotorum tuorum conspectu<anchor xml:id="n1e"/> mihi gratiose communicato authorum multorum tum nomina tum opera primum didici hucusque ignorans, qui qualesve fuerint Gerhohus, Othlonus, Placidus, Candidus, Agius et alii. Ignorantiae huic causam utique praebuit solitudo, in qua non nisi unius bibliothecae manuscriptos codices evolvere potui, dum tibi plurimas evolvere licuit. Ex hac tamen unica nostra satis adverti etiam in hac provincia vixisse scriptores Cartusianos, quorum nomina abbatem Morotium, et quotquot de scriptoribus nostris scripserunt, latuerunt. Cuius rationem reor fuisse communem, eo quod nemo in his partibus, uti in Belgio, Gallia, Italia factum legimus, hactenus bibliothecas perlustraverit aut ex perlustratis codices eruerit. Videtur labor iste, tametsi magnus, tamen etiam honori magno admixtus, tibi, mi Bernarde, et fratri tuo ex divina dispositione reservatus. Unde forti animo in opere inchoato pergitote ea omnia prae reliquis seligentes, quae ad Dei gloriam, ecclesiae utilitatem et ad vestri ordinis decorem nec non patriae honorem inveneritis. </ab>
          <ab resp="#editor" xml:id="seg2">Alterum mihi novum est, quod de <anchor xml:id="n2"/>Galliae statu<anchor xml:id="n2e"/> insinuas. Modica quidem aliquando ex Diario Viennensi de hac controversia audivi; sed quia illa saepe vacillant, mediocrem illis fidem adhibui. Vidi etiam in hac causa, sed nondum perlegi<anchor xml:id="n3"/> Epistolas abbatis<anchor xml:id="n3e"/> N. ad episcopum N. ex Gallico in Latinum versas per Bartholomaeum Des Bosses Societatis Jesu. De his nuper retulit nobis<anchor xml:id="n4"/> bibliopola Augustanus<anchor xml:id="n4e"/> sibi in nundinis Graecensibus interdictum fuisse, ne illas venderet in his terris. Haec pauca, quae mihi innotuerunt, sunt. </ab>
          <ab resp="#editor" xml:id="seg3">Censes et existimas litem illam vix sine concilio generali terminandam, et ideo <anchor xml:id="n5"/>Gubernaculum conciliorum<anchor xml:id="n5e"/> Andreae Maioricensis a me postulas. Ego dum scriptis, quae praemisi, excusationem paro, tuas de 1. Decembris accipio literas, quibus indicas<anchor xml:id="n6"/> desistendum<anchor xml:id="n6e"/> esse. <pb n="1v"/> Ut tamen non nescias, cur excusationem paraverim, audi causam. <anchor xml:id="n7"/>In schismate illo diuturno<anchor xml:id="n7e"/>, quod non ignoras, etiam ordo noster sub duobus floruit generalibus et permansit annis triginta duobus ab anno 1378 usque ad annum 1410. Floruit, repeto, quia inter hos annos in utraque obedientia novae sunt fundatae Cartusiae, quin et<anchor xml:id="n8"/> novae erectae provinciae<anchor xml:id="n8e"/>; in utraque vixerunt viri sanctimonia celebres, qui nihil tam <sic>ardentius</sic> expetierunt quam divisi ordinis reunionem, tandem secutam. </ab>
-         <ab resp="#editor" xml:id="seg4">Ordo deinceps factus cautior et divisionem reformidans nec<note place="foot" xml:id="d3e68470">Mit Verweiszeichen am linken Blattrand eingefügt.</note> Eugenium post depositionem nec <anchor xml:id="n9"/>Felicem (licet Cartusiae cuiusdam fundatorem<anchor xml:id="n9e"/>) post electionem coluit.<anchor xml:id="n10"/> Et dum iterum circa annum 1512 nova timeretur divisio, ab ordine emanavit decretum<anchor xml:id="n10e"/>, mediante <choice><sic>qua</sic><corr>quo</corr></choice> omne divisionis periculum tollebatur aut saltem tolli videbatur. Simile absque dubio emanabit in causa, de qua nunc agitur, si necessitas urgeat, et manebimus in simplicitate Cartusiana apud ecclesiam veram et antiquam, qualiscunque et illa fuit olim et nunc est et nunquam deficiet. </ab>
-         <ab resp="#editor" xml:id="seg5">Nolui igitur Gubernaculum istud exscribere, ne sacri ordinis excederem censuram sine dubio futuram, licet author ipse satis scribat modeste, sententias cum rationibus pro et contra adferens et se aliorum iudicio submittens; quin et scribens eo tempore, quo et Cartusiani quidam eiusdem creduntur fuisse sententiae, inter quos celeberrimus Dionysius noster, cuius <choice><sic>relationes</sic><corr>revelationes</corr></choice> sibi Ruremundae factas et desuper scriptas ad principes (vel papam) epistolas haud dubie legisti. Hortatur in illis, ut concilium fiat, Norinbergam pro loco suggerit, imo et minatur posse illud, si papa nollet, ab aliis convocari. </ab>
-         <ab resp="#editor" xml:id="seg6">Nec ego negaverim conciliorum huiusmodi utilitatem, si tanta facilitate fieri possent, quanta in ordine nostro capitula annua. Habemus pro illis locum<del ana="#after">termi</del> fixum et certum; habemus et, qui expensas solvant, olim quidem fundatas etc. Pro concilio tamen generali quanta erit loci difficultas et praesertim talis, qui omnibus placeat? Quanta sumptuum multitudo? Italia displicebit Gallis, Gallia Italis erit suspecta; caesar durante bello non mittet suos in Hispaniam nec Hispanus in Germaniam. <anchor xml:id="n11"/>Qui ad illud appellant<anchor xml:id="n11e"/>, vix se illi submittent, nisi pro eisdem decidatur. Nescio, an capiti membra debitam sint exhibitura reverentiam, et quis novit, an non ab eius depositione, ut olim, facerent initium? Omitto alia. <pb n="2r"/> </ab>
+         <ab resp="#editor" xml:id="seg4">Ordo deinceps factus cautior et divisionem reformidans nec<note place="foot" xml:id="d3e68470">Mit Verweiszeichen am linken Blattrand eingefügt.</note> Eugenium post depositionem nec <anchor xml:id="n9"/>Felicem (licet Cartusiae cuiusdam fundatorem<anchor xml:id="n9e"/>) post electionem coluit.<anchor xml:id="n10"/> Et dum iterum circa annum 1512 nova timeretur divisio, ab ordine emanavit decretum<anchor xml:id="n10e"/>, mediante <choice>
+               <sic>qua</sic>
+               <corr>quo</corr>
+            </choice> omne divisionis periculum tollebatur aut saltem tolli videbatur. Simile absque dubio emanabit in causa, de qua nunc agitur, si necessitas urgeat, et manebimus in simplicitate Cartusiana apud ecclesiam veram et antiquam, qualiscunque et illa fuit olim et nunc est et nunquam deficiet. </ab>
+         <ab resp="#editor" xml:id="seg5">Nolui igitur Gubernaculum istud exscribere, ne sacri ordinis excederem censuram sine dubio futuram, licet author ipse satis scribat modeste, sententias cum rationibus pro et contra adferens et se aliorum iudicio submittens; quin et scribens eo tempore, quo et Cartusiani quidam eiusdem creduntur fuisse sententiae, inter quos celeberrimus Dionysius noster, cuius <choice>
+               <sic>relationes</sic>
+               <corr>revelationes</corr>
+            </choice> sibi Ruremundae factas et desuper scriptas ad principes (vel papam) epistolas haud dubie legisti. Hortatur in illis, ut concilium fiat, Norinbergam pro loco suggerit, imo et minatur posse illud, si papa nollet, ab aliis convocari. </ab>
+         <ab resp="#editor" xml:id="seg6">Nec ego negaverim conciliorum huiusmodi utilitatem, si tanta facilitate fieri possent, quanta in ordine nostro capitula annua. Habemus pro illis locum<del ana="#after">termi</del> fixum et certum; habemus et, qui expensas solvant, olim quidem fundatas etc. Pro concilio tamen generali quanta erit loci difficultas et praesertim talis, qui omnibus placeat? Quanta sumptuum multitudo? Italia displicebit Gallis, Gallia Italis erit suspecta; caesar durante bello non mittet suos in Hispaniam nec Hispanus in Germaniam. <anchor xml:id="n11"/>Qui ad illud appellant<anchor xml:id="n11e"/>, vix se illi submittent, nisi pro eisdem decidatur. Nescio, an capiti membra debitam sint exhibitura reverentiam, et quis novit, an non ab eius depositione, ut olim, facerent initium? Omitto alia. <pb n="2r"/>
+         </ab>
          <ab resp="#editor" xml:id="seg7">Mi pater, erant in schismate illo tres se <add place="above">pro</add> pontifice gerentes, quorum quilibet se cessurum <anchor xml:id="n12"/>iuramento promiserat<anchor xml:id="n12e"/>. Quid ergo mirum, quod concilii patres etiam invitos tunc deposuerint et ex gremio cardinalium alium substituerint? Id mirabilius, quod <anchor xml:id="n13"/>hunc a se institutum, qui unicus erat papa et indubitatus, rursus deponere statuerint<anchor xml:id="n13e"/> et tandem Eugenium (exemplo vix ante audito) actu absolverint et in eius locum relicto cardinalium collegio Felicem adoptaverint. Infelix sane concilium in Felice, dum se Nicolao, et plures alii cum et ante eum, submisit. Confuse haec scribo, quia properanter, et ut scias me quidquid aliud, <add place="above">quam</add> quae ad concilia spectant, in tui gratiam descripturum. </ab>
-         <ab resp="#editor" xml:id="seg8">Iucundius est illud novum, quod de <anchor xml:id="n14"/>congregatione Benedictino-Austriaca<anchor xml:id="n14e"/>, olim Mellicensi, scribis; utinam in eo victoriam obtineres. Quanti constiterit congregatio sancti Mauri, ipse in<anchor xml:id="n15"/> Desiderio eius authore abunde recenses<anchor xml:id="n15e"/>. Non dubito, quin dominorum abbatum concordia, si adesset, plurimum illam adiuvaret; at si haec desit, vix obtinebitur. Plura de hac solitarius et rerum vestrarum ignarus non scribo. Interim memineris illius: per <choice><sic>sis</sic><corr>sil</corr></choice>, sol, vis, cap Cartusia <anchor xml:id="n16"/>permanet in vi<anchor xml:id="n16e"/>. </ab>
+         <ab resp="#editor" xml:id="seg8">Iucundius est illud novum, quod de <anchor xml:id="n14"/>congregatione Benedictino-Austriaca<anchor xml:id="n14e"/>, olim Mellicensi, scribis; utinam in eo victoriam obtineres. Quanti constiterit congregatio sancti Mauri, ipse in<anchor xml:id="n15"/> Desiderio eius authore abunde recenses<anchor xml:id="n15e"/>. Non dubito, quin dominorum abbatum concordia, si adesset, plurimum illam adiuvaret; at si haec desit, vix obtinebitur. Plura de hac solitarius et rerum vestrarum ignarus non scribo. Interim memineris illius: per <choice>
+               <sic>sis</sic>
+               <corr>sil</corr>
+            </choice>, sol, vis, cap Cartusia <anchor xml:id="n16"/>permanet in vi<anchor xml:id="n16e"/>. </ab>
          <ab resp="#editor" xml:id="seg9">Addo <anchor xml:id="n17"/>Epistolam ex toto historicam<anchor xml:id="n17e"/> quaedam ex anno 1456 et alia ex 1457 continentem. Quis<anchor xml:id="n18"/> Heinricus fuerit, ad quem scripta, me latet; forsitan Heinricus noster de Eckenfeld<anchor xml:id="n18e"/> magister Viennensis in physicis et astrologicis expertus, anno 1442 apud nos professus, trium Cartusiarum prior actualis et in quarta electus, multum (ut coaevus habet) doctus et benignus pater. </ab>
-         <ab resp="#editor" xml:id="seg10"><anchor xml:id="n19"/>Codicem<anchor xml:id="n19e"/>, in quo hymni et sequentiae, accepi; et in prima eius apertione quaedam non quaesita nec intenta ex characteris similitudine inveni. Sed de his, quia tota fere die in alia occupatus fui obedientia, vel invitus supersedeo plura scribere, maxime dum et alii codices nunc dispersi remaneant revidendi. Vale, mi pater, et tecum frater tuus.</ab>
+         <ab resp="#editor" xml:id="seg10">
+            <anchor xml:id="n19"/>Codicem<anchor xml:id="n19e"/>, in quo hymni et sequentiae, accepi; et in prima eius apertione quaedam non quaesita nec intenta ex characteris similitudine inveni. Sed de his, quia tota fere die in alia occupatus fui obedientia, vel invitus supersedeo plura scribere, maxime dum et alii codices nunc dispersi remaneant revidendi. Vale, mi pater, et tecum frater tuus.</ab>
          <closer>Gemnici 3. Decembris 1718.</closer>
       </body>
    </text>

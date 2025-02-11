@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="455" xml:id="pez-0455">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Jakob Mascov an Bernhard Pez. 1715-10-20. Leipzig.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">455</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -42,10 +53,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -71,17 +83,20 @@
             <p corresp="#seg2">Wenn BP das vollständige Werk wünscht, kann auch diesem Begehren entsprochen werden. <rs ref="index:d10854e3749">Christian Friedrich Börner</rs>, von dem die Abschrift stammt und der dadurch bereits mit der schwierigen Schrift vertraut ist, würde gerne die Gelegenheit zu einem weiteren Dienst an BP, dem eifrigen Verfechter der literarischen Leistungen der <rs ref="index:d14380e4919">Benediktiner</rs> in Deutschland, nützen.</p>
             <p corresp="#seg3">René Massuet hat BP schon früher gegenüber JM gelobt, die persönliche Bekanntschaft mit BP verstärkt JMs Wertschätzung noch.</p>
             <p corresp="#seg4">Das von BP angesprochene „<rs ref="index:d14380e28677">Compendiöse gelehrten-lexicon</rs>“ hat <rs ref="index:d14380e28655">Johann Burkhard Mencke</rs> zwar bereits herausgegeben, die Bereitschaft BPs, zu dem Werk beizutragen, kann ihren Niederschlag jedoch in der zweiten Ausgabe finden. Auch an einem ausführlicheren <rs ref="index:d14380e23973">lateinischen</rs> biographischen Lexikon wird gearbeitet, in dem Leben und Werke detaillierter beschrieben werden sollen.</p>
-            <p corresp="#seg5"><rs ref="index:d14380e28655">Mencke</rs> und andere Interessierte an der <rs ref="index:d14380e9395">deutschen</rs> Geschichte loben BP und <rs ref="index:d14380e34537">HP</rs> für ihre Editionspläne. Die Brüder werden den <rs ref="index:d14380e9395">Deutschen</rs> ihren <rs ref="index:d14380e25581">Mabillon</rs> und <rs ref="index:d14380e124">d’Achery</rs> schenken und ihren Ordensbrüdern ein gutes Vorbild geben, ihre Altertümer zum Wohl der vaterländischen Geschichte (<rs type="cit" ref="citIndex:ix2_d653e979">historiae patriae emolumentum</rs>) ans Licht zu bringen.</p>
-            <p corresp="#seg6"><rs ref="index:d14380e29435">Bernard de Montfaucons</rs> „<rs ref="index:d10854e20511">Bibliotheca Coisliniana</rs>“ bildete zusammen mit der neuen <rs ref="index:d10854e12518">Herodot-Ausgabe</rs> des <rs ref="index:d14380e16529">Gronovius</rs> einen der Glanzpunkte der letzten <rs ref="index:d14380e24402">Leipziger Messe</rs>; zur Messe an Ostern erwartet man <rs ref="index:d10854e17615">Lünigs „Spicilegium ecclesiasticum“</rs> in drei Teilen.</p>
+            <p corresp="#seg5">
+               <rs ref="index:d14380e28655">Mencke</rs> und andere Interessierte an der <rs ref="index:d14380e9395">deutschen</rs> Geschichte loben BP und <rs ref="index:d14380e34537">HP</rs> für ihre Editionspläne. Die Brüder werden den <rs ref="index:d14380e9395">Deutschen</rs> ihren <rs ref="index:d14380e25581">Mabillon</rs> und <rs ref="index:d14380e124">d’Achery</rs> schenken und ihren Ordensbrüdern ein gutes Vorbild geben, ihre Altertümer zum Wohl der vaterländischen Geschichte (<rs type="cit" ref="citIndex:ix2_d653e979">historiae patriae emolumentum</rs>) ans Licht zu bringen.</p>
+            <p corresp="#seg6">
+               <rs ref="index:d14380e29435">Bernard de Montfaucons</rs> „<rs ref="index:d10854e20511">Bibliotheca Coisliniana</rs>“ bildete zusammen mit der neuen <rs ref="index:d10854e12518">Herodot-Ausgabe</rs> des <rs ref="index:d14380e16529">Gronovius</rs> einen der Glanzpunkte der letzten <rs ref="index:d14380e24402">Leipziger Messe</rs>; zur Messe an Ostern erwartet man <rs ref="index:d10854e17615">Lünigs „Spicilegium ecclesiasticum“</rs> in drei Teilen.</p>
             <p corresp="#seg7">JM bietet BP weiterhin seine Dienste an. Briefe an ihn gehen am sichersten über Briefboten (tabellarii).</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>ex manuscripto Paulino</mentioned>
-            <p>Zum Text und zur Vorlage vgl. <ref type="letter" target="letter:386">386</ref><ref target="letter:386#seg2">2</ref>. Die von
+            <p>Zum Text und zur Vorlage vgl. <ref type="letter" target="letter:386">386</ref>
+               <ref target="letter:386#seg2">2</ref>. Die von
                   Mascov übersendete Abschrift ist erhalten in StiB Melk, Cod. 395, 593–650; vgl.
                      <rs type="bibl" ref="bibl:16512">Glassner, Handschriften</rs> 84. Sie trägt den
                   Titel: „De monachis ordinis sancti Benedicti viris literatis, qui in divinis et
@@ -126,7 +141,8 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Maxime reverendo atque eruditissimo patri Bernardo Pez Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Jacobus Mascow.</opener>
+         <opener>
+            <pb n="1r"/> Maxime reverendo atque eruditissimo patri Bernardo Pez Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Jacobus Mascow.</opener>
          <ab resp="#editor" xml:id="seg1">Non debebat sane ulla res tanti mihi esse, maxime reverende pater, ut responsionem ad humanissimas tuas literas differrem. Sed ecce sibi pro me deprecatores illustres aliquot ordinis vestri scriptores, quorum elogia <anchor xml:id="n1"/>ex manuscripto Paulino<anchor xml:id="n1e"/> describi curavi et speciminis loco ad te mitto. Digestum opus per titulos est, ac summos pontifices, cardinales, archiepiscopos, episcopos, abbates, martyres et scriptores, qui divi Benedicti familiam illustraverunt, tum denique reges, principes et belli duces, qui posthabita rerum mundanarum vanitate religiosam vitam ad vestram regulam instituerunt, recenset. Habes hic titulum de scriptoribus, quem supplevi ex reliquis, cum eo lectorem auctor remisit. Sed forte infra expectationem tuam illa sunt. Vides enim in tanta literarum luce, quam tenuia sint, quam partim <pb n="1v"/> fabulosa? Nam illa, ut unum attingam, quae <anchor xml:id="n2"/>de Sylvestro II.<anchor xml:id="n2e"/> refert, cui hodie non suspecta sint? Et cui suffecerit in historicis rebus <anchor xml:id="n3"/>Vincentii Bellovacensis auctoritas<anchor xml:id="n3e"/>, qua tamen praecipue Petrus noster nititur? Laudo tamen consilium eius, quod pro illorum temporum captu satis amplum est et cuius ratione meruisse mihi videtur, ut aliqua eius apud posteritatem duret memoria, qui aliorum famae tam sedulo inserviit. </ab>
          <ab resp="#editor" xml:id="seg2">Quod si haec te quoque causa moverit, summe reverende pater, ut opus integrum describi vobis velis, habemus idoneam illi operae manum. Quippe qui haec descripsit, eo ipso familiarem sibi scripturam reddidit. Satis alias difficilem. Gratissima erit clarissimo <anchor xml:id="n4"/>Boernero nostro<anchor xml:id="n4e"/> haec occasio studium in te suum tibi probandi. Et quis non studeret tibi, mi pater, qui antiquissimi et clarissimi ordinis decus, quod literarum <pb n="2r"/> gloria sibi quaesivit, tam strenue in Germania sustines. </ab>
          <ab resp="#editor" xml:id="seg3">Memini haec <anchor xml:id="n5"/>praedicasse aliquando mihi reverendum patrem Massuetum<anchor xml:id="n5e"/>, ideoque nunc impensius mihi gratulor, quod propius me cognoscendis meritis tuis humanitas tua admovit. </ab>

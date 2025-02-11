@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="789" xml:id="pez-0789">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Casimir Freschot an Bernhard Pez. 1717-05-25. Prag.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">789</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -75,70 +88,72 @@
                <ptr type="mentions" target="letter:777"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e1316">Amsterdam</term>
-            <term ref="index:d14380e6135">Bologna</term>
-            <term ref="index:d14380e8793">Cosimo III</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e13039">Freschot, Casimir ; Ducum et regum Boemiae corona collectis ex eorum vita floribus
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e1316">Amsterdam</term>
+               <term ref="index:d14380e6135">Bologna</term>
+               <term ref="index:d14380e8793">Cosimo III</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e13039">Freschot, Casimir ; Ducum et regum Boemiae corona collectis ex eorum vita floribus
          contexta et filo historico colligata. Nürnberg 1717</term>
-            <term ref="index:d14380e13055">Freschot, Casimir ; *Geschichte von Utrecht. Ms</term>
-            <term ref="index:d14380e13064">Freschot, Casimir ; Histoire abregée de la ville et province d’Utrecht. Utrecht
+               <term ref="index:d14380e13055">Freschot, Casimir ; *Geschichte von Utrecht. Ms</term>
+               <term ref="index:d14380e13064">Freschot, Casimir ; Histoire abregée de la ville et province d’Utrecht. Utrecht
          1713</term>
-            <term ref="index:d14380e13076">Freschot, Casimir ; Histoire du congres et de la paix d’Utrecht, comme aussi de celle
+               <term ref="index:d14380e13076">Freschot, Casimir ; Histoire du congres et de la paix d’Utrecht, comme aussi de celle
          de Rastadt et de Bade. Utrecht 1716</term>
-            <term ref="index:d14380e13085">Freschot, Casimir ; Infulae Pragensis ornamenta seu Omnium Pragensium episcoporum et
+               <term ref="index:d14380e13085">Freschot, Casimir ; Infulae Pragensis ornamenta seu Omnium Pragensium episcoporum et
          archiepiscoporum vitae stilo conciso descriptae. Nürnberg 1716</term>
-            <term ref="index:d14380e13096">Freschot, Casimir ; Li pregi della nobiltà veneta abbozzati in un giuoco d’arme di
+               <term ref="index:d14380e13096">Freschot, Casimir ; Li pregi della nobiltà veneta abbozzati in un giuoco d’arme di
          tutte le famiglie. Venedig 1682</term>
-            <term ref="index:d14380e13102">Freschot, Casimir ; Li pregi della nobiltà veneta abbozzati in un giuoco d’arme di
+               <term ref="index:d14380e13102">Freschot, Casimir ; Li pregi della nobiltà veneta abbozzati in un giuoco d’arme di
          tutte le famiglie. Venedig 1682 ; Zweite Auflage. Venedig 1707</term>
-            <term ref="index:d14380e13107">Freschot, Casimir ; Li successi della fede nell’Inghilterra colla storia dell’ultima
+               <term ref="index:d14380e13107">Freschot, Casimir ; Li successi della fede nell’Inghilterra colla storia dell’ultima
          eresi. Venedig 1685</term>
-            <term ref="index:d14380e13112">Freschot, Casimir ; Marmor loquens seu Sanctorum, quorum sculptae imagines in ponte
+               <term ref="index:d14380e13112">Freschot, Casimir ; Marmor loquens seu Sanctorum, quorum sculptae imagines in ponte
          Pragensi visuntur, elogia. Prag 1716</term>
-            <term ref="index:d14380e13123">Freschot, Casimir ; Memorie historiche e geographiche della Dalmazia. Bologna
+               <term ref="index:d14380e13123">Freschot, Casimir ; Memorie historiche e geographiche della Dalmazia. Bologna
          1687</term>
-            <term ref="index:d14380e13129">Freschot, Casimir ; Nouvelle relation de la ville et republique de Venise. Utrecht
+               <term ref="index:d14380e13129">Freschot, Casimir ; Nouvelle relation de la ville et republique de Venise. Utrecht
          1709</term>
-            <term ref="index:d14380e13134">Freschot, Casimir ; Origine, progressi e ruina del Calvinismo nella Francia. Parma
+               <term ref="index:d14380e13134">Freschot, Casimir ; Origine, progressi e ruina del Calvinismo nella Francia. Parma
          1693</term>
-            <term ref="index:d14380e13146">Freschot, Casimir ; Ristretto dell’historia d’Ungheria e singolarmente le cose
+               <term ref="index:d14380e13146">Freschot, Casimir ; Ristretto dell’historia d’Ungheria e singolarmente le cose
          soccorsevi sotto il regno di Leopoldo sino alla triomfante presa di Buda. Bologna
          1686</term>
-            <term ref="index:d14380e13151">Freschot, Casimir ; Vita di Carlo V. duca di Lorena e di Bar, generalissimo dell’armi
+               <term ref="index:d14380e13151">Freschot, Casimir ; Vita di Carlo V. duca di Lorena e di Bar, generalissimo dell’armi
          imperiali. Mailand 1692</term>
-            <term ref="index:d14380e13158">Freschot, Casimir ; *Second et troisieme tome du Supplément a l’Histoire universelle
+               <term ref="index:d14380e13158">Freschot, Casimir ; *Second et troisieme tome du Supplément a l’Histoire universelle
          dés l’an 1500. Amsterdam 1710</term>
-            <term ref="index:d14380e18205">Hertz, Giovanni Gabriele</term>
-            <term ref="index:d14380e18214">Hertz, Giovanni Giacomo</term>
-            <term ref="index:d14380e19828">Italien, Italiener, Italienisch</term>
-            <term ref="index:d14380e21985">Klemens XI</term>
-            <term ref="index:d14380e22371">Kongregationen des Benediktinerordens ; Cassinenserkongregation</term>
-            <term ref="index:d14380e23082">Kotterowsky, Aemilian</term>
-            <term ref="index:d14380e23279">Kuenburg, Franz Ferdinand, Graf</term>
-            <term ref="index:d10854e18291">Mailand</term>
-            <term ref="index:d14380e26036">Malatesta, Marcantonio Pandolfo</term>
-            <term ref="index:d14380e27822">Meester, Guillaume</term>
-            <term ref="index:d14380e29520">Monti, Giacomo</term>
-            <term ref="index:d14380e29527">Monti, Paolo</term>
-            <term ref="index:d14380e29788">*Mouleville, NN de</term>
-            <term ref="index:d14380e32499">Parma</term>
-            <term ref="index:d14380e32731">Pazzoni, Alberto</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e35611">Poolsum, Willem van</term>
-            <term ref="index:d14380e35789">Prag</term>
-            <term ref="index:d14380e35864">Prag ; St. Nikolaus</term>
-            <term ref="index:d14380e37634">Roger, Étienne</term>
-            <term ref="index:d14380e37728">Rom, Römer ; Päpstliche Kurie, Papsttum</term>
-            <term ref="index:d14380e39371">St. Johann unter dem Felsen</term>
-            <term ref="index:d10854e31000">Toskana</term>
-            <term ref="index:d14380e43226">Trauttmansdorff</term>
-            <term ref="index:d14380e43908">Utrecht</term>
-            <term ref="index:d14380e44267">Venedig, Venezianer</term>
-            <term ref="index:d14380e44671">Vlach, Anselm</term>
-            <term ref="index:d14380e45571">Wien</term></keywords></textClass>
+               <term ref="index:d14380e18205">Hertz, Giovanni Gabriele</term>
+               <term ref="index:d14380e18214">Hertz, Giovanni Giacomo</term>
+               <term ref="index:d14380e19828">Italien, Italiener, Italienisch</term>
+               <term ref="index:d14380e21985">Klemens XI</term>
+               <term ref="index:d14380e22371">Kongregationen des Benediktinerordens ; Cassinenserkongregation</term>
+               <term ref="index:d14380e23082">Kotterowsky, Aemilian</term>
+               <term ref="index:d14380e23279">Kuenburg, Franz Ferdinand, Graf</term>
+               <term ref="index:d10854e18291">Mailand</term>
+               <term ref="index:d14380e26036">Malatesta, Marcantonio Pandolfo</term>
+               <term ref="index:d14380e27822">Meester, Guillaume</term>
+               <term ref="index:d14380e29520">Monti, Giacomo</term>
+               <term ref="index:d14380e29527">Monti, Paolo</term>
+               <term ref="index:d14380e29788">*Mouleville, NN de</term>
+               <term ref="index:d14380e32499">Parma</term>
+               <term ref="index:d14380e32731">Pazzoni, Alberto</term>
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e35611">Poolsum, Willem van</term>
+               <term ref="index:d14380e35789">Prag</term>
+               <term ref="index:d14380e35864">Prag ; St. Nikolaus</term>
+               <term ref="index:d14380e37634">Roger, Étienne</term>
+               <term ref="index:d14380e37728">Rom, Römer ; Päpstliche Kurie, Papsttum</term>
+               <term ref="index:d14380e39371">St. Johann unter dem Felsen</term>
+               <term ref="index:d10854e31000">Toskana</term>
+               <term ref="index:d14380e43226">Trauttmansdorff</term>
+               <term ref="index:d14380e43908">Utrecht</term>
+               <term ref="index:d14380e44267">Venedig, Venezianer</term>
+               <term ref="index:d14380e44671">Vlach, Anselm</term>
+               <term ref="index:d14380e45571">Wien</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Am vergangenen Sonntag, anlässlich der feierlichen Weihe des neuen Abtes von <rs ref="index:d14380e35864">St. Nikolaus</rs> (<rs ref="index:d14380e44671">Anselm Vlach</rs>) durch den
                <rs ref="index:d14380e35789">Prager</rs> Erzbischof (<rs ref="index:d14380e23279">Franz Ferdinand Grafen
@@ -164,7 +179,7 @@
                aufhält.</p>
             <p corresp="#seg5">Aufgrund der insistenten Bitte BPs übermittelt CF ein Verzeichnis der unter seinem Namen erschienenen
                Schriften in italienischer und <rs ref="index:d14380e12712">französischer</rs> Sprache.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -195,11 +210,14 @@
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
             <mentioned>illos esse mortuos</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:733">733</ref> <ref target="letter:733#seg2">2</ref>; <ref type="letter" target="letter:761">761</ref> <ref target="letter:761#seg2">2</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:733">733</ref>
+               <ref target="letter:733#seg2">2</ref>; <ref type="letter" target="letter:761">761</ref>
+               <ref target="letter:761#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
             <mentioned>Mouleville</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:777">777</ref> <ref target="letter:777#seg2">2</ref>. </p>
+            <p>Vgl. <ref type="letter" target="letter:777">777</ref>
+               <ref target="letter:777#seg2">2</ref>. </p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg5">
             <mentioned>cathalogo ... submitto</mentioned>
@@ -211,12 +229,12 @@
             <p> Die erste Ausgabe wurde 1682 von Andrea Poletti
                   gedruckt, eine weitere unter abgeändertem Titel 1707 von Giovanni Gabriele Hertz.
                   Zu den Buchdruckern und Verlegern Hertz vgl. <ref type="letter" target="letter:733">733</ref>
-                  <ref target="letter:733#seg3">3</ref>.</p>
+               <ref target="letter:733#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
             <mentioned> Giacomo Monti</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:19264">Sartori, Dizionario</rs> 104f.; vgl. <rs type="bibl" ref="bibl:14870">Allsop, Corelli</rs> 24. </p>
+               <rs type="bibl" ref="bibl:19264">Sartori, Dizionario</rs> 104f.; vgl. <rs type="bibl" ref="bibl:14870">Allsop, Corelli</rs> 24. </p>
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg5">
             <mentioned>Li successi della fede ... 1687</mentioned>
@@ -224,18 +242,19 @@
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg5">
             <mentioned>Marc-Antonio Malatesta</mentioned>
-            <p><rs type="bibl" ref="bibl:19254">Santoro,
+            <p>
+               <rs type="bibl" ref="bibl:19254">Santoro,
                      Tipografi milanesi</rs> 333–335.</p>
          </note>
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg5">
             <mentioned> Pazzoni e Paolo Monti</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:17826">Lasagni, Dizionario</rs> 3 585, 830. </p>
+               <rs type="bibl" ref="bibl:17826">Lasagni, Dizionario</rs> 3 585, 830. </p>
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg5">
             <mentioned>van Poolsum</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:16684">Gruys–De Wolf, Thesaurus</rs> 140. </p>
+               <rs type="bibl" ref="bibl:16684">Gruys–De Wolf, Thesaurus</rs> 140. </p>
          </note>
          <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg5">
             <mentioned>Second ... Supplément</mentioned>
@@ -243,13 +262,14 @@
          </note>
          <note target="#range(right('n15'), left('n15e'))" n="15" anchored="false" corresp="#seg5">
             <mentioned>Etienne Roger</mentioned>
-            <p><rs type="bibl" ref="bibl:16684">Gruys–De Wolf,
+            <p>
+               <rs type="bibl" ref="bibl:16684">Gruys–De Wolf,
                      Thesaurus</rs> 148. </p>
          </note>
          <note target="#range(right('n16'), left('n16e'))" n="16" anchored="false" corresp="#seg5">
             <mentioned>Guillaume Meester</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:16684">Gruys–De Wolf, Thesaurus</rs> 120.</p>
+               <rs type="bibl" ref="bibl:16684">Gruys–De Wolf, Thesaurus</rs> 120.</p>
          </note>
          <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg5">
             <mentioned> Paratum habeo ... folio</mentioned>
@@ -261,14 +281,32 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverende et eruditissime domine pater et amice colendissime.</opener>
-         <ab resp="#editor" xml:id="seg1">Occasione solemnis <anchor xml:id="n1"/>benedictionis<anchor xml:id="n1e"/>, quam a nostro celsissimo principe archiepiscopo dominica ultima suscepit novus abbas S. Nicolai, cum reperto uno e vestris, quem monachum comitem novi abbatis, collocutus in <sic>antimera</sic>, et qui erat ipse <anchor xml:id="n2"/>abbas S. Joannis<anchor xml:id="n2e"/>, ut puto, sub Rupe, futurus in <choice><sic>c</sic><corr>sacra</corr></choice> cerimonia cooperator principis; et quaerens, utrum paternitas vestra admodum reverenda iam se itineri commisisset, ad quod se<anchor xml:id="n3"/> accinctam ad me scripserat<anchor xml:id="n3e"/>, dixit se non putare, quod hactenus incepisset peregrinari; quod in causa est, cur iterum rescribam et referam, quae mihi cum meo principe tandem suae residentiae restituto contigerunt. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverende et eruditissime domine pater et amice colendissime.</opener>
+         <ab resp="#editor" xml:id="seg1">Occasione solemnis <anchor xml:id="n1"/>benedictionis<anchor xml:id="n1e"/>, quam a nostro celsissimo principe archiepiscopo dominica ultima suscepit novus abbas S. Nicolai, cum reperto uno e vestris, quem monachum comitem novi abbatis, collocutus in <sic>antimera</sic>, et qui erat ipse <anchor xml:id="n2"/>abbas S. Joannis<anchor xml:id="n2e"/>, ut puto, sub Rupe, futurus in <choice>
+               <sic>c</sic>
+               <corr>sacra</corr>
+            </choice> cerimonia cooperator principis; et quaerens, utrum paternitas vestra admodum reverenda iam se itineri commisisset, ad quod se<anchor xml:id="n3"/> accinctam ad me scripserat<anchor xml:id="n3e"/>, dixit se non putare, quod hactenus incepisset peregrinari; quod in causa est, cur iterum rescribam et referam, quae mihi cum meo principe tandem suae residentiae restituto contigerunt. </ab>
          <ab resp="#editor" xml:id="seg2">Post tentatam non una via, ut a pontifice obtineret, facultatem me apud se retinendi, quod frustra fuit, cum a me peteret, quid ergo statuerem, respondi me non invitum rediturum in Italiam confisum, quod summi Etruriae ducis, cui, ut videt paternitas vestra admodum reverenda, Elogia sanctorum dedicavi, anticipato studio ipsum demerendi, favore et auspiciis obtinere sperem <anchor xml:id="n4"/>novum inter Casinenses ingressum<anchor xml:id="n4e"/>, maxime quod ab amicis in eorum congregatione relictis intelligam <anchor xml:id="n5"/>illos esse mortuos<anchor xml:id="n5e"/>, qui malo in me animo erant. </ab>
-         <ab resp="#editor" xml:id="seg3">Cum sub praelo habeam alia item Elogia regum Bohemiae et instanter sim recepturus opus absolute impressum, cuius iam ad me transmissa sunt plusquam 20 folia eiusdem tenoris, quo impressa sunt Elogia episcoporum, illico cum reliquum operis habuero, Viennam me conferam, inde Italiae iter suscepturus; unde si quid me valiturum umquam arbitretur <choice><sic>aliquis</sic><corr>aliquid</corr></choice> , quod suo servitio conducat, me paratissimum habebit ad omnia, quae virium mearum tenuitatem non excedant. </ab>
+         <ab resp="#editor" xml:id="seg3">Cum sub praelo habeam alia item Elogia regum Bohemiae et instanter sim recepturus opus absolute impressum, cuius iam ad me transmissa sunt plusquam 20 folia eiusdem tenoris, quo impressa sunt Elogia episcoporum, illico cum reliquum operis habuero, Viennam me conferam, inde Italiae iter suscepturus; unde si quid me valiturum umquam arbitretur <choice>
+               <sic>aliquis</sic>
+               <corr>aliquid</corr>
+            </choice> , quod suo servitio conducat, me paratissimum habebit ad omnia, quae virium mearum tenuitatem non excedant. </ab>
          <ab resp="#editor" xml:id="seg4">Nihil ab ultima gratissima epistola reverendae admodum paternitatis vestrae, quae sub dato 22. praeteriti Aprilis scripta erat, accepi; unde nec scire queo, utrum, quod sperare me iusserat, aliquid et qua via direxerit ad me pro retributione benefica libellorum, quos transmittere ausus sum. Post reditum nostri principis indicaram illi unum ex amicis meis, qui moderatoris studiorum officio fungitur apud iuniores comites de Trautmansdorf nomine De <anchor xml:id="n6"/>Mouleville<anchor xml:id="n6e"/>; cui si consignaretur quidquam, illico ad me tuto perveniret. Eundem adhuc Viennae degentem habet paternitas vestra admodum reverenda, quo utatur, si prior gratificandi mihi voluntas perseveret. De caetero cum pervenero in Italiam, poterit nostrum commercium arctius stringi, illique partem adventus mei communicare non morabor, ubi sedem fixero. Me interim gratis affectibus reverendae admodum paternitatis vestrae me commendo</ab>
          <closer>Ad omnia obsequia paratissimus Casimirus Freschot.</closer>
          <closer>Pragae 25. Maii 1717.</closer>
-         <closer xml:id="seg5">Cum aliquoties institerit paternitas vestra admodum reverenda pro habendo <anchor xml:id="n7"/>cathalogo opusculorum meorum, hic sequenter submitto<anchor xml:id="n7e"/>, quae meo nomine vulgata sunt. Italici. Li pregi della nobiltà Veneta abbozzati in un giuoco d’armi di tutte le <choice><sic>famill</sic><corr>famiglie</corr></choice>. Venetia appresso<del ana="#after">And</del> Giovanni Giacomo Hertz 1682 in duodecimo. Ristretto dell’historia d’Hungaria etc. Bologna<del ana="#before">Milano per Marc Antonio Malatesta</del> per<anchor xml:id="n8"/> Giacomo Monti<anchor xml:id="n8e"/> 1686 in quarto. Li successi della fede nell’Inghilterra etc. Bologna per<anchor xml:id="n9"/> Giacomo Monti<anchor xml:id="n9e"/> 1687 in duodecimo. Memorie historiche e geographiche della Dalmatia etc. Bologna per<anchor xml:id="n10"/> Giacomo Monti<anchor xml:id="n10e"/> 1687 in duodecimo. Vita di Carlo V. duca di Lorena generalissimo dell’armi imperiali etc. Milano per <anchor xml:id="n11"/>Marc-Antonio Malatesta<anchor xml:id="n11e"/> 1692 in duodecimo. Origine, progressi e ruina del Calvinismo nella Francia. Parma per Alberto<anchor xml:id="n12"/> Pazzoni e Paolo Monti<anchor xml:id="n12e"/> 1693 in quarto. Gallici. Nouvelle relation de la ville et republique de Venise. Utrecht chez Guillaume <anchor xml:id="n13"/>van Poolsum<anchor xml:id="n13e"/> 1709 in duodecimo. <anchor xml:id="n14"/>Second et troisieme tome du Supplément<anchor xml:id="n14e"/> a l’Histoire universelle dés l’an 1500<del ana="#after">Utrecht chez Guillaume Meester</del>. Amsterdam chez <anchor xml:id="n15"/>Etienne Roger<anchor xml:id="n15e"/> 1710 in duodecimo. Histoire <add place="above">abregée</add> de la ville et province d’Utrecht. Chez <anchor xml:id="n16"/>Guillaume Meester<anchor xml:id="n16e"/> 1713.<anchor xml:id="n17"/> Paratum habeo amplum volumen eiusdem Historiae in folio<anchor xml:id="n17e"/>. Histoire du congres et de la paix d’Utrecht. Chez Guillaume <anchor xml:id="n18"/>van Poolsum<anchor xml:id="n18e"/> <choice><sic>1717</sic><corr>1716</corr></choice> in <choice><sic>quarto</sic><corr>duodecimo</corr></choice>.<pb n="1v"/> </closer>
+         <closer xml:id="seg5">Cum aliquoties institerit paternitas vestra admodum reverenda pro habendo <anchor xml:id="n7"/>cathalogo opusculorum meorum, hic sequenter submitto<anchor xml:id="n7e"/>, quae meo nomine vulgata sunt. Italici. Li pregi della nobiltà Veneta abbozzati in un giuoco d’armi di tutte le <choice>
+               <sic>famill</sic>
+               <corr>famiglie</corr>
+            </choice>. Venetia appresso<del ana="#after">And</del> Giovanni Giacomo Hertz 1682 in duodecimo. Ristretto dell’historia d’Hungaria etc. Bologna<del ana="#before">Milano per Marc Antonio Malatesta</del> per<anchor xml:id="n8"/> Giacomo Monti<anchor xml:id="n8e"/> 1686 in quarto. Li successi della fede nell’Inghilterra etc. Bologna per<anchor xml:id="n9"/> Giacomo Monti<anchor xml:id="n9e"/> 1687 in duodecimo. Memorie historiche e geographiche della Dalmatia etc. Bologna per<anchor xml:id="n10"/> Giacomo Monti<anchor xml:id="n10e"/> 1687 in duodecimo. Vita di Carlo V. duca di Lorena generalissimo dell’armi imperiali etc. Milano per <anchor xml:id="n11"/>Marc-Antonio Malatesta<anchor xml:id="n11e"/> 1692 in duodecimo. Origine, progressi e ruina del Calvinismo nella Francia. Parma per Alberto<anchor xml:id="n12"/> Pazzoni e Paolo Monti<anchor xml:id="n12e"/> 1693 in quarto. Gallici. Nouvelle relation de la ville et republique de Venise. Utrecht chez Guillaume <anchor xml:id="n13"/>van Poolsum<anchor xml:id="n13e"/> 1709 in duodecimo. <anchor xml:id="n14"/>Second et troisieme tome du Supplément<anchor xml:id="n14e"/> a l’Histoire universelle dés l’an 1500<del ana="#after">Utrecht chez Guillaume Meester</del>. Amsterdam chez <anchor xml:id="n15"/>Etienne Roger<anchor xml:id="n15e"/> 1710 in duodecimo. Histoire <add place="above">abregée</add> de la ville et province d’Utrecht. Chez <anchor xml:id="n16"/>Guillaume Meester<anchor xml:id="n16e"/> 1713.<anchor xml:id="n17"/> Paratum habeo amplum volumen eiusdem Historiae in folio<anchor xml:id="n17e"/>. Histoire du congres et de la paix d’Utrecht. Chez Guillaume <anchor xml:id="n18"/>van Poolsum<anchor xml:id="n18e"/>
+            <choice>
+               <sic>1717</sic>
+               <corr>1716</corr>
+            </choice> in <choice>
+               <sic>quarto</sic>
+               <corr>duodecimo</corr>
+            </choice>.<pb n="1v"/>
+         </closer>
       </body>
    </text>
 </TEI>

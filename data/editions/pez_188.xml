@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="188" xml:id="pez-0188">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an die Bayerische Benediktinerkongregation. LE 2. 1711-09-23. Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">188</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
             <relatedItem type="instanceOf">
                <bibl>
                   <author>Bernhard Pez</author>
@@ -60,10 +71,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -87,7 +99,7 @@
             <p corresp="#seg1">BP zweifelt nicht, dass sein Adressat bereits von seinem Vorhaben einer „<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“ weiß, da er schon vor einiger Zeit die Benediktinerklöster <rs ref="index:d14380e4170">Bayerns</rs> mittels einer <rs ref="index:d10854e23695">Enzyklik</rs> zur Mitwirkung aufgerufen hat.</p>
             <p corresp="#seg2">Wohl haben sich bereits viele Äbte in <rs ref="index:d14380e12712">Frankreich</rs>, <rs ref="index:d14380e19828">Italien</rs> und dem restlichen <rs ref="index:d14380e9395">Deutschland</rs> hilfreich erwiesen. Dagegen hat <rs ref="index:d14380e4170">Bayern</rs> noch kaum Material eingesendet, obwohl dort, wie man in <rs ref="index:d10854e21970">Österreich</rs> allgemein anerkennt, die meisten gelehrten Benediktiner leben. BP bittet deshalb nochmals darum, einen Mitbruder mit dem Erstellen eines Verzeichnisses der Schriftsteller des Klosters aus den hauseigenen Quellen zu beauftragen. An Informationen wünscht BP Angaben zu Herkunft, Ehren, Tugenden und Ämtern, gedruckten oder ungedruckten Werken mit Ort und Zeit des Erscheinens sowie zum Urteil anderer Gelehrter über diese, schließlich zum Todesjahr. Diese sollen an ihn entweder direkt nach <rs ref="index:d14380e28088">Melk</rs> oder nach <rs ref="index:d10854e21230">Niederaltaich</rs> an <rs ref="index:d10854e11648">Placidus Haiden</rs> eingesendet werden.</p>
             <p corresp="#seg3">Weiters verschickt BP in einer Beilage die <rs ref="index:d10854e18873">Enzyklik</rs> der <rs ref="index:d10854e15615">Mauriner</rs> aus <rs ref="index:d14380e12712">Frankreich</rs> und erklärt sich bereit, Einsendungen an diese entgegenzunehmen und für die Weiterleitung nach <rs ref="index:d14380e32292">Paris</rs> zu sorgen. Er verspricht, das Kloster seines Adressaten in der „<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“ gebührend zu würdigen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -98,15 +110,17 @@
                   „orbis eruditus“ – schreibt, mag davon rühren, dass er antiösterreichische
                   Ressentiments der bayerischen Klöster als Grund ihrer fehlenden Mitarbeit
                   vermutete. Vgl. <ref type="letter" target="letter:28">28</ref>, <ref type="letter" target="letter:85">85</ref>
-                  <ref target="letter:85#seg4">4</ref>.</p>
+               <ref target="letter:85#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>officia</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:44">44</ref> <ref target="letter:44#seg3">3</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:44">44</ref>
+               <ref target="letter:44#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>iudicium doctorum</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:91">91</ref> <ref target="letter:91#seg3">3</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:91">91</ref>
+               <ref target="letter:91#seg3">3</ref>.</p>
          </note>
       </listAnnotation>
       <listBibl>
@@ -119,7 +133,8 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Reverendissime perillustris etc.</opener>
+         <opener>
+            <pb n="1r"/> Reverendissime perillustris etc.</opener>
          <ab resp="#editor" xml:id="seg1">Minime dubito, quin operis pro communi sacri ordinis nostri [gloria]<note place="foot" xml:id="d4618e23724">Wohl in der Abschrift irrig ausgelassen; vgl. die Parallelstelle in 164.</note> suscepti a me fama ad reverendissimi perillustris domini domini aures pervenerit, maxime cum huius negotii causa ad universa Bavariae ordinis sancti Benedicti monasteria encyclicam pridem dederim, in qua me ingens volumen, quo omnes scriptores Benedictinos a condito sacro ordine usque ad hanc aetatem scribendo complector, moliri et adornare significabam. </ab>
          <ab resp="#editor" xml:id="seg2">At vero, tametsi nec in Gallia nec in Italia Germaniaque reliqua reverendissimi domini domini abbates defuerint, qui singulari studio et favore mea consilia prosequerentur, nescio tamen, quo maligno fato factum fuerit, ut pauca admodum litteratorum Benedictinorum nomina et monumenta in rem meam facientia mihi ex <anchor xml:id="n1"/>Bavaria submissa sint, cum tamen communi Austriae nostrae applausu<anchor xml:id="n1e"/> certum sit nullibi fere gentium maiorem <pb n="1v"/> doctissimorum Benedictinorum numerum hodie florere quam in Bavaria. Quod cum mecum perpenderem, non potui non id in animum inducere, ut preces pristinas datis denuo ad singula monasteria litteris repeterem. Quo etiam fine reverendissimum perillustrem etc. dominum dominum hisce, qua maxima possum, corporis animique demissione oro ac rogo, ut is pro celebratissimo suo in sacrum ordinem zelo unum aliquem ex clarissimis suis dominis capitularibus deligere dignetur, qui omnium doctissimorum dominorum confratrum, quibus aliqua unquam in scribendis litteris laus fuit, nomina, patriam, honores, virtutes, <anchor xml:id="n2"/>officia<anchor xml:id="n2e"/>, elenchum operum qua typis mandatorum qua manuscriptorum, formam, tempus et locum editionis, <anchor xml:id="n3"/>iudicium doctorum<anchor xml:id="n3e"/> de iis virorum, denique annum obitus colligat et ad me seu recta Mellicium seu Altaham Inferiorem ad admodum reverendum patrem Placidum demittat. </ab>
          <ab resp="#editor" xml:id="seg3">Praeterea repraesento hic eruditissimorum nostrorum congregationis sancti Mauri in Gallia fratrum preces, quae in quibus versentur, adiecta encyclica epistola ad me Parisiis data eloquetur. Quod si reverendissimus perillustris dominus dominus aequissimis eorum votis gratificari cupit, omnia mihi consignari poterunt: meae deinceps curae incumbet de modo et via, qua tuto omnia Parisios ferantur, prospicere. Interim maxima de amplissimo reverendissimi domini domini <pb n="2r"/> favore spe concepta polliceor me nihil in mea Bibliotheca Benedictina omissurum, quod celeberrimum monasterium amplius illustrare possit. Deus optimus maximus eundem gratiosissimum dominum dominum patronum meum in totius sacri ordinis nostri ornamentum quam diutissime florentem conservet.</ab>

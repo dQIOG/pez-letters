@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="634" xml:id="pez-0634">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Kaspar Erhardt an Bernhard Pez. 1716-08-06. Regensburg (St. Emmeram).</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">634</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Die Identität des Adressaten ist aus dem Brief selbst nicht eindeutig zu ersehen, aus den Bezugnahmen auf die LE 3 und auf die „Bibliotheca Benedictina“ geht jedoch deutlich hervor, dass es sich um ein Schreiben an BP handelt.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -78,36 +90,39 @@
                <ptr type="mentions" target="letter:479"/>
             </correspContext>
          </correspDesc>
-         <textClass><keywords>
-            <term ref="index:d14380e2497">Anonyme Werke ; Oratio super Miserere. Ms. Regensburg, St. Emmeram</term>
-            <term ref="index:d14380e2886">Apollonius</term>
-            <term ref="index:d14380e11544">Erhardt, Kaspar ; Catalogus scriptorum monasterii S. Emmerami. Ms</term>
-            <term ref="index:d14380e11553">Erhardt, Kaspar ; *Hausgeschichtliche Materialien zu St. Emmeram</term>
-            <term ref="index:d14380e11563">Erhardt, Thomas Aquin</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e18476">Hoffmann, Christophorus</term>
-            <term ref="index:d14380e25705">Mabillon, Jean ; Annales ordinis sancti Benedicti, occidentalium monachorum patriarchae, in quibus non modo res monasticae, sed etiam ecclesiasticae historiae non minima pars continetur. 6 Bde. Paris 1703–1739</term>
-            <term ref="index:d14380e26993">Massuet, René</term>
-            <term ref="index:d14380e27059">Massuet, René ; Krankheit und Tod</term>
-            <term ref="index:d14380e31769">Otloh von St. Emmeram</term>
-            <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
-            <term ref="index:d14380e33611">Pez, Bernhard ; Enzyklik 1715/16</term>
-            <term ref="index:d14380e36714">Regensburg ; St. Emmeram</term>
-            <term ref="index:d14380e36741">Regensburg ; St. Emmeram ; Bibliothek</term>
-            <term ref="index:d14380e36820">Regensburg ; St. Emmeram ; Bibliothek ; Oratio super Miserere. Ms</term>
-            <term ref="index:d14380e36835">Regensburg ; St. Emmeram ; Bibliothek ; Traditions- und Urkundensammlungen</term>
-            <term ref="index:d14380e41975">Tagino</term>
-            <term ref="index:d14380e43201">Trauner, Ignaz von</term>
-            <term ref="index:d14380e44695">Vogl, Cölestin</term>
-            <term ref="index:d14380e45389">Wessobrunn</term>
-            <term ref="index:d14380e46284">Wilhelm von Hirsau</term>
-            <term ref="index:d14380e46526">Wolfgang von Regensburg, hl</term></keywords></textClass>
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e2497">Anonyme Werke ; Oratio super Miserere. Ms. Regensburg, St. Emmeram</term>
+               <term ref="index:d14380e2886">Apollonius</term>
+               <term ref="index:d14380e11544">Erhardt, Kaspar ; Catalogus scriptorum monasterii S. Emmerami. Ms</term>
+               <term ref="index:d14380e11553">Erhardt, Kaspar ; *Hausgeschichtliche Materialien zu St. Emmeram</term>
+               <term ref="index:d14380e11563">Erhardt, Thomas Aquin</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e18476">Hoffmann, Christophorus</term>
+               <term ref="index:d14380e25705">Mabillon, Jean ; Annales ordinis sancti Benedicti, occidentalium monachorum patriarchae, in quibus non modo res monasticae, sed etiam ecclesiasticae historiae non minima pars continetur. 6 Bde. Paris 1703–1739</term>
+               <term ref="index:d14380e26993">Massuet, René</term>
+               <term ref="index:d14380e27059">Massuet, René ; Krankheit und Tod</term>
+               <term ref="index:d14380e31769">Otloh von St. Emmeram</term>
+               <term ref="index:d14380e33227">Pez, Bernhard ; -Bibliotheca Benedictina generalis</term>
+               <term ref="index:d14380e33611">Pez, Bernhard ; Enzyklik 1715/16</term>
+               <term ref="index:d14380e36714">Regensburg ; St. Emmeram</term>
+               <term ref="index:d14380e36741">Regensburg ; St. Emmeram ; Bibliothek</term>
+               <term ref="index:d14380e36820">Regensburg ; St. Emmeram ; Bibliothek ; Oratio super Miserere. Ms</term>
+               <term ref="index:d14380e36835">Regensburg ; St. Emmeram ; Bibliothek ; Traditions- und Urkundensammlungen</term>
+               <term ref="index:d14380e41975">Tagino</term>
+               <term ref="index:d14380e43201">Trauner, Ignaz von</term>
+               <term ref="index:d14380e44695">Vogl, Cölestin</term>
+               <term ref="index:d14380e45389">Wessobrunn</term>
+               <term ref="index:d14380e46284">Wilhelm von Hirsau</term>
+               <term ref="index:d14380e46526">Wolfgang von Regensburg, hl</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">KE hat endlich die Handschriften der <rs ref="index:d14380e36741">Bibliothek</rs> von <rs ref="index:d14380e36714">St. Emmeram</rs> durchgesehen und einen <rs ref="index:d14380e11544">Schriftstellerkatalog</rs> erstellt. Von einer schnelleren Bearbeitung dieses für das Kloster so ruhmreichen Unterfangens haben ihn seine Pflichten in Pfarrseelsorge und Lehrtätigkeit abgehalten, zumal ihm für die Bibliotheksarbeit nur die Erholungszeiten blieben. Er entschuldigt sich für die geringe Qualität seiner Ausarbeitung und bittet um Rückfragen zu allenfalls unklaren Stellen.</p>
             <p corresp="#seg2">Er fügt die <rs ref="index:d14380e2497">„Oratio super Miserere“</rs> des <rs ref="index:d14380e46526">hl. Wolfgang</rs> (siehe Kommentar) an, welche BP sich bereits in seinem ersten Brief von 1715 ausgebeten hat <ref type="letter" target="letter:479">479</ref>. Weiters hat ihn BP um Auskunft über die <rs ref="index:d14380e36835">Regensburger Traditionsbücher</rs> ersucht. KE antwortet, dass es sich dabei um nichts anderes handelt als um eine von verschiedenen Emmeramer Mönchen über die Jahrhunderte bis in die Gegenwart aufgezeichnete Hausgeschichte (series historica ... pertexta), in die auch ein Katalog der Äbte, Schenkungen und Verträge eingerückt sind (siehe Kommentar).</p>
             <p corresp="#seg3">Die von KE verfasste <rs ref="index:d14380e11553">Geschichte seines Klosters</rs> hat er hingegen nach <rs ref="index:d14380e12712">Frankreich</rs> an den Fortsetzer der <rs ref="index:d14380e25705">„Annales OSB“</rs>, <rs ref="index:d14380e26993">René Massuet</rs>, geschickt und eine Abschrift bei sich behalten. Er hat darin allerdings kaum einmal Autoren von Büchern behandelt, sondern die Geschichte von <rs ref="index:d14380e36714">St. Emmeram</rs> nach Jahrhunderten dargestellt. Daher dürfte das Material auch nicht von Interesse für BP sein; sollte dies doch der Fall sein, würde KE es sofort übermitteln.</p>
             <p corresp="#seg4">BPs „Conspectus Bibliothecae Benedictinae“ (LE 3) hat KE an seinen Bruder <rs ref="index:d14380e11563">Thomas Aquin Erhardt</rs> in <rs ref="index:d14380e45389">Wessobrunn</rs> geschickt, der daraufhin Beiträge zugesagt hat. KE wünscht BP ein längeres Leben, als Massuet beschieden war, und endet mit der Zusage von und der Bitte um Gebetsgedenken.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -196,14 +211,16 @@
                   „Liber traditionum I“ und „Liber II“ beschriftet: <rs type="bibl" ref="bibl:20332">Widemann, Traditionen</rs> VII; vgl. <rs type="bibl" ref="bibl:15426">Bretholz, Studien</rs> 12. Eine fortlaufend geführte Geschichte von St.
                   Emmeram mit Quelleninserten, die der Beschreibung KEs besser entspräche, ist
                   hingegen nicht zu ermitteln. Zur Einsichtnahme der genannten Traditionsbücher
-                  durch BP im September 1717 und zu seinen späteren Publikationen daraus vgl. <ref type="letter" target="letter:912">912</ref> <ref target="letter:912#seg7">7</ref>.</p>
+                  durch BP im September 1717 und zu seinen späteren Publikationen daraus vgl. <ref type="letter" target="letter:912">912</ref>
+               <ref target="letter:912#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
             <mentioned>in Galliam misi</mentioned>
             <p> KE hatte René Massuet bereits einmal über BP
                   hausgeschichtliche Materialien zu seinem Kloster unter dem Titel „De antiquo
                   nomine monasterii S. Emmerami“ zukommen lassen: vgl. <ref type="letter" target="letter:388">388</ref>
-                  <ref target="letter:388#seg1">1</ref>, <ref type="letter" target="letter:428">428</ref> <ref target="letter:428#seg1">1</ref>. Das Begleitschreiben KEs dazu
+               <ref target="letter:388#seg1">1</ref>, <ref type="letter" target="letter:428">428</ref>
+               <ref target="letter:428#seg1">1</ref>. Das Begleitschreiben KEs dazu
                   vom 13. Dezember 1714 ist erhalten in BN, FF 19664, 129r–130v. Massuet hatte sich
                   durch einen Brief an KE vom 3. Mai 1715 bedankt: <rs type="bibl" ref="bibl:16082">Endres, Korrespondenz</rs> 41f. Aus diesen Briefen geht hervor, dass KE jene
                   Sendung als vorläufig ansah und weitere Nachforschungen versprach. Es ist daher
@@ -222,7 +239,8 @@
             <p>Es ist davon auszugehen, dass die
                   weitergeleitete LE 3 von BP nicht für Thomas Aquin Erhardt, sondern eher für KE
                   selbst bestimmt war, zumal Ersterer bereits um den vorangegangenen Jahreswechsel
-                  über Karl Meichelbeck ein Exemplar erhalten hatte: vgl. <ref type="letter" target="letter:540">540</ref> <ref target="letter:540#seg4">4</ref>. Eine Ansetzung des hier erwähnten Stücks als Brief BPs an
+                  über Karl Meichelbeck ein Exemplar erhalten hatte: vgl. <ref type="letter" target="letter:540">540</ref>
+               <ref target="letter:540#seg4">4</ref>. Eine Ansetzung des hier erwähnten Stücks als Brief BPs an
                   Thomas Aquin Erhardt unterbleibt deshalb, vielmehr ist es wohl als Teil von 607
                   anzusehen. Dass Erhardt laut dem Bericht seines Bruders Hilfe zusagte, anstatt auf
                   bereits Geleistetes zu verweisen, lässt darauf schließen, dass diese Vorgänge in
@@ -231,8 +249,12 @@
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
             <mentioned> longiores quam domino Massuet</mentioned>
             <p> Zu Krankheit und Tod Massuets vgl.
-                     <ref type="letter" target="letter:500">500</ref> <ref target="letter:500#seg7">7</ref>, <ref type="letter" target="letter:509">509</ref> <ref target="letter:509#seg2">2</ref>,
-                     <ref type="letter" target="letter:527">527</ref> <ref target="letter:527#seg3">3</ref>, <ref type="letter" target="letter:581">581 </ref><ref target="letter:581 #seg4">4</ref>.
+                     <ref type="letter" target="letter:500">500</ref>
+               <ref target="letter:500#seg7">7</ref>, <ref type="letter" target="letter:509">509</ref>
+               <ref target="letter:509#seg2">2</ref>,
+                     <ref type="letter" target="letter:527">527</ref>
+               <ref target="letter:527#seg3">3</ref>, <ref type="letter" target="letter:581">581 </ref>
+               <ref target="letter:581 #seg4">4</ref>.
                   Es ist anzunehmen, dass KE davon durch BP erfahren hatte; ein direkter Kontakt KEs
                   mit den Maurinern ist nach dem oben erwähnten Brief Massuets von 1715 erst wieder
                   1719 nachzuweisen: <rs type="bibl" ref="bibl:16082">Endres, Korrespondenz</rs> 10,
@@ -252,11 +274,15 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Benedictus Deus!</opener>
+         <opener>
+            <pb n="1r"/> Benedictus Deus!</opener>
          <opener>Plurimum reverende religiosissime ac clarissime domine, patrone colendissime, observandissime.</opener>
          <ab resp="#editor" xml:id="seg1">Perlustravi tandem nostram bibliothecam manuscriptam<note type="annotation" xml:id="d3e15497">Abkürzung <orig>msc.</orig>; als Auflösung wäre auch <orig>manuscriptorum</orig> möglich.</note> et <anchor xml:id="n1"/>catalogum nostrorum perfeci auctorum<anchor xml:id="n1e"/>. Sed cur opus coenobio nostro tam gloriosum non sum aggressus ferventius? Cur non confeci velocius? Ratio et vera excusatio in promptu est: labores tum parochiales tum scholastici non permittebant huic serio intendere labori. Ferme enim non aliud tempus quam recreationis et relaxationis evolvendis manuscriptis codicibus impendi. Et hinc mirum non est rem hanc et tam sero et tam imperfecte ad optatum denique finem pervenisse. Rogo proin, dignetur imperfectum hunc mei laboris fructum boni consulere ac errores tam calami quam styli mihi benigne condonare. Si quid obscurum, si quid salebrosum, si quid dubium occurrat, moneri cupio et doceri. </ab>
          <ab resp="#editor" xml:id="seg2">Adieci praeterea <anchor xml:id="n2"/>orationem sancti Wolfgangi Super Miserere<anchor xml:id="n2e"/>, quam in prima epistola anno 1715 iam ad me data sibi expetiit. Ubi etiam postulat, quid sint nostri <anchor xml:id="n3"/>libri traditionum<anchor xml:id="n3e"/>? Respondeo hos aliud nihil esse nisi seriem historiae a diversis nostri monasterii religiosis ad nostros ferme annos pertextam, ubi etiam inseruntur catalogus abbatum, donationes, contractus etc. </ab>
-         <ab resp="#editor" xml:id="seg3">Annales vero, quos ego <choice><sic>connd</sic><corr>condidi</corr></choice>, <anchor xml:id="n4"/>in Galliam misi<anchor xml:id="n4e"/> clarissimo Annalium continuatori domino Massuet.<anchor xml:id="n5"/> Apographum<anchor xml:id="n5e"/> horum penes me est. Sed de auctoribus librorum raram facio mentionem, sed praecise iuxta ordinem saeculorum rerum nostrarum historiam contexo. Hinc, prout ego quidem aestimo, aut nihil <pb n="1v"/> aut parum intento conferret operi: alias enim ad clarissimae paternitatis obsequia confestim transmitterem. Sic enim aequissimis ac sanctissimis necnon sacro ordini nostro perquam gloriosis postulationibus opto satisfacere, ut nihil magis. </ab>
+         <ab resp="#editor" xml:id="seg3">Annales vero, quos ego <choice>
+               <sic>connd</sic>
+               <corr>condidi</corr>
+            </choice>, <anchor xml:id="n4"/>in Galliam misi<anchor xml:id="n4e"/> clarissimo Annalium continuatori domino Massuet.<anchor xml:id="n5"/> Apographum<anchor xml:id="n5e"/> horum penes me est. Sed de auctoribus librorum raram facio mentionem, sed praecise iuxta ordinem saeculorum rerum nostrarum historiam contexo. Hinc, prout ego quidem aestimo, aut nihil <pb n="1v"/> aut parum intento conferret operi: alias enim ad clarissimae paternitatis obsequia confestim transmitterem. Sic enim aequissimis ac sanctissimis necnon sacro ordini nostro perquam gloriosis postulationibus opto satisfacere, ut nihil magis. </ab>
          <ab resp="#editor" xml:id="seg4">Et<del ana="#after">in</del> hinc Conspectum Bibliothecae Benedictinae, <sic>quae</sic> oeconomiam operis pulcherrime exhibet, <anchor xml:id="n6"/>ad meum dominum germanum<anchor xml:id="n6e"/> in monasterium Wessofontanum direxi, qui suo etiam tempore adpromisit suppetias. Deus ter optimus maximus clarissimo domino<anchor xml:id="n7"/> longiores quam domino Massuet<anchor xml:id="n7e"/> concedat soles, ut opus hoc grande possit sanus et integer consummare! Hunc<del ana="#before">Hinc</del> in finem saepe ad aram memor ero, qui reciprocam supplico memoriam ac me plurimum reverendae dominationis suae favoribus enixe commendo.</ab>
          <closer>Plurimum reverendae ac clarissimae dominationis servus ad obsequia paratissimus Casparus Erhardt monachus Benedictinus ad S. Emmeramum Ratisbonae.</closer>
          <closer>6. Augusti anno 1716.</closer>

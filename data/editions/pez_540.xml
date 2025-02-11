@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="540" xml:id="pez-0540">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Karl Meichelbeck an Bernhard Pez. 1716-03-28. Benediktbeuern.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">540</idno>
          </publicationStmt>
          <seriesStmt>
@@ -34,7 +46,6 @@
             <relatedItem type="otherEdition">
                <bibl>Siegmund, Meichelbecks Briefe 80/1–2 155–157.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                KM vermerkt in seinem Diarium zum 28. März 1716: <orig>Patri Pezio mitto cistulam plenam meis et aliorum libellis; cui etiam scribo fuse</orig> (BStB München, Meichelbeckiana 18b, 271r).
             </note>
@@ -56,10 +67,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -89,7 +101,7 @@
             <p corresp="#seg4">Außerdem enthält die Kiste ein Büchlein aus <rs ref="index:d14380e3167">Attel</rs>, von dem der dortige Prior (<rs ref="index:d14380e40796">Engelbert Seybold</rs>?) zur Verwunderung KMs diesem geschrieben hat, dies sei alles, was sein Kloster für BP beitragen könne. Aus <rs ref="index:d14380e37985">Rott am Inn</rs>, <rs ref="index:d14380e45067">Weihenstephan</rs>, <rs ref="index:d10854e714">Andechs</rs> und <rs ref="index:d14380e45389">Wessobrunn</rs> hat KM noch keine Antwort erhalten; Abt <rs ref="index:d14380e28852">Benedikt Meyding</rs> von <rs ref="index:d14380e39711">Scheyern</rs> hat ihm geschrieben, dass er BPs Vorhaben („<rs ref="index:d14380e33227">Bibliotheca Benedictina</rs>“) seine Unterstützung nicht versagen will. Nun ist Geduld nötig.</p>
             <p corresp="#seg5">Von den wenigen Schriftstellern <rs ref="index:d14380e4706">Benediktbeuerns</rs> will KM später berichten. <rs ref="index:d10854e35200">Gregor Zödl</rs>, der ihn oft in diesen Geschäften unterstützt, kann derzeit kaum helfen, weil er damit beauftragt worden ist, ein Spiel zum Empfang der Kurfürstin <rs ref="index:d14380e42666">Therese Kunigunde Sobieska</rs> zu komponieren, die für das Frühjahr einen Besuch in <rs ref="index:d14380e4706">Benediktbeuern</rs> erwägt. KM selbst muss vielleicht am kommenden Tag mit seinem Abt <rs ref="index:d14380e31969">Magnus Pachinger</rs>, der BP wohlgesinnt ist, in Angelegenheiten des Klosters einige Tage verreisen; ein Erfolg könnte für Benediktbeuern großen Gewinn bedeuten. KM wünscht BP zum Osterfest den Segen des Himmels als Lohn für seine Schrift zur Verteidigung des Benediktinerordens („<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“).</p>
             <p corresp="#seg6">In einem Postskriptum bemerkt KM, dass in <rs ref="index:d14380e16543">Bernhard Gross</rs>’ Predigt (auf den Tod von Abt <rs ref="index:d14380e29011">Quirin Millon</rs>) „<rs ref="index:d14380e16561">Das arbeitsame und in seinem hönig erstorbene immlein</rs>“ der Einfluss BPs deutlich zu erkennen ist.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -97,13 +109,15 @@
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>Exercitatiunculas ... Confutationem Senseri</mentioned>
             <p> Zu diesen Werken KMs
-                  vgl. <ref type="letter" target="letter:464">464</ref> <ref target="letter:464#seg1">1</ref>, <ref type="letter" target="letter:474">474</ref>
-                  <ref target="letter:474#seg6">6</ref> und <ref target="letter:474#seg7">7</ref>. In der Melker Bibliothek ist heute keine dieser Schriften
+                  vgl. <ref type="letter" target="letter:464">464</ref>
+               <ref target="letter:464#seg1">1</ref>, <ref type="letter" target="letter:474">474</ref>
+               <ref target="letter:474#seg6">6</ref> und <ref target="letter:474#seg7">7</ref>. In der Melker Bibliothek ist heute keine dieser Schriften
                   mehr festzustellen.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>causa ... Romae</mentioned>
-            <p> Zu KMs Aufenthalt in Rom vgl. <ref type="letter" target="letter:464">464</ref> <ref target="letter:464#seg4">4</ref>. Der Rechtsstreit mit den Hieronymitaner-Eremiten drehte
+            <p> Zu KMs Aufenthalt in Rom vgl. <ref type="letter" target="letter:464">464</ref>
+               <ref target="letter:464#seg4">4</ref>. Der Rechtsstreit mit den Hieronymitaner-Eremiten drehte
                   sich um eine Niederlassung, die diese am Walchensee in einem Gebiet, das zwischen
                   Benediktbeuern und dem benachbarten Augustiner-Chorherrenstift Schlehdorf strittig
                   war, seit 1687 aufgebaut hatten: <rs type="bibl" ref="bibl:17190">Hörger,
@@ -134,7 +148,8 @@
             <mentioned>libellus Attilensis</mentioned>
             <p> Diese Erwähnung wird auf das „Speculum cleri“
                   von Aemilian Naisl bezogen bei <rs type="bibl" ref="bibl:19582">Siegmund,
-                     Meichelbecks Briefe</rs> 80/1–2 159. Jenes Werk kommt zwar in <ref type="letter" target="letter:565">565</ref> <ref target="letter:565#seg2">2</ref> in Verbindung mit Bemerkungen zu der diesen
+                     Meichelbecks Briefe</rs> 80/1–2 159. Jenes Werk kommt zwar in <ref type="letter" target="letter:565">565</ref>
+               <ref target="letter:565#seg2">2</ref> in Verbindung mit Bemerkungen zu der diesen
                   Brief begleitenden Büchersendung zur Sprache, doch wird dort nicht eindeutig
                   gesagt, dass es dieser zugehörte; eine Verbindung zu Attel ist zudem nicht
                   erkennbar. KMs Diarium vermerkt zum 7. März 1716 nur „Hò ricevuto dal padre priore
@@ -226,11 +241,13 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Plurimum reverende religiosissime et clarissime domine pater Bernarde, amice et fautor in paucis colende.</opener>
+         <opener>
+            <pb n="1r"/> Plurimum reverende religiosissime et clarissime domine pater Bernarde, amice et fautor in paucis colende.</opener>
          <ab resp="#editor" xml:id="seg1">Nuperiores meas ad paternitatem vestram dedi die 12. elapsi mensis Martii. Nunc sto promissis et transmitto cistulam plenam minutiis, dummodo patris Ludovici Ettalensis opus excipiam. Accipiet itaque paternitas vestra meas illas <anchor xml:id="n1"/>Exercitatiunculas, quas iuvenilis ardor e calamo elicuit, quasque offero non voluntate mea, sed iussu vestro et Alphonsi nostri hortatu. Confutationem Senseri<anchor xml:id="n1e"/> haeretici addidi triplicatam, ut vacuum implerem. </ab>
          <ab resp="#editor" xml:id="seg2">Adiunxi aliam confutationem adversantium olim monasterio nostro Eremitarum Romae a me editam, ita exigente necessitate maxima, eo quod <anchor xml:id="n2"/>causa monasterii nostri Romae<anchor xml:id="n2e"/> ob pessimas et supra fidem nequissimas informationes apud summos et infimos iamiam fuerit ruinata, praecipitata, desperata, uti ex ore non unius eminentissimi ipsemet accepi et propria experientia nimium quantum didici. Sed adfuit denique fortior, veritas scilicet, quae Deus est: et licet sceptra, purpurae et coronae fuerint adversatae rebus nostris, obtinuimus tamen iudicium iustum. Scripsi ego (victoria nobis a Deo mirabiliter concessa) <pb n="1v"/> ea super re librum, cui titulus:<anchor xml:id="n3"/> Historia eremitorii Wallerseensis<anchor xml:id="n3e"/>, qui liber si in apricum possit prodire, videret fortassis mundus versutias tantas et tales in diversis tribunalibus contra monasterium nostrum excogitatas et motas, ut forte pauculi codices reperiri possent, ubi talia invenirentur. <anchor xml:id="n4"/>Sed Deus avertat libri illius propalationem, quem in nostro archivo asservari satius est<anchor xml:id="n4e"/>. Interim paternitas vestra clarissima in illo meo Romano opusculo legere poterit partem negotii, quam lustrare fortassis non pigebit. Certe lucubratiuncula illa Romae fuit lecta sine fastidio, si solos adversarios Eremitas eorumque fautores excipere placeat. Verum opusculum illud mitto non alia intentione, quam ut me demonstrem vestrae clarissimae paternitatis amicum integerrimum, cuius est cum amico communicare omnia. </ab>
          <ab resp="#editor" xml:id="seg3">Eadem nec alia intentione inserui hisce reculis periochen dramatis a nostro patre Gregorio exhibiti Monachii, de quo alias. </ab>
-         <ab resp="#editor" xml:id="seg4">Est in eadem cistula etiam <pb n="2r"/> <anchor xml:id="n5"/>libellus Attilensis<anchor xml:id="n5e"/>, quem unicum se posse communicare reverendus pater<anchor xml:id="n6"/> prior loci<anchor xml:id="n6e"/> mihi admiranti scribit. Ex monasteriis Rottensi, Weihenstephanensi, Andecensi et<anchor xml:id="n7"/> Wessofontano<anchor xml:id="n7e"/> nullum hucusque responsum vidi. Reverendissimus tamen<anchor xml:id="n8"/> Schyrensis mihi scribit<anchor xml:id="n8e"/> se non defuturum intentioni clarissimae paternitatis vestrae. Itaque<anchor xml:id="n9"/> patientia nobis est necessaria, donec reportemus<anchor xml:id="n9e"/>, quod optamus. </ab>
+         <ab resp="#editor" xml:id="seg4">Est in eadem cistula etiam <pb n="2r"/>
+            <anchor xml:id="n5"/>libellus Attilensis<anchor xml:id="n5e"/>, quem unicum se posse communicare reverendus pater<anchor xml:id="n6"/> prior loci<anchor xml:id="n6e"/> mihi admiranti scribit. Ex monasteriis Rottensi, Weihenstephanensi, Andecensi et<anchor xml:id="n7"/> Wessofontano<anchor xml:id="n7e"/> nullum hucusque responsum vidi. Reverendissimus tamen<anchor xml:id="n8"/> Schyrensis mihi scribit<anchor xml:id="n8e"/> se non defuturum intentioni clarissimae paternitatis vestrae. Itaque<anchor xml:id="n9"/> patientia nobis est necessaria, donec reportemus<anchor xml:id="n9e"/>, quod optamus. </ab>
          <ab resp="#editor" xml:id="seg5">De pauculis nostri monasterii scriptoribus scribam alio tempore. Reverendus pater <anchor xml:id="n10"/>Gregorius<anchor xml:id="n10e"/> noster eo in negotio operam mihi solet iungere; sed modo iussus est componere exceptionem solemnem serenissimae electricis nostrae, quae <anchor xml:id="n11"/>verno tempore ad hoc nostrum monasterium venire<anchor xml:id="n11e"/> cogitat. Itaque et ipse hoc tempore parum aut nihil potest praestare ad hanc nostram intentionem atque propositum. Ego forte crastina cum meo reverendissimo domino<anchor xml:id="n12"/> abbate<anchor xml:id="n12e"/>, sincero paternitatis vestrae clarissimae cultore, debebo<anchor xml:id="n13"/> iter quoddam facere ad dies aliquot. Deus sit propitius votis nostris pro ingenti monasterii emolumento<anchor xml:id="n13e"/>! Finio modo in hac festinatione et tot felicitates <pb n="2v"/> caelestesque benedictiones paternitati vestrae clarissimae ad<anchor xml:id="n14"/> Paschalia festa<anchor xml:id="n14e"/> apprecor, quot illa apices scripsit in sacri ordinis nostri defensionem et gloriam. Amen. Commendo me humillime et maneo, qui semper</ab>
          <closer>Paternitatis vestrae clarissimae servus in Christo obligatissimus paratissimus pater Carolus.</closer>
          <closer>In monasterio Benedictoburano 28. Martii 1716.</closer>

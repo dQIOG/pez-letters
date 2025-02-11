@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="253" xml:id="pez-0253">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Augustin Brunner an Bernhard Pez. 1712-07-01. Gurtweil.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">253</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -79,14 +92,15 @@
          <abstract>
             <p corresp="#seg1">Drei Jahre nach der Aufforderung BPs <ref type="letter" target="letter:26">26</ref> hat <rs ref="index:d10854e27100">St. Blasien</rs> im <rs ref="index:d10854e28449">Schwarzwald</rs> noch immer keine Angaben zu seinen Schriftstellern gesendet, was auf die andauernden Kriegshandlungen (im <rs ref="index:d10854e29346">Spanischen Erbfolgekrieg</rs>) zurückzuführen ist. Vor einigen Monaten hat AB den Auftrag erhalten, BPs Wunsch endlich zu entsprechen. <rs ref="index:d10854e27100">St. Blasien</rs> hat kaum Schriftsteller vorzuweisen; sollten aber noch weitere gefunden werden, so werden sie BP mitgeteilt.</p>
             <p corresp="#seg2">Beigelegt findet BP einen Schriftstellerkatalog zu <rs ref="index:d10854e27100">St. Blasien</rs>, wo man unter dem in der <rs ref="index:d14380e40241">Schweiz</rs> ausgebrochenen <rs ref="index:d14380e39321">Krieg</rs> viel zu leiden hat und sehnlichst auf Frieden wartet.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>Mensibus ... mihi commissum</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:194">194</ref> <ref target="letter:194#seg2">2</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:194">194</ref>
+               <ref target="letter:194#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>Adiectum fasciculum</mentioned>
@@ -110,7 +124,8 @@
                      Klingnau</rs> 797f. Zu Rauber als Abt von Schwarzach: <rs type="bibl" ref="bibl:37000">Schwarzmaier,
                      Schwarzach</rs> 579. Zu den beiden
                   Äbten Werner I. und II. sowie zu den beiden Nennungen „Otto von St. Blasien“ vgl.
-                     <ref type="letter" target="letter:278">278</ref> <ref target="letter:278#seg3">3</ref>, <ref target="letter:278#seg5">5</ref>.</p>
+                     <ref type="letter" target="letter:278">278</ref>
+               <ref target="letter:278#seg3">3</ref>, <ref target="letter:278#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>bellis Helveticis</mentioned>
@@ -122,12 +137,18 @@
    </standOff>
    <text>
       <front>
-         <p>Admodum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez celeberrimi et exempti monasterii Mellicensis vulgo Mölkh ordinis sancti patris Benedicti Austriae Inferioris professo et ibidem bibliothecario dignissimo, domino ac patrono meo colendissimo. <note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 42r.</note></p>
+         <p>Admodum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez celeberrimi et exempti monasterii Mellicensis vulgo Mölkh ordinis sancti patris Benedicti Austriae Inferioris professo et ibidem bibliothecario dignissimo, domino ac patrono meo colendissimo. <note type="annotation">Überliefert in StiA Melk, Karton 7 Patres 9, Abschriftencodex 42r.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiosissime in Christo ac clarissime domine pater.</opener>
-         <ab resp="#editor" xml:id="seg1">Trienium effluxit, nec votis circa petitum authorum seu manuscriptorum seu impressorum e monasterio nostro S. Blasii in Hercynia affluebat. Non mirum, quia continuis bellis et inopia scribendi tardamur. <anchor xml:id="n1"/>Mensibus abhinc aliquibus opus mihi commissum<anchor xml:id="n1e"/>; pro possibili requisitum designare <choice><sic>adlabori</sic><corr>adlaboravi</corr></choice>, utinam tale, quod optimo vestro affectui, eximio labori ac magnae Benedictinae gloriae responderet. Scriptores nostri pauci, imo vero vix ulli sunt; ne tamen et nos calamo degenerasse videremur, animum saltem implumem et veridicum monstramus. Si qui autem, uti sperare licet, plures nobis authores<del ana="#after">et</del> e nostris sint apparituri, communicationem non denegabimus. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n2"/>Adiectum fasciculum<anchor xml:id="n2e"/> ubi copia perlegendi fuerit, pro praesenti omnem nostram copiam (legi et scribi si dignam) coram videbit. Interim <anchor xml:id="n3"/>bellis Helveticis<anchor xml:id="n3e"/> modo graviter flagellati unicum folium oliferae pacis suspiramus. Ego vero paternitati vestrae clarissimae omnia precor optabilia.</ab>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiosissime in Christo ac clarissime domine pater.</opener>
+         <ab resp="#editor" xml:id="seg1">Trienium effluxit, nec votis circa petitum authorum seu manuscriptorum seu impressorum e monasterio nostro S. Blasii in Hercynia affluebat. Non mirum, quia continuis bellis et inopia scribendi tardamur. <anchor xml:id="n1"/>Mensibus abhinc aliquibus opus mihi commissum<anchor xml:id="n1e"/>; pro possibili requisitum designare <choice>
+               <sic>adlabori</sic>
+               <corr>adlaboravi</corr>
+            </choice>, utinam tale, quod optimo vestro affectui, eximio labori ac magnae Benedictinae gloriae responderet. Scriptores nostri pauci, imo vero vix ulli sunt; ne tamen et nos calamo degenerasse videremur, animum saltem implumem et veridicum monstramus. Si qui autem, uti sperare licet, plures nobis authores<del ana="#after">et</del> e nostris sint apparituri, communicationem non denegabimus. </ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n2"/>Adiectum fasciculum<anchor xml:id="n2e"/> ubi copia perlegendi fuerit, pro praesenti omnem nostram copiam (legi et scribi si dignam) coram videbit. Interim <anchor xml:id="n3"/>bellis Helveticis<anchor xml:id="n3e"/> modo graviter flagellati unicum folium oliferae pacis suspiramus. Ego vero paternitati vestrae clarissimae omnia precor optabilia.</ab>
          <closer>Servus in Christo pater Augustinus Brunner ordinis sancti Benedicti monasterii S. Blasii in Sylva Hercynia conventualis et pro tempore vicarius in Gurtweil.</closer>
          <closer>Gurtweil 1712 die 1. Julii.</closer>
       </body>

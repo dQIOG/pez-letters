@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="399" xml:id="pez-0399">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an Hieronymus Übelbacher. 1715-04-25. Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">399</idno>
          </publicationStmt>
          <seriesStmt>
@@ -41,10 +53,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -68,7 +81,7 @@
             <p corresp="#seg1">BP möchte HÜ ein kürzlich erschienenes eigenes Werk („<rs ref="index:d14380e10982">Triumphus castitatis</rs>“) mit Dank für dessen Gunst und Wohltaten zudenken, zumal HÜ ja an allen Werken zu seinem Orden (den <rs ref="index:d14380e3377">Augustiner-Chorherren</rs>) interessiert ist.</p>
             <p corresp="#seg2">In dem Buch hat BP auf Seite 146 HÜ erwähnt, um <rs ref="index:d14380e10288">Dürnstein</rs>, seine <rs ref="index:d14380e10296">Bibliothek</rs> und seinen <rs ref="index:d14380e43529">Propst</rs> den entfernteren Teilen <rs ref="index:d14380e9395">Deutschlands</rs> bekannt zu machen. Da der Platz dort zum Lob HÜs jedoch nicht ausreichte, möchte BP in einem weiteren Werk, das er bald veröffentlichen will („<rs ref="index:d14380e33468">Bibliotheca Mellicensis</rs>“), eine ausführlichere Würdigung einrücken. Schon das vorliegende Werk zeigt die Nützlichkeit der staubigen Arbeit mit den Handschriften.</p>
             <p corresp="#seg3">BP bittet HÜ auch um die Genehmigung zur Übersendung zweier <rs ref="index:d14380e10296">Dürnsteiner Handschriften</rs>, die er bei seinem Besuch <rs ref="index:d10854e28031">Sebastian Schott</rs> angezeigt und auch mit einem weißen Zettel markiert hat. Es handelt sich um eine <rs ref="index:d10854e7054">Handschrift in Folio</rs>, welche eine <rs ref="index:d10854e21970">österreichische</rs> Chronik in deutscher Sprache („<rs ref="index:d10854e22188">Österreichische Chronik von den 95 Herrschaften</rs>“) enthält, sowie eine <rs ref="index:d10854e7070">Quarthandschrift</rs>, in der sich die „<rs ref="index:d14380e2596">Vita beati Hartmanni</rs>“, des ersten Propstes von <rs ref="index:d14380e22058">Klosterneuburg</rs>, befindet. <rs ref="index:d14380e34537">HP</rs> will die Texte in seinen „<rs ref="index:d14380e34754">Scriptores rerum Austriacarum</rs>“ edieren. BP schließt mit Wünschen zum Osterfest.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -90,7 +103,8 @@
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>alio opere brevi edendo</mentioned>
             <p>Gemeint ist wahrscheinlich die angekündigte „Bibliotheca Mellicensis“; zu deren
-                  geplanter Anlage vgl. <ref type="letter" target="letter:379">379</ref> <ref target="letter:379#seg8">8</ref>. Dieser Plan wurde
+                  geplanter Anlage vgl. <ref type="letter" target="letter:379">379</ref>
+               <ref target="letter:379#seg8">8</ref>. Dieser Plan wurde
                   nicht ausgeführt und ging wohl, zumindest was die Bibliotheken anderer Klöster als
                   Melk betraf, in der Veröffentlichung von Handschriftenlisten in der Leipziger
                   Zeitschrift „Umständliche bücher-historie“ auf. Wohl wegen des geänderten
@@ -102,7 +116,8 @@
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
             <mentioned>Chronicon Austriae</mentioned>
             <p>Die Dürnsteiner Überlieferung der „Österreichischen Chronik von den 95
-                  Herrschaften“; vgl. <ref type="letter" target="letter:363">363</ref> <ref target="letter:363#seg6">6</ref>.</p>
+                  Herrschaften“; vgl. <ref type="letter" target="letter:363">363</ref>
+               <ref target="letter:363#seg6">6</ref>.</p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg3">
             <mentioned>Vitam beati Hartmanni</mentioned>
@@ -114,13 +129,18 @@
    </standOff>
    <text>
       <front>
-         <p>Reverendissimo perillustri ac amplissimo domino domino Hieronymo inclytae et florentissimae canoniae Tyrnsteinensis ordinis canonicorum regularium sancti Augustini praeposito vigilantissimo, sacrae theologiae doctori, sacrae caesareae maiestatis consiliario etc. etc., domino domino ac patrono gratiosissimo. Tyrnstein.<note type="annotation">Siegel.</note></p>
+         <p>Reverendissimo perillustri ac amplissimo domino domino Hieronymo inclytae et florentissimae canoniae Tyrnsteinensis ordinis canonicorum regularium sancti Augustini praeposito vigilantissimo, sacrae theologiae doctori, sacrae caesareae maiestatis consiliario etc. etc., domino domino ac patrono gratiosissimo. Tyrnstein.<note type="annotation">Siegel.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Reverendissime perillustris ac amplissime domine, domine praesul, patrone gratiosissime.</opener>
+         <opener>
+            <pb n="1r"/> Reverendissime perillustris ac amplissime domine, domine praesul, patrone gratiosissime.</opener>
          <ab resp="#editor" xml:id="seg1">Praesumo hisce reverendissimae perillustri ac amplissimae dominationi dominationi vestrae leve quoddam opusculum nuper a me editum demississime offerre, idque in nonnullam grati animi perpetuaeque memoriae contestationem, quam tot <anchor xml:id="n1"/>insignes gratiae<anchor xml:id="n1e"/> et extraordinarii favores a summo meo patrono in me licet immeritum collati iam dudum imperarunt. Nec metuo, ne exigua haecce opella reverendissimae ac perillustri dominationi dominationi vestrae vehementer displiceat, utpote cui omnes litterarii conatus, maxime pro illustrando suo inclyto ordine suscepti, in delitiis sunt. </ab>
-         <ab resp="#editor" xml:id="seg2"><anchor xml:id="n2"/>Pagina 146<anchor xml:id="n2e"/> celeberrimum eiusdem nomen inserui, eo quidem animo, ut aliquam Tyrnsteinensis bibliothecae maximique nunc ibidem praesulis notitiam reliqua remotior a nobis Germania haberet. Caeterum cum hic campus in meritissimas reverendissimae ac perillustris dominationis dominationis vestrae laudes excurrendi nimium angustus fuerit, in <anchor xml:id="n3"/>alio opere brevi edendo<anchor xml:id="n3e"/> meae obligationi satisfacere studebo. Interim vel ex praesenti opusculo patet pulverulentos nostros in excutiendis veteribus codicibus labores suo fructu et insigni utilitate nequaquam carere. </ab>
-         <ab resp="#editor" xml:id="seg3">Utinam clarissimus dominus Sebastianus mihi cum venia reverendissimae ac perillustris dominationis dominationis vestrae mitteret duos codices manuscriptos, quorum unus in folio vetus quoddam <anchor xml:id="n4"/>Chronicon Austriae<anchor xml:id="n4e"/> <add place="below"><witDetail wit="#A">mit Verweiszeichen unter der Zeile</witDetail>Germanice scriptum</add>, alter vero in quarto Vitam <pb n="1v"/> beati Hartmanni primi praepositi <sic>Claustroneoburgenis</sic> complectitur! Utrumque enim opus typis editurus esset infimus reverendissimae dominationis dominationis vestrae servus pater Hieronymus in suis Rerum Austriacarum scriptoribus, quos iusto opere illustrare strenue pergit. Commendavi hos codices singulariter domino Sebastiano, dum Tyrnsteinii fui, et si recte memini, infixa desuper candida schedula notavi, ut eos reperire adeo difficile illi non accidet. Nos singularem hanc gratiam aeterna memoria in ipso opere prosequi non obliviscemur. Nunc autem aliud non superest, nisi ut post praestita Paschalium gaudiorum vota me reverendissimae perillustri ac amplissimae dominationi dominationi vestrae quam humillime commendem, utpote qui esse cupio</ab>
+         <ab resp="#editor" xml:id="seg2">
+            <anchor xml:id="n2"/>Pagina 146<anchor xml:id="n2e"/> celeberrimum eiusdem nomen inserui, eo quidem animo, ut aliquam Tyrnsteinensis bibliothecae maximique nunc ibidem praesulis notitiam reliqua remotior a nobis Germania haberet. Caeterum cum hic campus in meritissimas reverendissimae ac perillustris dominationis dominationis vestrae laudes excurrendi nimium angustus fuerit, in <anchor xml:id="n3"/>alio opere brevi edendo<anchor xml:id="n3e"/> meae obligationi satisfacere studebo. Interim vel ex praesenti opusculo patet pulverulentos nostros in excutiendis veteribus codicibus labores suo fructu et insigni utilitate nequaquam carere. </ab>
+         <ab resp="#editor" xml:id="seg3">Utinam clarissimus dominus Sebastianus mihi cum venia reverendissimae ac perillustris dominationis dominationis vestrae mitteret duos codices manuscriptos, quorum unus in folio vetus quoddam <anchor xml:id="n4"/>Chronicon Austriae<anchor xml:id="n4e"/>
+            <add place="below">
+               <witDetail wit="#A">mit Verweiszeichen unter der Zeile</witDetail>Germanice scriptum</add>, alter vero in quarto Vitam <pb n="1v"/> beati Hartmanni primi praepositi <sic>Claustroneoburgenis</sic> complectitur! Utrumque enim opus typis editurus esset infimus reverendissimae dominationis dominationis vestrae servus pater Hieronymus in suis Rerum Austriacarum scriptoribus, quos iusto opere illustrare strenue pergit. Commendavi hos codices singulariter domino Sebastiano, dum Tyrnsteinii fui, et si recte memini, infixa desuper candida schedula notavi, ut eos reperire adeo difficile illi non accidet. Nos singularem hanc gratiam aeterna memoria in ipso opere prosequi non obliviscemur. Nunc autem aliud non superest, nisi ut post praestita Paschalium gaudiorum vota me reverendissimae perillustri ac amplissimae dominationi dominationi vestrae quam humillime commendem, utpote qui esse cupio</ab>
          <closer>Reverendissimae perillustris ac amplissimae dominationis dominationis vestrae servus infimus pater Bernardus Pez professus Mellicensis et bibliothecarius.</closer>
          <closer>Mellicii 25. Aprilis 1715.</closer>
       </body>

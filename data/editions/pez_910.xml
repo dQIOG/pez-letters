@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="910" xml:id="pez-0910">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Christoph Bartenstein an Bernhard Pez. 1718-02-26.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">910</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -76,33 +88,35 @@
                <ptr type="mentions" target="letter:909"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e3453">Augustus</term>
-            <term ref="index:d14380e9628">Dietmayr, Berthold</term>
-            <term ref="index:d14380e10463">Eckhart, Johann Georg</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e13478">Friedrich August II</term>
-            <term ref="index:d14380e13488">Friedrich August II ; Brief an Papst Klemens XI. 1717</term>
-            <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
-            <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e3453">Augustus</term>
+               <term ref="index:d14380e9628">Dietmayr, Berthold</term>
+               <term ref="index:d14380e10463">Eckhart, Johann Georg</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e13478">Friedrich August II</term>
+               <term ref="index:d14380e13488">Friedrich August II ; Brief an Papst Klemens XI. 1717</term>
+               <term ref="index:d14380e14738">Gentilotti von Engelsbrunn, Johann Benedikt</term>
+               <term ref="index:d14380e14825">Gentilotti von Engelsbrunn, Johann Benedikt ; [Pseudonym Angelus Fonteius Veronensis]
          Epistola ad virum clarissimum Joannem Burchardum Menkenium Lipsiensem de Conspectu insignis
          codicis diplomatico-historico-epistolaris ex ἀυτογράφῳ, ut quidem videtur, dato ad Actorum
          eruditorum Lipsiensium collectores a reverendo patre Bernardo Pez Benedictino et
          bibliothecario Mellicensi in Austria. Verona [Wien] 1717</term>
-            <term ref="index:d14380e19730">Innozenz I</term>
-            <term ref="index:d14380e19737">Innozenz II</term>
-            <term ref="index:d14380e21985">Klemens XI</term>
-            <term ref="index:d14380e22016">Klemens XI ; Allokution zur Konversion des Kurprinzen Friedrich August von Sachsen
+               <term ref="index:d14380e19730">Innozenz I</term>
+               <term ref="index:d14380e19737">Innozenz II</term>
+               <term ref="index:d14380e21985">Klemens XI</term>
+               <term ref="index:d14380e22016">Klemens XI ; Allokution zur Konversion des Kurprinzen Friedrich August von Sachsen
          1717</term>
-            <term ref="index:d14380e25171">Lothar III</term>
-            <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
+               <term ref="index:d14380e25171">Lothar III</term>
+               <term ref="index:d14380e33532">Pez, Bernhard ; Dissertatio apologetico-litteraria ad perillustrem et eruditissimum
          dominum dominum Joannem Benedictum Gentilottum ab Engelsbrunn pro editione integri
          syntagmatis diplomatico-historico-epistolaris Udalrici Babenbergensis ex codice Zwetlensi,
          impugnata a viro clarissimo Angelo Fonteio Veronensi. Augsburg 1717</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e38504">Sachsen</term>
-            <term ref="index:d14380e45571">Wien</term></keywords></textClass>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e38504">Sachsen</term>
+               <term ref="index:d14380e45571">Wien</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">Da in dem Brief BPs vom Ende des vergangenen Jahres <ref type="letter" target="letter:871">871</ref> die
                Versendung von dessen „<rs ref="index:d14380e33532">Dissertatio apologetico-litteraria</rs>“ an CB
@@ -137,7 +151,7 @@
                beherrscht, bittet CB, jenem die Briefe weiterzugeben und ihm CB zu empfehlen. CB wünscht sich einen
                Besuch BPs in <rs ref="index:d14380e45571">Wien</rs>, da er gerne einiges mit ihm im Vertrauen besprechen
                würde, und schließt mit Grüßen an HP.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -148,7 +162,8 @@
                   erschien zwar mit der Jahresangabe „1717“, tatsächlich aber erst im März oder
                   April 1718, wie ein Brief Gentilottis an seinen Bruder Johann Franz vom 6. April
                   1718 bezeugt: Rovereto, Biblioteca Rosminiana, Fondo Gentilotti 3.5. Weiters vgl.
-                     <ref type="letter" target="letter:912">912</ref> <ref target="letter:912#seg5">5</ref>.</p>
+                     <ref type="letter" target="letter:912">912</ref>
+               <ref target="letter:912#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>Tuam ... iudicem statueres</mentioned>
@@ -185,7 +200,8 @@
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg3">
             <mentioned>de Eckardo narras</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:912">912</ref> <ref target="letter:912#seg5">5</ref>.
+            <p>Vgl. <ref type="letter" target="letter:912">912</ref>
+               <ref target="letter:912#seg5">5</ref>.
                   Vermutlich hatte BP vor kurzem 911 erhalten und eine darin geäußerte Stellungnahme
                   Eckharts in 909 geschildert. Da diese Deutung jedoch nicht als sicher angesehen
                   werden kann, wird sie nicht zur Datierung von 911 herangezogen.</p>
@@ -194,11 +210,13 @@
             <mentioned> Augusti dicta</mentioned>
             <p>Wahrscheinlich wird hier nicht auf Kaiser Karl VI.,
                   sondern auf den von Gentilotti als Motto der „Epistola ad Menkenium“ gebrauchten
-                  angeblichen Ausspruch des Kaisers Augustus angespielt: vgl. <ref type="letter" target="letter:828">828</ref> <ref target="letter:828#seg2">2</ref>.</p>
+                  angeblichen Ausspruch des Kaisers Augustus angespielt: vgl. <ref type="letter" target="letter:828">828</ref>
+               <ref target="letter:828#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg4">
             <mentioned>quas princeps ... scripsit</mentioned>
-            <p>Zur Konversion des Kurprinzen vgl. <rs type="bibl" ref="bibl:18768">Peper, Konversionen</rs> 135–138; sowie <ref type="letter" target="letter:308">308</ref> <ref target="letter:308#seg2">2</ref>. Zum erwähnten Brief, der vom 25. September
+            <p>Zur Konversion des Kurprinzen vgl. <rs type="bibl" ref="bibl:18768">Peper, Konversionen</rs> 135–138; sowie <ref type="letter" target="letter:308">308</ref>
+               <ref target="letter:308#seg2">2</ref>. Zum erwähnten Brief, der vom 25. September
                   1717 aus St. Pölten datiert ist, vgl. <rs type="bibl" ref="bibl:16004">Duhr,
                      Konversion</rs> 115; <rs type="bibl" ref="bibl:19010">Räß, Convertiten</rs> 9
                   208–210. Die Antwort des Papstes erfolgte als Allokution vor dem Geheimen
@@ -206,7 +224,9 @@
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
             <mentioned> Fac ... peroptarem</mentioned>
-            <p>Zu dieser Aufforderung vgl. <ref type="letter" target="letter:756">756</ref> <ref target="letter:756#seg6">6</ref>, <ref type="letter" target="letter:861">861</ref> <ref target="letter:861#seg4">4</ref>. Ihre nahezu
+            <p>Zu dieser Aufforderung vgl. <ref type="letter" target="letter:756">756</ref>
+               <ref target="letter:756#seg6">6</ref>, <ref type="letter" target="letter:861">861</ref>
+               <ref target="letter:861#seg4">4</ref>. Ihre nahezu
                   wortgleiche Wiederholung ist auffällig.</p>
          </note>
       </listAnnotation>
@@ -232,11 +252,26 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo in Christo patri domino Bernhardo Petzio bibliothecario Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo in Christo patri domino Bernhardo Petzio bibliothecario Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</opener>
          <ab resp="#editor" xml:id="seg1">Cum in tuis sub finem elapsi anni exaratis ad me literis spem mihi propemodum certam fecisses opusculi, quo Fonteianae Epistolae refutatio contineretur, intra paucos dies mittendi, diutius, quam par fuisset, distuli responsum, quod ad easdem istas literas tuas tibi, vir amicissime, debebam. Ast cum ex ultimis tuis postea intellexerim <anchor xml:id="n1"/>moram adhuc aliquam forsan intercessuram, antequam iste tuus labor in meas manus perveniat<anchor xml:id="n1e"/>, mearum partium duxi silentium sat diuturnum iam nunc rumpere. Ante omnia vero tibi non minus pro faustis, quibus me prosequeris, ominibus quam pro communicatione eorum, quae partim te privatim, partim vero rempublicam literariam tangunt, debitas pariter <pb n="1v"/> ingentesque gratias persolvo simulque te porro quam persuasissimum esse cupio fiduciam, quam in sincero meo affectu cultuque ponis, nunquam male collocatam fore. Utinam vero opere potius quam verbis eundem istum affectum meum tibi demonstrare in viribus meis esset. Sed faciam hercle, ne unquam de me vel levissimam conquerendi ansam habeas, quam primum sese aliqua tibi tuisque studiis inserviendi occasio offeret. </ab>
-         <ab resp="#editor" xml:id="seg2">De tuis cum illustrissimo domino Gentillotto dissidiis multum et ex animo doleo iterumque, quod iam nuper ad te scripsisse memini, te moneo, ut, si quae conciliandae concordiae spes affulgeat, me parario illam stabilire velis, certus nulli me labori parciturum tuaeque <choice><sic>aestimationis</sic><corr>existimationis</corr></choice> nequicquam prodigum futurum. <anchor xml:id="n2"/>Tuam Dissertationem Gentillotto inscriptam cum voluptate ex literis tuis intellexi; nec enim poteras quicquam aptius agere, quam ut Gentillottum te inter et Fonteium iudicem statueres<anchor xml:id="n2e"/>. <choice><sic>Quod</sic><corr>Quae</corr></choice> de <anchor xml:id="n3"/>Lothario rege cum Innocentio I. coniuncto deque typographi mendo in exprimendo seculo<anchor xml:id="n3e"/> memoras, ita comparata sunt, ut omnem suspicionem <add>commissi a te</add> erroris facile cuivis sis exempturus; nec dubito, quin hac in causa Gentillottum sat aequum sis habiturus iudicem, praesertim cum Fonteius huius sphalmatis typographum potius quam te insimulaverit. <pb n="2r"/> Ceterum sancte affirmare possum de Fonteii Epistola nihil prorsus<del ana="#after">mihi</del>, antequam iam typis excusa in manus meas traderetur, mihi innotuisse; quamvis simul et illud fateri habeam necesse, me authorem illius ex stilo statim subodoratum fuisse. </ab>
-         <ab resp="#editor" xml:id="seg3">Quae <anchor xml:id="n4"/>de Eckardo narras<anchor xml:id="n4e"/>, mihi sane perquam accepta fuerant, utpote qui amorem tui nunquam sum depositurus; nec ab hoc amore me vel sexcenta<anchor xml:id="n5"/> Augusti dicta<anchor xml:id="n5e"/> dimovebunt. Tu, quaeso, dolorem tuum preme <choice><sic>et</sic><corr>nec</corr></choice> segnius ob ea, quae hactenus contigerunt, studiis promovendis incumbe. Posteritas sat laudis rependet. </ab>
-         <ab resp="#editor" xml:id="seg4">Num illas literas, <anchor xml:id="n6"/>quas princeps electoralis Saxoniae ad summum pontificem, antequam conversionem suam declararet, <choice><sic>videris</sic><corr>scripsit</corr></choice><anchor xml:id="n6e"/>, ut et pontificis responsorias <add place="above">videris</add><anchor xml:id="n7"/>, scire ex te percuperem, utramque missurus. Illarum ipse author sum, fueruntque illae pontifici acceptissimae. Sunt autem Gallico idiomate conscriptae, cuius si reverendissimus dominus praesul tuus gnarus esset, ut illi easdem communicares meque ipsius gratiae simul commendares, enixe te rogarem. Fac modo, ut te Vindobonae amplecti detur. Plurima enim in sinum tuum effundere peroptarem<anchor xml:id="n7e"/>. Vale, amice integerrime, tuumque doctissimum fratrem ex me multum saluta meque porro impense, uti ego te, ama.</ab>
+         <ab resp="#editor" xml:id="seg2">De tuis cum illustrissimo domino Gentillotto dissidiis multum et ex animo doleo iterumque, quod iam nuper ad te scripsisse memini, te moneo, ut, si quae conciliandae concordiae spes affulgeat, me parario illam stabilire velis, certus nulli me labori parciturum tuaeque <choice>
+               <sic>aestimationis</sic>
+               <corr>existimationis</corr>
+            </choice> nequicquam prodigum futurum. <anchor xml:id="n2"/>Tuam Dissertationem Gentillotto inscriptam cum voluptate ex literis tuis intellexi; nec enim poteras quicquam aptius agere, quam ut Gentillottum te inter et Fonteium iudicem statueres<anchor xml:id="n2e"/>. <choice>
+               <sic>Quod</sic>
+               <corr>Quae</corr>
+            </choice> de <anchor xml:id="n3"/>Lothario rege cum Innocentio I. coniuncto deque typographi mendo in exprimendo seculo<anchor xml:id="n3e"/> memoras, ita comparata sunt, ut omnem suspicionem <add>commissi a te</add> erroris facile cuivis sis exempturus; nec dubito, quin hac in causa Gentillottum sat aequum sis habiturus iudicem, praesertim cum Fonteius huius sphalmatis typographum potius quam te insimulaverit. <pb n="2r"/> Ceterum sancte affirmare possum de Fonteii Epistola nihil prorsus<del ana="#after">mihi</del>, antequam iam typis excusa in manus meas traderetur, mihi innotuisse; quamvis simul et illud fateri habeam necesse, me authorem illius ex stilo statim subodoratum fuisse. </ab>
+         <ab resp="#editor" xml:id="seg3">Quae <anchor xml:id="n4"/>de Eckardo narras<anchor xml:id="n4e"/>, mihi sane perquam accepta fuerant, utpote qui amorem tui nunquam sum depositurus; nec ab hoc amore me vel sexcenta<anchor xml:id="n5"/> Augusti dicta<anchor xml:id="n5e"/> dimovebunt. Tu, quaeso, dolorem tuum preme <choice>
+               <sic>et</sic>
+               <corr>nec</corr>
+            </choice> segnius ob ea, quae hactenus contigerunt, studiis promovendis incumbe. Posteritas sat laudis rependet. </ab>
+         <ab resp="#editor" xml:id="seg4">Num illas literas, <anchor xml:id="n6"/>quas princeps electoralis Saxoniae ad summum pontificem, antequam conversionem suam declararet, <choice>
+               <sic>videris</sic>
+               <corr>scripsit</corr>
+            </choice>
+            <anchor xml:id="n6e"/>, ut et pontificis responsorias <add place="above">videris</add>
+            <anchor xml:id="n7"/>, scire ex te percuperem, utramque missurus. Illarum ipse author sum, fueruntque illae pontifici acceptissimae. Sunt autem Gallico idiomate conscriptae, cuius si reverendissimus dominus praesul tuus gnarus esset, ut illi easdem communicares meque ipsius gratiae simul commendares, enixe te rogarem. Fac modo, ut te Vindobonae amplecti detur. Plurima enim in sinum tuum effundere peroptarem<anchor xml:id="n7e"/>. Vale, amice integerrime, tuumque doctissimum fratrem ex me multum saluta meque porro impense, uti ego te, ama.</ab>
          <closer>Scribebam die 26. Februarii 1718<note type="annotation" xml:id="d3e53434">Die Lesbarkeit der Jahreszahl ist durch verwischte Tinte erschwert. Von späterer Hand ist neben ihr die Ziffer <orig>8</orig> vermerkt.</note>.</closer>
       </body>
    </text>

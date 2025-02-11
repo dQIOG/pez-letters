@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="375" xml:id="pez-0375">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Christoph Bartenstein an Hieronymus Pez. 1714-11-24. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">375</idno>
          </publicationStmt>
          <seriesStmt>
@@ -49,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -83,7 +96,7 @@
             <p corresp="#seg5">HPs Absicht, seine Kenntnis des <rs ref="index:d14380e16473">Griechischen</rs> und <rs ref="index:d14380e12712">Französischen</rs> zu vertiefen, lobt CB; jeder Gelehrte muss <rs ref="index:d14380e12712">Französisch</rs> verstehen, da viele wichtige Bücher in dieser Sprache erscheinen. Zwar missbilligt CB, dass die <rs ref="index:d14380e12712">Franzosen</rs> Bücher über die Glaubenslehre, die Riten der alten Kirche sowie Kirchen- und Profangeschichte auf <rs ref="index:d14380e12712">Französisch</rs> schreiben, doch wird man sie davon nicht abbringen und muss sich deshalb anpassen.</p>
             <p corresp="#seg6">Über die Edition von <rs ref="index:d10854e21970">österreichischen</rs> Geschichtsschreibern („Scriptores rerum Austriacarum“) hat <rs ref="index:d14380e33148">BP</rs> mit dem Hofbibliothekspräfekten <rs ref="index:d14380e14738">Gentilotti</rs> gesprochen und wohl darüber schon brieflich an HP berichtet. CB rät, die <rs ref="index:d14380e28088">Melker</rs> und sonstigen Klosterbestände notfalls auch separat zu publizieren. Der eigene Ruhm ist dem gemeinen Besten unterzuordnen, wenn auch das Streben nach beidem legitim ist.</p>
             <p corresp="#seg7">CB wiederholt seine Verstimmung über <rs ref="index:d14380e33148">BP</rs>; er und <rs ref="index:d10854e32969">Widow</rs> wollen jenem nicht mehr schreiben, solange er die Einladung zum Gastmahl (symposion) weiter verschmäht. Stattdessen lädt CB HP zu diesem ein.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -99,7 +112,8 @@
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned>significandum mihi duceres</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:371">371</ref> <ref target="letter:371#seg9">9</ref>. Die Formulierung dort lässt nicht
+            <p>Vgl. <ref type="letter" target="letter:371">371</ref>
+               <ref target="letter:371#seg9">9</ref>. Die Formulierung dort lässt nicht
                   erkennen, ob HP zum Zeitpunkt von <ref type="letter" target="letter:371">371</ref> bereits an CB
                   geschrieben hatte.</p>
          </note>
@@ -136,17 +150,26 @@
             <mentioned>edendis rerum Austriacarum authoribus</mentioned>
             <p>Vgl. Einleitung, Abschnitt I.5. Aus CBs Äußerungen ist erkennbar, dass die Haltung
                   Gentilottis (vgl. <ref type="letter" target="letter:378">378</ref>) dem Vorhaben ernstlich
-                  entgegenstand; vgl. <ref type="letter" target="letter:379">379</ref> <ref target="letter:379#seg9">9</ref>.</p>
+                  entgegenstand; vgl. <ref type="letter" target="letter:379">379</ref>
+               <ref target="letter:379#seg9">9</ref>.</p>
          </note>
       </listAnnotation>
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo in Christo patri Hieronymo Petzio Benedictino Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</opener>
-         <ab resp="#editor" xml:id="seg1">Non adeo diu defuissem officio respondendi ad humanissimas, quibus me dignatus es, literas, nisi <choice><sic>tua</sic><corr>tu</corr></choice> ea, de quibus ad me scripseras, <anchor xml:id="n1"/>ex clarissimo fratre tuo<anchor xml:id="n1e"/> me etiam minime monente iamdudum cognovisses. Non ignorabam enim, quot quantisque distinearis negotiis, vir eruditissime, ut literis rerum omnium inanibus tuas interrumpere occupationes merito vererer. Sed scilicet adeo propenso<del ana="#after">in</del> me prosequeris affectu, ut nuper per eundem clarissimum fratrem tuum <anchor xml:id="n2"/>significandum mihi duceres<anchor xml:id="n2e"/> nec nugas meas futuras tibi ingratas. </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverendo in Christo patri Hieronymo Petzio Benedictino Mellicensi salutem plurimam dicit Johannes Christophorus Bartenstein.</opener>
+         <ab resp="#editor" xml:id="seg1">Non adeo diu defuissem officio respondendi ad humanissimas, quibus me dignatus es, literas, nisi <choice>
+               <sic>tua</sic>
+               <corr>tu</corr>
+            </choice> ea, de quibus ad me scripseras, <anchor xml:id="n1"/>ex clarissimo fratre tuo<anchor xml:id="n1e"/> me etiam minime monente iamdudum cognovisses. Non ignorabam enim, quot quantisque distinearis negotiis, vir eruditissime, ut literis rerum omnium inanibus tuas interrumpere occupationes merito vererer. Sed scilicet adeo propenso<del ana="#after">in</del> me prosequeris affectu, ut nuper per eundem clarissimum fratrem tuum <anchor xml:id="n2"/>significandum mihi duceres<anchor xml:id="n2e"/> nec nugas meas futuras tibi ingratas. </ab>
          <ab resp="#editor" xml:id="seg2">Gratulor tibi, vir doctissime, de abdicato <anchor xml:id="n3"/>recipiendorum hospitum onere verius quam munere<anchor xml:id="n3e"/>. Miror Mellicii eiusmodi curas illis transcribi, qui longe felicius tempus omne Musis impenderent. Parisiis immunes ab hisce et similibus spartis illi, quos natos in decus et incrementum literariae reipublicae constat: quod et de te ferri posse iudicium ego sane nullus dubito, qui lecto Colomanno tuo <anchor xml:id="n4"/>ex ungue leonem<anchor xml:id="n4e"/> statim agnovi. </ab>
-         <ab resp="#editor" xml:id="seg3">Si quas ego vero tibi in priore epistola mea ob insignem adeo ingenii tui foetum tribui laudes, cave<note type="annotation" xml:id="d4618e48452">Korrigiert aus unleserlicher Streichung im Ausmaß von ca. 4–5 Buchstaben.</note> illas humanitati potius meae quam merito adscribas tuo. Odi ego adulatores amicos quam maxime, et quod in aliis non fero, nollem in me ab amicis iure posse reprehendi. Sed <add place="left-margin">non</add> fert nimirum nec, quas mereris, laudes modestia tua; cui nec ego amplius gravis esse volo. Unum sic habeto, me in te amando colendoque nemini cessurum unquam. Amicum me cultoremque profiteor eorum omnium, qui incrementa literarum promovere pro virili quisque parte conantur. In te vero, vir clarissime, cum egregias animi dotes eruditionemque haud vulgarem merito suspiciam, magis tamen adhuc illum animi tui candorem, quem singula epistolae tuae verba spirant, propensumque erga me ne facie quidem notum animum exosculor atque amplector. Tu et de literis bene mereri perge et me, ut coepisti, amare, certo simul persuasus eum me semper futurum, quem tu esse optabis. <pb n="1v"/> </ab>
-         <ab resp="#editor" xml:id="seg4">Dici non potest, quantum in mea Widowiique mei mente excitavit gaudium inexpectatus clarissimi fratris tui Vindobonam adventus; nec quicquam nunc gaudio nostro deest, nisi quod ille raro admodum nos invisat. Hactenus tamen quotidie eidem colloqui in caesarea bibliotheca licuit. Invitavimus eundem ad Platonicam coenam Gallico more <choice><sic>institutam</sic><corr>instructam</corr></choice>, ubi scilicet <anchor xml:id="n5"/>ciborum parum<anchor xml:id="n5e"/> aderit, ast maxima egregiae hospitum voluntatis copia iuncta suavissimo perillustris domini Gentilottii consortio. Sed aspernatur omnia Bernhardus tuus, nosque iam non subirascentes modo experitur, sed non minus iratos, ac <anchor xml:id="n6"/>Neptunus olim fuit, cum excitatos ab Aeolo contra Aeneam ventos in sua quemque redire iuberet claustra<anchor xml:id="n6e"/>. Vindictam meditamur ambo sane parem iniuriae, quam Gallicae nostrae coenae ille infert. Rem omnem<del ana="#after">Mont</del> ad <anchor xml:id="n7"/>amphictyonicum iudicium<anchor xml:id="n7e"/> vestrum, id est ad Montefalconium, Massuetum, Nourrium et sexcentos alios heroas vestros<del ana="#after">ge</del> deferam, quos ille eo immitiores in ferenda sententia sentiet, quo magis absoluta Origenis expositionis in Psalmos descriptio favorem iudicum mihi conciliare apta erit. Tune vero posthaec Mellicium me invitabis? Ast scito me vel portae proximum pedem domui non illaturum. Ad <anchor xml:id="n8"/>diem Lunae<anchor xml:id="n8e"/> vel aegrotum <anchor xml:id="n9"/>peremptorie citamus: ubi non comparebit<anchor xml:id="n9e"/>, tum vero Phlegethonta movebo. Imo potius Vindobona ipsaque Germania quam citissime excedam, ipso insalutato Galliam petiturus. </ab>
+         <ab resp="#editor" xml:id="seg3">Si quas ego vero tibi in priore epistola mea ob insignem adeo ingenii tui foetum tribui laudes, cave<note type="annotation" xml:id="d4618e48452">Korrigiert aus unleserlicher Streichung im Ausmaß von ca. 4–5 Buchstaben.</note> illas humanitati potius meae quam merito adscribas tuo. Odi ego adulatores amicos quam maxime, et quod in aliis non fero, nollem in me ab amicis iure posse reprehendi. Sed <add place="left-margin">non</add> fert nimirum nec, quas mereris, laudes modestia tua; cui nec ego amplius gravis esse volo. Unum sic habeto, me in te amando colendoque nemini cessurum unquam. Amicum me cultoremque profiteor eorum omnium, qui incrementa literarum promovere pro virili quisque parte conantur. In te vero, vir clarissime, cum egregias animi dotes eruditionemque haud vulgarem merito suspiciam, magis tamen adhuc illum animi tui candorem, quem singula epistolae tuae verba spirant, propensumque erga me ne facie quidem notum animum exosculor atque amplector. Tu et de literis bene mereri perge et me, ut coepisti, amare, certo simul persuasus eum me semper futurum, quem tu esse optabis. <pb n="1v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg4">Dici non potest, quantum in mea Widowiique mei mente excitavit gaudium inexpectatus clarissimi fratris tui Vindobonam adventus; nec quicquam nunc gaudio nostro deest, nisi quod ille raro admodum nos invisat. Hactenus tamen quotidie eidem colloqui in caesarea bibliotheca licuit. Invitavimus eundem ad Platonicam coenam Gallico more <choice>
+               <sic>institutam</sic>
+               <corr>instructam</corr>
+            </choice>, ubi scilicet <anchor xml:id="n5"/>ciborum parum<anchor xml:id="n5e"/> aderit, ast maxima egregiae hospitum voluntatis copia iuncta suavissimo perillustris domini Gentilottii consortio. Sed aspernatur omnia Bernhardus tuus, nosque iam non subirascentes modo experitur, sed non minus iratos, ac <anchor xml:id="n6"/>Neptunus olim fuit, cum excitatos ab Aeolo contra Aeneam ventos in sua quemque redire iuberet claustra<anchor xml:id="n6e"/>. Vindictam meditamur ambo sane parem iniuriae, quam Gallicae nostrae coenae ille infert. Rem omnem<del ana="#after">Mont</del> ad <anchor xml:id="n7"/>amphictyonicum iudicium<anchor xml:id="n7e"/> vestrum, id est ad Montefalconium, Massuetum, Nourrium et sexcentos alios heroas vestros<del ana="#after">ge</del> deferam, quos ille eo immitiores in ferenda sententia sentiet, quo magis absoluta Origenis expositionis in Psalmos descriptio favorem iudicum mihi conciliare apta erit. Tune vero posthaec Mellicium me invitabis? Ast scito me vel portae proximum pedem domui non illaturum. Ad <anchor xml:id="n8"/>diem Lunae<anchor xml:id="n8e"/> vel aegrotum <anchor xml:id="n9"/>peremptorie citamus: ubi non comparebit<anchor xml:id="n9e"/>, tum vero Phlegethonta movebo. Imo potius Vindobona ipsaque Germania quam citissime excedam, ipso insalutato Galliam petiturus. </ab>
          <ab resp="#editor" xml:id="seg5">Laudo et perlaudo consilium tuum, vir eximie, de addiscenda Graecae Gallicaeque linguae penitiore notitia. De necessitate Graecae linguae nihil addo, cum illam tibi perspectam satis existimem. Gallica vel eam ob causam eruditus hodie vix ac ne vix quidem caret, quod eximii omnis generis <sic>liberi</sic>  illo idiomate conscripti magno prodierint numero, quos legisse neminem sane poenitebit. Ego quidem Gallorum institutum non probo libros de dogmatibus fidei, de ritibus veteris ecclesiae, de historia vetere tam sacra quam profana Gallice conscribentium, sed cum nobis integrum non sit Gallos ab hoc instituto abducere, eis nos accommodare habemus necesse. </ab>
          <ab resp="#editor" xml:id="seg6">De <anchor xml:id="n10"/>edendis rerum Austriacarum authoribus<anchor xml:id="n10e"/> plurima cum illustrissi[mo bi]bliothecae<note place="foot" xml:id="d4618e48487">Der fehlende Text (an einer Zeilenfuge) wurde offenbar im Schreibfluss ausgelassen.</note> caesareae praefecto collocutus est clarissimus vir frater tuus, qui sine dubio, quaenam sit hac de re Gentilottii mens, iam per literas tibi significavit. Ego te sedulo moneo, ne animum abicias, sed vel edas separatim, quae in Mellicensi aliorumque monasteriorum scriniis latent. Privatae gloriae anteponendum est commodum publicum; quamvis et alteri litare utique liceat. Sed tu scilicet monitore non eges, qui in iis, quae literas spectant, <sic>fraeno</sic>  potius opus habes quam calcaribus. </ab>
          <ab resp="#editor" xml:id="seg7">Plura hac vice non addo, cum prae ira in Bernhardum tuum mei vix sim potens; nec manum calamo vel ego vel Widowius meus unquam adiciemus, nisi ille desinat ieiunas nostras coenas contemnere. Vale, vir eruditissime, ac sinceriore nos quam frater tuus prosequere affectu; et si fieri potest, ad nos excurre, ut vel tu fratris nomine συμποσίῳ nostro Platonico intersis.</ab>

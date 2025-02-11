@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="466" xml:id="pez-0466">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Johann Benedikt Gentilotti an Bernhard Pez. 1715-11-30. Wien.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">466</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -79,10 +92,15 @@
          <abstract>
             <p corresp="#seg1">BG entschuldigt sich für seine arbeitsbedingte Säumigkeit bei der Beantwortung von BPs letztem Brief vom 7. November <ref type="letter" target="letter:458">458</ref>.</p>
             <p corresp="#seg2">Zu BPs Reaktion auf das von BG geäußerte Urteil über BPs „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“ hält BG fest, dass er die Gelehrtheit des Werks schätzt und nur den allzu scharfen Ton bemängelt. Wäre dieser unterblieben, so hätten die <rs ref="index:d14380e20126">Jesuiten</rs> keinen Anhaltspunkt für weitere Entgegnungen. Diese Ansicht teilen auch andere BP wohlgesinnte Männer. BG möchte in die Angelegenheit aber nicht weiter hineingezogen werden.</p>
-            <p corresp="#seg3"><rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs> ist endlich nach <rs ref="index:d14380e45571">Wien</rs> zurückgekehrt, aber weiterhin unzufrieden mit seiner Lage. BG versucht ihn zu unterstützen und zu seinen Gunsten zu intervenieren, was BP jedoch für sich behalten soll.</p>
-            <p corresp="#seg4">BG war bestürzt über die Nachricht von BPs <rs ref="index:d10854e24048">Krankheit</rs>, die er auf übermäßige Arbeit zurückführt. Von zwei jungen <rs ref="index:d14380e1139"><rs ref="index:d10854e4054"><rs ref="index:d14380e44909">Melkern</rs></rs></rs>, die BG in der <rs ref="index:d14380e45820">Hofbibliothek</rs> besucht haben, hat er nun aber von BPs Besserung erfahren. Er rät ihm, seine Gesundheit im Interesse des gemeinen Nutzens (<rs type="cit" ref="citIndex:ix2_d653e339">bonum publicum</rs>) zu wahren.</p>
+            <p corresp="#seg3">
+               <rs ref="index:d14380e4006">Johann Christoph Bartenstein</rs> ist endlich nach <rs ref="index:d14380e45571">Wien</rs> zurückgekehrt, aber weiterhin unzufrieden mit seiner Lage. BG versucht ihn zu unterstützen und zu seinen Gunsten zu intervenieren, was BP jedoch für sich behalten soll.</p>
+            <p corresp="#seg4">BG war bestürzt über die Nachricht von BPs <rs ref="index:d10854e24048">Krankheit</rs>, die er auf übermäßige Arbeit zurückführt. Von zwei jungen <rs ref="index:d14380e1139">
+                  <rs ref="index:d10854e4054">
+                     <rs ref="index:d14380e44909">Melkern</rs>
+                  </rs>
+               </rs>, die BG in der <rs ref="index:d14380e45820">Hofbibliothek</rs> besucht haben, hat er nun aber von BPs Besserung erfahren. Er rät ihm, seine Gesundheit im Interesse des gemeinen Nutzens (<rs type="cit" ref="citIndex:ix2_d653e339">bonum publicum</rs>) zu wahren.</p>
             <p corresp="#seg5">Die zwei <rs ref="index:d14380e28088">Melker</rs> haben BG zugleich ein Verzeichnis der in der <rs ref="index:d14380e28279">Melker Bibliothek</rs> vorhandenen alten Editionen ausgehändigt. Im Gegenzug sendet BG eine Liste von Büchertiteln, um die BP gebeten hatte, mit der Bitte, die Ungenauigkeit des Buchhändlers zu entschuldigen. Er übersendet weiters einen Brief an <rs ref="index:d14380e26993">René Massuet</rs>, den BP mit Entschuldigung für BGs Säumigkeit weiterleiten soll. BG schließt mit Grüßen an HP.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -113,7 +131,8 @@
             <mentioned>epistolam ad ... Massuetum</mentioned>
             <p>Dieser Brief ist erhalten in BN FF 19664, 148r–149v. Er trägt dasselbe Datum wie
                   der an BP, den 30. November, und enthält BGs Dank für die Zusendung von Coustants
-                  „Vindiciae“; vgl. <ref type="letter" target="letter:434">434</ref> <ref target="letter:434#seg6">6</ref>.</p>
+                  „Vindiciae“; vgl. <ref type="letter" target="letter:434">434</ref>
+               <ref target="letter:434#seg6">6</ref>.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
@@ -122,7 +141,8 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Venerando et eruditissimo viro domno Bernardo Pez Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilottus ab Engelsbrun.</opener>
+         <opener>
+            <pb n="1r"/> Venerando et eruditissimo viro domno Bernardo Pez Benedictino et bibliothecario Mellicensi salutem plurimam dicit Joannes Benedictus Gentilottus ab Engelsbrun.</opener>
          <ab resp="#editor" xml:id="seg1">Debeo patrocinium negligentiae meae in respondendo litteris tuis, quibus dies VII. Idus Novembris adscriptus erat. Illud autem aliunde non sumam, quam ab occupationibus, quibus superiori tempore praeter consuetudinem fui implicatus, quibus tu, virorum optime, huiusmodi cunctationem assignes, velim. </ab>
          <ab resp="#editor" xml:id="seg2">Secus atque in animo habeo, meum, si quod est, <anchor xml:id="n1"/>de Epistolis tuis apologeticis iudicium<anchor xml:id="n1e"/> a te accipi video; nam iis ingenii, eruditionis et eloquentiae laudem tribuo, nec quidquam praeter acerba quaedam verba a te in adversarium emissa minus probo, mecumque alii, qui te aeque amant. Quod si tibi ab illis temperasses, omnem Sociis non solum respondendi, sed et conquerendi ansam praecidisses. Sed haec vos inter vos partite; <pb n="1v"/> neque enim ego eam litem meam facere, neque, quod sensus meos tibi, amicissime Bernarde, aperte atque ingenue exposui, de tuo in me amore quidquam detractum velim. </ab>
          <ab resp="#editor" xml:id="seg3">Bartensteinius noster eo, quo dudum intenderat, tandem pervenit, id est Vindobonam. Quod autem non illico omnia illa, quae animo conceperat, assequitur, commotum ac perturbatum video; eumque optima spe et expectatione sustento atque excito <add place="above">fore</add>, ut res ex eius sententia fluant. Sed haec tecum habeto: nemini dixeris. </ab>

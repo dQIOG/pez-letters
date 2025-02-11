@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="901" xml:id="pez-0901">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Leopold Wydemann an Hieronymus Pez. 1718-02-05. Gaming.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">901</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Es muss unklar bleiben, in welchem seiner beiden Briefe (<ref type="letter" target="letter:894">894</ref>, <ref type="letter" target="letter:895">895</ref>) HP auf das Problem der vermeintlichen
                zwei Ehen Hermanns II. von Cilli einging, worauf LW in diesem Brief reagierte. – Im Anschluss an diesen
@@ -68,10 +79,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -98,104 +110,106 @@
                <ptr type="mentionedIn" target="letter:898"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e400">Adelheid von Ortenburg</term>
-            <term ref="index:d14380e668">Albert (Bf. Passau)</term>
-            <term ref="index:d14380e676">Albert ; Urkunde für Gaming 1341</term>
-            <term ref="index:d14380e827">Albrecht II</term>
-            <term ref="index:d14380e843">Albrecht II ; Urkunde zur Gründung der Kartause Gaming 1330</term>
-            <term ref="index:d14380e866">Albrecht III</term>
-            <term ref="index:d14380e1809">Anna von Cilli († 1416; Tochter Wilhelms; verh. Ladislaus II.)</term>
-            <term ref="index:d14380e1818">Anna von Cilli († nach 1439; Tochter Hermanns; verh. N. Garai)</term>
-            <term ref="index:d14380e1860">Anna von Polen</term>
-            <term ref="index:d14380e1869">Anna von Schaunberg</term>
-            <term ref="index:d14380e2172">Anonyme Werke ; Cillier Chronik</term>
-            <term ref="index:d14380e3821">Barbara von Cilli</term>
-            <term ref="index:d14380e4170">Bayern, Bayern</term>
-            <term ref="index:d14380e6300">Bosnien</term>
-            <term ref="index:d14380e7535">Carrara</term>
-            <term ref="index:d14380e7696">Cavacci, Giacomo ; Historiarum coenobii D. Justinae Patavinae libri sex. Venedig
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e400">Adelheid von Ortenburg</term>
+               <term ref="index:d14380e668">Albert (Bf. Passau)</term>
+               <term ref="index:d14380e676">Albert ; Urkunde für Gaming 1341</term>
+               <term ref="index:d14380e827">Albrecht II</term>
+               <term ref="index:d14380e843">Albrecht II ; Urkunde zur Gründung der Kartause Gaming 1330</term>
+               <term ref="index:d14380e866">Albrecht III</term>
+               <term ref="index:d14380e1809">Anna von Cilli († 1416; Tochter Wilhelms; verh. Ladislaus II.)</term>
+               <term ref="index:d14380e1818">Anna von Cilli († nach 1439; Tochter Hermanns; verh. N. Garai)</term>
+               <term ref="index:d14380e1860">Anna von Polen</term>
+               <term ref="index:d14380e1869">Anna von Schaunberg</term>
+               <term ref="index:d14380e2172">Anonyme Werke ; Cillier Chronik</term>
+               <term ref="index:d14380e3821">Barbara von Cilli</term>
+               <term ref="index:d14380e4170">Bayern, Bayern</term>
+               <term ref="index:d14380e6300">Bosnien</term>
+               <term ref="index:d14380e7535">Carrara</term>
+               <term ref="index:d14380e7696">Cavacci, Giacomo ; Historiarum coenobii D. Justinae Patavinae libri sex. Venedig
          1606</term>
-            <term ref="index:d14380e8216">Cilli (Ort)</term>
-            <term ref="index:d14380e8225">Cilli (Familie)</term>
-            <term ref="index:d14380e8247">Cilli ; Stammbaum aus der Kartause Seitz</term>
-            <term ref="index:d14380e11057">Elisabeth von Abensberg</term>
-            <term ref="index:d14380e11097">Elisabeth Kotromanić</term>
-            <term ref="index:d14380e11158">Elisabeth von Slawonien</term>
-            <term ref="index:d14380e12445">Foresti, Giacomo Filippo ; Supplementum chronicarum. Venedig 1492</term>
-            <term ref="index:d14380e12476">Francesco il Vecchio da Carrara</term>
-            <term ref="index:d14380e12484">Francesco Novello da Carrara</term>
-            <term ref="index:d14380e12491">Francesco III. da Carrara</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e13185">Freising</term>
-            <term ref="index:d14380e13374">Friedrich I</term>
-            <term ref="index:d14380e13390">Friedrich II</term>
-            <term ref="index:d14380e13828">Gaming</term>
-            <term ref="index:d14380e13882">Gaming ; Archiv ; Chartae der Kartäuser-Generalkapitel</term>
-            <term ref="index:d14380e14475">Garai</term>
-            <term ref="index:d14380e15433">Giacomino da Carrara</term>
-            <term ref="index:d14380e15440">Giacomo II. da Carrara</term>
-            <term ref="index:d14380e15447">Giacomo da Carrara</term>
-            <term ref="index:d14380e17434">Hedwig von Anjou, hl</term>
-            <term ref="index:d14380e18041">Hermann I</term>
-            <term ref="index:d14380e18050">Hermann II</term>
-            <term ref="index:d14380e18106">Hermann (Bf. Freising)</term>
-            <term ref="index:d14380e18882">Hübner, Johann ; Drey hundert und drey und dreyßig genealogische tabellen. Leipzig
+               <term ref="index:d14380e8216">Cilli (Ort)</term>
+               <term ref="index:d14380e8225">Cilli (Familie)</term>
+               <term ref="index:d14380e8247">Cilli ; Stammbaum aus der Kartause Seitz</term>
+               <term ref="index:d14380e11057">Elisabeth von Abensberg</term>
+               <term ref="index:d14380e11097">Elisabeth Kotromanić</term>
+               <term ref="index:d14380e11158">Elisabeth von Slawonien</term>
+               <term ref="index:d14380e12445">Foresti, Giacomo Filippo ; Supplementum chronicarum. Venedig 1492</term>
+               <term ref="index:d14380e12476">Francesco il Vecchio da Carrara</term>
+               <term ref="index:d14380e12484">Francesco Novello da Carrara</term>
+               <term ref="index:d14380e12491">Francesco III. da Carrara</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e13185">Freising</term>
+               <term ref="index:d14380e13374">Friedrich I</term>
+               <term ref="index:d14380e13390">Friedrich II</term>
+               <term ref="index:d14380e13828">Gaming</term>
+               <term ref="index:d14380e13882">Gaming ; Archiv ; Chartae der Kartäuser-Generalkapitel</term>
+               <term ref="index:d14380e14475">Garai</term>
+               <term ref="index:d14380e15433">Giacomino da Carrara</term>
+               <term ref="index:d14380e15440">Giacomo II. da Carrara</term>
+               <term ref="index:d14380e15447">Giacomo da Carrara</term>
+               <term ref="index:d14380e17434">Hedwig von Anjou, hl</term>
+               <term ref="index:d14380e18041">Hermann I</term>
+               <term ref="index:d14380e18050">Hermann II</term>
+               <term ref="index:d14380e18106">Hermann (Bf. Freising)</term>
+               <term ref="index:d14380e18882">Hübner, Johann ; Drey hundert und drey und dreyßig genealogische tabellen. Leipzig
          1708</term>
-            <term ref="index:d14380e20323">Johann</term>
-            <term ref="index:d14380e20903">Joseph I</term>
-            <term ref="index:d14380e20912">Jost</term>
-            <term ref="index:d14380e21171">Karl IV</term>
-            <term ref="index:d14380e21188">Karl VI</term>
-            <term ref="index:d14380e21243">Karl VI ; Pragmatische Sanktion 1713</term>
-            <term ref="index:d14380e21396">Kartäuser</term>
-            <term ref="index:d14380e21476">Kartäuser ; Generalkapitel ; Chartae</term>
-            <term ref="index:d14380e21549">Kasimir I</term>
-            <term ref="index:d14380e21647">Katharina Kotromanić</term>
-            <term ref="index:d14380e21672">Katharina von Ungarn</term>
-            <term ref="index:d14380e23463">Ladislaus II. Jagiello</term>
-            <term ref="index:d14380e23481">Ladislaus Garai</term>
-            <term ref="index:d14380e24643">Leopold I</term>
-            <term ref="index:d14380e24689">Leopold III</term>
-            <term ref="index:d14380e25312">Ludwig IV. „der Bayer“</term>
-            <term ref="index:d14380e25368">Ludwig I (Kg. Ungarn und Polen)</term>
-            <term ref="index:d14380e25384">Ludwig (v. Cilli)</term>
-            <term ref="index:d14380e26217">Maria von Ungarn</term>
-            <term ref="index:d14380e26491">Marsilio I. da Carrara (gest. 1338)</term>
-            <term ref="index:d14380e26498">Marsilio da Carrara (gest. 1435)</term>
-            <term ref="index:d14380e30712">Nikolaus Garai</term>
-            <term ref="index:d14380e31465">Österreich, Österreicher</term>
-            <term ref="index:d14380e31802">Öttinger</term>
-            <term ref="index:d14380e32084">Padua</term>
-            <term ref="index:d14380e32575">Passau</term>
-            <term ref="index:d14380e33041">*Petrus de Carraria</term>
-            <term ref="index:d14380e33148">Pez, Bernhard</term>
-            <term ref="index:d14380e35051">Philipp II</term>
-            <term ref="index:d14380e35114">Piccolomini, Eneas Silvius ; Historia Austrialis</term>
-            <term ref="index:d14380e35336">Pletriach</term>
-            <term ref="index:d14380e35438">Polen</term>
-            <term ref="index:d14380e39609">Schaunberger</term>
-            <term ref="index:d14380e40535">Seitz</term>
-            <term ref="index:d14380e40559">Seitz ; Kartäuser-Generalkapitel 1392</term>
-            <term ref="index:d14380e40832">Sigismund</term>
-            <term ref="index:d14380e41498">Stephan II. Kotromanić</term>
-            <term ref="index:d14380e41508">Stephan</term>
-            <term ref="index:d14380e41556">Steyerer, Anton</term>
-            <term ref="index:d14380e42053">Tarent</term>
-            <term ref="index:d10854e31000">Toskana</term>
-            <term ref="index:d14380e43537">Ubertino da Carrara</term>
-            <term ref="index:d14380e43680">Ulrich I</term>
-            <term ref="index:d14380e43687">Ulrich II</term>
-            <term ref="index:d14380e43779">Ungarn, Ungarn</term>
-            <term ref="index:d14380e44079">Valvasor, Johann Weikhard von ; Die ehre deß hertzogthums Crain, das ist: Wahre,
+               <term ref="index:d14380e20323">Johann</term>
+               <term ref="index:d14380e20903">Joseph I</term>
+               <term ref="index:d14380e20912">Jost</term>
+               <term ref="index:d14380e21171">Karl IV</term>
+               <term ref="index:d14380e21188">Karl VI</term>
+               <term ref="index:d14380e21243">Karl VI ; Pragmatische Sanktion 1713</term>
+               <term ref="index:d14380e21396">Kartäuser</term>
+               <term ref="index:d14380e21476">Kartäuser ; Generalkapitel ; Chartae</term>
+               <term ref="index:d14380e21549">Kasimir I</term>
+               <term ref="index:d14380e21647">Katharina Kotromanić</term>
+               <term ref="index:d14380e21672">Katharina von Ungarn</term>
+               <term ref="index:d14380e23463">Ladislaus II. Jagiello</term>
+               <term ref="index:d14380e23481">Ladislaus Garai</term>
+               <term ref="index:d14380e24643">Leopold I</term>
+               <term ref="index:d14380e24689">Leopold III</term>
+               <term ref="index:d14380e25312">Ludwig IV. „der Bayer“</term>
+               <term ref="index:d14380e25368">Ludwig I (Kg. Ungarn und Polen)</term>
+               <term ref="index:d14380e25384">Ludwig (v. Cilli)</term>
+               <term ref="index:d14380e26217">Maria von Ungarn</term>
+               <term ref="index:d14380e26491">Marsilio I. da Carrara (gest. 1338)</term>
+               <term ref="index:d14380e26498">Marsilio da Carrara (gest. 1435)</term>
+               <term ref="index:d14380e30712">Nikolaus Garai</term>
+               <term ref="index:d14380e31465">Österreich, Österreicher</term>
+               <term ref="index:d14380e31802">Öttinger</term>
+               <term ref="index:d14380e32084">Padua</term>
+               <term ref="index:d14380e32575">Passau</term>
+               <term ref="index:d14380e33041">*Petrus de Carraria</term>
+               <term ref="index:d14380e33148">Pez, Bernhard</term>
+               <term ref="index:d14380e35051">Philipp II</term>
+               <term ref="index:d14380e35114">Piccolomini, Eneas Silvius ; Historia Austrialis</term>
+               <term ref="index:d14380e35336">Pletriach</term>
+               <term ref="index:d14380e35438">Polen</term>
+               <term ref="index:d14380e39609">Schaunberger</term>
+               <term ref="index:d14380e40535">Seitz</term>
+               <term ref="index:d14380e40559">Seitz ; Kartäuser-Generalkapitel 1392</term>
+               <term ref="index:d14380e40832">Sigismund</term>
+               <term ref="index:d14380e41498">Stephan II. Kotromanić</term>
+               <term ref="index:d14380e41508">Stephan</term>
+               <term ref="index:d14380e41556">Steyerer, Anton</term>
+               <term ref="index:d14380e42053">Tarent</term>
+               <term ref="index:d10854e31000">Toskana</term>
+               <term ref="index:d14380e43537">Ubertino da Carrara</term>
+               <term ref="index:d14380e43680">Ulrich I</term>
+               <term ref="index:d14380e43687">Ulrich II</term>
+               <term ref="index:d14380e43779">Ungarn, Ungarn</term>
+               <term ref="index:d14380e44079">Valvasor, Johann Weikhard von ; Die ehre deß hertzogthums Crain, das ist: Wahre,
          gründliche und recht eigendliche gelegen- und beschaffenheit dieses in manchen alten und
          neuen geschicht-büchern zwar rühmlich berührten, doch bishero nie annoch recht
          beschriebenen römisch-keyserlichen herrlichen erblandes. 4 Bde. Laibach 1689</term>
-            <term ref="index:d14380e44267">Venedig, Venezianer</term>
-            <term ref="index:d14380e44452">Verona</term>
-            <term ref="index:d14380e45571">Wien</term>
-            <term ref="index:d14380e46248">Wilhelm</term></keywords></textClass>
+               <term ref="index:d14380e44267">Venedig, Venezianer</term>
+               <term ref="index:d14380e44452">Verona</term>
+               <term ref="index:d14380e45571">Wien</term>
+               <term ref="index:d14380e46248">Wilhelm</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">LW setzt die neulich <ref type="letter" target="letter:898">898</ref> begonnene Erörterung über die
                <rs ref="index:d14380e8225">Grafen von Cilli</rs> fort, insbesondere über <rs ref="index:d14380e18050">Hermann (II.)</rs>, den Stifter der Kartause <rs ref="index:d14380e35336">Pletriach</rs>. Dass dieser
@@ -284,7 +298,8 @@
                „<rs ref="index:d14380e2172">Cillier Chronik</rs>“ führt eine nicht namentlich genannte Schaunbergerin
                als Hermanns Ehefrau an, was LW aber bezweifelt; er glaubt vielmehr, dass diese mit <rs ref="index:d14380e18041">Hermann I.</rs> vermählt war, <rs ref="index:d14380e18050">Hermann II.</rs>
                hingegen Katharina und dann nach deren Tod Elisabeth heiratete (siehe Kommentar). Begründungen dafür
-               leitet LW aus der „Cillier Chronik“ selbst ab. Die erste ist, dass König <rs ref="index:d14380e25368">Ludwig (I.) von Ungarn</rs> <rs ref="index:d14380e21672">Katharina</rs> einem Hermann von Cilli zur
+               leitet LW aus der „Cillier Chronik“ selbst ab. Die erste ist, dass König <rs ref="index:d14380e25368">Ludwig (I.) von Ungarn</rs>
+               <rs ref="index:d14380e21672">Katharina</rs> einem Hermann von Cilli zur
                Frau gab; die zweite, dass diese Katharina eine Verwandte Ludwigs und Erbin des Königreichs (recte: von
                <rs ref="index:d14380e6300">Bosnien</rs>) war; die dritte, dass die Hochzeit im Jahr 1373 stattgefunden
                haben dürfte; die vierte, dass <rs ref="index:d14380e20323">Johann von Cilli</rs>, Sohn <rs ref="index:d14380e18041">Hermanns I.</rs>, der „<rs ref="index:d14380e2172">Cillier Chronik</rs>“
@@ -354,7 +369,7 @@
                – vor allem Friedrichs – Verdienste um verschiedene Klöster (?). Aus Zeitknappheit schließt LW jedoch und
                unterwirft das Geschriebene der Prüfung durch HP und BP. Er grüßt beide und bittet um Einschluss in ihre
                Gebete.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -383,16 +398,19 @@
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg1">
             <mentioned> Schaunberg</mentioned>
             <p>Zu Anna von Schaunberg vgl. <ref type="letter" target="letter:880">880
-                  </ref><ref target="letter:880#seg7">7</ref>.</p>
+                  </ref>
+               <ref target="letter:880#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg1">
             <mentioned> capitulum ... Seitzii</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:865">865</ref> <ref target="letter:865#seg9">9</ref>.
+            <p>Vgl. <ref type="letter" target="letter:865">865</ref>
+               <ref target="letter:865#seg9">9</ref>.
                </p>
          </note>
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg1">
             <mentioned>error apud Hubnerum</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:880">880 </ref><ref target="letter:880 #seg4">4</ref>.
+            <p> Vgl. <ref type="letter" target="letter:880">880 </ref>
+               <ref target="letter:880 #seg4">4</ref>.
                </p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg1">
@@ -400,16 +418,19 @@
             <p> In der Charta von 1418 wird die verstorbene
                   Gräfin Elisabeth nicht als die Ehefrau eines Hermann, sondern lediglich als
                   „fundatrix“ von Pletriach bezeichnet, woraus LW auf die Ehe mit Hermann II.
-                  schloss: vgl. <ref type="letter" target="letter:880">880</ref> <ref target="letter:880#seg7">7</ref>.</p>
+                  schloss: vgl. <ref type="letter" target="letter:880">880</ref>
+               <ref target="letter:880#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg1">
             <mentioned> expono brevius</mentioned>
-            <p>Im Folgenden referiert LW seine Darlegungen aus <ref type="letter" target="letter:880">880</ref> <ref target="letter:880#seg5">5</ref> bis <ref target="letter:880#seg9">9</ref>.</p>
+            <p>Im Folgenden referiert LW seine Darlegungen aus <ref type="letter" target="letter:880">880</ref>
+               <ref target="letter:880#seg5">5</ref> bis <ref target="letter:880#seg9">9</ref>.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg2">
             <mentioned>in diplomatibus nostris vocant</mentioned>
             <p>LW bezieht sich auf den Gaminger
-                  Stiftbrief vom 24. Juni 1330 (vgl. <ref type="letter" target="letter:845">845</ref> <ref target="letter:845#seg5">5</ref>) sowie
+                  Stiftbrief vom 24. Juni 1330 (vgl. <ref type="letter" target="letter:845">845</ref>
+               <ref target="letter:845#seg5">5</ref>) sowie
                   auf eine Urkunde Bischof Alberts von Passau vom 10. Dezember 1341: HHStA Wien,
                   Allgemeine Urkundenreihe, 1341 XII 10. Von der letzteren liegt eine Abschrift LWs
                   in den Kollektaneen Anton Steyerers vor: HHStA Wien, Hs. Rot 8/2, 447. Albert von
@@ -421,7 +442,8 @@
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg2">
             <mentioned> legendum Petrum de Gara</mentioned>
             <p> Zu dem fraglichen Eintrag in der Charta
-                  von 1417 vgl. <ref type="letter" target="letter:880">880</ref> <ref target="letter:880#seg7">7</ref>. Soweit sich aus der
+                  von 1417 vgl. <ref type="letter" target="letter:880">880</ref>
+               <ref target="letter:880#seg7">7</ref>. Soweit sich aus der
                   Entgegnung LWs ablesen lässt, hatte HP vorgeschlagen, in der dort genannten Person
                   einen Peter Garai, Sohn des Nikolaus Garai mit Anna von Cilli und Bruder des
                   Ladislaus Garai, zu sehen; dieser wäre als Neffe Ludwigs von Cilli unter der
@@ -435,7 +457,7 @@
             <mentioned>credo Petrum de Carraria</mentioned>
             <p>Zu den Hinweisen zugunsten des ebenfalls
                   nicht gänzlich unmöglichen Lösungsansatzes LWs vgl. <ref type="letter" target="letter:880">880</ref>
-                  <ref target="letter:880#seg7">7</ref>. </p>
+               <ref target="letter:880#seg7">7</ref>. </p>
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg3">
             <mentioned>Cavacium ... extinctos</mentioned>
@@ -481,18 +503,21 @@
             <mentioned> apud sororem in Cilia</mentioned>
             <p>LW setzte eine Angehörige des Hauses Carrara
                   als zweite Ehefrau Hermanns II. voraus, über die Ludwig von Cilli mit dem
-                  hypothetischen Pietro da Carrara verwandt gewesen wäre: vgl. <ref type="letter" target="letter:880">880</ref> <ref target="letter:880#seg7">7</ref>.</p>
+                  hypothetischen Pietro da Carrara verwandt gewesen wäre: vgl. <ref type="letter" target="letter:880">880</ref>
+               <ref target="letter:880#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n17'), left('n17e'))" n="17" anchored="false" corresp="#seg4">
             <mentioned>refert Aeneas</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:880">880</ref> <ref target="letter:880#seg11">11</ref>.
+            <p> Vgl. <ref type="letter" target="letter:880">880</ref>
+               <ref target="letter:880#seg11">11</ref>.
                </p>
          </note>
          <note target="#range(right('n18'), left('n18e'))" n="18" anchored="false" corresp="#seg4">
             <mentioned>Coniecturas pro Catharina</mentioned>
             <p> Zu LWs These, Katharina Kotromanić wäre
                   nicht mit Hermann I., sondern vielmehr mit Hermann II. verheiratet gewesen, vgl.
-                     <ref type="letter" target="letter:880">880</ref> <ref target="letter:880#seg10">10</ref>.</p>
+                     <ref type="letter" target="letter:880">880</ref>
+               <ref target="letter:880#seg10">10</ref>.</p>
          </note>
          <note target="#range(right('n19'), left('n19e'))" n="19" anchored="false" corresp="#seg4">
             <mentioned> putetur anno 1373</mentioned>
@@ -554,7 +579,8 @@
             <p>LW geht hier davon aus, dass jenes
                   „Königreich“, als dessen Erbin Katharina bezeichnet wurde, Ungarn sein müsse.
                   Früher hatte er das Wort noch – richtigerweise – lieber auf Bosnien beziehen
-                  wollen: vgl. <ref type="letter" target="letter:880">880</ref> <ref target="letter:880#seg10">10</ref>. </p>
+                  wollen: vgl. <ref type="letter" target="letter:880">880</ref>
+               <ref target="letter:880#seg10">10</ref>. </p>
          </note>
          <note target="#range(right('n25'), left('n25e'))" n="25" anchored="false" corresp="#seg4">
             <mentioned>Austriae haeredes</mentioned>
@@ -562,7 +588,8 @@
                   den habsburgischen Ländern zeigt, wie sehr die damit verbundenen Fragen zu dieser
                   Zeit auch nicht direkt in die höfische Politik involvierte Kreise beschäftigten.
                   Der 1716 geborene Sohn Kaiser Karls VI., Erzherzog Leopold Johann, war bereits
-                  1717 gestorben: vgl. <ref type="letter" target="letter:559">559</ref> <ref target="letter:559#seg1">1</ref>. Die Pragmatische
+                  1717 gestorben: vgl. <ref type="letter" target="letter:559">559</ref>
+               <ref target="letter:559#seg1">1</ref>. Die Pragmatische
                   Sanktion oder „Pactum mutuae successionis“, auf der die hier von LW erwähnte
                   Rechtslage beruhte, war 1713 veröffentlicht worden: vgl. <rs type="bibl" ref="bibl:19154">Roider, Pragmatic Sanction</rs>; <rs type="bibl" ref="bibl:20112">Vocelka, Glanz und Untergang</rs> 84–87.</p>
          </note>
@@ -604,17 +631,20 @@
             <p>Die frühere Standeserhebung von
                   1341 wurde in der Urkunde Karls IV. von 1372 offenbar vorsätzlich ignoriert und
                   scheint auch dem Verfasser der „Cillier Chronik“ unbekannt geblieben zu sein. Zu
-                  ihr vgl. <ref type="letter" target="letter:888">888</ref> <ref target="letter:888#seg11">11</ref>. </p>
+                  ihr vgl. <ref type="letter" target="letter:888">888</ref>
+               <ref target="letter:888#seg11">11</ref>. </p>
          </note>
          <note target="#range(right('n32'), left('n32e'))" n="32" anchored="false" corresp="#seg5">
             <mentioned>quoad annum 1353</mentioned>
             <p> Der Bezug ist unklar, weil dieses Datum in der
                   „Cillier Chronik“ gar nicht vorkommt, sofern nicht die LW vorliegende
-                  Überlieferung in dieser Hinsicht abwich. Zu LWs Kenntnis der Chronik vgl. <ref type="letter" target="letter:880">880</ref> <ref target="letter:880#seg7">7</ref>.</p>
+                  Überlieferung in dieser Hinsicht abwich. Zu LWs Kenntnis der Chronik vgl. <ref type="letter" target="letter:880">880</ref>
+               <ref target="letter:880#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n33'), left('n33e'))" n="33" anchored="false" corresp="#seg6">
             <mentioned>Wilhelmi Ciliensis filiam ... duceret</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:880">880</ref> <ref target="letter:880#seg4">4</ref>.</p>
+            <p> Vgl. <ref type="letter" target="letter:880">880</ref>
+               <ref target="letter:880#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n34'), left('n34e'))" n="34" anchored="false" corresp="#seg6">
             <mentioned> Mortua Maria</mentioned>
@@ -634,13 +664,30 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo nec non religiosissimo in Christo patri Hieronymo Pez frater Leopoldus Wydeman salutem plurimam dicit.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo nec non religiosissimo in Christo patri Hieronymo Pez frater Leopoldus Wydeman salutem plurimam dicit.</opener>
          <ab resp="#editor" xml:id="seg1">Prosequor materiam nuper inchoatam de Ciliensibus, praesertim illam de Hermanno Cartusiae Pletriacensis fundatore, quem bigamum fuisse putabam et puto me ex chartis capitularibus, cum et aliae istis accedant coniecturae, posse verosimiliter colligere. Opinioni meae, charissime pater, opponis rationes quatuor, quas pace tua breviter repeto et refello. Ratio tua prima, quod Chronicon et schema Ciliense non nisi unius uxoris meminerit, exigua est vel ex hoc capite, quod nec in Chronico nec in schemate fiat mentio duarum coniugum, quas habuit <anchor xml:id="n1"/>Ulricus II. Wilhelmi pater<anchor xml:id="n1e"/>. Unde sicut in uno, ita in altero potuit deficere author, qui plenam notitiam non habuit, uti<del ana="#before">dum.</del> ex eo constat, quod nec Ulrici nec Hermanni uxores nominare sciverit, dum simpliciter fuisse unam <anchor xml:id="n2"/>de Öttingen<anchor xml:id="n2e"/> et alteram de<anchor xml:id="n3"/> Schaunberg<anchor xml:id="n3e"/> asserit. Nec in chartis, ais iterum, vestris fit binarum coniugum mentio. Verissimum id quidem, ast simul recordare chartas ab anno 1392 initium sumere quoad<anchor xml:id="n4"/> capitulum generale Seitzii<anchor xml:id="n4e"/> celebratum, et ante hunc annum ex mente mea iam mortuam fuisse primam Hermanni coniugem, et post hunc annum Hermannum inchoasse beneficia in sacrum ordinem. Et hinc, uti nosti, collegi Hermannum circa 1393 aut viduum aut coelibem vixisse. Scriptorum quoque tam Austriacorum quam Hungaricorum de duabus coniugibus silentium vel ideo inefficax est, quia ex scriptoribus, quotquot legi, ne unus quidem est, qui Hermanni coniugem vel quoad familiam vel quoad nomen expresserit. Et hinc a me postulatum fuit Vienna, quae Barbarae augustae mater et qua familia fuerit progenita. Et iterum hinc <anchor xml:id="n5"/>error apud Hubnerum<anchor xml:id="n5e"/> in tabellis, dum Annam Casimiri Magni regis Poloniae filiam Hermanno quidem in coniugem et Barbarae in matrem tribuit. <anchor xml:id="n6"/>Elisabetham ego primus ex chartis nostris reperi<anchor xml:id="n6e"/> Hermanni uxorem, at utrum illa de genere Schauenburgico an alio fuerit, sub dubio remanet. A me pro quarta ratione exigis efficacem rationem, qua probem Hermanni bigamiam. Deest quidem illa mihi tam efficax, veruntamen non desunt coniecturae, uti nuper exposui latius et nunc<anchor xml:id="n7"/> expono brevius<anchor xml:id="n7e"/>. </ab>
-         <ab resp="#editor" xml:id="seg2">Harum prima est, quod in chartis pro matre et non pro coniuge Hermanni fiant preces contra praxim ordinis; altera de episcopo Frisingensi, de quo non mirabar N.B. potuisse ex adulterio nasci, sed longe aliud, nempe quod in adulterio natus fuerit in episcopum assumptus et quidem adhuc iuvenis, itemque non regis aut principis, sed comitis tantummodo filius, qui comes in episcopatu Frisingensi sub ducatu, ni fallor, ducum Bavariae nullum ius videtur habuisse, ut, quem vellet, faceret episcopum. Circumstantiae hae augent casum. <pb n="1v"/> Tertia est ex titulo avunculi, qui Petro de Carraria in charta datur. Foret haec coniectura ratio manifesta, si sciretur, quid per avunculum in charta subintelligi deberet. Verum cum avunculi nomen, uti erudite scribis, olim pro variis nepotibus aliisque consobrinis (uti erant fundator noster Albertus et alter Albertus de Saxonia episcopus Pataviensis, qui se mutuo avunculos <anchor xml:id="n8"/>in diplomatibus nostris vocant<anchor xml:id="n8e"/>) sumi soleret, remanet nuda coniectura. Hanc conaris, vir clarissime, evertere et putas pro Petro de Carraria forte<anchor xml:id="n9"/> legendum Petrum de Gara<anchor xml:id="n9e"/>. At ad hanc coniecturam plura requiruntur, ut probetur. Primo quod Nicolao de Gara fuerit filius nomine Petrus; secundo quod hic Petrus sit mortuus anno 1416 vel 1417, nam obitus hoc anno in charta recensetur; tertio quod adolescens fuerit ad summum 14 annorum. Nosti enim, quod post Sigismundi captivitatem, in qua fuit anno 1401, inita sint matrimonia. Quarto quod vel Petrus iste mortuus fuerit apud fundatorem in Ciliensi districtu vel vice versa Ludovicus obierit in Hungaria apud illum de Gara. Ab uno enim eodemque priore (quem Pletriacensem magis aestimo fuisse quam alium in Hungaria) obitus utriusque cum utriusque titulo necessario debuit capitulo generali tunc in Gallia celebrato insinuari, quod fieri vix potuisset, si unus in Hungaria et alter in Cilia obiissent. Nec dubito, quin Petrus ille, quicunque fuerit, ex solo intuitu Hermanni fundatoris in ordine post <choice><sic>obt.</sic><corr>obitum</corr></choice> obtinuerit beneficium, non autem ex propriis in ordinem meritis. Verosimilius proinde <anchor xml:id="n10"/>credo Petrum de Carraria<anchor xml:id="n10e"/>, tunc exulem et paterna expulsum pridem haereditate, in charta anni 1417 intelligi quam Petrum de Gara, cuius familia florebat tunc in Hungaria, si tamen aliquis Petrus de Gara extitit frater Ladislai de Gara. </ab>
-         <ab resp="#editor" xml:id="seg3">Sed rursus mihi contra Petrum de Carraria, pater clarissime, obicis <anchor xml:id="n11"/>Cavacium vestrum plures de Carrariis producentem et addentem omnes praeter Marsilium a Venetis circa 1406 extinctos<anchor xml:id="n11e"/>. Cavacii opus non legi; forsitan tamen plurima collegit ex Bergomensi in Supplemento chronicarum, in quo sparsim similia leguntur de Carrariis. Stemma hoc teste Bergomensi <anchor xml:id="n12"/>inchoavit Marsilius<anchor xml:id="n12e"/>, in quo deinceps numerat tres<anchor xml:id="n13"/> Franciscos, tres etiam Jacobos vel Jacobinos<anchor xml:id="n13e"/> et alios. De Francisco secundo et eius filiis ita loquitur Bergomensis: Franciscus autem postmodum strangulatus ignominiose sepultus fuit. Filii vero quo mortis genere perierint, non<del ana="#before">nescitur.</del> habetur. Superfuerant tamen ei duo filii, videlicet Ubertinus et Marsilius, qui ante captivitatem urbis ad Ethruscos confugerant.<anchor xml:id="n14"/> De Jacobo idem author dubitat<anchor xml:id="n14e"/>, frater fuerit an filius Francisci secundi, cui Veronam commisit, in qua Jacobus captus Venetis traditur. An Jacobus etiam occisus et hoc cum filiis fuerit, nondum legi apud Bergomensem. Uti apparet, multi tunc erant vel fratres vel consanguinei <pb n="2r"/> de Carraria, et ex his probabiliter etiam nepotes maioris et minoris aetatis; quos omnes a Venetis, nullo <choice><sic>habitu.</sic><corr>habito</corr></choice> erga puerilem vel infantilem aetatem respectu, fuisse deletos vix credo, tametsi patria et haeredidate expulsos non ambigam. Fugit Ubertinus, fugit et Marsilius (alter et iunior) ad Ethruscos, cur non et Petrus, cuiuscunque ex tot Carrariensibus filius, poterat in tenera adhuc aetate<anchor xml:id="n15"/> apud sororem in Cilia<anchor xml:id="n15e"/> salvari vel ab ipsis Venetis ad eam ob suam innocentiam transmitti? </ab>
-         <ab resp="#editor" xml:id="seg4">Sed tandem, quia de hoc Petro nihil certi habeo praeter id, quod ex chartis accepi, et in hoc proprie non sistit nostra quaestio, ad Hermannum fundatorem redeo et de illo quaestionem propono, quae eius uxor fuerit, ex qua Barbaram augustam procreavit? Ante resolutionem iterum te fratremque tuum convenio, ut meas tantummodo rationes audiatis et penitus nihil ad eas respondeatis, nisi quod absque labore et sine detrimento temporis (nolo enim vos in opere vestro ob intricatam hanc materiam impedire) forsitan vel invenistis vel casu inventuri eritis. Praesertim et illud me reddit valde sollicitum, Ulricus an fuerit Hermanni fundatoris filius vel ex filio nepos. Ultimum <anchor xml:id="n16"/>refert Aeneas<anchor xml:id="n16e"/> et plerique post illum, forsitan eius uti coaevi authoritate permoti, at primum pauciores. De quaestione ipsa tres veniunt in considerationem, an et quae<del ana="#after">et.</del> ex his fuerit uxor Hermanni: Catharina cognata Ludovici regis Hungariae, N. comitissa de Schaunberg et Elisabetha fundatrix. Elisabetham fuisse Hermanni coniugem certum est ex charta per omnes Cartusias statim ab eius obitu diffusa; sed dubium, de qua stirpe fuerit, et an unica Hermanni uxor et ex ipso Barbarae mater. Anonymam quandam de Schaunberg vult Hermanni uxorem fuisse Chronicon Ciliense, quod ego in dubium verto et magis arbitror hanc de Schauenberg ductam fuisse ab Hermanno I. et vice versa Catharinam ab Hermanno II., qui et hac mortua duxisse creditur Elisabetham. <anchor xml:id="n17"/>Coniecturas pro Catharina<anchor xml:id="n17e"/> desumo ex ipso Chronico Ciliensi. Prima est, quod Ludovicus rex Hungariae dederit Catharinam Hermanno cuidam Ciliensi in coniugem. Secunda, quod haec Catharina fuerit Ludovici regis cognata sive vulgo mumb und ein erb des königreichß. Tertia, quod matrimonium hoc initum<anchor xml:id="n18"/> putetur anno 1373<anchor xml:id="n18e"/>. Quarta, quod <anchor xml:id="n19"/>Joannes comes Ciliae, Hermanni primi filius, iam ducta uxore teste ipso Chronico sit mortuus anno 1372<anchor xml:id="n19e"/>; et consequenter saltem anno 1354 aut 1355 debuit fuisse natus Joannes, et ante annum 1354 matrimonium contrahi inter Hermannum primum et Catharinam ex supposito, quod eius uxor fuerit. Quod autem id factum <add place="above">non</add> sit nec fieri potuerit, inde videtur satis colligi, quod eo tempore nulla fuerit Catharina, quae Ludovici cognata et haeres regni et simul nubilis dici potuerit. Habuisse quidem asseritur <pb n="2v"/> Ludovicus sororem nomine Catharinam; <anchor xml:id="n20"/>sed haec uxor fuit Jodoci<anchor xml:id="n20e"/> marchionis Moraviae. Nostra, de qua quaerimus, Catharina creditur fuisse filia vel neptis Stephani regis Bosniae, cuius alteram filiam Elisabetham duxit<note place="foot" xml:id="d3e52162"><hi rend="italic" xml:space="preserve">	Elisabetham duxit: </hi>Wortfolge durch über der Zeile eingefügte Ziffern hergestellt. Danach durchgestrichen <hi rend="italic">m.</hi></note> Ludovicus memoratus; vel certe filia Stephani, qui frater fuit Ludovici saepedicti. Cuiuscunque autem Stephani filia dicatur fuisse Catharina, non potuit inire matrimonium anno 1353 cum Hermanno primo Ciliensi nec mater esse Joannis vel Hermanni secundi. Si enim Stephani regis Bosniae filia fuit, Ludovicus illam tradere non potuit anno 1353 Hermanno primo ex duplici causa: primo quia Ludovicus tunc nondum habebat Elisabetham, certam praefati regis Bosniae filiam; secundo quia adhuc vivebat Stephanus rex Bosniae et illi incumbebat elocare elocandas. Si filia Stephani, qui frater erat Ludovici saepedicti regis, fuit Catharina, res ad oculum patet Catharinam non potuisse tradi Hermanno primo, bene tamen Hermanno secundo. Fuit enim Stephanus Ludovici frater anno 1332 natus et circa annum 1350 uxoratus, cuius filia una Philippo Tarenti <choice><sic>principe.</sic><corr>principi</corr></choice> ad annum 1367 tradita legitur. An praeter hanc etiam filiam habuerit Catharinam nomine, nuspiam quidem legi; sed tamen, quia de filiabus principum multae apud scriptores passim omittuntur, habuisse reor. Huic enim prae omnibus <anchor xml:id="n21"/>titulus iste: ein mumb und erb des königreichß competebat<anchor xml:id="n21e"/>, cui et Ludovicus mortuo fratre Stephano de matrimonio aliave conditione providere poterat et debebat. Erat illa tanquam Stephani filia haeres Hungarici regni in defectu aliorum haeredeum, uti et nunc censentur <anchor xml:id="n22"/>Austriae haeredes<anchor xml:id="n22e"/><anchor xml:id="n23"/> archiducissae tam Leopoldinae quam Josephinae, praesertim in defectu, quem Deus avertat, Carolinarum prolium. Si ergo haec, uti auguror, filia fuit Stephani, qui frater erat Ludovici regis, necessario iungenda erat matrimonio non cum Hermanno primo, sed cum Hermanno secundo. Vix enim anno 1353 ex Stephano Ludovici regis fratre nasci potuit<anchor xml:id="n23e"/>, bene tamen tunc praeter propter nata Hermanno II. in uxorem anno 1373 tradi. </ab>
-         <ab resp="#editor" xml:id="seg5"><anchor xml:id="n24"/>Coniugium autem<anchor xml:id="n24e"/> anno 1373 esse contractum ex ipso Chronico Ciliensi colligitur. In eo enim (ut verba docent partim ipsiusmet Chronici <anchor xml:id="n25"/>in mea quinta observatione<anchor xml:id="n25e"/>, partim schematis genealogici)<anchor xml:id="n26"/> Carolus IV. imperator Ulricum et Hermannum fecit (verius confirmavit) comites, idque ad annum 1362<anchor xml:id="n26e"/>, uti schema praefatum, <anchor xml:id="n27"/>Valvasorius<anchor xml:id="n27e"/> et alii tradunt. Nec haec confirmatio, utpote post mortem Friderici primi Ciliensium <anchor xml:id="n28"/>comitis a Ludovico Bavaro creati<anchor xml:id="n28e"/> facta, multo<note place="foot" xml:id="d3e52176">Mit Verweiszeichen am linken Blattrand eingefügt.</note> citius fieri poterat, cum Fridericus iste obierit anno 1359 et post eius mortem confirmatio et peti et dari potuit. Error igitur in Chronico<del ana="#after">duplex, primus.</del> <anchor xml:id="n29"/>quoad annum 1353<anchor xml:id="n29e"/>, quo<del ana="#before">alter quo.</del> dicuntur, sed altero errore, Albertus et Leopoldus <pb n="3r"/> duces Austriae suum dedisse consensum; nisi dixerimus hos anno 1373 consensum dedisse et approbasse titulum comitis, quem Ciliensibus confirmaverat Carolus IV. Constat autem ex variis documentis Albertum et Leopoldum fratres et duces Austriae circa illud tempus consuevisse confirmanda vel danda privilegia sub utriusque nomine roborare. Si ergo, uti coniectura satis docet, anno 1373 Albertus et Leopoldus approbarunt creationem Ciliensium in comites, sequitur et eodem anno matrimonium inter Catharinam et Hermannum II. initum fuisse; aut certe author Chronici Ciliensis illa, quae narrat, narrat ordine praepostero. Crederem authorem huius Chronici vera quidem in substantia narravisse, sed non illa illi applicasse, cui debebat. Cuius malae applicationis causa esse potuit, quod post mortem Ulrici primum scripserit Chronicon. Nam et illius mortem refert et addit haec formalia: Die regierung der graffen von Cilli hat nicht länger gewehrt alß 95 jahr. Obiit Ulricus 1456 in Novembri, ergo ex mente authoris Chronici regimen inceperunt anno 1361 vel 1362. </ab>
-         <ab resp="#editor" xml:id="seg6">Pro confirmatione coniecturae meae valebit forsan exemplum a pari desumptum. De Jagellone sive Vladislao rege Poloniae referunt scriptores Polonici Jagellonem mortua Hedwige timuisse, ne regno privaretur; unde ei pro se stabiliendo suasum, ut Annam, Wilhelmi Ciliensis filiam ex<del ana="#after">filia.</del> Anna Casimiri regis Poloniae filia genitam, duceret in uxorem. Fecit illud Jagello et se stabilivit.<anchor xml:id="n30"/> Mortua Maria<anchor xml:id="n30e"/> plura sustinere debuit et ipse Sigismundus, etiam in carcerem coniectus. Rex erat et quidem imperatoris filius, et tamen non nisi comitis filiam duxit coniugem. Quare? Mihi licet certitudo desit, adest tamen suspicio id ideo factum, ut se in regno Hungariae stabiliret mediante Barbara tanquam Catharinae (quae haeres fuerat nata in regno) ex Hermanno II. Ciliensi filia. Hermannum II. duxisse coniugem vel saltem potuisse ducere <add place="above">anno 1373</add> ex eo colligitur, quod Joannes Hermanni frater ducta iam uxore sine prole obierat anno 1372, unde per Hermannum stemma manebat propagandum. Credo igitur verosimile esse omnino, quod Hermannus II. duxerit anno 1373 in uxorem Catharinam Ludovici regis Hungariae cognatam et ex ea duas procreaverit filias, unam Nicolao de Gara et alteram Sigismundo caesari desponsatas. Itemque, quod mortua Catharina Hermannus extra matrimonium susceperit Hermannum episcopum Frisingensem, et tandem ex ducta Elisabetha reliquas proles. Illam autem de Schauenberg fore relinquendam Hermanno primo arbitror, idque tamdiu, donec aliquid certius in medium producatur, salvo semper in omnibus meliori iudicio. <pb n="3v"/> Restarent observationes in schema Ciliensium praesertim quoad ea, quae in illo referuntur de Friderico II. et de Ulrico eorumque, maxime Friderici, meritis in varias <sic>religionis</sic><note place="foot" xml:id="d3e52208">Es fehlt mindestens ein Hauptwort zu<hi rend="italic" xml:space="preserve"> varias</hi>; denkbar wäre etwa<hi rend="italic" xml:space="preserve"> domus.</hi></note>. Sed quia et tempus breve et taedium longum in perplexa materia, ab ulteriori scriptione abstineo et haec scripta examini subicio, tali tamen, ut illud sine labore temporisque iactura fiat. Vale et recte vive cum fratre tuo, mei in orationibus vestris memores.</ab>
+         <ab resp="#editor" xml:id="seg2">Harum prima est, quod in chartis pro matre et non pro coniuge Hermanni fiant preces contra praxim ordinis; altera de episcopo Frisingensi, de quo non mirabar N.B. potuisse ex adulterio nasci, sed longe aliud, nempe quod in adulterio natus fuerit in episcopum assumptus et quidem adhuc iuvenis, itemque non regis aut principis, sed comitis tantummodo filius, qui comes in episcopatu Frisingensi sub ducatu, ni fallor, ducum Bavariae nullum ius videtur habuisse, ut, quem vellet, faceret episcopum. Circumstantiae hae augent casum. <pb n="1v"/> Tertia est ex titulo avunculi, qui Petro de Carraria in charta datur. Foret haec coniectura ratio manifesta, si sciretur, quid per avunculum in charta subintelligi deberet. Verum cum avunculi nomen, uti erudite scribis, olim pro variis nepotibus aliisque consobrinis (uti erant fundator noster Albertus et alter Albertus de Saxonia episcopus Pataviensis, qui se mutuo avunculos <anchor xml:id="n8"/>in diplomatibus nostris vocant<anchor xml:id="n8e"/>) sumi soleret, remanet nuda coniectura. Hanc conaris, vir clarissime, evertere et putas pro Petro de Carraria forte<anchor xml:id="n9"/> legendum Petrum de Gara<anchor xml:id="n9e"/>. At ad hanc coniecturam plura requiruntur, ut probetur. Primo quod Nicolao de Gara fuerit filius nomine Petrus; secundo quod hic Petrus sit mortuus anno 1416 vel 1417, nam obitus hoc anno in charta recensetur; tertio quod adolescens fuerit ad summum 14 annorum. Nosti enim, quod post Sigismundi captivitatem, in qua fuit anno 1401, inita sint matrimonia. Quarto quod vel Petrus iste mortuus fuerit apud fundatorem in Ciliensi districtu vel vice versa Ludovicus obierit in Hungaria apud illum de Gara. Ab uno enim eodemque priore (quem Pletriacensem magis aestimo fuisse quam alium in Hungaria) obitus utriusque cum utriusque titulo necessario debuit capitulo generali tunc in Gallia celebrato insinuari, quod fieri vix potuisset, si unus in Hungaria et alter in Cilia obiissent. Nec dubito, quin Petrus ille, quicunque fuerit, ex solo intuitu Hermanni fundatoris in ordine post <choice>
+               <sic>obt.</sic>
+               <corr>obitum</corr>
+            </choice> obtinuerit beneficium, non autem ex propriis in ordinem meritis. Verosimilius proinde <anchor xml:id="n10"/>credo Petrum de Carraria<anchor xml:id="n10e"/>, tunc exulem et paterna expulsum pridem haereditate, in charta anni 1417 intelligi quam Petrum de Gara, cuius familia florebat tunc in Hungaria, si tamen aliquis Petrus de Gara extitit frater Ladislai de Gara. </ab>
+         <ab resp="#editor" xml:id="seg3">Sed rursus mihi contra Petrum de Carraria, pater clarissime, obicis <anchor xml:id="n11"/>Cavacium vestrum plures de Carrariis producentem et addentem omnes praeter Marsilium a Venetis circa 1406 extinctos<anchor xml:id="n11e"/>. Cavacii opus non legi; forsitan tamen plurima collegit ex Bergomensi in Supplemento chronicarum, in quo sparsim similia leguntur de Carrariis. Stemma hoc teste Bergomensi <anchor xml:id="n12"/>inchoavit Marsilius<anchor xml:id="n12e"/>, in quo deinceps numerat tres<anchor xml:id="n13"/> Franciscos, tres etiam Jacobos vel Jacobinos<anchor xml:id="n13e"/> et alios. De Francisco secundo et eius filiis ita loquitur Bergomensis: Franciscus autem postmodum strangulatus ignominiose sepultus fuit. Filii vero quo mortis genere perierint, non<del ana="#before">nescitur.</del> habetur. Superfuerant tamen ei duo filii, videlicet Ubertinus et Marsilius, qui ante captivitatem urbis ad Ethruscos confugerant.<anchor xml:id="n14"/> De Jacobo idem author dubitat<anchor xml:id="n14e"/>, frater fuerit an filius Francisci secundi, cui Veronam commisit, in qua Jacobus captus Venetis traditur. An Jacobus etiam occisus et hoc cum filiis fuerit, nondum legi apud Bergomensem. Uti apparet, multi tunc erant vel fratres vel consanguinei <pb n="2r"/> de Carraria, et ex his probabiliter etiam nepotes maioris et minoris aetatis; quos omnes a Venetis, nullo <choice>
+               <sic>habitu.</sic>
+               <corr>habito</corr>
+            </choice> erga puerilem vel infantilem aetatem respectu, fuisse deletos vix credo, tametsi patria et haeredidate expulsos non ambigam. Fugit Ubertinus, fugit et Marsilius (alter et iunior) ad Ethruscos, cur non et Petrus, cuiuscunque ex tot Carrariensibus filius, poterat in tenera adhuc aetate<anchor xml:id="n15"/> apud sororem in Cilia<anchor xml:id="n15e"/> salvari vel ab ipsis Venetis ad eam ob suam innocentiam transmitti? </ab>
+         <ab resp="#editor" xml:id="seg4">Sed tandem, quia de hoc Petro nihil certi habeo praeter id, quod ex chartis accepi, et in hoc proprie non sistit nostra quaestio, ad Hermannum fundatorem redeo et de illo quaestionem propono, quae eius uxor fuerit, ex qua Barbaram augustam procreavit? Ante resolutionem iterum te fratremque tuum convenio, ut meas tantummodo rationes audiatis et penitus nihil ad eas respondeatis, nisi quod absque labore et sine detrimento temporis (nolo enim vos in opere vestro ob intricatam hanc materiam impedire) forsitan vel invenistis vel casu inventuri eritis. Praesertim et illud me reddit valde sollicitum, Ulricus an fuerit Hermanni fundatoris filius vel ex filio nepos. Ultimum <anchor xml:id="n16"/>refert Aeneas<anchor xml:id="n16e"/> et plerique post illum, forsitan eius uti coaevi authoritate permoti, at primum pauciores. De quaestione ipsa tres veniunt in considerationem, an et quae<del ana="#after">et.</del> ex his fuerit uxor Hermanni: Catharina cognata Ludovici regis Hungariae, N. comitissa de Schaunberg et Elisabetha fundatrix. Elisabetham fuisse Hermanni coniugem certum est ex charta per omnes Cartusias statim ab eius obitu diffusa; sed dubium, de qua stirpe fuerit, et an unica Hermanni uxor et ex ipso Barbarae mater. Anonymam quandam de Schaunberg vult Hermanni uxorem fuisse Chronicon Ciliense, quod ego in dubium verto et magis arbitror hanc de Schauenberg ductam fuisse ab Hermanno I. et vice versa Catharinam ab Hermanno II., qui et hac mortua duxisse creditur Elisabetham. <anchor xml:id="n17"/>Coniecturas pro Catharina<anchor xml:id="n17e"/> desumo ex ipso Chronico Ciliensi. Prima est, quod Ludovicus rex Hungariae dederit Catharinam Hermanno cuidam Ciliensi in coniugem. Secunda, quod haec Catharina fuerit Ludovici regis cognata sive vulgo mumb und ein erb des königreichß. Tertia, quod matrimonium hoc initum<anchor xml:id="n18"/> putetur anno 1373<anchor xml:id="n18e"/>. Quarta, quod <anchor xml:id="n19"/>Joannes comes Ciliae, Hermanni primi filius, iam ducta uxore teste ipso Chronico sit mortuus anno 1372<anchor xml:id="n19e"/>; et consequenter saltem anno 1354 aut 1355 debuit fuisse natus Joannes, et ante annum 1354 matrimonium contrahi inter Hermannum primum et Catharinam ex supposito, quod eius uxor fuerit. Quod autem id factum <add place="above">non</add> sit nec fieri potuerit, inde videtur satis colligi, quod eo tempore nulla fuerit Catharina, quae Ludovici cognata et haeres regni et simul nubilis dici potuerit. Habuisse quidem asseritur <pb n="2v"/> Ludovicus sororem nomine Catharinam; <anchor xml:id="n20"/>sed haec uxor fuit Jodoci<anchor xml:id="n20e"/> marchionis Moraviae. Nostra, de qua quaerimus, Catharina creditur fuisse filia vel neptis Stephani regis Bosniae, cuius alteram filiam Elisabetham duxit<note place="foot" xml:id="d3e52162">
+               <hi rend="italic" xml:space="preserve">	Elisabetham duxit: </hi>Wortfolge durch über der Zeile eingefügte Ziffern hergestellt. Danach durchgestrichen <hi rend="italic">m.</hi>
+            </note> Ludovicus memoratus; vel certe filia Stephani, qui frater fuit Ludovici saepedicti. Cuiuscunque autem Stephani filia dicatur fuisse Catharina, non potuit inire matrimonium anno 1353 cum Hermanno primo Ciliensi nec mater esse Joannis vel Hermanni secundi. Si enim Stephani regis Bosniae filia fuit, Ludovicus illam tradere non potuit anno 1353 Hermanno primo ex duplici causa: primo quia Ludovicus tunc nondum habebat Elisabetham, certam praefati regis Bosniae filiam; secundo quia adhuc vivebat Stephanus rex Bosniae et illi incumbebat elocare elocandas. Si filia Stephani, qui frater erat Ludovici saepedicti regis, fuit Catharina, res ad oculum patet Catharinam non potuisse tradi Hermanno primo, bene tamen Hermanno secundo. Fuit enim Stephanus Ludovici frater anno 1332 natus et circa annum 1350 uxoratus, cuius filia una Philippo Tarenti <choice>
+               <sic>principe.</sic>
+               <corr>principi</corr>
+            </choice> ad annum 1367 tradita legitur. An praeter hanc etiam filiam habuerit Catharinam nomine, nuspiam quidem legi; sed tamen, quia de filiabus principum multae apud scriptores passim omittuntur, habuisse reor. Huic enim prae omnibus <anchor xml:id="n21"/>titulus iste: ein mumb und erb des königreichß competebat<anchor xml:id="n21e"/>, cui et Ludovicus mortuo fratre Stephano de matrimonio aliave conditione providere poterat et debebat. Erat illa tanquam Stephani filia haeres Hungarici regni in defectu aliorum haeredeum, uti et nunc censentur <anchor xml:id="n22"/>Austriae haeredes<anchor xml:id="n22e"/>
+            <anchor xml:id="n23"/> archiducissae tam Leopoldinae quam Josephinae, praesertim in defectu, quem Deus avertat, Carolinarum prolium. Si ergo haec, uti auguror, filia fuit Stephani, qui frater erat Ludovici regis, necessario iungenda erat matrimonio non cum Hermanno primo, sed cum Hermanno secundo. Vix enim anno 1353 ex Stephano Ludovici regis fratre nasci potuit<anchor xml:id="n23e"/>, bene tamen tunc praeter propter nata Hermanno II. in uxorem anno 1373 tradi. </ab>
+         <ab resp="#editor" xml:id="seg5">
+            <anchor xml:id="n24"/>Coniugium autem<anchor xml:id="n24e"/> anno 1373 esse contractum ex ipso Chronico Ciliensi colligitur. In eo enim (ut verba docent partim ipsiusmet Chronici <anchor xml:id="n25"/>in mea quinta observatione<anchor xml:id="n25e"/>, partim schematis genealogici)<anchor xml:id="n26"/> Carolus IV. imperator Ulricum et Hermannum fecit (verius confirmavit) comites, idque ad annum 1362<anchor xml:id="n26e"/>, uti schema praefatum, <anchor xml:id="n27"/>Valvasorius<anchor xml:id="n27e"/> et alii tradunt. Nec haec confirmatio, utpote post mortem Friderici primi Ciliensium <anchor xml:id="n28"/>comitis a Ludovico Bavaro creati<anchor xml:id="n28e"/> facta, multo<note place="foot" xml:id="d3e52176">Mit Verweiszeichen am linken Blattrand eingefügt.</note> citius fieri poterat, cum Fridericus iste obierit anno 1359 et post eius mortem confirmatio et peti et dari potuit. Error igitur in Chronico<del ana="#after">duplex, primus.</del>
+            <anchor xml:id="n29"/>quoad annum 1353<anchor xml:id="n29e"/>, quo<del ana="#before">alter quo.</del> dicuntur, sed altero errore, Albertus et Leopoldus <pb n="3r"/> duces Austriae suum dedisse consensum; nisi dixerimus hos anno 1373 consensum dedisse et approbasse titulum comitis, quem Ciliensibus confirmaverat Carolus IV. Constat autem ex variis documentis Albertum et Leopoldum fratres et duces Austriae circa illud tempus consuevisse confirmanda vel danda privilegia sub utriusque nomine roborare. Si ergo, uti coniectura satis docet, anno 1373 Albertus et Leopoldus approbarunt creationem Ciliensium in comites, sequitur et eodem anno matrimonium inter Catharinam et Hermannum II. initum fuisse; aut certe author Chronici Ciliensis illa, quae narrat, narrat ordine praepostero. Crederem authorem huius Chronici vera quidem in substantia narravisse, sed non illa illi applicasse, cui debebat. Cuius malae applicationis causa esse potuit, quod post mortem Ulrici primum scripserit Chronicon. Nam et illius mortem refert et addit haec formalia: Die regierung der graffen von Cilli hat nicht länger gewehrt alß 95 jahr. Obiit Ulricus 1456 in Novembri, ergo ex mente authoris Chronici regimen inceperunt anno 1361 vel 1362. </ab>
+         <ab resp="#editor" xml:id="seg6">Pro confirmatione coniecturae meae valebit forsan exemplum a pari desumptum. De Jagellone sive Vladislao rege Poloniae referunt scriptores Polonici Jagellonem mortua Hedwige timuisse, ne regno privaretur; unde ei pro se stabiliendo suasum, ut Annam, Wilhelmi Ciliensis filiam ex<del ana="#after">filia.</del> Anna Casimiri regis Poloniae filia genitam, duceret in uxorem. Fecit illud Jagello et se stabilivit.<anchor xml:id="n30"/> Mortua Maria<anchor xml:id="n30e"/> plura sustinere debuit et ipse Sigismundus, etiam in carcerem coniectus. Rex erat et quidem imperatoris filius, et tamen non nisi comitis filiam duxit coniugem. Quare? Mihi licet certitudo desit, adest tamen suspicio id ideo factum, ut se in regno Hungariae stabiliret mediante Barbara tanquam Catharinae (quae haeres fuerat nata in regno) ex Hermanno II. Ciliensi filia. Hermannum II. duxisse coniugem vel saltem potuisse ducere <add place="above">anno 1373</add> ex eo colligitur, quod Joannes Hermanni frater ducta iam uxore sine prole obierat anno 1372, unde per Hermannum stemma manebat propagandum. Credo igitur verosimile esse omnino, quod Hermannus II. duxerit anno 1373 in uxorem Catharinam Ludovici regis Hungariae cognatam et ex ea duas procreaverit filias, unam Nicolao de Gara et alteram Sigismundo caesari desponsatas. Itemque, quod mortua Catharina Hermannus extra matrimonium susceperit Hermannum episcopum Frisingensem, et tandem ex ducta Elisabetha reliquas proles. Illam autem de Schauenberg fore relinquendam Hermanno primo arbitror, idque tamdiu, donec aliquid certius in medium producatur, salvo semper in omnibus meliori iudicio. <pb n="3v"/> Restarent observationes in schema Ciliensium praesertim quoad ea, quae in illo referuntur de Friderico II. et de Ulrico eorumque, maxime Friderici, meritis in varias <sic>religionis</sic>
+            <note place="foot" xml:id="d3e52208">Es fehlt mindestens ein Hauptwort zu<hi rend="italic" xml:space="preserve"> varias</hi>; denkbar wäre etwa<hi rend="italic" xml:space="preserve"> domus.</hi>
+            </note>. Sed quia et tempus breve et taedium longum in perplexa materia, ab ulteriori scriptione abstineo et haec scripta examini subicio, tali tamen, ut illud sine labore temporisque iactura fiat. Vale et recte vive cum fratre tuo, mei in orationibus vestris memores.</ab>
          <closer>Gemnici 1718 die 5. Februarii.</closer>
       </body>
    </text>

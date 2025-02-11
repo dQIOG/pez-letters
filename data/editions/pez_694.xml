@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="694" xml:id="pez-0694">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Joachim Edlinger an Bernhard Pez. 1716-11-28. Seitenstetten.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">694</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -76,29 +88,32 @@
                <ptr type="mentions" target="letter:693"/>
             </correspContext>
          </correspDesc>
-         <textClass><keywords>
-            <term ref="index:d14380e228">Acta eruditorum. Leipzig 1682–1732</term>
-            <term ref="index:d14380e1216">*Am Anger, Johann</term>
-            <term ref="index:d14380e5729">Biberbach</term>
-            <term ref="index:d14380e10733">Edlinger, Joachim ; *Werk über richtige Aussprache</term>
-            <term ref="index:d14380e10759">Edlinger, Joachim ; *Buchhändler, mit denen Edlinger zu tun hat</term>
-            <term ref="index:d14380e10769">Edlinger, Joachim ; *Zwei benediktinische Kritiker der Arbeiten von BP und HP, im Herbst 1716 in Kontakt mit JE</term>
-            <term ref="index:d14380e13248">Freudenpichl, Ambros</term>
-            <term ref="index:d14380e14516">Garsten</term>
-            <term ref="index:d14380e14554">Garsten ; *Kritiker der Arbeiten BPs und HPs 1716</term>
-            <term ref="index:d14380e19053">Hueber, Udiscalk</term>
-            <term ref="index:d14380e23222">Krinner, Roman</term>
-            <term ref="index:d14380e23241">Krinner, Roman ; *Katalog von Werken in der Tegernseer Bibliothek. Ms</term>
-            <term ref="index:d14380e23973">Latein</term>
-            <term ref="index:d14380e24317">Leipzig</term>
-            <term ref="index:d14380e26892">Maße, Gewichte, Währung ; Gulden</term>
-            <term ref="index:d14380e27569">Medizin, medizinische Begriffe, gesundheitliche Belange ; Galle ; Schwarze Galle, Melancholie</term>
-            <term ref="index:d14380e27728">Medizin, medizinische Begriffe, gesundheitliche Belange ; Schlaf</term>
-            <term ref="index:d14380e28577">Melk ; *Kritiker der Arbeiten von BP und HP 1716, der missgünstige Nachrichten in anderen Klöstern verbreitet</term>
-            <term ref="index:d14380e34157">Pez, Bernhard ; Akademie- bzw. Kongregationspläne 1717/18</term>
-            <term ref="index:d14380e34537">Pez, Hieronymus</term>
-            <term ref="index:d14380e40413">Seitenstetten</term>
-            <term ref="index:d14380e45159">Weistrach</term></keywords></textClass>
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e228">Acta eruditorum. Leipzig 1682–1732</term>
+               <term ref="index:d14380e1216">*Am Anger, Johann</term>
+               <term ref="index:d14380e5729">Biberbach</term>
+               <term ref="index:d14380e10733">Edlinger, Joachim ; *Werk über richtige Aussprache</term>
+               <term ref="index:d14380e10759">Edlinger, Joachim ; *Buchhändler, mit denen Edlinger zu tun hat</term>
+               <term ref="index:d14380e10769">Edlinger, Joachim ; *Zwei benediktinische Kritiker der Arbeiten von BP und HP, im Herbst 1716 in Kontakt mit JE</term>
+               <term ref="index:d14380e13248">Freudenpichl, Ambros</term>
+               <term ref="index:d14380e14516">Garsten</term>
+               <term ref="index:d14380e14554">Garsten ; *Kritiker der Arbeiten BPs und HPs 1716</term>
+               <term ref="index:d14380e19053">Hueber, Udiscalk</term>
+               <term ref="index:d14380e23222">Krinner, Roman</term>
+               <term ref="index:d14380e23241">Krinner, Roman ; *Katalog von Werken in der Tegernseer Bibliothek. Ms</term>
+               <term ref="index:d14380e23973">Latein</term>
+               <term ref="index:d14380e24317">Leipzig</term>
+               <term ref="index:d14380e26892">Maße, Gewichte, Währung ; Gulden</term>
+               <term ref="index:d14380e27569">Medizin, medizinische Begriffe, gesundheitliche Belange ; Galle ; Schwarze Galle, Melancholie</term>
+               <term ref="index:d14380e27728">Medizin, medizinische Begriffe, gesundheitliche Belange ; Schlaf</term>
+               <term ref="index:d14380e28577">Melk ; *Kritiker der Arbeiten von BP und HP 1716, der missgünstige Nachrichten in anderen Klöstern verbreitet</term>
+               <term ref="index:d14380e34157">Pez, Bernhard ; Akademie- bzw. Kongregationspläne 1717/18</term>
+               <term ref="index:d14380e34537">Pez, Hieronymus</term>
+               <term ref="index:d14380e40413">Seitenstetten</term>
+               <term ref="index:d14380e45159">Weistrach</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">JE wundert sich öfter, dass gerade jene, die ungern auch nur einen Moment ohne gelehrte Tätigkeit verstreichen lassen, stets durch viele anderweitige Aufgaben an dieser gehindert werden, während andere, auch unter den Mönchen, sich die Langeweile mit <rs ref="index:d14380e27728">Schlaf</rs> oder Spiel vertreiben. Dass auch HP von diesem Los ereilt worden ist, hat JE erst aus BPs <ref type="letter" target="letter:692">692</ref>, dann aus HPs eigenem Brief <ref type="letter" target="letter:693">693</ref> erfahren.</p>
             <p corresp="#seg2">So gratuliert JE zur neu gewonnenen Muße HPs. Er selbst ist in einer weniger glücklichen Lage, da er, kaum aus <rs ref="index:d14380e45159">Weistrach</rs> zurückgekehrt, mit der Versorgung der Pfarre <rs ref="index:d14380e5729">Biberbach</rs> betraut worden ist; dies wird jedoch nur mehr für kurze Zeit andauern, wie er aus der fortschreitenden Genesung von <rs ref="index:d14380e19053">Udiscalk Hueber</rs> schließt.</p>
@@ -108,7 +123,7 @@
             <p corresp="#seg6">JE ist sehr interessiert an der von BP angebotenen Zusendung von Gelehrtenbriefen, ebenso an der des gewünschten Buches. BP soll weiterhin durch gelehrte Arbeit seinen Namen berühmt machen; wer darin Hochmut erkennen will, zeigt nur seinen Neid. Dies ist jedoch zu ertragen wie das Kläffen winziger Hunde, die Gäste anbellen, doch die wilden Tiere nicht anrühren. Wenn sie ein echtes Bedürfnis nach Gelehrsamkeit besäßen, würden BPs Kritiker sich selbst an Großtaten der Polymathie versuchen, anstatt ihr Leben nach Art der Käfer im scholastischen Staub zuzubringen.</p>
             <p corresp="#seg7">Der <rs ref="index:d14380e14516">Garstener</rs> Abt <rs ref="index:d14380e13248">Ambros Freudenpichl</rs> erwartet täglich aus <rs ref="index:d14380e24317">Leipzig</rs> die lateinischen <rs ref="index:d14380e228">„Acta eruditorum“</rs>. Wenn sie auch derjenige liest, der BP und HP für „Kompilatoren“ hält, wird er seine Meinung darin keineswegs bestätigt finden. In den „Acta eruditorum“ werden die Verfechter der historischen und philologischen Gelehrsamkeit sowie der Quellenkritik gewürdigt, scholastischer Unsinn (scholasticae tricae) als Scharlatanerie aufgefasst. So wird sich der <rs ref="index:d14380e28577">Kritiker</rs> von BP und HP fragen müssen, ob sein Urteilsvermögen getrübt ist oder das der dortigen Autoren. Sicher wird es das seine sein, wenn er sich nicht zum Gespött der Vernünftigen (saniores) machen will, indem er gegen einen Sturzbach schwimmt. JE ermuntert BP, in der Einleitung zu einem seiner Werke solche Leute zu tadeln. Der fragliche <rs ref="index:d14380e27569">Melancholiker</rs> bezieht seine ungüstige Meinung vom Hochmut BPs und HPs, wie JE schon einmal angedeutet hat, von einem Melker. JE will für ihn keine Fürsprache leisten, wohl aber für einen anderen, der öffentlich (in arena) seinen Fehler eingeräumt hat und zum Bewunderer der Brüder geworden ist.</p>
             <p corresp="#seg8">JE würde länger schreiben, wenn ihn nicht die Notwendigkeit des <rs ref="index:d14380e27728">Schlafes</rs> davon abhalten würde – den Großteil seines Briefes hat er bei künstlichem Licht (lucerna) geschrieben, weil er am Folgetag verreisen muss. BP soll <rs ref="index:d14380e34537">HP</rs> grüßen und <rs ref="index:d14380e1216">Johann am Anger</rs>, wenn dieser kommt, auch zu JE schicken.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -130,7 +145,13 @@
                   Steinfellner war zudem Wunderlichs Vorgänger in Weistrach gewesen: ebd. 125–127.
                   Ob die offenbar guten Beziehungen Seitenstettens und JEs zu Götz und Steinfellner
                   in einem Zusammenhang mit JEs Einsatz in Weistrach zu sehen sind, ist nicht näher
-                  festzustellen; dazu vgl. <ref type="letter" target="letter:504">504</ref> <ref target="letter:504#seg1">1</ref>, <ref type="letter" target="letter:513">513</ref> <ref target="letter:513#seg4">4</ref>, <ref type="letter" target="letter:841">841</ref> <ref target="letter:841#seg1">1</ref>, <ref type="letter" target="letter:843">843</ref> <ref target="letter:843#seg4">4</ref>, <ref type="letter" target="letter:987">987 </ref><ref target="letter:987 #seg2">2</ref>, <ref type="letter" target="letter:1010">1010</ref> <ref target="letter:1010#seg4">4</ref>.</p>
+                  festzustellen; dazu vgl. <ref type="letter" target="letter:504">504</ref>
+               <ref target="letter:504#seg1">1</ref>, <ref type="letter" target="letter:513">513</ref>
+               <ref target="letter:513#seg4">4</ref>, <ref type="letter" target="letter:841">841</ref>
+               <ref target="letter:841#seg1">1</ref>, <ref type="letter" target="letter:843">843</ref>
+               <ref target="letter:843#seg4">4</ref>, <ref type="letter" target="letter:987">987 </ref>
+               <ref target="letter:987 #seg2">2</ref>, <ref type="letter" target="letter:1010">1010</ref>
+               <ref target="letter:1010#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned> parochiam Biberbacensem</mentioned>
@@ -157,13 +178,13 @@
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
             <mentioned> expensis hoc ... anno</mentioned>
             <p>Vgl. <ref type="letter" target="letter:843">843</ref>
-                  <ref target="letter:843#seg5">5</ref>.</p>
+               <ref target="letter:843#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n7'), left('n7e'))" n="7" anchored="false" corresp="#seg4">
             <mentioned>consortio ... domus iungat</mentioned>
             <p>Die Bemerkungen könnten mit
                   Akademieplänen BPs in Verbindung stehen: vgl. <ref type="letter" target="letter:868">868</ref>
-                  <ref target="letter:868#seg1">1</ref> sowie Einleitung, Abschnitt I.5.</p>
+               <ref target="letter:868#seg1">1</ref> sowie Einleitung, Abschnitt I.5.</p>
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
             <mentioned>ex Krineriano catalogo</mentioned>
@@ -171,22 +192,32 @@
                   Roman Krinner setzte erst 1717 ein und hatte dann zumeist Abschriften aus
                   Tegernseer Handschriften zum Gegenstand: vgl. 818, 820, 834. Der Tegernseer Abt
                   Petrus von Guetrather hatte im Oktober 1716 mit einigen seiner Konventualen Melk
-                  einen Besuch abgestattet: vgl. <ref type="letter" target="letter:688">688</ref> <ref target="letter:688#seg2">2</ref>. Es ließe
+                  einen Besuch abgestattet: vgl. <ref type="letter" target="letter:688">688</ref>
+               <ref target="letter:688#seg2">2</ref>. Es ließe
                   sich mutmaßen, dass bei dieser Gelegenheit ein von Krinner angefertigter Katalog
                   von Druckwerken der Tegernseer Bibliothek übergeben wurde, aus dem JE für BP,
                   möglicherweise beauftragt durch 692, einen Auszug anfertigte. Eine Ergänzung
-                  lieferte JE mit <ref type="letter" target="letter:825">825</ref> <ref target="letter:825#seg2">2</ref>. Die zwei mit JE in
+                  lieferte JE mit <ref type="letter" target="letter:825">825</ref>
+               <ref target="letter:825#seg2">2</ref>. Die zwei mit JE in
                   Verbindung stehenden bibliographischen Notizensammlungen im Melker Pez-Nachlass
                   dürften eher nicht in Frage kommen, da in beiden auch in beträchtlicher Zahl Werke
                   von Nicht-Benediktinern angeführt werden: StiA Melk, Karton 85 Varia 25, Fasz. 1,
-                  Nr. 15 und Nr. 41; vgl. <ref type="letter" target="letter:640">640</ref> <ref target="letter:640#seg2">2</ref>.</p>
+                  Nr. 15 und Nr. 41; vgl. <ref type="letter" target="letter:640">640</ref>
+               <ref target="letter:640#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
             <mentioned> bibliopola ille</mentioned>
             <p>Von wem JE hier spricht, ist nicht zu bestimmen; zu
-                  seinen Verbindungen zu diversen Buchhandels- und Verlagshäusern vgl. <ref type="letter" target="letter:513">513</ref> <ref target="letter:513#seg4">4</ref>, <ref type="letter" target="letter:841">841</ref> <ref target="letter:841#seg4">4</ref>, <ref type="letter" target="letter:843">843</ref> <ref target="letter:843#seg5">5</ref>, <ref type="letter" target="letter:900">900</ref> <ref target="letter:900#seg9">9</ref>, <ref type="letter" target="letter:974">974</ref> <ref target="letter:974#seg1">1</ref>, <ref type="letter" target="letter:1010">1010</ref> <ref target="letter:1010#seg1">1</ref>. –
+                  seinen Verbindungen zu diversen Buchhandels- und Verlagshäusern vgl. <ref type="letter" target="letter:513">513</ref>
+               <ref target="letter:513#seg4">4</ref>, <ref type="letter" target="letter:841">841</ref>
+               <ref target="letter:841#seg4">4</ref>, <ref type="letter" target="letter:843">843</ref>
+               <ref target="letter:843#seg5">5</ref>, <ref type="letter" target="letter:900">900</ref>
+               <ref target="letter:900#seg9">9</ref>, <ref type="letter" target="letter:974">974</ref>
+               <ref target="letter:974#seg1">1</ref>, <ref type="letter" target="letter:1010">1010</ref>
+               <ref target="letter:1010#seg1">1</ref>. –
                   Es ist freilich nicht ersichtlich, wie ein Buchhändler Angaben über Professklöster
-                  eruieren sollte. Im Lichte der weiteren Angaben JEs zu diesem Vorgang in <ref type="letter" target="letter:825">825</ref> <ref target="letter:825#seg2">2</ref> erscheint es plausibler, dass der Händler
+                  eruieren sollte. Im Lichte der weiteren Angaben JEs zu diesem Vorgang in <ref type="letter" target="letter:825">825</ref>
+               <ref target="letter:825#seg2">2</ref> erscheint es plausibler, dass der Händler
                   lediglich eine Bitte um Ergänzung an Krinner übermitteln sollte.</p>
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg6">
@@ -205,10 +236,13 @@
                   hier der Abt selbst angesprochen wird, der zu BP in gutem Verhältnis gestanden zu
                   sein scheint: vgl. 633. Ob ein Zusammenhang mit einem zuvor beabsichtigten
                   Herantreten an das Kloster durch eine LE 3 besteht, ist nicht sicher
-                  festzustellen, wenn auch plausibel: vgl. <ref type="letter" target="letter:504">504 </ref><ref target="letter:504 #seg8">8</ref>.
-                  Festzuhalten ist weiters, dass sich JE in <ref type="letter" target="letter:504">504</ref> <ref target="letter:504#seg5">5</ref>
+                  festzustellen, wenn auch plausibel: vgl. <ref type="letter" target="letter:504">504 </ref>
+               <ref target="letter:504 #seg8">8</ref>.
+                  Festzuhalten ist weiters, dass sich JE in <ref type="letter" target="letter:504">504</ref>
+               <ref target="letter:504#seg5">5</ref>
                   in nicht ganz vorteilhafter Weise über Ildephons Kypers von Garsten geäußert
-                  hatte. Auch das in <ref type="letter" target="letter:674">674</ref> <ref target="letter:674#seg3">3</ref> thematisierte Gerücht in
+                  hatte. Auch das in <ref type="letter" target="letter:674">674</ref>
+               <ref target="letter:674#seg3">3</ref> thematisierte Gerücht in
                   Bezug auf den Admonter Prior, wohl Bonifaz Kuchler, kann hier relevant sein, zumal
                   JE Näheres dazu aus Steyr erfahren wollte, das in unmittelbarer Nähe zu Garsten
                   liegt; ob es dabei um Kritik an den Brüdern Pez ging, ist zwar nicht eindeutig,
@@ -223,13 +257,15 @@
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg8">
             <mentioned>Joannes am Anger</mentioned>
             <p>Zu ihm konnte nichts ermittelt werden. Es ist auch
-                  nicht klar, ob mit diesem Namen der in <ref type="letter" target="letter:513">513</ref> <ref target="letter:513#seg4">4</ref>
+                  nicht klar, ob mit diesem Namen der in <ref type="letter" target="letter:513">513</ref>
+               <ref target="letter:513#seg4">4</ref>
                   angesprochene „Johann am Stain“ oder der in <ref type="letter" target="letter:1010">1010</ref>
-                  <ref target="letter:1010#seg1">1</ref> genannte „Johann Stainer“ gemeint sein kann.</p>
+               <ref target="letter:1010#seg1">1</ref> genannte „Johann Stainer“ gemeint sein kann.</p>
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
-         <note anchored="false">Ordnungsvermerk: <orig>193.</orig></note>
+         <note anchored="false">Ordnungsvermerk: <orig>193.</orig>
+         </note>
       </listAnnotation>
       <listBibl>
          <head>Literatur</head>
@@ -245,14 +281,19 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo ac clarissimo domino patri Bernardo Pez amicorum suorum principi salutem plurimam dicit pater<hi rend="Fußnotenzeichen1" xml:space="preserve"> </hi>Joachimus Edlinger.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverendo ac clarissimo domino patri Bernardo Pez amicorum suorum principi salutem plurimam dicit pater<hi rend="Fußnotenzeichen1" xml:space="preserve"> </hi>Joachimus Edlinger.</opener>
          <ab resp="#editor" xml:id="seg1">Saepiuscule mecum illud fatum demiror, quo fit, ut illi potissimum, qui vel momentum temporis amusum sibi elabi aegre patiuntur, multis aliis e transverso ingruentibus negotiis frequenter impediantur, cum non paucis religiosorum etiam, ut tempus fallant, aut utramque in aurem stertendum sit aut ludendum. Etiam Hieronymum meum iniqua hoc in passu sorte usum fuisse tum e tuis, tum e propriis ipsius literis didici. </ab>
          <ab resp="#editor" xml:id="seg2">Gratulor <anchor xml:id="n1"/>modernum ipsi otium<anchor xml:id="n1e"/> et, ut diuturnum sit, precor. Mihi diu non licuit esse tam beato nec iam licet; vix enim<anchor xml:id="n2"/> Weistrachio<anchor xml:id="n2e"/> redux iam ad aliud pistrinum,<anchor xml:id="n3"/> parochiam Biberbacensem<anchor xml:id="n3e"/>, damnatus fui, quod de facto me tenet, brevi tamen, ut ex patris <anchor xml:id="n4"/>Udiscalci<anchor xml:id="n4e"/> reconvalescentia conicio, dimittendum. </ab>
          <ab resp="#editor" xml:id="seg3">Eo gravior posterioris temporis iactura mihi accidit, quo infoecundior pecuniario saltem lucro, cuius tamen primum illud sat <anchor xml:id="n5"/>ferax fuit<anchor xml:id="n5e"/>, id quod in rem meam egregie facit, qui ad incitas iam pene redactus eram,<anchor xml:id="n6"/> expensis hoc uno anno<anchor xml:id="n6e"/> in solos libros prope 40 florenis. </ab>
-         <ab resp="#editor" xml:id="seg4">Lucubratiunculam meam, quae necdum resumta diuturnam hanc remoram fuit passa, Deo favente saltem nono Decembris continuare incipiam; utinam Peziorum id in <anchor xml:id="n7"/>consortio liceat! Sane quod tu votum in tuis literis promis, ut una nos domus iungat<anchor xml:id="n7e"/>, id sexcenties ego pridem ingeminavi, fortunae in beneficiis numeraturus, si vel amanuensem tuum esse contingeret. Si hic loci me aptum censes praestando tibi quantulocunque obsequio, non cunctanter iube. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg4">Lucubratiunculam meam, quae necdum resumta diuturnam hanc remoram fuit passa, Deo favente saltem nono Decembris continuare incipiam; utinam Peziorum id in <anchor xml:id="n7"/>consortio liceat! Sane quod tu votum in tuis literis promis, ut una nos domus iungat<anchor xml:id="n7e"/>, id sexcenties ego pridem ingeminavi, fortunae in beneficiis numeraturus, si vel amanuensem tuum esse contingeret. Si hic loci me aptum censes praestando tibi quantulocunque obsequio, non cunctanter iube. <pb n="1v"/>
+         </ab>
          <ab resp="#editor" xml:id="seg5">Et ut promtitudinem tibi meam probem, Benedictinos illos <anchor xml:id="n8"/>ex Krineriano catalogo<anchor xml:id="n8e"/> a me in tuum usum excerptos autores, quorum locum professionis (tanquam in catalogo non expressum et hinc nec mihimet cognitum) ignoras, notula quadam signatos vel omnino exscriptos mitte; faxim, ut<anchor xml:id="n9"/> bibliopola ille<anchor xml:id="n9e"/>, ad quem et alia quaedam habeo, et loca adiciat. </ab>
          <ab resp="#editor" xml:id="seg6">Tu si literarum aliquid ab eruditis ad te datarum, veluti spem facis, una cum <anchor xml:id="n10"/>desiderato libello<anchor xml:id="n10e"/> mecum communicaveris, rem in me collocatam puta supra, quam dici potest, gratam. Illis tu excitare ad inclarescendum porro eruditis tuis laboribus, ut nominis tui fama virtutis ac eruditionis alis subvecta in ultimas tandem terrarum oras se diffundat. Qui fastus aut superbiae titulo ardorem hunc omni laude dignissimum ac nonnisi generosis pectoribus solemnem dehonestare audet, nae is rerum isthac stolida inversione suam mundo palam facit invidiam. Sed ferenda haec, mi Bernarde, ut minuti illi canes, qui hospites allatrant, feras non tangunt; si ingenuam Suffenis illis doctrinae cupiditatem reverentiamque posteritatis insevisset natura, stimulo et ipsis ad ausus quosdam heroicos esset gloriae merces, quo ad studium polymathiae cum sublimioribus animabus concitarentur nec in scholastico pulvere scarabaeorum more aetatem degerent. </ab>
-         <ab resp="#editor" xml:id="seg7">Reverendissimus Garstensis <anchor xml:id="n11"/>Acta eruditorum<anchor xml:id="n11e"/> Latina omnia, nisi iam habeat, quot diebus exspectat Lipsia, quae si lectione sua et ille dignabitur, <anchor xml:id="n12"/>cui compilatores sunt Pezii<anchor xml:id="n12e"/>, heu quam a suo sensu aliena deprehendet! <pb n="2r"/> Utramque paginam ibi faciunt, qui historiam quandam e manuscriptis eruunt, qui philologiam excolunt vel autorem quendam ad fidem manuscriptorum codicum emendant aut notis criticis etc. illustrant, scholasticis illis tricis ut plurimum inter charletanerias connumeratis. Aut suum igitur aut illorum depravatos esse sensus dicat et iudicia, oportet: certe suum, nisi contra torrentem luctando risum sanioribus movere malit. Tu in praefatione quadam operum a te edendorum, si bene te novi, horum hominum ineptias non sine sale retundes, cuius et me <choice><sic>hortar</sic><corr>hortatorem</corr></choice> habes. Noster quidem melancholicus ille sinistram suam de fastu vestro opinionem, ut nuper innui, vestratium cuidam debet; sed nec pro ipso apud te intercedo, quanquam id ausim pro altero, qui nempe erroris sui veniam in arena postulavit, tui cultor haud postremus. </ab>
+         <ab resp="#editor" xml:id="seg7">Reverendissimus Garstensis <anchor xml:id="n11"/>Acta eruditorum<anchor xml:id="n11e"/> Latina omnia, nisi iam habeat, quot diebus exspectat Lipsia, quae si lectione sua et ille dignabitur, <anchor xml:id="n12"/>cui compilatores sunt Pezii<anchor xml:id="n12e"/>, heu quam a suo sensu aliena deprehendet! <pb n="2r"/> Utramque paginam ibi faciunt, qui historiam quandam e manuscriptis eruunt, qui philologiam excolunt vel autorem quendam ad fidem manuscriptorum codicum emendant aut notis criticis etc. illustrant, scholasticis illis tricis ut plurimum inter charletanerias connumeratis. Aut suum igitur aut illorum depravatos esse sensus dicat et iudicia, oportet: certe suum, nisi contra torrentem luctando risum sanioribus movere malit. Tu in praefatione quadam operum a te edendorum, si bene te novi, horum hominum ineptias non sine sale retundes, cuius et me <choice>
+               <sic>hortar</sic>
+               <corr>hortatorem</corr>
+            </choice> habes. Noster quidem melancholicus ille sinistram suam de fastu vestro opinionem, ut nuper innui, vestratium cuidam debet; sed nec pro ipso apud te intercedo, quanquam id ausim pro altero, qui nempe erroris sui veniam in arena postulavit, tui cultor haud postremus. </ab>
          <ab resp="#editor" xml:id="seg8">Iucundum mihi adeo tecum confabulari, ut, ni necessarius somnus (nam ad lucernam potiorem horum partem, quia crastina excurrendum, scripsi) urgeret, longior forem. Hieronymum, ocellum meum, meis verbis saluta, et si quando <anchor xml:id="n13"/>Joannes am Anger<anchor xml:id="n13e"/> comparuerit, fac, ut ad me quoque veniat. Vale, dimidium animae meae, ac me ama.</ab>
          <closer>Seittenstadii IV. Kalendas Decembris MDCCXVI.</closer>
       </body>

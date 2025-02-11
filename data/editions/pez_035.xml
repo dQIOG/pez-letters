@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="35" xml:id="pez-0035">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Albert Krez an Bernhard Pez. 1710-02-07. Ottobeuren.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">35</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -82,7 +95,7 @@
             <p corresp="#seg2">Über dasselbe Kriegsgeschehen wie BP – den bayerisch-französischen Feldzug von 1702 bis 1704 (im <rs ref="index:d10854e29346">Spanischen Erbfolgekrieg</rs>) – hat auch AK ein Werk verfasst, die „<rs ref="index:d10854e16255">Summarische oder kurze beschreibung</rs>“, das wesentlich ausführlicher ist, jedoch nie gedruckt werden wird.</p>
             <p corresp="#seg3">AK ist erfreut, dass BPs Vorhaben („<rs ref="index:d10854e23377">Bibliotheca Benedictina</rs>“) Unterstützer gefunden hat, und erbittet Gottes Hilfe dafür.</p>
             <p corresp="#seg4">Zur geographischen Lage von <rs ref="index:d10854e13570">Irsee</rs> kann AK nicht viel sagen, obwohl es ihm gut bekannt ist und nur etwa fünf Stunden von <rs ref="index:d14380e31859">Ottobeuren</rs> entfernt liegt. Es befindet sich in einer von Wäldern und Gebirge rings eingeschlossenen Vertiefung, somit in durchaus ungünstiger Lage. Mehr Auskunft kann der dortige Subprior <rs ref="index:d10854e7753">Placidus Emer</rs> geben, vielleicht auch Stiche des alten und des in Bau befindlichen neuen Klosters senden, da in <rs ref="index:d10854e13570">Irsee</rs> ein künstlerisch begabter Laienbruder (<rs ref="index:d10854e25838">Magnus Remy</rs>) lebt.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -105,7 +118,9 @@
                   Placidus Emer mit der Antwort auf seine Enzyklik beauftragt wurde, die jedoch
                   nicht überaus hilfreich ausfiel (<ref type="letter" target="letter:42">42</ref>, vom 19. Februar
                   1710). Ein Zusammenhang dieses Vorgangs mit dem Hinweis AKs in diesem Brief ist
-                  freilich allein schon aus chronologischen Gründen auszuschließen.</p><p><rs type="bibl" ref="bibl:36050">Dischinger, Lapides loquuntur</rs> 327–330; <rs type="bibl" ref="bibl:36812">Pörnbacher, Kloster Irsee</rs> 93, 116–129; <rs type="bibl" ref="bibl:37052">Steichele–Schröder, Bistum Augsburg 6</rs>
+                  freilich allein schon aus chronologischen Gründen auszuschließen.</p>
+            <p>
+               <rs type="bibl" ref="bibl:36050">Dischinger, Lapides loquuntur</rs> 327–330; <rs type="bibl" ref="bibl:36812">Pörnbacher, Kloster Irsee</rs> 93, 116–129; <rs type="bibl" ref="bibl:37052">Steichele–Schröder, Bistum Augsburg 6</rs>
                   237f.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg4">
@@ -124,14 +139,17 @@
    </standOff>
    <text>
       <front>
-         <p>Admodum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez celeberrimi monasterii Mellicensis ordinis sancti Benedicti professo et bibliothecario ac historico eruditissimo, domino patri ac patrono observandissimo. Ottobeyren. Melch in Under Österreich.<note type="annotation">Siegel.</note></p>
+         <p>Admodum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez celeberrimi monasterii Mellicensis ordinis sancti Benedicti professo et bibliothecario ac historico eruditissimo, domino patri ac patrono observandissimo. Ottobeyren. Melch in Under Österreich.<note type="annotation">Siegel.</note>
+         </p>
       </front>
       <body>
-         <opener><pb n="1r"/> Admodum reverende religiosissime et clarissime domine pater in Christo et patrone colendissime observandissime.</opener>
+         <opener>
+            <pb n="1r"/> Admodum reverende religiosissime et clarissime domine pater in Christo et patrone colendissime observandissime.</opener>
          <ab resp="#editor" xml:id="seg1">Laconice ad gratissimas una cum opusculo eruditissimo, sed serius acceptas litteras respondere cogor; gratias ergo pro tanta in me indignum ac immeritum benevolentia ac beneficentia maximas ago et pro libello <anchor xml:id="n1"/>libellum remitto<anchor xml:id="n1e"/>, quamvis nulla ratione illi aequiparandum, quippe simplicis tantum et rudis ingenii partum, quod tamen de salute corporis et animae ac utriusque longaevitate beataque aeternitate dicit, docet et spectat, admodum reverendae paternitati vestrae totique monasterio Mellicensi celeberrimo ex animo precor. </ab>
          <ab resp="#editor" xml:id="seg2">De caetero de eiusdem belli, de quo illa in libello suo egit, <add place="above">rebus</add> ego quoque similem, sed longe maiorem ac fusiorem sub hoc titulo scripsi: <anchor xml:id="n2"/>Summarische oder kurze beschreibung<anchor xml:id="n2e"/> der churbayrisch- und französischen kriegsläuffe umb, in und durch die ottobeyrische herrschafft von dem 1702 biß 4 inclusive <pb n="1v"/> sambt einem zuesatz von copiis underschidlicher schreiben betreffend das obergesagte zway iährige kriegswesen. At haec historia mea non videbit lumen. </ab>
          <ab resp="#editor" xml:id="seg3">Porro vehementer gaudeo admodum reverendae paternitatis <sic>vestri</sic> laudatissimis conatibus pro illustrando ordine nostro et adesse fautores et non deesse felicem successum. Bonus Deus secundet et coronet glorioso operis fine. </ab>
-         <ab resp="#editor" xml:id="seg4">Quod attinet Ursinensis monasterii situm, vereor, ne satis exponere possim, licet mihi notissimum et tantum quinque horis Ottobura distantem; iacet id in depresso solo fere undique sylvis et montibus clauso, adeoque loco prorsus inamoeno. Plura docere poterit reverendus pater <anchor xml:id="n3"/>Placidus Emer<anchor xml:id="n3e"/> subprior ibi, vir optimus et eruditissimus, qui honori haud dubie sibi ducet, si litteris conventus <sic>admodum</sic><note place="foot" xml:id="d4618e4071">Sicherlich irrig ausgelassen <hi rend="italic">reverendae</hi>.</note> paternitatis vestrae gratificari possit, et forsan etiam tam antiqui coenobii quam novi, <pb n="2r"/> quod moliuntur, delineationem mittet, quia Ursinenses <anchor xml:id="n4"/>fratrem laicum habent artis pictoriae peritissimum<anchor xml:id="n4e"/>. Atque hisce me in constantes favores religiosos, sacras preces et sacrificia commendo.</ab>
+         <ab resp="#editor" xml:id="seg4">Quod attinet Ursinensis monasterii situm, vereor, ne satis exponere possim, licet mihi notissimum et tantum quinque horis Ottobura distantem; iacet id in depresso solo fere undique sylvis et montibus clauso, adeoque loco prorsus inamoeno. Plura docere poterit reverendus pater <anchor xml:id="n3"/>Placidus Emer<anchor xml:id="n3e"/> subprior ibi, vir optimus et eruditissimus, qui honori haud dubie sibi ducet, si litteris conventus <sic>admodum</sic>
+            <note place="foot" xml:id="d4618e4071">Sicherlich irrig ausgelassen <hi rend="italic">reverendae</hi>.</note> paternitatis vestrae gratificari possit, et forsan etiam tam antiqui coenobii quam novi, <pb n="2r"/> quod moliuntur, delineationem mittet, quia Ursinenses <anchor xml:id="n4"/>fratrem laicum habent artis pictoriae peritissimum<anchor xml:id="n4e"/>. Atque hisce me in constantes favores religiosos, sacras preces et sacrificia commendo.</ab>
          <closer>Admodum reverendae et religiosissimae paternitatis vestrae obligatissimus in Christo servus pater Albertus Krez subprior.</closer>
          <closer>Raptim Ottoburae 1710 7. Februarii.</closer>
       </body>

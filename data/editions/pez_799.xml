@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="799" xml:id="pez-0799">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Edmond Martène an Bernhard Pez. 1717-07-09. Paris (St.-Germain-des-Prés).</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">799</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 2: 1716–1718</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Am unteren Rand von 2v neben – aber nicht im Zusammenhang mit – dem Ordnungsvermerk von einer Hand des 18. Jh. Vermerk: <orig>Fasc. 4</orig>. – Im Text Unterstreichungen von zwei verschiedenen Händen. Eine dürfte, nach der Tinte zu schließen, die EMs sein; die stärkeren Unterstreichungen von einer anderen Hand scheinen nicht nach inhaltlichen Kriterien, sondern zur Markierung von Stellen eingesetzt zu sein, die beim Lesen Schwierigkeiten bereiteten. Die Letzteren werden nicht wiedergegeben.
             </note>
@@ -53,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,133 +89,135 @@
                <ptr type="next" target="letter:826"/>
             </correspContext>
          </correspDesc>
-         
-         <textClass><keywords>
-            <term ref="index:d14380e124">Achery, Jean-Luc d’</term>
-            <term ref="index:d14380e578">Aguesseau, Henri François d’</term>
-            <term ref="index:d14380e621">Alabat, Guillaume</term>
-            <term ref="index:d14380e1223">Amboise, Jacques d’</term>
-            <term ref="index:d14380e1230">Ambronay</term>
-            <term ref="index:d14380e3437">Augustinus, hl ; Sancti Aurelii Augustini Hipponensis episcopi Operum tomi undecim. Hg.
+         <textClass>
+            <keywords>
+               <term ref="index:d14380e124">Achery, Jean-Luc d’</term>
+               <term ref="index:d14380e578">Aguesseau, Henri François d’</term>
+               <term ref="index:d14380e621">Alabat, Guillaume</term>
+               <term ref="index:d14380e1223">Amboise, Jacques d’</term>
+               <term ref="index:d14380e1230">Ambronay</term>
+               <term ref="index:d14380e3437">Augustinus, hl ; Sancti Aurelii Augustini Hipponensis episcopi Operum tomi undecim. Hg.
          von François Delfau, Thomas Blampin, Pierre Coustant und Claude Guesnié. 11 Bde. Paris
          1679–1700</term>
-            <term ref="index:d14380e4101">Basilius von Cäsarea ; Sancti Basilii Caesareae Cappadociae Opera omnia. Hg. von Julien
+               <term ref="index:d14380e4101">Basilius von Cäsarea ; Sancti Basilii Caesareae Cappadociae Opera omnia. Hg. von Julien
          Garnier. 3 Bde. Paris 1721–1730</term>
-            <term ref="index:d14380e4124">Bastide, Philippe</term>
-            <term ref="index:d14380e4518">Bénard, Laurent</term>
-            <term ref="index:d14380e4919">Benediktiner</term>
-            <term ref="index:d14380e5768">Bigot, Émery</term>
-            <term ref="index:d14380e5878">Blampin, Thomas</term>
-            <term ref="index:d14380e6010">Boëtte de Blémur, Marie-Jacqueline</term>
-            <term ref="index:d14380e6342">Bougis, Simon ; Meditations pour les novices et les jeunes profès et pour toutes sortes
+               <term ref="index:d14380e4124">Bastide, Philippe</term>
+               <term ref="index:d14380e4518">Bénard, Laurent</term>
+               <term ref="index:d14380e4919">Benediktiner</term>
+               <term ref="index:d14380e5768">Bigot, Émery</term>
+               <term ref="index:d14380e5878">Blampin, Thomas</term>
+               <term ref="index:d14380e6010">Boëtte de Blémur, Marie-Jacqueline</term>
+               <term ref="index:d14380e6342">Bougis, Simon ; Meditations pour les novices et les jeunes profès et pour toutes sortes
          de personnes qui sont encore dans la vie purgative. Paris 1674</term>
-            <term ref="index:d14380e6373">Bourges</term>
-            <term ref="index:d14380e6383">Bourges ; St.-Sulpice</term>
-            <term ref="index:d14380e6885">Bucelin, Gabriel</term>
-            <term ref="index:d14380e6893">Bucelin, Gabriel ; Benedictus redivivus, hoc est Benedictini ordinis vetustissimi
+               <term ref="index:d14380e6373">Bourges</term>
+               <term ref="index:d14380e6383">Bourges ; St.-Sulpice</term>
+               <term ref="index:d14380e6885">Bucelin, Gabriel</term>
+               <term ref="index:d14380e6893">Bucelin, Gabriel ; Benedictus redivivus, hoc est Benedictini ordinis vetustissimi
          amplissimique nostra ac supera aetate immarcescibilis vigor ac viror. Feldkirch
          1679</term>
-            <term ref="index:d14380e7850">Champagne</term>
-            <term ref="index:d14380e7986">Chezal-Benoît</term>
-            <term ref="index:d14380e8323">Clermont</term>
-            <term ref="index:d14380e8331">Clermont ; St.-Allyre</term>
-            <term ref="index:d14380e8349">Cluny</term>
-            <term ref="index:d14380e8669">Cormeilles</term>
-            <term ref="index:d14380e9225">De la Tour, Charles</term>
-            <term ref="index:d14380e9232">Delfau, François</term>
-            <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
-            <term ref="index:d14380e10049">Du Four, Louis-Thomas</term>
-            <term ref="index:d14380e10061">Du Four, Louis-Thomas ; Linguae Hebraicae opus grammaticum. Paris 1642</term>
-            <term ref="index:d14380e10068">Du Four, Louis-Thomas ; *Testamentum spirituale. Ms</term>
-            <term ref="index:d14380e10160">Du Mas, Pierre</term>
-            <term ref="index:d14380e10199">Du Pin, Louis Ellies ; Nouvelle bibliothèque des auteurs ecclesiastiques. 2 Bde. Paris
+               <term ref="index:d14380e7850">Champagne</term>
+               <term ref="index:d14380e7986">Chezal-Benoît</term>
+               <term ref="index:d14380e8323">Clermont</term>
+               <term ref="index:d14380e8331">Clermont ; St.-Allyre</term>
+               <term ref="index:d14380e8349">Cluny</term>
+               <term ref="index:d14380e8669">Cormeilles</term>
+               <term ref="index:d14380e9225">De la Tour, Charles</term>
+               <term ref="index:d14380e9232">Delfau, François</term>
+               <term ref="index:d14380e9395">Deutschland, Deutsche , deutsch</term>
+               <term ref="index:d14380e10049">Du Four, Louis-Thomas</term>
+               <term ref="index:d14380e10061">Du Four, Louis-Thomas ; Linguae Hebraicae opus grammaticum. Paris 1642</term>
+               <term ref="index:d14380e10068">Du Four, Louis-Thomas ; *Testamentum spirituale. Ms</term>
+               <term ref="index:d14380e10160">Du Mas, Pierre</term>
+               <term ref="index:d14380e10199">Du Pin, Louis Ellies ; Nouvelle bibliothèque des auteurs ecclesiastiques. 2 Bde. Paris
          1686–1687 ; Zweite Auflage. 19 Bde. 1690–1715</term>
-            <term ref="index:d14380e10210">Dupont, Maur</term>
-            <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
-            <term ref="index:d14380e12901">Frankreich, Franzosen , französisch ; Meile</term>
-            <term ref="index:d14380e14482">Garet, Jean</term>
-            <term ref="index:d14380e14493">Garnier, Julien</term>
-            <term ref="index:d14380e15123">Gerberon, Gabriel</term>
-            <term ref="index:d14380e16330">Gregor XV ; Bulle zur Konfirmation der Maurinerkongregation 1621</term>
-            <term ref="index:d14380e16613">Guérard, Robert</term>
-            <term ref="index:d14380e16638">Guesnié, Claude</term>
-            <term ref="index:d14380e17511">Heiligenkreuz ; Bibliothek ; Idung von Prüfening, Dialogus duorum monachorum.
+               <term ref="index:d14380e10210">Dupont, Maur</term>
+               <term ref="index:d14380e12712">Frankreich, Franzosen , französisch</term>
+               <term ref="index:d14380e12901">Frankreich, Franzosen , französisch ; Meile</term>
+               <term ref="index:d14380e14482">Garet, Jean</term>
+               <term ref="index:d14380e14493">Garnier, Julien</term>
+               <term ref="index:d14380e15123">Gerberon, Gabriel</term>
+               <term ref="index:d14380e16330">Gregor XV ; Bulle zur Konfirmation der Maurinerkongregation 1621</term>
+               <term ref="index:d14380e16613">Guérard, Robert</term>
+               <term ref="index:d14380e16638">Guesnié, Claude</term>
+               <term ref="index:d14380e17511">Heiligenkreuz ; Bibliothek ; Idung von Prüfening, Dialogus duorum monachorum.
          Ms</term>
-            <term ref="index:d14380e19648">Idung ; Dialogus duorum monachorum Cisterciensis et Cluniacensis ; Ms. Morimond</term>
-            <term ref="index:d14380e19655">Idung ; Dialogus duorum monachorum Cisterciensis et Cluniacensis ; Ms.
+               <term ref="index:d14380e19648">Idung ; Dialogus duorum monachorum Cisterciensis et Cluniacensis ; Ms. Morimond</term>
+               <term ref="index:d14380e19655">Idung ; Dialogus duorum monachorum Cisterciensis et Cluniacensis ; Ms.
          Heiligenkreuz</term>
-            <term ref="index:d14380e20126">Jesuiten</term>
-            <term ref="index:d14380e20926">Jouennaux, Guy</term>
-            <term ref="index:d14380e22371">Kongregationen des Benediktinerordens ; Cassinenserkongregation</term>
-            <term ref="index:d14380e22422">Kongregationen des Benediktinerordens ; Chezal-Benoît</term>
-            <term ref="index:d14380e22427">Kongregationen des Benediktinerordens ; Cluny</term>
-            <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
-            <term ref="index:d14380e22654">Kongregationen des Benediktinerordens ; St.-Vanne</term>
-            <term ref="index:d14380e22705">Kongregationen des Benediktinerordens ; Société de Bretagne</term>
-            <term ref="index:d14380e23686">Lamy, François, baron de Montireau</term>
-            <term ref="index:d14380e23973">Latein</term>
-            <term ref="index:d14380e24440">Le Mans</term>
-            <term ref="index:d14380e24466">Le Mans ; St.-Vincent</term>
-            <term ref="index:d14380e24594">Leo X</term>
-            <term ref="index:d14380e24602">Leo X ; Bulle zur Konfirmation der Kongregation von Chezal-Benoît, 1516</term>
-            <term ref="index:d14380e24933">Limoges ; St.-Augustin</term>
-            <term ref="index:d14380e25182">Lothringen</term>
-            <term ref="index:d14380e25581">Mabillon, Jean</term>
-            <term ref="index:d14380e25761">Mabillon, Jean ; Annales ordinis sancti Benedicti, occidentalium monachorum
+               <term ref="index:d14380e20126">Jesuiten</term>
+               <term ref="index:d14380e20926">Jouennaux, Guy</term>
+               <term ref="index:d14380e22371">Kongregationen des Benediktinerordens ; Cassinenserkongregation</term>
+               <term ref="index:d14380e22422">Kongregationen des Benediktinerordens ; Chezal-Benoît</term>
+               <term ref="index:d14380e22427">Kongregationen des Benediktinerordens ; Cluny</term>
+               <term ref="index:d14380e22462">Kongregationen des Benediktinerordens ; Maurinerkongregation</term>
+               <term ref="index:d14380e22654">Kongregationen des Benediktinerordens ; St.-Vanne</term>
+               <term ref="index:d14380e22705">Kongregationen des Benediktinerordens ; Société de Bretagne</term>
+               <term ref="index:d14380e23686">Lamy, François, baron de Montireau</term>
+               <term ref="index:d14380e23973">Latein</term>
+               <term ref="index:d14380e24440">Le Mans</term>
+               <term ref="index:d14380e24466">Le Mans ; St.-Vincent</term>
+               <term ref="index:d14380e24594">Leo X</term>
+               <term ref="index:d14380e24602">Leo X ; Bulle zur Konfirmation der Kongregation von Chezal-Benoît, 1516</term>
+               <term ref="index:d14380e24933">Limoges ; St.-Augustin</term>
+               <term ref="index:d14380e25182">Lothringen</term>
+               <term ref="index:d14380e25581">Mabillon, Jean</term>
+               <term ref="index:d14380e25761">Mabillon, Jean ; Annales ordinis sancti Benedicti, occidentalium monachorum
          patriarchae, in quibus non modo res monasticae, sed etiam ecclesiasticae historiae non
          minima pars continetur. 6 Bde. Paris 1703–1739 ; Bd. 5. Paris 1713 ; Darin: Massuet,
          Synopsis vitae Joannis Mabillonii</term>
-            <term ref="index:d14380e25798">Mabillon, Jean ; Lettre circulaire sur la mort de madame de Blémur. Ms</term>
-            <term ref="index:d14380e26100">Maran, Prudent</term>
-            <term ref="index:d14380e26459">Mars, Noël</term>
-            <term ref="index:d14380e26560">Martène, Edmond ; La vie du venerable pere dom Claude Martin, religieux benedictin de
+               <term ref="index:d14380e25798">Mabillon, Jean ; Lettre circulaire sur la mort de madame de Blémur. Ms</term>
+               <term ref="index:d14380e26100">Maran, Prudent</term>
+               <term ref="index:d14380e26459">Mars, Noël</term>
+               <term ref="index:d14380e26560">Martène, Edmond ; La vie du venerable pere dom Claude Martin, religieux benedictin de
          la congregation de saint Maur, decedé en odeur de sainteté au monastere de Mairmontier, le
          9 du mois d’aoust 1696. Tours 1697</term>
-            <term ref="index:d14380e26576">Martène, Edmond ; Plan für eine Sammlung „Historiens de France“</term>
-            <term ref="index:d14380e26581">Martène, Edmond ; Schriftstellerkatalog der Maurinerkongregation. Ms</term>
-            <term ref="index:d14380e26632">Martène, Edmond ; [Edmond Martène, Ursin Durand] Thesaurus novus anecdotorum. 5 Bde.
+               <term ref="index:d14380e26576">Martène, Edmond ; Plan für eine Sammlung „Historiens de France“</term>
+               <term ref="index:d14380e26581">Martène, Edmond ; Schriftstellerkatalog der Maurinerkongregation. Ms</term>
+               <term ref="index:d14380e26632">Martène, Edmond ; [Edmond Martène, Ursin Durand] Thesaurus novus anecdotorum. 5 Bde.
          Paris 1717 ; Bd. 5 ; Darin: Idung von Prüfening, Dialogus duorum monachorum</term>
-            <term ref="index:d14380e26799">Martin, Claude ; [anonym] Méditations chrétiennes pour les dimanches, les féries et le
+               <term ref="index:d14380e26799">Martin, Claude ; [anonym] Méditations chrétiennes pour les dimanches, les féries et le
          principales fêtes. Paris 1669</term>
-            <term ref="index:d14380e26805">Martin, Claude ; [anonym] Méditations chrétiennes pour les dimanches, les féries et le
+               <term ref="index:d14380e26805">Martin, Claude ; [anonym] Méditations chrétiennes pour les dimanches, les féries et le
          principales fêtes. Paris 1669 ; Succinctae meditationes Christianae pro dominicis, feriis
          et praecipuis festis totius anni, 2 Bde., übers. von Franz Mezger. Salzburg 1695</term>
-            <term ref="index:d14380e26935">Maße, Gewichte, Währung ; Meile</term>
-            <term ref="index:d14380e26993">Massuet, René</term>
-            <term ref="index:d14380e28647">Ménard, Hugues ; Martyrologium sanctorum ordinis divi Benedicti. Paris 1629</term>
-            <term ref="index:d14380e28790">Metz</term>
-            <term ref="index:d14380e29001">Millet, Simon-Germain</term>
-            <term ref="index:d14380e29755">Mosel</term>
-            <term ref="index:d14380e29797">Mouzon</term>
-            <term ref="index:d14380e30855">Normandie</term>
-            <term ref="index:d14380e30940">Nouaillé</term>
-            <term ref="index:d14380e32292">Paris</term>
-            <term ref="index:d14380e32378">Paris ; Collège de Marmoutier</term>
-            <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum
+               <term ref="index:d14380e26935">Maße, Gewichte, Währung ; Meile</term>
+               <term ref="index:d14380e26993">Massuet, René</term>
+               <term ref="index:d14380e28647">Ménard, Hugues ; Martyrologium sanctorum ordinis divi Benedicti. Paris 1629</term>
+               <term ref="index:d14380e28790">Metz</term>
+               <term ref="index:d14380e29001">Millet, Simon-Germain</term>
+               <term ref="index:d14380e29755">Mosel</term>
+               <term ref="index:d14380e29797">Mouzon</term>
+               <term ref="index:d14380e30855">Normandie</term>
+               <term ref="index:d14380e30940">Nouaillé</term>
+               <term ref="index:d14380e32292">Paris</term>
+               <term ref="index:d14380e32378">Paris ; Collège de Marmoutier</term>
+               <term ref="index:d14380e33384">Pez, Bernhard ; Bibliotheca Benedictino-Mauriana seu De ortu, vitis et scriptis patrum
          Benedictinorum e celeberrima congregatione S. Mauri in Francia. Augsburg–Graz 1716</term>
-            <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
-            <term ref="index:d14380e35065">Philippe de Luxembourg</term>
-            <term ref="index:d14380e35183">Pinel, Marcellin</term>
-            <term ref="index:d14380e35499">Pommeraye, Jean-François</term>
-            <term ref="index:d14380e35526">Pommeraye, Jean-François ; Sanctae Rotomagensis ecclesiae concilia ac synodalia
+               <term ref="index:d14380e34236">Pez, Bernhard ; Bibliotheksreise 1717</term>
+               <term ref="index:d14380e35065">Philippe de Luxembourg</term>
+               <term ref="index:d14380e35183">Pinel, Marcellin</term>
+               <term ref="index:d14380e35499">Pommeraye, Jean-François</term>
+               <term ref="index:d14380e35526">Pommeraye, Jean-François ; Sanctae Rotomagensis ecclesiae concilia ac synodalia
          decreta. Rouen 1677</term>
-            <term ref="index:d14380e35577">Pont-à-Mousson</term>
-            <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
-            <term ref="index:d14380e36964">Régnier, Colomban</term>
-            <term ref="index:d14380e37654">Rolle, Anselme</term>
-            <term ref="index:d14380e37663">Rollet, Humbert</term>
-            <term ref="index:d14380e39054">Salzburg</term>
-            <term ref="index:d14380e40325">Sées</term>
-            <term ref="index:d14380e40337">Sées ; St.-Martin</term>
-            <term ref="index:d14380e42063">Tarisse, Grégoire</term>
-            <term ref="index:d14380e42614">Tesnière, Martin</term>
-            <term ref="index:d14380e42828">Thomas, NN</term>
-            <term ref="index:d14380e42989">Toronce, Hervé</term>
-            <term ref="index:d14380e43103">Tours</term>
-            <term ref="index:d14380e43123">Tours ; Marmoutier</term>
-            <term ref="index:d14380e43151">Tours ; St.-Gatien</term>
-            <term ref="index:d14380e43158">Tours ; St.-Martin</term>
-            <term ref="index:d14380e46977">Zisterzienser</term></keywords></textClass>
+               <term ref="index:d14380e35577">Pont-à-Mousson</term>
+               <term ref="index:d14380e35665">Post, Briefbeförderung; postalische Vermerke auf Briefen</term>
+               <term ref="index:d14380e36964">Régnier, Colomban</term>
+               <term ref="index:d14380e37654">Rolle, Anselme</term>
+               <term ref="index:d14380e37663">Rollet, Humbert</term>
+               <term ref="index:d14380e39054">Salzburg</term>
+               <term ref="index:d14380e40325">Sées</term>
+               <term ref="index:d14380e40337">Sées ; St.-Martin</term>
+               <term ref="index:d14380e42063">Tarisse, Grégoire</term>
+               <term ref="index:d14380e42614">Tesnière, Martin</term>
+               <term ref="index:d14380e42828">Thomas, NN</term>
+               <term ref="index:d14380e42989">Toronce, Hervé</term>
+               <term ref="index:d14380e43103">Tours</term>
+               <term ref="index:d14380e43123">Tours ; Marmoutier</term>
+               <term ref="index:d14380e43151">Tours ; St.-Gatien</term>
+               <term ref="index:d14380e43158">Tours ; St.-Martin</term>
+               <term ref="index:d14380e46977">Zisterzienser</term>
+            </keywords>
+         </textClass>
          <abstract>
             <p corresp="#seg1">BPs <rs ref="index:d14380e33384">„Bibliotheca Benedictino-Mauriana“</rs> hat EM nicht ohne Genuss
                gelesen, da sie gefällig geschrieben ist und BP mit vielem Fleiß aus wenigen und unbedeutenden
@@ -264,7 +278,8 @@
                richtig als „Concilia Normanniae“ zu bezeichnen (recte: siehe Kommentar). Der im 18. Kapitel angeführte
                <rs ref="index:d14380e4124">Philippe Bastide</rs> war keineswegs ein Mitarbeiter von <rs ref="index:d14380e124">Jean-Luc d’Achery</rs> und <rs ref="index:d14380e25581">Jean Mabillon</rs>,
                sondern trat ihren Arbeiten vielmehr aus unüberlegtem Eifer für den Ruhm des Ordens entgegen. Im 29.
-               Kapitel wird unter den Unterstützern von <rs ref="index:d14380e14482">Jean Garet</rs> aus dem <rs ref="index:d14380e4919">Benediktinerorden</rs> <rs ref="index:d14380e5768">Émery Bigot</rs> genannt,
+               Kapitel wird unter den Unterstützern von <rs ref="index:d14380e14482">Jean Garet</rs> aus dem <rs ref="index:d14380e4919">Benediktinerorden</rs>
+               <rs ref="index:d14380e5768">Émery Bigot</rs> genannt,
                der allerdings Laie war.</p>
             <p corresp="#seg11">Im 34. (recte: 35.) Kapitel findet sich ein Irrtum von <rs ref="index:d14380e26993">René Massuet</rs>,
                der gleich an der Schwelle von Mabillons Leben gestolpert ist, indem er behauptet hat, dieser sei in der
@@ -289,7 +304,8 @@
                die maurinischen Schriftsteller erhält. Diese will EM versenden, sobald ihm BP einen sicheren
                Übermittlungsweg mitteilt.</p>
             <p corresp="#seg16">EM ist erfreut, in der „Bibliotheca Benedictino-Mauriana“ zu lesen, dass die <rs ref="index:d14380e26799">„Méditations chrétiennes“</rs> von Claude Martin zu <rs ref="index:d14380e39054">Salzburg</rs> in
-               <rs ref="index:d14380e23973">lateinischer</rs> <rs ref="index:d14380e26805">Übersetzung (von Franz
+               <rs ref="index:d14380e23973">lateinischer</rs>
+               <rs ref="index:d14380e26805">Übersetzung (von Franz
                   Mezger)</rs> erschienen sind. Er hofft, dass auch von seiner <rs ref="index:d14380e26560">„Vie du
                   venerable dom Claude Martin“</rs> eine lateinische Übersetzung zum Nutzen <rs ref="index:d14380e9395">deutscher</rs> und anderer ausländischer <rs ref="index:d14380e4919">Benediktiner</rs> angefertigt
                wird; die <rs ref="index:d14380e12712">französische</rs> Fassung ist von seinen Landsleuten mit Gewinn
@@ -304,14 +320,15 @@
                <rs ref="index:d14380e578">Henri-François d’Aguesseau</rs> hat den Maurinern aufgetragen, eine Edition
                alter Autoren zur französischen Geschichte zusammenzustellen. Falls BP in den Bibliotheken, die er
                besuchen wird, Einschlägiges unterkommt, bittet EM um Hinweise.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>Bibliothecam ... legi</mentioned>
-            <p> Zu ihrer Übermittlung nach Paris vgl. <ref type="letter" target="letter:764">764 </ref><ref target="letter:764 #seg1">1</ref>. </p>
+            <p> Zu ihrer Übermittlung nach Paris vgl. <ref type="letter" target="letter:764">764 </ref>
+               <ref target="letter:764 #seg1">1</ref>. </p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>Bucelinum sequutus</mentioned>
@@ -330,7 +347,7 @@
          <note target="#range(right('n5'), left('n5e'))" n="5" anchored="false" corresp="#seg2">
             <mentioned> nostrae incorporata</mentioned>
             <p>
-                  <rs type="bibl" ref="bibl:15186">Berlière, Chezal-Benoît</rs> 18 1–20; <rs type="bibl" ref="bibl:15602">Chaussy, Bénédictins</rs> 1 45f.; <rs type="bibl" ref="bibl:15830">Denis, Richelieu</rs> 113–134.</p>
+               <rs type="bibl" ref="bibl:15186">Berlière, Chezal-Benoît</rs> 18 1–20; <rs type="bibl" ref="bibl:15602">Chaussy, Bénédictins</rs> 1 45f.; <rs type="bibl" ref="bibl:15830">Denis, Richelieu</rs> 113–134.</p>
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg3">
             <mentioned>refers de ... Sagiensi</mentioned>
@@ -358,7 +375,8 @@
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
             <mentioned>Benard</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:683">683</ref> <ref target="letter:683#seg2">2</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:683">683</ref>
+               <ref target="letter:683#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n9'), left('n9e'))" n="9" anchored="false" corresp="#seg5">
             <mentioned> tantummodo 1630</mentioned>
@@ -451,7 +469,8 @@
          </note>
          <note target="#range(right('n22'), left('n22e'))" n="22" anchored="false" corresp="#seg8">
             <mentioned> Germanus Millet</mentioned>
-            <p><rs type="bibl" ref="bibl:14772">Tassin, Histoire
+            <p>
+               <rs type="bibl" ref="bibl:14772">Tassin, Histoire
                      littéraire</rs> 28–30; vgl. <rs type="bibl" ref="bibl:15602">Chaussy,
                      Bénédictins</rs> 2 12; <rs type="bibl" ref="bibl:15604">Chaussy, Matricula</rs>
                   11; <rs type="bibl" ref="bibl:20356">Wilhelm et al., Nouveau supplément 2</rs>
@@ -473,7 +492,8 @@
          <note target="#range(right('n24'), left('n24e'))" n="24" anchored="false" corresp="#seg9">
             <mentioned> tota ... Blampinio</mentioned>
             <p>Blampin, zuvor Professor der Theologie zu
-                  St.-Germain-des-Prés, wurde erst 1676 an die Stelle Delfaus gesetzt: <rs type="bibl" ref="bibl:36174">Gasnault, Artisans</rs> 48. Zu ihm vgl. <ref type="letter" target="letter:749">749</ref> <ref target="letter:749#seg12">12</ref>.</p>
+                  St.-Germain-des-Prés, wurde erst 1676 an die Stelle Delfaus gesetzt: <rs type="bibl" ref="bibl:36174">Gasnault, Artisans</rs> 48. Zu ihm vgl. <ref type="letter" target="letter:749">749</ref>
+               <ref target="letter:749#seg12">12</ref>.</p>
          </note>
          <note target="#range(right('n25'), left('n25e'))" n="25" anchored="false" corresp="#seg9">
             <mentioned> duo tantum</mentioned>
@@ -499,17 +519,19 @@
                   zuzuschreiben: <rs type="bibl" ref="bibl:14772">Tassin, Histoire littéraire</rs>
                   88f., 329; vgl. <rs type="bibl" ref="bibl:20354">Wilhelm et al., Nouveau
                      supplément 1</rs> 154, 245. Zu Gerberon vgl. <ref type="letter" target="letter:594">594</ref>
-                  <ref target="letter:594#seg2">2</ref>. </p>
+               <ref target="letter:594#seg2">2</ref>. </p>
          </note>
          <note target="#range(right('n27'), left('n27e'))" n="27" anchored="false" corresp="#seg9">
             <mentioned>catalogum</mentioned>
-            <p> Vgl. <ref type="letter" target="letter:827">827</ref> <ref target="letter:827#seg5">5</ref>.</p>
+            <p> Vgl. <ref type="letter" target="letter:827">827</ref>
+               <ref target="letter:827#seg5">5</ref>.</p>
          </note>
          <note target="#range(right('n28'), left('n28e'))" n="28" anchored="false" corresp="#seg10">
             <mentioned>Concilia Normanniae</mentioned>
             <p> Hier irrt EM; der Titel des Werkes lautet, wie
                   er von BP verzeichnet ist: Pez, Bibliotheca Benedictino-Mauriana 49. Zu Pommeraye
-                  vgl. <ref type="letter" target="letter:749">749</ref> <ref target="letter:749#seg4">4</ref>.</p>
+                  vgl. <ref type="letter" target="letter:749">749</ref>
+               <ref target="letter:749#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n29'), left('n29e'))" n="29" anchored="false" corresp="#seg10">
             <mentioned> Bastide</mentioned>
@@ -558,7 +580,8 @@
             <mentioned>Meditationes de vita purgativa ... idem sunt</mentioned>
             <p>Pez, Bibliotheca
                   Benedictino-Mauriana 292. Die mögliche Identität dieser zwei angeführten Werke
-                  Simon Bougis’ wird von BP selbst eingeräumt. Zu Bougis vgl. <ref type="letter" target="letter:749">749</ref> <ref target="letter:749#seg7">7</ref>.</p>
+                  Simon Bougis’ wird von BP selbst eingeräumt. Zu Bougis vgl. <ref type="letter" target="letter:749">749</ref>
+               <ref target="letter:749#seg7">7</ref>.</p>
          </note>
          <note target="#range(right('n36'), left('n36e'))" n="36" anchored="false" corresp="#seg13">
             <mentioned> Amburnago</mentioned>
@@ -594,7 +617,8 @@
          </note>
          <note target="#range(right('n40'), left('n40e'))" n="40" anchored="false" corresp="#seg14">
             <mentioned> Maranum</mentioned>
-            <p><rs type="bibl" ref="bibl:14772">Tassin, Histoire
+            <p>
+               <rs type="bibl" ref="bibl:14772">Tassin, Histoire
                      littéraire</rs> 473, 741–749; vgl. <rs type="bibl" ref="bibl:15602">Chaussy,
                      Bénédictins</rs> 2 88; <rs type="bibl" ref="bibl:15604">Chaussy, Matricula</rs>
                   97; <rs type="bibl" ref="bibl:16082">Endres, Korrespondenz</rs> 10–28, 42–71; <rs type="bibl" ref="bibl:20354">Wilhelm et al., Nouveau supplément</rs>
@@ -609,7 +633,8 @@
          </note>
          <note target="#range(right('n42'), left('n42e'))" n="42" anchored="false" corresp="#seg16">
             <mentioned>Vitam eiusdem</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:677">677</ref> <ref target="letter:677#seg2">2</ref>.
+            <p>Vgl. <ref type="letter" target="letter:677">677</ref>
+               <ref target="letter:677#seg2">2</ref>.
                </p>
          </note>
          <note target="#range(right('n43'), left('n43e'))" n="43" anchored="false" corresp="#seg17">
@@ -633,7 +658,8 @@
          </note>
          <note target="#range(right('n45'), left('n45e'))" n="45" anchored="false" corresp="#seg18">
             <mentioned> cancellarius</mentioned>
-            <p> Zu ihm vgl. <ref type="letter" target="letter:359">359</ref> <ref target="letter:359#seg9">9</ref>.
+            <p> Zu ihm vgl. <ref type="letter" target="letter:359">359</ref>
+               <ref target="letter:359#seg9">9</ref>.
                </p>
          </note>
          <note target="#range(right('n46'), left('n46e'))" n="46" anchored="false" corresp="#seg18">
@@ -646,7 +672,8 @@
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
-         <note anchored="false">Nummerierung: <orig>III.</orig></note>
+         <note anchored="false">Nummerierung: <orig>III.</orig>
+         </note>
          <note anchored="false">Ordnungsvermerk: <orig>153</orig>.</note>
       </listAnnotation>
       <listBibl>
@@ -663,24 +690,53 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Admodum reverendo et erudito viro patri Bernardo Pez monacho Benedictino ac bibliothecario Mellicensi frater Edmundus Martene humilis monachus e congregatione sancti Mauri salutem plurimam dicit.</opener>
-         <ab resp="#editor" xml:id="seg1"><anchor xml:id="n1"/>Bibliothecam tuam Benedictino-Maurianam avide percurri nec sine animi suavitate legi<anchor xml:id="n1e"/>, est enim <choice><sic>salso</sic><corr>terso</corr></choice> et <sic>elegati</sic> stylo conscripta ac tanta artis industria composita, ut ex paucis exiguisque scriptoribus magnum opus <sic>efficeris</sic>. Unde numquam satis dignas tibi grates nostri referre possunt. In ea tamen nonnulla subrepsere menda, non tuo, sed eorum, quos sequutus es auctores, vitio. Ea si quidem iubes, non carpendi pruritu, sed fraterno affectu tibi suggeram. </ab>
-         <ab resp="#editor" xml:id="seg2">In Dissertatione tua historica de ortu et progressu nostrae congregationis capite secundo <choice><sic>institutionis</sic><corr>institutionem</corr></choice> congregationis Casalis Benedicti Guillelmo Alabatio abbati Casalis anno 1502 tribuis, <anchor xml:id="n2"/>Bucelinum sequutus<anchor xml:id="n2e"/>. Verum<anchor xml:id="n3"/> aliter res se habet<anchor xml:id="n3e"/>. Nam anno 1488 Petrus Masius Dumas abbas Casalis Benedicti, vir generis nobilitate et pietate in primis commendandus, monasterium suum ad formam congregationis sanctae Justinae reformavit, qui mox omnium animos in sui admirationem attraxit. Anno 1497 Guillelmus Alabatius abbas S. Sulpitii <choice><sic>eam</sic><corr>Bituricensis</corr></choice> <sic>eamdam</sic> vivendi rationem in suo introduxit monasterio resignata in gratiam reformationis abbatia Guidoni<anchor xml:id="n4"/> Juvenali<anchor xml:id="n4e"/>. Anno vero 1500 Jacobus de Ambasia episcopus Claromontanus et abbas S. Illidii, et<del ana="#after">P</del> anno 1501 Philippus de Luxemburgo episcopus Cenomanensis et abbas S. Vincentii Cenomanensis reformandas abbatias <add place="above">suas</add> sponte dimiserunt; demum anno 1505 die 14. Aprilis quatuor horum monasteriorum abbates apud S. Sulpitium cum suis discretis convenerunt ac communi conventuum suorum consensu foedus perpetuum inter se inierunt, ut unum deinceps <choice><sic>corps</sic><corr>corpus</corr></choice>, unam ex quatuor illis abbatiis congregationem efficerent. His anno 1511 adiuncta est Sagiensis S. Martini, ac demum anno 1516 congregationem confirmavit suo diplomate Leo papa X. Haec fuere vera initia congregationis Casalis Benedicti, quae demum<anchor xml:id="n5"/> nostrae incorporata<anchor xml:id="n5e"/> est anno <choice><sic>1606</sic><corr>1636</corr></choice>. <pb n="1v"/> </ab>
+         <opener>
+            <pb n="1r"/> Admodum reverendo et erudito viro patri Bernardo Pez monacho Benedictino ac bibliothecario Mellicensi frater Edmundus Martene humilis monachus e congregatione sancti Mauri salutem plurimam dicit.</opener>
+         <ab resp="#editor" xml:id="seg1">
+            <anchor xml:id="n1"/>Bibliothecam tuam Benedictino-Maurianam avide percurri nec sine animi suavitate legi<anchor xml:id="n1e"/>, est enim <choice>
+               <sic>salso</sic>
+               <corr>terso</corr>
+            </choice> et <sic>elegati</sic> stylo conscripta ac tanta artis industria composita, ut ex paucis exiguisque scriptoribus magnum opus <sic>efficeris</sic>. Unde numquam satis dignas tibi grates nostri referre possunt. In ea tamen nonnulla subrepsere menda, non tuo, sed eorum, quos sequutus es auctores, vitio. Ea si quidem iubes, non carpendi pruritu, sed fraterno affectu tibi suggeram. </ab>
+         <ab resp="#editor" xml:id="seg2">In Dissertatione tua historica de ortu et progressu nostrae congregationis capite secundo <choice>
+               <sic>institutionis</sic>
+               <corr>institutionem</corr>
+            </choice> congregationis Casalis Benedicti Guillelmo Alabatio abbati Casalis anno 1502 tribuis, <anchor xml:id="n2"/>Bucelinum sequutus<anchor xml:id="n2e"/>. Verum<anchor xml:id="n3"/> aliter res se habet<anchor xml:id="n3e"/>. Nam anno 1488 Petrus Masius Dumas abbas Casalis Benedicti, vir generis nobilitate et pietate in primis commendandus, monasterium suum ad formam congregationis sanctae Justinae reformavit, qui mox omnium animos in sui admirationem attraxit. Anno 1497 Guillelmus Alabatius abbas S. Sulpitii <choice>
+               <sic>eam</sic>
+               <corr>Bituricensis</corr>
+            </choice>
+            <sic>eamdam</sic> vivendi rationem in suo introduxit monasterio resignata in gratiam reformationis abbatia Guidoni<anchor xml:id="n4"/> Juvenali<anchor xml:id="n4e"/>. Anno vero 1500 Jacobus de Ambasia episcopus Claromontanus et abbas S. Illidii, et<del ana="#after">P</del> anno 1501 Philippus de Luxemburgo episcopus Cenomanensis et abbas S. Vincentii Cenomanensis reformandas abbatias <add place="above">suas</add> sponte dimiserunt; demum anno 1505 die 14. Aprilis quatuor horum monasteriorum abbates apud S. Sulpitium cum suis discretis convenerunt ac communi conventuum suorum consensu foedus perpetuum inter se inierunt, ut unum deinceps <choice>
+               <sic>corps</sic>
+               <corr>corpus</corr>
+            </choice>, unam ex quatuor illis abbatiis congregationem efficerent. His anno 1511 adiuncta est Sagiensis S. Martini, ac demum anno 1516 congregationem confirmavit suo diplomate Leo papa X. Haec fuere vera initia congregationis Casalis Benedicti, quae demum<anchor xml:id="n5"/> nostrae incorporata<anchor xml:id="n5e"/> est anno <choice>
+               <sic>1606</sic>
+               <corr>1636</corr>
+            </choice>. <pb n="1v"/>
+         </ab>
          <ab resp="#editor" xml:id="seg3">Quod eodem capite ex Bucelino <anchor xml:id="n6"/>refers de congregatione Sagiensi<anchor xml:id="n6e"/>, omnino fictitium est. Nullam enim in Galliis agnoscimus congregationem Sagiensem. Sed ut dicebam modo, Sagiense S. Martini monasterium Casalis Benedicti congregationi se adiunxit anno 1511. </ab>
          <ab resp="#editor" xml:id="seg4">Eiusdem Dissertationis capite tertio agens de initiis congregationis S. Vitoni ita habes: Ex <anchor xml:id="n7"/>viginti quatuor<anchor xml:id="n7e"/>, qui nomina primum dederant, vix tres, quod ante coeperant, agere <sic>perrexunt</sic>. Verum paulo aliter res se habet. Patres quidem Societatis Jesu 24 tyrones promiserant, sed ex his nullus praeter tres nomen dedit. Ibidem Carmelienses pro Cormeliacenses in Normannia monachos commemoras. </ab>
-         <ab resp="#editor" xml:id="seg5">Capite quarto de Laurentio <anchor xml:id="n8"/>Benard<anchor xml:id="n8e"/> haec habes: Postea in diversa ordinis Cluniacensis monasteria acceptam sancti Vitoni disciplinam invexit sicque author fuit congregationis, quam vocant strictioris observantiae Cluniacensis. Verum id constare non potest. Nam anno<anchor xml:id="n9"/> tantummodo 1630<anchor xml:id="n9e"/> Cluniacum reformationem a <choice><sic>Cluniacensibus</sic><corr>Vitonianis</corr></choice> accepit. <sic>Laurientius</sic> vero <anchor xml:id="n10"/>Benard<anchor xml:id="n10e"/> anno 1620 ad Superos evolarat, cum prius nostrae congregationi nomen dedisset. Ibidem non<anchor xml:id="n11"/> Hubertus Rollet<anchor xml:id="n11e"/>, sed<anchor xml:id="n12"/> Anselmus Rolle<anchor xml:id="n12e"/> primus fuit prior S. Augustini Lemovicensis anno 1613. Non triennio post, sed 1615<anchor xml:id="n13"/> Nobiliacense S. Juniani<anchor xml:id="n13e"/> monasterium reformatur. </ab>
+         <ab resp="#editor" xml:id="seg5">Capite quarto de Laurentio <anchor xml:id="n8"/>Benard<anchor xml:id="n8e"/> haec habes: Postea in diversa ordinis Cluniacensis monasteria acceptam sancti Vitoni disciplinam invexit sicque author fuit congregationis, quam vocant strictioris observantiae Cluniacensis. Verum id constare non potest. Nam anno<anchor xml:id="n9"/> tantummodo 1630<anchor xml:id="n9e"/> Cluniacum reformationem a <choice>
+               <sic>Cluniacensibus</sic>
+               <corr>Vitonianis</corr>
+            </choice> accepit. <sic>Laurientius</sic> vero <anchor xml:id="n10"/>Benard<anchor xml:id="n10e"/> anno 1620 ad Superos evolarat, cum prius nostrae congregationi nomen dedisset. Ibidem non<anchor xml:id="n11"/> Hubertus Rollet<anchor xml:id="n11e"/>, sed<anchor xml:id="n12"/> Anselmus Rolle<anchor xml:id="n12e"/> primus fuit prior S. Augustini Lemovicensis anno 1613. Non triennio post, sed 1615<anchor xml:id="n13"/> Nobiliacense S. Juniani<anchor xml:id="n13e"/> monasterium reformatur. </ab>
          <ab resp="#editor" xml:id="seg6">Capite quinto <anchor xml:id="n14"/>erravit Bucelinus<anchor xml:id="n14e"/>, dum loquens de<anchor xml:id="n15"/> initio societatis Britannicae<anchor xml:id="n15e"/> ait Natalem Mars ex licentiato in theologia factum fuisse monachum Maioris Monasterii, cum econtrario<anchor xml:id="n16"/> a puero fuerit monachus, deinde post professionem missus Parisios in collegio Maioris Monasterii sacris litteris operam dederit ac gradum licentiatus in theologia assecutus<anchor xml:id="n16e"/> fuerit. Sed neque ipse societati<anchor xml:id="n17"/> initium dedit<anchor xml:id="n17e"/>, licet societatis primus extiterit superior. </ab>
-         <ab resp="#editor" xml:id="seg7">Capite sexto congregatio sancti Mauri non 1621, sed 1618 auctoritate regia <anchor xml:id="n18"/>initium duxit, anno 1621 a summo pontifice confirmata<anchor xml:id="n18e"/>, cuius<anchor xml:id="n19"/> primi praepositi<anchor xml:id="n19e"/> <add place="above">fuere</add> ab anno 1618 reverendus pater Martinus Tesnier, ab anno 1621 reverendus pater domnus Columbanus Regnier, ab anno 1624 iterum reverendus pater domnus Martinus Tesnier, <pb n="2r"/> ab anno 1627 reverendus pater domnus Maurus Dupont. Hi non generales, sed praesidentes dicebantur, ut in congregatione sancti Vitoni et in Cassinensi. Non reverendus pater domnus Gregorius Tarisse primus<anchor xml:id="n20"/> excitavit studia<anchor xml:id="n20e"/> litterarum in nostra congregatione, sed<del ana="#after">omnes</del> primi nostrae congregationis patres, qui omnes docti extiterunt. Haec de praevia dissertatione. </ab>
+         <ab resp="#editor" xml:id="seg7">Capite sexto congregatio sancti Mauri non 1621, sed 1618 auctoritate regia <anchor xml:id="n18"/>initium duxit, anno 1621 a summo pontifice confirmata<anchor xml:id="n18e"/>, cuius<anchor xml:id="n19"/> primi praepositi<anchor xml:id="n19e"/>
+            <add place="above">fuere</add> ab anno 1618 reverendus pater Martinus Tesnier, ab anno 1621 reverendus pater domnus Columbanus Regnier, ab anno 1624 iterum reverendus pater domnus Martinus Tesnier, <pb n="2r"/> ab anno 1627 reverendus pater domnus Maurus Dupont. Hi non generales, sed praesidentes dicebantur, ut in congregatione sancti Vitoni et in Cassinensi. Non reverendus pater domnus Gregorius Tarisse primus<anchor xml:id="n20"/> excitavit studia<anchor xml:id="n20e"/> litterarum in nostra congregatione, sed<del ana="#after">omnes</del> primi nostrae congregationis patres, qui omnes docti extiterunt. Haec de praevia dissertatione. </ab>
          <ab resp="#editor" xml:id="seg8">Capite primo Bibliothecae tuae pagina 4 <anchor xml:id="n21"/>erravit Dupin<anchor xml:id="n21e"/>, dum Martyrologium Menardi Benedictinum duobus magnis voluminibus in folio editum fuisse asserit. Capite secundo de<anchor xml:id="n22"/> Thomae Du Four<anchor xml:id="n22e"/> operibus nihil novi <add place="above">praeter</add> linguae Hebraicae opus grammaticum; non defuit in eo doctrina ad alia componenda. Testamentum eius spirituale legi, atque unico continetur folio. Capite septimo<anchor xml:id="n23"/> Germanus Millet<anchor xml:id="n23e"/> non anno 1674, sed 1647 obiit. </ab>
-         <ab resp="#editor" xml:id="seg9">Capite octavo Thomas Blampinus numquam<del ana="#after">socius</del> datus fuit adiutor <anchor xml:id="n24"/>Francisco Delphavio in editione sancti Augustini, sed Francisco de medio sublato<anchor xml:id="n24e"/><anchor xml:id="n25"/> tota operis oeconomia tradita fuit Thomae Blampinio<anchor xml:id="n25e"/>. Sed neque misso in exsilium Francisco Delfavio omnes eius socii dissipati sunt, sed<anchor xml:id="n26"/> duo tantum<anchor xml:id="n26e"/> cum eo. Nonnulla etiam tribuis Delfavio, <anchor xml:id="n27"/>quae sunt Gerberonii<anchor xml:id="n27e"/>. Quae videre poteris, cum contextum a me <anchor xml:id="n28"/>catalogum<anchor xml:id="n28e"/> scriptorum nostrorum receperis. </ab>
+         <ab resp="#editor" xml:id="seg9">Capite octavo Thomas Blampinus numquam<del ana="#after">socius</del> datus fuit adiutor <anchor xml:id="n24"/>Francisco Delphavio in editione sancti Augustini, sed Francisco de medio sublato<anchor xml:id="n24e"/>
+            <anchor xml:id="n25"/> tota operis oeconomia tradita fuit Thomae Blampinio<anchor xml:id="n25e"/>. Sed neque misso in exsilium Francisco Delfavio omnes eius socii dissipati sunt, sed<anchor xml:id="n26"/> duo tantum<anchor xml:id="n26e"/> cum eo. Nonnulla etiam tribuis Delfavio, <anchor xml:id="n27"/>quae sunt Gerberonii<anchor xml:id="n27e"/>. Quae videre poteris, cum contextum a me <anchor xml:id="n28"/>catalogum<anchor xml:id="n28e"/> scriptorum nostrorum receperis. </ab>
          <ab resp="#editor" xml:id="seg10">Capite 16. inter opera Francisci Pommeraye recenses Rotomagensis ecclesiae concilia, rectius forte <anchor xml:id="n29"/>Concilia Normanniae<anchor xml:id="n29e"/>. Capite 18. ais Philippum<anchor xml:id="n30"/> Bastide<anchor xml:id="n30e"/> iunctum fuisse Acherio et Mabilonio. Immo iis praesertim adversatus est et, quantum potuit, contradixit, non satis discreto pro gloria ordinis zelo. Capite 29. inter<anchor xml:id="n31"/> Garetii<anchor xml:id="n31e"/> consiliorum fautores recenses e nostris<anchor xml:id="n32"/> Emericum Bigot<anchor xml:id="n32e"/>, qui tamen non monachus, sed laicus extitit. </ab>
          <ab resp="#editor" xml:id="seg11">Capite 34. <anchor xml:id="n33"/>cespitavit Massuetus<anchor xml:id="n33e"/> in ipso limine vitae Mabillonii, dum eum natum fuisse dicit in finibus Campaniae duabus circiter leucis a Mussiponte. Nam Mussipons oppidum est Lotharingiae ad Mosellam fluvium quatuor leucis distans a Metis. Lege igitur: duabus circiter leucis Gallicis a Mosomo. Pagina 215 inter opera Mabillonii<anchor xml:id="n34"/> epistola enciclica<anchor xml:id="n34e"/> de morte Mariae de Blemur, lege Jacobae de Blemur. </ab>
-         <ab resp="#editor" xml:id="seg12">Capite 41. annos 33 <anchor xml:id="n35"/>tribuis Francisco Lami<anchor xml:id="n35e"/>, cum nostram ingressus est<del ana="#after">societ</del> congregationem, et tamen 23. annum non excesserat. <pb n="2v"/> </ab>
-         <ab resp="#editor" xml:id="seg13">Partis secundae capite primo pagina 292 <anchor xml:id="n36"/>Meditationes de vita purgativa et Meditationes pro noviciis idem sunt<anchor xml:id="n36e"/> opus. Capite secundo pagina 293 pro<anchor xml:id="n37"/> Amburnago<anchor xml:id="n37e"/> lege Ambroniaco. Capite undecimo pagina 345<anchor xml:id="n38"/> Claudius Guenié non omnes, sed aliquot tantum indices sancti Augustini edidit<anchor xml:id="n38e"/>. Pagina <choice><sic>359</sic><corr>355</corr></choice> dominus<anchor xml:id="n39"/> Thomasius<anchor xml:id="n39e"/> archivii eiusdem ecclesiae praefectus: pro eiusdem lege Turonensis vel sancti Gatiani, nam ecclesia sancti Martini non est cathedralis. </ab>
+         <ab resp="#editor" xml:id="seg12">Capite 41. annos 33 <anchor xml:id="n35"/>tribuis Francisco Lami<anchor xml:id="n35e"/>, cum nostram ingressus est<del ana="#after">societ</del> congregationem, et tamen 23. annum non excesserat. <pb n="2v"/>
+         </ab>
+         <ab resp="#editor" xml:id="seg13">Partis secundae capite primo pagina 292 <anchor xml:id="n36"/>Meditationes de vita purgativa et Meditationes pro noviciis idem sunt<anchor xml:id="n36e"/> opus. Capite secundo pagina 293 pro<anchor xml:id="n37"/> Amburnago<anchor xml:id="n37e"/> lege Ambroniaco. Capite undecimo pagina 345<anchor xml:id="n38"/> Claudius Guenié non omnes, sed aliquot tantum indices sancti Augustini edidit<anchor xml:id="n38e"/>. Pagina <choice>
+               <sic>359</sic>
+               <corr>355</corr>
+            </choice> dominus<anchor xml:id="n39"/> Thomasius<anchor xml:id="n39e"/> archivii eiusdem ecclesiae praefectus: pro eiusdem lege Turonensis vel sancti Gatiani, nam ecclesia sancti Martini non est cathedralis. </ab>
          <ab resp="#editor" xml:id="seg14">Capite 20. pagina 397 emendandum, quod <anchor xml:id="n40"/>Opera sancti Basilii<anchor xml:id="n40e"/> curante Garnerio sub praelo gemere dicuntur. Nam ne unum quidem folium sancti Basilii hactenus editum est. Pagina 400 Prudentium<anchor xml:id="n41"/> Maranum<anchor xml:id="n41e"/> natum facis anno 1689, cum tamen primam lucem videret 1683. </ab>
          <ab resp="#editor" xml:id="seg15">Nonnulla alia corrigenda et ipse facile advertes, cum opellam meam de scriptoribus nostrae congregationis acceperis. Eam autem statim mittam, cum mihi significaveris, cui illam tuto consignare possim. </ab>
          <ab resp="#editor" xml:id="seg16">Non parvam mihi contulit laetitiam, quod in Bibliotheca tua Mauriana <anchor xml:id="n42"/>legi Meditationes reverendi patris Claudii Martin Latinitate donatas Salzburgi fuisse typis mandatas<anchor xml:id="n42e"/>. Utinam aliquis vestrum <anchor xml:id="n43"/>Vitam eiusdem<anchor xml:id="n43e"/> sanctissimi viri a me Gallice scriptam in Latinum similiter convertat Germanis aliisque Benedictinis profuturam, quam Galli patria lingua exaratam non sine fructu legerunt. </ab>
-         <ab resp="#editor" xml:id="seg17"><anchor xml:id="n44"/>Dialogus duorum monachorum<anchor xml:id="n44e"/> Cluniacensis et Cisterciensis de novitate ordinis Cisterciensis, quem reperisti in bibliotheca S. Crucis in Austria, ipse est, quem in Thesauro nostro anecdotorum edidimus. Sed in codice nostro desideratur praefatio seu epistola nuncupatoria, quae in vestro extat. </ab>
+         <ab resp="#editor" xml:id="seg17">
+            <anchor xml:id="n44"/>Dialogus duorum monachorum<anchor xml:id="n44e"/> Cluniacensis et Cisterciensis de novitate ordinis Cisterciensis, quem reperisti in bibliotheca S. Crucis in Austria, ipse est, quem in Thesauro nostro anecdotorum edidimus. Sed in codice nostro desideratur praefatio seu epistola nuncupatoria, quae in vestro extat. </ab>
          <ab resp="#editor" xml:id="seg18">Faustum tibi <anchor xml:id="n45"/>iter<anchor xml:id="n45e"/> et amplissimam veterum scriptorum necdum editorum messem<del ana="#after">tibi</del> deprecor. Illustrissimus Franciae<anchor xml:id="n46"/> cancellarius<anchor xml:id="n46e"/> litteras impense favens <anchor xml:id="n47"/>iubet nos auctorum veterum historiae Francorum editionem adornare<anchor xml:id="n47e"/>. Si quid huic editioni accommodum in bibliothecis, quas lustraveris, repereris, pergratum nobis faceres, si saltem indicare velles. Vale, optime pater, et me tuis precibus enixe commendatum habe.</ab>
          <closer>Dabam in monasterio S. Germani a Pratis die 9. Julii 1717.</closer>
       </body>

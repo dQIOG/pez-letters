@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="88" xml:id="pez-0088">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>René Massuet an Bernhard Pez. 1710-07-10. Paris (St.-Germain-des-Prés).</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">88</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
             <note type="remarks">
                Der zweite und der vierte der bei Glassner,
                      Verzeichnis 225, angeführten Briefe von RM sind weitgehend identisch. Bei
@@ -77,10 +88,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -104,23 +116,32 @@
             </correspContext>
          </correspDesc>
          <abstract>
-            <p corresp="#seg1"><rs type="person">RM</rs> hat BPs Brief vom 18. Mai <ref type="letter" target="letter:68">68</ref> bereits am Ende jenes Monats erhalten, zwei Tage nach dem Schreiben <rs ref="index:d14380e39962">Anselm Schrambs</rs>. Durch die Druckfahnenkorrektur seiner Edition der Schrift <rs ref="index:d14380e19786">„Contra haereses“ des Irenäus von Lyon</rs> ist <rs type="person">RM</rs> jedoch bislang vom Verfassen einer Antwort abgehalten worden, was ihn umso mehr bedrückt, als er BP als feinsinnigen und gebildeten Mann schätzt.</p>
-            <p corresp="#seg2"><rs type="person">RM</rs> ist erfreut über BPs Ankauf der ersten vier Bände der „<rs ref="index:d10854e17940">Annales OSB</rs>“, bezweifelt jedoch, dass die „<rs ref="index:d14380e6100">Acta sanctorum OSB</rs>“ aus <rs ref="index:d14380e2855">Antwerpen</rs> bezogen werden können, da sie selbst in <rs ref="index:d14380e32292">Paris</rs> nur mehr zu einem hohen Preis zu bekommen sind. Ein Buchhändler hat alle Exemplare des zweiten Bandes aufgekauft und verkauft sie nun überteuert um bis zu 50 oder 60 Livres. Buchhändler sind größere Räuber an den Buchkäufern als die <rs ref="index:d10854e31543">Ungarn</rs> an BPs Landsleuten.</p>
-            <p corresp="#seg3"><rs ref="index:d10854e2458">Henri Basnage</rs> hatte in den Generalstaaten geplant, <rs ref="index:d14380e150">d’Acherys „Spicilegium“</rs>, <rs ref="index:d14380e25828">Mabillons „Vetera analecta“</rs> sowie die <rs ref="index:d14380e7499">„Antiquae lectiones“ von Canisius</rs> neu herauszubringen, ist jedoch vor kurzem gestorben. Diese Werke sollte sich BP unbedingt besorgen, ebenso <rs ref="index:d10854e18065">Mabillons „Musaeum Italicum“</rs>. *Der <rs ref="index:d14380e25845">vierte Band</rs> von <rs ref="index:d14380e25828">Mabillons „Vetera analecta“</rs> enthält viele benediktinische Schriftsteller, die dieser auf seiner Reise durch die Klöster <rs ref="index:d14380e9395">Deutschlands</rs> gesammelt hat. Die Beschreibung der Reise, das <rs ref="index:d14380e25851">„Iter Germanicum“</rs>, hat er dem vierten Band vorangestellt und gleichzeitig Separatdrucke anfertigen lassen. <rs type="person">RM</rs> verfügt über ein Exemplar und will es BP bei Gelegenheit als Geschenk übermitteln. Wenn BP das Werk überhaupt nicht besitzt, möge er dies mitteilen, damit <rs type="person">RM</rs> die benediktinischen Autoren daraus abschreiben lassen kann*. Diese und andere <rs ref="index:d10854e15615">Maurinerwerke</rs> könnte BP aus dem Kloster <rs ref="index:d10854e31947">St. Georg zu Villingen</rs> im <rs ref="index:d10854e28449">Schwarzwald</rs> ausleihen. Dass sie dort vorhanden sind, ersieht <rs type="person">RM</rs> aus den Briefen *des dortigen Priors <rs ref="index:d10854e9969">Georg Gaisser</rs>*, welche <rs ref="index:d14380e25581">Mabillon</rs> von dort erhalten hat. Gleiches gilt für <rs ref="index:d10854e21646">Ochsenhausen</rs>. Sicher besitzt auch <rs ref="index:d14380e39115">St. Peter</rs> zu <rs ref="index:d14380e39054">Salzburg</rs> die ersten Bände der „<rs ref="index:d14380e25664">Acta sanctorum OSB</rs>“. *Schließlich legt <rs type="person">RM</rs> BP <rs ref="index:d10854e18065">Mabillons „Musaeum Italicum“</rs> ans Herz, darin besonders das „<rs ref="index:d10854e18080">Iter Italicum</rs>“ am Beginn des ersten Bandes*.</p>
-            <p corresp="#seg4"><rs type="person">RM</rs> empfiehlt für BPs Vorhaben weiters die sechs Bände „<rs ref="index:d14380e3720">Miscellanea</rs>“ des ehemaligen Präfekten der <rs ref="index:d14380e32292">Pariser</rs> <rs ref="index:d14380e32361">Bibliothèque Colbert</rs>, <rs ref="index:d14380e3697">Étienne Baluze</rs>. Der sechste Band befindet sich eben erst im Druck. Wenn sich BP das Werk nicht leicht beschaffen kann, will <rs type="person">RM</rs> daraus die Benediktinerautoren samt Katalogen ihrer Werke exzerpieren. In seinem „<rs ref="index:d14380e25851">Iter Germanicum</rs>“ erwähnt <rs ref="index:d14380e25581">Mabillon</rs> <rs ref="index:d10854e7672">Nikolaus Ellenbog</rs> aus <rs ref="index:d14380e31859">Ottobeuren</rs> in <rs ref="index:d10854e28377">Schwaben</rs>; <rs type="person">RM</rs> sind vor kurzem zufällig nähere Angaben zu diesem untergekommen, welche <rs ref="index:d14380e3697">Baluze</rs> aus dessen Briefen zusammengestellt und an <rs ref="index:d14380e25581">Mabillon</rs> geschickt hat. <rs type="person">RM</rs> teilt sie nun BP mit.</p>
+            <p corresp="#seg1">
+               <rs type="person">RM</rs> hat BPs Brief vom 18. Mai <ref type="letter" target="letter:68">68</ref> bereits am Ende jenes Monats erhalten, zwei Tage nach dem Schreiben <rs ref="index:d14380e39962">Anselm Schrambs</rs>. Durch die Druckfahnenkorrektur seiner Edition der Schrift <rs ref="index:d14380e19786">„Contra haereses“ des Irenäus von Lyon</rs> ist <rs type="person">RM</rs> jedoch bislang vom Verfassen einer Antwort abgehalten worden, was ihn umso mehr bedrückt, als er BP als feinsinnigen und gebildeten Mann schätzt.</p>
+            <p corresp="#seg2">
+               <rs type="person">RM</rs> ist erfreut über BPs Ankauf der ersten vier Bände der „<rs ref="index:d10854e17940">Annales OSB</rs>“, bezweifelt jedoch, dass die „<rs ref="index:d14380e6100">Acta sanctorum OSB</rs>“ aus <rs ref="index:d14380e2855">Antwerpen</rs> bezogen werden können, da sie selbst in <rs ref="index:d14380e32292">Paris</rs> nur mehr zu einem hohen Preis zu bekommen sind. Ein Buchhändler hat alle Exemplare des zweiten Bandes aufgekauft und verkauft sie nun überteuert um bis zu 50 oder 60 Livres. Buchhändler sind größere Räuber an den Buchkäufern als die <rs ref="index:d10854e31543">Ungarn</rs> an BPs Landsleuten.</p>
+            <p corresp="#seg3">
+               <rs ref="index:d10854e2458">Henri Basnage</rs> hatte in den Generalstaaten geplant, <rs ref="index:d14380e150">d’Acherys „Spicilegium“</rs>, <rs ref="index:d14380e25828">Mabillons „Vetera analecta“</rs> sowie die <rs ref="index:d14380e7499">„Antiquae lectiones“ von Canisius</rs> neu herauszubringen, ist jedoch vor kurzem gestorben. Diese Werke sollte sich BP unbedingt besorgen, ebenso <rs ref="index:d10854e18065">Mabillons „Musaeum Italicum“</rs>. *Der <rs ref="index:d14380e25845">vierte Band</rs> von <rs ref="index:d14380e25828">Mabillons „Vetera analecta“</rs> enthält viele benediktinische Schriftsteller, die dieser auf seiner Reise durch die Klöster <rs ref="index:d14380e9395">Deutschlands</rs> gesammelt hat. Die Beschreibung der Reise, das <rs ref="index:d14380e25851">„Iter Germanicum“</rs>, hat er dem vierten Band vorangestellt und gleichzeitig Separatdrucke anfertigen lassen. <rs type="person">RM</rs> verfügt über ein Exemplar und will es BP bei Gelegenheit als Geschenk übermitteln. Wenn BP das Werk überhaupt nicht besitzt, möge er dies mitteilen, damit <rs type="person">RM</rs> die benediktinischen Autoren daraus abschreiben lassen kann*. Diese und andere <rs ref="index:d10854e15615">Maurinerwerke</rs> könnte BP aus dem Kloster <rs ref="index:d10854e31947">St. Georg zu Villingen</rs> im <rs ref="index:d10854e28449">Schwarzwald</rs> ausleihen. Dass sie dort vorhanden sind, ersieht <rs type="person">RM</rs> aus den Briefen *des dortigen Priors <rs ref="index:d10854e9969">Georg Gaisser</rs>*, welche <rs ref="index:d14380e25581">Mabillon</rs> von dort erhalten hat. Gleiches gilt für <rs ref="index:d10854e21646">Ochsenhausen</rs>. Sicher besitzt auch <rs ref="index:d14380e39115">St. Peter</rs> zu <rs ref="index:d14380e39054">Salzburg</rs> die ersten Bände der „<rs ref="index:d14380e25664">Acta sanctorum OSB</rs>“. *Schließlich legt <rs type="person">RM</rs> BP <rs ref="index:d10854e18065">Mabillons „Musaeum Italicum“</rs> ans Herz, darin besonders das „<rs ref="index:d10854e18080">Iter Italicum</rs>“ am Beginn des ersten Bandes*.</p>
+            <p corresp="#seg4">
+               <rs type="person">RM</rs> empfiehlt für BPs Vorhaben weiters die sechs Bände „<rs ref="index:d14380e3720">Miscellanea</rs>“ des ehemaligen Präfekten der <rs ref="index:d14380e32292">Pariser</rs>
+               <rs ref="index:d14380e32361">Bibliothèque Colbert</rs>, <rs ref="index:d14380e3697">Étienne Baluze</rs>. Der sechste Band befindet sich eben erst im Druck. Wenn sich BP das Werk nicht leicht beschaffen kann, will <rs type="person">RM</rs> daraus die Benediktinerautoren samt Katalogen ihrer Werke exzerpieren. In seinem „<rs ref="index:d14380e25851">Iter Germanicum</rs>“ erwähnt <rs ref="index:d14380e25581">Mabillon</rs>
+               <rs ref="index:d10854e7672">Nikolaus Ellenbog</rs> aus <rs ref="index:d14380e31859">Ottobeuren</rs> in <rs ref="index:d10854e28377">Schwaben</rs>; <rs type="person">RM</rs> sind vor kurzem zufällig nähere Angaben zu diesem untergekommen, welche <rs ref="index:d14380e3697">Baluze</rs> aus dessen Briefen zusammengestellt und an <rs ref="index:d14380e25581">Mabillon</rs> geschickt hat. <rs type="person">RM</rs> teilt sie nun BP mit.</p>
             <p corresp="#seg5">Im Nachlass <rs ref="index:d14380e25581">Mabillons</rs> (scrinia Mabillonii) hat <rs type="person">RM</rs> Aufzeichnungen nicht nur über <rs ref="index:d14380e12712">französische</rs>, sondern auch über ausländische Benediktinerautoren gefunden, die er BP aus Dankbarkeit für dessen Hilfe zukommen lassen will. Ohne die großzügige Unterstützung BPs könnte er, ein unbekannter <rs ref="index:d14380e12712">französischer</rs> Mönch, kaum hoffen, die nötigen Informationen zu den Klöstern <rs ref="index:d14380e9395">Deutschlands</rs>, <rs ref="index:d10854e31543">Ungarns</rs> und <rs ref="index:d14380e35438">Polens</rs> zusammenzutragen, zu welchen in den Mauriner-Kollektaneen so gut wie nichts vorhanden ist. BPs Verdienste um die Ordensannalen will <rs type="person">RM</rs> an entsprechender Stelle würdigen. <rs ref="index:d14380e25581">Mabillon</rs> hatte die „<rs ref="index:d14380e25705">Annales OSB</rs>“ erst im fortgeschrittenen Alter in Angriff genommen und deshalb bloß bis auf den Tod des <rs ref="index:d14380e5312">Hl. Bernhard</rs> führen können. Sein Schüler und Nachfolger <rs ref="index:d14380e38364">Thierry Ruinart</rs> ist ebenfalls zu früh verstorben, und nun ist <rs type="person">RM</rs>, dem die Leitung des Unternehmens gegen seinen Willen anvertraut worden ist, auf die Hilfe anderer angewiesen.</p>
-            <p corresp="#seg6"><rs type="person">RM</rs> benötigt vor allem Material zu den Klöstern <rs ref="index:d14380e6032">Böhmens</rs>, <rs ref="index:d10854e31543">Ungarns</rs> und <rs ref="index:d14380e35438">Polens</rs> und nennt jene <rs ref="index:d14380e9395">deutschen</rs> Klöster, zu denen in <rs ref="index:d14380e32292">Paris</rs> Kollektaneen vorhanden sind: von <rs ref="index:d10854e29568">Stablo</rs> ein <rs ref="index:d10854e29576">Äbtekatalog</rs> mit Urkunden; <rs ref="index:d10854e11145">Gregoriental</rs>; <rs ref="index:d14380e45356">Werden</rs>; *<rs ref="index:d10854e32569">Weißenburg</rs>*; <rs ref="index:d10854e7183">Ebersmünster</rs>; <rs ref="index:d10854e20951">Murbach</rs>; <rs ref="index:d14380e14516">Garsten</rs>; <rs ref="index:d10854e10217">Gengenbach</rs>; <rs ref="index:d14380e24888">Liesborn</rs>; von <rs ref="index:d14380e11252">Engelberg</rs> eine <rs ref="index:d14380e11272">Hausgeschichte</rs> seit 1120; <rs ref="index:d10854e16105">Kornelimünster</rs>; von <rs ref="index:d14380e39115">St. Peter</rs> zu <rs ref="index:d14380e39054">Salzburg</rs> eine „<rs ref="index:d10854e26971">Disquisitio historico-chronica</rs>“ über das Alter der Kirche und des Klosters; von <rs ref="index:d14380e34947">Pfäfers</rs> eine <rs ref="index:d10854e24245">Gründungsgeschichte</rs> und weitere Dokumente. Von den <rs ref="index:d14380e40241">Schweizer</rs> Klöstern erhofft sich <rs type="person">RM</rs> noch einiges, ansonsten vertraut er auf BPs Hilfe, wobei er BP bittet, nicht selbst abzuschreiben, sondern nur die Klöster dazu anzuhalten, Material zu ihrer Geschichte an <rs type="person">RM</rs> einzusenden.</p>
+            <p corresp="#seg6">
+               <rs type="person">RM</rs> benötigt vor allem Material zu den Klöstern <rs ref="index:d14380e6032">Böhmens</rs>, <rs ref="index:d10854e31543">Ungarns</rs> und <rs ref="index:d14380e35438">Polens</rs> und nennt jene <rs ref="index:d14380e9395">deutschen</rs> Klöster, zu denen in <rs ref="index:d14380e32292">Paris</rs> Kollektaneen vorhanden sind: von <rs ref="index:d10854e29568">Stablo</rs> ein <rs ref="index:d10854e29576">Äbtekatalog</rs> mit Urkunden; <rs ref="index:d10854e11145">Gregoriental</rs>; <rs ref="index:d14380e45356">Werden</rs>; *<rs ref="index:d10854e32569">Weißenburg</rs>*; <rs ref="index:d10854e7183">Ebersmünster</rs>; <rs ref="index:d10854e20951">Murbach</rs>; <rs ref="index:d14380e14516">Garsten</rs>; <rs ref="index:d10854e10217">Gengenbach</rs>; <rs ref="index:d14380e24888">Liesborn</rs>; von <rs ref="index:d14380e11252">Engelberg</rs> eine <rs ref="index:d14380e11272">Hausgeschichte</rs> seit 1120; <rs ref="index:d10854e16105">Kornelimünster</rs>; von <rs ref="index:d14380e39115">St. Peter</rs> zu <rs ref="index:d14380e39054">Salzburg</rs> eine „<rs ref="index:d10854e26971">Disquisitio historico-chronica</rs>“ über das Alter der Kirche und des Klosters; von <rs ref="index:d14380e34947">Pfäfers</rs> eine <rs ref="index:d10854e24245">Gründungsgeschichte</rs> und weitere Dokumente. Von den <rs ref="index:d14380e40241">Schweizer</rs> Klöstern erhofft sich <rs type="person">RM</rs> noch einiges, ansonsten vertraut er auf BPs Hilfe, wobei er BP bittet, nicht selbst abzuschreiben, sondern nur die Klöster dazu anzuhalten, Material zu ihrer Geschichte an <rs type="person">RM</rs> einzusenden.</p>
             <p corresp="#seg7">Von <rs ref="index:d14380e39962">Schrambs</rs> „<rs ref="index:d14380e40004">Chronicon</rs>“, das dieser an <rs ref="index:d14380e38364">Thierry Ruinart</rs> gesendet hat, hat <rs type="person">RM</rs> nichts gehört. Ein Freund hat sich bereit erklärt, beim Gouverneur von Straßburg (<rs ref="index:d10854e6843">Du Bourg</rs>?), an welchen das Werk aus <rs ref="index:d10854e24294">Philippsburg</rs> geschickt werden sollte, nachfragen zu lassen.</p>
             <p corresp="#seg8">Die von BP genannten Hausgeschichten von <rs ref="index:d10854e32902">Wiblingen</rs> (<rs ref="index:d10854e12708">Heuchlinger, „Templum honoris“</rs>), <rs ref="index:d10854e35314">Zwiefalten</rs> (<rs ref="index:d10854e30078">Sulger, „Annales imperialis monasterii Zwiefaltensis“</rs>), <rs ref="index:d10854e30724">Thierhaupten</rs> (<rs ref="index:d10854e5148">Cherle, „Chronologia monastico-philosophica“</rs>) und <rs ref="index:d10854e21940">Ossiach</rs> (<rs ref="index:d10854e32257">Wallner, „Annus millesimus“</rs>) würde sich <rs type="person">RM</rs> gerne besorgen, klagt aber über die Schwierigkeiten im Buchhandel, die der <rs ref="index:d10854e29346">Krieg</rs> in ganz <rs ref="index:d14380e11804">Europa</rs> verursacht. <rs type="person">RM</rs> betet um baldigen Frieden.</p>
-            <p corresp="#seg9"><rs type="person">RM</rs> lobt <rs ref="index:d14380e39962">Anselm Schramb</rs> aufgrund seines Briefs und schickt ihm ein Dankschreiben. Auch den gegenwärtigen Brief für BP sendet <rs type="person">RM</rs> an <rs ref="index:d14380e39962">Schramb</rs> in <rs ref="index:d14380e45571">Wien</rs>, weil ihm dies der sicherste und schnellste Weg zu sein scheint. Ob auch BPs Schreiben an ihn auf diesem Weg nach <rs ref="index:d14380e32292">Paris</rs> gelangt ist, weiß er nicht. <rs type="person">RM</rs> schließt mit Segenswünschen.</p>
-            </abstract>
+            <p corresp="#seg9">
+               <rs type="person">RM</rs> lobt <rs ref="index:d14380e39962">Anselm Schramb</rs> aufgrund seines Briefs und schickt ihm ein Dankschreiben. Auch den gegenwärtigen Brief für BP sendet <rs type="person">RM</rs> an <rs ref="index:d14380e39962">Schramb</rs> in <rs ref="index:d14380e45571">Wien</rs>, weil ihm dies der sicherste und schnellste Weg zu sein scheint. Ob auch BPs Schreiben an ihn auf diesem Weg nach <rs ref="index:d14380e32292">Paris</rs> gelangt ist, weiß er nicht. <rs type="person">RM</rs> schließt mit Segenswünschen.</p>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg1">
             <mentioned>Anselmo Schramb</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:71">71</ref> <ref target="letter:71#seg3">3</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:71">71</ref>
+               <ref target="letter:71#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg1">
             <mentioned>improbus ... labor</mentioned>
@@ -129,7 +150,8 @@
          </note>
          <note target="#range(right('n3'), left('n3e'))" n="3" anchored="false" corresp="#seg2">
             <mentioned>Miror ... mitti possint</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:68">68</ref> <ref target="letter:68#seg3">3</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:68">68</ref>
+               <ref target="letter:68#seg3">3</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg2">
             <mentioned>Factum ... literatorum damno</mentioned>
@@ -172,7 +194,9 @@
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg4">
             <mentioned>Mabillonius ... acceperat</mentioned>
-            <p>Zu den Handschriften Ellenbogs in der Bibliothèque Colbert vgl. <ref type="letter" target="letter:125">125</ref> <ref target="letter:125#seg3">3</ref>, <ref type="letter" target="letter:143">143</ref> <ref target="letter:143#seg16">16</ref>. Für eine
+            <p>Zu den Handschriften Ellenbogs in der Bibliothèque Colbert vgl. <ref type="letter" target="letter:125">125</ref>
+               <ref target="letter:125#seg3">3</ref>, <ref type="letter" target="letter:143">143</ref>
+               <ref target="letter:143#seg16">16</ref>. Für eine
                   Versendung von Material daraus an Mabillon findet sich kein Anhaltspunkt in den
                   Regesten der Briefe von und an Baluze bei <rs type="bibl" ref="bibl:17878">Leclercq, Mabillon 2</rs> 898, 902, 904, 906, 908, 910, 954, 972, 982.</p>
          </note>
@@ -182,11 +206,13 @@
          </note>
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg5">
             <mentioned>Ruinart ... ereptus</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:48">48</ref> <ref target="letter:48#seg2">2</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:48">48</ref>
+               <ref target="letter:48#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg6">
             <mentioned>scriniis nostris</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:48">48</ref> <ref target="letter:48#seg3">3</ref>. Die von RM genannten Materialien
+            <p>Vgl. <ref type="letter" target="letter:48">48</ref>
+               <ref target="letter:48#seg3">3</ref>. Die von RM genannten Materialien
                   scheinen in den Resten dieser Bestände in der BN allerdings meistenteils nicht
                   erhalten zu sein.</p>
          </note>
@@ -244,17 +270,362 @@
          <p>Plurimum reverendo religiosissimo ac clarissimo domino patri Bernardo Pez presbytero ac capitulari monasterii Mellicensis in Austria Inferiori eiusdemque monasterii bibliothecario, patrono colendissimo. Mölk.</p>
       </front>
       <body>
-         <opener><pb n="1r"/> <app><lem>Admodum reverendo religiosissimo clarissimo ac doctissimo domino et patri Bernardo Pez Melliciensi bibliothecae praefecto amicoque suo colendissimo frater Renatus Massuet presbyter et monachus Benedictinus abbatiae Sancti Germani a Pratis Parisiensis salutem plurimam dicit</lem><rdg wit="#B">Reverendo patri Bernardo Pez bibliothecario Mellicensi in Austria Inferiori</rdg></app>.</opener>
-         <ab resp="#editor" xml:id="seg1">Accepi <app><lem>iucundissimas</lem><rdg wit="#B">amantissimas</rdg></app> literas tuas citius longe, quam sperare potuissem. Datae siquidem sunt 18. Maii mihique sub eiusdem mensis finem redditae, biduo post <app><lem>acceptam</lem><rdg wit="#B">redditam mihi alteram</rdg></app> a reverendo patre <app><lem>Anselmo</lem><rdg wit="#B"/></app> Schramb epistolam. <app><lem>Quod vero tardior in rescribendo fuerim</lem><rdg wit="#B">Quod vero tardius ego rescripserim</rdg></app>, fecit <app><lem>improbus</lem><rdg wit="#B">importunus</rdg></app> meae Irenaei editionis labor eo iam importunius ingravescens, quo properante ad finem editione ingeminant specimina typographica corrigenda. Quamvis autem <app><lem>iis</lem><rdg wit="#B">his</rdg></app> curis solutus <app><lem>nec</lem><rdg wit="#B">nondum</rdg></app> sim nec ante duos menses esse possim, vereor<app><rdg wit="#B"><add place="after">si responsum diutius distulerim</add></rdg></app>, ne<app><rdg wit="#B"><add place="after">malis, ut</add></rdg></app> inurbanus, immo <app><lem>immo et ingratus</lem><rdg wit="#B"/></app> apud te audiam, si, quod ad literas officii plenas singularisque in me benevolentiae testes responsum debetur, procrastinare perrexerim. Ea est enim humanitas tua, quae non modo virum suavissimis moribus excultum<app><rdg wit="#B"><add place="after">sapiat</add></rdg></app>, sed et pectus amicum atque generosum <app><lem>sapiat</lem><rdg wit="#B">arguat</rdg></app>. <app><lem>Praeclarae dotes, quibus splendorem addit eruditio haud vulgaris</lem><rdg wit="#B">Praeclarae in eruditissimo homine dotes</rdg></app>. Utinam meritam tibi gratiam tandem aliquando persolvere <app><lem>valeam</lem><rdg wit="#B">queam</rdg></app>, ut votis et officio faciam <app><lem/><rdg wit="#A"><add place="above">satis</add></rdg></app>, nihil non experiar. Si forte votis effecta non respondeant, faciam tamen, ut <app><lem>de meo in te studio sinceroque affectu</lem><rdg wit="#B">de propenso in te studio devotissimoque tibi corde</rdg></app> numquam dubites. </ab>
-         <ab resp="#editor" xml:id="seg2">Gaudeo, quod quatuor Annalium nostrorum tomos feliciter tibi comparaveris; <app><lem>necessarius omnino</lem><rdg wit="#B">omnino neccessarius</rdg></app> tibi liber erat. Miror vero, si Acta sanctorum ordinis nostri Antverpia <app><lem>ad te</lem><rdg wit="#B">tibi</rdg></app> mitti possint: <app><lem>Parisiis</lem><rdg wit="#B">hic</rdg></app> enim, ubi editum est opus, non adeo obvium est. <app><lem>Octo quidem tomi</lem><rdg wit="#B">Octo quidem illius operis tomi</rdg></app> facile occurrunt, <app><lem>sed</lem><rdg wit="#B">at</rdg></app> rarissimus est secundus, nec nisi <app><lem>magno</lem><rdg wit="#B">magno pretio</rdg></app> comparari potest. <anchor xml:id="n1"/>Factum id, quod unus e bibliopolis nostris omnia, quae supererant, illius tomi exemplaria callide sibi vindicaverit ingenti certe literatorum damno<anchor xml:id="n1e"/>. Nam emptores vexat tomumque suum plus quadruplo vendit, quinquaginta scilicet aut etiam sexaginta Gallicas libras<note place="foot" xml:id="d4618e10708"><hi rend="italic">Factum ... libras: Id factum, quod unus e bibliopolis nostris omnia huius tomi exemplaria magno literatorum omnium damno sibi vindicaverit: emptores enim vexat tomumque suum ultra modum vendit nec dimittere ulla ratione vult nisi 50 aut 60 librarum Gallicarum pretio</hi> B.</note>. <app><lem>Qui sint bibliopolarum vestrorum mores, non novi; nostros tenacissimum esse hominum genus experimento didici, exactores φιλοβὶβλοῦς acerbiores quam vobis Hungari; quo magis lucrantur, eo avidius lucro inhiant</lem><rdg wit="#B">Qui sint bibliopolae vestri, non novi: nostros avarissimum esse hominum genus experimento didici: quo magis lucrantur, eo cupidius lucro inhiant</rdg></app>. </ab>
-         <ab resp="#editor" xml:id="seg3">Spicilegium Acherianum cum Analectis Mabillonianis <app><lem>Antiquisque Canisii lectionibus</lem><rdg wit="#B"/></app> novis typis in Hollandia subicere <anchor xml:id="n2"/>meditabatur Basnagius<anchor xml:id="n2e"/>, sed cum paucis abhinc mensibus excesserit e vivis, <app><lem>haud scio</lem><rdg wit="#B">incertum</rdg></app>, an aliquis alius <app><lem>insistat</lem><rdg wit="#B">insistet</rdg></app> in incoepto. <app><lem>Vix tamen prioribus illis libris ut et Musaeo Italico Mabillonii</lem><rdg wit="#B">Vix tamen eiusmodi libris</rdg></app> carere possis<note place="foot" xml:id="d4618e10746">Danach <hi rend="italic">Quartus Analectorum tomus multos exhibet auctores Benedictinos, quorum opera Mabillonius Germaniae bibliothecas perlustrans ex earumdem forulis eruit luceque donavit. Huic tomo praemisit itineris sui historiam, in qua, quid in unaquaque bibliotheca praecipuum sibi occurrerit, memorat, nec auctores ordinis nostri hactenus ineditos reticet. [</hi>Danach durchgestrichen <hi rend="italic">Eam historiam a reliquo opere separatim.] Illius historiae exemplaria quaedam separatim a reliquo opere imprimi in amicorum gratiam <sic>imprimi</sic> curavit. Unum exemplar penes me habeo: hoc tibi munusculum lubens offerrem, si quae tibi se transmittendi offeret occasio. Interim si totum tibi desit opus, mihi significes velim. Benedictinorum auctorum nomina et opera exscribi curabo et ad te mitti </hi>B.</note>. <app><lem>At si quae</lem><rdg wit="#B">Si quae tamen</rdg></app> vobis necessitudo cum nostris S. Georgii<app><rdg wit="#B"><add place="after">apud Villingam</add></rdg></app> Villingae ad Sylvam Nigram monachis <app><lem>intercederet</lem><rdg wit="#B">interesset</rdg></app>, hinc facile libros omnes tum Mabillonianos tum alios, qui e congregatione <app><lem>nostra</lem><rdg wit="#B"/></app> prodierunt, commodato accipere possetis: huc enim sollicite et accurate missos hinc fuisse ex pluribus inde <anchor xml:id="n3"/>ad Mabillonium datis epistolis<note place="foot" xml:id="d4618e10780"><hi rend="italic">hinc ... epistolis: a Mabillonio ex literis ad eum a domino Georgio Geyssero eiusdem monasterii priore intimoque Mabillonii <sic>amici</sic> scriptis</hi> B.</note><anchor xml:id="n3e"/> comperire mihi videor<app><rdg wit="#B"><add place="after">Inter Mabillonii opera non omittendum certe tibi est Musaeum Italicum ab eodem ex Italia reduce duobus in tomis in quarto vulgatum variaque complectens opera hactenus inedita e bibliothecarum Italicarum scriniis eruta. Sed quod magis ad rem tuam facit, itineris Italici historia est tomo primo praevia, quam legisse te non poenituerit. Sed his forte non caret bibliotheca vestra</add></rdg></app>. Missos etiam <anchor xml:id="n4"/><sic>Oschenhusium</sic><anchor xml:id="n4e"/>  puto. Actorum sacri ordinis nostri priores saltem tomi penes Salisburgenses S. Petri monachos certissime sunt<note place="foot" xml:id="d4618e10799"><hi rend="italic">Missos ... sunt</hi> fehlt B.</note>. </ab>
-         <ab resp="#editor" xml:id="seg4"> <app><lem>Sed nescio, an satis apud vos nota sint Stephani Baluzii olim Colbertinae huius urbis bibliothecae praefecti Miscellanea</lem><rdg wit="#B">At vereor, ut minus nota sint apud vos Stephani Baluzii Miscellanea</rdg></app> sex tomis in octavo Parisiis edita. Sextus saltem tomus notus <app><lem>nondum esse</lem><rdg wit="#B">esse non</rdg></app> potest, ut qui vix e praelo <app><lem>prodeat</lem><rdg wit="#B">prodierit</rdg></app>. Plura hinc eruere posses, quae ad rem <pb n="1v"/> tuam non parum facerent<note place="foot" xml:id="d4618e10827"><hi rend="italic">Plura ... facerent: Plura etiam in iis voluminibus occurrent auctorum nostrorum opera hactenus inedita</hi> B.</note>. Si<note type="annotation" xml:id="d4618e10834">Danach in A unleserliche Streichung im Ausmaß von 2 Buchstaben.</note> vero, quod nollem, nec habeatur nec haberi facile possit opus<note place="foot" xml:id="d4618e10837">Über der Zeile eingefügt A. <hi rend="italic">nec habeatur ... opus: ea omnia vobis deessent opera nec facile comparari possent</hi> B.</note>, huic incommodo prospicere <app><lem>conabor</lem><rdg wit="#B">conaremur</rdg></app> <app><lem>mittendo Benedictinorum auctorum nomina cum operum catalogo</lem><rdg wit="#B"/></app>. Interea, quia Mabillonius Itineris sui Germanici pagina 44 strictim <anchor xml:id="n5"/>meminit Nicolai Ellembogii<anchor xml:id="n5e"/> monachi Ottemburani in Suevia, operae pretium <app><lem>forte fecerim</lem><rdg wit="#B">facturum me putem</rdg></app>, si paulo ampliora <app><lem>quaedam</lem><rdg wit="#B">quaepiam</rdg></app> de eodem tecum communicem, quae <app><lem>idem</lem><rdg wit="#B"/></app> Mabillonius a Stephano Baluzio ex Ellembogii epistolis <app><lem>eruta</lem><rdg wit="#B">enim<del ana="#after">eruerat</del></rdg></app> acceperat, quaeque mihi nuper aliud quaerenti sub manum devenerunt. Munusculum hoc benigne excipias, donec largiori munere eam, quam tecum nectere cupio, amicitiam conglutinare licuerit. </ab>
-         <ab resp="#editor" xml:id="seg5">Iam, sed segni manu, quia nondum satis expedita, quaedam Mabillonii scrinia evolvi, e quibus non poenitendam auctorum Benedictinorum<app><rdg wit="#B"><add place="after"><sic>auctorum</sic> </add></rdg></app>, <app><lem>non Gallorum tantum, sed etiam exterorum</lem><rdg wit="#B"/></app> <sic>suppellectilem</sic>  tibi aliquando suppeditatum iri prospicio. Patientiam, <app><lem>quaeso</lem><rdg wit="#B"/></app>, habe in me, et omnia reddam tibi. Reddam, dico, non dabo: nec enim quidpiam, quodcumque tandem sit, dono dare, sed potius debita persolvere me censuerim ei, qui tam amanter tamque generose in laborum meorum partem venire gestit. Certe quae subsidia mihi paras et offers, ea sunt, quae <app><lem>spem longe superant</lem><rdg wit="#B">vix sperari potuissent</rdg></app>. Ecquae spes fuisset monacho Gallo <app><lem>obscuri nominis</lem><rdg wit="#B"/></app> Parisiis degenti non plerorumque dumtaxat Germanicorum monasteriorum, sed maxime Hungarorum et Polonorum in alio velut orbe respectu nostri sitorum historica <app><lem>monumenta sibi comparandi, plura forte e ruderibus eruendi</lem><rdg wit="#B">monumenta et forsan etiam rudera eruendi</rdg></app>, nisi meus Bernardus Pez <app><lem>generosi et candidi pectoris amicus</lem><rdg wit="#B">generosae indolis amicus</rdg></app> opportune sese obtulisset, qui me <app><lem>hac cura levaret</lem><rdg wit="#B">hoc labore levasset</rdg></app>? Immortales tibi gratias pro tanta benignitate refero, <app><lem>vir doctissime et ex animo amice</lem><rdg wit="#B"/></app>: <app><lem>quantum</lem><rdg wit="#B">quantumque<del ana="#after">debeant Anna</del></rdg></app> tibi debuerint Annales nostri, toti ordini nostro memori mente significare non omittam. Paucissima de Germaniae monasteriis, <app><lem>de Hungaris ac Polonis nihil prorsus in scriniis nostris hactenus occurrit</lem><rdg wit="#B">hactenus in scriniis nostris deprehendi</rdg></app>. Factum id, quod, cum Mabillonius aetate iam provecta <app><lem>Annales incoepisset, capitis canitie</lem><rdg wit="#B"/></app> monitus <app><lem>sarcinas sibi brevi colligendas</lem><rdg wit="#B">sibi sarcinas brevi colligendas esse</rdg></app>, vixque fieri posse, ut<app><rdg wit="#B"><add place="after">totum Annalium</add></rdg></app> opus ad umbilicum<app><rdg wit="#B"><add place="after">ipse</add></rdg></app> perduceret, vota sua omnia, collectanea et investigationes in unum sancti Bernardi aevum contraxerit. Votorum quidem compos factus historiam nostram usque ad obitum sancti Bernardi feliciter perduxit, sed caetera successoribus et investiganda et peragenda reliquit. Vix a Mabillonii morte recolligere sese coeperat domnus Theodericus Ruinart discipulus eius et successor, <app><lem>cum et ipse praefestina morte</lem><rdg wit="#B">cum ipse praecipiti fato</rdg></app> ereptus rem <app><lem>intactam et</lem><rdg wit="#B"/></app> infectam dimisit. In me ergo <app><lem>ab aliis abstractum</lem><rdg wit="#B">aliis ereptum</rdg></app> studiis et in peregrinum illud et insolens eruditionis genus, reluctantem certe, vocatum totum onus cum <app><lem>iam</lem><rdg wit="#B"/></app> recumbat, amicorum opem supplex implorare cogor. </ab>
-         <ab resp="#editor" xml:id="seg6">De Germaniae, Bohemiae, Hungariae <app><lem>Hungariae et Poloniae</lem><rdg wit="#B">Poloniae et Hungariae</rdg></app> monasteriis dumtaxat sollicitus sum, quia minus nostris in regionibus nota sunt rariusque ac difficilius <app><lem>cum iis intercedere nobis</lem><rdg wit="#B">nobis cum iis intercedere</rdg></app> potest commercium. Haec tantum de Germanicis occurrunt in <anchor xml:id="n6"/>scriniis nostris<note place="foot" xml:id="d4618e11016"><hi rend="italic">de ... nostris: de iisdem in scriniis nostris occurrunt</hi> B.</note><anchor xml:id="n6e"/>: nam de libris dudum editis non loquor; <app><lem>plerosque</lem><rdg wit="#B">omnes pene</rdg></app> habemus, et si qui desint, in <app><lem>locupletissimis</lem><rdg wit="#B">amplissimis</rdg></app> huius urbis bibliothecis reperiri posse confido. Primo. Abbatum Stabulensium series cum pluribus tum <app><lem>regum, imperatorum ac principum</lem><rdg wit="#B">regum ac imperatorum</rdg></app> diplomatibus, tum summorum pontificum bullis ad<app><rdg wit="#B"><add place="after">eam</add></rdg></app> <app><lem>Stabulensem</lem><rdg wit="#A"><choice><sic>Stabulensium</sic><corr>Stabulensem</corr></choice></rdg></app> abbatiam spectantibus. Secundo. Pauca quaedam de monasterio Vallis Gregorianae vulgo Munster seu Gregoriental. Tertio. Pauca item de Werthina<app><rdg wit="#B"><add place="after">Quarto. De abbatia Wissemburgensi vulgo Salbruch</add></rdg></app>. Quarto. De Ebersmunster seu Ebersheim. Quinto. De abbatia Murbacensi. Sexto. De monasterio Garstensi. Septimo. De abbatia beatae Mariae in <sic>Grengenbach</sic> . Octavo. De monasterio Liesbornensi. Nono. <anchor xml:id="n7"/>Historia Montis Angelorum<anchor xml:id="n7e"/> vulgo Engelberg ab anno 1120. Decimo. Plura de imperiali <pb n="2r"/> abbatia S. Cornelii ad Indam. Undecimo. Disquisitio praeliminaris <app><lem>historico-chronica</lem><rdg wit="#B">historico-chronica</rdg></app> de antiquitate ecclesiae<app><rdg wit="#A"><add place="after">Salisburgensis</add></rdg></app> et monasterii Salisburgensis. Duodecimo. <anchor xml:id="n8"/>Primaeva origo monasterii Fabariensis<anchor xml:id="n8e"/> pluraque monumenta ad eiusdem monasterii historiam pertinentia. Haec sunt, <app><lem>erudite pater</lem><rdg wit="#B">vir eruditissime</rdg></app>, quae de Germaniae monasteriis manuscripta reperio; pauca, ut vides, nec ad institutum nostrum sufficientia. De Helvetiae monasteriis plura a nostris exspecto; caetera a benignitate tua spero. Non quidem precor, ut quidquam tu ipse describas; absit, ut studiis<app><rdg wit="#B"><add place="after">suis</add></rdg></app> molestus interpellator moras vel levissimas obiciam. Id tantum etiam atque etiam rogo, ut operam tuam apud<app><rdg wit="#B"><add place="after">sodales</add></rdg></app> Benedictinos nostros <app><lem>populares aut vicinos</lem><rdg wit="#B">contribules</rdg></app> tuos interponere non graveris, <app><lem>ut</lem><rdg wit="#B">quatenus</rdg></app> ea omnia, quae ad monasteriorum <app><lem>suorum</lem><rdg wit="#B"/></app> illustrandam historiam <app><lem>conducere possunt</lem><rdg wit="#B">spectant</rdg></app>, mecum communicare dignentur. </ab>
-         <ab resp="#editor" xml:id="seg7">De Annalibus vestris Melliciensibus a reverendo patre Anselmo Schramb ad <app><lem>nostrum piae memoriae domnum Theodericum Ruinart missis</lem><rdg wit="#B">domnum nostrum piae memoriae Ruinartium directis</rdg></app> nihil quidquam <app><lem>audivi</lem><rdg wit="#B">inaudivi</rdg></app>, vereorque, ne <app><lem>interceptus fuerit fasciculus</lem><rdg wit="#B">fasciculo infausti quidpiam evenerit</rdg></app>. Promisit unus ex amicis <app><lem>meis</lem><rdg wit="#B"/></app> curaturum se, <sic>ut ut</sic>  quispiam <app><lem>Argentoratensem</lem><rdg wit="#B">Argentinensem</rdg></app> gubernatorem<app><rdg wit="#B"><add place="after">conveniret</add></rdg></app>, ad quem <app><lem>Philipsburgo primum</lem><rdg wit="#B"/></app> mittendus erat fasciculus, conveniret ab eoque sciscitaretur, num accepisset. Amissum certe dolerem <app><lem>vehementer</lem><rdg wit="#B">quam maxime</rdg></app>; sed tantisper exspectandum, donec certiora nobis Argentorato nuntientur. </ab>
-         <ab resp="#editor" xml:id="seg8">Quas a variis Germaniae monasteriis, Wiblingano, Zwiffaltensi, Thierhauptano, Ossiacensi etc. in lucem editas memoras singulares chronologias, chronica <app><lem>et</lem><rdg wit="#B"/></app> historias domesticas, comparare mihi gestirem, si <app><lem>qua ratione</lem><rdg wit="#B"/></app> liceret. Sed vix id sperari potest, quamdiu atrox illud, quo tota ardet Europa, bellum omne prorsus commercium intercipiet. Faxit Deus, pax illa tam crebris populorum invocata suspiriis cito redeat. </ab>
-         <ab resp="#editor" xml:id="seg9">Ex literis<app><rdg wit="#B"><add place="after">reverendi</add></rdg></app> patris<app><rdg wit="#(?) #A"><add place="after">Anton</add></rdg></app> Anselmi Schramb deprehendo virum bonum esse<app><rdg wit="#B"><add place="after">nostrisque studiis apprime faventem</add></rdg></app> studiorumque nostrorum fautorem <app><lem>singularem</lem><rdg wit="#B"><sic>singularis</sic> </rdg></app>. Huic, <app><lem>ut decet</lem><rdg wit="#B">ut par est</rdg></app>, rescribo amplissimas acturus gratias, quas meo nomine ingemines, precor. Hanc etiam epistolam ad eum mitto Viennam; ratus tutiorem expeditioremque viam <app><lem>esse</lem><rdg wit="#B"/></app>, ut ad te citius transmittatur. An ea, qua me dignatus <app><lem>es</lem><rdg wit="#B"/></app>, eadem via Parisios missa fuerit, haud scio: id certum, celeriter ad me perlatam fuisse. Vale, vir optime<app><rdg wit="#B"><add place="after">amantissime</add></rdg></app> ac doctissime. <app><lem>Me, quaeso, in amicorum numerum habeas deditissimumque tibi putes</lem><rdg wit="#B"/></app>. <app><lem>Prosperum Numen adspiret studiis tuis</lem><rdg wit="#B">Prosperumque Numen adspiret pulcherrimis coeptis tuis<add place="after">Prius vivere me desiturum putes, velim, quam tui meminisse</add></rdg></app>.</ab>
-         <closer> <app><lem>Dabam Parisiis in monasterio Sancti Germani a Pratis die decima Julii anno 1710</lem><rdg wit="#B"/></app>.</closer>
+         <opener>
+            <pb n="1r"/>
+            <app>
+               <lem>Admodum reverendo religiosissimo clarissimo ac doctissimo domino et patri Bernardo Pez Melliciensi bibliothecae praefecto amicoque suo colendissimo frater Renatus Massuet presbyter et monachus Benedictinus abbatiae Sancti Germani a Pratis Parisiensis salutem plurimam dicit</lem>
+               <rdg wit="#B">Reverendo patri Bernardo Pez bibliothecario Mellicensi in Austria Inferiori</rdg>
+            </app>.</opener>
+         <ab resp="#editor" xml:id="seg1">Accepi <app>
+               <lem>iucundissimas</lem>
+               <rdg wit="#B">amantissimas</rdg>
+            </app> literas tuas citius longe, quam sperare potuissem. Datae siquidem sunt 18. Maii mihique sub eiusdem mensis finem redditae, biduo post <app>
+               <lem>acceptam</lem>
+               <rdg wit="#B">redditam mihi alteram</rdg>
+            </app> a reverendo patre <app>
+               <lem>Anselmo</lem>
+               <rdg wit="#B"/>
+            </app> Schramb epistolam. <app>
+               <lem>Quod vero tardior in rescribendo fuerim</lem>
+               <rdg wit="#B">Quod vero tardius ego rescripserim</rdg>
+            </app>, fecit <app>
+               <lem>improbus</lem>
+               <rdg wit="#B">importunus</rdg>
+            </app> meae Irenaei editionis labor eo iam importunius ingravescens, quo properante ad finem editione ingeminant specimina typographica corrigenda. Quamvis autem <app>
+               <lem>iis</lem>
+               <rdg wit="#B">his</rdg>
+            </app> curis solutus <app>
+               <lem>nec</lem>
+               <rdg wit="#B">nondum</rdg>
+            </app> sim nec ante duos menses esse possim, vereor<app>
+               <rdg wit="#B">
+                  <add place="after">si responsum diutius distulerim</add>
+               </rdg>
+            </app>, ne<app>
+               <rdg wit="#B">
+                  <add place="after">malis, ut</add>
+               </rdg>
+            </app> inurbanus, immo <app>
+               <lem>immo et ingratus</lem>
+               <rdg wit="#B"/>
+            </app> apud te audiam, si, quod ad literas officii plenas singularisque in me benevolentiae testes responsum debetur, procrastinare perrexerim. Ea est enim humanitas tua, quae non modo virum suavissimis moribus excultum<app>
+               <rdg wit="#B">
+                  <add place="after">sapiat</add>
+               </rdg>
+            </app>, sed et pectus amicum atque generosum <app>
+               <lem>sapiat</lem>
+               <rdg wit="#B">arguat</rdg>
+            </app>. <app>
+               <lem>Praeclarae dotes, quibus splendorem addit eruditio haud vulgaris</lem>
+               <rdg wit="#B">Praeclarae in eruditissimo homine dotes</rdg>
+            </app>. Utinam meritam tibi gratiam tandem aliquando persolvere <app>
+               <lem>valeam</lem>
+               <rdg wit="#B">queam</rdg>
+            </app>, ut votis et officio faciam <app>
+               <lem/>
+               <rdg wit="#A">
+                  <add place="above">satis</add>
+               </rdg>
+            </app>, nihil non experiar. Si forte votis effecta non respondeant, faciam tamen, ut <app>
+               <lem>de meo in te studio sinceroque affectu</lem>
+               <rdg wit="#B">de propenso in te studio devotissimoque tibi corde</rdg>
+            </app> numquam dubites. </ab>
+         <ab resp="#editor" xml:id="seg2">Gaudeo, quod quatuor Annalium nostrorum tomos feliciter tibi comparaveris; <app>
+               <lem>necessarius omnino</lem>
+               <rdg wit="#B">omnino neccessarius</rdg>
+            </app> tibi liber erat. Miror vero, si Acta sanctorum ordinis nostri Antverpia <app>
+               <lem>ad te</lem>
+               <rdg wit="#B">tibi</rdg>
+            </app> mitti possint: <app>
+               <lem>Parisiis</lem>
+               <rdg wit="#B">hic</rdg>
+            </app> enim, ubi editum est opus, non adeo obvium est. <app>
+               <lem>Octo quidem tomi</lem>
+               <rdg wit="#B">Octo quidem illius operis tomi</rdg>
+            </app> facile occurrunt, <app>
+               <lem>sed</lem>
+               <rdg wit="#B">at</rdg>
+            </app> rarissimus est secundus, nec nisi <app>
+               <lem>magno</lem>
+               <rdg wit="#B">magno pretio</rdg>
+            </app> comparari potest. <anchor xml:id="n1"/>Factum id, quod unus e bibliopolis nostris omnia, quae supererant, illius tomi exemplaria callide sibi vindicaverit ingenti certe literatorum damno<anchor xml:id="n1e"/>. Nam emptores vexat tomumque suum plus quadruplo vendit, quinquaginta scilicet aut etiam sexaginta Gallicas libras<note place="foot" xml:id="d4618e10708">
+               <hi rend="italic">Factum ... libras: Id factum, quod unus e bibliopolis nostris omnia huius tomi exemplaria magno literatorum omnium damno sibi vindicaverit: emptores enim vexat tomumque suum ultra modum vendit nec dimittere ulla ratione vult nisi 50 aut 60 librarum Gallicarum pretio</hi> B.</note>. <app>
+               <lem>Qui sint bibliopolarum vestrorum mores, non novi; nostros tenacissimum esse hominum genus experimento didici, exactores φιλοβὶβλοῦς acerbiores quam vobis Hungari; quo magis lucrantur, eo avidius lucro inhiant</lem>
+               <rdg wit="#B">Qui sint bibliopolae vestri, non novi: nostros avarissimum esse hominum genus experimento didici: quo magis lucrantur, eo cupidius lucro inhiant</rdg>
+            </app>. </ab>
+         <ab resp="#editor" xml:id="seg3">Spicilegium Acherianum cum Analectis Mabillonianis <app>
+               <lem>Antiquisque Canisii lectionibus</lem>
+               <rdg wit="#B"/>
+            </app> novis typis in Hollandia subicere <anchor xml:id="n2"/>meditabatur Basnagius<anchor xml:id="n2e"/>, sed cum paucis abhinc mensibus excesserit e vivis, <app>
+               <lem>haud scio</lem>
+               <rdg wit="#B">incertum</rdg>
+            </app>, an aliquis alius <app>
+               <lem>insistat</lem>
+               <rdg wit="#B">insistet</rdg>
+            </app> in incoepto. <app>
+               <lem>Vix tamen prioribus illis libris ut et Musaeo Italico Mabillonii</lem>
+               <rdg wit="#B">Vix tamen eiusmodi libris</rdg>
+            </app> carere possis<note place="foot" xml:id="d4618e10746">Danach <hi rend="italic">Quartus Analectorum tomus multos exhibet auctores Benedictinos, quorum opera Mabillonius Germaniae bibliothecas perlustrans ex earumdem forulis eruit luceque donavit. Huic tomo praemisit itineris sui historiam, in qua, quid in unaquaque bibliotheca praecipuum sibi occurrerit, memorat, nec auctores ordinis nostri hactenus ineditos reticet. [</hi>Danach durchgestrichen <hi rend="italic">Eam historiam a reliquo opere separatim.] Illius historiae exemplaria quaedam separatim a reliquo opere imprimi in amicorum gratiam <sic>imprimi</sic> curavit. Unum exemplar penes me habeo: hoc tibi munusculum lubens offerrem, si quae tibi se transmittendi offeret occasio. Interim si totum tibi desit opus, mihi significes velim. Benedictinorum auctorum nomina et opera exscribi curabo et ad te mitti </hi>B.</note>. <app>
+               <lem>At si quae</lem>
+               <rdg wit="#B">Si quae tamen</rdg>
+            </app> vobis necessitudo cum nostris S. Georgii<app>
+               <rdg wit="#B">
+                  <add place="after">apud Villingam</add>
+               </rdg>
+            </app> Villingae ad Sylvam Nigram monachis <app>
+               <lem>intercederet</lem>
+               <rdg wit="#B">interesset</rdg>
+            </app>, hinc facile libros omnes tum Mabillonianos tum alios, qui e congregatione <app>
+               <lem>nostra</lem>
+               <rdg wit="#B"/>
+            </app> prodierunt, commodato accipere possetis: huc enim sollicite et accurate missos hinc fuisse ex pluribus inde <anchor xml:id="n3"/>ad Mabillonium datis epistolis<note place="foot" xml:id="d4618e10780">
+               <hi rend="italic">hinc ... epistolis: a Mabillonio ex literis ad eum a domino Georgio Geyssero eiusdem monasterii priore intimoque Mabillonii <sic>amici</sic> scriptis</hi> B.</note>
+            <anchor xml:id="n3e"/> comperire mihi videor<app>
+               <rdg wit="#B">
+                  <add place="after">Inter Mabillonii opera non omittendum certe tibi est Musaeum Italicum ab eodem ex Italia reduce duobus in tomis in quarto vulgatum variaque complectens opera hactenus inedita e bibliothecarum Italicarum scriniis eruta. Sed quod magis ad rem tuam facit, itineris Italici historia est tomo primo praevia, quam legisse te non poenituerit. Sed his forte non caret bibliotheca vestra</add>
+               </rdg>
+            </app>. Missos etiam <anchor xml:id="n4"/>
+            <sic>Oschenhusium</sic>
+            <anchor xml:id="n4e"/>  puto. Actorum sacri ordinis nostri priores saltem tomi penes Salisburgenses S. Petri monachos certissime sunt<note place="foot" xml:id="d4618e10799">
+               <hi rend="italic">Missos ... sunt</hi> fehlt B.</note>. </ab>
+         <ab resp="#editor" xml:id="seg4">
+            <app>
+               <lem>Sed nescio, an satis apud vos nota sint Stephani Baluzii olim Colbertinae huius urbis bibliothecae praefecti Miscellanea</lem>
+               <rdg wit="#B">At vereor, ut minus nota sint apud vos Stephani Baluzii Miscellanea</rdg>
+            </app> sex tomis in octavo Parisiis edita. Sextus saltem tomus notus <app>
+               <lem>nondum esse</lem>
+               <rdg wit="#B">esse non</rdg>
+            </app> potest, ut qui vix e praelo <app>
+               <lem>prodeat</lem>
+               <rdg wit="#B">prodierit</rdg>
+            </app>. Plura hinc eruere posses, quae ad rem <pb n="1v"/> tuam non parum facerent<note place="foot" xml:id="d4618e10827">
+               <hi rend="italic">Plura ... facerent: Plura etiam in iis voluminibus occurrent auctorum nostrorum opera hactenus inedita</hi> B.</note>. Si<note type="annotation" xml:id="d4618e10834">Danach in A unleserliche Streichung im Ausmaß von 2 Buchstaben.</note> vero, quod nollem, nec habeatur nec haberi facile possit opus<note place="foot" xml:id="d4618e10837">Über der Zeile eingefügt A. <hi rend="italic">nec habeatur ... opus: ea omnia vobis deessent opera nec facile comparari possent</hi> B.</note>, huic incommodo prospicere <app>
+               <lem>conabor</lem>
+               <rdg wit="#B">conaremur</rdg>
+            </app>
+            <app>
+               <lem>mittendo Benedictinorum auctorum nomina cum operum catalogo</lem>
+               <rdg wit="#B"/>
+            </app>. Interea, quia Mabillonius Itineris sui Germanici pagina 44 strictim <anchor xml:id="n5"/>meminit Nicolai Ellembogii<anchor xml:id="n5e"/> monachi Ottemburani in Suevia, operae pretium <app>
+               <lem>forte fecerim</lem>
+               <rdg wit="#B">facturum me putem</rdg>
+            </app>, si paulo ampliora <app>
+               <lem>quaedam</lem>
+               <rdg wit="#B">quaepiam</rdg>
+            </app> de eodem tecum communicem, quae <app>
+               <lem>idem</lem>
+               <rdg wit="#B"/>
+            </app> Mabillonius a Stephano Baluzio ex Ellembogii epistolis <app>
+               <lem>eruta</lem>
+               <rdg wit="#B">enim<del ana="#after">eruerat</del>
+               </rdg>
+            </app> acceperat, quaeque mihi nuper aliud quaerenti sub manum devenerunt. Munusculum hoc benigne excipias, donec largiori munere eam, quam tecum nectere cupio, amicitiam conglutinare licuerit. </ab>
+         <ab resp="#editor" xml:id="seg5">Iam, sed segni manu, quia nondum satis expedita, quaedam Mabillonii scrinia evolvi, e quibus non poenitendam auctorum Benedictinorum<app>
+               <rdg wit="#B">
+                  <add place="after">
+                     <sic>auctorum</sic>
+                  </add>
+               </rdg>
+            </app>, <app>
+               <lem>non Gallorum tantum, sed etiam exterorum</lem>
+               <rdg wit="#B"/>
+            </app>
+            <sic>suppellectilem</sic>  tibi aliquando suppeditatum iri prospicio. Patientiam, <app>
+               <lem>quaeso</lem>
+               <rdg wit="#B"/>
+            </app>, habe in me, et omnia reddam tibi. Reddam, dico, non dabo: nec enim quidpiam, quodcumque tandem sit, dono dare, sed potius debita persolvere me censuerim ei, qui tam amanter tamque generose in laborum meorum partem venire gestit. Certe quae subsidia mihi paras et offers, ea sunt, quae <app>
+               <lem>spem longe superant</lem>
+               <rdg wit="#B">vix sperari potuissent</rdg>
+            </app>. Ecquae spes fuisset monacho Gallo <app>
+               <lem>obscuri nominis</lem>
+               <rdg wit="#B"/>
+            </app> Parisiis degenti non plerorumque dumtaxat Germanicorum monasteriorum, sed maxime Hungarorum et Polonorum in alio velut orbe respectu nostri sitorum historica <app>
+               <lem>monumenta sibi comparandi, plura forte e ruderibus eruendi</lem>
+               <rdg wit="#B">monumenta et forsan etiam rudera eruendi</rdg>
+            </app>, nisi meus Bernardus Pez <app>
+               <lem>generosi et candidi pectoris amicus</lem>
+               <rdg wit="#B">generosae indolis amicus</rdg>
+            </app> opportune sese obtulisset, qui me <app>
+               <lem>hac cura levaret</lem>
+               <rdg wit="#B">hoc labore levasset</rdg>
+            </app>? Immortales tibi gratias pro tanta benignitate refero, <app>
+               <lem>vir doctissime et ex animo amice</lem>
+               <rdg wit="#B"/>
+            </app>: <app>
+               <lem>quantum</lem>
+               <rdg wit="#B">quantumque<del ana="#after">debeant Anna</del>
+               </rdg>
+            </app> tibi debuerint Annales nostri, toti ordini nostro memori mente significare non omittam. Paucissima de Germaniae monasteriis, <app>
+               <lem>de Hungaris ac Polonis nihil prorsus in scriniis nostris hactenus occurrit</lem>
+               <rdg wit="#B">hactenus in scriniis nostris deprehendi</rdg>
+            </app>. Factum id, quod, cum Mabillonius aetate iam provecta <app>
+               <lem>Annales incoepisset, capitis canitie</lem>
+               <rdg wit="#B"/>
+            </app> monitus <app>
+               <lem>sarcinas sibi brevi colligendas</lem>
+               <rdg wit="#B">sibi sarcinas brevi colligendas esse</rdg>
+            </app>, vixque fieri posse, ut<app>
+               <rdg wit="#B">
+                  <add place="after">totum Annalium</add>
+               </rdg>
+            </app> opus ad umbilicum<app>
+               <rdg wit="#B">
+                  <add place="after">ipse</add>
+               </rdg>
+            </app> perduceret, vota sua omnia, collectanea et investigationes in unum sancti Bernardi aevum contraxerit. Votorum quidem compos factus historiam nostram usque ad obitum sancti Bernardi feliciter perduxit, sed caetera successoribus et investiganda et peragenda reliquit. Vix a Mabillonii morte recolligere sese coeperat domnus Theodericus Ruinart discipulus eius et successor, <app>
+               <lem>cum et ipse praefestina morte</lem>
+               <rdg wit="#B">cum ipse praecipiti fato</rdg>
+            </app> ereptus rem <app>
+               <lem>intactam et</lem>
+               <rdg wit="#B"/>
+            </app> infectam dimisit. In me ergo <app>
+               <lem>ab aliis abstractum</lem>
+               <rdg wit="#B">aliis ereptum</rdg>
+            </app> studiis et in peregrinum illud et insolens eruditionis genus, reluctantem certe, vocatum totum onus cum <app>
+               <lem>iam</lem>
+               <rdg wit="#B"/>
+            </app> recumbat, amicorum opem supplex implorare cogor. </ab>
+         <ab resp="#editor" xml:id="seg6">De Germaniae, Bohemiae, Hungariae <app>
+               <lem>Hungariae et Poloniae</lem>
+               <rdg wit="#B">Poloniae et Hungariae</rdg>
+            </app> monasteriis dumtaxat sollicitus sum, quia minus nostris in regionibus nota sunt rariusque ac difficilius <app>
+               <lem>cum iis intercedere nobis</lem>
+               <rdg wit="#B">nobis cum iis intercedere</rdg>
+            </app> potest commercium. Haec tantum de Germanicis occurrunt in <anchor xml:id="n6"/>scriniis nostris<note place="foot" xml:id="d4618e11016">
+               <hi rend="italic">de ... nostris: de iisdem in scriniis nostris occurrunt</hi> B.</note>
+            <anchor xml:id="n6e"/>: nam de libris dudum editis non loquor; <app>
+               <lem>plerosque</lem>
+               <rdg wit="#B">omnes pene</rdg>
+            </app> habemus, et si qui desint, in <app>
+               <lem>locupletissimis</lem>
+               <rdg wit="#B">amplissimis</rdg>
+            </app> huius urbis bibliothecis reperiri posse confido. Primo. Abbatum Stabulensium series cum pluribus tum <app>
+               <lem>regum, imperatorum ac principum</lem>
+               <rdg wit="#B">regum ac imperatorum</rdg>
+            </app> diplomatibus, tum summorum pontificum bullis ad<app>
+               <rdg wit="#B">
+                  <add place="after">eam</add>
+               </rdg>
+            </app>
+            <app>
+               <lem>Stabulensem</lem>
+               <rdg wit="#A">
+                  <choice>
+                     <sic>Stabulensium</sic>
+                     <corr>Stabulensem</corr>
+                  </choice>
+               </rdg>
+            </app> abbatiam spectantibus. Secundo. Pauca quaedam de monasterio Vallis Gregorianae vulgo Munster seu Gregoriental. Tertio. Pauca item de Werthina<app>
+               <rdg wit="#B">
+                  <add place="after">Quarto. De abbatia Wissemburgensi vulgo Salbruch</add>
+               </rdg>
+            </app>. Quarto. De Ebersmunster seu Ebersheim. Quinto. De abbatia Murbacensi. Sexto. De monasterio Garstensi. Septimo. De abbatia beatae Mariae in <sic>Grengenbach</sic> . Octavo. De monasterio Liesbornensi. Nono. <anchor xml:id="n7"/>Historia Montis Angelorum<anchor xml:id="n7e"/> vulgo Engelberg ab anno 1120. Decimo. Plura de imperiali <pb n="2r"/> abbatia S. Cornelii ad Indam. Undecimo. Disquisitio praeliminaris <app>
+               <lem>historico-chronica</lem>
+               <rdg wit="#B">historico-chronica</rdg>
+            </app> de antiquitate ecclesiae<app>
+               <rdg wit="#A">
+                  <add place="after">Salisburgensis</add>
+               </rdg>
+            </app> et monasterii Salisburgensis. Duodecimo. <anchor xml:id="n8"/>Primaeva origo monasterii Fabariensis<anchor xml:id="n8e"/> pluraque monumenta ad eiusdem monasterii historiam pertinentia. Haec sunt, <app>
+               <lem>erudite pater</lem>
+               <rdg wit="#B">vir eruditissime</rdg>
+            </app>, quae de Germaniae monasteriis manuscripta reperio; pauca, ut vides, nec ad institutum nostrum sufficientia. De Helvetiae monasteriis plura a nostris exspecto; caetera a benignitate tua spero. Non quidem precor, ut quidquam tu ipse describas; absit, ut studiis<app>
+               <rdg wit="#B">
+                  <add place="after">suis</add>
+               </rdg>
+            </app> molestus interpellator moras vel levissimas obiciam. Id tantum etiam atque etiam rogo, ut operam tuam apud<app>
+               <rdg wit="#B">
+                  <add place="after">sodales</add>
+               </rdg>
+            </app> Benedictinos nostros <app>
+               <lem>populares aut vicinos</lem>
+               <rdg wit="#B">contribules</rdg>
+            </app> tuos interponere non graveris, <app>
+               <lem>ut</lem>
+               <rdg wit="#B">quatenus</rdg>
+            </app> ea omnia, quae ad monasteriorum <app>
+               <lem>suorum</lem>
+               <rdg wit="#B"/>
+            </app> illustrandam historiam <app>
+               <lem>conducere possunt</lem>
+               <rdg wit="#B">spectant</rdg>
+            </app>, mecum communicare dignentur. </ab>
+         <ab resp="#editor" xml:id="seg7">De Annalibus vestris Melliciensibus a reverendo patre Anselmo Schramb ad <app>
+               <lem>nostrum piae memoriae domnum Theodericum Ruinart missis</lem>
+               <rdg wit="#B">domnum nostrum piae memoriae Ruinartium directis</rdg>
+            </app> nihil quidquam <app>
+               <lem>audivi</lem>
+               <rdg wit="#B">inaudivi</rdg>
+            </app>, vereorque, ne <app>
+               <lem>interceptus fuerit fasciculus</lem>
+               <rdg wit="#B">fasciculo infausti quidpiam evenerit</rdg>
+            </app>. Promisit unus ex amicis <app>
+               <lem>meis</lem>
+               <rdg wit="#B"/>
+            </app> curaturum se, <sic>ut ut</sic>  quispiam <app>
+               <lem>Argentoratensem</lem>
+               <rdg wit="#B">Argentinensem</rdg>
+            </app> gubernatorem<app>
+               <rdg wit="#B">
+                  <add place="after">conveniret</add>
+               </rdg>
+            </app>, ad quem <app>
+               <lem>Philipsburgo primum</lem>
+               <rdg wit="#B"/>
+            </app> mittendus erat fasciculus, conveniret ab eoque sciscitaretur, num accepisset. Amissum certe dolerem <app>
+               <lem>vehementer</lem>
+               <rdg wit="#B">quam maxime</rdg>
+            </app>; sed tantisper exspectandum, donec certiora nobis Argentorato nuntientur. </ab>
+         <ab resp="#editor" xml:id="seg8">Quas a variis Germaniae monasteriis, Wiblingano, Zwiffaltensi, Thierhauptano, Ossiacensi etc. in lucem editas memoras singulares chronologias, chronica <app>
+               <lem>et</lem>
+               <rdg wit="#B"/>
+            </app> historias domesticas, comparare mihi gestirem, si <app>
+               <lem>qua ratione</lem>
+               <rdg wit="#B"/>
+            </app> liceret. Sed vix id sperari potest, quamdiu atrox illud, quo tota ardet Europa, bellum omne prorsus commercium intercipiet. Faxit Deus, pax illa tam crebris populorum invocata suspiriis cito redeat. </ab>
+         <ab resp="#editor" xml:id="seg9">Ex literis<app>
+               <rdg wit="#B">
+                  <add place="after">reverendi</add>
+               </rdg>
+            </app> patris<app>
+               <rdg wit="#(?) #A">
+                  <add place="after">Anton</add>
+               </rdg>
+            </app> Anselmi Schramb deprehendo virum bonum esse<app>
+               <rdg wit="#B">
+                  <add place="after">nostrisque studiis apprime faventem</add>
+               </rdg>
+            </app> studiorumque nostrorum fautorem <app>
+               <lem>singularem</lem>
+               <rdg wit="#B">
+                  <sic>singularis</sic>
+               </rdg>
+            </app>. Huic, <app>
+               <lem>ut decet</lem>
+               <rdg wit="#B">ut par est</rdg>
+            </app>, rescribo amplissimas acturus gratias, quas meo nomine ingemines, precor. Hanc etiam epistolam ad eum mitto Viennam; ratus tutiorem expeditioremque viam <app>
+               <lem>esse</lem>
+               <rdg wit="#B"/>
+            </app>, ut ad te citius transmittatur. An ea, qua me dignatus <app>
+               <lem>es</lem>
+               <rdg wit="#B"/>
+            </app>, eadem via Parisios missa fuerit, haud scio: id certum, celeriter ad me perlatam fuisse. Vale, vir optime<app>
+               <rdg wit="#B">
+                  <add place="after">amantissime</add>
+               </rdg>
+            </app> ac doctissime. <app>
+               <lem>Me, quaeso, in amicorum numerum habeas deditissimumque tibi putes</lem>
+               <rdg wit="#B"/>
+            </app>. <app>
+               <lem>Prosperum Numen adspiret studiis tuis</lem>
+               <rdg wit="#B">Prosperumque Numen adspiret pulcherrimis coeptis tuis<add place="after">Prius vivere me desiturum putes, velim, quam tui meminisse</add>
+               </rdg>
+            </app>.</ab>
+         <closer>
+            <app>
+               <lem>Dabam Parisiis in monasterio Sancti Germani a Pratis die decima Julii anno 1710</lem>
+               <rdg wit="#B"/>
+            </app>.</closer>
       </body>
    </text>
 </TEI>

@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="673" xml:id="pez-0673">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Kaspar Erhardt an Bernhard Pez. 1716-10-14. Regensburg.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">673</idno>
          </publicationStmt>
          <seriesStmt>
@@ -52,10 +64,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -80,14 +93,22 @@
          <abstract>
             <p corresp="#seg1">KE erwidert den von BP ausgesprochenen Dank <ref type="letter" target="letter:672">672</ref> und freut sich mit seinem Kloster <rs ref="index:d14380e36714">St. Emmeram</rs> und dem ganzen <rs ref="index:d14380e4919">Benediktinerorden</rs> über einen in allen Wissensgebieten versierten Gelehrten wie BP, dessen Werke diesem gelehrten Jahrhundert von einem Mann dargeboten werden, der höchste Tugend und Wissenschaft miteinander vereint.</p>
             <p corresp="#seg2">Diese Bewandertheit in göttlichen wie menschlichen Sachen wird auch jedem auffallen, der BPs „<rs ref="index:d14380e33682">Epistolae apologeticae</rs>“ liest. Alle, denen der Ruhm des Ordens am Herzen liegt, wünschen BP ein langes Leben und danken der Vorsehung, dass sie den <rs ref="index:d14380e9395">Deutschen</rs> (Germani) einen Mann von solcher Gelehrsamkeit geschenkt hat, der die <rs ref="index:d10854e15615">Mauriner</rs> zu übertreffen oder doch mit ihnen um den Siegespreis zu ringen scheint. Doch um BPs Bescheidenheit nicht zu beleidigen, geht KE nun zur Beantwortung von dessen Nachfragen über.</p>
-            <p corresp="#seg3">Zu Paragraph 14 (des von KE übermittelten „<rs ref="index:d14380e11544">Catalogus scriptorum</rs>“) möchte BP die Lebenszeit jenes <rs ref="index:d14380e717">Albert von Oberaltaich</rs> erfahren, der die „<rs ref="index:d14380e727">Vita sancti Alberti</rs>“ verfasst hat. Die <rs ref="index:d14380e735"><rs ref="index:d14380e36751">Emmeramer Handschrift</rs></rs> enthält hierzu keine Angaben, doch um den 16. Oktober wird KE nach <rs ref="index:d14380e31025">Oberaltaich</rs> aufbrechen, um dort die Fratres der <rs ref="index:d14380e22316">Bayerischen Kongregation</rs> in der Philosophie zu unterrichten. Dort hofft KE, ermitteln zu können, in welchem Jahrhundert <rs ref="index:d14380e717">Albert</rs> gelebt hat, was er alsbald BP mitteilen will.</p>
-            <p corresp="#seg4">Zu Paragraph 15 schlägt BP (für einen Vermerk in der <rs ref="index:d14380e30905"><rs ref="index:d14380e36809">Handschrift</rs></rs> mit Sequenzen aus dem „<rs ref="index:d14380e30899">Liber hymnorum</rs>“ des <rs ref="index:d14380e30893">Notker Balbulus</rs>) die Lesung „Notkeri Sequentiae“ vor, worauf KE antwortet, dass die zwei ersten Silben des fraglichen Wortes fast ganz unleserlich sind. Zu Paragraph 26 hat BP gefragt, ob es sich bei <rs ref="index:d14380e40885">Sigismund Paurenfeint</rs> um den Autor oder um den Schreiber (einer <rs ref="index:d14380e36788">Sammelhandschrift</rs>) handelt. KE sucht die Handschrift seit einigen Tagen vergeblich und will dies während seines verbleibenden Aufenthalts in <rs ref="index:d14380e36631">Regensburg</rs> weiter tun. Er ist allerdings sicher, dass nicht <rs ref="index:d14380e1631">Andreas (von Regensburg)</rs> der Autor ist; dessen Geschichtswerk ist KE aus Handschriften und Drucken wohlbekannt. Er wagt zwar nichts Sicheres dazu zu sagen, ob nicht ein anderer der Autor des Textes war, doch wird KE nicht grundlos <rs ref="index:d14380e40885">Sigismund Paurenfeint</rs> als solchen bezeichnet haben.</p>
+            <p corresp="#seg3">Zu Paragraph 14 (des von KE übermittelten „<rs ref="index:d14380e11544">Catalogus scriptorum</rs>“) möchte BP die Lebenszeit jenes <rs ref="index:d14380e717">Albert von Oberaltaich</rs> erfahren, der die „<rs ref="index:d14380e727">Vita sancti Alberti</rs>“ verfasst hat. Die <rs ref="index:d14380e735">
+                  <rs ref="index:d14380e36751">Emmeramer Handschrift</rs>
+               </rs> enthält hierzu keine Angaben, doch um den 16. Oktober wird KE nach <rs ref="index:d14380e31025">Oberaltaich</rs> aufbrechen, um dort die Fratres der <rs ref="index:d14380e22316">Bayerischen Kongregation</rs> in der Philosophie zu unterrichten. Dort hofft KE, ermitteln zu können, in welchem Jahrhundert <rs ref="index:d14380e717">Albert</rs> gelebt hat, was er alsbald BP mitteilen will.</p>
+            <p corresp="#seg4">Zu Paragraph 15 schlägt BP (für einen Vermerk in der <rs ref="index:d14380e30905">
+                  <rs ref="index:d14380e36809">Handschrift</rs>
+               </rs> mit Sequenzen aus dem „<rs ref="index:d14380e30899">Liber hymnorum</rs>“ des <rs ref="index:d14380e30893">Notker Balbulus</rs>) die Lesung „Notkeri Sequentiae“ vor, worauf KE antwortet, dass die zwei ersten Silben des fraglichen Wortes fast ganz unleserlich sind. Zu Paragraph 26 hat BP gefragt, ob es sich bei <rs ref="index:d14380e40885">Sigismund Paurenfeint</rs> um den Autor oder um den Schreiber (einer <rs ref="index:d14380e36788">Sammelhandschrift</rs>) handelt. KE sucht die Handschrift seit einigen Tagen vergeblich und will dies während seines verbleibenden Aufenthalts in <rs ref="index:d14380e36631">Regensburg</rs> weiter tun. Er ist allerdings sicher, dass nicht <rs ref="index:d14380e1631">Andreas (von Regensburg)</rs> der Autor ist; dessen Geschichtswerk ist KE aus Handschriften und Drucken wohlbekannt. Er wagt zwar nichts Sicheres dazu zu sagen, ob nicht ein anderer der Autor des Textes war, doch wird KE nicht grundlos <rs ref="index:d14380e40885">Sigismund Paurenfeint</rs> als solchen bezeichnet haben.</p>
             <p corresp="#seg5">Zum dritten Anhang bittet BP um den Namen des Druckers der <rs ref="index:d14380e44709">dritten Ausgabe</rs> des „<rs ref="index:d14380e44705">Mausolaeum</rs>“ von Abt <rs ref="index:d14380e44695">Cölestin Vogl</rs>. KE gibt das Titelblatt wieder, das <rs ref="index:d14380e36352">Johann Ägidius Raith</rs> als Drucker anführt. KE merkt weiters an, dass sich in dem Buch die Lebensbeschreibungen der Heiligen <rs ref="index:d14380e11224">Emmeram</rs>, <rs ref="index:d14380e9748">Dionysius</rs>, <rs ref="index:d10854e34162">Wolfgang</rs>, <rs ref="index:d14380e14574">Gaubald</rs>, <rs ref="index:d14380e43506">Tuto</rs>, <rs ref="index:d14380e16783">Günther</rs>, <rs ref="index:d14380e36381">Ramwold</rs>, des Kaisers <rs ref="index:d14380e3047">Arnulf</rs> sowie eine Geschichte der <rs ref="index:d14380e4285">Herzöge von Bayern</rs> und der Bischöfe von <rs ref="index:d14380e36631">Regensburg</rs> finden.</p>
-            <p corresp="#seg6">KE nennt die Werke Abt <rs ref="index:d14380e43201">Ignaz von Trauners</rs>: „<rs ref="index:d14380e43216">Gallus cantans</rs>“, gedruckt von <rs ref="index:d14380e17023">August Hanckwitz</rs> zu <rs ref="index:d14380e36631">Regensburg</rs> 1677; zwei Bände „<rs ref="index:d14380e43221">Geistliche seelen-iagd</rs>“ zu <rs ref="index:d14380e9730">Dillingen</rs> bei <rs ref="index:d10854e6490"><rs ref="index:d14380e4566">Johann Kaspar Bencard</rs></rs> 1685 und 1690 sowie, posthum herausgegeben erst von <rs ref="index:d14380e21934">Calcidonius Klein</rs> und nach dessen Tod von <rs ref="index:d14380e29894">Joachim Müller</rs>, zwei Bände „<rs ref="index:d14380e43211">Fragmenta sacra</rs>“, gleichfalls bei <rs ref="index:d14380e4566"><rs ref="index:d10854e6490">Bencard</rs></rs> zu <rs ref="index:d14380e9730">Dillingen</rs>.</p>
+            <p corresp="#seg6">KE nennt die Werke Abt <rs ref="index:d14380e43201">Ignaz von Trauners</rs>: „<rs ref="index:d14380e43216">Gallus cantans</rs>“, gedruckt von <rs ref="index:d14380e17023">August Hanckwitz</rs> zu <rs ref="index:d14380e36631">Regensburg</rs> 1677; zwei Bände „<rs ref="index:d14380e43221">Geistliche seelen-iagd</rs>“ zu <rs ref="index:d14380e9730">Dillingen</rs> bei <rs ref="index:d10854e6490">
+                  <rs ref="index:d14380e4566">Johann Kaspar Bencard</rs>
+               </rs> 1685 und 1690 sowie, posthum herausgegeben erst von <rs ref="index:d14380e21934">Calcidonius Klein</rs> und nach dessen Tod von <rs ref="index:d14380e29894">Joachim Müller</rs>, zwei Bände „<rs ref="index:d14380e43211">Fragmenta sacra</rs>“, gleichfalls bei <rs ref="index:d14380e4566">
+                  <rs ref="index:d10854e6490">Bencard</rs>
+               </rs> zu <rs ref="index:d14380e9730">Dillingen</rs>.</p>
             <p corresp="#seg7">Weiters hat sich BP Abschriften der Werke des <rs ref="index:d14380e31769">Otloh von St. Emmeram</rs> erbeten. KE würde diesem Wunsch gerne mit eigener Hand nachkommen, wird jedoch durch seine philosophische Lehrtätigkeit abgehalten. Wenn ihn nicht der Gehorsam verpflichtete, so wäre ihm lieber, dass ein anderer den vom <rs ref="index:d14380e22332">Generalkapitel</rs> der <rs ref="index:d14380e22316">Kongregation</rs> übertragenen Lehrstuhl innehätte und er sich ganz dem Studium von Altertümern und den Wünschen BPs widmen könnte. Doch will KE seinen Abt <rs ref="index:d14380e17917">Johann Baptist Hemm</rs> erst mündlich, später durch Briefe aus <rs ref="index:d14380e31025">Oberaltaich</rs> dazu ermuntern, die Abschrift zu veranlassen oder, so von BP gewünscht, die Bücher selbst zu übermitteln.</p>
             <p corresp="#seg8">KE zweifelt nicht daran, dass BP von seinem Bruder (<rs ref="index:d14380e11563">Thomas Aquin Erhardt</rs>) aus <rs ref="index:d14380e45389">Wessobrunn</rs> das Gewünschte erhalten hat <ref type="letter" target="letter:609">609</ref>. Dieser hatte das von ihm gesammelte Material nach <rs ref="index:d14380e36631">Regensburg</rs> geschickt, von wo es KE um den 20. Juli weiter nach <rs ref="index:d14380e45571">Wien</rs> versendet hat.</p>
             <p corresp="#seg9">Die <rs ref="index:d14380e36113">Prüfeninger</rs> hält KE zur Mitarbeit an und will dafür sorgen, dass sie weiterhin ermahnt werden. Er vermutet dort jedoch wenig Nützliches für BP, weil das <rs ref="index:d14380e36113">Kloster</rs> im Vergleich zu anderen in <rs ref="index:d14380e4170">Bayern</rs> nicht sehr alt ist; doch übertrifft es manche im Lande, und besonders in der <rs ref="index:d10854e24270">Oberpfalz</rs>, an Regeldisziplin und an Üppigkeit seiner Dotation. KE schließt mit Segenswünschen.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -135,7 +156,8 @@
                   [...]tiae cum notis musicis“, wobei zwei in der Vorlage unleserliche Silben durch
                   Striche angedeutet werden. BPs spätere Edition beruhte auf der genannten
                   Handschrift: <rs type="bibl" ref="bibl:36782">Pez, Thesaurus</rs> 1/1 col. 15–42;
-                  vgl. <ref type="letter" target="letter:973">973</ref> <ref target="letter:973#seg2">2</ref>. Es handelt sich um Sequenzen aus dem
+                  vgl. <ref type="letter" target="letter:973">973</ref>
+               <ref target="letter:973#seg2">2</ref>. Es handelt sich um Sequenzen aus dem
                   „Liber hymnorum“ des Notker Balbulus; zur Überlieferung vgl. <rs type="bibl" ref="bibl:16728">Haefele, Notker</rs> col. 1189; <rs type="bibl" ref="bibl:17100">Hoffmann, Buchkunst und Königtum</rs> 1 222, 375, 390, 401;
                      <rs type="bibl" ref="bibl:20148">Von den Steinen, Notker</rs> 2
                192–213.</p>
@@ -174,7 +196,8 @@
          </note>
          <note target="#range(right('n8'), left('n8e'))" n="8" anchored="false" corresp="#seg5">
             <mentioned>Joan Egidi Raith</mentioned>
-            <p><rs type="bibl" ref="bibl:18698">Paisey,
+            <p>
+               <rs type="bibl" ref="bibl:18698">Paisey,
                      Buchdrucker</rs> 201; <rs type="bibl" ref="bibl:19078">Reske, Buchdrucker</rs>
                   783.</p>
          </note>
@@ -186,7 +209,8 @@
          </note>
          <note target="#range(right('n10'), left('n10e'))" n="10" anchored="false" corresp="#seg6">
             <mentioned> Augusto Hanckwitzen</mentioned>
-            <p><rs type="bibl" ref="bibl:18698">Paisey,
+            <p>
+               <rs type="bibl" ref="bibl:18698">Paisey,
                      Buchdrucker</rs> 93; <rs type="bibl" ref="bibl:19078">Reske, Buchdrucker</rs>
                   783.</p>
          </note>
@@ -196,7 +220,8 @@
          </note>
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg6">
             <mentioned> Klain ... Miller</mentioned>
-            <p><rs type="bibl" ref="bibl:14728">Kraus,
+            <p>
+               <rs type="bibl" ref="bibl:14728">Kraus,
                      Catalogus</rs> 24; vgl. <rs type="bibl" ref="bibl:16630">Greipl, Abt und
                      Fürst</rs> 154.</p>
          </note>
@@ -208,7 +233,8 @@
                   durch jüngere Melker Mitbrüder BPs erfolgte, wurden die Handschriften offenbar
                   dorthin gesendet; dies dürfte jedoch erst nach BPs Besuch in St. Emmeram 1717
                   erfolgt sein, da er über die dort gefundenen Werke eingehende Notizen machte: StiB
-                  Melk, Cod. 1850, 342v. Zur Mitarbeit Leopold Wydemanns vgl. <ref type="letter" target="letter:1016">1016</ref> <ref target="letter:1016#seg1">1</ref>. </p>
+                  Melk, Cod. 1850, 342v. Zur Mitarbeit Leopold Wydemanns vgl. <ref type="letter" target="letter:1016">1016</ref>
+               <ref target="letter:1016#seg1">1</ref>. </p>
          </note>
          <note target="#range(right('n14'), left('n14e'))" n="14" anchored="false" corresp="#seg7">
             <mentioned>reverendissimum</mentioned>
@@ -239,21 +265,34 @@
          </note>
       </listAnnotation>
       <listAnnotation type="editorialNotes">
-         <note anchored="false">Nummerierung: <orig>III.</orig></note>
+         <note anchored="false">Nummerierung: <orig>III.</orig>
+         </note>
          <note anchored="false">Ordnungsvermerk: <orig>138</orig>.</note>
       </listAnnotation>
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Benedictus Deus!</opener>
+         <opener>
+            <pb n="1r"/> Benedictus Deus!</opener>
          <opener>Plurimum reverende religiosissime ac clarissime domine pater, patrone observandissime.</opener>
          <ab resp="#editor" xml:id="seg1">Nostrum est cumulatissimas, quas paternitas sua agit, reddere gratiarum actiones. Sua enim eruditione, laboribus curisque litterariis non tantum S. Emmeramum, sed ordinem Benedictinum obstringit universum. Enimvero gratulatur sibi nostra religio virum et in rebus historicis et omni scientiarum genere versatissimum, a quo non nisi consummatae eruditionis opera erudito huic<del ana="#after">saeu</del> saeculo porrigenda confidit. Si enim duae in authore desiderantur dotes, virtus scilicet et scientia, hae<del ana="#before">haec</del> plane in clarissima dominatione videntur summae. </ab>
          <ab resp="#editor" xml:id="seg2">Luculenter hoc patet ex Epistolis apologeticis. Has enim qui legit, una legit zelum erga sacrum ordinem, rerum asceticarum et historicarum intelligentiam mentemque tum altioribus tum humanioribus litteris apprime excultam. Omnes proin, quibus gloria ordinis Benedictini (sicut omnibus deberet) cordi <pb n="1v"/> est, optant clarissimae paternitati longaevos sanos serenos sine nube dies gratiasque ferunt divinae providentiae, quae nobis Germanis virum concessit tantae eruditionis, qui nostros e congregatione S. Mauri vel superare vel cum palma certare videtur. Sed ne religiosam modestiam offendam, calamum sisto et <anchor xml:id="n1"/>ad dubia paucis respondeo<anchor xml:id="n1e"/>. </ab>
          <ab resp="#editor" xml:id="seg3">Ad paragraphum 14. desiderat aetatem fratris Alberti, qui vitam scripsit sancti Adalberti. Sed hodie de annis huius Alberti rescribere nil possum; <anchor xml:id="n2"/>in manuscripto enim nostro<anchor xml:id="n2e"/> nihil expressum invenio. Pergam tamen circa 16. mensis<del ana="#before">Oc</del> currentis in monasterium Oberaltaichense philosophiam reverendis fratribus de congregatione nostra eo mittendis traditurus: ibi spero sine difficultate experiri saeculum, quo hic vixit Albertus, quod dein fideliter perscribam. </ab>
          <ab resp="#editor" xml:id="seg4">Ad paragraphum 15. quaerit, an non legendum <anchor xml:id="n3"/>Notkeri Sequentiae<anchor xml:id="n3e"/>? Respondeo: duae primae syllabae ita vetustate sunt obsoletae, ut fugiant oculos. <pb n="2r"/> Ad paragraphum 26. dubitat, num<anchor xml:id="n4"/> Sigismundus Paurenfeint<anchor xml:id="n4e"/> sit author operis an librarius tantum? Codicem huius Sigismundi iam aliquot diebus horis destinatis quaero nec invenio, et amplius istis diebus, quibus adero Ratisbonae, quaeram. Interim videor mihi esse moraliter certus, quod liber iste non sit partus Andreae. Historia enim huius authoris tum ex manuscriptis tum ex libris impressis mihi notissima est. Num vero non sit alius author, determinare non audeo. Scio tamen, quod sine fundamento hunc monachum libri authorem non asseruerim. </ab>
-         <ab resp="#editor" xml:id="seg5">Pro <anchor xml:id="n5"/>appendice tertia<anchor xml:id="n5e"/> postulat nomen typographi, cuius opera tertio recusum est<anchor xml:id="n6"/> Mausolaeum<anchor xml:id="n6e"/> abbatis Coelestini. Ut plane intelligat, quae scire desiderat, hic frontem operis appono:<anchor xml:id="n7"/> Mausolaeum<anchor xml:id="n7e"/> oder Herrliches grab des bayrischen apostls und blutzeigen Christi sancti Emmerami, geziert mit viler anderer heiligen-seeligen bischöfen, abbten, kaiser und könig, königinen, <choice><sic>h.</sic><corr>fürsten</corr></choice> und <pb n="2v"/> graffen und herren begräbnussen, so in gedachter S. Emmerami closter-kirchen zu sechen, zusammen getragen durch Coelestinum abbten daselbst. Editio tertia. Sambt einer inhaltischen histori etc. Gedruckt zu Regenspurg bey <anchor xml:id="n8"/>Joan Egidi Raith<anchor xml:id="n8e"/>, hochfürstlichen bischöflichen Regenspurgerischen hoff-buchtrucker anno 1680. In hoc libro etiam continentur vitae sanctorum Emmerami, Dionysii, Wolfgangi, Gaubaldi, Tuthonis, Guntharii, Ramvoldi, Arnulphi imperatoris etc. et historia quasi universalis et particularis ducum Bavariae et episcoporum Ratisbonensium. Liber alias est in quarto iustae magnitudinis. </ab>
-         <ab resp="#editor" xml:id="seg6">Catalogus librorum <anchor xml:id="n9"/>Ignatii Trauner abbatis<anchor xml:id="n9e"/> hic est: Primo. Gallus cantans, das ist Kräender<del ana="#after">haus-hah</del> haus-hahn etc. Bues- und passion-predigen durch underschidlich auserlösenen raren concepten etc. <sic>gedruck</sic>  <add place="left-margin">zu Regenspurg</add> bey Augusto Hanckwizen in verlag des authors 1677. <pb n="3r"/> Secundo. Geistliche seelen-iagd, das ist Erstes dominicale etc. Gedruckt zu<del ana="#after">Billingen</del> Dillingen in verlag und truckerey Joannis Caspar<anchor xml:id="n10"/> Bencard<anchor xml:id="n10e"/> academischen buchhandlers anno 1685. Tertio. Geistliche seelen-iagd, das ist Anderes dominicale. Von reverendo patre Ignatio Trauner etc. In verlag Joannis Caspari<anchor xml:id="n11"/> Bencard<anchor xml:id="n11e"/> etc. anno 1690. Quarto. Fragmenta sacra, das ist Überblibene geistliche brossaamen oder sittliche lob- und ehren predigen etc. Ignatii Trauner ordinis sancti Benedicti des kaiserlichen freüen reich-stifft zu S. Emmeram in Regenspurg gewesten abbten und beeder respective chur- und hoch-fürstlichen clöster Reichenbach und Planckstetten wirdigisten herrn administratorn etc., in ein doppletes festival eingerichtet von reverendo domino patre Calcidonio Klain, benenten reichs-stüft profess, der zeit ordinari prediger und statt-pfarr-verweser zu S. Rupert <pb n="3v"/> allda. Opus posthumum. Dillingen in verlag Joan Caspar<anchor xml:id="n12"/> Bencard<anchor xml:id="n12e"/> etc. Quinto. Fragmenta sacra etc. anderer theil, oder Sittliche lob- und ehren-predigen Ignatii Trauner, eingerichtet von reverendo patre Calcidonio<anchor xml:id="n13"/> Klain piae memoriae, nach dessen ableiben aber continuieret und vollendet a reverendo domino patre Joachimo Miller<anchor xml:id="n13e"/> ernanten reich-stüfts profess, der zeit<del ana="#after">ar</del> ordinari prediger und statt-pfarr-verweser zu S. Rupert allda. Dillingen in verlag Joan etc. anno 1702. Sunt haec quinque volumina in quarto, duo ultima<del ana="#after">sex</del> sunt posthuma. </ab>
-         <ab resp="#editor" xml:id="seg7">Denique exposcit sibi descriptionem <anchor xml:id="n14"/>operum Othlonis<anchor xml:id="n14e"/> nostri. Utinam possem hic propria manu servire; sed labores (quibus parochus intendere non poteram) instant philosophici nec permittunt, ut huic me dem operi. Per me si staret, et si obedientia <pb n="4r"/> non compelleret, lubens cederem alteri cathedram a generali capitulo delatam totumque me studio rerum antiquarum et clarissimae dominationis obsequiis consecrarem. At cum id per me praestare nequeam, urgebo tamen <anchor xml:id="n15"/>reverendissimum<anchor xml:id="n15e"/> et verbis et litteris e Superiori Quercu ad ipsum dandis, ut<app><rdg wit="#"><add place="after">dis</add></rdg></app> describere iubeat etc. Aut si hoc efficere non possim, ut libros ipsos (si tamen <choice><sic>desideret</sic><corr>desiderentur</corr></choice>) transmittat. </ab>
+         <ab resp="#editor" xml:id="seg5">Pro <anchor xml:id="n5"/>appendice tertia<anchor xml:id="n5e"/> postulat nomen typographi, cuius opera tertio recusum est<anchor xml:id="n6"/> Mausolaeum<anchor xml:id="n6e"/> abbatis Coelestini. Ut plane intelligat, quae scire desiderat, hic frontem operis appono:<anchor xml:id="n7"/> Mausolaeum<anchor xml:id="n7e"/> oder Herrliches grab des bayrischen apostls und blutzeigen Christi sancti Emmerami, geziert mit viler anderer heiligen-seeligen bischöfen, abbten, kaiser und könig, königinen, <choice>
+               <sic>h.</sic>
+               <corr>fürsten</corr>
+            </choice> und <pb n="2v"/> graffen und herren begräbnussen, so in gedachter S. Emmerami closter-kirchen zu sechen, zusammen getragen durch Coelestinum abbten daselbst. Editio tertia. Sambt einer inhaltischen histori etc. Gedruckt zu Regenspurg bey <anchor xml:id="n8"/>Joan Egidi Raith<anchor xml:id="n8e"/>, hochfürstlichen bischöflichen Regenspurgerischen hoff-buchtrucker anno 1680. In hoc libro etiam continentur vitae sanctorum Emmerami, Dionysii, Wolfgangi, Gaubaldi, Tuthonis, Guntharii, Ramvoldi, Arnulphi imperatoris etc. et historia quasi universalis et particularis ducum Bavariae et episcoporum Ratisbonensium. Liber alias est in quarto iustae magnitudinis. </ab>
+         <ab resp="#editor" xml:id="seg6">Catalogus librorum <anchor xml:id="n9"/>Ignatii Trauner abbatis<anchor xml:id="n9e"/> hic est: Primo. Gallus cantans, das ist Kräender<del ana="#after">haus-hah</del> haus-hahn etc. Bues- und passion-predigen durch underschidlich auserlösenen raren concepten etc. <sic>gedruck</sic>
+            <add place="left-margin">zu Regenspurg</add> bey Augusto Hanckwizen in verlag des authors 1677. <pb n="3r"/> Secundo. Geistliche seelen-iagd, das ist Erstes dominicale etc. Gedruckt zu<del ana="#after">Billingen</del> Dillingen in verlag und truckerey Joannis Caspar<anchor xml:id="n10"/> Bencard<anchor xml:id="n10e"/> academischen buchhandlers anno 1685. Tertio. Geistliche seelen-iagd, das ist Anderes dominicale. Von reverendo patre Ignatio Trauner etc. In verlag Joannis Caspari<anchor xml:id="n11"/> Bencard<anchor xml:id="n11e"/> etc. anno 1690. Quarto. Fragmenta sacra, das ist Überblibene geistliche brossaamen oder sittliche lob- und ehren predigen etc. Ignatii Trauner ordinis sancti Benedicti des kaiserlichen freüen reich-stifft zu S. Emmeram in Regenspurg gewesten abbten und beeder respective chur- und hoch-fürstlichen clöster Reichenbach und Planckstetten wirdigisten herrn administratorn etc., in ein doppletes festival eingerichtet von reverendo domino patre Calcidonio Klain, benenten reichs-stüft profess, der zeit ordinari prediger und statt-pfarr-verweser zu S. Rupert <pb n="3v"/> allda. Opus posthumum. Dillingen in verlag Joan Caspar<anchor xml:id="n12"/> Bencard<anchor xml:id="n12e"/> etc. Quinto. Fragmenta sacra etc. anderer theil, oder Sittliche lob- und ehren-predigen Ignatii Trauner, eingerichtet von reverendo patre Calcidonio<anchor xml:id="n13"/> Klain piae memoriae, nach dessen ableiben aber continuieret und vollendet a reverendo domino patre Joachimo Miller<anchor xml:id="n13e"/> ernanten reich-stüfts profess, der zeit<del ana="#after">ar</del> ordinari prediger und statt-pfarr-verweser zu S. Rupert allda. Dillingen in verlag Joan etc. anno 1702. Sunt haec quinque volumina in quarto, duo ultima<del ana="#after">sex</del> sunt posthuma. </ab>
+         <ab resp="#editor" xml:id="seg7">Denique exposcit sibi descriptionem <anchor xml:id="n14"/>operum Othlonis<anchor xml:id="n14e"/> nostri. Utinam possem hic propria manu servire; sed labores (quibus parochus intendere non poteram) instant philosophici nec permittunt, ut huic me dem operi. Per me si staret, et si obedientia <pb n="4r"/> non compelleret, lubens cederem alteri cathedram a generali capitulo delatam totumque me studio rerum antiquarum et clarissimae dominationis obsequiis consecrarem. At cum id per me praestare nequeam, urgebo tamen <anchor xml:id="n15"/>reverendissimum<anchor xml:id="n15e"/> et verbis et litteris e Superiori Quercu ad ipsum dandis, ut<app>
+               <rdg wit="#">
+                  <add place="after">dis</add>
+               </rdg>
+            </app> describere iubeat etc. Aut si hoc efficere non possim, ut libros ipsos (si tamen <choice>
+               <sic>desideret</sic>
+               <corr>desiderentur</corr>
+            </choice>) transmittat. </ab>
          <ab resp="#editor" xml:id="seg8">Caeterum non dubito, quin a meo germano Wessobrunna, quod sibi expetiit, acceperit. Nam a se conscripta Ratisbonam misit, quae Viennam usque circa 20. Julii (si bene recordor) a me directa sunt. </ab>
          <ab resp="#editor" xml:id="seg9">Prunifingenses etiam atque etiam moneo et moneri curabo, ut suum praestent officium; puto tamen pauca ibi fore, quae aliquid possent<del ana="#after">conferre</del> clarissimae paternitati conferre. Monasterium enim hoc, aliis in Bavaria collatum, <anchor xml:id="n16"/>non est antiquum<anchor xml:id="n16e"/>, licet alias<del ana="#after">a</del> regulari disciplina et <pb n="4v"/> fundationis opulentia<del ana="#after">quaedam</del> quaedam in nostra patria et praesertim<anchor xml:id="n17"/> in Palatinatu sita<anchor xml:id="n17e"/> excedat. Interim obtestabor Deum ter optimum maximum, ut clarissimam paternitatem in multos annos incolumem tum pro sui tum pro omnium ordinis nostri monasteriorum gloria conservet, qui reciproce mei memoriam in sacris et piis laboribus rogo.</ab>
          <closer>Plurimum reverendae ac clarissimae dominationis vestrae devotissimus servus pater Casparus Erhardt monachus Benedictinus ad S. Emmeramum.</closer>

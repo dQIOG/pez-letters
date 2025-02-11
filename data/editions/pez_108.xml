@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="108" xml:id="pez-0108">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bernhard Pez an Benedetto Bacchini. 1710-09-07 (?). Melk.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">108</idno>
          </publicationStmt>
          <seriesStmt>
@@ -47,10 +59,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -83,14 +96,16 @@
             <p corresp="#seg4">BP hat auch an den Abt von <rs ref="index:d10854e22917">S. Giovanni Evangelista</rs> zu <rs ref="index:d14380e32499">Parma</rs> (<rs ref="index:d10854e4072">Cherubino Boscoli</rs>) schon vor längerem geschrieben <ref type="letter" target="letter:106">106</ref>, jedoch ebenfalls keine Antwort erhalten. Daher dankt er für BBas Bereitschaft, sich persönlich an jenen zu wenden. In <rs ref="index:d14380e46413">Wions</rs> „<rs ref="index:d14380e46421">Lignum vitae</rs>“ hat BP etliche Schriftsteller von <rs ref="index:d10854e22917">S. Giovanni</rs> gefunden, doch bietet <rs ref="index:d14380e46413">Wion</rs> nur spärliche Angaben. In demselben Werk ist BP auch eine Notiz zu <rs ref="index:d10854e31697">Eusebio Valentini</rs> mit einem Verzeichnis von dessen Schriften untergekommen, an das er die Angaben BBas anfügen wird.</p>
             <p corresp="#seg5">Aus <rs ref="index:d10854e8724">Ferrara</rs> (<rs ref="index:d10854e8731">S. Benedetto</rs>) hat BP ein freundliches Schreiben <ref type="letter" target="letter:90">90</ref>, aber kein Material erhalten. Er würde sich freuen, ein Schriftenverzeichnis BBas auf anderem Wege zu bekommen.</p>
             <p corresp="#seg6">Fehler in der Adresse bedauert BP, ändert sie aber nicht, weil, wie ein Sprichwort besagt, der zu Rüstende für einen Gerüsteten zu halten ist, und weil BBa aufgrund seiner Gelehrsamkeit und Tugenden jedes Titels würdig ist.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
       <listAnnotation type="commentary">
          <note target="#range(right('n1'), left('n1e'))" n="1" anchored="false" corresp="#seg2">
             <mentioned>Armellino meas literas ... inscripsi</mentioned>
-            <p>Offenbar aufgrund einer der bereits früher erhaltenen Anregungen: <ref type="letter" target="letter:81">81</ref> <ref target="letter:81#seg5">5</ref>, <ref type="letter" target="letter:87">87</ref> <ref target="letter:87#seg2">2</ref>.</p>
+            <p>Offenbar aufgrund einer der bereits früher erhaltenen Anregungen: <ref type="letter" target="letter:81">81</ref>
+               <ref target="letter:81#seg5">5</ref>, <ref type="letter" target="letter:87">87</ref>
+               <ref target="letter:87#seg2">2</ref>.</p>
          </note>
          <note target="#range(right('n2'), left('n2e'))" n="2" anchored="false" corresp="#seg2">
             <mentioned>S. Pauli abbatem</mentioned>
@@ -111,7 +126,7 @@
                   von <ref type="letter" target="letter:91">91</ref> gebraucht hatte und für diesen Brief trotz der
                   Korrektur BBas beibehielt – unter Berufung darauf, dass BBa dieses Amt zwar noch
                   nicht innehatte, aber nach seinen eigenen Worten (<ref type="letter" target="letter:98">98</ref>
-                  <ref target="letter:98#seg1">1</ref>) bereits damit rechnete, dass es ihm durch das Generalkapitel von 1711
+               <ref target="letter:98#seg1">1</ref>) bereits damit rechnete, dass es ihm durch das Generalkapitel von 1711
                   übertragen werden würde. Dass BBa bereits eine andere Abtei (zumindest nominell)
                   innehatte, dürfte BP übersehen oder ignoriert haben.</p>
          </note>
@@ -122,7 +137,8 @@
          <p>Reverendissimo perillustri ac amplissimo domino domino Benedicto Bacchinio celeberrimi et florentissimi monasterii S. Petri Mutinae ordinis sancti patris Benedicti congregationis Casinensis alias sanctae Justinae de Padua abbati vigilantissimo, domino domino ac patrono gratiosissimo. Modena. Per Mantua.</p>
       </front>
       <body>
-         <opener><pb n="1r"/> Reverendissime perillustris ac amplissime domine domine praesul, patrone gratiosissime.</opener>
+         <opener>
+            <pb n="1r"/> Reverendissime perillustris ac amplissime domine domine praesul, patrone gratiosissime.</opener>
          <ab resp="#editor" xml:id="seg1">Incredibili me gaudio reverendissimi ac amplissimi domini domini literae XVIII. Kalendas Septembris datae et ipsis Nonis eiusdem Septembris a me acceptae compleverunt. In iis porro cum omnia praeclara et gratiosa fuerint, tum humanitas illa summa et eruditio cum promptissima gratificandi voluntate coniuncta cui non solatio maximo et voluptati sint? Sane nunc demum mihi licet beato esse et felici, ut cuius res in illius manus devenere, in quo iuvandi promptitudo cum facultate ac rem quamlibet exsequendi dexteritate pridem de victoria contendit. Mihi vero inter haec aliud suppetit nihil, nisi ut me quam gratissimum pro impenso favore reverendissimo domino domino ac patrono meo gratiosissimo exhibeam. Id quod et affatim in loco et tempore praestabo. Utinam Deus misero mihi hanc vitam eo proroget usque, dum in meo opere pro ampliori sacri ordinis nostri gloria suscepto apparere possit, quam bene et utiliter in meis consiliis promovendis reverendissimus dominus dominus suam opem et beneficia posuerit! Nihil omnino praeteribo, unde vel minimum lucis aut splendoris in celeberrimum eiusdem nomen, imo in totius doctissimae Italiae Benedictinae laudem absistere redundareque possit. </ab>
          <ab resp="#editor" xml:id="seg2">Iam vero ad suggestum gratiose consilium admodum reverendum ac clarissimum dominum Armellinum per literas conveniendi id unum habeo, quod reponam, nempe me pridem Romam ad S. Paulum in hac mea causa scripsisse; sed ut est res omnis tabellaria in distantes longius terras propaganda plurimis viarum incommodis exposita, nullum adhuc responsum recepi. Repetii paucas ante hebdomadas eundem laborem ipsique admodum reverendo domino <anchor xml:id="n1"/>Armellino meas literas, quas prius ad reverendissimum S. Pauli abbatem direxeram, nominatim inscripsi<anchor xml:id="n1e"/>. Quae has fortuna mansura sit, eventus abunde docebit. Interim immortalis beneficii et favoris loco habebo, si, quod tamen commodo reverendissimi domini patroni mei fieri velim, per se ipse dignatus fuerit virum illum doctissimum de meis laboribus et studiis per aliquam epistolam longe commodius, citius et certius Mutina Romam perferendam docere. </ab>
          <ab resp="#editor" xml:id="seg3">Quamvis prospiciam non omnia, quae e re mea sint, mihi Roma expectanda esse. <pb n="1v"/> Tametsi enim dem omnia opera ab eruditissimis congregationis Casinensis doctoribus edita aut saltem horum nomina inde haberi posse: quis autem aut unde elogia scriptorum et vitam, in qua exornanda non levem operam colloco, nanciscar? Profecto nulla superest alia ratio, nisi quam in prioribus meis literis exposui, nimirum: ut in singulis monasteriis unus aliquis deligatur, qui excussis archivis et domesticis monumentis ea demum omnia colligat, quae authoris nomen et memoriam amplius illustrent commendentque. Atque ita quidem mihi videtur. Quod si commodior ad haec mea vota perveniendi ratio reverendissimo domino domino occurrat, eam, quaeso, me ne celet. Nulli labori parcam, quo bene de florentissima hac congregatione merear. </ab>

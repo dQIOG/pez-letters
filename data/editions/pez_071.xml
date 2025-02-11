@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../odd/pez-letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="71" xml:id="pez-0071">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Moritz Müller an Bernhard Pez. 1710-05-26. St. Gallen.</title>
-            
             <principal>Thomas Wallnig</principal>
             <respStmt>
                <resp>Conversion to TEI</resp>
@@ -20,7 +21,18 @@
             <p>digital edition</p>
          </editionStmt>
          <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+            <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+            <distributor ref="https://ror.org/028bsh698">Austrian Centre for Digital Humanities and Cultural Heritage</distributor>
+            <date when="2024">2024</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <address>
+               <addrLine>Bäckerstraße 13</addrLine>
+               <addrLine>1010 Vienna</addrLine>
+               <addrLine>Austria</addrLine>
+            </address>
             <idno type="pezEd">71</idno>
          </publicationStmt>
          <seriesStmt>
@@ -31,7 +43,6 @@
             <relatedItem type="publishedIn">
                <bibl>Die gelehrte Korrespondenz der Brüder Pez, Text, Regesten, Kommentare; Band 1: 1709–1715.</bibl>
             </relatedItem>
-            
          </notesStmt>
          <sourceDesc>
             <listWit>
@@ -50,10 +61,11 @@
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="letter" matchPattern="(\d+)" replacementPattern="pez_$1.xml"/>
-            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="$1"/>
+            <prefixDef ident="index" matchPattern="(.+)" replacementPattern="../indices/index.xml#$1"/>
             <prefixDef ident="cmif" matchPattern="(.*)" replacementPattern="https://encoding-correspondence.bbaw.de/v1/CMIF.html#$1">
                <ab>Vokabular des Correspondence Metadata Interchange Format (<ptr target="https://encoding-correspondence.bbaw.de/v1/CMIF.html"/>).</ab>
             </prefixDef>
+            <prefixDef ident="bibl" matchPattern="^(.+)$" replacementPattern="../indices/listbibl.xml#b$1"/>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -82,13 +94,17 @@
             <p corresp="#seg3">Dass <rs ref="index:d14380e39962">Anselm Schramb</rs> seinen Brief erhalten hat, weiß MM, weil er aus <rs ref="index:d14380e45571">Wien</rs> bereits eine Antwort empfangen und das ihr beigelegte Schreiben vor vier Tagen nach <rs ref="index:d14380e32292">Paris</rs> weitergeleitet hat. Er erwartet nun eine Antwort <rs ref="index:d14380e26993">Massuets</rs>, die er nach <rs ref="index:d14380e28088">Melk</rs> weitersenden wird.</p>
             <p corresp="#seg4">Was die von den <rs ref="index:d14380e28088">Melkern</rs> bestellten „<rs ref="index:d10854e31172">Annales Hirsaugienses</rs>“ des <rs ref="index:d14380e43380">Trithemius</rs> betrifft, so hat MM sie schon vor vier Wochen dem <rs ref="index:d14380e43652">Ulmer</rs> Buchhändler (<rs ref="index:d10854e3388">Beuerlein</rs>) übermittelt, der aber unterlassen hat, sie auftragsgemäß über die <rs ref="index:d14380e9895">Donau</rs> nach <rs ref="index:d14380e28088">Melk</rs> zu senden. MM hat den Verdacht, dass der Händler sie auf eigene Rechnung an einen lokalen Kunden verkauft hat, und ist darüber nicht wenig verstimmt. So sendet MM nun ein weiteres Exemplar des Werks, welches zwei Bände in Folio umfasst, zum Freundschaftspreis von vier Gulden statt vier Gulden und dreißig Kreuzern.</p>
             <p corresp="#seg5">Die Bezahlung kann zu einem beliebigen günstigen Zeitpunkt erfolgen, da es MM nicht um seinen Lebensunterhalt (victus et amictus), schon gar nicht um Gewinn geht. MM dankt besonders für die Zusendung von kaiserlichen Goldgulden, die in seiner Gegend selten sind; da sie sich gut mit Briefen versenden lassen, wünscht er sie sich auch zur Bezahlung der „<rs ref="index:d10854e31172">Annales Hirsaugienses</rs>“.</p>
-            <p corresp="#seg6"><rs ref="index:d14380e38364">Ruinarts</rs> „<rs ref="index:d14380e38376">Abregé de la vie de Dom Mabillon</rs>“ ist vergriffen, doch wird demnächst eine erweiterte Neuauflage erscheinen, wie MM hört. Von der Apologie <rs ref="index:d10854e10446">Johannes Gersens</rs> (<rs ref="index:d10854e17877">Mabillon, „Animadversiones in Vindicias Kempenses“</rs>) haben die <rs ref="index:d14380e32292">Pariser</rs> Buchhändler (<rs ref="index:d14380e1795"><rs ref="index:d14380e1788">Anisson</rs></rs> und <rs ref="index:d14380e37514">Rigaud</rs>?) kürzlich geschrieben, dass sie nicht mehr zu bekommen ist. Von beiden Werken hat MM jüngst je zwei Exemplare erhalten, aber bereits an Freunde weitergegeben.</p>
-            <p corresp="#seg7">MM findet, dass die <rs ref="index:d14380e28088">Melker</rs> <rs ref="index:d10854e17940">Mabillons „Annales OSB“</rs> um 42 Gulden zu teuer gekauft haben.</p>
+            <p corresp="#seg6">
+               <rs ref="index:d14380e38364">Ruinarts</rs> „<rs ref="index:d14380e38376">Abregé de la vie de Dom Mabillon</rs>“ ist vergriffen, doch wird demnächst eine erweiterte Neuauflage erscheinen, wie MM hört. Von der Apologie <rs ref="index:d10854e10446">Johannes Gersens</rs> (<rs ref="index:d10854e17877">Mabillon, „Animadversiones in Vindicias Kempenses“</rs>) haben die <rs ref="index:d14380e32292">Pariser</rs> Buchhändler (<rs ref="index:d14380e1795">
+                  <rs ref="index:d14380e1788">Anisson</rs>
+               </rs> und <rs ref="index:d14380e37514">Rigaud</rs>?) kürzlich geschrieben, dass sie nicht mehr zu bekommen ist. Von beiden Werken hat MM jüngst je zwei Exemplare erhalten, aber bereits an Freunde weitergegeben.</p>
+            <p corresp="#seg7">MM findet, dass die <rs ref="index:d14380e28088">Melker</rs>
+               <rs ref="index:d10854e17940">Mabillons „Annales OSB“</rs> um 42 Gulden zu teuer gekauft haben.</p>
             <p corresp="#seg8">Eine vollständige Ausgabe von <rs ref="index:d14380e150">d’Acherys „Spicilegium“</rs> ist kaum mehr zu bekommen; wenn irgendwer in Deutschland dies doch bewerkstelligen kann, dann MM. Der Autor heißt „<rs ref="index:d14380e124">D’Acherius</rs>“, nicht „Acherianus“, wie BP schreibt; er war Mitarbeiter <rs ref="index:d14380e25581">Mabillons</rs> an den „<rs ref="index:d14380e25664">Acta sanctorum OSB</rs>“ (recte: siehe Kommentar), selbst hat er das „<rs ref="index:d14380e150">Spicilegium</rs>“ alter, vornehmlich <rs ref="index:d14380e12712">französischer</rs> und benediktinischer Schriftsteller herausgebracht, das zwischen 1665 und 1675 (recte: 1655 und 1677) in 13 Quartbänden erschienen ist. Der Preis des Werks ist nicht fest, wird aber mindestens ebenso hoch sein wie jener für die „<rs ref="index:d10854e17940">Annales OSB</rs>“.</p>
             <p corresp="#seg9">MM preist seine Vorteile beim Kauf <rs ref="index:d14380e12712">französischer</rs> Bücher an; er bezieht sie direkt von Buchhändlern in <rs ref="index:d14380e25537">Lyon</rs> und <rs ref="index:d14380e32292">Paris</rs>. Zudem profitiert MM von dem Handelsvertrag zwischen <rs ref="index:d14380e12712">Frankreich</rs> und <rs ref="index:d10854e27374">St. Gallen</rs>, demzufolge die <rs ref="index:d14380e12712">französischen</rs> Waren, die aus <rs ref="index:d14380e25537">Lyon</rs> und <rs ref="index:d14380e32292">Paris</rs> monatlich nach <rs ref="index:d10854e27374">St. Gallen</rs> gebracht werden, gegen eine jährliche Zahlung von 2000 Talern zollfrei gestellt sind. So hofft MM, nicht nur die Klöster der <rs ref="index:d14380e40241">Schweiz</rs> und <rs ref="index:d10854e28377">Schwabens</rs>, sondern auch des von alters her mit <rs ref="index:d10854e27374">St. Gallen</rs> verbündeten <rs ref="index:d14380e31465">Österreich</rs> beliefern zu können.</p>
             <p corresp="#seg10">MM kann auch sämtliche <rs ref="index:d10854e15777">Kirchenvätereditionen</rs> der <rs ref="index:d10854e15615">Mauriner</rs> besorgen; er sendet eine Preisliste der lieferbaren Werke mit dem billigsten Tarif inklusive Transportkosten bis <rs ref="index:d14380e39290">St. Gallen</rs>. Als Versandweg schlägt MM jenen über <rs ref="index:d10854e17237">Lindau</rs> und <rs ref="index:d14380e43652">Ulm</rs> vor, falls BP nicht andere Strecken nennt. Er möchte jedoch zuerst eine Ermächtigung sowie die Zahlung in bar erhalten. Wiederum bietet MM seine Dienste an und freut sich, den Studien eines gelehrten Mannes, die noch dazu den Ruhm des Ordens befördern, dienen zu können.</p>
             <p corresp="#seg11">In einem Postskriptum lässt MM <rs ref="index:d14380e39962">Anselm Schramb</rs> grüßen und ausrichten, dass er dessen Brief an <rs ref="index:d14380e26993">Massuet</rs> nach <rs ref="index:d14380e32292">Paris</rs> weitergesendet hat. Auf <rs ref="index:d14380e39962">Schrambs</rs> an ihn selbst gerichtetes Schreiben will MM antworten, sobald er Post aus <rs ref="index:d14380e32292">Paris</rs> erhalten hat.</p>
-            </abstract>
+         </abstract>
       </profileDesc>
    </teiHeader>
    <standOff>
@@ -107,7 +123,7 @@
                   erschien – da innerhalb der Maurinerkongregation Widerstände gegen ihre
                   Veröffentlichung auftraten, u. a. von Seiten Massuets, der selbst ebenfalls eine
                   lateinische Vita vorbereitete – erst 1714 zu Padua: <rs type="bibl" ref="bibl:15824">Denis, Charles de l’Hostallerie</rs> 43–65, 343–363; <rs type="bibl" ref="bibl:17878">Leclercq, Mabillon</rs> 2 993–995; <rs type="bibl" ref="bibl:20066">Vanel, Nécrologe</rs> 177f.; <rs type="bibl" ref="bibl:20068">Vanel, Savants lyonnais</rs> 369. Vgl. auch <ref type="letter" target="letter:192">192</ref>
-                  <ref target="letter:192#seg4">4</ref>.</p>
+               <ref target="letter:192#seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n4'), left('n4e'))" n="4" anchored="false" corresp="#seg6">
             <mentioned>Apologiam ... Gersenis</mentioned>
@@ -131,7 +147,8 @@
          </note>
          <note target="#range(right('n6'), left('n6e'))" n="6" anchored="false" corresp="#seg6">
             <mentioned>bina ... destinavi</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:57">57</ref> <ref target="letter:57#seg3">3</ref>, wo von dreißig Exemplaren des „Abregé“
+            <p>Vgl. <ref type="letter" target="letter:57">57</ref>
+               <ref target="letter:57#seg3">3</ref>, wo von dreißig Exemplaren des „Abregé“
                   die Rede ist. Der zeitliche Abstand von sechs Wochen bis zwei Monaten lässt
                   plausibel erscheinen, dass es sich um zwei separate Lieferungen handelte.</p>
          </note>
@@ -169,7 +186,8 @@
          </note>
          <note target="#range(right('n11'), left('n11e'))" n="11" anchored="false" corresp="#seg9">
             <mentioned>Austriae ... coniunctissimae</mentioned>
-            <p>Vgl. <ref type="letter" target="letter:32">32 </ref><ref target="letter:32 #seg4">4</ref>.</p>
+            <p>Vgl. <ref type="letter" target="letter:32">32 </ref>
+               <ref target="letter:32 #seg4">4</ref>.</p>
          </note>
          <note target="#range(right('n12'), left('n12e'))" n="12" anchored="false" corresp="#seg10">
             <mentioned>elegantissimis typis ac vere regiis</mentioned>
@@ -181,7 +199,8 @@
          <note target="#range(right('n13'), left('n13e'))" n="13" anchored="false" corresp="#seg10">
             <mentioned>operum syllabum</mentioned>
             <p>Massuet hatte in einer Beilage zu seinem Schreiben an MM vom 7. März 1710 zu einer
-                  Liste von MM genannter Bücher (vgl. <ref type="letter" target="letter:32">32</ref> <ref target="letter:32#seg4">4</ref>) die
+                  Liste von MM genannter Bücher (vgl. <ref type="letter" target="letter:32">32</ref>
+               <ref target="letter:32#seg4">4</ref>) die
                   Preise angegeben; diese Informationen gibt MM hier offenbar an BP weiter. Die von
                   Massuet gesendete Liste ist erhalten in StiA St. Gallen, Bd. 322, 323–326. Sie
                   wurde von <rs type="bibl" ref="bibl:15750">Dantier, Pièces annexées</rs>, nicht
@@ -211,13 +230,18 @@
    </standOff>
    <text>
       <body>
-         <opener><pb n="1r"/> Ex S. Gallo. 1710 26. Maii.</opener>
+         <opener>
+            <pb n="1r"/> Ex S. Gallo. 1710 26. Maii.</opener>
          <opener>Admodum reverende religiosissime ac clarissime domine in Christo pater ac domine amice colendissime.</opener>
          <ab resp="#editor" xml:id="seg1">Ultimas admodum reverendae clarissimae dominationis suae de 18. Maii ad me datas heri 25. currentis ad vesperas recepi, hodieque et acclusas per postam ordinariam ac securam viam Parisios ad amicum reverendum patrem Massuet dimitto, et ad vestras pariter humanissimas respondeo. </ab>
          <ab resp="#editor" xml:id="seg2">Imprimis gaudeo de gaudio vestro ex meis tametsi modicis obsequiis concepto, spondeoque me porro defuturum in nullo, si quid opellae ad laudatissima studia vestra conferre ex parte mea potuero. Tantum imperate et me dignum, qui serviat, aestimate. </ab>
          <ab resp="#editor" xml:id="seg3">Caeterum, quod admodum reverendus clarissimus dominus pater Anselmus Schramm meas Viennam transmissas receperit, nullus dubito, imo certus scio, quia prius abs eodem Vienna quam Melicio responsum obtinui <anchor xml:id="n1"/>suasque ad me denuo missas iam ante quatuor dies Parisios destinavi<anchor xml:id="n1e"/>. Spero me brevi iterum a reverendo patre Massuet responsum obtenturum, quod, mox ac accepero, Melicium ablegabo. </ab>
-         <ab resp="#editor" xml:id="seg4">Quod attinet ad Trithemii Annales hactenus nondum iuxta vota vestra receptos, unicus Ulmensis librarius in causa fuit, qui mandati a me dati, nescio qua ex iniuria, oblitus fuit et eos transmittere omisit, cum illos eidem quatuor iam ante septimanas destinaverim per Danubium Melicium avehendos. Quos tamen ille in vicinia praesentis, ut credo, lucri avidus, me invito et vix non subirato, distraxit et <anchor xml:id="n2"/>suis rationibus adnotavit<anchor xml:id="n2e"/>. Mitto ergo iam alterum exemplar dicti authoris et rari quidem operis, quod ex nostra bibliotheca prodiit, nostris typis ad honorem nostri ordinis <add place="above">editum</add>. Si plura forte <choice><sic>desiderantur</sic><corr>desiderentur</corr></choice>, ero ad obsequia. Constat opus duobus tomis in folio, et pretio 4 fl. imperialium, ita quidem amicis taxato, cum alias aliis pro 4 fl. et 30 x. detur. </ab>
-         <ab resp="#editor" xml:id="seg5">De solutione non est periculum, et quacunque occasione opportuna aut fieri aut differri pro lubitu poterit: non enim ex hisce victum aut amictum, multo minus lucrum quaero. Singulariter porro me obligatum agnosco pro rara illa apud nos moneta in nummis aureis imperialibus transmissa; et quia commode in litteris includi possunt, gratissimum foret, si pro commoditate solutio Trithemii in illa moneta fieret; quam pro raritate asservarem in memoriam datoris. <pb n="1v"/> </ab>
+         <ab resp="#editor" xml:id="seg4">Quod attinet ad Trithemii Annales hactenus nondum iuxta vota vestra receptos, unicus Ulmensis librarius in causa fuit, qui mandati a me dati, nescio qua ex iniuria, oblitus fuit et eos transmittere omisit, cum illos eidem quatuor iam ante septimanas destinaverim per Danubium Melicium avehendos. Quos tamen ille in vicinia praesentis, ut credo, lucri avidus, me invito et vix non subirato, distraxit et <anchor xml:id="n2"/>suis rationibus adnotavit<anchor xml:id="n2e"/>. Mitto ergo iam alterum exemplar dicti authoris et rari quidem operis, quod ex nostra bibliotheca prodiit, nostris typis ad honorem nostri ordinis <add place="above">editum</add>. Si plura forte <choice>
+               <sic>desiderantur</sic>
+               <corr>desiderentur</corr>
+            </choice>, ero ad obsequia. Constat opus duobus tomis in folio, et pretio 4 fl. imperialium, ita quidem amicis taxato, cum alias aliis pro 4 fl. et 30 x. detur. </ab>
+         <ab resp="#editor" xml:id="seg5">De solutione non est periculum, et quacunque occasione opportuna aut fieri aut differri pro lubitu poterit: non enim ex hisce victum aut amictum, multo minus lucrum quaero. Singulariter porro me obligatum agnosco pro rara illa apud nos moneta in nummis aureis imperialibus transmissa; et quia commode in litteris includi possunt, gratissimum foret, si pro commoditate solutio Trithemii in illa moneta fieret; quam pro raritate asservarem in memoriam datoris. <pb n="1v"/>
+         </ab>
          <ab resp="#editor" xml:id="seg6">Elogium vitae reverendi patris Mabillon, Gallice editum et paucis foliis comprehensum, totum iam usque distractum est; sed brevi nova et <anchor xml:id="n3"/>auctior eiusdem Vitae editio<anchor xml:id="n3e"/>, ut audio, prodibit. <anchor xml:id="n4"/>Apologiam vero Joannis Gersenis<anchor xml:id="n4e"/> amplius haberi non posse <anchor xml:id="n5"/>librarii Parisienses<anchor xml:id="n5e"/> nuper scripsere. De utroque opusculo <anchor xml:id="n6"/>bina eaque ultima exemplaria nuperrime recepi, sed ea iam ad amicos meos destinavi<anchor xml:id="n6e"/>. </ab>
          <ab resp="#editor" xml:id="seg7">Annales vestros Mabillonii pretio satis charo emistis, si pro eis 42 fl. expendistis. Ego certe eos longe minori pretio et maiori compendio comparo. </ab>
          <ab resp="#editor" xml:id="seg8">Opus illud D’Acherianum, eruditissimum pariter ac rarissimum, difficulter amplius haberi poterit totum atque completum, utpote prioribus tomis iam separatim distractis. Si tamen vel alicubi in Germania ab aliquo haberi poterit, per me poterit; omnemque curam impendam, ut illud habeam, si tamen prius admodum reverendae dominationis mandatum procurae accipiam. Author illius est reverendus dominus pater D’Acherius (<anchor xml:id="n7"/>non Acherianus, ut scribitis<anchor xml:id="n7e"/>), <anchor xml:id="n8"/>Mabillonii olim collega et socius<anchor xml:id="n8e"/> in edendis Sanctorum Actis, ordinis sancti Benedicti, congregationis sancti Mauri, vir undequaque eruditissimus, qui sub titulo Spicilegii opus illud edidit Parisiis ab anno 1665 usque ad annum 1675; constatque 13 tomis in quarto et continet omnium veterum Gallicanorum praesertim ac Benedictinorum scriptorum hactenus nunquam editorum monimenta praecipua. Serviet, credo, vel maxime intentioni vestrae. Pretium illius certum ac determinatum iam non occurrit; aestimo tamen praedictum opus Annalium pretium aut paulo superaturum aut certe aequaturum, nisi maior indies raritas pretium quoque maius adaugeat. </ab>
