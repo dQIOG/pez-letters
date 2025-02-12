@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-02-11T23:52:43Z. . 
+Schema generated from ODD source 2025-02-12T09:31:01Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -4770,11 +4770,51 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
         </sch:assert>
             </sch:rule>
          </pattern>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.analytic.attribute.ana"/>
+         <ref name="att.global.linking.attribute.synch"/>
+         <ref name="att.global.linking.attribute.sameAs"/>
+         <ref name="att.global.linking.attribute.copyOf"/>
+         <ref name="att.global.linking.attribute.next"/>
+         <ref name="att.global.linking.attribute.prev"/>
+         <ref name="att.global.linking.attribute.exclude"/>
+         <ref name="att.global.linking.attribute.select"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.responsibility.attribute.cert"/>
+         <ref name="att.global.responsibility.attribute.resp"/>
+         <ref name="att.global.source.attribute.source"/>
          <ref name="att.cmc.attributes"/>
          <ref name="att.declaring.attributes"/>
          <ref name="att.fragmentable.attributes"/>
          <ref name="att.written.attributes"/>
+         <optional>
+            <attribute name="corresp">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corresponds) points to elements that correspond to the current element in some way.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI">
+                        <param name="pattern">\S+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="pez-p-corresp-corresp-on-p-constraint-rule-14">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:p[starts-with(@corresp, '#')]">
+               <sch:let name="id" value="substring-after(@corresp,'#')"/>
+               <sch:report test="not(exists(root()//*[@xml:id=$id]))">ID-Referenz "<sch:value-of select="@corresp"/>" kann nicht aufgelöst werden.</sch:report>
+            </sch:rule>
+         </pattern>
          <empty/>
       </element>
    </define>
@@ -4980,7 +5020,7 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
          <ref name="macro.limitedContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-desc-deprecationInfo-only-in-deprecated-constraint-rule-14">
+                  id="pez-desc-deprecationInfo-only-in-deprecated-constraint-rule-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:desc[ @type eq 'deprecationInfo']">
@@ -5079,7 +5119,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-rt-target-rt-target-not-span-constraint-rule-15">
+                  id="pez-rt-target-rt-target-not-span-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:rt/@target">
@@ -5096,7 +5136,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-rt-from-rt-from-constraint-rule-16">
+                  id="pez-rt-from-rt-from-constraint-rule-17">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:rt/@from">
@@ -5113,7 +5153,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-rt-to-rt-to-constraint-rule-17">
+                  id="pez-rt-to-rt-to-constraint-rule-18">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:rt/@to">
@@ -5344,7 +5384,7 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <ref name="macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-rs-rs-assert-index-links-constraint-rule-18">
+                  id="pez-rs-rs-assert-index-links-constraint-rule-19">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:rs[starts-with(@key, 'index:')]">
@@ -5600,7 +5640,7 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-ptr-ptr-assert-letter-links-constraint-rule-20">
+                  id="pez-ptr-ptr-assert-letter-links-constraint-rule-21">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ptr[some $ref in tokenize(@target,' ') satisfies starts-with($ref, 'letter:')]">
@@ -5609,7 +5649,7 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-ptr-ptrAtts-constraint-rule-21">
+                  id="pez-ptr-ptrAtts-constraint-rule-22">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ptr">
@@ -5653,23 +5693,25 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
          <ref name="macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-ref-ref-assert-letter-links-constraint-rule-22">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      context="tei:ref[@type = 'letter'][not(exists(@target))][if (contains(.,'#')) then substring-before(.,'#') castable as xs:integer else . castable as xs:integer]">
-               <sch:let name="letterPath"
-                        value="concat('../data/editions/pez_',format-number(xs:integer(if (contains(.,'#')) then substring-before(.,'#') else .) ,'000'),'.xml')"/>
-               <sch:report test="not(doc-available($letterPath))">Referenz auf Brief ID <sch:value-of select="."/> lässt sich nicht auflösen. Document <sch:value-of select="$letterPath"/> not avaiable.</sch:report>
-            </sch:rule>
+                  id="pez-ref-ref-assert-letter-links-constraint-rule-23">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ref[@type = 'letter'][not(exists(@target))]">
-               <sch:assert test="if (contains(.,'#')) then substring-before(.,'#') castable as xs:integer else . castable as xs:integer">Briefreferenz ist keine Nummer</sch:assert>
+               <sch:let name="letterIDString"
+                        value="if (substring-before(.,'#') != '') then substring-before(.,'#') else ."/>
+               <sch:let name="letterID"
+                        value="if ($letterIDString castable as xs:integer) then format-number(xs:integer($letterIDString) ,'000') else ''"/>
+               <sch:let name="letterPath"
+                        value="concat('../data/editions/pez_',$letterID,'.xml')"/>
+               <sch:report test="$letterIDString = ''">Leere Referenz auf Brief-ID</sch:report>
+               <sch:report test="not($letterIDString castable as xs:integer)">Briefreferenz "<sch:value-of select="$letterIDString"/>" ist keine Nummer</sch:report>
+               <sch:report test="not(doc-available($letterPath))">Referenz auf Brief-ID "<sch:value-of select="$letterID"/>" lässt sich nicht auflösen. Document <sch:value-of select="$letterPath"/> not avaiable.</sch:report>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ref[exists(@target)][some $ref in tokenize(@target,' ') satisfies starts-with($ref, 'letter:')]">
-               <sch:report test="some $ref in tokenize(@target,' ') satisfies not(doc-available(concat('../data/editions/pez_',format-number(xs:integer(if (contains($ref,'#')) then substring-before(substring-after($ref,'letter:'),'#') else substring-after($ref,'letter:')),'000'),'.xml',if(substring-after($ref,'#') != '') then concat('#',substring-after($ref,'#')) else '')))">Ein oder mehrere Referenzen auf Brief-IDs in "<sch:value-of select="@target"/>" lassen sich nicht auflösen.</sch:report>
+               <sch:assert test="every $ref in tokenize(@target,' ')[starts-with(.,'letter:')] satisfies matches($ref, '^letter:\d{1,4}(#\w+)?$')">Brief-Referenzen mit dem "letter:" Präfix dürfen nur aus 1–4 Nummern, optional gefolgt von eine Fragment-Identifier bestehen.</sch:assert>
+               <sch:report test="some $ref in tokenize(@target,' ')[starts-with(.,'letter:')] satisfies not(doc-available(concat('../data/editions/pez_',format-number(xs:integer(if (substring-before(substring-after($ref,'letter:'),'#') != '') then substring-before(substring-after($ref,'letter:'),'#') else substring-after($ref,'letter:')),'000'),'.xml',if(substring-after($ref,'#') != '') then concat('#',substring-after($ref,'#')) else '')))">Ein oder mehrere Referenzen auf Brief-IDs in "<sch:value-of select="@target"/>" lassen sich nicht auflösen.</sch:report>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -5842,9 +5884,39 @@ Suggested values include: 1] gloss (gloss); 2] index (index); 3] instructions (i
          <ref name="att.anchoring.attributes"/>
          <ref name="att.cmc.attributes"/>
          <ref name="att.placement.attributes"/>
-         <ref name="att.pointing.attributes"/>
+         <ref name="att.pointing.attribute.targetLang"/>
+         <ref name="att.pointing.attribute.evaluate"/>
          <ref name="att.typed.attributes"/>
          <ref name="att.written.attributes"/>
+         <optional>
+            <attribute name="target">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the destination of the reference by supplying one or more URI References.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI">
+                        <param name="pattern">\S+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="pez-note-target-target-on-not-constraint-rule-27">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:note[starts-with(@target, '#range')]">
+               <sch:let name="range-pointer-regex"
+                        value="'^\s*#range\(right\(''(.+?)''\), left\(''(.+?)''\)\s*'"/>
+               <sch:let name="milestone-ids"
+                        value="analyze-string(@target,$range-pointer-regex)"/>
+               <sch:let name="id-of-start-milestone" value="$milestone-ids//*:group[@nr=1]"/>
+               <sch:let name="id-of-end-milestone" value="$milestone-ids//*:group[@nr=2]"/>
+               <sch:assert test="exists($milestone-ids//*:match)">Range-Pointer in "<sch:value-of select="@target"/>" folgt nicht dem Format "#range(right({id}), left({id}))"</sch:assert>
+               <sch:report test="not(exists(root()//*[@xml:id=$id-of-start-milestone]))">ID-Referenz zu Start-Milestone "<sch:value-of select="$id-of-start-milestone"/>" kann nicht aufgelöst werden.</sch:report>
+               <sch:report test="not(exists(root()//*[@xml:id=$id-of-end-milestone]))">ID-Referenz zu End-Milestone "<sch:value-of select="$id-of-end-milestone"/>" kann nicht aufgelöst werden.</sch:report>
+            </sch:rule>
+         </pattern>
          <empty/>
       </element>
    </define>
@@ -6446,7 +6518,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-relatedItem-targetorcontent1-constraint-rule-27">
+                  id="pez-relatedItem-targetorcontent1-constraint-rule-28">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:relatedItem">
@@ -6481,7 +6553,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-l-abstractModel-structure-l-in-l-constraint-rule-28">
+                  id="pez-l-abstractModel-structure-l-in-l-constraint-rule-29">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:l">
@@ -6530,7 +6602,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-lg-atleast1oflggapl-constraint-rule-29">
+                  id="pez-lg-atleast1oflggapl-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:lg">
@@ -6539,7 +6611,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-lg-abstractModel-structure-lg-in-l-constraint-rule-30">
+                  id="pez-lg-abstractModel-structure-lg-in-l-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:lg">
@@ -6839,7 +6911,7 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</a:documentation
          <ref name="macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-s-noNestedS-constraint-rule-31">
+                  id="pez-s-noNestedS-constraint-rule-32">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:s">
@@ -6999,7 +7071,7 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</a:documentation
          <ref name="macro.phraseSeq.limited"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-span-target-from-constraint-rule-32">
+                  id="pez-span-target-from-constraint-rule-33">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:span">
@@ -7010,7 +7082,7 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</a:documentation
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-span-targetto-constraint-rule-33">
+                  id="pez-span-targetto-constraint-rule-34">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:span">
@@ -7021,7 +7093,7 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</a:documentation
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-span-tonotfrom-constraint-rule-34">
+                  id="pez-span-tonotfrom-constraint-rule-35">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:span">
@@ -7032,7 +7104,7 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</a:documentation
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-span-tofrom-constraint-rule-35">
+                  id="pez-span-tofrom-constraint-rule-36">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:span">
@@ -7627,7 +7699,7 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-quotation-quotationContents-constraint-rule-36">
+                  id="pez-quotation-quotationContents-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7912,7 +7984,7 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
          </attribute>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-citeStructure-match-citestructure-outer-match-constraint-rule-37">
+                  id="pez-citeStructure-match-citestructure-outer-match-constraint-rule-38">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7922,7 +7994,7 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-citeStructure-match-citestructure-inner-match-constraint-rule-38">
+                  id="pez-citeStructure-match-citestructure-inner-match-constraint-rule-39">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -8709,7 +8781,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-link-linkTargets3-constraint-rule-39">
+                  id="pez-link-linkTargets3-constraint-rule-40">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -8751,7 +8823,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <ref name="macro.abContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-ab-abstractModel-structure-ab-in-l-constraint-rule-40">
+                  id="pez-ab-abstractModel-structure-ab-in-l-constraint-rule-41">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -8932,7 +9004,7 @@ Suggested values include: 1] d (days); 2] h (hours); 3] min (minutes); 4] s (sec
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-join-joinTargets3-constraint-rule-41">
+                  id="pez-join-joinTargets3-constraint-rule-42">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9108,7 +9180,7 @@ Suggested values include: 1] d (days); 2] h (hours); 3] min (minutes); 4] s (sec
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-standOff-nested_standOff_should_be_typed-constraint-rule-42">
+                  id="pez-standOff-nested_standOff_should_be_typed-constraint-rule-43">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9309,7 +9381,7 @@ Suggested values include: 1] d (days); 2] h (hours); 3] min (minutes); 4] s (sec
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-msDesc-one_ms_singleton_max-constraint-rule-43">
+                  id="pez-msDesc-one_ms_singleton_max-constraint-rule-44">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9334,7 +9406,7 @@ Suggested values include: 1] d (days); 2] h (hours); 3] min (minutes); 4] s (sec
          <ref name="macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-catchwords-catchword_in_msDesc-constraint-rule-44">
+                  id="pez-catchwords-catchword_in_msDesc-constraint-rule-45">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9357,7 +9429,7 @@ Suggested values include: 1] d (days); 2] h (hours); 3] min (minutes); 4] s (sec
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-dimensions-duplicateDim-constraint-rule-45">
+                  id="pez-dimensions-duplicateDim-constraint-rule-46">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9573,7 +9645,7 @@ Sample values include: 1] binding; 2] endband; 3] slipcase; 4] support; 5] tie</
          <ref name="macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-secFol-secFol_in_msDesc-constraint-rule-46">
+                  id="pez-secFol-secFol_in_msDesc-constraint-rule-47">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9591,7 +9663,7 @@ Sample values include: 1] binding; 2] endband; 3] slipcase; 4] support; 5] tie</
          <ref name="macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-signatures-signatures_in_msDesc-constraint-rule-47">
+                  id="pez-signatures-signatures_in_msDesc-constraint-rule-48">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9670,7 +9742,7 @@ Sample values include: 1] binding; 2] endband; 3] slipcase; 4] support; 5] tie</
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-msIdentifier-msId_minimal-constraint-rule-48">
+                  id="pez-msIdentifier-msId_minimal-constraint-rule-49">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -12160,7 +12232,7 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-relation-ref-or-key-or-name-constraint-rule-49">
+                  id="pez-relation-ref-or-key-or-name-constraint-rule-50">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -12170,7 +12242,7 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-relation-active-mutual-constraint-rule-50">
+                  id="pez-relation-active-mutual-constraint-rule-51">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -12180,7 +12252,7 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-relation-active-passive-constraint-rule-51">
+                  id="pez-relation-active-passive-constraint-rule-52">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -12894,7 +12966,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-rdgGrp-only1lem-constraint-rule-52">
+                  id="pez-rdgGrp-only1lem-constraint-rule-53">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:rdgGrp">
@@ -13054,7 +13126,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
          </attribute>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-variantEncoding-location-variantEncodingLocation-constraint-rule-53">
+                  id="pez-variantEncoding-location-variantEncodingLocation-constraint-rule-54">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:variantEncoding">
@@ -13354,7 +13426,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-div-abstractModel-structure-div-in-l-constraint-rule-54">
+                  id="pez-div-abstractModel-structure-div-in-l-constraint-rule-55">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:l//tei:div">
@@ -13365,7 +13437,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="pez-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-55">
+                  id="pez-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-56">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:div">

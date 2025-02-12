@@ -49,20 +49,60 @@
                <constraintSpec ident="ref-assert-letter-links" scheme="schematron">
                   <constraint>
                      <!-- Letter references -->
-                     <sch:rule context="tei:ref[@type = 'letter'][not(exists(@target))][if (contains(.,'#')) then substring-before(.,'#') castable as xs:integer else . castable as xs:integer]">
-                        <sch:let name="letterPath"
-                           value="concat('../data/editions/pez_',format-number(xs:integer(if (contains(.,'#')) then substring-before(.,'#') else .) ,'000'),'.xml')"/>
-                        <sch:report test="not(doc-available($letterPath))">Referenz auf Brief ID <sch:value-of select="."/> lässt sich nicht auflösen. Document <sch:value-of select="$letterPath"/> not avaiable.</sch:report>
-                     </sch:rule>
+                     <!-- ref elements with type "letter" without an explicit @target contain the letter ID: <ref type="letter">1030</ref> -->
                      <sch:rule context="tei:ref[@type = 'letter'][not(exists(@target))]">
-                        <sch:assert test="if (contains(.,'#')) then substring-before(.,'#') castable as xs:integer else . castable as xs:integer">Briefreferenz ist keine Nummer</sch:assert>
+                        <sch:let name="letterIDString" value="if (substring-before(.,'#') != '') then substring-before(.,'#') else ."/>
+                        <sch:let name="letterID" value="if ($letterIDString castable as xs:integer) then format-number(xs:integer($letterIDString) ,'000') else ''"/>
+                        <sch:let name="letterPath" value="concat('../data/editions/pez_',$letterID,'.xml')"/>
+                        <sch:report test="$letterIDString = ''">Leere Referenz auf Brief-ID</sch:report>
+                        <sch:report test="not($letterIDString castable as xs:integer)">Briefreferenz "<sch:value-of select="$letterIDString"/>" ist keine Nummer</sch:report>
+                        <sch:report test="not(doc-available($letterPath))">Referenz auf Brief-ID "<sch:value-of select="$letterID"/>" lässt sich nicht auflösen. Document <sch:value-of select="$letterPath"/> not avaiable.</sch:report>
                      </sch:rule>
+                     <!-- ref elements can also reference a letter using the uri prefix "letter" and a non-zero-padded number, optionally followed by a fragment identifier: <ref target="letter:3#seg1">any text</ref> -->
                      <sch:rule context="tei:ref[exists(@target)][some $ref in tokenize(@target,' ') satisfies starts-with($ref, 'letter:')]">
-                        <sch:report test="some $ref in tokenize(@target,' ') satisfies not(doc-available(concat('../data/editions/pez_',format-number(xs:integer(if (contains($ref,'#')) then substring-before(substring-after($ref,'letter:'),'#') else substring-after($ref,'letter:')),'000'),'.xml',if(substring-after($ref,'#') != '') then concat('#',substring-after($ref,'#')) else '')))">Ein oder mehrere Referenzen auf Brief-IDs in "<sch:value-of select="@target"/>" lassen sich nicht auflösen.</sch:report>
+                        <sch:assert test="every $ref in tokenize(@target,' ')[starts-with(.,'letter:')] satisfies matches($ref, '^letter:\d{1,4}(#\w+)?$')">Brief-Referenzen mit dem "letter:" Präfix dürfen nur aus 1–4 Nummern, optional gefolgt von eine Fragment-Identifier bestehen.</sch:assert>
+                        <sch:report test="some $ref in tokenize(@target,' ')[starts-with(.,'letter:')] satisfies not(doc-available(concat('../data/editions/pez_',format-number(xs:integer(if (substring-before(substring-after($ref,'letter:'),'#') != '') then substring-before(substring-after($ref,'letter:'),'#') else substring-after($ref,'letter:')),'000'),'.xml',if(substring-after($ref,'#') != '') then concat('#',substring-after($ref,'#')) else '')))">Ein oder mehrere Referenzen auf Brief-IDs in "<sch:value-of select="@target"/>" lassen sich nicht auflösen.</sch:report>
                      </sch:rule>
                   </constraint>
                </constraintSpec>
             </elementSpec>
+            
+            <elementSpec ident="p" module="core" mode="change">
+               <attList>
+                  <attDef ident="corresp" mode="change">
+                     <constraintSpec ident="corresp-on-p" scheme="schematron">
+                        <constraint>
+                           <sch:rule context="tei:p[starts-with(@corresp, '#')]">
+                              <sch:let name="id" value="substring-after(@corresp,'#')"/>
+                              <sch:report test="not(exists(root()//*[@xml:id=$id]))">ID-Referenz "<sch:value-of select="@corresp"/>" kann nicht aufgelöst werden.</sch:report>
+                           </sch:rule>
+                        </constraint>
+                     </constraintSpec>
+                  </attDef>
+               </attList>
+            </elementSpec>
+            
+            <elementSpec ident="note" module="core" mode="change">
+               <attList>
+                  <attDef ident="target" mode="change">
+                     <constraintSpec ident="target-on-not" scheme="schematron">
+                        <constraint>
+                           <!-- range references must follow the form #range(right({id-of-start-milestone}), left({id-of-start-milestone})) -->
+                           <sch:rule context="tei:note[starts-with(@target, '#range')]">
+                              <sch:let name="range-pointer-regex" value="'^\s*#range\(right\(''(.+?)''\), left\(''(.+?)''\)\s*'"/>
+                              <sch:let name="milestone-ids" value="analyze-string(@target,$range-pointer-regex)"/>
+                              <sch:let name="id-of-start-milestone" value="$milestone-ids//*:group[@nr=1]"/>
+                              <sch:let name="id-of-end-milestone" value="$milestone-ids//*:group[@nr=2]"/>
+                              <sch:assert test="exists($milestone-ids//*:match)">Range-Pointer in "<sch:value-of select="@target"/>" folgt nicht dem Format "#range(right({id}), left({id}))"</sch:assert>
+                              <sch:report test="not(exists(root()//*[@xml:id=$id-of-start-milestone]))">ID-Referenz zu Start-Milestone "<sch:value-of select="$id-of-start-milestone"/>" kann nicht aufgelöst werden.</sch:report>
+                              <sch:report test="not(exists(root()//*[@xml:id=$id-of-end-milestone]))">ID-Referenz zu End-Milestone "<sch:value-of select="$id-of-end-milestone"/>" kann nicht aufgelöst werden.</sch:report>
+                           </sch:rule>
+                        </constraint>
+                     </constraintSpec>
+                  </attDef>
+               </attList>
+            </elementSpec>
+            
             
             <elementSpec ident="ptr" module="core" mode="change">
                <constraintSpec ident="ptr-assert-letter-links" scheme="schematron">
