@@ -21,7 +21,7 @@ COL_URIS = set()
 
 
 files = sorted(glob.glob("data/editions/*.xml"))
-files = files[:20]
+# files = files[:20]
 for x in tqdm(files):
     doc = TeiReader(x)
     cur_col_id = os.path.split(x)[-1].replace(".xml", "")
