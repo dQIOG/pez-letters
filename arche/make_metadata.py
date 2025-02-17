@@ -8,6 +8,8 @@ from acdh_tei_pyutils.utils import extract_fulltext
 from rdflib import Namespace, URIRef, RDF, Graph, Literal, XSD
 
 to_ingest = "to_ingest"
+arche_ttl_name = "arche.ttl"
+arche_md_save = os.path.join(to_ingest, arche_ttl_name)
 shutil.rmtree(to_ingest, ignore_errors=True)
 os.makedirs(to_ingest, exist_ok=True)
 g = Graph().parse("arche/arche_constants.ttl")
@@ -21,8 +23,8 @@ COL_URIS = set()
 
 
 files = sorted(glob.glob("data/editions/*.xml"))
-files = files[:20]
-for x in tqdm(files):
+# files = files[:20]
+for x in tqdm(files, total=len(files)):
     doc = TeiReader(x)
     cur_col_id = os.path.split(x)[-1].replace(".xml", "")
     cur_doc_id = f"{cur_col_id}.xml"
@@ -48,11 +50,18 @@ for x in tqdm(files):
 
     # title
     title = extract_fulltext(doc.any_xpath(".//tei:titleStmt/tei:title[1]")[0])
+    letter_nr = doc.any_xpath("./@n")[0]
+
+    try:
+        inferred = doc.any_xpath("//tei:gap[@reason='inferred letter']")[0]
+        final_title = f"{letter_nr} {title}"
+    except IndexError:
+        final_title = f"[{letter_nr}] {title}"
     g.add(
         (
             cur_doc_uri,
             ACDH["hasTitle"],
-            Literal(f"{title}", lang="de"),
+            Literal(f"{final_title}", lang="de"),
         )
     )
     g.add(
@@ -151,7 +160,7 @@ print("adding triples from 'other_things.ttl'")
 g.parse("arche/other_things.ttl")
 
 print("writing graph to file")
-g.serialize("to_ingest/arche.ttl")
+g.serialize(arche_md_save)
 
 print("resolving relativ imports schema locaiton")
 
@@ -169,3 +178,6 @@ for x in tqdm(files, total=len(files)):
     content = content.replace(old_value, new_value)
     with open(x, "w") as f:
         f.write(content)
+
+files = glob.glob("./data/editions/pez_*.xml")
+print(f"done, check {arche_md_save}")
