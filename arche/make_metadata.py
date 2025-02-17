@@ -24,7 +24,7 @@ COL_URIS = set()
 
 files = sorted(glob.glob("data/editions/*.xml"))
 # files = files[:20]
-for x in tqdm(files, total=len(files)):
+for i, x in enumerate(tqdm(files, total=len(files)), start=1):
     doc = TeiReader(x)
     cur_col_id = os.path.split(x)[-1].replace(".xml", "")
     cur_doc_id = f"{cur_col_id}.xml"
@@ -109,6 +109,16 @@ for x in tqdm(files, total=len(files)):
     else:
         g.add((cur_doc_uri, ACDH["hasExtent"], Literal("1 Seite", lang="de")))
 
+    # hasNextItem
+    try:
+        next_doc = TeiReader(files[i])
+        next_id = next_doc.any_xpath(".//@xml:id")[0]
+        g.add(
+            (cur_doc_uri, ACDH["hasNextItem"], URIRef(f"{TOP_COL_URI}/{next_id}.xml"))
+        )
+    except IndexError:
+        pass
+
     # hasSchema
     g.add(
         (cur_doc_uri, ACDH["hasSchema"], Literal("https://id.acdh.oeaw.ac.at/pez-briefe/pez-letters.rng"))
@@ -164,7 +174,7 @@ g.serialize(arche_md_save)
 
 print("resolving relativ imports schema locaiton")
 
-files = glob.glob("to_ingest/pez_*.xml")
+files = glob.glob("to_ingest/pez-*.xml")
 
 for x in tqdm(files, total=len(files)):
     with open(x, "r") as f:
@@ -179,5 +189,5 @@ for x in tqdm(files, total=len(files)):
     with open(x, "w") as f:
         f.write(content)
 
-files = glob.glob("./data/editions/pez_*.xml")
+files = glob.glob("./data/editions/pez-*.xml")
 print(f"done, check {arche_md_save}")
