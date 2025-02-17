@@ -168,3 +168,20 @@ g.parse("arche/other_things.ttl")
 
 print("writing graph to file")
 g.serialize("to_ingest/arche.ttl")
+
+print("resolving relativ imports schema locaiton")
+
+files = glob.glob("to_ingest/pez_*.xml")
+
+for x in tqdm(files, total=len(files)):
+    with open(x, "r") as f:
+        content = f.read()
+    old_value = '<?xml-model href="../../odd/pez-letters.rng"'
+    new_value = f'<?xml-model href="{TOP_COL_URI}/pez-letters.rng"'
+    content = content.replace(old_value, new_value)
+
+    old_value = 'replacementPattern="../indices/'
+    new_value = f'replacementPattern="{TOP_COL_URI}/'
+    content = content.replace(old_value, new_value)
+    with open(x, "w") as f:
+        f.write(content)
