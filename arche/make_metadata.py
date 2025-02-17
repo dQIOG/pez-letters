@@ -80,7 +80,11 @@ for x in tqdm(files):
         )
     if end:
         g.add(
-            (cur_doc_uri, ACDH["hasCoverageEndDate"], Literal(start, datatype=XSD.date))  # noqa: 501
+            (
+                cur_doc_uri,
+                ACDH["hasCoverageEndDate"],
+                Literal(start, datatype=XSD.date),
+            )  # noqa: 501
         )
 
     # hasExtent
@@ -94,9 +98,25 @@ for x in tqdm(files):
             )
         )
     else:
-        g.add(
-            (cur_doc_uri, ACDH["hasExtent"], Literal("1 Seite", lang="de"))
+        g.add((cur_doc_uri, ACDH["hasExtent"], Literal("1 Seite", lang="de")))
+
+    # hasNextItem
+    try:
+        next_string = (
+            doc.any_xpath(".//tei:ptr[@type='next']")[0].attrib["target"].split(":")[-1]
         )
+        g.add(
+            (
+                cur_doc_uri,
+                ACDH["hasNextItem"],
+                URIRef(f"{TOP_COL_URI}/pez_{next_string}"),
+            )
+        )
+        print(next_string)
+
+    except IndexError:
+        print(x)
+
     _, tail = os.path.split(x)
     new_name = os.path.join(to_ingest, tail)
     shutil.copy(x, new_name)
