@@ -80,7 +80,11 @@ for x in tqdm(files):
         )
     if end:
         g.add(
-            (cur_doc_uri, ACDH["hasCoverageEndDate"], Literal(start, datatype=XSD.date))  # noqa: 501
+            (
+                cur_doc_uri,
+                ACDH["hasCoverageEndDate"],
+                Literal(start, datatype=XSD.date),
+            )  # noqa: 501
         )
 
     # hasExtent
@@ -94,9 +98,13 @@ for x in tqdm(files):
             )
         )
     else:
-        g.add(
-            (cur_doc_uri, ACDH["hasExtent"], Literal("1 Seite", lang="de"))
-        )
+        g.add((cur_doc_uri, ACDH["hasExtent"], Literal("1 Seite", lang="de")))
+
+    # hasSchema
+    g.add(
+        (cur_doc_uri, ACDH["hasSchema"], Literal("https://id.acdh.oeaw.ac.at/pez-briefe/pez-letters.rng"))
+    )
+
     _, tail = os.path.split(x)
     new_name = os.path.join(to_ingest, tail)
     shutil.copy(x, new_name)
@@ -144,3 +152,20 @@ g.parse("arche/other_things.ttl")
 
 print("writing graph to file")
 g.serialize("to_ingest/arche.ttl")
+
+print("resolving relativ imports schema locaiton")
+
+files = glob.glob("to_ingest/pez_*.xml")
+
+for x in tqdm(files, total=len(files)):
+    with open(x, "r") as f:
+        content = f.read()
+    old_value = '<?xml-model href="../../odd/pez-letters.rng"'
+    new_value = f'<?xml-model href="{TOP_COL_URI}/pez-letters.rng"'
+    content = content.replace(old_value, new_value)
+
+    old_value = 'replacementPattern="../indices/'
+    new_value = f'replacementPattern="{TOP_COL_URI}/'
+    content = content.replace(old_value, new_value)
+    with open(x, "w") as f:
+        f.write(content)
