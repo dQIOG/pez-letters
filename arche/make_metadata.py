@@ -72,6 +72,15 @@ for i, x in enumerate(tqdm(files, total=len(files)), start=1):
         )
     )
 
+    # isSourceOf
+    if int(letter_nr) < 479:
+        g.add(
+            (URIRef("https://id.acdh.oeaw.ac.at/pez-briefe/vol-01-2010"), ACDH["isSourceOf"], cur_doc_uri)
+        )
+    else:
+        g.add(
+            (URIRef("https://id.acdh.oeaw.ac.at/pez-briefe/vol-02-2015"), ACDH["isSourceOf"], cur_doc_uri)
+        )
     # start/end date
     try:
         start, end = extract_begin_end(
