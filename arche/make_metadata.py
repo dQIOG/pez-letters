@@ -21,7 +21,7 @@ COL_URIS = set()
 
 
 files = sorted(glob.glob("data/editions/*.xml"))
-# files = files[:20]
+files = files[:20]
 for x in tqdm(files):
     doc = TeiReader(x)
     cur_col_id = os.path.split(x)[-1].replace(".xml", "")
@@ -99,22 +99,6 @@ for x in tqdm(files):
         )
     else:
         g.add((cur_doc_uri, ACDH["hasExtent"], Literal("1 Seite", lang="de")))
-
-    # hasNextItem
-    try:
-        next_string = (
-            doc.any_xpath(".//tei:ptr[@type='next']")[0].attrib["target"].split(":")[-1]
-        )
-        g.add(
-            (
-                cur_doc_uri,
-                ACDH["hasNextItem"],
-                URIRef(f"{TOP_COL_URI}/pez_{next_string}"),
-            )
-        )
-        print(next_string)
-    except IndexError:
-        print(x)
 
     # hasSchema
     g.add(
