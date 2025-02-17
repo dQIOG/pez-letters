@@ -113,9 +113,13 @@ for x in tqdm(files):
             )
         )
         print(next_string)
-
     except IndexError:
         print(x)
+
+    # hasSchema
+    g.add(
+        (cur_doc_uri, ACDH["hasSchema"], Literal("https://id.acdh.oeaw.ac.at/pez-briefe/pez-letters.rng"))
+    )
 
     _, tail = os.path.split(x)
     new_name = os.path.join(to_ingest, tail)
